@@ -5,14 +5,6 @@ atlantis:webstash(type="css")
         h3{@media only screen and (min-width:992px) {padding-top:5%;}@media only screen and (min-width:1200px) {padding-top:10%;}}
         img{width:100%}
       }
-      #danica-puppy-play-button{cursor:pointer}
-      .videoWrapper{position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-      .videoWrapper iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
-atlantis:webstash(type="js")
-  script.
-    $('#danica-puppy-play-button').on('click', function(){
-      $("#danica-puppy-promo-video").sfDialog({titleHidden:true, dialogWidthIdeal:840,destroyOnClose:true, buttons: []});
-    });  
 
 section#danica-puppy-promo
   .container
@@ -24,10 +16,18 @@ section#danica-puppy-promo
               h2.walsheim-bold Danica and Buddy
           .row
             .col-md-4.col-sm-3.col-xs-2
-              img#danica-puppy-play-button(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png")
+
+              +videoPlayerModalAll(
+                'rMF9d8-3WBA', 
+                'danica-puppy-play-button', 
+                '', 
+                '',
+                '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png', 
+                '', 
+                '', 
+                'danica-puppy-promo-video', 
+                '')
+
             .col-md-8.col-sm-4.col-xs-3
               h3.walsheim-bold Watch the video!
       .col-md-7.col-sm-0.col-xs-9
-  #danica-puppy-promo-video.sf-dialog
-    .videoWrapper
-      iframe(width="640", height="390", src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)

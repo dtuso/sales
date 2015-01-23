@@ -875,10 +875,10 @@ h2.marquee-product-name,
 }
   </style>
   <style>
-    .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee.jpg) no-repeat top center;); }
+    .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center;); }
     
   </style>
-  <style>.marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee.jpg) no-repeat top center;); }</style>
+  <style>.marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center;); }</style>
 </atlantis:webstash>
 <div data-onclick="#" data-icode="" class="marquee marquee-app-landing marquee-white">
   <div class="container relative-position">
