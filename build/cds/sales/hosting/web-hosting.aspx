@@ -6411,7 +6411,7 @@ h2.marquee-product-name,
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -6531,12 +6531,24 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
       </style>
       <atlantis:webstash type="css">
@@ -6792,7 +6804,7 @@ h2.marquee-product-name,
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -6912,12 +6924,24 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
         </style>
       </atlantis:webstash>
@@ -6927,7 +6951,8 @@ h2.marquee-product-name,
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h2>
               <p class="plan-text">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                 ##if(productHasSavingsMoreThan(294057, 294057, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -6952,7 +6977,8 @@ h2.marquee-product-name,
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                 ##if(productHasSavingsMoreThan(32051, 32051, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -6978,7 +7004,8 @@ h2.marquee-product-name,
             <div class="pro-plan-wrap">
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                 ##if(productHasSavingsMoreThan(32059, 32059, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -7005,7 +7032,8 @@ h2.marquee-product-name,
               <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
               <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
               <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
-              <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+              <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                 ##if(productHasSavingsMoreThan(32082, 32082, 0))
                  <br><strong>[@L[cds.sales/_common:was]@L] 
                   <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -7027,7 +7055,7 @@ h2.marquee-product-name,
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] [@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] ([@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L]) <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
             </div>
           </div>
           <atlantis:webstash type="js">
@@ -7373,7 +7401,7 @@ h2.marquee-product-name,
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -7493,12 +7521,24 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
       </style>
       <div class="pro-plans-wrap bg-gray-light">
@@ -7582,7 +7622,7 @@ h2.marquee-product-name,
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
               <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]'></span></div>
-              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] [@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
+              <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] ([@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L]) <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
             </div>
           </div>
           <atlantis:webstash type="js">
