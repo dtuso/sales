@@ -22,7 +22,7 @@ var got1Page = {
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
-  lastSpinResultCount: 0,
+  totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
@@ -481,11 +481,11 @@ function showSearchSpins($this, domain, alternateDomains){
   // setup search box  
   showTypeYourDomain();
 
-  displayMoreResultsLinks();
+  displayMoreResultsLinks(alternateDomains.length);
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-  lastSpinResultCount =  0;
+  totalSpinResults =  0;
   var $spinResults = $('#spin-results');
   var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
@@ -496,8 +496,15 @@ function showSearchSpins($this, domain, alternateDomains){
     $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
-  got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  got1Page.totalSpinResults = alternateDomains.length;
+  
+  if(got1Page.totalSpinResults <= got1Page.maxNumberOfSpinsToShowByDefault) {
+    hideMoreResultsLinks();
+  } else {
+    updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  }
+  
+
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -547,18 +554,17 @@ function hideMoreResultsLinks() {
   $("#show-more-section").hide();
 }
 
-function displayMoreResultsArea () {
+function displayMoreResultsArea() {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(got1Page.lastSpinResultCount);
+  updateDomainCountText(got1Page.totalSpinResults);
 }
 
-function updateDomainCountText(currentlyShown) {
-
+function updateDomainCountText(numberShowing) {
   var $spinCounts = $('#spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
-  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
-  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.totalSpinResults);
   $spinCounts.html(templateHtml);
 }
 

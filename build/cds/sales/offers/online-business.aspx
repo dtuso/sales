@@ -152,7 +152,7 @@ var got1Page = {
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
-  lastSpinResultCount: 0,
+  totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
@@ -611,11 +611,11 @@ function showSearchSpins($this, domain, alternateDomains){
   // setup search box  
   showTypeYourDomain();
 
-  displayMoreResultsLinks();
+  displayMoreResultsLinks(alternateDomains.length);
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-  lastSpinResultCount =  0;
+  totalSpinResults =  0;
   var $spinResults = $('#spin-results');
   var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
@@ -626,8 +626,15 @@ function showSearchSpins($this, domain, alternateDomains){
     $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
-  got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  got1Page.totalSpinResults = alternateDomains.length;
+  
+  if(got1Page.totalSpinResults <= got1Page.maxNumberOfSpinsToShowByDefault) {
+    hideMoreResultsLinks();
+  } else {
+    updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  }
+  
+
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -677,18 +684,17 @@ function hideMoreResultsLinks() {
   $("#show-more-section").hide();
 }
 
-function displayMoreResultsArea () {
+function displayMoreResultsArea() {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(got1Page.lastSpinResultCount);
+  updateDomainCountText(got1Page.totalSpinResults);
 }
 
-function updateDomainCountText(currentlyShown) {
-
+function updateDomainCountText(numberShowing) {
   var $spinCounts = $('#spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
-  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
-  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.totalSpinResults);
   $spinCounts.html(templateHtml);
 }
 
@@ -1290,7 +1296,7 @@ h
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -1644,7 +1650,7 @@ h
                 <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name"> </span></h2>
               </div>
               <div class="col-md-4 col-sm-12 get-it-now-btn">
-                <button class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
+                <button data-ci="92733" class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
               </div>
             </div>
           </div>
@@ -3117,7 +3123,7 @@ h
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-stores-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" data-ci="95733" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
