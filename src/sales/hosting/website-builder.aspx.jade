@@ -181,30 +181,55 @@ block sections
         | [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+  | 
+  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(da,de,es,fi,fr,it,nb,nl,pl,pt,ru,sv,tr,uk))
+  | 
+  section#other-products
+    .container
+        .row
+          .col-sm-12
+            h2.text-center.h1 [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
+    +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]', 'btn-default-dark')
+  | 
+  |##else
+  | 
   section#other-products
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
         a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        | 
+        |##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
+        | 
+      +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_qsc]@L]", shapeColor: "orange", whiteText: "white-text"})
+        | 
+        |##else
+        | 
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs]@L]", shapeColor: "orange", whiteText: "white-text"})
+        | 
+        |##endif
+        | 
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
         a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
-
-  section#disclaimers
-    p 
-    p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
-      a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
-    #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
-      p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
-      p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
-      | 
-      |##if(splitTestingSideIsActive(1349, B))
-      | 
-      p [@L[cds.sales/gd/hosting/website-builder:renewal-disclaimer]@L]
-      | 
-      |##endif
-      | 
-    p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
+  | 
+  |##endif
+  | 
+  section#disclaimers.disclaimers-section
+    .container
+      div
+        p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
+          a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
+        #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
+          p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
+          p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
+          | 
+          |##if(splitTestingSideIsActive(1349, B))
+          | 
+          p [@L[cds.sales/gd/hosting/website-builder:renewal-disclaimer]@L]
+          | 
+          |##endif
+          | 
+        p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
 
   | 
   |##if(activeLanguageAny([en-US]))

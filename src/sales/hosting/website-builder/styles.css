@@ -262,3 +262,11 @@ width: 50%;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     }
   }
+
+  .features {
+    background-color: #62A92F;
+  }
+  .disclaimers-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }

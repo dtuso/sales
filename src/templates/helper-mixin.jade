@@ -50,9 +50,21 @@ mixin videoPlayerScriptsOnly(buttonId, modalId)
   atlantis:webstash(type="js")
     script.
       $(document).ready(function(){
+        
+        var $overlay = $("##{modalId}").find(".videoWrapperInModal");
+
+        // attach modal popup to click event
         $('##{buttonId}').on('click', function(){
+          $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
           $("##{modalId}").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
         });
+
+        // close the overlay when iframe loads
+        $("##{modalId}").find("iframe").load(function(){
+          
+          $overlay.sfMsgOverlay({ message: null });
+        });
+
       });
 
   if(!videoPlayerModal.renderedRezingCommonJs)
@@ -85,7 +97,7 @@ mixin videoPlayerStylesOnly()
     style.
       .video-modal {display: none;}
       .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-      .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+      .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
       img.video-play-icon {margin-right:10px;vertical-align:top;}
       .video-modal-img-as-button {cursor: pointer;}
       .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
@@ -105,8 +117,6 @@ mixin videoPlayerModalOnly(youtubeVideoId, modalId, addlModalClasses)
 
   div.sf-dialog.video-modal(id="#{modalId}", class="#{addlModalClasses}")
     .videoWrapperInModal
-      .video-iframe-underlay
-        h2 [@L[cds.sales/gd/tlds/gtld:loading]@L]
       iframe(width="640", height="390", src="//www.youtube.com/embed/#{youtubeVideoId}?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
 
 

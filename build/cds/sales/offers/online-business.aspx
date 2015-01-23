@@ -1161,7 +1161,7 @@ h
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -1461,7 +1461,7 @@ h
           .main-marquee .logo-wrapper .office-365 { line-height: 1; font-size: 0.5em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
           @media (min-width: 992px) { 
             .main-marquee .header-text .get-online { font-size: 5em; }
-            .main-marquee .logo-wrapper  { margin-top: 0; }
+            .main-marquee .logo-wrapper  { margin-top: 42px; }
             .main-marquee .logo-wrapper .icon { min-height: 140px; }
             .main-marquee .logo-wrapper .plus { font-size: 6em; padding-top: 60px; }
             }
@@ -2522,9 +2522,21 @@ h
             <atlantis:webstash type="js">
               <script>
                 $(document).ready(function(){
+                  
+                  var $overlay = $("#site-choice-wsb-video-modal").find(".videoWrapperInModal");
+                
+                  // attach modal popup to click event
                   $('#wsb-only-video-btn').on('click', function(){
+                    $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
                     $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
                   });
+                
+                  // close the overlay when iframe loads
+                  $("#site-choice-wsb-video-modal").find("iframe").load(function(){
+                    
+                    $overlay.sfMsgOverlay({ message: null });
+                  });
+                
                 });
                 
               </script>
@@ -2558,7 +2570,7 @@ h
               <style>
                 .video-modal {display: none;}
                 .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-                .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+                .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
                 img.video-play-icon {margin-right:10px;vertical-align:top;}
                 .video-modal-img-as-button {cursor: pointer;}
                 .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
@@ -2569,9 +2581,6 @@ h
             <button id="wsb-only-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
             <div id="site-choice-wsb-video-modal" class="sf-dialog video-modal got-video-modal">
               <div class="videoWrapperInModal">
-                <div class="video-iframe-underlay">
-                  <h2>[@L[cds.sales/gd/tlds/gtld:loading]@L]</h2>
-                </div>
                 <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
               </div>
             </div> 
@@ -2971,9 +2980,21 @@ h
                           <atlantis:webstash type="js">
                             <script>
                               $(document).ready(function(){
+                                
+                                var $overlay = $("#site-choice-wsb-video-modal").find(".videoWrapperInModal");
+                              
+                                // attach modal popup to click event
                                 $('#wsb-video-btn').on('click', function(){
+                                  $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
                                   $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
                                 });
+                              
+                                // close the overlay when iframe loads
+                                $("#site-choice-wsb-video-modal").find("iframe").load(function(){
+                                  
+                                  $overlay.sfMsgOverlay({ message: null });
+                                });
+                              
                               });
                               
                             </script>
@@ -2982,7 +3003,7 @@ h
                             <style>
                               .video-modal {display: none;}
                               .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
                               img.video-play-icon {margin-right:10px;vertical-align:top;}
                               .video-modal-img-as-button {cursor: pointer;}
                               .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
@@ -2993,9 +3014,6 @@ h
                           <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                           <div id="site-choice-wsb-video-modal" class="sf-dialog video-modal got-video-modal">
                             <div class="videoWrapperInModal">
-                              <div class="video-iframe-underlay">
-                                <h2>[@L[cds.sales/gd/tlds/gtld:loading]@L]</h2>
-                              </div>
                               <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                             </div>
                           </div> 
@@ -3066,9 +3084,21 @@ h
                           <atlantis:webstash type="js">
                             <script>
                               $(document).ready(function(){
+                                
+                                var $overlay = $("#site-choice-ols-video-modal").find(".videoWrapperInModal");
+                              
+                                // attach modal popup to click event
                                 $('#ols-video-btn').on('click', function(){
+                                  $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
                                   $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
                                 });
+                              
+                                // close the overlay when iframe loads
+                                $("#site-choice-ols-video-modal").find("iframe").load(function(){
+                                  
+                                  $overlay.sfMsgOverlay({ message: null });
+                                });
+                              
                               });
                               
                             </script>
@@ -3077,7 +3107,7 @@ h
                             <style>
                               .video-modal {display: none;}
                               .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;}
+                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
                               img.video-play-icon {margin-right:10px;vertical-align:top;}
                               .video-modal-img-as-button {cursor: pointer;}
                               .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
@@ -3088,9 +3118,6 @@ h
                           <button id="ols-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
                           <div id="site-choice-ols-video-modal" class="sf-dialog video-modal got-video-modal">
                             <div class="videoWrapperInModal">
-                              <div class="video-iframe-underlay">
-                                <h2>[@L[cds.sales/gd/tlds/gtld:loading]@L]</h2>
-                              </div>
                               <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                             </div>
                           </div> 
@@ -5929,7 +5956,7 @@ var PlanBox6UI = {
 </atlantis:webstash>
 
     </section>
-    <section id="disclaimers"> 
+    <section id="disclaimers" class="content-disclaimer disclaimers-section"> 
       <div class="disclaimers-row">
         <div class="container">
           <div class="row">
