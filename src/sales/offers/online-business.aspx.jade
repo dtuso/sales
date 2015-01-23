@@ -1,8 +1,8 @@
 ---
 location: sales/offers/online-business.aspx
-id: 54bfdab3f778fc07e885c04d
-name: GCE-32414-GOT-jmg
-comments: GOT rebrand 2015 SuperBowl
+id: 54c1d96bf778fc1dd09be015
+name: GCE-35497 
+comments: IE fix for Greek
 ---
 extends ../../templates/pages/landing-page
 
@@ -45,6 +45,7 @@ block domainSearch
   //- nothing to see here
   //- override the landing-page.jade with a blank section
 
+
 //- top marquee
 block marquee
   include ./online-business/_marquee.jade
@@ -63,7 +64,7 @@ block alternatives
 
 //- there's always a catch... show it here.
 block disclaimers
-  section#disclaimers 
+  section#disclaimers.content-disclaimer.disclaimers-section 
     .disclaimers-row
       .container
         .row

@@ -123,7 +123,29 @@
         });
       }
       
+    </script><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
+      
     </script>
+    <!-- Google Tag Manager-->
+    <!-- End Google Tag Manager-->
+    <script type="text/javascript">
+      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
+      (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
+      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+      delayLoader.addElement(d);
+      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+      
+    </script>
+  </head>
+  <body ng-controller="" ng-cloak>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -687,30 +709,27 @@ cursor: pointer;
   }
 }
 
-
-    </style><!--[if lt IE 9]>
-    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
+    </style>
+    <style>
+      /* TODO: can this styling be abstracted into landing-page.jade? */
+      body { background-color: #d9d9d9; }
+      #marquee { 
+        background: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
+        padding-bottom: 120px;
+        margin-bottom: 0;
+        background-size: cover;
+      }
+      .plan-tile { 
+        margin-top: 0; 
+        margin-bottom: 0; 
+      }
+      .pro-plans { 
+        margin-top: -120px; 
+        padding-bottom: 20px; 
+        padding-top: 0; 
+      }
       
-    </script>
-    <!-- Google Tag Manager-->
-    <!-- End Google Tag Manager-->
-    <script type="text/javascript">
-      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
-      (function (a, b, c, d) {
-      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
-      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
-      delayLoader.addElement(d);
-      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
-      })();
-      
-    </script>
-  </head>
-  <body ng-controller="" ng-cloak>
+    </style>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -719,17 +738,26 @@ cursor: pointer;
      
     <section id="marquee">
       <style>
-        body { background-color: #d9d9d9; }
-        #marquee { background: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; padding-bottom: 120px;margin-bottom: 0;background-size: cover;}
-        .plan-tile { margin-top: 0; margin-bottom: 0; }
-        .pro-plans { margin-top: -120px; padding-bottom: 20px; padding-top: 0 !important; }
-        .dash { letter-spacing: -10px; font-size: 1.5em; line-height: 0.6; vertical-align: -0.1em; }
-        .marquee-content-wrapper { padding: 40px; margin-left: 10px; margin-right: 10px; background-color: rgba(0,0,0,0.8); color: white; }
-        .marquee { padding-top: 40px; padding-bottom: 40px; }
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee { 
+          padding-top: 40px; 
+          padding-bottom: 40px; 
+        }
         .marquee.marquee-white {
             color: #fff;
         }
-        
         .marquee.marquee-white h1,
         .marquee.marquee-white h2,
         .marquee.marquee-white h3,
@@ -738,18 +766,32 @@ cursor: pointer;
         .marquee.marquee-white h6 {
             color: #fff;
         }
-        
         .marquee.marquee-white .dashed-underline {
             border-bottom-color: #fff;
         }
-        
         .marquee.marquee-white a:not(.btn) {
             color: #fff;
             text-decoration: underline;
         }
-        
         .marquee.marquee-white a:not(.btn):hover {
             text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-size: 4rem;
+          font-weight: 100;
+          line-height: 1.1;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
         }
         
       </style>
@@ -758,11 +800,10 @@ cursor: pointer;
           <div class="col-sm-7 marquee-content-wrapper">
             <h1 class="h2 marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
             <h2 class="h1 marquee-product-description">Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.</h2>
-            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] <u><strong>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L]</strong></u> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
+            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] <u><strong>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L]</strong></u> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-default-light jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
           </div>
         </div>
       </div>
-      
     </section> 
     ##elseif(countrySiteAny(ar,br,cl,co,mx,pe,ve))
      
@@ -4379,902 +4420,70 @@ h2.marquee-product-name,
     ##else
      
     <section id="marquee"> 
-      <atlantis:webstash type="css">
-        <style>.white-text{
-    color: #FFFFFF;
-}
-.marquee {
-    background-position: top center;
-}
-
-.marquee .marquee-product-img {
-    margin-bottom: 10px;
-}
-
-.marquee .jump-arrow-btn {
-    margin-top: 10px;
-}
-
-.marquee .marquee-buttons a {
-    margin-right: 20px;
-}
-
-.marquee .marquee-buttons a:last-child {
-    margin-right: 0;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: none;
-    padding-left: 10px;
-    color: #333333;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-size: 1.2rem;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee.marquee-app-landing {
-    min-height: 655px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    margin-top: 0;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    padding-left: 0;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.marquee.marquee-app-landing .marquee-pro-left-text {
-    padding-top: 45px;
-}
-
-.marquee.marquee-app-landing .marquee-product-description {
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-signup {
-    min-height: 584px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-wrap {
-    margin-bottom: 75px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup h2 {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee-pro-signup h3 {
-    margin-top: 0;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 50%;
-        margin: 30px 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 80%;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-check-wrap {
-    margin-top: 30px;
-}
-
-.marquee-pro-signup .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro-signup .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-buttons {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
-    margin-right: 20px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check {
-    padding-left: 35px;
-    font-family: 'Walsheim-Bold';
-    position: relative;
-    font-size: 18px;
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check:before {
-    content: '';
-    background-position: 0px -234px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -3px;
-}
-
-.marquee-pro-rebrand {
-    min-height: 378px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-rebrand {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text {
-    margin-bottom: 65px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h2 {
-    font-size: 40px;
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-    line-height: 1;
-}
-
-.marquee-pro {
-    min-height: 450px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro .well {
-    background-color: rgba(239, 108, 15, 0.8);
-    border: none;
-    color: #fff;
-    padding: 30px;
-    min-height: 275px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .well {
-        min-height: 0;
-        margin-top: 20px;
-    }
-}
-
-.marquee-pro .well .row {
-    min-height: 0 !important;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap {
-    border-left: 1px solid #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro .well .marquee-pro-icon-wrap {
-        border-left: 0;
-    }
-
-    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
-        margin-top: 30px;
-    }
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
-    height: 95px;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
-    max-width: 75%;
-    max-height: 75%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap h5 {
-    font-weight: 500;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap:first-child {
-    border-left: 0;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
-    margin: 0 auto 15px;
-    max-height: 85px;
-}
-
-.marquee-pro .well.marquee-pro-centered a {
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .well.marquee-pro-centered h2 {
-    margin-top: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
-    border-top: 1px solid #fff;
-    font-weight: 700;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
-    margin-top: 20px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
-    margin-top: 15px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
-    font-size: 15px;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
-    font-size: 35px;
-    font-size: 3.5rem;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-}
-
-.marquee-pro .well.marquee-pro-centered .search-template-box {
-    border: 3px solid #fff;
-    margin-top: 10px;
-}
-
-.marquee-pro .marquee-pro-first-area h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .marquee-pro-first-area h2 {
-    margin-top: 12px;
-}
-
-.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
-    padding-top: 10px;
-    border-top: 1px solid #fff;
-}
-
-.marquee-pro .marquee-product-text {
-    margin-bottom: 20px;
-}
-
-.marquee-pro .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    color: #333333;
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-.marquee-table-grid > .row {
-    display: table;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row {
-        display: block;
-    }
-}
-
-.marquee-table-grid > .row > [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row > [class*="col-"] {
-        display: block;
-        float: none;
-        border-left: none;
-        border-right: none;
-        padding: 20px inherit;
-        border-top: 1px solid #fff;
-    }
-
-    .marquee-table-grid > .row > [class*="col-"]:first-child {
-        border-top: 0;
-    }
-}
-.marquee {
-    background-size: cover !important;
-    position: relative;
-    background-position: bottom center;
-    background-color: #fff;
-  /* Ribbon */
-}
-
-.marquee .relative-position {
-    position: relative;
-}
-
-.marquee .marquee-all-centered {
-    text-align: center;
-}
-
-.marquee .marquee-two-col-txt ul.marquee-product-bullets {
-    text-align: left;
-}
-
-.marquee.marquee-short {
-    min-height: 368px;
-}
-
-.marquee.marquee-short .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-short .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
-        height: auto !important;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        transform: translateY(0%);
-        top: 0%;
-    }
-}
-
-.marquee.marquee-tall {
-    min-height: 523px;
-}
-
-.marquee.marquee-tall .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-tall .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-tall {
-        min-height: 400px;
-    }
-}
-
-.marquee.marquee-img-tall-left-txt {
-    height: 523px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 430px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-img-short-left-txt {
-    height: 368px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 300px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-white {
-    color: #fff;
-}
-
-.marquee.marquee-white h1,
-.marquee.marquee-white h2,
-.marquee.marquee-white h3,
-.marquee.marquee-white h4,
-.marquee.marquee-white h5,
-.marquee.marquee-white h6 {
-    color: #fff;
-}
-
-.marquee.marquee-white .dashed-underline {
-    border-bottom-color: #fff;
-}
-
-.marquee.marquee-white a:not(.btn) {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.marquee.marquee-white a:not(.btn):hover {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap .vertical-height {
-        height: auto !important;
-    }
-}
-
-.marquee .img-center {
-    margin: 0 auto;
-}
-
-.marquee .marquee-corner-img {
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-width: 165px;
-    min-height: 169px;
-}
-
-.marquee .marquee-product-img {
-    max-width: 100%;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: underline;
-    padding-left: 10px;
-    color: #808080;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee .marquee-product-description {
-    font-size: 56px;
-    font-size: 5.6rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-product-description {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee .marquee-product-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-    padding: 0 0 14px;
-}
-
-.marquee ul.marquee-product-bullets {
-    font-size: 18px;
-    font-size: 1.8rem;
-    text-align: center;
-    list-style-position: inside;
-    padding: 0;
-}
-
-.marquee .marquee-restrictions-text {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-
-.marquee .marquee-ribbon {
-    width: 112px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    z-index: 100;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-ribbon {
-        position: relative;
-        margin: 0 auto;
-    }
-}
-
-.marquee .marquee-left-ribbon .marquee-ribbon {
-    left: 0;
-    right: auto;
-}
-
-.marquee .marquee-price-btn-wrap {
-    color: #ef6c0f;
-    line-height: 1;
-    font-weight: 400;
-    padding: 5px 0 20px;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap {
-        line-height: 1.2;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .btn {
-    margin-right: 10px;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-text {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-small-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
-        font-size: 16px;
-        font-size: 1.6rem;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price {
-    font-size: 36px;
-    font-size: 3.6rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price {
-        font-size: 30px;
-        font-size: 3rem;
-    }
-}
-
-.marquee .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-left: 0;
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-check-bullets span {
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-.marquee .marquee-check-bullets li:before {
-    content: "\e207";
-    font-family: 'uxfont';
-    padding-right: 5px;
-}
-
-.marquee .marquee-btn-wrap {
-    margin-bottom: 20px;
-}
-
-.marquee .search-template .search-template-box {
-    border: 1px solid #cecece;
-}
-
-.marquee .marquee-customer-name-wrap {
-    position: absolute;
-    bottom: 10px;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-name-wrap {
-        position: relative;
-        bottom: auto;
-    }
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-name {
-    font-weight: bold;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-text {
-    font-weight: 100;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-website {
-    color: #008a32;
-    text-decoration: underline;
-}
-
-.marquee .marquee-two-col-abstract.left-column {
-    color: #fff;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
-    color: #fff;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 46px;
-    margin: 34px 0 0 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
-    font-family: "Walsheim-Bold";
-    font-size: 22px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
-    font-family: "Walsheim-Medium";
-    font-size: 18px;
-    margin-top: 18px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
-    display: block;
-    font-family: "Walsheim-Black";
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .btn {
-    font-family: "Walsheim-Medium";
-    font-size: 24px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
-    margin: 12px 0 24px;
-    font-family: "Walsheim-Regular";
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
-    padding-left: 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
-    list-style: none;
-}
-
-.marquee .marquee-two-col-abstract.right-column {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    background-position: top center;
-    background-size: cover;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-left {
-    position: absolute;
-    left: 0;
-    height: 100%;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-right {
-    position: absolute;
-    right: 0;
-    height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-two-col-abstract.right-column {
-        position: relative;
-        min-height: 200px;
-    }
-}
-
-h1.marquee-product-name,
-h2.marquee-product-name,
-.marquee-product-name {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-@media only screen and (max-width: 992px) {
-    h1.marquee-product-name,
-  h2.marquee-product-name,
-  .marquee-product-name {
-        font-size: 20px;
-        font-size: 2rem;
-        margin-top: 10px;
-    }
-}
-        </style>
-        <style>
-          .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center;); }
-          
-        </style>
-      </atlantis:webstash>
-      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing ">
-        <div class="container relative-position">
-          <div class="row">
-            <div class="col-sm-12">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="row">
-                  <div class="col-md-7 col-sm-12">
-                    <div class="marquee-pro-left-text">
-                            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
-                            <h2 class="marquee-product-description">[@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]</h2>
-                            <div class="marquee-product-text"><span class='sf-tip sf-tipper-target underline' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeDisclaimer]@L]'>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L]</span> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-primary jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <style>
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee { 
+          padding-top: 40px; 
+          padding-bottom: 40px; 
+        }
+        .marquee.marquee-white {
+            color: #fff;
+        }
+        .marquee.marquee-white h1,
+        .marquee.marquee-white h2,
+        .marquee.marquee-white h3,
+        .marquee.marquee-white h4,
+        .marquee.marquee-white h5,
+        .marquee.marquee-white h6 {
+            color: #fff;
+        }
+        .marquee.marquee-white .dashed-underline {
+            border-bottom-color: #fff;
+        }
+        .marquee.marquee-white a:not(.btn) {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .marquee.marquee-white a:not(.btn):hover {
+            text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-size: 4rem;
+          font-weight: 100;
+          line-height: 1.1;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
+        }
+        
+      </style>
+      <div class="container marquee marquee-white">
+        <div class="row">
+          <div class="col-sm-7 marquee-content-wrapper">
+            <h1 class="h2 marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
+            <h2 class="h1 marquee-product-description">Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.</h2>
+            <div class="marquee-product-text">[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] <u><strong>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L]</strong></u> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]</div><a href="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]" class="btn btn-default-light jump-arrow-btn">[@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]</a>
           </div>
         </div>
       </div>
@@ -5538,7 +4747,7 @@ h2.marquee-product-name,
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -5658,12 +4867,24 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
         </style>
       </atlantis:webstash>
@@ -5674,7 +4895,8 @@ h2.marquee-product-name,
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(294057, 294057, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="294057" secondaryproductid="294057" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -5699,7 +4921,8 @@ h2.marquee-product-name,
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -5718,14 +4941,15 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32059, 32059, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -5744,7 +4968,7 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               </div>
             </div>
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
@@ -5752,7 +4976,8 @@ h2.marquee-product-name,
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32082, 32082, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -5771,10 +4996,10 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] [@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] ([@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L]) <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
               </div>
             </div>
           </div>
@@ -6035,7 +5260,7 @@ h2.marquee-product-name,
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -6155,12 +5380,24 @@ h2.marquee-product-name,
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
 }
         </style>
       </atlantis:webstash>
@@ -6190,7 +5427,7 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               </div>
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
@@ -6216,7 +5453,7 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:fiveHundredEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
               </div>
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
@@ -6243,10 +5480,10 @@ h2.marquee-product-name,
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L]</div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] [@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:ultimateSSL]@L] ([@L[cds.sales/hosting/web-hosting-rebrand:restrictionsapply]@L]) <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:sslRestrictionsToolTip]@L]'></span></div>
               </div>
             </div>
           </div>
@@ -6302,7 +5539,7 @@ h2.marquee-product-name,
       <div class="container">
         <div class="row pro-banner white-text">
           <div class="col-sm-3 pro-banner-image">
-            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-webpro-logo.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
           </div>
           <div class="col-sm-6 pro-banner-text">
@@ -6641,7 +5878,7 @@ h2.marquee-product-name,
              
           </div>
           <div class="col-sm-6 one-click-right">
-            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-feature1-logos.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
           </div>
         </div>
@@ -6658,12 +5895,12 @@ h2.marquee-product-name,
            
           <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
           ##endif
-           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+           <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
           <div class="speed-text"><img></div>
         </div>
       </div>
       <div class="container">
-        <div class="col-sm-2 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+        <div class="col-sm-2 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Chart_Polygon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
         </div>
         <div class="col-sm-10">
           <div>
@@ -6694,7 +5931,7 @@ h2.marquee-product-name,
         <div class="container">
           <div class="row">
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
               </div> 
               ##if(activeLanguageAny([en-US]))
                
@@ -6714,7 +5951,7 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
               </div>
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
               ##if(activeLanguageAny([en-US]))
@@ -6727,7 +5964,7 @@ h2.marquee-product-name,
                
             </div>
             <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
               </div> 
               ##if(activeLanguageAny([en-US]))
                
@@ -8752,21 +7989,20 @@ height: 27px;
 .two-up-wrap-compare h2 {
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
-  color: #333;
+  color: #232323;
 }
-.two-up-wrap-compare h3 {
+.two-up-wrap-compare h3.headline-primary {
   font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
+  text-transform: none;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
+  color: #232323;
 }
 .two-up-wrap-compare .white-text {
   color: #fff;
@@ -8870,13 +8106,12 @@ height: 27px;
   }
 }
 
-.two-up-title {
+.two-up-title.h0 {
   margin: 40px 0;
   line-height: 1;
   font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   font-weight: 300;
+  color: #232323;
 }
 .two-up-speech-shape {
   font-family: 'Walsheim-Bold';
@@ -8953,7 +8188,7 @@ height: 27px;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:choosePlatform]@L]</h2>
               </div>
             </div>
           </div>
@@ -8965,8 +8200,8 @@ height: 27px;
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-cpanel-linux.png" alt=""/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle2]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/hosting/web-hosting-rebrand:linuxPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItem]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:cPanelListItemDesc]@L]</div>
@@ -8982,8 +8217,8 @@ height: 27px;
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-Windows8.png" alt=""/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle2]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlan]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="include-check-black"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPlesk]@L]</strong> </br> [@L[cds.sales/hosting/web-hosting-rebrand:windowsPlanPleskDesc]@L]</div>
@@ -9203,7 +8438,7 @@ height: 27px;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]</h2>
               </div>
             </div>
           </div>
@@ -9216,7 +8451,7 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
@@ -9233,7 +8468,7 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
@@ -9258,7 +8493,7 @@ height: 27px;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFind]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFind]@L]</h2>
               </div>
             </div>
           </div>
@@ -9271,7 +8506,7 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
@@ -9288,7 +8523,7 @@ height: 27px;
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
                     <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
                   </div>
-                  <h2>[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
@@ -9616,10 +8851,10 @@ height: 27px;
       function disclaimersModal() {
         $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
       }
-      $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
-          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
+      $("#alternate-products").find(".col-md-offset-2").hover(function(){
+          $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
       }, function() {
-          $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+          $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
       });
       ##if(activeLanguageAny([en-us]))
         var loadReviews = function(){

@@ -142,35 +142,6 @@ if (!Array.prototype.indexOf){
   };
 }
 
-/* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-
-var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-    $fluidEl = $("body"); /*The element that is fluid width*/
-
-// Figure out and save aspect ratio for each video
-$allVideos.each(function() {
-  $(this)
-    .data('aspectRatio', this.height / this.width)
-    // and remove the hard coded width/height
-    .removeAttr('height')
-    .removeAttr('width');
-});
-
-// When the window is resized
-$(window).resize(function() {
-  var newWidth = $fluidEl.width();
-  // Resize all videos according to their own aspect ratio
-  $allVideos.each(function() {
-    var $el = $(this);
-    $el
-      .width(newWidth)
-      .height(newWidth * $el.data('aspectRatio'));
-  });
-// Kick off one resize to fix all videos on page load
-}).resize();
-/* end import */
-
-
 var got1Page = {
   tldInfo: {
     defaultTld: 'com', 
@@ -181,7 +152,7 @@ var got1Page = {
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
-  lastSpinResultCount: 0,
+  totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
@@ -280,30 +251,27 @@ $(document).ready(function() {
   }
 
   //- set up domain search buttons to do a domain search
-  $('#marquee')
-    .on('keyup', '.search-form-input', function(e) { 
-      
-      if ( e.which == 13 ) {
-        // enter key!
-        e.preventDefault();
-        $('#marquee').find('.offer-search-btn').trigger('click');
-        return false;
-      } else {
-        // verify domain name has a good tld
-        var domain = $(e.target).val();
-        if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-          displayInvlidTldMessage();
-        } else {
-          showTypeYourDomain();
-        }
-      }
-
-    })
-    .on('click', '.offer-search-btn', function(e) {
+  $( "#marquee").keypress(function(e) {
+    if ( e.which == 13 ) {
+      // enter key!
       e.preventDefault();
-      domainSearchFormSubmit(e);
+      $('#marquee').find('.offer-search-btn').trigger('click');
       return false;
-    });
+    } else {
+      // verify domain name has a good tld
+      var domain = $(e.target).val();
+      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+        displayInvlidTldMessage();
+      } else {
+        showTypeYourDomain();
+      }
+    }
+  })
+  .on('click', '.offer-search-btn', function(e) {
+    e.preventDefault();
+    domainSearchFormSubmit(e);
+    return false;
+  });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -414,14 +382,7 @@ function wireupModals() {
     });
   }
 
-  $('#wsb-video-btn, #wsb-only-video-btn').on('click', function(){
-    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
-  });
-
   if(got1Page.canOfferOls) {
-    $('#ols-video-btn').on('click', function(){      
-      $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, buttons: []});
-    });
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
@@ -484,7 +445,7 @@ function domainSearchFormSubmit(e) {
   $('#marquee').find('.search-form-input').val(''); 
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
   apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
 
   $.ajaxSetup({cache:false});
@@ -552,8 +513,8 @@ function verifyDomainIsStillAvailable(e) {
   $thisParent.find('.checking-availability').show();
 
   apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
-  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
-  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + domain.Extension);
+  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + encodeURIComponent(domain.NameWithoutExtension));
+  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + encodeURIComponent(domain.Extension));
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -618,7 +579,7 @@ function goToDppCheckoutPage(e) {
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
-  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
@@ -650,11 +611,11 @@ function showSearchSpins($this, domain, alternateDomains){
   // setup search box  
   showTypeYourDomain();
 
-  displayMoreResultsLinks();
+  displayMoreResultsLinks(alternateDomains.length);
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-  lastSpinResultCount =  0;
+  totalSpinResults =  0;
   var $spinResults = $('#spin-results');
   var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
@@ -665,8 +626,15 @@ function showSearchSpins($this, domain, alternateDomains){
     $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
-  got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  got1Page.totalSpinResults = alternateDomains.length;
+  
+  if(got1Page.totalSpinResults <= got1Page.maxNumberOfSpinsToShowByDefault) {
+    hideMoreResultsLinks();
+  } else {
+    updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  }
+  
+
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
@@ -716,18 +684,17 @@ function hideMoreResultsLinks() {
   $("#show-more-section").hide();
 }
 
-function displayMoreResultsArea () {
+function displayMoreResultsArea() {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(got1Page.lastSpinResultCount);
+  updateDomainCountText(got1Page.totalSpinResults);
 }
 
-function updateDomainCountText(currentlyShown) {
-
+function updateDomainCountText(numberShowing) {
   var $spinCounts = $('#spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
-  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
-  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.totalSpinResults);
   $spinCounts.html(templateHtml);
 }
 
@@ -1200,7 +1167,7 @@ h
     padding: 10px 20px;
     text-transform: uppercase;
     line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
     background-size: cover;
     overflow: visible;
 }
@@ -1333,7 +1300,7 @@ h
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]/fos/liveperson/js/liveperson_20150115.min.js')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
       
     </script>
     <!-- Google Tag Manager-->
@@ -1353,6 +1320,7 @@ h
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+    
     <atlantis:webstash type="css">
       <style>
         #marquee {
@@ -1499,7 +1467,7 @@ h
           .main-marquee .logo-wrapper .office-365 { line-height: 1; font-size: 0.5em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
           @media (min-width: 992px) { 
             .main-marquee .header-text .get-online { font-size: 5em; }
-            .main-marquee .logo-wrapper  { margin-top: 0; }
+            .main-marquee .logo-wrapper  { margin-top: 42px; }
             .main-marquee .logo-wrapper .icon { min-height: 140px; }
             .main-marquee .logo-wrapper .plus { font-size: 6em; padding-top: 60px; }
             }
@@ -1686,7 +1654,7 @@ h
                 <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name"> </span></h2>
               </div>
               <div class="col-md-4 col-sm-12 get-it-now-btn">
-                <button class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
+                <button data-ci="92733" class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
               </div>
             </div>
           </div>
@@ -1983,14 +1951,12 @@ h
         #products {padding-bottom:40px;}
         #products.key-benefits-wrap h2.products-title-text {
           color:#333;
-          font-family: "Walsheim-Bold";
           font-size: 40px;
         }
         #products.key-benefits-wrap div.features-text {color:#333;}
         
         #products.key-benefits-wrap h3.key-benefits-title {
           color:#333;
-          font-family: "Walsheim-Regular";
           font-size: 30px;
         }
         
@@ -2088,12 +2054,12 @@ h
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <h2 class="products-title-text">[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
+            <h2 class="h0 products-title-text">[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
@@ -2101,16 +2067,20 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
+              ##if(productIsOffered(105))
+               
               <div class="include-check-none"><strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong></div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>          
+              ##endif
+               
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-pro-email-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
@@ -2184,7 +2154,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2193,7 +2162,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2215,8 +2184,8 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
                 <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div></div>
               </div>
             </div>
@@ -2271,7 +2240,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2280,7 +2248,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2302,8 +2270,8 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2>[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
-                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
                 <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div></div>
               </div>
             </div>
@@ -2381,7 +2349,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2390,7 +2357,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2412,7 +2379,7 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2>[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
                 <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
               </div>
             </div>
@@ -2422,16 +2389,16 @@ h
     </section>
     <atlantis:webstash type="css">
       <style>
-        #site-choice-compare h2,
-        #site-choice-compare h3,
-        #wsb-only-choice h2,
-        #wsb-only-choice h3  {
-          color: #232323!important;
+        #site-choice .disclaimer-mark .headline-primary,
+        #wsb-only-choice .disclaimer-mark .headline-primary{
+          text-transform: none;
         }
         
-        #site-choice-compare .disclaimer-mark div.headline-primary,
-        #wsb-only-choice .disclaimer-mark div.headline-primary {
-          color: #333;
+        #site-choice-compare div.disclaimer-mark div.headline-primary,
+        #wsb-only-choice div.disclaimer-mark div.headline-primary,
+        #site-choice-compare div.disclaimer-mark p.disclaimer,
+        #wsb-only-choice div.disclaimer-mark p.disclaimer {
+          color: #232323;
         }
         
         #site-choice-compare .button-margin,    
@@ -2472,6 +2439,7 @@ h
         #site-choice ul.check-bullets li h5,
         #wsb-only-choice ul.check-bullets li h5  {
           margin-bottom: 5px;
+          color: #232323;
         }
         
         
@@ -2529,11 +2497,11 @@ h
      
     <section id="wsb-only-choice" class="bg-green-official-light">
       <div class="container">
-        <div class="row top-row text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+        <div class="row top-row text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
         </div>
         <div class="row text-center">     
-          <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
-          <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+          <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+          <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
         </div>
         <div class="row">  
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
@@ -2550,7 +2518,76 @@ h
         </div>
         <div class="row">
           <div class="col-sm-6 col-sm-push-3 button-margin">
-            <button id="wsb-only-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+             
+            ##if(activeLanguageAny(en))
+             
+            <atlantis:webstash type="js">
+              <script>
+                $(document).ready(function(){
+                  
+                  var $overlay = $("#site-choice-wsb-video-modal").find(".videoWrapperInModal");
+                
+                  // attach modal popup to click event
+                  $('#wsb-only-video-btn').on('click', function(){
+                    $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
+                    $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
+                  });
+                
+                  // close the overlay when iframe loads
+                  $("#site-choice-wsb-video-modal").find("iframe").load(function(){
+                    
+                    $overlay.sfMsgOverlay({ message: null });
+                  });
+                
+                });
+                
+              </script>
+            </atlantis:webstash>
+            <atlantis:webstash type="js">
+              <script>
+                $(document).ready(function(){
+                  /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+                  var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
+                      $fluidEl = $("body"); /*The element that is fluid width*/      
+                  $allVideos.each(function() {        
+                    // Figure out and save aspect ratio for each video
+                    // and remove the hard coded width/height
+                    $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
+                  });
+                  // When the window is resized
+                  $(window).resize(function() {
+                    var newWidth = $fluidEl.width();
+                    // Resize all videos according to their own aspect ratio
+                    $allVideos.each(function() {
+                      var $el = $(this);
+                      $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+                    });
+                  // Kick off one resize to fix all videos on page load
+                  }).resize();
+                });
+                
+              </script>
+            </atlantis:webstash>
+            <atlantis:webstash type="css">
+              <style>
+                .video-modal {display: none;}
+                .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+                .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+                img.video-play-icon {margin-right:10px;vertical-align:top;}
+                .video-modal-img-as-button {cursor: pointer;}
+                .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
+                .video-iframe-underlay  h2 {text-align:center;}
+                
+              </style>
+            </atlantis:webstash>
+            <button id="wsb-only-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+            <div id="site-choice-wsb-video-modal" class="sf-dialog video-modal got-video-modal">
+              <div class="videoWrapperInModal">
+                <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+              </div>
+            </div> 
+            ##endif
+             
           </div>
         </div>
         <div class="row">
@@ -2709,21 +2746,20 @@ h
 .two-up-wrap-compare h2 {
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
-  color: #333;
+  color: #232323;
 }
-.two-up-wrap-compare h3 {
+.two-up-wrap-compare h3.headline-primary {
   font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
+  text-transform: none;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
+  color: #232323;
 }
 .two-up-wrap-compare .white-text {
   color: #fff;
@@ -2827,13 +2863,12 @@ h
   }
 }
 
-.two-up-title {
+.two-up-title.h0 {
   margin: 40px 0;
   line-height: 1;
   font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   font-weight: 300;
+  color: #232323;
 }
 .two-up-speech-shape {
   font-family: 'Walsheim-Bold';
@@ -2910,7 +2945,7 @@ h
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
               </div>
             </div>
           </div>
@@ -2920,10 +2955,10 @@ h
             <div class="row">
               <div class="col-md-5 or-container col-sm-6  bg-green-official">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row text-center disclaimer-mark"> 
@@ -2939,12 +2974,56 @@ h
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                           
+                          ##if(activeLanguageAny(en))
+                           
+                          <atlantis:webstash type="js">
+                            <script>
+                              $(document).ready(function(){
+                                
+                                var $overlay = $("#site-choice-wsb-video-modal").find(".videoWrapperInModal");
+                              
+                                // attach modal popup to click event
+                                $('#wsb-video-btn').on('click', function(){
+                                  $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
+                                  $("#site-choice-wsb-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
+                                });
+                              
+                                // close the overlay when iframe loads
+                                $("#site-choice-wsb-video-modal").find("iframe").load(function(){
+                                  
+                                  $overlay.sfMsgOverlay({ message: null });
+                                });
+                              
+                              });
+                              
+                            </script>
+                          </atlantis:webstash>
+                          <atlantis:webstash type="css">
+                            <style>
+                              .video-modal {display: none;}
+                              .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+                              img.video-play-icon {margin-right:10px;vertical-align:top;}
+                              .video-modal-img-as-button {cursor: pointer;}
+                              .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
+                              .video-iframe-underlay  h2 {text-align:center;}
+                              
+                            </style>
+                          </atlantis:webstash>
+                          <button id="wsb-video-btn" data-ci="95270" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <div id="site-choice-wsb-video-modal" class="sf-dialog video-modal got-video-modal">
+                            <div class="videoWrapperInModal">
+                              <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                          </div> 
+                          ##endif
+                           
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="wsb-designs-btn" data-ci="95266" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
+                          <button id="wsb-designs-btn" data-ci="95816" data-toggle="modal" data-target="#g-modal" class="btn btn-md btn-block view-all btn-primary">[@L[cds.sales/offers/online-business:32573-view-designs-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -2980,10 +3059,10 @@ h
               </div>
               <div class="col-md-5 col-md-offset-2 col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
-                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+                  <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row text-center disclaimer-mark"> 
@@ -2999,12 +3078,56 @@ h
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                           
+                          ##if(activeLanguageAny(en))
+                           
+                          <atlantis:webstash type="js">
+                            <script>
+                              $(document).ready(function(){
+                                
+                                var $overlay = $("#site-choice-ols-video-modal").find(".videoWrapperInModal");
+                              
+                                // attach modal popup to click event
+                                $('#ols-video-btn').on('click', function(){
+                                  $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
+                                  $("#site-choice-ols-video-modal").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
+                                });
+                              
+                                // close the overlay when iframe loads
+                                $("#site-choice-ols-video-modal").find("iframe").load(function(){
+                                  
+                                  $overlay.sfMsgOverlay({ message: null });
+                                });
+                              
+                              });
+                              
+                            </script>
+                          </atlantis:webstash>
+                          <atlantis:webstash type="css">
+                            <style>
+                              .video-modal {display: none;}
+                              .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+                              .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+                              img.video-play-icon {margin-right:10px;vertical-align:top;}
+                              .video-modal-img-as-button {cursor: pointer;}
+                              .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
+                              .video-iframe-underlay  h2 {text-align:center;}
+                              
+                            </style>
+                          </atlantis:webstash>
+                          <button id="ols-video-btn" data-ci="95266" class="btn btn-md btn-block btn-primary"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" class="video-play-icon" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]</button>
+                          <div id="site-choice-ols-video-modal" class="sf-dialog video-modal got-video-modal">
+                            <div class="videoWrapperInModal">
+                              <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                          </div> 
+                          ##endif
+                           
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-sm-12 button-margin">
-                          <button id="ols-stores-btn" data-ci="95266" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
+                          <button id="ols-stores-btn" data-ci="95733" class="btn btn-md btn-block btn-primary">[@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]</button>
                         </div>
                       </div>
                       <div class="row">
@@ -3066,11 +3189,6 @@ h
     </section>
     <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
-    </div>
-    <div id="site-choice-ols-video-modal" class="sf-dialog got-video-modal">
-      <div class="videoWrapper">
-        <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
-      </div>
     </div>
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
@@ -3645,11 +3763,6 @@ top: -6px;
      
     <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
       <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
-    </div>
-    <div id="site-choice-wsb-video-modal" class="sf-dialog got-video-modal">
-      <div class="videoWrapper">
-        <iframe width="640" height="390" src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
-      </div>
     </div>
     <section><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -5843,7 +5956,7 @@ var PlanBox6UI = {
 </atlantis:webstash>
 
     </section>
-    <section id="disclaimers"> 
+    <section id="disclaimers" class="content-disclaimer disclaimers-section"> 
       <div class="disclaimers-row">
         <div class="container">
           <div class="row">

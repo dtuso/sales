@@ -10,7 +10,7 @@
  * 
  * 1. Simply add class "lazyload" to your div or image
  * 2. "data-lazyload-source" Add an attribute to define your source image 
- * 3. "data-lazyload-watch" Optionally add an attribute to define the region of the page that fires off loading of the actual image 
+ * 3. "data-lazyload-watch" Optionally add an attribute to define the region of the page that fires off loading of the actual image, if no watch is defined then it waits for the image itself to come into the viewport 
  * 4. "data-lazyload-callback" Optional callback that fires BEFORE the fade in
  * 5. "data-lazyload-callbackAfter" Optional callback that fires AFTER the fade in
  * 

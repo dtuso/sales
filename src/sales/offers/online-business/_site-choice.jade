@@ -1,16 +1,16 @@
 atlantis:webstash(type="css")
   style.
 
-    #site-choice-compare h2,
-    #site-choice-compare h3,
-    #wsb-only-choice h2,
-    #wsb-only-choice h3  {
-      color: #232323!important;
+    #site-choice .disclaimer-mark .headline-primary,
+    #wsb-only-choice .disclaimer-mark .headline-primary{
+      text-transform: none;
     }
 
-    #site-choice-compare .disclaimer-mark div.headline-primary,
-    #wsb-only-choice .disclaimer-mark div.headline-primary {
-      color: #333;
+    #site-choice-compare div.disclaimer-mark div.headline-primary,
+    #wsb-only-choice div.disclaimer-mark div.headline-primary,
+    #site-choice-compare div.disclaimer-mark p.disclaimer,
+    #wsb-only-choice div.disclaimer-mark p.disclaimer {
+      color: #232323;
     }
 
     #site-choice-compare .button-margin,    
@@ -51,6 +51,7 @@ atlantis:webstash(type="css")
     #site-choice ul.check-bullets li h5,
     #wsb-only-choice ul.check-bullets li h5  {
       margin-bottom: 5px;
+      color: #232323;
     }
 
 
@@ -110,8 +111,8 @@ section#wsb-only-choice.bg-green-official-light
     .row.top-row.text-center
         +lazyImg('', '', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png")
     .row.text-center      
-        h2(class="text-center") [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
-        h3(class="text-center") [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
+        h2.h0.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]
+        h3.headline-primary.text-center [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]
     .row   
       .col-sm-6.col-sm-push-3.text-center.disclaimer-mark 
         div.headline-primary(data-tokenize!='[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]') [@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] 
@@ -126,7 +127,22 @@ section#wsb-only-choice.bg-green-official-light
           | 
     .row
       .col-sm-6.col-sm-push-3.button-margin
-        button#wsb-only-video-btn.btn.btn-md.btn-block.btn-primary(data-ci="95266") <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+        | 
+        |##if(activeLanguageAny(en))
+        | 
+        +videoPlayerModalAll(
+          '-HtVJyxSQmw', 
+          'wsb-only-video-btn', 
+          '95270', 
+          '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png',
+          '', 
+          '[@L[cds.sales/offers/online-business:32573-watch-video-button]@L]', 
+          'btn-md btn-block btn-primary', 
+          'site-choice-wsb-video-modal', 
+          'got-video-modal')
+        | 
+        |##endif
+        | 
     .row
       .col-sm-6.col-sm-push-3.button-margin
         button#wsb-only-designs-btn.btn.btn-md.btn-block.view-all.btn-primary(data-ci="95266" data-toggle="modal" data-target="#g-modal") [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
@@ -180,11 +196,25 @@ section#site-choice
           | 
       .row
         .col-sm-12.button-margin
-          button#wsb-video-btn.btn.btn-md.btn-block.btn-primary(data-ci="95266") <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
-
+          | 
+          |##if(activeLanguageAny(en))
+          | 
+          +videoPlayerModalAll(
+            '-HtVJyxSQmw', 
+            'wsb-video-btn', 
+            '95270', 
+            '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png', 
+            '',
+            '[@L[cds.sales/offers/online-business:32573-watch-video-button]@L]', 
+            'btn-md btn-block btn-primary', 
+            'site-choice-wsb-video-modal', 
+            'got-video-modal')
+          | 
+          |##endif
+          | 
       .row
         .col-sm-12.button-margin
-          button#wsb-designs-btn.btn.btn-md.btn-block.view-all.btn-primary(data-ci="95266" data-toggle="modal" data-target="#g-modal") [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
+          button#wsb-designs-btn.btn.btn-md.btn-block.view-all.btn-primary(data-ci="95816" data-toggle="modal" data-target="#g-modal") [@L[cds.sales/offers/online-business:32573-view-designs-button]@L]
 
       .row
         .col-sm-12
@@ -223,10 +253,26 @@ section#site-choice
           | 
       .row
         .col-sm-12.button-margin
-          button#ols-video-btn.btn.btn-md.btn-block.btn-primary(data-ci="95266") <img class="video-play-icon" src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png" /> [@L[cds.sales/offers/online-business:32573-watch-video-button]@L]
+          | 
+          |##if(activeLanguageAny(en))
+          | 
+          +videoPlayerModalAll(
+            'rMF9d8-3WBA', 
+            'ols-video-btn', 
+            '95266', 
+            '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_play_icon_small.png',
+            '', 
+            '[@L[cds.sales/offers/online-business:32573-watch-video-button]@L]', 
+            'btn-md btn-block btn-primary', 
+            'site-choice-ols-video-modal', 
+            'got-video-modal')
+          | 
+          |##endif
+          | 
+
       .row
         .col-sm-12.button-margin
-          button#ols-stores-btn.btn.btn-md.btn-block.btn-primary(data-ci="95266") [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
+          button#ols-stores-btn.btn.btn-md.btn-block.btn-primary(data-ci="95733") [@L[cds.sales/offers/online-business:32573-see-real-stores-button]@L]
 
       .row
         .col-sm-12
@@ -263,10 +309,6 @@ section#site-choice
 #site-choice-ols-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
   p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]
 
-#site-choice-ols-video-modal.sf-dialog.got-video-modal
-  .videoWrapper
-    iframe(width="640", height="390", src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
-
 #site-choice-ols-stores-modal.sf-dialog
   include ./_modal_ols_stores.jade
 
@@ -277,9 +319,6 @@ section#site-choice
 #site-choice-wsb-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
   p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]
 
-#site-choice-wsb-video-modal.sf-dialog.got-video-modal
-  .videoWrapper
-    iframe(width="640", height="390", src="//www.youtube.com/embed/-HtVJyxSQmw?html5=1&rel=0&iv_load_policy=3&modestbranding=1",autoplay, scrolling="no", frameborder="0", allowfullscreen)
-
 section
   include ../../../templates/wsb-templates.html
+

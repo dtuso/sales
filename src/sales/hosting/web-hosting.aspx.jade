@@ -24,10 +24,10 @@ prepend endOfPageScripts
     function disclaimersModal() {
       $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
     }
-    $("#alternate-products").find(".col-md-offset-2").find("h2").hover(function(){
-        $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
+    $("#alternate-products").find(".col-md-offset-2").hover(function(){
+        $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrooow]@L]").fadeIn("slow");
     }, function() {
-        $(this).hide().text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
+        $("#alternate-products").find(".col-md-offset-2").find("h2").text("[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]").fadeIn("slow");
     });
     ##if(activeLanguageAny([en-us]))
       var loadReviews = function(){
@@ -92,6 +92,24 @@ prepend endOfPageScripts
 append pageStyles
   style
     include ./web-hosting/styles.css
+  style.
+    /* TODO: can this styling be abstracted into landing-page.jade? */
+    body { background-color: #d9d9d9; }
+    #marquee { 
+      background: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
+      padding-bottom: 120px;
+      margin-bottom: 0;
+      background-size: cover;
+    }
+    .plan-tile { 
+      margin-top: 0; 
+      margin-bottom: 0; 
+    }
+    .pro-plans { 
+      margin-top: -120px; 
+      padding-bottom: 20px; 
+      padding-top: 0; 
+    }
 
 block domainSearch
   // nothing to see here
@@ -104,48 +122,7 @@ block marquee
   |##if(activeLanguageAny([en-US]))
   | 
   section#marquee
-    style.
-      body { background-color: #d9d9d9; }
-      #marquee { background: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; padding-bottom: 120px;margin-bottom: 0;background-size: cover;}
-      .plan-tile { margin-top: 0; margin-bottom: 0; }
-      .pro-plans { margin-top: -120px; padding-bottom: 20px; padding-top: 0 !important; }
-      .dash { letter-spacing: -10px; font-size: 1.5em; line-height: 0.6; vertical-align: -0.1em; }
-      .marquee-content-wrapper { padding: 40px; margin-left: 10px; margin-right: 10px; background-color: rgba(0,0,0,0.8); color: white; }
-      .marquee { padding-top: 40px; padding-bottom: 40px; }
-      .marquee.marquee-white {
-          color: #fff;
-      }
-
-      .marquee.marquee-white h1,
-      .marquee.marquee-white h2,
-      .marquee.marquee-white h3,
-      .marquee.marquee-white h4,
-      .marquee.marquee-white h5,
-      .marquee.marquee-white h6 {
-          color: #fff;
-      }
-
-      .marquee.marquee-white .dashed-underline {
-          border-bottom-color: #fff;
-      }
-
-      .marquee.marquee-white a:not(.btn) {
-          color: #fff;
-          text-decoration: underline;
-      }
-
-      .marquee.marquee-white a:not(.btn):hover {
-          text-decoration: none;
-      }
-
-    .container.marquee.marquee-white
-      .row
-        .col-sm-7.marquee-content-wrapper
-          h1.h2.marquee-product-name [@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]
-          h2.h1.marquee-product-description Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.
-          .marquee-product-text [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] <u><strong>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L]</strong></u> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]
-          a.btn.btn-primary.jump-arrow-btn(href!="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]
-    //-include ./web-hosting/_marquee-en-us.jade
+    include ./web-hosting/_marquee.jade
 
 
   | 
