@@ -35,9 +35,7 @@ block endOfPageScripts
       };
     });
 
-  //-$ script(src="http://img2.wsimg.com/starfield/fos.share/v1.3/fos.share-20140213.min.js" id="fosShareScript")
-  script(type="text/javascript").
-    delayLoader.addScript("[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140213.min.js", { "id": "fosShareScript" });
+  script(src!="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript")
 
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
   script(type="text/javascript").
@@ -56,7 +54,7 @@ block endOfPageScripts
         qs[hash[0]] = hash[1];
       }
 
-      delayLoader.onDelayLoadComplete(function() {
+      window.setTimeout(function() {
         $('#shareme').fosShare({});
       }, 2000);
     });

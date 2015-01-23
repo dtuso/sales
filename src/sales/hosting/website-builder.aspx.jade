@@ -47,13 +47,13 @@ block plans
       +planTile
         include ./website-builder/plans/_plan-website-builder-unlimited.jade
         
-      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx' />]@T]", "slp_wst_3" )
+      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]", "slp_wst_3" )
   
 block sections  
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
-  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
+  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]",data-ciCode="87758")
     .templates-chart.bg-gray-light
       .container.templates-container
         .header-section.text-center
@@ -76,7 +76,7 @@ block sections
           | ##endif
           | 
           .headline-primary [@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]
-          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
         .templates-image-container  
           | 
           | ##if(countrySiteAny(ca))
@@ -128,10 +128,27 @@ block sections
               +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg")
 
     include ../../templates/wsb-templates.html
- 
-
-    +fullVideoModule({"icode":"code","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
-
+    |##if(activeLanguageAny(en))
+    | 
+    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+    | 
+    |##elseif(activeLanguageAny(es))
+    | 
+    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
+    | 
+    |##else
+    | 
+    style
+      include:css ../../templates/styles/full-video.css
+    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg', data-icode='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
+      .container.relative-position.video-info
+        .row
+          .col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
+            h3.h1 [@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]
+            span.cta [@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]
+    | 
+    |##endif
+    | 
 
     section#social-media
       | 
@@ -159,7 +176,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-us]))
   | 
-  section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]")
+  section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]",data-ciCode="87151")
     .container
       .row
         .col-sm-12
@@ -170,7 +187,7 @@ block sections
   |##endif
   | 
 
-  section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]")
+  section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]",data-ciCode="87759")
     +renderAccordion({id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
       h2.h1 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
@@ -197,7 +214,7 @@ block sections
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
-        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]',data-ci="88753") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
         | 
         |##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
         | 
@@ -210,13 +227,20 @@ block sections
         |##endif
         | 
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]',data-ci="88754") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
   | 
   |##endif
   | 
   section#disclaimers.disclaimers-section
     .container
       div
+        | 
+        |##if(splitTestingSideIsActive(1349, B))
+        | 
+        | 4
+        | 
+        |##endif
+        | 
         p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
           a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
@@ -257,6 +281,52 @@ block sections
 
 prepend endOfPageScripts
   script.
+   if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+      $('[data-ci]').click(function(e){
+          $this = $(this);
+          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+          fbiLibCheckQueue();
+      });
+    }
+    var wsb = {
+     tldInfo: {
+        tlds: []
+      }
+    };
+    ##if(countrySiteAny(ca) || isManager())  
+        wsb.tldInfo.tlds.push('ca');
+    ##endif
+    ##if(countrySiteAny(br) || isManager())
+        wsb.tldInfo.tlds.push('br');
+    ##endif
+    ##if(countrySiteAny(in) || isManager())
+        wsb.tldInfo.tlds.push('in');
+    ##endif
+    ##if(countrySiteAny(uk) || isManager())
+        wsb.tldInfo.tlds.push('uk');
+    ##endif
+
+    $(document).ready(function(){
+       showTldsInList('#disclaimers');
+
+    });
+
+    function showTldsInList(selector) {
+      var $this = $(selector),
+      formatTldSelector = function(tld) { return '.tlds-' + tld.replace('.','-')},
+      tldList = wsb.tldInfo.tlds,
+      removedSpansArr = [];
+
+      //- remove all dynamic tlds from this
+      $.each(tldList, function(idx, tld){
+        var $tldItem = $this.find(formatTldSelector(tld));
+        removedSpansArr.push($tldItem);
+      });
+      $.each(removedSpansArr, function(idx, tldSpan) {
+          //- show  list
+        $(tldSpan.selector).show();
+      });
+    }
     ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
     $(document).ready(function(){
       $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");

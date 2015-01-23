@@ -70,62 +70,14 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       script        
         include ./js/jquery.lazyload.2.0.0.min.js
       script.
-        var head = (typeof document.head !== 'undefined' ? document.head : document.getElementsByTagName('head')[0]);
-        var insertBefore = head.insertBefore;
-        var delayLoader = (function(headNode) {
-          var elements = [];
-          var fnOnDelayLoadComplete = [];
-
-          function addElement(element) {
-            elements.unshift(element);  // Insert in the order received
-          }
-
-          return {
-            addElement: function(element) {
-              addElement(element);
-            },
-            addScript: function(url, params) {
-              params = params || {};
-
-              var script = document.createElement('script');
-              script.type = 'text/javascript';
-              script.src = url;
-              script.async = true;
-              if (typeof params.id !== 'undefined') {
-                script.id = params.id;
-              }
-              addElement(script);
-              for (var i = 0; i < fnOnDelayLoadComplete.length; i++) {
-                fnOnDelayLoadComplete[i]();
-              }
-            },
-            onDelayLoadComplete: function(callback) {
-              fnOnDelayLoadComplete.unshift(callback);
-            },
-            load: function() {
-              for (var i = 0; i < elements.length; i++) {
-                insertBefore.call(headNode, elements[i], headNode.firstChild);
-              }
-              head.insertBefore = insertBefore;
-            }
-          };
-        })(head);
-
-        var oldOnload = window.onload;
-        window.onload = function() {
-          delayLoader.load();
-          if (oldOnload) {
-            oldOnload();
-          }
-        };
-
-        head.insertBefore = function (newElement, referenceElement) {
-          if (newElement.tagName === 'SCRIPT') {
-            delayLoader.addElement(newElement);
-          } else {
-            insertBefore.call(head, newElement, referenceElement);
-          }
-        };
+        function loadJsAsync(sourceUrl, id) {
+           var js, fjs = document.getElementsByTagName('script')[0];
+           if (document.getElementById(id)) {return;}
+           js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
+           js.id = id;
+           js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+           fjs.parentNode.insertBefore(js, fjs);
+        }
 
         function endOfPageScripts() {
 
@@ -172,44 +124,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- if an inherited page does not want any of these JS files delay loaded, 
     //- the delayed load can be overridden by appending the JS file to the headScripts block
     script(type='text/javascript').
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
-
-    //- TODO: does PC load this?
-    // Google Tag Manager
-    //-
-      noscript
-        iframe(src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden")
-      script(type="text/javascript").
-        var _gaDataLayer = _gaDataLayer || [];
-        _gaDataLayer.push({ 'shopperId': '#{requestContext.shopperId}' });
-        _gaDataLayer.push({ 'privateLabelId': '#{requestContext.plId}' });
-        _gaDataLayer.push({ 'isc': '#{page.isc}' });
-        _gaDataLayer.push({ 'segmentId': '#{requestContext.segmentId}' });
-        _gaDataLayer.push({ 'status': '200' });
-        _gaDataLayer.push({ 'tcc.status': 'on' });
-        var _gaq = _gaq || [];
-        _gaq.push(['_setDomainName', '#{requestContext.domainName}']);
-
-        (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; delayLoader.addElement(j); })(window, document, 'script', '_gaDataLayer', 'GTM-SXRF');
-      
-      if requestContext.splitTestTrackingData
-        script(type="text/javascript").
-          _gaDataLayer.push({ 'splits': '#{requestContext.splitTestTrackingData}' });
-    // End Google Tag Manager
-
-    //- TODO: do we need this script section?
-    script(type="text/javascript").
-      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
-      (function (a, b, c, d) {
-      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
-      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
-      delayLoader.addElement(d);
-      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
-      })();
-
-    //- TODO: where to load bigtext?
-    //-script(type="text/javascript", src="https://img1.wsimg.com/fos/hp/rebrand/js/bigtext.min.js")
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
 
     //- inherited pages should attempt to use the correct head block for adding head content
     //- however, if the content doesn't fit logically into those, the "head" block can be used

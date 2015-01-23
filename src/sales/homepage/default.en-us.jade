@@ -1,11 +1,11 @@
 extends ./_home-page.jade
 
 block hero  
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" />]@P]
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
-  include ./tiles/marquee-com-tld-sale-tile.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block marquee-tile2
-  include ./tiles/marquee-tile-gtld.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="2" />]@P]
 block merch-tile1
   include ./tiles/get-found.jade
 block merch-tile2
@@ -19,6 +19,4 @@ block prepend sections
   include ./sections/_why-godaddy.jade
   include ./sections/_website-promo.jade
   include ./sections/_o365-promo.jade
-  include ./sections/_new-customers-promo.jade
   include ./sections/_support-promo.jade
-  include ./sections/_puppy-nascar-promo.jade

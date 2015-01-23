@@ -36,11 +36,11 @@ block vars
   - checkFeatures = "";
   - disclaimer = "";
   - pfid = "";
+  - ci = "";
   - packageids = "";
   - promocode = "";
   - defaultPlan = "";
   - flagText = "";
-  - tcode = "";
   - listID = "";
   - buttonid = "";
   - buttonText = "";
@@ -126,13 +126,13 @@ block vars
 
   block button
     if (buttonText && buttonUrl)
-      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-tcode!=tcode data-index="1") !{buttonText}
+      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-ci!=ci data-index="1") !{buttonText}
     else if(buttonText && showDropDownList )
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}",data-ul="#{listID}") !{buttonText}
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}",data-ul="#{listID}") !{buttonText}
     else if (buttonText && !showDropDownList && defaultPlan && buttonid)
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(id=buttonid ,data-tcode="#{tcode}",data-plan="#{defaultPlan}") !{buttonText}
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(id=buttonid ,data-ci="#{ci}",data-plan="#{defaultPlan}") !{buttonText}
     else
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-tcode="#{tcode}") No Action
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}") No Action
 
   block features
     //- Feature list

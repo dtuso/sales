@@ -29,6 +29,10 @@
 .gtld-marquee-tile li:hover {
   color: #00a55e;
 }
+.Explorer8 .gtld-marquee-tile,
+.Explorer7 .gtld-marquee-tile {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
+}
 
 </style>
 <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
@@ -49,7 +53,7 @@
                 <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
                 <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
                 <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
-                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
+                <li data-url="[@T[link:<relative path='/tlds/email'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
               </ul>
             </div>
           </div>
