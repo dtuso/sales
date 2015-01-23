@@ -34,6 +34,8 @@ GoDaddy is&hellip;
 <phrase key="NewsCenterAbout-11-TheWorldSLargestDomainNameRegistrarAndWeb" />
 The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
+<strong>58 million domains</strong><br /> under management
+<phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement_35279" />
 <strong>59 million domains</strong><br /> under management
 <phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
 <strong>12 million<br />customers</strong>
@@ -537,6 +539,8 @@ There was an problem sending your message.
 <phrase key="captchaInvalidCode" />
 Invalid Code Entered
 <phrase key="NewsCenterAbout-Domains" />
+58
+<phrase key="NewsCenterAbout-Domains_35279" />
 59
 <phrase key="NewsCenterAbout-Customers" />
 12
