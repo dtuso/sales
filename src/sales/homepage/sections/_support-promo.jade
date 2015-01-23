@@ -18,9 +18,9 @@ section#support-promo
     .row
       .col-xs-6.text-center
         <!--[if lt IE 9]>
-        +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
+        +lazyImg('support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
         <![endif]-->
-        +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
+        +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
       .col-xs-6
         .support-promo-text.text-white
           h3.walsheim-black Award-Winning<br />24/7 Support
@@ -28,6 +28,6 @@ section#support-promo
           .container
             .row
               .col-md-4.col-xs-12
-                a.btn.btn-default-light Learn More
+                a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") Learn More
               .col-md-8.col-xs-12
                 .support-promo-number.walsheim-medium [@T[supportphone:<technical />]@T]
