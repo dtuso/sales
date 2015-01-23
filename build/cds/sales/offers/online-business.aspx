@@ -1941,14 +1941,12 @@ h
         #products {padding-bottom:40px;}
         #products.key-benefits-wrap h2.products-title-text {
           color:#333;
-          font-family: "Walsheim-Bold";
           font-size: 40px;
         }
         #products.key-benefits-wrap div.features-text {color:#333;}
         
         #products.key-benefits-wrap h3.key-benefits-title {
           color:#333;
-          font-family: "Walsheim-Regular";
           font-size: 30px;
         }
         
@@ -2046,12 +2044,12 @@ h
       <div class="container">
         <div class="row">
           <div class="col-sm-12 text-center">
-            <h2 class="products-title-text">[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
+            <h2 class="h0 products-title-text">[@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
@@ -2059,7 +2057,7 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
@@ -2072,7 +2070,7 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
+            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-pro-email-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
@@ -2146,7 +2144,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2155,7 +2152,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2177,8 +2174,8 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
                 <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div></div>
               </div>
             </div>
@@ -2233,7 +2230,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2242,7 +2238,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2264,8 +2260,8 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2>[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
-                <h4 class="features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
                 <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div></div>
               </div>
             </div>
@@ -2343,7 +2339,6 @@ h
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
-            font-family: 'Walsheim-Black';
             margin: 0 0 20px;
             color: #333;
             font-size: 40px;
@@ -2352,7 +2347,7 @@ h
             color: #fff !important;
           }
           .features .features-subtitle {
-            font-family: 'Walsheim-Bold';
+            text-transform: none; /* override headline-primary */
             margin-top: 20px;
           }
           .features .features-text {
@@ -2374,7 +2369,7 @@ h
             </div>
             <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2>[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
                 <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
               </div>
             </div>
@@ -2384,16 +2379,16 @@ h
     </section>
     <atlantis:webstash type="css">
       <style>
-        #site-choice-compare h2,
-        #site-choice-compare h3,
-        #wsb-only-choice h2,
-        #wsb-only-choice h3  {
-          color: #232323!important;
+        #site-choice .disclaimer-mark .headline-primary,
+        #wsb-only-choice .disclaimer-mark .headline-primary{
+          text-transform: none;
         }
         
-        #site-choice-compare .disclaimer-mark div.headline-primary,
-        #wsb-only-choice .disclaimer-mark div.headline-primary {
-          color: #333;
+        #site-choice-compare div.disclaimer-mark div.headline-primary,
+        #wsb-only-choice div.disclaimer-mark div.headline-primary,
+        #site-choice-compare div.disclaimer-mark p.disclaimer,
+        #wsb-only-choice div.disclaimer-mark p.disclaimer {
+          color: #232323;
         }
         
         #site-choice-compare .button-margin,    
@@ -2434,6 +2429,7 @@ h
         #site-choice ul.check-bullets li h5,
         #wsb-only-choice ul.check-bullets li h5  {
           margin-bottom: 5px;
+          color: #232323;
         }
         
         
@@ -2494,8 +2490,8 @@ h
         <div class="row top-row text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_wsb_icon_large_feature.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
         </div>
         <div class="row text-center">     
-          <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
-          <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+          <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+          <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
         </div>
         <div class="row">  
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
@@ -2740,21 +2736,20 @@ h
 .two-up-wrap-compare h2 {
   font-size: 4rem;
   text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
-  color: #333;
+  color: #232323;
 }
-.two-up-wrap-compare h3 {
+.two-up-wrap-compare h3.headline-primary {
   font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
+  text-transform: none;
   margin-top: 20px;
   margin-bottom: 10px;
   font-weight: 300;
   line-height: 1.1;
+  color: #232323;
 }
 .two-up-wrap-compare .white-text {
   color: #fff;
@@ -2858,13 +2853,12 @@ h
   }
 }
 
-.two-up-title {
+.two-up-title.h0 {
   margin: 40px 0;
   line-height: 1;
   font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
   font-weight: 300;
+  color: #232323;
 }
 .two-up-speech-shape {
   font-family: 'Walsheim-Bold';
@@ -2941,7 +2935,7 @@ h
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/offers/online-business:32573-which-sites-right-for-you]@L]</h2>
               </div>
             </div>
           </div>
@@ -2953,8 +2947,8 @@ h
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-wsb-icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row text-center disclaimer-mark"> 
@@ -3057,8 +3051,8 @@ h
                 <div style="" class="two-up-text-wrap ">
                   <div class="text-center two-up-image"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-onlineStore.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
                   </div>
-                  <h2 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
-                  <h3 class="text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
+                  <h2 class="h0 text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols]@L]</h2>
+                  <h3 class="headline-primary text-center">[@L[cds.sales/offers/online-business:32573-godaddy-ols-text]@L]</h3>
                   <div class="row">
                     <div class="col-sm-12">
                       <div class="row text-center disclaimer-mark"> 
