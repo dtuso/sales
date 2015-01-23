@@ -875,7 +875,7 @@ h2.marquee-product-name,
 }
   </style>
   <style>
-    .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee.jpg) no-repeat top center;); }
+    .marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center;); }
     
   </style>
   <style>.marquee { background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg) no-repeat top center;); }</style>
