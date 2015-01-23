@@ -93,6 +93,9 @@ append pageStyles
   style
     include ./web-hosting/styles.css
   style.
+    #speed-chart, #features, #reviews, #faq, #disclaimers { background-color: #fff; }
+    #plans { padding-bottom: 40px; }
+
     /* TODO: can this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
     #marquee { 
@@ -101,6 +104,69 @@ append pageStyles
       margin-bottom: 0;
       background-size: cover;
     }
+
+    /* latam */
+    html[lang="es-ar"] #marquee,
+    html[lang="pt-br"] #marquee,
+    html[lang="es-cl"] #marquee,
+    html[lang="es-co"] #marquee,
+    html[lang="es-mx"] #marquee,
+    html[lang="es-pe"] #marquee,
+    html[lang="es-ve"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_lam_host.jpg);
+    }
+
+    /* general */
+    html[lang="en-us"] #marquee,
+    html[lang="es-us"] #marquee,
+    html[lang="en-au"] #marquee,
+    html[lang="en-ca"] #marquee,
+    html[lang="en-nz"] #marquee,
+    html[lang="fr-be"] #marquee,
+    html[lang="fr-ca"] #marquee {
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);
+    }
+
+    /* asia */
+    html[lang="en-my"] #marquee,
+    html[lang="en-ph"] #marquee,
+    html[lang="en-sg"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_asia_host.jpg);
+    }
+
+    /* in-pk */
+    html[lang="en-in"] #marquee,
+    html[lang="en-pk"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_in-pk_host.jpg);
+    }
+
+    /* emea */
+    html[lang="nl-be"] #marquee,
+    html[lang="da-dk"] #marquee,
+    html[lang="de-de"] #marquee,
+    html[lang="es-es"] #marquee,
+    html[lang="fr-fr"] #marquee,
+    html[lang="en-ie"] #marquee,
+    html[lang="it-it"] #marquee,
+    html[lang="nb-no"] #marquee,
+    html[lang="nl-nl"] #marquee,
+    html[lang="de-at"] #marquee,
+    html[lang="pl-pl"] #marquee,
+    html[lang="pt-pt"] #marquee,
+    html[lang="fr-ch"] #marquee,
+    html[lang="it-ch"] #marquee,
+    html[lang="de-ch"] #marquee,
+    html[lang="en-za"] #marquee,
+    html[lang="fi-fi"] #marquee,
+    html[lang="sv-se"] #marquee,
+    html[lang="tr-tr"] #marquee,
+    html[lang="en-gb"] #marquee,
+    html[lang="el-gr"] #marquee,
+    html[lang="ru-ru"] #marquee,
+    html[lang="uk-ua"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_emea_host.jpg);
+    }
+
     .plan-tile { 
       margin-top: 0; 
       margin-bottom: 0; 
@@ -111,49 +177,27 @@ append pageStyles
       padding-top: 0; 
     }
 
+    .pro-banner { color: #fff; }
+
 block domainSearch
-  // nothing to see here
+  //- nothing to see here
   //- override the landing-page.jade with a blank section
 
-block marquee
-  append vars
-    -lightText = false;
+block marqueeContent
   | 
   |##if(activeLanguageAny([en-US]))
   | 
-  section#marquee
-    include ./web-hosting/_marquee.jade
-
-
-  | 
-  |##elseif(countrySiteAny(ar,br,cl,co,mx,pe,ve))
-  | 
-  section#marquee 
-    include ./web-hosting/_marquee-lam.jade
-  | 
-  |##elseif(countrySiteAny(be,dk,de,es,fr,ie,it,nl,no,at,pl,pt,ch,za,fi,se,tr,uk,gr,ru,ua))
-  | 
-  section#marquee 
-    include ./web-hosting/_marquee-emea.jade
-  | 
-  |##elseif(countrySiteAny(in,pk))
-  | 
-  append vars
-    -lightText = true;
-  section#marquee 
-    include ./web-hosting/_marquee-inpk.jade
-  | 
-  |##elseif(countrySiteAny(my,ph,sg))
-  | 
-  section#marquee 
-    include ./web-hosting/_marquee-asia.jade
+  h1.marquee-product-name [@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]
+  h2.marquee-product-description Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.
+  .marquee-product-text [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1Rebrand]@L] <u><strong>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2Rebrand]@L]</strong></u> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText3Rebrand]@L]
+  a.btn.btn-default-light.jump-arrow-btn(href!="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]
   | 
   |##else
   | 
-  append vars
-    -lightText = false;
-  section#marquee 
-    include ./web-hosting/_marquee.jade
+  h1.marquee-product-name [@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]
+  h2.marquee-product-description [@L[cds.sales/hosting/web-hosting-rebrand:marquee]@L]
+  .marquee-product-text <span class='sf-tip sf-tipper-target underline' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeDisclaimer]@L]'>[@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText1]@L]</span> [@L[cds.sales/hosting/web-hosting-rebrand:guaranteeText2]@L]
+  a.btn.btn-default-light.jump-arrow-btn(href!="[@T[link:<relative path='~/hosting/web-hosting-config-new.aspx' secure='true'><param name='ci' value='89262' /><param name='plan' value='host_GridHostEcoDiabloLin1Yr_us' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:getstarted]@L]
   | 
   |##endif
   | 
@@ -201,11 +245,11 @@ block plans
           | 
           | ##if(activeLanguageAny([en-US]))
           | 
-          h2.h1.text-center [@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]
+          h2.text-center(style="padding-top: 50px;") [@L[cds.sales/hosting/web-hosting-rebrand:theresMoreRebrand]@L]
           | 
           | ##endif
           | 
-          h3.h2.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
+          h3.text-center [@L[cds.sales/hosting/web-hosting-rebrand:allPlans]@L]
       .row
         .col-sm-4
           ul.green-check

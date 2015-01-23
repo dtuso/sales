@@ -783,7 +783,30 @@ $(window).load(function () {
 
       </script>
       <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
-    </atlantis:webstash>
+    </atlantis:webstash><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
+      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
+      
+    </script>
+    <!-- Google Tag Manager-->
+    <!-- End Google Tag Manager-->
+    <script type="text/javascript">
+      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
+      (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
+      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
+      delayLoader.addElement(d);
+      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+      })();
+      
+    </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-controller="" ng-cloak>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -793,22 +816,98 @@ $(window).load(function () {
       ul li.no-check { background-image: none !important; }
       
     </style>
-    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <style>
-
-##if(countrySiteAny(gr))
-* {
-  font-family: arial !important;
-}
-.close {
-  font-family: uxfont !important;
-}
-.uxicon {
-  font-family: uxfont !important;
-}
-##endif
-
-
+      /* fix the greek font styling issue here */
+      ##if(countrySiteAny(gr))
+      * {
+        font-family: arial !important;
+      }
+      .close {
+        font-family: uxfont !important;
+      }
+      .uxicon {
+        font-family: uxfont !important;
+      }
+      ##endif
+      
+      /* override UXCORE font settings for all LPs */
+      h2 {
+        margin-bottom: 40px;
+        margin-top: 0;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-family: 'Walsheim-Black';
+        font-weight: 300;
+        line-height: 1.1;
+        color: #333;
+      }
+      h3 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: 'Walsheim-Black';
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+      
+      /* default LP marquee styling */
+      .dash { 
+        letter-spacing: -10px; 
+        font-size: 1.5em; 
+        line-height: 0.6; 
+        vertical-align: -0.1em; 
+      }
+      .marquee-content-wrapper { 
+        padding: 40px; 
+        margin-left: 10px; 
+        margin-right: 10px; 
+        background-color: rgba(0,138,50,0.9); 
+        color: white; 
+      }
+      .marquee { 
+        padding-top: 40px; 
+        padding-bottom: 40px; 
+      }
+      .marquee.marquee-white {
+          color: #fff;
+      }
+      .marquee.marquee-white h1,
+      .marquee.marquee-white h2,
+      .marquee.marquee-white h3,
+      .marquee.marquee-white h4,
+      .marquee.marquee-white h5,
+      .marquee.marquee-white h6 {
+          color: #fff;
+      }
+      .marquee.marquee-white .dashed-underline {
+          border-bottom-color: #fff;
+      }
+      .marquee.marquee-white a:not(.btn) {
+          color: #fff;
+          text-decoration: underline;
+      }
+      .marquee.marquee-white a:not(.btn):hover {
+          text-decoration: none;
+      }
+      .marquee .jump-arrow-btn { margin-top:30px;}
+      .marquee h1 { 
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #ef6c0f;
+        font-family: 'Walsheim-Bold';
+        margin-bottom: 10px;
+        margin-top:0;
+      }
+      .marquee h2 { 
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.1;
+        margin-top:0;
+        margin-bottom: 20px;
+        font-family: 'Walsheim-Bold';
+      }
+      
     </style>
     <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -1287,36 +1386,26 @@ h
 }
 
 .pro-plans .sf-tipper-target {
-  background-image: url(https://img1.wsimg-com.ide/fos/mike/img/hosting/img-tootip-.png);
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
   width: 14px;
   height: 14px;
   display: inline-block;
   vertical-align: baseline;
   cursor: pointer;
 }
-    </style><!--[if lt IE 9]>
-    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
-    <script type="text/javascript">
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2')
-      delayLoader.addScript('[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js')
-      
-    </script>
-    <!-- Google Tag Manager-->
-    <!-- End Google Tag Manager-->
-    <script type="text/javascript">
-      var utag_data = { source_code:"gtnila43",pl_id:"1",app_name:"desktop.sales",authenticated:"false",page_type:"home_page" };
-      (function (a, b, c, d) {
-      a = '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js';
-      b = document; c = 'script'; d = b.createElement(c); d.src = a; d.type = 'text/java' + c; d.async = true;
-      delayLoader.addElement(d);
-      //$ a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
-      })();
-      
-    </script>
-  </head>
-  <body ng-controller="" ng-cloak>
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
+}
+    </style>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
