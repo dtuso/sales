@@ -76,7 +76,7 @@ block sections
           | ##endif
           | 
           .headline-primary [@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]
-          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
         .templates-image-container  
           | 
           | ##if(countrySiteAny(ca))
@@ -130,7 +130,7 @@ block sections
     include ../../templates/wsb-templates.html
  
 
-    +fullVideoModule({"icode":"code","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
 
 
     section#social-media
@@ -257,6 +257,45 @@ block sections
 
 prepend endOfPageScripts
   script.
+    var wsb = {
+     tldInfo: {
+        tlds: []
+      }
+    };
+    ##if(countrySiteAny(ca) || isManager())  
+        wsb.tldInfo.tlds.push('ca');
+    ##endif
+    ##if(countrySiteAny(br) || isManager())
+        wsb.tldInfo.tlds.push('br');
+    ##endif
+    ##if(countrySiteAny(in) || isManager())
+        wsb.tldInfo.tlds.push('in');
+    ##endif
+    ##if(countrySiteAny(uk) || isManager())
+        wsb.tldInfo.tlds.push('uk');
+    ##endif
+
+    $(document).ready(function(){
+       showTldsInList('#disclaimers');
+
+    });
+
+    function showTldsInList(selector) {
+      var $this = $(selector),
+      formatTldSelector = function(tld) { return '.tlds-' + tld.replace('.','-')},
+      tldList = wsb.tldInfo.tlds,
+      removedSpansArr = [];
+
+      //- remove all dynamic tlds from this
+      $.each(tldList, function(idx, tld){
+        var $tldItem = $this.find(formatTldSelector(tld));
+        removedSpansArr.push($tldItem);
+      });
+      $.each(removedSpansArr, function(idx, tldSpan) {
+          //- show  list
+        $(tldSpan.selector).show();
+      });
+    }
     ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
     $(document).ready(function(){
       $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
