@@ -5274,12 +5274,13 @@ font-size: 2.4rem;
 margin-bottom: 10px;
 font-family: 'Walsheim-Bold';
 line-height: 1.1;
+margin-top: 15px;
 }
 .features-two-up .feature-row-text {
 margin-bottom: 20px;
 }
                     </style>
-                    <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-computer-illustration.png);" data-lazy-load="" class="features-two-up   ">
+                    <div style="background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png);" data-lazy-load="" class="features-two-up   ">
                       <div class="container">
                         <div class="row">
                           <div class="col-sm-12">
@@ -5288,7 +5289,7 @@ margin-bottom: 20px;
                                     <div class="row feature-row-height">
                                       <div class="col-sm-7">
                                         <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" data-lazy-load="" alt="" class="feature-image img-responsive">
                                           </div>
                                           <div class="col-sm-7">
                                             <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
@@ -5300,7 +5301,7 @@ margin-bottom: 20px;
                                     <div class="row feature-row-height">
                                       <div class="col-sm-7">
                                         <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle.png" data-lazy-load="" alt="" class="feature-image img-responsive">
+                                          <div class="col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" data-lazy-load="" alt="" class="feature-image img-responsive">
                                           </div>
                                           <div class="col-sm-7">
                                             <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
