@@ -445,7 +445,7 @@ function domainSearchFormSubmit(e) {
   $('#marquee').find('.search-form-input').val(''); 
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
   apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
 
   $.ajaxSetup({cache:false});
@@ -513,8 +513,8 @@ function verifyDomainIsStillAvailable(e) {
   $thisParent.find('.checking-availability').show();
 
   apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
-  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
-  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + domain.Extension);
+  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + encodeURIComponent(domain.NameWithoutExtension));
+  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + encodeURIComponent(domain.Extension));
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -579,7 +579,7 @@ function goToDppCheckoutPage(e) {
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
-  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
