@@ -75,8 +75,13 @@ block vars
         if(priceText) 
           strong !{priceText}
           br
-        span.plan-price.text-warning [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-        span.plan-duration.text-warning !{term}
+        if(plansPanelTotalColumns==4)
+          span.plan-price.text-warning.four-columns [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+          .plan-duration-div-four
+            span.plan-duration.text-warning !{term}
+        else
+          span.plan-price.text-warning [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+          span.plan-duration.text-warning !{term}
         | 
         |##if(productHasSavingsMoreThan(!{pfid}, !{pfid}, 0))
         | 
