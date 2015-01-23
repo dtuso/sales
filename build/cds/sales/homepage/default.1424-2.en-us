@@ -309,108 +309,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" />]@P]</div>
+            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
           <div class="col-md-4 col-sm-12">
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">
-                    <style>.tld-sale-tile {
-  background-color: #333;
-  color: #fff;
-}
-.tld-sale-tile .tile-content-wrapper {
-  padding: 10px 15px;
-}
-.tld-sale-tile .header-text {
-  font-size: 40px;
-  color: #f2812e;
-  float: left;
-}
-.tld-sale-tile .body {
-  font-size: 20px;
-  line-height: 1em;
-  margin: 8px 0 18px;
-}
-.tld-sale-tile .restrictions-text {
-  font-size: 10px;
-}
-
-                    </style>
-                    <div data-url="" data-ci="" class="tile -sale tld-sale-tile">
-                      <div class="tile-content-wrapper">
-                        <div class="clearfix">
-                          <div class="header-text walsheim-black">[@T[productprice:<current productid="" period="yearly" promocode="" htmlsymbol="false" />]@T]</div>
-                        </div>
-                        <div class="body walsheim-medium"></div>
-                        <div class="restrictions-text walsheim-regular"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
                 </div>
                 <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">
-                    <style>.gtld-marquee-tile {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
-}
-.gtld-marquee-tile .left-content-wrapper {
-  padding-left: 10%;
-}
-.gtld-marquee-tile .header-text {
-  font-size: 40px;
-  color: #333;
-  margin: 25px 0 0 10px;
-}
-.gtld-marquee-tile .gtld-links-wrapper {
-  padding-left: -15px;
-}
-.gtld-marquee-tile ul {
-  list-style-type: none;
-  padding: 20px 0 0 20px;
-}
-.gtld-marquee-tile li {
-  color: #77c043;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 0;
-}
-.gtld-marquee-tile li:hover {
-  color: #00a55e;
-}
-
-                    </style>
-                    <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
-                      <div class="tile-content-wrapper">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="left-content-wrapper">
-                                <div class="header-wrapper">
-                                  <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="right-content-wrapper">
-                                <div class="gtld-links-wrapper">
-                                  <ul>
-                                    <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/email'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="2" />]@P]</div>
                 </div>
               </div>
             </div>
@@ -509,6 +417,10 @@
     background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
     background-size: cover;
   }
+}
+.Explorer8 .domain-promo-content {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
+  background-size: cover;
 }
 .domain-promo-text {
   padding: 7% 2% 1%;
@@ -1022,6 +934,9 @@
   margin-top: 100px;
   right: 50px;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+}
+.Explorer8 #o365-promo .promo-flag {
+  background-color: #fedc45;
 }
 .o365-promo-text ul {
   list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
