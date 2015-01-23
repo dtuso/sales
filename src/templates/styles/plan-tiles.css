@@ -255,6 +255,8 @@
     overflow: visible;
 }
 
+.Explorer8 .plan-flag {background-color:#fedc45}
+
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
 }

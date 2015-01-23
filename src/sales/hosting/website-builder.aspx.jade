@@ -47,13 +47,13 @@ block plans
       +planTile
         include ./website-builder/plans/_plan-website-builder-unlimited.jade
         
-      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx' />]@T]", "slp_wst_3" )
+      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]", "slp_wst_3" )
   
 block sections  
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
 
-  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]")
+  section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]",data-ciCode="87758")
     .templates-chart.bg-gray-light
       .container.templates-container
         .header-section.text-center
@@ -159,7 +159,7 @@ block sections
   | 
   |##if(activeLanguageAny([en-us]))
   | 
-  section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]")
+  section#reviews(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_2]@L]",data-ciCode="87151")
     .container
       .row
         .col-sm-12
@@ -170,7 +170,7 @@ block sections
   |##endif
   | 
 
-  section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]")
+  section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]",data-ciCode="87759")
     +renderAccordion({id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
       h2.h1 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
@@ -197,7 +197,7 @@ block sections
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
-        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]',data-ci="88753") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
         | 
         |##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
         | 
@@ -210,13 +210,20 @@ block sections
         |##endif
         | 
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx" />]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]',data-ci="88754") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
   | 
   |##endif
   | 
   section#disclaimers.disclaimers-section
     .container
       div
+        | 
+        |##if(splitTestingSideIsActive(1349, B))
+        | 
+        | 4
+        | 
+        |##endif
+        | 
         p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
           a(onClick="disclaimersModal()") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
@@ -257,6 +264,13 @@ block sections
 
 prepend endOfPageScripts
   script.
+   if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+      $('[data-ci]').click(function(e){
+          $this = $(this);
+          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+          fbiLibCheckQueue();
+      });
+    }
     var wsb = {
      tldInfo: {
         tlds: []
