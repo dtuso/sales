@@ -1,7 +1,7 @@
 mixin twoUp(options)
   style
     include:css ./styles/featuresLeftTwoUp.css
-  div(class="features-two-up #{options.featuresWrapClass ? options.featuresWrapClass : ''} #{options.whiteText ? 'text-white' : ''} #{options.backgroundColor ? options.backgroundColor : ''}", style != (typeof options.backgroundImage != 'undefined' && !options.lazyLoad ? 'background-image: url(' + options.backgroundImage + ');' : ''), data-lazy-load != (typeof options.backgroundImage != 'undefined' && options.lazyLoad ? '{"src":"#{options.backgroundImage}"}' : ''))
+  div(class="features-two-up #{options.lazyLoad ? 'lazyload' : ''} #{options.featuresWrapClass ? options.featuresWrapClass : ''} #{options.whiteText ? 'text-white' : ''} #{options.backgroundColor ? options.backgroundColor : ''}", style != (typeof options.backgroundImage != 'undefined' && !options.lazyLoad ? 'background-image: url(' + options.backgroundImage + ');' : ''), data-lazyload-source !=(typeof options.backgroundImage!='undefined' && options.lazyLoad ? '#{options.backgroundImage}' : ''))
     .container
       .row
         .col-sm-12
@@ -18,7 +18,7 @@ mixin twoUpFeature(feature)
         .row.feature-row
           .col-sm-5
             if (feature.image)
-              img.feature-image.img-responsive(src!="#{feature.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : feature.image}", data-lazy-load != feature.lazyLoad ? '{"src":"#{feature.image}","watch":".key-benefits-wrap","callback":"triggerResize"}' : '', alt="#{feature.altText ? feature.altText : ''}")
+              img(class="#{feature.lazyLoad ? 'lazyload' : ''} feature-image img-responsive",src!="#{feature.lazyLoad ? 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' : feature.image}", data-lazyload-source !=(typeof feature.image!='undefined' && feature.lazyLoad ? '#{feature.image}' : ''), alt="#{feature.altText ? feature.altText : ''}")
 
           .col-sm-7
             if (feature.title)
