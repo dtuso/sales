@@ -29,6 +29,10 @@
 .gtld-marquee-tile li:hover {
   color: #00a55e;
 }
+.Explorer8 .gtld-marquee-tile,
+.Explorer7 .gtld-marquee-tile {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
+}
 
 </style>
 <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">

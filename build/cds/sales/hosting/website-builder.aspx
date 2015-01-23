@@ -704,6 +704,8 @@ width: 50%;
     overflow: visible;
 }
 
+.Explorer8 .plan-flag {background-color:#fedc45}
+
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
 }
@@ -1096,6 +1098,8 @@ width: 50%;
     background-size: cover;
     overflow: visible;
 }
+
+.Explorer8 .plan-flag {background-color:#fedc45}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -1684,13 +1688,6 @@ width: 50%;
                   });
               });
           }
-          if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
-            $('[data-ci]').click(function(e){
-                $this = $(this);
-                FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
-                fbiLibCheckQueue();
-            });
-          }
         });
         $('.dropdown-menu').on("click",function(){
           $('#midPageNav .dropdown-toggle').dropdown('toggle');
@@ -1992,17 +1989,6 @@ $(document).ready(function(){
   
   if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
     recommendedThemes = recommendedThemes[0].slice(0,40);
-    // populate slider
-    var recommendedSlide = ''
-    +'<li class="copy-link" data-toggle="modal" data-target="#g-modal"   data-copylink="a">'
-      +'<div class="wsbsolazy wsl-img" data-wsl-src="'+recommendedThemes[0]['URL']+'" data-ci="89631">'
-        +'<div class="hover">'
-          +'<div>[@L[cds.sales/gd/hosting/website-builder:templates-rollover]@L]</div>'
-        +'</div>'
-      +'</div>'
-      +'<a href="#recommended" class="fancyfont" target="_self">[@L[cds.sales/gd/hosting/website-builder:recommended]@L]</a>'
-    +'</li>';
-    $('#templates ul.slidethis').prepend(recommendedSlide);
   
     // modal select option
     var $selectUl = $('#template-select > ul');

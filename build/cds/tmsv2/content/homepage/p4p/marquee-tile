@@ -57,6 +57,10 @@
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   margin-top: 10px;
 }
+.Explorer8 .marquee-tile-p4p,
+.Explorer7 .marquee-tile-p4p {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
+}
 
 </style>
 <div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
