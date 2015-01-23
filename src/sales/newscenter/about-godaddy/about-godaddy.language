@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5488cd56f778fc16ec4de589
-name: GCE-32100, 33789
-comments: About Us ... India News Releases section -  URL for India News Release / Update PR contacts on the About Us Page
+id: false
+name: GCE-35279
+comments: 59 million domains
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -34,7 +34,7 @@ GoDaddy is&hellip;
 <phrase key="NewsCenterAbout-11-TheWorldSLargestDomainNameRegistrarAndWeb" />
 The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
-<strong>58 million domains</strong><br /> under management
+<strong>59 million domains</strong><br /> under management
 <phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
 <strong>12 million<br />customers</strong>
 <phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" />
@@ -537,7 +537,7 @@ There was an problem sending your message.
 <phrase key="captchaInvalidCode" />
 Invalid Code Entered
 <phrase key="NewsCenterAbout-Domains" />
-58
+59
 <phrase key="NewsCenterAbout-Customers" />
 12
 <phrase key="NewsCenterAbout-Employees" />
@@ -629,12 +629,12 @@ Unlimited time-off, check. Top-tier benefits, yep. Flexible work schedule, you g
 <phrase key="NewsCenterAbout-BuddyBio2" />
 Chief Companion Officer.
 <phrase key="NewsCenterAbout-BuddyBio3" />
-As GoDaddy’s CCO, Buddy is responsible for rousing games of fetch and tug, tail-wagging, office cuddling, therapeutic walks, the occasional piddle and “awwwwwwww.”
+As GoDaddy’s CCO, Buddy is responsible for fetching, tail-wagging, stress relief and “awwwwwwww.”
 <phrase key="NewsCenterAbout-BuddyBio4" />
 Prior to joining GoDaddy, Buddy was one of six adorable Golden Retriever puppies born October 6, 2014, outside Hollywood, in the hills of Ventura, California.
 <phrase key="NewsCenterAbout-BuddyBio5" />
-After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the litter was easy, and at just 9 weeks of age, Buddy was cast in his first Super Bowl commercial with GoDaddy.
+After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the litter was easy, and at 9 weeks of age, Buddy was cast in his first Super Bowl commercial with GoDaddy and a short time later he was adopted into the GoDaddy family.
 <phrase key="NewsCenterAbout-BuddyBio6" />
-Equally at home in the call center, on the office slide or in Blake’s office, Buddy has learned ‘Sit’ and ‘Stay,’ is working on ‘Shake,’ and has an intense obsession with tennis balls, your shoes and squirrels.
+Equally at home in the customer care center, on the office putting green or visiting business owners and employees to help them chill, Buddy’s expertise in making “ruff” days a little better continues to garner accolades including, ‘Who’s a good boy?’
 <phrase key="NewsCenterAbout-BuddyBio7" />
 Buddy’s expertise in being adorable continues to garner many accolades including, ‘Who’s a good boy?’ and ‘Puppy Break!’.
