@@ -121,7 +121,7 @@ var got1Page = {
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
-  animationTime: 600,
+  animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
@@ -670,17 +670,36 @@ function animateMarquee($currentView, $animateToView) {
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
-  $obj
-    .css({"height": startHeight + "px", "z-index": zIndex})
-    .animate({
-      "height": finishHeight + "px"
-    },{ 
-      duration: got1Page.animationTime, 
+  var intHeight = (finishHeight - (Math.abs(startHeight-finishHeight)/2))
+  console.log('finishHeight', finishHeight);
+  console.log('intHeight', intHeight);
+  $obj.css({"height": startHeight + "px", "z-index": zIndex}).animate({
+      "height":  finishHeight + "px"
+  },{ 
+      duration: got1Page.animationTime*3/4, 
       easing: got1Page.animationEasingType, 
       complete:function(){
-        $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
+        $obj.animate({
+          "height":  intHeight + "px"
+        },{ 
+          duration: got1Page.animationTime/6, 
+          easing: got1Page.animationEasingType, 
+          complete:function(){
+            $obj.animate({
+              "height":  finishHeight + "px"
+            },{ 
+              duration: got1Page.animationTime/4, 
+              easing: got1Page.animationEasingType, 
+              complete:function(){
+                $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
+              }
+            });
+          }
+        });
       }
   });
+
+
 }
 
 function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
@@ -845,6 +864,14 @@ $(window).load(function () {
         margin-top:0;
         margin-bottom: 20px;
         font-family: 'Walsheim-Bold';
+      }
+      .sf-tipper-target {
+        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        vertical-align: baseline;
+        cursor: pointer;
       }
       
     </style>
@@ -1326,15 +1353,6 @@ h
     top: -6px;
 }
 
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
     .four-columns {
         font-size: 3.5rem !important;
@@ -1479,7 +1497,7 @@ h
         <style>
           /* marquee styling */
           .main-marquee { color: #333; font-size: 12px; text-transform: uppercase;  fill: #333; }
-          .main-marquee html[lang|="en"] .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
+          html[lang*="en-us"] .main-marquee .dash-em { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
           .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
           .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
           .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
@@ -1589,7 +1607,7 @@ h
         <div class="container main-marquee">
           <div class="row">
             <div class="col-md-6 col-xs-12">
-              <div class="header-text dash">
+              <div class="header-text dash-em">
                 <h1 class="get-online">[@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]</h1>
               </div>
               <div class="header-text bigtext">

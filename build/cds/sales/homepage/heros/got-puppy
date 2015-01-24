@@ -27,19 +27,29 @@
   color: #ff8a00;
 }
 #marquee .btn-purchase {
-  float: right;
   min-width: 40%;
-  position: absolute;
-  right: 10px;
-  bottom: 20px;
+}
+#marquee .price-wrapper .bigtext {
+  width: 60%;
 }
 #marquee .disclaimer {
   font-size: 0.6em;
-  text-align: right;
 }
 #marquee .hero-wrapper > .row img {
   margin: 0 auto;
   display: block;
+}
+@media only screen and (min-width: 1200px) {
+  #marquee .btn-purchase {
+    margin-top: 15px;
+    float: right;
+  }
+  #marquee .price-wrapper .bigtext {
+    width: 100%;
+  }
+  #marquee .disclaimer {
+    text-align: right;
+  }
 }
 @media (min-width: 768px) {
   #marquee .hero-wrapper > .row {
@@ -66,8 +76,15 @@
         <div class="walsheim-black">DOMAIN + WEBSITE + EMAIL</div>
       </div>
     </div>
-    <div class="price-wrapper">
-      <div style="width:55%; display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div><a data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">Get Started</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="price-wrapper">
+            <div style="display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">     <a data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">Get Started</a></div>
+      </div>
     </div>
     <div class="disclaimer">First year only. Other restrictions apply.</div>
   </div>

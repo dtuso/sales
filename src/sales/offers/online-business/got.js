@@ -39,7 +39,7 @@ var got1Page = {
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
-  animationTime: 600,
+  animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
