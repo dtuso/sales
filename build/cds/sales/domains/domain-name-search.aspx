@@ -185,6 +185,14 @@
         margin-bottom: 20px;
         font-family: 'Walsheim-Bold';
       }
+      .sf-tipper-target {
+        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        vertical-align: baseline;
+        cursor: pointer;
+      }
       
     </style>
     <atlantis:webstash type="css">
@@ -745,15 +753,6 @@
     top: -6px;
 }
 
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
     .four-columns {
         font-size: 3.5rem !important;
@@ -1210,15 +1209,6 @@
     position: absolute;
     left: 0;
     top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -2030,15 +2020,6 @@
     top: -6px;
 }
 
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
 @media (min-width: 768px) {
     .four-columns {
         font-size: 3.5rem !important;
@@ -2455,15 +2436,6 @@
     position: absolute;
     left: 0;
     top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
