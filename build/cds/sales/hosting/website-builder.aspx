@@ -185,6 +185,14 @@
         margin-bottom: 20px;
         font-family: 'Walsheim-Bold';
       }
+      .sf-tipper-target {
+        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+        width: 14px;
+        height: 14px;
+        display: inline-block;
+        vertical-align: baseline;
+        cursor: pointer;
+      }
       
     </style>
     <style>
@@ -460,12 +468,110 @@ width: 50%;
     padding-bottom: 50px;
   }
     </style>
+    <style>
+      #plans { padding-bottom: 40px; }
+      #social-media, #reviews, #faq, #disclaimers { background: #fff; }
+      #social-media { padding-top: 50px; }
+      /* TODO: can this styling be abstracted into landing-page.jade? */
+      body { background-color: #d9d9d9; }
+      #marquee { 
+        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center; 
+        padding-bottom: 120px;
+        margin-bottom: 0;
+        background-size: cover;
+      }
+      
+      /* latam */
+      html[lang="es-ar"] #marquee,
+      html[lang="pt-br"] #marquee,
+      html[lang="es-cl"] #marquee,
+      html[lang="es-co"] #marquee,
+      html[lang="es-mx"] #marquee,
+      html[lang="es-pe"] #marquee,
+      html[lang="es-ve"] #marquee {
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg);
+      }
+      
+      /* general */
+      html[lang="en-us"] #marquee,
+      html[lang="es-us"] #marquee,
+      html[lang="en-au"] #marquee,
+      html[lang="en-ca"] #marquee,
+      html[lang="en-nz"] #marquee,
+      html[lang="fr-be"] #marquee,
+      html[lang="fr-ca"] #marquee {
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg);
+      }
+      
+      /* asia */
+      html[lang="en-my"] #marquee,
+      html[lang="en-ph"] #marquee,
+      html[lang="en-sg"] #marquee {
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_Asia.jpg);
+      }
+      
+      /* in-pk */
+      html[lang="en-in"] #marquee,
+      html[lang="en-pk"] #marquee {
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_in-pk_wsb.jpg);
+      }
+      
+      /* emea */
+      html[lang="nl-be"] #marquee,
+      html[lang="da-dk"] #marquee,
+      html[lang="de-de"] #marquee,
+      html[lang="es-es"] #marquee,
+      html[lang="fr-fr"] #marquee,
+      html[lang="en-ie"] #marquee,
+      html[lang="it-it"] #marquee,
+      html[lang="nb-no"] #marquee,
+      html[lang="nl-nl"] #marquee,
+      html[lang="de-at"] #marquee,
+      html[lang="pl-pl"] #marquee,
+      html[lang="pt-pt"] #marquee,
+      html[lang="fr-ch"] #marquee,
+      html[lang="it-ch"] #marquee,
+      html[lang="de-ch"] #marquee,
+      html[lang="en-za"] #marquee,
+      html[lang="fi-fi"] #marquee,
+      html[lang="sv-se"] #marquee,
+      html[lang="tr-tr"] #marquee,
+      html[lang="en-gb"] #marquee,
+      html[lang="el-gr"] #marquee,
+      html[lang="ru-ru"] #marquee,
+      html[lang="uk-ua"] #marquee {
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_EMEA.jpg);
+      }
+      
+      .plan-tile { 
+        margin-top: 0; 
+        margin-bottom: 0; 
+      }
+      .pro-plans { 
+        margin-top: -120px; 
+        padding-bottom: 20px; 
+        padding-top: 0; 
+      }
+      .marquee ul { padding: 0; }
+      
+    </style>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
-       
-      [@P[cdsDocument:<data app="sales" location="hosting/website-builder/marquees/marquee" /> ]@P]
+      <div class="container marquee marquee-white">
+        <div class="row">
+          <div class="col-sm-7 marquee-content-wrapper">
+            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
+            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
+            </ul><a href="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]" class="btn btn-default-light jump-arrow-btn">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</a>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="plans">
       <atlantis:webstash type="css">
@@ -840,15 +946,6 @@ width: 50%;
     position: absolute;
     left: 0;
     top: -6px;
-}
-
-.pro-plans .sf-tipper-target {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -5141,7 +5238,7 @@ margin-bottom: 20px;
           <div class="container">
             <div class="row">
               <div class="col-sm-9">
-                <h2 style="color:#FFF" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
+                <h2 style="color:#FFF;margin-top:30px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
               </div>
               <div class="col-sm-3">
                 <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
