@@ -495,6 +495,9 @@ cursor: pointer;
 
 .sf-tip.underline {
   text-decoration: underline;
+  width: auto;
+  height: auto;
+  background-image: none;
 }
 
 .heartIcon {
@@ -2273,7 +2276,7 @@ cursor: pointer;
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" class="key-benefits-wrap tile-section">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section">
       <div style="background-image: url(); background-color: #fff;">
         <div class="container">
           <div class="row">
@@ -2342,7 +2345,7 @@ cursor: pointer;
     </section> 
     ##if(activeLanguageAny([en-IN]))
      
-    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" data-ciCode="95793" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -3308,7 +3311,7 @@ height: 27px;
     </section> 
     ##else
      
-    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" class="compare-chart-pro section-pro bg-pro-gray tile-section">
+    <section id="compare" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagecompare]@L]" data-ciCode="95793" class="compare-chart-pro section-pro bg-pro-gray tile-section">
       <div style="background: #fff;" class="container">
         <div class="text-center">
           <h2>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-tab-title-11166]@L]</h2>
@@ -4220,7 +4223,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="platforms" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]">
+    <section id="platforms" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpageplatforms]@L]" data-ciCode="95795">
       <style>
 .two-up-title-wrap.bg-white {
   background-color: #fff;
@@ -4582,7 +4585,7 @@ height: 27px;
     </section> 
     ##if(activeLanguageAny([en-US]))
      
-    <section id="reviews" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]" class="tile-section">
+    <section id="reviews" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagereviews]@L]" data-ciCode="95796" class="tile-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
