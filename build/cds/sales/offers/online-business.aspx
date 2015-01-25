@@ -251,22 +251,25 @@ $(document).ready(function() {
   }
 
   //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
-    } else {
-      // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvlidTldMessage();
+  $('#marquee')
+    .on('keyup', '.search-form-input', function(e) { 
+      
+      if ( e.which == 13 ) {
+        // enter key!
+        e.preventDefault();
+        $('#marquee').find('.offer-search-btn').trigger('click');
+        return false;
       } else {
-        showTypeYourDomain();
+        // verify domain name has a good tld
+        var domain = $(e.target).val();
+        if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+          displayInvlidTldMessage();
+        } else {
+          showTypeYourDomain();
+        }
       }
-    }
-  })
+
+    })
   .on('click', '.offer-search-btn', function(e) {
     e.preventDefault();
     domainSearchFormSubmit(e);
