@@ -497,6 +497,9 @@ cursor: pointer;
 
 .sf-tip.underline {
   text-decoration: underline;
+  width: auto;
+  height: auto;
+  background-image: none;
 }
 
 .heartIcon {
