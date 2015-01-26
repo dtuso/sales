@@ -3200,7 +3200,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
                     $this,
                     'prepend'
                 );
@@ -3326,7 +3326,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
                     $this,
                     'prepend'
                 );
