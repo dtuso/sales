@@ -44,20 +44,20 @@ mixin twoUpCompareColumn(columnOptions)
       if (columnOptions.title)
         case columnOptions.titleAlign
           when "center"
-            h2(class="text-center") !{columnOptions.title}
+            h2.h0.text-center !{columnOptions.title}
           when "right"
-            h2(class="text-right") !{columnOptions.title}
+            h2.h0.text-right !{columnOptions.title}
           default
-            h2 !{columnOptions.title}
+            h2.h0 !{columnOptions.title}
 
       if (columnOptions.subtitle)
         case columnOptions.subtitleAlign
           when "center"
-            h3(class="text-center") !{columnOptions.subtitle}
+            h3.headline-primary.text-center !{columnOptions.subtitle}
           when "right"
-            h3(class="text-right") !{columnOptions.subtitle}
+            h3.headline-primary.text-right !{columnOptions.subtitle}
           default
-            h3 !{columnOptions.subtitle}
+            h3.headline-primary !{columnOptions.subtitle}
       
       .row
         .col-sm-12
@@ -86,7 +86,7 @@ mixin renderTwoUpCompare(twoUpOptions)
         .container
           .row
             .col-sm-12
-              h2.text-center.two-up-title !{twoUpOptions.title}
+              h2.h0.text-center.two-up-title !{twoUpOptions.title}
     div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor} lazyload", 
         style!= "#{twoUpOptions.style ? twoUpOptions.style : ''};", 
         data-lazyload-source!=("#{twoUpOptions.backgroundImage}"))

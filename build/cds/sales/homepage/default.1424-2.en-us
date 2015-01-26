@@ -75,7 +75,7 @@
       
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
@@ -133,6 +133,7 @@
 }
 .hero-wrapper {
   min-height: 300px;
+  cursor: pointer;
 }
 .tile {
   cursor: pointer;
@@ -252,18 +253,168 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="container">
+          <div class="col-xs-12 col-md-9">
+            <div class="hero-wrapper">
+              <atlantis:webstash type="css">
+                <style>#marquee {
+  background-color: #f3f3f4;
+  overflow-y: hidden;
+}
+#marquee .promo-wrapper,
+#marquee .price-wrapper {
+  margin-top: 20px;
+}
+#marquee .inline-dash {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.5em;
+  font-size: 1.4em;
+  vertical-align: top;
+  line-height: 50%;
+}
+#marquee .headline-wrapper {
+  margin-top: 40px;
+  line-height: 1;
+}
+#marquee .promo-wrapper {
+  color: #77c043;
+}
+#marquee .price {
+  color: #ff8a00;
+}
+#marquee .btn-purchase {
+  min-width: 40%;
+}
+#marquee .price-wrapper .bigtext {
+  width: 60%;
+}
+#marquee .disclaimer {
+  font-size: 0.6em;
+}
+#marquee .hero-wrapper > .row img {
+  margin: 0 auto;
+  display: block;
+}
+@media only screen and (min-width: 1200px) {
+  #marquee .btn-purchase {
+    margin-top: 15px;
+    float: right;
+  }
+  #marquee .price-wrapper .bigtext {
+    width: 100%;
+  }
+  #marquee .disclaimer {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  #marquee .hero-wrapper > .row {
+    max-height: 315px;
+  }
+  #marquee .hero-wrapper > .row img {
+    margin: -72px 0 0 0;
+  }
+}
+
+                </style>
+              </atlantis:webstash>
               <div class="row">
-                <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="headline-wrapper">
+                    <div style="width:100%" class="bigtext">
+                      <div class="line walsheim-black">WOOK AT THE PUPPY!</div>
+                      <div class="line tungsten">NOW STOP WOOKING AT THE PUPPY</div>
+                      <div class="line walsheim-black"><span class='inline-dash'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> AND WOOK AT THIS OFFER</div>
+                    </div>
+                  </div>
+                  <div class="promo-wrapper">
+                    <div style="width:100%" class="bigtext">
+                      <div class="walsheim-black">DOMAIN + WEBSITE + EMAIL</div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-6 col-sm-12">
+                        <div class="price-wrapper">
+                          <div style="display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-sm-12">     <a data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">Get Started</a></div>
+                    </div>
+                  </div>
+                  <div class="disclaimer">First year only. Other restrictions apply.</div>
                 </div>
-                <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="2" />]@P]</div>
-                </div>
+                <div class="col-xs-12 col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="tile-wrapper">
+              <atlantis:webstash type="css">
+                <style>#marquee .tile-wrapper {
+  margin-top: 0;
+}
+#marquee .tile.puppy {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 22px;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+#marquee .tile.puppy h3 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+#marquee .tile.puppy p {
+  font-size: 1em;
+  font-family: 'Walsheim-Regular', 'Arial', sans-serif;
+}
+#marquee .tile.puppy a {
+  font-size: 1.3em;
+  color: #77c043;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  font-size: 1.2em;
+}
+#marquee .tile.puppy img.nascar {
+  height: 80px;
+  float: right;
+  margin-top: 20px;
+}
+#marquee .tile.puppy img.mask {
+  display: none;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  #marquee .tile.puppy {
+    min-height: 294px;
+  }
+}
+@media (min-width: 1200px) {
+  #marquee .tile.puppy {
+    padding: 10px 30px 46px 40px;
+    margin-left: -40px;
+    font-size: 14px;
+  }
+  img.mask {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  img.nascar {
+    margin-right: -70px;
+  }
+}
+
+                </style>
+              </atlantis:webstash>
+              <div class="tile puppy"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEzIiBoZWlnaHQ9IjE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMCAwLDUwIDE1LDAiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMTc0IDAsNTAgMjUsMTU4IDE0MCwxNzQiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjMxMywxNzQgMTQwLDE3NCAyODAsMTQwIDMxMywwIi8+DQo8L3N2Zz4=" class="mask"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar_360.png" class="nascar">
+                <h3>Enter to Win</h3>
+                <p>Your pup could be on the GoDaddy race car!</p><a>Submit Your Pup</a>
               </div>
             </div>
           </div>
@@ -276,18 +427,18 @@
           <div class="col-md-3 col-sm-6 col-xs-6">
             <div class="tile-wrapper"> 
               <style>
-                .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
-                .gdpro-tile .promo-logo{width:80%}
-                .gdpro-tile .promo-text{padding-top:10px}
-                .gdpro-tile .promo-cta{position:absolute;bottom:5px}
-                .gdpro-tile a{text-decoration:underline;color:#f2812e}
+                .get-found-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                .get-found-tile .promo-logo{width:80%}
+                .get-found-tile .promo-text{padding-top:10px}
+                .get-found-tile .promo-cta{position:absolute;bottom:5px}
+                .get-found-tile a{text-decoration:underline;color:#f2812e}
               </style>
-              <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="tile gdpro-tile">
+              <div data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95778' /></relative>]@T]" data-ci='95778' class="tile get-found-tile">
                 <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkY4MzAwIiBwb2ludHM9IjM5My40NDksMTgzLjI4NCAzNDIuNzA4LDIyOC4yNDkgMzQ3LjUxLDI4Mi45ODggNDIxLjM1NiwzMTYuNzE2IDUwMCwyNzkuNTczIDQ4NS44MjIsMjEyLjYxICIvPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTM1LjIzOSwyNDguNjAzaDI0LjI5N3Y3LjUxNWgtNS42MThjLTIuMjYyLDExLjQ1NC0xMC43MjUsMTkuMzM1LTI0Ljg3OSwxOS4zMzUNCgkJYy0xNi43MDgsMC0yNi4yNjYtMTIuOTE0LTI2LjI2Ni0yNi43NzZjMC0xMy44NjIsMTAuMTQyLTI2Ljc3NiwyNi4yNjYtMjYuNzc2YzEyLjAzOSwwLDIwLjk0LDcuNTE1LDIxLjc0MiwxNi41NjFoLTguNDYzDQoJCWMtMC44NzYtNS4wMzQtNi4yMDMtOS4wNDctMTMuMjc5LTkuMDQ3Yy0xMC45NDQsMC0xNy42NTUsOS4yNjYtMTcuNjU1LDE5LjI2MWMwLDkuOTk2LDYuMTI5LDE5LjI2MywxOC43NTIsMTkuMjYzDQoJCWM4LjY4MiwwLDEzLjg2Mi01LjU0NSwxNC44ODMtMTEuODE5aC05Ljc3N3YtNy41MTVIMzUuMjM5eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYyLjUyOCwyNTcuMjEzYzAtOS42MzEsNy4wNzctMTcuODc3LDE3Ljg3NS0xNy44NzdjMTAuOTQ0LDAsMTguMDIyLDguMjQ1LDE4LjAyMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIyLDE3Ljg3NUM2OS42MDQsMjc1LjA4OCw2Mi41MjgsMjY2Ljg0Myw2Mi41MjgsMjU3LjIxM3ogTTkwLjQ3MSwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM4Ni41MywyNjguMDEyLDkwLjQ3MSwyNjMuMDQ5LDkwLjQ3MSwyNTcuMjEzeiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMjEuODQyLDIyMy4xNDFjMTYuOTI2LDAsMjYuNDg1LDEyLjYyMSwyNi40ODUsMjUuNTM2cy05LjU1OCwyNS41MzYtMjYuNDg1LDI1LjUzNkgxMDUuMjh2LTUxLjA3MQ0KCQlIMTIxLjg0MnogTTExMy42NzEsMjMwLjY1N3YzNi4wNDNoOC4xNzFjMTEuMzgxLDAsMTcuODc1LTguOTAxLDE3Ljg3NS0xOC4wMjJjMC05LjExOS02LjQ5NC0xOC4wMi0xNy44NzUtMTguMDINCgkJQzEyMS44NDIsMjMwLjY1NywxMTMuNjcxLDIzMC42NTcsMTEzLjY3MSwyMzAuNjU3eiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xODguNTI5LDI0MC4yMTJ2MzMuOTk4aC03Ljk1MnYtNC41OTdjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczDQoJCWMtMTAuMzYsMC0xNy40MzgtOC4yNDUtMTcuNDM4LTE3Ljg3NWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi00LjU5N2g3Ljk1MlYyNDAuMjEyeg0KCQkgTTE4MC41NzcsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMxNzYuNjM2LDI2OC4wMTIsMTgwLjU3NywyNjMuMDQ5LDE4MC41NzcsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yMjMuMTExLDI2OS42MTVjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MkwyMjMuMTExLDI2OS42MTUNCgkJTDIyMy4xMTEsMjY5LjYxNXogTTIyMy4xMTEsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OA0KCQlzMy45MzksMTAuNzk4LDkuOTIzLDEwLjc5OEMyMTkuMTcyLDI2OC4wMTIsMjIzLjExMSwyNjMuMDQ5LDIyMy4xMTEsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yNjUuNTAyLDI2OS42MTVjLTIuMTE0LDMuNDMtNi41NjYsNS40NzMtMTAuNTA1LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTM5LDAsOC4zOTEsMi4wNDQsMTAuNTA1LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MlYyNjkuNjE1eiBNMjY1LjUwMiwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMyNjEuNTYxLDI2OC4wMTIsMjY1LjUwMiwyNjMuMDQ5LDI2NS41MDIsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yODAuNzUyLDI3OC4wNzhoNy43MzNjMC4wNzIsMy43OTQsMi41NTMsNi45MzEsOC4wOTgsNi45MzFjNS42OSwwLDguNTM2LTIuNTUzLDguNTM2LTkuMTkzdi02LjM0Nw0KCQljLTIuMTE2LDMuNjQ4LTYuMDU1LDUuNjE4LTExLjA5LDUuNjE4Yy00Ljg4OCwwLTguMzE3LTEuNzUxLTEwLjIxNC00LjU5N2MtMS42NzctMi41NTMtMi4xODgtNS4zOTktMi4xODgtMTAuMDY4di0yMC4yMWg3Ljk1Mg0KCQl2MTcuNTg0YzAsNS44MzYsMS42NzcsMTAuMjg4LDcuMzY4LDEwLjI4OGM1LjU0NSwwLDguMTcxLTQuNDUyLDguMTcxLTEwLjI4OHYtMTcuNTg0aDcuOTUydjM1LjYwNA0KCQljMCwxMS42LTYuMzQ4LDE2LjI2OS0xNy41MSwxNi4yNjlDMjg2LjgwOCwyOTIuMDg3LDI4MC44MjQsMjg1LjUyMiwyODAuNzUyLDI3OC4wNzh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNMzE2LjcxNCwyNDAuOTExYzAtMy4zMjcsMi4zOTktNi40MjcsNi4zMzgtNi40MjdzNi4zMzgsMy4xLDYuMzM4LDYuNDI3YzAsMy4zMjctMi4zOTksNi40MjYtNi4zMzgsNi40MjYNCgkJUzMxNi43MTQsMjQ0LjIzOCwzMTYuNzE0LDI0MC45MTF6IE0zMjguMzQxLDI0MC45MTFjMC0yLjg3Mi0xLjk5Ny01LjUzMi01LjI4OS01LjUzMmMtMy4yNzQsMC01LjI3MSwyLjY2Mi01LjI3MSw1LjUzMg0KCQljMCwyLjg1MywxLjk5Nyw1LjUxNyw1LjI3MSw1LjUxN0MzMjYuMzQ0LDI0Ni40MjYsMzI4LjM0MSwyNDMuNzY0LDMyOC4zNDEsMjQwLjkxMXogTTMyMC44ODIsMjQ0LjIwM3YtNy4xMjdoMi42MjcNCgkJYzEuNDE4LDAsMi4zNDYsMS4xMDQsMi4zNDYsMi4zODFjMCwxLjAzMi0wLjYzLDEuOTQyLTEuNjQ2LDIuMjIzbDEuNTkzLDIuNTIxaC0wLjk2M2wtMS41MjMtMi40MTZoLTEuNTkzdjIuNDE2aC0wLjg0MVYyNDQuMjAzeg0KCQkgTTMyMy40MzgsMjQxLjAzNGMwLjkyNiwwLDEuNTIzLTAuNzE4LDEuNTIzLTEuNTc2YzAtMC44NzYtMC41OTctMS42MTEtMS41MjMtMS42MTFoLTEuNzE4djMuMTg2DQoJCUMzMjEuNzIsMjQxLjAzNCwzMjMuNDM4LDI0MS4wMzQsMzIzLjQzOCwyNDEuMDM0eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM3My4wMzIsMjIzLjE0MWgxOC4zMTNjMTAuOTQ0LDAsMTguMDIyLDguMjQzLDE4LjAyMiwxNy44NzVzLTcuMDc3LDE3Ljg3NS0xOC4wMjIsMTcuODc1aC05LjkyMXYxNS4zMjINCgkJaC04LjM5MXYtNTEuMDcxSDM3My4wMzJ6IE00MDAuOTc3LDI0MS4wMTZjMC01LjYxOC0zLjc5NC0xMC4zNi05LjYzMS0xMC4zNmgtOS45MjF2MjAuNzIxaDkuOTIxDQoJCUMzOTcuMTgyLDI1MS4zNzYsNDAwLjk3NywyNDYuNjMzLDQwMC45NzcsMjQxLjAxNnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzYuMjg4LDI0Ny41ODJjLTEuMjQxLTAuMjkzLTEuODk3LTAuMzY1LTMuMTM3LTAuMzY1Yy02Ljc4NCwwLTEwLjUwNSwzLjg2Ny0xMC41MDUsMTIuMzN2MTQuNjY0aC03Ljk1Mg0KCQl2LTMzLjk5OGg3Ljk1MnY1LjQ3M2MxLjUzMi0zLjEzNyw1Ljk4My01LjkxLDEwLjUwNS01LjkxYzEuMjQxLDAsMi4yNjIsMC4xNDYsMy4xMzcsMC41MTFWMjQ3LjU4MnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzcuMDkyLDI1Ny4yMTNjMC05LjYzMSw3LjA3Ny0xNy44NzcsMTcuODc3LTE3Ljg3N2MxMC45NDIsMCwxOC4wMiw4LjI0NSwxOC4wMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIsMTcuODc1QzQ0NC4xNjgsMjc1LjA4OCw0MzcuMDkyLDI2Ni44NDMsNDM3LjA5MiwyNTcuMjEzeiBNNDY1LjAzMywyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM0NjEuMDk0LDI2OC4wMTIsNDY1LjAzMywyNjMuMDQ5LDQ2NS4wMzMsMjU3LjIxM3oiLz4NCjwvZz4NCjwvc3ZnPg0K" class="promo-logo svgfallback">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/get-found-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTg5LjY5MSAzOC45OTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4OS42OTEgMzguOTk2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik02OC41NjIsMTcuMDExaDIuNzg0Yy0wLjI0LDEuMjk2LTEuMjQ4LDIuMzc2LTMuMTkyLDIuMzc2Yy0yLjczNiwwLTQuMDgtMi4xMTItNC4wOC00LjYwOA0KCWMwLTIuNDQ4LDEuMjcyLTQuNzI4LDMuODQtNC43MjhjMS43MjgsMCwyLjY2NCwxLjA1NiwyLjgzMiwyLjAxNmg1LjUyMWMtMC4zMTItMy40NTYtMy41NzYtNi4yODktOC4yODEtNi4yODkNCgljLTUuNzEzLDAtOS4wMDEsNC4xNTItOS4wMDEsOC45NTNjMCw0LjcyOCwzLjE2OCw4Ljc2MSw5LjA0OSw4Ljc2MWM0Ljc1MiwwLDcuNzc3LTIuNjE2LDguMzc3LTYuNDhoMS42MDh2LTMuMjg4aC05LjQ1N1YxNy4wMTF6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNODkuOTA2LDkuOTc4VjYuMjM0SDc5LjA4MXYxNi44MDJoMTAuODI1di0zLjc0NGgtNS44MzJ2LTIuODA4aDUuODMydi0zLjU3NmgtNS44MzJWOS45NzhIODkuOTA2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTk0LjgzNCwyMy4wMzVoNC45OTJWMTAuNTA2aDMuNDU2VjYuMjM0SDkxLjM3N3Y0LjI3MmgzLjQ1NlYyMy4wMzV6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTIwLjc0NiwxMC4zMTR2LTQuMDhoLTEwLjgyNXYxNi44MDJoNC45OTJ2LTUuMDY1aDUuODMzdi0zLjkzNmgtNS44MzN2LTMuNzJIMTIwLjc0NnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xMzAuNDU4LDIzLjQ5MWM1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJUzEyNC42OTgsMjMuNDkxLDEzMC40NTgsMjMuNDkxeiBNMTMwLjQ1OCwxOC45MzFjLTIuNTQ0LDAtNC4wNTYtMi4wNjQtNC4wNTYtNC4yOTZjMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5Ng0KCWMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzEzNC41MTQsMTYuODY3LDEzMy4wMjYsMTguOTMxLDEzMC40NTgsMTguOTMxeiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4wNzMsMTcuMjAzYzAsMy42NDgsMi42NjQsNi4yODgsNy4wMzMsNi4yODhjNC4zNjgsMCw3LjAwOS0yLjY0LDcuMDA5LTYuMjg4VjYuMjM0aC00Ljk5MnYxMC45MjENCgljMCwxLjE1Mi0wLjg0LDIuMTEyLTIuMDE2LDIuMTEyYy0xLjE3NiwwLTIuMDQtMC45Ni0yLjA0LTIuMTEyVjYuMjM0aC00Ljk5M1YxNy4yMDN6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTYwLjg1LDYuMjM0aC01LjA4OHYxNi44MDJoNC45OTJWMTMuNDFsNS40OTcsOS42MjVoNS4wODhWNi4yMzRoLTUuMDE2djkuOTYxTDE2MC44NSw2LjIzNHoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xNzQuMDQxLDYuMjM0djE2LjgwMmg2Ljg2NWM1LjYxNiwwLDguNzg1LTQuMDMyLDguNzg1LTguNDAxYzAtNC4zNjgtMy4yMTYtOC40MDEtOC43ODUtOC40MDFIMTc0LjA0MXoNCgkgTTE4MC41NDYsMTAuNDU4YzIuNTIsMCw0LjAzMiwyLjAxNiw0LjAzMiw0LjE3NmMwLDIuMTYtMS41MTIsNC4xNzYtNC4wMzIsNC4xNzZoLTEuNTEydi04LjM1M0gxODAuNTQ2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM4Ljc1Niw0LjI5M0wyNC45OTksMEwxMS4yNDIsNC4yOTNMMCwxNC42NTdsMTEuMjQyLDEwLjM2NGw1LjQ4OCwxLjcxM2wtNC4yMjEtNC44MzdsMC40OC0xMC4zODQNCglsNy4zOTQtNi45ODlsOS45NzcsMC40OTlsNi43MTUsNy42OTVsLTAuNDgsMTAuMzgzbC00LjA5NiwzLjg3Mmw2LjI1Ny0xLjk1M2wxMS4yNDEtMTAuMzY0TDM4Ljc1Niw0LjI5M3oiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0yNS4wNTksMTEuNTk5bC0zLjk1NywxLjQ3NWwtMS43OTYsMy45NTVsMS40MTgsNC4xMThsMy44LDEuODY5bDMuOTU3LTEuNDc1bDEuNzk2LTMuOTU1bC0xLjQxNy00LjExOA0KCUwyNS4wNTksMTEuNTk5eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM1LjM2MiwzMi4xNjhMMjUuMDk4LDE0LjY1N2wtMS41MjQsMC42MzNsLTEuMjM4LDEuMTIxbDEwLjI2NSwxNy41MTFsLTUuMzg5LDMuNDIybDEwLjI1OCwxLjY1Mw0KCWwzLjI4MS0xMC4yNUwzNS4zNjIsMzIuMTY4eiIvPg0KPC9zdmc+DQo=" class="promo-logo svgfallback">
                   </div>
-                  <div class="promo-text walsheim-black">BUILDING SITES FOR OTHERS? CHECK OUT GODADDY PRO.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" class="walsheim-black">JOIN OUR BETA </a></div>
+                  <div class="promo-text walsheim-black">BRING IN MORE CUSTOMERS.</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95778' /></relative>]@T]" class="walsheim-black">LEARN MORE </a></div>
                 </div>
               </div>
             </div>
@@ -349,6 +500,257 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>
+        #puppy-promo{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/buddy-video.jpg);background-size:cover;}
+        div.video-marquee{background-color:transparent}
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="script"></atlantis:webstash>
+    <section id="puppy-promo">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <style>.video-marquee {
+	background-position: top center;
+}
+.video-marquee {
+	background-size: cover;
+	position: relative;
+	background-position: bottom center;
+	background-color: #fff;
+}
+.video-marquee.video-marquee-white {
+color: #fff;
+}
+.video-marquee.full-video {
+height: 535px;
+padding-top: 1px;
+}
+.video-marquee.full-video .video-info {
+margin-top: 150px;
+}
+.video-marquee .relative-position {
+position: relative;
+}
+.video-marquee .video-marquee-all-centered {
+text-align: center;
+}
+.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+color: #fff;
+}
+.video-marquee.full-video .video-info .cta {
+font-family: 'Walsheim-Black';
+text-transform: uppercase;
+}
+            </style>
+            <atlantis:webstash type="js">
+              <script>
+                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+                $(document).ready(function(){
+                  if(typeof youtubeVideo === 'undefined'){
+                    window.youtubeVideo = {
+                      _src: 'https://www.youtube.com/embed/',
+                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                        if(typeof parameters === 'object'){
+                          var paramString = '';
+                          
+                          // add origin to src
+                          parameters.origin = window.location.protocol+'//'+window.location.host
+                
+                          if(youtubeVideo._src.indexOf('?') === -1){
+                            paramString += '?';
+                          }else{
+                            paramString += '&';
+                          }
+                
+                          for(param in parameters){
+                            if(paramString.length > 2){
+                              paramString += '&';
+                            }
+                            paramString += param+'='+parameters[param];
+                          }
+                          parameters = paramString;
+                        }
+                        
+                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+                
+                        // append/prepend to container
+                        if(typeof container === 'string'){
+                          container = $(container);
+                        }
+                
+                        if(typeof insertType === 'undefined' || insertType === 'append'){
+                          container.append($video);
+                        }else{
+                          container.prepend($video);
+                        }
+                
+                        if(typeof callback === 'function'){
+                          $video.load(function(){
+                            callback($video[0]);
+                          });
+                        }
+                
+                        return $video[0];
+                      }
+                    };
+                  }
+                  
+                  var $containers = $('[data-tile="buddyVideo"]');
+                  $containers.each(function(){
+                    var $this = $(this);
+                    var videoId = $this.data('youtube-id');
+                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                      // remove this event
+                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+                
+                      // load the video
+                      youtubeVideo.loadVideo(
+                          videoId,
+                          '100%',
+                          '100%',
+                          function(video){
+                              var $videoInfo = $this.find('.video-info');
+                              $videoInfo.animate({'opacity':0.0},1000,function(){
+                                  $videoInfo.css({'display':'none'});
+                              });
+                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                          },
+                          {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                          $this,
+                          'prepend'
+                      );
+                    }).css({'cursor':'pointer'});
+                  });
+                });
+              </script>
+            </atlantis:webstash>
+            <div style="" data-lazyload-source="" data-icode="code" data-tile="buddyVideo" data-youtube-id="-HtVJyxSQmw" class=" video-marquee video-marquee-white full-video">
+              <div class="container relative-position video-info">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
+                    <h3 class="h1">Will Buddy find his way home?</h3><span class="cta">WATCH VIDEO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#danica-puppy-promo {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy-placeholder.jpg) top center no-repeat;
+  background-size: cover;
+  min-height: 266px;
+}
+@media only screen and (min-width: 992px) {
+  #danica-puppy-promo h3 {
+    padding-top: 5%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #danica-puppy-promo h3 {
+    padding-top: 10%;
+  }
+}
+#danica-puppy-promo img {
+  width: 100%;
+}
+#danica-puppy-promo #danica-puppy-play-button {
+  content: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png);
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="danica-puppy-promo">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-8 col-xs-12">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h2 class="walsheim-bold">Danica and Buddy</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 col-sm-3 col-xs-2">
+                  <atlantis:webstash type="js">
+                    <script>
+                      $(document).ready(function(){
+                        
+                        var $overlay = $("#danica-puppy-promo-video").find(".videoWrapperInModal");
+                      
+                        // attach modal popup to click event
+                        $('#danica-puppy-play-button').on('click', function(){
+                          $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
+                          $("#danica-puppy-promo-video").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
+                        });
+                      
+                        // close the overlay when iframe loads
+                        $("#danica-puppy-promo-video").find("iframe").load(function(){
+                          
+                          $overlay.sfMsgOverlay({ message: null });
+                        });
+                      
+                      });
+                      
+                    </script>
+                  </atlantis:webstash>
+                  <atlantis:webstash type="js">
+                    <script>
+                      $(document).ready(function(){
+                        /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
+                        var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
+                            $fluidEl = $("body"); /*The element that is fluid width*/      
+                        $allVideos.each(function() {        
+                          // Figure out and save aspect ratio for each video
+                          // and remove the hard coded width/height
+                          $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
+                        });
+                        // When the window is resized
+                        $(window).resize(function() {
+                          var newWidth = $fluidEl.width();
+                          // Resize all videos according to their own aspect ratio
+                          $allVideos.each(function() {
+                            var $el = $(this);
+                            $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
+                          });
+                        // Kick off one resize to fix all videos on page load
+                        }).resize();
+                      });
+                      
+                    </script>
+                  </atlantis:webstash>
+                  <atlantis:webstash type="css">
+                    <style>
+                      .video-modal {display: none;}
+                      .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
+                      .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
+                      img.video-play-icon {margin-right:10px;vertical-align:top;}
+                      .video-modal-img-as-button {cursor: pointer;}
+                      .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
+                      .video-iframe-underlay  h2 {text-align:center;}
+                      
+                    </style>
+                  </atlantis:webstash><img id="danica-puppy-play-button" data-ci="" class="video-modal-img-as-button"/>
+                  <div id="danica-puppy-promo-video" class="sf-dialog video-modal">
+                    <div class="videoWrapperInModal">
+                      <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-8 col-sm-4 col-xs-3">
+                  <h3 class="walsheim-bold">Watch the video!</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-0 col-xs-9"></div>
         </div>
       </div>
     </section>
@@ -462,6 +864,68 @@
               <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
               <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#o365-promo {
+  padding-bottom: 105px;
+}
+#o365-promo h2 {
+  font-size: 4.5rem;
+}
+#o365-promo h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+#o365-promo .o365-promo-text p {
+  max-width: 420px;
+}
+#o365-promo .promo-flag {
+  color: #000;
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  background-size: cover;
+  overflow: visible;
+  position: absolute;
+  margin-top: 100px;
+  right: 50px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+}
+.Explorer8 #o365-promo .promo-flag {
+  background-color: #fedc45;
+}
+.o365-promo-text ul {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
+  margin: 0 0 20px -12px;
+}
+.o365-promo-image {
+  padding-top: 115px;
+  width: 140%;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="o365-promo">
+      <div class="container">
+        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
+        <div class="row">
+          <div class="col-sm-6 o365-promo-text">
+            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
+            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
+            <ul>
+              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
+              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
+              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
+          </div>
+          <div class="col-sm-6">
+            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -851,63 +1315,60 @@
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>#o365-promo {
-  padding-bottom: 105px;
+      <style>#new-customers-promo {
+  background-color: #e8e8e8;
 }
-#o365-promo h2 {
-  font-size: 4.5rem;
+#new-customers-promo h2 {
+  margin: 30px 0 25px;
 }
-#o365-promo h3 {
-  font-size: 4rem;
-  text-transform: uppercase;
+#new-customers-promo p.text-center {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
-#o365-promo .o365-promo-text p {
-  max-width: 420px;
+#new-customers-promo .new-customers-get-found img {
+  height: 132px;
 }
-#o365-promo .promo-flag {
-  color: #000;
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  line-height: 1;
-  background-size: cover;
-  overflow: visible;
-  position: absolute;
-  margin-top: 100px;
-  right: 50px;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+#new-customers-promo .new-customers-ssl img {
+  height: 132px;
 }
-.Explorer8 #o365-promo .promo-flag {
+.new-customers-gd-pro img {
+  width: 42%;
+}
+h2.two-up-title {
+  margin: 20px 0;
+}
+.two-up-speech-shape.two-up-speech-shape-gold,
+.two-up-speech-shape.two-up-speech-shape-gold:after {
   background-color: #fedc45;
 }
-.o365-promo-text ul {
-  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
-  margin: 0 0 20px -12px;
-}
-.o365-promo-image {
-  padding-top: 115px;
-  width: 140%;
+.two-up-speech-shape.two-up-speech-shape-gold:before {
+  border-top-color: #fedc45;
 }
 
       </style>
     </atlantis:webstash>
-    <section id="o365-promo">
+    <section id="new-customers-promo" class="bg-gray-lighter">
       <div class="container">
-        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
+        <h2 class="text-center walsheim-black">Find And Keep<br />New Customers</h2>
+        <p class="text-center walsheim-bold">Online or off, we can help your business</p>
         <div class="row">
-          <div class="col-sm-6 o365-promo-text">
-            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
-            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
-            <ul>
-              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
-              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
-              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
-            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
+          <div class="col-sm-4">
+            <div class="feature new-customers-get-found"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload svgfallback"/>
+              <h3 class="walsheim-bold">Get Found</h3>
+              <p>You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.</p><a data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95784' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
+            </div>
           </div>
-          <div class="col-sm-6">
-            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
+          <div class="col-sm-4">
+            <div class="feature new-customers-ssl"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload svgfallback"/>
+              <h3 class="walsheim-bold">SSL Certificates</h3>
+              <p>If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.</p><a data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95785' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature new-customers-gd-pro"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload svgfallback"/>
+              <h3 class="walsheim-bold">GoDaddy Pro</h3>
+              <p>If you can code a website in your sleep and provision servers for fun, head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.</p><a data-url="[@T[link:<relative path='/pro'><param name='ci' value='95783' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
+            </div>
           </div>
         </div>
       </div>

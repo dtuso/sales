@@ -1,30 +1,3 @@
-h1 {
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  font-size: 20px;
-  color: #333;
-}
-
-h2{
-  margin-bottom: 40px;
-  margin-top: 0;
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  font-weight: 300;
-  line-height: 1.1;
-  color: #333;
-}
-
-h3 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-weight: 300;
-  line-height: 1.1;
-}
 
 .tile-section {
   padding-top: 50px;
@@ -199,6 +172,7 @@ h3 {
     background-image: none !important;
     background-color: transparent;
     padding-bottom: 0;
+    padding-top: 0;
   }
   .one-click-right {
     padding-top: 40px;
@@ -322,6 +296,9 @@ cursor: pointer;
 
 .sf-tip.underline {
   text-decoration: underline;
+  width: auto;
+  height: auto;
+  background-image: none;
 }
 
 .heartIcon {

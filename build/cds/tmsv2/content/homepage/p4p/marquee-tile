@@ -1,6 +1,6 @@
 
 <atlantis:webstash type="css">
-  <link href="[@T[link:&lt;css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit'/>]@T]" rel="stylesheet" media="screen"/>
+  <link href="[@T[link:&lt;css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit'/&gt;]@T]" rel="stylesheet" media="screen"/>
 </atlantis:webstash>
 <style>#p4p-list {
   border-top-width: 3px;
@@ -57,6 +57,10 @@
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   margin-top: 10px;
 }
+.Explorer8 .marquee-tile-p4p,
+.Explorer7 .marquee-tile-p4p {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
+}
 
 </style>
 <div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
@@ -79,7 +83,7 @@
         </div>
         <div class="col-sm-3"></div>
         <atlantis:webstash type="js">
-          <script src="[@T[link:&lt;js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit'/>]@T]"></script>
+          <script src="[@T[link:&lt;js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit'/&gt;]@T]"></script>
           <script>$(document).ready(function(){$('#p4p-list').dropdown();});</script>
         </atlantis:webstash>
       </div>

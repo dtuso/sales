@@ -22,7 +22,7 @@ var got1Page = {
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
-  lastSpinResultCount: 0,
+  totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
@@ -39,7 +39,7 @@ var got1Page = {
   },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
   canOfferOls: true,
-  animationTime: 600,
+  animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
@@ -131,7 +131,7 @@ $(document).ready(function() {
       // verify domain name has a good tld
       var domain = $(e.target).val();
       if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvlidTldMessage();
+        displayInvalidTldMessage();
       } else {
         showTypeYourDomain();
       }
@@ -146,7 +146,6 @@ $(document).ready(function() {
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
-
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
@@ -155,10 +154,13 @@ $(document).ready(function() {
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-not-available-marquee-view').on('click', '.view-all-button', displayMoreResultsArea);
 
-
   $('#default-marquee-view').find('.see-details-disclaimer-link').attr('data-ci', got1Page.canOfferOls ? "95734" : "95736");
 
-
+  $("[data-ci-workaround]").click(function(a){
+    var $this=$(this);
+    FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
+    fbiLibCheckQueue();
+  });
 
 });
 
@@ -296,11 +298,9 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
-
   var $this = $(e.target),
     $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
     domain = $.trim($textInput.val()), 
-    sucessful = false,
     apiEndpoint1;
 
   if((domain && domain.length==0) || !domain) return;
@@ -308,14 +308,14 @@ function domainSearchFormSubmit(e) {
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {
-    displayInvlidTldMessage();
+    displayInvalidTldMessage();
     return;
   }
 
   $('#marquee').find('.search-form-input').val(''); 
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + domain);
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
   apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
 
   $.ajaxSetup({cache:false});
@@ -340,11 +340,11 @@ function domainSearchFormSubmit(e) {
         // tokenize header on search available page
         $('span#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section');
-        if($thisSection[0].id != "domain-available-marquee-view") {
-          $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
-          animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
-        }
+        var $thisSection = $this.closest('.js-marquee-section');       
+
+        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+
+        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
 
       } else {
 
@@ -373,7 +373,6 @@ function domainSearchFormSubmit(e) {
 
 function verifyDomainIsStillAvailable(e) {
 
-
   var $this = $(e.target),
     $thisParent = $this.parent(),
     domain = $this.data('domain'),
@@ -383,8 +382,8 @@ function verifyDomainIsStillAvailable(e) {
   $thisParent.find('.checking-availability').show();
 
   apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
-  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + domain.NameWithoutExtension);
-  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + domain.Extension);
+  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + encodeURIComponent(domain.NameWithoutExtension));
+  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + encodeURIComponent(domain.Extension));
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -425,7 +424,6 @@ function showChoicesScreen(e){
   $('#products, #domains').hide();
   var $thisSection = $this.closest('.js-marquee-section');
 
-
   animateMarquee($thisSection, $('#step2-choose-product') /*toView*/);
 
   // FOR IE we need to resize the plan boxes that were previously hidden
@@ -449,7 +447,7 @@ function goToDppCheckoutPage(e) {
     sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
-  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + domain.Fqdn);
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
@@ -481,11 +479,11 @@ function showSearchSpins($this, domain, alternateDomains){
   // setup search box  
   showTypeYourDomain();
 
-  displayMoreResultsLinks();
+  displayMoreResultsLinks(alternateDomains.length);
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-  lastSpinResultCount =  0;
+  totalSpinResults =  0;
   var $spinResults = $('#spin-results');
   var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
@@ -496,14 +494,18 @@ function showSearchSpins($this, domain, alternateDomains){
     $newSpin.find('.select-and-continue').show().data('domain', domain);
     $spinResults.append($newSpin);
   });
-  got1Page.lastSpinResultCount = alternateDomains.length;
-  updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  got1Page.totalSpinResults = alternateDomains.length;
+  
+  if(got1Page.totalSpinResults <= got1Page.maxNumberOfSpinsToShowByDefault) {
+    hideMoreResultsLinks();
+  } else {
+    updateDomainCountText(got1Page.maxNumberOfSpinsToShowByDefault);
+  }
+  
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
-  if($thisSection[0].id != "domain-not-available-marquee-view") {
-    animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
-  }
+  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
 
 }
 
@@ -517,7 +519,7 @@ function showApi3SearchError(e,domain){
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
-function displayInvlidTldMessage(){
+function displayInvalidTldMessage(){
   $('#marquee .search-message').hide();
   $('#marquee .invalid-TLD-entered').show();
 }
@@ -547,22 +549,23 @@ function hideMoreResultsLinks() {
   $("#show-more-section").hide();
 }
 
-function displayMoreResultsArea () {
+function displayMoreResultsArea() {
   $("#spin-results .spin-result").slideDown(got1Page.animationTime);
   hideMoreResultsLinks();
-  updateDomainCountText(got1Page.lastSpinResultCount);
+  updateDomainCountText(got1Page.totalSpinResults);
 }
 
-function updateDomainCountText(currentlyShown) {
-
+function updateDomainCountText(numberShowing) {
   var $spinCounts = $('#spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
-  templateHtml = templateHtml.replace(/\{0\}/gi, currentlyShown); 
-  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.lastSpinResultCount);
+  templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, got1Page.totalSpinResults);
   $spinCounts.html(templateHtml);
 }
 
 function animateMarquee($currentView, $animateToView) {  
+
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
   var currentViewHeight = $currentView.height(),
     windowWidth = $(window).width(),

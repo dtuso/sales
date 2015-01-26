@@ -1,0 +1,29 @@
+extends ./_home-page.jade
+
+block marquee
+  section#marquee
+    .container
+      .row
+        .col-xs-12.col-md-9
+          .hero-wrapper
+            include ./heros/got-puppy.jade
+        .col-xs-12.col-md-3
+          .tile-wrapper
+            include ./tiles/puppy.jade
+block merch-tile1
+  include ./tiles/get-found.jade
+block merch-tile2
+  include ./tiles/o365-tile.jade
+block merch-tile3
+  include ./tiles/merch-tile-web-hosting.jade
+block merch-tile4
+  include ./tiles/online-store-tile.jade
+block prepend sections
+  include ./sections/_buddy-promo-full-video.jade
+  include ./sections/_danica-buddy-promo.jade
+  include ./sections/_domain-promo.jade
+  include ./sections/_why-godaddy.jade
+  include ./sections/_o365-promo.jade
+  include ./sections/_website-promo.jade
+  include ./sections/_new-customers-promo.jade
+  include ./sections/_support-promo.jade

@@ -76,7 +76,6 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
       }
       .features.features-wrap h2,
       .features.features-slim h2 {
-        font-family: 'Walsheim-Black';
         margin: 0 0 20px;
         color: #333;
         font-size: 40px;
@@ -85,7 +84,7 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
         color: #fff !important;
       }
       .features .features-subtitle {
-        font-family: 'Walsheim-Bold';
+        text-transform: none; /* override headline-primary */
         margin-top: 20px;
       }
       .features .features-text {
@@ -114,10 +113,10 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
         .col-sm-6(class="#{secondColClass ? secondColClass : ''}")
           div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
             if (title)
-              h2 !{title}
+              h2.h0 !{title}
 
             if (subtitle)
-              h4.features-subtitle !{subtitle}
+              h4.headline-primary.features-subtitle !{subtitle}
 
             if (text)
               .features-text !{text}
