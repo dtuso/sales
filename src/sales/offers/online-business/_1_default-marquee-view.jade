@@ -2,7 +2,7 @@ atlantis:webstash(type="css")
   style.
     /* marquee styling */
     .main-marquee { color: #333; font-size: 12px; text-transform: uppercase;  fill: #333; }
-    .main-marquee html[lang|="en"] .dash { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
+    html[lang*="en-us"] .main-marquee .dash-em { background-size: contain; background-repeat: x; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48Zz48cmVjdCBpZD0nc3ZnXzEnIGZpbGw9JyMzMzMnIHg9JzAnIHk9JzM5JyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzIyJy8+PC9nPjwvc3ZnPg==); }
     .main-marquee .header-text { padding-left: 5%; line-height: 0.8; padding-right: 15%; }
     .main-marquee .header-text:first-child { padding-left: 0; line-height: 0.8; padding-right: 0; margin-left: 5%; margin-right: 15%; }
     .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
@@ -110,7 +110,7 @@ section#default-marquee-view.bg-green-official.js-marquee-section
   .container.main-marquee
     .row
       .col-md-6.col-xs-12
-        .header-text.dash
+        .header-text.dash-em
           h1.get-online [@L[cds.sales/offers/online-business:32573-top-banner-headline]@L]
         .header-text.bigtext
           .today [@L[cds.sales/offers/online-business:32573-top-banner-subheadline]@L]
