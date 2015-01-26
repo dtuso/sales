@@ -114,7 +114,7 @@ block marqueeContent
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]
-  a.btn.btn-default-light.jump-arrow-btn(href!="[@T[link:<relative path='~/hosting/website-builder-config.aspx' secure='true'><param name='ci' value='' /><param name='plan' value='wsb_personal_12month' /></relative>]@T]") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
+  button.btn.btn-default-light.btn-plan(data-plan="wsb_personal_12month") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
 
 block plans
   section#plans
@@ -352,7 +352,7 @@ block sections
     div#login-modal.modal.fade
       div.modal-dialog
         div.modal-content
-          form(method="POST" id="g-modal-loginAcct-form" action!="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/web-hosting.aspx' secure='false' parammode='explicit'/>]@T]")
+          form(method="POST" id="g-modal-loginAcct-form" action!="[@T[link:<external parammode='explicit' linktype='SSOURL' secure='true' />]@T]/login.aspx?spkey=[@T[sso:spkey]@T]&target=[@T[link:<external linktype='siteurl' path='/hosting/website-builder.aspx' parammode='explicit'/>]@T]")
             input(type="hidden" value="LOGIN" name="LOGIN")
             input(type="hidden" value="1" name="verifyShopper")
             div.modal-header
