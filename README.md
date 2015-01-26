@@ -40,7 +40,7 @@ can make sure your repository stays in sync with the original one. I don't know 
 do this in the terminal or shell:
 
 ```
-git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git
+git remote add upstream https://github.secureserver.net/FOS-CDS-Pages/Sales.git 
 ```
 
 ```
