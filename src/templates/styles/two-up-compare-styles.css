@@ -144,7 +144,6 @@
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;
