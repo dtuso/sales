@@ -833,7 +833,7 @@ width: 50%;
     overflow: visible;
 }
 
-.Explorer8 .plan-flag {background-color:#fedc45}
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -973,7 +973,7 @@ width: 50%;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
                    <br><strong>
                      
@@ -1015,7 +1015,7 @@ width: 50%;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
                    <br><strong>
                      
@@ -1058,7 +1058,7 @@ width: 50%;
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7509, 7509, 0))
                    <br><strong>
                      
@@ -1101,7 +1101,7 @@ width: 50%;
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7514, 7514, 0))
                    <br><strong>
                      
@@ -1377,7 +1377,9 @@ width: 50%;
       });
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
-        organizeNavBar();
+        if($('.mid-page-nav').is(':visible')){
+          organizeNavBar();
+        }
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
