@@ -297,7 +297,7 @@
 }
 @media only screen and (min-width: 1200px) {
   #marquee .btn-purchase {
-    margin-top: 15px;
+    margin-top: 40px;
     float: right;
   }
   #marquee .price-wrapper .bigtext {
@@ -307,12 +307,26 @@
     text-align: right;
   }
 }
+@media (min-width: 992px) {
+  #marquee .hero-wrapper > .row img {
+    width: 90%;
+  }
+  .disclaimer {
+    margin-bottom: 0px;
+  }
+}
 @media (min-width: 768px) {
   #marquee .hero-wrapper > .row {
     max-height: 315px;
   }
   #marquee .hero-wrapper > .row img {
-    margin: -72px 0 0 0;
+    width: 100%;
+  }
+  .disclaimer {
+    margin-bottom: 20px;
+  }
+  .price-text {
+    font-size: 1.2rem;
   }
 }
 
@@ -336,6 +350,7 @@
                     <div class="row">
                       <div class="col-lg-6 col-sm-12">
                         <div class="price-wrapper">
+                          <div class="price-text walsheim-black">ALL STARTING AT JUST</div>
                           <div style="display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div>
                         </div>
                       </div>
