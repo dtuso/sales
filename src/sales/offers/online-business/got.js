@@ -146,7 +146,6 @@ $(document).ready(function() {
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
-
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
@@ -299,7 +298,6 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
-
   var $this = $(e.target),
     $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
     domain = $.trim($textInput.val()), 

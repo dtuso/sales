@@ -228,7 +228,6 @@ $(document).ready(function() {
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
-
   $('#domain-not-available-marquee-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   $('#step2-choose-product').on('click','.btn-purchase', goToDppCheckoutPage);
 
@@ -381,7 +380,6 @@ function isTldValid(domain) {
 
 function domainSearchFormSubmit(e) {
  
-
   var $this = $(e.target),
     $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
     domain = $.trim($textInput.val()), 
@@ -670,36 +668,17 @@ function animateMarquee($currentView, $animateToView) {
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
-  var intHeight = (finishHeight - (Math.abs(startHeight-finishHeight)/2))
-  console.log('finishHeight', finishHeight);
-  console.log('intHeight', intHeight);
-  $obj.css({"height": startHeight + "px", "z-index": zIndex}).animate({
-      "height":  finishHeight + "px"
-  },{ 
-      duration: got1Page.animationTime*3/4, 
+  $obj
+    .css({"height": startHeight + "px", "z-index": zIndex})
+    .animate({
+      "height": finishHeight + "px"
+    },{ 
+      duration: got1Page.animationTime, 
       easing: got1Page.animationEasingType, 
       complete:function(){
-        $obj.animate({
-          "height":  intHeight + "px"
-        },{ 
-          duration: got1Page.animationTime/6, 
-          easing: got1Page.animationEasingType, 
-          complete:function(){
-            $obj.animate({
-              "height":  finishHeight + "px"
-            },{ 
-              duration: got1Page.animationTime/4, 
-              easing: got1Page.animationEasingType, 
-              complete:function(){
-                $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
-              }
-            });
-          }
-        });
+        $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
       }
   });
-
-
 }
 
 function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
@@ -755,7 +734,7 @@ $(window).load(function () {
       <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
-    <link href="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
@@ -2555,7 +2534,7 @@ h
           <div class="col-sm-6 col-sm-push-3 text-center disclaimer-mark"> 
             <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
             <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-              <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+              <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</button> 
               ##if(countrySiteAny(uk))
                
               <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
@@ -3012,7 +2991,7 @@ h
                       <div class="row text-center disclaimer-mark"> 
                         <div data-tokenize="[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]" class="headline-primary">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price]@L] </div>
                         <p data-tokenize="[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly" promocode="0" />]@T]" class="disclaimer">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer]@L] 
-                          <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</a></button> 
+                          <button data-ci-workaround="95736" class="btn-link see-wsb-disclaimer-link">[@L[cds.sales/offers/online-business:32573-godaddy-wsb-text-price-disclaimer-link]@L]</button> 
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
