@@ -67,14 +67,6 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block headScripts
-      | 
-      | ##if(isManager())
-      | 
-      | <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
-      | 
-      | ##endif
-      | 
-
       script        
         include ./js/jquery.lazyload.2.0.0.min.js
       script.
@@ -122,7 +114,12 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
           });
         }
 
-    //- TODO: get this content from PC's head-ie-rsiv item -- see git for history
+    //- TODO: get this content from PC's head-ie-rsiv item
+    <!--[if lt IE 9]>
+    link(href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect")
+    link(href!="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy")
+    script(src!="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js")
+    <![endif]-->
 
     //- if an inherited page does not want any of these JS files delay loaded, 
     //- the delayed load can be overridden by appending the JS file to the headScripts block
