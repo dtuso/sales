@@ -4806,7 +4806,7 @@ margin-bottom: 20px;
          });
       </script>
     </section> 
-    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(da,de,es,fi,fr,it,nb,nl,pl,pt,ru,sv,tr,uk))
+    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,uk))
      
     <section id="other-products">
       <div class="container">
@@ -5392,17 +5392,14 @@ margin-bottom: 20px;
        $(document).ready(function(){
          $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
          $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
-         $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
          $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
       
          $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
          $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
-         $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
          $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
       
          $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
          $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
-         $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
          $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
       
          $(".ep-wsb-how-to-publish-a-website-faq").html(
@@ -5460,7 +5457,7 @@ margin-bottom: 20px;
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        if ($(window).width() > 768){
+        if ($(window).width() >= 768){
           $(".pro-plans").each(function(index, outerPlan) {
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
