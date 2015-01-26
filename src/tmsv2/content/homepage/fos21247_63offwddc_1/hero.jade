@@ -9,8 +9,12 @@ block append rightArrowStyles
     :less
       .hero.right-arrow.ddc-1{
         .rightContent{
-            .line1.part1{width:35%;white-space:normal;display:inline-block}
-            .line1.part2{width:60%;display:inline-block}
+          .line1{display:inline-block}
+          .line1.part1{
+            width:35%; font-size:150%;
+            div{white-space:normal !important;}
+          }
+          .line1.part2{width:60%;}
         }
       }
 block leftContent
@@ -20,8 +24,10 @@ block leftContent
       span.dash —
       span JOIN THE CLUB.
 block rightContent
+  .line1.part1.bigtext
+    .walsheim-medium SAVE UP TO
+  .line1.part2.bigtext
+    .walsheim-black [@T[productcompare:<percent primaryproductid="11601" secondaryproductid="11601" primarypricetype="8" secondarypricetype="0" showsymbol="true"/>]@T]
   .bigtext
-    .line1.part1.walsheim-medium SAVE UP TO
-    .line1.part2.walsheim-black [@T[productcompare:<percent primaryproductid="11601" secondaryproductid="11601" primarypricetype="8" secondarypricetype="0" showsymbol="true"/>]@T]
     .line2.walsheim-black EVERY DAY
   a.btn.btn-sm.btn-purchase JOIN DISCOUNT DOMAIN CLUBS

@@ -48,7 +48,7 @@
         if(ieVersion == '10-11+'){
           var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
           var base64 = window.btoa(utf8);
-          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+')no-repeat');
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
           }
         else{
           $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
