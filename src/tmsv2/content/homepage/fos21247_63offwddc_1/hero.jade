@@ -1,0 +1,27 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "93635";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/domains/discount-domains.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " ddc-1";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.ddc-1{
+        .rightContent{
+            .line1.part1{width:35%;white-space:normal;display:inline-block}
+            .line1.part2{width:60%;display:inline-block}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.walsheim-black  LOVE DOMAINS?
+    .line2.tungsten 
+      span.dash —
+      span JOIN THE CLUB.
+block rightContent
+  .bigtext
+    .line1.part1.walsheim-medium SAVE UP TO
+    .line1.part2.walsheim-black [@T[productcompare:<percent primaryproductid="11601" secondaryproductid="11601" primarypricetype="8" secondarypricetype="0" showsymbol="true"/>]@T]
+    .line2.walsheim-black EVERY DAY
+  a.btn.btn-sm.btn-purchase JOIN DISCOUNT DOMAIN CLUBS

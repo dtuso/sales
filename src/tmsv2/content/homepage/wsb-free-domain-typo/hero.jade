@@ -1,0 +1,56 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "94097";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " wsb-free-domain-typo";
+    - rightArrow.arrowTextColor = '#333';
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.wsb-free-domain-typo{
+        .leftContent{
+          .products{
+            .product{display:inline-block;width:43%; margin-right:20%}
+            .product>img{width:100%}
+            .product>div{font-size:170%; margin:0 auto}
+            .addition{width:10%; display:inline-block}
+            .domain>div{width:50%}
+            .domain{margin-right:20%}
+          }
+        }
+        .rightContent {
+          width: 95%;
+          .line5{white-space:normal;font-size:125%}
+          .line6{font-size:65%; padding-top:2%; white-space:normal}
+        }
+        .addition{position: absolute;top: 50%;left:50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+      }
+block leftContent
+  .products.walsheim-black
+    .product.domain.bigtext
+      <!--[if lt IE 9]>
+      img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain-black.png").www
+      <![endif]-->
+      img.www.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=")
+      .domain.tungsten DOMAIN
+    .addition.bigtext
+      span [@L[cds.sales/homepage/heros/got:additionSign]@L]
+    .product.website.bigtext
+      <!--[if lt IE 9]>
+      img.img-responsi(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website-black.png").pencil
+      <![endif]-->
+      img.pencil.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=")
+      .tungsten WEBSITE BUILDER
+block rightContent
+  .bigtext
+    .line1.walsheim-black FREE DOMAIN
+    .line2.tungsten WHEN YOU BUY WEBSITE BUILDER
+    .line3.walsheim-black [@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH
+    .line4.tungsten
+      span THIS
+      span.dash ———
+      span IS NOT A TYPO
+    .line5.walsheim-bold AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.
+  a.btn.btn-lg.btn-purchase GET STARTED
+  .line6.walsheim-black Free domain with annual plan only. Other restrictions apply.

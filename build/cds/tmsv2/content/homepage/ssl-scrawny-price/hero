@@ -1,0 +1,83 @@
+
+<!-- start right-arrow hero section-->
+<atlantis:webstash type="css">
+  <style>
+    .hero-wrapper>div{min-height:inherit;}
+    .right-arrow.hero {min-height: inherit;line-height:.9;white-space:nowrap;background: transparent}
+    .right-arrow>div{min-height:inherit}
+    .right-arrow .left{background-color:rgb(119,192,67);color:#fff}
+    .right-arrow .right{background-color:transparent; color:#000}
+    .right-arrow .dash{letter-spacing:-.1rem}
+    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
+    .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent{width:80%; margin-left:10%;}
+    .right-arrow .rightContent{width:70%}
+    .right-arrow .rightContent .btn{margin:5% 0}
+    
+  </style>
+  <style>.hero.right-arrow.ssl-scrawny-price .rightContent {
+  width: 95%;
+}
+.hero.right-arrow.ssl-scrawny-price .rightContent .line4 {
+  margin-bottom: 2%;
+}
+.hero.right-arrow.ssl-scrawny-price .rightContent .line5 {
+  text-decoration: underline;
+  white-space: normal;
+  font-size: 70%;
+}
+.hero.right-arrow.ssl-scrawny-price .rightContent .restrictions {
+  white-space: normal;
+  font-size: 70%;
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='94084'/><param name='isc' value='SSLSAVINGS' /></relative>]@T]" class="hero right-arrow ssl-scrawny-price">
+  <div class="left col-xs-6">
+    <div class="leftContent">
+      <div class="bigtext">
+        <div class="line1 tungsten">POWERFUL SECURITY</div>
+        <div class="line2 walsheim-black"> <span class="dash">—————</span><span>SCRAWNY LITTLE PRICE.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1 arrow"></div>
+  <script>
+    (function(){
+    function IEVersion(){
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
+        return '8-9';
+      }
+      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+        return '10-current';
+      }
+    }
+    var ieVersion = IEVersion();
+      if(ieVersion != undefined)
+        if(ieVersion == '10-11+'){
+          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
+          var base64 = window.btoa(utf8);
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+')no-repeat');
+          }
+        else{
+          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
+        }
+      })();
+  </script>
+  <div class="right col-xs-5">
+    <div class="rightContent">
+      <div class="bigtext">
+        <div class="line1 tungsten">STANDARD SSL CERTIFICATES</div>
+        <div class="line2 walsheim-black"> 
+          <strike>[@T[productprice:<list productid="3604" period="yearly" />]@T] </strike><span class="price">[@T[productprice:<current productid="3604" period="yearly" promocode="78124565" />]@T]/1<sup>st</sup><span>YEAR</span></span>
+        </div>
+        <div class="line3 tungsten"> <span class="dash">————————</span><span>WHEN YOU BUY 2 OR MORE YEARS.</span></div>
+      </div><a class="btn btn-lg btn-purchase">START NOW</a>
+      <div class="line4 walsheim-regular">USE PROMO CODE SSLSAVINGS </div>
+      <div data-style="qt" data-width="350" data-target=".restrictions" data-location="bottom" data-content="[@T[productprice:<current productid='3604' period='yearly' promocode='78124565' />]@T] for first year of Single Website Protection plan when you purchase a plan of at least 2 years. Price of subsequent years is [@T[productprice:<list productid='3604' period='yearly' />]@T]. Must use 'SSLsavings' promo code for discount. Offer valid for U.S. residents only." class="line5 walsheim-regular restrictions sf-tip sf-tipper-target">RESTRICTIONS APPLY</div>
+    </div>
+  </div>
+</div>
+<!-- end right-arrow hero section-->

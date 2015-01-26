@@ -1,0 +1,73 @@
+
+<!-- start right-arrow hero section-->
+<atlantis:webstash type="css">
+  <style>
+    .hero-wrapper>div{min-height:inherit;}
+    .right-arrow.hero {min-height: inherit;line-height:.9;white-space:nowrap;background: transparent}
+    .right-arrow>div{min-height:inherit}
+    .right-arrow .left{background-color:rgb(119,192,67);color:#fff}
+    .right-arrow .right{background-color:transparent; color:#000}
+    .right-arrow .dash{letter-spacing:-.1rem}
+    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
+    .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent{width:80%; margin-left:10%;}
+    .right-arrow .rightContent{width:70%}
+    .right-arrow .rightContent .btn{margin:5% 0}
+    
+  </style>
+  <style>.hero.right-arrow.ddc-1 .rightContent .line1.part1 {
+  width: 35%;
+  white-space: normal;
+  display: inline-block;
+}
+.hero.right-arrow.ddc-1 .rightContent .line1.part2 {
+  width: 60%;
+  display: inline-block;
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/domains/discount-domains.aspx'><param name='ci' value='93635'/></relative>]@T]" class="hero right-arrow ddc-1">
+  <div class="left col-xs-6">
+    <div class="leftContent">
+      <div class="bigtext">
+        <div class="line1 walsheim-black"> LOVE DOMAINS?</div>
+        <div class="line2 tungsten"> <span class="dash">—</span><span>JOIN THE CLUB.</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1 arrow"></div>
+  <script>
+    (function(){
+    function IEVersion(){
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
+        return '8-9';
+      }
+      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+        return '10-current';
+      }
+    }
+    var ieVersion = IEVersion();
+      if(ieVersion != undefined)
+        if(ieVersion == '10-11+'){
+          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
+          var base64 = window.btoa(utf8);
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+')no-repeat');
+          }
+        else{
+          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
+        }
+      })();
+  </script>
+  <div class="right col-xs-5">
+    <div class="rightContent">
+      <div class="bigtext">
+        <div class="line1 part1 walsheim-medium">SAVE UP TO</div>
+        <div class="line1 part2 walsheim-black">[@T[productcompare:<percent primaryproductid="11601" secondaryproductid="11601" primarypricetype="8" secondarypricetype="0" showsymbol="true"/>]@T]</div>
+        <div class="line2 walsheim-black">EVERY DAY</div>
+      </div><a class="btn btn-sm btn-purchase">JOIN DISCOUNT DOMAIN CLUBS</a>
+    </div>
+  </div>
+</div>
+<!-- end right-arrow hero section-->
