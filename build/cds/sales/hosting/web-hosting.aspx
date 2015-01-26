@@ -838,7 +838,7 @@ cursor: pointer;
         <div class="row">
           <div class="col-sm-7 marquee-content-wrapper">
              
-            ##if(activeLanguageAny([en-US]))
+            ##if(activeLanguageAny([en-US]) && splitTestingSideIsActive(1425, B))
              
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
             <h2 class="marquee-product-description">Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.</h2>
@@ -4374,7 +4374,6 @@ height: 27px;
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;
