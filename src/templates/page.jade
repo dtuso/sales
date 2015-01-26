@@ -67,6 +67,14 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block headScripts
+      | 
+      | ##if(isManager())
+      | 
+      | <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
+      | 
+      | ##endif
+      | 
+
       script        
         include ./js/jquery.lazyload.2.0.0.min.js
       script.
