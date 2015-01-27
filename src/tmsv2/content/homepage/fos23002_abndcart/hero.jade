@@ -1,0 +1,26 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "93634";
+  - rightArrow.ctaLink = "[@T[link:<external linktype='carturl' path='/basket.aspx'><param name='ci' value='"+rightArrow.ci+"'/></external>]@T]";
+  - rightArrow.classes += " abndcart";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.abndcart{
+        .rightContent {
+          .line2{ padding:0 0 2% 0}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.tungsten YOU DID THE RESEARCH
+    .line2.walsheim-black YOU SHOPPED
+    .line3.tungsten 
+      span.dash —
+      span SMART
+block rightContent
+  .bigtext
+    .line1.walsheim-black NOW
+    .line2.walsheim-black YOU JUST NEED TO 
+  a.btn.btn-lg.btn-purchase GO TO CART
