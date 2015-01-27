@@ -1268,7 +1268,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-D" data-ci="undefined" data-plan="host_GridHostStrDiabloLin1Yr_in" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-D" data-ci="90621" data-plan="host_GridHostStrDiabloLin1Yr_in" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1294,7 +1294,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-A" data-ci="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1321,7 +1321,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-B" data-ci="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1349,7 +1349,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-C" data-ci="undefined" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1778,7 +1778,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-A" data-ci="undefined" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1804,7 +1804,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-B" data-ci="undefined" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -1831,7 +1831,7 @@ cursor: pointer;
                    
                 </div>
                 <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
-                <button id="product-C" data-ci="undefined" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]'></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
@@ -2578,7 +2578,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans('parallels-tab')" data-ci="95797">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 15%; border-bottom: 8px solid #a6a6a6;">
@@ -2969,7 +2969,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans('cpanel-tab')" data-ci="95792">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -3544,7 +3544,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans('parallels-tab')" data-ci="95797">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
@@ -3881,7 +3881,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans('cpanel-tab')" data-ci="95792">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -4610,7 +4610,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" class="tile-section">
+    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="95879" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -5254,28 +5254,13 @@ height: 27px;
           }
         });
       ##endif
-      function comparePlans2(id){
-        if(id=="cpanel-tab"){
-          $("#parallels-tab").hide();
-          $("#"+id).show();
-         }else if(id =="parallels-tab"){
-          $("#cpanel-tab").hide();
-          $("#"+id).show();
-         }
-      }
       function comparePlans(id){
         if(id=="cpanel-tab"){
           $("#parallels-tab").hide();
           $("#"+id).show();
-          $(".compareButtons").removeClass("rightActive").addClass("leftActive");
-          $(".compareButtonsRight").removeClass("activeButton").addClass("inactiveButton");
-          $(".compareButtonsLeft").removeClass("inactiveButton").addClass("activeButton");
          }else if(id =="parallels-tab"){
           $("#cpanel-tab").hide();
           $("#"+id).show();
-          $(".compareButtons").removeClass("leftActive").addClass("rightActive");
-          $(".compareButtonsLeft").removeClass("activeButton").addClass("inactiveButton");
-          $(".compareButtonsRight").removeClass("inactiveButton").addClass("activeButton");
          }
       }
       $('.dropdown-toggle').dropdown()
