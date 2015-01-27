@@ -122,4 +122,4 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
               .features-text !{text}
 
             if (buttonText && buttonUrl)
-              a(href="#{buttonUrl}", class="btn #{buttonColor ? buttonColor : 'btn-default'}" ) !{buttonText}
+              a(href!="#{buttonUrl}", class="btn #{buttonColor ? buttonColor : 'btn-default'}" ) !{buttonText}

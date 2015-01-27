@@ -59,8 +59,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       meta(property="fb:app_id" content="115696031791232")
       meta(property="fb:admins" content="633356800")
 
-    | 
-    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+
+    [@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
 
     //- inherited page classes can prepend/override/append headScripts when 
     //- that page needs a script loaded early on in DOM processing
