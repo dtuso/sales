@@ -76,7 +76,7 @@
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
@@ -253,26 +253,6 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-<<<<<<< HEAD
-          <div class="col-xs-12 col-md-9">
-            <div class="hero-wrapper">
-              <atlantis:webstash type="css">
-                <style>#marquee {
-  background-color: #f3f3f4;
-  overflow-y: hidden;
-}
-#marquee .promo-wrapper,
-#marquee .price-wrapper {
-  margin-top: 20px;
-}
-#marquee .inline-dash {
-  display: inline-block;
-  overflow: hidden;
-  letter-spacing: -0.5em;
-  font-size: 1.4em;
-  vertical-align: top;
-  line-height: 50%;
-=======
           <div class="col-md-8 col-sm-12">
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
@@ -289,7 +269,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
->>>>>>> origin/rebrand-homepage-pregame
 }
 #marquee .headline-wrapper {
   margin-top: 40px;
@@ -1133,7 +1112,6 @@ text-transform: uppercase;
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;

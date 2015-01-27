@@ -49,7 +49,9 @@ mixin renderMidPageNav(options)
     });
     $(document).ready(function(){
       // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
-      organizeNavBar();
+      if($('.mid-page-nav').is(':visible')){
+        organizeNavBar();
+      }
 
       var nav = $('.mid-page-nav');
       var navTop = nav.offset().top;

@@ -28,13 +28,6 @@
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-     
-    ##if(isManager())
-     
-    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
-     
-    ##endif
-     
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -82,7 +75,10 @@
         });
       }
       
-    </script>
+    </script><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
@@ -838,7 +834,7 @@ cursor: pointer;
         <div class="row">
           <div class="col-sm-7 marquee-content-wrapper">
              
-            ##if(activeLanguageAny([en-US]))
+            ##if(activeLanguageAny([en-US]) && splitTestingSideIsActive(1425, B))
              
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]</h1>
             <h2 class="marquee-product-description">Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.</h2>
@@ -1116,7 +1112,7 @@ cursor: pointer;
     overflow: visible;
 }
 
-.Explorer8 .plan-flag {background-color:#fedc45}
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -1183,7 +1179,12 @@ cursor: pointer;
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -1252,7 +1253,7 @@ cursor: pointer;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(294057, 294057, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1278,7 +1279,7 @@ cursor: pointer;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1305,7 +1306,7 @@ cursor: pointer;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32059, 32059, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1333,7 +1334,7 @@ cursor: pointer;
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
+                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(32082, 32082, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
@@ -1622,7 +1623,7 @@ cursor: pointer;
     overflow: visible;
 }
 
-.Explorer8 .plan-flag {background-color:#fedc45}
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -1689,7 +1690,12 @@ cursor: pointer;
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -1758,7 +1764,7 @@ cursor: pointer;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -1784,7 +1790,7 @@ cursor: pointer;
               <div class="pro-plan-wrap">
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32059, 32059, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -1811,7 +1817,7 @@ cursor: pointer;
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
                 <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
-                <div class="plan-price-wrap"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32082, 32082, 0))
                    <br><strong>[@L[cds.sales/_common:was]@L] 
                     <strike>[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
@@ -2120,7 +2126,9 @@ cursor: pointer;
       });
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
-        organizeNavBar();
+        if($('.mid-page-nav').is(':visible')){
+          organizeNavBar();
+        }
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
@@ -4374,7 +4382,6 @@ height: 27px;
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;
@@ -5283,7 +5290,7 @@ height: 27px;
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        if ($(window).width() > 768){
+        if ($(window).width() >= 768){
           $(".pro-plans").each(function(index, outerPlan) {
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {

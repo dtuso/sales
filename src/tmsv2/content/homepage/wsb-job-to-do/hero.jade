@@ -1,0 +1,20 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "94090";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " wsb-job-to-do";
+block leftContent
+  .bigtext
+    .line1.tungsten WEBSITE BUILDER
+    .line2.walsheim-black YOUR DOMAIN
+    .line3.tungsten HAS A JOB TO DO
+    .line4.walsheim-black
+      span.dash ————————
+      span PUT IT TO WORK
+block rightContent
+  .bigtext
+    .line1.walsheim-bold BUILD A WEBSITE
+    .line2.walsheim-bold FOR AS LOW AS
+    .line3.price [@T[productprice:<current productid="7524" period="monthly" />]@T]/MO
+  a.btn.btn-lg.btn-purchase START NOW

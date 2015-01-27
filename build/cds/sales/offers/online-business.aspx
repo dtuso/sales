@@ -735,7 +735,7 @@ $(window).load(function () {
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
@@ -1216,7 +1216,7 @@ h
     overflow: visible;
 }
 
-.Explorer8 .plan-flag {background-color:#fedc45}
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -1283,7 +1283,12 @@ h
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -1722,11 +1727,11 @@ h
           #spin-results .spin-results-message, 
           #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
-          #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
+          #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
           #spin-results .spin-results-message {margin-top:15px;}
           #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
-          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
+          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;word-wrap: break-word;}
+          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;word-wrap: break-word;}
           #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
           #spin-results .plan-tile {margin-top: 0px;}
           
@@ -2570,31 +2575,6 @@ h
                 
               </script>
             </atlantis:webstash>
-            <atlantis:webstash type="js">
-              <script>
-                $(document).ready(function(){
-                  /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-                  var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-                      $fluidEl = $("body"); /*The element that is fluid width*/      
-                  $allVideos.each(function() {        
-                    // Figure out and save aspect ratio for each video
-                    // and remove the hard coded width/height
-                    $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-                  });
-                  // When the window is resized
-                  $(window).resize(function() {
-                    var newWidth = $fluidEl.width();
-                    // Resize all videos according to their own aspect ratio
-                    $allVideos.each(function() {
-                      var $el = $(this);
-                      $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-                    });
-                  // Kick off one resize to fix all videos on page load
-                  }).resize();
-                });
-                
-              </script>
-            </atlantis:webstash>
             <atlantis:webstash type="css">
               <style>
                 .video-modal {display: none;}
@@ -2804,7 +2784,6 @@ h
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;
@@ -4129,49 +4108,31 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/97d611570df922cf947daef6ea7c720b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/luxury-transport.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/120ac6ea7e9a87f3254d5ea1092cb1fd?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/02aee5deba51271ae149ac610fb15d58?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/car-repair-company.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/e0e0b23c023fe40f5820b57ff9718f4a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d1aa702bacda360199f77ce4d39c8335?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/car-repair-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/58cd1a2ed18bcd522ef9c5c0cc4fb3c9?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/fc77f275cd3bb46a9217778c19cf6920?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/trucking-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/62780ee3a3dc1a54e699c56144ec64f7?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/on-time-trucking.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-eighth]@L]</span>
                     </li>
@@ -4181,89 +4142,46 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6b1eb0fa3185dd00243d0af845ff4b5e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b5e88b535286beb96285edb0667118bf?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/edec4f4323111955332fb9f34269c69c?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tm-accountants.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/5740464ea783efd94a7358b8b172de62?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/classic-legal.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fourth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2f141e7a0ad3f354f611eccd57601dbf?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-law-office.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/e26bd0f0ae83f4d53cadf96daad1aeeb?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/accounting-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/74655e66edef5238d4f708c06299ca72?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/law-firm.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a8134b28d40d3967435ab72039909c7e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/57195ef216c02718129c9231cc135be0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/391a3ef2159e40b19962bb971ac8eef1?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b3ff5029d53338b958df6c2a5ba1dc47?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/welding-company.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-twelve]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ea40d655c8fa1bf7a9c6f4e52018f2d5?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/vivid-paint.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-thirteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7b37730642f1ca7b00ac80cde15fe24d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fourteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1df47357cbf03621119a0ac2ed5582c8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fifteen]@L]</span>
                     </li>
                 </ul>
                 <a name="creativedesign"></a>
@@ -4271,153 +4189,76 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6b1eb0fa3185dd00243d0af845ff4b5e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ee1a43fb66327beafbb9f1fb234e7601?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-photographer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6dfefac0bc77ee80514e4c38bff57149?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/unique-boutique.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c83bafcc9ce874fbcce32169af7115c7?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/48336c35318bf842c2c6efe7f99d205b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1c8b714a0bcde9607e21d87a3a64fe5d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/52c4cf2834f6d806917e99bd4f00ae01?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-planner.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c8c1f21e455eca74803e1a7ef9f42044?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1bbcfc868d75ed079bc3e53431743bee?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b800d642322564436ecde62ea3f1299e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9b4b62e84b089a04299c3050c08edd37?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/photography-business.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-eleven]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d400d4730b855846e6cadb9d50e4d744?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twelve]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/5df2c0c4f4312f7f67e9f2534eee760f?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-designer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-thirteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4ab4161ae3cc34545d3f7a3467ec52e9?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/digital-world.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-fourteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7bf7f71bfcfdd2f11f25db20413d1bb0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-fifteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/aafd7cf01f27edc16feb2b7c98d2e2a8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-sixteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7da584233c1765ab4944dfba8c23feca?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-seventeen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b298203567bd31e603561f8b0fe2a741?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/childrens-author.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-eighteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/e83d4997012ef0feecc2bee56bf6501b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/blurb.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-nineteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/776f61859e979b3a71913d54fa416023?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twenty]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c61c8dbbe913c6f0191279886447fa01?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/continent-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twentyone]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9b4fa47157e8561f4297bc926f4f2cfa?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/professional-photography.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twentytwo]@L]</span>
@@ -4428,66 +4269,38 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/346c2e2ffac026828c9d7fcd92107b7f?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/elegant-florist.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/311be31b2720948105b51d3bf81aa660?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a8134b28d40d3967435ab72039909c7e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a9094a551d757f31797d14cc1625f73b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/watch-store.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8e53724a1989fa1f7b93c7faae808f3f?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/crop-farmer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/420d47ea6c808ca35ec22ebdfda200b4?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/smart-phone-app.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/648da9722023c864c59e88e4a2c15766?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7da584233c1765ab4944dfba8c23feca?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-tenth]@L]</span>
                     </li>
                 </ul>
                 <a name="education"></a>
@@ -4495,52 +4308,10 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d66926624d78c1b5d9ecd01b526aba90?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6b3e7b1c612202f60defd08996104ea1?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/preschool-education.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c4351ef5145cde1165c592aa2c58a67e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d8fd576bbbb469adf7420f7799234da2?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/f61b0d4be62749c1310e63a3c1e67095?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/df156fa4aded5facae9311cae5ba5dd6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a60f32efc59ded1b2005373fa1c39337?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-eighth]@L]</span>
                     </li>
                 </ul>
                 <a name="foodrestaurant"></a>
@@ -4548,133 +4319,63 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/297ddef0786375216e1ba1c3cea1d722?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ecd4d6fb82c0fa91149514ac2b3193ff?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/sweets-bakery.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6d023cb2723a5b9c6203b34c0b6f1487?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fourth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a38c5e9cc546c700765f1b73351d13f6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b43c28f859d7cfc8747e94c77997488d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/59487eb5acdf87f32cfaa82b9114e032?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/casual-brewery.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/726cee28a8704d1a838ea03b34138f08?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/3ec66a1c9991cc46b9d939c3b7fd8cab?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/gourmet-restaurant.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-ninth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/01b9767b84e7f5409b6f994b0a5badba?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b6aadba77466402a5fe471ae790eefd8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/54de9b764daeb389f6620dee03b4e30a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-twelve]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a070db22e7cea396b32a6b4b4c111bed?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-thirteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/11af94d995470db1474ba1d6b95b4126?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/sumptuous-cuisine.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fourteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/aecc1db10dc1508eb517f24d1ac8d6fe?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fifteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1793c5dce81e8eb74221f9f99eff81a8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/happy-hour.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-sixteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2fff8ad238337b4d13a0513205885293?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/so-thai.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-eighteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ed31a630bb6589708b2d51f76f7b2011?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/british-pub.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-nineteen]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4c1669ef52aaa302826df3116a91d154?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/china-china.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-twenty]@L]</span>
@@ -4685,90 +4386,56 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/499011ca812f85c918059bd0dcc32fb6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a7020f503b4f0e2382439118bb13f1d6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/contemporary-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/45963e9f60e58ca63271e64b7e23dd3f?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/serenity-spa.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/cfae9f3aa1727cfa85d3164b4b9d03a5?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/lotus-yoga-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-fourth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6dfefac0bc77ee80514e4c38bff57149?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/unique-boutique.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/0af7ada02ef833e0e67b48749e6eb2e6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/fitness-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/311be31b2720948105b51d3bf81aa660?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a7bb77f70817b56bec9be7fd7123a3d2?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/fitness-boot-camp.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-eighth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4688f56761a464581c97ea853adbdb42?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/power-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-ninth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8bde973a91bab9743c28f750751677e5?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/648da9722023c864c59e88e4a2c15766?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/3ed72b90c7e51b74b43fc0aacd09eeb4?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-twelve]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/be6fd7c75d32aefee337200249bd9918?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/classic-barber-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-thirteen]@L]</span>
@@ -4777,58 +4444,36 @@ $(document).ready(function(){
                 <a name="miscellaneousother"></a>
                 <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-misc]@L]</h3>
                 <ul>
-
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/88768ce98a62d952f8373c77de2c5899?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/52c4cf2834f6d806917e99bd4f00ae01?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-planner.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ccbb412d002b07fa98aa4201a58b0be6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/christian-church.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9b5688e3de6a012bb99311e416e1ab68?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b298203567bd31e603561f8b0fe2a741?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/childrens-author.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7b37730642f1ca7b00ac80cde15fe24d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/e83d4997012ef0feecc2bee56bf6501b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/blurb.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/776f61859e979b3a71913d54fa416023?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-eighth]@L]</span>
@@ -4839,35 +4484,35 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/f82c273077002dde24df81402744ce44?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-musician.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c590706413c4cfb175221fed3f85f1d1?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-lessons-dark.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1517701d9f836ac016d243a2a75b4dd1?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/feel-the-music.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ef4cff5a7285b99528f7b216d1e9add8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-lessons-light.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-fourth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/3fadc4a4c7bd54b88f51ceada1b32c74?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-venue.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-fifth]@L]</span>
@@ -4878,66 +4523,17 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/33bc6664b18fc9d2d59c094c34eab376?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2f26bc51cc7a32706fe51fe854254100?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/hopeful-message.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2aa571de893d7578f54df2647b36474e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4287cb04a6afd9b397068db2af54d735?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8bde973a91bab9743c28f750751677e5?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1be45dc5112000dd8de014d315433552?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ccbb412d002b07fa98aa4201a58b0be6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/christian-church.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ed6c02e95c66ea66eb84120dbeafe924?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/63f87870ab3a67636cb083d17d1cfd28?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-ninth]@L]</span>
                     </li>
                 </ul>
                 <a name="personalfamily"></a>
@@ -4945,73 +4541,38 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/22acee4fe6f4de86cd52d4825d7ff3f0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/family-pet.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9725a87ebb6af248305af8490c879043?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-bliss.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7d4d37691c1cdb32a0a5d6ccf4284ffa?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/bulletin-board.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/87aa31f9fff7b7d73bcba52650a477d0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/3b404b6c401953b0d5c693898632de57?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/baby-girl-announcement.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ed6c02e95c66ea66eb84120dbeafe924?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/528a8a89f427b984430d0f24307df187?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8c556f345bb7237a44c5543d7bf0bffc?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2a0fa049c2424458120e8ab1291a7539?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/baby-boy-announcement.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/63f87870ab3a67636cb083d17d1cfd28?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-tenth]@L]</span>
                     </li>
                 </ul>
                 <a name="petsanimals"></a>
@@ -5019,65 +4580,31 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/22acee4fe6f4de86cd52d4825d7ff3f0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/family-pet.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/eb8029b558898300969660ad5e346d65?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/pampered-pets.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/0905eb98f4a153e7e2d6ff30b26e9e7e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/44b98d9be7c5ed25c2fd30650c66cd33?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/premier-pet-sitters.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-fourth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/911d33db00b266c45fe93a6b8a4243e9?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b15edfece257ee0f5d4888df44b6e49a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/cdf1e33f0782ceff18e028a955c1100a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/animal-shelter.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/5ace572f6f29ae5aa427b569bc192c7d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/3bcd3d002e9225cbaef6a40b253be2a6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-ninth]@L]</span>
                     </li>
                 </ul>
                 <a name="photographyart"></a>
@@ -5085,70 +4612,35 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/ee1a43fb66327beafbb9f1fb234e7601?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-photographer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c83bafcc9ce874fbcce32169af7115c7?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/1c8b714a0bcde9607e21d87a3a64fe5d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c8c1f21e455eca74803e1a7ef9f42044?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9b4b62e84b089a04299c3050c08edd37?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/photography-business.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/5df2c0c4f4312f7f67e9f2534eee760f?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-designer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/da1f403f57b818167c4d37e0ca325947?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/7bf7f71bfcfdd2f11f25db20413d1bb0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/776f61859e979b3a71913d54fa416023?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-ninth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9b4fa47157e8561f4297bc926f4f2cfa?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/professional-photography.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-tenth]@L]</span>
@@ -5159,87 +4651,52 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/75f85fbd9dbda3d3ab62c1fc7f1a3f9c?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-first]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8069abcc892909253086e112ec2f8d7d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/0005c73bcf1b4c00ae654e1cbd2bf01a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/hometown-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/f7c8ba6a3aa7d1219c171b6b5b072526?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/96b373e17c288707330e267cc06ad557?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/southwest-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-fifth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/9823e710d54266fc512487895455f9eb?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/we-find-homes.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/904a1903280654a0899f9c3797ad7110?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/smith-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-seventh]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4867a92e3a836a931e82f85b2c2a7d03?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/40a0f60ee0748c085ece8e01fdee8339?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/6542222c311b686576ce2e7b8625a327?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4b23d4b0131ffd75f563d0595ad6cf93?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-apartments.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/aafd7cf01f27edc16feb2b7c98d2e2a8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-twelve]@L]</span>
                     </li>
                 </ul>
                 <a name="sportsrecreation"></a>
@@ -5247,80 +4704,31 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/499011ca812f85c918059bd0dcc32fb6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a7020f503b4f0e2382439118bb13f1d6?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/contemporary-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d8fd576bbbb469adf7420f7799234da2?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/85802760b59cb9f760716935e849f23a?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/528a8a89f427b984430d0f24307df187?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/811f9337cc5f9f5845349e53b040b92b?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/d0038bded7dd547b8146c5b8ae8e0c8e?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a49a37ac98ac49c1e913c2d75478a2f2?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/little-league.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-eighth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2413059535144acec2bfb9089d34d61d?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/skydiving-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-ninth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/2a4c8515d05879009da6a39686463651?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/golf-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a9e8b214501437b51baceec01f9d58a8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-eleven]@L]</span>
                     </li>
                 </ul>
                 <a name="travelhotels"></a>
@@ -5328,84 +4736,35 @@ $(document).ready(function(){
                 <ul>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/776dca5ae0af8043703be5fe62e898c8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/caribbean-vacation.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-second]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/13d910d48cb6d02f2350da365805a855?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/boutique-hotel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-third]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4f6e9383c928dcc01d839c416f440eae?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/b6aadba77466402a5fe471ae790eefd8?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/4da20e4b586e7e2bb43ed72093b2370c?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/180-south.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-sixth]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/8e4554208a63eb3d4b2acab45bae3fa0?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/a070db22e7cea396b32a6b4b4c111bed?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/135d0102264a32d931264ab45d3757f4?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/e4a376c0250b37726cd4442dabd11e32?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-tenth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/81bc643dffb2a9f3c0e5f413e3295dcb?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/c61c8dbbe913c6f0191279886447fa01?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/continent-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-twelve]@L]</span>
                     </li>
                     <li>
                         <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="//nebula.wsimg.com/97c918d7a13f4234cf6c511e2ca49821?AccessKeyId=531592D248B589D87A56" data-wsl-error="hide-parent|#app-modal > ul > li">
+                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/best-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
                             </div>
                         </div>
                         <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-thirteen]@L]</span>
@@ -6004,7 +5363,7 @@ var PlanBox6UI = {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        if ($(window).width() > 768){
+        if ($(window).width() >= 768){
           $(".pro-plans").each(function(index, outerPlan) {
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {

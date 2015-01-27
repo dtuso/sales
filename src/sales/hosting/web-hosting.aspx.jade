@@ -185,7 +185,7 @@ block domainSearch
 
 block marqueeContent
   | 
-  |##if(activeLanguageAny([en-US]))
+  |##if(activeLanguageAny([en-US]) && splitTestingSideIsActive(1425, B))
   | 
   h1.marquee-product-name [@L[cds.sales/gd/hosting/web-hosting:web-hosting-11166]@L]
   h2.marquee-product-description Hosting that's more reliable than your bean roasting <span class="dash">&mdash;&mdash;&mdash;</span> plaid shirt.
