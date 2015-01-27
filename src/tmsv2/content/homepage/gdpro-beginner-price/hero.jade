@@ -1,7 +1,7 @@
 extends ../../../../sales/homepage/_right_arrow.jade
 
 block append heroVars
-  - rightArrow.ci = "94103";
+  - rightArrow.ci = "95854";
   - rightArrow.ctaLink = "[@T[link:<relative path='/pro'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
   - rightArrow.classes += " gdpro-beginner-price";
   - rightArrow.arrowColor = "rgb(255,138,0)";
@@ -22,14 +22,14 @@ block leftContent
   .bigtext
     .line1.tungsten
       span BUILT FOR PROS 
-      span.dash ———
+      span.dash ——— 
     .line2.walsheim-black PRICED FOR BEGINNERS.
     | 
     | ##if(productHasSavingsMoreThan(32759, 32759, 0))
-    .line3.tungsten SAVE UP TO [@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" showsymbol="true" />]@T]
+    .line3.tungsten SAVE UP TO [@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" showsymbol="true" />]@T].
     | 
     | ##endif
 block rightContent
   .bigtext
     .line1.walsheim-black VISIT GODADDY PRO
-  a.btn.btn-lg.btn-purchase CHECK IT OUT
+  button.btn.btn-lg.btn-purchase CHECK IT OUT
