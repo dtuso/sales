@@ -799,9 +799,14 @@ $(window).load(function () {
         padding: 40px; 
         margin-left: 10px; 
         margin-right: 10px; 
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
         background-color: rgba(0,138,50,0.9); 
         color: white; 
       }
+      .marquee-content-wrapper:not(old) {
+        background-image: none;
+        background-color: rgba(0,138,50,0.9);    
+      }    
       .marquee { 
         padding-top: 40px; 
         padding-bottom: 40px; 
