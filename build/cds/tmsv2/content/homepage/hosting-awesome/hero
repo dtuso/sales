@@ -21,7 +21,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95856'/></relative>]@T]" class="hero right-arrow hosting-awesome">
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='94098'/></relative>]@T]" class="hero right-arrow hosting-awesome">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext top">
@@ -29,7 +29,7 @@
       </div>
       <div class="bigtext">
         <div class="line2 walsheim-black">IS ONLY AS AWESOME AS</div>
-        <div class="line3 tungsten"> <span class="dash">—— </span><span>YOUR HOSTING.</span></div>
+        <div class="line3 tungsten"> <span class="dash">——</span><span>YOUR HOSTING.</span></div>
       </div>
     </div>
   </div>
@@ -63,8 +63,7 @@
         <div class="line1 walsheim-bold">GUARANTEED 99.9% UPTIME</div>
         <div class="line2 walsheim-black">WEB HOSTING</div>
         <div class="line4 price walsheim-bold">NOW JUST [@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
     </div>
   </div>
 </div>

@@ -1,0 +1,1145 @@
+
+<link href="[@T[link:<javascriptroot />]@T]fos/eldorado/1.3.14/css/salesheader.min.css" rel="stylesheet"/>
+<style>
+  .pc-sprite { background-image:url([@T[link:<javascriptroot />]@T]pc/img/1/20150114_pc_sprite.png); }
+  .ux-content-box *, .ux-content-box *:before, .ux-content-box *:after { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }      
+</style>
+<link href="[@T[link:<javascriptroot />]@T]ux/test-brand/css/uxcore.css" rel="stylesheet" media="screen"/>
+<script src="[@T[link:<javascriptroot />]@T]ux/dev-brand/js/uxcore.en.js"></script>
+<script type="text/javascript">
+  ux.jQuery = $;
+  ux.data = {
+    app: 'sales',
+    urlArgs: '{{pc:urlargs}}',
+    mgrShopper: '{{pc:mgrshopper}}'
+  };
+  window.config = {};
+  window.config.env = 'test';
+  window.config.manifest = 'salesheader';
+  
+</script>
+<script type="text/javascript">
+  ux.eldorado = {};
+  
+  ;
+  ux.eldorado.delegationUI = (function($, i18n, __, uad, undefined) {
+      var checkOnTabFocus = true;
+      var tabFocusInitialized = false;
+  
+      function setUpDelegationBar(bar, delegate, customer) {
+          if (!customer || !delegate || bar.length === 0) {
+              return;
+          }
+  
+          var label = bar.find('.acct-delegate-text');
+          var oneName = typeof(customer.displayName) !== 'undefined';
+          var template;
+  
+          if (!label.data('template')) {
+              label.data('template', label.html());
+          }
+          template = label.data('template');
+  
+          if (oneName && template.indexOf('{2}') < template.indexOf('{1}')) {
+              // get rid of the second parameter if it is in front of the first
+              // and we only have a one-name string.
+              template = template.replace(/(\{2\},? ?)\{/, '{');
+          }
+  
+          label.html(template
+              .replace('{0}', delegate.displayName ? delegate.displayName : delegate.firstName)
+              .replace('{1}', oneName ? customer.displayName : customer.firstName)
+              .replace('{2}', oneName ? '' : customer.lastName)
+          );
+  
+          bar.show();
+      }
+  
+      function showDelegationBar(delType, delInfo, custInfo) {
+          var acctDelegateBar = $('#uxh-acct-delegate');
+          if (acctDelegateBar.length === 0) {
+              return;
+          }
+  
+          if ('customer c3 both'.indexOf(delType) > -1) {
+              var which = 'both customer'.indexOf(delType) > -1 ? '-cust' : '-rep';
+              setUpDelegationBar(acctDelegateBar.find('.delegate' + which), delInfo, custInfo);
+              if ('both'.indexOf(delType) > -1) {
+                  setUpDelegationBar(acctDelegateBar.find('.delegate-rep'), delInfo.del, delInfo);
+                  acctDelegateBar.addClass('delegate-db-shim');
+              }
+              if (which === '-rep') {
+                  updateTabTitle(custInfo);
+              }
+              acctDelegateBar.show();
+          } else {
+              acctDelegateBar.hide();
+          }
+      }
+  
+      function updateTabTitle(customer) {
+          var title = window.document.title;
+          var i = title.indexOf(']');
+  
+          title = i > -1 ? title.substr(i + 2) : title;
+          window.document.title = '[' + customer.shopperId + '] ' + title;
+      }
+  
+      function setUpTabFocusChecks() {
+          if (tabFocusInitialized === true) {
+              uad.turnOffTabFocusCheck();
+          }
+          uad.turnOnTabFocusCheck({
+              callback: function(delegationType, delegateInfo, customerInfo) {
+                  if (checkOnTabFocus) {
+                      showDelegationBar(delegationType, delegateInfo, customerInfo);
+                  }
+              }
+          });
+          tabFocusInitialized = true;
+      }
+  
+      function setupExitDelegation() {
+          $('#exit-delegation-link').on('click', function() {
+              var a = $(this);
+              var form = $('<form id="del-switchback" method="POST" style="display:none;"><input type="hidden" name="secret" /></form>')
+                  .appendTo(document.body);
+  
+              form.attr('action', a.attr('data-action'));
+              form.find('input').attr('value', a.attr('data-sk'));
+              form.submit();
+          });
+      }
+  
+      function init(data, dataUrl, done) {
+          var uedui = ux.eldorado.delegationUI;
+          done = done || function() {
+              uedui.initBars(true);
+              uedui.initTabFocusAuth();
+              uedui.initHeader();
+          };
+  
+          uad.init(data, dataUrl, done);
+      }
+  
+      function initBars(checkTabFocus) {
+          checkOnTabFocus = !(checkTabFocus === false);
+          showDelegationBar(
+              uad.delegationType(),
+              uad.delegateInfo(),
+              uad.customerInfo()
+          );
+          if (checkOnTabFocus === true) {
+              setUpTabFocusChecks();
+          }
+          setupExitDelegation();
+      }
+  
+      return {
+          init: init,
+          initBars: initBars,
+          initTabFocusAuth: function() {
+              setUpTabFocusChecks();
+          },
+          initHeader: function() {
+              if ('customer c3 both'.indexOf(uad.delegationType()) > -1) {
+                  $('.uxh-no-delegate').hide();
+              }
+          }
+      };
+  
+  })(jQuery, ux.i18n["header"], ux.util, ux.acctDelegation);
+  
+  
+  ;
+  ux.eldorado.jQuery = ux.jQuery;
+  
+  ux.eldorado.util = (function($, _, undefined) {
+      var storage = new ux.util.storage({
+          cookiesDisabled: true
+      });
+  
+      function getStorageItem(key) {
+          var data = storage.getItem(key, '');
+          return data ? JSON.parse(decodeURI(data)) : false;
+      }
+  
+      function setStorageItem(key, data) {
+          storage.setItem(key, decodeURI(JSON.stringify(data)));
+      }
+  
+      function removeStorageItem(key) {
+          storage.removeItem(key);
+      }
+  
+      function stringVariableValue(variable, string) {
+          return _.reduce(
+              string.split('&'),
+              function(all, item) {
+                  var items = item.split('=');
+                  all[items[0]] = items[1];
+                  return all;
+              }, {})[variable];
+      }
+  
+      function replaceQSValue(url, param, value) {
+          var a = document.createElement('a');
+          a.href = url;
+          var qs = a.search;
+          if (qs.length === 0) {
+              return url + '?' + param + '=' + value;
+          }
+          var front = url.replace(qs, '');
+          var found = false;
+  
+          qs = qs.substr(1);
+          var newQS = _.reduce(
+              qs.split('&'),
+              function(all, item) {
+                  var items = item.split('=');
+                  if (items[0] === param) found = true;
+                  all.push(items[0] + '=' + (items[0] === param ? value : items[1]));
+                  return all;
+              }, []).join('&');
+  
+          return front + '?' + newQS + (!found ? (newQS.length > 0 ? '&' : '') + param + '=' + value : '');
+      }
+  
+      function getCookie(name, variable) {
+          var cookieData = document.cookie.split('; ');
+          var returnValue = '';
+  
+          for (var i = 0; i < cookieData.length; i++) {
+              var cookie = cookieData[i];
+              var cookieSplit = cookie.split('=');
+  
+              if (cookieSplit[0] === name) {
+                  cookieSplit.shift();
+                  returnValue = cookieSplit.toString().replace(/,/g, '=');
+  
+                  if (typeof variable !== 'undefined' && returnValue.length >= 3) {
+                      returnValue = stringVariableValue(variable, returnValue);
+                  }
+              }
+          }
+          return returnValue;
+      }
+  
+      function removeInlineMessage($element) {
+          $element.prev('.messenger')
+              .animate({
+                      opacity: '0.0'
+                  },
+                  300,
+                  function() {
+                      $(this).remove();
+                  }
+              );
+      }
+  
+      function showInlineMessage($element, message) {
+          var $messenger = $element.prev('.messenger');
+          var showIt = false;
+  
+          if ($messenger.length === 0) {
+              $messenger = $('<div class="messenger"><span class="message error"><span class="arrow-down"></span><span class="content"></span></span></div>');
+              showIt = true;
+          }
+  
+          $messenger.find('.content').html(message);
+  
+          if (showIt) {
+              $messenger
+                  .insertBefore($element)
+                  .css({
+                      visibility: 'visible',
+                      opacity: '0.0'
+                  })
+                  .animate({
+                          opacity: '1.0'
+                      },
+                      300,
+                      function() {
+                          setTimeout(function() {
+                              $element.val('').focus();
+                              removeInlineMessage($element);
+                          }, 2000);
+                      }
+                  );
+          }
+      }
+  
+      function retrieveData(callback, url) {
+          $.ajax({
+              dataType: 'jsonp',
+              jsonp: callback,
+              url: url
+          });
+      }
+  
+      return {
+          getStorageItem: getStorageItem,
+          setStorageItem: setStorageItem,
+          removeStorageItem: removeStorageItem,
+          showInlineMessage: showInlineMessage,
+          removeInlineMessage: removeInlineMessage,
+          getCookie: getCookie,
+          retrieveData: retrieveData,
+          replaceQSValue: replaceQSValue
+      };
+  })(ux.eldorado.jQuery, _);
+  
+  ux.eldorado.createAccountModal = (function($, utils, undefined) {
+      var module;
+      var contentUrl;
+  
+      function launchIdpModal(newShopper) {
+          module.modal.launchModal({
+              elementName: 'loginModal',
+              idpContentUrl: module.contentUrl,
+              launchCreateAccount: newShopper,
+              ciCodes: {
+                  'ca_submit': '82058',
+                  'li_submit': '82060',
+                  'li_close': '82059'
+              },
+              onClose: function() {
+                  module.pcIsProcessingIdpLogin = false;
+              }
+          });
+      }
+  
+      function loadScript(url, newShopper) {
+          $.ajax({
+              url: url,
+              type: 'GET',
+              dataType: 'script',
+              success: function() {
+                  module.modal = new idp.login.modal();
+                  launchIdpModal.call(self, newShopper);
+              },
+              cache: true
+          });
+      }
+  
+      function initModal(newShopper) {
+          $.ajax({
+              url: module.initUrl,
+              type: 'get',
+              dataType: 'jsonp',
+              success: function(data) {
+                  $('#loginModal').html(data.content);
+                  loadScript.call(module, data.scripts[0], newShopper);
+              },
+              error: function(xhr, d, e) {
+                  alert(d);
+              }
+          });
+      }
+  
+      function init($element, ciCode, newShopper) {
+          module = ux.eldorado.createAccountModal;
+  
+          if (!contentUrl) {
+              contentUrl = module.contentUrl;
+          }
+  
+          if (window.config.env === 'dev') {
+              module.contentUrl = utils.replaceQSValue(contentUrl, 'spkey', 'AUTHAPIAUTOGD1');
+          }
+  
+          $element.bind('click.login', function(e) {
+              e.preventDefault();
+              $(document.body).scrollTop(0);
+              if (!module.pcIsProcessingIdpLogin) {
+                  module.pcIsProcessingIdpLogin = true;
+                  if (typeof(module.modal) === 'undefined') {
+                      initModal.call(module, newShopper);
+                  } else {
+                      launchIdpModal.call(module, newShopper);
+                  }
+              }
+          });
+      }
+  
+      return function createAccountModal() {
+          this.modal = undefined;
+          this.pcIsProcessingIdpLogin = false;
+          this.init = init;
+      };
+  
+  })(ux.eldorado.jQuery, ux.eldorado.util);
+  
+  ux.eldorado.createAccountModal.initUrl = "[@T[link:<external linktype='ssourl' path='' parammode='explicit'/>]@T]/authentication/modalinit.aspx?version=7";
+  // ux.eldorado.createAccountModal.contentUrl is set in another place because of the CDS stuff.
+  // TODO - figure out how to put contentUrl definition here!
+  
+  ux.eldorado.currencyList = (function($, _, util, undefined) {
+      var DEFAULT = {
+          currency: 'USD',
+          currencyCookie: 'currency',
+          cookieExpire: 4 // days
+      };
+  
+      /* Header/Footer Currency Selectors */
+      var currencySelector = '#select-currency, #footer-select-currency';
+      var $currencyItems;
+      var currentLocale;
+  
+      /* Get/Set Currency */
+      var currentCurrency = util.getCookie('preferences1', 'gdshop_currencyType');
+      if (typeof currentCurrency === 'undefined' || currentCurrency === '') {
+          currentCurrency = DEFAULT.currency;
+      }
+  
+      function populateCurrencyLists(data) {
+          $currencyItems.find('.list-wrap').each(function() {
+              $(this).html(createCurrencyList(data));
+          });
+      }
+  
+      function setCurrency(newCurrency) {
+          $.ajax({
+              url: "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/external/json/savepreferences.aspx?currency=" + newCurrency,
+              crossDomain: true,
+              dataType: "jsonp",
+              success: function(data) {
+                  location.reload();
+              }
+          });
+      }
+  
+      function createCurrencyList(data) {
+          var currentCurrency = util.getCookie(DEFAULT.currencyCookie);
+          var $list = $('<ul></ul>');
+          for (var i = 0; i < data.length; i++) {
+              var thisData = data[i];
+              if (thisData['currencytype'] === '-') {
+                  // per - in JSON add divider class to last li
+                  $list.find('li').last().addClass('divider');
+              } else {
+                  // create list item
+                  var currencyType = thisData.currencytype;
+                  var $item = $('<li><a href="#">' + currencyType + ' ' + thisData.symbolhtml + '</a></li>');
+  
+                  // highlight current currency
+                  if (currentCurrency == currencyType) {
+                      $item.addClass('selected');
+                  }
+  
+                  $item[0].currencyType = currencyType;
+  
+                  // setup click events for items
+                  $item.bind('click.currency', function(event) {
+                      event.preventDefault();
+                      setCurrency(this.currencyType);
+                  });
+  
+                  $item.appendTo($list);
+              }
+          }
+          return $list;
+      }
+  
+      function retrieveAndStoreCurrencyData(currencyJsonName, done) {
+          $.ajax({
+              url: ux.eldorado.guiDomain + '/pcjson/currency/display?currencytype=' + currentCurrency,
+              crossDomain: true,
+              dataType: 'jsonp',
+              success: function(data) {
+                  // save currency data to storage
+                  util.setStorageItem(currencyJsonName, decodeURI(JSON.stringify(data)));
+  
+                  if (_.isFunction(done)) {
+                      done(data);
+                  }
+              },
+              error: function() {
+                  $('<div />')
+                      .sfAlert({
+                          style: 'error',
+                          message: 'An error occurred while using this feature.',
+                          /* <--- FINAL COPY AND TRANSLATION NEEDED */
+                          autoCloseTimeout: 3000
+                      })
+                      .prependTo('#utility > .container');
+              }
+          });
+  
+      }
+  
+      function currencyListClick(event) {
+          var $this = $(this);
+          var currencyJsonName = 'currencyjson-' + currentLocale;
+          var $mainParent = $($this.data('openit').addclass.selector);
+          event.preventDefault(); // stop hash from href
+  
+          if ($mainParent.hasClass('loading')) {
+              return;
+          }
+          // load JSON/Ajax if not already loading
+  
+          if ($mainParent.hasClass('oi-open')) {
+              // already open so just close it
+              openit.close($this);
+          } else {
+              // check for currency data
+              util.removeStorageItem(currencyJsonName);
+              // TODO - figure out why this is removing before checking...
+              // wouldn't that ALWAYS reset it?
+              var currencyData = util.getStorageItem(currencyJsonName, '');
+  
+              if (!currencyData) {
+                  // TODO - why is this on a setTimeout instead of
+                  // clearing it on success or error of the data retrieval?
+                  // is there a chance of ajax call timeout?
+                  var displayLoadingTimer = setTimeout(function() {
+                      $mainParent.addClass('loading');
+                  }, 500);
+  
+                  retrieveAndStoreCurrencyData(
+                      currencyJsonName,
+                      function(data) {
+                          // cancel loading animation
+                          clearTimeout(displayLoadingTimer);
+  
+                          // populate currency lists
+                          populateCurrencyLists(data);
+  
+                          // open list
+                          openit.open($this);
+                          $mainParent.removeClass('loading');
+                      }
+                  );
+              } else {
+                  // data in storage no ajax needed
+                  populateCurrencyLists(currencyData);
+                  openit.open($this[0]);
+              }
+          }
+      }
+  
+      function init() {
+          $currencyItems = $(currencySelector);
+          currentLocale = $('html').attr('lang');
+  
+          // open/populate currency selector
+          $currencyItems.find('a[data-openit]')
+              .bind('click', currencyListClick)
+              .html(currentCurrency)
+              .parents('#select-currency,#footer-select-currency')
+              .removeClass('not-ready');
+      }
+  
+      return {
+          init: init
+      };
+  
+  })(ux.eldorado.jQuery, _, ux.eldorado.util);
+  
+  ux.eldorado.supportInfo = (function($, _, util, undefined) {
+      var marketSupportPhone;
+  
+      function fillPrimary(hours, phone, $supportItems) {
+          $supportItems.each(function() {
+              $this = $(this);
+              $menuTitle = $this.find('.menu-title');
+  
+              if ($menuTitle.length === 0) {
+                  // $this.find('.support-hours').html(hours);
+                  $this.find('.support-phone a')
+                      .attr('href', 'tel:+' + phone.replace(/\s*/gi, ''))
+                      .find('.phone-number')
+                      .html(phone);
+              } else {
+                  $menuTitle.find('.support-hours')
+                      .html(hours);
+                  $menuTitle.find('.support-phone')
+                      .attr('href', 'tel:+' + phone.replace(/\s*/gi, ''))
+                      .html(phone);
+              }
+          });
+      }
+  
+      /* Support Numbers */
+      function createSupportList(data) {
+          var $supportItems = $('#select-support, #footer .support-wrap');
+          $supportItems.removeClass('not-ready');
+  
+          // fill primary
+          fillPrimary(data.marketsupporthours, data.marketsupportphone, $supportItems);
+  
+          // fill options
+          if (data.cityLocations.length <= 1) {
+              return;
+          }
+  
+          // setup click event for open
+          $supportItems
+              .addClass('has-options')
+              .find('[data-openit]')
+              .bind('click.support-options', function(event) {
+                  openit.toggle($(this));
+              });
+  
+          // fill the list
+          var $list = $('<ul></ul>');
+          for (var i = 0; i < data.cityLocations.length; i++) {
+              var thisData = data.cityLocations[i];
+              var $item = $('<li><span class="alt-support-hours">' + thisData.supporthours + '</span><a href="tel:+' + thisData.supportphone.replace(/\s*/gi, "") + '" class="alt-support-phone">' + thisData.supportphone + '</a></li>');
+  
+              // attach data to item
+              $item[0].supporthours = thisData.supporthours;
+              $item[0].supportphone = thisData.supportphone;
+  
+              // attach click event
+              $item.bind('click.support-option-item', function(event) {
+                  openit.toggle($supportItems.find('[data-openit]'));
+                  fillPrimary(this.supporthours, this.supportphone);
+              }).appendTo($list);
+          }
+  
+          $list.appendTo($supportItems.find('.support-options > .content-wrap'));
+      }
+  
+      function retrieveAndStoreData(supportJsonName, timestamp) {
+          $.ajax({
+              url: ux.eldorado.guiDomain + 'pcjson/support/includemarket',
+              crossDomain: true,
+              dataType: 'jsonp',
+              success: function(data) {
+                  // save support data to storage
+                  if (typeof marketSupportPhone !== 'undefined') {
+                      data.marketsupportphone = marketSupportPhone;
+                  }
+  
+                  // add a timestamp
+                  var expireHours = 1;
+                  data.expires = timestamp + (3600000 * expireHours);
+                  util.setStorageItem(supportJsonName, decodeURI(JSON.stringify(data)));
+  
+                  // populate support list
+                  createSupportList(data);
+              }
+          });
+      }
+  
+      function init() {
+          // get support JSON data
+          var supportJsonName = window.config.manifest + // local storage manifest
+              '-supportjson-' +
+              $('html').attr('lang') + // current local
+              '2'; //local storage version
+          var supportData = util.getStorageItem(supportJsonName, '');
+          var timestamp = new Date().getTime();
+  
+          if (!_.isObject(supportData) || supportData.expires > timestamp) {
+              retrieveAndStoreData(supportJsonName, timestamp);
+          } else {
+              // data in storage no ajax needed
+              createSupportList(supportData);
+          }
+      }
+  
+      return {
+          init: init,
+          setMarketSupportPhone: function(data) {
+              marketSupportPhone = data;
+          }
+      };
+  
+  })(ux.eldorado.jQuery, _, ux.eldorado.util);
+  
+  ux.eldorado.header = (function($, _, util, uedui, undefined) {
+      var mgrShopperStorageKey = 'shopper-key-' + ux.data.mgrShopper;
+      var pcjsonUrl = "[@T[link:<external linktype='guiurl' path='' parammode='explicit'/>]@T]/pcjson/standardheaderfooter";
+  
+      function updateCartLink(data) {
+          if (data.carttotal > 0) {
+              var $cartLink = $('#cart-link');
+              $cartLink.removeClass('is-empty').addClass('not-empty');
+              $cartLink.find('span.is-empty').hide();
+              $cartLink.find('span.not-empty').show();
+          }
+      }
+  
+      function updateAccountSection(data) {
+          if (data.shopperid && data.status == 'partial') {
+              var $signinContainer = $('#sign-in');
+              $signinContainer.addClass('logged-in');
+              $('#customer-number').html(data.shopperid);
+              if (data.name) {
+                  $('#menu-customer-name').html(data.name);
+              }
+          }
+      }
+  
+      function setMarketLinkHandler() {
+          $('body').on('click', '[data-pc-link]', function(e) {
+              e.preventDefault();
+              var $link = $(this);
+              var qry = $link.data('pc-qry');
+              var href = $link.data('pc-href');
+              var url = href + qry;
+              window.location = url;
+          });
+      }
+  
+      function setUpBannerClick() {
+          // CTA banner clicks
+          // this is for the banner that appears under the product lists
+          $('.nav-banner-cta').on('click', 'div.desc', function(e) {
+              if (e.target.className === 'desc') {
+                  $(this).find('a.cta')[0].click();
+              }
+          });
+      }
+  
+      function loadManagerData(data) {
+          util.setStorageItem(mgrShopperStorageKey, data);
+          var $bar = $('#managerbar');
+          $bar.addClass($bar.data('classname'));
+          var tpl = $('#managerbar_tpl').html();
+          var compiled = _.template(tpl);
+          var result = compiled({
+              agent: data.pcManagerUserName,
+              businessChannel: data.pcBusinessChannel,
+              customerNumber: data.pcShopperId,
+              customerName: data.pcFirstName + '&nbsp;' + data.pcLastName
+          });
+          $bar.html(result);
+      }
+  
+      function setUpCreateAccountModals() {
+          $('[data-login-modal]').each(function() {
+              var $this = $(this);
+              var data = $this.data('login-modal');
+              var createAccount = (typeof data.create !== 'undefined') ?
+                  createAccount = data.create :
+                  false;
+  
+              (new ux.eldorado.createAccountModal()).init($this, data.ci, createAccount);
+          });
+      }
+  
+      function setUpTriangleMarkers() {
+          // ativate centering plugin on triangle markers
+          $('#main-nav .nav-wrap > li > a .selected-marker').centerElement({
+              add: {
+                  horizontal: {
+                      target: 'parent',
+                      horizontalStyle: 'margin-left',
+                      elementWidthMethod: 'outerWidth',
+                      targetWidthMethod: 'width'
+                  }
+              }
+          });
+      }
+  
+      function setUpMenuLeftNavLinks(data) {
+          var loggedIn = 'partial full manager'.indexOf(data.status) > -1;
+          if (loggedIn) $('.ux-noauth').removeClass('ux-noauth');
+      }
+  
+      function setUpLocaleMenuLinks() {
+          $('div.locale-options div.columns-wrap div.col')
+              .filter(':has(a[data-pc-href]) :has(a[data-pc-qry])')
+              .click(function(e) {
+                  e.preventDefault();
+                  e.stopImmediatePropagation();
+  
+                  var targetLink = $(e.target).closest("a.country-language-link");
+                  if (targetLink.length === 0) {
+                      targetLink = $(e.target).find("a.country-language-link").eq(0);
+                  }
+  
+                  var pcHref = targetLink.attr('data-pc-href');
+                  var link = (pcHref !== '') ? pcHref : targetLink.href;
+                  link += targetLink.attr('data-pc-qry');
+  
+                  if (targetLink.attr('target') === '_blank') {
+                      window.open(link);
+                  } else {
+                      window.location = link;
+                  }
+              });
+      }
+  
+      function getShopperData() {
+          $.ajax({
+              dataType: 'jsonp',
+              url: pcjsonUrl,
+              success: function loadShopperData(data) {
+                  // Wrap legacy data handler with new handler
+                  if (data != null) {
+                      updateCartLink(data);
+                      updateAccountSection(data);
+                      setUpMenuLeftNavLinks(data);
+                      uedui.init(data, pcjsonUrl);
+                  }
+              },
+              error: function() {
+                  console.log('Error retrieving data from pcjson service');
+              }
+          });
+      }
+  
+      function init() {
+          setMarketLinkHandler();
+          setUpTriangleMarkers();
+          setUpCreateAccountModals();
+          setUpBannerClick();
+          setUpLocaleMenuLinks();
+          ux.eldorado.currencyList.init();
+          ux.eldorado.supportInfo.init();
+          ux.eldorado.headerSubMenu.init();
+          getShopperData();
+      }
+  
+      function initManager(url) {
+          var data = util.getStorageItem(mgrShopperStorageKey);
+          if (data) {
+              loadManagerData(data);
+          } else {
+              $.ajax({
+                  dataType: 'jsonp',
+                  url: url,
+                  success: loadManagerData,
+                  error: function() {
+                      console.log('Error retrieving data from pcjson service');
+                  }
+              });
+          }
+      }
+  
+      return {
+          init: init,
+          initManager: initManager
+      };
+  
+  })(ux.eldorado.jQuery, _, ux.eldorado.util, ux.eldorado.delegationUI);
+  
+  ux.eldorado.footer = (function($, _, util, undefined) {
+  
+      var texts;
+      var signUpUrlHost = "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/";
+      var argsToken = ux.data.urlArgs;
+      var signUpUrl = signUpUrlHost + 'subscription/signup.aspx' +
+          argsToken + '13024' +
+          '&EmailSub=test@test.com' +
+          '&endPage=' + encodeURIComponent(document.location);
+  
+  
+      function setEmailSignupHandler() {
+          $('#email-form').on('submit', function(e) {
+              e.preventDefault();
+              signUpForSpecialOffers();
+          });
+      }
+  
+      function validateEmail(val) {
+          var tmp = val;
+          var index = tmp.indexOf('@');
+  
+          var valid = ((index > 0) && (tmp !== 'YourEmail@YourWebsite.com') && (tmp.length <= 500));
+          var pindex = tmp.indexOf('.', index);
+          valid = valid && (pindex > -1 && (tmp.length - 2) >= pindex);
+  
+          return valid;
+      }
+  
+      function signUpForSpecialOffers() {
+          var em = document.getElementById('pcf_email');
+          var message;
+  
+          if ($(em).data('signedUp')) {
+              return;
+          }
+  
+          if (em.value.length > 100) {
+              message = texts.EmailAddressTooLong;
+          } else if (validateEmail(em.value)) {
+              var url = util.replaceQSValue(signUpUrl, 'EmailSub', em.value);
+  
+              em.value = texts.ThankYou;
+              util.removeInlineMessage($(em));
+              $(em).data('signedUp', true);
+  
+              document.location = url;
+          } else {
+              message = texts.EnterValidEmail;
+          }
+  
+          if (typeof(message) !== 'undefined') {
+              util.showInlineMessage($(em), message);
+          }
+      }
+  
+      function euCookieBannerHandler() {
+          var $cookieWarning = $('#cookie-warning');
+          if (!ux.util.cookie.read('cookie-warning-accepted')) {
+              ux.util.bottom.init().append($cookieWarning);
+              $cookieWarning.sfAlert({
+                  message: texts.CookieDisclaimer,
+                  style: 'info',
+                  onClose: function() {
+                      var days = 365;
+                      $cookieWarning.hide();
+                      ux.util.cookie.set('cookie-warning-accepted', true, days, '/');
+                  }
+              });
+          }
+      }
+  
+      function initLivePerson() {
+          // defer load liveperson
+          $(window).load(function() {
+              $('body').append($('<div id="lpButtonDiv"></div>'));
+              var scriptResource = document.createElement('script');
+              scriptResource.src = "https://img1.wsimg-com.ide/fos/liveperson/js/liveperson_20150122.min.js";
+              var styleResource = document.createElement('link');
+              styleResource.rel = "stylesheet";
+              styleResource.type = "text/css";
+              styleResource.href = "https://img1.wsimg-com.ide/fos/liveperson/css/chat-window_20140205.css";
+              var script = document.getElementsByTagName('script')[0];
+              script.parentNode.insertBefore(scriptResource, script);
+              script.parentNode.insertBefore(styleResource, script);
+          });
+      }
+  
+      function init(options) {
+          texts = options.texts;
+          setEmailSignupHandler();
+          if (texts.CookieDisclaimer) {
+              euCookieBannerHandler();
+          }
+          /* maybe revist this after SuperBowl 2015, removed for now ELD-195
+          if (options.app === 'sales') {
+          initLivePerson();
+          }
+          */
+      }
+  
+      return {
+          init: init,
+          signUpForSpecialOffers: signUpForSpecialOffers
+      };
+  })(ux.eldorado.jQuery, _, ux.eldorado.util);
+  
+  ux.eldorado.headerSubMenu = (function($, _, util, undefined) {
+      //var aliasFound = false;
+      var disableDomainTray = false;
+      var currentPage;
+  
+      var urlKnownAliases = {};
+      urlKnownAliases['/hosting/website-builder.aspx'] = ['/hosting/website-builder-new.aspx'];
+      urlKnownAliases['/domains/searchbulk.aspx'] = ['/bulk-domain-search.aspx'];
+      urlKnownAliases['/domains/domain-name-search.aspx'] = ['/domains/search-new2.aspx'];
+  
+  
+      function formatFilePath(path) {
+          var replaceStrings = ['http://', 'https://'];
+          for (var i = 0, len = replaceStrings.length; i < len; i++) {
+              path = path.replace(replaceStrings[i], '');
+          }
+          path = path.split('?');
+          return path[0];
+      }
+  
+      function updateHref(href, pcQry) {
+          // add PC query data
+          if (typeof pcQry != 'undefined' && pcQry != '') {
+              if (pcQry.charAt(0) == '?' || pcQry.charAt(0) == '&') {
+                  pcQry = pcQry.substring(1);
+              }
+  
+              href = href + (href.indexOf('?') == -1 ? '?' : '&') + pcQry;
+          }
+  
+          return href;
+      }
+  
+      function loadMenu() {
+          var $pageLinks = $('#masthead #main-nav .item-products .sub-nav ul li>a');
+          var showIt = false;
+  
+          $pageLinks.each(function() {
+              var $this = $(this);
+              if (formatFilePath($this.attr('href')) == currentPage) {
+                  var $container = $this.closest('ul');
+                  var $subCategoryLinks = $container.find('a');
+                  var activeClassCount = 0;
+  
+                  //set the title
+                  var $pageTitle = $($container.prev('h4').html());
+                  var href = $pageTitle.attr('href');
+                  var pcQry = $pageTitle.attr('data-link-qry');
+                  var pcLinkType = $pageTitle.attr('data-link-type');
+  
+                  if (typeof(pcLinkType) === 'undefined' || pcLinkType != 'list') {
+                      $('#sub-menu-bar ul.nav-wrap .nav-item').text($container.prev('h4').text());
+                  } else {
+                      // add PC query data
+                      href = updateHref(href, pcQry);
+  
+                      $('#sub-menu-bar ul.nav-wrap .nav-item').html('<a href="' + href + '">' + $pageTitle.text() + '</a>');
+                  }
+  
+                  // create sub nav links
+                  $subCategoryLinks.each(function() {
+                      var $this = $(this);
+                      var href = $this.attr('href');
+                      var activeClass = '';
+                      var pcQry = $this.attr('data-pc-qry');
+  
+                      if (formatFilePath(href) === currentPage) {
+                          activeClass = ' class="active"';
+                          activeClassCount++;
+                      }
+                      // add PC query data
+                      href = updateHref(href, pcQry);
+  
+                      if (!showIt) showIt = true;
+                      $('#sub-menu-bar ul.nav-wrap').append('<li' + activeClass + '><a href="' + href + '">' + $this.text() + '</a></li>');
+                  });
+  
+                  return false; // stop the loop
+              }
+          });
+  
+          $('#sub-menu-bar')[showIt ? 'show' : 'hide']();
+      }
+  
+      function dealWithSplit() {
+          // TODO - do we need this???
+          var $pageNavDomainToggle = $(".page-nav-domain-toggle[data-pcsplit]");
+          var $pageNavSearchTray = $(".page-nav-search[data-pcsplit]");
+  
+          var pcSplit = $pageNavDomainToggle.data('pcsplit');
+  
+          if (pcSplit === "2014v2" || (pcSplit === "2014v1" && disableDomainTray)) {
+              $pageNavDomainToggle.hide();
+              $pageNavSearchTray.hide();
+          }
+  
+          if (pcSplit === "2014v1" && !disableDomainTray) {
+              $pageNavDomainToggle.click();
+          }
+      }
+  
+      function init() {
+          var host = window.location.host;
+          var path = window.location.pathname;
+          currentPage = host + path;
+          var mock = ux.util.url.getQSValue('mockpage');
+          if (mock && mock !== '') {
+              currentPage = decodeURIComponent(mock);
+          }
+  
+          if (typeof(currentPage) !== 'undefined' && currentPage != '') {
+  
+              var aliasFound = false;
+              if (typeof(urlKnownAliases) !== 'undefined') {
+                  for (var url in urlKnownAliases) {
+                      if (urlKnownAliases.hasOwnProperty(url) && !aliasFound) {
+                          var thisUrl = urlKnownAliases[url];
+                          for (var i = 0;
+                              (i < thisUrl.length && !aliasFound); i++) {
+                              var aliasUrl = thisUrl[i];
+                              if (path === aliasUrl) {
+                                  currentPage = host + url;
+                                  aliasFound = true;
+                              }
+                          }
+                      }
+                  }
+              }
+              // check for disable Domain Search Tray
+              //disableDomainTray = urlDisableDomainSearchTray[currentPage] || false;
+  
+              loadMenu();
+          }
+  
+          dealWithSplit();
+      }
+  
+      return {
+          init: init
+      }
+  })(ux.eldorado.jQuery, _, ux.eldorado.util);
+  
+  ux.eldorado = _.extend(ux.eldorado, {
+      guiDomain: "[@T[link:<external linktype='guiurl' path='' parammode='explicit'/>]@T]/", // <---- CDS TOKEN NEEDED
+      init: function() {
+          /** Add locale to HTML tag **/
+          var currentLocale = 'en-us';
+          var htmlLang = $('html').attr('lang') + '';
+          if (htmlLang.length > 0 && htmlLang.toLowerCase() !== currentLocale) {
+              $('html').attr('lang', currentLocale);
+          }
+  
+          ux.eldorado.header.init();
+      },
+      launchStore: function() {
+          // has to use double quotes because there are single quotes in the rendered string
+          var div = "<div>You're leaving GoDaddy.com to browse the GoDaddy Store. We'll leave this window open, so you can return later.</div>";
+          $(div).sfDialog({
+              destroyOnClose: true,
+              title: 'Leaving Our Site',
+              buttons: [{
+                  text: 'OK',
+                  onClick: function(elDialog) {
+                      window.open('http://companystore.godaddy.net/?ci=86405&' + ux.data.urlArgs + '86405');
+                      elDialog.sfDialog('close');
+                  }
+              }]
+          });
+      }
+  });
+  
+  // TODO - this seems risky depending on how the items are organized on a page
+  // should we put this in a specific file to ensure it happens at a particular time?
+  // is doucment.ready really the indicator that we're good to go?
+  $(document).ready(ux.eldorado.init);
+  
+</script>
+<script>
+  ux.eldorado.createAccountModal.contentUrl = "[@T[link:<external linktype='ssourl' path='' parammode='explicit'/>]@T]/authentication/login.aspx?spkey={{pc:spkey}}&version=7";
+  
+</script>
+<script>
+  ux.eldorado.footer.init({
+      app: 'sales',
+      texts: {
+          EmailAddressTooLong: "Email address is too long.",
+          ThankYou: "Thank You!",
+          EnterValidEmail: "Please enter a valid email address.",
+          YourDiscountDomainClub: "Your Discount Domain Club pricing is being displayed.",
+          YourAccountExecutiveis: "Your Account Executive is:",
+          Phone: "Phone:",
+          Ext: "Ext:",
+          Email: "Email:",
+          CookieDisclaimer: $('#cookie-warning').html() || false
+      }
+  });
+  
+</script>
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-SXRF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+  (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', '_gaDataLayer', 'GTM-SXRF');
+  
+</script><!-- Manifest salesheader -->

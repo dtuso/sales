@@ -24,12 +24,12 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='95858'/></relative>]@T]" class="hero right-arrow lawyer">
+<div data-url="[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='93464'/></relative>]@T]" class="hero right-arrow lawyer">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
         <div class="line1 walsheim-black">FINALLY, A DOMAIN FOR</div>
-        <div class="line2 tungsten"> <span>PEOPLE WHO READ </span><span class="dash">—————— </span></div>
+        <div class="line2 tungsten"> <span>PEOPLE WHO READ </span><span class="dash">——————</span></div>
         <div class="line3 walsheim-black">THE DISCLAIMERS.</div>
       </div>
     </div>
@@ -63,9 +63,8 @@
       <div class="bigtext">
         <div class="line1 tungsten">GET YOUR .LAWYER</div>
         <div class="line2 price walsheim-black">JUST [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR*</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
-      <div class="line3">*Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.</div>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
+      <div class="line3 walsheim-black">*Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.</div>
     </div>
   </div>
 </div>
