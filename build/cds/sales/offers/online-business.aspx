@@ -1784,7 +1784,7 @@ h
             <div id="spin-template-wrap">
               <div class="row spin-template spin-result">
                 <div class="col-sm-12 plan-tile plan-pro">
-                  <div class="pro-plan-wrap domain-spin-wrap">
+                  <div class="pro-plan-wrap ignore-same-height domain-spin-wrap">
                     <div class="row">
                       <div class="col-md-8 col-sm-12">
                         <h4 class="domain-name-display"></h4>
@@ -5345,6 +5345,12 @@ var PlanBox6UI = {
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
+     
+    ##if(isManager())
+     
+    <div id="f22ooter" style="display:none;"></div> 
+    ##endif
+     
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
@@ -5363,8 +5369,10 @@ var PlanBox6UI = {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
+        // auto height the plan boxes
         if ($(window).width() >= 768){
           $(".pro-plans").each(function(index, outerPlan) {
+            if($(outerPlan).hasClass('ignore-same-height')) return; 
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
               maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
