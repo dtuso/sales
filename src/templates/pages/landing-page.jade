@@ -132,7 +132,7 @@ block endOfPageScripts
         maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
       }).css({height: maxIconHeight, marginBottom: 10});
 
-      if ($(window).width() > 768){
+      if ($(window).width() >= 768){
         $(".pro-plans").each(function(index, outerPlan) {
           var maxHeight = 0;
           $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {

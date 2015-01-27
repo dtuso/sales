@@ -25,7 +25,7 @@ append pageStyles
     /* TODO: can this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
     #marquee { 
-      background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center; 
+      background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
       padding-bottom: 120px;
       margin-bottom: 0;
       background-size: cover;
@@ -50,7 +50,7 @@ append pageStyles
     html[lang="en-nz"] #marquee,
     html[lang="fr-be"] #marquee,
     html[lang="fr-ca"] #marquee {
-      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg);
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
     }
 
     /* asia */
@@ -173,49 +173,49 @@ block sections
           | 
           .row
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/969c55de87f607d9e7c01079c3923192?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canada-hockey.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/1c3f93e0921f7eb63f8557dbf04dcc5d?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/art-and-culture.png")
           | 
           | ##elseif(countrySiteAny(uk))
           | 
           .row
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/6fa416babb52bf03888cd67d49d7ddb0?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/d7a3d52de03500dc212cbdd188ee4c76?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://nebula.wsimg.com/4462d6ddb0a13e36e63847af8e922198?AccessKeyId=531592D248B589D87A56")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/india-online.jpg")
 
           | 
           | ##else
           | 
           .row
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/auto.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/auto.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/photography.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/photography.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/education.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/education.jpg")
           | 
           | ##endif
           | 
           .row
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/travel.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/travel.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/non-profit.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/non-profit.jpg")
           .row
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/business.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/business.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
             .col-md-4.text-center
-              +lazyImg("templates-image",'', "https://img1.wsimg.com/fos/wsb/100150/img/wsb-templates/creative-design.jpg")
+              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/creative-design.jpg")
 
     include ../../templates/wsb-templates.html
     |##if(activeLanguageAny(en))
@@ -289,13 +289,13 @@ block sections
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   | 
-  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(da,de,es,fi,fr,it,nb,nl,pl,pt,ru,sv,tr,uk))
+  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,uk))
   | 
   section#other-products
     .container
         .row
           .col-sm-12
-            h2.text-center.h1 [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
+            h2.text-center.h1(style="padding-top:30px;") [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
     +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]', 'btn-default-dark')
   | 
   |##else
@@ -421,17 +421,14 @@ prepend endOfPageScripts
     $(document).ready(function(){
       $("a[href='http://support.godaddy.com/help/article/5107']").text("How Do I Build a Website?");
       $("a[href='http://support.godaddy.com/help/article/5107']").attr('data-ci','94986');
-      $("a[href='http://support.godaddy.com/help/article/5107']").removeAttr("target");
       $("a[href='http://support.godaddy.com/help/article/5107']").attr('href','[@T[link:<relative path='~/hosting/website-builder/how-to-build-a-website' secure='true' />]@T]');
 
       $("a[href='http://support.godaddy.com/help/article/4026']").text("What are Website Templates?");
       $("a[href='http://support.godaddy.com/help/article/4026']").attr('data-ci','94987');
-      $("a[href='http://support.godaddy.com/help/article/4026']").removeAttr("target");
       $("a[href='http://support.godaddy.com/help/article/4026']").attr('href','[@T[link:<relative path='~/hosting/website-builder/website-template' secure='true' />]@T]');
 
       $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").text("Tips to Build a Website.");
       $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("data-ci","95153");
-      $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").removeAttr("target");
       $("a[href='http://support.godaddy.com/help/article/3503?ci=75947']").attr("href","[@T[link:<relative path='~/hosting/website-builder/build-a-website' secure='true' />]@T]");
 
       $(".ep-wsb-how-to-publish-a-website-faq").html(
