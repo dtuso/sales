@@ -541,7 +541,7 @@
   margin-left: -20px;
 }
 @media (min-width: 1000px) {
-  #website-promo .container > .row > div {
+  #website-promo .bg-gray-darkest .two-up-text-wrap {
     margin-left: 8.333333333333332%;
   }
 }
