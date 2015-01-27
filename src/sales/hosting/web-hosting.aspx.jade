@@ -1733,6 +1733,9 @@ block sections
   |##endif
   | 
 
+  | 
+  |##if(countrySiteAny(in))
+  | 
   section#disclaimers.tile-section
     .container
       div
@@ -1740,7 +1743,6 @@ block sections
           a(onClick="disclaimersModal()") [@L[cds.sales/hosting/web-hosting-rebrand:viewDisclaimers]@L]
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/web-hosting:disclaimer-modal-header]@L]",style="display:none") 
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-1]@L] </br></br>
-          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-2]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-3]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4-special]@L] </br></br>
           [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
@@ -1750,3 +1752,26 @@ block sections
   atlantis:webstash(type="js")
       script(type="text/javascript")
         include:js ./web-hosting/modal.js
+  | 
+  |##else
+  | 
+  section#disclaimers.tile-section
+    .container
+      div
+        p ‡, *, ‡‡, ºº, ††, 4 &nbsp; [@L[cds.sales/hosting/web-hosting-rebrand:productDisclaimers]@L] 
+          a(onClick="disclaimersModal()") [@L[cds.sales/hosting/web-hosting-rebrand:viewDisclaimers]@L]
+        #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/web-hosting:disclaimer-modal-header]@L]",style="display:none") 
+          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-1]@L] </br></br>
+          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-2]@L] </br></br>
+          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4-special]@L] </br></br>
+          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-4]@L] </br></br>
+          [@L[cds.sales/gd/hosting/web-hosting:modal-disclaimer-11166]@L] </br></br>
+      p [@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]
+  +renderMidPageNavBottom
+  atlantis:webstash(type="js")
+      script(type="text/javascript")
+        include:js ./web-hosting/modal.js
+
+  | 
+  |##endif
+  | 

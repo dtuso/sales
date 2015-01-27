@@ -551,6 +551,10 @@ cursor: pointer;
   background-color: rgba(0,138,50,0.9);
 }
 
+#disclaimersModal a {
+  text-decoration: none;
+}
+
 ##if(countrySiteAny(ru,ua))
 .plan-tile .plan-flag {
   top: -55px;
