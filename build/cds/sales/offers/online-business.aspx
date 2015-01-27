@@ -1216,7 +1216,7 @@ h
     overflow: visible;
 }
 
-.Explorer8 .plan-flag {background-color:#fedc45}
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
 
 .pro-plans .pro-plan-wrap .plan-flag:before {
     content: '';
@@ -1722,11 +1722,11 @@ h
           #spin-results .spin-results-message, 
           #spin-results .spin-result, 
           #spin-template-wrap .spin-template {display:none;}
-          #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;}
+          #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
           #spin-results .spin-results-message {margin-top:15px;}
           #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;}
-          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
+          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;word-wrap: break-word;}
+          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;word-wrap: break-word;}
           #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
           #spin-results .plan-tile {margin-top: 0px;}
           
@@ -2570,31 +2570,6 @@ h
                 
               </script>
             </atlantis:webstash>
-            <atlantis:webstash type="js">
-              <script>
-                $(document).ready(function(){
-                  /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-                  var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-                      $fluidEl = $("body"); /*The element that is fluid width*/      
-                  $allVideos.each(function() {        
-                    // Figure out and save aspect ratio for each video
-                    // and remove the hard coded width/height
-                    $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-                  });
-                  // When the window is resized
-                  $(window).resize(function() {
-                    var newWidth = $fluidEl.width();
-                    // Resize all videos according to their own aspect ratio
-                    $allVideos.each(function() {
-                      var $el = $(this);
-                      $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-                    });
-                  // Kick off one resize to fix all videos on page load
-                  }).resize();
-                });
-                
-              </script>
-            </atlantis:webstash>
             <atlantis:webstash type="css">
               <style>
                 .video-modal {display: none;}
@@ -2804,7 +2779,6 @@ h
 }
 .two-up-wrap-compare .check-bullets li:before {
   content: '';
-  background-image: ;
   background-size: 205px auto;
   background-position: 0 -700px;
   width: 25px;
