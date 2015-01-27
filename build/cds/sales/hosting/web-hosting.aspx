@@ -2132,7 +2132,6 @@ cursor: pointer;
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top;
         var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
@@ -2141,6 +2140,7 @@ cursor: pointer;
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
+          var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
           var aboveFooterTop=(scroll < footerBot) ? true : false;
           var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
@@ -4948,6 +4948,9 @@ height: 27px;
         </div>
         <p>[@L[cds.sales/hosting/web-hosting-rebrand:trademark]@L]</p>
       </div>
+    </section>
+    <section id="renderMidPageNavBottom">
+      <div></div>
     </section>
     <atlantis:webstash type="js">
       <script type="text/javascript">/* ========================================================================
