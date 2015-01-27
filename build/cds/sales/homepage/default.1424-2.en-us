@@ -253,22 +253,24 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-                </div>
-                <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">
-                    <style>.gtld-marquee-tile {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
+          <div class="col-xs-12 col-md-9">
+            <div class="hero-wrapper">
+              <atlantis:webstash type="css">
+                <style>#marquee {
+  background-color: #f3f3f4;
+  overflow-y: hidden;
+}
+#marquee .promo-wrapper,
+#marquee .price-wrapper {
+  margin-top: 20px;
+}
+#marquee .inline-dash {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.5em;
+  font-size: 1.4em;
+  vertical-align: top;
+  line-height: 50%;
 }
 #marquee .headline-wrapper {
   margin-top: 40px;
@@ -633,7 +635,7 @@ text-transform: uppercase;
                               });
                               //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                           },
-                          {'autoplay':1,'controls':0,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                          {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
                           $this,
                           'prepend'
                       );
@@ -642,7 +644,7 @@ text-transform: uppercase;
                 });
               </script>
             </atlantis:webstash>
-            <div style="" data-lazyload-source="" data-icode="code" data-tile="buddyVideo" data-youtube-id="-HtVJyxSQmw" class=" video-marquee video-marquee-white full-video">
+            <div style="" data-lazyload-source="" data-icode="code" data-tile="buddyVideo" data-youtube-id="X2AHrCtOHqc" class=" video-marquee video-marquee-white full-video">
               <div class="container relative-position video-info">
                 <div class="row">
                   <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
@@ -657,25 +659,55 @@ text-transform: uppercase;
     </section>
     <atlantis:webstash type="css">
       <style>#danica-puppy-promo {
-  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy-placeholder.jpg) top center no-repeat;
-  background-size: cover;
-  min-height: 266px;
+  background-color: #f3f3f4;
 }
-@media only screen and (min-width: 992px) {
-  #danica-puppy-promo h3 {
-    padding-top: 5%;
-  }
+#danica-puppy-promo h2 {
+  font-size: 3rem;
 }
-@media only screen and (min-width: 1200px) {
-  #danica-puppy-promo h3 {
-    padding-top: 10%;
-  }
+#danica-puppy-promo h3 {
+  margin: 0;
+  font-size: 2.0rem;
 }
 #danica-puppy-promo img {
   width: 100%;
 }
 #danica-puppy-promo #danica-puppy-play-button {
   content: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png);
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 480px) {
+  #danica-puppy-promo h2 {
+    width: 100%;
+  }
+  #danica-puppy-promo h3 {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #danica-puppy-promo {
+    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy.jpg) top center no-repeat;
+    background-size: cover;
+  }
+  #danica-puppy-promo h2 {
+    width: 75%;
+  }
+  #danica-puppy-promo h3 {
+    margin: 25px 10px 0 -40px;
+    font-size: 1.6rem;
+  }
+  #danica-puppy-promo #danica-puppy-play-button {
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #danica-puppy-promo h2 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #danica-puppy-promo h3 {
+    margin-top: 40px;
+  }
 }
 
       </style>
@@ -687,7 +719,7 @@ text-transform: uppercase;
             <div class="container">
               <div class="row">
                 <div class="col-sm-12">
-                  <h2 class="walsheim-bold">Danica and Buddy</h2>
+                  <h2 class="walsheim-black">Adopt your own buddy.</h2>
                 </div>
               </div>
               <div class="row">
@@ -714,31 +746,6 @@ text-transform: uppercase;
                       
                     </script>
                   </atlantis:webstash>
-                  <atlantis:webstash type="js">
-                    <script>
-                      $(document).ready(function(){
-                        /* see: http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php */
-                        var $allVideos = $("iframe[src^='http://www.youtube.com']"),/* Find all YouTube videos */    
-                            $fluidEl = $("body"); /*The element that is fluid width*/      
-                        $allVideos.each(function() {        
-                          // Figure out and save aspect ratio for each video
-                          // and remove the hard coded width/height
-                          $(this).data('aspectRatio', this.height / this.width).removeAttr('height').removeAttr('width');
-                        });
-                        // When the window is resized
-                        $(window).resize(function() {
-                          var newWidth = $fluidEl.width();
-                          // Resize all videos according to their own aspect ratio
-                          $allVideos.each(function() {
-                            var $el = $(this);
-                            $el.width(newWidth).height(newWidth * $el.data('aspectRatio'));
-                          });
-                        // Kick off one resize to fix all videos on page load
-                        }).resize();
-                      });
-                      
-                    </script>
-                  </atlantis:webstash>
                   <atlantis:webstash type="css">
                     <style>
                       .video-modal {display: none;}
@@ -753,12 +760,12 @@ text-transform: uppercase;
                   </atlantis:webstash><img id="danica-puppy-play-button" data-ci="" class="video-modal-img-as-button"/>
                   <div id="danica-puppy-promo-video" class="sf-dialog video-modal">
                     <div class="videoWrapperInModal">
-                      <iframe width="640" height="390" src="//www.youtube.com/embed/rMF9d8-3WBA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                      <iframe width="640" height="390" src="//www.youtube.com/embed/JT1JB2brDgA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
                     </div>
                   </div>
                 </div>
                 <div class="col-md-8 col-sm-4 col-xs-3">
-                  <h3 class="walsheim-bold">Watch the video!</h3>
+                  <h3 class="walsheim-bold">WATCH VIDEO</h3>
                 </div>
               </div>
             </div>
@@ -877,68 +884,6 @@ text-transform: uppercase;
               <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
               <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <atlantis:webstash type="css">
-      <style>#o365-promo {
-  padding-bottom: 105px;
-}
-#o365-promo h2 {
-  font-size: 4.5rem;
-}
-#o365-promo h3 {
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-#o365-promo .o365-promo-text p {
-  max-width: 420px;
-}
-#o365-promo .promo-flag {
-  color: #000;
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  line-height: 1;
-  background-size: cover;
-  overflow: visible;
-  position: absolute;
-  margin-top: 100px;
-  right: 50px;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
-}
-.Explorer8 #o365-promo .promo-flag {
-  background-color: #fedc45;
-}
-.o365-promo-text ul {
-  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
-  margin: 0 0 20px -12px;
-}
-.o365-promo-image {
-  padding-top: 115px;
-  width: 140%;
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="o365-promo">
-      <div class="container">
-        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
-        <div class="row">
-          <div class="col-sm-6 o365-promo-text">
-            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
-            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
-            <ul>
-              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
-              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
-              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
-            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
-          </div>
-          <div class="col-sm-6">
-            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -1327,60 +1272,63 @@ text-transform: uppercase;
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>#new-customers-promo {
-  background-color: #e8e8e8;
+      <style>#o365-promo {
+  padding-bottom: 105px;
 }
-#new-customers-promo h2 {
-  margin: 30px 0 25px;
+#o365-promo h2 {
+  font-size: 4.5rem;
 }
-#new-customers-promo p.text-center {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+#o365-promo h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
 }
-#new-customers-promo .new-customers-get-found img {
-  height: 132px;
+#o365-promo .o365-promo-text p {
+  max-width: 420px;
 }
-#new-customers-promo .new-customers-ssl img {
-  height: 132px;
+#o365-promo .promo-flag {
+  color: #000;
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  background-size: cover;
+  overflow: visible;
+  position: absolute;
+  margin-top: 100px;
+  right: 50px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
 }
-.new-customers-gd-pro img {
-  width: 42%;
-}
-h2.two-up-title {
-  margin: 20px 0;
-}
-.two-up-speech-shape.two-up-speech-shape-gold,
-.two-up-speech-shape.two-up-speech-shape-gold:after {
+.Explorer8 #o365-promo .promo-flag {
   background-color: #fedc45;
 }
-.two-up-speech-shape.two-up-speech-shape-gold:before {
-  border-top-color: #fedc45;
+.o365-promo-text ul {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
+  margin: 0 0 20px -12px;
+}
+.o365-promo-image {
+  padding-top: 115px;
+  width: 140%;
 }
 
       </style>
     </atlantis:webstash>
-    <section id="new-customers-promo" class="bg-gray-lighter">
+    <section id="o365-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black">Find And Keep<br />New Customers</h2>
-        <p class="text-center walsheim-bold">Online or off, we can help your business</p>
+        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
         <div class="row">
-          <div class="col-sm-4">
-            <div class="feature new-customers-get-found"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">Get Found</h3>
-              <p>You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.</p><a data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95784' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
+          <div class="col-sm-6 o365-promo-text">
+            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
+            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
+            <ul>
+              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
+              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
+              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
           </div>
-          <div class="col-sm-4">
-            <div class="feature new-customers-ssl"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">SSL Certificates</h3>
-              <p>If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.</p><a data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95785' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="feature new-customers-gd-pro"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">GoDaddy Pro</h3>
-              <p>If you can code a website in your sleep and provision servers for fun, head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.</p><a data-url="[@T[link:<relative path='/pro'><param name='ci' value='95783' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
+          <div class="col-sm-6">
+            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
