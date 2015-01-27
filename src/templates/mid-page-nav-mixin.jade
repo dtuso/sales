@@ -6,6 +6,7 @@ mixin priceBlock(price, duration, link, options)
   - options.priceText = options.priceText || "[@L[cds.sales/_common:plans-starting-at]@L]"
   - options.buttonColor = options.buttonColor || "btn-purchase"
   - options.buttonText = options.buttonText || "[@L[cds.sales/_common:see-the-plans]@L]"
+  - options.ci = options.ci || ""
   
   //- allow consumers to pass a block for full flexiblity
   if block
@@ -15,7 +16,7 @@ mixin priceBlock(price, duration, link, options)
       .price-text #{options.priceText}
       .price !{price}
         span !{"/" + duration}
-      a(href="#{link}" class="#{options.buttonColor} btn btn-sm") !{options.buttonText}
+      a(data-ci="#{options.ci}", href="#{link}" class="#{options.buttonColor} btn btn-sm") !{options.buttonText}
 
 mixin renderMidPageNavBottom()
   section#renderMidPageNavBottom

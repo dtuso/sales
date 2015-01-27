@@ -1365,7 +1365,7 @@ width: 50%;
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#plan-A" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a data-ci="95885" href="#plan-A" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -3219,7 +3219,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3345,7 +3345,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3389,7 +3389,7 @@ font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
       </style>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered">
@@ -3478,37 +3478,37 @@ text-transform: uppercase;
                     </div>
                     <div class="row">
                               <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
                                 </div>
@@ -4092,19 +4092,19 @@ text-transform: uppercase;
                     </div>
                     <div class="row">
                               <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
                                 </div>
@@ -4778,7 +4778,7 @@ margin-bottom: 20px;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
+                <button data-ci="95882" id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -5245,7 +5245,7 @@ margin-bottom: 20px;
                   <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" data-ci="88753" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
                       ##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
                        
                     </div>
@@ -5278,7 +5278,7 @@ margin-bottom: 20px;
                        
                       ##endif
                        
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" data-ci="88754" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
