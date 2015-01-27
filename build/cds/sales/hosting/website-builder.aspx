@@ -475,7 +475,7 @@ width: 50%;
       /* TODO: can this styling be abstracted into landing-page.jade? */
       body { background-color: #d9d9d9; }
       #marquee { 
-        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg) no-repeat top center; 
+        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
         padding-bottom: 120px;
         margin-bottom: 0;
         background-size: cover;
@@ -500,7 +500,7 @@ width: 50%;
       html[lang="en-nz"] #marquee,
       html[lang="fr-be"] #marquee,
       html[lang="fr-ca"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-marquee_wsb_sb15.jpg);
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
       }
       
       /* asia */
@@ -900,7 +900,12 @@ width: 50%;
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -4812,7 +4817,7 @@ margin-bottom: 20px;
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h2 class="text-center h1">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]</h2>
+            <h2 style="padding-top:30px;" class="text-center h1">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]</h2>
           </div>
         </div>
       </div>
