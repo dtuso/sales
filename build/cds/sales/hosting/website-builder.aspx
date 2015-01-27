@@ -569,7 +569,7 @@ width: 50%;
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button data-plan="wsb_personal_12month" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
@@ -1388,7 +1388,6 @@ width: 50%;
       
         var nav = $('.mid-page-nav');
         var navTop = nav.offset().top;
-        var footerBot = $('#footer').offset().top;
         var sections = [];
       
         $('[data-mid-nav-title]').each(function(){
@@ -1397,6 +1396,7 @@ width: 50%;
         });
         $(window).scroll(function () {
           var scroll = $(this).scrollTop();
+          var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
           var aboveFooterTop=(scroll < footerBot) ? true : false;
           var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
@@ -4626,11 +4626,11 @@ margin-bottom: 20px;
           <div class="container">
             <div class="row">
               <div class="col-sm-9">
-                <h2 style="color:#FFF;margin-top:30px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
+                <h2 style="color:#FFF;margin-top:40px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
               </div>
               <div class="col-sm-3">
                 <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
-                  <button data-tcode="" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                  <button data-ci="91392" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 </div>
               </div>
             </div>
@@ -5295,7 +5295,7 @@ margin-bottom: 20px;
            
           ##endif
            
-          <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
+          <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
             <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
             <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
@@ -5337,6 +5337,9 @@ margin-bottom: 20px;
     </section> 
     ##endif
      
+    <section id="renderMidPageNavBottom">
+      <div></div>
+    </section>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
