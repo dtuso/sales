@@ -799,9 +799,14 @@ $(window).load(function () {
         padding: 40px; 
         margin-left: 10px; 
         margin-right: 10px; 
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
         background-color: rgba(0,138,50,0.9); 
         color: white; 
       }
+      .marquee-content-wrapper:not(old) {
+        background-image: none;
+        background-color: rgba(0,138,50,0.9);    
+      }   
       .marquee { 
         padding-top: 40px; 
         padding-bottom: 40px; 
@@ -1349,6 +1354,12 @@ h
     }
 }
     </style>
+    <atlantis:webstash type="js">
+      <style>
+        .btn {white-space: normal;word-wrap: break-word;} /* override UXCore's button styling */
+        
+      </style>
+    </atlantis:webstash>
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -1487,7 +1498,7 @@ h
           .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
           .main-marquee .header-text .today {  font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
           .main-marquee .header-text.as-low-as-price {  line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; background-repeat: no-repeat; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
-          .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; margin-top: -14px; text-transform: none; }
+          #marquee .main-marquee .header-text.disclaimers { color: #00701D; line-height: 1.6em; margin-top: -14px; text-transform: none; }
           .main-marquee .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
           .main-marquee .logo-wrapper { margin-top: 20px; }
           .main-marquee .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: Tungsten,'Tungsten A','Tungsten B',Impact,sans-serif; font-size: 2em; }
@@ -5345,12 +5356,6 @@ var PlanBox6UI = {
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
-     
-    ##if(isManager())
-     
-    <div id="f22ooter" style="display:none;"></div> 
-    ##endif
-     
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
     <script type="text/javascript">
