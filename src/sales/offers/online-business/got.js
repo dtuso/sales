@@ -45,6 +45,12 @@ var got1Page = {
 };
 
 
+##if(isManager())
+  got1Page.offersCodes.itc_wsb = 'mgr_' + got1Page.offersCodes.itc_wsb;
+  got1Page.offersCodes.itc_ols = 'mgr_' + got1Page.offersCodes.itc_ols;
+##endif 
+      
+
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
 ##endif
