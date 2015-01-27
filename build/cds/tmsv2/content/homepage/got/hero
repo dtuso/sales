@@ -94,7 +94,8 @@
     </div>
   </div>
   <div class="cta">
-    <div class="col-xs-11"><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</a>
+    <div class="col-xs-11">
+      <button class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</button>
       <div class="disclaimer">[@L[cds.sales/homepage/heros/got:disclaimer]@L]</div>
     </div>
   </div>

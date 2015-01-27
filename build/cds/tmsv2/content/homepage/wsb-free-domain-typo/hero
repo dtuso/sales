@@ -7,7 +7,7 @@
     .right-arrow>div{min-height:inherit}
     .right-arrow .left{background-color:rgb(119,192,67);color:#333}
     .right-arrow .right{background-color:transparent; color:#000}
-    .right-arrow .dash{letter-spacing:-.1rem}
+    .right-arrow .dash{letter-spacing:-.2rem}
     .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
     .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
     .right-arrow .leftContent{width:80%; margin-left:10%;}
@@ -60,7 +60,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='94097'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
+<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="products walsheim-black">
@@ -104,10 +104,11 @@
         <div class="line1 walsheim-black">FREE DOMAIN</div>
         <div class="line2 tungsten">WHEN YOU BUY WEBSITE BUILDER</div>
         <div class="line3 walsheim-black">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</div>
-        <div class="line4 tungsten"><span>THIS</span><span class="dash">———</span><span>IS NOT A TYPO</span></div>
+        <div class="line4 tungsten"><span>THIS</span><span class="dash"> ——— </span><span>IS NOT A TYPO</span></div>
         <div class="line5 walsheim-bold">AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</div>
-      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
-      <div class="line6 walsheim-black">Free domain with annual plan only. Other restrictions apply.</div>
+      </div>
+      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      <div class="line6">Free domain with annual plan only. Other restrictions apply.</div>
     </div>
   </div>
 </div>

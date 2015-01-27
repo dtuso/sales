@@ -1,7 +1,7 @@
 extends ../../../../sales/homepage/_right_arrow.jade
 
 block append heroVars
-  - rightArrow.ci = "94096";
+  - rightArrow.ci = "95853";
   - rightArrow.ctaLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
   - rightArrow.classes += " domain-enough-passwords";
 block append rightArrowStyles
@@ -18,11 +18,11 @@ block leftContent
     .line2.tungsten YOUR DOMAIN TO US.
     .line3.walsheim-black YOU HAVE ENOUGH PASSWORDS
     .line4.tungsten 
-      span.dash ———————————
+      span.dash ——————————— 
       span TO REMEMBER
 block rightContent
   .bigtext
     .line1.price.walsheim-black FREE
     .line2.tungsten 1-YEAR EXTENSION
-  a.btn.btn-lg.btn-purchase GET STARTED
-  .line3.walsheim-black *Exclusions apply
+  button.btn.btn-lg.btn-purchase GET STARTED
+  .line3 *Exclusions apply
