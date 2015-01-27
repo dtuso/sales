@@ -78,7 +78,7 @@
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]/fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
@@ -1179,7 +1179,12 @@ cursor: pointer;
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -1685,7 +1690,12 @@ cursor: pointer;
     color: #ef6c0f;
     font-family: 'Walsheim-Bold';
 }
-
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
 .pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
     font-size: 24px;
     font-size: 2.4rem;
@@ -5280,7 +5290,7 @@ height: 27px;
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        if ($(window).width() > 768){
+        if ($(window).width() >= 768){
           $(".pro-plans").each(function(index, outerPlan) {
             var maxHeight = 0;
             $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
