@@ -17,6 +17,9 @@ mixin priceBlock(price, duration, link, options)
         span !{"/" + duration}
       a(href="#{link}" class="#{options.buttonColor} btn btn-sm") !{options.buttonText}
 
+mixin renderMidPageNavBottom()
+  section#renderMidPageNavBottom
+    div
 mixin renderMidPageNav(options)
   - options = options || {};
   - options.icode = options.icode || "";
@@ -55,7 +58,6 @@ mixin renderMidPageNav(options)
 
       var nav = $('.mid-page-nav');
       var navTop = nav.offset().top;
-      var footerBot = $('#footer').offset().top;
       var sections = [];
 
       $('[data-mid-nav-title]').each(function(){
@@ -64,6 +66,7 @@ mixin renderMidPageNav(options)
       });
       $(window).scroll(function () {
         var scroll = $(this).scrollTop();
+        var footerBot = $('#renderMidPageNavBottom').offset().top-130;
         var belowNavTop=(scroll+2 > navTop) ? true : false;
         var aboveFooterTop=(scroll < footerBot) ? true : false;
         var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;

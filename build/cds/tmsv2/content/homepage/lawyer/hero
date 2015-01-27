@@ -7,7 +7,7 @@
     .right-arrow>div{min-height:inherit}
     .right-arrow .left{background-color:rgb(119,192,67);color:#fff}
     .right-arrow .right{background-color:transparent; color:#000}
-    .right-arrow .dash{letter-spacing:-.1rem}
+    .right-arrow .dash{letter-spacing:-.2rem}
     .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
     .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
     .right-arrow .leftContent{width:80%; margin-left:10%;}
@@ -24,12 +24,12 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='93464'/></relative>]@T]" class="hero right-arrow lawyer">
+<div data-url="[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='95858'/></relative>]@T]" class="hero right-arrow lawyer">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
         <div class="line1 walsheim-black">FINALLY, A DOMAIN FOR</div>
-        <div class="line2 tungsten"> <span>PEOPLE WHO READ </span><span class="dash">——————</span></div>
+        <div class="line2 tungsten"> <span>PEOPLE WHO READ </span><span class="dash">—————— </span></div>
         <div class="line3 walsheim-black">THE DISCLAIMERS.</div>
       </div>
     </div>
@@ -63,8 +63,9 @@
       <div class="bigtext">
         <div class="line1 tungsten">GET YOUR .LAWYER</div>
         <div class="line2 price walsheim-black">JUST [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR*</div>
-      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
-      <div class="line3 walsheim-black">*Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.</div>
+      </div>
+      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      <div class="line3">*Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.</div>
     </div>
   </div>
 </div>
