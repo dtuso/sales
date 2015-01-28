@@ -357,18 +357,67 @@
             </atlantis:webstash>
             <atlantis:webstash type="js">
               <script>
-                // jquery.domainscout.1.0.0.js
-                  if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
+                function domainSearchFormSubmit(e) {
                 
+                  var $textInput = $('#domain-name-input'),
+                    domain = $.trim($textInput.val()), 
+                    apiEndpoint1 = "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
+                  if((domain && domain.length==0) || !domain){
+                    window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                    return;
+                  }
+                
+                  apiEndpoint1 += "&checkAvail=1&domainToCheck=" + encodeURIComponent(domain);
+                  $.ajaxSetup({cache:false});
+                  $.ajax({
+                    url: apiEndpoint1,
+                    type: 'POST',
+                    dataType: 'json',
+                    cache: false,
+                    success: function(data){ 
+                      var isAvailable = data && (data.success === true || data.Success === true);
+                      if(isAvailable) {
+                        window.location = data.NextStepUrl;
+                        return;
+                      } else {              
+                        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                        return;
+                      }    
+                
+                    },
+                    error: function(){
+                      showApi1or2SearchError(e, domain);
+                    }
+                  });
+                
+                }
+                $(document).ready(function(){
+                  $( "#domain-search-form").on('submit', function(e) {
+                    e.preventDefault();
+                    domainSearchFormSubmit(e);
+                    return false;
+                  });        
+                });
+                function showApi1or2SearchError(e,domain){
+                  var $modal = $("#api-failure");
+                  $modal.sfDialog({titleHidden:true, buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }]});
+                }      
+                  
               </script>
             </atlantis:webstash>
-            <form action="[@T[link:&lt;external linktype='siteurl' path='' parammode='explicit'/&gt;]@T]/api/dpp/search/single?ci=54814&amp;isc=gd41166r" data-icode="home:Domain Search:Domains:Domain Search" data-domainsearch="{&quot;search-element&quot;:&quot;input.searchInput&quot;,&quot;placeholder-element&quot;:&quot;label&quot;,&quot;button&quot;:&quot;button&quot;,&quot;empty-redirect&quot;:&quot;[@T[link:&lt;external linktype=&quot;siteurl&quot; path=&quot;&quot; parammode=&quot;explicit&quot;/&gt;]@T]/domains/domain-name-search.aspx&quot;}" role="form">
+            <form id="domain-search-form">
               <div class="input-group">
                 <label for="domain-name-input" class="searchInput sr-only">Type the one you  here</label>
                 <input id="domain-name-input" type="text" placeholder="Type the one you  here" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-                  <button type="submit" data-ci="undefined" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">Search</span></button></span>
+                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">Search</span></button></span>
               </div>
             </form>
+            <div id="api-failure" class="sf-dialog api-B-failure">
+              <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
+                <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+              </h2>
+              <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
+            </div>
           </div>
         </div>
         <div class="row">
@@ -1540,7 +1589,9 @@
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
         if($('.mid-page-nav').is(':visible')){
-          organizeNavBar();
+          setTimeout(function(){
+            organizeNavBar()
+          },3000);
         }
       
         var nav = $('.mid-page-nav');
