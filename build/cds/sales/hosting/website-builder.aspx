@@ -556,7 +556,9 @@ width: 50%;
       
     </style>
     <!-- HEADERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container marquee marquee-white">
@@ -5341,7 +5343,9 @@ margin-bottom: 20px;
       <div></div>
     </section>
     <!-- FOOTERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
