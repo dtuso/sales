@@ -219,69 +219,25 @@
 
               </style>
             </atlantis:webstash>
-            <atlantis:webstash type="js">
-              <script>
-                function domainSearchFormSubmit(e) {
-                
-                  var $textInput = $('#domain-name-input'),
-                    domain = $.trim($textInput.val()), 
-                    apiEndpoint1 = "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
-                  if((domain && domain.length==0) || !domain){
-                    window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                    return;
-                  }
-                
-                  apiEndpoint1 += "&checkAvail=1&domainToCheck=" + encodeURIComponent(domain);
-                  $.ajaxSetup({cache:false});
-                  $.ajax({
-                    url: apiEndpoint1,
-                    type: 'POST',
-                    dataType: 'json',
-                    cache: false,
-                    success: function(data){ 
-                      var isAvailable = data && (data.success === true || data.Success === true);
-                      if(isAvailable) {
-                        window.location = data.NextStepUrl;
-                        return;
-                      } else {              
-                        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                        return;
-                      }    
-                
-                    },
-                    error: function(){
-                      showApi1or2SearchError(e, domain);
-                    }
-                  });
-                
-                }
-                $(document).ready(function(){
-                  $( "#domain-search-form").on('submit', function(e) {
-                    e.preventDefault();
-                    domainSearchFormSubmit(e);
-                    return false;
-                  });        
-                });
-                function showApi1or2SearchError(e,domain){
-                  var $modal = $("#api-failure");
-                  $modal.sfDialog({titleHidden:true, buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }]});
-                }      
-                  
-              </script>
-            </atlantis:webstash>
-            <form id="domain-search-form">
+            <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+              <input type="hidden" name="ci" value="54814"/>
+              <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
                 <label for="domain-name-input" class="searchInput sr-only">Find your perfect domain name</label>
                 <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+                  <button type="submit" data-ci="54814" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
               </div>
             </form>
-            <div id="api-failure" class="sf-dialog api-B-failure">
-              <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
-                <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
-              </h2>
-              <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
-            </div>
+            <script>
+              $("#domain-search-form").on('submit', function(e) {
+                var input = $("#domain-search-form").find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
+                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                }
+              });
+              
+            </script>
           </div>
         </div>
       </div>
