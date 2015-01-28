@@ -5546,6 +5546,7 @@ height: 27px;
             bv.id = 'bvapi';
             bv.async = true;
             bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+            bv.onreadystatechange = loadReviews; //Legacy IE
             bv.onload = loadReviews;
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
           }
