@@ -128,6 +128,12 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- keep in mind this is loaded last and (intentionally or unintentionally) overrides above JS/CSS/meta stuff
     block head
 
+    //- this adds styling for the impersonation/currency in the manager header only
+    | 
+    | ##if(IsManager())
+    | <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    | ##endif
+
   body(ng-controller!=angularNgCntl ng-cloak)
     
     //- pageStyles relocated here from head tag to ensure that any page-specific styling 
