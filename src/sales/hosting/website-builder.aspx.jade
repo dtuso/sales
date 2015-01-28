@@ -220,29 +220,17 @@ block sections
     include ../../templates/wsb-templates.html
     |##if(activeLanguageAny(en))
     | 
-<<<<<<< HEAD
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
-    | 
-    |##elseif(activeLanguageAny(es))
-    | 
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
-=======
     +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
     | 
     |##elseif(activeLanguageAny(es))
     | 
     +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
->>>>>>> CI codes for Web Hosting and WSB
     | 
     |##else
     | 
     style
       include:css ../../templates/styles/full-video.css
-<<<<<<< HEAD
-    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg', data-icode='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
-=======
     .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
->>>>>>> CI codes for Web Hosting and WSB
       .container.relative-position.video-info
         .row
           .col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
