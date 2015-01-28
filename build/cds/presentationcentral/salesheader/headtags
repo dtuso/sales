@@ -1142,7 +1142,7 @@
   
 </script>
 <script>
-  ux.eldorado.createAccountModal.contentUrl = "[@T[link:<external linktype='ssourl' path='' parammode='explicit'/>]@T]/authentication/login.aspx?spkey={{pc:spkey}}&version=7";
+  ux.eldorado.createAccountModal.contentUrl = "[@T[link:<external linktype='ssourl' path='' parammode='explicit'/>]@T]/authentication/login.aspx?spkey=[@T[appSetting:<setting name='UXCORE_IDP_SPKEY' />]@T]&version=7";
   
 </script>
 <script>

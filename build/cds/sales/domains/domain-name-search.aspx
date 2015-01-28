@@ -2826,7 +2826,7 @@ text-transform: uppercase;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="question-btn" class="btn btn-default-dark">SEE ALL QUESTIONS</button>
+                <button data-ci="" id="question-btn" class="btn btn-default-dark">SEE ALL QUESTIONS</button>
               </div>
             </ul>
           </div>

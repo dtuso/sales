@@ -2604,7 +2604,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a data-ci="89287" href="javascript:comparePlans2('parallels-tab')">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')" data-ci="89287">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 15%; border-bottom: 8px solid #a6a6a6;">
@@ -2995,7 +2995,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a data-ci="89286" href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')" data-ci="89286">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -3570,7 +3570,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a data-ci="89287" href="javascript:comparePlans2('parallels-tab')">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')" data-ci="89287">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
@@ -3907,7 +3907,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a data-ci="89286" href="javascript:comparePlans2('cpanel-tab')">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')" data-ci="89286">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -4636,7 +4636,7 @@ height: 27px;
     </section> 
     ##endif
      
-    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="95879" class="tile-section">
+    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" class="tile-section">
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
