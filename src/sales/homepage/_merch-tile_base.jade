@@ -1,11 +1,13 @@
 extend ./_tile.jade
 
 block append vars
-  - logoImage = logoImage || "";
-  - logoImageFallback = logoImageFallback || "";
-  - logoText = logoText || "";
-  - promoText = promoText || "";
-
+  - logoImage              = logoImage || "";
+  - logoImageFallback      = logoImageFallback || "";
+  - logoText               = logoText || "";
+  - promoText              = promoText || "";
+  - merchTilePFID          = merchTilePFID || "";
+  - ctaTextContainsPercent = ctaTextContainsPercent || false;
+  - ctaFallBackText        = ctaFallBackText || "";
 
 block tileContent
   .promo-logo-wrapper
@@ -17,4 +19,11 @@ block tileContent
       .promo-logo-text !{logoText}
   .promo-text.walsheim-black !{promoText}
   .promo-cta
-    a.walsheim-black(href!=ctaLink) !{ctaText} 
+    if (ctaTextContainsPercent)
+      | ##if(productHasSavingsMoreThan(!{merchTilePFID}, !{merchTilePFID}, 0))
+      | <a class="walsheim-black" href="!{ctaLink}">!{ctaText}</a>
+      | ##else
+      | <a class="walsheim-black" href="!{ctaLink}">!{ctaFallBackText}</a>
+      | ##endif
+    else
+      a.walsheim-black(href!=ctaLink) !{ctaText} 
