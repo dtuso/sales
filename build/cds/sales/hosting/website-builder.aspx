@@ -1382,7 +1382,9 @@ width: 50%;
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
         if($('.mid-page-nav').is(':visible')){
-          organizeNavBar();
+          setTimeout(function(){
+            organizeNavBar()
+          },3000);
         }
       
         var nav = $('.mid-page-nav');
@@ -1544,7 +1546,7 @@ width: 50%;
   #templates>p{display:block;text-align:center;font-size:14px;color:#666;width:400px;margin:8px auto 0;line-height:24px}#templates>a{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}#templates>form{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}
   #templates .templates-slider .left-arrow,#templates .templates-slider .right-arrow{position:absolute;width:60px;height:60px;z-index:1;margin-top:96px}#templates .templates-slider>ul{height:357px;margin:25px 0 -10px 40px;overflow:hidden;padding:0 0 0 8px;position:relative;width:916px}
   #templates .templates-slider>ul li{position:relative;display:block;width:212px;float:left;margin-right:19px}#templates .templates-slider>ul li>.wsl-img{position:absolute;width:212px;height:268px;top:0;left:0;-moz-box-shadow:0 3px 7px -3px #282828;-webkit-box-shadow:0 3px 7px -3px #282828;box-shadow:0 3px 7px -3px #282828;background-color:#fff;*z-index:3}
-  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:10px;position:relative;width:auto;height:706px;z-index:1050}
+  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:auto;position:relative;width:1000px;height:706px;z-index:1050}
   @media screen and (min-width:900px){.templates-dialog{margin:auto;width:1000px;padding-top:30px;padding-bottom:30px}}.templates-slider>ul li .hover>div{margin:45px 0 0;text-align:center}.templates-slider>ul li .hover>div>p{color:#fff;font-size:20px;margin-top:25px}
   .templates-slider>ul li .hover>div>p>span{color:#354e00;display:block;font-size:14px;margin-top:10px;padding:0 25px;*line-height:18px}#templates .templates-slider>ul li>a{display:block;width:192px;height:62px;line-height:62px;text-align:center;background-color:#fff;margin:268px auto 0;color:#3282e6;font-size:16px;text-decoration:none;*position:absolute;*left:10px;*z-index:1}
   #templates .view-all{text-decoration:none}#templates .view-all:hover{text-decoration:underline}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}.templates-modal{background-color:#EEE;box-shadow:0 0 6px rgba(0,0,0,.8);color:#333;font-size:14px;height:644px;line-height:1.3;padding:0;width:1002px;z-index:21;display: none;}
@@ -1557,12 +1559,12 @@ width: 50%;
   .g-modal-header{border-bottom:1px solid #CCC;color:#333;font-size:24px;font-weight:400;padding-bottom:2px}.g-modal-content{overflow:auto;position:relative}.g-modal-content p{margin:15px 0}.g-modal-buttonpane{margin-top:8px;text-align:center;font-size:12px;position:relative}
   .g-modal-footer{background:#dbdbdb;padding:15px;text-align:center}#app-modal>ul{background:#dbdbdb;list-style-type:none;margin:10px 0 0;padding:0 0 20px 10px;width:100%}#app-modal>ul:after{clear:both;content:"";display:table}
   #app-modal>ul>h3{color:#333;font-size:24px;font-weight:400;margin:0}#app-modal>ul>li{background:none repeat scroll 0 0 #FFF;float:left;height:202px;margin:15px 20px 0 0;padding-top:7px;text-align:center;width:213px}#app-modal>ul>li>div{overflow:hidden;width:201px;height:146px;margin:0 auto}
-  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:37px;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
-  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;height:35px;display:block}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:0 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
+  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:1.6em;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
+  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;min-height:35px;}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:6px 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
   #g-modal .plan-droplist-select>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;left:-999em;z-index:1000}#g-modal .plan-droplist-select.droplist-open{overflow:visible}
   #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
   #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
-  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{float:left;text-align:left;width:auto;height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
+  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{text-align:left;width:auto;min-height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
   #g-modal button.close {
     -webkit-appearance: none;
     padding: 0;
@@ -3213,7 +3215,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3339,7 +3341,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3383,7 +3385,7 @@ font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
       </style>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered">
@@ -4810,7 +4812,7 @@ margin-bottom: 20px;
          });
       </script>
     </section> 
-    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,uk))
+    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,ua))
      
     <section id="other-products">
       <div class="container">
@@ -4900,7 +4902,7 @@ margin-bottom: 20px;
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]</h2>
                 <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h4>
-                <div class="features-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</div><a href="[@T[link:&lt;relative path=&quot;~/hosting/wordpress-hosting.aspx&quot; /&gt;]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                <div class="features-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</div><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
               </div>
             </div>
           </div>
@@ -5445,6 +5447,7 @@ margin-bottom: 20px;
              bv.id = 'bvapi';
              bv.async = true;
              bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+             bv.onreadystatechange = loadReviews; //Legacy IE
              bv.onload = loadReviews;
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
            }
