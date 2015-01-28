@@ -1385,7 +1385,9 @@ width: 50%;
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
         if($('.mid-page-nav').is(':visible')){
-          organizeNavBar();
+          setTimeout(function(){
+            organizeNavBar()
+          },3000);
         }
       
         var nav = $('.mid-page-nav');
@@ -5451,6 +5453,7 @@ margin-bottom: 20px;
              bv.id = 'bvapi';
              bv.async = true;
              bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+             bv.onreadystatechange = loadReviews; //Legacy IE
              bv.onload = loadReviews;
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
            }

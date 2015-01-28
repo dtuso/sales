@@ -2151,7 +2151,9 @@ cursor: pointer;
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
         if($('.mid-page-nav').is(':visible')){
-          organizeNavBar();
+          setTimeout(function(){
+            organizeNavBar()
+          },3000);
         }
       
         var nav = $('.mid-page-nav');
