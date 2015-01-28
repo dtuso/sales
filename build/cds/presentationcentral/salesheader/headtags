@@ -1097,7 +1097,7 @@
       }
   });
   
-  // TODO - boing - this seems risky depending on how the items are organized on a page
+  // TODO - this seems risky depending on how the items are organized on a page
   // should we put this in a specific file to ensure it happens at a particular time?
   // is doucment.ready really the indicator that we're good to go?
   $(document).ready(ux.eldorado.init);

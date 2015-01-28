@@ -1146,7 +1146,7 @@ script(type="text/javascript").
       },
       launchStore: function() {
           // has to use double quotes because there are single quotes in the rendered string
-          var div = "<div>You're leaving GoDaddy.com to browse the GoDaddy Store. We'll leave this window open, so you can return later.</div>";
+          var div = "<div>[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Modal.GodaddyStore.HeaderText]@L]</div>";
           $(div).sfDialog({
               destroyOnClose: true,
               title: 'Leaving Our Site',
@@ -1173,14 +1173,14 @@ script.
   ux.eldorado.footer.init({
       app: 'sales',
       texts: {
-          EmailAddressTooLong: "Email address is too long.",
-          ThankYou: "Thank You!",
-          EnterValidEmail: "Please enter a valid email address.",
-          YourDiscountDomainClub: "Your Discount Domain Club pricing is being displayed.",
-          YourAccountExecutiveis: "Your Account Executive is:",
-          Phone: "Phone:",
-          Ext: "Ext:",
-          Email: "Email:",
+          EmailAddressTooLong: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.EmailAddressTooLong]@L]",
+          ThankYou: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.ThankYou]@L]",
+          EnterValidEmail: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.EnterValidEmail]@L]",
+          YourDiscountDomainClub: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.YourDiscountDomainClub]@L]",
+          YourAccountExecutiveis: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.YourAccountExecutiveis]@L]",
+          Phone: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Phone]@L]",
+          Ext: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Ext]@L]",
+          Email: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Email]@L]",
           CookieDisclaimer: $('#cookie-warning').html() || false
       }
   });
