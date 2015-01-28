@@ -205,7 +205,9 @@
       </style>
     </atlantis:webstash>
     <!-- HEADERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- HEADEREND-->
     <section id="marquee">
       <atlantis:webstash type="css">
@@ -2832,7 +2834,9 @@ text-transform: uppercase;
       </div>
     </section>
     <!-- FOOTERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
