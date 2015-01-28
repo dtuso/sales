@@ -5,12 +5,68 @@ link(href!="[@T[link:<javascriptroot />]@T]fos/eldorado/1.3.14/css/salesheader.m
 style.
   .pc-sprite { background-image:url([@T[link:<javascriptroot />]@T]pc/img/1/20150114_pc_sprite.png); }
   .ux-content-box *, .ux-content-box *:before, .ux-content-box *:after { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }      
-link(href!="[@T[link:<javascriptroot />]@T]ux/test-brand/css/uxcore.css" rel="stylesheet" media="screen")
+link(href!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/css/uxcore.css" rel="stylesheet" media="screen")
 
-//-
-//- PC SCRIPTS
-//-
-script(src!="[@T[link:<javascriptroot />]@T]ux/dev-brand/js/uxcore.en.js")
+<!-- HTML5 shim IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/html5shiv.min.js")
+<![endif]-->
+
+| ##if(activeLanguageAny(da))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.da.min.js")
+| 
+| ##elseif(activeLanguageAny(de))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.de.min.js")
+| 
+| ##elseif(activeLanguageAny(el))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.el.min.js")
+| 
+| ##elseif(activeLanguageAny(es))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.es.min.js")
+| 
+| ##elseif(activeLanguageAny(fi))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.fi.min.js")
+| 
+| ##elseif(activeLanguageAny(fr))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.fr.min.js")
+| 
+| ##elseif(activeLanguageAny(it))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.it.min.js")
+| 
+| ##elseif(activeLanguageAny(nb))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.nb.min.js")
+| 
+| ##elseif(activeLanguageAny(nl))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.nl.min.js")
+| 
+| ##elseif(activeLanguageAny(pl))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pl.min.js")
+| 
+| ##elseif(activeLanguageAny([pt-br]))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt-BR.min.js")
+| 
+| ##elseif(activeLanguageAny([pt-pt]))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt-PT.min.js")
+| 
+| ##elseif(activeLanguageAny(pt))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt.min.js")
+| 
+| ##elseif(activeLanguageAny(ru))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.ru.min.js")
+| 
+| ##elseif(activeLanguageAny(sv))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.sv.min.js")
+| 
+| ##elseif(activeLanguageAny(tr))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.tr.min.js")
+| 
+| ##elseif(activeLanguageAny(uk))
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.uk.min.js")
+| 
+| ##else
+script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.en.min.js")
+| 
+| ##endif 
 
 script(type="text/javascript").
   ux.jQuery = $;
@@ -901,11 +957,11 @@ script(type="text/javascript").
           $(window).load(function() {
               $('body').append($('<div id="lpButtonDiv"></div>'));
               var scriptResource = document.createElement('script');
-              scriptResource.src = "https://img1.wsimg-com.ide/fos/liveperson/js/liveperson_20150122.min.js";
+              scriptResource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js";
               var styleResource = document.createElement('link');
               styleResource.rel = "stylesheet";
               styleResource.type = "text/css";
-              styleResource.href = "https://img1.wsimg-com.ide/fos/liveperson/css/chat-window_20140205.css";
+              styleResource.href = "[@T[link:<javascriptroot />]@T]fos/liveperson/css/chat-window_20140205.css";
               var script = document.getElementsByTagName('script')[0];
               script.parentNode.insertBefore(scriptResource, script);
               script.parentNode.insertBefore(styleResource, script);

@@ -4,8 +4,46 @@
   .pc-sprite { background-image:url([@T[link:<javascriptroot />]@T]pc/img/1/20150114_pc_sprite.png); }
   .ux-content-box *, .ux-content-box *:before, .ux-content-box *:after { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }      
 </style>
-<link href="[@T[link:<javascriptroot />]@T]ux/1.2.4-brand/css/uxcore.min.css" rel="stylesheet" media="screen"/>
-<script src="[@T[link:<javascriptroot />]@T]ux/1.2.4-brand/js/uxcore.en.min.js"></script>
+<link href="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/css/uxcore.css" rel="stylesheet" media="screen"/><!-- HTML5 shim IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/html5shiv.min.js"></script><![endif]-->
+##if(activeLanguageAny(da))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.da.min.js"></script> 
+##elseif(activeLanguageAny(de))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.de.min.js"></script> 
+##elseif(activeLanguageAny(el))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.el.min.js"></script> 
+##elseif(activeLanguageAny(es))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.es.min.js"></script> 
+##elseif(activeLanguageAny(fi))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.fi.min.js"></script> 
+##elseif(activeLanguageAny(fr))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.fr.min.js"></script> 
+##elseif(activeLanguageAny(it))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.it.min.js"></script> 
+##elseif(activeLanguageAny(nb))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.nb.min.js"></script> 
+##elseif(activeLanguageAny(nl))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.nl.min.js"></script> 
+##elseif(activeLanguageAny(pl))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pl.min.js"></script> 
+##elseif(activeLanguageAny([pt-br]))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt-BR.min.js"></script> 
+##elseif(activeLanguageAny([pt-pt]))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt-PT.min.js"></script> 
+##elseif(activeLanguageAny(pt))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.pt.min.js"></script> 
+##elseif(activeLanguageAny(ru))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.ru.min.js"></script> 
+##elseif(activeLanguageAny(sv))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.sv.min.js"></script> 
+##elseif(activeLanguageAny(tr))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.tr.min.js"></script> 
+##elseif(activeLanguageAny(uk))
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.uk.min.js"></script> 
+##else
+<script src="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit'/>]@T]/js/uxcore.en.min.js"></script> 
+##endif 
 <script type="text/javascript">
   ux.jQuery = $;
   ux.data = {
@@ -1082,7 +1120,7 @@
       },
       launchStore: function() {
           // has to use double quotes because there are single quotes in the rendered string
-          var div = "<div>You're leaving GoDaddy.com to browse the GoDaddy Store. We'll leave this window open, so you can return later.</div>";
+          var div = "<div>[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Modal.GodaddyStore.HeaderText]@L]</div>";
           $(div).sfDialog({
               destroyOnClose: true,
               title: 'Leaving Our Site',

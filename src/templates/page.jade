@@ -154,19 +154,13 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
             $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
 
     // HEADERBEGIN
-    | 
-    | ##if(!isManager())
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    | ##endif
     // HEADEREND
 
     block content
 
     // FOOTERBEGIN
-    | 
-    | ##if(!isManager())
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    | ##endif
     // FOOTEREND-     
 
     <!-- liveperson includes -->
