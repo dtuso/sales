@@ -1930,7 +1930,7 @@ cursor: pointer;
             <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
             <p class="bottom-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]</p>
           </div>
-          <div class="col-sm-2 pro-banner-button"><a data-ci="93999" href="[@T[link:<relative path='/pro/cpanel-hosting'></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
+          <div class="col-sm-2 pro-banner-button"><a data-ci="93999" href="[@T[link:<relative path='/pro/cpanel-hosting'><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a></div>
         </div>
         <div class="row">
           <div class="col-sm-12">
@@ -2604,7 +2604,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')" data-ci="89287">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans('parallels-tab')" data-ci="95797">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 15%; border-bottom: 8px solid #a6a6a6;">
@@ -2995,7 +2995,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')" data-ci="89286">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans('cpanel-tab')" data-ci="95792">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -3570,7 +3570,7 @@ height: 27px;
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:cPanelTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
                     <li id="cpanelTab" class="active"><a>cPanel</a></li>
-                    <li id="parallelsTab"><a href="javascript:comparePlans2('parallels-tab')" data-ci="89287">Parallels</a></li>
+                    <li id="parallelsTab"><a href="javascript:comparePlans('parallels-tab')" data-ci="95797">Parallels</a></li>
                   </ul>
                 </td>
                 <td style="width: 20%; border-bottom: 8px solid #f47f00;">
@@ -3907,7 +3907,7 @@ height: 27px;
                 <td style="width: 40%;padding-left: 0;padding-bottom: 0;border-bottom: 1px solid #333;">
                   <!--h2 [@L[cds.sales/hosting/web-hosting-rebrand:windowsTitle]@L]-->
                   <ul class="nav nav-tabs compare-nav-tabs">
-                    <li id="cpanelTab"><a href="javascript:comparePlans2('cpanel-tab')" data-ci="89286">cPanel</a></li>
+                    <li id="cpanelTab"><a href="javascript:comparePlans('cpanel-tab')" data-ci="95792">cPanel</a></li>
                     <li id="parallelsTab" class="active"><a>Parallels</a></li>
                   </ul>
                 </td>
@@ -4845,7 +4845,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
-                      </ul><a data-ci="95800" href="[@T[link:<relative path='/hosting/website-builder.aspx'></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a data-ci="95800" href="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='95800' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -4862,7 +4862,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
-                      </ul><a data-ci="95799" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a data-ci="95799" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='95799' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -4900,7 +4900,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
-                      </ul><a data-ci="95800" href="[@T[link:<relative path='/hosting/website-builder.aspx'></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a data-ci="95800" href="[@T[link:<relative path='/hosting/website-builder.aspx'>><param name='ci' value='95800' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -4917,7 +4917,7 @@ height: 27px;
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
-                      </ul><a data-ci="95800" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
+                      </ul><a data-ci="95799" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'>><param name='ci' value='95799' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</a>
                     </div>
                   </div>
                 </div>
