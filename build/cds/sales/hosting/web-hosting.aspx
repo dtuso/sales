@@ -849,7 +849,9 @@ cursor: pointer;
       
     </style>
     <!-- HEADERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container marquee marquee-white">
@@ -5500,7 +5502,9 @@ height: 27px;
     ##endif
      
     <!-- FOOTERBEGIN--> 
+    ##if(!isManager())
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    ##endif
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -5546,6 +5550,7 @@ height: 27px;
             bv.id = 'bvapi';
             bv.async = true;
             bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+            bv.onreadystatechange = loadReviews; //Legacy IE
             bv.onload = loadReviews;
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
           }
