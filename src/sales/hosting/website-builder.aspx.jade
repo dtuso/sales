@@ -141,7 +141,7 @@ block plans
   
 block sections  
   +renderMidPageNav
-    +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
+    +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A", {"ci":"95885"})
 
   section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]",data-ciCode="87758")
     .templates-chart.bg-gray-light
@@ -220,17 +220,17 @@ block sections
     include ../../templates/wsb-templates.html
     |##if(activeLanguageAny(en))
     | 
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
     | 
     |##elseif(activeLanguageAny(es))
     | 
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
     | 
     |##else
     | 
     style
       include:css ../../templates/styles/full-video.css
-    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg', data-icode='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
+    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
       .container.relative-position.video-info
         .row
           .col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
@@ -278,7 +278,7 @@ block sections
   | 
 
   section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]",data-ciCode="87759")
-    +renderAccordion({id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
+    +renderAccordion({ci: "95882", id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
       h2.h1 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
@@ -304,7 +304,7 @@ block sections
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
-        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]',data-ci="88753") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
         | 
         |##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
         | 
@@ -317,7 +317,7 @@ block sections
         |##endif
         | 
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]',data-ci="88754") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
   | 
   |##endif
   | 
