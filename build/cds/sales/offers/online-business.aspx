@@ -121,8 +121,8 @@ var got1Page = {
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
 
-
-##if(isManager())
+//- false added for a quick override until DPP is ready with the mgr_ itc codes
+##if(isManager() && false)
   got1Page.offersCodes.itc_wsb = 'mgr_' + got1Page.offersCodes.itc_wsb;
   got1Page.offersCodes.itc_ols = 'mgr_' + got1Page.offersCodes.itc_ols;
 ##endif 
