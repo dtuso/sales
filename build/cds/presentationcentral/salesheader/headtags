@@ -1097,7 +1097,7 @@
       }
   });
   
-  // TODO - this seems risky depending on how the items are organized on a page
+  // TODO - boing - this seems risky depending on how the items are organized on a page
   // should we put this in a specific file to ensure it happens at a particular time?
   // is doucment.ready really the indicator that we're good to go?
   $(document).ready(ux.eldorado.init);
@@ -1111,14 +1111,14 @@
   ux.eldorado.footer.init({
       app: 'sales',
       texts: {
-          EmailAddressTooLong: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:EmailAddressTooLong]@L]",
-          ThankYou: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:ThankYou]@L]",
-          EnterValidEmail: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:EnterValidEmail]@L]",
-          YourDiscountDomainClub: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:YourDiscountDomainClub]@L]",
-          YourAccountExecutiveis: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:YourAccountExecutiveis]@L]",
-          Phone: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Phone]@L]",
-          Ext: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Ext]@L]",
-          Email: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Email]@L]",
+          EmailAddressTooLong: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.EmailAddressTooLong]@L]",
+          ThankYou: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.ThankYou]@L]",
+          EnterValidEmail: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.EnterValidEmail]@L]",
+          YourDiscountDomainClub: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.YourDiscountDomainClub]@L]",
+          YourAccountExecutiveis: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.YourAccountExecutiveis]@L]",
+          Phone: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Phone]@L]",
+          Ext: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Ext]@L]",
+          Email: "[@L[cds.presentationcentral/standardheaderfooter/1/2014v1:Javascript.Email]@L]",
           CookieDisclaimer: $('#cookie-warning').html() || false
       }
   });
