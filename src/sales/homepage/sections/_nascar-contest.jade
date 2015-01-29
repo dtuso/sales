@@ -1,0 +1,21 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #nascar-contest{background:#79be4b center center;background-size:cover;
+        h2{margin:80px 0 0;}
+        h3{margin-top:0;font-size:1.6rem;
+           @media only screen and (max-width:680px){width:180px;}
+        }
+        a{margin-bottom:30px;
+          @media only screen and (min-width:1400px){margin-bottom:100px;}
+        }
+
+        .nascar-contest-btn{font-size:1.4rem;}
+      }
+section#nascar-contest.lazyload(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar-full-width.jpg")
+  .container
+    .row
+      .col-sm-6.col-offset-sm-6
+        h2.walsheim-black TAKE A BREAK
+        h3.walsheim-regular Turn the GoDaddy racecar into your 200 mph business billboard.
+        a.btn.btn-default-dark.nascar-contest-btn.walsheim-black(data-url!="[@T[link:<relative path='/contest/buddy'><param name='ci' value='95788' /><param name='gdccopath' value='enter' /></relative>]@T]") ENTER TO WIN 
