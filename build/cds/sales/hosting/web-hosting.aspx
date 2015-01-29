@@ -773,7 +773,7 @@ cursor: pointer;
       /* TODO: can this styling be abstracted into landing-page.jade? */
       body { background-color: #d9d9d9; }
       #marquee { 
-        background: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
+        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
         padding-bottom: 120px;
         margin-bottom: 0;
         background-size: cover;
@@ -798,7 +798,7 @@ cursor: pointer;
       html[lang="en-nz"] #marquee,
       html[lang="fr-be"] #marquee,
       html[lang="fr-ca"] #marquee {
-        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);
       }
       
       /* asia */
