@@ -653,7 +653,7 @@ text-transform: uppercase;
         <div class="row">
           <div class="col-sm-6 col-offset-sm-6">
             <h2 class="walsheim-black">TAKE A BREAK</h2>
-            <h3 class="walsheim-regular">Turn the GoDaddy racecar into your 200 mph business billboard.</h3><a data-url="[@T[link:<relative path='/contest/buddy'><param name='ci' value='95788' /><param name='gdccopath' value='enter' /></relative>]@T]" class="btn btn-default-dark nascar-contest-btn walsheim-black">ENTER TO WIN </a>
+            <h3 class="walsheim-regular">Turn the GoDaddy racecar into your 200 mph business billboard.</h3><a href="[@T[link:<relative path='/contest/buddy'><param name='ci' value='95788' /><param name='gdccopath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">ENTER TO WIN </a>
           </div>
         </div>
       </div>
