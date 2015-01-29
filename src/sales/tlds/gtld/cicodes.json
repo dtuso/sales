@@ -131,6 +131,84 @@
           { "ITC Code" : "GtldEoiWebsiteReviews" },
           { "Description" : ".REVIEWS Slide Link" }
           ]
+      },
+      { ".FORSALE Slide Link" : [
+          { "ITC ID" : "95842" },
+          { "ITC Code" : "GtldEoiForsaleLink" },
+          { "Description" : ".FORSALE Slide Link" }
+          ]
+      },
+      { ".WORK Slide Link" : [
+          { "ITC ID" : "95848" },
+          { "ITC Code" : "GtldEoiWorkLink" },
+          { "Description" : ".WORK Slide Link" }
+          ]
+      },
+      { ".BAND Slide Link" : [
+          { "ITC ID" : "95837" },
+          { "ITC Code" : "GtldEoiBandLink" },
+          { "Description" : ".BAND Slide Link" }
+          ]
+      },
+      { ".ENERGY Slide Link" : [
+          { "ITC ID" : "95841" },
+          { "ITC Code" : "GtldEoiEnergyLink" },
+          { "Description" : ".ENERGY Slide Link" }
+          ]
+      },
+      { ".CASA Slide Link" : [
+          { "ITC ID" : "95838" },
+          { "ITC Code" : "GtldEoiCasaLink" },
+          { "Description" : ".CASA Slide Link" }
+          ]
+      },
+      { ".RIP Slide Link" : [
+          { "ITC ID" : "95847" },
+          { "ITC Code" : "GtldEoiRipLink" },
+          { "Description" : ".RIP Slide Link" }
+          ]
+      },
+      { ".DEGREE Slide Link" : [
+          { "ITC ID" : "95840" },
+          { "ITC Code" : "GtldEoiDegreeLink" },
+          { "Description" : ".DEGREE Slide Link" }
+          ]
+      },
+      { ".GIVES Slide Link" : [
+          { "ITC ID" : "95843" },
+          { "ITC Code" : "GtldEoiGivesLink" },
+          { "Description" : ".GIVES Slide Link" }
+          ]
+      },
+      { ".COACH Slide Link" : [
+          { "ITC ID" : "95839" },
+          { "ITC Code" : "GtldEoiCoachLink" },
+          { "Description" : ".COACH Slide Link" }
+          ]
+      },
+      { ".LEGAL Slide Link" : [
+          { "ITC ID" : "95844" },
+          { "ITC Code" : "GtldEoiLegalLink" },
+          { "Description" : ".LEGAL Slide Link" }
+          ]
+      },
+      { ".MEMORIAL Slide Link" : [
+          { "ITC ID" : "95845" },
+          { "ITC Code" : "GtldEoiMemorialLink" },
+          { "Description" : ".MEMORIAL Slide Link" }
+          ]
+      },
+      { ".MONEY Slide Link" : [
+          { "ITC ID" : "95846" },
+          { "ITC Code" : "GtldEoiMoneyLink" },
+          { "Description" : ".MONEY Slide Link" }
+          ]
+      },
+      { ".PRESS Slide Link" : [
+          { "ITC ID" : "95868" },
+          { "ITC Code" : "GtldEoiPressLink" },
+          { "Description" : ".PRESS Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [
