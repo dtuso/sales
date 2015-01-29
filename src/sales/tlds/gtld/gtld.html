@@ -11,41 +11,46 @@ comments: Prep for uxcore - css updates
 
 <atlantis:webstash type="css">
   <style>
-    ##if(countrySiteAny(www, ca))
-    .bg-images > .bg-slide1 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-club.jpg") !important;
+    ##if(appSettingEnabled(UXCORE_ENABLED))
+    body {
+      font-size: 10px;
+      background: #d4d4d4;
     }
-    ##else
-    .bg-images > .bg-slide1 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
+    h1 {
+      color:#FFFFFF;
+    }
+    #footer #footer-legal {
+      background: #fff;
     }
     ##endif
     
+    .bg-images > .bg-slide1 {
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/30_off_tld_background.jpg");
+    }
+
     .bg-images > .bg-slide2 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-guru.jpg");
+      ##if(countrySiteAny(www, ca))
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-club.jpg") !important;
+      ##else
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
+      ##endif
     }
     
     .bg-images > .bg-slide3 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-reviews.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-guru.jpg");
     }
-    
-    ##if(activeLanguageAny([en-GB]))
+        
     .bg-images > .bg-slide4 {
+      ##if(activeLanguageAny([en-GB]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-london.jpg");
-    }
-    ##elseif(activeLanguageAny([en-US], [es-US]))
-    .bg-images > .bg-slide4 {
+      ##elseif(activeLanguageAny([en-US], [es-US]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-nyc.jpg");
-    }
-    ##elseif(activeLanguageAny([en-CA], [fr-CA]))
-    .bg-images > .bg-slide4 {
+      ##elseif(activeLanguageAny([en-CA], [fr-CA]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-quebec.jpg");
-    }
-    ##else
-    .bg-images > .bg-slide4 {
+      ##else
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-website.jpg");
+      ##endif
     }
-    ##endif
   </style>
 </atlantis:webstash>
 
@@ -55,30 +60,10 @@ comments: Prep for uxcore - css updates
   .idp-modal-wrap {top: 35%!important;}
 </style>
 
-##if(appSettingEnabled(UXCORE_ENABLED))
-  <style type="text/css">
-    body {
-      font-size: 10px;
-      background: #d4d4d4;
-    }
-    a, a:hover {
-      color: #7db701;
-    }
-    h1 {
-      font-size: 24;
-      color:#FFFFFF;
-    }
-    h1, h2, h3 {
-      margin-top: 0px;
-    }
-    .badge-important {
-      background-color: #F3514C;
-    }
-    #footer #footer-legal {
-      background: #fff;
-    }
-  </style>
-##endif
+  </head>
+
+  <body>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
 {% endblock metahead %}
 
@@ -105,6 +90,11 @@ comments: Prep for uxcore - css updates
           <li>[@L[cds.sales/gd/tlds/gtld:MainText3]@L]</li>
         </ul>
       </div>
+      <style>
+        .carousel-inner-item-gtld-1 p a {
+          font-weight: bold;
+        }
+      </style>
       <div class="tab-content-column-gtld">
         <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/tlds/gtld:MainBadgeNew]@L]</span>
         <section class="carousel-container main-banner-carousel">
@@ -115,23 +105,22 @@ comments: Prep for uxcore - css updates
                   <div class="carousel-inner carousel-inner-container">
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-1 active">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextClub]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="no-margin-bottom" style="font-size: 24px; line-height: 1.27778em; font-weight: bold;">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideSave]@L]</p>
+                        <p style="font-size: 14px;">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideList]@L]</p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextClub]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.reviews</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextReviews]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90921" href="[@T[link:<relative path="~/tlds/reviews"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
@@ -463,7 +452,11 @@ comments: Prep for uxcore - css updates
         });
     }
     $(document).ready(function(){
-      var checkInterval = setInterval(function(){
+      $('.carousel').carousel({
+        interval: 7000
+      });
+
+        var checkInterval = setInterval(function(){
         var $noButton = $('.noButton');
         if($noButton.length >= 1){
           // add click event
