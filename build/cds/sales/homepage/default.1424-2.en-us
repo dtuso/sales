@@ -51,7 +51,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -81,7 +84,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-cloak>
+  <body>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -309,7 +312,7 @@
 }
 
                     </style>
-                    <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
+                    <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
                       <div class="tile-content-wrapper">
                         <div class="container">
                           <div class="row">

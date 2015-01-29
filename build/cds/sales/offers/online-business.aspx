@@ -337,7 +337,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
-      window.triggerResize();
+      window.triggerResize(); // force equalHeightSlides when modal is showing (otherwise they have no height when display:none)
     });
   }
 
@@ -3277,7 +3277,6 @@ h
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
-            alert(1);
             // autoheight the slides
             var $slides = $('#carousel-ols-stores').find('.ols-carousel-item');
             var equalHeightSlides = function(){
@@ -3667,7 +3666,7 @@ top: -6px;
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="container-fluid ols-carousel-item">
                                   <div class="row">
-                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" class="img-responsive img-centered"></div>
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Gloss.png" class="img-responsive img-centered"></div>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12">
@@ -3689,7 +3688,7 @@ top: -6px;
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="container-fluid ols-carousel-item">
                                   <div class="row">
-                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" class="img-responsive img-centered"></div>
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Bibs.png" class="img-responsive img-centered"></div>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12">
@@ -3711,17 +3710,17 @@ top: -6px;
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="container-fluid ols-carousel-item">
                                   <div class="row">
-                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" class="img-responsive img-centered"></div>
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Princess.png" class="img-responsive img-centered"></div>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12">
-                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
                                     </div>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12">
-                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
-                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
                                     </div>
                                   </div>
                                 </div>
@@ -3733,7 +3732,7 @@ top: -6px;
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
                                 <div class="container-fluid ols-carousel-item">
                                   <div class="row">
-                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" class="img-responsive img-centered"></div>
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Jones.png" class="img-responsive img-centered"></div>
                                   </div>
                                   <div class="row">
                                     <div class="col-xs-12">
