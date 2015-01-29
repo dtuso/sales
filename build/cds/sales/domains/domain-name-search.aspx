@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
+<html lang="[@T[localization:<language full='true' />]@T]" id="ng-app" ng-app="dnsApp">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -11,20 +11,21 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domains/domain-name-search.aspx' parammode='explicit'/>]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
-    <meta property="og:type" content="website">
+    <title>[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]</title>
+    <meta name="description" content="[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]">
+    <meta property="og:description" content="[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]">
+    <meta property="og:type" content="product">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
-    <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -51,7 +52,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -82,7 +86,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="dnsCtrl">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -200,10 +204,35 @@
     </style>
     <atlantis:webstash type="css">
       <style>
-        .plan-tile { margin-top: 70px; }
-        .search-template .search-template-box { margin-bottom: 10px; }
-        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
-        #domainSearch { padding-bottom: 10px; }
+        .modal-open {overflow: hidden;}
+        body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+        .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+        .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+        .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+        .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+        .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+        .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+        .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+        .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+        .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+        .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+        .modal-header .close {margin-top: -2px;}
+        .modal-title {margin: 0;line-height: 1.428571429;}
+        .modal-body {overflow: auto;border: 0;}
+        .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+        .modal-footer:after {clear: both;}
+        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+        .modal-footer:after {clear: both;}
+        .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+        .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+        .modal-footer .btn-block + .btn-block {margin-left: 0;}
+        @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+        .search-template .search-template-box { margin-bottom: 10px;}
+        .bg-green-official { background-color: #77c043; }
+        #what-do-you-get {background-color: #e8e8e8;}
+        #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
+        #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
         
       </style>
     </atlantis:webstash>
@@ -211,10 +240,887 @@
     <!-- HEADEREND-->
     <section id="marquee">
       <atlantis:webstash type="css">
+        <style>.white-text{
+    color: #FFFFFF;
+}
+.marquee {
+    background-position: top center;
+}
+
+.marquee .marquee-product-img {
+    margin-bottom: 10px;
+}
+
+.marquee .jump-arrow-btn {
+    margin-top: 10px;
+}
+
+.marquee .marquee-buttons a {
+    margin-right: 20px;
+}
+
+.marquee .marquee-buttons a:last-child {
+    margin-right: 0;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: none;
+    padding-left: 10px;
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-size: 1.2rem;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee.marquee-app-landing {
+    min-height: 655px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    margin-top: 0;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-left: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+.marquee.marquee-app-landing .marquee-check-bullets li:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+.marquee.marquee-app-landing .marquee-pro-left-text {
+    padding-top: 45px;
+}
+
+.marquee.marquee-app-landing .marquee-product-description {
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+}
+
+.marquee.marquee-app-landing .marquee-product-name {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-signup {
+    min-height: 584px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-wrap {
+    margin-bottom: 75px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup h2 {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee-pro-signup h3 {
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 50%;
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro-signup .marquee-pro-signup-img img {
+        width: 80%;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-check-wrap {
+    margin-top: 30px;
+}
+
+.marquee-pro-signup .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro-signup .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-signup .marquee-pro-signup-buttons {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+
+.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
+    margin-right: 20px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check {
+    padding-left: 35px;
+    font-family: 'Walsheim-Bold';
+    position: relative;
+    font-size: 18px;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.marquee-pro-signup .marquee-pro-signup-check:before {
+    content: '';
+    background-position: 0px -234px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+.marquee-pro-rebrand {
+    min-height: 378px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro-rebrand {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text {
+    margin-bottom: 65px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+    margin-bottom: 10px;
+}
+
+.marquee-pro-rebrand .marquee-pro-left-text h2 {
+    font-size: 40px;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Walsheim-Bold';
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.marquee-pro {
+    min-height: 450px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro {
+        padding-bottom: 50px;
+    }
+}
+
+.marquee-pro .well {
+    background-color: rgba(239, 108, 15, 0.8);
+    border: none;
+    color: #fff;
+    padding: 30px;
+    min-height: 275px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .well {
+        min-height: 0;
+        margin-top: 20px;
+    }
+}
+
+.marquee-pro .well .row {
+    min-height: 0 !important;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-pro .well .marquee-pro-icon-wrap {
+        border-left: 0;
+    }
+
+    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
+        margin-top: 30px;
+    }
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
+    height: 95px;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
+    max-width: 75%;
+    max-height: 75%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap h5 {
+    font-weight: 500;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap:first-child {
+    border-left: 0;
+}
+
+.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
+    margin: 0 auto 15px;
+    max-height: 85px;
+}
+
+.marquee-pro .well.marquee-pro-centered a {
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .well.marquee-pro-centered h2 {
+    margin-top: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
+    border-top: 1px solid #fff;
+    font-weight: 700;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
+    margin-top: 20px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
+    margin-top: 15px;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
+    font-size: 35px;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: 'Walsheim-Bold';
+}
+
+.marquee-pro .well.marquee-pro-centered .search-template-box {
+    border: 3px solid #fff;
+    margin-top: 10px;
+}
+
+.marquee-pro .marquee-pro-first-area h1 {
+    font-size: 20px;
+    font-size: 2rem;
+    font-family: 'Walsheim-Bold';
+    margin: 0 0 10px 0;
+}
+
+.marquee-pro .marquee-pro-first-area h2 {
+    margin-top: 12px;
+}
+
+.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
+    padding-top: 10px;
+    border-top: 1px solid #fff;
+}
+
+.marquee-pro .marquee-product-text {
+    margin-bottom: 20px;
+}
+
+.marquee-pro .jump-to-plans {
+    position: absolute;
+    bottom: -60px;
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+
+.marquee-pro .jump-to-plans .marquee-jump-text {
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+    color: #333333;
+    font-size: 20px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee-pro .jump-to-plans .marquee-jump-text {
+        margin-bottom: 5px;
+    }
+}
+
+.marquee-table-grid > .row {
+    display: table;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row {
+        display: block;
+    }
+}
+
+.marquee-table-grid > .row > [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee-table-grid > .row > [class*="col-"] {
+        display: block;
+        float: none;
+        border-left: none;
+        border-right: none;
+        padding: 20px inherit;
+        border-top: 1px solid #fff;
+    }
+
+    .marquee-table-grid > .row > [class*="col-"]:first-child {
+        border-top: 0;
+    }
+}
+.marquee {
+    background-size: cover !important;
+    position: relative;
+    background-position: bottom center;
+    background-color: #fff;
+  /* Ribbon */
+}
+
+.marquee .relative-position {
+    position: relative;
+}
+
+.marquee .marquee-all-centered {
+    text-align: center;
+}
+
+.marquee .marquee-two-col-txt ul.marquee-product-bullets {
+    text-align: left;
+}
+
+.marquee.marquee-short {
+    min-height: 368px;
+}
+
+.marquee.marquee-short .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-short .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-short .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0%;
+    }
+}
+
+.marquee.marquee-tall {
+    min-height: 523px;
+}
+
+.marquee.marquee-tall .container {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row {
+    min-height: inherit;
+}
+
+.marquee.marquee-tall .container .row .col-sm-pull-6 {
+    min-height: inherit;
+}
+
+@media only screen and (max-width: 767px) {
+    .marquee.marquee-tall .container .row .col-sm-pull-6 {
+        min-height: 100px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-tall {
+        min-height: 400px;
+    }
+}
+
+.marquee.marquee-img-tall-left-txt {
+    height: 523px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 430px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-tall-left-txt {
+        height: 332px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-img-short-left-txt {
+    height: 368px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee.marquee-img-short-left-txt {
+        height: 234px;
+        background-position: -160px;
+    }
+}
+
+.marquee.marquee-white {
+    color: #fff;
+}
+
+.marquee.marquee-white h1,
+.marquee.marquee-white h2,
+.marquee.marquee-white h3,
+.marquee.marquee-white h4,
+.marquee.marquee-white h5,
+.marquee.marquee-white h6 {
+    color: #fff;
+}
+
+.marquee.marquee-white .dashed-underline {
+    border-bottom-color: #fff;
+}
+
+.marquee.marquee-white a:not(.btn) {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.marquee.marquee-white a:not(.btn):hover {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-wrap .vertical-height {
+        height: auto !important;
+    }
+}
+
+.marquee .img-center {
+    margin: 0 auto;
+}
+
+.marquee .marquee-corner-img {
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 165px;
+    min-height: 169px;
+}
+
+.marquee .marquee-product-img {
+    max-width: 100%;
+}
+
+.marquee .marquee-product-review {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-product-review a {
+    text-decoration: underline;
+    padding-left: 10px;
+    color: #808080;
+}
+
+.marquee .marquee-product-review a:hover {
+    text-decoration: none;
+}
+
+.marquee .marquee-product-description {
+    font-size: 56px;
+    font-size: 5.6rem;
+    font-weight: 100;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-product-description {
+        font-size: 40px;
+        font-size: 4rem;
+    }
+}
+
+.marquee .marquee-product-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+    padding: 0 0 14px;
+}
+
+.marquee ul.marquee-product-bullets {
+    font-size: 18px;
+    font-size: 1.8rem;
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.marquee .marquee-restrictions-text {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.marquee .marquee-ribbon {
+    width: 112px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+@media only screen and (max-width: 992px) {
+    .marquee .marquee-ribbon {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+.marquee .marquee-left-ribbon .marquee-ribbon {
+    left: 0;
+    right: auto;
+}
+
+.marquee .marquee-price-btn-wrap {
+    color: #ef6c0f;
+    line-height: 1;
+    font-weight: 400;
+    padding: 5px 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap {
+        line-height: 1.2;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .btn {
+    margin-right: 10px;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price-small-text {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
+        font-size: 16px;
+        font-size: 1.6rem;
+    }
+}
+
+.marquee .marquee-price-btn-wrap .marquee-price {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-price-btn-wrap .marquee-price {
+        font-size: 30px;
+        font-size: 3rem;
+    }
+}
+
+.marquee .marquee-check-bullets {
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 0;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+.marquee .marquee-check-bullets span {
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+.marquee .marquee-check-bullets li:before {
+    content: "\e207";
+    font-family: 'uxfont';
+    padding-right: 5px;
+}
+
+.marquee .marquee-btn-wrap {
+    margin-bottom: 20px;
+}
+
+.marquee .search-template .search-template-box {
+    border: 1px solid #cecece;
+}
+
+.marquee .marquee-customer-name-wrap {
+    position: absolute;
+    bottom: 10px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 480px) {
+    .marquee .marquee-customer-name-wrap {
+        position: relative;
+        bottom: auto;
+    }
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-name {
+    font-weight: bold;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-text {
+    font-weight: 100;
+}
+
+.marquee .marquee-customer-name-wrap .marquee-customer-website {
+    color: #008a32;
+    text-decoration: underline;
+}
+
+.marquee .marquee-two-col-abstract.left-column {
+    color: #fff;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
+    color: #fff;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 46px;
+    margin: 34px 0 0 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
+    font-family: "Walsheim-Bold";
+    font-size: 22px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
+    font-family: "Walsheim-Medium";
+    font-size: 18px;
+    margin-top: 18px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
+    display: block;
+    font-family: "Walsheim-Black";
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .btn {
+    font-family: "Walsheim-Medium";
+    font-size: 24px;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
+    margin: 12px 0 24px;
+    font-family: "Walsheim-Regular";
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
+    padding-left: 0;
+}
+
+.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
+    list-style: none;
+}
+
+.marquee .marquee-two-col-abstract.right-column {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+.marquee .marquee-two-col-abstract.right-column img.abstract-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .marquee .marquee-two-col-abstract.right-column {
+        position: relative;
+        min-height: 200px;
+    }
+}
+
+h1.marquee-product-name,
+h2.marquee-product-name,
+.marquee-product-name {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px) {
+    h1.marquee-product-name,
+  h2.marquee-product-name,
+  .marquee-product-name {
+        font-size: 20px;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+}
+        </style>
         <style>
-          .marquee { background-color: #ffffff }
-          .marquee.marquee-app-landing { min-height: 400px; color: #333333; }
-          .marquee.marquee-app-landing h2 { color: #333333; }
+          .marquee { background-color: #ffffff; padding-bottom:30px !important; min-height:200px !important;}
+          .marquee.marquee-app-landing .marquee-pro-left-text {padding-top:0px;}
+          .marquee.marquee-app-landing .marquee-check-bullets li {margin-bottom:15px;}
+          .marquee .marquee-check-bullets span {text-transform:none; font-stretch: normal; font-family: Arial; font-weight:bold;}
+          .marquee.marquee-app-landing { min-height: 300px; color: #333333; }
+          .marquee.marquee-app-landing h2 { color: #333333; font-size:50px; line-height:50px; }
           
         </style>
       </atlantis:webstash>
@@ -224,86 +1130,13 @@
             <div class="col-sm-12">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="row">
-                  <div class="col-md-9 col-sm-12">
+                  <div class="col-sm-12">
                     <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">FIND YOUR PERFECT NAME.</h2>
+                            <h2 class="marquee-product-description">[@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]</h2>
                             <ul class="marquee-check-bullets">
-                              <li>1</li>
-                              <li>2</li>
-                              <li> </li>
-                              <li>m</li>
-                              <li>i</li>
-                              <li>l</li>
-                              <li>l</li>
-                              <li>i</li>
-                              <li>o</li>
-                              <li>n</li>
-                              <li> </li>
-                              <li>c</li>
-                              <li>u</li>
-                              <li>s</li>
-                              <li>t</li>
-                              <li>o</li>
-                              <li>m</li>
-                              <li>e</li>
-                              <li>r</li>
-                              <li>s</li>
-                              <li> </li>
-                              <li>t</li>
-                              <li>r</li>
-                              <li>u</li>
-                              <li>s</li>
-                              <li>t</li>
-                              <li> </li>
-                              <li>u</li>
-                              <li>s</li>
-                              <li> </li>
-                              <li>w</li>
-                              <li>i</li>
-                              <li>t</li>
-                              <li>h</li>
-                              <li> </li>
-                              <li>t</li>
-                              <li>h</li>
-                              <li>e</li>
-                              <li>i</li>
-                              <li>r</li>
-                              <li> </li>
-                              <li>d</li>
-                              <li>o</li>
-                              <li>m</li>
-                              <li>a</li>
-                              <li>i</li>
-                              <li>n</li>
-                              <li>s</li>
-                              <li>.</li>
-                              <li> </li>
-                              <li> </li>
-                              <li>T</li>
-                              <li>h</li>
-                              <li>e</li>
-                              <li>y</li>
-                              <li> </li>
-                              <li>m</li>
-                              <li>u</li>
-                              <li>s</li>
-                              <li>t</li>
-                              <li> </li>
-                              <li>k</li>
-                              <li>n</li>
-                              <li>o</li>
-                              <li>w</li>
-                              <li> </li>
-                              <li>s</li>
-                              <li>o</li>
-                              <li>m</li>
-                              <li>e</li>
-                              <li>t</li>
-                              <li>h</li>
-                              <li>i</li>
-                              <li>n</li>
-                              <li>g</li>
-                              <li>.</li>
+                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]</li>
+                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]</li>
+                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]</li>
                             </ul>
                     </div>
                   </div>
@@ -315,10 +1148,28 @@
       </div>
     </section>
     <section id="domainSearch" class="bg-green-official">
+      <atlantis:webstash type="css">
+        <style>
+          #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+          #domainSearch { padding-bottom: 10px; }
+          #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+          #domainSearch #domain-name-input {font-size: 18px; font-family: Arial; color:#333333;}
+          #domainSearch #domain-name-input::-webkit-input-placeholder { color: #333333; font-family: Arial; }
+          #domainSearch #domain-name-input:-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+          #domainSearch #domain-name-input::-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+          #domainSearch #domain-name-input:-ms-input-placeholder { color: #333333; font-family: Arial; }
+          #domainSearch #domain-name-input.headline-primary {text-transform:none;}
+          #domainSearch .form-control {height:62px;}
+          #domainSearch .input-group-btn .btn {margin-left: 10px;}
+          #domainSearch .input-group-btn .search-text {font-size: 30px; font-family: 'Walsheim-Bold'; padding: 8px 15px 5px; }
+          #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+          #domainSearch h1 {font-size:inherit;font-family:inherit;display:inline;color:inherit;}
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div style="padding-top:10px;" class="col-xs-12">
-            <h4>Start your domain name search here</h4>
+            <div id="main-panel-title">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeadingRebrand]@L]</div>
           </div>
         </div>
         <div class="row">
@@ -358,87 +1209,124 @@
 
               </style>
             </atlantis:webstash>
-            <atlantis:webstash type="js">
-              <script>
-                function domainSearchFormSubmit(e) {
-                
-                  var $textInput = $('#domain-name-input'),
-                    domain = $.trim($textInput.val()), 
-                    apiEndpoint1 = "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
-                  if((domain && domain.length==0) || !domain){
-                    window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                    return;
-                  }
-                
-                  apiEndpoint1 += "&checkAvail=1&domainToCheck=" + encodeURIComponent(domain);
-                  $.ajaxSetup({cache:false});
-                  $.ajax({
-                    url: apiEndpoint1,
-                    type: 'POST',
-                    dataType: 'json',
-                    cache: false,
-                    success: function(data){ 
-                      var isAvailable = data && (data.success === true || data.Success === true);
-                      if(isAvailable) {
-                        window.location = data.NextStepUrl;
-                        return;
-                      } else {              
-                        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                        return;
-                      }    
-                
-                    },
-                    error: function(){
-                      showApi1or2SearchError(e, domain);
-                    }
-                  });
-                
-                }
-                $(document).ready(function(){
-                  $( "#domain-search-form").on('submit', function(e) {
-                    e.preventDefault();
-                    domainSearchFormSubmit(e);
-                    return false;
-                  });        
-                });
-                function showApi1or2SearchError(e,domain){
-                  var $modal = $("#api-failure");
-                  $modal.sfDialog({titleHidden:true, buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }]});
-                }      
-                  
-              </script>
-            </atlantis:webstash>
-            <form id="domain-search-form">
+            <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+              <input type="hidden" name="ci" value=""/>
+              <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
-                <label for="domain-name-input" class="searchInput sr-only">Type the one you  here</label>
-                <input id="domain-name-input" type="text" placeholder="Type the one you  here" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">Search</span></button></span>
+                <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]</label>
+                <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
+                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]</span></button></span>
               </div>
             </form>
-            <div id="api-failure" class="sf-dialog api-B-failure">
-              <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
-                <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
-              </h2>
-              <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
-            </div>
+            <script>
+              $("#domain-search-form").on('submit', function(e) {
+                var input = $("#domain-search-form").find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
+                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                }
+              });
+              
+            </script>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12"><a href="#" data-toggle="modal" data-target="#bulkModal" class="btn-link">Domain Pricing</a><a href="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]" class="btn-link">Bulk Domain Search</a><a href="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]" class="btn-link">Transfer Domains</a></div>
+        <div class="row domain-links">
+          <div class="col-xs-12"><a href="#" data-toggle="modal" data-target="#bulkModal" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink1]@L]</a><a href="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink2]@L]</a><a href="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink3]@L]</a></div>
         </div>
       </div>
     </section>
-    <section id="plans">
+    <section id="top-pods">
       <atlantis:webstash type="css">
         <style>
-          #plans .tldlogo{background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-s9ffd8fe504.png);background-repeat:no-repeat;display:inline-block;vertical-align:middle;}
-          #plans .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
-          #plans .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+          #top-pods {background-color: #e8e8e8;}
+          #top-pods .plan-tile {margin-top: 55px; }
+          #top-pods .pro-plans{padding-bottom:45px;}
+          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
+          #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
+          #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+          #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+          #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
+          #top-pods .tldlogo {background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-s1d41272b7e.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+          .tldlogo-dot-at {background-position: -110px -1396px;height: 40px;width: 42px;}
+          .tldlogo-dot-be {background-position: 0 -1276px;height: 40px;width: 51px;}
+          .tldlogo-dot-berlin {background-position: 0 -1356px;height: 30px;width: 84px;}
+          .tldlogo-dot-biz {background-position: -100px -1316px;height: 40px;width: 44px;}
+          .tldlogo-dot-br {background-position: -133px -316px;height: 40px;width: 24px;}
+          .tldlogo-dot-build {background-position: 0 -1076px;height: 40px;width: 67px;}
+          .tldlogo-dot-ca {background-position: -51px -1316px;height: 40px;width: 49px;}
+          .tldlogo-dot-casa {background-position: 0 -1116px;height: 40px;width: 71px;}
+          .tldlogo-dot-ch {background-position: 0 -716px;height: 40px;width: 52px;}
+          .tldlogo-dot-city {background-position: 0 -1036px;height: 40px;width: 66px;}
+          .tldlogo-dot-cl {background-position: 0 -516px;height: 40px;width: 38px;}
+          .tldlogo-dot-club {background-position: 0 -1156px;height: 40px;width: 73px;}
+          .tldlogo-dot-co-in {background-position: -63px -956px;height: 40px;width: 93px;}
+          .tldlogo-dot-co-nz {background-position: -71px -1116px;height: 40px;width: 84px;}
+          .tldlogo-dot-co-uk-old {background-position: -63px -996px;height: 40px;width: 76px;}
+          .tldlogo-dot-co-uk {background-position: 0 -1236px;height: 40px;width: 52px;}
+          .tldlogo-dot-co-za {background-position: 0 -396px;height: 40px;width: 34px;}
+          .tldlogo-dot-co {background-position: -126px -596px;height: 40px;width: 31px;}
+          .tldlogo-dot-com-au {background-position: -37px -436px;height: 40px;width: 119px;}
+          .tldlogo-dot-com-co {background-position: 0 -1436px;height: 40px;width: 36px;}
+          .tldlogo-dot-com-mx {background-position: -38px -476px;height: 40px;width: 119px;}
+          .tldlogo-dot-com-old {background-position: -66px -1036px;height: 40px;width: 88px;}
+          .tldlogo-dot-com {background-position: -53px -676px;height: 40px;width: 101px;}
+          .tldlogo-dot-company {background-position: 0 -116px;height: 40px;width: 157px;}
+          .tldlogo-dot-de {background-position: 0 -676px;height: 40px;width: 53px;}
+          .tldlogo-dot-democrat {background-position: -58px -876px;height: 40px;width: 97px;}
+          .tldlogo-dot-directory {background-position: 0 -236px;height: 40px;width: 137px;}
+          .tldlogo-dot-dk {background-position: 0 -636px;height: 40px;width: 53px;}
+          .tldlogo-dot-email {background-position: -60px -916px;height: 40px;width: 94px;}
+          .tldlogo-dot-es {background-position: 0 -596px;height: 40px;width: 50px;}
+          .tldlogo-dot-estate {background-position: -46px -556px;height: 40px;width: 107px;}
+          .tldlogo-dot-eu {background-position: 0 0;height: 36px;width: 52px;}
+          .tldlogo-dot-expert {background-position: 0 -1396px;height: 40px;width: 110px;}
+          .tldlogo-dot-fr {background-position: 0 -356px;height: 40px;width: 31px;}
+          .tldlogo-dot-futbol {background-position: -31px -356px;height: 40px;width: 123px;}
+          .tldlogo-dot-global-old {background-position: 0 -476px;height: 40px;width: 38px;}
+          .tldlogo-dot-global {background-position: -57px -36px;height: 36px;width: 83px;}
+          .tldlogo-dot-guru {background-position: -73px -1156px;height: 40px;width: 82px;}
+          .tldlogo-dot-in {background-position: 0 -796px;height: 40px;width: 57px;}
+          .tldlogo-dot-info {background-position: 0 -36px;height: 40px;width: 57px;}
+          .tldlogo-dot-it {background-position: -36px -1436px;height: 40px;width: 35px;}
+          .tldlogo-dot-kiwi {background-position: -67px -1076px;height: 40px;width: 86px;}
+          .tldlogo-dot-lawyer {background-position: -52px 0;height: 36px;width: 100px;}
+          .tldlogo-dot-london {background-position: 0 -276px;height: 40px;width: 134px;}
+          .tldlogo-dot-luxury {background-position: 0 -1476px;height: 40px;width: 124px;}
+          .tldlogo-dot-me {background-position: -79px -516px;height: 40px;width: 28px;}
+          .tldlogo-dot-menu {background-position: -52px -1236px;height: 40px;width: 104px;}
+          .tldlogo-dot-mx {background-position: 0 -956px;height: 40px;width: 63px;}
+          .tldlogo-dot-my {background-position: 0 -996px;height: 40px;width: 63px;}
+          .tldlogo-dot-net-old {background-position: 0 -916px;height: 40px;width: 60px;}
+          .tldlogo-dot-net {background-position: 0 -76px;height: 40px;width: 74px;}
+          .tldlogo-dot-ninja {background-position: -57px -796px;height: 40px;width: 98px;}
+          .tldlogo-dot-nl {background-position: -38px -516px;height: 40px;width: 41px;}
+          .tldlogo-dot-nyc {background-position: 0 -436px;height: 40px;width: 37px;}
+          .tldlogo-dot-org {background-position: -50px -596px;height: 40px;width: 76px;}
+          .tldlogo-dot-pe {background-position: -80px -1276px;height: 40px;width: 43px;}
+          .tldlogo-dot-ph {background-position: 0 -556px;height: 40px;width: 46px;}
+          .tldlogo-dot-photography {background-position: 0 -156px;height: 40px;width: 155px;}
+          .tldlogo-dot-photos {background-position: -34px -396px;height: 40px;width: 120px;}
+          .tldlogo-dot-pl {background-position: 0 -1196px;height: 40px;width: 66px;}
+          .tldlogo-dot-quebec {background-position: -53px -636px;height: 40px;width: 102px;}
+          .tldlogo-dot-reviews {background-position: -74px -76px;height: 40px;width: 83px;}
+          .tldlogo-dot-rocks {background-position: -52px -756px;height: 40px;width: 100px;}
+          .tldlogo-dot-ru {background-position: -51px -1276px;height: 40px;width: 29px;}
+          .tldlogo-dot-se {background-position: 0 -1316px;height: 40px;width: 51px;}
+          .tldlogo-dot-services {background-position: 0 -196px;height: 40px;width: 145px;}
+          .tldlogo-dot-sg {background-position: 0 -756px;height: 40px;width: 52px;}
+          .tldlogo-dot-social {background-position: -52px -716px;height: 40px;width: 101px;}
+          .tldlogo-dot-tax {background-position: 0 -836px;height: 40px;width: 58px;}
+          .tldlogo-dot-uk {background-position: -123px -1276px;height: 40px;width: 31px;}
+          .tldlogo-dot-uno {background-position: -71px -1436px;height: 40px;width: 29px;}
+          .tldlogo-dot-ve {background-position: -84px -1356px;height: 40px;width: 51px;}
+          .tldlogo-dot-vegas {background-position: -58px -836px;height: 40px;width: 98px;}
+          .tldlogo-dot-website {background-position: 0 -316px;height: 40px;width: 133px;}
+          .tldlogo-dot-wiki {background-position: -66px -1196px;height: 40px;width: 91px;}
+          .tldlogo-dot-xyz {background-position: 0 -876px;height: 40px;width: 58px;}
         </style>
-      </atlantis:webstash> 
-      ##if(activeLanguageAny([en-ca]))
-            <atlantis:webstash type="css">
-              <style>
+      </atlantis:webstash>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
@@ -827,589 +1715,452 @@
         display: inline;
     }
 }
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plans-wrap ">
-              <div id="plans" data-icode="" class="container pro-plans">
-                <div class="row">
-                        <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                          <div class="pro-plan-wrap">
-                            <style>
-                              .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
-                              .plan-text { height: 66px; }
-                            </style>
-                            <div class="tldlogo tldlogo-dot-com"></div>
-                            <p class="plan-text">Get the domain that will never go out of style.</p>
-                            <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                          </div>
-                        </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-ca{background-position:-51px -1277px; height:40px; width:49px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-ca"></div>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCaText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='9405' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-quebec{background-position:-53px -597px; height:40px; width:102px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-quebec"></div>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotQuebecText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='546605' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/quebec'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-website{background-position:0px -279px; height:40px; width:133px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-website"></div>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotWebsiteText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='461465' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h3 class="text-center">So What All Do You Get?</h3>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
-                        <div class="include-check">Quickly forward your domain to any existing website</div>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
-                        <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Real-time monitoring to keep you up and running</div>
-                      </div>
-                    </div>
+        </style>
+      </atlantis:webstash>
+      <div class="pro-plans-wrap ">
+        <div id="plans" data-icode="" class="container pro-plans">
+          <div class="row">
+            <div class="ng-scope">
+              <div id="{{pod.PodId}}" ng-repeat="pod in podsDataTop" class="col-sx-3">
+                <div class="col-md-3 col-sm-6 plan-tile plan-pro">
+                  <div class="pro-plan-wrap">
+                    <div class="tldlogo {{pod.logoclass}}"></div>
+                    <p ng-bind-html="pod.PodText" class="plan-text"> </p>
+                    <div class="plan-price-wrap">
+                      <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                        <strike>{{pod.ListPrice}}</strike></span>
+                    </div><a href="{{pod.ButtonURL}}" data-index="1" ng-hide="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:PreRegisterRebrand]@L]</a><a href="{{pod.ButtonURL}}" data-index="1" ng-show="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                   </div>
                 </div>
               </div>
-            </div> 
-      ##else
-            <atlantis:webstash type="css">
-              <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.Explorer8 .plan-flag {background-color:#fedc45 !important;}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    padding-bottom: 30px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-        font-size: 35px;
-        font-size: 3.5rem;
-    }
-}
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-@media (min-width: 768px) {
-    .four-columns {
-        font-size: 3.5rem !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .plan-duration-div-four {
-        display: inline;
-    }
-}
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plans-wrap ">
-              <div id="plans" data-icode="" class="container pro-plans">
-                <div class="row">
-                        <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                          <div class="pro-plan-wrap">
-                            <style>
-                              .tldlogo-dot-com{background-position:-52px -676px; height:40px; width:101px; margin-bottom:10px;}
-                              .plan-text { height: 66px; }
-                            </style>
-                            <div class="tldlogo tldlogo-dot-com"></div>
-                            <p class="plan-text">Get the domain that will never go out of style.</p>
-                            <div class="plan-price-wrap">[@T[productprice:<template productid='101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                          </div>
-                        </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-net{background-position:0px -36px; height:40px; width:74px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-net"></div>
-                      <p class="plan-text">The domain for entrepreneurs.</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='12001' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-org{background-position:-63px -960px; height:40px; width:76px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-org"></div>
-                      <p class="plan-text">Build trust with this well-known and respected domain.</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='12101' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-md-3 col-sm-6 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <style>
-                        .tldlogo-dot-info{background-position:0px -1198px; height:40px; width:57px; margin-bottom:10px;}
-                        .plan-text { height: 66px; }
-                      </style>
-                      <div class="tldlogo tldlogo-dot-info"></div>
-                      <p class="plan-text">Share your info with the world.</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='201' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/info.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <h3 class="text-center">So What All Do You Get?</h3>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Simple domain set up - no technical skills needed. Honest.</div>
-                        <div class="include-check">Quickly forward your domain to any existing website</div>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Up to 100 subdomains (like pics.coolexample.com) to customize your site.</div>
-                        <div class="include-check">100 professional email aliases (like sales@coolexample.com).</div>
-                      </div>
-                      <div class="col-md-4 col-sm-6">
-                        <div class="include-check">Real-time monitoring to keep you up and running</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> 
-      ##endif
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="promo-carousel" class="features-carousel-pro-carousel">
       <atlantis:webstash type="css">
         <style>
-          #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; }
+          #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
+          #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+          #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
           #promo-carousel .btn { margin-top: 40px; }
+          #promo-carousel .greenText { color: #77c043;}
         </style>
       </atlantis:webstash>
+      <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+      </style>
       <div class="carousel-wrap">
         <div class="carousel-container container">
-          <div id="my-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
+          <div id="top-carousel" data-ride="carousel" data-interval="false" class="carousel slide">
             <ol class="carousel-indicators">
-              <li data-target="#my-carousel" data-slide-to="0" data-ci=""></li>
-              <li data-target="#my-carousel" data-slide-to="1" data-ci=""></li>
-              <li data-target="#my-carousel" data-slide-to="2" data-ci=""></li>
+              <li data-target="#top-carousel" data-slide-to="0" data-ci=""></li>
+              <li data-target="#top-carousel" data-slide-to="1" data-ci=""></li>
+              <li data-target="#top-carousel" data-slide-to="2" data-ci=""></li>
             </ol>
             <div class="carousel-inner">
               <div class="item">
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div style="text-transform: uppercase;" class="plan-carousel-copy">FINALLY! A WEB ADDRESS THAT TELLS PEOPLE EXACTLY WHAT YOU DO</div>
-                    <div class="plan-carousel-copy">.attorney, .church, .club, .xyz and .guide are now available.</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]</div>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div style="text-transform: uppercase;" class="plan-carousel-copy">30% OFF</div>
-                    <div class="plan-carousel-copy">.global, .email, .website, .guru, .army now.</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L]</div>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="plan-carousel-copy">SAVE up to 50% when you get online with</div>
-                    <div class="plan-carousel-copy">.com, .net, .co, .org, .me, .biz, or .us</div><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]" class="btn btn-default-dark">Search Domains Now</a>
+                     
+                    ##if(activeLanguageAny([en-us]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3USRebrand]@L]</div> 
+                    ##else
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]</div> 
+                    ##endif
                   </div>
                 </div>
               </div>
-            </div><a href="#my-carousel" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#my-carousel" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+            </div><a href="#top-carousel" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#top-carousel" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
           </div>
           <script>
             $('.carousel .carousel-indicators li:first-child').addClass("active");
             $('.carousel .carousel-inner .item:first-child').addClass("active");
           </script>
+        </div>
+      </div>
+    </section>
+    <section id="what-do-you-get">
+      <atlantis:webstash type="css">
+        <style>
+          #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:60px;}
+          #what-do-you-get .container{padding-bottom: 70px;}
+        </style>
+      </atlantis:webstash>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]</div>
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]</div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]</div>
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]</div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1681,928 +2432,555 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="why-godaddy" data-mid-nav-title="Why GoDaddy?" class="key-benefits-wrap tile-section bg-pro-gray">
-      <div class="container">
-        <div class="row">
-          <div style="padding-top: 30px; padding-bottom: 30px;" class="col-sm-12">
-            <h2>Why Choose GoDaddy?</h2>
-            <h3>With more than 58 million domains under management, we have more experience than anyone.  We're like your favorite local store that's been there for ages and always seems to have everything you need.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" class="key-benefits-img">
-            </div>
-            <h3 class="key-benefits-title">World's Largest Registrar</h3>
-            <div class="key-benefits-text">More people trust us than any other domain provider.  Since the right domain name can set you up for future success, you don't want to mess around.  Go with the world's largest registrar.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_Security.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Widest Selection on the Web</h3>
-            <div class="key-benefits-text">Every time you enter a name in our domain serach box, our powerful engine searces the web's largest pool of names.  There's no better place to find the right domain name for your business.</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" class="key-benefits-img"></div>
-            <h3 class="key-benefits-title">Award-Winning 24/7 Support</h3>
-            <div class="key-benefits-text">Stumped by... anything?  Our smart, friendly domain experts are here to help.  Call them day or night at (480) 505-8877.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="bottom-pods" class="bg-green-official">
+    <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
-          #bottom-pods .pro-plans-wrap { margin-bottom: -310px; }
-          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
-          #bottom-pods .bottom-headline { font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; padding:80px 0 0 0; }
+          #why-godaddy .why-gd-container{padding:30px 0 80px;}
+          #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
+          #why-godaddy h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;}
+          #why-godaddy h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;}
+          #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
+          #why-godaddy .key-benefits-text{padding-top:20px;}
+          #why-godaddy .key-benefits-img-wrap {height:154px;}
+          #why-godaddy .icon-domain {padding-top:33px;}
+          #why-godaddy .icon-headset {padding-top:34px;}
         </style>
-      </atlantis:webstash><span class="bottom-headline">HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG</span> 
-      ##if(activeLanguageAny([en-ca]))
-            <atlantis:webstash type="css">
-              <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.Explorer8 .plan-flag {background-color:#fedc45 !important;}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    padding-bottom: 30px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-        font-size: 35px;
-        font-size: 3.5rem;
-    }
-}
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-@media (min-width: 768px) {
-    .four-columns {
-        font-size: 3.5rem !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .plan-duration-div-four {
-        display: inline;
-    }
-}
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plans-wrap bg-green-official">
-              <div id="plans" data-icode="" class="container pro-plans">
-                <div class="row">
-                        <div class="col-sm-4 plan-tile plan-pro">
-                          <div class="pro-plan-wrap">
-                            <div class="plan-flag">NOW AVAILABLE</div>
-                            <h2 class="plan-title">.global</h2>
-                            <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
-                            <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                          </div>
-                        </div>
-                  <div class="col-sm-4 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <div class="plan-flag">NOW AVAILABLE</div>
-                      <h2 class="plan-title">.club</h2>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <div class="plan-flag">NOW AVAILABLE</div>
-                      <h2 class="plan-title">.co</h2>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> 
-      ##else
-            <atlantis:webstash type="css">
-              <style>
-.plan-tile { 
-  margin-top: -145px; 
-  margin-bottom: 20px;
-}
-.sf-droplist-msg {
-  text-align: inherit;
-}
-.pro-plans {
-    margin-top: 0px;
-    padding-bottom: 80px;
-}
-
-.pro-plans .tld-col-title {
-    text-transform: uppercase;
-}
-
-.pro-plans .non-input-group {
-    margin-bottom: 10px;
-}
-
-.pro-plans .non-input-group .form-control {
-    border: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    font-family: 'Walsheim-Black';
-    font-size: 30px;
-    font-size: 3rem;
-    padding: 4px 20px;
-    height: 44px;
-    line-height: 1;
-    color: #333333;
-}
-
-.pro-plans .sub-plan-text {
-    margin-top: 30px;
-    margin-bottom: -30px;
-}
-
-.pro-plans h2 {
-    margin-top: 0;
-}
-
-.pro-plans h2.domains-plans-mid-title {
-    margin: 40px 0;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-}
-
-.pro-plans.plan-container {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.pro-plans.plan-container:before,
-.pro-plans.plan-container:after {
-    content: " ";
-  /* 1 */
-    display: table;
-  /* 2 */
-}
-
-.pro-plans.plan-container:after {
-    clear: both;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container {
-        max-width: 1170px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .pro-plans.plan-container {
-        max-width: 970px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container {
-        max-width: 750px;
-    }
-}
-
-.pro-plans.plan-container .plan-col-15 {
-    width: 20%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        border: 0;
-        margin-left: 16.66666666667%;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(1) {
-        border: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
-        clear: none;
-        margin-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        clear: left;
-        border-left: 0;
-        margin-left: 25%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-15 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-
-    .pro-plans.plan-container .plan-col-15:nth-child(5) {
-        margin-left: 0;
-    }
-}
-
-.pro-plans.plan-container .plan-col-2 {
-    width: 16.66666666667%;
-    float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-@media only screen and (max-width: 1535px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 33.3333%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        border: 0;
-        clear: left;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(1) {
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 50%;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
-        clear: none;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(3) {
-        clear: left;
-        border-left: 0;
-    }
-
-    .pro-plans.plan-container .plan-col-2:nth-child(5) {
-        clear: left;
-        border-left: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans.plan-container .plan-col-2 {
-        width: 100%;
-        border: 0;
-        clear: none;
-        float: none;
-    }
-}
-
-.pro-plans .pro-plan-wrap {
-    border-top: 10px solid #008a32;
-    padding: 40px;
-    background-color: #fff;
-    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap {
-        padding: 40px 30px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap {
-        margin-bottom: 40px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .features-row {
-    margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
-        margin: 0 auto 20px;
-    }
-}
-
-.pro-plans .pro-plan-wrap .plan-flag {
-    color: #000;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 28px;
-    font-size: 2.8rem;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    line-height: 1;
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
-    background-size: cover;
-    overflow: visible;
-}
-
-.Explorer8 .plan-flag {background-color:#fedc45 !important;}
-
-.pro-plans .pro-plan-wrap .plan-flag:before {
-    content: '';
-}
-
-.plan-tile .plan-flag {
-    position: absolute;
-    top: -20px;
-    right: 30px;
-    color: #fff;
-    display: inline-block;
-    padding: 0 15px;
-    line-height: 2.5;
-}
-
-.pro-plans .pro-plan-wrap h6 {
-    margin-top: 0;
-}
-
-.pro-plans .pro-plan-wrap h2 {
-    margin-bottom: 14px;
-}
-
-.pro-plans .pro-plan-wrap .plan-title {
-    font-size: 30px;
-    font-size: 3rem;
-    margin-top: 0;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.pro-plans .pro-plan-wrap .plan-subtitle {
-    color: #000 !important;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.pro-plans .pro-plan-wrap .plan-text {
-    min-height: 44px;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-tile-top {
-    padding: 0px;
-}
-
-.pro-plans .pro-plan-wrap .plan-disclaimers {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap {
-    padding-bottom: 30px;
-}
-
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-    font-size: 45px;
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-}
-@media only screen and (max-width: 768px) {
-    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
-        font-size: 35px;
-        font-size: 3.5rem;
-    }
-}
-.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ef6c0f;
-}
-
-.pro-plans .pro-plan-wrap .btn {
-    margin-bottom: 20px;
-}
-
-.pro-plans .pro-plan-wrap .plan-item {
-    border-top: 0 none;
-    min-height: 0;
-    padding: 5px 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-.pro-plans .pro-plan-wrap .check-item {
-    border-top: 0 none;
-    min-height: 0;
-    text-align: left;
-    font-size: 16px;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.pro-plans .include-check {
-    position: relative;
-    padding-left: 45px;
-    margin-top: 20px;
-}
-
-.pro-plans .include-check:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-@media (min-width: 768px) {
-    .four-columns {
-        font-size: 3.5rem !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .plan-duration-div-four {
-        display: inline;
-    }
-}
-              </style>
-            </atlantis:webstash>
-            <div class="pro-plans-wrap bg-green-official">
-              <div id="plans" data-icode="" class="container pro-plans">
-                <div class="row">
-                        <div class="col-sm-4 plan-tile plan-pro">
-                          <div class="pro-plan-wrap">
-                            <div class="plan-flag">NOW AVAILABLE</div>
-                            <h2 class="plan-title">.global</h2>
-                            <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]</p>
-                            <div class="plan-price-wrap">[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                          </div>
-                        </div>
-                  <div class="col-sm-4 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <div class="plan-flag">NOW AVAILABLE</div>
-                      <h2 class="plan-title">.club</h2>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                  <div class="col-sm-4 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <div class="plan-flag">NOW AVAILABLE</div>
-                      <h2 class="plan-title">.co</h2>
-                      <p class="plan-text">[@L[cds.sales/gd/domains/domain-name-search:PodDotCoText]@L]</p>
-                      <div class="plan-price-wrap">[@T[productprice:<template productid='56401' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">REGISTER</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> 
-      ##endif
-    </section>
-    <section id="new-domains" class="bg-pro-gray">
-      <div class="container">
-        <atlantis:webstash type="css">
-          <style>
-            #new-domains {padding:280px 0 0 0;}
-            #new-domains.container{margin:0 auto;}
-            #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
-            #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
-            #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
-            #new-domains ul li a{float:right;}
-            #new-domains .col-tld-title {padding-left: 10px;}
-          </style>
-        </atlantis:webstash>
+      </atlantis:webstash>
+      <div class="container why-gd-container">
         <div class="row">
-          <div class="col-md-6"><span class="col-tld-title">NEW DOMAINS </span><span class="bg-warning">AVAILABLE:</span></div>
-          <div class="col-md-6"><span class="col-tld-title">NEW DOMAINS </span><span class="bg-warning">COMING SOON:</span></div>
+          <div class="col-sm-10 why-gd-banner">
+            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
+            <h3>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]</h3>
+          </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <ul>
-              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
-              </li>
-              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
-              </li>
-            </ul>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png" class="key-benefits-img">
+            </div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]</div>
           </div>
-          <div class="col-md-6">
-            <ul>
-              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
-              </li>
-              <li><span>domain name</span><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxxx' /></relative>]@T]" class="btn btn-primary">REGISTER</a>
-              </li>
-            </ul>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png" class="key-benefits-img icon-domain"></div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]</div>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png" class="key-benefits-img icon-headset"></div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]</div>
           </div>
         </div>
       </div>
+      <section id="bottom-pods" class="bg-green-official">
+        <atlantis:webstash type="css">
+          <style>
+            #bottom-pods #plans {background-color: #77c043;height:250px;}
+            #bottom-pods .plan-tile{margin-top:60px;}
+            #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:65px;}
+            #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
+            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+            #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;}
+            #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
+            #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+          </style>
+        </atlantis:webstash>
+        <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
+        <atlantis:webstash type="css">
+          <style>
+.plan-tile { 
+  margin-top: -145px; 
+  margin-bottom: 20px;
+}
+.sf-droplist-msg {
+  text-align: inherit;
+}
+.pro-plans {
+    margin-top: 0px;
+    padding-bottom: 80px;
+}
+
+.pro-plans .tld-col-title {
+    text-transform: uppercase;
+}
+
+.pro-plans .non-input-group {
+    margin-bottom: 10px;
+}
+
+.pro-plans .non-input-group .form-control {
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Walsheim-Black';
+    font-size: 30px;
+    font-size: 3rem;
+    padding: 4px 20px;
+    height: 44px;
+    line-height: 1;
+    color: #333333;
+}
+
+.pro-plans .sub-plan-text {
+    margin-top: 30px;
+    margin-bottom: -30px;
+}
+
+.pro-plans h2 {
+    margin-top: 0;
+}
+
+.pro-plans h2.domains-plans-mid-title {
+    margin: 40px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.pro-plans.plan-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.pro-plans.plan-container:before,
+.pro-plans.plan-container:after {
+    content: " ";
+  /* 1 */
+    display: table;
+  /* 2 */
+}
+
+.pro-plans.plan-container:after {
+    clear: both;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container {
+        max-width: 1170px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .pro-plans.plan-container {
+        max-width: 970px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container {
+        max-width: 750px;
+    }
+}
+
+.pro-plans.plan-container .plan-col-15 {
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        border: 0;
+        margin-left: 16.66666666667%;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(1) {
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(4n) {
+        clear: none;
+        margin-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        clear: left;
+        border-left: 0;
+        margin-left: 25%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-15 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+
+    .pro-plans.plan-container .plan-col-15:nth-child(5) {
+        margin-left: 0;
+    }
+}
+
+.pro-plans.plan-container .plan-col-2 {
+    width: 16.66666666667%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media only screen and (max-width: 1535px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 33.3333%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        border: 0;
+        clear: left;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 50%;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(4n) {
+        clear: none;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(3) {
+        clear: left;
+        border-left: 0;
+    }
+
+    .pro-plans.plan-container .plan-col-2:nth-child(5) {
+        clear: left;
+        border-left: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans.plan-container .plan-col-2 {
+        width: 100%;
+        border: 0;
+        clear: none;
+        float: none;
+    }
+}
+
+.pro-plans .pro-plan-wrap {
+    border-top: 10px solid #008a32;
+    padding: 40px;
+    background-color: #fff;
+    -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap {
+        margin-bottom: 40px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .features-row {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pro-plans .pro-plan-wrap .features-row .col-sm-6 img {
+        margin: 0 auto 20px;
+    }
+}
+
+.pro-plans .pro-plan-wrap .plan-flag {
+    color: #000;
+    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size: 28px;
+    font-size: 2.8rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    line-height: 1;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;
+    background-size: cover;
+    overflow: visible;
+}
+
+.Explorer8 .plan-flag {background-color:#fedc45 !important;}
+
+.pro-plans .pro-plan-wrap .plan-flag:before {
+    content: '';
+}
+
+.plan-tile .plan-flag {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    color: #fff;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 2.5;
+}
+
+.pro-plans .pro-plan-wrap h6 {
+    margin-top: 0;
+}
+
+.pro-plans .pro-plan-wrap h2 {
+    margin-bottom: 14px;
+}
+
+.pro-plans .pro-plan-wrap .plan-title {
+    font-size: 30px;
+    font-size: 3rem;
+    margin-top: 0;
+    font-family: 'Walsheim-Bold';
+    text-transform: uppercase;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: -moz-pre-wrap;
+}
+
+.pro-plans .pro-plan-wrap .plan-subtitle {
+    color: #000 !important;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pro-plans .pro-plan-wrap .plan-text {
+    min-height: 44px;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-tile-top {
+    padding: 0px;
+}
+
+.pro-plans .pro-plan-wrap .plan-disclaimers {
+    font-size: 14px;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap {
+    padding-bottom: 30px;
+}
+
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+    font-size: 45px;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ef6c0f;
+    font-family: 'Walsheim-Bold';
+}
+@media only screen and (max-width: 768px) {
+    .pro-plans .pro-plan-wrap .plan-price-wrap .plan-price {
+        font-size: 35px;
+        font-size: 3.5rem;
+    }
+}
+.pro-plans .pro-plan-wrap .plan-price-wrap .plan-duration {
+    font-size: 24px;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ef6c0f;
+}
+
+.pro-plans .pro-plan-wrap .btn {
+    margin-bottom: 20px;
+}
+
+.pro-plans .pro-plan-wrap .plan-item {
+    border-top: 0 none;
+    min-height: 0;
+    padding: 5px 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+.pro-plans .pro-plan-wrap .check-item {
+    border-top: 0 none;
+    min-height: 0;
+    text-align: left;
+    font-size: 16px;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.pro-plans .include-check {
+    position: relative;
+    padding-left: 45px;
+    margin-top: 20px;
+}
+
+.pro-plans .include-check:before {
+    content: "";
+    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+    background-position: 0 -668px;
+    background-size: 205px auto;
+    width: 25px;
+    height: 27px;
+    padding-right: 5px;
+    position: absolute;
+    left: 0;
+    top: -6px;
+}
+
+@media (min-width: 768px) {
+    .four-columns {
+        font-size: 3.5rem !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .plan-duration-div-four {
+        display: inline;
+    }
+}
+          </style>
+        </atlantis:webstash>
+        <div class="pro-plans-wrap ">
+          <div id="plans" data-icode="" class="container pro-plans">
+            <div class="row">
+              <div class="ng-scope">
+                <div id="{{pod.PodId}}" ng-repeat="pod in podsDataBottom" class="col-sx-3">
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
+                      <p ng-bind-html="pod.PodTLD" class="plan-title"></p>
+                      <p ng-bind-html="pod.PodText" class="plan-text"> </p>
+                      <div class="plan-price-wrap">
+                        <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                          <strike>{{pod.ListPrice}}</strike></span>
+                      </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="new-domains" class="bg-pro-gray">
+        <div class="container">
+          <atlantis:webstash type="css">
+            <style>
+              #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
+              #new-domains .container{margin:0 auto;padding-left:0px;}
+              #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+              #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+              #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+              #new-domains ul li a{float:right;}
+              #new-domains .col-tld-title {padding-left: 10px;}
+              #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
+            </style>
+          </atlantis:webstash>
+          <div class="row">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]</span><a href="[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span><a href="[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="find-your-domain">
+        <atlantis:webstash type="css">
+          <style>
+            #find-your-domain{background-color:#77c043;}
+            #find-your-domain .container{padding-left:10px;}
+            #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+            #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
+            #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:80px;font-family:'Walsheim-Black';margin-bottom:0px;}
+            #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:100px;display:block;}
+            #find-your-domain .find-cta-text:hover{text-decoration:underline;}
+            #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+          </style>
+        </atlantis:webstash>
+        <div class="container">
+          <h3>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h3><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><i class="ico ico-gt-circle-small"></i>
+            <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
+        </div>
+      </section>
     </section>
-    <section id="options" data-mid-nav-title="Options" class="key-benefits-wrap tile-section bg-pro-gray">
+    <section id="options" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
+      <atlantis:webstash type="css">
+        <style>
+          #options {padding-top:80px;}
+          #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
+          #options #carousel-domain-options .subtext {text-align:left;}
+          #options #carousel-domain-options ul {list-style-type:none;-webkit-padding-start:0px;}
+          #options #carousel-domain-options ul li {text-align:left;}
+          #options #carousel-domain-options ul li .check-text {margin:-40px 0 0 40px;display:inline-block;}
+          #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
+          #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
+          #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
+          #options .carousel-container .carousel-panel {min-height:596px;}
+          #options .headline-primary {text-transform:none;}
+        </style>
+      </atlantis:webstash>
       <style>.features-tabbed-carousel-top {
   text-align: center;
 }
@@ -2660,21 +3038,28 @@ text-transform: uppercase;
   }
 }
       </style>
-      <div data-icode="12345" id="" class="features-tabbed-carousel-top ">
+      <div data-icode="" id="" class="features-tabbed-carousel-top ">
         <div class="container">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+              <h2 class="h1">[@L[cds.sales/gd/domains/domain-name-search:MainBannerBadGuys]@L]</h2>
+              <h4 class="headline-primary">[@L[cds.sales/gd/domains/domain-name-search:MainBannerBadGuysDescription]@L]</h4>
             </div>
           </div>
           <div class="row">
-            <div data-begin="undefined" data-end="undefined" class="features-tabbed-carousel-icon col-md-NaN">
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-text">first-tab</div>
+                <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateProtectionTab]@L]</div>
               </div>
             </div>
-            <div data-begin="NaN" data-end="NaN" class="features-tabbed-carousel-icon col-md-NaN">
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-text">second-tab</div>
+                <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTab]@L]</div>
+              </div>
+            </div>
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:CertifiedDomainsTab]@L]</div>
               </div>
             </div>
           </div>
@@ -2703,10 +3088,10 @@ text-transform: uppercase;
             var slideNum = $(this).data("begin");
             $(".features-tabbed-carousel-icon").removeClass("active");
             $(this).addClass("active");
-            $('#').carousel(slideNum);
+            $('#carousel-domain-options').carousel(slideNum);
           });
           
-          $('#').on('slid.bs.carousel', function () {
+          $('#carousel-domain-options').on('slid.bs.carousel', function () {
             var carouselData = $(this).data('bs.carousel');
             var currentIndex = carouselData.getActiveIndex();
             $(".features-tabbed-carousel-icon").each(function() {
@@ -2720,11 +3105,418 @@ text-transform: uppercase;
           
         </script>
       </atlantis:webstash>
+      <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+      </style>
+      <div class="carousel-wrap">
+        <div class="carousel-container container">
+          <div id="carousel-domain-options" data-ride="carousel" data-interval="false" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-domain-options" data-slide-to="0" data-ci=""></li>
+              <li data-target="#carousel-domain-options" data-slide-to="1" data-ci=""></li>
+              <li data-target="#carousel-domain-options" data-slide-to="2" data-ci=""></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Slices-HotelDoors.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                    <h2>[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationTitleRebrand]@L]</h2>
+                    <div class="subtext">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationSubTitleRebrand]@L]</div>
+                    <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationText1Rebrand]@L]</div>
+                    <ul>
+                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem1Rebrand]@L]</span></li>
+                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem2Rebrand]@L]</span></li>
+                    </ul>
+                    <div class="last-private-item">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem3Rebrand]@L]</div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/ProtectedRegistration.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                    <h2>[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTitleRebrand]@L]</h2>
+                    <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitle1Rebrand]@L]</div>
+                    <div class="sub-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitleTwo]@L]</div>
+                    <ul>
+                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText1Rebrand]@L]</span></li>
+                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText2Rebrand]@L]</span></li>
+                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText3Rebrand]@L]</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/CertifiedDomains.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                    <h2>[@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationTitleRebrand]@L]</h2>
+                    <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationText1Rebrand]@L]</div>
+                    <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationItem1Rebrand]@L]</div>
+                    <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationText2]@L]</div>
+                  </div>
+                </div>
+              </div>
+            </div><a href="#carousel-domain-options" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-domain-options" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+          </div>
+          <script>
+            $('.carousel .carousel-indicators li:first-child').addClass("active");
+            $('.carousel .carousel-inner .item:first-child').addClass("active");
+          </script>
+        </div>
+      </div>
     </section>
-    <section id="questions" data-mid-nav-title="Questions?" class="bg-pro-gray">
+    <section id="questions" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:FaqTabRebrand]@L]" class="bg-pro-gray">
       <atlantis:webstash type="css">
-        <style>#questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }</style>
-      </atlantis:webstash><span class="question-headline">YOUR QUESTIONS, OUR ANSWERS</span>
+        <style>
+          #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
+          #questions #question-accordion {border:none;}
+          #questions .accordion-group li.accordion-dropdown {margin:0px;}
+          #questions .accordion-group li.accordion-dropdown span{font-size:24px;}
+          #questions .accordion-group li.accordion-dropdown .dropdown{padding:10px 0 30px;}
+          #questions .accordion-group li.accordion-dropdown .dropdown span{font-size:16px;text-transform:none;line-height:20px;}
+          #questions .accordion-group button {margin-bottom: 110px;}
+        </style>
+      </atlantis:webstash><span class="question-headline">[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestionAns]@L]</span>
       <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
@@ -2809,24 +3601,40 @@ text-transform: uppercase;
         <div class="row">
           <div class="col-sm-12">
             <ul id="question-accordion" class="accordion-group ">
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>WHAT'S A DOMAIN NAME?</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion1]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div><span>A website is the key to blah blah blah blah</span>
+                    <div><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer1]@L]</span>
                     </div>
                   </li>
                 </ul>
               </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>HOW DO I SEARCH DOMAIN NAMES?</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion2]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div><span>Well first you stick your left foot in, then you stick your left foot out...</span>
+                    <div><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer2]@L]</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion3]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer3]@L]</span>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion4]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div><span>[@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer4]@L]</span>
                     </div>
                   </li>
                 </ul>
               </li>
               <div class="text-center">
-                <button data-ci="" id="question-btn" class="btn btn-default-dark">SEE ALL QUESTIONS</button>
+                <button data-ci="" id="question-btn" class="btn btn-default-dark">[@L[cds.sales/gd/domains/domain-name-search:SeeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -2863,6 +3671,42 @@ text-transform: uppercase;
           $('#question-accordion').find('.accordion-dropdown').addClass("active");
          });
       </script>
+    </section>
+    <section class="container content-disclaimer">
+      <atlantis:webstash type="css">
+        <style>
+          .content-disclaimer{background-color:#e8e8e8;max-width:100%;text-align:left;width:100%;}
+          .content-disclaimer p{width:1140px;margin:0 auto;font-size:14px;padding:10px 0;}
+          .simple-link{color:inherit;text-decoration:underline;}
+          #disclaimer-modal .disclaimer-modal-list{list-style-type:none;}
+        </style>
+      </atlantis:webstash>
+      <p><small class="small-print">[@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentSymbols]@L]<a href="#" data-toggle="modal" data-target="#myModal" class="simple-link">[@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentLinkText]@L]</a></small></p>
+    </section>
+    <section id="disclaimer-modal">
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close"></button>
+              <p class="modal-title"><strong>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalTitle]@L]</strong></p>
+            </div>
+            <div class="modal-body">
+              <ul class="disclaimer-modal-list">
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem1]@L]</li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        </li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]</li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]</li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem7]@L]                          </li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem9]@L]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="renderMidPageNavBottom">
+      <div></div>
     </section>
     <section id="hidden-modal">
       <atlantis:webstash type="css">
@@ -2944,7 +3788,99 @@ text-transform: uppercase;
       });
       
     </script>
+    <script type="text/javascript">
+      var url;
+      ##if(activeLanguageAny([en-in]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_in"/>]@T]';
+      ##elseif(activeLanguageAny([es-es]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_es"/>]@T]';
+      ##elseif(activeLanguageAny([pt-br]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_br"/>]@T]';
+      ##elseif(activeLanguageAny([en-au]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_au"/>]@T]';
+      ##elseif(activeLanguageAny([es-ve]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ve"/>]@T]';
+      ##elseif(activeLanguageAny([de-at]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_at"/>]@T]';
+      ##elseif(activeLanguageAny([fr-be]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_be"/>]@T]';
+      ##elseif(activeLanguageAny([da-dk]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_dk"/>]@T]';
+      ##elseif(activeLanguageAny([en-my]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_my"/>]@T]';
+      ##elseif(activeLanguageAny([nl-nl]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_nl"/>]@T]';
+      ##elseif(activeLanguageAny([pt-pt]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_pt"/>]@T]';
+      ##elseif(activeLanguageAny([pl-pl]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_pl"/>]@T]';
+      ##elseif(activeLanguageAny([sv-se]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_se"/>]@T]';
+      ##elseif(activeLanguageAny([de-de]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_de"/>]@T]';
+      ##elseif(activeLanguageAny([de-ch]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ch"/>]@T]';
+      ##elseif(activeLanguageAny([fi-fi]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_fi"/>]@T]';
+      ##elseif(activeLanguageAny([el-gr]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_gr"/>]@T]';
+      ##elseif(activeLanguageAny([it-it]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_it"/>]@T]';
+      ##elseif(activeLanguageAny([fr-fr]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_fr"/>]@T]';
+      ##elseif(activeLanguageAny([ru-ru]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ru"/>]@T]';
+      ##elseif(activeLanguageAny([uk-ua]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ua"/>]@T]';
+      ##elseif(activeLanguageAny([tr-tr]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_tr"/>]@T]';     
+      ##elseif(activeLanguageAny([es-cl]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_cl"/>]@T]';
+      ##elseif(activeLanguageAny([en-gb]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_uk"/>]@T]';
+      ##elseif(activeLanguageAny([en-sg]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_sg"/>]@T]';
+      ##elseif(activeLanguageAny([en-ie]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ie"/>]@T]';
+      ##elseif(activeLanguageAny([nb-no]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_nb_no"/>]@T]';
+      ##elseif(activeLanguageAny([es-ar]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ar"/>]@T]';
+      ##elseif(activeLanguageAny([es-co]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_co"/>]@T]';
+      ##elseif(activeLanguageAny([es-mx]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_mx"/>]@T]';
+      ##elseif(activeLanguageAny([es-pe]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_pe"/>]@T]';
+      ##elseif(activeLanguageAny([en-za]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_za"/>]@T]';
+      ##elseif(activeLanguageAny([en-ph]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ph"/>]@T]';
+      ##elseif(activeLanguageAny([en-nz]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_nz"/>]@T]';
+      ##elseif(activeLanguageAny([es-us]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_es-us"/>]@T]';
+      ##elseif(activeLanguageAny([en-ca]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_ca"/>]@T]';
+      ##elseif(activeLanguageAny([fr-ca]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_fr_ca"/>]@T]';
+      ##elseif(activeLanguageAny([en-pk]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_pk"/>]@T]';
+      ##elseif(activeLanguageAny([fr-ch]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_fr_ch"/>]@T]';
+      ##elseif(activeLanguageAny([nl-be]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_nl_be"/>]@T]';
+      ##elseif(activeLanguageAny([it-ch]))
+      url='[@T[link:<relative path="~/api/package/config/domainlp_it_ch"/>]@T]';
+      ##else      
+      url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
+      ##endif
+      var api_url = '[@T[link:<relative path="/domainsapi/v1/tlds/pricing"/>]@T]';
+    </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/angular/domains/angular.1.2.9.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/dns-20141028 -Rebrand.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       $("#bulkModal").on('show.bs.modal',function (e){
             var $container = $('#chart-iframe-container');

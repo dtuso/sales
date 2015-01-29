@@ -30,7 +30,7 @@ mixin domainSearchInput(domainSearchParams)
     input(type="hidden",name="checkAvail",value="1")
     .input-group
       label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}", type='text', placeholder!='#{domainSearchParams.placeholderText}', name='domainToCheck' maxlength='63')
+      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
       span.input-group-btn
         button.btn.btn-primary(type='submit' data-ci='#{domainSearchParams.cicode}') 
           span.search-icon.uxicon.uxicon-magnifying-glass

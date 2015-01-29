@@ -60,7 +60,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       meta(property="fb:admins" content="633356800")
 
 
-    [@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    |[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
 
     //- inherited page classes can prepend/override/append headScripts when 
     //- that page needs a script loaded early on in DOM processing
@@ -93,7 +93,10 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
             },200);
 
             // Wire up tooltips
-            $(document).sfTipper({ wireup: true });
+            if($(document).sfTipper){
+              $(document).sfTipper({ wireup: true });
+            }
+            
           });
 
           $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -134,7 +137,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     | <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     | ##endif
 
-  body(ng-controller!=angularNgCntl ng-cloak)
+  body(ng-controller!=angularNgCntl)
     
     //- pageStyles relocated here from head tag to ensure that any page-specific styling 
     //- can override Atlantis Webstash styling placed at bottom of head tag
