@@ -19,6 +19,14 @@ append pageStyles
   style
     include ./website-builder/styles.css
   style.
+    html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+    font-size: 26px;
+    font-size: 2.6rem;
+    }
+    html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+      font-size: 24px;
+      font-size: 2.4rem;
+    }
     #plans { padding-bottom: 40px; }
     #social-media, #reviews, #faq, #disclaimers { background: #fff; }
     #social-media { padding-top: 50px; }
@@ -220,17 +228,17 @@ block sections
     include ../../templates/wsb-templates.html
     |##if(activeLanguageAny(en))
     | 
-    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
     | 
     |##elseif(activeLanguageAny(es))
     | 
-    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
     | 
     |##else
     | 
     style
       include:css ../../templates/styles/full-video.css
-    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
+    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
       .container.relative-position.video-info
         .row
           .col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
@@ -289,7 +297,7 @@ block sections
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   | 
-  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,ua))
+  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
   | 
   section#other-products
     .container
@@ -324,14 +332,15 @@ block sections
   section#disclaimers.disclaimers-section
     .container
       div
-        | 
-        |##if(splitTestingSideIsActive(1349, B))
-        | 
-        | 4
-        | 
-        |##endif
-        | 
-        p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
+        p.h5
+          | 
+          |##if(splitTestingSideIsActive(1349, B))
+          | 
+          |<sup>4</sup>
+          | 
+          |##endif
+          | 
+          | [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
           a(onClick="disclaimersModal()", data-ci="87766") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]

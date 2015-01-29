@@ -51,7 +51,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -82,7 +85,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -472,6 +475,14 @@ width: 50%;
   }
     </style>
     <style>
+      html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+      font-size: 26px;
+      font-size: 2.6rem;
+      }
+      html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
       #plans { padding-bottom: 40px; }
       #social-media, #reviews, #faq, #disclaimers { background: #fff; }
       #social-media { padding-top: 50px; }
@@ -1439,7 +1450,7 @@ width: 50%;
         $dropdownMenu = "";
         if(linkArea > navBarArea)
         {
-          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
         while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
@@ -3209,7 +3220,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
                     $this,
                     'prepend'
                 );
@@ -3218,7 +3229,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3335,7 +3346,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
                     $this,
                     'prepend'
                 );
@@ -3344,7 +3355,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3388,7 +3399,7 @@ font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
       </style>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered">
@@ -4815,7 +4826,7 @@ margin-bottom: 20px;
          });
       </script>
     </section> 
-    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,ua))
+    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
      
     <section id="other-products">
       <div class="container">
@@ -5292,14 +5303,16 @@ margin-bottom: 20px;
     <section id="disclaimers" class="disclaimers-section">
       <div class="container">
         <div>
-           
-          ##if(splitTestingSideIsActive(1349, B))
-           
-          4
-           
-          ##endif
-           
-          <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
+          <p class="h5">
+             
+            ##if(splitTestingSideIsActive(1349, B))
+             
+            <sup>4</sup>
+             
+            ##endif
+             
+            [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a>
+          </p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
             <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
             <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
