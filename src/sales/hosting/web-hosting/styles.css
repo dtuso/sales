@@ -559,4 +559,7 @@ cursor: pointer;
 .plan-tile .plan-flag {
   top: -55px;
 }
+.pro-banner a {
+  max-width: 120%;
+}
 ##endif
