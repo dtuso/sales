@@ -56,7 +56,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -334,6 +337,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
+      window.triggerResize();
     });
   }
 
@@ -749,7 +753,7 @@ $(window).load(function () {
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -3215,9 +3219,6 @@ h
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
         <style>
-          #carousel-ols-stores {
-            width: 1000px;
-          }
           .plan-tile { 
             margin-top: -145px; 
           }
@@ -3229,31 +3230,6 @@ h
           }
           .bg-gray-light {
             background-color: #d9d9d9;
-          }
-          .customer-slide {
-            background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
-            background-repeat: no-repeat;
-            margin-bottom: 20px;
-          }
-          .customer-slide.slide-1 {
-            background-position: 0px 5px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-2 {
-            background-position: 0px -405px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-3 {
-            background-position: -0px -815px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-4 {
-            background-position: 0px -1225px; 
-            height: 410px; 
-            width: 665px;
           }
           .customer-byline {
             font-size: 15px;
@@ -3293,9 +3269,29 @@ h
           .item-wrapper {
             padding: 20px 0 20px !important;
           }
-          
-          
+          .img-centered {
+            margin: 0 auto;
+          }
         </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script>
+          $(document).ready(function(){
+            alert(1);
+            // autoheight the slides
+            var $slides = $('#carousel-ols-stores').find('.ols-carousel-item');
+            var equalHeightSlides = function(){
+              var maxHeight = 0;
+              $slides.each(function(){
+                maxHeight = $(this).outerHeight() > maxHeight ? $(this).outerHeight() : maxHeight;          
+              });
+              if( maxHeight > 0 ) $slides.css("height", maxHeight + "px");
+            }
+            $(window).on('resize', equalHeightSlides);
+          });
+          
+          
+        </script>
       </atlantis:webstash>
       <div data-icode="" class="carousel-panel container">
         <div class="row">
@@ -3304,14 +3300,14 @@ h
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10 center-block">
-          <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
-          <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1 center-block">
+            <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
+            <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+          </div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
             <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
@@ -3669,27 +3665,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-2"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3697,27 +3687,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-3"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3725,27 +3709,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-4"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3753,21 +3731,17 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-1"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
