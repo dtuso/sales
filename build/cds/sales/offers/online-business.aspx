@@ -56,7 +56,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -120,13 +123,6 @@ var got1Page = {
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
-
-
-##if(isManager())
-  got1Page.offersCodes.itc_wsb = 'mgr_' + got1Page.offersCodes.itc_wsb;
-  got1Page.offersCodes.itc_ols = 'mgr_' + got1Page.offersCodes.itc_ols;
-##endif 
-      
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
@@ -395,11 +391,15 @@ function domainSearchFormSubmit(e) {
     return;
   }
 
-  $('#marquee').find('.search-form-input').val(''); 
+
+  var newItc = got1Page.offersCodes.itc_wsb;
+  ##if(isManager())
+    newItc = 'mgr_' + newItc;
+  ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -408,6 +408,7 @@ function domainSearchFormSubmit(e) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
+
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
         searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
@@ -415,10 +416,10 @@ function domainSearchFormSubmit(e) {
         alternateDomains = data.RecommendedDomains || [];
 
       if(isAvailable) {
-        // Domain is available, so allow them to search again or to select this available domain
+        $('#marquee').find('.search-form-input').val(''); 
 
-        // setup search box
-        showTypeYourDomain();
+        // Domain is available, so allow them to search again or to select this available domain        
+        showTypeYourDomain();// setup search box
 
         // tokenize header on search available page
         $('span#available-domain-name').text(exactMatchDomain.Fqdn);
@@ -436,8 +437,12 @@ function domainSearchFormSubmit(e) {
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
+
           // SHOW SPINS
           showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+          $('#marquee').find('.search-form-input').val(''); 
+          
         } else {
           // NO SPINS
           showApi1or2SearchError(e, domain);
@@ -747,7 +752,7 @@ $(window).load(function () {
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}

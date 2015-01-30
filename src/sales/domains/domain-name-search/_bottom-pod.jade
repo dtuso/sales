@@ -1,0 +1,20 @@
+extend ../../../templates/plan-tile
+
+block vars
+  -flagText = "[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]"
+
+block title
+  p.plan-title(ng-bind-html="pod.PodTLD")
+
+block description
+  p.plan-text(ng-bind-html="pod.PodText") 
+
+block price
+  .plan-price-wrap
+    nostrike.plan-price.text-warning(ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") {{pod.ListPrice}}{{pod.IcannForList}}
+    span.plan-price.text-warning(ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") {{pod.CurrentPrice}}{{pod.IcannForCurrent}}
+    span.plan-strike-price(ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") <br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+      strike {{pod.ListPrice}}
+
+block button
+  a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!="{{pod.ButtonURL}}" data-index="1" ) {{pod.ButtonText}}

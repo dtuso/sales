@@ -1,7 +1,7 @@
 
 mixin domainSearchInput(domainSearchParams)
   - domainSearchParams                       = domainSearchParams || {};
-  - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
+  - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single";
   - domainSearchParams.cicode                = domainSearchParams.cicode || "";
   - domainSearchParams.icode                 = domainSearchParams.icode || "home:Domain Search:Domains:Domain Search";
   - domainSearchParams.tcode                 = domainSearchParams.tcode || "home:Domain Search:Domains:Domain Search:Search Domain";
@@ -24,68 +24,25 @@ mixin domainSearchInput(domainSearchParams)
           .search-text { display: inline; }
           .search-icon { display: none; }
         }
-  atlantis:webstash(type="js")
-    script.
-      function domainSearchFormSubmit(e) {
  
-        var $textInput = $('##{domainSearchParams.domainInputId}'),
-          domain = $.trim($textInput.val()), 
-          apiEndpoint1 = "!{domainSearchParams.actionUrl}";
-        if((domain && domain.length==0) || !domain){
-          window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-          return;
-        }
-
-        apiEndpoint1 += "&checkAvail=1&domainToCheck=" + encodeURIComponent(domain);
-        $.ajaxSetup({cache:false});
-        $.ajax({
-          url: apiEndpoint1,
-          type: 'POST',
-          dataType: 'json',
-          cache: false,
-          success: function(data){ 
-            var isAvailable = data && (data.success === true || data.Success === true);
-            if(isAvailable) {
-              window.location = data.NextStepUrl;
-              return;
-            } else {              
-              window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-              return;
-            }    
-
-          },
-          error: function(){
-            showApi1or2SearchError(e, domain);
-          }
-        });
-
-      }
-      $(document).ready(function(){
-        $( "##{domainSearchParams.formId}").on('submit', function(e) {
-          e.preventDefault();
-          domainSearchFormSubmit(e);
-          return false;
-        });        
-      });
-      function showApi1or2SearchError(e,domain){
-        var $modal = $("##{domainSearchParams.errorModalId}");
-        $modal.sfDialog({titleHidden:true, buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }]});
-      }      
-        
-  form(id!="#{domainSearchParams.formId}")
+  form(id!="#{domainSearchParams.formId}" method="get" action!="#{domainSearchParams.actionUrl}")
+    input(type="hidden",name="ci",value=domainSearchParams.cicode)
+    input(type="hidden",name="checkAvail",value="1")
     .input-group
       label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}", type='text', placeholder!='#{domainSearchParams.placeholderText}', name='domainToCheck' maxlength='63')
+      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
       span.input-group-btn
         button.btn.btn-primary(type='submit' data-ci='#{domainSearchParams.cicode}') 
           span.search-icon.uxicon.uxicon-magnifying-glass
           span.search-text !{domainSearchParams.buttonText}
-  
-  .sf-dialog.api-B-failure(id!="#{domainSearchParams.errorModalId}")
-    h2.api-error-header
-      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
-      div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
-    p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
+  script.
+    $("##{domainSearchParams.formId}").on('submit', function(e) {
+      var input = $("##{domainSearchParams.formId}").find("input[name='domainToCheck']");
+      if (input && (input.val() == null || input.val() == "")) {
+        e.preventDefault();
+        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+      }
+    });
 
 mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
     

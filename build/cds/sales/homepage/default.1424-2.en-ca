@@ -51,7 +51,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -81,7 +84,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-cloak>
+  <body>
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -219,69 +222,25 @@
 
               </style>
             </atlantis:webstash>
-            <atlantis:webstash type="js">
-              <script>
-                function domainSearchFormSubmit(e) {
-                
-                  var $textInput = $('#domain-name-input'),
-                    domain = $.trim($textInput.val()), 
-                    apiEndpoint1 = "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single?ci=54814&isc=gd41166r";
-                  if((domain && domain.length==0) || !domain){
-                    window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                    return;
-                  }
-                
-                  apiEndpoint1 += "&checkAvail=1&domainToCheck=" + encodeURIComponent(domain);
-                  $.ajaxSetup({cache:false});
-                  $.ajax({
-                    url: apiEndpoint1,
-                    type: 'POST',
-                    dataType: 'json',
-                    cache: false,
-                    success: function(data){ 
-                      var isAvailable = data && (data.success === true || data.Success === true);
-                      if(isAvailable) {
-                        window.location = data.NextStepUrl;
-                        return;
-                      } else {              
-                        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                        return;
-                      }    
-                
-                    },
-                    error: function(){
-                      showApi1or2SearchError(e, domain);
-                    }
-                  });
-                
-                }
-                $(document).ready(function(){
-                  $( "#domain-search-form").on('submit', function(e) {
-                    e.preventDefault();
-                    domainSearchFormSubmit(e);
-                    return false;
-                  });        
-                });
-                function showApi1or2SearchError(e,domain){
-                  var $modal = $("#api-failure");
-                  $modal.sfDialog({titleHidden:true, buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }]});
-                }      
-                  
-              </script>
-            </atlantis:webstash>
-            <form id="domain-search-form">
+            <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+              <input type="hidden" name="ci" value="54814"/>
+              <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
                 <label for="domain-name-input" class="searchInput sr-only">Find your perfect domain name</label>
                 <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+                  <button type="submit" data-ci="54814" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
               </div>
             </form>
-            <div id="api-failure" class="sf-dialog api-B-failure">
-              <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
-                <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
-              </h2>
-              <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
-            </div>
+            <script>
+              $("#domain-search-form").on('submit', function(e) {
+                var input = $("#domain-search-form").find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
+                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                }
+              });
+              
+            </script>
           </div>
         </div>
       </div>
@@ -303,87 +262,115 @@
         </div>
       </div>
     </section>
-    <section id="marquee">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-                </div>
-                <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">
-                    <style>.gtld-marquee-tile {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
+    <atlantis:webstash type="css">
+      <style>#marquee {
+  font-size: 16px;
+  background-color: #f3f3f4;
+  overflow-y: hidden;
 }
-.gtld-marquee-tile .left-content-wrapper {
-  padding-left: 10%;
+#marquee .promo-wrapper,
+#marquee .price-wrapper {
+  margin-top: 20px;
 }
-.gtld-marquee-tile .header-text {
-  font-size: 40px;
-  color: #333;
-  margin: 25px 0 0 10px;
+#marquee .inline-dash {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: -0.5em;
+  font-size: 1.4em;
+  vertical-align: top;
+  line-height: 50%;
 }
-.gtld-marquee-tile .gtld-links-wrapper {
-  padding-left: -15px;
+#marquee .headline-wrapper {
+  margin-top: 1em;
+  line-height: 1;
 }
-.gtld-marquee-tile ul {
-  list-style-type: none;
-  padding: 20px 0 0 20px;
-}
-.gtld-marquee-tile li {
+#marquee .promo-wrapper {
   color: #77c043;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 0;
 }
-.gtld-marquee-tile li:hover {
-  color: #00a55e;
+#marquee .disclaimer {
+  font-size: 0.6em;
+  margin-bottom: 2%;
 }
-.Explorer8 .gtld-marquee-tile,
-.Explorer7 .gtld-marquee-tile {
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
+#marquee .hero-wrapper > .row img {
+  margin: 0 auto;
+  display: block;
+}
+#marquee .dash {
+  letter-spacing: -0.3em;
+}
+#marquee button.btn-purchase {
+  margin: 3% 0;
+}
+#marquee .line1,
+#marquee .line2 {
+  color: #008b2d;
+}
+#marquee .chips {
+  max-height: 219px;
+  height: 100%;
+}
+#marquee .line1,
+#marquee .line2 {
+  font-size: 1.2em;
+}
+#marquee .line3 {
+  font-size: 1.67em;
+}
+#marquee .line5 {
+  font-size: 2.7em;
+}
+@media only screen and (min-width: 401px) {
+  #marquee {
+    font-size: 29px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #marquee {
+    font-size: 16px;
+  }
+  #marquee .headline-wrapper {
+    margin-top: 2.4em;
+  }
+  #marquee .chips {
+    max-height: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee {
+    font-size: 20px;
+  }
+  #marquee .image {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #marquee {
+    font-size: 24px;
+  }
+  #marquee .image {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
 }
 
-                    </style>
-                    <div data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95717' /></relative>]@T]" data-ci='95717' class="tile gtld-marquee-tile">
-                      <div class="tile-content-wrapper">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="left-content-wrapper">
-                                <div class="header-wrapper">
-                                  <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="right-content-wrapper">
-                                <div class="gtld-links-wrapper">
-                                  <ul>
-                                    <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/email'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      </style>
+    </atlantis:webstash>
+    <section id="marquee">
+      <!--remove rems-->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-5 image"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyNy42IDE0MSAzMDIuNCAzMTUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMjcuNiAxNDEgMzAyLjQgMzE1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMzE1LDQxMy40IDMwMi45LDQyMS4zIDI1Ny42LDQyNy4zIDE1Mi45LDQwOC4zIDEzMi41LDQwNi42IDEyNy41LDM5OC41IDE1OS4xLDQwMS4zIDI1NC4yLDQxOS45IA0KCTI5Mi45LDQxNi4xICIvPg0KPHBhdGggZmlsbD0iIzAwOEEzMiIgZD0iTTMxMC4xLDQwOC41TDI3Ni40LDM5M2wtMzUuMi0zLjFsLTI4LjktNi4xYzAsMC0yMy41LTAuOC0yNy42LTEuN2MtNC4xLTAuOS0yOS44LDMuMy0yOS44LDMuM2wtMzIuNCw2LjQNCglsMjQtMWwyOS4yLTAuNWwxNi41LTEuNmwyMC45LDEuOGwyOS4xLDUuNmwyOS41LDIuNkwzMTAuMSw0MDguNXoiLz4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMTM4LjcsNDU2IDI5NS4yLDQ1NiAzMDMuMiw0MjguOSAyNTEuNyw0MzAuNCAyMDMuOCw0MjEuNCAxNTIuNCw0MTIgMTMxLjgsNDE1LjEgMTM1LjQsNDMzLjIgIi8+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI4Mi40LDM3Ni43IDIzNC44LDMxOSAyMDUsNDA4ICIvPg0KPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIzMDUuMSwyNDcuMyAzMDQuOCwyNDcuMiAzMDQuNywyNDcgMzA0LjYsMjQ3IDI1Ny43LDIyOS4yIDI5MS44LDIyNS44IDMxMS4zLDIyOSAzMjEuNywyMjcuMiANCgkzMjAuNywyMTguOCAyOTQuNCwyMTAuOSAyNjMuNywyMDguNyAyNzAuOCwyMDEuNSAyODEuNiwxOTQuOSAyODYuOSwxODguNiAyODIuNywxODQuMSAyNjkuNCwxODkgMjQ5LjUsMTk3LjUgMTYxLjgsMjA3LjggDQoJMTMzLjEsMTQxIDI3LjYsMTQxIDg0LjYsMjExLjMgMTI3LjUsMjY0LjcgMTY4LjMsMzA1LjQgMTcxLjgsMzA3LjkgMjA3LjEsMzIyLjggMjIyLjEsMzQwLjEgMjI2LjcsMzM2LjMgMjI5LjEsMzI1IDIxMi45LDMwNC41IA0KCTIwMC4yLDI4OS42IDIwMC40LDI4OS40IDIwOS43LDI3NS42IDIyNy4xLDI2OSAyNTYuOCwyODguMyAyNDQuNiwzMTMuOSAyNDUuNSwzMjQuMiAyNDkuNiwzMjguNSAyNzkuMiwyODQuMiAyNzcuMiwyNzIuNiANCgkyNTIuMiwyNTIuOSAyOTQuMSwyNjMuMyAzMTMuNiwyNzUuNiAzMjYuMSwyNzguMyAzMzAsMjcxLjcgMzA1LjEsMjQ3LjQgIi8+DQo8cGF0aCBmaWxsPSIjMDA4QTMyIiBkPSJNMjc4LjIsNDU2YzIuMy04LjgsNC4zLTE2LjEsNC4zLTE2LjFsLTQxLjcsNi42bC04NS4yLTE3LjhsMTAuMiwyNy4zSDI3OC4yeiIvPg0KPC9zdmc+DQo=" class="svgfallback chips"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-nacho.png"><![endif]--></div>
+          <div class="col-xs-12 col-sm-7">
+            <div class="headline-wrapper walsheim-black">
+              <div class="line1">TO BUSINESS OWNERS, WE RAISE </div>
+              <div class="line2"><span>A CHIP AND DROP&nbsp;</span><span class="dash"> ———— </span><span>&nbsp; OUR PRICES.</span></div>
+              <div class="line3">DOMAIN + WEBSITE + EMAIL</div>
+              <div class="line4">ALL STARTING AT JUST</div>
+              <div class="line5 price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO</div>
+              <button data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">GET STARTED</button>
             </div>
+            <div class="disclaimer">First year only. Other restrictions apply.</div>
           </div>
         </div>
       </div>
@@ -405,7 +392,7 @@
                   <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkY4MzAwIiBwb2ludHM9IjM5My40NDksMTgzLjI4NCAzNDIuNzA4LDIyOC4yNDkgMzQ3LjUxLDI4Mi45ODggNDIxLjM1NiwzMTYuNzE2IDUwMCwyNzkuNTczIDQ4NS44MjIsMjEyLjYxICIvPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTM1LjIzOSwyNDguNjAzaDI0LjI5N3Y3LjUxNWgtNS42MThjLTIuMjYyLDExLjQ1NC0xMC43MjUsMTkuMzM1LTI0Ljg3OSwxOS4zMzUNCgkJYy0xNi43MDgsMC0yNi4yNjYtMTIuOTE0LTI2LjI2Ni0yNi43NzZjMC0xMy44NjIsMTAuMTQyLTI2Ljc3NiwyNi4yNjYtMjYuNzc2YzEyLjAzOSwwLDIwLjk0LDcuNTE1LDIxLjc0MiwxNi41NjFoLTguNDYzDQoJCWMtMC44NzYtNS4wMzQtNi4yMDMtOS4wNDctMTMuMjc5LTkuMDQ3Yy0xMC45NDQsMC0xNy42NTUsOS4yNjYtMTcuNjU1LDE5LjI2MWMwLDkuOTk2LDYuMTI5LDE5LjI2MywxOC43NTIsMTkuMjYzDQoJCWM4LjY4MiwwLDEzLjg2Mi01LjU0NSwxNC44ODMtMTEuODE5aC05Ljc3N3YtNy41MTVIMzUuMjM5eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYyLjUyOCwyNTcuMjEzYzAtOS42MzEsNy4wNzctMTcuODc3LDE3Ljg3NS0xNy44NzdjMTAuOTQ0LDAsMTguMDIyLDguMjQ1LDE4LjAyMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIyLDE3Ljg3NUM2OS42MDQsMjc1LjA4OCw2Mi41MjgsMjY2Ljg0Myw2Mi41MjgsMjU3LjIxM3ogTTkwLjQ3MSwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM4Ni41MywyNjguMDEyLDkwLjQ3MSwyNjMuMDQ5LDkwLjQ3MSwyNTcuMjEzeiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMjEuODQyLDIyMy4xNDFjMTYuOTI2LDAsMjYuNDg1LDEyLjYyMSwyNi40ODUsMjUuNTM2cy05LjU1OCwyNS41MzYtMjYuNDg1LDI1LjUzNkgxMDUuMjh2LTUxLjA3MQ0KCQlIMTIxLjg0MnogTTExMy42NzEsMjMwLjY1N3YzNi4wNDNoOC4xNzFjMTEuMzgxLDAsMTcuODc1LTguOTAxLDE3Ljg3NS0xOC4wMjJjMC05LjExOS02LjQ5NC0xOC4wMi0xNy44NzUtMTguMDINCgkJQzEyMS44NDIsMjMwLjY1NywxMTMuNjcxLDIzMC42NTcsMTEzLjY3MSwyMzAuNjU3eiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xODguNTI5LDI0MC4yMTJ2MzMuOTk4aC03Ljk1MnYtNC41OTdjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczDQoJCWMtMTAuMzYsMC0xNy40MzgtOC4yNDUtMTcuNDM4LTE3Ljg3NWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi00LjU5N2g3Ljk1MlYyNDAuMjEyeg0KCQkgTTE4MC41NzcsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMxNzYuNjM2LDI2OC4wMTIsMTgwLjU3NywyNjMuMDQ5LDE4MC41NzcsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yMjMuMTExLDI2OS42MTVjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MkwyMjMuMTExLDI2OS42MTUNCgkJTDIyMy4xMTEsMjY5LjYxNXogTTIyMy4xMTEsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OA0KCQlzMy45MzksMTAuNzk4LDkuOTIzLDEwLjc5OEMyMTkuMTcyLDI2OC4wMTIsMjIzLjExMSwyNjMuMDQ5LDIyMy4xMTEsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yNjUuNTAyLDI2OS42MTVjLTIuMTE0LDMuNDMtNi41NjYsNS40NzMtMTAuNTA1LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTM5LDAsOC4zOTEsMi4wNDQsMTAuNTA1LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MlYyNjkuNjE1eiBNMjY1LjUwMiwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMyNjEuNTYxLDI2OC4wMTIsMjY1LjUwMiwyNjMuMDQ5LDI2NS41MDIsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yODAuNzUyLDI3OC4wNzhoNy43MzNjMC4wNzIsMy43OTQsMi41NTMsNi45MzEsOC4wOTgsNi45MzFjNS42OSwwLDguNTM2LTIuNTUzLDguNTM2LTkuMTkzdi02LjM0Nw0KCQljLTIuMTE2LDMuNjQ4LTYuMDU1LDUuNjE4LTExLjA5LDUuNjE4Yy00Ljg4OCwwLTguMzE3LTEuNzUxLTEwLjIxNC00LjU5N2MtMS42NzctMi41NTMtMi4xODgtNS4zOTktMi4xODgtMTAuMDY4di0yMC4yMWg3Ljk1Mg0KCQl2MTcuNTg0YzAsNS44MzYsMS42NzcsMTAuMjg4LDcuMzY4LDEwLjI4OGM1LjU0NSwwLDguMTcxLTQuNDUyLDguMTcxLTEwLjI4OHYtMTcuNTg0aDcuOTUydjM1LjYwNA0KCQljMCwxMS42LTYuMzQ4LDE2LjI2OS0xNy41MSwxNi4yNjlDMjg2LjgwOCwyOTIuMDg3LDI4MC44MjQsMjg1LjUyMiwyODAuNzUyLDI3OC4wNzh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNMzE2LjcxNCwyNDAuOTExYzAtMy4zMjcsMi4zOTktNi40MjcsNi4zMzgtNi40MjdzNi4zMzgsMy4xLDYuMzM4LDYuNDI3YzAsMy4zMjctMi4zOTksNi40MjYtNi4zMzgsNi40MjYNCgkJUzMxNi43MTQsMjQ0LjIzOCwzMTYuNzE0LDI0MC45MTF6IE0zMjguMzQxLDI0MC45MTFjMC0yLjg3Mi0xLjk5Ny01LjUzMi01LjI4OS01LjUzMmMtMy4yNzQsMC01LjI3MSwyLjY2Mi01LjI3MSw1LjUzMg0KCQljMCwyLjg1MywxLjk5Nyw1LjUxNyw1LjI3MSw1LjUxN0MzMjYuMzQ0LDI0Ni40MjYsMzI4LjM0MSwyNDMuNzY0LDMyOC4zNDEsMjQwLjkxMXogTTMyMC44ODIsMjQ0LjIwM3YtNy4xMjdoMi42MjcNCgkJYzEuNDE4LDAsMi4zNDYsMS4xMDQsMi4zNDYsMi4zODFjMCwxLjAzMi0wLjYzLDEuOTQyLTEuNjQ2LDIuMjIzbDEuNTkzLDIuNTIxaC0wLjk2M2wtMS41MjMtMi40MTZoLTEuNTkzdjIuNDE2aC0wLjg0MVYyNDQuMjAzeg0KCQkgTTMyMy40MzgsMjQxLjAzNGMwLjkyNiwwLDEuNTIzLTAuNzE4LDEuNTIzLTEuNTc2YzAtMC44NzYtMC41OTctMS42MTEtMS41MjMtMS42MTFoLTEuNzE4djMuMTg2DQoJCUMzMjEuNzIsMjQxLjAzNCwzMjMuNDM4LDI0MS4wMzQsMzIzLjQzOCwyNDEuMDM0eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM3My4wMzIsMjIzLjE0MWgxOC4zMTNjMTAuOTQ0LDAsMTguMDIyLDguMjQzLDE4LjAyMiwxNy44NzVzLTcuMDc3LDE3Ljg3NS0xOC4wMjIsMTcuODc1aC05LjkyMXYxNS4zMjINCgkJaC04LjM5MXYtNTEuMDcxSDM3My4wMzJ6IE00MDAuOTc3LDI0MS4wMTZjMC01LjYxOC0zLjc5NC0xMC4zNi05LjYzMS0xMC4zNmgtOS45MjF2MjAuNzIxaDkuOTIxDQoJCUMzOTcuMTgyLDI1MS4zNzYsNDAwLjk3NywyNDYuNjMzLDQwMC45NzcsMjQxLjAxNnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzYuMjg4LDI0Ny41ODJjLTEuMjQxLTAuMjkzLTEuODk3LTAuMzY1LTMuMTM3LTAuMzY1Yy02Ljc4NCwwLTEwLjUwNSwzLjg2Ny0xMC41MDUsMTIuMzN2MTQuNjY0aC03Ljk1Mg0KCQl2LTMzLjk5OGg3Ljk1MnY1LjQ3M2MxLjUzMi0zLjEzNyw1Ljk4My01LjkxLDEwLjUwNS01LjkxYzEuMjQxLDAsMi4yNjIsMC4xNDYsMy4xMzcsMC41MTFWMjQ3LjU4MnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzcuMDkyLDI1Ny4yMTNjMC05LjYzMSw3LjA3Ny0xNy44NzcsMTcuODc3LTE3Ljg3N2MxMC45NDIsMCwxOC4wMiw4LjI0NSwxOC4wMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIsMTcuODc1QzQ0NC4xNjgsMjc1LjA4OCw0MzcuMDkyLDI2Ni44NDMsNDM3LjA5MiwyNTcuMjEzeiBNNDY1LjAzMywyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM0NjEuMDk0LDI2OC4wMTIsNDY1LjAzMywyNjMuMDQ5LDQ2NS4wMzMsMjU3LjIxM3oiLz4NCjwvZz4NCjwvc3ZnPg0K" class="promo-logo svgfallback">
                   </div>
                   <div class="promo-text walsheim-black">BUILDING SITES FOR OTHERS? CHECK OUT GODADDY PRO.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" class="walsheim-black">JOIN OUR BETA </a>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" class="walsheim-black">LEARN MORE </a>
                   </div>
                 </div>
               </div>
@@ -425,7 +412,12 @@
                   <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/O365-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDExLjQzOCA5MC41MzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxMS40MzggOTAuNTM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xNTQuMjI1LDQ0LjY0MmMwLDUuNzc4LTEuMDUyLDEwLjg0NC0zLjE1NywxNS4xOTVjLTIuMTExLDQuMzUxLTUuMTM3LDcuNzAxLTkuMDg3LDEwLjA0Nw0KCQljLTMuOTQ4LDIuMzQ2LTguNDk0LDMuNTIyLTEzLjY0MywzLjUyMmMtNC45NzMsMC05LjM5Mi0xLjE0Mi0xMy4yNjYtMy40MjRjLTMuODc2LTIuMjgzLTYuODY4LTUuNTI0LTguOTg3LTkuNzMNCgkJYy0yLjEyMS00LjE5OS0zLjE4Mi04Ljk2LTMuMTgyLTE0LjI4NGMwLTUuNzMxLDEuMDczLTEwLjc3MywzLjIxOS0xNS4xNGMyLjE0LTQuMzYyLDUuMjIzLTcuNzEzLDkuMjMzLTEwLjA0Ng0KCQljNC4wMTEtMi4zMzQsOC42NTUtMy41MDMsMTMuOTI3LTMuNTAzYzQuODIsMCw5LjE0MywxLjE0OSwxMi45NjcsMy40NDRjMy44MTksMi4yOTUsNi43NzIsNS41MjcsOC44NTQsOS42ODcNCgkJQzE1My4xODYsMzQuNTczLDE1NC4yMjUsMzkuMzE4LDE1NC4yMjUsNDQuNjQyIE0xNDcuNTY2LDQ1LjQ3NWMwLTcuMDY3LTEuNjUzLTEyLjU4LTQuOTU3LTE2LjU0DQoJCWMtMy4zMTEtMy45NTktNy45MTQtNS45NDItMTMuODE1LTUuOTQyYy0zLjcxLDAtNy4wMzYsMC45NDItOS45NzQsMi44MThjLTIuOTM4LDEuODgxLTUuMjE3LDQuNTQ3LTYuODMzLDguMDA2DQoJCWMtMS42MTMsMy40Ni0yLjQyMiw3LjMxOC0yLjQyMiwxMS41NzljMCw0LjMzOSwwLjc3Niw4LjIwOSwyLjMzLDExLjYwMmMxLjU1MiwzLjM5MywzLjc2Myw2LjAxNiw2LjY0LDcuODczDQoJCWMyLjg3OSwxLjg1Myw2LjE0NSwyLjc4Myw5LjgwNCwyLjc4M2M2LjAwNCwwLDEwLjcxMS0xLjk3LDE0LjExOC01LjkwNkMxNDUuODY0LDU3LjgxMywxNDcuNTY2LDUyLjM4NywxNDcuNTY2LDQ1LjQ3NSIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xODEuNTEzLDIwLjUzNWMtMS4yMTQtMC42ODQtMi41ODYtMS4wMjQtNC4xMjgtMS4wMjRjLTQuMzM5LDAtNi41MDksMi43NC02LjUwOSw4LjIxN3Y1Ljk3N2g5LjA4M3Y1LjI1OA0KCQloLTkuMDgzVjcyLjQ2aC02LjIwOFYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4MS05LjUzOWMyLjMyMi0yLjQyMyw1LjI3Ny0zLjYzNSw4Ljg2LTMuNjM1DQoJCWMxLjg5MiwwLDMuMzg5LDAuMjI3LDQuNTAzLDAuNjg0VjIwLjUzNXoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjAyLjkwNCwyMC41MzVjLTEuMjEyLTAuNjg0LTIuNTg2LTEuMDI0LTQuMTI2LTEuMDI0Yy00LjMzOSwwLTYuNTA5LDIuNzQtNi41MDksOC4yMTd2NS45NzdoOS4wODN2NS4yNTgNCgkJaC05LjA4M1Y3Mi40NmgtNi4yMVYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4My05LjUzOWMyLjMyMi0yLjQyMyw1LjI3NS0zLjYzNSw4Ljg1OC0zLjYzNQ0KCQljMS44OTQsMCwzLjM5MSwwLjIyNyw0LjUwNCwwLjY4NFYyMC41MzV6Ii8+DQoJPHBhdGggZmlsbD0iI0VCM0QwMSIgZD0iTTIxNC4zNSwxOS44MTZjMCwxLjE2MS0wLjQwMywyLjEyNy0xLjIxMiwyLjg5M2MtMC44MDksMC43Ny0xLjc2NSwxLjE1My0yLjg3NSwxLjE1Mw0KCQljLTEuMTM1LDAtMi4wOTctMC4zNjgtMi44NzctMS4xMTRjLTAuNzgyLTAuNzQzLTEuMTcyLTEuNzI0LTEuMTcyLTIuOTMyYzAtMS4wODcsMC4zODMtMi4wMjUsMS4xNTMtMi44MTgNCgkJYzAuNzcyLTAuNzk4LDEuNzM1LTEuMTkyLDIuODk2LTEuMTkyYzEuMTU3LDAsMi4xMzEsMC4zODcsMi45MTQsMS4xNzJDMjEzLjk1OCwxNy43NTYsMjE0LjM1LDE4LjcwMSwyMTQuMzUsMTkuODE2IE0yMTMuMjksNzIuNDU2DQoJCWgtNi4yMDlWMzMuNzAxaDYuMjA5VjcyLjQ1NnoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjQ4LjcxNSw3MC42ODJjLTMuMDAyLDEuODE4LTYuNTUsMi43MjUtMTAuNjM3LDIuNzI1Yy0zLjUzLDAtNi43MDQtMC44MTctOS41MTktMi40MzkNCgkJYy0yLjgxNS0xLjYzLTUtMy45MzMtNi41NjYtNi45MTFjLTEuNTY1LTIuOTc1LTIuMzQ1LTYuMzE3LTIuMzQ1LTEwLjAyN2MwLTYuNDA3LDEuODMzLTExLjU1Niw1LjUwNC0xNS40NDUNCgkJYzMuNjcxLTMuODgyLDguNTYzLTUuODI4LDE0LjY2Ny01LjgyOGMzLjM4MywwLDYuMzcyLDAuNjU3LDguOTcyLDEuOTd2Ni4zNTZjLTIuOTAyLTIuMDE3LTUuOTgxLTMuMDI2LTkuMjM1LTMuMDI2DQoJCWMtNC4wMTEsMC03LjI3MywxLjQzNS05Ljc4NSw0LjI5NmMtMi41MSwyLjg2Ni0zLjc2Nyw2LjU2My0zLjc2NywxMS4xMWMwLDQuNTE5LDEuMTk1LDguMDg0LDMuNTc5LDEwLjcxMQ0KCQljMi4zODIsMi42MjMsNS41OCwzLjkzMyw5LjU5MSwzLjkzM2MzLjM4MywwLDYuNTYxLTEuMTA3LDkuNTQtMy4zMzFWNzAuNjgyeiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0yODYuODUyLDU0LjYzNWgtMjcuMzY0YzAuMTA0LDQuMzY2LDEuMjU3LDcuNywzLjQ2NiwxMC4wMTFjMi4yMDYsMi4zMDYsNS4yNjMsMy40Niw5LjE3NSwzLjQ2DQoJCWM0LjM5MSwwLDguMzkxLTEuNDExLDEyLjAwMS00LjIzOHY1Ljc5M2MtMy4zODEsMi40OTgtNy44NzQsMy43NDUtMTMuNDczLDMuNzQ1Yy01LjUyOSwwLTkuODM5LTEuNzg3LTEyLjk0Ny01LjM1Ng0KCQljLTMuMTAyLTMuNTY5LTQuNjU1LTguNTEtNC42NTUtMTQuODE5YzAtMy44MzUsMC43NzgtNy4zMzMsMi4zMy0xMC41YzEuNTUtMy4xNjcsMy42OTItNS42MTcsNi40MTMtNy4zNjENCgkJYzIuNzI3LTEuNzQsNS43NTYtMi42MTUsOS4wODMtMi42MTVjNS4wMTksMCw4LjkzOCwxLjYzNCwxMS43NTMsNC45MDZjMi44MTQsMy4yNjQsNC4yMiw3LjgzOCw0LjIyLDEzLjcxN1Y1NC42MzV6DQoJCSBNMjgwLjQ5Niw0OS4zNzNjLTAuMDUzLTMuNTgxLTAuOTE2LTYuMzY0LTIuNTk2LTguMzQ2Yy0xLjY3Ny0xLjk4MS00LjA0Mi0yLjk3MS03LjA5My0yLjk3MWMtMi44NzcsMC01LjM0LDEuMDM2LTcuMzgsMy4xMDQNCgkJYy0yLjA0NiwyLjA2OC0zLjMzMSw0LjgwOC0zLjg1OCw4LjIxM0gyODAuNDk2eiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0zMzQuMDc5LDU3LjA5M2MwLDQuODk0LTEuNzUzLDguODM5LTUuMjYsMTEuODI5Yy0zLjUwNywyLjk5LTguMTE1LDQuNDg0LTEzLjgxNSw0LjQ4NA0KCQljLTUuMTcyLDAtOS4yODYtMC45ODUtMTIuMzQxLTIuOTUxdi02LjY2MWMzLjY2MiwyLjg3Myw3Ljg0OSw0LjMxMiwxMi41NjUsNC4zMTJjMy44MTIsMCw2Ljg0Ni0wLjk0Myw5LjEwMy0yLjgxOQ0KCQljMi4yNjEtMS44NzYsMy4zOTEtNC40MjEsMy4zOTEtNy42MjdjMC03LjA4Ny01LjA0OS0xMC42MzMtMTUuMTQtMTAuNjMzaC00LjUwNHYtNS4yNjJoNC4yNzVjOC45MzEsMCwxMy4zOTktMy4zMzEsMTMuMzk5LTkuOTkyDQoJCWMwLTYuMTU3LTMuNDA3LTkuMjMzLTEwLjIyLTkuMjMzYy0zLjgzNSwwLTcuNDI5LDEuMjg2LTEwLjc4MywzLjg1OHYtNi4wMTdjMy40NTYtMi4wNjgsNy41NjYtMy4xMDQsMTIuMzM3LTMuMTA0DQoJCWM0LjQ5MiwwLDguMTE3LDEuMTg5LDEwLjg4MiwzLjU3N2MyLjc2MiwyLjM4NCw0LjE0Miw1LjUwOCw0LjE0Miw5LjM2NmMwLDcuMTQyLTMuNjA3LDExLjczMi0xMC44MjQsMTMuNzh2MC4xNDkNCgkJYzMuODM1LDAuNDMsNi45MzEsMS44MTMsOS4yNzYsNC4xNjNDMzMyLjkwNiw1MC42NTksMzM0LjA3OSw1My41ODcsMzM0LjA3OSw1Ny4wOTMiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMzc0LjkxMyw1NS4yNDFjMCwzLjQzMi0wLjczNyw2LjU0Ny0yLjIxMiw5LjM0NmMtMS40NzQsMi43OTktMy41MSw0Ljk3Mi02LjExNCw2LjUwOQ0KCQljLTIuNTk3LDEuNTQtNS41MTIsMi4zMS04Ljc0MSwyLjMxYy01LjQyNCwwLTkuNjc5LTIuMTgxLTEyLjc3Ni02LjU0OGMtMy4wOS00LjM2My00LjYzNC0xMC40NjEtNC42MzQtMTguMjgzDQoJCWMwLTYuMjA0LDAuOTE2LTExLjY4OCwyLjc0Ni0xNi40NDJjMS44MjktNC43NTgsNC40MTktOC40MjEsNy43NzMtMTAuOTkyYzMuMzU4LTIuNTc3LDcuMjMtMy44NjMsMTEuNjItMy44NjMNCgkJYzMuNzM1LDAsNi43MzgsMC41MTYsOS4wMTEsMS41NTJ2NS44NjhjLTIuODAxLTEuNDM5LTUuNzU2LTIuMTU4LTguODU5LTIuMTU4Yy00Ljc5NCwwLTguNjMzLDIuMTUtMTEuNTI0LDYuNDU0DQoJCWMtMi44OTEsNC4zMDEtNC4zMzYsMTAuMDM1LTQuMzM2LDE3LjIwMWgwLjE1MmMyLjQ5OC01LjEyNSw2LjYyNS03LjY4NSwxMi4zNzctNy42ODVjNC42OTMsMCw4LjQ1NiwxLjUzMiwxMS4yODIsNC42MDENCgkJQzM3My41MDQsNDYuMTc1LDM3NC45MTMsNTAuMjE3LDM3NC45MTMsNTUuMjQxIE0zNjguNTU3LDU2LjAzNGMwLTMuNzg4LTAuOTI5LTYuNzc1LTIuNzgxLTguOTcyDQoJCWMtMS44NTUtMi4xOTMtNC40NDktMy4yODgtNy43NzktMy4yODhjLTMuMDI2LDAtNS41NzQsMS4wNjQtNy42NDUsMy4xOThjLTIuMDY5LDIuMTI3LTMuMTAyLDQuNzExLTMuMTAyLDcuNzM2DQoJCWMwLDMuODEyLDEuMDI4LDYuOTk4LDMuMDgyLDkuNTU1YzIuMDU3LDIuNTY0LDQuNjUsMy44NDMsNy43ODEsMy44NDNjMy4xMDIsMCw1LjYyLTEuMTE0LDcuNTQ5LTMuMzUxDQoJCUMzNjcuNTkxLDYyLjUyMywzNjguNTU3LDU5LjYxNSwzNjguNTU3LDU2LjAzNCIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik00MTEuNDM4LDU1Ljg4MmMwLDUuMjc3LTEuNzQ1LDkuNTExLTUuMjQsMTIuNzIxYy0zLjQ5NSwzLjIwMS04LjE1OSw0LjgtMTMuOTg3LDQuOA0KCQljLTUuMDQ3LDAtOC43OTMtMC43NTQtMTEuMjM4LTIuMjY3di02LjU4N2MzLjY4MiwyLjM3Nyw3LjQ1MywzLjU2MiwxMS4zMTUsMy41NjJjMy44MzUsMCw2LjkyNS0xLjA3NSw5LjI3MS0zLjIyMQ0KCQljMi4zNTEtMi4xNDYsMy41MjQtNS4wMTksMy41MjQtOC42MjRjMC0zLjUzNy0xLjE5LTYuMzA1LTMuNTU5LTguMzExYy0yLjM3My0yLjAwNS01LjgxNy0zLjAwNi0xMC4zMzItMy4wMDYNCgkJYy0zLjYxLDAtNi42NzcsMC4xNDgtOS4xOTgsMC40NDlsMS44NTMtMjcuMjEyaDI1LjA5NXY1LjYwMmgtMTkuNzE5bC0xLjA5NywxNS45MzRsNC45OTYtMC4xOTJjNS42NTIsMCwxMC4xMiwxLjQzMSwxMy4zOTksNC4yOA0KCQlDNDA5Ljc5Nyw0Ni42Niw0MTEuNDM4LDUwLjY4Niw0MTEuNDM4LDU1Ljg4MiIvPg0KCTxwb2x5Z29uIGZpbGw9IiNFQjNEMDEiIHBvaW50cz0iNzUuNTIxLDgyLjk5MiA3NS41MTMsODIuOTg3IDc1LjUxMyw3Ljc3NiA0OC41NjUsMCAwLjEyMSwxOC4xOSAwLDE4LjIxMyAwLjAwNiw3Mi41OTcgDQoJCTE2LjUzNyw2Ni4xMjcgMTYuNTM3LDIxLjg4IDQ4LjU2NSwxNC4yMjIgNDguNTYxLDc5LjI3OCAwLjAzMyw3Mi41OTcgNDguNTYxLDkwLjUxNyA0OC41NjEsOTAuNTM2IDc1LjUxMyw4My4wNzcgNzUuNTEzLDgyLjk5MiAJDQoJCSIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="promo-logo svgfallback">
                   </div>
                   <div class="promo-text walsheim-black">WORK ANYWHERE WITH MICROSOFT OFFICE.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]" class="walsheim-black">Save up to [@T[productcompare:<percent primaryproductid='543628' secondaryproductid='543628' showsymbol='true'/>]@T] </a>
+                  <div class="promo-cta">
+                    ##if(productHasSavingsMoreThan(543628, 543628, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='543628' secondaryproductid='543628' showsymbol='true'/>]@T]</a>
+                    ##else
+                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">LEARN MORE</a>
+                    ##endif
                   </div>
                 </div>
               </div>
@@ -475,6 +467,221 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#nacho-promo {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nacho-video.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -1200px 0;
+}
+@media only screen and (min-width: 480px) {
+  #nacho-promo {
+    background-position: -950px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #nacho-promo {
+    background-position: -700px 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #nacho-promo {
+    background-position: -450px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #nacho-promo {
+    background-position: -200px 0;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #nacho-promo {
+    background-position: 0 0;
+  }
+}
+.Explorer8 #nacho-promo {
+  background-position: 0 0;
+}
+div.video-marquee {
+  background-color: transparent;
+}
+
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="script"></atlantis:webstash>
+    <section id="nacho-promo">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <style>.video-marquee {
+	background-position: top center;
+}
+.video-marquee {
+	background-size: cover;
+	position: relative;
+	background-position: bottom center;
+	background-color: #fff;
+}
+.video-marquee.video-marquee-white {
+color: #fff;
+}
+.video-marquee.full-video {
+height: 535px;
+padding-top: 1px;
+}
+.video-marquee.full-video .video-info {
+margin-top: 150px;
+}
+.video-marquee .relative-position {
+position: relative;
+}
+.video-marquee .video-marquee-all-centered {
+text-align: center;
+}
+.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+color: #fff;
+}
+.video-marquee.full-video .video-info .cta {
+font-family: 'Walsheim-Black';
+text-transform: uppercase;
+}
+            </style>
+            <atlantis:webstash type="js">
+              <script>
+                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+                $(document).ready(function(){
+                  if(typeof youtubeVideo === 'undefined'){
+                    window.youtubeVideo = {
+                      _src: 'https://www.youtube.com/embed/',
+                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+                        if(typeof parameters === 'object'){
+                          var paramString = '';
+                          
+                          // add origin to src
+                          parameters.origin = window.location.protocol+'//'+window.location.host
+                
+                          if(youtubeVideo._src.indexOf('?') === -1){
+                            paramString += '?';
+                          }else{
+                            paramString += '&';
+                          }
+                
+                          for(param in parameters){
+                            if(paramString.length > 2){
+                              paramString += '&';
+                            }
+                            paramString += param+'='+parameters[param];
+                          }
+                          parameters = paramString;
+                        }
+                        
+                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+                
+                        // append/prepend to container
+                        if(typeof container === 'string'){
+                          container = $(container);
+                        }
+                
+                        if(typeof insertType === 'undefined' || insertType === 'append'){
+                          container.append($video);
+                        }else{
+                          container.prepend($video);
+                        }
+                
+                        if(typeof callback === 'function'){
+                          $video.load(function(){
+                            callback($video[0]);
+                          });
+                        }
+                
+                        return $video[0];
+                      }
+                    };
+                  }
+                  
+                  var $containers = $('[data-tile="NachoVideo"]');
+                  $containers.each(function(){
+                    var $this = $(this);
+                    var videoId = $this.data('youtube-id');
+                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
+                      // remove this event
+                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+                
+                      // load the video
+                      youtubeVideo.loadVideo(
+                          videoId,
+                          '100%',
+                          '100%',
+                          function(video){
+                              var $videoInfo = $this.find('.video-info');
+                              $videoInfo.animate({'opacity':0.0},1000,function(){
+                                  $videoInfo.css({'display':'none'});
+                              });
+                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                          },
+                          {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
+                          $this,
+                          'prepend'
+                      );
+                    }).css({'cursor':'pointer'});
+                  });
+                });
+              </script>
+            </atlantis:webstash>
+            <div style="" data-lazyload-source="" data-icode="code" data-ci="" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
+              <div class="container relative-position video-info">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
+                    <h3 class="h1">NO TIME FOR 7-LAYER DIP?<br />WE SALUTE YOU.</h3><span class="cta">WATCH OUR SUPER BOWL COMMERCIAL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#nascar-contest {
+  background: #79be4b center center;
+  background-size: cover;
+}
+#nascar-contest h2 {
+  margin: 80px 0 0;
+}
+#nascar-contest h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 680px) {
+  #nascar-contest h3 {
+    width: 180px;
+  }
+}
+#nascar-contest a {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1400px) {
+  #nascar-contest a {
+    margin-bottom: 100px;
+  }
+}
+#nascar-contest .nascar-contest-btn {
+  font-size: 1.4rem;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar-full-width.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <h2 class="walsheim-black">TAKE A BREAK</h2>
+            <h3 class="walsheim-regular">Turn the GoDaddy racecar into your 200 mph business billboard.</h3><a href="[@T[link:<relative path='/contest/buddy'><param name='ci' value='95788' /><param name='gdccopath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">ENTER TO WIN </a>
           </div>
         </div>
       </div>
@@ -575,7 +782,7 @@
           <div class="col-sm-4">
             <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
               <h3 class="walsheim-black">World's Leading<br />Domain Registrar</h3>
-              <p>With over 12 million happy customers and 58 million domains under management, we know how to set you up for success online.</p>
+              <p>With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.</p>
             </div>
           </div>
           <div class="col-sm-4">
