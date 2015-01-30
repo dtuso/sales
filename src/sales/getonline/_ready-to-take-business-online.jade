@@ -1,0 +1,42 @@
+include domain-starting-at-mixin.jade
+mixin renderReadyToTakeBusinessOnline(domain, price)
+  append pageStyles
+    atlantis:webstash(type="js")
+      style.
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat center bottom;}
+
+  section#got
+    .container
+      .row
+        div.text-center
+          h2 Ready to take your business online
+          +renderDomainstringWithPrice(domain, price)
+      .row
+        div.topSpacing
+          div.col-xss-1
+          .col-sm-3
+            .icon-spacing
+              .domain-icon
+              p
+                label Domain
+              span.tooltip-icon
+
+          .col-sm-3
+            .icon-spacing
+              .wsb-icon
+              p
+                label Website builder
+              span.tooltip-icon
+          .col-sm-3
+            .icon-spacing
+              .email-icon
+              p
+                label Office 365 email
+              span.tooltip-icon
