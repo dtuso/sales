@@ -1,0 +1,70 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee { 
+        font-size:16px;
+        background-color: #f3f3f4; overflow-y: hidden;
+        .promo-wrapper, .price-wrapper { margin-top: 20px; }
+        .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%; }
+        .headline-wrapper { margin-top: 1em; line-height: 1; }
+        .promo-wrapper { color: #77c043; }
+        .disclaimer { font-size: 0.6em; margin-bottom:2%}
+        .hero-wrapper > .row img { margin: 0 auto; display: block; }
+        .dash{letter-spacing:-.3em}
+        button.btn-purchase{margin:3% 0}
+        .line1,.line2{color:#008B2D}
+        .chips{max-height:219px;height:100%}
+        .line1,.line2{font-size:1.2em;}
+        .line3{font-size:1.67em}
+        .line5{font-size:2.7em}
+        .disclaimer{}
+      }
+      @media only screen and (min-width: 401px){
+        #marquee{font-size:29px}
+      }
+      @media only screen and (min-width: 768px){
+        #marquee{
+          font-size:16px;
+          .headline-wrapper{margin-top:2.4em}
+          .chips{max-height:none}
+        }
+      }
+      @media only screen and (min-width: 992px){
+        #marquee{
+          font-size:20px;
+          .image{
+          padding-left:4%;
+          padding-right:4%;
+          }
+        }
+      }
+      @media only screen and (min-width:1200px){
+        #marquee{
+          font-size:24px;
+          .image{
+            padding-left:6%;
+            padding-right:6%;
+          }
+        }
+      }
+section#marquee
+  //remove rems
+  .container
+    .row
+      .col-xs-12.col-sm-5.image
+        img.svgfallback.chips(src!="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyNy42IDE0MSAzMDIuNCAzMTUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMjcuNiAxNDEgMzAyLjQgMzE1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMzE1LDQxMy40IDMwMi45LDQyMS4zIDI1Ny42LDQyNy4zIDE1Mi45LDQwOC4zIDEzMi41LDQwNi42IDEyNy41LDM5OC41IDE1OS4xLDQwMS4zIDI1NC4yLDQxOS45IA0KCTI5Mi45LDQxNi4xICIvPg0KPHBhdGggZmlsbD0iIzAwOEEzMiIgZD0iTTMxMC4xLDQwOC41TDI3Ni40LDM5M2wtMzUuMi0zLjFsLTI4LjktNi4xYzAsMC0yMy41LTAuOC0yNy42LTEuN2MtNC4xLTAuOS0yOS44LDMuMy0yOS44LDMuM2wtMzIuNCw2LjQNCglsMjQtMWwyOS4yLTAuNWwxNi41LTEuNmwyMC45LDEuOGwyOS4xLDUuNmwyOS41LDIuNkwzMTAuMSw0MDguNXoiLz4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMTM4LjcsNDU2IDI5NS4yLDQ1NiAzMDMuMiw0MjguOSAyNTEuNyw0MzAuNCAyMDMuOCw0MjEuNCAxNTIuNCw0MTIgMTMxLjgsNDE1LjEgMTM1LjQsNDMzLjIgIi8+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI4Mi40LDM3Ni43IDIzNC44LDMxOSAyMDUsNDA4ICIvPg0KPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIzMDUuMSwyNDcuMyAzMDQuOCwyNDcuMiAzMDQuNywyNDcgMzA0LjYsMjQ3IDI1Ny43LDIyOS4yIDI5MS44LDIyNS44IDMxMS4zLDIyOSAzMjEuNywyMjcuMiANCgkzMjAuNywyMTguOCAyOTQuNCwyMTAuOSAyNjMuNywyMDguNyAyNzAuOCwyMDEuNSAyODEuNiwxOTQuOSAyODYuOSwxODguNiAyODIuNywxODQuMSAyNjkuNCwxODkgMjQ5LjUsMTk3LjUgMTYxLjgsMjA3LjggDQoJMTMzLjEsMTQxIDI3LjYsMTQxIDg0LjYsMjExLjMgMTI3LjUsMjY0LjcgMTY4LjMsMzA1LjQgMTcxLjgsMzA3LjkgMjA3LjEsMzIyLjggMjIyLjEsMzQwLjEgMjI2LjcsMzM2LjMgMjI5LjEsMzI1IDIxMi45LDMwNC41IA0KCTIwMC4yLDI4OS42IDIwMC40LDI4OS40IDIwOS43LDI3NS42IDIyNy4xLDI2OSAyNTYuOCwyODguMyAyNDQuNiwzMTMuOSAyNDUuNSwzMjQuMiAyNDkuNiwzMjguNSAyNzkuMiwyODQuMiAyNzcuMiwyNzIuNiANCgkyNTIuMiwyNTIuOSAyOTQuMSwyNjMuMyAzMTMuNiwyNzUuNiAzMjYuMSwyNzguMyAzMzAsMjcxLjcgMzA1LjEsMjQ3LjQgIi8+DQo8cGF0aCBmaWxsPSIjMDA4QTMyIiBkPSJNMjc4LjIsNDU2YzIuMy04LjgsNC4zLTE2LjEsNC4zLTE2LjFsLTQxLjcsNi42bC04NS4yLTE3LjhsMTAuMiwyNy4zSDI3OC4yeiIvPg0KPC9zdmc+DQo=")
+        <!--[if lt IE 9]>
+        img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-nacho.png")
+        <![endif]-->
+      .col-xs-12.col-sm-7
+        .headline-wrapper.walsheim-black
+          .line1 TO BUSINESS OWNERS, WE RAISE 
+          .line2
+            span A CHIP AND DROP&nbsp;
+            span.dash  ———— 
+            span &nbsp; OUR PRICES.
+          .line3 DOMAIN + WEBSITE + EMAIL
+          .line4 ALL STARTING AT JUST
+          .line5.price [@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO
+          button.btn.btn-purchase(data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]") GET STARTED
+        .disclaimer First year only. Other restrictions apply.
