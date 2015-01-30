@@ -422,7 +422,7 @@ function domainSearchFormSubmit(e) {
         showTypeYourDomain();// setup search box
 
         // tokenize header on search available page
-        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');       
 
@@ -433,7 +433,7 @@ function domainSearchFormSubmit(e) {
       } else {
 
         // tokenize header on search available page
-        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -971,7 +971,11 @@ h2.api-error-header {
 
 .bigtext {visibility: hidden;}
 
-h
+.btn, .word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
     </style>
     <style>
 .plan-tile { 
@@ -1363,12 +1367,6 @@ h
     }
 }
     </style>
-    <atlantis:webstash type="css">
-      <style>
-        .btn {white-space: normal;word-wrap: break-word;} /* override UXCore's button styling */
-        
-      </style>
-    </atlantis:webstash>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     
@@ -1398,10 +1396,11 @@ h
           background: #fedc45; 
           padding: 0 5px;
           line-height: 1.29em; /* to line up with the button height */
-          word-wrap: break-word; 
-          display: inline; 
           margin: 0;
+          display: inline;
+          display: -ms-inline-grid;
         }
+        
         
         #marquee h2.availability-header {
           color: #333333; 
@@ -1683,7 +1682,7 @@ h
             margin: 62px 0 40px;
           }
           
-          #domain-available-marquee-view h2.domain-name-displayed {
+          #domain-available-marquee-view h2.available-domain-name-text {
             margin: 0;
           }
           #domain-available-marquee-view .reseach-container {
@@ -1702,7 +1701,7 @@ h
             </div>
             <div class="row available-domain-name-row">
               <div class="col-md-8 col-sm-12">
-                <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name"> </span></h2>
+                <h2 id="available-domain-name" class="available-domain-name-text domain-name-displayed word-break"> </h2>
               </div>
               <div class="col-md-4 col-sm-12 get-it-now-btn">
                 <button data-ci="92733" class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
@@ -1749,8 +1748,8 @@ h
           #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
           #spin-results .spin-results-message {margin-top:15px;}
           #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;word-wrap: break-word;}
-          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;word-wrap: break-word;}
+          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
+          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
           #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
           #spin-results .plan-tile {margin-top: 0px;}
           
@@ -1770,7 +1769,7 @@ h
             </div>
             <div class="row not-available-domain-name-row"> 
               <div class="col-md-8 col-sm-12">
-                <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name"> </span></h2>
+                <h2 id="not-available-domain-name" class="not-available-domain-name-text domain-name-displayed word-break"></h2>
               </div>
             </div>
             <div class="row">
@@ -1806,8 +1805,8 @@ h
                   <div class="pro-plan-wrap ignore-same-height domain-spin-wrap">
                     <div class="row">
                       <div class="col-md-8 col-sm-12">
-                        <h4 class="domain-name-display"></h4>
-                        <h2 class="domain-name-display-tld"></h2>
+                        <h4 class="word-break domain-name-display"></h4>
+                        <h2 class="word-break domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
                         <button data-ci="95267" class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
@@ -2086,8 +2085,6 @@ h
           color: #333;
         }
         .key-benefits-wrap .key-benefit h3.key-benefits-title {
-          word-wrap: break-word;
-          word-break: break-word;
           white-space: -moz-pre-wrap;
           margin-top: 0px;
           font-size: 30pt;
@@ -2110,7 +2107,7 @@ h
         </div>
         <div class="row">
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
@@ -2118,7 +2115,7 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
@@ -2131,7 +2128,7 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-pro-email-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
