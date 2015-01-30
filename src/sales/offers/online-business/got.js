@@ -128,8 +128,10 @@ $(document).ready(function() {
       return false;
     } else {
       // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
+      var pressedCharacter =  (e.which == 0 || e.which == 8) ? '' : String.fromCharCode(e.which); /* ignore delete */
+      var domain = $.trim($(e.target).val() + pressedCharacter);
+      console.log(e.which, domain);
+      if(domain.indexOf('.') > 0 && !isTldValid(domain.toLowerCase())) {
         displayInvalidTldMessage();
       } else {
         showTypeYourDomain();
