@@ -53,7 +53,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -84,7 +87,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
