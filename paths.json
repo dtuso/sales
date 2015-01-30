@@ -26,6 +26,7 @@
   "home":                    "./homepage/",
   "hosting-ssl-clp":         "./category-listing/hosting-ssl-clp/",
   "how-to-build-a-website":  "./expansion-pages/website-builder/how-to-build-a-website/",
+  "how-to-publish-a-website":"./expansion-pages/website-builder/how-to-publish-a-website/",  
   "leaf-pages":              "./tlds/leafpage",
   "lenovo":                  "./lenovo/",
   "locations":               "./careers/locations/",
