@@ -52,10 +52,11 @@ mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTy
         h2.headline-primary.get-a-domain-text !{title}
   .row
     .col-md-12.offer-search-box
-      .input-group
-        input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
-        span.input-group-btn
-          button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
+      form
+        .input-group
+          input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
+          span.input-group-btn
+            button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
   .row.domain-search-messaging-row
     .col-md-12
       span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}

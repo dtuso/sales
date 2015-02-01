@@ -200,22 +200,18 @@ $(document).ready(function() {
   }
 
   //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
+  $( "#marquee").keyup(function(e) {
+    if ( e.which == 13 )  return;
+    // verify domain name has a good tld
+    var domain = $(e.target).val();
+    if(domain.indexOf('.') > 0 && !isTldValid(domain.toLowerCase())) {
+
+      displayInvalidTldMessage();
+
     } else {
-      // verify domain name has a good tld
-      var pressedCharacter =  (e.which == 0 || e.which == 8) ? '' : String.fromCharCode(e.which); /* ignore delete */
-      var domain = $.trim($(e.target).val() + pressedCharacter);
-      console.log(e.which, domain);
-      if(domain.indexOf('.') > 0 && !isTldValid(domain.toLowerCase())) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
+
+
+      showTypeYourDomain();
     }
   })
   .on('click', '.offer-search-btn', function(e) {
@@ -1649,10 +1645,12 @@ h
           </div>
           <div class="row">
             <div class="col-md-12 offer-search-box">
-              <div class="input-group">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                  <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
-              </div>
+              <form>
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
+              </form>
             </div>
           </div>
           <div class="row domain-search-messaging-row">
@@ -1721,10 +1719,12 @@ h
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
-                </div>
+                <form>
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
@@ -1782,10 +1782,12 @@ h
             </div>
             <div class="row">
               <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
-                </div>
+                <form>
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </form>
               </div>
             </div>
             <div class="row domain-search-messaging-row">

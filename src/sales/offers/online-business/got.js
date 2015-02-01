@@ -120,22 +120,14 @@ $(document).ready(function() {
   }
 
   //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
+  $( "#marquee").keyup(function(e) {
+    if ( e.which == 13 )  return;
+    // verify domain name has a good tld
+    var domain = $(e.target).val();
+    if(domain.indexOf('.') > 0 && !isTldValid(domain.toLowerCase())) {
+      displayInvalidTldMessage();
     } else {
-      // verify domain name has a good tld
-      var pressedCharacter =  (e.which == 0 || e.which == 8) ? '' : String.fromCharCode(e.which); /* ignore delete */
-      var domain = $.trim($(e.target).val() + pressedCharacter);
-      console.log(e.which, domain);
-      if(domain.indexOf('.') > 0 && !isTldValid(domain.toLowerCase())) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
+      showTypeYourDomain();
     }
   })
   .on('click', '.offer-search-btn', function(e) {
