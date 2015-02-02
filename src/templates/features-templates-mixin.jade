@@ -39,40 +39,28 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
         .features {
           background-image: none !important;
         }
-      }
-      @media only screen and (max-width: 992px) {
-        .features .features-img {
-          width: 85%;
-        }
-      }
-      @media only screen and (max-width: 768px) {
         .features .features-img {
           width: 50%;
         }
       }
       @media only screen and (max-width: 992px) {
+        .features .features-img {
+          width: 85%;
+        }
         .features .features-img.features-img-right-slim {
           margin: 40px 0 0;
         }
-      }
-      @media only screen and (max-width: 992px) {
         .features .features-img.features-img-left,
         .features .features-img.features-img-right {
           margin: 0 0 40px;
         }
+        .features.features-wrap {
+          min-height: 0;
+          margin: 40px 0;
+        }
       }
       .features.features-wrap {
         min-height: 560px;
-      }
-      @media only screen and (max-width: 992px) {
-        .features.features-wrap {
-          min-height: 0;
-        }
-      }
-      @media only screen and (max-width: 992px) {
-        .features.features-wrap {
-          padding: 40px 0;
-        }
       }
       .features.features-wrap h2,
       .features.features-slim h2 {
@@ -107,7 +95,7 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
           if (featuresImg)
             div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
               if(lazyLoad)
-                +lazyImg("features-img #{imgClass ? imgClass : ''}", imgClass, featuresImg, featuresImgAltText, "triggerResize", null)
+                +lazyImg("features-img " + imgClass, null, featuresImg, featuresImgAltText, "triggerResize", null)
               else
                 img.features-img(class="#{imgClass ? imgClass : ''}", src!="#{featuresImg}", alt="#{featuresImgAltText ? featuresImgAltText : ''}")
         .col-sm-6(class="#{secondColClass ? secondColClass : ''}")
