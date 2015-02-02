@@ -1,0 +1,19 @@
+extends ../../../templates/marquees/landing-page-marquee.jade
+
+append marqueeStyles
+  style.
+    .marquee { background-color: #ffffff; padding-bottom:30px !important; min-height:200px !important;}
+    .marquee.marquee-app-landing .marquee-pro-left-text {padding-top:0px;}
+    .marquee.marquee-app-landing .marquee-check-bullets li {margin-bottom:15px;}
+    .marquee .marquee-check-bullets span {text-transform:none; font-stretch: normal; font-family: Arial; font-weight:bold;}
+    .marquee.marquee-app-landing { min-height: 300px; color: #333333; }
+    .marquee.marquee-app-landing h2 { color: #333333; font-size:50px; line-height:50px; }
+
+block content
+  .col-sm-12
+    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".marquee-www-rebrand-wrap"},"verticalStyle":"padding-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      .row
+        div.col-sm-12
+          .marquee-pro-left-text
+            +productDescription('[@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]')
+            +checkBullets(["[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]", "[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]", "[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]"])

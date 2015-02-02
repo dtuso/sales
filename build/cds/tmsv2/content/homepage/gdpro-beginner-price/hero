@@ -1,0 +1,69 @@
+
+<!-- start right-arrow hero section-->
+<atlantis:webstash type="css">
+  <style>
+    .hero-wrapper>div{min-height:inherit;}
+    .right-arrow.hero {min-height: inherit;line-height:.9;white-space:nowrap;background: transparent}
+    .right-arrow>div{min-height:inherit}
+    .right-arrow .left{background-color:rgb(255,138,0);color:#fff}
+    .right-arrow .right{background-color:transparent; color:#000}
+    .right-arrow .dash{letter-spacing:-.2rem}
+    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(255,138,0)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
+    .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent{width:80%; margin-left:10%;}
+    .right-arrow .rightContent{width:70%}
+    .right-arrow .rightContent .btn{margin:5% 0}
+    
+  </style>
+  <style>.hero.right-arrow.gdpro-beginner-price .rightContent .line1 {
+  padding-bottom: 2%;
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95854'/></relative>]@T]" class="hero right-arrow gdpro-beginner-price">
+  <div class="left col-xs-6">
+    <div class="leftContent"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-logo-reversed.png" class="img-responsive fallback"/><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjMyLjkxMyAwIDQzOS43MiAxMTgiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMzIuOTEzIDAgNDM5LjcyIDExOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGc+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYxLjYyNCw1Ny43NjRoMjEuNDg3djYuNjQ2aC00Ljk2OGMtMi4wMDEsMTAuMTI5LTkuNDg1LDE3LjA5OS0yMi4wMDIsMTcuMDk5Yy0xNC43NzYsMC0yMy4yMjgtMTEuNDItMjMuMjI4LTIzLjY3OXM4Ljk2OS0yMy42NzksMjMuMjI4LTIzLjY3OWMxMC42NDcsMCwxOC41MTgsNi42NDYsMTkuMjI3LDE0LjY0NWgtNy40ODRjLTAuNzc1LTQuNDUyLTUuNDg2LTgtMTEuNzQzLThjLTkuNjc4LDAtMTUuNjEzLDguMTk1LTE1LjYxMywxNy4wMzNjMCw4Ljg0LDUuNDIsMTcuMDM1LDE2LjU4NCwxNy4wMzVjNy42NzgsMCwxMi4yNTktNC45MDQsMTMuMTYyLTEwLjQ1MmgtOC42NDd2LTYuNjQ2aC0wLjAwM1Y1Ny43NjR6Ii8+PC9nPjxnPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik04NS43NTcsNjUuMzc5YzAtOC41MTcsNi4yNTgtMTUuODEsMTUuODA4LTE1LjgxYzkuNjc4LDAsMTUuOTM3LDcuMjkxLDE1LjkzNywxNS44MWMwLDguNTE3LTYuMjU4LDE1LjgwOC0xNS45MzcsMTUuODA4QzkyLjAxNSw4MS4xODcsODUuNzU3LDczLjg5NSw4NS43NTcsNjUuMzc5eiBNMTEwLjQ2OCw2NS4zNzljMC01LjE2My0zLjQ4NS05LjU0OS04LjkwMy05LjU0OWMtNS4yOTEsMC04Ljc3NSw0LjM4OC04Ljc3NSw5LjU0OXMzLjQ4Myw5LjU0OSw4Ljc3NSw5LjU0OUMxMDYuOTgzLDc0LjkyOCwxMTAuNDY4LDcwLjU0LDExMC40NjgsNjUuMzc5eiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMzguMjExLDM1LjI0N2MxNC45NjgsMCwyMy40MjIsMTEuMTYxLDIzLjQyMiwyMi41ODJzLTguNDUyLDIyLjU4Mi0yMy40MjIsMjIuNTgyaC0xNC42NDZWMzUuMjQ3TDEzOC4yMTEsMzUuMjQ3TDEzOC4yMTEsMzUuMjQ3eiBNMTMwLjk4NSw0MS44OTR2MzEuODc0aDcuMjI2YzEwLjA2NCwwLDE1LjgwOC03Ljg3MiwxNS44MDgtMTUuOTM3YzAtOC4wNjQtNS43NDMtMTUuOTM1LTE1LjgwOC0xNS45MzVDMTM4LjIxMSw0MS44OTQsMTMwLjk4NSw0MS44OTQsMTMwLjk4NSw0MS44OTR6Ii8+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTE5Ny4xODYsNTAuMzQ0VjgwLjQxaC03LjAzMnYtNC4wNjZjLTEuODcxLDMuMDMzLTUuODA3LDQuODQtOS4yOTIsNC44NGMtOS4xNjIsMC0xNS40MjEtNy4yOTEtMTUuNDIxLTE1LjgwOGMwLTguNTE3LDYuMjU4LTE1LjgxLDE1LjQyMS0xNS44MWMzLjQ4NSwwLDcuNDIxLDEuODA3LDkuMjkyLDQuODR2LTQuMDY2aDcuMDMyVjUwLjM0NHogTTE5MC4xNTMsNjUuMzc5YzAtNS4xNjMtMy40ODUtOS41NDktOC45MDMtOS41NDljLTUuMjkxLDAtOC43NzUsNC4zODgtOC43NzUsOS41NDlzMy40ODMsOS41NDksOC43NzUsOS41NDlDMTg2LjY2OCw3NC45MjgsMTkwLjE1Myw3MC41NCwxOTAuMTUzLDY1LjM3OXoiLz48L2c+PGc+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTIyNy43NjcsNzYuMzQ2Yy0xLjg3MSwzLjAzMy01LjgwNyw0Ljg0LTkuMjkyLDQuODRjLTkuMTYyLDAtMTUuNDIxLTcuMjkxLTE1LjQyMS0xNS44MDhjMC04LjUxNyw2LjI1OC0xNS44MSwxNS40MjEtMTUuODFjMy40ODUsMCw3LjQyMSwxLjgwNyw5LjI5Miw0Ljg0VjM1LjI0N2g3LjAzMnY0NS4xNjVoLTcuMDMyVjc2LjM0NkwyMjcuNzY3LDc2LjM0NnogTTIyNy43NjcsNjUuMzc5YzAtNS4xNjMtMy40ODUtOS41NDktOC45MDMtOS41NDljLTUuMjkxLDAtOC43NzUsNC4zODgtOC43NzUsOS41NDlzMy40ODMsOS41NDksOC43NzUsOS41NDlDMjI0LjI4NCw3NC45MjgsMjI3Ljc2Nyw3MC41NCwyMjcuNzY3LDY1LjM3OXoiLz48L2c+PGc+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTI2NS4yNTYsNzYuMzQ2Yy0xLjg3LDMuMDMzLTUuODA3LDQuODQtOS4yOSw0Ljg0Yy05LjE2MiwwLTE1LjQyMS03LjI5MS0xNS40MjEtMTUuODA4YzAtOC41MTcsNi4yNTgtMTUuODEsMTUuNDIxLTE1LjgxYzMuNDgzLDAsNy40MjEsMS44MDcsOS4yOSw0Ljg0VjM1LjI0N2g3LjAzMnY0NS4xNjVoLTcuMDMyVjc2LjM0NnogTTI2NS4yNTYsNjUuMzc5YzAtNS4xNjMtMy40ODMtOS41NDktOC45MDMtOS41NDljLTUuMjkxLDAtOC43NzUsNC4zODgtOC43NzUsOS41NDlzMy40ODMsOS41NDksOC43NzUsOS41NDlDMjYxLjc3MSw3NC45MjgsMjY1LjI1Niw3MC41NCwyNjUuMjU2LDY1LjM3OXoiLz48L2c+PGc+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTI3OC43NDIsODMuODMxaDYuODM5YzAuMDYzLDMuMzU1LDIuMjU4LDYuMTMsNy4xNjEsNi4xM2M1LjAzMiwwLDcuNTQ5LTIuMjU4LDcuNTQ5LTguMTN2LTUuNjEzYy0xLjg3MSwzLjIyNi01LjM1NSw0Ljk2OC05LjgwOCw0Ljk2OGMtNC4zMjIsMC03LjM1NS0xLjU0OS05LjAzMy00LjA2NmMtMS40ODMtMi4yNTgtMS45MzUtNC43NzQtMS45MzUtOC45MDNWNTAuMzQ1aDcuMDMydjE1LjU1YzAsNS4xNjEsMS40ODMsOS4wOTgsNi41MTYsOS4wOThjNC45MDQsMCw3LjIyNi0zLjkzNyw3LjIyNi05LjA5OHYtMTUuNTVoNy4wMzJWODEuODNjMCwxMC4yNTktNS42MTMsMTQuMzg4LTE1LjQ4NSwxNC4zODhDMjg0LjA5OCw5Ni4yMiwyNzguODA2LDkwLjQxNCwyNzguNzQyLDgzLjgzMXoiLz48L2c+PGc+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTMxMC41NDUsNTAuOTYyYzAtMi45NDMsMi4xMjEtNS42ODQsNS42MDUtNS42ODRzNS42MDUsMi43NDEsNS42MDUsNS42ODRzLTIuMTIxLDUuNjgzLTUuNjA1LDUuNjgzQzMxMi42NjcsNTYuNjQ1LDMxMC41NDUsNTMuOTA1LDMxMC41NDUsNTAuOTYyeiBNMzIwLjgyNyw1MC45NjJjMC0yLjU0LTEuNzY2LTQuODkyLTQuNjc3LTQuODkyYy0yLjg5NSwwLTQuNjYxLDIuMzU0LTQuNjYxLDQuODkyYzAsMi41MjMsMS43NjYsNC44NzksNC42NjEsNC44NzlDMzE5LjA2MSw1NS44MzksMzIwLjgyNyw1My40ODUsMzIwLjgyNyw1MC45NjJ6IE0zMTQuMjMxLDUzLjg3NHYtNi4zMDNoMi4zMjNjMS4yNTQsMCwyLjA3NSwwLjk3NiwyLjA3NSwyLjEwNWMwLDAuOTEzLTAuNTU4LDEuNzE4LTEuNDU1LDEuOTY2bDEuNDA5LDIuMjI5aC0wLjg1MWwtMS4zNDYtMi4xMzZoLTEuNDA5djIuMTM2aC0wLjc0NEwzMTQuMjMxLDUzLjg3NEwzMTQuMjMxLDUzLjg3NHogTTMxNi40OTIsNTEuMDcxYzAuODE5LDAsMS4zNDYtMC42MzUsMS4zNDYtMS4zOTRjMC0wLjc3NS0wLjUyOC0xLjQyNS0xLjM0Ni0xLjQyNWgtMS41MnYyLjgxOEMzMTQuOTcyLDUxLjA3MSwzMTYuNDkyLDUxLjA3MSwzMTYuNDkyLDUxLjA3MXoiLz48L2c+PGc+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQ2MC4wOTUsMjUuOTM1TDM3OC40MDUsMGwtNDQuODczLDM5Ljc2NWw0LjI0Nyw0OC40MDhMNDAzLjA4NSwxMThsNjkuNTQ4LTMyLjg0N0w0NjAuMDk1LDI1LjkzNXogTTM3Ni41NDQsNjYuODYzaC04Ljc3M3YxMy41NWgtNy40MjFWMzUuMjQ4bC0wLjAwMS0wLjAwMWgxNi4xOTVjOS42NzgsMCwxNS45MzcsNy4yOSwxNS45MzcsMTUuODA4QzM5Mi40ODIsNTkuNTczLDM4Ni4yMjQsNjYuODYzLDM3Ni41NDQsNjYuODYzeiBNNDE2LjI5LDU2Ljg2MmMtMS4wOTgtMC4yNTktMS42NzgtMC4zMjMtMi43NzUtMC4zMjNjLTYsMC05LjI5LDMuNDItOS4yOSwxMC45MDR2MTIuOTY4aC03LjAzMlY1MC4zNDVoNy4wMzJ2NC44NGMxLjM1NS0yLjc3NCw1LjI5MS01LjIyNyw5LjI5LTUuMjI3YzEuMDk4LDAsMi4wMDEsMC4xMjksMi43NzUsMC40NTJWNTYuODYyeiBNNDMyLjgxLDgxLjE4N2MtOS41NTIsMC0xNS44MS03LjI5MS0xNS44MS0xNS44MDhjMC04LjUxNyw2LjI1OC0xNS44MSwxNS44MS0xNS44MWM5LjY3NiwwLDE1LjkzNSw3LjI5MiwxNS45MzUsMTUuODFDNDQ4Ljc0Niw3My44OTUsNDQyLjQ4OCw4MS4xODcsNDMyLjgxLDgxLjE4N3oiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNDMyLjgwOCw1NS44M2MtNS4yOTEsMC04Ljc3NSw0LjM4OC04Ljc3NSw5LjU0OWMwLDUuMTYxLDMuNDgzLDkuNTQ5LDguNzc1LDkuNTQ5YzUuNDE5LDAuMDAxLDguOTAzLTQuMzg4LDguOTAzLTkuNTQ5QzQ0MS43MSw2MC4yMTUsNDM4LjIyNyw1NS44Myw0MzIuODA4LDU1LjgzeiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zNzYuNTQ1LDQxLjg5M2gtOC43NzN2MTguMzI1aDguNzczYzUuMTYxLTAuMDAxLDguNTE3LTQuMTk2LDguNTE3LTkuMTYzQzM4NS4wNjMsNDYuMDg3LDM4MS43MDgsNDEuODkzLDM3Ni41NDUsNDEuODkzeiIvPjwvZz48L2c+PC9zdmc+" class="img-responsive svgfallback"/>
+      <div class="bigtext">
+        <div class="line1 tungsten"><span>BUILT FOR PROS </span><span class="dash">——— </span></div>
+        <div class="line2 walsheim-black">PRICED FOR BEGINNERS.</div> 
+        ##if(productHasSavingsMoreThan(32759, 32759, 0))
+        <div class="line3 tungsten">SAVE UP TO [@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" showsymbol="true" />]@T].</div> 
+        ##endif
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1 arrow"></div>
+  <script>
+    (function(){
+    function IEVersion(){
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
+        return '8-9';
+      }
+      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+        return '10-current';
+      }
+    }
+    var ieVersion = IEVersion();
+      if(ieVersion != undefined)
+        if(ieVersion == '10-11+'){
+          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(255,138,0)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
+          var base64 = window.btoa(utf8);
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
+          }
+        else{
+          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-orange.png) no-repeat');
+        }
+      })();
+  </script>
+  <div class="right col-xs-5">
+    <div class="rightContent">
+      <div class="bigtext">
+        <div class="line1 walsheim-black">VISIT GODADDY PRO</div>
+      </div>
+      <button class="btn btn-lg btn-purchase">CHECK IT OUT</button>
+    </div>
+  </div>
+</div>
+<!-- end right-arrow hero section-->

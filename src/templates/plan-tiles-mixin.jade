@@ -1,0 +1,108 @@
+//- fails if plansPanels ever need to be nested
+- var plansPanelTotalColumns
+- var plansPanelColumnsPopulated
+- var hasIncludedPlanTilesMixinCss = false
+
+
+mixin planTile(planid)
+  case plansPanelTotalColumns
+    when 1
+      div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro(id=planid)
+        block
+    when 2
+      if (plansPanelColumnsPopulated === 0)   
+        - plansPanelColumnsPopulated++   
+        div.col-sm-offset-2.col-sm-4.plan-tile.plan-pro(id=planid)
+          block
+      else
+        div.col-sm-4.plan-tile.plan-pro(id=planid)
+          block
+    when 3
+      div.col-sm-4.plan-tile.plan-pro(id=planid)
+        block
+    when 4
+      div.col-md-3.col-sm-6.plan-tile.plan-pro(id=planid)
+        block
+    when 5
+      div.plan-col-15.plan-tile.plan-pro(id=planid)
+        block
+    when 6
+      div.plan-col-2.plan-tile.plan-pro(id=planid)
+        block
+
+
+mixin renderPlanTiles(columns, options)
+  - plansPanelTotalColumns = columns
+  - plansPanelColumnsPopulated = 0
+  - options = options || {};
+  - options.backgroundColor = options.backgroundColor || "";
+  - options.icode = options.icode || "";
+
+  if (columns > 4)
+    - containerClass = "plan-container"
+  else
+    - containerClass = "container"
+
+  atlantis:webstash(type="css")
+    style
+      include:css ./styles/plan-tiles.css
+
+  div(class="pro-plans-wrap #{options.backgroundColor}")
+    #plans(class="#{containerClass} pro-plans", data-icode="#{options.icode}")
+      .row
+        block
+
+
+mixin renderCartLogic(url, itc, options)
+  - addToCartRedirectUrl = url
+  - itemTrackingCode = itc
+  - options = {};
+  - options.dropdown = false;
+
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      var itemTrackingCode = "!{itemTrackingCode}";
+      var ci = "0"
+
+      $(".btn-plan").click(function() {
+
+        if ("#{options.dropdown}" != "false"){
+          var productTile = $(this).data("ul");
+
+          var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+        }
+        else{
+          var productPackage = $(this).data("plan");
+          if($(this).data("ci")!== undefined)
+            ci = $(this).data("ci");
+        }
+
+        var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          contentType: "application/json",
+          data: "requestData=" + JSON.stringify({
+            pkgid: productPackage,
+            qty: 1,
+            itc: itemTrackingCode
+          }),
+          dataType: "jsonp"
+        })
+        .done(function(data) {
+          var redirectUrl = "!{addToCartRedirectUrl}";
+          redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+          if (redirectUrl.indexOf("?") === -1) {
+            redirectUrl += "?plan=";
+          } else {
+            redirectUrl += "&plan=";
+          }
+          redirectUrl += productPackage;
+
+          window.location.href = redirectUrl;
+        })
+        .fail(function(xhr, status, error) {
+          alert('Failed to add to the cart. Please try again later.')
+        });
+      });

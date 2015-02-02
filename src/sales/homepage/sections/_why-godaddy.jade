@@ -1,0 +1,39 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #why-godaddy{padding-bottom:25px;background-color:#ccc;}
+      #why-godaddy p{margin-right:15px;}
+      #why-godaddy h2{color:#333}
+      #why-godaddy .why-gd-prices{padding-top:40px}
+      #why-godaddy .why-gd-support{padding-top:34px}
+      #why-godaddy .feature h3{font-size:3rem;text-transform:uppercase;margin-bottom:10px;}
+      #why-godaddy .why-gd-prices img{height:112px}
+
+section#why-godaddy
+  .container
+    h2.text-center.walsheim-black Why get online with us?
+    .row
+      .col-sm-4
+        .feature.why-gd-registrar
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
+          h3.walsheim-black World's Leading<br />Domain Registrar
+          p With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.
+      .col-sm-4
+        .feature.why-gd-prices
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
+          h3.walsheim-black More Names<br />at Better Prices
+          p We have 100s of domains to choose from, not to mention prices that other companies only dream about.  
+      .col-sm-4
+        .feature.why-gd-support
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+          h3.walsheim-black Award-Winning<br />24/7 Support
+          p Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  

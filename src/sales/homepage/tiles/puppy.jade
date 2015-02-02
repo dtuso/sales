@@ -1,0 +1,36 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee .tile-wrapper { margin-top: 0; }
+      #marquee .tile.puppy { 
+        background-color: #333; color: #fff; padding: 20px 22px; font-size: 16px; position: relative; overflow: hidden; 
+
+        h3 { font-size: 1.5em; margin: 0; padding: 10px 0; text-transform: uppercase; font-family:'Walsheim-Black', 'Arial Black', sans-serif; }
+        p { font-size: 1em; font-family:'Walsheim-Regular', 'Arial', sans-serif; }
+        a { font-size: 1.3em; color: #77c043; text-transform: uppercase; font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 1.2em; }
+        img.nascar { height: 80px; float: right; margin-top: 20px; }
+        img.mask { display: none; }
+      }
+      @media (min-width: 992px) and (max-width: 1199px) {
+        #marquee .tile.puppy { min-height: 294px; }
+      }
+      @media (min-width: 1200px) {
+        #marquee .tile.puppy { padding: 10px 30px 46px 40px; margin-left: -40px; font-size: 14px; }
+        img.mask { display:block !important; position: absolute; right: 0; top: 0; }
+        img.nascar { margin-right: -70px; }
+      }
+
+.tile.puppy
+  img(class="mask" src!="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEzIiBoZWlnaHQ9IjE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMCAwLDUwIDE1LDAiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMTc0IDAsNTAgMjUsMTU4IDE0MCwxNzQiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjMxMywxNzQgMTQwLDE3NCAyODAsMTQwIDMxMywwIi8+DQo8L3N2Zz4=")
+  img(class="nascar" src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar_360.png")
+  h3 Enter to Win
+  p Your pup could be on the GoDaddy race car!
+  a Submit Your Pup
+
+//- svg mask:
+//- 
+//- <svg width="313" height="188" xmlns="http://www.w3.org/2000/svg">
+//-   <polygon stroke="#f3f3f4" fill="#f3f3f4" points="0,0 0,50 15,0"/>
+//-   <polygon stroke="#f3f3f4" fill="#f3f3f4" points="0,174 0,50 25,158 140,174"/>
+//-   <polygon stroke="#f3f3f4" fill="#f3f3f4" points="313,174 140,174 280,140 313,0"/>
+//- </svg>

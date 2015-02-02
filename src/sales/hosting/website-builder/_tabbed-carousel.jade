@@ -1,0 +1,66 @@
+include ../../../templates/tabbed-carousel-mixin.jade
+include ../../../templates/carousel-mixin.jade
+- tabbedCarousel = tabbedCarousel || {};
+- tabbedCarousel.title = "[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]";
+- tabbedCarousel.subtitle = "[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]";
+- tabbedCarousel.numOfTabs= 6;
+- tabbedCarousel.lazyLoad = true;
+- tabbedCarousel.id = "carousel-social-media";
+- tabbedCarousel.textCenter = true;
+
++renderTabbedCarousel(tabbedCarousel)
+  +addTab({ci:"87767",icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
+  +addTab({ci:"87768",icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
+  +addTab({ci:"87769",icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
+  +addTab({ci:"87770",icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]"})
+  +addTab({ci:"87771",icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]"})
+  +addTab({ci:"87772",icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]"})
++carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup>
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]
+  +carouselItem(tabbedCarousel)
+    +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png")
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+        h2 [@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup>
+    .row
+      .col-sm-10.col-sm-offset-1.col-xs-12
+          .carousel-panel-text [@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]

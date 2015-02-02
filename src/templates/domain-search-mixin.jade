@@ -1,0 +1,64 @@
+
+mixin domainSearchInput(domainSearchParams)
+  - domainSearchParams                       = domainSearchParams || {};
+  - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single";
+  - domainSearchParams.cicode                = domainSearchParams.cicode || "";
+  - domainSearchParams.icode                 = domainSearchParams.icode || "home:Domain Search:Domains:Domain Search";
+  - domainSearchParams.tcode                 = domainSearchParams.tcode || "home:Domain Search:Domains:Domain Search:Search Domain";
+  - domainSearchParams.buttonText            = domainSearchParams.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
+  - domainSearchParams.placeholderText       = domainSearchParams.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
+  - domainSearchParams.formId                = domainSearchParams.formId || "domain-search-form";
+  - domainSearchParams.errorModalId          = domainSearchParams.errorModalId || "api-failure";
+  - domainSearchParams.domainInputId         = domainSearchParams.domainInputId || "domain-name-input";
+  atlantis:webstash(type="css")
+    style
+      :less
+        #domain-name-input { color: #008a32; }
+        #domain-name-input::-webkit-input-placeholder { color: #008a32; }
+        #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
+        #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
+        #domain-name-input:-ms-input-placeholder { color: #008a32; }
+        .search-text { display: none; }
+        .search-icon { font-size: 22px; }
+        @media (min-width: 768px) {
+          .search-text { display: inline; }
+          .search-icon { display: none; }
+        }
+ 
+  form(id!="#{domainSearchParams.formId}" method="get" action!="#{domainSearchParams.actionUrl}")
+    input(type="hidden",name="ci",value=domainSearchParams.cicode)
+    input(type="hidden",name="checkAvail",value="1")
+    .input-group
+      label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
+      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
+      span.input-group-btn
+        button.btn.btn-primary(type='submit' data-ci='#{domainSearchParams.cicode}') 
+          span.search-icon.uxicon.uxicon-magnifying-glass
+          span.search-text !{domainSearchParams.buttonText}
+  script.
+    $("##{domainSearchParams.formId}").on('submit', function(e) {
+      var input = $("##{domainSearchParams.formId}").find("input[name='domainToCheck']");
+      if (input && (input.val() == null || input.val() == "")) {
+        e.preventDefault();
+        window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+      }
+    });
+
+mixin domainSearchOffersInput(title, cicode, placeholderText, buttonText, infoTypeHere, infoErrorEligibility, infoInvalidTld)
+    
+  .row
+    .col-md-12
+      if(title)
+        h2.headline-primary.get-a-domain-text !{title}
+  .row
+    .col-md-12.offer-search-box
+      .input-group
+        input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{placeholderText}" name="domainToCheck" autocomplete="off" maxlength="63")
+        span.input-group-btn
+          button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{cicode}") !{buttonText}
+  .row.domain-search-messaging-row
+    .col-md-12
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{infoTypeHere}
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{infoErrorEligibility}
+      span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{infoInvalidTld}
+

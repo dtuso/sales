@@ -1,0 +1,51 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #danica-puppy-promo{background-color:#f3f3f4;
+        h2{font-size:3rem;}
+        h3{margin:0;font-size:2.0rem;}
+        img{width:100%}
+        #danica-puppy-play-button{content:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png);margin-bottom:50px;}
+      }
+      @media only screen and (min-width:480px) {
+         #danica-puppy-promo h2{width:100%}
+         #danica-puppy-promo h3{margin-top:10px;}
+       }
+      @media only screen and (min-width:768px) {
+         #danica-puppy-promo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy.jpg) top center no-repeat;background-size:cover;}
+         #danica-puppy-promo h2{width:75%}
+         #danica-puppy-promo h3{margin:25px 10px 0 -40px;font-size:1.6rem;}
+         #danica-puppy-promo #danica-puppy-play-button{width:65%;}
+       }
+      @media only screen and (min-width:992px) {
+        #danica-puppy-promo h2{width:100%;}
+       }
+      @media only screen and (min-width:1200px) {
+        #danica-puppy-promo h3{margin-top:40px;}
+       }
+
+section#danica-puppy-promo
+  .container
+    .row
+      .col-md-5.col-sm-8.col-xs-12
+        .container
+          .row
+            .col-sm-12
+              h2.walsheim-black Adopt your own buddy.
+          .row
+            .col-md-4.col-sm-3.col-xs-2
+
+              +videoPlayerModalAll(
+                'JT1JB2brDgA', 
+                'danica-puppy-play-button', 
+                '', 
+                '',
+                '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png', 
+                '', 
+                '', 
+                'danica-puppy-promo-video', 
+                '')
+
+            .col-md-8.col-sm-4.col-xs-3
+              h3.walsheim-bold WATCH VIDEO
+      .col-md-7.col-sm-0.col-xs-9

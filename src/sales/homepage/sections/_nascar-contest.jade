@@ -1,0 +1,21 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #nascar-contest{background:#fff center center;background-size:cover;
+        h2{margin:80px 0 0;}
+        h3{margin-top:0;font-size:1.6rem;
+           @media only screen and (max-width:680px){width:180px;}
+        }
+        a{margin-bottom:30px;
+          @media only screen and (min-width:1400px){margin-bottom:100px;}
+        }
+
+        .nascar-contest-btn{font-size:1.4rem;}
+      }
+section#nascar-contest.lazyload(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg")
+  .container
+    .row
+      .col-sm-6.col-offset-sm-6
+        h2.walsheim-black Your new hire,<br />Danica Patrick
+        h3.walsheim-regular Have Danica pay a visit to your business.
+        a.btn.btn-default-dark.nascar-contest-btn.walsheim-black(href!="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank") ENTER TO WIN 

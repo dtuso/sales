@@ -1,0 +1,168 @@
+atlantis:webstash(type="css")
+  style.
+    #carousel-ols-stores {
+      width: 1000px;
+    }
+    .plan-tile { 
+      margin-top: -145px; 
+    }
+    .sf-droplist-msg {
+      text-align: inherit;
+    }
+    .bg-black {
+      background-color: #333333;
+    }
+    .bg-gray-light {
+      background-color: #d9d9d9;
+    }
+    .customer-slide {
+      background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
+      background-repeat: no-repeat;
+      margin-bottom: 20px;
+    }
+    .customer-slide.slide-1 {
+      background-position: 0px 5px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-2 {
+      background-position: 0px -405px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-3 {
+      background-position: -0px -815px;
+      height: 410px;
+      width: 665px;
+    }
+    .customer-slide.slide-4 {
+      background-position: 0px -1225px; 
+      height: 410px; 
+      width: 665px;
+    }
+    .customer-byline {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .btn-default-black {
+      color: #000;
+      border-color: #000;
+    }
+    .carousel-panel-text {
+      min-height: 50px;
+      margin-bottom: 0px;
+    }
+    .carousel-wrap {
+      padding-bottom: 50px !important;
+    }
+    .carousel-container .carousel .carousel-indicators {
+      bottom: -50px !important;
+    }
+    .main-heading {
+      margin: 0px;
+      font-size: 30px;
+    }
+    .subheading {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+    .customer-quote {
+      margin-top: 0px;
+      margin-bottom: 10px;
+      min-height: 90px;
+    }
+    .store-name {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .item-wrapper {
+      padding: 20px 0 20px !important;
+    }
+
+
+include ../../../templates/carousel-mixin.jade
+- olsCarousel = olsCarousel || {};
+- olsCarousel.numOfTabs= 4;
+- olsCarousel.lazyLoad = true;
+- olsCarousel.id = "carousel-ols-stores";
+- olsCarousel.textCenter = false;
+- olsCarousel.css = true;
+- olsCarousel.ci = {panelContainer:'95265',carouselIndicator:'95263',prev:'95262', next:'95264'};
+
+block heading
+  .row
+    .col-sm-1
+    .col-sm-10.center-block
+      h1.h0.main-heading.text-center [@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]
+      h3.subheading.text-center [@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]
+  .col-sm-1
+  
++carousel(olsCarousel.id , olsCarousel.numOfTabs, olsCarousel)
+  +carouselItem(olsCarousel)
+    .row
+      .col-sm-1
+      .col-sm-10.center-block
+        .customer-slide.slide-2
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.glossandtoss.net",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+      .col-sm-1
+  +carouselItem(olsCarousel)
+    .row
+      .col-sm-1
+      .col-sm-10.center-block
+        .customer-slide.slide-3
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.snap-bibs.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+      .col-sm-1
+  +carouselItem(olsCarousel)
+    .row
+      .col-sm-1
+      .col-sm-10.center-block
+        .customer-slide.slide-4
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.theprincessexpress.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+      .col-sm-1
+  +carouselItem(olsCarousel)
+    .row
+      .col-sm-1
+      .col-sm-10.center-block
+        .customer-slide.slide-1
+      .col-sm-1
+    .row
+      .col-sm-1
+      .col-sm-10.col-xs-10
+        h2.store-name [@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]
+        .customer-quote [@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]
+        .customer-byline &mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]
+        a.btn.btn-default.btn-default-black(href="http://www.thejonesmarket.com",target="_blank") [@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]
+      .col-sm-1
