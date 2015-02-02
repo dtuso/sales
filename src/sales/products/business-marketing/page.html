@@ -1,8 +1,8 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 54939fc5f778fc1aac854065
+id: 54b04ecaf778fc234c60ae34
 name: GCE-33979
-comments: Wrapped pcUpdateCart/pcCartCnt in AppSetting Conditional
+comments: Additional CSS UxCore fixes wrapped in AppSetting Conditional
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
 assetPath: false
 ---
@@ -188,8 +188,9 @@ assetPath: false
     }
 
   {% endless %}
-  </style>
+  </style>   
   <!-- end-css-elevate -->
+
   <section class="container background-container main-banner-business-marketing">
     <div class="container l-main-container">
       <div class="row center-text">
@@ -211,7 +212,6 @@ assetPath: false
       </div>
     </div>
   </section>
-   
 
   <!------------------------------------>
   <!--       TABS (Plans & FAQ)       -->
@@ -454,10 +454,9 @@ assetPath: false
   z-index: 1;
 }
 
-
       {% endless %}
       </style>
-      <!-- end-css-elevate -->
+      <!-- end-css-elevate -->  
       <section class="main-plans">
         <div class="container l-main-container">
           <h2 class="text-center">[@L[cds.sales/gd/products/business-marketing:plans-title]@L]</h2>
@@ -1017,6 +1016,19 @@ assetPath: false
 
   $(document).ready(function(){
 
+    ##if(appSettingEnabled(UXCORE_ENABLED))
+      $('body').css('font-size', '10px');
+      $('.main-banner-title').css('color', '#ffffff');
+      $('.cta-small').css('line-height', '2.35714em');
+      $('.badge').css('background-color', '#f3514c');
+      $('.badge').css('font-size', '1em');
+      $('.badge').css('line-height', '2.5em');
+      $('.badge').css('padding', '0 1em');
+      $('.badge').css('border-radius', '0');
+      $('.badge').css('font-weight', 'normal');
+      $('.background-container').css('min-width', '100%');
+    ##endif 
+
     // WIRE UP CI CODE TRACKING
     setupCiCodeTracking();
 
@@ -1033,7 +1045,6 @@ assetPath: false
 
     // SLIDER AREA
     activateSlides('#customer-slider');
-
   });
 
   function setPricing(selector) {

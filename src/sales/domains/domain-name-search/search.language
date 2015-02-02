@@ -15,10 +15,10 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2014-12-16
+      Modified Date:  2015-01-15
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCE-33861
-      Comments:       Merchandising Updates 12/23/2014
+      JIRA Ticket:    GCE-34816
+      Comments:       Merchandising Updates 01/15/2015 - sync for translations pickup
       
 
 
@@ -65,7 +65,7 @@ Why choose [@T[companyname:name]@T]?
 <phrase key="WhyGoDaddyMiscBannerTitle2" />
 What's included in the price of your domain:
 <phrase key="WhyGoDaddyMiscBannerText" />
-The right domain name can set you up for future success. With <strong>more than 58 million domains under management</strong>, we have more experience and expertise than anyone. Don't leave it to chance. Go with the world's largest registrar.
+The right domain name can set you up for future success. With <strong>more than 59 million domains under management</strong>, we have more experience and expertise than anyone. Don't leave it to chance. Go with the world's largest registrar.
 <phrase key="WhyGoDaddyMiscBannerListTitle0" />
 Trust
 <phrase key="WhyGoDaddyMiscBannerListTitle1" />
@@ -236,14 +236,18 @@ Inspire trust with a Certified Domain validation seal.
 Inspire trust with a Certified Domain validation seal.
 <phrase key="CertifiedRegistrationText1" />
 Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is something you can do to reassure them you&#39;re one of the good guys: Put a Certified Domain validation seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">View Sample Certification</a>.
+<phrase key="CertifiedRegistrationText1Rebrand" />
+Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is a way to tell them you're legit &mdash; by displaying a Certified Domain seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">See sample</a>.
 <phrase key="CertifiedRegistrationItem1" />
 To acquire Certified Domain accreditation, you must undergo a credentials check that confirms the contact information provided with your domain registration.
+<phrase key="CertifiedRegistrationItem1Rebrand" />
+A Certified Domain seal shows visitors you've passed Go Daddy's validation process and are the legal owner of the domain. They know that if you were a spammer, there's no way you'd pass the validation.
 <phrase key="CertifiedRegistrationItem2" />
 Once the credentials have been authenticated, [@T[companyname:name]@T] electronically issues a non-transferable Certified Domain seal that you can load to your website and WhoIs display. This process can generally be completed in 10 minutes, with the Certified Domain seal issued to your site within 1 business day.
 <phrase key="CertifiedRegistrationItem3" />
 The seal remains there until it expires or until a change in your domain contact information makes it necessary for you to reapply for accreditation.
 <phrase key="CertifiedRegistrationText2" />
-Certified Domains do not include encryption for site data and transactions. <span class="br"></span><a target="_blank" href="[@T[link:<relative path="/ssl/ssl-certificates.aspx"><param name="ci" value="80774" /></relative>]@T]">Learn more about SSL Certificates</a>
+Certified Domains do not include encryption for site data and transactions. <span class="br"></span><a target="_blank" href="[@T[link:<relative path="/ssl/ssl-certificates.aspx"><param name="ci" value="80774" /></relative>]@T]">See SSL Certificates</a>
 <phrase key="SalesCertifiedBtnText" />
 Search for Certified Domains
 <phrase key="MainPageContentTabContent1title1" />
@@ -273,13 +277,13 @@ Your identity is nobody's business but ours.<sup>&reg;</sup>
 <phrase key="MainPageContentTabContent1text11" />
 Domains By Proxy was launched in 2002 to address one of the biggest shortcomings of the Internet — loss of privacy. In fact, Domains By Proxy was the very first Internet WHOIS privacy service, and was created in direct response to consumer demand. Supported by a patented private registration process, Domains By Proxy believes that now, more than ever, you should be able to keep your personal contact information private when you register a domain name.
 <phrase key="DisclaimerContentSymbols" />
-<sup>*</sup>, <sup>***</sup>, <sup>&#134;</sup>, <sup>&#134;&#134;</sup>, <sup>+</sup>, <sup>++</sup>, <sup>^^</sup>, <sup>^^^</sup>, <sup>&#177;</sup> 
+<sup>*</sup>, <sup>***</sup>,  <sup>&#134;&#134;</sup>, <sup>++</sup>, <sup>^^</sup>, <sup>&#177;</sup>  
 <phrase key="DisclaimerContentLinkText" />
 Click here for product disclaimers and legal policies
 <phrase key="DisclaimerModalTitle" />
 Disclaimer
 <phrase key="DisclaimerModalListItem1" />
-<sup>*</sup> Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T]/yr.
+<sup>*</sup> Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T]/yr. Sale pricing for new domain registrations only, not for renewals or transfers.
 <phrase key="DisclaimerModalListItem2" />
 <sup>***</sup> Domains with bulk pricing do not qualify for additional promotional discounts.
 <phrase key="DisclaimerModalListItem3" />
@@ -367,7 +371,7 @@ The domain for entrepreneurs.
 <phrase key="PodDotVeText"/>
 .VE stands for Venezuela.
 <phrase key="PodDotInfoText"/>
-Share your info with the world.
+Share your <strong>.info</strong> with the world.
 <phrase key="PodDotEsText"/>
 All-purpose domain for sites aimed at Spanish-speakers.
 <phrase key="PodDotBrText"/>
@@ -624,20 +628,22 @@ Cater to millions with <strong>.berlin</strong>
 <strong>.site</strong>
 <phrase key="TldDotOnline" />
 <strong>.online</strong>
+<phrase key="TldDotCompany" />
+<strong>.company</strong>
 <phrase key="CarouselSlide1Default" />
-Get a web address that tells the world what you do. New domains available now: <strong>.attorney</strong>, <strong>.church</strong>, <strong>.club</strong>, <strong>.xyz</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do. New domains available now: <strong>.website</strong>, <strong>.business</strong>, <strong>.company</strong>, and <strong>.global</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.immo</strong>, <strong>.today</strong>, <strong>.guide</strong>, <strong>.club</strong> and <strong>.kaufen</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.auction</strong>, <strong>.software</strong>, <strong>.world</strong>, <strong>.website</strong>, and <strong>.immo</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1ES" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.digital</strong>, <strong>.tips</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.club</strong>, <strong>.today</strong>, <strong>.website</strong> and <strong>.global</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.club</strong>, <strong>.business</strong>, <strong>.website</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1MY" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1BR" />
-Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.website</strong>, <strong>.rocks</strong> and <strong>.lawyer</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.website</strong>, <strong>.rocks</strong> and <strong>.email</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1IN" />
 The buying stage was good, setup was easy and post-launch was smooth. I've called GoDaddy customer service once and had an excellent experience.
 <phrase key="CarouselSlide1CA" />
@@ -662,3 +668,144 @@ It's Go Time! Get online now with your own domain name. Save 50% and more on <a 
 SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
 <phrase key="CarouselSlide3IN" />
 [@T[companyname:name]@T] is not only a well-known name in the industry that understand your requirements, but they can also help you decide what's best suited for your needs.
+<phrase key="SalesHeaderMainHeadingRebrand" />
+START YOUR <h1>DOMAIN SEARCH</h1> NOW.
+<phrase key="SalesHeaderPlaceholderRebrand" />
+Type the one you want here
+<phrase key="SalesHeaderBtnTextRebrand" />
+SEARCH
+<phrase key="RegisterRebrand" />
+REGISTER
+<phrase key="WhyGoDaddyTabRebrand" />
+WHY [@T[companyname:name]@T]?
+<phrase key="DomainOptionsTabRebrand" />
+OPTIONS
+<phrase key="FaqTabRebrand" />
+QUESTIONS?
+<phrase key="WhyGoDaddyMiscBannerTitleRebrand" />
+WHY CHOOSE [@T[companyname:name]@T]?
+<phrase key="WhyGoDaddyMiscBannerTextRebrand" />
+With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure, comfy home online.
+<phrase key="WhyGoDaddyMiscBannerListTitle0Rebrand" />
+WORLD'S LARGEST REGISTRAR
+<phrase key="WhyGoDaddyMiscBannerListTitle1Rebrand" />
+WIDEST SELECTION ON THE WEB
+<phrase key="WhyGoDaddyMiscBannerListTitle2Rebrand" />
+AWARD&ndash;WINNING 24/7 SUPPORT
+<phrase key="WhyGoDaddyMiscBannerListText0Rebrand" />
+More people trust us than any other domain provider. Since the right domain name can set you up for future success, you don't want to mess around. Go with the world's largest registrar.
+<phrase key="WhyGoDaddyMiscBannerListText1Rebrand" />
+Every time you enter a name in our domain search box, our powerful engine searches the web's largest pool of names. There's no better place to find the right domain name for your business.
+<phrase key="WhyGoDaddyMiscBannerListText2Rebrand" />
+Stumped by. . .anything? Our smart, friendly domain experts are here to help. Call them day or night at [@T[supportphone:<technical />]@T].
+<phrase key="WhyGoDaddyListTitle0Rebrand" />
+<strong>NEW DOMAINS</strong>
+<phrase key="WhyGoDaddyListTitle01" />
+AVAILABLE:
+<phrase key="WhyGoDaddyListTitle1Rebrand" />
+<strong>NEW DOMAINS</strong>
+<phrase key="WhyGoDaddyListTitle11" />
+COMING SOON:
+<phrase key="PrivateProtectionTab" />
+PRIVACY PROTECTION
+<phrase key="ProtectedRegistrationTab" />
+BUSINESS PROTECTION
+<phrase key="CertifiedDomainsTab" />
+CERTIFIED DOMAINS
+<phrase key="PrivateRegistrationTitleRebrand" />
+KEEP YOUR PRIVATE DETAILS, UHH&hellip;PRIVATE.
+<phrase key="PrivateRegistrationSubTitleRebrand" />
+As soon as you register a domain with [@T[companyname:name]@T] or any other registrar, your personal information is displayed in a public directory. Hackers and spammers often use this to compile email lists and steal domains. Harsh, but true.
+
+<phrase key="PrivateRegistrationText1Rebrand" />
+When you add Privacy Protection to your domains:
+<phrase key="PrivateRegistrationItem1Rebrand" />
+We replace your name and contact details with our partner company's, Domains By Proxy. No one ever sees your name, address, email or phone number but us.
+<phrase key="PrivateRegistrationItem2Rebrand" />
+You still control your domains and all email addressed to them as well as the right to sell, renew or transfer them. Your domains are still 100% yours.
+<phrase key="PrivateRegistrationItem3Rebrand" />
+You may sleep better knowing your personal information isn't on display to the whole world.
+<phrase key="ProtectedRegistrationTitleRebrand" />
+KEEP YOUR DOMAIN LOCKED & IN YOUR NAME.
+<phrase key="ProtectedRegistrationSubTitle1Rebrand" />
+Let's say you forget to renew your domain. Or you change the email address on your GoDaddy account. This is all it takes for someone to step in and transfer your domain name away without your permission.
+<phrase key="ProtectedRegistrationSubTitleTwo" />
+But put Business Protection to work on your most important domain names and they'll be safe for up to 12 months. <br /><br />Business Protection:
+<phrase key="ProtectedRegistrationText1Rebrand" />
+Blocks both accidental and malicious domain transfers.
+<phrase key="ProtectedRegistrationText2Rebrand" />
+Keeps your personal details hidden from snoops and crooks.
+<phrase key="ProtectedRegistrationText3Rebrand" />
+Publishes an online business card so customers and partners can find you.
+<phrase key="CertifiedRegistrationTitleRebrand" />
+HELP VISITORS GET COMFORTABLE WITH A CERTIFIED DOMAIN SEAL.
+<phrase key="CarouselSlide1DefaultRebrand" />
+Finally! A web address that tells people exactly what you do. <br> <a data-ci="92815" href="[@T[link:<relative path="/tlds/website"></relative>]@T]"><span class="greenText">.website</span></a>, <a data-ci="95395" href="[@T[link:<relative path="/tlds/business"></relative>]@T]"><span class="greenText">.business</span></a>, <a data-ci="90324" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText">.company</span></a> and <a data-ci="90588" href="[@T[link:<relative path="/tlds/global"></relative>]@T]"><span class="greenText">.global</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
+<phrase key="CarouselSlide2DefaultRebrand" />
+30% OFF <br /><a data-ci="95443" href="[@T[link:<relative path="/tlds/global"></relative>]@T]"><span class="greenText"><strong>.global</strong></span></a>, <a data-ci="95442" href="[@T[link:<relative path="/tlds/email"></relative>]@T]"><span class="greenText"><strong>.email</strong></span></a>, <a data-ci="95440" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText"><strong>.club</strong></span></a>, <a data-ci="95444" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText"><strong>.guru</strong></span></a> and <a data-ci="95441" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText"><strong>.company</strong></span></a> now.
+<phrase key="CarouselSlide3USRebrand" />
+SAVE up to 50% when you get online with <a data-ci="95435" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><span class="greenText"><strong>.com</strong></span></a>, <a data-ci="95437" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><span class="greenText"><strong>.net</strong></span></a>, <a data-ci="95434" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><span class="greenText"><strong>.co</strong></span></a>, <a data-ci="95438" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><span class="greenText"><strong>.org</strong></span></a>, <a data-ci="95436" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><span class="greenText"><strong>.me</strong></span></a>, <a data-ci="95433" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><span class="greenText"><strong>.biz</strong></span></a> or <a data-ci="95439" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><span class="greenText"><strong>.us</strong></span></a>
+<phrase key="MainHeadingText" />
+CUSTOMERS ARE LOOKING FOR <span class="br"></span>YOU ONLINE - A DOMAIN SAYS<span class="br"></span> "HEY <span class="rebrand-dash">&mdash;&mdash;&mdash;</span> OVER HERE!"
+<phrase key="MainHeadingSubText1" />
+<span>12 million customers trust us</span> with their domains. They must know something.
+<phrase key="MainHeadingSubText2" />
+<span>Experts you can call 24/7</span> make building a business a little less lonely.
+<phrase key="MainHeadingSubText3" />
+<span>Low prices and a huge selection.</span> Who doesn't love that?
+<phrase key="MainHeadingPentagonText" />
+Save upto on popular domains
+<phrase key="MainHeadingPentagonPercent" />
+50%
+<phrase key="MainHeadingWhatDoYouGet" />
+SO WHAT ALL DO YOU GET?
+<phrase key="WhatDoYouGetPointer1" />
+Simple domain set up - no technical skills needed. Honest.
+<phrase key="WhatDoYouGetPointer2" />
+Quick, simple tools to forward your domains to any existing website.
+<phrase key="WhatDoYouGetPointer3" />
+Up to 100 subdomains (like pics@coolexample.com) to customize your site.
+<phrase key="WhatDoYouGetPointer4" />
+100 professional email aliases (like sales@coolexample.com).
+<phrase key="WhatDoYouGetPointer5" />
+Real-time monitoring to make sure you're always up and running.
+<phrase key="FourPodsAboveText" />
+HUNDREDS OF GREAT NEW DOMAINS JOIN .COM, .NET AND .ORG
+<phrase key="Was" />
+was
+<phrase key="FindTheDomain" />
+FIND THE DOMAIN THAT'S SPECIFIC TO YOU.
+<phrase key="SeeAllDomains" />
+See all our new domains
+<phrase key="MainBannerBadGuys" />
+KEEP THE BAD GUYS AWAY.
+<phrase key="MainBannerBadGuysDescription" />
+There are people on the web who are always trying to steal your domains and personal details. These optional services can help (you, not them).
+<phrase key="MainBannerQuestionAns" /> 
+YOUR QUESTIONS, OUR ANSWERS
+<phrase key="MainBannerQuestion1" /> 
+WHAT'S A DOMAIN NAME?
+<phrase key="MainBannerAnswer1" />
+<p>A website is the key to doing business around the world. But without a memorable web address - a.k.a. domain name - customers may have a hard time finding you or remembering how to get back to your site.</p><p>Finding the right name is as easy as doing a domain check at GoDaddy. Just enter the domain you want in the box at the top of this page and we'll let you know if it's available to be registered.</p><p>But GoDaddy isn't just about domain names. We've got everything you need to get online. From building your website to attracting new customers to securing their data when they make a purchase, GoDaddy has you covered.</p>
+<phrase key="MainBannerQuestion2" /> 
+HOW DO I SEARCH DOMAIN NAMES?
+<phrase key="MainBannerAnswer2" />
+Your domain name is arguably the most important part of your online presence and it all starts with a domain name search.<br /><br /><p>Within seconds we'll tell you not only if that name's available, but suggest others you might not have thought of - from standards like .com and .net to new domains like .club, .guru and many others.</p>  
+<phrase key="MainBannerQuestion3" />
+WHAT PAYMENT OPTIONS DO YOU OFFER?
+<phrase key="MainBannerAnswer3" /> 
+After seeing how easy it is to use our domain names search, you'll want a payment process that's just as simple. We accept all major credit cards, including VISA, MasterCard, Discover and American Express, as well as debit cards, PayPal&#174; and payment by check. Or you can use GoodAsGold, a payment system that allows you to fund your GoDaddy account via wire transfer or by mailing a check or money order. And if you're more of a phone person, feel free to call our customer care consultants at [@T[supportphone:<mcafee />]@T].
+<phrase key="MainBannerQuestion4" />
+WHAT IF I NEED HELP?
+<phrase key="MainBannerAnswer4" />
+Our award-winning customer care consultants are available via phone, email and the web 24/7/365. They're trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you're just getting started or already a pro, we've got answers.    
+<phrase key="MainBannerQuestion5" /> 
+WHY SHOULD I CHOOSE GODADDY?
+<phrase key="MainBannerAnswer5" />
+The right domain name can set you up for future success. With more than 59 million domains under management, we have more experience than anyone. Don't leave it to chance. Go with the world's largest registrar.  
+<phrase key="SeeAllQuestions" />
+SEE ALL QUESTIONS
+<phrase key="CustomerSupport"/>
+24/7 Customer Support for GoDaddy Users
+<phrase key="PerfectDomain"/>
+FIND YOUR PERFECT DOMAIN NAME.

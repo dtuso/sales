@@ -1,0 +1,104 @@
+---
+location: localization/sales/gd/expansion-pages/online-store/best-ecommerce-sites/en
+id: 54907121f778fc1cd843c6d1
+name: SEM-271
+---
+{% include '../../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Best eCommerce Sites | Add Products &amp; Options - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Learn what features make the best eCommerce sites and how you can start building yours today with [@T[companyname:name]@T]'s Online Store.
+<phrase key="og-title" />
+Best eCommerce Sites | Add Products &amp; Options - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Learn what features make the best eCommerce sites and how you can start building yours today with [@T[companyname:name]@T]'s Online Store.
+<phrase key="meta-keywords" />
+best ecommerce sites, best ecommerce platform, best ecommerce websites, best ecommerce software, best ecommerce website, best ecommerce website builder, best ecommerce design, best ecommerce site
+<phrase key="page-title-h1" />
+The Best eCommerce Sites for Adding Products
+<phrase key="view-plans-button-label" />
+View Product
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Online Store
+<phrase key="share-buttons" />
+google,facebook,twitter
+<phrase key="main-content" />
+Getting your business online doesn't have to be complicated. In fact, it absolutely shouldn't be! While venturing into the online world can seem overwhelming at times, there are plenty of tools that can help you make a relatively smooth transition to selling products online. An intuitive eCommerce website builder, like [@T[companyname:name]@T]'s Online Store, provides users with simple setup and design options. That means you can get your website up and running within a short amount of time.<br /><br />
+ 
+<b>No Technical Skills Required</b><br />
+The best eCommerce platforms do not make it difficult or overly complicated for you to get your company's products online. Nope. The best eCommerce software provides you with a simple setup process, so you can easily build your website from scratch and customize it according to your business needs. You shouldn't have to pay a high price for someone to make changes to your company's website. With [@T[companyname:name]@T]'s Online Store platform, you don't have to. Its intuitive design and built-in payment processing means you can get your online business up and running in a short amount of time.<br /><br />
+ 
+Follow the below steps to add or change products on your Online Store:<br /><br />
+ 
+<b>Create Product Options and Selections</b><br />
+<ol class="ep-ol-numbers-left-justify">
+  <li>Log in to your <a href="[@T[link:<external parammode='explicit' linktype='MYAURL' secure='true' path='/'><param name='ci' value='95239' /></external>]@T]">Account Manager</a>.</li>
+  <li>Under the <b>Products</b> list, click <b>Online Store</b>, then click <b>Launch</b> next to the appropriate account you want to use.</li>
+  <li>Under the <b>Products</b> tab, click <b>Products</b>.</li>
+  <li>Click the product for which you want to create options and click the <b>Inventory &amp; Options</b> tab.</li>
+  <li>In the <b>Options</b> section, click <b>Create options</b>.</li>
+  <li>Click the <b>Option</b> menu and type in your first option (for example Size or Color) and press Return/Enter. </li>
+  <li>To add more options, click <b>Add another option</b> and type in a second option. Each product can have up to three options.</li>
+  <li>For each option, you can add variations in the <b>Selections offered</b> field. Example: If you add an Option named "Size", you can enter the selections "Small, Medium, Large." Separate each variation with a comma or by hitting the Tab or Enter key. When you're done adding selections, press Return/Enter.</li>
+  <li>Repeat step 8 for any other options, as needed.</li>
+  <li>Once you've entered all your options and selections, click <b>OK</b> to close the window.</li>
+  <li>The main page for that product reappears with a table containing all its <b>Options</b> with each of their selections. Click inside the table to edit the <b>SKU</b>, <b>Price</b> or <b>Quantity</b>. If you no longer want to sell a specific Option and Selection combination, click the remove icon (⊖) at the of the row.</li>
+  <li>Click <b>Save</b>.</li>
+</ol>
+
+<b>NOTE</b>: You can add up to 250 option variations for each product. For example, a product that comes in three sizes, each in three colors, equals nine variations.<br /><br />
+ 
+<b>Change Product Options and Selections</b><br />
+<ol class="ep-ol-numbers-left-justify">
+  <li>After logging into your store, under the <b>Products</b> tab, click <b>Products</b>.</li>
+  <li>Click the product whose options you want to change then click the <b>Inventory &amp; Options</b> tab.</li>
+  <li>In the <b>Options</b> section:<br />
+    <ul>
+	  <li>Click <b>Remove all options</b>, which triggers an alert asking if you really want to remove every option for that product. If so, click <b>OK</b> and skip to the last step. OR,</li>
+	  <li>Click <b>Edit options</b> if you want to add or change the product's options. Continue to Step 4.</li>
+	</ul>
+  </li>
+  <li>Under <b>Edit options for this product</b>, you can:<br />
+    <ul>
+	  <li>Delete a product <b>Option</b>, such as <b>Size</b>, by clicking ⊖ (minus sign) at the far right of that option.</li>
+      <li>Delete one or more of the <b>Selections offered</b> for a product option, by clicking the <b>x</b> after each selection item.</li>
+	  <li>Rearrange the order of selections by clicking and dragging a selection within its field.</li>
+	</ul>
+  <li>Click <b>Save</b> at the bottom to apply your changes.</li>
+</ol>
+ 
+<b>Award-Winning Support</b><br />
+Even with the best eCommerce website builder, you're still going to have questions sometimes. That's why [@T[companyname:name]@T]'s Online Store gives you easy access to our award-winning support team. Our experienced customer service representatives are available 24 hours a day, 7 days a week to answer your questions and help you keep your online business running smoothly all year long.<br /><br />
+ 
+<b>Get Started &amp; Get Online</b><br />
+As a small business owner, you've got a lot on your plate. You can't waste time trying to figure out a complicated website builder. You can't afford to spend thousands of dollars on a site that's hard to update and manage. Don't waste your time. Don't waste your money. Don't get frustrated. Just get started and get the best eCommerce site possible by using [@T[companyname:name]@T]'s Online Store platform. Our customer support team will be available to help at any step along the way, so you can quickly get your website up and running, allowing you to make your store offerings available to the growing number of online shoppers.<br /><br />
+ 
+Get the best eCommerce website for your company. Sign up today for [@T[companyname:name]@T]'s Online Store and start growing and running your business more effectively.
+<phrase key="see-all-faqs-button-label" />
+See All Online Store FAQs
+<phrase key="choose-your-product-package-label" />
+Learn more about Online Store Free Trial
+<phrase key="top-3-faqs-title" />
+Top Three Related FAQs
+<phrase key="top-3-faqs-1" />
+Selling Products Online
+<phrase key="top-3-faqs-2" />
+Creating Your Storefront
+<phrase key="top-3-faqs-3" />
+Import Products Spreadsheet
+<phrase key="other-resources-title" />
+Other Resources
+<phrase key="other-resources-1" />
+Domains
+<phrase key="other-resources-2" />
+Website Builder
+<phrase key="other-resources-3" />
+Online Store
+<phrase key="other-resources-4" />
+Get Found Tool
+<phrase key="other-resources-5" />
+24/7 Support
+<phrase key="green-box-title" />
+Need help?
+<phrase key="green-box-text" />
+Call anytime. Our free, award-winning support is here day and night.

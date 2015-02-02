@@ -1,0 +1,65 @@
+---
+location: localization/sales/gd/expansion-pages/website-builder/build-a-website/en
+id: 546661adf778fc1a109d40b0
+name: SEM-262
+---
+{% include '../../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Build a Website | A Platform for Your Needs - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Build a website using an online website builder program to achieve great results at an affordable price. Learn more.
+<phrase key="og-title" />
+Build a Website | A Platform for Your Needs - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Build a website using an online website builder program to achieve great results at an affordable price. Learn more.
+<phrase key="meta-keywords" />
+build a wedding website, build a site, build a website online, build a professional website, build a web site, build a website from scratch, build a mobile website, build a business website, build a photography website, build a church website, build a website software, build a simple website, build a ecommerce website
+<phrase key="page-title-h1" />
+Build a Website
+<phrase key="view-plans-button-label" />
+View Plans
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Website Builder
+<phrase key="main-content" comment="{0} will be replaced with a price amount" />
+When you build a website, you make your business or your non-profit org accessible to a much larger audience. If you're a business, perhaps you want this audience to make purchases from your website. If you're a non-profit, maybe you're just seeking to raise awareness or generate donations. The key to get your online audience to interact with your website is to build a site that makes it easy for users to browse, complete their purchases, make their donation, etc. Websites that are confusing will simply frustrate users, driving them away before they complete a transaction.<br /><br />
+
+If you want to get a website online, using a tool like [@T[companyname:name]@T]'s Website Builder can help you get the ball rolling. Website builders provide you access to a large repository of website templates. These templates are easily customizable to reflect your business or organization, but they still provide you with the structural design that keeps your website user-friendly — no matter how much you may change things up.<br /><br />
+
+<b>Keep Things Simple</b><br />
+Sometimes, the best websites are the simple ones that don't make users guess what to do or click next. While it can be easy to overload a website with different features, keeping things simple can help ensure that your users can get from point A to point B without getting frustrated. Always try to see things from the user's standpoint, particularly if you're trying to build an eCommerce website. Don't include something on your website just because it looks cool. Be conscientious about making the best design choice for the end user. Have friends or family members test drive your website to see if it's easy to complete the desired action. Consider their feedback when making your website more user-friendly.<br /><br />
+
+<b>A Slew of Options</b><br />
+When you use a website builder platform to create your site, you'll often find specific templates created for your industry, from photographers to churches and everything in-between. However, just because you are using a template does not mean you'll end up with cookie-cutter results. You can change images, colors, fonts and more, so you can build a website that reflects the heart and soul of your business or organization. The templates just provide you with the springboard for getting your ideas off the ground.<br /><br />
+
+<b>No Technical Skills Required</b><br />
+If you're ready to get a website online, test drive [@T[companyname:name]@T]'s Website Builder. It features intuitive design tools, so you don't need any technical skills to get started. Plus, if you ever get stuck, you have access to our award-winning support team. They're available to help you around the clock – 24 hours a day, 7 days a week.<br /><br />
+
+Sign up today to get started.
+<phrase key="see-all-faqs-button-label" />
+See All Website Builder FAQs
+<phrase key="choose-your-product-package-label" />
+Choose Your Website Builder Package
+<phrase key="top-3-faqs-title" />
+Top Three Related FAQs
+<phrase key="top-3-faqs-1" />
+Change Your Template
+<phrase key="top-3-faqs-2" />
+Add Sitemap File
+<phrase key="top-3-faqs-3" />
+Backup &amp; Restore
+<phrase key="other-resources-title" />
+Other Resources
+<phrase key="other-resources-1" />
+Domains
+<phrase key="other-resources-2" />
+Website Builder
+<phrase key="other-resources-3" />
+Online Store
+<phrase key="other-resources-4" />
+Get Found Tool
+<phrase key="other-resources-5" />
+24/7 Support
+<phrase key="green-box-title" />
+Need help?
+<phrase key="green-box-text" />
+Call anytime. Our free, award-winning support is here day and night.
