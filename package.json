@@ -14,11 +14,11 @@
     "core-util-is": "^1.0.1",
     "event-stream": "^3.1.5",
     "front-matter": "^0.2.0",
-    "gulp": "^3.6.0",
+    "gulp": ">=3.6.0",
     "gulp-cdsm": "git+ssh://git@github.secureserver.net:mrobinson/gulp-cdsm.git",
     "gulp-changed": "^1.0.0",
     "gulp-concat": "^2.2.0",
-    "gulp-data": ">=1.0.0",
+    "gulp-data": ">=1.0.2",
     "gulp-debug": "~0.3.0",
     "gulp-ext-replace": "^0.1.0",
     "gulp-front-matter": "^1.0.0",
@@ -34,21 +34,21 @@
     "iniparser": "^1.0.5",
     "isarray": "0.0.1",
     "less": "^1.7.3",
-    "lodash": "^2.4.1",
+    "lodash": "2.4.1",
     "minimist": "0.0.8",
-    "mkdirp": "^0.5.0",
-    "moment": "^2.6.0",
-    "object-keys": "^0.5.1",
-    "prompt": "^0.2.13",
-    "readable-stream": "^1.0.27-1",
-    "request": "^2.34.0",
-    "rimraf": "^2.2.6",
-    "uglify-js": "^2.4.13",
-    "underscore": "^1.7.0",
-    "username": "^0.1.1"
+    "mkdirp": "0.5.0",
+    "moment": "2.6.0",
+    "object-keys": "0.5.1",
+    "prompt": "0.2.14",
+    "readable-stream": "1.0.27-1",
+    "request": "2.49.0",
+    "rimraf": "2.2.8",
+    "uglify-js": "2.4.15",
+    "underscore": "1.7.0",
+    "username": "1.0.0"
   },
   "devDependencies": {
     "underscore-deep-extend": "0.0.5",
-    "vinyl": "~0.2.3"
+    "vinyl": "0.4.6"
   }
 }

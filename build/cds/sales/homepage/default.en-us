@@ -262,13 +262,10 @@
         </div>
       </div>
     </section>
-    <section id="marquee">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-md-9">
-            <div class="hero-wrapper">
-              <atlantis:webstash type="css">
-                <style>#marquee {
+    <atlantis:webstash type="css">
+      <style>#marquee {
+  font-size: 16px;
+  cursor: pointer;
   background-color: #f3f3f4;
   overflow-y: hidden;
 }
@@ -285,165 +282,96 @@
   line-height: 50%;
 }
 #marquee .headline-wrapper {
-  margin-top: 40px;
+  margin-top: 1em;
   line-height: 1;
 }
 #marquee .promo-wrapper {
   color: #77c043;
 }
-#marquee .price {
-  color: #ff8a00;
-}
-#marquee .btn-purchase {
-  min-width: 40%;
-}
-#marquee .price-wrapper .bigtext {
-  width: 60%;
-}
 #marquee .disclaimer {
   font-size: 0.6em;
+  margin-bottom: 2%;
 }
 #marquee .hero-wrapper > .row img {
   margin: 0 auto;
   display: block;
 }
-@media only screen and (min-width: 1200px) {
-  #marquee .btn-purchase {
-    margin-top: 40px;
-    float: right;
-  }
-  #marquee .price-wrapper .bigtext {
-    width: 100%;
-  }
-  #marquee .disclaimer {
-    text-align: right;
-  }
+#marquee .dash {
+  letter-spacing: -0.3em;
 }
-@media (min-width: 992px) {
-  #marquee .hero-wrapper > .row img {
-    width: 90%;
-  }
-  .disclaimer {
-    margin-bottom: 0px;
-  }
+#marquee button.btn-purchase {
+  margin: 3% 0;
 }
-@media (min-width: 768px) {
-  #marquee .hero-wrapper > .row {
-    max-height: 315px;
-  }
-  #marquee .hero-wrapper > .row img {
-    width: 100%;
-  }
-  .disclaimer {
-    margin-bottom: 20px;
-  }
-  .price-text {
-    font-size: 1.2rem;
-  }
+#marquee .line1,
+#marquee .line2 {
+  color: #008b2d;
 }
-
-                </style>
-              </atlantis:webstash>
-              <div class="row">
-                <div class="col-xs-12 col-sm-6">
-                  <div class="headline-wrapper">
-                    <div style="width:100%" class="bigtext">
-                      <div class="line walsheim-black">WOOK AT THE PUPPY!</div>
-                      <div class="line tungsten">NOW STOP WOOKING AT THE PUPPY</div>
-                      <div class="line walsheim-black"><span class='inline-dash'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> AND WOOK AT THIS OFFER</div>
-                    </div>
-                  </div>
-                  <div class="promo-wrapper">
-                    <div style="width:100%" class="bigtext">
-                      <div class="walsheim-black">DOMAIN + WEBSITE + EMAIL</div>
-                    </div>
-                  </div>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-6 col-sm-12">
-                        <div class="price-wrapper">
-                          <div class="price-text walsheim-black">ALL STARTING AT JUST</div>
-                          <div style="display: inline-block;" class="bigtext"><span class="price walsheim-black">$1.00/MO</span></div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6 col-sm-12">     <a data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]" class="btn btn-purchase">Get Started</a></div>
-                    </div>
-                  </div>
-                  <div class="disclaimer">First year only. Other restrictions apply.</div>
-                </div>
-                <div class="col-xs-12 col-sm-5"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-buddy.jpg"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="tile-wrapper">
-              <atlantis:webstash type="css">
-                <style>#marquee .tile-wrapper {
-  margin-top: 0;
+#marquee .chips {
+  max-height: 219px;
+  height: 100%;
 }
-#marquee .tile.puppy {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 22px;
-  font-size: 16px;
-  position: relative;
-  overflow: hidden;
-}
-#marquee .tile.puppy h3 {
-  font-size: 1.5em;
-  margin: 0;
-  padding: 10px 0;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-}
-#marquee .tile.puppy p {
-  font-size: 1em;
-  font-family: 'Walsheim-Regular', 'Arial', sans-serif;
-}
-#marquee .tile.puppy a {
-  font-size: 1.3em;
-  color: #77c043;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+#marquee .line1,
+#marquee .line2 {
   font-size: 1.2em;
 }
-#marquee .tile.puppy img.nascar {
-  height: 80px;
-  float: right;
-  margin-top: 20px;
+#marquee .line3 {
+  font-size: 1.67em;
 }
-#marquee .tile.puppy img.mask {
-  display: none;
+#marquee .line5 {
+  font-size: 2.7em;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
-  #marquee .tile.puppy {
-    min-height: 294px;
+@media only screen and (min-width: 401px) {
+  #marquee {
+    font-size: 29px;
   }
 }
-@media (min-width: 1200px) {
-  #marquee .tile.puppy {
-    padding: 10px 30px 46px 40px;
-    margin-left: -40px;
-    font-size: 14px;
+@media only screen and (min-width: 768px) {
+  #marquee {
+    font-size: 16px;
   }
-  img.mask {
-    display: block !important;
-    position: absolute;
-    right: 0;
-    top: 0;
+  #marquee .headline-wrapper {
+    margin-top: 2.4em;
   }
-  img.nascar {
-    margin-right: -70px;
+  #marquee .chips {
+    max-height: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee {
+    font-size: 20px;
+  }
+  #marquee .image {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #marquee {
+    font-size: 24px;
+  }
+  #marquee .image {
+    padding-left: 6%;
+    padding-right: 6%;
   }
 }
 
-                </style>
-              </atlantis:webstash>
-              <div class="tile puppy"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzEzIiBoZWlnaHQ9IjE4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMCAwLDUwIDE1LDAiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjAsMTc0IDAsNTAgMjUsMTU4IDE0MCwxNzQiLz4NCiAgPHBvbHlnb24gc3Ryb2tlPSIjZjNmM2Y0IiBmaWxsPSIjZjNmM2Y0IiBwb2ludHM9IjMxMywxNzQgMTQwLDE3NCAyODAsMTQwIDMxMywwIi8+DQo8L3N2Zz4=" class="mask"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar_360.png" class="nascar">
-                <h3>Enter to Win</h3>
-                <p>Your pup could be on the GoDaddy race car!</p><a>Submit Your Pup</a>
-              </div>
+      </style>
+    </atlantis:webstash>
+    <section id="marquee" data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]">
+      <!--remove rems-->
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-5 image"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyNy42IDE0MSAzMDIuNCAzMTUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMjcuNiAxNDEgMzAyLjQgMzE1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMzE1LDQxMy40IDMwMi45LDQyMS4zIDI1Ny42LDQyNy4zIDE1Mi45LDQwOC4zIDEzMi41LDQwNi42IDEyNy41LDM5OC41IDE1OS4xLDQwMS4zIDI1NC4yLDQxOS45IA0KCTI5Mi45LDQxNi4xICIvPg0KPHBhdGggZmlsbD0iIzAwOEEzMiIgZD0iTTMxMC4xLDQwOC41TDI3Ni40LDM5M2wtMzUuMi0zLjFsLTI4LjktNi4xYzAsMC0yMy41LTAuOC0yNy42LTEuN2MtNC4xLTAuOS0yOS44LDMuMy0yOS44LDMuM2wtMzIuNCw2LjQNCglsMjQtMWwyOS4yLTAuNWwxNi41LTEuNmwyMC45LDEuOGwyOS4xLDUuNmwyOS41LDIuNkwzMTAuMSw0MDguNXoiLz4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMTM4LjcsNDU2IDI5NS4yLDQ1NiAzMDMuMiw0MjguOSAyNTEuNyw0MzAuNCAyMDMuOCw0MjEuNCAxNTIuNCw0MTIgMTMxLjgsNDE1LjEgMTM1LjQsNDMzLjIgIi8+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI4Mi40LDM3Ni43IDIzNC44LDMxOSAyMDUsNDA4ICIvPg0KPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIzMDUuMSwyNDcuMyAzMDQuOCwyNDcuMiAzMDQuNywyNDcgMzA0LjYsMjQ3IDI1Ny43LDIyOS4yIDI5MS44LDIyNS44IDMxMS4zLDIyOSAzMjEuNywyMjcuMiANCgkzMjAuNywyMTguOCAyOTQuNCwyMTAuOSAyNjMuNywyMDguNyAyNzAuOCwyMDEuNSAyODEuNiwxOTQuOSAyODYuOSwxODguNiAyODIuNywxODQuMSAyNjkuNCwxODkgMjQ5LjUsMTk3LjUgMTYxLjgsMjA3LjggDQoJMTMzLjEsMTQxIDI3LjYsMTQxIDg0LjYsMjExLjMgMTI3LjUsMjY0LjcgMTY4LjMsMzA1LjQgMTcxLjgsMzA3LjkgMjA3LjEsMzIyLjggMjIyLjEsMzQwLjEgMjI2LjcsMzM2LjMgMjI5LjEsMzI1IDIxMi45LDMwNC41IA0KCTIwMC4yLDI4OS42IDIwMC40LDI4OS40IDIwOS43LDI3NS42IDIyNy4xLDI2OSAyNTYuOCwyODguMyAyNDQuNiwzMTMuOSAyNDUuNSwzMjQuMiAyNDkuNiwzMjguNSAyNzkuMiwyODQuMiAyNzcuMiwyNzIuNiANCgkyNTIuMiwyNTIuOSAyOTQuMSwyNjMuMyAzMTMuNiwyNzUuNiAzMjYuMSwyNzguMyAzMzAsMjcxLjcgMzA1LjEsMjQ3LjQgIi8+DQo8cGF0aCBmaWxsPSIjMDA4QTMyIiBkPSJNMjc4LjIsNDU2YzIuMy04LjgsNC4zLTE2LjEsNC4zLTE2LjFsLTQxLjcsNi42bC04NS4yLTE3LjhsMTAuMiwyNy4zSDI3OC4yeiIvPg0KPC9zdmc+DQo=" class="svgfallback chips"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-nacho.png"><![endif]--></div>
+          <div class="col-xs-12 col-sm-7">
+            <div class="headline-wrapper walsheim-black">
+              <div class="line1">TO BUSINESS OWNERS, WE RAISE </div>
+              <div class="line2"><span>A CHIP AND DROP&nbsp;</span><span class="dash"> ———— </span><span>&nbsp; OUR PRICES.</span></div>
+              <div class="line3">DOMAIN + WEBSITE + EMAIL</div>
+              <div class="line4">ALL STARTING AT JUST</div>
+              <div class="line5 price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO</div>
+              <button data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]" class="btn btn-purchase">GET STARTED</button>
             </div>
+            <div class="disclaimer">First year only. Annual purchase required.</div>
           </div>
         </div>
       </div>
@@ -545,13 +473,48 @@
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>
-        #puppy-promo{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/buddy-video.jpg);background-size:cover;}
-        div.video-marquee{background-color:transparent}
+      <style>#nacho-promo {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nacho-video.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -1200px 0;
+}
+@media only screen and (min-width: 480px) {
+  #nacho-promo {
+    background-position: -950px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #nacho-promo {
+    background-position: -700px 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #nacho-promo {
+    background-position: -450px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #nacho-promo {
+    background-position: -200px 0;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  #nacho-promo {
+    background-position: 0 0;
+  }
+}
+.Explorer8 #nacho-promo {
+  background-position: 0 0;
+}
+div.video-marquee {
+  background-color: transparent;
+}
+
       </style>
     </atlantis:webstash>
     <atlantis:webstash type="script"></atlantis:webstash>
-    <section id="puppy-promo">
+    <section id="nacho-promo">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -641,7 +604,7 @@ text-transform: uppercase;
                     };
                   }
                   
-                  var $containers = $('[data-tile="buddyVideo"]');
+                  var $containers = $('[data-tile="NachoVideo"]');
                   $containers.each(function(){
                     var $this = $(this);
                     var videoId = $this.data('youtube-id');
@@ -670,11 +633,11 @@ text-transform: uppercase;
                 });
               </script>
             </atlantis:webstash>
-            <div style="" data-lazyload-source="" data-icode="code" data-ci="" data-tile="buddyVideo" data-youtube-id="X2AHrCtOHqc" class=" video-marquee video-marquee-white full-video">
+            <div style="" data-lazyload-source="" data-icode="code" data-ci="" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
               <div class="container relative-position video-info">
                 <div class="row">
                   <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
-                    <h3 class="h1">Will Buddy find his way home?</h3><span class="cta">WATCH VIDEO</span>
+                    <h3 class="h1">[@L[cds.sales/homepage/sections/_nacho-full-video:tagline]@L]</h3><span class="cta">[@L[cds.sales/homepage/sections/_nacho-full-video:cta]@L]</span>
                   </div>
                 </div>
               </div>
@@ -684,119 +647,43 @@ text-transform: uppercase;
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>#danica-puppy-promo {
-  background-color: #f3f3f4;
+      <style>#nascar-contest {
+  background: #fff center center;
+  background-size: cover;
 }
-#danica-puppy-promo h2 {
-  font-size: 3rem;
+#nascar-contest h2 {
+  margin: 80px 0 0;
 }
-#danica-puppy-promo h3 {
-  margin: 0;
-  font-size: 2.0rem;
+#nascar-contest h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
 }
-#danica-puppy-promo img {
-  width: 100%;
-}
-#danica-puppy-promo #danica-puppy-play-button {
-  content: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png);
-  margin-bottom: 50px;
-}
-@media only screen and (min-width: 480px) {
-  #danica-puppy-promo h2 {
-    width: 100%;
-  }
-  #danica-puppy-promo h3 {
-    margin-top: 10px;
+@media only screen and (max-width: 680px) {
+  #nascar-contest h3 {
+    width: 180px;
   }
 }
-@media only screen and (min-width: 768px) {
-  #danica-puppy-promo {
-    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-buddy.jpg) top center no-repeat;
-    background-size: cover;
-  }
-  #danica-puppy-promo h2 {
-    width: 75%;
-  }
-  #danica-puppy-promo h3 {
-    margin: 25px 10px 0 -40px;
-    font-size: 1.6rem;
-  }
-  #danica-puppy-promo #danica-puppy-play-button {
-    width: 65%;
+#nascar-contest a {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1400px) {
+  #nascar-contest a {
+    margin-bottom: 100px;
   }
 }
-@media only screen and (min-width: 992px) {
-  #danica-puppy-promo h2 {
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #danica-puppy-promo h3 {
-    margin-top: 40px;
-  }
+#nascar-contest .nascar-contest-btn {
+  font-size: 1.4rem;
 }
 
       </style>
     </atlantis:webstash>
-    <section id="danica-puppy-promo">
+    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg" class="lazyload">
       <div class="container">
         <div class="row">
-          <div class="col-md-5 col-sm-8 col-xs-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <h2 class="walsheim-black">Adopt your own buddy.</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 col-sm-3 col-xs-2">
-                  <atlantis:webstash type="js">
-                    <script>
-                      $(document).ready(function(){
-                        
-                        var $overlay = $("#danica-puppy-promo-video").find(".videoWrapperInModal");
-                      
-                        // attach modal popup to click event
-                        $('#danica-puppy-play-button').on('click', function(){
-                          $overlay.sfMsgOverlay({ message: "[@L[cds.sales/gd/tlds/gtld:loading]@L]" });
-                          $("#danica-puppy-promo-video").sfDialog({titleHidden:true, dialogWidthIdeal:840, destroyOnClose:true, buttons: []});
-                        });
-                      
-                        // close the overlay when iframe loads
-                        $("#danica-puppy-promo-video").find("iframe").load(function(){
-                          
-                          $overlay.sfMsgOverlay({ message: null });
-                        });
-                      
-                      });
-                      
-                    </script>
-                  </atlantis:webstash>
-                  <atlantis:webstash type="css">
-                    <style>
-                      .video-modal {display: none;}
-                      .videoWrapperInModal {position:relative;padding-bottom: 56.25%; /* 16:9 */padding-top:25px;height:0;}
-                      .videoWrapperInModal iframe {position:absolute;top:0;left:0;width:100%;height:100%;}
-                      img.video-play-icon {margin-right:10px;vertical-align:top;}
-                      .video-modal-img-as-button {cursor: pointer;}
-                      .video-iframe-underlay {position: absolute;z-index:1;top:150px;width:100%;}
-                      .video-iframe-underlay  h2 {text-align:center;}
-                      
-                    </style>
-                  </atlantis:webstash><img id="danica-puppy-play-button" data-ci="" class="video-modal-img-as-button"/>
-                  <div id="danica-puppy-promo-video" class="sf-dialog video-modal">
-                    <div class="videoWrapperInModal">
-                      <iframe width="640" height="390" src="//www.youtube.com/embed/JT1JB2brDgA?html5=1&amp;rel=0&amp;iv_load_policy=3&amp;modestbranding=1" autoplay="autoplay" scrolling="no" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-8 col-sm-4 col-xs-3">
-                  <h3 class="walsheim-bold">WATCH VIDEO</h3>
-                </div>
-              </div>
-            </div>
+          <div class="col-sm-6 col-offset-sm-6">
+            <h2 class="walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
+            <h3 class="walsheim-regular">[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
           </div>
-          <div class="col-md-7 col-sm-0 col-xs-9"></div>
         </div>
       </div>
     </section>
@@ -848,14 +735,14 @@ text-transform: uppercase;
       </style>
     </atlantis:webstash>
     <section id="domain-promo" class="bg-green-official">
-      <h2 class="text-center walsheim-black">It All Starts With A Domain Name.</h2>
+      <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
       <div class="domain-promo-content">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text text-white">
-              <h3 class="walsheim-black">Find Your<br />Perfect Name</h3>
-              <div>From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.org</strong> to new domain names like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">Get Started</a>
-              <p class="customer-website"><b>Candis Jones</b>, Business Owner & GoDaddy Customer, <span>TheJonesMarket.com</span></p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]</h3>
+              <div>[@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]</a>
+              <p class="customer-website">[@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]</p>
             </div>
           </div>
         </div>
@@ -891,87 +778,25 @@ text-transform: uppercase;
     </atlantis:webstash>
     <section id="why-godaddy">
       <div class="container">
-        <h2 class="text-center walsheim-black">Why get online with us?</h2>
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]</h2>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">World's Leading<br />Domain Registrar</h3>
-              <p>With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.</p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">More Names<br />at Better Prices</h3>
-              <p>We have 100s of domains to choose from, not to mention prices that other companies only dream about.  </p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
-              <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <atlantis:webstash type="css">
-      <style>#o365-promo {
-  padding-bottom: 105px;
-}
-#o365-promo h2 {
-  font-size: 4.5rem;
-}
-#o365-promo h3 {
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-#o365-promo .o365-promo-text p {
-  max-width: 420px;
-}
-#o365-promo .promo-flag {
-  color: #000;
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  line-height: 1;
-  background-size: cover;
-  overflow: visible;
-  position: absolute;
-  margin-top: 100px;
-  right: 50px;
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
-}
-.Explorer8 #o365-promo .promo-flag {
-  background-color: #fedc45;
-}
-.o365-promo-text ul {
-  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
-  margin: 0 0 20px -12px;
-}
-.o365-promo-image {
-  padding-top: 115px;
-  width: 140%;
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="o365-promo">
-      <div class="container">
-        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
-        <div class="row">
-          <div class="col-sm-6 o365-promo-text">
-            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
-            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
-            <ul>
-              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
-              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
-              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
-            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
-          </div>
-          <div class="col-sm-6">
-            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -1312,7 +1137,7 @@ text-transform: uppercase;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="h0 text-center two-up-title">Get Your Website Online Today.</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]</h2>
               </div>
             </div>
           </div>
@@ -1323,15 +1148,15 @@ text-transform: uppercase;
               <div class="col-md-5 or-container-none col-sm-6  bg-gray-darkest">
                 <div style="" class="two-up-text-wrap white-text">
                   <div class="two-up-speech-shape two-up-speech-shape-gold">
-                    <div class="shape-text">WEBSITE BUILDER</div>
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]</div>
                   </div>
-                  <h2 class="h0"><br />No Time?<br />No Problem.</h2>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
-                        <li>Start with your choice of 100s of professional designs.</li>
-                        <li>Customize it with our simple drag-&-drop tools.</li>
-                        <li>Put your beautiful new site online with free hosting.</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]</li>
                       </ul><a data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]" class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
                     </div>
                   </div>
@@ -1340,15 +1165,15 @@ text-transform: uppercase;
               <div class="col-md-5 col-md-offset-2 col-sm-6  gb-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="two-up-speech-shape two-up-speech-shape-gold">
-                    <div class="shape-text">WEB HOSTING</div>
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]</div>
                   </div>
-                  <h2 class="h0">Already<br />Have a Site?<br />Host it with us.</h2>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
-                        <li>Industry-leading page load times.</li>
-                        <li>Powered by cPanel&reg; or Parallels&reg; Plesk</li>
-                        <li>Guaranteed 99.9% uptime + 24/7 support</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]</li>
                       </ul><a data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]" class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
                     </div>
                   </div>
@@ -1360,60 +1185,63 @@ text-transform: uppercase;
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>#new-customers-promo {
-  background-color: #e8e8e8;
+      <style>#o365-promo {
+  padding-bottom: 105px;
 }
-#new-customers-promo h2 {
-  margin: 30px 0 25px;
+#o365-promo h2 {
+  font-size: 4.5rem;
 }
-#new-customers-promo p.text-center {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+#o365-promo h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
 }
-#new-customers-promo .new-customers-get-found img {
-  height: 132px;
+#o365-promo .o365-promo-text p {
+  max-width: 420px;
 }
-#new-customers-promo .new-customers-ssl img {
-  height: 132px;
+#o365-promo .promo-flag {
+  color: #000;
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  background-size: cover;
+  overflow: visible;
+  position: absolute;
+  margin-top: 100px;
+  right: 50px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
 }
-.new-customers-gd-pro img {
-  width: 42%;
-}
-h2.two-up-title {
-  margin: 20px 0;
-}
-.two-up-speech-shape.two-up-speech-shape-gold,
-.two-up-speech-shape.two-up-speech-shape-gold:after {
+.Explorer8 #o365-promo .promo-flag {
   background-color: #fedc45;
 }
-.two-up-speech-shape.two-up-speech-shape-gold:before {
-  border-top-color: #fedc45;
+.o365-promo-text ul {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
+  margin: 0 0 20px -12px;
+}
+.o365-promo-image {
+  padding-top: 115px;
+  width: 140%;
 }
 
       </style>
     </atlantis:webstash>
-    <section id="new-customers-promo" class="bg-gray-lighter">
+    <section id="o365-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black">Find And Keep<br />New Customers</h2>
-        <p class="text-center walsheim-bold">Online or off, we can help your business</p>
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:header-text]@L]</h2>
         <div class="row">
-          <div class="col-sm-4">
-            <div class="feature new-customers-get-found"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Get Found Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">Get Found</h3>
-              <p>You don't need to be online to put the web to work for you. Get Found lets you list your business on the web's most popular sites - Google, Yelp, Foursquare and more - all from one place.</p><a data-url="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95784' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
+          <div class="col-sm-6 o365-promo-text">
+            <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:sub-header-text]@L]</h3>
+            <p>[@L[cds.sales/homepage/sections/_o365-promo:body-text]@L]</p>
+            <ul>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line1]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line2]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line3]@L]</li>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
           </div>
-          <div class="col-sm-4">
-            <div class="feature new-customers-ssl"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="SSL Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">SSL Certificates</h3>
-              <p>If customers don't feel safe on your site, they won't buy from you. An SSL Certificate encrypts sensitive data like credit cards and passwords so your customers (and your reputation) are secure.</p><a data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95785' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="feature new-customers-gd-pro"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Pro Logo" class="lazyload svgfallback"/>
-              <h3 class="walsheim-bold">GoDaddy Pro</h3>
-              <p>If you can code a website in your sleep and provision servers for fun, head over to GoDaddy Pro to see the big guns like VPS and dedicated servers.</p><a data-url="[@T[link:<relative path='/pro'><param name='ci' value='95783' /></relative>]@T]" class="btn btn-default-dark walsheim-black">Learn More</a>
-            </div>
+          <div class="col-sm-6">
+            <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -1461,17 +1289,17 @@ h2.two-up-title {
     </atlantis:webstash>
     <section id="support-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black text-white">We're Always Here To Help.</h2>
+        <h2 class="text-center walsheim-black text-white">[@L[cds.sales/homepage/sections/_support-promo:header-text]@L]</h2>
         <div class="row">
           <div class="col-xs-6 text-center"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload support-promo-img"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload svgfallback support-promo-img"/>
           </div>
           <div class="col-xs-6">
             <div class="support-promo-text text-white">
-              <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
-              <p>We make it easy to get online, but if you do need help or just wanna talk to someone, our online experts are available 24/7/365.</p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_support-promo:body-text]@L]</p>
               <div class="container">
                 <div class="row">
-                  <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">Learn More</a></div>
+                  <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]</a></div>
                   <div class="col-md-8 col-xs-12">
                     <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
                   </div>

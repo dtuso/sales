@@ -1,0 +1,119 @@
+---
+location: sales/ecommerce/online-store/best-ecommerce-sites
+id: 54b9a503f778fc23d002939c
+name: SEM-271
+comments: Expansion Pages - Best eCommerce Sites
+cssVersionOverride: 2
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+{% parent %}
+  <style type="text/css">
+    #gdep .icon-container div, #gdep .image-container div {
+      background-image: url([@T[link:<imageroot/>]@T]fos/sales/themes/scotty/expansion-pages/img/ep_online_store_sprite.png);
+    }
+    #gdep .ep-product-icon {
+      background: no-repeat -126px 0;
+      width: 97px;
+      height: 107px;
+      margin: 0 auto;
+    }
+  </style>
+{% endblock %} 
+{% block body %}
+  <div id="gdep">
+    <section class="faq-section">
+      <div class="l-main-container container faq-container">
+        <div class="col-sm-12">
+          <div class="col-sm-8">
+            <div class="expansion-page-top">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="icon-container">
+                    <div class="ep-product-icon"> </div>
+                  </div>
+                </div>
+                <div class="col-sm-9 title-container">
+                  <div>
+                    <h1>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:page-title-h1]@L]</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="expansion-page-share">
+              <div class="gdep-view-plans">
+                <a class="btn btn-primary btn-lg" id="gdep-view-plans" href="[@T[link:<relative path='~/ecommerce/online-store.aspx' secure='true'><param name='ci' value='95251' /></relative>]@T]" data-ci="95251">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:view-plans-button-label]@L]</a>
+              </div>
+              <div class="gdep-share">
+                <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-sites' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:page-title]@L]" data-twrelated="[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-sites' secure='true' />]@T]" data-buttons="google,facebook,twitter"></div>
+              </div>
+            </div>
+            <div class="expansion-page-content">
+              <div>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:main-content]@L]</div>
+              <div class="text-center">
+                <a class="btn btn-primary btn-lg" id="gdep-see-all-faqs" href="[@T[link:<relative path='~/ecommerce/online-store.aspx' secure='true'><param name='ci' value='95247' /></relative>]@T]#faq" data-ci="95247">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:see-all-faqs-button-label]@L]</a>
+              </div>
+            </div>              
+          </div>
+          <div class="col-sm-4 sidebar-container">
+            <div class="sidebar-box">
+              <h6>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:top-3-faqs-title]@L]</h6>
+              <ul class="list-unstyled">    
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/4731/selling-products-online'><param name='ci' value='95248' /></external>]@T]" data-ci="95248">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:top-3-faqs-1]@L]</a>
+                </li>
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/category/507/quick-shopping-cart-creating-your-storefront'><param name='ci' value='95249' /></external>]@T]" data-ci="95249">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:top-3-faqs-2]@L]</a>
+                </li>
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='help/article/1129/what-fields-are-required-for-the-import-products-spreadsheet'><param name='ci' value='95250' /></external>]@T]" data-ci="95250">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:top-3-faqs-3]@L]</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sidebar-box ">
+              <h6>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-title]@L]</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/158/registering-domain-names'><param name='ci' value='95242' /></external>]@T]" data-ci="95242">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-1]@L]</a>
+                </li>
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/986/website-builder'><param name='ci' value='95243' /></external>]@T]" data-ci="95243">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-2]@L]</a>
+                </li>
+                ##if(!activeLanguageAny([fr-CA]) && (countrySiteAny(uk,ca,au,nz,sg,ph) || activeLanguageAny([en-us],[en-ie])))
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/1042/online-store'><param name='ci' value='95244' /></external>]@T]" data-ci="95244">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-3]@L]</a>
+                </li>
+                ##endif
+                ##if(activeLanguageAny([en-us]))
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/help/category/1038/get-found'><param name='ci' value='95245' /></external>]@T]" data-ci="95245">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-4]@L]</a>
+                </li>
+                ##endif
+                <li>
+                  <a href="[@T[link:<external parammode='explicit' linktype='COMMUNITYURL' secure='true' path='/'><param name='ci' value='95246' /></external>]@T]" data-ci="95246">[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:other-resources-5]@L]</a>
+                </li>
+              </ul>
+            </div>
+            <div class="sidebar-green-box">
+              <div class="image-container">
+                <div class="green-box-image"></div>
+              </div>
+              <h3>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:green-box-title]@L]</h3>
+              <h6>[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:green-box-text]@L]</h6>
+              <a href="tel:[@T[support:<technicalSupportPhone />]@T]" class="sidebar-phone">[@T[support:<technicalSupportPhone />]@T]</a>
+            </div>                    
+          </div>
+        </div>
+        <div class="expansion-page-cta-container">
+          <a class="btn btn-primary btn-lg expansion-page-cta" id="gdep-choose-package" href="[@T[link:<relative path='~/ecommerce/online-store.aspx' secure='true'><param name='ci' value='95240' /></relative>]@T]" data-ci="95240">
+            <i class="ico ico-gt"></i>
+            [@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:choose-your-product-package-label]@L]
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %} 
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+{% endblock %}

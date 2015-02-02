@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/code-signing-certificate.aspx
-id: 5411e5b0f778fc0f24cc8eec
-name: GCE-28157
-comments: Updated canonical url to be secure
+id: 54b6e8e7f778fc0f24ed20d9
+name: GCE-34935
+comments: Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
@@ -33,6 +33,27 @@ comments: Updated canonical url to be secure
       background-image: url("[@T[link:<imageroot />]@T]/fos/201401/ssl/code-signing-certificate/img/LATAM_bg-tab-content-pricing-code-signing-certificate.jpg");
     }
     </style>
+##endif
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+  <style type="text/css">
+    body {
+      font-size: 10px;
+      background-color: #d4d4d4;
+    }
+    .modal-dialog {
+      left: 0%;
+    }
+    a, a:hover {
+      color: #7db701;
+    }
+    #footer-legal {
+      background-color: #fff;
+    }
+    #footer-legal a {
+      color: #3282e6;
+    }
+  </style>
 ##endif
 
 {% endblock %}
@@ -627,7 +648,11 @@ comments: Updated canonical url to be secure
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        ##if(appSettingEnabled(UXCORE_ENABLED))
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        ##else
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                        ##endif
                         <h4 class="modal-title"><strong>[@L[cds.sales/gd/ssl/code-signing-certificate2:DisclaimerModalHeader]@L]</strong></h4>
                     </div>
                     <div class="modal-body">

@@ -2,7 +2,7 @@ atlantis:webstash(type="css")
   style
     :less
       #marquee { 
-        font-size:16px;
+        font-size:16px;cursor:pointer;
         background-color: #f3f3f4; overflow-y: hidden;
         .promo-wrapper, .price-wrapper { margin-top: 20px; }
         .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%; }
@@ -47,7 +47,7 @@ atlantis:webstash(type="css")
           }
         }
       }
-section#marquee
+section#marquee(data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]")
   //remove rems
   .container
     .row
@@ -66,5 +66,5 @@ section#marquee
           .line3 DOMAIN + WEBSITE + EMAIL
           .line4 ALL STARTING AT JUST
           .line5.price [@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO
-          button.btn.btn-purchase(data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='11111' /></relative>]@T]") GET STARTED
-        .disclaimer First year only. Other restrictions apply.
+          button.btn.btn-purchase(data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]") GET STARTED
+        .disclaimer First year only. Annual purchase required.

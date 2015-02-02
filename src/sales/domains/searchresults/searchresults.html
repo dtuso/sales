@@ -1,10 +1,8 @@
 ---
 location: sales/domains/searchresults.aspx
 id: 54248eb3f778fc165cc8f627
-name: GCE-25519
+name: GCE-29443
 ---
-##if(false)
-{% include 'modules/doc-block.html' %}
 ##endif
 <!DOCTYPE html>
 <html lang="[@T[localization:<language full="true" />]@T]">
@@ -21,9 +19,9 @@ name: GCE-25519
   <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/global/build/0.2.0/gd-fos-global.min.css" />
   ##if(siteContextAny(gd))  
   <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_20140916.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_20141222.css" />
   ##else  
-  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL20140916.css" />
+  <link type="text/css" rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/searchresults/css/styles_PL20140930.css" />
   ##endif    
   <script type="text/javascript"  src="[@T[link:<javascriptroot />]@T]shared/js/1.5.1/global.20120918.min.js"></script>
   ##if(!activeLanguageAny(en, es))
@@ -211,7 +209,7 @@ name: GCE-25519
     <!-- Generic : 0 -->
     <div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && 'header' !== context || IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>
     <!--<div class="onsale" data-bind="visible: IsOnSale() && !fullAvailCheckError() && !HasDiscount">[@L[cds.sales/domains/searchresults-new3:OnSale]@L]</div>-->
-    <div class="onsale2" data-bind="visible: HasDiscount()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span> [@L[cds.sales/domains/searchresults-new3:tldCOM]@L] </div>
+    <div class="onsale2" data-bind="visible: HasDiscount()">[@L[cds.sales/domains/searchresults-new3:OnSale]@L] <span data-bind="html: Prices().CurrentPrice">$2.99*</span> <span style="text-transform: uppercase" data-bind="html: '.' + TLD()"></span></div>
 
     <div class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }">
       <span data-bind="html: context == 'header' ? DomainSearchResults.BreakString(SLD(), 30) : DomainSearchResults.BreakString(SLD(), 45)"></span>
@@ -220,11 +218,13 @@ name: GCE-25519
         <!-- ko with: Type -->
         <span class="domainType" data-bind="visible: !$parent.IsAd(), html: DisplayText"></span>
         <!-- /ko -->
+        ##if(splitTestingSideIsActive(1406, A))
         <!-- ko with: IsAd -->
           <span class="domainType IsAd" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagAd]@L]</span>
         <!-- /ko -->
+        ##endif
         <!-- ko with: IsPremiumPrice -->
-          <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
+        <span class="domainType isPremiumPrice" style="">[@L[cds.sales/domains/searchresults-new3:domainFlagPremium]@L]</span>
         <!-- /ko -->
       </div>
     </div>
@@ -233,8 +233,10 @@ name: GCE-25519
     <!-- /ko -->
     <!-- ko template: TemplateName() --><!-- /ko -->
     <!-- ko if: !Type.eq(DomainSearchResults.ItemTypes.PreRegistration) && 'header' === context  -->
+    <!-- ko if: !Type.eq(DomainSearchResults.ItemTypes.Premium) -->
     <!-- ko with: CCTLDResult -->
     <div class="ccTldUpsell" data-bind="template: { name: 'CcTldTemplate' }, css: { 'unavailable' : fullAvailCheckError }, visible: !$parent.fullAvailCheckError() || fullAvailCheckError() && !$parent.fullAvailCheckError()"></div>
+    <!-- /ko -->
     <!-- /ko -->
     <!-- /ko -->
     <!-- ko with: Stack() -->
@@ -268,10 +270,8 @@ name: GCE-25519
     <div class="comPromoPricing" data-bind="visible: !IsSelected() && HasDiscount()">
       <span style="display: block;">[@L[cds.sales/domains/searchresults-new3:1stYearPrice]@L] <span data-bind="html: Prices().CurrentPrice">2.99*</span> [@L[cds.sales/domains/searchresults-new3:additionYears]@L] <span data-bind="html: Prices().ListPrice">14.99*</span></span>
     </div>
-  
-    
-    
-    <a class="learnMore" href="#" data-bind="visible: IsPremiumPrice(), click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+    <!-- ko template: { name: 'TldRestrictions' } --><!-- /ko -->
+    <span class="premValue" data-bind="visible: IsPremiumPrice()">[@L[cds.sales/domains/searchresults-new3:PremiumValue]@L]</span> <a href="#" style="float: none;" class="learnMore" data-bind="visible: IsPremiumPrice(), click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
     <div class="priceAndAction" data-bind="visible: IsPremiumPrice()">
       <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
       <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
@@ -290,6 +290,7 @@ name: GCE-25519
         </div>
       </span>
     </div>
+    <!-- ko if: IsPremiumPrice()-->
     <div class="slideOut" data-bind="visible: IsExpanded">
       <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
       <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
@@ -297,6 +298,7 @@ name: GCE-25519
       <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2IsPremiumPrice]@L]</p>
       <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
     </div>
+    <!-- /ko -->
   </script>
 
   <script type="text/html" id="DomainTemplateaftermarket">
@@ -346,31 +348,47 @@ name: GCE-25519
 
   <script type="text/html" id="DomainTemplatepremium">
     <!-- Premium : 0 -->
-    <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
     <div class="priceAndAction">
       <!-- ko template: { name: ActionTemplate } --><!-- /ko -->
-      <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
-        <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:FirstYearPriceDescription]@L]</span>
-        <!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko -->
-      </span>
-      <span class="pricing pricing-renewal" data-bind="visible: !IsSelected()">
-        <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:RenewalPriceDescription]@L]</span>
-        <span class="price price-small" data-bind="html: Prices()['RenewalListPrice']">$MXN.XX</span>
-        <div class="g-toolTip">
-          <div>
-            <p>[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain1]@L]</p>
-            <p>[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain2]@L]</p>
-            <p>[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain3]@L]</p>
-          </div>
+      <div class="pricingContainer">
+        <div>
+          <span class="pricing" data-bind="visible: !IsSelected() && !fullAvailCheck() && !fullAvailCheckError()">
+          <p><span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:FirstYearPriceDescription]@L]</span>
+          <!-- ko template :{ name: 'CurrentPriceListPriceTemplate' }--><!-- /ko -->
+          </p>
+          </span>
         </div>
-      </span>
+        <div>
+          <span class="pricing pricing-renewal" data-bind="visible: !IsSelected()">
+            <span class="priceDesc">[@L[cds.sales/domains/searchresults-new3:RenewalPriceDescription]@L]</span>
+            <span class="price price-small" data-bind="html: Prices()['RenewalListPrice']" >$MXN.XX</span>
+            <div class="g-toolTip">
+              <div>
+                <p>[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain1]@L]</p>
+                <p>[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain2]@L]</p>
+                <p class="noHeaderPhone">[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain3]@L]</p>
+              </div>            
+            </div>
+          </span>
+        </div>
+      </div>
     </div>
+    <div>
+      <span class="noStripPhone">[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain3]@L]</span>
+      <span class="premValue">[@L[cds.sales/domains/searchresults-new3:PremiumValue]@L]</span> <a class="learnMore" href="#" data-bind="click: Expand, clickBubble: false" style="float: none;">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a>
+    </div>
+    <!-- ko if: 'header' === context  -->
+    <!-- ko with: CCTLDResult -->
+    <div class="ccTldUpsell" data-bind="template: { name: 'CcTldTemplate' }, css: { 'unavailable' : fullAvailCheckError }, visible: !$parent.fullAvailCheckError() || fullAvailCheckError() && !$parent.fullAvailCheckError()"></div>
+    <!-- /ko -->
+    <!-- /ko -->
+    <!-- <p class="domainName" data-bind="css: { 'added': IsSelected, 'unavailable' : fullAvailCheckError }"></p> -->
     <div class="slideOut" data-bind="visible: IsExpanded">
       <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
       <h6>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumTitle]@L]</h6>
       <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription1]@L]</p>
       <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription2]@L]</p>
-      <p>[@L[cds.sales/domains/searchresults-new3:WhatIsPremiumDescription3]@L]</p>
+      <p class="noHeaderPhone">[@L[cds.sales/domains/searchresults-new3:AboutPremiumDomain3]@L]</p>
     </div>
   </script>
 
@@ -388,6 +406,7 @@ name: GCE-25519
       </span>
       <!-- /ko -->
     </div>
+    <!-- ko template: { name: 'TldRestrictions' } --><!-- /ko -->
     <div class="phaseOptions">
       <p data-bind="visible: !Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:PreRegistrationTagLine]@L]</p>
       <p data-bind="visible: Type().IsEarlyAccess">[@L[cds.sales/domains/searchresults-new3:EAPreRegistrationTagLine]@L]</p>
@@ -405,6 +424,7 @@ name: GCE-25519
     <div class="priceAndAction">
       <a href="#" class="btn btn-prg flt-btn flt-btn-grn arrow-after" data-bind="css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: ShowPrivateSale, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:GetItemActionText]@L]</a>
     </div>
+    <!-- ko template: { name: 'TldRestrictions' } --><!-- /ko -->
     <div class="slideOut" data-bind="visible: IsExpanded">
       <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
       <h6>[@L[cds.sales/domains/searchresults-new3:AboutLeadGenerationTitle]@L]</h6>
@@ -652,7 +672,7 @@ name: GCE-25519
             [@L[cds.sales/domains/searchresults-new3:PricingDetailsActionText]@L]
             <div class="g-toolTipContents">
               <!-- ko if: HasSubPhases -->  
-              
+
               <p data-bind="visible: !$root.IsTldNyc()">[@L[cds.sales/domains/searchresults-new3:PriorityPreRegPricingDetailToolTipText]@L]</p>
               
                <p data-bind="css: { 'nomargin': $root.IsTldNyc()}">[@L[cds.sales/domains/searchresults-new3:PricingDetailRenewal2]@L]</p>
@@ -744,6 +764,38 @@ name: GCE-25519
       </ul>
     </div>
   </script>
+  
+  <script type="text/html" id="TldRestrictions">
+    <!-- ko if: TLD() == 'com.br' || TLD() == 'net.br' -->
+    <div class="tldRestrictions">
+      <p>[@L[cds.sales/domains/searchresults-new3:brRestrictions]@L]&nbsp;<a class="tldRestrictionLearnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a></p>
+      <div class="tldRestrictionsSlideout slideOut" data-bind="visible: IsExpanded">
+        <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+        <h6><span>&nbsp;[@L[cds.sales/domains/searchresults-new3:brLearnMoreHeader]@L]</span></h6>
+        <p>[@L[cds.sales/domains/searchresults-new3:brLearnMore]@L]</p>
+      </div>      
+    </div>      
+    <!-- /ko -->
+    
+    <!-- ko if: TLD() == 'airforce' || TLD() == 'army' || TLD() =='navy' -->
+    <div class="tldRestrictions">
+      <!-- ko if: TLD() == 'airforce' -->
+      <p>[@L[cds.sales/domains/searchresults-new3:ausAirforce]@L]&nbsp;<a class="tldRestrictionLearnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a></p>    
+      <!-- /ko -->
+      <!-- ko if: TLD() == 'army'-->
+      <p>[@L[cds.sales/domains/searchresults-new3:restrictApply]@L]&nbsp;<a class="tldRestrictionLearnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a></p>    
+      <!-- /ko -->
+      <!-- ko if: TLD() == 'navy' -->
+      <p>[@L[cds.sales/domains/searchresults-new3:ausNavy]@L]&nbsp;<a class="tldRestrictionLearnMore" href="#" data-bind="click: Expand, clickBubble: false">[@L[cds.sales/domains/searchresults-new3:LearnMoreActionText]@L]</a></p>    
+      <!-- /ko -->
+      <div class="tldRestrictionsSlideout slideOut" data-bind="visible: IsExpanded">
+        <div class="slideOutClose" data-bind="click: Collapse, clickBubble: false">X</div>
+        <h6><span data-bind="html: '.' + TLD()">TLD</span><span>&nbsp;[@L[cds.sales/domains/searchresults-new3:regRequirements]@L]</span></h6>
+        <p>[@L[cds.sales/domains/searchresults-new3:militaryRestrictions]@L]</p>
+      </div>
+    </div>
+    <!-- /ko -->
+  </script>
 
   <!-- #region Action Templates -->
 
@@ -788,7 +840,7 @@ name: GCE-25519
   <script type="text/javascript">$sf = { skin: "fos" };</script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]starfield/curl/v1.1.2/curl.js"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/domains/search-new/js/filter.slider.min.js"></script>
-  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20140924.js' />]@T]"></script>
+  <script type="text/javascript" src="[@T[link:<js path='fos/sales/themes/scotty/domains/searchresults/js/searchresults_20141113.js' />]@T]"></script>
   <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/searchresults/js/searchbox_20140916_2.js"></script>
 
   <!--[if lte IE 8]>
@@ -848,6 +900,7 @@ name: GCE-25519
 
       DomainSearchResults.Init({
         GetUrl: '[@T[link:<relative path="~/api/dpp/searchresults/All"></relative>]@T]',
+        StackUrl: '[@T[link:<relative path="~/domainsapi/v1/bundles/"></relative>]@T]',
         PostUrl: '[@T[link:<relative path="~/api/dpp/searchresultscart/"><param name="applyBP" value="1" /></relative>]@T]',
         CartUrl: '[@T[link:<external linktype="CARTURL" path="cart/basket.aspx" secure="true"><param name="ci" value="84362" /><param name="dpp2" value="1" /></external>]@T]',
         RegistrationUrl: '[@T[link:<relative path="~/domains/popups/ccregistrationlengths.aspx"><param name="ci" value="75657" /></relative>]@T]',
@@ -864,6 +917,11 @@ name: GCE-25519
         PhaseEarlyAccessPriorityPreRegName: '[@L[cds.sales/domains/searchresults-new3:EAPriorityPreRegPriceTitle]@L]',
         PhaseTrademarkName: '[@L[cds.sales/domains/searchresults-new3:TrademarkOptionTitle]@L]',
         threeName: '[@L[cds.sales/domains/searchresults-new3:GetStackText]@L]',
+        ##if(splitTestingSideIsActive(1381, A))
+        StackSplitValue: false,
+        ##elseif(splitTestingSideIsActive(1381, B))
+        StackSplitValue: true,
+        ##endif
         twoName: '[@L[cds.sales/domains/searchresults-new3:GetStackTextNew]@L]',
         Filters: [
           {
