@@ -1,6 +1,6 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54beb6c5f778fc1118b5596d
+id:  54c9772ff778fc10543b3cf2
 name: GCE-32573
 comments: GOT rebrand 2015 SuperBowl
 ---
@@ -251,8 +251,8 @@ Business email
 Customizable themes
 <phrase key="32573-godaddy-wsb-bullet-6" />
 Unlimited pages
-<phrase key="32573-godaddy-wsb-bullet-7" />
-20,000+ images
+<phrase key="32573-godaddy-wsb-bullet-7" comment="20,000 aka 20k images, localized by market" />
+[@T[currencyprice:<price usdamount="2000000" dropdecimal="true" dropsymbol="true" htmlsymbol="false" negative="parenthesis" currencytype="USD" />]@T]+ images
 <phrase key="32573-godaddy-ols" />
 GoDaddy Online Store
 <phrase key="32573-godaddy-ols-text" />
@@ -433,3 +433,5 @@ Something unexpected happened
 Real customers. Real sites.
 <phrase key="32573-our-customers-love-ols" />
 Our customers love Online Store.
+<phrase key="32573-domain-already-in-cart-checkout-or-search" />
+This domain is already in your cart. Please go to your <a href="{0}">cart</a>, delete your domain and search again.

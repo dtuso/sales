@@ -1,11 +1,7 @@
 extends ./_home-page.jade
 
-block hero  
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
-block marquee-tile1
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
-block marquee-tile2
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="2" />]@P]
+block marquee
+  include ../../tmsv2/content/homepage/got-nacho/hero.jade
 block merch-tile1
   include ./tiles/gdpro-tile.jade
 block merch-tile2
@@ -15,6 +11,7 @@ block merch-tile3
 block merch-tile4
   include ./tiles/online-store-tile.jade
 block prepend sections
+  include ./sections/_nacho-full-video.jade
   include ./sections/_domain-promo.jade
   include ./sections/_why-godaddy.jade
   include ./sections/_website-promo.jade

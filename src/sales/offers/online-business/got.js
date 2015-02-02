@@ -298,6 +298,7 @@ function domainSearchFormSubmit(e) {
 
   if((domain && domain.length==0) || !domain) return;
 
+  domain = domain.toLowerCase();
   domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
 
   if(!isTldValid(domain)) {

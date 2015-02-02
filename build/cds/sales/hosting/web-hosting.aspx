@@ -2288,7 +2288,6 @@ cursor: pointer;
           <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
           ##endif
            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-          <div class="speed-text"><img></div>
         </div>
       </div>
       <div class="container">
@@ -2704,7 +2703,7 @@ height: 27px;
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]"></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
@@ -3100,7 +3099,7 @@ height: 27px;
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]"></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
@@ -3656,7 +3655,7 @@ height: 27px;
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]"></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
@@ -4012,7 +4011,7 @@ height: 27px;
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
               </tr>
               <tr>
-                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class='tool-tip-black sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]'></span></td>
+                <td>[@L[cds.sales/hosting/web-hosting-rebrand:subdomains]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:subDomainstooltip]@L]"></span></td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-domains-subdomain-economy-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
                 <td>[@L[cds.sales/gd/hosting/web-hosting:compare-plans-core-features-websites-unlimited-11166]@L]</td>
