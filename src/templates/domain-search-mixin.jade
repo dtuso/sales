@@ -127,7 +127,6 @@ mixin domainSearchOffersInput(prms)
         
         var domainName = sld + ((tld!='') ? '.' + tld : '');
         if(needsTrimmed) {
-          debugger;
           $textInput.val(domainName);
         }
         return domainName;
@@ -181,6 +180,7 @@ mixin domainSearchOffersInput(prms)
       $("##{prms.formId}").on('keyup', function(e){
         if(e.which == 13) return;
         var domainName = #{prms.formId}.trimmedDomainName(true);
+        console.log(domainName);
         if(!domainName || domainName.length == 0) return;
         domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         #{prms.formId}.ensureValidTld(domainName);

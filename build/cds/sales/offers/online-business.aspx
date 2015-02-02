@@ -1577,7 +1577,6 @@ h
                 
                 var domainName = sld + ((tld!='') ? '.' + tld : '');
                 if(needsTrimmed) {
-                  debugger;
                   $textInput.val(domainName);
                 }
                 return domainName;
@@ -1631,6 +1630,7 @@ h
               $("#defaultmarqueeviewform").on('keyup', function(e){
                 if(e.which == 13) return;
                 var domainName = defaultmarqueeviewform.trimmedDomainName(true);
+                console.log(domainName);
                 if(!domainName || domainName.length == 0) return;
                 domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                 defaultmarqueeviewform.ensureValidTld(domainName);
@@ -1773,7 +1773,6 @@ h
                   
                   var domainName = sld + ((tld!='') ? '.' + tld : '');
                   if(needsTrimmed) {
-                    debugger;
                     $textInput.val(domainName);
                   }
                   return domainName;
@@ -1827,6 +1826,7 @@ h
                 $("#domainavailablemarqueeviewform").on('keyup', function(e){
                   if(e.which == 13) return;
                   var domainName = domainavailablemarqueeviewform.trimmedDomainName(true);
+                  console.log(domainName);
                   if(!domainName || domainName.length == 0) return;
                   domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                   domainavailablemarqueeviewform.ensureValidTld(domainName);
@@ -1958,7 +1958,6 @@ h
                   
                   var domainName = sld + ((tld!='') ? '.' + tld : '');
                   if(needsTrimmed) {
-                    debugger;
                     $textInput.val(domainName);
                   }
                   return domainName;
@@ -2012,6 +2011,7 @@ h
                 $("#domainnotavailablemarqueeviewform").on('keyup', function(e){
                   if(e.which == 13) return;
                   var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(true);
+                  console.log(domainName);
                   if(!domainName || domainName.length == 0) return;
                   domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                   domainnotavailablemarqueeviewform.ensureValidTld(domainName);
