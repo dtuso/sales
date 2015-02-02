@@ -1,0 +1,14 @@
+extend ../../../layouts/homepage/downArrowTile
+
+append vars
+  - headerText = "";
+  - buttonLink = "[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='xxxx' /></relative>]@T]";
+  - buttonText = "[@L[cds.sales/homepage/tile/com299:com299-tile-btn]@L]";
+  - disclaimerText = "[@L[cds.sales/homepage/tile/com299:com299-tile-restrictions]@L]";
+  - dataCi = "xxxx";
+  - containerClass = "com299-in";
+
+block body
+  h3.body-text
+    .price-text [@L[cds.sales/homepage/tile/com299:com299-tile-subtext]@L]
+    .price [@L[cds.sales/homepage/tile/com299:com299-tile-pricing-text]@L]
