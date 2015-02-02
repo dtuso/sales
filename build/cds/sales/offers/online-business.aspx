@@ -1526,10 +1526,13 @@ h
             </div>
           </form>
           <script>
-            defaultmarqueeviewform = {
+            var defaultmarqueeviewform = {
                executeFnByName: function(name, context) {
                 
-                var args = [].slice.call(arguments).splice(2);
+                var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                for(var i=2; i < arguments.length; i++){
+                  args.push(arguments[i]);
+                }
                 var namespaces = name.split(".");
                 var func = namespaces.pop();
                 for(var i = 0; i < namespaces.length; i++) {
@@ -1609,7 +1612,7 @@ h
                     isValid = true;
                   }
                 });
-                return isValid
+                return isValid;
             
               },
               formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
@@ -1627,10 +1630,9 @@ h
               });
             
               $("#defaultmarqueeviewform").on('submit', defaultmarqueeviewform.validateSubmit);
-              $("#defaultmarqueeviewform").on('keyup', function(e){
+              $("#defaultmarqueeviewform").on('keyup', function(e){ 
                 if(e.which == 13) return;
                 var domainName = defaultmarqueeviewform.trimmedDomainName(true);
-                console.log(domainName);
                 if(!domainName || domainName.length == 0) return;
                 domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                 defaultmarqueeviewform.ensureValidTld(domainName);
@@ -1713,10 +1715,13 @@ h
               </div>
             </form>
             <script>
-              domainavailablemarqueeviewform = {
+              var domainavailablemarqueeviewform = {
                  executeFnByName: function(name, context) {
                   
-                  var args = [].slice.call(arguments).splice(2);
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
                   var namespaces = name.split(".");
                   var func = namespaces.pop();
                   for(var i = 0; i < namespaces.length; i++) {
@@ -1796,7 +1801,7 @@ h
                       isValid = true;
                     }
                   });
-                  return isValid
+                  return isValid;
               
                 },
                 formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
@@ -1814,10 +1819,9 @@ h
                 });
               
                 $("#domainavailablemarqueeviewform").on('submit', domainavailablemarqueeviewform.validateSubmit);
-                $("#domainavailablemarqueeviewform").on('keyup', function(e){
+                $("#domainavailablemarqueeviewform").on('keyup', function(e){ 
                   if(e.which == 13) return;
                   var domainName = domainavailablemarqueeviewform.trimmedDomainName(true);
-                  console.log(domainName);
                   if(!domainName || domainName.length == 0) return;
                   domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                   domainavailablemarqueeviewform.ensureValidTld(domainName);
@@ -1889,10 +1893,13 @@ h
               </div>
             </form>
             <script>
-              domainnotavailablemarqueeviewform = {
+              var domainnotavailablemarqueeviewform = {
                  executeFnByName: function(name, context) {
                   
-                  var args = [].slice.call(arguments).splice(2);
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
                   var namespaces = name.split(".");
                   var func = namespaces.pop();
                   for(var i = 0; i < namespaces.length; i++) {
@@ -1972,7 +1979,7 @@ h
                       isValid = true;
                     }
                   });
-                  return isValid
+                  return isValid;
               
                 },
                 formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
@@ -1990,10 +1997,9 @@ h
                 });
               
                 $("#domainnotavailablemarqueeviewform").on('submit', domainnotavailablemarqueeviewform.validateSubmit);
-                $("#domainnotavailablemarqueeviewform").on('keyup', function(e){
+                $("#domainnotavailablemarqueeviewform").on('keyup', function(e){ 
                   if(e.which == 13) return;
                   var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(true);
-                  console.log(domainName);
                   if(!domainName || domainName.length == 0) return;
                   domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
                   domainnotavailablemarqueeviewform.ensureValidTld(domainName);

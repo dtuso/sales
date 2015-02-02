@@ -76,10 +76,13 @@ mixin domainSearchOffersInput(prms)
         span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
         span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
   script.
-    #{prms.formId} = {
+    var #{prms.formId} = {
        executeFnByName: function(name, context) {
         
-        var args = [].slice.call(arguments).splice(2);
+        var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+        for(var i=2; i < arguments.length; i++){
+          args.push(arguments[i]);
+        }
         var namespaces = name.split(".");
         var func = namespaces.pop();
         for(var i = 0; i < namespaces.length; i++) {
@@ -122,8 +125,8 @@ mixin domainSearchOffersInput(prms)
             hasTld = idx > -1,
             sld = hasTld ? domain.substring(0, idx) : domain,
             tld = hasTld ? domain.substring(idx+1) : '',
-            needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
-        sld = needsTrimmed ? sld.substring(0, 63) : sld;
+            needsTrimmed = ((idx == -1) ? domain.length > #{prms.maxDomainLength} : idx > #{prms.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+        sld = needsTrimmed ? sld.substring(0, #{prms.maxDomainLength}) : sld;
         
         var domainName = sld + ((tld!='') ? '.' + tld : '');
         if(needsTrimmed) {
@@ -159,7 +162,7 @@ mixin domainSearchOffersInput(prms)
             isValid = true;
           }
         });
-        return isValid
+        return isValid;
 
       },
       formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
@@ -177,10 +180,9 @@ mixin domainSearchOffersInput(prms)
       });
 
       $("##{prms.formId}").on('submit', #{prms.formId}.validateSubmit);
-      $("##{prms.formId}").on('keyup', function(e){
+      $("##{prms.formId}").on('keyup', function(e){ 
         if(e.which == 13) return;
         var domainName = #{prms.formId}.trimmedDomainName(true);
-        console.log(domainName);
         if(!domainName || domainName.length == 0) return;
         domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         #{prms.formId}.ensureValidTld(domainName);
