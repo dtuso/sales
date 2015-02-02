@@ -199,29 +199,6 @@ $(document).ready(function() {
     showTypeYourDomain();
   }
 
-  //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
-    } else {
-      // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
-    }
-  })
-  .on('click', '.offer-search-btn', function(e) {
-    e.preventDefault();
-    domainSearchFormSubmit(e);
-    return false;
-  });
-
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
@@ -359,39 +336,9 @@ function showTldImagesInDomainArea() {
   $(window).trigger('resize');
 }
 
-function formatDomainWithDefaultTldIfNoneSpecified(domain) {
-  if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.tldInfo.defaultTld;
-}
+function domainSearchFormSubmit(e, domain) { 
 
-function isTldValid(domain) {
-  var isValid = false;
-  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
-      isValid = true;
-    }
-  });
-  return isValid;
-}
-
-
-function domainSearchFormSubmit(e) {
- 
-  var $this = $(e.target),
-    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
-    domain = $.trim($textInput.val()), 
-    apiEndpoint1;
-
-  if((domain && domain.length==0) || !domain) return;
-
-  domain = domain.toLowerCase();
-  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
-
-  if(!isTldValid(domain)) {
-    displayInvalidTldMessage();
-    return;
-  }
-
+  var $this = $(e.target);
 
   var newItc = got1Page.offersCodes.itc_wsb;
   ##if(isManager())
@@ -606,11 +553,6 @@ function showApi1or2SearchError(e,domain){
 function showApi3SearchError(e,domain){  
   var $modal = $("#step2-choose-product .api-c-failure-modal");
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function displayInvalidTldMessage(){
-  $('#marquee .search-message').hide();
-  $('#marquee .invalid-TLD-entered').show();
 }
 
 function showDomainRegistrationFailure(tld) {
@@ -1529,82 +1471,6 @@ h
           }
           #marquee .search-message {display: none; text-transform: none; }
           
-          /*  speech */
-          
-          .speech-shape-upsidedown {
-            line-height: 1.9em;
-            font-family: 'Walsheim-Bold';
-            font-size: 18px;
-            padding: 5px 17px;
-            color: #fff;
-            display: inline-block;
-            position: relative;
-            margin-bottom: 20px;
-            z-index: 2;
-          }
-          .speech-shape-upsidedown .shape-text {
-            position: relative;
-            z-index: 40;
-          }
-          .speech-shape-upsidedown:before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 0;
-            border-bottom: 15px solid;
-            border-right: 15px solid transparent;
-          }
-          .speech-shape-upsidedown:after {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width:20px;
-            right: -6px;
-            top: 0;
-            transform: skew(12deg, 0);
-            z-index: 1;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-            border-bottom-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-            border-bottom-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white {
-            background-color: #fff;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-            border-bottom-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-            background-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-            background-color: #fedc45;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-            border-bottom-color: #fedc45;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-            background-color: #fedc45;
-          }
-          
-          /* (end) speech */
-          
         </style>
       </atlantis:webstash>
       <section id="default-marquee-view" class="bg-green-official js-marquee-section">
@@ -1641,22 +1507,139 @@ h
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 offer-search-box">
-              <div class="input-group">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                  <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+          <form id="defaultmarqueeviewform">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h2>
               </div>
             </div>
-          </div>
-          <div class="row domain-search-messaging-row">
-            <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-          </div>
+            <div class="row">
+              <div class="col-md-12 offer-search-box">
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
+              </div>
+            </div>
+            <div class="row domain-search-messaging-row">
+              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+            </div>
+          </form>
+          <script>
+            var defaultmarqueeviewform = {
+               executeFnByName: function(name, context) {
+                
+                var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                for(var i=2; i < arguments.length; i++){
+                  args.push(arguments[i]);
+                }
+                var namespaces = name.split(".");
+                var func = namespaces.pop();
+                for(var i = 0; i < namespaces.length; i++) {
+                  context = context[namespaces[i]];
+                }
+                return context[func].apply(this, args);
+            
+              },
+              validateSubmit: function(e){
+            
+                e.preventDefault();
+                var domainName = defaultmarqueeviewform.trimmedDomainName(false);
+                if((domainName && domainName.length==0) || !domainName) return false;
+            
+                domainName = domainName.toLowerCase();
+                domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                if(!defaultmarqueeviewform.ensureValidTld(domainName)) {
+                  return;
+                }
+                var functionName = 'domainSearchFormSubmit';
+                if(functionName.length > 0)  {
+                  defaultmarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                }
+            
+              },
+              trimmedDomainName: function(isKeyPress){
+                
+                var $form = $("#defaultmarqueeviewform"),
+                  $textInput = $form.find('input[name="domainToCheck"]'),
+                  domainName = $textInput.val();
+                if((domainName && domainName.length==0) || !domainName) return null;
+            
+                domainName = defaultmarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                return domainName;
+            
+              },
+              reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+            
+                var idx = domain.indexOf('.'),
+                    hasTld = idx > -1,
+                    sld = hasTld ? domain.substring(0, idx) : domain,
+                    tld = hasTld ? domain.substring(idx+1) : '',
+                    needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                
+                var domainName = sld + ((tld!='') ? '.' + tld : '');
+                if(needsTrimmed) {
+                  $textInput.val(domainName);
+                }
+                return domainName;
+            
+              },
+              ensureValidTld: function() {
+            
+                var $form = $("#defaultmarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val(); 
+                    validTld = defaultmarqueeviewform.hasTldValid(domainName);
+                $form.find('.search-message').hide();
+                if(validTld) {
+                  $form.find('.type-your-business-name').show();
+                } else {
+                  $form.find('.invalid-TLD-entered').show();
+                }
+                return validTld;
+                
+              },
+              hasTldValid: function(domain) {
+            
+                domain = $.trim(domain || "");
+                var idx = domain.indexOf('.'), isValid = false;
+                if(!domain || domain.length == 0 || idx == -1) return true;
+            
+                var domainsTld = domain.substring(idx+1).toLowerCase();
+                $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                  if(tld.toLowerCase() === domainsTld) {
+                    isValid = true;
+                  }
+                });
+                return isValid;
+            
+              },
+              formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+            
+                if(domain.indexOf('.') > 0) return domain;
+                return domain + '.' + got1Page.tldInfo.defaultTld;
+            
+              }
+            };
+            
+            $(document).ready(function(){
+            
+              $("#defaultmarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                $("#defaultmarqueeviewform").submit();
+              });
+            
+              $("#defaultmarqueeviewform").on('submit', defaultmarqueeviewform.validateSubmit);
+              $("#defaultmarqueeviewform").on('keyup', function(e){ 
+                if(e.which == 13) return;
+                var domainName = defaultmarqueeviewform.trimmedDomainName(true);
+                if(!domainName || domainName.length == 0) return;
+                domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                defaultmarqueeviewform.ensureValidTld(domainName);
+              });
+            
+            });
+          </script>
         </div>
       </section> 
       ##if(productIsOffered(105)) 
@@ -1713,22 +1696,139 @@ h
         </div>
         <div class="bg-white reseach-container">
           <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+            <form id="domainavailablemarqueeviewform">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
                 </div>
               </div>
-            </div>
-            <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-            </div>
+              <div class="row">
+                <div class="col-md-12 offer-search-box">
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row domain-search-messaging-row">
+                <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              </div>
+            </form>
+            <script>
+              var domainavailablemarqueeviewform = {
+                 executeFnByName: function(name, context) {
+                  
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
+                  var namespaces = name.split(".");
+                  var func = namespaces.pop();
+                  for(var i = 0; i < namespaces.length; i++) {
+                    context = context[namespaces[i]];
+                  }
+                  return context[func].apply(this, args);
+              
+                },
+                validateSubmit: function(e){
+              
+                  e.preventDefault();
+                  var domainName = domainavailablemarqueeviewform.trimmedDomainName(false);
+                  if((domainName && domainName.length==0) || !domainName) return false;
+              
+                  domainName = domainName.toLowerCase();
+                  domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  if(!domainavailablemarqueeviewform.ensureValidTld(domainName)) {
+                    return;
+                  }
+                  var functionName = 'domainSearchFormSubmit';
+                  if(functionName.length > 0)  {
+                    domainavailablemarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                  }
+              
+                },
+                trimmedDomainName: function(isKeyPress){
+                  
+                  var $form = $("#domainavailablemarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val();
+                  if((domainName && domainName.length==0) || !domainName) return null;
+              
+                  domainName = domainavailablemarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                  return domainName;
+              
+                },
+                reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+              
+                  var idx = domain.indexOf('.'),
+                      hasTld = idx > -1,
+                      sld = hasTld ? domain.substring(0, idx) : domain,
+                      tld = hasTld ? domain.substring(idx+1) : '',
+                      needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                  sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                  
+                  var domainName = sld + ((tld!='') ? '.' + tld : '');
+                  if(needsTrimmed) {
+                    $textInput.val(domainName);
+                  }
+                  return domainName;
+              
+                },
+                ensureValidTld: function() {
+              
+                  var $form = $("#domainavailablemarqueeviewform"),
+                      $textInput = $form.find('input[name="domainToCheck"]'),
+                      domainName = $textInput.val(); 
+                      validTld = domainavailablemarqueeviewform.hasTldValid(domainName);
+                  $form.find('.search-message').hide();
+                  if(validTld) {
+                    $form.find('.type-your-business-name').show();
+                  } else {
+                    $form.find('.invalid-TLD-entered').show();
+                  }
+                  return validTld;
+                  
+                },
+                hasTldValid: function(domain) {
+              
+                  domain = $.trim(domain || "");
+                  var idx = domain.indexOf('.'), isValid = false;
+                  if(!domain || domain.length == 0 || idx == -1) return true;
+              
+                  var domainsTld = domain.substring(idx+1).toLowerCase();
+                  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                    if(tld.toLowerCase() === domainsTld) {
+                      isValid = true;
+                    }
+                  });
+                  return isValid;
+              
+                },
+                formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+              
+                  if(domain.indexOf('.') > 0) return domain;
+                  return domain + '.' + got1Page.tldInfo.defaultTld;
+              
+                }
+              };
+              
+              $(document).ready(function(){
+              
+                $("#domainavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                  $("#domainavailablemarqueeviewform").submit();
+                });
+              
+                $("#domainavailablemarqueeviewform").on('submit', domainavailablemarqueeviewform.validateSubmit);
+                $("#domainavailablemarqueeviewform").on('keyup', function(e){ 
+                  if(e.which == 13) return;
+                  var domainName = domainavailablemarqueeviewform.trimmedDomainName(true);
+                  if(!domainName || domainName.length == 0) return;
+                  domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  domainavailablemarqueeviewform.ensureValidTld(domainName);
+                });
+              
+              });
+            </script>
           </div>
         </div>
       </section>
@@ -1774,22 +1874,139 @@ h
                 <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name"> </span></h2>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+            <form id="domainnotavailablemarqueeviewform">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h2>
                 </div>
               </div>
-            </div>
-            <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-            </div>
+              <div class="row">
+                <div class="col-md-12 offer-search-box">
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row domain-search-messaging-row">
+                <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              </div>
+            </form>
+            <script>
+              var domainnotavailablemarqueeviewform = {
+                 executeFnByName: function(name, context) {
+                  
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
+                  var namespaces = name.split(".");
+                  var func = namespaces.pop();
+                  for(var i = 0; i < namespaces.length; i++) {
+                    context = context[namespaces[i]];
+                  }
+                  return context[func].apply(this, args);
+              
+                },
+                validateSubmit: function(e){
+              
+                  e.preventDefault();
+                  var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(false);
+                  if((domainName && domainName.length==0) || !domainName) return false;
+              
+                  domainName = domainName.toLowerCase();
+                  domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  if(!domainnotavailablemarqueeviewform.ensureValidTld(domainName)) {
+                    return;
+                  }
+                  var functionName = 'domainSearchFormSubmit';
+                  if(functionName.length > 0)  {
+                    domainnotavailablemarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                  }
+              
+                },
+                trimmedDomainName: function(isKeyPress){
+                  
+                  var $form = $("#domainnotavailablemarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val();
+                  if((domainName && domainName.length==0) || !domainName) return null;
+              
+                  domainName = domainnotavailablemarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                  return domainName;
+              
+                },
+                reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+              
+                  var idx = domain.indexOf('.'),
+                      hasTld = idx > -1,
+                      sld = hasTld ? domain.substring(0, idx) : domain,
+                      tld = hasTld ? domain.substring(idx+1) : '',
+                      needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                  sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                  
+                  var domainName = sld + ((tld!='') ? '.' + tld : '');
+                  if(needsTrimmed) {
+                    $textInput.val(domainName);
+                  }
+                  return domainName;
+              
+                },
+                ensureValidTld: function() {
+              
+                  var $form = $("#domainnotavailablemarqueeviewform"),
+                      $textInput = $form.find('input[name="domainToCheck"]'),
+                      domainName = $textInput.val(); 
+                      validTld = domainnotavailablemarqueeviewform.hasTldValid(domainName);
+                  $form.find('.search-message').hide();
+                  if(validTld) {
+                    $form.find('.type-your-business-name').show();
+                  } else {
+                    $form.find('.invalid-TLD-entered').show();
+                  }
+                  return validTld;
+                  
+                },
+                hasTldValid: function(domain) {
+              
+                  domain = $.trim(domain || "");
+                  var idx = domain.indexOf('.'), isValid = false;
+                  if(!domain || domain.length == 0 || idx == -1) return true;
+              
+                  var domainsTld = domain.substring(idx+1).toLowerCase();
+                  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                    if(tld.toLowerCase() === domainsTld) {
+                      isValid = true;
+                    }
+                  });
+                  return isValid;
+              
+                },
+                formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+              
+                  if(domain.indexOf('.') > 0) return domain;
+                  return domain + '.' + got1Page.tldInfo.defaultTld;
+              
+                }
+              };
+              
+              $(document).ready(function(){
+              
+                $("#domainnotavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                  $("#domainnotavailablemarqueeviewform").submit();
+                });
+              
+                $("#domainnotavailablemarqueeviewform").on('submit', domainnotavailablemarqueeviewform.validateSubmit);
+                $("#domainnotavailablemarqueeviewform").on('keyup', function(e){ 
+                  if(e.which == 13) return;
+                  var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(true);
+                  if(!domainName || domainName.length == 0) return;
+                  domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  domainnotavailablemarqueeviewform.ensureValidTld(domainName);
+                });
+              
+              });
+            </script>
           </div>
         </div>
         <div class="bg-white">
