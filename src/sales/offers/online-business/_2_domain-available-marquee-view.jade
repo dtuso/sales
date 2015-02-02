@@ -35,4 +35,15 @@ section#domain-available-marquee-view.js-marquee-section
 
   .bg-white.reseach-container
     .container
-      +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]', '95737', '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]','[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
+      +domainSearchOffersInput({
+          'tlds': 'got1Page.tldInfo.tlds',
+          'defaultTld': 'got1Page.tldInfo.defaultTld',
+          'formId': 'domain-available-marquee-view-form',
+          'title': '[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]', 
+          'cicode': '95737', 
+          'placeholderText': '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', 
+          'buttonText': '[@L[cds.sales/offers/online-business:32573-search]@L]', 
+          'infoTypeHere': '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', 
+          'infoErrorEligibility': '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]',
+          'infoInvalidTld': '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]'
+          })
