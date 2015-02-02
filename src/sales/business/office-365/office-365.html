@@ -22,8 +22,6 @@ assetPath: false
   'A': 'Office365_Office_A_12month', 
   'B': 'Office365_Office_B_12month', 
   'C': 'Office365_Office_C_12month'} %}
-{% set split1414testside = 'queryValueHas(split,1)' %}
-{% set split1414testside = 'splitTestingSideIsActive(1414, B)' %}
 
 {% extends 'layouts/base.html' %}
 
@@ -383,12 +381,7 @@ assetPath: false
     }
 
     /* Plan Boxes */
-    .row.auto-center-row{
-      width:auto;
-      margin:auto;
-      display: table;
-    }
-
+        
     #plan-boxes-section{
       padding: 40px 0 60px;
     }
@@ -411,11 +404,6 @@ assetPath: false
       padding: 0px;
       position: relative;
     }
-
-   .plan-box-gap{
-     margin-left: 37px;
-     margin-right: 37px;
-   }
 
     .col-xs-4.plan-box .plan-contents{
       padding: 12px 20px 15px;
@@ -1035,21 +1023,11 @@ assetPath: false
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.A}}" data-ci="94226">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>  
         </div>
-      ##endif 
-
-      ##if({{split1414testside}})
-        <div id="plan-box-B" class="col-xs-4 plan-box mt5 plan-box-gap">
-          <div class="side-title-container">
-            <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-2-title]@L]</h3>
-          </div>
-          <div class="plan-contents side-plan">
-      ##else
         <div id="plan-box-B" class="col-xs-4 plan-box highlighted-plan">
           <div class="side-title-container">
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-2-title]@L]</h3>
           </div>
           <div class="plan-contents">
-      ##endif
             <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-2-description]@L]</p>
             <div class="office-box"></div>
             <div class="price-wrapper"> 
@@ -1077,19 +1055,11 @@ assetPath: false
             <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.B}}" data-ci="94227">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>
           </div>
         </div>
-          ##if({{split1414testside}})
-        <div id="plan-box-C" class="col-xs-4 plan-box mt5 plan-box-gap">
-          <div class="side-title-container">        
-            <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
-          </div>
-          <div class="plan-contents side-plan">
-          ##else
         <div id="plan-box-C" class="col-xs-4 plan-box mt5">
           <div class="side-title-container">        
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
           </div>
           <div class="plan-contents side-plan right-side">
-          ##endif
             <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-3-description]@L]</p>
             <div class="office-box"></div>
             <div class="price-wrapper"> 
@@ -1135,11 +1105,7 @@ assetPath: false
               <span class="pre-text-green-check"></span>
             </div>
             <div class="check-text-wrapper">
-            ##if({{split1414testside}})
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-1-description]@L]</p>
-            ##else
               <p>[@L[cds.sales/business/office-365:29621-FeatureContent-1-description]@L]</p>
-            ##endif
             </div>
           </div> <!-- /check-section -->
         </div> <!-- /text-side -->       
@@ -1155,11 +1121,7 @@ assetPath: false
                 <span class="pre-text-green-check"></span>
               </div>
               <div class="check-text-wrapper price-hide" data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]">
-                ##if({{split1414testside}})
-                <p>[@L[cds.sales/business/office-365:32259-FeatureContent-2-description]@L]</p>
-                ##else
                 <p>[@L[cds.sales/business/office-365:32904-FeatureContent-2-description]@L]</p>
-                ##endif
               </div>
             </div><!-- /check-section -->
           </div><!-- /text-side --> 
@@ -1217,11 +1179,7 @@ assetPath: false
               <span class="pre-text-green-check"></span>
             </div>
             <div class="check-text-wrapper">
-            ##if({{split1414testside}})
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-4-description]@L]</p>
-            ##else
               <p>[@L[cds.sales/business/office-365:29621-FeatureContent-4-description]@L]</p>
-            ##endif
             </div>
           </div><!-- /check-section -->
         </div><!-- /text-side --> 
@@ -1239,11 +1197,7 @@ assetPath: false
               <span class="pre-text-green-check"></span>
             </div>
             <div class="check-text-wrapper">
-            ##if({{split1414testside}})
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-5-description]@L]</p>
-            ##else
               <p>[@L[cds.sales/business/office-365:29621-FeatureContent-5-description]@L]</p>
-            ##endif
             </div>
           </div> <!-- /check-section -->
         </div> <!-- /text-side -->
@@ -1284,34 +1238,6 @@ assetPath: false
       <div class="productivity-sub-section last more-than-office-cta">        
         <div class="sub-section-column text-side">
           <h3>[@L[cds.sales/business/office-365:29621-FeatureContent-8-title]@L]</h3>
-          
-          ##if({{split1414testside}})
-          <div class="check-section row">
-            <div class="check-block">
-              <span class="pre-text-green-check"></span>
-            </div>
-            <div class="check-text-wrapper">
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-8-bullet-get]@L]</p>
-            </div>
-          </div><!-- /check-section -->
-          <div class="check-section row">
-            <div class="check-block">
-              <span class="pre-text-green-check"></span>
-            </div>
-            <div class="check-text-wrapper">
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-8-bullet-keep]@L]</p>
-            </div>
-          </div><!-- /check-section -->
-          <div class="check-section row">
-            <div class="check-block">
-              <span class="pre-text-green-check"></span>
-            </div>
-            <div class="check-text-wrapper">
-              <p>[@L[cds.sales/business/office-365:32259-FeatureContent-8-bullet-meet]@L]</p>
-            </div>
-          </div><!-- /check-section -->
-          ##else
-
           <div class="check-section row">
             <div class="check-block">
               <span class="pre-text-green-check"></span>
@@ -1336,7 +1262,6 @@ assetPath: false
               <p>[@L[cds.sales/business/office-365:29621-FeatureContent-8-bullet-meet]@L]</p>
             </div>
           </div><!-- /check-section -->
-          ##endif
           <div class="check-section row">
             <div class="check-block">
               <span class="pre-text-green-check"></span>
@@ -1383,136 +1308,6 @@ assetPath: false
     </div> <!-- /l-main-container   -->
   </section>
 
-  ##if({{split1414testside}})
-
-
-
-
-  <section id="compare-plans" class="compare-plans-section">
-    <h2 class="section-header">[@L[cds.sales/business/office-365:29621-Compare-title]@L]</h2>
-    <p class="section-sub-header">[@L[cds.sales/business/office-365:29621-Compare-subtitle]@L]</p>
-    <div class="container l-main-container">
-      <div class="compare-table-wrapper">
-        <table>
-          <tr>
-            <th colspan='2' class="tdd"><span class="office-table-logo"></span></th>
-            <th class="business-essentials-header">[@L[cds.sales/business/office-365:29621-PlanBlock-2-title]@L]</th>
-            <th class="productivity-plus-header">[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</th>
-          </tr>
-          <tr class="row-divider">
-            <td colspan='2' class="gray tdd">[@L[cds.sales/business/office-365:29621-Compare-column-title]@L]</td>
-            <td class="gray">&nbsp;</td>
-            <td class="gray">&nbsp;</td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-desktop]@L]</td>
-            <td><span class="table-check"></span></td>
-            <td><span class="table-check"></span></td>                                    
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-automatic]@L]</td>
-            <td><span class="table-check"></span></td>
-            <td><span class="table-check"></span></td>                                    
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-mobile]@L]</td>
-            <td><span class="table-check"></span></td>
-            <td><span class="table-check"></span></td>                                    
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-secure]@L]</td>
-            <td><span class="table-check"></span></td>
-            <td><span class="table-check"></span></td>                                    
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-online]@L]</td>
-            <td><span class="table-check"></span></td>
-            <td><span class="table-check"></span></td>                                    
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-email]@L]</td>
-            <td></td>
-            <td><span class="table-check"></span></td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-storage]@L]</td>
-            <td>&nbsp;</td>
-            <td><span class="table-check"></span></td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-sync]@L]</td>
-            <td></td>
-            <td><span class="table-check"></span></td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-meetings]@L]</td>
-            <td>&nbsp;</td>
-            <td><span class="table-check"></span></td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd">[@L[cds.sales/business/office-365:29621-Compare-spam]@L]</td>
-            <td>&nbsp;</td>
-            <td><span class="table-check"></span></td>
-          </tr>
-          <tr>
-            <td colspan='2' class="tdd last">
-              <p class="td-header">[@L[cds.sales/business/office-365:29621-PlansInclude-title]@L]</p>
-              <p>[@L[cds.sales/business/office-365:29621-PlansInclude-support]@L]</p>
-              <p>[@L[cds.sales/business/office-365:29621-PlansInclude-money]@L]</p>
-              <p>[@L[cds.sales/business/office-365:29621-PlansInclude-uptime]@L]</p>                          
-            </td>
-            <td class="last">
-              <div class="table-td-cell-vertAlign">
-                <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.B}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
-                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
-                ##if(productHasSavingsMoreThan({{pfids.B}}, {{pfids.B}}, 0))
-                  <div class="row strike-through-wrapper">
-                    <p class="strike-through-price">
-                      <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.B}}" secondaryproductid="{{pfids.B}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
-                          [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
-                        </strong>
-                      </span>
-                    </p>
-                    <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.B}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
-                  </div>
-                ##endif
-                ##if(countrySiteAny(uk))
-                  <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
-                ##endif
-              </div>
-              <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="{{groupids.B}}" data-ci="94222">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
-            </td>
-            <td class="last">
-              <div class="table-td-cell-vertAlign">
-                <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
-                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
-                ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
-                  <div class="row strike-through-wrapper">
-                    <p class="strike-through-price">
-                      <span class="secondary-color uppercase price-hide">
-                        <strong data-tokenize="[@T[productcompare:<percent primaryproductid="{{pfids.C}}" secondaryproductid="{{pfids.C}}" showsymbol="true" ><html><![CDATA[{0}]]></html></percent>]@T]"> 
-                          [@L[cds.sales/business/office-365:29621-OnSaleSave]@L]
-                        </strong>
-                      </span>
-                    </p>
-                    <p class="current-renewal-price price-hide" data-tokenize="[@T[productprice:<list productid="{{pfids.C}}" period="monthly" htmlsymbol="true" />]@T]">[@L[cds.sales/business/office-365:29621-RenewsAtPerMonth]@L]</p>
-                  </div>
-                ##endif
-                ##if(countrySiteAny(uk))
-                  <div class="vat-tax-message">[@L[cds.sales/business/office-365:vat-price]@L]</div>
-                ##endif
-              </div>
-              <button type="button" class="btn btn-warning btn-block table-btn btn-lg js-add-to-cart" data-value="{{groupids.C}}" data-ci="94223">[@L[cds.sales/business/office-365:split-test-b-3-AddToCart]@L]</button>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </section>
-  ##else
   <section id="compare-plans" class="compare-plans-section">
     <h2 class="section-header">[@L[cds.sales/business/office-365:29621-Compare-title]@L]</h2>
     <p class="section-sub-header">[@L[cds.sales/business/office-365:29621-Compare-subtitle]@L]</p>
@@ -1672,7 +1467,6 @@ assetPath: false
       </div>
     </div>
   </section>
-  ##endif
 
   <section id="faq-section" class="white-bg">
     <h2 class="section-header">[@L[cds.sales/business/office-365:split-test-b-3-FrequentlyAskedQuestions]@L]</h2>
@@ -1682,11 +1476,7 @@ assetPath: false
           <a class="open-button plus" href="#" data-ci="94244"></a>
         </div>
         <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-1]@L]</div>
-         ##if({{split1414testside}})
-         <div class="answer">[@L[cds.sales/business/office-365:32259-FAQ-a-1]@L]</div>
-         ##else
-         <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-1]@L]</div>
-         ##endif
+        <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-1]@L]</div>
       </div> 
       <div class="question-section">
         <div class="show-hide-question-section">
@@ -1700,11 +1490,7 @@ assetPath: false
           <a class="open-button plus" href="#" data-ci="94257"></a>
         </div>
         <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-3]@L]</div>
-        ##if({{split1414testside}})
-        <div class="answer">[@L[cds.sales/business/office-365:32259-FAQ-a-3]@L]</div>
-        ##else
         <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-3]@L]</div>
-        ##endif
       </div>
       <p class="more-text">
         <a href="javascript:void(0);" data-ci="94230">[@L[cds.sales/business/office-365:split-test-b-1-more-faq]@L] <i class="chevron-down"></i></a>
@@ -1737,11 +1523,7 @@ assetPath: false
             <a class="open-button plus" href="#" data-ci="94261"></a>
           </div>
           <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-7]@L]</div>
-          ##if({{split1414testside}})
-          <div class="answer">[@L[cds.sales/business/office-365:32259-FAQ-a-7]@L]</div>
-          ##else
           <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-7]@L]</div>
-          ##endif
         </div>
         <div class="question-section">
           <div class="show-hide-question-section">
@@ -1769,22 +1551,14 @@ assetPath: false
             <a class="open-button plus" href="#" data-ci="94246"></a>
           </div>
           <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-11]@L]</div>
-          ##if(countrySiteAny(www))
-          <div class="answer" data-tokenize="[@T[support:<hostedExchangePhone/>]@T]">[@L[cds.sales/business/office-365:29621-FAQ-a-11-US]@L]</div>
-          ##else
-          <div class="answer" data-tokenize="[@T[supportphone:<technical/>]@T]">[@L[cds.sales/business/office-365:29621-FAQ-a-11-INT]@L]</div>
-          ##endif
+          <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-11]@L]</div>
         </div>
         <div class="question-section">
           <div class="show-hide-question-section">
             <a class="open-button plus" href="#" data-ci="94247"></a>
           </div>
           <div class="question">[@L[cds.sales/business/office-365:29621-FAQ-q-12]@L]</div>
-          ##if({{split1414testside}})
-          <div class="answer">[@L[cds.sales/business/office-365:32259-FAQ-a-12]@L]</div>
-          ##else
           <div class="answer">[@L[cds.sales/business/office-365:29621-FAQ-a-12]@L]</div>
-          ##endif
         </div>
         <div class="question-section">
           <div class="show-hide-question-section">

@@ -1,0 +1,12 @@
+extend ../../../../templates/plan-tile
+
+block vars
+  - title = ".global";
+  - description = "[@L[cds.sales/gd/domains/domain-name-search:PodDotGlobalText]@L]";
+  - pfid = "[@T[productprice:<template productid='483124' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]";
+  - flagText = "NOW AVAILABLE"
+  - buttonText = "REGISTER";
+  - buttonUrl = "[@T[link:<relative path='/tlds/global'><param name='ci' value='xxxxx' /></relative>]@T]"
+
+block price
+  .plan-price-wrap !{pfid}

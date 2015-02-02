@@ -1,0 +1,114 @@
+
+<!-- start right-arrow hero section-->
+<atlantis:webstash type="css">
+  <style>
+    .hero-wrapper>div{min-height:inherit;}
+    .right-arrow.hero {min-height: inherit;line-height:.9;white-space:nowrap;background: transparent}
+    .right-arrow>div{min-height:inherit}
+    .right-arrow .left{background-color:rgb(119,192,67);color:#333}
+    .right-arrow .right{background-color:transparent; color:#000}
+    .right-arrow .dash{letter-spacing:-.2rem}
+    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
+    .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent{width:80%; margin-left:10%;}
+    .right-arrow .rightContent{width:70%}
+    .right-arrow .rightContent .btn{margin:5% 0}
+    
+  </style>
+  <style>.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product {
+  display: inline-block;
+  width: 43%;
+  margin-right: 20%;
+}
+.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product > img {
+  width: 100%;
+}
+.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product > div {
+  font-size: 170%;
+  margin: 0 auto;
+}
+.hero.right-arrow.wsb-free-domain-typo .leftContent .products .addition {
+  width: 10%;
+  display: inline-block;
+}
+.hero.right-arrow.wsb-free-domain-typo .leftContent .products .domain > div {
+  width: 50%;
+}
+.hero.right-arrow.wsb-free-domain-typo .leftContent .products .domain {
+  margin-right: 20%;
+}
+.hero.right-arrow.wsb-free-domain-typo .rightContent {
+  width: 95%;
+}
+.hero.right-arrow.wsb-free-domain-typo .rightContent .line5 {
+  white-space: normal;
+  font-size: 125%;
+}
+.hero.right-arrow.wsb-free-domain-typo .rightContent .line6 {
+  font-size: 65%;
+  padding-top: 2%;
+  white-space: normal;
+}
+.hero.right-arrow.wsb-free-domain-typo .addition {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='94097'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
+  <div class="left col-xs-6">
+    <div class="leftContent">
+      <div class="products walsheim-black">
+        <div class="product domain bigtext"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain-black.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www svgfallback"/>
+          <div class="domain tungsten">DOMAIN</div>
+        </div>
+        <div class="addition bigtext"><span>[@L[cds.sales/homepage/heros/got:additionSign]@L]</span></div>
+        <div class="product website bigtext"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website-black.png" class="img-responsi pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil svgfallback"/>
+          <div class="tungsten">WEBSITE BUILDER</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-1 arrow"></div>
+  <script>
+    (function(){
+    function IEVersion(){
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
+        return '8-9';
+      }
+      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+        return '10-current';
+      }
+    }
+    var ieVersion = IEVersion();
+      if(ieVersion != undefined)
+        if(ieVersion == '10-11+'){
+          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
+          var base64 = window.btoa(utf8);
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
+          }
+        else{
+          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
+        }
+      })();
+  </script>
+  <div class="right col-xs-5">
+    <div class="rightContent">
+      <div class="bigtext">
+        <div class="line1 walsheim-black">FREE DOMAIN</div>
+        <div class="line2 tungsten">WHEN YOU BUY WEBSITE BUILDER</div>
+        <div class="line3 walsheim-black">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</div>
+        <div class="line4 tungsten"><span>THIS</span><span class="dash">———</span><span>IS NOT A TYPO</span></div>
+        <div class="line5 walsheim-bold">AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</div>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
+      <div class="line6 walsheim-black">Free domain with annual plan only. Other restrictions apply.</div>
+    </div>
+  </div>
+</div>
+<!-- end right-arrow hero section-->

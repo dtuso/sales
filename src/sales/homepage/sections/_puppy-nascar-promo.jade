@@ -1,0 +1,23 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #puppy-nascar-promo{background:#79be4b center center;background-size:cover;
+        h2{margin:80px 0 0;}
+        h3{margin-top:0;font-size:1.6rem;
+           @media only screen and (max-width:680px){width:180px;}
+        }
+        a{margin-bottom:30px;
+          @media only screen and (min-width:1400px){margin-bottom:100px;}
+        }
+
+        .puppy-nascar-promo-btn{font-size:1.4rem;}
+      }
+      .puppy-nascar-img{width:80%;padding-top:10%}
+      .Explorer8 #puppy-nascar-promo,.Explorer7 #puppy-nascar-promo{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb-social-module-background-01.png);}
+section#puppy-nascar-promo.lazyload(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/nascar-full-width.jpg")
+  .container
+    .row
+      .col-sm-6.col-offset-sm-6
+        h2.walsheim-black Enter to win
+        h3.walsheim-regular Your pup could be on the GoDaddy race car!
+        a.btn.btn-default-dark.puppy-nascar-promo-btn.walsheim-black(data-url!="[@T[link:<relative path='/contest/buddy'><param name='ci' value='95788' /><param name='gdccopath' value='enter' /></relative>]@T]") SUBMIT YOUR PUP 

@@ -1,0 +1,28 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "94098";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " hosting-awesome";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.hosting-awesome{
+        .leftContent {
+        .top{width:60%}
+        }
+      }
+block leftContent
+  .bigtext.top
+    .line1.tungsten YOUR WEBSITE
+  .bigtext
+    .line2.walsheim-black IS ONLY AS AWESOME AS
+    .line3.tungsten 
+      span.dash ——
+      span YOUR HOSTING.
+block rightContent
+  .bigtext
+    .line1.walsheim-bold GUARANTEED 99.9% UPTIME
+    .line2.walsheim-black WEB HOSTING
+    .line4.price.walsheim-bold NOW JUST [@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
+  a.btn.btn-lg.btn-purchase GET STARTED

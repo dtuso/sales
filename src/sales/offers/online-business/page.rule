@@ -1,7 +1,8 @@
 ---
 location: sales/offers/online-business.aspx.rule
-id:  54b58336f778fc10040523dc
-name: GCE-31515
+id: 5491e85bf778fc1c3885549f
+name: GCE-34025
+comments: Update to pricing token for VAT countries.
 ---
 [
   { 
@@ -11,7 +12,7 @@ name: GCE-31515
   },
   { 
     "Type": "Redirect",
-    "Condition": "(!productIsOffered(99) || countrySiteAny(mx))",
+    "Condition": "(!productIsOffered(99))",
     "Data": "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 ]

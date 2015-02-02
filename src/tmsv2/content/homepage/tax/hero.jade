@@ -1,0 +1,26 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "91417";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/tlds/tax'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " tax";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.tax{
+        .rightContent {
+        .line3{margin-bottom:3%}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.tungsten KEEP A CALCULATOR
+    .line2.walsheim-black
+      span.dash —————
+      span UNDER YOUR PILLOW?
+block rightContent
+  .bigtext
+    .line1.walsheim-black .TAX
+    .line2.walsheim-bold IS FOR YOU
+    .line3.price.walsheim-regular JUST [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
+  a.btn.btn-lg.btn-purchase GET STARTED

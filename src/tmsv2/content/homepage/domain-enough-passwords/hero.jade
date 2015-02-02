@@ -1,0 +1,28 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "95853";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " domain-enough-passwords";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.domain-enough-passwords{
+        .rightContent {
+          .line3{font-size:65%; padding:2% 0}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.walsheim-black TRANSFER
+    .line2.tungsten YOUR DOMAIN TO US.
+    .line3.walsheim-black YOU HAVE ENOUGH PASSWORDS
+    .line4.tungsten 
+      span.dash ——————————— 
+      span TO REMEMBER
+block rightContent
+  .bigtext
+    .line1.price.walsheim-black FREE
+    .line2.tungsten 1-YEAR EXTENSION
+  button.btn.btn-lg.btn-purchase GET STARTED
+  .line3 *Exclusions apply

@@ -1,0 +1,30 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #o365-promo{padding-bottom:105px}
+      #o365-promo h2{font-size:4.5rem;}
+      #o365-promo h3{font-size:4rem;text-transform:uppercase;}
+      #o365-promo .o365-promo-text p{max-width:420px;}
+      #o365-promo .promo-flag{color:#000; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;font-size:28px;font-size:2.8rem;padding:10px 20px;text-transform:uppercase;line-height:1;background-size:cover;overflow:visible;position:absolute;margin-top:100px;right:50px;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;}
+      .Explorer8 #o365-promo .promo-flag{background-color:#fedc45}
+      .o365-promo-text ul{list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);margin:0 0 20px -12px}
+      .o365-promo-image{padding-top:115px;width:140%}
+
+section#o365-promo
+  .container
+    h2.text-center.walsheim-black The Right Email Makes A Difference.
+    .row
+      .col-sm-6.o365-promo-text
+        h3.walsheim-black Look like the<br />pro you are
+        p Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:
+        ul
+          li <b>Get a professional address</b>, like yourname@coolexample.com.
+          li <b>Sync email across all your computers</b>, smartphones and more.
+          li <b>Store more of your email</b> with 50 GB of secure online storage. 
+        a.btn.btn-default-dark(data-url!="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]") Learn More
+      .col-sm-6
+        .promo-flag Easy Setup
+        <!--[if lt IE 9]>
+        +lazyImg('o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','Office 365 image')
+        <![endif]-->
+        +lazyImg('svgfallback o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','Office 365 image')
