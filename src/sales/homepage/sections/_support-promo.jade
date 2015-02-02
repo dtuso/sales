@@ -14,7 +14,7 @@ atlantis:webstash(type="css")
 
 section#support-promo
   .container
-    h2.text-center.walsheim-black.text-white We're Always Here To Help.
+    h2.text-center.walsheim-black.text-white [@L[cds.sales/homepage/sections/_support-promo:header-text]@L]
     .row
       .col-xs-6.text-center
         <!--[if lt IE 9]>
@@ -23,11 +23,11 @@ section#support-promo
         +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
       .col-xs-6
         .support-promo-text.text-white
-          h3.walsheim-black Award-Winning<br />24/7 Support
-          p We make it easy to get online, but if you do need help or just wanna talk to someone, our online experts are available 24/7/365.
+          h3.walsheim-black [@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]
+          p [@L[cds.sales/homepage/sections/_support-promo:body-text]@L]
           .container
             .row
               .col-md-4.col-xs-12
-                a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") Learn More
+                a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") [@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]
               .col-md-8.col-xs-12
                 .support-promo-number.walsheim-medium [@T[supportphone:<technical />]@T]
