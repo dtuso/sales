@@ -1637,16 +1637,7 @@ h
               });
             
             });
-            
-            
           </script>
-          <atlantis:webstash type="css">
-            <style>.something {
-  font-size: 16px;
-}
-
-            </style>
-          </atlantis:webstash>
         </div>
       </section> 
       ##if(productIsOffered(105)) 
@@ -1833,16 +1824,7 @@ h
                 });
               
               });
-              
-              
             </script>
-            <atlantis:webstash type="css">
-              <style>.something {
-  font-size: 16px;
-}
-
-              </style>
-            </atlantis:webstash>
           </div>
         </div>
       </section>
@@ -2018,16 +2000,7 @@ h
                 });
               
               });
-              
-              
             </script>
-            <atlantis:webstash type="css">
-              <style>.something {
-  font-size: 16px;
-}
-
-              </style>
-            </atlantis:webstash>
           </div>
         </div>
         <div class="bg-white">
