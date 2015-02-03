@@ -1133,7 +1133,7 @@ script(type="text/javascript").
       guiDomain: "[@T[link:<external linktype='guiurl' path='' parammode='explicit'/>]@T]/", // <---- CDS TOKEN NEEDED
       init: function() {
           /** Add locale to HTML tag **/
-          var currentLocale = 'en-us';
+          var currentLocale = "[@T[localization:<language full='true' />]@T]";
           var htmlLang = $('html').attr('lang') + '';
           if (htmlLang.length > 0 && htmlLang.toLowerCase() !== currentLocale) {
               $('html').attr('lang', currentLocale);
