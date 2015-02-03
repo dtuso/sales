@@ -314,6 +314,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
+      window.triggerResize(); // force equalHeightSlides when modal is showing (otherwise they have no height when display:none)
     });
   }
 
@@ -914,7 +915,6 @@ h2.api-error-header {
 
 .bigtext {visibility: hidden;}
 
-h
     </style>
     <style>
 .plan-tile { 
@@ -2227,6 +2227,7 @@ h
         #products.key-benefits-wrap h3.key-benefits-title {
           color:#333;
           font-size: 30px;
+          margin-top: 35px;
         }
         
         /* KEY BENEFITS */
@@ -2308,7 +2309,7 @@ h
           word-break: break-word;
           white-space: -moz-pre-wrap;
           margin-top: 0px;
-          font-size: 30pt;
+          font-size: 30px;
           font-weight: bold;
           color: #333;
         }
@@ -2369,7 +2370,7 @@ h
           min-height: 360px;
         }
         #domainSection1What, #domainSection2Email {
-          margin: 10px 0;
+          margin: 20px 0;
         }
         
       </style>
@@ -2386,40 +2387,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2448,7 +2437,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2472,40 +2461,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2534,7 +2511,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2556,7 +2533,7 @@ h
       </div>
       <atlantis:webstash type="css">
         <style>
-          #findYourPerfectDomain .tld-images {margin-top: 0px; margin-left: 60px;}
+          #findYourPerfectDomain .tld-images {margin-top: 0px; }
           #findYourPerfectDomain .tld-image {margin: 15px;}
           #findYourPerfectDomain.tile-section {
             padding:20px 0;
@@ -2581,40 +2558,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2643,7 +2608,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6 bg-slim-left">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="features-img-right-slim" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right-slim"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
@@ -3436,9 +3401,6 @@ h
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
         <style>
-          #carousel-ols-stores {
-            width: 1000px;
-          }
           .plan-tile { 
             margin-top: -145px; 
           }
@@ -3450,31 +3412,6 @@ h
           }
           .bg-gray-light {
             background-color: #d9d9d9;
-          }
-          .customer-slide {
-            background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
-            background-repeat: no-repeat;
-            margin-bottom: 20px;
-          }
-          .customer-slide.slide-1 {
-            background-position: 0px 5px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-2 {
-            background-position: 0px -405px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-3 {
-            background-position: -0px -815px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-4 {
-            background-position: 0px -1225px; 
-            height: 410px; 
-            width: 665px;
           }
           .customer-byline {
             font-size: 15px;
@@ -3496,7 +3433,6 @@ h
           }
           .main-heading {
             margin: 0px;
-            font-size: 30px;
           }
           .subheading {
             margin-bottom: 0px;
@@ -3505,18 +3441,36 @@ h
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
-            min-height: 90px;
           }
-          .store-name {
-            margin-top: 10px;
-            margin-bottom: 10px;
+          .carousel-panel h2.store-name {
+            margin: 10px 0;
           }
           .item-wrapper {
             padding: 20px 0 20px !important;
           }
-          
-          
+          .img-centered {
+            margin: 0 auto;
+          }
         </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script>
+          $(document).ready(function(){
+            // autoheight the slides
+            var $slides = $('#carousel-ols-stores').find('.ols-carousel-item');
+            $slides.css("min-height", "100 px");
+            var equalHeightSlides = function(){
+              var maxHeight = 0;
+              $slides.each(function(){
+                maxHeight = $(this).outerHeight() > maxHeight ? $(this).outerHeight() : maxHeight;          
+              });
+              if( maxHeight > 0 ) $slides.css("height", maxHeight + "px").css("min-height", "auto");
+            }
+            $(window).on('resize', equalHeightSlides);
+          });
+          
+          
+        </script>
       </atlantis:webstash>
       <div data-icode="" class="carousel-panel container">
         <div class="row">
@@ -3525,14 +3479,14 @@ h
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10 center-block">
-          <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
-          <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1 center-block">
+            <h2 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h2>
+            <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+          </div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
             <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
@@ -3890,27 +3844,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-2"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Gloss.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3918,27 +3866,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-3"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Bibs.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3946,27 +3888,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-4"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Princess.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3974,21 +3910,17 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-1"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Jones.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
