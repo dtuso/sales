@@ -33,7 +33,7 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
@@ -4847,40 +4847,28 @@ margin-bottom: 20px;
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -4909,7 +4897,7 @@ margin-bottom: 20px;
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png" data-lazyload-watch="features-img-right" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right"/>
               </div>
             </div>
             <div class="col-sm-6">
