@@ -33,7 +33,7 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
@@ -633,7 +633,7 @@ text-transform: uppercase;
                 });
               </script>
             </atlantis:webstash>
-            <div style="" data-lazyload-source="" data-icode="code" data-ci="" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
+            <div style="" data-lazyload-source="" data-icode="code" data-ci="95781" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
               <div class="container relative-position video-info">
                 <div class="row">
                   <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
