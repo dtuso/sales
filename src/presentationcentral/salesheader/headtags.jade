@@ -736,16 +736,16 @@ script(type="text/javascript").
       }
 
       function setMarketLinkHandler() {
-          $('body').on('click', '[data-pc-link]', function(e) {
-              e.preventDefault();
-              var $link = $(this);
-              var qry = $link.data('pc-qry');
-              var href = $link.data('pc-href');
-              var url = href + qry;
-              window.location = url;
-          });
+        $('body').on('click', '[data-pc-qry], [data-pc-link]', function(e) {
+          e.preventDefault();
+          var $link = $(this);
+          var qry = $link.data('pc-qry');
+          var href = $link.data('pc-href') || $link.attr('href');
+          var url = href + qry;
+          window.location = url;
+        });
       }
-
+      
       function setUpBannerClick() {
           // CTA banner clicks
           // this is for the banner that appears under the product lists
