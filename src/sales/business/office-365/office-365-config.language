@@ -1,6 +1,6 @@
 ---
 location: localization/sales/business/office-365-config/en
-id: 54c7dcb1f778fc2bc0f8d7e9
+id:  54cfd7bef778fc20ac262edb
 name: GCE-32258
 comments: Config page verbage update
 max: "{{max}}"
@@ -184,3 +184,7 @@ per user/month. 1st year only.
 Extend your term
 <phrase key="cp-14-AvoidAnnualRenewals-32258" />
 Avoid annual renewals with a multi-year term.
+<phrase key="AdditionalYear" />
+add&#39;l year
+<phrase key="AdditionalYears" />
+add&#39;l years
