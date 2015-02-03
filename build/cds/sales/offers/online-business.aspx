@@ -3433,7 +3433,6 @@ h2.api-error-header {
           }
           .main-heading {
             margin: 0px;
-            font-size: 30px;
           }
           .subheading {
             margin-bottom: 0px;
@@ -3442,11 +3441,9 @@ h2.api-error-header {
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
-            min-height: 90px;
           }
-          .store-name {
-            margin-top: 10px;
-            margin-bottom: 10px;
+          .carousel-panel h2.store-name {
+            margin: 10px 0;
           }
           .item-wrapper {
             padding: 20px 0 20px !important;
@@ -3485,7 +3482,7 @@ h2.api-error-header {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-push-1 center-block">
-            <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
+            <h2 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h2>
             <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
           </div>
         </div>
