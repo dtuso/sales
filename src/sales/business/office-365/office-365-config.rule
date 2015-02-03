@@ -1,8 +1,8 @@
 ---
 location: sales/business/office-365-config.aspx.rule
-id: 5462503ef778fc0a70ee7815
-name: GCE-31272
-comments: O365 Office LP - Adding GD Exclusive Text to page
+id:  54b68e3af778fc0f24ed2032
+name: GCE-35024
+comments: Turn On Additional Markets for O365 (GD markets) & PC Changes
 ---
 [
   { 
@@ -13,6 +13,6 @@ comments: O365 Office LP - Adding GD Exclusive Text to page
   { 
     'Type': 'Redirect', 
     'Condition': '!productIsOffered(99) && !isManager()', 
-    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/email/email-hosting.aspx\"></relative>]@T]' }"
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" ></relative>]@T]' }"
   }
 ]

@@ -119,29 +119,6 @@ $(document).ready(function() {
     showTypeYourDomain();
   }
 
-  //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
-    } else {
-      // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
-    }
-  })
-  .on('click', '.offer-search-btn', function(e) {
-    e.preventDefault();
-    domainSearchFormSubmit(e);
-    return false;
-  });
-
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
   
@@ -257,6 +234,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
+      window.triggerResize(); // force equalHeightSlides when modal is showing (otherwise they have no height when display:none)
     });
   }
 
@@ -279,39 +257,9 @@ function showTldImagesInDomainArea() {
   $(window).trigger('resize');
 }
 
-function formatDomainWithDefaultTldIfNoneSpecified(domain) {
-  if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.tldInfo.defaultTld;
-}
+function domainSearchFormSubmit(e, domain) { 
 
-function isTldValid(domain) {
-  var isValid = false;
-  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
-      isValid = true;
-    }
-  });
-  return isValid;
-}
-
-
-function domainSearchFormSubmit(e) {
- 
-  var $this = $(e.target),
-    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
-    domain = $.trim($textInput.val()), 
-    apiEndpoint1;
-
-  if((domain && domain.length==0) || !domain) return;
-
-  domain = domain.toLowerCase();
-  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
-
-  if(!isTldValid(domain)) {
-    displayInvalidTldMessage();
-    return;
-  }
-
+  var $this = $(e.target);
 
   var newItc = got1Page.offersCodes.itc_wsb;
   ##if(isManager())
@@ -526,11 +474,6 @@ function showApi1or2SearchError(e,domain){
 function showApi3SearchError(e,domain){  
   var $modal = $("#step2-choose-product .api-c-failure-modal");
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function displayInvalidTldMessage(){
-  $('#marquee .search-message').hide();
-  $('#marquee .invalid-TLD-entered').show();
 }
 
 function showDomainRegistrationFailure(tld) {

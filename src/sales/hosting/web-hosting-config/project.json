@@ -7,21 +7,21 @@
       },
       "cdsLocation": "sales/hosting/web-hosting-config-new.aspx",
       "draft": {
-        "id": "53dfd5c8f778fc33bc708f4d",
-        "createdDate": "2014-08-04",
+        "id": "54b5742cf778fc10040523ad",
+        "createdDate": "2015-01-13",
         "createdBy": {
-          "fullName": "Ryan Hurst",
-          "username": "rhurst"
+          "fullName": "Victor Songco",
+          "username": "vsongco"
         },
-        "jiraTicket": "FOS-1310",
-        "comments": "Select cPanel by default and remove price from cpanel option",
+        "jiraTicket": "SEM-289",
+        "comments": "Missing meta data on TEST/PROD pages",
         "url": "http://www.dev-godaddy.com/hosting/web-hosting-config-new.aspx"
       }
     },
     "assetPath": "fos/201401/sales/hosting/web-hosting-config/",
-    "metaTitle": "[@L[cds.sales/hosting/web-hosting:page-title]@L]",
-    "metaDescription": "",
-    "metaKeywords": "",
+    "metaTitle": "[@L[cds.sales/hosting/web-hosting-config:meta-title]@L]",
+    "metaDescription": "[@L[cds.sales/hosting/web-hosting-config:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/hosting/web-hosting-config:meta-keywords]@L]",
     "metaCanonicalPath": "/hosting/web-hosting-config-new.aspx",
     "metaOgTitle": "",
     "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",

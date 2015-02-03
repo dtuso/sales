@@ -1,12 +1,28 @@
 ---
 location: sales/ecommerce/online-store.aspx
-id: 54877fe1f778fc14fce4f68c
-name: SEM-235
-comments: SEO Expansion Pages - Best eCommerce solution
+id: 54b82c4cf778fc1c443c2036
+name: SEM-271
+comments: SEO Expansion Page - Best eCommerce Sites
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %}
+
+{% block metahead %}
+{% parent %}
+##if(appSettingEnabled(UXCORE_ENABLED))
+<style>
+body {
+    font-size: 10px;
+    background-color: #ededed;
+}
+a, a:hover {
+    color: #7db701;
+}
+</style>
+##endif
+{% endblock %}
+
 {% block body %}
 <!------------------------------------>
 <!--           MARQUEE              -->
@@ -295,6 +311,9 @@ cssVersionOverride: 2
 <!------------------------------------>
 <!--  FEATURE CONTENT PAYMENT TYPES -->
 <!------------------------------------>
+##if(appSettingEnabled(UXCORE_ENABLED))
+<div style="background-color: #ededed;">
+##endif
 <section class="container main-payment-types">
 
   <div class="container l-main-container">
@@ -346,6 +365,9 @@ cssVersionOverride: 2
 
 ##endif
 </section>
+##if(appSettingEnabled(UXCORE_ENABLED))
+</div>
+##endif
 
 <!------------------------------------>
 <!--       CALL TO ACTION  (CTA) BAR       -->
@@ -510,6 +532,9 @@ cssVersionOverride: 2
     <!------------------------------------>
     <!--   PLAN TIER (What's Included)  -->
     <!------------------------------------>
+    ##if(appSettingEnabled(UXCORE_ENABLED))
+    <div style="background-color: #ededed;">
+    ##endif
     <section class="container main-plan-tiers">
       
       <div class="container l-main-container center-text included-highlighted-bg">
@@ -774,6 +799,9 @@ cssVersionOverride: 2
 
     </div> 
 </section>
+##if(appSettingEnabled(UXCORE_ENABLED))
+</div>
+##endif
 
  <!------------------------------------>
  <!--     CUSTOMER CAROUSEL 2014Q3   -->
@@ -827,8 +855,11 @@ cssVersionOverride: 2
   </div>
 </section>
 <!------------------------------------>
- <!--                FAQ            -->
- <!------------------------------------>
+<!--                FAQ            -->
+<!------------------------------------>
+##if(appSettingEnabled(UXCORE_ENABLED))
+<div style="background-color: #ededed;">
+##endif
 <section id="faq" class="container main-faq">
   <div class="container l-main-container">
     <h2 class="center-text"> Frequently asked questions</h2>
@@ -885,10 +916,13 @@ cssVersionOverride: 2
       <a id="lessLink" class="less" href="javascript:void(0);" data-ci="93932">[@L[cds.sales/gd/ecommerce/online-store:Less]@L] <i class="chevron-up"></i></a> 
     </p>
   </div>
-</section>  
+</section>
+##if(appSettingEnabled(UXCORE_ENABLED))
+</div>
+##endif
 <!------------------------------------>
- <!--     CUSTOMER REVIEWS  BEGIN   -->
- <!------------------------------------>
+<!--     CUSTOMER REVIEWS  BEGIN   -->
+<!------------------------------------>
 
    <div class="tab-pane solazy" id="reviews" data-trigger-function="LoadBV">
        ##if(activeLanguageAny(en))
@@ -996,6 +1030,7 @@ cssVersionOverride: 2
                             ##endif  
                             ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
                               $(".expansion-page-1-link").html(" You can also learn <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-solution' secure='true'><param name='ci' value='95066' /></relative>]@T]\">How the Best eCommerce Stores</a> leverage trust signals and social sharing buttons.");
+                              $(".expansion-page-2-link").html("For more information, see <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-sites' secure='true'><param name='ci' value='95241' /></relative>]@T]\">Creating Online Store Product Options</a>.");
                             ##endif                            
                             });              
                         </script>
