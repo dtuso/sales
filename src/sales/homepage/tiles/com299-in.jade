@@ -10,7 +10,13 @@ append vars
 block append downArrowTileStyles
   style.
     .tile.com299-in{background-image:url('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/rajesh-background.jpg')}
+    .tile.com299-in .header-wrapper,.tile.com299-in .arrow-separator{visibility:hidden;}
+    .tile.com299-in .header-wrapper{min-height:120px;}
+    .tile.com299-in .body-text{font-size:28px; line-height:1em;}
+    .tile.com299-in .price-text{font-size:54px;color:#77c043;}
+    .tile.com299-in .btn-cta{width:auto}
+    .tile.com299-in .cta-wrapper,.tile.com299-in .body-wrapper{padding-right:20px;padding-left:20px}
 
 block body
     .body-text [@L[cds.sales/homepage/tile/com299-in:body-text]@L]
-    h3.price-text [@L[cds.sales/homepage/tile/com299-in:price-text]@L]
+    h3.price-text.tungsten [@L[cds.sales/homepage/tile/com299-in:price-text]@L]
