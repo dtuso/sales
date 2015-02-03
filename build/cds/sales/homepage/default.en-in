@@ -121,7 +121,7 @@
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
          
-        [@P[cdsDocument:<data app="sales" location="homepage/tile/com299-in/default_template" /> ]@P]</div>
+        [@P[cdsDocument:<data app="sales" location="homepage/tiles/com299-in/default_template" /> ]@P]</div>
     </div>
     <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
       <div class="modal-dialog">

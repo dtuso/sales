@@ -291,7 +291,7 @@ function domainSearchFormSubmit(e, domain) {
         showTypeYourDomain();// setup search box
 
         // tokenize header on search available page
-        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');       
 
@@ -302,7 +302,7 @@ function domainSearchFormSubmit(e, domain) {
       } else {
 
         // tokenize header on search available page
-        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
