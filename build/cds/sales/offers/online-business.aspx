@@ -3461,12 +3461,13 @@ h2.api-error-header {
           $(document).ready(function(){
             // autoheight the slides
             var $slides = $('#carousel-ols-stores').find('.ols-carousel-item');
+            $slides.css("min-height", "100 px");
             var equalHeightSlides = function(){
               var maxHeight = 0;
               $slides.each(function(){
                 maxHeight = $(this).outerHeight() > maxHeight ? $(this).outerHeight() : maxHeight;          
               });
-              if( maxHeight > 0 ) $slides.css("height", maxHeight + "px");
+              if( maxHeight > 0 ) $slides.css("height", maxHeight + "px").css("min-height", "auto");
             }
             $(window).on('resize', equalHeightSlides);
           });
