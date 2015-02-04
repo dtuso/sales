@@ -5,8 +5,7 @@ id: 54cfe4cbf778fc20ac262ef5
 name: GCE-32258
 comments: Update verbage on page
 ---
-{%- set split1414testside = 'splitTestingSideIsActive(1414, B)' -%}
-{% set split1414testside = 'queryValueHas(split,1)' -%}
+{%- set split1414testside = 'splitTestingSideIsActive(1414, B)' %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -66,7 +65,7 @@ comments: Update verbage on page
   </style>
 <![endif]-->
   <!-- endbuild -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
+
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
  
 </head>
@@ -473,7 +472,7 @@ comments: Update verbage on page
               </div>
               <div class="order-item" data-planLevel="Business" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-BusinessEssentials]@L]</p>
-                <div class="order-item-details-wrapper list" style="display: none;">
+                <div class="order-item-details-wrapper" style="display: none;">
                   <span class="order-item-details sale"></span>
                   <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
@@ -674,7 +673,7 @@ comments: Update verbage on page
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
 
   <script>
     if(typeof o365PageData == 'undefined'){
