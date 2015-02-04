@@ -1,0 +1,18 @@
+include _domain-starting-at-mixin.jade
+mixin renderGoodNews(domain, price, image)
+  append pageStyles
+    atlantis:webstash(type="js")
+      style.
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+
+  section#getItNow
+    .container
+      .row
+        div.text-center
+          h2 GOOD NEWS!
+          +renderDomainstringWithPrice(domain, price)
+      .row
+        div.topSpacing
+          .good-news-image
