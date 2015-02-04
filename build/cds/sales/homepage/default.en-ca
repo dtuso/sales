@@ -167,7 +167,7 @@
   margin-top: 10px;
 }
 #domain-name-input {
-  text-transform: initial;
+  text-transform: inherit;
 }
 .price,
 .icann-disclaimer {
