@@ -1,6 +1,6 @@
 ---
-location: tmsv2/content/advlp/1domwebhost/offer
-id: 54d00d4cf778fc20ac262fa1
+location: tmsv2/content/advlp/1domwsb/offer
+id: 
 name: GCE-34369
 comments: Various VAT fixes
 ---
@@ -8,29 +8,31 @@ comments: Various VAT fixes
 ##if(false)
 <!--
 
-https://www.dev-godaddy.com/offers/default.aspx?nosplit=1&isc=12MOHOS1&tmskey=1domwebhost_1
+https://www.godaddy.com/offers/default.aspx?isc=12MOWSB1&tmskey=1domwsb_2  //isc=12MOWSB1 for Monthly Price
+https://www.godaddy.com/offers/default.aspx?isc=JONWSB2&tmskey=1domwsb_1 //isc=JONWSB2 for Yearly Price
 
 -->
 ##endif
+
 <script>
 // name = does not need to match anything and may not be needed
 // plan =  package name for api
   var offersCodes = {
-    'name': '1domwebhost',
+    'name': '1domwsb',
     'plan': '',
     'planoptions':{
-      'economy-hosting':'host_GridHostEcoDiabloLin1Yr_us',
-      'deluxe-hosting' : 'host_GridHostDlxDiabloLin1Yr_us',
-      'ultimate-hosting' : 'host_GridHostUnlDiabloLin1Yr_us'
+      'personal-plan':'wsb_personal_12month',
+      'business-plan' : 'wsb_business_12month',
+      'business-plus-plan' : 'wsb_businessplus_12month'
       }, 
-    'itc': 'dlp_hosting',
+    'itc': 'dlp_wsb',
     'ci': {
-      'domainSearchClick': '94269',
-      'domainSearchSubmit': '94270',
-      'addDomainBtn': '94266',
-      'apiAddCi': '94267',
-      'apiDomainAddToCart': '94268',
-      'disclaimerLink': '94141'
+      'domainSearchClick': '92206',
+      'domainSearchSubmit': '92209',
+      'addDomainBtn': '92207',
+      'apiAddCi': '92210',
+      'apiDomainAddToCart': '92296',
+      'disclaimerLink': '92208'
     }
   }
 ##if(isManager())
@@ -41,38 +43,84 @@ https://www.dev-godaddy.com/offers/default.aspx?nosplit=1&isc=12MOHOS1&tmskey=1d
 
 
 <div style="display:none;">
-  <div id="tms-modal-body">    
-    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:webhost-disclaimer_34369]@L]</p>    
+  <div id="tms-modal-body">
+    ##if(countrySiteAny(uk) || isManager())
+    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-2-year-uk_34369]@L]</p>
+    <p class="tms-hide tms-disclaimer-month-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-4-month-uk_34369]@L]</p>
+    ##else
+    <p class="tms-hide tms-disclaimer-month-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-3-month_34369]@L]</p>
+    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-1-year_34369]@L]</p>
+    ##endif
   </div>
 </div>
+
+
 <atlantis:webstash type="js">
   <script>
     $(document).ready(function(){
-        $(".price").each(function(){
+      $(".price").each(function(){
         var $this = $(this);
-        var val = '[@T[productprice:<current productid="32051" promocode="310211725" period="monthly"/>]@T]';
-        $this.html(val.replace(/(.+)(.00)+?$/,'$1<span>$2</span>'));
+        var valMonthYear = {
+          '1domwsb_1':'year',
+          '1domwsb_2':'month',
+          '1domwsb_3':'year',
+          '1domwsb_4':'month',
+          '1domwsb_5':'year',
+          '1domwsb_6':'month',
+          '1domwsb_7':'year',
+          '1domwsb_8':'month',
+          '1domwsb_9':'year',
+          '1domwsb_10':'month',
+          '1domwsb_11':'year',
+          '1domwsb_12':'month',
+          '1domwsb_13':'month'
+        }
+        
+        var priceData = {
+          'month':'[@T[productprice:<current productid="7524" promocode="31254128" period="monthly" />]@T]',
+          'monthList':'[@T[productprice:<template productid="7524" promocode="0" period="monthly" ><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]',
+          'year':'[@T[productprice:<current productid="7524" promocode="31254129" />]@T]',
+          'yearList':'[@T[productprice:<template productid="7524" promocode="0" ><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]'
+        }
+         
+        var val = priceData[valMonthYear['[@D[tms.message.tag]@D]']];
+        if(valMonthYear['[@D[tms.message.tag]@D]'] == 'month'){
+          $('.promo-plan-month').show();
+          $('.promo-plan-year').hide();
+          $('#personal-price').html(priceData.month);
+          $('#list-price').html(priceData.monthList);
+        }else if(valMonthYear['[@D[tms.message.tag]@D]'] == 'year'){
+          $('.promo-plan-month').hide();
+          $('.promo-plan-year').show();
+          $('#personal-price').html(priceData.year);
+          $('#list-price').html(priceData.yearList);
+        }
+        $this.html(val.replace(/(.+)(\.00)+?$/,'$1<span>$2</span>'));
         $this.addClass("price-show");
       });
     })
+    
   </script>
 </atlantis:webstash>
 
 <atlantis:webstash type="css">
   <style>    
-    #domainRow h1.alt-title-[@D[tms.message.tag]@D]{width:90%;font-size: 60px;font-weight:100;line-height: 1.2em;color:white;margin-top: 125px;margin-bottom: 25px;font-family: HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
-    #domainRow h1.alt-title-[@D[tms.message.tag]@D] strong{white-space:nowrap;font-size:60px;font-weight:bold;color:#ff8a00;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
-    #domainRow h1.alt-title-[@D[tms.message.tag]@D] span{font-size:60px;font-weight:bold;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}    
-    html body .tms-hide.tms-disclaimer-year-[@D[tms.message.tag]@D]{display:block;}        
-      
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D]{margin-left: 0;font-size: 60px;font-weight:100;line-height: 1.2em;width: 96%;color:white;margin-top: 125px;margin-bottom: 25px;font-family: HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D] strong{font-size:60px;font-weight:bold;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D] em{white-space:nowrap;font-size:60px;font-style: normal;font-weight:bold;color:#ff8a00;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}    
+    html body .tms-hide.tms-disclaimer-year-[@D[tms.message.tag]@D]{display:block;}     
+    
+    /* variant 1 */   
+    #domainRow h1.alt-title-1domwsb_1{margin-left: 0;font-size: 55px;font-weight:100;line-height: 1.2em;width: 96%;color:white;margin-top: 125px;margin-bottom: 25px;font-family: HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+         
     .price{display:none}
     .price.price-show{display:inline}
     html[lang*=en] .price.price-show .decim{display:none}
     
     .hide-non-en{display:none;}
     html[lang*=en] .hide-non-en{display:block;}
+    html[lang*=ru] .grid-column .starting-at{white-space:nowrap;}
     .nobreak{white-space:nowrap;}
-    
   </style>
 </atlantis:webstash> 
   
@@ -91,27 +139,27 @@ offersCodes.ci.domainSearchSubmit
   <style>   
     
     /* Header and Plan Boxes CSS - start */
-        
-    #hosting-plans .product-features{margin-bottom: 20px;padding-left: 1.142857143em;margin-top: 0.7em;text-align: left;line-height: 25px;}    
-    #hosting-plans .grid-column {padding-left: 14px;padding-right: 10px;font-size:17px;cursor:pointer;background-color: white ;padding-top: 0.6em;text-align:left;}    
-    #hosting-plans .grid-column,
-    #hosting-plans:hover #economy-hosting .grid-column{margin:10px;border: 0 solid #7db701;}    
-    #hosting-plans .grid-column:hover,
-    #hosting-plans:hover #economy-hosting .grid-column:hover,#hosting-plans #economy-hosting .grid-column{margin:0;border: 10px solid #7db701;}    
+    #wsb-plans .grid-column h2{font-size:28pt;}  
+    #wsb-plans .product-features{margin-bottom: 20px;padding-left: 1.142857143em;margin-top: 0.7em;text-align: left;line-height: 25px;}    
+    #wsb-plans .grid-column {padding-left: 14px;padding-right: 10px;font-size:17px;cursor:pointer;background-color: white ;padding-top: 0.6em;text-align:left;}    
+    #wsb-plans .grid-column,
+    #wsb-plans:hover #personal-plan .grid-column{margin:10px;border: 0 solid #7db701;}    
+    #wsb-plans .grid-column:hover,
+    #wsb-plans:hover #personal-plan .grid-column:hover,#wsb-plans #personal-plan .grid-column{margin:0;border: 10px solid #7db701;}    
     .l-main-container.extra-width-override,.l-main-container.extra-width-override .l-main-container{width:1020px!important;}    
-    #economy-hosting.hosting-col-1{max-width: 340px;width: 340px;}
-    .hosting-col-2{max-width: 340px;width: 340px;padding-left:0px}
-    .hosting-col-3{max-width: 340px;width: 340px;padding-left:0px}   
-    .main-banner{background-size:cover;background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/hosting_bkg.jpg');background-repeat:no-repeat;}    
-    #hosting-plans .font-size-mo{font-size:0.5em}
+    #personal-plan.wsb-col-1{max-width: 340px;width: 340px;}
+    .wsb-col-2{max-width: 340px;width: 340px;padding-left:0px}
+    .wsb-col-3{max-width: 340px;width: 340px;padding-left:0px}   
+    .main-banner{background-position: center top;background-size:cover;background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/wsb_bkg.jpg);background-repeat:no-repeat;}    
+    #wsb-plans .font-size-mo{font-size:0.5em}
     /* Header and Plan Boxes CSS - End */    
     
-    /* Webhost Subheaders CSS Start */    
-    .webhost-subheaders{color:white;font-family:HelveticaNeue,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif; margin-left: 38%;}
-    .webhost-subheaders div{font-weight: 400;font-size: 13pt;line-height: 28px;display:block;text-align:left;}
-    .webhost-subheaders > div:before{ content:" ";display:inline-block;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/icons.png') no-repeat -23px 0;width: 14px;height: 12px;position: relative;margin-top: 5px;padding-right:25px;top: 2px;}    
-    /* Webhost Subheaders CSS End */    
-    
+    /* WSB Subheaders CSS Start */    
+    .wsb-subheaders{color:white;font-family:HelveticaNeue,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif; margin-left: 33.3%;}
+    .wsb-subheaders div{font-weight: 300;font-size: 13pt;line-height: 28px;display:block;text-align:left;}
+    .wsb-subheaders > div:before{ content:" ";display:inline-block;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/icons.png') no-repeat -23px 0;width: 14px;height: 12px;position: relative;margin-top: 5px;padding-right:25px;top: 2px;}    
+    /* WSB Subheaders CSS End */    
+   
     
     /* Slides CSS Start*/    
     .got-slider-wrapper {min-height:650px;overflow:hidden; width:1020px; padding-bottom:40px; position:relative;}
@@ -169,8 +217,8 @@ offersCodes.ci.domainSearchSubmit
     .domain-search .g-btn-sec{border-radius:0}
     .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}
     #domainRow .webhost-offer-title{color: white;font-weight: 700;font-size: 30px;}
-    #freeDomain{margin-top:206px;background-color: white;padding-bottom:1.2em;}
-    #freeDomainResults{margin-top:206px;background-color: white;}    
+    #freeDomain{margin-top:220px;background-color: white;padding-bottom:1.2em;}
+    #freeDomainResults{margin-top:220px;background-color: white;}    
     #no-domain-btn,#btn-no-domain{color:black;margin: 0 14%;cursor:pointer;text-decoration: underline;float:left;font-family: Helvetica Neue;}
     #no-domain-btn:hover,#btn-no-domain:hover{cursor:pointer;color:#7db701;}
     #freeDomain #back-to-product-plans{color:black;text-decoration: underline;margin-right: -7em;font-family: Helvetica Neue;}    
@@ -188,11 +236,9 @@ offersCodes.ci.domainSearchSubmit
 
 
 
-<section id="domainRow" class="main-banner main-banner-offers">
-  <span class="got-slides-move-with-slides left-corner-ribbon money-back-guarantee-light [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></span>
+<section id="domainRow" class="main-banner main-banner-offers">  
   <div class="l-main-container container main-banner-content got-slider-wrapper extra-width-override">
     <div class="row got-slides">
-
 <!-- ========================================
 
       Product Price Columns
@@ -200,117 +246,128 @@ offersCodes.ci.domainSearchSubmit
 ============================================= -->
 
       <div class="got-slide got-slide-1">
-        <div class="l-main-container container main-banner-content"> 
-          <span class="ribbon ribbon-right">
-          <i class="marquee-flag sale [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></i>
-          </span>
-          <h1 class="main-banner-subtitle alt-title-[@D[tms.message.tag]@D]" id="webhost-main-headline">
-          [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:headline-[@D[tms.message.tag]@D]]@L]                     
+        <div class="l-main-container container main-banner-content">
+          <h1 class="main-banner-subtitle alt-title-[@D[tms.message.tag]@D]" id="webhost-main-headline">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:headline-[@D[tms.message.tag]@D]]@L]                     
           </h1>
-           <div class="webhost-subheaders">
-              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:webhost-banner-item-2]@L]</div>
-              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:webhost-banner-item-1]@L]</div>
-              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:webhost-banner-item-3]@L]</div>
+           <div class="wsb-subheaders">
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-1]@L]</div>
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-2]@L]</div>
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-3]@L]</div>
             </div> 
           
-          <div id="hosting-plans" class="hosting-plans-cols row tab-content equal-height" data-gd-sidebysidealign="{}">
+          <div id="wsb-plans" class="wsb-plans-cols row tab-content equal-height" data-gd-sidebysidealign="{}">
             <!-- col-xs-4 (1) -->
-            <div id="economy-hosting" class="col-xs-4 hosting-col-1 relative" data-gd-sidebysidealign-col="1">                            
+            <div id="personal-plan" class="col-xs-4 wsb-col-1 relative" data-gd-sidebysidealign-col="1">                            
               <div class="grid-column no-padding-bottom relative">
                 <div data-gd-sidebysidealign-row="1">
-                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:economy-hosting-plan-title]@L]</h2>
-                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:economy-hosting-plan-desc]@L]</p>
-                  <div class="clearfix"></div>
-                </div>
-                <div data-gd-sidebysidealign-row="2">
-                  <p class="starting-at"><strong><span class="starting-price">[@T[productprice:<current productid="32051" promocode="310211725" period="monthly"/>]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span></p>
-                  ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                    <p class="margin-bottom-12">[@T[productprice:<template productid="32051" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T] <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span></p>               
-                  ##endif
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-title-desc]@L]</p>
                   <div class="clearfix"></div>                  
+                </div>                
+                <div data-gd-sidebysidealign-row="2">
+                    <p class="starting-at">
+                      <strong><span id="personal-price" class="starting-price"></span></strong><span class="font-size-mo promo-plan-month">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span><span class="font-size-mo promo-plan-year">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
+                    </p>
+                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                    <p id="personal-plan-on-sale" class="margin-bottom-12">
+                      <span id="list-price" class="tertiary-color line-through"></span>
+                      <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>                      
+                    </p>
+                  ##endif
+                  <div class="clearfix"></div>
                 </div> 
                 ##if(countrySiteAny(uk))
-                    <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
-                  ##endif
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
                 <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
-                  <button data-product-plan='economy-hosting' id="economy-hosting-select" type="submit" data-ci="94121" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                  <button data-product-plan='personal-plan' id="personal-plan-select" type="submit" data-ci="94371" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
                 </p>
                 <ul class="product-features" data-gd-sidebysidealign-row="4">
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:economy-hosting-plan-features1]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:economy-hosting-plan-features2]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:economy-hosting-plan-features3]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-features-2]@L]</li>  
                 </ul> 
                 <div class="clearfix"></div>
               </div>                            
-            </div><!-- end - id="economy-hosting"  -->
+            </div><!-- end - id="personal-plan"  -->
             <!-- end - col-xs-4 (1) -->
 
 
             <!-- col-xs-4 (2) -->
-            <div id="deluxe-hosting" class="col-xs-4 hosting-col-2 relative" data-gd-sidebysidealign-col="2">                            
+            <div id="business-plan" class="col-xs-4 wsb-col-2 relative" data-gd-sidebysidealign-col="2">                            
               <div class="grid-column no-padding-bottom relative">
                 <div data-gd-sidebysidealign-row="1">
-                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:deluxe-hosting-plan-title]@L]</h2>
-                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:deluxe-hosting-plan-desc]@L]</p> 
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-title-desc]@L]</p> 
                   <div class="clearfix"></div>
                 </div>
                 <div data-gd-sidebysidealign-row="2">
-                  <p class="starting-at"><strong><span class="starting-price">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span></p>
-                  ##if(productHasSavingsMoreThan(32059, 32059, 0))
-                    <p class="margin-bottom-12">[@T[productprice:<template productid="32059" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T] <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span></p>
+                  <p class="starting-at">
+                    <strong><span class="starting-price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span>
+                  </p>
+                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                  <p class="margin-bottom-12">
+                    <span class="tertiary-color line-through">[@T[productprice:<template productid="7509" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                    <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>
+                  </p>
                   ##endif
-                  <div class="clearfix"></div>                  
-                </div>  
+                  <div class="clearfix"></div>
+                </div> 
                 ##if(countrySiteAny(uk))
-                    <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
-                  ##endif
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
                 <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
-                  <button data-product-plan='deluxe-hosting' id="deluxe-hosting-select" type="submit" data-ci="94120" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                  <button data-product-plan='business-plan' id="business-plan-select" type="submit" data-ci="94369" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
                 </p>
                 <ul class="product-features" data-gd-sidebysidealign-row="4">
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:deluxe-hosting-plan-features1]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:deluxe-hosting-plan-features2]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:deluxe-hosting-plan-features3]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-2]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-3]@L]</li>                
                 </ul> 
                 <div class="clearfix"></div>
               </div>                       
-            </div><!-- end - id="deluxe-hosting" -->
+            </div><!-- end - id="business-plan" -->
             <!-- end - col-xs-4 (2) -->
 
 
             <!-- col-xs-4 (3) -->
-            <div id="ultimate-hosting" class="col-xs-4 hosting-col-3 relative" data-gd-sidebysidealign-col="3">                            
+            <div id="business-plus-plan" class="col-xs-4 wsb-col-3 relative" data-gd-sidebysidealign-col="3">                            
               <div class="grid-column no-padding-bottom relative">
                 <div data-gd-sidebysidealign-row="1">
-                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ultimate-hosting-plan-title]@L]</h2>
-                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ultimate-hosting-plan-desc]@L]</p> 
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-title-desc]@L]</p> 
                   <div class="clearfix"></div>
                 </div>
                 <div data-gd-sidebysidealign-row="2">
-                  <p class="starting-at"><strong><span class="starting-price">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span></p>
-                  ##if(productHasSavingsMoreThan(32082, 32082, 0))
-                    <p class="margin-bottom-12">[@T[productprice:<template productid="32082" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T] <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span></p>
+                  <p class="starting-at">
+                    <strong><span class="starting-price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span>
+                  </p>
+                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                  <p class="margin-bottom-12">
+                    <span class="tertiary-color line-through">[@T[productprice:<template productid="7514" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                    <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>
+                  </p>
                   ##endif
-                  <div class="clearfix"></div>                  
+                  <div class="clearfix"></div>
                 </div>
                 ##if(countrySiteAny(uk))
-                    <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
-                  ##endif
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
                 <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
-                  <button data-product-plan='ultimate-hosting' id="ultimate-hosting-select" data-ci="94122" type="submit" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                  <button data-product-plan='business-plus-plan' id="business-plus-plan-select" data-ci="94370" type="submit" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
                 </p>
                 <ul class="product-features" data-gd-sidebysidealign-row="4">
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ultimate-hosting-plan-features1]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ultimate-hosting-plan-features2]@L]</li>
-                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ultimate-hosting-plan-features3]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-2]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-3]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-4]@L]</li>
                 </ul> 
                 <div class="clearfix"></div>
               </div>
-            </div><!-- end - id="ultimate-hosting" -->
+            </div><!-- end - id="business-plus-plan" -->
             <!-- end - col-xs-4 (3) -->
 
 
-          </div><!-- end - id="hosting-plans" -->
+          </div><!-- end - id="wsb-plans" -->
         
         </div><!-- end - class="l-main-container container main-banner-content" -->
       </div> <!-- end - class="got-slide got-slide-1" -->
@@ -518,7 +575,7 @@ offersCodes.ci.domainSearchSubmit
         slideToSlideElement({'element':$('.got-slide-1'),'animatespeed':1,'updateheight':true});
       },10);
       
-      $('#economy-hosting-select,#deluxe-hosting-select,#ultimate-hosting-select').bind('click',function(){
+      $('#personal-plan-select,#business-plan-select,#business-plus-plan-select').bind('click',function(){
         $('#txtsldlabel').css('opacity','1');
         $('#txtsld').val('');
         $('.search-result').removeClass('invalid').removeClass('not-available').removeClass('available');
@@ -544,7 +601,7 @@ offersCodes.ci.domainSearchSubmit
     /* ==== END - Slide Feature ============== */
     
      
-        $('#economy-hosting-select, #deluxe-hosting-select, #ultimate-hosting-select').click(function(){
+        $('#personal-plan-select, #business-plan-select, #business-plus-plan-select').click(function(){
           offersCodes.plan = offersCodes.planoptions[$(this).data('product-plan')];   
           //$("#freeDomain").show();  
           //$('#hosting-plans,#webhost-main-headline,.webhost-offer-title,.webhost-subheaders').hide();      
@@ -962,11 +1019,11 @@ offersCodes.ci.domainSearchSubmit
 #whyUsRow .circle3{background-position:-348px 0}
 #whyUsRow .circle4{background-position:-522px 0}
 #whyUsRow .circle-text{width:170px;text-align:center;color:#7db701;line-height:20px;font-size:20px;font-weight:200;margin-top:20px;overflow:visible}
-#whyUsRow .extra-width{width:190px;}
-#whyUsRow .offers-sprite1{background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/why_icons_new.png');}
+#whyUsRow .more-width{width:190px;}
 .why-us-circles{margin:30px auto 0;width:1000px}
 .why-us-circles>ul>li{float:left;list-style-type:none;margin-left:64px;overflow:visible}
 .why-us-circles>ul>li>div>span{display:block}
+#whyUsRow .offers-sprite1{background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/why_icons_new.png');}
 #pcf .pc-support-wrapper{margin-top:0;}
   </style>
 </atlantis:webstash>
@@ -991,7 +1048,7 @@ offersCodes.ci.domainSearchSubmit
                     <div class="circle3 offers-sprite1"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-3]@L]</div>
                   </li>
                   <li>
-                    <div class="circle4 offers-sprite1"></div><div class="circle-text extra-width">[@L[cds.sales/offers/default:whyus-img-text-4_34369]@L]</div>
+                    <div class="circle4 offers-sprite1"></div><div class="circle-text more-width">[@L[cds.sales/offers/default:whyus-img-text-4_34369]@L]</div>
                   </li>
                 </ul>
               </div>
