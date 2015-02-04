@@ -1,0 +1,1116 @@
+---
+location: tmsv2/content/advlp/1domwsb/offer
+id: 54d00c40f778fc20ac262fa0
+name: GCE-34369
+comments: Various VAT fixes
+---
+
+##if(false)
+<!--
+
+https://www.godaddy.com/offers/default.aspx?isc=12MOWSB1&tmskey=1domwsb_2  //isc=12MOWSB1 for Monthly Price
+https://www.godaddy.com/offers/default.aspx?isc=JONWSB2&tmskey=1domwsb_1 //isc=JONWSB2 for Yearly Price
+
+-->
+##endif
+
+<script>
+// name = does not need to match anything and may not be needed
+// plan =  package name for api
+  var offersCodes = {
+    'name': '1domwsb',
+    'plan': '',
+    'planoptions':{
+      'personal-plan':'wsb_personal_12month',
+      'business-plan' : 'wsb_business_12month',
+      'business-plus-plan' : 'wsb_businessplus_12month'
+      }, 
+    'itc': 'dlp_wsb',
+    'ci': {
+      'domainSearchClick': '92206',
+      'domainSearchSubmit': '92209',
+      'addDomainBtn': '92207',
+      'apiAddCi': '92210',
+      'apiDomainAddToCart': '92296',
+      'disclaimerLink': '92208'
+    }
+  }
+##if(isManager())
+  offersCodes.itc = 'mgr_' + offersCodes.itc;
+##endif 
+
+</script>
+
+
+<div style="display:none;">
+  <div id="tms-modal-body">
+    ##if(countrySiteAny(uk) || isManager())
+    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-2-year-uk_34369]@L]</p>
+    <p class="tms-hide tms-disclaimer-month-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-4-month-uk_34369]@L]</p>
+    ##else
+    <p class="tms-hide tms-disclaimer-month-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-3-month_34369]@L]</p>
+    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:disclaimer-1-year_34369]@L]</p>
+    ##endif
+  </div>
+</div>
+
+
+<atlantis:webstash type="js">
+  <script>
+    $(document).ready(function(){
+      $(".price").each(function(){
+        var $this = $(this);
+        var valMonthYear = {
+          '1domwsb_1':'year',
+          '1domwsb_2':'month',
+          '1domwsb_3':'year',
+          '1domwsb_4':'month',
+          '1domwsb_5':'year',
+          '1domwsb_6':'month',
+          '1domwsb_7':'year',
+          '1domwsb_8':'month',
+          '1domwsb_9':'year',
+          '1domwsb_10':'month',
+          '1domwsb_11':'year',
+          '1domwsb_12':'month',
+          '1domwsb_13':'month'
+        }
+        
+        var priceData = {
+          'month':'[@T[productprice:<current productid="7524" promocode="31254128" period="monthly" />]@T]',
+          'monthList':'[@T[productprice:<template productid="7524" promocode="0" period="monthly" ><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]',
+          'year':'[@T[productprice:<current productid="7524" promocode="31254129" />]@T]',
+          'yearList':'[@T[productprice:<template productid="7524" promocode="0" ><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]'
+        }
+         
+        var val = priceData[valMonthYear['[@D[tms.message.tag]@D]']];
+        if(valMonthYear['[@D[tms.message.tag]@D]'] == 'month'){
+          $('.promo-plan-month').show();
+          $('.promo-plan-year').hide();
+          $('#personal-price').html(priceData.month);
+          $('#list-price').html(priceData.monthList);
+        }else if(valMonthYear['[@D[tms.message.tag]@D]'] == 'year'){
+          $('.promo-plan-month').hide();
+          $('.promo-plan-year').show();
+          $('#personal-price').html(priceData.year);
+          $('#list-price').html(priceData.yearList);
+        }
+        $this.html(val.replace(/(.+)(\.00)+?$/,'$1<span>$2</span>'));
+        $this.addClass("price-show");
+      });
+    })
+    
+  </script>
+</atlantis:webstash>
+
+<atlantis:webstash type="css">
+  <style>    
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D]{margin-left: 0;font-size: 60px;font-weight:100;line-height: 1.2em;width: 96%;color:white;margin-top: 125px;margin-bottom: 25px;font-family: HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D] strong{font-size:60px;font-weight:bold;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+    #domainRow h1.alt-title-[@D[tms.message.tag]@D] em{white-space:nowrap;font-size:60px;font-style: normal;font-weight:bold;color:#ff8a00;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}    
+    html body .tms-hide.tms-disclaimer-year-[@D[tms.message.tag]@D]{display:block;}     
+    
+    /* variant 1 */   
+    #domainRow h1.alt-title-1domwsb_1{margin-left: 0;font-size: 55px;font-weight:100;line-height: 1.2em;width: 96%;color:white;margin-top: 125px;margin-bottom: 25px;font-family: HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+         
+    .price{display:none}
+    .price.price-show{display:inline}
+    html[lang*=en] .price.price-show .decim{display:none}
+    
+    .hide-non-en{display:none;}
+    html[lang*=en] .hide-non-en{display:block;}
+    html[lang*=ru] .grid-column .starting-at{white-space:nowrap;}
+    .nobreak{white-space:nowrap;}
+  </style>
+</atlantis:webstash> 
+  
+
+
+<!-- Domain Search Block Start
+Use:
+offersCodes.plan
+offersCodes.itc
+offersCodes.ci.apiAddCi
+offersCodes.ci.apiDomainAddToCart
+offersCodes.ci.apiremovedomain
+offersCodes.ci.domainSearchSubmit
+ -->
+<atlantis:webstash type="css">
+  <style>   
+    
+    /* Header and Plan Boxes CSS - start */
+    #wsb-plans .grid-column h2{font-size:28pt;}  
+    #wsb-plans .product-features{margin-bottom: 20px;padding-left: 1.142857143em;margin-top: 0.7em;text-align: left;line-height: 25px;}    
+    #wsb-plans .grid-column {padding-left: 14px;padding-right: 10px;font-size:17px;cursor:pointer;background-color: white ;padding-top: 0.6em;text-align:left;}    
+    #wsb-plans .grid-column,
+    #wsb-plans:hover #personal-plan .grid-column{margin:10px;border: 0 solid #7db701;}    
+    #wsb-plans .grid-column:hover,
+    #wsb-plans:hover #personal-plan .grid-column:hover,#wsb-plans #personal-plan .grid-column{margin:0;border: 10px solid #7db701;}    
+    .l-main-container.extra-width-override,.l-main-container.extra-width-override .l-main-container{width:1020px!important;}    
+    #personal-plan.wsb-col-1{max-width: 340px;width: 340px;}
+    .wsb-col-2{max-width: 340px;width: 340px;padding-left:0px}
+    .wsb-col-3{max-width: 340px;width: 340px;padding-left:0px}   
+    .main-banner{background-position: center top;background-size:cover;background-image:url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/wsb_bkg.jpg);background-repeat:no-repeat;}    
+    #wsb-plans .font-size-mo{font-size:0.5em}
+    /* Header and Plan Boxes CSS - End */    
+    
+    /* WSB Subheaders CSS Start */    
+    .wsb-subheaders{color:white;font-family:HelveticaNeue,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif; margin-left: 33.3%;}
+    .wsb-subheaders div{font-weight: 300;font-size: 13pt;line-height: 28px;display:block;text-align:left;}
+    .wsb-subheaders > div:before{ content:" ";display:inline-block;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/icons.png') no-repeat -23px 0;width: 14px;height: 12px;position: relative;margin-top: 5px;padding-right:25px;top: 2px;}    
+    /* WSB Subheaders CSS End */    
+   
+    
+    /* Slides CSS Start*/    
+    .got-slider-wrapper {min-height:650px;overflow:hidden; width:1020px; padding-bottom:40px; position:relative;}
+    .got-slides {width:3060px;position:absolute;left:0px;}    
+    .got-slide {min-height:650px;width:1020px;padding-left:10px;padding-right:10px;float:left;overflow-x:hidden;}  
+    .got-slide.got-slide-1{width:1020px;padding-left:0;padding-right:0;}    
+    /* Slides CSS End */    
+    
+    
+    
+     /* Domain Search CSS Start  */    
+    #domainRow {background-color:#fff;min-height:360px;position: relative;}
+    #domainRow h1{color:#333;font-size:60px;font-weight:100;line-height:1.3em}    
+    //#domainRow h1 strong{font-size:70px;font-weight:700!important;color:#ff8a00;}
+    #domainRow h1 strong em{color:#ff8a00;font-style:normal}
+    #domainRow form{width:auto;margin:20px auto 85px;padding:8px;display:table}
+    #domainRow form .highlight-tooltip{display:none}    
+    #domainRow form.highlight .highlight-tooltip{display:block;background-color:#fc0;color:#630;position:absolute;right:106%;top:-8px;text-transform:uppercase;text-align:center;padding:13px 23px}
+    #domainRow form.highlight .highlight-tooltip:after{content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
+    #domainRow #add-domain-btn,
+    #domainRow .flt-btn-grn,
+    #domainRow .flt-btn-orng{font-size:24px;padding:18px 36px;font-weight:400;font-size: 18px;font-family: Helvetica;}
+    #domainRow .search-result .search-result-invalid,
+    #domainRow .search-result .search-result-is-available,
+    #domainRow .search-result .search-result-not-available{display:none}
+    #domainRow .search-result .result-message{margin:0 auto;display:table;font-size: 38px;color:black;margin-bottom: 30px;padding-top: 105px;font-size: 22px;font-family:Helvetica;font-weight:bold;}
+    #domainRow .search-result.available .search-result-is-available{display:block;color:#70a100}
+    #domainRow .search-result.invalid .search-result-invalid,
+    #domainRow .search-result.not-available .search-result-not-available{display:block;color:#000}
+    #domainRow #add-domain-btn{font-size:18px;padding:18px 36px;font-family: Helvetica;}
+    #domainRow .got-slide-2 .searched-domain{font-weight:bold;color: #ff8400;font-size:35px;font-family:Helvetica;} 
+    #domainRow .got-slide-3 .searched-domain{font-weight:bold;color: #70a100;font-size:35px;font-family:Helvetica;}     
+    #domainRow #free-domain-title{font-size: 60px;padding-top: 85px;}
+    .domain-check-buttons {clear:both; text-align:right;margin-top: 2.4em;}    
+    #add-domain-btn {margin-top:10px!important;margin-bottom:4px!important;}
+    #search-btn-loading,
+    #no-domain-loading, 
+    #add-domain-loading {margin-top:14px!important; margin-left:auto;margin-right:auto;}
+    .search-input-wrapper{width:453px}
+    .search-input-label{min-width:500px}
+    .domain-search{background-color:#fff;border:1px solid #a4a4a4;height:53px;position:relative;margin-right:6px;min-width:375px;display:table;float:left}
+    .domain-search>div{display:inline-block;vertical-align:top}
+    .domain-search>.tld-input{font-family: Helvetica;border:0;float:none;font-size:24px;height:51px;outline:0;position:relative;min-width:120px;z-index:2;border-left:1px solid #a4a4a4}
+    #domain_search_input.search-input,.search-input[type=text]{background-color:transparent;border:0;color:#333;font-family:"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:24px;font-weight:300;line-height:1.4;height:30px;left:13px;outline:0;padding:0;position:absolute;right:9px;top:10px;width:70%;}
+    .search-input.allow-placeholder{background-color:transparent}
+    .search-input-label{color:#679b08;display:block;font-size:24px;font-weight:300;outline:0;overflow:hidden;padding:13px 0 8px 13px;white-space:nowrap;font-family: Helvetica;}
+    .tld-input-selected{float:left;padding:13px 0 4px 14px;width:120px}
+    .tld-input.droplist-open{overflow:visible}
+    .tld-input>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;top:-9999em;width:112px;z-index:3}
+    .tld-input.droplist-open>ul{width:155px;top:52px;z-index:1000}
+    .tld-input.droplist-open>ul>li{padding:5px 10px}
+    .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
+    .tld-input.droplist-open>ul>li.selected,.tld-input.droplist-open>ul>li.selected:hover{background:#e4efc7}
+    .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:relative}
+    .domain-search .g-btn-sec{border-radius:0}
+    .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}
+    #domainRow .webhost-offer-title{color: white;font-weight: 700;font-size: 30px;}
+    #freeDomain{margin-top:220px;background-color: white;padding-bottom:1.2em;}
+    #freeDomainResults{margin-top:220px;background-color: white;}    
+    #no-domain-btn,#btn-no-domain{color:black;margin: 0 14%;cursor:pointer;text-decoration: underline;float:left;font-family: Helvetica Neue;}
+    #no-domain-btn:hover,#btn-no-domain:hover{cursor:pointer;color:#7db701;}
+    #freeDomain #back-to-product-plans{color:black;text-decoration: underline;margin-right: -7em;font-family: Helvetica Neue;}    
+    #search-again{color:black;margin-top: 75px;text-decoration: underline;padding-bottom: 1.9em;font-size: 16px;font-family: Helvetica Neue;}    
+    #freeDomain #back-to-product-plans:hover{cursor:pointer;color:#7db701;}
+    #search-again:hover{cursor:pointer;color:#7db701;}      
+    #domainRow .icon-check-img{background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/icons_new.png');display: block;width: 26px;height: 25px;float: left;position: relative;top: 6px;background-position: -657px 0;right:4px;}    
+    #domainRow .icon-check-img-available{background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/icons_new.png');display: block;width: 33px;height: 25px;float: left;position: relative;right: 5px;top: 9px;background-position: -683px 0;}        
+    #domainRow .vat-tax-message{font-size:0.9em;}
+    /* Domain Search CSS End  */
+    
+    
+  </style>
+</atlantis:webstash>
+
+
+
+<section id="domainRow" class="main-banner main-banner-offers">  
+  <div class="l-main-container container main-banner-content got-slider-wrapper extra-width-override">
+    <div class="row got-slides">
+<!-- ========================================
+
+      Product Price Columns
+
+============================================= -->
+
+      <div class="got-slide got-slide-1">
+        <div class="l-main-container container main-banner-content">
+          <h1 class="main-banner-subtitle alt-title-[@D[tms.message.tag]@D]" id="webhost-main-headline">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:headline-[@D[tms.message.tag]@D]]@L]                     
+          </h1>
+           <div class="wsb-subheaders">
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-1]@L]</div>
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-2]@L]</div>
+              <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:wsb-subheader-3]@L]</div>
+            </div> 
+          
+          <div id="wsb-plans" class="wsb-plans-cols row tab-content equal-height" data-gd-sidebysidealign="{}">
+            <!-- col-xs-4 (1) -->
+            <div id="personal-plan" class="col-xs-4 wsb-col-1 relative" data-gd-sidebysidealign-col="1">                            
+              <div class="grid-column no-padding-bottom relative">
+                <div data-gd-sidebysidealign-row="1">
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-title-desc]@L]</p>
+                  <div class="clearfix"></div>                  
+                </div>                
+                <div data-gd-sidebysidealign-row="2">
+                    <p class="starting-at">
+                      <strong><span id="personal-price" class="starting-price"></span></strong><span class="font-size-mo promo-plan-month">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span><span class="font-size-mo promo-plan-year">/[@L[cds.sales/gd/ssl/ssl-certificates:year]@L]</span>
+                    </p>
+                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                    <p id="personal-plan-on-sale" class="margin-bottom-12">
+                      <span id="list-price" class="tertiary-color line-through"></span>
+                      <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>                      
+                    </p>
+                  ##endif
+                  <div class="clearfix"></div>
+                </div> 
+                ##if(countrySiteAny(uk))
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
+                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
+                  <button data-product-plan='personal-plan' id="personal-plan-select" type="submit" data-ci="94371" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                </p>
+                <ul class="product-features" data-gd-sidebysidealign-row="4">
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:personal-plan-features-2]@L]</li>  
+                </ul> 
+                <div class="clearfix"></div>
+              </div>                            
+            </div><!-- end - id="personal-plan"  -->
+            <!-- end - col-xs-4 (1) -->
+
+
+            <!-- col-xs-4 (2) -->
+            <div id="business-plan" class="col-xs-4 wsb-col-2 relative" data-gd-sidebysidealign-col="2">                            
+              <div class="grid-column no-padding-bottom relative">
+                <div data-gd-sidebysidealign-row="1">
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-title-desc]@L]</p> 
+                  <div class="clearfix"></div>
+                </div>
+                <div data-gd-sidebysidealign-row="2">
+                  <p class="starting-at">
+                    <strong><span class="starting-price">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span>
+                  </p>
+                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                  <p class="margin-bottom-12">
+                    <span class="tertiary-color line-through">[@T[productprice:<template productid="7509" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                    <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>
+                  </p>
+                  ##endif
+                  <div class="clearfix"></div>
+                </div> 
+                ##if(countrySiteAny(uk))
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
+                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
+                  <button data-product-plan='business-plan' id="business-plan-select" type="submit" data-ci="94369" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                </p>
+                <ul class="product-features" data-gd-sidebysidealign-row="4">
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-2]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plan-features-3]@L]</li>                
+                </ul> 
+                <div class="clearfix"></div>
+              </div>                       
+            </div><!-- end - id="business-plan" -->
+            <!-- end - col-xs-4 (2) -->
+
+
+            <!-- col-xs-4 (3) -->
+            <div id="business-plus-plan" class="col-xs-4 wsb-col-3 relative" data-gd-sidebysidealign-col="3">                            
+              <div class="grid-column no-padding-bottom relative">
+                <div data-gd-sidebysidealign-row="1">
+                  <h2>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-title]@L]</h2>
+                  <p>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-title-desc]@L]</p> 
+                  <div class="clearfix"></div>
+                </div>
+                <div data-gd-sidebysidealign-row="2">
+                  <p class="starting-at">
+                    <strong><span class="starting-price">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span></strong><span class="font-size-mo">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:month]@L]</span>
+                  </p>
+                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                  <p class="margin-bottom-12">
+                    <span class="tertiary-color line-through">[@T[productprice:<template productid="7514" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                    <span class="secondary-color uppercase"><strong>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:on-sale]@L]</strong></span>
+                  </p>
+                  ##endif
+                  <div class="clearfix"></div>
+                </div>
+                ##if(countrySiteAny(uk))
+                     <span class="vat-tax-message">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]</span>
+                ##endif
+                <p class="no-margin-bottom" data-gd-sidebysidealign-row="3">
+                  <button data-product-plan='business-plus-plan' id="business-plus-plan-select" data-ci="94370" type="submit" data-form="addtocart-form" class="btn btn-primary btn-block js-addtocart-btn btn--push-down btn-lg">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:select-plan]@L]</button>
+                </p>
+                <ul class="product-features" data-gd-sidebysidealign-row="4">
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-1]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-2]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-3]@L]</li>
+                  <li>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:business-plus-plan-features-4]@L]</li>
+                </ul> 
+                <div class="clearfix"></div>
+              </div>
+            </div><!-- end - id="business-plus-plan" -->
+            <!-- end - col-xs-4 (3) -->
+
+
+          </div><!-- end - id="wsb-plans" -->
+        
+        </div><!-- end - class="l-main-container container main-banner-content" -->
+      </div> <!-- end - class="got-slide got-slide-1" -->
+
+<!-- ===== END - Product Price Columns ====== -->
+
+
+<!-- ========================================
+
+      Domain Search
+
+============================================= -->
+
+      <div class="got-slide got-slide-2">
+
+        <div id="freeDomain">
+          <div class="columns">
+
+            <div id="free-domain-title">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:pick-your-domain]@L]</div>
+            <div class="search-result text-center">
+                <div class="search-result-not-available">
+                  <div class="result-message"><span class="icon-check-img"></span>[@L[cds.sales/offers/default:domain-not-available]@L]</div>          
+                </div>        
+                <div class="search-result-invalid">
+                  <div class="result-message">[@L[cds.sales/offers/default:domain-is-invalid]@L]</div>
+                </div>
+              </div>
+            <div class="column-right">
+              <form name="domaincheck" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'></relative>]@T]" id="domainSearch" class="highlight search-form">
+                <input type="hidden" name="targetdivid" value="x" />
+                <input type="hidden" name="source" value="domaincheck" />
+                <input type="hidden" name="token" id="token"/>
+                <input type="hidden" name="domaintoadd" id="domaintoadd"/>
+                <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
+                <div class="domain-search">                 
+
+                  <div class="text-left search-input-wrapper">
+                    <label for="txtsld" id="txtsldlabel" class="search-input-label">[@L[cds.sales/offers/default:domain-search-placeholder]@L]</label>
+                    <input id="txtsld" type="text" class="search-input" name="sld" value="" />
+                  </div>        
+                  <div class="text-left tld-input">
+                    <div class="tld-input-selected">
+                      <span>.com</span>
+                    </div>
+                    <input type="hidden" name="tld" id="txtTld" value="com" />
+                    <input type="hidden" name="addIfAvailable" value="true" />
+                    <a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
+                    <ul>
+                      <li data-main=".com" data-view="com" class="availabletld selected">
+                        <div data-main="true">
+                          <span>.com</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(br) || isManager())
+                      <li data-main=".com.br" data-view="com.br" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.br</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(mx) || isManager())
+                      <li data-main=".com.mx" data-view="com.mx" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.mx</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(au) || isManager())
+                      <li data-main=".com.au" data-view="com.au" class="availabletld">
+                        <div data-main="true">
+                          <span>.com.au</span>
+                        </div>
+                      </li>
+                      ##endif
+                      <li data-main=".co" data-view="co" class="availabletld">
+                        <div data-main="true">
+                          <span>.co</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(ca) || isManager())
+                      <li data-main=".ca" data-view="ca" class="availabletld">
+                        <div data-main="true">
+                          <span>.ca</span>
+                        </div>
+                      </li>
+                      ##endif
+                      ##if(countrySiteAny(in))
+                      <li data-main=".in" data-view="in" class="availabletld">
+                        <div data-main="true">
+                          <span>.in</span>
+                        </div>
+                      </li>
+                      ##endif
+                      <li data-main=".net" data-view="net" class="availabletld">
+                        <div data-main="true">
+                          <span>.net</span>
+                        </div>
+                      </li>
+                      <li data-main=".org" data-view="org" class="availabletld">
+                        <div data-main="true">
+                          <span>.org</span>
+                        </div>
+                      </li>
+                      ##if(countrySiteAny(uk) || isManager())
+                      <li data-main=".co.uk" data-view="co.uk" class="availabletld">
+                        <div data-main="true">
+                          <span>.co.uk</span>
+                        </div>
+                      </li>
+                      <li data-main=".uk" data-view="uk" class="availabletld">
+                        <div data-main="true">
+                          <span>.uk</span>
+                        </div>
+                      </li>
+                      ##endif
+                    </ul>
+                  </div><!-- end - class="text-left tld-input" -->
+                </div><!-- end - class="domain-search" -->
+                <div id="domain-search-click" class="flt-btn-grn" data-ci="domainSearchClick">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:go-btn]@L]</div>
+                <div id="search-btn-loading" class="loading" style="display: none"></div>                
+              </form><!-- end - form name="domaincheck"  -->              
+            </div><!-- end - class="column-right" -->
+            <div id="no-domain-btn" class="flt-btn-gray spc10 floatleft">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:no-domain-btn]@L]</div>
+              <div id="back-to-product-plans">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:back-btn]@L]</div>
+          </div><!-- end - class="columns" -->
+        </div><!-- end - id="freeDomain" style="display:none;" -->
+      </div><!-- end - class="got-slide got-slide-2" -->
+      
+
+      <div class="got-slide got-slide-3">
+        <div id="freeDomainResults">
+          <div id="domain-avail-check" class="domain-check" style="display:none;">
+            <div id="domain-searched" class="domain-check-hidden"></div>
+          </div>
+          <div class="domain-check-buttons">
+            <div id="no-domain-loading" class="loading" style="display: none"></div>
+            <div class="search-result text-center">
+              <div class="search-result-is-available">
+                <div class="result-message"><span class="icon-check-img-available"></span>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:domain-is-available]@L]</div>
+                <div id="add-domain-btn" class="flt-btn-orng" data-ci="addDomainBtn">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:add-continue-to-cart]@L]</div>
+                <div id="add-domain-loading" class="loading" style="display: none"></div> 
+                <div id="search-again">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:srch-again]@L]</div>
+              </div>
+            </div>
+          </div><!--  end - class="domain-check-buttons" -->         
+        </div>
+      </div><!-- end - class="got-slide got-slide-3" -->
+
+<!-- ===== END - Domain Search ============== -->
+
+    </div><!-- end - class="row got-slides" -->
+  </div><!-- end -  class="l-main-container container main-banner-content got-slider-wrapper" -->
+</section><!-- end - id="domainRow" -->
+
+
+
+  <atlantis:webstash type="js">
+  <script type="text/javascript">
+    
+    /* =======================================
+          Slide Feature
+    ========================================== */   
+
+
+      
+    function slideToSlideElement(data){
+      var $element = data.element;
+      var slideAnimationMs = data.animatespeed || 400;
+      var minHeight = data.minheight || 400;
+      var updateHeight = false;
+      if(data.updateheight === true){
+        updateHeight = true;
+      }
+
+      //animate slide
+      var $wrapper = $element.parents('.got-slider-wrapper').eq(0);
+      var $gotSlides = $element.parents('.got-slides').eq(0);
+      // Option to add a class to another object to also have that object move with the slides even if it is not in the wrapper
+      var $moveOutsideObject = $('.got-slides-move-with-slides');
+      
+      
+      var currentLeft = $element.position().left;
+      
+    
+      //slideWrapperHeight($element);
+      var animateData = {left:-currentLeft+'px'}
+      $moveOutsideObject.animate(animateData,slideAnimationMs);
+      
+      if(updateHeight === true){
+        // take away height attribute if it exists
+        $element.height('auto');
+        var slideHeight = Math.max($element.height()+1,minHeight);
+        animateData['height'] = (slideHeight)+'px';
+        $wrapper.animate({height:(slideHeight)+'px'},slideAnimationMs);
+      }
+      $gotSlides.animate(animateData,slideAnimationMs);
+    }
+        
+    $(document).ready(function(){      
+      // Setup slider effects on button clicks on domainRow
+      var $gotSlidesDr = $('#domainRow .got-slides');
+      var $gotSlidesGs = $('#get-started .got-slides');
+      
+      setTimeout(function(){
+        slideToSlideElement({'element':$('.got-slide-1'),'animatespeed':1,'updateheight':true});
+      },10);
+      
+      $('#personal-plan-select,#business-plan-select,#business-plus-plan-select').bind('click',function(){
+        $('#txtsldlabel').css('opacity','1');
+        $('#txtsld').val('');
+        $('.search-result').removeClass('invalid').removeClass('not-available').removeClass('available');
+        $('#free-domain-title').show();
+        slideToSlideElement({'element':$('.got-slide-2')});
+        
+        
+      });
+
+      $('#back-to-product-plans').bind('click',function(){
+        slideToSlideElement({'element':$('.got-slide-1')});
+      });
+      $('#search-again').bind('click',function(){
+        $('#txtsldlabel').css('opacity','1');
+        $('#txtsld').val('');
+        $('#free-domain-title').show();
+        slideToSlideElement({'element':$('.got-slide-2')});
+      });
+    });
+
+  
+    
+    /* ==== END - Slide Feature ============== */
+    
+     
+        $('#personal-plan-select, #business-plan-select, #business-plus-plan-select').click(function(){
+          offersCodes.plan = offersCodes.planoptions[$(this).data('product-plan')];   
+          //$("#freeDomain").show();  
+          //$('#hosting-plans,#webhost-main-headline,.webhost-offer-title,.webhost-subheaders').hide();      
+            
+    
+          $('#add-domain-btn').bind('click', function (e) {
+            
+            
+            $('#domain-search-click, #search-again, #no-domain-btn2').addClass('disabled');
+            $('#add-domain-btn').addClass('disabled');
+            $('#add-domain-loading').fadeIn();
+          
+            var data = {
+              ciCode: offersCodes.ci.apiAddCi,
+              itcCode: offersCodes.itc, 
+              planSelected: offersCodes.plan
+            }
+      
+            PlanBox6UI.recordClick(e, offersCodes.ci.apiAddCi, $(this)[0]);
+            PlanBox6UI.recordClick(e, offersCodes.ci.apiDomainAddToCart, $(this)[0]);
+          
+            PlanConfig.apiPlantoCart(data,function(){
+              nextStepUrl = updateUrlParams(nextStepUrl,{'ci':offersCodes.ci.apiDomainAddToCart});
+              window.location = nextStepUrl;      
+            });
+          });
+        }); 
+    
+    
+    
+  // gdSideBySideAlign plugin
+  (function ( $, window, document, undefined ) {
+
+    var pluginName = 'gdSideBySideAlign',
+        defaults = {
+          bailIfRowCountsMismatch : true
+    };
+
+    function GDSideBySideAlign( element, options ) {
+      this.element = element;
+      this.options = $.extend( {}, defaults, options);
+      this._defaults = defaults;
+      this._name = pluginName;
+      this.init();
+    }
+
+    GDSideBySideAlign.prototype.init = function () {
+
+        // Find the columns
+        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
+
+        if($columns.length == 0) {
+          return; // bail if no columns found
+        }
+
+        // Make sure columns have an equal number of rows
+        var numRows = 0, equalLength = true;
+        $.each($columns, function(idx,item){
+          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
+          if(numRows == 0) {
+            numRows = $rows.length;
+          }
+          if(equalLength) {
+            if(numRows != $rows.length) equalLength = false;
+          }
+        });
+        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
+          return; // bail if no rows, or rows are not equal length
+        }
+
+        // loop thru each row and grab the largest cell height and apply to each cell in that row
+        for(var i=1; i<=numRows; i++) {
+          var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
+          var maxHeight = 0;
+          $.each($cells,function(idx, cell){
+            maxHeight = Math.max(maxHeight, $(cell).height());
+          });
+          $cells.height(maxHeight);
+        }
+
+    }; /* end GDSideBySideAlign.prototype.init */
+
+    // register the function to be used
+    $.fn[pluginName] = function ( options ) {
+      return this.each(function () {
+        if (!$.data(this, 'plugin_' + pluginName)) {
+          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
+        }
+      });
+    };
+
+    // load the plugin
+    $(document).ready(function(){
+      $('[data-gd-sidebysidealign]').gdSideBySideAlign();
+    });
+
+  })( jQuery, window, document );
+</script>
+</atlantis:webstash>
+
+
+
+
+
+<atlantis:webstash type="js">
+  <script> 
+   
+    
+
+    $.ajaxSetup({cache:false});
+    var nextStepUrl;
+    
+    var PlanBox6UI = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $('#txtTld').val(li.attr('data-view'));
+        }
+      },
+      recordClick: function (c, a, b) {
+        if (typeof (FastballEvent_MouseClick) !== "undefined") {
+          FastballEvent_MouseClick(c, a, b, "a");
+        }
+      }
+    };
+
+    var PlanConfig = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $('#txtTld').val(li.attr('data-view'));
+        }
+      }, apiPlantoCart: function (data,cb) {
+        if(typeof data != "object") return;
+
+        data = data || {};
+        
+        data.action = data.action || 'add';
+        data.itcCode = data.itcCode || false;
+        data.ciCode = data.ciCode || false;
+        data.quantity = data.quantity || '1';
+        data.planSelected = data.planSelected || false;
+
+        for(key in data){
+          if(data[key]===false) return;
+        }
+        
+        var url = PlanConfig.getCartAPIUrl(data.action, data.itcCode, data.ciCode, data.quantity, data.planSelected);
+        $.getJSON(url, function (data) {
+          if (data.Success == true) {                                 
+            if(typeof cb == 'function'){
+              cb();    
+            } else {   
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+            ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
+            ##endif
+            }    
+          }
+        });
+         
+      }, getCartAPIUrl:function(action,itcCode,ciCode,quantity,planSelected) {
+            var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+            url += '/'+ action; //action
+            url += '/'+ itcCode; //itc code
+            url += '/'+ ciCode; //ci code
+            url += '/'+ quantity;
+            url += '/' + planSelected; //Plan Name
+           
+            return url;
+        }
+    };
+
+    $(document).ready(function () {
+
+        var $buttonsDiv = $('.domain-check-buttons');
+      //$buttonsDiv.appendTo('#freeDomain'); 
+        // clear form
+        $("#txtsld").val('')
+        .bind('focus',function(){
+          if(this.value==''){
+            $('#txtsldlabel').css({'opacity':0});
+          }
+        }).bind('blur',function(){
+          if(this.value==''){
+            $('#txtsldlabel').css({'opacity':1});
+          }
+        });
+      
+        $('#planSelected').val(offersCodes.plan)
+        
+
+        $('.tld-input').click(function () {
+          var wrap = $(this);
+          if (wrap.hasClass('droplist-open')) {
+            wrap.removeClass('droplist-open');
+          } else {
+            wrap.addClass('droplist-open');
+          }
+        });
+        
+        $('.tld-input').mouseleave(function () {
+            $(this).removeClass('droplist-open');
+        });
+
+
+        $('.tld-input > ul > li').click(function () {
+          var li = $(this);
+          var parent = li.parents('.tld-input');
+          li.siblings('li').removeClass('selected');
+          li.addClass('selected');
+          //PlanBox6UI.showTerm(li);
+          PlanBox6UI.changeSelected(li, parent);
+        });    
+    
+        $('#no-domain-btn,#no-domain-btn2').bind('click', function () {
+          if($(this).hasClass('disabled')==false){
+            var data = {
+              ciCode: offersCodes.ci.apiAddCi,
+              itcCode: offersCodes.itc, 
+              planSelected: offersCodes.plan
+            }
+            $("#search-btn-loading").fadeIn();
+            $("#add-domain-loading").fadeIn();
+            $(this).addClass('disabled');
+            
+            $('#add-domain-btn').addClass('disabled');
+            $('#domain-search-click').addClass('disabled');
+            $('#back-to-product-plans').addClass('disabled');
+            $('#search-again').addClass('disabled');
+         
+            PlanConfig.apiPlantoCart(data);
+         }
+    
+        });    
+    
+
+        $('#domain-search-click').bind('click', function () {
+          $('#domainSearch').submit();
+        }); 
+
+        $('form[name=domaincheck]').each(function(){
+          //update the form to have correct trackingCode
+          var $this = $(this);
+          var newAction = updateUrlParams($this.attr("action"),{'trackingCode':offersCodes.itc})
+          $this.attr("action",newAction);
+        });
+
+        $('form[name=domaincheck]').submit(function (e) {
+          // Domain Search
+          PlanBox6UI.recordClick(e, offersCodes.ci.domainSearchSubmit, $(this)[0]);
+          var domaintoremove = $('#domaintoadd').val();
+          var domaintoadd = $('#domaintoadd').val();
+
+          var tld = $('#txtTld');
+          var $searchField = $('#txtsld');
+          var domain = $searchField.val();
+          var domainSplit = domain.split('.');
+          var newtld = '';
+          var $resultsDiv = $('.search-result');
+          var data = [];  
+          $('#free-domain-title').show();
+
+          $resultsDiv.removeClass("available not-available invalid");
+
+          var $avlTlds = $(".availabletld");
+          var tld2 = $(".availabletld.selected").data("view");
+        
+          $avlTlds.each(function(){
+            data.push($(this).data("view"))
+          });
+
+          var splitSearch = matchEnding($.trim(domain),data);
+            
+          $searchField.val(splitSearch[0].split('.')[0].toLowerCase());
+
+          $avlTlds.each(function(){
+            var $this = $(this);
+            if($this.data('view')==splitSearch[1]){
+              $(".availabletld.selected").removeClass('selected');
+              $this.addClass('selected');
+              $('.tld-input-selected span').html("."+splitSearch[1]);
+              tld2 = splitSearch[1];
+            } else {
+              
+            }
+          });
+
+          domain = [$searchField.val() , tld2].join(".");
+
+          tld.val(tld2);
+
+            var valid = false;
+
+            if ($searchField.val().length > 0) {
+
+               /* if (tld.val() == '') {
+                    tld.val('com');
+                } else if (newtld != undefined) {
+                    tld.val(newtld);
+                    $('#txtsld').val(domain.split('.')[0]);
+                }
+
+                */
+                $('.availabletld').each(function () {
+                    if ($(this).attr('data-view') == tld.val()) {
+                        valid = true;
+                    }
+                });
+                $(".searched-domain").text(domain)
+        
+                if (!valid) {
+                  
+                } else {
+                    $('.search-form').removeClass('highlight');
+                    $('#domain-search-click').addClass('disabled');
+                    $('#search-btn-loading').fadeIn();
+                    $('#add-domain-loading').fadeIn();
+                    
+                    $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
+                        $('#add-domain-btn').removeClass('hide-flt-btn');
+
+                        if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            //$('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+
+                            $resultsDiv.addClass("not-available");
+                            $('#free-domain-title').hide();
+
+                        } else if (jsonData.Properties.domainInfo[0].isPremium) {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            //$('#domain-searched').html("<span>" + domain + "&nbsp;[@L[fosconfigcommon:doesnotqualify]@L]</span><br />[@L[fosconfigcommon:stillinterested]@L]&nbsp;<a class=\"g-a\" href=\"" + url + "\">[@L[fosconfigcommon:searchnowlink]@L]</ a>");
+
+                            $resultsDiv.addClass("not-available");                            
+
+                        } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            //$('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[cds.sales/hosting/fosconfigcommon:domNameInvalid]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+
+                            $resultsDiv.addClass("invalid"); 
+                            $('#free-domain-title').hide();
+
+                        } 
+                        else if (jsonData.Properties.domainInfo[0].error != '') {
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            //$('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+
+                            $resultsDiv.addClass("not-available");
+                            $('#free-domain-title').hide();
+
+                        } else {
+                            $('#domain-avail-check').removeClass('unavailable');
+                            $('#domain-avail-check').addClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            //$('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "</span><br />[@L[fosconfigcommon:isavailable]@L]");
+                            $('#token').val(jsonData.Properties.domainInfo[0].name + '|available');
+                            $('#domaintoadd').val(jsonData.Properties.domainInfo[0].name);
+
+                            $resultsDiv.addClass("available");  
+                            $('#free-domain-title').show();
+                            slideToSlideElement({'element':$('.got-slide-3')});                            
+                        }
+
+                        $(".searched-domain").text(jsonData.Properties.domainInfo[0].shortName.toLowerCase());
+
+                        $('#domain-search-click').removeClass('disabled');
+                        $('#search-btn-loading').hide();
+                        $('#add-domain-loading').hide();                        
+                        nextStepUrl = jsonData.Properties.nextStepUrl;
+                    }, 'json');
+                     
+                    return false;
+                }
+            }
+            return false;
+        });
+    });
+
+  </script>
+</atlantis:webstash>  
+  
+  
+
+  <!-- ========================================
+
+      Why US Block
+
+============================================= -->
+
+<atlantis:webstash type="css">
+  <style>
+#whyUsRow{padding-top:30px}
+#whyUsRow .why-us-wrap{width:100%;height:350px}
+#whyUsRow .why-us-headline-wrap{width:1000px;margin:25px auto 0;text-align:center}
+#whyUsRow .why-us-headline{text-transform:uppercase;font-size:24px}
+#whyUsRow .col-lg-3{padding:0;width:25%}
+#whyUsRow .circle1,#whyUsRow .circle2,#whyUsRow .circle3,#whyUsRow .circle4{width:170px;height:170px}
+#whyUsRow .circle1{background-position:0 0}
+#whyUsRow .circle2{background-position:-174px 0}
+#whyUsRow .circle3{background-position:-348px 0}
+#whyUsRow .circle4{background-position:-522px 0}
+#whyUsRow .circle-text{width:170px;text-align:center;color:#7db701;line-height:20px;font-size:20px;font-weight:200;margin-top:20px;overflow:visible}
+#whyUsRow .more-width{width:190px;}
+.why-us-circles{margin:30px auto 0;width:1000px}
+.why-us-circles>ul>li{float:left;list-style-type:none;margin-left:64px;overflow:visible}
+.why-us-circles>ul>li>div>span{display:block}
+#whyUsRow .offers-sprite1{background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/why_icons_new.png');}
+#pcf .pc-support-wrapper{margin-top:0;}
+  </style>
+</atlantis:webstash>
+
+
+<section class="misc-banner-generic" id="whyUsRow">
+        <div class="l-main-container container main-banner-content">
+          <div class="why-us-wrap">
+            <div class="why-us-content">
+              <div class="why-us-headline-wrap text-center">
+                <span class="why-us-headline b condensed">[@L[cds.sales/offers/default:whyus-text-area]@L]</span>
+              </div>
+              <div class="why-us-circles">
+                <ul>
+                  <li>
+                    <div class="circle1 offers-sprite1"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-1]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle2 offers-sprite1"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-2]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle3 offers-sprite1"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-3]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle4 offers-sprite1"></div><div class="circle-text more-width">[@L[cds.sales/offers/default:whyus-img-text-4_34369]@L]</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- ========================================
+
+      Why US End Block
+
+============================================= -->
+ 
+
+  
+
+<!-- ========================================
+
+      Disclaimers Block Start
+
+============================================= -->
+
+<atlantis:webstash type="css">
+  <style>
+    /* disclaimers css start */
+    .modal-title{font-size:24px}
+    .modal-dialog{width: 600px}
+    #disclaimers{font-size:14px;margin:0 auto;line-height:14px;width:1000px}
+    #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
+    #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+    /* disclaimers end */
+  </style>
+</atlantis:webstash>
+
+<section class="misc-banner-generic">
+  <div class="l-main-container container main-banner-content">
+  <!-- Page Disclaimer -->
+    <div id="disclaimers">
+      <p>
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/default:disclaimer-text]@L]</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+        <strong>[@L[cds.sales/offers/default:disclaimer-modal-title]@L]</strong>
+        </h4>
+      </div>
+      <div class="modal-body">
+      
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- ========================================
+
+      Disclaimers Block End
+
+============================================= --> 
