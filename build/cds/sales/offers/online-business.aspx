@@ -38,7 +38,7 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       

@@ -713,16 +713,16 @@
       }
   
       function setMarketLinkHandler() {
-          $('body').on('click', '[data-pc-link]', function(e) {
-              e.preventDefault();
-              var $link = $(this);
-              var qry = $link.data('pc-qry');
-              var href = $link.data('pc-href');
-              var url = href + qry;
-              window.location = url;
-          });
+        $('body').on('click', '[data-pc-qry], [data-pc-link]', function(e) {
+          e.preventDefault();
+          var $link = $(this);
+          var qry = $link.data('pc-qry');
+          var href = $link.data('pc-href') || $link.attr('href');
+          var url = href + qry;
+          window.location = url;
+        });
       }
-  
+      
       function setUpBannerClick() {
           // CTA banner clicks
           // this is for the banner that appears under the product lists
@@ -1110,7 +1110,7 @@
       guiDomain: "[@T[link:<external linktype='guiurl' path='' parammode='explicit'/>]@T]/", // <---- CDS TOKEN NEEDED
       init: function() {
           /** Add locale to HTML tag **/
-          var currentLocale = 'en-us';
+          var currentLocale = "[@T[localization:<language full='true' />]@T]";
           var htmlLang = $('html').attr('lang') + '';
           if (htmlLang.length > 0 && htmlLang.toLowerCase() !== currentLocale) {
               $('html').attr('lang', currentLocale);
