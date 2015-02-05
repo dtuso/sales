@@ -1,6 +1,7 @@
 extends ../../../templates/pages/landing-page
 
 include _ready-to-take-business-online.jade
+include _office365-email-mixin.jade
 
 block domainSearch
 
@@ -17,7 +18,7 @@ block sections
   block product
 
   block office365
-    //- define shared ofice 365 HTML here
+    +renderOffice365Email("domain")
 
   block whyUs
     
