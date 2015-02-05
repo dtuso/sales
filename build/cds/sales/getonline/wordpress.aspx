@@ -54,7 +54,6 @@
           if($(document).sfTipper){
             $(document).sfTipper({ wireup: true });
           }
-          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
