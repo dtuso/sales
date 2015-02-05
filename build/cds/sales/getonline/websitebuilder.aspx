@@ -243,66 +243,114 @@
         </div>
       </div>
     </section>
-    <hr>
-    <!--include ../shared/domain-search-widget-->
-    <!--section#websitenode-builder
-    //div
-      //img(src="/headrer-image.pnodeng")
-      //h2 Website builder
-      //a.btn.btn-default-light View All Templates
-      //img(src="/main-image.png")
-    -->
-    <atlantis:webstash type="js">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat center bottom;}
-        
-      </style>
-    </atlantis:webstash>
-    <section id="got">
-      <div class="container">
-        <div class="row">
-          <div class="text-center">
-            <h2>Ready to take your business online</h2>
-            <div class="section">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+    <div>
+      <!--div.text-center-->
+      <!--  +renderDomainstringWithPrice("testingJade", "$1.00")-->
+      <hr>
+      <!--include ../shared/domain-search-widget-->
+      <!--section#websitenode-builder
+      //div
+        //img(src="/headrer-image.pnodeng")
+        //h2 Website builder
+        //a.btn.btn-default-light View All Templates
+        //img(src="/main-image.png")
+      -->
+      <hr>
+      <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
+      <div style="background-image: url(); background-color: #fff;">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div>
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3>
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p>
+            </div>
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div>
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3>
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p>
+            </div>
+            <div class="col-sm-4 key-benefit">
+              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              </div>
+              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3>
+              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="topSpacing">
-            <div class="col-xss-1"></div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="domain-icon"></div>
-                <p>
-                  <label>Domain</label>
-                </p><span class="tooltip-icon"></span>
+      </div>
+      <hr>
+      <atlantis:webstash type="js">
+        <style>
+          .container .row .topSpacing{padding-top:20px;}
+          .container .row .leftSpacing{padding-left:50px;}
+          .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+          .icon-spacing{text-align: center;font-size: 2em;}
+          .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+          .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+          .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+          .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+          .domain-icon-spacing {margin-right: 60px;}
+          .col-spacer2{width:43%;}
+          .col-spacer1{width: 30%;}
+          
+        </style>
+      </atlantis:webstash>
+      <section id="got">
+        <div class="container">
+          <div class="row">
+            <div class="text-center">
+              <h2>Ready to take your business online</h2>
+              <div class="section">
+                <h3>We have an excellent starter pack for</h3>
+                <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="wsb-icon"></div>
-                <p>
-                  <label>Website builder</label>
-                </p><span class="tooltip-icon"></span>
+          </div>
+          <div class="row">
+            <div class="topSpacing">
+              <div class="col-xss-1"></div>
+              <div class="col-sm-3">
+                <div class="icon-spacing">
+                  <div class="domain-icon"></div>
+                  <p>
+                    <label>Domain</label>
+                  </p><span class="tooltip-icon domain-icon-spacing"></span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="icon-spacing">
+                  <div class="wsb-icon"></div>
+                  <p>
+                    <label>Website builder</label>
+                  </p><span class="tooltip-icon"></span>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="icon-spacing">
+                  <div class="email-icon"></div>
+                  <p>
+                    <label>Office 365 email</label>
+                  </p><span class="tooltip-icon"></span>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 col-spacer1"></div>
+            <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+          </div>
+          <div style="padding-top:30px;padding-bottom:10px" class="row">
+            <div class="col-sm-4 col-spacer2"></div>
             <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="email-icon"></div>
-                <p>
-                  <label>Office 365 email</label>
-                </p><span class="tooltip-icon"></span>
-              </div>
+              <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
             </div>
+          </div>
+          <div style="padding-top:10px" class="row">
+            <div class="col-sm-4"></div>
+            <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
           </div>
         </div>
       </div>

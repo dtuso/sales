@@ -7,12 +7,9 @@ include _good-news-get-it-now.jade
 block domainSearch
 
 block sections
-
+ 
   block getItNow
     +renderGoodNews("domain","price","image-path")
-
-  block domainName
-    //include ../shared/domain-search-widget
 
   block product
 
@@ -20,7 +17,9 @@ block sections
     //- define shared ofice 365 HTML here
 
   block whyUs
-    
+    include -why-us.jade
+    hr
+  
   block got
     +renderReadyToTakeBusinessOnline("domain","price")
          
