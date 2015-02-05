@@ -1,6 +1,6 @@
 extends ../../../templates/pages/landing-page
 
-include _ready-to-take-business-online.jade
+include _ready-to-take-business-online-mixin.jade
 
 block domainSearch
 
@@ -22,6 +22,7 @@ block sections
     block whyUs
       include -why-us.jade
       hr
+      
     block got
       +renderReadyToTakeBusinessOnline("domain","price")
          

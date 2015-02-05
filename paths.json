@@ -66,5 +66,6 @@
   "web-host":                "./hosting/web-host/",
   "managed-vps-config":      "./pro/managed-vps-config/",
   "ds-PL":                   "./hosting/private-label/dedicated-servers/",
-  "ds-config-PL":            "./hosting/private-label/dedicated-servers-config/"
+  "ds-config-PL":            "./hosting/private-label/dedicated-servers-config/",
+  "getonline":               "./getonline/"
 }
