@@ -103,7 +103,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /><param name="dppDom" value="dppDom" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -471,7 +471,7 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain)));
+    returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain.Fqdn)));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -1628,7 +1628,6 @@ h2.api-error-header {
                     case("dup"):
                       $('#defaultmarqueeviewform .search-message').hide();
                       $('#defaultmarqueeviewform .dup-domain-fail').show();
-                      console.log('dup domain defaultmarqueeviewform');
                       break;
               
                     default:
@@ -1638,14 +1637,12 @@ h2.api-error-header {
                       $failArea.html(html);
                       $('#defaultmarqueeviewform .search-message').hide();
                       $('#defaultmarqueeviewform .domain-eligibility-fail').show();
-                      console.log('eligibility fail defaultmarqueeviewform');
                       break;
               
                   }
                 } else {
                   $('#defaultmarqueeviewform .search-message').hide();
                   $('#defaultmarqueeviewform .type-your-business-name').show();
-                  console.log('false defaultmarqueeviewform');
                 }
               
               
@@ -1727,86 +1724,6 @@ h2.api-error-header {
                 <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span><span data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</span></div>
               </div>
             </form>
-            <atlantis:webstash type="css">
-              <style>
-                /*  speech */
-                .speech-shape-upsidedown {
-                  line-height: 1.9em;
-                  font-size: 18px;
-                  padding: 5px 17px;
-                  color: #fff;
-                  display: inline-block;
-                  position: relative;
-                  margin-bottom: 20px;
-                  z-index: 2;
-                }
-                .speech-shape-upsidedown .shape-text {
-                  position: relative;
-                  z-index: 40;
-                }
-                .speech-shape-upsidedown:before {
-                  content: '';
-                  position: absolute;
-                  top: -15px;
-                  left: 0;
-                  border-bottom: 15px solid;
-                  border-right: 15px solid transparent;
-                }
-                .speech-shape-upsidedown:after {
-                  content: '';
-                  position: absolute;
-                  height: 100%;
-                  width:20px;
-                  right: -6px;
-                  top: 0;
-                  transform: skew(12deg, 0);
-                  z-index: 1;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green {
-                  background-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-                  border-bottom-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-                  background-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-                  background-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
-                  color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-                  border-bottom-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-                  background-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white {
-                  background-color: #fff;
-                  color: #333;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-                  border-bottom-color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-                  background-color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-                  background-color: #fedc45;
-                  color: #333;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-                  border-bottom-color: #fedc45;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-                  background-color: #fedc45;
-                }
-                
-                /* (end) speech */
-              </style>
-            </atlantis:webstash>
             <atlantis:webstash type="js">
               <script>
                 var domainavailablemarqueeviewform = {
@@ -1942,7 +1859,6 @@ h2.api-error-header {
                       case("dup"):
                         $('#domainavailablemarqueeviewform .search-message').hide();
                         $('#domainavailablemarqueeviewform .dup-domain-fail').show();
-                        console.log('dup domain domainavailablemarqueeviewform');
                         break;
                 
                       default:
@@ -1952,14 +1868,12 @@ h2.api-error-header {
                         $failArea.html(html);
                         $('#domainavailablemarqueeviewform .search-message').hide();
                         $('#domainavailablemarqueeviewform .domain-eligibility-fail').show();
-                        console.log('eligibility fail domainavailablemarqueeviewform');
                         break;
                 
                     }
                   } else {
                     $('#domainavailablemarqueeviewform .search-message').hide();
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
-                    console.log('false domainavailablemarqueeviewform');
                   }
                 
                 
@@ -2030,86 +1944,6 @@ h2.api-error-header {
                 <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span><span data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</span></div>
               </div>
             </form>
-            <atlantis:webstash type="css">
-              <style>
-                /*  speech */
-                .speech-shape-upsidedown {
-                  line-height: 1.9em;
-                  font-size: 18px;
-                  padding: 5px 17px;
-                  color: #fff;
-                  display: inline-block;
-                  position: relative;
-                  margin-bottom: 20px;
-                  z-index: 2;
-                }
-                .speech-shape-upsidedown .shape-text {
-                  position: relative;
-                  z-index: 40;
-                }
-                .speech-shape-upsidedown:before {
-                  content: '';
-                  position: absolute;
-                  top: -15px;
-                  left: 0;
-                  border-bottom: 15px solid;
-                  border-right: 15px solid transparent;
-                }
-                .speech-shape-upsidedown:after {
-                  content: '';
-                  position: absolute;
-                  height: 100%;
-                  width:20px;
-                  right: -6px;
-                  top: 0;
-                  transform: skew(12deg, 0);
-                  z-index: 1;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green {
-                  background-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-                  border-bottom-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-                  background-color: #008a32;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-                  background-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
-                  color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-                  border-bottom-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-                  background-color: #ef6c0f;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white {
-                  background-color: #fff;
-                  color: #333;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-                  border-bottom-color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-                  background-color: #fff;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-                  background-color: #fedc45;
-                  color: #333;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-                  border-bottom-color: #fedc45;
-                }
-                .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-                  background-color: #fedc45;
-                }
-                
-                /* (end) speech */
-              </style>
-            </atlantis:webstash>
             <atlantis:webstash type="js">
               <script>
                 var domainnotavailablemarqueeviewform = {
@@ -2245,7 +2079,6 @@ h2.api-error-header {
                       case("dup"):
                         $('#domainnotavailablemarqueeviewform .search-message').hide();
                         $('#domainnotavailablemarqueeviewform .dup-domain-fail').show();
-                        console.log('dup domain domainnotavailablemarqueeviewform');
                         break;
                 
                       default:
@@ -2255,14 +2088,12 @@ h2.api-error-header {
                         $failArea.html(html);
                         $('#domainnotavailablemarqueeviewform .search-message').hide();
                         $('#domainnotavailablemarqueeviewform .domain-eligibility-fail').show();
-                        console.log('eligibility fail domainnotavailablemarqueeviewform');
                         break;
                 
                     }
                   } else {
                     $('#domainnotavailablemarqueeviewform .search-message').hide();
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
-                    console.log('false domainnotavailablemarqueeviewform');
                   }
                 
                 

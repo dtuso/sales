@@ -44,7 +44,9 @@ mixin domainSearchInput(domainSearchParams)
       }
     });
 
+- domainSearchOffersInputCssRendered = false;
 mixin domainSearchOffersInput(prms)
+  
   - prms                          = prms || {};
   - prms.tlds                     = prms.tlds || ['com','co','org','net'];
   - prms.defaultTld               = prms.defaultTld || 'com';
@@ -78,84 +80,87 @@ mixin domainSearchOffersInput(prms)
         span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
         span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
         span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{prms.dupDomainInCartCiCode}" /></external>]@T]') !{prms.infoDupDomainInCart}
-  atlantis:webstash(type="css")
-    style.
-      /*  speech */
-      .speech-shape-upsidedown {
-        line-height: 1.9em;
-        font-size: 18px;
-        padding: 5px 17px;
-        color: #fff;
-        display: inline-block;
-        position: relative;
-        margin-bottom: 20px;
-        z-index: 2;
-      }
-      .speech-shape-upsidedown .shape-text {
-        position: relative;
-        z-index: 40;
-      }
-      .speech-shape-upsidedown:before {
-        content: '';
-        position: absolute;
-        top: -15px;
-        left: 0;
-        border-bottom: 15px solid;
-        border-right: 15px solid transparent;
-      }
-      .speech-shape-upsidedown:after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width:20px;
-        right: -6px;
-        top: 0;
-        transform: skew(12deg, 0);
-        z-index: 1;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-green {
-        background-color: #008a32;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-        border-bottom-color: #008a32;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-        background-color: #008a32;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-        background-color: #ef6c0f;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
-        color: #fff;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-        border-bottom-color: #ef6c0f;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-        background-color: #ef6c0f;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-white {
-        background-color: #fff;
-        color: #333;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-        border-bottom-color: #fff;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-        background-color: #fff;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-        background-color: #fedc45;
-        color: #333;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-        border-bottom-color: #fedc45;
-      }
-      .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-        background-color: #fedc45;
-      }
+  
+  unless(domainSearchOffersInputCssRendered )
+    - domainSearchOffersInputCssRendered = true;
+    atlantis:webstash(type="css")
+      style.
+        /*  speech */
+        .speech-shape-upsidedown {
+          line-height: 1.9em;
+          font-size: 18px;
+          padding: 5px 17px;
+          color: #fff;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 20px;
+          z-index: 2;
+        }
+        .speech-shape-upsidedown .shape-text {
+          position: relative;
+          z-index: 40;
+        }
+        .speech-shape-upsidedown:before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: 0;
+          border-bottom: 15px solid;
+          border-right: 15px solid transparent;
+        }
+        .speech-shape-upsidedown:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width:20px;
+          right: -6px;
+          top: 0;
+          transform: skew(12deg, 0);
+          z-index: 1;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+          border-bottom-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
+          color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+          border-bottom-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white {
+          background-color: #fff;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+          border-bottom-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+          background-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+          background-color: #fedc45;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+          border-bottom-color: #fedc45;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+          background-color: #fedc45;
+        }
 
-      /* (end) speech */
+        /* (end) speech */
   atlantis:webstash(type="js")
     script.
       var #{prms.formId} = {
@@ -291,7 +296,6 @@ mixin domainSearchOffersInput(prms)
             case("dup"):
               $('##{prms.formId} .search-message').hide();
               $('##{prms.formId} .dup-domain-fail').show();
-              console.log('dup domain #{prms.formId}');
               break;
 
             default:
@@ -301,14 +305,12 @@ mixin domainSearchOffersInput(prms)
               $failArea.html(html);
               $('##{prms.formId} .search-message').hide();
               $('##{prms.formId} .domain-eligibility-fail').show();
-              console.log('eligibility fail #{prms.formId}');
               break;
 
           }
         } else {
           $('##{prms.formId} .search-message').hide();
           $('##{prms.formId} .type-your-business-name').show();
-          console.log('false #{prms.formId}');
         }
 
 
