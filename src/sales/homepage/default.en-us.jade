@@ -1,7 +1,11 @@
 extends ./_home-page.jade
 
-block marquee
-  include ../../tmsv2/content/homepage/got-nacho/hero.jade
+block hero
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
+block marquee-tile1
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+block marquee-tile2
+  include ../../tmsv2/content/homepage/gtld/marquee-tile.jade
 block merch-tile1
   include ./tiles/get-found.jade
 block merch-tile2
@@ -11,10 +15,9 @@ block merch-tile3
 block merch-tile4
   include ./tiles/online-store-tile.jade
 block prepend sections
-  include ./sections/_nacho-full-video.jade
-  include ./sections/_nascar-contest.jade
   include ./sections/_domain-promo.jade
   include ./sections/_why-godaddy.jade
   include ./sections/_website-promo.jade
   include ./sections/_o365-promo.jade
   include ./sections/_support-promo.jade
+  include ./sections/_nascar-contest.jade
