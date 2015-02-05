@@ -29,8 +29,7 @@
     <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
     <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -39,15 +38,11 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
       function endOfPageScripts() {
-      
-        // jquery.domainscout.1.0.0.js
-        if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
-      
       
         $(document).ready(function(){
           // fix centering elements
@@ -61,7 +56,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -125,7 +123,6 @@ var got1Page = {
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
-
 
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
@@ -201,29 +198,6 @@ $(document).ready(function() {
   } else {
     showTypeYourDomain();
   }
-
-  //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
-    } else {
-      // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
-    }
-  })
-  .on('click', '.offer-search-btn', function(e) {
-    e.preventDefault();
-    domainSearchFormSubmit(e);
-    return false;
-  });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -340,6 +314,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
+      window.triggerResize(); // force equalHeightSlides when modal is showing (otherwise they have no height when display:none)
     });
   }
 
@@ -362,43 +337,18 @@ function showTldImagesInDomainArea() {
   $(window).trigger('resize');
 }
 
-function formatDomainWithDefaultTldIfNoneSpecified(domain) {
-  if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.tldInfo.defaultTld;
-}
+function domainSearchFormSubmit(e, domain) { 
 
-function isTldValid(domain) {
-  var isValid = false;
-  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
-      isValid = true;
-    }
-  });
-  return isValid;
-}
+  var $this = $(e.target);
 
-
-function domainSearchFormSubmit(e) {
- 
-  var $this = $(e.target),
-    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
-    domain = $.trim($textInput.val()), 
-    apiEndpoint1;
-
-  if((domain && domain.length==0) || !domain) return;
-
-  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
-
-  if(!isTldValid(domain)) {
-    displayInvalidTldMessage();
-    return;
-  }
-
-  $('#marquee').find('.search-form-input').val(''); 
+  var newItc = got1Page.offersCodes.itc_wsb;
+  ##if(isManager())
+    newItc = 'mgr_' + newItc;
+  ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -407,6 +357,7 @@ function domainSearchFormSubmit(e) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
+
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
         searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
@@ -414,13 +365,13 @@ function domainSearchFormSubmit(e) {
         alternateDomains = data.RecommendedDomains || [];
 
       if(isAvailable) {
-        // Domain is available, so allow them to search again or to select this available domain
+        $('#marquee').find('.search-form-input').val(''); 
 
-        // setup search box
-        showTypeYourDomain();
+        // Domain is available, so allow them to search again or to select this available domain        
+        showTypeYourDomain();// setup search box
 
         // tokenize header on search available page
-        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');       
 
@@ -431,12 +382,16 @@ function domainSearchFormSubmit(e) {
       } else {
 
         // tokenize header on search available page
-        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
+
           // SHOW SPINS
           showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+          $('#marquee').find('.search-form-input').val(''); 
+          
         } else {
           // NO SPINS
           showApi1or2SearchError(e, domain);
@@ -601,11 +556,6 @@ function showApi3SearchError(e,domain){
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
 }
 
-function displayInvalidTldMessage(){
-  $('#marquee .search-message').hide();
-  $('#marquee .invalid-TLD-entered').show();
-}
-
 function showDomainRegistrationFailure(tld) {
   var 
     $failArea = $('#marquee .domain-eligibility-fail'), 
@@ -741,9 +691,12 @@ $(window).load(function () {
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
       
     </script>
-    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+    ##if(IsManager())
+    <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -806,7 +759,7 @@ $(window).load(function () {
       .marquee-content-wrapper:not(old) {
         background-image: none;
         background-color: rgba(0,138,50,0.9);    
-      }   
+      }    
       .marquee { 
         padding-top: 40px; 
         padding-bottom: 40px; 
@@ -962,7 +915,10 @@ h2.api-error-header {
 
 .bigtext {visibility: hidden;}
 
-h
+.btn, .word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+}
     </style>
     <style>
 .plan-tile { 
@@ -1354,14 +1310,7 @@ h
     }
 }
     </style>
-    <atlantis:webstash type="js">
-      <style>
-        .btn {white-space: normal;word-wrap: break-word;} /* override UXCore's button styling */
-        
-      </style>
-    </atlantis:webstash>
-    <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     
     <atlantis:webstash type="css">
@@ -1390,10 +1339,11 @@ h
           background: #fedc45; 
           padding: 0 5px;
           line-height: 1.29em; /* to line up with the button height */
-          word-wrap: break-word; 
-          display: inline; 
           margin: 0;
+          display: inline;
+          display: -ms-inline-grid;
         }
+        
         
         #marquee h2.availability-header {
           color: #333333; 
@@ -1498,7 +1448,7 @@ h
           .main-marquee .header-text .get-online {  display: inline; background-color: #77c043; color: #333; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif; font-size: 3em; }
           .main-marquee .header-text .today {  font-family:'Walsheim-Bold', 'Arial Black', sans-serif; font-size: 11.5em; }
           .main-marquee .header-text.as-low-as-price {  line-height: 1; padding-top: 60px; padding-bottom: 45px; margin-top: -45px; color: #fff; background-repeat: no-repeat; font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size: 2em; background-image: url(data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PScwLDAsNTUzLDEyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cG9seWdvbiBwb2ludHM9JzAsMzggNDc5LDMxIDQ3OSwwIDU1Myw2OCA0NzksMTI1IDQ4MSw5OSAyMiwxMDEnIHN0eWxlPSdmaWxsOiMzZTk2MzU7IHN0cm9rZTojM2U5NjM1OycgLz48L3N2Zz4=);}
-          #marquee .main-marquee .header-text.disclaimers { color: #00701D; line-height: 1.6em; margin-top: -14px; text-transform: none; }
+          #marquee .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; line-height: 1.6em; margin-top: -14px; text-transform: none; }
           .main-marquee .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
           .main-marquee .logo-wrapper { margin-top: 20px; }
           .main-marquee .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: Tungsten,'Tungsten A','Tungsten B',Impact,sans-serif; font-size: 2em; }
@@ -1519,82 +1469,6 @@ h
             .main-marquee .logo-wrapper .icon { min-height: 160px; }
           }
           #marquee .search-message {display: none; text-transform: none; }
-          
-          /*  speech */
-          
-          .speech-shape-upsidedown {
-            line-height: 1.9em;
-            font-family: 'Walsheim-Bold';
-            font-size: 18px;
-            padding: 5px 17px;
-            color: #fff;
-            display: inline-block;
-            position: relative;
-            margin-bottom: 20px;
-            z-index: 2;
-          }
-          .speech-shape-upsidedown .shape-text {
-            position: relative;
-            z-index: 40;
-          }
-          .speech-shape-upsidedown:before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 0;
-            border-bottom: 15px solid;
-            border-right: 15px solid transparent;
-          }
-          .speech-shape-upsidedown:after {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width:20px;
-            right: -6px;
-            top: 0;
-            transform: skew(12deg, 0);
-            z-index: 1;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-            border-bottom-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-            border-bottom-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white {
-            background-color: #fff;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-            border-bottom-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-            background-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-            background-color: #fedc45;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-            border-bottom-color: #fedc45;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-            background-color: #fedc45;
-          }
-          
-          /* (end) speech */
           
         </style>
       </atlantis:webstash>
@@ -1632,22 +1506,139 @@ h
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 offer-search-box">
-              <div class="input-group">
-                <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                  <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+          <form id="defaultmarqueeviewform">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-step-1-get-a-domain]@L]</h2>
               </div>
             </div>
-          </div>
-          <div class="row domain-search-messaging-row">
-            <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-          </div>
+            <div class="row">
+              <div class="col-md-12 offer-search-box">
+                <div class="input-group">
+                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-domain-search-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
+              </div>
+            </div>
+            <div class="row domain-search-messaging-row">
+              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+            </div>
+          </form>
+          <script>
+            var defaultmarqueeviewform = {
+               executeFnByName: function(name, context) {
+                
+                var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                for(var i=2; i < arguments.length; i++){
+                  args.push(arguments[i]);
+                }
+                var namespaces = name.split(".");
+                var func = namespaces.pop();
+                for(var i = 0; i < namespaces.length; i++) {
+                  context = context[namespaces[i]];
+                }
+                return context[func].apply(this, args);
+            
+              },
+              validateSubmit: function(e){
+            
+                e.preventDefault();
+                var domainName = defaultmarqueeviewform.trimmedDomainName(false);
+                if((domainName && domainName.length==0) || !domainName) return false;
+            
+                domainName = domainName.toLowerCase();
+                domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                if(!defaultmarqueeviewform.ensureValidTld(domainName)) {
+                  return;
+                }
+                var functionName = 'domainSearchFormSubmit';
+                if(functionName.length > 0)  {
+                  defaultmarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                }
+            
+              },
+              trimmedDomainName: function(isKeyPress){
+                
+                var $form = $("#defaultmarqueeviewform"),
+                  $textInput = $form.find('input[name="domainToCheck"]'),
+                  domainName = $textInput.val();
+                if((domainName && domainName.length==0) || !domainName) return null;
+            
+                domainName = defaultmarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                return domainName;
+            
+              },
+              reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+            
+                var idx = domain.indexOf('.'),
+                    hasTld = idx > -1,
+                    sld = hasTld ? domain.substring(0, idx) : domain,
+                    tld = hasTld ? domain.substring(idx+1) : '',
+                    needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                
+                var domainName = sld + ((tld!='') ? '.' + tld : '');
+                if(needsTrimmed) {
+                  $textInput.val(domainName);
+                }
+                return domainName;
+            
+              },
+              ensureValidTld: function() {
+            
+                var $form = $("#defaultmarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val(); 
+                    validTld = defaultmarqueeviewform.hasTldValid(domainName);
+                $form.find('.search-message').hide();
+                if(validTld) {
+                  $form.find('.type-your-business-name').show();
+                } else {
+                  $form.find('.invalid-TLD-entered').show();
+                }
+                return validTld;
+                
+              },
+              hasTldValid: function(domain) {
+            
+                domain = $.trim(domain || "");
+                var idx = domain.indexOf('.'), isValid = false;
+                if(!domain || domain.length == 0 || idx == -1) return true;
+            
+                var domainsTld = domain.substring(idx+1).toLowerCase();
+                $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                  if(tld.toLowerCase() === domainsTld) {
+                    isValid = true;
+                  }
+                });
+                return isValid;
+            
+              },
+              formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+            
+                if(domain.indexOf('.') > 0) return domain;
+                return domain + '.' + got1Page.tldInfo.defaultTld;
+            
+              }
+            };
+            
+            $(document).ready(function(){
+            
+              $("#defaultmarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                $("#defaultmarqueeviewform").submit();
+              });
+            
+              $("#defaultmarqueeviewform").on('submit', defaultmarqueeviewform.validateSubmit);
+              $("#defaultmarqueeviewform").on('keyup', function(e){ 
+                if(e.which == 13) return;
+                var domainName = defaultmarqueeviewform.trimmedDomainName(true);
+                if(!domainName || domainName.length == 0) return;
+                domainName = defaultmarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                defaultmarqueeviewform.ensureValidTld(domainName);
+              });
+            
+            });
+          </script>
         </div>
       </section> 
       ##if(productIsOffered(105)) 
@@ -1675,7 +1666,7 @@ h
             margin: 62px 0 40px;
           }
           
-          #domain-available-marquee-view h2.domain-name-displayed {
+          #domain-available-marquee-view h2.available-domain-name-text {
             margin: 0;
           }
           #domain-available-marquee-view .reseach-container {
@@ -1694,7 +1685,7 @@ h
             </div>
             <div class="row available-domain-name-row">
               <div class="col-md-8 col-sm-12">
-                <h2 class="available-domain-name-text domain-name-displayed"><span id="available-domain-name"> </span></h2>
+                <h2 id="available-domain-name" class="available-domain-name-text domain-name-displayed word-break"> </h2>
               </div>
               <div class="col-md-4 col-sm-12 get-it-now-btn">
                 <button data-ci="92733" class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
@@ -1704,22 +1695,139 @@ h
         </div>
         <div class="bg-white reseach-container">
           <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+            <form id="domainavailablemarqueeviewform">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
                 </div>
               </div>
-            </div>
-            <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-            </div>
+              <div class="row">
+                <div class="col-md-12 offer-search-box">
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row domain-search-messaging-row">
+                <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              </div>
+            </form>
+            <script>
+              var domainavailablemarqueeviewform = {
+                 executeFnByName: function(name, context) {
+                  
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
+                  var namespaces = name.split(".");
+                  var func = namespaces.pop();
+                  for(var i = 0; i < namespaces.length; i++) {
+                    context = context[namespaces[i]];
+                  }
+                  return context[func].apply(this, args);
+              
+                },
+                validateSubmit: function(e){
+              
+                  e.preventDefault();
+                  var domainName = domainavailablemarqueeviewform.trimmedDomainName(false);
+                  if((domainName && domainName.length==0) || !domainName) return false;
+              
+                  domainName = domainName.toLowerCase();
+                  domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  if(!domainavailablemarqueeviewform.ensureValidTld(domainName)) {
+                    return;
+                  }
+                  var functionName = 'domainSearchFormSubmit';
+                  if(functionName.length > 0)  {
+                    domainavailablemarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                  }
+              
+                },
+                trimmedDomainName: function(isKeyPress){
+                  
+                  var $form = $("#domainavailablemarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val();
+                  if((domainName && domainName.length==0) || !domainName) return null;
+              
+                  domainName = domainavailablemarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                  return domainName;
+              
+                },
+                reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+              
+                  var idx = domain.indexOf('.'),
+                      hasTld = idx > -1,
+                      sld = hasTld ? domain.substring(0, idx) : domain,
+                      tld = hasTld ? domain.substring(idx+1) : '',
+                      needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                  sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                  
+                  var domainName = sld + ((tld!='') ? '.' + tld : '');
+                  if(needsTrimmed) {
+                    $textInput.val(domainName);
+                  }
+                  return domainName;
+              
+                },
+                ensureValidTld: function() {
+              
+                  var $form = $("#domainavailablemarqueeviewform"),
+                      $textInput = $form.find('input[name="domainToCheck"]'),
+                      domainName = $textInput.val(); 
+                      validTld = domainavailablemarqueeviewform.hasTldValid(domainName);
+                  $form.find('.search-message').hide();
+                  if(validTld) {
+                    $form.find('.type-your-business-name').show();
+                  } else {
+                    $form.find('.invalid-TLD-entered').show();
+                  }
+                  return validTld;
+                  
+                },
+                hasTldValid: function(domain) {
+              
+                  domain = $.trim(domain || "");
+                  var idx = domain.indexOf('.'), isValid = false;
+                  if(!domain || domain.length == 0 || idx == -1) return true;
+              
+                  var domainsTld = domain.substring(idx+1).toLowerCase();
+                  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                    if(tld.toLowerCase() === domainsTld) {
+                      isValid = true;
+                    }
+                  });
+                  return isValid;
+              
+                },
+                formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+              
+                  if(domain.indexOf('.') > 0) return domain;
+                  return domain + '.' + got1Page.tldInfo.defaultTld;
+              
+                }
+              };
+              
+              $(document).ready(function(){
+              
+                $("#domainavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                  $("#domainavailablemarqueeviewform").submit();
+                });
+              
+                $("#domainavailablemarqueeviewform").on('submit', domainavailablemarqueeviewform.validateSubmit);
+                $("#domainavailablemarqueeviewform").on('keyup', function(e){ 
+                  if(e.which == 13) return;
+                  var domainName = domainavailablemarqueeviewform.trimmedDomainName(true);
+                  if(!domainName || domainName.length == 0) return;
+                  domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  domainavailablemarqueeviewform.ensureValidTld(domainName);
+                });
+              
+              });
+            </script>
           </div>
         </div>
       </section>
@@ -1741,8 +1849,8 @@ h
           #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
           #spin-results .spin-results-message {margin-top:15px;}
           #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;word-wrap: break-word;}
-          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;word-wrap: break-word;}
+          #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
+          #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
           #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
           #spin-results .plan-tile {margin-top: 0px;}
           
@@ -1762,25 +1870,142 @@ h
             </div>
             <div class="row not-available-domain-name-row"> 
               <div class="col-md-8 col-sm-12">
-                <h2 class="not-available-domain-name-text domain-name-displayed"><span id="not-available-domain-name"> </span></h2>
+                <h2 id="not-available-domain-name" class="not-available-domain-name-text domain-name-displayed word-break"></h2>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" maxlength="63" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+            <form id="domainnotavailablemarqueeviewform">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-search-try-again]@L]</h2>
                 </div>
               </div>
-            </div>
-            <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
-            </div>
+              <div class="row">
+                <div class="col-md-12 offer-search-box">
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="95736" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  </div>
+                </div>
+              </div>
+              <div class="row domain-search-messaging-row">
+                <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              </div>
+            </form>
+            <script>
+              var domainnotavailablemarqueeviewform = {
+                 executeFnByName: function(name, context) {
+                  
+                  var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+                  for(var i=2; i < arguments.length; i++){
+                    args.push(arguments[i]);
+                  }
+                  var namespaces = name.split(".");
+                  var func = namespaces.pop();
+                  for(var i = 0; i < namespaces.length; i++) {
+                    context = context[namespaces[i]];
+                  }
+                  return context[func].apply(this, args);
+              
+                },
+                validateSubmit: function(e){
+              
+                  e.preventDefault();
+                  var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(false);
+                  if((domainName && domainName.length==0) || !domainName) return false;
+              
+                  domainName = domainName.toLowerCase();
+                  domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  if(!domainnotavailablemarqueeviewform.ensureValidTld(domainName)) {
+                    return;
+                  }
+                  var functionName = 'domainSearchFormSubmit';
+                  if(functionName.length > 0)  {
+                    domainnotavailablemarqueeviewform.executeFnByName(functionName, window, e, domainName);
+                  }
+              
+                },
+                trimmedDomainName: function(isKeyPress){
+                  
+                  var $form = $("#domainnotavailablemarqueeviewform"),
+                    $textInput = $form.find('input[name="domainToCheck"]'),
+                    domainName = $textInput.val();
+                  if((domainName && domainName.length==0) || !domainName) return null;
+              
+                  domainName = domainnotavailablemarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+                  return domainName;
+              
+                },
+                reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+              
+                  var idx = domain.indexOf('.'),
+                      hasTld = idx > -1,
+                      sld = hasTld ? domain.substring(0, idx) : domain,
+                      tld = hasTld ? domain.substring(idx+1) : '',
+                      needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+                  sld = needsTrimmed ? sld.substring(0, 63) : sld;
+                  
+                  var domainName = sld + ((tld!='') ? '.' + tld : '');
+                  if(needsTrimmed) {
+                    $textInput.val(domainName);
+                  }
+                  return domainName;
+              
+                },
+                ensureValidTld: function() {
+              
+                  var $form = $("#domainnotavailablemarqueeviewform"),
+                      $textInput = $form.find('input[name="domainToCheck"]'),
+                      domainName = $textInput.val(); 
+                      validTld = domainnotavailablemarqueeviewform.hasTldValid(domainName);
+                  $form.find('.search-message').hide();
+                  if(validTld) {
+                    $form.find('.type-your-business-name').show();
+                  } else {
+                    $form.find('.invalid-TLD-entered').show();
+                  }
+                  return validTld;
+                  
+                },
+                hasTldValid: function(domain) {
+              
+                  domain = $.trim(domain || "");
+                  var idx = domain.indexOf('.'), isValid = false;
+                  if(!domain || domain.length == 0 || idx == -1) return true;
+              
+                  var domainsTld = domain.substring(idx+1).toLowerCase();
+                  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
+                    if(tld.toLowerCase() === domainsTld) {
+                      isValid = true;
+                    }
+                  });
+                  return isValid;
+              
+                },
+                formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+              
+                  if(domain.indexOf('.') > 0) return domain;
+                  return domain + '.' + got1Page.tldInfo.defaultTld;
+              
+                }
+              };
+              
+              $(document).ready(function(){
+              
+                $("#domainnotavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
+                  $("#domainnotavailablemarqueeviewform").submit();
+                });
+              
+                $("#domainnotavailablemarqueeviewform").on('submit', domainnotavailablemarqueeviewform.validateSubmit);
+                $("#domainnotavailablemarqueeviewform").on('keyup', function(e){ 
+                  if(e.which == 13) return;
+                  var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(true);
+                  if(!domainName || domainName.length == 0) return;
+                  domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+                  domainnotavailablemarqueeviewform.ensureValidTld(domainName);
+                });
+              
+              });
+            </script>
           </div>
         </div>
         <div class="bg-white">
@@ -1798,8 +2023,8 @@ h
                   <div class="pro-plan-wrap ignore-same-height domain-spin-wrap">
                     <div class="row">
                       <div class="col-md-8 col-sm-12">
-                        <h4 class="domain-name-display"></h4>
-                        <h2 class="domain-name-display-tld"></h2>
+                        <h4 class="word-break domain-name-display"></h4>
+                        <h2 class="word-break domain-name-display-tld"></h2>
                       </div>
                       <div class="col-md-4 col-sm-12 text-right">
                         <button data-ci="95267" class="btn btn-primary select-and-continue spin-results-message">[@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]</button>
@@ -2001,6 +2226,7 @@ h
         #products.key-benefits-wrap h3.key-benefits-title {
           color:#333;
           font-size: 30px;
+          margin-top: 35px;
         }
         
         /* KEY BENEFITS */
@@ -2078,11 +2304,9 @@ h
           color: #333;
         }
         .key-benefits-wrap .key-benefit h3.key-benefits-title {
-          word-wrap: break-word;
-          word-break: break-word;
           white-space: -moz-pre-wrap;
           margin-top: 0px;
-          font-size: 30pt;
+          font-size: 30px;
           font-weight: bold;
           color: #333;
         }
@@ -2102,7 +2326,7 @@ h
         </div>
         <div class="row">
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
@@ -2110,20 +2334,20 @@ h
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
               ##if(productIsOffered(105))
                
               <div class="include-check-none"><strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong></div>
-              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div>          
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div> 
               ##endif
                
             </div>
           </div>
           <div class="col-sm-4 key-benefit">
-            <h3 class="headline-primary key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-pro-email-text]@L]</div>
             <div class="features-text">
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
@@ -2143,7 +2367,7 @@ h
           min-height: 360px;
         }
         #domainSection1What, #domainSection2Email {
-          margin: 10px 0;
+          margin: 20px 0;
         }
         
       </style>
@@ -2160,40 +2384,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2222,7 +2434,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2246,40 +2458,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2308,7 +2508,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="features-img-left" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6">
@@ -2330,7 +2530,7 @@ h
       </div>
       <atlantis:webstash type="css">
         <style>
-          #findYourPerfectDomain .tld-images {margin-top: 0px; margin-left: 60px;}
+          #findYourPerfectDomain .tld-images {margin-top: 0px; }
           #findYourPerfectDomain .tld-image {margin: 15px;}
           #findYourPerfectDomain.tile-section {
             padding:20px 0;
@@ -2355,40 +2555,28 @@ h
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -2417,7 +2605,7 @@ h
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-push-6 bg-slim-left">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="features-img-right-slim" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right-slim"/>
               </div>
             </div>
             <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
@@ -3210,9 +3398,6 @@ h
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
         <style>
-          #carousel-ols-stores {
-            width: 1000px;
-          }
           .plan-tile { 
             margin-top: -145px; 
           }
@@ -3224,31 +3409,6 @@ h
           }
           .bg-gray-light {
             background-color: #d9d9d9;
-          }
-          .customer-slide {
-            background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-sprite_ols_modal.png');
-            background-repeat: no-repeat;
-            margin-bottom: 20px;
-          }
-          .customer-slide.slide-1 {
-            background-position: 0px 5px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-2 {
-            background-position: 0px -405px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-3 {
-            background-position: -0px -815px;
-            height: 410px;
-            width: 665px;
-          }
-          .customer-slide.slide-4 {
-            background-position: 0px -1225px; 
-            height: 410px; 
-            width: 665px;
           }
           .customer-byline {
             font-size: 15px;
@@ -3270,7 +3430,6 @@ h
           }
           .main-heading {
             margin: 0px;
-            font-size: 30px;
           }
           .subheading {
             margin-bottom: 0px;
@@ -3279,18 +3438,36 @@ h
           .customer-quote {
             margin-top: 0px;
             margin-bottom: 10px;
-            min-height: 90px;
           }
-          .store-name {
-            margin-top: 10px;
-            margin-bottom: 10px;
+          .carousel-panel h2.store-name {
+            margin: 10px 0;
           }
           .item-wrapper {
             padding: 20px 0 20px !important;
           }
-          
-          
+          .img-centered {
+            margin: 0 auto;
+          }
         </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script>
+          $(document).ready(function(){
+            // autoheight the slides
+            var $slides = $('#carousel-ols-stores').find('.ols-carousel-item');
+            $slides.css("min-height", "100 px");
+            var equalHeightSlides = function(){
+              var maxHeight = 0;
+              $slides.each(function(){
+                maxHeight = $(this).outerHeight() > maxHeight ? $(this).outerHeight() : maxHeight;          
+              });
+              if( maxHeight > 0 ) $slides.css("height", maxHeight + "px").css("min-height", "auto");
+            }
+            $(window).on('resize', equalHeightSlides);
+          });
+          
+          
+        </script>
       </atlantis:webstash>
       <div data-icode="" class="carousel-panel container">
         <div class="row">
@@ -3299,14 +3476,14 @@ h
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-1"></div>
-        <div class="col-sm-10 center-block">
-          <h1 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h1>
-          <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-push-1 center-block">
+            <h2 class="h0 main-heading text-center">[@L[cds.sales/offers/online-business:32573-real-customers-real-sites]@L]</h2>
+            <h3 class="subheading text-center">[@L[cds.sales/offers/online-business:32573-our-customers-love-ols]@L]</h3>
+          </div>
         </div>
       </div>
-      <div class="col-sm-1"></div>
             <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
@@ -3664,27 +3841,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-2"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Gloss.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName2]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote2]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine2]@L]</div><a href="http://www.glossandtoss.net" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3692,27 +3863,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-3"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Bibs.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName3]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote3]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine3]@L]</div><a href="http://www.snap-bibs.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3720,27 +3885,21 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-4"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Princess.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName4]@L]</h2>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote4]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine4]@L]</div><a href="http://www.theprincessexpress.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3748,21 +3907,17 @@ top: -6px;
                           <div class="item">
                             <div class="item-wrapper">
                               <div data-icode="" data-ci="95265" class="carousel-panel container">
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 center-block">
-                                    <div class="customer-slide slide-1"></div>
+                                <div class="container-fluid ols-carousel-item">
+                                  <div class="row">
+                                    <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/Store_Jones.png" class="img-responsive img-centered"></div>
                                   </div>
-                                  <div class="col-sm-1"></div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-1"></div>
-                                  <div class="col-sm-10 col-xs-10">
-                                    <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
-                                    <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
-                                    <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                  <div class="row">
+                                    <div class="col-xs-12">
+                                      <h2 class="store-name">[@L[cds.sales/offers/online-business:32573-ols-customerStoreName1]@L]</h2>
+                                      <div class="customer-quote">[@L[cds.sales/offers/online-business:32573-ols-customerQuote1]@L]</div>
+                                      <div class="customer-byline">&mdash; [@L[cds.sales/offers/online-business:32573-ols-customerByLine1]@L]</div><a href="http://www.thejonesmarket.com" target="_blank" class="btn btn-default btn-default-black">[@L[cds.sales/offers/online-business:32573-see-it-in-action]@L]</a>
+                                    </div>
                                   </div>
-                                  <div class="col-sm-1"></div>
                                 </div>
                               </div>
                             </div>
@@ -3788,7 +3943,7 @@ top: -6px;
   #templates>p{display:block;text-align:center;font-size:14px;color:#666;width:400px;margin:8px auto 0;line-height:24px}#templates>a{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}#templates>form{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}
   #templates .templates-slider .left-arrow,#templates .templates-slider .right-arrow{position:absolute;width:60px;height:60px;z-index:1;margin-top:96px}#templates .templates-slider>ul{height:357px;margin:25px 0 -10px 40px;overflow:hidden;padding:0 0 0 8px;position:relative;width:916px}
   #templates .templates-slider>ul li{position:relative;display:block;width:212px;float:left;margin-right:19px}#templates .templates-slider>ul li>.wsl-img{position:absolute;width:212px;height:268px;top:0;left:0;-moz-box-shadow:0 3px 7px -3px #282828;-webkit-box-shadow:0 3px 7px -3px #282828;box-shadow:0 3px 7px -3px #282828;background-color:#fff;*z-index:3}
-  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:10px;position:relative;width:auto;height:706px;z-index:1050}
+  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:auto;position:relative;width:1000px;height:706px;z-index:1050}
   @media screen and (min-width:900px){.templates-dialog{margin:auto;width:1000px;padding-top:30px;padding-bottom:30px}}.templates-slider>ul li .hover>div{margin:45px 0 0;text-align:center}.templates-slider>ul li .hover>div>p{color:#fff;font-size:20px;margin-top:25px}
   .templates-slider>ul li .hover>div>p>span{color:#354e00;display:block;font-size:14px;margin-top:10px;padding:0 25px;*line-height:18px}#templates .templates-slider>ul li>a{display:block;width:192px;height:62px;line-height:62px;text-align:center;background-color:#fff;margin:268px auto 0;color:#3282e6;font-size:16px;text-decoration:none;*position:absolute;*left:10px;*z-index:1}
   #templates .view-all{text-decoration:none}#templates .view-all:hover{text-decoration:underline}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}.templates-modal{background-color:#EEE;box-shadow:0 0 6px rgba(0,0,0,.8);color:#333;font-size:14px;height:644px;line-height:1.3;padding:0;width:1002px;z-index:21;display: none;}
@@ -3801,12 +3956,12 @@ top: -6px;
   .g-modal-header{border-bottom:1px solid #CCC;color:#333;font-size:24px;font-weight:400;padding-bottom:2px}.g-modal-content{overflow:auto;position:relative}.g-modal-content p{margin:15px 0}.g-modal-buttonpane{margin-top:8px;text-align:center;font-size:12px;position:relative}
   .g-modal-footer{background:#dbdbdb;padding:15px;text-align:center}#app-modal>ul{background:#dbdbdb;list-style-type:none;margin:10px 0 0;padding:0 0 20px 10px;width:100%}#app-modal>ul:after{clear:both;content:"";display:table}
   #app-modal>ul>h3{color:#333;font-size:24px;font-weight:400;margin:0}#app-modal>ul>li{background:none repeat scroll 0 0 #FFF;float:left;height:202px;margin:15px 20px 0 0;padding-top:7px;text-align:center;width:213px}#app-modal>ul>li>div{overflow:hidden;width:201px;height:146px;margin:0 auto}
-  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:37px;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
-  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;height:35px;display:block}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:0 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
+  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:1.6em;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
+  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;min-height:35px;}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:6px 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
   #g-modal .plan-droplist-select>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;left:-999em;z-index:1000}#g-modal .plan-droplist-select.droplist-open{overflow:visible}
   #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
   #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
-  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{float:left;text-align:left;width:auto;height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
+  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{text-align:left;width:auto;min-height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
   #g-modal button.close {
     -webkit-appearance: none;
     padding: 0;
@@ -5353,8 +5508,7 @@ var PlanBox6UI = {
         </div>
       </div>
     </section>
-    <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->

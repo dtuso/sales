@@ -19,6 +19,14 @@ append pageStyles
   style
     include ./website-builder/styles.css
   style.
+    html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+    font-size: 26px;
+    font-size: 2.6rem;
+    }
+    html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+      font-size: 24px;
+      font-size: 2.4rem;
+    }
     #plans { padding-bottom: 40px; }
     #social-media, #reviews, #faq, #disclaimers { background: #fff; }
     #social-media { padding-top: 50px; }
@@ -141,7 +149,7 @@ block plans
   
 block sections  
   +renderMidPageNav
-    +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A")
+    +priceBlock('[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#plan-A", {"ci":"95885"})
 
   section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_1]@L]",data-ciCode="87758")
     .templates-chart.bg-gray-light
@@ -220,17 +228,17 @@ block sections
     include ../../templates/wsb-templates.html
     |##if(activeLanguageAny(en))
     | 
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
     | 
     |##elseif(activeLanguageAny(es))
     | 
-    +fullVideoModule({"icode":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
+    +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"wXlQyXhIsH8","tileName":"wsbVideo"})
     | 
     |##else
     | 
     style
       include:css ../../templates/styles/full-video.css
-    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg', data-icode='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
+    .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
       .container.relative-position.video-info
         .row
           .col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered
@@ -278,7 +286,7 @@ block sections
   | 
 
   section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]",data-ciCode="87759")
-    +renderAccordion({id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
+    +renderAccordion({ci: "95882", id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]"})
       h2.h1 [@L[cds.sales/gd/hosting/website-builder:rb_your_question]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-first-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-first-slide-content]@L]
@@ -289,14 +297,14 @@ block sections
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
   | 
-  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,uk))
+  |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
   | 
   section#other-products
     .container
         .row
           .col-sm-12
             h2.text-center.h1(style="padding-top:30px;") [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
-    +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx" />]@T]', 'btn-default-dark')
+    +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]', 'btn-default-dark')
   | 
   |##else
   | 
@@ -304,7 +312,7 @@ block sections
     +renderTwoUpCompare({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]", twoUpCompareId: "two-up", titleBackgroundColor: "bg-white", backgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/two-up-bg-wsb.jpg", style: "min-height: 100%"})
       +twoUpCompareColumn({title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", shapeColor: "orange"})
         p [@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]
-        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]',data-ci="88753") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-dark(href!='[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
         | 
         |##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
         | 
@@ -317,21 +325,22 @@ block sections
         |##endif
         | 
         p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]',data-ci="88754") [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
+        a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
   | 
   |##endif
   | 
   section#disclaimers.disclaimers-section
     .container
       div
-        | 
-        |##if(splitTestingSideIsActive(1349, B))
-        | 
-        | 4
-        | 
-        |##endif
-        | 
-        p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
+        p.h5
+          | 
+          |##if(splitTestingSideIsActive(1349, B))
+          | 
+          |<sup>4</sup>
+          | 
+          |##endif
+          | 
+          | [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] 
           a(onClick="disclaimersModal()", data-ci="87766") [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
@@ -468,6 +477,7 @@ prepend endOfPageScripts
           bv.id = 'bvapi';
           bv.async = true;
           bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+          bv.onreadystatechange = loadReviews; //Legacy IE
           bv.onload = loadReviews;
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
         }

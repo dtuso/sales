@@ -24,8 +24,7 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -34,15 +33,11 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
       function endOfPageScripts() {
-      
-        // jquery.domainscout.1.0.0.js
-        if("undefined"==typeof domainscout){var domainscout={version:"1.0.2"};$(document).ready(function(){function b(a){var b=a,d=b.data("domainscout")||b.data("domainsearch");if(b[0]["ds-domain"]=b.find(d["search-element"]),b[0]["ds-placeholder"]=b.find(d["placeholder-element"]),b[0]["ds-button"]=b.find(d.button),b[0]["ds-url"]=d.url,b[0]["ds-ci"]=d.ci,b[0]["ds-hide-label"]=d["hide-label"],b[0]["ds-empty-redirect"]=d["empty-redirect"],"undefined"==typeof b[0]["ds-hide-label"]&&(b[0]["ds-hide-label"]=!0),1==b[0]["ds-domain"].length&&(b[0]["ds-domain"].is("input")||b[0]["ds-domain"].is("textarea"))){if(domainscout.items=domainscout.items.add(b),b[0]["ds-placeholder"].is("label")){var e=b[0]["ds-domain"].attr("id");"undefined"==typeof e&&(e="ds-"+domainscout.items.length,b[0]["ds-domain"].attr("id",e)),b[0]["ds-placeholder"].attr("for",e)}else b[0]["ds-placeholder"].bind("click",function(){b[0]["ds-domain"].focus()});b[0]["ds-domain"].val(""),b[0]["ds-domain"].bind("focus.ds-event",function(){b.addClass("ds-focus"),b[0]["ds-domain"].bind("keydown.ds-event",function(a){var d=[16,27,20,8,37,38,39,40];13==a.which?(c(b),a.preventDefault()):-1==d.indexOf(a.which)&&b[0]["ds-hide-label"]&&b[0]["ds-placeholder"].css("display","none")})}),b[0]["ds-domain"].bind("blur.ds-event",function(){b.removeClass("ds-focus"),b[0]["ds-domain"].unbind("keydown.ds-event"),b[0]["ds-hide-label"]&&""==b[0]["ds-domain"].val()&&"none"==b[0]["ds-placeholder"].css("display")&&b[0]["ds-placeholder"].css("display","block")})}b[0]["ds-button"].bind("click",function(a){a.stopPropagation(),a.preventDefault(),"undefined"!=typeof _trfq&&_trfq.push(["cmdLogPageEvent","click","","",b[0]]),c(b)})}function c(a){var b=$(a),c=!0,e=!1,g=b[0]["ds-url"];"undefined"==typeof b[0]["ds-url"]&&(g=b.attr("action"),("undefined"==typeof g||"#"==g)&&(c=!1));var h;c&&1==b[0]["ds-domain"].length?(h=b[0]["ds-domain"].val(),"undefined"!=typeof h&&""!=h?(g=g.split("?")[0],g=g+"?domainToCheck="+d(h)):(g=b[0]["ds-empty-redirect"],g.indexOf(location.protocol)&&(g=location.protocol+g),e=!0,"undefined"==typeof g&&(c=!1))):c=!1,c&&(e||(g+="&checkAvail=1","undefined"==b[0]["ds-ci"]&&(b[0]["ds-url"]=f("ci")),"undefined"!=b[0]["ds-ci"]&&(g=g+"&"+b[0]["ds-ci"])),window.location.href=g)}function d(a){return a}function e(a){return a instanceof $||(a=$(a)),a}function f(a){var b=decodeURI((RegExp(a+"="+"(.+?)(&|$)").exec(location.search)||[,null])[1]);return"null"==b&&(b=void 0),b}var a=$("[data-domainscout],[data-domainsearch]");domainscout.items=$(),a.each(function(){b($(this))}),domainscout.add=function(a){b(e(a))},domainscout.search=function(a){c(e(a))}})}
-      
       
         $(document).ready(function(){
           // fix centering elements
@@ -56,7 +51,10 @@
           },200);
       
           // Wire up tooltips
-          $(document).sfTipper({ wireup: true });
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
         });
       
         $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -82,9 +80,12 @@
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
       
     </script>
-    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+    ##if(IsManager())
+    <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    ##endif
   </head>
-  <body ng-controller="" ng-cloak>
+  <body ng-controller="">
     <style>
       .svgfallback{display:none}
       .svgfallback:not(old){display:block}
@@ -147,7 +148,7 @@
       .marquee-content-wrapper:not(old) {
         background-image: none;
         background-color: rgba(0,138,50,0.9);    
-      }   
+      }    
       .marquee { 
         padding-top: 40px; 
         padding-bottom: 40px; 
@@ -474,6 +475,14 @@ width: 50%;
   }
     </style>
     <style>
+      html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+      font-size: 26px;
+      font-size: 2.6rem;
+      }
+      html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
       #plans { padding-bottom: 40px; }
       #social-media, #reviews, #faq, #disclaimers { background: #fff; }
       #social-media { padding-top: 50px; }
@@ -560,8 +569,7 @@ width: 50%;
       .marquee ul { padding: 0; }
       
     </style>
-    <!-- HEADERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container marquee marquee-white">
@@ -1365,7 +1373,7 @@ width: 50%;
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a href="#plan-A" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a data-ci="95885" href="#plan-A" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -1388,7 +1396,9 @@ width: 50%;
       $(document).ready(function(){
         // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
         if($('.mid-page-nav').is(':visible')){
-          organizeNavBar();
+          setTimeout(function(){
+            organizeNavBar()
+          },3000);
         }
       
         var nav = $('.mid-page-nav');
@@ -1440,7 +1450,7 @@ width: 50%;
         $dropdownMenu = "";
         if(linkArea > navBarArea)
         {
-          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>More<br><em>...</em></span></a><ul class="dropdown-menu">');
+          $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
         while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
@@ -1550,7 +1560,7 @@ width: 50%;
   #templates>p{display:block;text-align:center;font-size:14px;color:#666;width:400px;margin:8px auto 0;line-height:24px}#templates>a{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}#templates>form{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}
   #templates .templates-slider .left-arrow,#templates .templates-slider .right-arrow{position:absolute;width:60px;height:60px;z-index:1;margin-top:96px}#templates .templates-slider>ul{height:357px;margin:25px 0 -10px 40px;overflow:hidden;padding:0 0 0 8px;position:relative;width:916px}
   #templates .templates-slider>ul li{position:relative;display:block;width:212px;float:left;margin-right:19px}#templates .templates-slider>ul li>.wsl-img{position:absolute;width:212px;height:268px;top:0;left:0;-moz-box-shadow:0 3px 7px -3px #282828;-webkit-box-shadow:0 3px 7px -3px #282828;box-shadow:0 3px 7px -3px #282828;background-color:#fff;*z-index:3}
-  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:10px;position:relative;width:auto;height:706px;z-index:1050}
+  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:auto;position:relative;width:1000px;height:706px;z-index:1050}
   @media screen and (min-width:900px){.templates-dialog{margin:auto;width:1000px;padding-top:30px;padding-bottom:30px}}.templates-slider>ul li .hover>div{margin:45px 0 0;text-align:center}.templates-slider>ul li .hover>div>p{color:#fff;font-size:20px;margin-top:25px}
   .templates-slider>ul li .hover>div>p>span{color:#354e00;display:block;font-size:14px;margin-top:10px;padding:0 25px;*line-height:18px}#templates .templates-slider>ul li>a{display:block;width:192px;height:62px;line-height:62px;text-align:center;background-color:#fff;margin:268px auto 0;color:#3282e6;font-size:16px;text-decoration:none;*position:absolute;*left:10px;*z-index:1}
   #templates .view-all{text-decoration:none}#templates .view-all:hover{text-decoration:underline}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}.templates-modal{background-color:#EEE;box-shadow:0 0 6px rgba(0,0,0,.8);color:#333;font-size:14px;height:644px;line-height:1.3;padding:0;width:1002px;z-index:21;display: none;}
@@ -1563,12 +1573,12 @@ width: 50%;
   .g-modal-header{border-bottom:1px solid #CCC;color:#333;font-size:24px;font-weight:400;padding-bottom:2px}.g-modal-content{overflow:auto;position:relative}.g-modal-content p{margin:15px 0}.g-modal-buttonpane{margin-top:8px;text-align:center;font-size:12px;position:relative}
   .g-modal-footer{background:#dbdbdb;padding:15px;text-align:center}#app-modal>ul{background:#dbdbdb;list-style-type:none;margin:10px 0 0;padding:0 0 20px 10px;width:100%}#app-modal>ul:after{clear:both;content:"";display:table}
   #app-modal>ul>h3{color:#333;font-size:24px;font-weight:400;margin:0}#app-modal>ul>li{background:none repeat scroll 0 0 #FFF;float:left;height:202px;margin:15px 20px 0 0;padding-top:7px;text-align:center;width:213px}#app-modal>ul>li>div{overflow:hidden;width:201px;height:146px;margin:0 auto}
-  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:37px;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
-  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;height:35px;display:block}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:0 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
+  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:1.6em;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
+  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;min-height:35px;}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:6px 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
   #g-modal .plan-droplist-select>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;left:-999em;z-index:1000}#g-modal .plan-droplist-select.droplist-open{overflow:visible}
   #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
   #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
-  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{float:left;text-align:left;width:auto;height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
+  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{text-align:left;width:auto;min-height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
   #g-modal button.close {
     -webkit-appearance: none;
     padding: 0;
@@ -3210,7 +3220,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
                     $this,
                     'prepend'
                 );
@@ -3219,7 +3229,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3336,7 +3346,7 @@ text-transform: uppercase;
                         });
                         //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                     },
-                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                    {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
                     $this,
                     'prepend'
                 );
@@ -3345,7 +3355,7 @@ text-transform: uppercase;
           });
         </script>
       </atlantis:webstash>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-icode="" data-ci="87762" data-tile="wsbVideo" data-youtube-id="wXlQyXhIsH8" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload play-button"/>
@@ -3389,7 +3399,7 @@ font-family: 'Walsheim-Black';
 text-transform: uppercase;
 }
       </style>
-      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video.jpg" data-icode="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
+      <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered">
@@ -3478,37 +3488,37 @@ text-transform: uppercase;
                     </div>
                     <div class="row">
                               <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
                                 </div>
@@ -4092,19 +4102,19 @@ text-transform: uppercase;
                     </div>
                     <div class="row">
                               <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                                 </div>
                               </div>
                               <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                                   <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                                   <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
                                 </div>
@@ -4778,7 +4788,7 @@ margin-bottom: 20px;
                 </ul>
               </li>
               <div class="text-center">
-                <button id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
+                <button data-ci="95882" id="faq-button" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:seeAllQuestions]@L]</button>
               </div>
             </ul>
           </div>
@@ -4816,7 +4826,7 @@ margin-bottom: 20px;
          });
       </script>
     </section> 
-    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,sv,tr,uk))
+    ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
      
     <section id="other-products">
       <div class="container">
@@ -4837,40 +4847,28 @@ margin-bottom: 20px;
             .features {
               background-image: none !important;
             }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-          }
-          @media only screen and (max-width: 768px) {
             .features .features-img {
               width: 50%;
             }
           }
           @media only screen and (max-width: 992px) {
+            .features .features-img {
+              width: 85%;
+            }
             .features .features-img.features-img-right-slim {
               margin: 40px 0 0;
             }
-          }
-          @media only screen and (max-width: 992px) {
             .features .features-img.features-img-left,
             .features .features-img.features-img-right {
               margin: 0 0 40px;
             }
+            .features.features-wrap {
+              min-height: 0;
+              margin: 40px 0;
+            }
           }
           .features.features-wrap {
             min-height: 560px;
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              min-height: 0;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features.features-wrap {
-              padding: 40px 0;
-            }
           }
           .features.features-wrap h2,
           .features.features-slim h2 {
@@ -4899,14 +4897,14 @@ margin-bottom: 20px;
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png" data-lazyload-watch="features-img-right" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img #{imgClass ? imgClass : ''}"/>
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right"/>
               </div>
             </div>
             <div class="col-sm-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]</h2>
                 <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h4>
-                <div class="features-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</div><a href="[@T[link:&lt;relative path=&quot;~/hosting/wordpress-hosting.aspx&quot; /&gt;]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                <div class="features-text">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</div><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
               </div>
             </div>
           </div>
@@ -5245,7 +5243,7 @@ margin-bottom: 20px;
                   <h2 class="h0">[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" data-ci="88753" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]</p><a href="[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a> 
                       ##if(activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]))
                        
                     </div>
@@ -5278,7 +5276,7 @@ margin-bottom: 20px;
                        
                       ##endif
                        
-                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" data-ci="88754" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
+                      <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -5293,14 +5291,16 @@ margin-bottom: 20px;
     <section id="disclaimers" class="disclaimers-section">
       <div class="container">
         <div>
-           
-          ##if(splitTestingSideIsActive(1349, B))
-           
-          4
-           
-          ##endif
-           
-          <p class="h5">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a></p>
+          <p class="h5">
+             
+            ##if(splitTestingSideIsActive(1349, B))
+             
+            <sup>4</sup>
+             
+            ##endif
+             
+            [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a>
+          </p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
             <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
             <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
@@ -5345,8 +5345,7 @@ margin-bottom: 20px;
     <section id="renderMidPageNavBottom">
       <div></div>
     </section>
-    <!-- FOOTERBEGIN--> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -5452,6 +5451,7 @@ margin-bottom: 20px;
              bv.id = 'bvapi';
              bv.async = true;
              bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+             bv.onreadystatechange = loadReviews; //Legacy IE
              bv.onload = loadReviews;
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
            }

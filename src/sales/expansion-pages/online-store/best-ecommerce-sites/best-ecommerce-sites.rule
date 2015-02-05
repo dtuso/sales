@@ -1,0 +1,22 @@
+---
+location: sales/ecommerce/online-store/best-ecommerce-sites.rule
+id: 54907177f778fc1cd843c6d5
+name: SEM-271
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': 'mobileRedirectRequired()',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[mobileRedirectLink:<data redirectKey=\"sales.productlanding.onlinestore\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]

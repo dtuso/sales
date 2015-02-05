@@ -3,22 +3,22 @@ atlantis:webstash(type="css")
     :less
       #website-promo .shape-text{color:#333}
       #website-promo ul{margin-left:-20px;}
-      #website-promo .container>.row>div{
+      #website-promo .bg-gray-darkest .two-up-text-wrap {
       @media (min-width: 1000px){margin-left:8.333333333333332%;}
       }
       .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
       .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
 section#website-promo
-  +renderTwoUpCompare({title: "Get Your Website Online Today.", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
-    +twoUpCompareColumn({title: "<br />No Time?<br />No Problem.", backgroundColor: "bg-gray-darkest", shapeText: "WEBSITE BUILDER", shapeColor: "gold", whiteText:"WhiteText"})
+  +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
+    +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
       ul
-        li Start with your choice of 100s of professional designs.
-        li Customize it with our simple drag-&-drop tools.
-        li Put your beautiful new site online with free hosting.
+        li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]
+        li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]
+        li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]
       a.btn.btn-default-light.website-promo-wsb-btn(data-url!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]") LEARN MORE
-    +twoUpCompareColumn({title: "Already<br />Have a Site?<br />Host it with us.", backgroundColor: "gb-green-official-light", shapeText: "WEB HOSTING", shapeColor: "gold"})
+    +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]", shapeColor: "gold"})
       ul
-        li Industry-leading page load times.
-        li Powered by cPanel&reg; or Parallels&reg; Plesk
-        li Guaranteed 99.9% uptime + 24/7 support
+        li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]
+        li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]
+        li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]
       a.btn.btn-default-dark.website-promo-hosting-btn(data-url!="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]") LEARN MORE    

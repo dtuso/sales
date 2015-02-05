@@ -19,6 +19,7 @@ mixin renderAccordion(options)
   - options.id = options.id || "";
   - options.buttonID = options.buttonID || "";
   - options.buttonText = options.buttonText || "";
+  - options.ci = options.ci || "";
 
   style
     include:css styles/accordion-styles.css
@@ -28,7 +29,7 @@ mixin renderAccordion(options)
         ul(id=options.id class="accordion-group #{options.customStyles}")
           block
           .text-center
-            button(id=options.buttonID class="btn btn-default-dark") #{options.buttonText}
+            button(data-ci="#{options.ci}", id=options.buttonID class="btn btn-default-dark") #{options.buttonText}
   script(type="text/javascript").
       $(".accordion-dropdown").click(function() {
         var dropdownGroup = $(this).parent(".accordion-group");

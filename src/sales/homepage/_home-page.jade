@@ -91,6 +91,7 @@ block append pageStyles
       .fosfbbox{height:25px !important;}
       #bugbar{margin:10px 0;}
       #domain-search{margin-top: 10px;}
+      #domain-name-input{text-transform:inherit}
       .price,.icann-disclaimer{color:@gd-orange}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
         .tile-wrapper{min-height:140px;margin:5px 0}
@@ -149,7 +150,7 @@ block content
       .container
         .row
           .col-xs-12
-            +domainSearchInput({"placeholderText":"Find your perfect domain name"})
+            +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814"})
 
   //- Bugbar
   block bugBar

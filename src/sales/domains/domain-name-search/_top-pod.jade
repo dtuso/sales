@@ -1,0 +1,18 @@
+extend ../../../templates/plan-tile
+
+block title
+  .tldlogo(class!="{{pod.logoclass}}")
+
+block description
+  p.plan-text(ng-bind-html="pod.PodText") 
+
+block price
+  .plan-price-wrap
+    nostrike.plan-price.text-warning(ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") {{pod.ListPrice}}{{pod.IcannForList}}
+    span.plan-price.text-warning(ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") {{pod.CurrentPrice}}{{pod.IcannForCurrent}}
+    span.plan-strike-price(ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'") <br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+      strike {{pod.ListPrice}}
+
+block button
+  a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!="{{pod.ButtonURL}}" data-index="1" ng-hide="'{{pod.LaunchPhase}}'=='28'") [@L[cds.sales/gd/domains/domain-name-search:PreRegisterRebrand]@L]
+  a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!="{{pod.ButtonURL}}" data-index="1" ng-show="'{{pod.LaunchPhase}}'=='28'") [@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]

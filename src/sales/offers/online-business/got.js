@@ -44,7 +44,6 @@ var got1Page = {
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
 };
 
-
 ##if(!productIsOffered(105))
   got1Page.canOfferOls = false;
 ##endif
@@ -119,29 +118,6 @@ $(document).ready(function() {
   } else {
     showTypeYourDomain();
   }
-
-  //- set up domain search buttons to do a domain search
-  $( "#marquee").keypress(function(e) {
-    if ( e.which == 13 ) {
-      // enter key!
-      e.preventDefault();
-      $('#marquee').find('.offer-search-btn').trigger('click');
-      return false;
-    } else {
-      // verify domain name has a good tld
-      var domain = $(e.target).val();
-      if(domain.indexOf('.') > 0 && !isTldValid(domain)) {
-        displayInvalidTldMessage();
-      } else {
-        showTypeYourDomain();
-      }
-    }
-  })
-  .on('click', '.offer-search-btn', function(e) {
-    e.preventDefault();
-    domainSearchFormSubmit(e);
-    return false;
-  });
 
   // set up verify buttons on spin results to do validation before sending to DPP
   $('#domain-available-marquee-view').on('click', '.purchase-btn', showChoicesScreen);
@@ -258,6 +234,7 @@ function wireupModals() {
     $('#ols-stores-btn').on('click', function(){
       $("#site-choice-ols-stores-modal").sfDialog({titleHidden:true, dialogWidthIdeal:1230, buttons: []});
       $('#site-choice-ols-stores-modal').parent().css({ "overflow": "hidden" });
+      window.triggerResize(); // force equalHeightSlides when modal is showing (otherwise they have no height when display:none)
     });
   }
 
@@ -280,43 +257,18 @@ function showTldImagesInDomainArea() {
   $(window).trigger('resize');
 }
 
-function formatDomainWithDefaultTldIfNoneSpecified(domain) {
-  if(domain.indexOf('.') > 0) return domain;
-  return domain + '.' + got1Page.tldInfo.defaultTld;
-}
+function domainSearchFormSubmit(e, domain) { 
 
-function isTldValid(domain) {
-  var isValid = false;
-  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-    if(domain.indexOf(tld, domain.length - tld.length) !== -1) {
-      isValid = true;
-    }
-  });
-  return isValid;
-}
+  var $this = $(e.target);
 
-
-function domainSearchFormSubmit(e) {
- 
-  var $this = $(e.target),
-    $textInput = $this.closest('.offer-search-box').find('.search-form-input'),
-    domain = $.trim($textInput.val()), 
-    apiEndpoint1;
-
-  if((domain && domain.length==0) || !domain) return;
-
-  domain = formatDomainWithDefaultTldIfNoneSpecified(domain);
-
-  if(!isTldValid(domain)) {
-    displayInvalidTldMessage();
-    return;
-  }
-
-  $('#marquee').find('.search-form-input').val(''); 
+  var newItc = got1Page.offersCodes.itc_wsb;
+  ##if(isManager())
+    newItc = 'mgr_' + newItc;
+  ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + got1Page.offersCodes.itc_wsb);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -325,6 +277,7 @@ function domainSearchFormSubmit(e) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
+
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
         searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
@@ -332,13 +285,13 @@ function domainSearchFormSubmit(e) {
         alternateDomains = data.RecommendedDomains || [];
 
       if(isAvailable) {
-        // Domain is available, so allow them to search again or to select this available domain
+        $('#marquee').find('.search-form-input').val(''); 
 
-        // setup search box
-        showTypeYourDomain();
+        // Domain is available, so allow them to search again or to select this available domain        
+        showTypeYourDomain();// setup search box
 
         // tokenize header on search available page
-        $('span#available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
         var $thisSection = $this.closest('.js-marquee-section');       
 
@@ -349,12 +302,16 @@ function domainSearchFormSubmit(e) {
       } else {
 
         // tokenize header on search available page
-        $('span#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
+
           // SHOW SPINS
           showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+          $('#marquee').find('.search-form-input').val(''); 
+          
         } else {
           // NO SPINS
           showApi1or2SearchError(e, domain);
@@ -517,11 +474,6 @@ function showApi1or2SearchError(e,domain){
 function showApi3SearchError(e,domain){  
   var $modal = $("#step2-choose-product .api-c-failure-modal");
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function displayInvalidTldMessage(){
-  $('#marquee .search-message').hide();
-  $('#marquee .invalid-TLD-entered').show();
 }
 
 function showDomainRegistrationFailure(tld) {

@@ -9,9 +9,9 @@ include ../../../templates/carousel-mixin.jade
 - tabbedCarousel.textCenter = true;
 
 +renderTabbedCarousel(tabbedCarousel)
-  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
-  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
-  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
+  +addTab({ci:"87767",icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
+  +addTab({ci:"87768",icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
+  +addTab({ci:"87769",icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
 
 +carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
   +carouselItem(tabbedCarousel)

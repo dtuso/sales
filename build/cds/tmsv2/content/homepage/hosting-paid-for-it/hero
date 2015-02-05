@@ -21,7 +21,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<external linktype='MYAURL'><param name='ci' value='95857'/></external>]@T]" class="hero right-arrow hosting-paid-for-it">
+<div data-url="[@T[link:<external linktype='myaurl'><param name='ci' value='94095'/></relative>]@T]" class="hero right-arrow hosting-paid-for-it">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext top">
@@ -29,7 +29,7 @@
       </div>
       <div class="bigtext">
         <div class="line2 walsheim-black">PAID FOR IT.</div>
-        <div class="line3 tungsten"> <span class="dash">——— </span><span>SO USE IT.</span></div>
+        <div class="line3 tungsten"> <span class="dash">———</span><span>SO USE IT.</span></div>
       </div>
     </div>
   </div>
@@ -62,8 +62,7 @@
       <div class="bigtext">
         <div class="line1 tungsten">ACTIVATE</div>
         <div class="line2 walsheim-black">YOUR HOSTING PLAN </div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
     </div>
   </div>
 </div>

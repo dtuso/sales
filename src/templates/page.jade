@@ -59,8 +59,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       meta(property="fb:app_id" content="115696031791232")
       meta(property="fb:admins" content="633356800")
 
-    | 
-    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+
+    |[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
 
     //- inherited page classes can prepend/override/append headScripts when 
     //- that page needs a script loaded early on in DOM processing
@@ -75,7 +75,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
            if (document.getElementById(id)) {return;}
            js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
            js.id = id;
-           js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+           js.src = sourceUrl;
            fjs.parentNode.insertBefore(js, fjs);
         }
 
@@ -93,7 +93,10 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
             },200);
 
             // Wire up tooltips
-            $(document).sfTipper({ wireup: true });
+            if($(document).sfTipper){
+              $(document).sfTipper({ wireup: true });
+            }
+            
           });
 
           $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
@@ -128,7 +131,13 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- keep in mind this is loaded last and (intentionally or unintentionally) overrides above JS/CSS/meta stuff
     block head
 
-  body(ng-controller!=angularNgCntl ng-cloak)
+    //- this adds styling for the impersonation/currency in the manager header only
+    | 
+    | ##if(IsManager())
+    | <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    | ##endif
+
+  body(ng-controller!=angularNgCntl)
     
     //- pageStyles relocated here from head tag to ensure that any page-specific styling 
     //- can override Atlantis Webstash styling placed at bottom of head tag
@@ -154,14 +163,12 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
             $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
 
     // HEADERBEGIN
-    | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     // HEADEREND
 
     block content
 
     // FOOTERBEGIN
-    | 
     | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     // FOOTEREND-     
 

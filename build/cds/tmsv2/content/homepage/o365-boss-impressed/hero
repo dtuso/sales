@@ -16,14 +16,14 @@
     
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95859'/></relative>]@T]" class="hero right-arrow o365-boss-impressed">
+<div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='94091'/></relative>]@T]" class="hero right-arrow o365-boss-impressed">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
-        <div class="line1 walsheim-black">OFFICE 365 FROM GODADDY</div>
+        <div class="line1 walsheim-black">OFFICE 365 FROM FROM GODADDY</div>
         <div class="line2 tungsten">EMAIL SO PROFESSIONAL,</div>
         <div class="line3 walsheim-black">EVEN YOUR OLD BOSS</div>
-        <div class="line4 tungsten"> <span class="dash">————— </span><span>WILL BE IMPRESSED.</span></div>
+        <div class="line4 tungsten"> <span class="dash">—————</span><span>WILL BE IMPRESSED</span></div>
       </div>
     </div>
   </div>
@@ -56,8 +56,7 @@
       <div class="bigtext">
         <div class="line1 walsheim-bold">PLANS FROM ONLY</div>
         <div class="line2 price walsheim-black">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">START NOW</button>
+      </div><a class="btn btn-lg btn-purchase">START NOW</a>
     </div>
   </div>
 </div>

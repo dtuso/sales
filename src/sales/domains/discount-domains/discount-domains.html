@@ -1,8 +1,8 @@
 ---
 location: sales/domains/discount-domains.aspx
-id: 547e44acf778fc1db8259f9f
-name: GCE-32911
-comments: Create a direct URL to the "Compare Plan" tab on the DDC Landing Page
+id: 54b426f9f778fc2aa474479c
+name: GCE-33979
+comments: Prepare for uxcore
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -25,6 +25,21 @@ comments: Create a direct URL to the "Compare Plan" tab on the DDC Landing Page
       </style>
   ##endif    
     
+  ##if(appSettingEnabled(UXCORE_ENABLED))
+  <style type="text/css">
+    body {
+      font-size: 10px;
+      background-color: #d4d4d4;
+    }
+    h1 {
+      color: white;
+    }
+    .modal-dialog {
+      left: 0%;
+    }
+  </style>
+  ##endif
+
   <style>
 
   .select-box-options > li {
@@ -4350,7 +4365,11 @@ comments: Create a direct URL to the "Compare Plan" tab on the DDC Landing Page
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
+            ##if(appSettingEnabled(UXCORE_ENABLED))
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+            ##else
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            ##endif
             <p class="modal-title"><strong>[@L[cds.sales/gd/domains/discount-domains2:DisclaimerModalTitle]@L]</strong></p>
           </div>
           <div class="modal-body">

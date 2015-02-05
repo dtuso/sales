@@ -1,12 +1,11 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 5490d3dbf778fc1cd843c736
-name: GCE-32259
-comments: 2 SKU Split Test 1414
+id: 54cfe4cbf778fc20ac262ef5
+name: GCE-32258
+comments: Update verbage on page
 ---
-{%- set split1414testside = 'splitTestingSideIsActive(1414, B)' -%}
-{% set split1414testside = 'queryValueHas(split,1)' -%}
+{%- set split1414testside = 'splitTestingSideIsActive(1414, B)' %}
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
@@ -66,7 +65,7 @@ comments: 2 SKU Split Test 1414
   </style>
 <![endif]-->
   <!-- endbuild -->
-  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
+
   [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
  
 </head>
@@ -290,8 +289,8 @@ comments: 2 SKU Split Test 1414
 
             <div class="config-step medium-margin-top-step">
               <span class="step-ribbon orange-step-ribbon js-step2"><span class="step-number-text">[@L[cds.sales/business/office-365-config:cp-2-Step2]@L]</span> | [@L[cds.sales/business/office-365-config:cp-4-ChooseYourPlanTerm]@L]</span>
-              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendAndSave]@L]</h2>
-              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-LockInYourSavingsAndAvoidAnnualRenewals]@L]</p>
+              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendYourTerm-32258]@L]</h2>
+              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-AvoidAnnualRenewals-32258]@L]</p>
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
@@ -311,8 +310,8 @@ comments: 2 SKU Split Test 1414
 
             <div style="display: none" class="config-step medium-margin-top-step">
               <span class="step-ribbon orange-step-ribbon js-step2"><span class="step-number-text">[@L[cds.sales/business/office-365-config:cp-2-Step2]@L]</span> | [@L[cds.sales/business/office-365-config:cp-4-ChooseYourPlanTerm]@L]</span>
-              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendAndSave]@L]</h2>
-              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-LockInYourSavingsAndAvoidAnnualRenewals]@L]</p>
+              <h2>[@L[cds.sales/business/office-365-config:cp-3-ExtendYourTerm-32258]@L]</h2>
+              <p class="lead">[@L[cds.sales/business/office-365-config:cp-14-AvoidAnnualRenewals-32258]@L]</p>
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
@@ -338,69 +337,105 @@ comments: 2 SKU Split Test 1414
           <!-- / End Left Column -->
           ##if(splitTestingSideIsActive(1176, A)) 
           <div class="config-cart-wrapper">
-            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]"}'>
+            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]","additionalYear":"[@L[cds.sales/business/office-365-config:AdditionalYear]@L]","additionalYears":"[@L[cds.sales/business/office-365-config:AdditionalYears]@L]"}'>
               <h3>[@L[cds.sales/business/office-365-config:cp-2-OrderSummary]@L]</h3>
               <div class="order-item" data-planLevel="Economy" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-EmailEssentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Business" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-BusinessPremium]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Premium" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-ProductivityPlus]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_A" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:email-essentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_B" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-OnlineEssentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_C" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:business-premium]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_A" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:online-essentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_B" style="display: none;">
                 <p class="order-item-title"> [@L[cds.sales/business/office-365-config:Business]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_C" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:business-premium]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>   
               <div class="order-total-wrapper">
@@ -422,69 +457,105 @@ comments: 2 SKU Split Test 1414
         ##else
         <!-- Config-Cart -->
           <div style="display: none" class="config-cart-wrapper">
-            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]"}'>
+            <div class="order-summary-wrapper" data-itemDetails='{"1usr":"[@L[cds.sales/business/office-365-config:cp-1-User]@L]","moreUsrs":"[@L[cds.sales/business/office-365-config:cp-1-Users]@L]","moTerm":"[@L[cds.sales/business/office-365-config:cp-2-MonthTerm]@L]","yrTerm":"[@L[cds.sales/business/office-365-config:cp-2-YearTerm]@L]","additionalYear":"[@L[cds.sales/business/office-365-config:AdditionalYear]@L]","additionalYears":"[@L[cds.sales/business/office-365-config:AdditionalYears]@L]"}'>
               <h3>[@L[cds.sales/business/office-365-config:cp-2-OrderSummary]@L]</h3>
               <div class="order-item" data-planLevel="Economy" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-EmailEssentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Business" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-BusinessEssentials]@L]</p>
-                <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                <div class="order-item-details-wrapper" style="display: none;">
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Premium" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-ProductivityPlus]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_A" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:email-essentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_B" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-OnlineEssentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Email_C" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:business-premium]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_A" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:cp-2-OnlineEssentials]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_B" style="display: none;">
                 <p class="order-item-title"> [@L[cds.sales/business/office-365-config:Business]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>
               <div class="order-item" data-planLevel="Office_C" style="display: none;">
                 <p class="order-item-title">[@L[cds.sales/business/office-365-config:business-premium]@L]</p>
                 <div class="order-item-details-wrapper">
-                  <span class="order-item-details"></span>
-                  <span class="order-item-total orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                  <span class="order-item-details sale"></span>
+                  <span class="order-item-total sale orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
+                </div>
+                <div class="order-item-details-wrapper list" style="display: none;">
+                  <span class="order-item-details list"></span>
+                  <span class="order-item-total list orange-text"><span class="currency-symbol"></span><span class="currency-amount"></span></span>
                 </div>
               </div>                            
               <div class="order-total-wrapper">
@@ -602,7 +673,7 @@ comments: 2 SKU Split Test 1414
   <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-v2.min.js" id="fosShareScript" type="text/javascript"></script>
   <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
 
   <script>
     if(typeof o365PageData == 'undefined'){
@@ -914,7 +985,28 @@ comments: 2 SKU Split Test 1414
               //var productPrice = splitPriceSymbol(office365config.productOrder[k].productPrice);
               var productPrice = office365config.productOrder[k].productPrice;              
               //var subTotal = (office365config.planDuration*productPrice[1]*qtyUsers).toFixed(2);
-              var subTotal = currencyCalc.evaluate([office365config.planDuration,'*',productPrice,'*',qtyUsers]);              
+              var listPrice = office365config.productOrder[k].productListPrice;
+              var overOneYear = office365config.planDuration > 12;
+              var firstYearPrice;
+              var offSalePrice;
+
+              if(overOneYear)
+              {
+                productPrice = office365config.productOrder[k].firstYearProductPrice;
+                listprice = office365config.productOrder[k].firstYearProductListPrice;
+                firstYearPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',12]);
+                offSalePrice = currencyCalc.evaluate([listPrice,'*',qtyUsers,'*',office365config.planDuration-12]);
+              }
+              else
+              {
+                firstYearPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',office365config.planDuration]);
+                offSalePrice = 0;
+              }
+
+              
+              var subTotal = currencyCalc.evaluate([firstYearPrice,'+',offSalePrice]);
+
+              //var subTotal = currencyCalc.evaluate([office365config.planDuration,'*',productPrice,'*',qtyUsers]);              
               //cartTotalPrice = (parseFloat(cartTotalPrice) + parseFloat(subTotal)).toFixed(2);
               cartTotalPrice = currencyCalc.evaluate([cartTotalPrice,'+',subTotal]);
               cartTotalUsers = parseInt(cartTotalUsers) + parseInt(qtyUsers);
@@ -926,11 +1018,27 @@ comments: 2 SKU Split Test 1414
                 $this.slideDown();
                 userString = stringData['1usr'];
               } else {
-                $this.slideUp()
+                $this.slideUp();
               }
 
-              $this.find(".order-item-details").html(qtyUsers + " "+userString+" x " + durationDisplayLabel + " " + termString);
-              if( qtyUsers > eachPlanUserMax && !o365PageData.isManager ) {
+              
+              if(overOneYear)
+              {
+                $this.find(".order-item-details.sale").html(qtyUsers + " "+userString+" x " + "1" + " " + termString);
+                var offSaleDuration = durationDisplayLabel - 1;
+                if(offSaleDuration > 0)
+                {
+                  var additionalYearString = offSaleDuration > 1 ? stringData['additionalYears'] : stringData['additionalYear'];
+                  $this.find(".order-item-details.list").html("+ " + offSaleDuration + " " + additionalYearString);
+                }
+              }
+              else
+              {
+                $this.find(".order-item-details.sale").html(qtyUsers + " "+userString+" x " + durationDisplayLabel + " " + termString);
+              }
+              
+              if( qtyUsers > eachPlanUserMax && !o365PageData.isManager ) 
+              {
                 planInvalidsQty++;
                 $this.find(".order-item-total").html("");
 
@@ -938,10 +1046,21 @@ comments: 2 SKU Split Test 1414
 
                 // if mouse click remains the number will continue to increase, trigger mouse up to prevent this
                 $(document).trigger("mouseup");
-              } else {
-                $this.find(".order-item-total").html(subTotal);
+              } 
+              else 
+              {
+                $this.find(".order-item-total.sale").html(firstYearPrice);
+                
+                if(overOneYear)
+                {
+                  $this.find(".order-item-total.list").html(offSalePrice);
+                  $this.find(".order-item-details-wrapper.list").show();
+                }
+                else
+                {
+                  $this.find(".order-item-details-wrapper.list").hide();
+                }
               }                
-              
             }
           } 
 
@@ -991,6 +1110,24 @@ comments: 2 SKU Split Test 1414
           return office365config.configData[varProduct][varPlanName][office365config.planDuration][param];
         },
 
+        "getOneYearProductValueSale":function(varProduct,varPlanName){
+          var salePrice = 0;
+          if(office365config.planDuration > 12)
+          {
+            salePrice = office365config.configData[varProduct][varPlanName][12]["currentPrice"];
+          }
+          return salePrice;
+        },
+
+        "getOneYearProductValueList":function(varProduct,varPlanName){
+          var listPrice = 0;
+          if(office365config.planDuration > 12)
+          {
+            listPrice = office365config.configData[varProduct][varPlanName][12]["listPrice"];
+          }
+          return listPrice;
+        },
+
         "setDuration":function(){ 
           var $durationsSelectBox = $(".js-duration");
           $durationsSelectBox.val(office365config.planDuration);
@@ -1008,13 +1145,19 @@ comments: 2 SKU Split Test 1414
             var thisProductId = office365config.getProductValue(thisProduct,thisPlan,"productId");
             var thisPackageId = office365config.getProductValue(thisProduct,thisPlan,"packageId");
             var thisConfigCiCode = office365config.getProductValue(thisProduct,thisPlan,"configCiCode");
+            var thisListPrice = office365config.getProductValue(thisProduct,thisPlan,"listPrice");
+            var thisFirstYearSalePrice = office365config.getOneYearProductValueSale(thisProduct,thisPlan);
+            var thisFirstYearListPrice = office365config.getOneYearProductValueList(thisProduct,thisPlan);
 
             office365config.productOrder[thisPlan]={
               "productQty":thisQty,
               "productPrice":thisPrice,
               "productId":thisProductId,
               "packageId":thisPackageId,
-              "configCiCode":thisConfigCiCode
+              "configCiCode":thisConfigCiCode,
+              "productListPrice":thisListPrice,
+              "firstYearProductPrice": thisFirstYearSalePrice,
+              "firstYearProductListPrice":thisFirstYearListPrice
             };
           });
           office365config.refreshCart(); 

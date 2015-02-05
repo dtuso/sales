@@ -9,12 +9,12 @@ include ../../../templates/carousel-mixin.jade
 - tabbedCarousel.textCenter = true;
 
 +renderTabbedCarousel(tabbedCarousel)
-  +addTab({icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
-  +addTab({icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
-  +addTab({icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
-  +addTab({icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]"})
-  +addTab({icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]"})
-  +addTab({icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]"})
+  +addTab({ci:"87767",icon:"uxicon-facebook-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]"})
+  +addTab({ci:"87768",icon:"uxicon-twitter",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]"})
+  +addTab({ci:"87769",icon:"uxicon-youtube-box",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]"})
+  +addTab({ci:"87770",icon:"uxicon-yelp",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]"})
+  +addTab({ci:"87771",icon:"uxicon-paypal",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]"})
+  +addTab({ci:"87772",icon:"uxicon-homefinder",logo:"",imageAlternateText:"",text:"[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]"})
 +carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
   +carouselItem(tabbedCarousel)
     +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png")

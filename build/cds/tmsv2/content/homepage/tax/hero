@@ -21,12 +21,12 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/tlds/tax'><param name='ci' value='95861'/></relative>]@T]" class="hero right-arrow tax">
+<div data-url="[@T[link:<relative path='/tlds/tax'><param name='ci' value='91417'/></relative>]@T]" class="hero right-arrow tax">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
         <div class="line1 tungsten">KEEP A CALCULATOR</div>
-        <div class="line2 walsheim-black"><span class="dash">————— </span><span>UNDER YOUR PILLOW?</span></div>
+        <div class="line2 walsheim-black"><span class="dash">—————</span><span>UNDER YOUR PILLOW?</span></div>
       </div>
     </div>
   </div>
@@ -60,8 +60,7 @@
         <div class="line1 walsheim-black">.TAX</div>
         <div class="line2 walsheim-bold">IS FOR YOU</div>
         <div class="line3 price walsheim-regular">JUST [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
     </div>
   </div>
 </div>

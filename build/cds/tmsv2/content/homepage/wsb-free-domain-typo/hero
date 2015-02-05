@@ -60,7 +60,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
+<div data-url="[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='94097'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="products walsheim-black">
@@ -104,11 +104,10 @@
         <div class="line1 walsheim-black">FREE DOMAIN</div>
         <div class="line2 tungsten">WHEN YOU BUY WEBSITE BUILDER</div>
         <div class="line3 walsheim-black">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</div>
-        <div class="line4 tungsten"><span>THIS</span><span class="dash"> ——— </span><span>IS NOT A TYPO</span></div>
+        <div class="line4 tungsten"><span>THIS</span><span class="dash">———</span><span>IS NOT A TYPO</span></div>
         <div class="line5 walsheim-bold">AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
-      <div class="line6">Free domain with annual plan only. Other restrictions apply.</div>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
+      <div class="line6 walsheim-black">Free domain with annual plan only. Other restrictions apply.</div>
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 mixin fullVideoModule(fullVideoParams)
   - fullVideoParams                       = fullVideoParams || {};
   - fullVideoParams.icode                 = fullVideoParams.icode || "";
+  - fullVideoParams.ci                 = fullVideoParams.ci || "";
   - fullVideoParams.lazyLoad              = fullVideoParams.lazyLoad || false;
   - fullVideoParams.backgroundImage       = fullVideoParams.backgroundImage || "";
   - fullVideoParams.playButton            = fullVideoParams.playButton || "";
@@ -84,14 +85,14 @@ mixin fullVideoModule(fullVideoParams)
                       });
                       //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
                   },
-                  {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0},
+                  {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
                   $this,
                   'prepend'
               );
             }).css({'cursor':'pointer'});
           });
         });
-  div(style!=(fullVideoParams.backgroundImage != "" && !fullVideoParams.lazyLoad ? "background-image: url(" + fullVideoParams.backgroundImage + ");" : ""), data-lazyload-source !=(typeof fullVideoParams.backgroundImage!='undefined' && fullVideoParams.lazyLoad ? '#{fullVideoParams.backgroundImage}' : ''), data-icode="#{fullVideoParams.icode}", data-tile="#{fullVideoParams.tileName}", data-youtube-id="#{fullVideoParams.youtubeId}", class="#{fullVideoParams.lazyLoad ? 'lazyload' : ''} video-marquee video-marquee-white full-video")
+  div(style!=(fullVideoParams.backgroundImage != "" && !fullVideoParams.lazyLoad ? "background-image: url(" + fullVideoParams.backgroundImage + ");" : ""), data-lazyload-source !=(typeof fullVideoParams.backgroundImage!='undefined' && fullVideoParams.lazyLoad ? '#{fullVideoParams.backgroundImage}' : ''), data-icode="#{fullVideoParams.icode}", data-ci="#{fullVideoParams.ci}", data-tile="#{fullVideoParams.tileName}", data-youtube-id="#{fullVideoParams.youtubeId}", class="#{fullVideoParams.lazyLoad ? 'lazyload' : ''} video-marquee video-marquee-white full-video")
     div.container.relative-position.video-info
       div.row
         div.col-sm-10.col-sm-offset-1.col-xs-12.video-marquee-all-centered

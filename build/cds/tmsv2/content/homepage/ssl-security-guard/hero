@@ -21,7 +21,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95860'/></relative>]@T]" class="hero right-arrow ssl-security-guard">
+<div data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='94099'/></relative>]@T]" class="hero right-arrow ssl-security-guard">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
@@ -63,8 +63,7 @@
         <div class="line1 walsheim-bold">ON SALE NOW</div>
         <div class="line2 walsheim-black">SSL CERTIFICATES</div>
         <div class="line3 price walsheim-bold">NOW JUST [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+      </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
     </div>
   </div>
 </div>

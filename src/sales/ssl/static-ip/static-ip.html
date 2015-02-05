@@ -1,8 +1,8 @@
 ---
 location: sales/ssl/static-ip.aspx
-id: 5429d6cef778fc1cd05bba42
-name: GCE-26547
-comments: changing support types
+id: 54b5a759f778fc1004052400
+name: GCE-34935
+comments:  Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
@@ -52,6 +52,25 @@ comments: changing support types
   }
 
   </style>
+  ##endif
+
+  ##if(appSettingEnabled(UXCORE_ENABLED))
+    <style>
+        body {
+            font-size: 10px;
+            background-color: #d4d4d4;
+        }
+        h1 {
+          color: #fff;
+          font-size: 28px;
+        }
+        #footer-legal {
+          background-color: #fff;
+        }
+        a, a:hover {
+          color: #7db701;
+        }
+    </style>
   ##endif
 
 {% endblock %}

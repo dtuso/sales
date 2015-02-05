@@ -16,8 +16,8 @@ atlantis:webstash(type="css")
     #spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
     #spin-results .spin-results-message {margin-top:15px;}
     #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-    #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight:bold;word-wrap: break-word;}
-    #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;word-wrap: break-word;}
+    #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
+    #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
     #domain-not-available-marquee-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
     #spin-results .plan-tile {margin-top: 0px;}
 
@@ -34,9 +34,19 @@ section#domain-not-available-marquee-view.js-marquee-section
           h2.h0.availability-header.domain-not-available-heading-text [@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]
       .row.not-available-domain-name-row 
         .col-md-8.col-sm-12
-          h2.not-available-domain-name-text.domain-name-displayed
-            span#not-available-domain-name 
-      +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-search-try-again]@L]', '95736', '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]', '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
+          h2.not-available-domain-name-text.domain-name-displayed.word-break#not-available-domain-name
+      +domainSearchOffersInput({
+          'tlds': 'got1Page.tldInfo.tlds',
+          'defaultTld': 'got1Page.tldInfo.defaultTld',
+          'formId': 'domain-not-available-marquee-view-form',
+          'title': '[@L[cds.sales/offers/online-business:32573-search-try-again]@L]', 
+          'cicode': '95736', 
+          'placeholderText': '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', 
+          'buttonText': '[@L[cds.sales/offers/online-business:32573-search]@L]', 
+          'infoTypeHere': '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', 
+          'infoErrorEligibility': '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]',
+          'infoInvalidTld': '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]'
+          })
 
   .bg-white
     .container.pro-plans
@@ -52,8 +62,8 @@ section#domain-not-available-marquee-view.js-marquee-section
             .pro-plan-wrap.ignore-same-height.domain-spin-wrap
               .row
                 .col-md-8.col-sm-12
-                  h4.domain-name-display
-                  h2.domain-name-display-tld
+                  h4.word-break.domain-name-display
+                  h2.word-break.domain-name-display-tld
                 .col-md-4.col-sm-12.text-right
                   button.btn.btn-primary.select-and-continue.spin-results-message(data-ci="95267") [@L[cds.sales/offers/online-business:32573-select-and-continue-button]@L]
                   .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]

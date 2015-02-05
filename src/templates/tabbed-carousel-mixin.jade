@@ -58,7 +58,7 @@ mixin renderTabbedCarousel(tabbedCarousel)
 mixin addTab(item)
   -slideEnd = tabCount
   .features-tabbed-carousel-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
-    div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-tabbed-carousel-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+    div(data-ci = item.ci != 'undefined' ? item.ci : '', data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-tabbed-carousel-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
       if (item.icon)
         .feature-carousel-icon
           span.uxicon(class="#{item.icon}")

@@ -1,9 +1,9 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
-id: 
-name: test
-comments: testing
+id: 54b83ffff778fc1c443c2046
+name: GCE-34935
+comments: Prep for uxcore - css updates
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -44,6 +44,39 @@ assetPath: false
       }
     </style>  
   <![endif]-->
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+  <style>
+    h3 {
+      margin-top: 0px;
+    }
+    a, a:hover {
+      color: #7db701;
+    }
+    .single-plan-box-uxcore-fix{
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .plan-box-uxcore-fix{
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .faq-uxcore-fix {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .modal-dialog {
+      left: 0%;
+    }
+     #footer-legal {
+      background-color: #fff;
+    }
+    #footer-legal a {
+      color: #3282e6;
+    }
+  </style>
+##endif
+
   <style type="text/css">
   {% less %}
     /*Local Globals*/
@@ -955,7 +988,11 @@ assetPath: false
 
   <section id="plan-boxes-section" class="white-bg">
     <div class="container l-main-container">
-      <div class="row">
+      ##if({{split1414testside}})
+      <div class="row auto-center-row">
+      <!-- No Plan A -->
+      ##else
+      <div class="row plan-box-uxcore-fix">
         <div id="plan-box-A" class="col-xs-4 plan-box mt5">
           <div class="side-title-container">
             <h3 class="product-title">[@L[cds.sales/business/office-365:29621-PlanBlock-1-title]@L]</h3>
@@ -1236,7 +1273,7 @@ assetPath: false
         </div><!-- /text-side --> 
         <div class="sub-section-column img-side">
           <div class="more-than-office-cta-plan-box">
-            <div class="row">
+            <div class="row single-plan-box-uxcore-fix">
               <h3>[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
               <div class="pricing-wrapper">
                 <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
@@ -1259,7 +1296,7 @@ assetPath: false
                 ##endif
               </div>
             </div>
-            <div class="row">
+            <div class="row single-plan-box-uxcore-fix">
               <button type="button" class="btn btn-warning btn-block btn-lg js-add-to-cart plan-box-button" data-value="{{groupids.C}}" data-ci="94229">[@L[cds.sales/business/office-365:29621-AddToCart]@L]</button>               
             </div>
           </div>  
@@ -1433,7 +1470,7 @@ assetPath: false
 
   <section id="faq-section" class="white-bg">
     <h2 class="section-header">[@L[cds.sales/business/office-365:split-test-b-3-FrequentlyAskedQuestions]@L]</h2>
-    <div class="container l-main-container"> 
+    <div class="container l-main-container faq-uxcore-fix"> 
       <div class="question-section">
         <div class="show-hide-question-section">
           <a class="open-button plus" href="#" data-ci="94244"></a>
@@ -1553,7 +1590,11 @@ assetPath: false
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
+              ##if(appSettingEnabled(UXCORE_ENABLED))
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              ##else
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              ##endif
               <p class="modal-title"><strong>[@L[cds.sales/business/office-365:29621-Disclaimers-title]@L]</strong></p>
             </div>
             <div class="modal-body">
