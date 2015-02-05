@@ -8,19 +8,20 @@ block marqueeContent
 
 
 block sections
+  div
+    block getItNow
 
-  block getItNow
+    block domainName
+      //include ../shared/domain-search-widget
 
-  block domainName
-    //include ../shared/domain-search-widget
+    block product
 
-  block product
+    block office365
+      //- define shared ofice 365 HTML here
 
-  block office365
-    //- define shared ofice 365 HTML here
-
-  block whyUs
-    
-  block got
-    +renderReadyToTakeBusinessOnline("domain","price")
+    block whyUs
+      include -why-us.jade
+      hr
+    block got
+      +renderReadyToTakeBusinessOnline("domain","price")
          
