@@ -87,186 +87,6 @@
     ##endif
   </head>
   <body ng-controller="dnsCtrl">
-    <style>section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-section h2 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  font-weight: 100;
-  line-height: 1.1;
-  color: #333;
-}
-.svgfallback {
-  display: none;
-}
-.svgfallback:not(old) {
-  display: block;
-}
-ul.green-check li,
-li.green-check,
-ul.no-check li,
-li.no-check {
-  padding: 0.4em 0 0.4em 35px;
-  list-style: none;
-  background-repeat: no-repeat;
-}
-ul.green-check li,
-li.green-check {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
-}
-ul.green-check li:not(old),
-li.green-check:not(old) {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
-}
-ul li.no-check {
-  background-image: none !important;
-}
-
-    </style>
-    <style>
-      /* fix the greek font styling issue here */
-      ##if(countrySiteAny(gr))
-      * {
-        font-family: arial !important;
-      }
-      .close {
-        font-family: uxfont !important;
-      }
-      .uxicon {
-        font-family: uxfont !important;
-      }
-      ##endif
-      
-      /* override UXCORE font settings for all LPs */
-      h2 {
-        margin-bottom: 40px;
-        margin-top: 0;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        font-weight: 300;
-        line-height: 1.1;
-        color: #333;
-      }
-      h3 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-      
-      /* default LP marquee styling */
-      .dash { 
-        letter-spacing: -10px; 
-        font-size: 1.5em; 
-        line-height: 0.6; 
-        vertical-align: -0.1em; 
-      }
-      .marquee-content-wrapper { 
-        padding: 40px; 
-        margin-left: 10px; 
-        margin-right: 10px; 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-        background-color: rgba(0,138,50,0.9); 
-        color: white; 
-      }
-      .marquee-content-wrapper:not(old) {
-        background-image: none;
-        background-color: rgba(0,138,50,0.9);    
-      }
-      .marquee.marquee-white {
-          color: #fff;
-      }
-      .marquee.marquee-white h1,
-      .marquee.marquee-white h2,
-      .marquee.marquee-white h3,
-      .marquee.marquee-white h4,
-      .marquee.marquee-white h5,
-      .marquee.marquee-white h6 {
-          color: #fff;
-      }
-      .marquee.marquee-white .dashed-underline {
-          border-bottom-color: #fff;
-      }
-      .marquee.marquee-white a:not(.btn) {
-          color: #fff;
-          text-decoration: underline;
-      }
-      .marquee.marquee-white a:not(.btn):hover {
-          text-decoration: none;
-      }
-      .marquee .jump-arrow-btn { margin-top:30px;}
-      .marquee h1 { 
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: #ef6c0f;
-        font-family: 'Walsheim-Bold';
-        margin-bottom: 10px;
-        margin-top:0;
-      }
-      .marquee h2 { 
-        font-weight: 100;
-        margin-top:0;
-        margin-bottom: 20px;
-        font-family: 'Walsheim-Bold';
-      }
-      .sf-tipper-target {
-        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        vertical-align: baseline;
-        cursor: pointer;
-      }
-      
-    </style>
-    <atlantis:webstash type="css">
-      <style>
-        .modal-open {overflow: hidden;}
-        body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
-        .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
-        .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
-        .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
-        .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
-        .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
-        .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
-        .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
-        .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
-        .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
-        .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
-        .modal-header .close {margin-top: -2px;}
-        .modal-title {margin: 0;line-height: 1.428571429;}
-        .modal-body {overflow: auto;border: 0;}
-        .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
-        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-        .modal-footer:after {clear: both;}
-        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-        .modal-footer:after {clear: both;}
-        .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
-        .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
-        .modal-footer .btn-block + .btn-block {margin-left: 0;}
-        @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
-        
-        #marquee { padding-bottom: 20px; }
-        #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
-        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
-        #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
-        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
-        
-        #what-do-you-get {background-color: #e8e8e8;}
-        #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
-        #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
-        
-        #bottom-pods { background-color: #77c043; }
-        
-      </style>
-    </atlantis:webstash>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
@@ -304,7 +124,7 @@ ul li.no-check {
 
           </style>
         </atlantis:webstash>
-        <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+        <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
           <input type="hidden" name="ci" value=""/>
           <input type="hidden" name="checkAvail" value="1"/>
           <div class="input-group">
@@ -314,8 +134,8 @@ ul li.no-check {
           </div>
         </form>
         <script>
-          $("#domain-search-form").on('submit', function(e) {
-            var input = $("#domain-search-form").find("input[name='domainToCheck']");
+          $(".domain-search-form").on('submit', function(e) {
+            var input = $(this).find("input[name='domainToCheck']");
             if (input && (input.val() == null || input.val() == "")) {
               e.preventDefault();
               window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
@@ -1528,62 +1348,21 @@ top: -6px;
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">World's Leading<br />Domain Registrar</h3>
-              <p>With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.</p>
+              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]</h3>
+              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]</p>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
-            <h3 class="walsheim-black">More Names<br />at Better Prices</h3>
-            <p>We have 100s of domains to choose from, not to mention prices that other companies only dream about.  </p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
-            <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
-            <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
-      <atlantis:webstash type="css">
-        <style>
-          #why-godaddy .why-gd-container{padding:30px 0 80px;}
-          #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
-          #why-godaddy h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;}
-          #why-godaddy h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;}
-          #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
-          #why-godaddy .key-benefits-text{padding-top:20px;}
-          #why-godaddy .key-benefits-img-wrap {height:154px;}
-          #why-godaddy .icon-domain {padding-top:33px;}
-          #why-godaddy .icon-headset {padding-top:34px;}
-        </style>
-      </atlantis:webstash>
-      <div class="container why-gd-container">
-        <div class="row">
-          <div class="col-sm-10 why-gd-banner">
-            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
-            <h3>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png" class="key-benefits-img">
+          <div class="col-sm-4">
+            <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]</h3>
+              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]  </p>
             </div>
-            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]</div>
-            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]</div>
           </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png" class="key-benefits-img icon-domain"></div>
-            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]</div>
-            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]</div>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png" class="key-benefits-img icon-headset"></div>
-            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]</div>
-            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]</div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]</h3>
+              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]  </p>
+            </div>
           </div>
         </div>
       </div>
@@ -2846,6 +2625,198 @@ top: -6px;
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: #333;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- landing page styling-->
+      <style>
+        /* fix the greek font styling issue here */
+        ##if(countrySiteAny(gr))
+        * {
+          font-family: arial !important;
+        }
+        .close {
+          font-family: uxfont !important;
+        }
+        .uxicon {
+          font-family: uxfont !important;
+        }
+        ##endif
+        
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
+        
+        /* default LP marquee styling */
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee-content-wrapper:not(old) {
+          background-image: none;
+          background-color: rgba(0,138,50,0.9);    
+        }
+        .marquee.marquee-white {
+            color: #fff;
+        }
+        .marquee.marquee-white h1,
+        .marquee.marquee-white h2,
+        .marquee.marquee-white h3,
+        .marquee.marquee-white h4,
+        .marquee.marquee-white h5,
+        .marquee.marquee-white h6 {
+            color: #fff;
+        }
+        .marquee.marquee-white .dashed-underline {
+            border-bottom-color: #fff;
+        }
+        .marquee.marquee-white a:not(.btn) {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .marquee.marquee-white a:not(.btn):hover {
+            text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-weight: 100;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
+        }
+        .sf-tipper-target {
+          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: baseline;
+          cursor: pointer;
+        }
+        
+      </style>
+      <!-- domain-name-search page styling-->
+      <style>
+        .modal-open {overflow: hidden;}
+        body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+        .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+        .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+        .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+        .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+        .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+        .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+        .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+        .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+        .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+        .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+        .modal-header .close {margin-top: -2px;}
+        .modal-title {margin: 0;line-height: 1.428571429;}
+        .modal-body {overflow: auto;border: 0;}
+        .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+        .modal-footer:after {clear: both;}
+        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+        .modal-footer:after {clear: both;}
+        .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+        .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+        .modal-footer .btn-block + .btn-block {margin-left: 0;}
+        @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+        
+        #marquee { padding-bottom: 20px; }
+        
+        #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
+        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
+        #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+        
+        #what-do-you-get {background-color: #e8e8e8;}
+        
+        #bottom-pods { background-color: #77c043; }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       

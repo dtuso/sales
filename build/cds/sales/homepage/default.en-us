@@ -85,135 +85,6 @@
     ##endif
   </head>
   <body>
-    <style>section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-section h2 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  font-weight: 100;
-  line-height: 1.1;
-  color: #333;
-}
-.svgfallback {
-  display: none;
-}
-.svgfallback:not(old) {
-  display: block;
-}
-ul.green-check li,
-li.green-check,
-ul.no-check li,
-li.no-check {
-  padding: 0.4em 0 0.4em 35px;
-  list-style: none;
-  background-repeat: no-repeat;
-}
-ul.green-check li,
-li.green-check {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
-}
-ul.green-check li:not(old),
-li.green-check:not(old) {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
-}
-ul li.no-check {
-  background-image: none !important;
-}
-
-    </style>
-    <style>@media only screen and (min-width:991px) {
-  h2 {
-    font-size: 4rem;
-  }
-}
-.text-white {
-  color: #ffffff;
-}
-.bg-green-official {
-  background-color: #77c043;
-}
-.walsheim-regular {
-  font-family: 'Walsheim-Regular', Arial, sans-serif;
-}
-.walsheim-medium {
-  font-family: 'Walsheim-Medium', Arial, sans-serif;
-}
-.walsheim-bold {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-}
-.walsheim-black {
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-}
-.tungsten {
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
-}
-#marquee {
-  position: relative;
-}
-#marquee .tile-wrapper {
-  margin-top: 6.5px;
-}
-#marquee .tile-wrapper:last-child {
-  margin-bottom: 6.5px;
-}
-#marquee .tile {
-  min-height: 140px;
-}
-.hero-wrapper {
-  min-height: 300px;
-  cursor: pointer;
-}
-.tile {
-  cursor: pointer;
-}
-.top-banner-lower-content {
-  min-height: 40px;
-}
-#limitations-social {
-  padding: 20px 0;
-  font-size: 1.2rem;
-}
-#limitations-social p {
-  margin: 0;
-}
-#limitations-social a {
-  cursor: pointer;
-}
-.gdhp-share {
-  position: relative;
-  float: right;
-  margin-top: 5px;
-}
-.fosfbbox {
-  height: 25px !important;
-}
-#bugbar {
-  margin: 10px 0;
-}
-#domain-search {
-  margin-top: 10px;
-}
-#domain-name-input {
-  text-transform: inherit;
-}
-.price,
-.icann-disclaimer {
-  color: #ff8a00;
-}
-#merchandising {
-  background-color: #fff;
-  padding: 10px 0;
-  font-size: 16px;
-}
-#merchandising .tile-wrapper {
-  min-height: 140px;
-  margin: 5px 0;
-}
-
-    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="domain-search">
@@ -238,18 +109,18 @@ ul li.no-check {
 
               </style>
             </atlantis:webstash>
-            <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
               <input type="hidden" name="ci" value="54814"/>
               <input type="hidden" name="checkAvail" value="1"/>
               <div class="input-group">
                 <label for="domain-name-input" class="searchInput sr-only">Find your perfect domain name</label>
-                <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
-                  <button type="submit" data-ci="54814" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+                <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="searchInput form-control"/><span class="input-group-btn">
+                  <button type="submit" data-ci="54814" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
               </div>
             </form>
             <script>
-              $("#domain-search-form").on('submit', function(e) {
-                var input = $("#domain-search-form").find("input[name='domainToCheck']");
+              $(".domain-search-form").on('submit', function(e) {
+                var input = $(this).find("input[name='domainToCheck']");
                 if (input && (input.val() == null || input.val() == "")) {
                   e.preventDefault();
                   window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
@@ -704,7 +575,10 @@ text-transform: uppercase;
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>.domain-promo-content {
+      <style>#domain-promo {
+  color: #fff;
+}
+.domain-promo-content {
   background-color: #333;
 }
 @media only screen and (min-width: 768px) {
@@ -751,24 +625,21 @@ text-transform: uppercase;
       </style>
     </atlantis:webstash>
     <section id="domain-promo" class="bg-green-official">
-      <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
+      <h2 class="text-center">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
       <div class="domain-promo-content">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text text-white">
+            <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text">
               <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]</h3>
               <div>[@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]</a>
-              <p class="customer-website">[@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]</p>
+              <p class="customer-website hidden-xs">[@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]</p>
             </div>
           </div>
         </div>
       </div>
     </section>
     <atlantis:webstash type="css">
-      <style>.feature img {
-  height: 150px;
-}
-#why-godaddy {
+      <style>#why-godaddy {
   background-color: #ccc;
 }
 
@@ -1329,6 +1200,162 @@ text-transform: uppercase;
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: #333;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- home page styling-->
+      <style>.text-white {
+  color: #ffffff;
+}
+.bg-green-official {
+  background-color: #77c043;
+}
+.walsheim-regular {
+  font-family: 'Walsheim-Regular', Arial, sans-serif;
+}
+.walsheim-medium {
+  font-family: 'Walsheim-Medium', Arial, sans-serif;
+}
+.walsheim-bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.walsheim-black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+.tungsten {
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
+}
+#marquee {
+  position: relative;
+}
+#marquee .tile-wrapper {
+  margin-top: 6.5px;
+}
+#marquee .tile-wrapper:last-child {
+  margin-bottom: 6.5px;
+}
+#marquee .tile {
+  min-height: 140px;
+}
+.hero-wrapper {
+  min-height: 300px;
+  cursor: pointer;
+}
+.tile {
+  cursor: pointer;
+}
+.top-banner-lower-content {
+  min-height: 40px;
+}
+#limitations-social {
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+#limitations-social p {
+  margin: 0;
+}
+#limitations-social a {
+  cursor: pointer;
+}
+.gdhp-share {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+}
+.fosfbbox {
+  height: 25px !important;
+}
+#bugbar {
+  margin: 10px 0;
+}
+#domain-search {
+  margin-top: 10px;
+}
+#domain-name-input {
+  text-transform: inherit;
+}
+.price,
+.icann-disclaimer {
+  color: #ff8a00;
+}
+#merchandising {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+#merchandising .tile-wrapper {
+  min-height: 140px;
+  margin: 5px 0;
+}
+section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#domain-name-input::-webkit-input-placeholder {
+  color: #008a32;
+}
+#domain-name-input:-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input::-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input:-ms-input-placeholder {
+  color: #008a32;
+}
+
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       

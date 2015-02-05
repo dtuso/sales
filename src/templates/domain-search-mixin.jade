@@ -1,15 +1,23 @@
 
 mixin domainSearchInput(domainSearchParams)
   - domainSearchParams                       = domainSearchParams || {};
-  - domainSearchParams.actionUrl             = domainSearchParams.actionUrl || "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single";
   - domainSearchParams.cicode                = domainSearchParams.cicode || "";
-  - domainSearchParams.icode                 = domainSearchParams.icode || "home:Domain Search:Domains:Domain Search";
-  - domainSearchParams.tcode                 = domainSearchParams.tcode || "home:Domain Search:Domains:Domain Search:Search Domain";
   - domainSearchParams.buttonText            = domainSearchParams.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
   - domainSearchParams.placeholderText       = domainSearchParams.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
-  - domainSearchParams.formId                = domainSearchParams.formId || "domain-search-form";
-  - domainSearchParams.errorModalId          = domainSearchParams.errorModalId || "api-failure";
-  - domainSearchParams.domainInputId         = domainSearchParams.domainInputId || "domain-name-input";
+  - domainSearchParams.formSize              = domainSearchParams.formSize || "lg";
+
+  //- pages can pass any value besides "sm" or "lg" to reset to normal sized inputs
+  case domainSearchParams.formSize
+    when "sm"
+      - buttonClass = "btn-sm"
+      - inputClass = "input-sm"
+    when "lg"
+      - buttonClass = "btn-lg"
+      - inputClass = "input-lg"
+    default
+      - buttonClass = ""
+      - inputClass = ""
+
   atlantis:webstash(type="css")
     style
       :less
@@ -20,19 +28,19 @@ mixin domainSearchInput(domainSearchParams)
           .search-icon { display: none; }
         }
  
-  form(id!="#{domainSearchParams.formId}" method="get" action!="#{domainSearchParams.actionUrl}")
+  form.domain-search-form(method="get" action!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single")
     input(type="hidden",name="ci",value=domainSearchParams.cicode)
     input(type="hidden",name="checkAvail",value="1")
     .input-group
       label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input.searchInput.form-control.input-lg(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
+      input#domain-name-input.searchInput.form-control(class=inputClass type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
       span.input-group-btn
-        button.btn.btn-primary.btn-lg(type='submit' data-ci='#{domainSearchParams.cicode}') 
+        button.btn.btn-primary(class=buttonClass type='submit' data-ci='#{domainSearchParams.cicode}') 
           span.search-icon.uxicon.uxicon-magnifying-glass
           span.search-text !{domainSearchParams.buttonText}
   script.
-    $("##{domainSearchParams.formId}").on('submit', function(e) {
-      var input = $("##{domainSearchParams.formId}").find("input[name='domainToCheck']");
+    $(".domain-search-form").on('submit', function(e) {
+      var input = $(this).find("input[name='domainToCheck']");
       if (input && (input.val() == null || input.val() == "")) {
         e.preventDefault();
         window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';

@@ -21,44 +21,43 @@ prepend headScripts
   script(src!="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js")
 
 append pageStyles
-  atlantis:webstash(type="css")
-    style.
-      .modal-open {overflow: hidden;}
-      body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
-      .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
-      .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
-      .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
-      .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
-      .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
-      .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
-      .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
-      .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
-      .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
-      .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
-      .modal-header .close {margin-top: -2px;}
-      .modal-title {margin: 0;line-height: 1.428571429;}
-      .modal-body {overflow: auto;border: 0;}
-      .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
-      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-      .modal-footer:after {clear: both;}
-      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-      .modal-footer:after {clear: both;}
-      .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
-      .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
-      .modal-footer .btn-block + .btn-block {margin-left: 0;}
-      @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
-      
-      #marquee { padding-bottom: 20px; }
-      #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
-      #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
-      #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
-      #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+  // domain-name-search page styling
+  style.
+    .modal-open {overflow: hidden;}
+    body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+    .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+    .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+    .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+    .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+    .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+    .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+    .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+    .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+    .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+    .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+    .modal-header .close {margin-top: -2px;}
+    .modal-title {margin: 0;line-height: 1.428571429;}
+    .modal-body {overflow: auto;border: 0;}
+    .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+    .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+    .modal-footer:after {clear: both;}
+    .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+    .modal-footer:after {clear: both;}
+    .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+    .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+    .modal-footer .btn-block + .btn-block {margin-left: 0;}
+    @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+    
+    #marquee { padding-bottom: 20px; }
+    
+    #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
+    #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
+    #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+    #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
 
-      #what-do-you-get {background-color: #e8e8e8;}
-      #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
-      #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
+    #what-do-you-get {background-color: #e8e8e8;}
 
-      #bottom-pods { background-color: #77c043; }
+    #bottom-pods { background-color: #77c043; }
 
 append endOfPageScripts
   script(type="text/javascript").
@@ -342,59 +341,24 @@ block sections
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
             <![endif]-->
             +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
-            h3.walsheim-black World's Leading<br />Domain Registrar
-            p With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.
-      .col-sm-4
-        .feature.why-gd-prices
-          <!--[if lt IE 9]>
-          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
-          <![endif]-->
-          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
-          h3.walsheim-black More Names<br />at Better Prices
-          p We have 100s of domains to choose from, not to mention prices that other companies only dream about.  
-      .col-sm-4
-        .feature.why-gd-support
-          <!--[if lt IE 9]>
-          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
-          <![endif]-->
-          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
-          h3.walsheim-black Award-Winning<br />24/7 Support
-          p Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  
-
-  section#why-godaddy.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title!="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]")
-    atlantis:webstash(type="css")
-      style.
-        #why-godaddy .why-gd-container{padding:30px 0 80px;}
-        #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
-        #why-godaddy h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;}
-        #why-godaddy h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;}
-        #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
-        #why-godaddy .key-benefits-text{padding-top:20px;}
-        #why-godaddy .key-benefits-img-wrap {height:154px;}
-        #why-godaddy .icon-domain {padding-top:33px;}
-        #why-godaddy .icon-headset {padding-top:34px;}
-    .container.why-gd-container
-      .row
-        .col-sm-10.why-gd-banner
-          h2 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]
-          h3 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]
-      .row
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img.icon-domain(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img.icon-headset(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]
+        .col-sm-4
+          .feature.why-gd-prices
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]  
+        .col-sm-4
+          .feature.why-gd-support
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]  
 
   section#bottom-pods
     atlantis:webstash(type="css")

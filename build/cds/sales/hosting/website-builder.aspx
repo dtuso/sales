@@ -86,513 +86,6 @@
     ##endif
   </head>
   <body ng-controller="">
-    <style>section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-section h2 {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  font-weight: 100;
-  line-height: 1.1;
-  color: #333;
-}
-.svgfallback {
-  display: none;
-}
-.svgfallback:not(old) {
-  display: block;
-}
-ul.green-check li,
-li.green-check,
-ul.no-check li,
-li.no-check {
-  padding: 0.4em 0 0.4em 35px;
-  list-style: none;
-  background-repeat: no-repeat;
-}
-ul.green-check li,
-li.green-check {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
-}
-ul.green-check li:not(old),
-li.green-check:not(old) {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
-}
-ul li.no-check {
-  background-image: none !important;
-}
-
-    </style>
-    <style>
-      /* fix the greek font styling issue here */
-      ##if(countrySiteAny(gr))
-      * {
-        font-family: arial !important;
-      }
-      .close {
-        font-family: uxfont !important;
-      }
-      .uxicon {
-        font-family: uxfont !important;
-      }
-      ##endif
-      
-      /* override UXCORE font settings for all LPs */
-      h2 {
-        margin-bottom: 40px;
-        margin-top: 0;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        font-weight: 300;
-        line-height: 1.1;
-        color: #333;
-      }
-      h3 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-      
-      /* default LP marquee styling */
-      .dash { 
-        letter-spacing: -10px; 
-        font-size: 1.5em; 
-        line-height: 0.6; 
-        vertical-align: -0.1em; 
-      }
-      .marquee-content-wrapper { 
-        padding: 40px; 
-        margin-left: 10px; 
-        margin-right: 10px; 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-        background-color: rgba(0,138,50,0.9); 
-        color: white; 
-      }
-      .marquee-content-wrapper:not(old) {
-        background-image: none;
-        background-color: rgba(0,138,50,0.9);    
-      }
-      .marquee.marquee-white {
-          color: #fff;
-      }
-      .marquee.marquee-white h1,
-      .marquee.marquee-white h2,
-      .marquee.marquee-white h3,
-      .marquee.marquee-white h4,
-      .marquee.marquee-white h5,
-      .marquee.marquee-white h6 {
-          color: #fff;
-      }
-      .marquee.marquee-white .dashed-underline {
-          border-bottom-color: #fff;
-      }
-      .marquee.marquee-white a:not(.btn) {
-          color: #fff;
-          text-decoration: underline;
-      }
-      .marquee.marquee-white a:not(.btn):hover {
-          text-decoration: none;
-      }
-      .marquee .jump-arrow-btn { margin-top:30px;}
-      .marquee h1 { 
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: #ef6c0f;
-        font-family: 'Walsheim-Bold';
-        margin-bottom: 10px;
-        margin-top:0;
-      }
-      .marquee h2 { 
-        font-weight: 100;
-        margin-top:0;
-        margin-bottom: 20px;
-        font-family: 'Walsheim-Bold';
-      }
-      .sf-tipper-target {
-        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        vertical-align: baseline;
-        cursor: pointer;
-      }
-      
-    </style>
-    <style>
-.bg-black {
-  background-color: #333333;
-}
-.bg-gray-light {
-    background-color: #d9d9d9;
-}
-.dash{
-  letter-spacing: -.5rem;
-}
-.BVBrowserWebkit{
-  margin-top:  50px;
-}
-.BVDITitle {
-  text-transform: uppercase !important;
-  text-align: center !important;
-  font-family: 'Walsheim-Black' !important;
-  font-weight: 300 !important;
-  line-height: 1.1 !important;
-  color: #333 !important;
-}
-
-#BVRRDisplayContentLinkWriteID a {
-  -webkit-font-smoothing: antialiased !important;
-  -webkit-transition-delay: 0s !important;
-  -webkit-transition-duration: 0.1s !important;
-  -webkit-transition-property: transform !important;
-  -webkit-transition-timing-function: ease !important;
-  -webkit-user-select: none !important;
-  background-color: rgb(0, 138, 50) !important;
-  border-bottom-color: rgb(0, 112, 41) !important;
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-bottom-style: solid !important;
-  border-bottom-width: 4px !important;
-  border-image-outset: 0px !important;
-  border-image-repeat: stretch !important;
-  border-image-slice: 100% !important;
-  border-image-source: none !important;
-  border-image-width: 1 !important;
-  border-left-color: rgb(0, 112, 41) !important;
-  border-left-style: solid !important;
-  border-left-width: 0px !important;
-  border-right-color: rgb(0, 112, 41) !important;
-  border-right-style: solid !important;
-  border-right-width: 0px !important;
-  border-top-color: rgb(0, 112, 41) !important;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  border-top-style: solid !important;
-  border-top-width: 0px !important;
-  box-sizing: border-box !important;
-  color: rgb(255, 255, 255) !important;
-  cursor: pointer !important;
-  display: inline-block !important;
-  font-family: Walsheim-Medium, Arial, sans-serif !important;
-  font-size: 18px !important;
-  font-weight: normal !important;
-  height: 46px !important;
-  line-height: 25.7142868041992px !important;
-  margin-bottom: 0px !important;
-  min-width: 88px !important;
-  padding-bottom: 7px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  padding-top: 10px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-  transition-delay: 0s !important;
-  transition-duration: 0.1s !important;
-  transition-property: transform !important;
-  transition-timing-function: ease !important;
-  vertical-align: middle !important;
-  white-space: nowrap !important;
-  background-image: none !important;
-}
-.templates-chart {
-padding-top: 70px;
-padding-bottom: 70px;
-}
-.templates-container{
-background-color: #fff;
--webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
--moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-padding-top: 40px;
-padding-bottom: 50px;
-}
-.templates-image{
-  margin: 25px auto;
-  box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
-  width: 200px;
-  overflow: hidden;
-}
-.templates-image-container{
-  margin: 30px 110px 40px 110px;
-}
-.templates-container .header-section{
-  margin: 30px 110px 0px 110px;
-
-}
-.view-all{
-  margin-top: 31px;
-}
-.condensed{
-  font-weight: bold;
-}
-.tlds-all{
-  display: none;
-}
-.carousel-panel .img-center {
-width: 50%;
-}
-  #login-modal button.close {
-    -webkit-appearance: none;
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-  }
-
-  .modal-open {
-    overflow: hidden;
-  }
-
-  #login-modal.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: none;
-    overflow: auto;
-    overflow-y: scroll;
-  }
-
-  #login-modal.modal.fade .modal-dialog {
-    -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-       -moz-transition: -moz-transform 0.3s ease-out;
-         -o-transition: -o-transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-  }
-
-  #login-modal.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  #login-modal .modal-dialog {
-    position: relative;
-    z-index: 1050;
-    width: auto;
-    margin: 10px;
-  }
-
-  #login-modal .modal-content {
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    outline: none;
-    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
-  }
-
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: #000000;
-  }
-
-  .modal-backdrop.fade {
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-
-  .modal-backdrop.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-
-  #login-modal .modal-header {
-    min-height: 16.428571429px;
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-header .close {
-    margin-top: -2px;
-  }
-
-  #login-modal .modal-title {
-    margin: 0;
-    line-height: 1.428571429;
-  }
-
-  #login-modal .modal-body {
-    position: relative;
-    padding: 20px;
-  }
-
-  #login-modal .modal-footer {
-    padding: 19px 20px 20px;
-    margin-top: 15px;
-    text-align: right;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer .btn + .btn {
-    margin-bottom: 0;
-    margin-left: 5px;
-  }
-
-  #login-modal .modal-footer .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-
-  #login-modal .modal-footer .btn-block + .btn-block {
-    margin-left: 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    #login-modal .modal-dialog {
-      width: 600px;
-      margin: 30px auto;
-    }
-    #login-modal .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-  }
-
-  .features {
-    background-color: #62A92F;
-  }
-  .disclaimers-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-    </style>
-    <style>
-      html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
-      font-size: 26px;
-      font-size: 2.6rem;
-      }
-      html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
-        font-size: 24px;
-        font-size: 2.4rem;
-      }
-      #plans { padding-bottom: 40px; }
-      #social-media, #reviews, #faq, #disclaimers { background: #fff; }
-      #social-media { padding-top: 50px; }
-      /* TODO: can this styling be abstracted into landing-page.jade? */
-      body { background-color: #d9d9d9; }
-      #marquee { 
-        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
-        padding-bottom: 120px;
-        margin-bottom: 0;
-        background-size: cover;
-      }
-      
-      /* latam */
-      html[lang="es-ar"] #marquee,
-      html[lang="pt-br"] #marquee,
-      html[lang="es-cl"] #marquee,
-      html[lang="es-co"] #marquee,
-      html[lang="es-mx"] #marquee,
-      html[lang="es-pe"] #marquee,
-      html[lang="es-ve"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg);
-      }
-      
-      /* general */
-      html[lang="en-us"] #marquee,
-      html[lang="es-us"] #marquee,
-      html[lang="en-au"] #marquee,
-      html[lang="en-ca"] #marquee,
-      html[lang="en-nz"] #marquee,
-      html[lang="fr-be"] #marquee,
-      html[lang="fr-ca"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
-      }
-      
-      /* asia */
-      html[lang="en-my"] #marquee,
-      html[lang="en-ph"] #marquee,
-      html[lang="en-sg"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_Asia.jpg);
-      }
-      
-      /* in-pk */
-      html[lang="en-in"] #marquee,
-      html[lang="en-pk"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_in-pk_wsb.jpg);
-      }
-      
-      /* emea */
-      html[lang="nl-be"] #marquee,
-      html[lang="da-dk"] #marquee,
-      html[lang="de-de"] #marquee,
-      html[lang="es-es"] #marquee,
-      html[lang="fr-fr"] #marquee,
-      html[lang="en-ie"] #marquee,
-      html[lang="it-it"] #marquee,
-      html[lang="nb-no"] #marquee,
-      html[lang="nl-nl"] #marquee,
-      html[lang="de-at"] #marquee,
-      html[lang="pl-pl"] #marquee,
-      html[lang="pt-pt"] #marquee,
-      html[lang="fr-ch"] #marquee,
-      html[lang="it-ch"] #marquee,
-      html[lang="de-ch"] #marquee,
-      html[lang="en-za"] #marquee,
-      html[lang="fi-fi"] #marquee,
-      html[lang="sv-se"] #marquee,
-      html[lang="tr-tr"] #marquee,
-      html[lang="en-gb"] #marquee,
-      html[lang="el-gr"] #marquee,
-      html[lang="ru-ru"] #marquee,
-      html[lang="uk-ua"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_EMEA.jpg);
-      }
-      
-      .plan-tile { 
-        margin-top: 0; 
-        margin-bottom: 0; 
-      }
-      .pro-plans { 
-        margin-top: -120px; 
-        padding-bottom: 20px; 
-        padding-top: 0; 
-      }
-      .marquee ul { padding: 0; }
-      
-    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
@@ -5372,6 +4865,527 @@ margin-bottom: 20px;
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: #333;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- landing page styling-->
+      <style>
+        /* fix the greek font styling issue here */
+        ##if(countrySiteAny(gr))
+        * {
+          font-family: arial !important;
+        }
+        .close {
+          font-family: uxfont !important;
+        }
+        .uxicon {
+          font-family: uxfont !important;
+        }
+        ##endif
+        
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
+        
+        /* default LP marquee styling */
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee-content-wrapper:not(old) {
+          background-image: none;
+          background-color: rgba(0,138,50,0.9);    
+        }
+        .marquee.marquee-white {
+            color: #fff;
+        }
+        .marquee.marquee-white h1,
+        .marquee.marquee-white h2,
+        .marquee.marquee-white h3,
+        .marquee.marquee-white h4,
+        .marquee.marquee-white h5,
+        .marquee.marquee-white h6 {
+            color: #fff;
+        }
+        .marquee.marquee-white .dashed-underline {
+            border-bottom-color: #fff;
+        }
+        .marquee.marquee-white a:not(.btn) {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .marquee.marquee-white a:not(.btn):hover {
+            text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-weight: 100;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
+        }
+        .sf-tipper-target {
+          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: baseline;
+          cursor: pointer;
+        }
+        
+      </style>
+      <style>
+.bg-black {
+  background-color: #333333;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.dash{
+  letter-spacing: -.5rem;
+}
+.BVBrowserWebkit{
+  margin-top:  50px;
+}
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
+}
+.templates-chart {
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.templates-container{
+background-color: #fff;
+-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+padding-top: 40px;
+padding-bottom: 50px;
+}
+.templates-image{
+  margin: 25px auto;
+  box-shadow: 0 3px 7px -3px #282828;
+  height: 260px;
+  width: 200px;
+  overflow: hidden;
+}
+.templates-image-container{
+  margin: 30px 110px 40px 110px;
+}
+.templates-container .header-section{
+  margin: 30px 110px 0px 110px;
+
+}
+.view-all{
+  margin-top: 31px;
+}
+.condensed{
+  font-weight: bold;
+}
+.tlds-all{
+  display: none;
+}
+.carousel-panel .img-center {
+width: 50%;
+}
+  #login-modal button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  #login-modal.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  #login-modal.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
+
+  #login-modal.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  #login-modal .modal-dialog {
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    margin: 10px;
+  }
+
+  #login-modal .modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+  }
+
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #login-modal .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-header .close {
+    margin-top: -2px;
+  }
+
+  #login-modal .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+  }
+
+  #login-modal .modal-body {
+    position: relative;
+    padding: 20px;
+  }
+
+  #login-modal .modal-footer {
+    padding: 19px 20px 20px;
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+
+  #login-modal .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+
+  #login-modal .modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    #login-modal .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    #login-modal .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .features {
+    background-color: #62A92F;
+  }
+  .disclaimers-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+      </style>
+      <style>
+        html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+        font-size: 26px;
+        font-size: 2.6rem;
+        }
+        html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+          font-size: 24px;
+          font-size: 2.4rem;
+        }
+        #plans { padding-bottom: 40px; }
+        #social-media, #reviews, #faq, #disclaimers { background: #fff; }
+        #social-media { padding-top: 50px; }
+        /* TODO: can this styling be abstracted into landing-page.jade? */
+        body { background-color: #d9d9d9; }
+        #marquee { 
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
+          padding-bottom: 120px;
+          margin-bottom: 0;
+          background-size: cover;
+        }
+        
+        /* latam */
+        html[lang="es-ar"] #marquee,
+        html[lang="pt-br"] #marquee,
+        html[lang="es-cl"] #marquee,
+        html[lang="es-co"] #marquee,
+        html[lang="es-mx"] #marquee,
+        html[lang="es-pe"] #marquee,
+        html[lang="es-ve"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg);
+        }
+        
+        /* general */
+        html[lang="en-us"] #marquee,
+        html[lang="es-us"] #marquee,
+        html[lang="en-au"] #marquee,
+        html[lang="en-ca"] #marquee,
+        html[lang="en-nz"] #marquee,
+        html[lang="fr-be"] #marquee,
+        html[lang="fr-ca"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+        }
+        
+        /* asia */
+        html[lang="en-my"] #marquee,
+        html[lang="en-ph"] #marquee,
+        html[lang="en-sg"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_Asia.jpg);
+        }
+        
+        /* in-pk */
+        html[lang="en-in"] #marquee,
+        html[lang="en-pk"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_in-pk_wsb.jpg);
+        }
+        
+        /* emea */
+        html[lang="nl-be"] #marquee,
+        html[lang="da-dk"] #marquee,
+        html[lang="de-de"] #marquee,
+        html[lang="es-es"] #marquee,
+        html[lang="fr-fr"] #marquee,
+        html[lang="en-ie"] #marquee,
+        html[lang="it-it"] #marquee,
+        html[lang="nb-no"] #marquee,
+        html[lang="nl-nl"] #marquee,
+        html[lang="de-at"] #marquee,
+        html[lang="pl-pl"] #marquee,
+        html[lang="pt-pt"] #marquee,
+        html[lang="fr-ch"] #marquee,
+        html[lang="it-ch"] #marquee,
+        html[lang="de-ch"] #marquee,
+        html[lang="en-za"] #marquee,
+        html[lang="fi-fi"] #marquee,
+        html[lang="sv-se"] #marquee,
+        html[lang="tr-tr"] #marquee,
+        html[lang="en-gb"] #marquee,
+        html[lang="el-gr"] #marquee,
+        html[lang="ru-ru"] #marquee,
+        html[lang="uk-ua"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_EMEA.jpg);
+        }
+        
+        .plan-tile { 
+          margin-top: 0; 
+          margin-bottom: 0; 
+        }
+        .pro-plans { 
+          margin-top: -120px; 
+          padding-bottom: 20px; 
+          padding-top: 0; 
+        }
+        .marquee ul { padding: 0; }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
