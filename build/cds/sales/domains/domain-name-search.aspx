@@ -87,14 +87,44 @@
     ##endif
   </head>
   <body ng-controller="dnsCtrl">
-    <style>
-      .svgfallback{display:none}
-      .svgfallback:not(old){display:block}
-      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
-      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
-      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
-      ul li.no-check { background-image: none !important; }
-      
+    <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: #333;
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
     </style>
     <style>
       /* fix the greek font styling issue here */
@@ -149,10 +179,6 @@
       .marquee-content-wrapper:not(old) {
         background-image: none;
         background-color: rgba(0,138,50,0.9);    
-      }    
-      .marquee { 
-        padding-top: 40px; 
-        padding-bottom: 40px; 
       }
       .marquee.marquee-white {
           color: #fff;
@@ -185,9 +211,7 @@
         margin-top:0;
       }
       .marquee h2 { 
-        font-size: 4rem;
         font-weight: 100;
-        line-height: 1.1;
         margin-top:0;
         margin-bottom: 20px;
         font-family: 'Walsheim-Bold';
@@ -228,971 +252,42 @@
         .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
         .modal-footer .btn-block + .btn-block {margin-left: 0;}
         @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
-        .search-template .search-template-box { margin-bottom: 10px;}
-        .bg-green-official { background-color: #77c043; }
+        
+        #marquee { padding-bottom: 20px; }
+        #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
+        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
+        #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+        
         #what-do-you-get {background-color: #e8e8e8;}
         #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
         #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
+        
+        #bottom-pods { background-color: #77c043; }
         
       </style>
     </atlantis:webstash>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
-      <atlantis:webstash type="css">
-        <style>.white-text{
-    color: #FFFFFF;
-}
-.marquee {
-    background-position: top center;
-}
-
-.marquee .marquee-product-img {
-    margin-bottom: 10px;
-}
-
-.marquee .jump-arrow-btn {
-    margin-top: 10px;
-}
-
-.marquee .marquee-buttons a {
-    margin-right: 20px;
-}
-
-.marquee .marquee-buttons a:last-child {
-    margin-right: 0;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: none;
-    padding-left: 10px;
-    color: #333333;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-size: 1.2rem;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee.marquee-app-landing {
-    min-height: 655px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    margin-top: 0;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    padding-left: 0;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 20px;
-}
-
-.marquee.marquee-app-landing .marquee-check-bullets li:before {
-    content: "";
-    background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-    background-position: 0 -668px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    padding-right: 5px;
-    position: absolute;
-    left: 0;
-    top: -6px;
-}
-
-.marquee.marquee-app-landing .marquee-pro-left-text {
-    padding-top: 45px;
-}
-
-.marquee.marquee-app-landing .marquee-product-description {
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-}
-
-.marquee.marquee-app-landing .marquee-product-name {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-signup {
-    min-height: 584px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-wrap {
-    margin-bottom: 75px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup h2 {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee-pro-signup h3 {
-    margin-top: 0;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 50%;
-        margin: 30px 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro-signup .marquee-pro-signup-img img {
-        width: 80%;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-check-wrap {
-    margin-top: 30px;
-}
-
-.marquee-pro-signup .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro-signup .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-signup .marquee-pro-signup-buttons {
-        text-align: center;
-        padding-bottom: 10px;
-    }
-}
-
-.marquee-pro-signup .marquee-pro-signup-buttons a:first-child {
-    margin-right: 20px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check {
-    padding-left: 35px;
-    font-family: 'Walsheim-Bold';
-    position: relative;
-    font-size: 18px;
-    font-size: 1.8rem;
-    margin-bottom: 30px;
-}
-
-.marquee-pro-signup .marquee-pro-signup-check:before {
-    content: '';
-    background-position: 0px -234px;
-    background-size: 205px auto;
-    width: 25px;
-    height: 27px;
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -3px;
-}
-
-.marquee-pro-rebrand {
-    min-height: 378px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro-rebrand {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text {
-    margin-bottom: 65px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #ef6c0f;
-    font-family: 'Walsheim-Bold';
-    margin-bottom: 10px;
-}
-
-.marquee-pro-rebrand .marquee-pro-left-text h2 {
-    font-size: 40px;
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'Walsheim-Bold';
-    margin-top: 10px;
-    line-height: 1;
-}
-
-.marquee-pro {
-    min-height: 450px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro {
-        padding-bottom: 50px;
-    }
-}
-
-.marquee-pro .well {
-    background-color: rgba(239, 108, 15, 0.8);
-    border: none;
-    color: #fff;
-    padding: 30px;
-    min-height: 275px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .well {
-        min-height: 0;
-        margin-top: 20px;
-    }
-}
-
-.marquee-pro .well .row {
-    min-height: 0 !important;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap {
-    border-left: 1px solid #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-pro .well .marquee-pro-icon-wrap {
-        border-left: 0;
-    }
-
-    .marquee-pro .well .marquee-pro-icon-wrap:not(:first-child) {
-        margin-top: 30px;
-    }
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height {
-    height: 95px;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon-height img {
-    max-width: 75%;
-    max-height: 75%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap h5 {
-    font-weight: 500;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap:first-child {
-    border-left: 0;
-}
-
-.marquee-pro .well .marquee-pro-icon-wrap .marquee-pro-icon {
-    margin: 0 auto 15px;
-    max-height: 85px;
-}
-
-.marquee-pro .well.marquee-pro-centered a {
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    text-transform: uppercase;
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .well.marquee-pro-centered h2 {
-    margin-top: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    white-space: -moz-pre-wrap;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals {
-    border-top: 1px solid #fff;
-    font-weight: 700;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal {
-    margin-top: 20px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-text,
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal .pro-marquee-deal-savings {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price {
-    margin-top: 15px;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price-small-text {
-    font-size: 15px;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-.marquee-pro .well.marquee-pro-centered .pro-marquee-home-deals .pro-marquee-deal-price .marquee-price {
-    font-size: 35px;
-    font-size: 3.5rem;
-    line-height: 1;
-    font-family: 'Walsheim-Bold';
-}
-
-.marquee-pro .well.marquee-pro-centered .search-template-box {
-    border: 3px solid #fff;
-    margin-top: 10px;
-}
-
-.marquee-pro .marquee-pro-first-area h1 {
-    font-size: 20px;
-    font-size: 2rem;
-    font-family: 'Walsheim-Bold';
-    margin: 0 0 10px 0;
-}
-
-.marquee-pro .marquee-pro-first-area h2 {
-    margin-top: 12px;
-}
-
-.marquee-pro .marquee-pro-first-area .marquee-pro-product-text {
-    padding-top: 10px;
-    border-top: 1px solid #fff;
-}
-
-.marquee-pro .marquee-product-text {
-    margin-bottom: 20px;
-}
-
-.marquee-pro .jump-to-plans {
-    position: absolute;
-    bottom: -60px;
-    margin: 0 auto;
-    text-align: center;
-    right: 0;
-    left: 0;
-}
-
-.marquee-pro .jump-to-plans .marquee-jump-text {
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-    color: #333333;
-    font-size: 20px;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee-pro .jump-to-plans .marquee-jump-text {
-        margin-bottom: 5px;
-    }
-}
-
-.marquee-table-grid > .row {
-    display: table;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row {
-        display: block;
-    }
-}
-
-.marquee-table-grid > .row > [class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee-table-grid > .row > [class*="col-"] {
-        display: block;
-        float: none;
-        border-left: none;
-        border-right: none;
-        padding: 20px inherit;
-        border-top: 1px solid #fff;
-    }
-
-    .marquee-table-grid > .row > [class*="col-"]:first-child {
-        border-top: 0;
-    }
-}
-.marquee {
-    background-size: cover !important;
-    position: relative;
-    background-position: bottom center;
-    background-color: #fff;
-  /* Ribbon */
-}
-
-.marquee .relative-position {
-    position: relative;
-}
-
-.marquee .marquee-all-centered {
-    text-align: center;
-}
-
-.marquee .marquee-two-col-txt ul.marquee-product-bullets {
-    text-align: left;
-}
-
-.marquee.marquee-short {
-    min-height: 368px;
-}
-
-.marquee.marquee-short .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-short .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-short .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix {
-        height: auto !important;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-short .vertical-height.marquee-sm-vertical-fix .vertical-text {
-        -webkit-transform: translateY(0%);
-        -moz-transform: translateY(0%);
-        transform: translateY(0%);
-        top: 0%;
-    }
-}
-
-.marquee.marquee-tall {
-    min-height: 523px;
-}
-
-.marquee.marquee-tall .container {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row {
-    min-height: inherit;
-}
-
-.marquee.marquee-tall .container .row .col-sm-pull-6 {
-    min-height: inherit;
-}
-
-@media only screen and (max-width: 767px) {
-    .marquee.marquee-tall .container .row .col-sm-pull-6 {
-        min-height: 100px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-tall {
-        min-height: 400px;
-    }
-}
-
-.marquee.marquee-img-tall-left-txt {
-    height: 523px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 430px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-tall-left-txt {
-        height: 332px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-img-short-left-txt {
-    height: 368px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 300px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee.marquee-img-short-left-txt {
-        height: 234px;
-        background-position: -160px;
-    }
-}
-
-.marquee.marquee-white {
-    color: #fff;
-}
-
-.marquee.marquee-white h1,
-.marquee.marquee-white h2,
-.marquee.marquee-white h3,
-.marquee.marquee-white h4,
-.marquee.marquee-white h5,
-.marquee.marquee-white h6 {
-    color: #fff;
-}
-
-.marquee.marquee-white .dashed-underline {
-    border-bottom-color: #fff;
-}
-
-.marquee.marquee-white a:not(.btn) {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.marquee.marquee-white a:not(.btn):hover {
-    text-decoration: none;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap {
-        margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-wrap .vertical-height {
-        height: auto !important;
-    }
-}
-
-.marquee .img-center {
-    margin: 0 auto;
-}
-
-.marquee .marquee-corner-img {
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 0;
-    min-width: 165px;
-    min-height: 169px;
-}
-
-.marquee .marquee-product-img {
-    max-width: 100%;
-}
-
-.marquee .marquee-product-review {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-product-review a {
-    text-decoration: underline;
-    padding-left: 10px;
-    color: #808080;
-}
-
-.marquee .marquee-product-review a:hover {
-    text-decoration: none;
-}
-
-.marquee .marquee-product-description {
-    font-size: 56px;
-    font-size: 5.6rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-product-description {
-        font-size: 40px;
-        font-size: 4rem;
-    }
-}
-
-.marquee .marquee-product-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-    padding: 0 0 14px;
-}
-
-.marquee ul.marquee-product-bullets {
-    font-size: 18px;
-    font-size: 1.8rem;
-    text-align: center;
-    list-style-position: inside;
-    padding: 0;
-}
-
-.marquee .marquee-restrictions-text {
-    font-size: 14px;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-}
-
-.marquee .marquee-ribbon {
-    width: 112px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-repeat: no-repeat;
-    z-index: 100;
-}
-
-@media only screen and (max-width: 992px) {
-    .marquee .marquee-ribbon {
-        position: relative;
-        margin: 0 auto;
-    }
-}
-
-.marquee .marquee-left-ribbon .marquee-ribbon {
-    left: 0;
-    right: auto;
-}
-
-.marquee .marquee-price-btn-wrap {
-    color: #ef6c0f;
-    line-height: 1;
-    font-weight: 400;
-    padding: 5px 0 20px;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap {
-        line-height: 1.2;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .btn {
-    margin-right: 10px;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-text {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price-small-text {
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price-small-text {
-        font-size: 16px;
-        font-size: 1.6rem;
-    }
-}
-
-.marquee .marquee-price-btn-wrap .marquee-price {
-    font-size: 36px;
-    font-size: 3.6rem;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-price-btn-wrap .marquee-price {
-        font-size: 30px;
-        font-size: 3rem;
-    }
-}
-
-.marquee .marquee-check-bullets {
-    list-style: none;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-left: 0;
-    font-size: 18px;
-    font-size: 1.8rem;
-}
-
-.marquee .marquee-check-bullets span {
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-.marquee .marquee-check-bullets li:before {
-    content: "\e207";
-    font-family: 'uxfont';
-    padding-right: 5px;
-}
-
-.marquee .marquee-btn-wrap {
-    margin-bottom: 20px;
-}
-
-.marquee .search-template .search-template-box {
-    border: 1px solid #cecece;
-}
-
-.marquee .marquee-customer-name-wrap {
-    position: absolute;
-    bottom: 10px;
-    font-size: 16px;
-    font-size: 1.6rem;
-}
-
-@media only screen and (max-width: 480px) {
-    .marquee .marquee-customer-name-wrap {
-        position: relative;
-        bottom: auto;
-    }
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-name {
-    font-weight: bold;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-text {
-    font-weight: 100;
-}
-
-.marquee .marquee-customer-name-wrap .marquee-customer-website {
-    color: #008a32;
-    text-decoration: underline;
-}
-
-.marquee .marquee-two-col-abstract.left-column {
-    color: #fff;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-name {
-    color: #fff;
-    font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-    font-size: 46px;
-    margin: 34px 0 0 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-description {
-    font-family: "Walsheim-Bold";
-    font-size: 22px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-text {
-    font-family: "Walsheim-Medium";
-    font-size: 18px;
-    margin-top: 18px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-product-price {
-    display: block;
-    font-family: "Walsheim-Black";
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .btn {
-    font-family: "Walsheim-Medium";
-    font-size: 24px;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text {
-    margin: 12px 0 24px;
-    font-family: "Walsheim-Regular";
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul {
-    padding-left: 0;
-}
-
-.marquee .marquee-two-col-abstract.left-column .marquee-restrictions-text ul li {
-    list-style: none;
-}
-
-.marquee .marquee-two-col-abstract.right-column {
-    position: absolute;
-    right: 0;
-    height: 100%;
-    background-position: top center;
-    background-size: cover;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-left {
-    position: absolute;
-    left: 0;
-    height: 100%;
-}
-
-.marquee .marquee-two-col-abstract.right-column img.abstract-right {
-    position: absolute;
-    right: 0;
-    height: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-    .marquee .marquee-two-col-abstract.right-column {
-        position: relative;
-        min-height: 200px;
-    }
-}
-
-h1.marquee-product-name,
-h2.marquee-product-name,
-.marquee-product-name {
-    font-size: 24px;
-    font-size: 2.4rem;
-    font-family: 'HelveticaNeue-CondensedBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-stretch: condensed;
-    text-transform: uppercase;
-}
-
-@media only screen and (max-width: 992px) {
-    h1.marquee-product-name,
-  h2.marquee-product-name,
-  .marquee-product-name {
-        font-size: 20px;
-        font-size: 2rem;
-        margin-top: 10px;
-    }
-}
-        </style>
-        <style>
-          .marquee { background-color: #ffffff; padding-bottom:30px !important; min-height:200px !important;}
-          .marquee.marquee-app-landing .marquee-pro-left-text {padding-top:0px;}
-          .marquee.marquee-app-landing .marquee-check-bullets li {margin-bottom:15px;}
-          .marquee .marquee-check-bullets span {text-transform:none; font-stretch: normal; font-family: Arial; font-weight:bold;}
-          .marquee.marquee-app-landing { min-height: 300px; color: #333333; }
-          .marquee.marquee-app-landing h2 { color: #333333; font-size:50px; line-height:50px; }
-          
-        </style>
-      </atlantis:webstash>
-      <div data-onclick="#" data-icode="" class="marquee marquee-app-landing ">
-        <div class="container relative-position">
-          <div class="row">
-            <div class="col-sm-12">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.marquee-www-rebrand-wrap&quot;},&quot;verticalStyle&quot;:&quot;padding-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="marquee-pro-left-text">
-                            <h2 class="marquee-product-description">[@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]</h2>
-                            <ul class="marquee-check-bullets">
-                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]</li>
-                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]</li>
-                              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]</li>
-                            </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="container marquee">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>[@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]</h2>
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]</li>
+              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]</li>
+              <li>[@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-    <section id="domainSearch" class="bg-green-official">
-      <atlantis:webstash type="css">
-        <style>
-          #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
-          #domainSearch { padding-bottom: 10px; }
-          #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
-          #domainSearch #domain-name-input {font-size: 18px; font-family: Arial; color:#333333;}
-          #domainSearch #domain-name-input::-webkit-input-placeholder { color: #333333; font-family: Arial; }
-          #domainSearch #domain-name-input:-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
-          #domainSearch #domain-name-input::-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
-          #domainSearch #domain-name-input:-ms-input-placeholder { color: #333333; font-family: Arial; }
-          #domainSearch #domain-name-input.headline-primary {text-transform:none;}
-          #domainSearch .form-control {height:62px;}
-          #domainSearch .input-group-btn .btn {margin-left: 10px;}
-          #domainSearch .input-group-btn .search-text {font-size: 30px; font-family: 'Walsheim-Bold'; padding: 8px 15px 5px; }
-          #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
-          #domainSearch h1 {font-size:inherit;font-family:inherit;display:inline;color:inherit;}
-        </style>
-      </atlantis:webstash>
+    <section id="domainSearch">
       <div class="container">
-        <div class="row">
-          <div style="padding-top:10px;" class="col-xs-12">
-            <div id="main-panel-title">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeadingRebrand]@L]</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <atlantis:webstash type="css">
-              <style>#domain-name-input {
-  color: #008a32;
-}
-#domain-name-input::-webkit-input-placeholder {
-  color: #008a32;
-}
-#domain-name-input:-moz-placeholder {
-  color: #008a32;
-  opacity: 1;
-}
-#domain-name-input::-moz-placeholder {
-  color: #008a32;
-  opacity: 1;
-}
-#domain-name-input:-ms-input-placeholder {
-  color: #008a32;
-}
-.search-text {
+        <h2>START YOUR DOMAIN SEARCH NOW.</h2>
+        <atlantis:webstash type="css">
+          <style>.search-text {
   display: none;
 }
 .search-icon {
@@ -1207,29 +302,27 @@ h2.marquee-product-name,
   }
 }
 
-              </style>
-            </atlantis:webstash>
-            <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
-              <input type="hidden" name="ci" value=""/>
-              <input type="hidden" name="checkAvail" value="1"/>
-              <div class="input-group">
-                <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]</label>
-                <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-                  <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]</span></button></span>
-              </div>
-            </form>
-            <script>
-              $("#domain-search-form").on('submit', function(e) {
-                var input = $("#domain-search-form").find("input[name='domainToCheck']");
-                if (input && (input.val() == null || input.val() == "")) {
-                  e.preventDefault();
-                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                }
-              });
-              
-            </script>
+          </style>
+        </atlantis:webstash>
+        <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
+          <input type="hidden" name="ci" value=""/>
+          <input type="hidden" name="checkAvail" value="1"/>
+          <div class="input-group">
+            <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]</label>
+            <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
+              <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]</span></button></span>
           </div>
-        </div>
+        </form>
+        <script>
+          $("#domain-search-form").on('submit', function(e) {
+            var input = $("#domain-search-form").find("input[name='domainToCheck']");
+            if (input && (input.val() == null || input.val() == "")) {
+              e.preventDefault();
+              window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+            }
+          });
+          
+        </script>
         <div class="row domain-links">
           <div class="col-xs-12"><a href="#" data-toggle="modal" data-target="#bulkModal" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink1]@L]</a><a href="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink2]@L]</a><a href="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink3]@L]</a></div>
         </div>
@@ -1239,8 +332,7 @@ h2.marquee-product-name,
       <atlantis:webstash type="css">
         <style>
           #top-pods {background-color: #e8e8e8;}
-          #top-pods .plan-tile {margin-top: 55px; }
-          #top-pods .pro-plans{padding-bottom:45px;}
+          #top-pods .plan-tile {margin-top: 0; }
           #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
           #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
@@ -1336,7 +428,6 @@ h2.marquee-product-name,
 }
 .pro-plans {
     margin-top: 0px;
-    padding-bottom: 80px;
 }
 
 .pro-plans .tld-col-title {
@@ -1742,10 +833,8 @@ h2.marquee-product-name,
       <atlantis:webstash type="css">
         <style>
           #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
-          #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
-          #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
-          #promo-carousel .btn { margin-top: 40px; }
-          #promo-carousel .greenText { color: #77c043;}
+          #promo-carousel .plan-carousel-copy a {text-decoration:none; color:#77c043;}
+          #promo-carousel .plan-carousel-copy a:hover {text-decoration:underline;}
         </style>
       </atlantis:webstash>
       <style>.item-wrapper { padding: 35px 0 20px; }
@@ -2137,29 +1226,25 @@ top: -6px;
       </div>
     </section>
     <section id="what-do-you-get">
-      <atlantis:webstash type="css">
-        <style>
-          #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:60px;}
-          #what-do-you-get .container{padding-bottom: 70px;}
-        </style>
-      </atlantis:webstash>
       <div class="container">
+        <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]</h2>
         <div class="row">
-          <div class="col-sm-12">
-            <h3 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]</h3>
+          <div class="col-sm-4">
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]</li>
+              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]</li>
+            </ul>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
-            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]</div>
-            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]</div>
+          <div class="col-sm-4">
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]</li>
+              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]</li>
+            </ul>
           </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]</div>
-            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]</div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]</div>
+          <div class="col-sm-4">
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -2432,6 +1517,36 @@ top: -6px;
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
+    <section id="why-godaddy">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
+            <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">World's Leading<br />Domain Registrar</h3>
+              <p>With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
+            <h3 class="walsheim-black">More Names<br />at Better Prices</h3>
+            <p>We have 100s of domains to choose from, not to mention prices that other companies only dream about.  </p>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
+            <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
+            <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
@@ -2472,22 +1587,23 @@ top: -6px;
           </div>
         </div>
       </div>
-      <section id="bottom-pods" class="bg-green-official">
-        <atlantis:webstash type="css">
-          <style>
-            #bottom-pods #plans {background-color: #77c043;height:250px;}
-            #bottom-pods .plan-tile{margin-top:60px;}
-            #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:65px;}
-            #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
-            #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;}
-            #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
-            #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
-          </style>
-        </atlantis:webstash>
-        <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
-        <atlantis:webstash type="css">
-          <style>
+    </section>
+    <section id="bottom-pods">
+      <atlantis:webstash type="css">
+        <style>
+          #bottom-pods #plans {background-color: #77c043;height:250px;}
+          #bottom-pods .plan-tile{margin-top:0;}
+          #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:65px;}
+          #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
+          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+          #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;}
+          #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
+          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+        </style>
+      </atlantis:webstash>
+      <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
+      <atlantis:webstash type="css">
+        <style>
 .plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
@@ -2497,7 +1613,6 @@ top: -6px;
 }
 .pro-plans {
     margin-top: 0px;
-    padding-bottom: 80px;
 }
 
 .pro-plans .tld-col-title {
@@ -2876,94 +1991,93 @@ top: -6px;
         display: inline;
     }
 }
-          </style>
-        </atlantis:webstash>
-        <div class="pro-plans-wrap ">
-          <div id="plans" data-icode="" class="container pro-plans">
-            <div class="row">
-              <div class="ng-scope">
-                <div id="{{pod.PodId}}" ng-repeat="pod in podsDataBottom" class="col-sx-3">
-                  <div class="col-sm-4 plan-tile plan-pro">
-                    <div class="pro-plan-wrap">
-                      <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
-                      <p ng-bind-html="pod.PodTLD" class="plan-title"></p>
-                      <p ng-bind-html="pod.PodText" class="plan-text"> </p>
-                      <div class="plan-price-wrap">
-                        <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
-                          <strike>{{pod.ListPrice}}</strike></span>
-                      </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
-                    </div>
+        </style>
+      </atlantis:webstash>
+      <div class="pro-plans-wrap ">
+        <div id="plans" data-icode="" class="container pro-plans">
+          <div class="row">
+            <div class="ng-scope">
+              <div id="{{pod.PodId}}" ng-repeat="pod in podsDataBottom" class="col-sx-3">
+                <div class="col-sm-4 plan-tile plan-pro">
+                  <div class="pro-plan-wrap">
+                    <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
+                    <p ng-bind-html="pod.PodTLD" class="plan-title"></p>
+                    <p ng-bind-html="pod.PodText" class="plan-text"> </p>
+                    <div class="plan-price-wrap">
+                      <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                        <strike>{{pod.ListPrice}}</strike></span>
+                    </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section id="new-domains" class="bg-pro-gray">
-        <div class="container">
-          <atlantis:webstash type="css">
-            <style>
-              #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
-              #new-domains .container{margin:0 auto;padding-left:0px;}
-              #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
-              #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
-              #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
-              #new-domains ul li a{float:right;}
-              #new-domains .col-tld-title {padding-left: 10px;}
-              #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
-            </style>
-          </atlantis:webstash>
-          <div class="row">
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <ul>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]</span><a href="[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span><a href="[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-                </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="find-your-domain">
+      </div>
+    </section>
+    <section id="new-domains" class="bg-pro-gray">
+      <div class="container">
         <atlantis:webstash type="css">
           <style>
-            #find-your-domain{background-color:#77c043;}
-            #find-your-domain .container{padding-left:10px;}
-            #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
-            #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
-            #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:80px;font-family:'Walsheim-Black';margin-bottom:0px;}
-            #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:100px;display:block;}
-            #find-your-domain .find-cta-text:hover{text-decoration:underline;}
-            #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+            #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
+            #new-domains .container{margin:0 auto;padding-left:0px;}
+            #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+            #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+            #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+            #new-domains ul li a{float:right;}
+            #new-domains .col-tld-title {padding-left: 10px;}
+            #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
           </style>
         </atlantis:webstash>
-        <div class="container">
-          <h3>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h3><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><i class="ico ico-gt-circle-small"></i>
-            <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
+        <div class="row">
+          <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
+          <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
         </div>
-      </section>
+        <div class="row">
+          <div class="col-md-6">
+            <ul>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]</span><a href="[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span><a href="[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+              </li>
+              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="find-your-domain">
+      <atlantis:webstash type="css">
+        <style>
+          #find-your-domain{background-color:#77c043;}
+          #find-your-domain .container{padding-left:10px;}
+          #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+          #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
+          #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:80px;font-family:'Walsheim-Black';margin-bottom:0px;}
+          #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:100px;display:block;}
+          #find-your-domain .find-cta-text:hover{text-decoration:underline;}
+          #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+        </style>
+      </atlantis:webstash>
+      <div class="container">
+        <h3>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h3><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><i class="ico ico-gt-circle-small"></i>
+          <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
+      </div>
     </section>
     <section id="options" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">

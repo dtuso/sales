@@ -13,11 +13,6 @@ mixin domainSearchInput(domainSearchParams)
   atlantis:webstash(type="css")
     style
       :less
-        #domain-name-input { color: #008a32; }
-        #domain-name-input::-webkit-input-placeholder { color: #008a32; }
-        #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
-        #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
-        #domain-name-input:-ms-input-placeholder { color: #008a32; }
         .search-text { display: none; }
         .search-icon { font-size: 22px; }
         @media (min-width: 768px) {
@@ -30,9 +25,9 @@ mixin domainSearchInput(domainSearchParams)
     input(type="hidden",name="checkAvail",value="1")
     .input-group
       label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input.headline-primary.searchInput.form-control(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
+      input.searchInput.form-control.input-lg(id!="#{domainSearchParams.domainInputId}" type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
       span.input-group-btn
-        button.btn.btn-primary(type='submit' data-ci='#{domainSearchParams.cicode}') 
+        button.btn.btn-primary.btn-lg(type='submit' data-ci='#{domainSearchParams.cicode}') 
           span.search-icon.uxicon.uxicon-magnifying-glass
           span.search-text !{domainSearchParams.buttonText}
   script.

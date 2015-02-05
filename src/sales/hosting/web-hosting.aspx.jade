@@ -165,6 +165,8 @@ append pageStyles
 
     .pro-banner { color: #fff; }
 
+    #speed-chart h2 { margin-bottom: 10px; }
+
 block domainSearch
   //- nothing to see here
   //- override the landing-page.jade with a blank section
@@ -298,11 +300,11 @@ block sections
         | 
         |##if(activeLanguageAny([en-US]))
         | 
-        h3 People <span class='heartIcon'></span> Fast Websites
+        h2.text-center People <span class='heartIcon'></span> Fast Websites
         | 
         |##else
         | 
-        h3 [@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]
+        h2.text-center [@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]
         | 
         |##endif
         | 
