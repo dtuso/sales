@@ -1,11 +1,32 @@
 ---
 location: sales/design/logo-design.aspx
-id: false
+id: 54b59457f778fc10040523ec
+name: GCE-34935
+comments:  Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
 	{% parent %}
+
+    ##if(appSettingEnabled(UXCORE_ENABLED))
+    <style>
+        body {
+            font-size: 10px;
+            background-color: #d4d4d4;
+        }
+        #footer-legal {
+          background-color: #fff;
+        }
+        .badge-important {
+          background-color: #F3514C;
+        }
+        .carousel-inner-container {
+          height: 400px;
+        }
+    </style>
+    ##endif
+
 {% endblock metahead %}
 
 {% block footer %}

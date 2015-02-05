@@ -1,0 +1,113 @@
+
+//- DEPENDENCIES
+//-   lazyImg mixin
+//-   lazyload jquery plugin v2.0
+//-   
+mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses, lazyLoad, backgroundImage, featuresImg, featuresImgAltText, title, subtitle, text, buttonText, buttonUrl, buttonColor )
+  - var featuresWrapClass = ""
+  - var imgClass = ""
+  - var firstColClass = ""
+  - var secondColClass = ""
+
+  case presentationTemplate
+    when "featuresRightText"
+      - featuresWrapClass = "features-wrap"
+      - imgClass = "features-img-right"
+      - firstColClass = ""
+      - secondColClass = ""
+    
+    when "featuresLeftText"
+      - featuresWrapClass = "features-wrap"
+      - imgClass = "features-img-left"
+      - firstColClass = "col-sm-push-6"
+      - secondColClass = "col-sm-pull-6"
+    
+    when "featuresSlim"
+      - featuresWrapClass = "features-slim"
+      - imgClass = "features-img-right-slim"
+      - firstColClass = "col-sm-push-6 bg-slim-left"
+      - secondColClass = "col-sm-pull-6 bg-slim-right"
+
+  atlantis:webstash(type="css")
+    style.
+      .features {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+      }
+      @media only screen and (max-width: 768px) {
+        .features {
+          background-image: none !important;
+        }
+        .features .features-img {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 992px) {
+        .features .features-img {
+          width: 85%;
+        }
+        .features .features-img.features-img-right-slim {
+          margin: 40px 0 0;
+        }
+        .features .features-img.features-img-left,
+        .features .features-img.features-img-right {
+          margin: 0 0 40px;
+        }
+        .features.features-wrap {
+          min-height: 0;
+          margin: 40px 0;
+        }
+      }
+      .features.features-wrap {
+        min-height: 560px;
+      }
+      .features.features-wrap h2,
+      .features.features-slim h2 {
+        margin: 0 0 20px;
+        color: #333;
+        font-size: 40px;
+      }
+      .features.text-white * {
+        color: #fff !important;
+      }
+      .features .features-subtitle {
+        text-transform: none; /* override headline-primary */
+        margin-top: 20px;
+      }
+      .features .features-text {
+        margin-bottom: 20px;
+      }
+      .features.features-slim {
+        min-height: 300px;
+      }
+
+
+  //- Features layouts
+  div(id="#{featuresId ? featuresId : ''}", 
+    class="features tile-section #{featuresWrapClass ? featuresWrapClass : ''} #{additionalWrapClasses ? additionalWrapClasses : ''} #{lazyLoad ? 'lazyload' : ''}", 
+    style!=(typeof backgroundImage!='undefined' && !lazyLoad ? 'background-image: url(\'#{backgroundImage}\');' : ''), 
+    data-lazyload-source!=(typeof backgroundImage!='undefined' && lazyLoad ? '#{backgroundImage}' : ''), 
+    data-lazyload-callback!='triggerResize')
+    .container
+      .row
+        .col-sm-6(class="#{firstColClass ? firstColClass : ''}")
+          if (featuresImg)
+            div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+              if(lazyLoad)
+                +lazyImg("features-img " + imgClass, null, featuresImg, featuresImgAltText, "triggerResize", null)
+              else
+                img.features-img(class="#{imgClass ? imgClass : ''}", src!="#{featuresImg}", alt="#{featuresImgAltText ? featuresImgAltText : ''}")
+        .col-sm-6(class="#{secondColClass ? secondColClass : ''}")
+          div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+            if (title)
+              h2.h0 !{title}
+
+            if (subtitle)
+              h4.headline-primary.features-subtitle !{subtitle}
+
+            if (text)
+              .features-text !{text}
+
+            if (buttonText && buttonUrl)
+              a(href!="#{buttonUrl}", class="btn #{buttonColor ? buttonColor : 'btn-default'}" ) !{buttonText}

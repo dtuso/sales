@@ -1,0 +1,108 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    html[lang|="el"] .headline {font-family:Arial, Sans-serif;font-weight:700;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    html[lang|="el"] .headline .line:nth-child(even) {font-family:Arial, Sans-serif;font-weight:700;}
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    html[lang|="el"] .walsheim {font-family:Arial, Sans-serif;font-weight:700;}
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    #gybo {width:100%;min-width:1000px;height:400px;cursor:pointer;background:#ffffff;font-family:'Walsheim-Regular';}
+    html[lang|="el"] #gybo {font-family:Arial, Sans-serif;}
+    #gybo .marquee-content{width:1000px;margin:0 auto;}
+    #gybo .text{color:#333333;padding:30px 0 0 0;}
+    #gybo .text>div{display:inline-block;vertical-align:top;}
+    #gybo .middle-wrapper{padding:20px 0 0 0;}
+    #gybo .price-text{text-align:center;}
+    #gybo .text>.headline{font-size:66px;line-height:66px; display:block; font-family:'walsheim-black'; margin:0;}
+    html[lang|="el"] #gybo .text>.headline{font-family:Arial, Sans-serif;font-weight:700;}
+    #gybo .product-text{font-size:28px;line-height:28px;text-align:center;}
+    #gybo .product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
+    html[lang|="el"] #gybo .product-subtext{font-family:Arial, Sans-serif;}
+    #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:10px;}
+    #gybo .rest-text{font-family:'Walsheim-Medium';font-size:12px;line-height:12px;display:block;padding-top:10px;text-align:center;}
+    html[lang|="el"] #gybo .rest-text{font-family:Arial, Sans-serif;}
+    #gybo .btn-wrapper>.price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;box-sizing:content-box;}
+    #gybo .btn-wrapper>.price-text>.price{line-height:1.1; font-family:'walsheim-black'}
+    html[lang|="el"] #gybo .btn-wrapper>.price-text>.price{font-family:Arial, Sans-serif;font-weight:700;}
+    #gybo .plus-img,.equal-img{font-size:100px;padding:20px 20px 0 20px; font-family:'walsheim-black'}
+    html[lang|="el"] #gybo .plus-img,html[lang|="el"] .equal-img{font-family:Arial, Sans-serif;font-weight:700;}
+    #gybo .btn-wrap>.btn{width:130px;font-size:24px;font-family:'Walsheim-Medium';box-sizing:content-box;}
+    html[lang|="el"] #gybo .btn-wrap>.btn{font-family:Arial, Sans-serif;}
+    #gybo .image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat;width:160px;height:160px;margin-bottom:10px;}
+    #gybo .domain{background-position: 0px 0px}
+    #gybo .wsb{background-position: 0px -162px}
+    #gybo .o365{background-position: 0px -324px}
+    html[lang|="de"] #gybo .headline{font-size:48px;}
+    html[lang|="de"] #gybo .product-text{font-size:24px;}
+    html[lang|="de"] #gybo .btn-wrap>.btn{font-size:18px;}
+    html[lang|="es"] #gybo .btn-wrap>.btn{font-size:14px;}
+    html[lang|="it"] #gybo .headline{font-size:48px;}
+    html[lang|="it"] #gybo .product-text{font-size:24px;}
+    html[lang|="it"] #gybo .btn-wrap>.btn{font-size:14px;}
+    html[lang|="fr"] #gybo .headline{font-size:48px;}
+    html[lang|="fr"] #gybo .product-text{font-size:24px;}
+    html[lang|="fr"] #gybo .btn-wrap>.btn{font-size:14px;}
+    html[lang|="fr"] #gybo .rest-text,html[lang|="uk"] #gybo .rest-text,html[lang|="it"] #gybo .rest-text,html[lang|="de"] #gybo .rest-text,html[lang|="da"] #gybo .rest-text,html[lang|="pt"] #gybo .rest-text,html[lang|="ru"] #gybo .rest-text{width:168px;}
+    html[lang|="uk"] #gybo .product-text,html[lang|="el"] #gybo .product-text,html[lang|="ru"] #gybo .product-text{font-size:22px;width:160px}
+    html[lang|="uk"] #gybo .btn-wrap>.btn{font-size:16px;}
+    html[lang|="uk"] #gybo .cond-text,html[lang|="el"] #gybo .cond-text{font-size:26px;}
+    html[lang|="tr"] #gybo .btn-wrap>.btn,html[lang|="fi"] #gybo .btn-wrap>.btn{font-size: 20px;}
+    html[lang|="fi"] #gybo .cond-text{font-size:33px;}
+    html[lang|="pt"] #gybo .product-text,html[lang|="sv"] #gybo .product-text{width:160px;}
+    html[lang|="pt"] #gybo .btn-wrap>.btn,html[lang|="el"] #gybo .btn-wrap>.btn,html[lang|="ru"] #gybo .btn-wrap>.btn{font-size:17px;}
+    html[lang|="ru"] #gybo .cond-text{font-size:30px;}
+    html[lang|="sv"] #gybo .text>.headline{font-size:33px;}
+    html[lang|="sv"] #gybo .btn-wrap>.btn{font-size:19px;}
+    
+  </style>
+</atlantis:webstash>
+<div id="gybo" data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='93372' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="marquee-content">
+      <div class="text">
+        <div class="headline">[@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]</div>
+        <div class="middle-wrapper">
+          <div class="domain image"></div>
+          <div class="product-text tungsten">[@L[cds.sales/homepage/marquee/gybo:gybo-marq-domain]@L]</div>
+        </div>
+        <div class="plus-img">+</div>
+        <div class="middle-wrapper">
+          <div class="wsb image"></div>
+          <div class="product-text tungsten">[@L[cds.sales/homepage/marquee/gybo:gybo-marq-wsb]@L]</div>
+        </div>
+        <div class="plus-img">+</div>
+        <div class="middle-wrapper">
+          <div class="o365 image"></div>
+          <div class="product-text tungsten">[@L[cds.sales/homepage/marquee/gybo:gybo-marq-email]@L]</div>
+          <div class="product-subtext">[@L[cds.sales/homepage/marquee/gybo:gybo-marq-o365]@L]</div>
+        </div>
+        <div class="equal-img">=</div>
+        <div class="btn-wrapper">
+          <div class="price-text bigtext">
+            <div class="price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T] </div>
+            <div class="cond-text tungsten">[@L[cds.sales/homepage/marquee/gybo:gybo-per-month]@L]</div>
+          </div>
+          <div class="btn-wrap">
+            <div id="gdhp-marq-gybo-btn" data-ci="93372" class="btn btn-warning">[@L[cds.sales/homepage/marquee/gybo:gybo-get-it-now]@L]</div>
+            <div class="rest-text">[@L[cds.sales/homepage/marquee/gybo:gybo-rest-text]@L]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->

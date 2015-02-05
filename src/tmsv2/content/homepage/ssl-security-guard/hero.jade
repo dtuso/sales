@@ -1,0 +1,29 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "94099";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " ssl-security-guard";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.ssl-security-guard{
+        .rightContent {
+        .line3{margin-bottom:3%}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.tungsten SSL CERTIFICATES
+    .line2.walsheim-black LIKE AN ONLINE
+    .line3.tungsten SECURITY GUARD.
+    .line4.walsheim-black THAT NEVER TAKES A BREAK.
+    .line5.tungsten 
+      span.dash ———— 
+      span EVER
+block rightContent
+  .bigtext
+    .line1.walsheim-bold ON SALE NOW
+    .line2.walsheim-black SSL CERTIFICATES
+    .line3.price.walsheim-bold NOW JUST [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
+  a.btn.btn-lg.btn-purchase GET STARTED

@@ -1,0 +1,27 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "95849";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/domainaddon/private-registration.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " domain-privacy";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.domain-privacy{
+        .rightContent {
+          .line4{font-size:65%; padding:3% 0}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.tungsten DON'T LET YOUR
+    .line2.walsheim-black PRIVATE INFO
+    .line3.tungsten 
+      span.dash ——————————— 
+      span OUT IN PUBLIC.
+block rightContent
+  .bigtext
+    .line1.tungsten ADD PRIVACY
+    .line2.walsheim-black TO YOUR DOMAIN 
+    .line4.price.walsheim-black [@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR PER DOMAIN
+  button.btn.btn-lg.btn-purchase GET STARTED

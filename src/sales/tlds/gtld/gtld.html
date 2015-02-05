@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 
-name: GCE-33979
-comments: GCE-33979 - Prepare for uxcore
+id: false
+name: GCE-34935
+comments: Prep for uxcore - css updates
 ---
 {% extends 'layouts/base.html' %}
 
@@ -23,29 +23,47 @@ comments: GCE-33979 - Prepare for uxcore
       background: #fff;
     }
     ##endif
+    
     .bg-images > .bg-slide1 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-global.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/30_off_tld_background.jpg");
     }
+
     .bg-images > .bg-slide2 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg");
+      ##if(countrySiteAny(www, ca))
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-club.jpg") !important;
+      ##else
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
+      ##endif
     }
+    
     .bg-images > .bg-slide3 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-ninja.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-guru.jpg");
     }
+        
     .bg-images > .bg-slide4 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-email.jpg");
+      ##if(activeLanguageAny([en-GB]))
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-london.jpg");
+      ##elseif(activeLanguageAny([en-US], [es-US]))
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-nyc.jpg");
+      ##elseif(activeLanguageAny([en-CA], [fr-CA]))
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-quebec.jpg");
+      ##else
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-website.jpg");
+      ##endif
     }
   </style>
 </atlantis:webstash>
 
-##if(countrySiteAny(www, ca))
-    <!-- International Background Images -->
-    <style type="text/css">
-      .bg-images > .bg-slide2 {
-      background-image: url("[@T[link:<cssroot />]@T]/fos/201401/tlds/gtld/img/bg-main-banner-club.jpg") !important;
-      }
-    </style>
-##endif
+<style type="text/css">
+  .bg-images{height:100%;}
+  .bg-images > .bg-slide {height:100%;}
+  .idp-modal-wrap {top: 35%!important;}
+</style>
+
+  </head>
+
+  <body>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
 {% endblock metahead %}
 
@@ -72,6 +90,11 @@ comments: GCE-33979 - Prepare for uxcore
           <li>[@L[cds.sales/gd/tlds/gtld:MainText3]@L]</li>
         </ul>
       </div>
+      <style>
+        .carousel-inner-item-gtld-1 p a {
+          font-weight: bold;
+        }
+      </style>
       <div class="tab-content-column-gtld">
         <span class="badge badge-important badge-upper-right">[@L[cds.sales/gd/tlds/gtld:MainBadgeNew]@L]</span>
         <section class="carousel-container main-banner-carousel">
@@ -82,9 +105,8 @@ comments: GCE-33979 - Prepare for uxcore
                   <div class="carousel-inner carousel-inner-container">
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-1 active">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.global</strong></p>
-                        <p>[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextGlobal]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="94396" href="[@T[link:<relative path="~/tlds/global"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="no-margin-bottom" style="font-size: 24px; line-height: 1.27778em; font-weight: bold;">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideSave]@L]</p>
+                        <p style="font-size: 14px;">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideList]@L]</p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
@@ -96,16 +118,30 @@ comments: GCE-33979 - Prepare for uxcore
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.ninja</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2TextNinja]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89639" href="[@T[link:<relative path="~/tlds/ninja"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide4Text2]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/guru"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.email</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide3TextEmail]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="92569" href="[@T[link:<relative path="~/tlds/email"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        ##if(ActiveLanguageAny([en-GB]))
+                        <p class="domain no-margin-bottom"><strong>.london</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextLondon]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        ##elseif(ActiveLanguageAny([en-CA], [fr-CA]))
+                        <p class="domain no-margin-bottom"><strong>.quebec</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextQuebec]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="95108" href="[@T[link:<relative path="~/tlds/quebec"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        ##elseif(ActiveLanguageAny([en-US], [es-US]))
+                        <p class="domain no-margin-bottom"><strong>.nyc</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        ##else
+                        <p class="domain no-margin-bottom"><strong>.website</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideText1Website]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="93501" href="[@T[link:<relative path="~/tlds/website"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        ##endif
                       </div>
                     </div>
                   </div>
@@ -416,7 +452,11 @@ comments: GCE-33979 - Prepare for uxcore
         });
     }
     $(document).ready(function(){
-      var checkInterval = setInterval(function(){
+      $('.carousel').carousel({
+        interval: 7000
+      });
+
+        var checkInterval = setInterval(function(){
         var $noButton = $('.noButton');
         if($noButton.length >= 1){
           // add click event

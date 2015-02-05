@@ -1,9 +1,4 @@
----
-location: sales/homepage/default.en-in
-id: false
-name: GCE-33227
-comment: search box fix
----
+
 extends ../../layouts/homepage/default_base
 
 block styles
@@ -26,7 +21,7 @@ block domainSearch
 
 block marquee
   | 
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com-in/default_template" /> ]@P]
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
 
 
 block bugBar
@@ -38,12 +33,8 @@ block primaryTile
 
 block secondaryTile
   | 
-  | ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
-  | ##else
-  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-  | ##endif
-  | 
+  | [@P[cdsDocument:<data app="sales" location="homepage/tiles/com299-in/default_template" /> ]@P]
+
 
 block lowerMarquee
 

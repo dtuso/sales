@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="[@T[localization:<language full='true' />]@T]">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
+    <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
+    <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
+    <link href="https://plus.google.com/108306343581548568740" rel="publisher">
+    <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
+    <meta name="y_key" content="1e39c508e0d87750">
+    <title>[@L[cds.sales/homepage:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <meta property="og:site_name" content="GoDaddy">
+    <meta property="fb:app_id" content="115696031791232">
+    <meta property="fb:admins" content="633356800">
+    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
+    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
+    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css"> 
+    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+    <style>
+      .uk-cookie-banner{background: #8a8a8a; color: #fff; font-size: 12px; padding: 10px;position:fixed;bottom:0;width: 100%;z-index:999}
+      .uk-cookie-banner a{color:#fff;text-decoration: underline}
+      .uk-cookie-banner span {display:block}
+      .uk-cookie-banner i {background-image: url([@T[link:<imageroot />]@T]fos/base/1/alerts.png)}
+      .uk-cookie-ico{background-position: 0 0;height:20px;display: block;float: left;margin: 10px;width: 20px}
+      .uk-cookie-wrap{margin: 0 auto;width: 1000px}
+      .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
+      .tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
+      .walsheim-black{font-family:'Walsheim-Black';}
+      .hp-sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) scroll no-repeat; vertical-align: top; }
+      input.search-form-input::-webkit-input-placeholder {color:#999;}
+      input.search-form-input:-moz-placeholder {color:#999;}
+      input.search-form-input::-moz-placeholder {color:#999;}
+      input.search-form-input:-ms-input-placeholder {color:#999;}
+      input.search-form-input.placeholder {color:#999;}
+      .gdhp-search-box2 input.search-form-input::-webkit-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input::-moz-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input:-ms-input-placeholder {color:#7DB701;}
+      .gdhp-search-box2 input.search-form-input.placeholder {color:#7DB701;}
+    </style> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+    <link href="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage20141219.css" rel="stylesheet" type="text/css">
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+     
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+    <!--  Domain Search Section-->
+    <div class="gdhp-search-section">
+      <div class="gdhp-main-top">
+        <form method="post" data-url="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]" class="search-form search-form-alternate search-form-certified">
+          <div class="gdhp-search-box">
+            <input type="text" id="searchDomainName" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-placeholder-text]@L]" class="search-form-input searchInput helveticafont">
+            <button type="submit" name="searchButton" data-ci="54814" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+     
+     ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+       ##if(splitTestingSideIsActive(1416, A))
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+       ##else
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+       ##endif
+     ##else
+       ##if(splitTestingSideIsActive(1417, A))
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+       ##else
+         [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+       ##endif
+     ##endif
+    <!-- Bugbar (and social links) Sections-->
+    <div class="top-banner-lower-content">
+      <div class="top-lower-content"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/uno'><param name='ci' value='88299' /><param name='tld' value='uno' /></relative>]@T]" class="tld-link uno"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAALVBMVEVMaXHGOiDRKBHmFBjOOQD+hwD1bwBdcz//lQDzVx3/iAD83dnyZWz7ysP3jZVxbLy+AAAAC3RSTlMA/oSuTw8lBRrdNGKaMGoAAACMSURBVHgBY2BgYHcyFFZjAANnQSBQBbGYBEFAuAEo7SgIBqYMDGyCECAEkoeCBIZGCOOMoAKD40bp0xel5XbfMWBQBDL3SJ8WlBUAM3fPfi0oDWGe3n0axHTcN1v64G7Zk2cNGAKl98gIygju3qjAkKIIN1dQGWYbkAl3Q1QRzGVA4Ah3LwOrsyDYFwC5OiUuOnsqwwAAAABJRU5ErkJggg==" class="tld-image uno"/><span class="price">[@T[productprice:<current productid='40995' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/xyz'><param name='ci' value='94936' /><param name='tld' value='xyz' /></relative>]@T]" class="tld-link xyz"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAVCAYAAADID4fUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0NFNDBBNEM4RDI5MTFFNDk3RDY5MDQwRkRBMEU4M0MiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0NFNDBBNEQ4RDI5MTFFNDk3RDY5MDQwRkRBMEU4M0MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3Q0U0MEE0QThEMjkxMUU0OTdENjkwNDBGREEwRTgzQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3Q0U0MEE0QjhEMjkxMUU0OTdENjkwNDBGREEwRTgzQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pgy30JAAAAMRSURBVHjazFZfaI5RGD/PrO9TPhdDfTX2ETFTmKshDEXGitIsMn9KpIVcSbHCWqIIpcmdf0MuNqEkf0smFysucGFkEnIhphmfjt/znud1zne8m+/dDad+5znned7znufvOYe01upftwL1H7TCxZkVUfwioFEpWgk6RCnda9gkYt3H2G2RfBitE6CdQANwMVAiYvUELH4CmrAsSvT9c4phcxh6KkV3AfNq0DURStClXAXibBClnMv3FaY6yO/5OTEDmOzMPwHPvYXv0b2QCcu6vQ0+A89kDBmx67sM9EvQD9YjwbpNvhIZz7p6YCIGlx3eFKASuGlkeru3ZgdQhsFD4249DsgYqLGgaWzsGpb2lfiYq6WaJz9ea/i6wVii5prcCRrH9rtdr5plPAbAOrUU2C+UWzEwysmRQlcJVAId9OK6QbKYwzIa2Cf0NGQloOuAL8AZWXBd6Gq2EN+sB1oBeEe9E9kVU3FhCDWFSpwE4xzotIhE3YOuFngNDMb8gU0A2mbXB5YdEP7u3GrQtSY86ihk3h40iJWoEYv7a2+EfjNJ99tb5aJ4OzZqAX0MVNpQBZY2y3kARWhL1IFZYARuHuhrwC1nPh/dfWAjMFLm7Y4lTTJYJfNGZy17bTMwHfzzklf+uRF4otwyNFuyBKiS+S50t4HZ+MkJ4Ih8u1BygdsiJ4wVwCz5hkt5gS1bvQx0EoBqUY8cZQIleozbAhcPE8FwmXeKdWeFv9yEL1CgxzGpTKhTrsShGyFVwhXVBjw1/9RZZ88sVZXUnJKTK2R2y4AzmO+MH0DKyrXwKCUWd8n5krYVQHFO1w72xGFvYcqWkErK3D16k6LAW/zsGOgc4R9yrPtLc7/Re1mJDolx3LtiJ7qtwCugySZmvpdYMOZbujW8wG6AUSQxr5B3RpaTRtTmnBiKYZtjDR/PODlpJial3kacG1eBamH8dN4vfJ1zyd+RXFGcE/manjRJRcX9vyFUS/5eif+y6nXOAvVnzQfteFwFBvK8u4uNxwNwNaFM6aupCM2X2FSM6wfyvPslwAC9xte4kuRkCQAAAABJRU5ErkJggg==" class="tld-image xyz"/><span class="price">[@T[productprice:<current productid='334499' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
+        <atlantis:webstash type="css">
+          <style>
+            .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
+            .tld-links span, .tld-links img { display: inline-block; }
+            .tld-links a:hover>.price{text-decoration:underline}
+            .tld-image {vertical-align: top; margin-right: 8px;}
+          </style>
+        </atlantis:webstash>
+        <div class="gdhp-share">
+          <div data-twshareurl="[@T[link:<relative path=''></relative>]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter" class="fosshare"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Tiles Section-->
+    <atlantis:webstash type="css">
+      <style>
+        .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
+        .gdhp-tile-area{width:1000px;margin:0 auto}
+        .gdhp-tile{width:480px;height:480px;background-color:#fff;float:left;margin:40px 10px 0;cursor:pointer;}
+        .gdhp-tile span{display:block;}
+        .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+        .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
+        .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
+        .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141205.png) scroll no-repeat;}
+      </style>
+    </atlantis:webstash>
+    <div class="gdhp-tile-wrap">
+      <div class="gdhp-tile-area">
+         
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+         
+         ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+           ##if(splitTestingSideIsActive(1416, A))
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+           ##else
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+           ##endif
+         ##else
+           ##if(splitTestingSideIsActive(1417, A))
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
+           ##else
+             [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+           ##endif
+         ##endif
+         </div>
+    </div>
+    <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal" aria-hidden="true" class="modal-header-close close">&times;</button>
+          </div>
+          <div class="modal-body">
+            <iframe width="854" height="480" src="" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Lower Marquee Section-->
+    <div class="gdhp-bottom-banner">
+      <div class="bottom-banner-content"><span class="bottom-banner-headline-2">[@L[cds.sales/homepage/segments/default:bottom-banner-headline-INTL]@L]</span><span class="bottom-banner-subtext-2 b">[@L[cds.sales/homepage/segments/default:bottom-banner-subtext-INTL]@L]</span></div>
+      <div class="bottom-banner-search">
+        <form method="post" data-url="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]" class="search-form search-form-certified">
+          <div class="gdhp-search-box2">
+            <input id="searchDomainName2" type="text" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-placeholder-text]@L]" class="search-form-input searchInput helveticafont">
+            <button type="submit" name="searchButton" data-ci="87137" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+    <!-- Why Us Section-->
+    <div class="why-us-wrap">
+      <div class="why-us-content">
+        <div class="why-us-headline-wrap"><span class="why-us-headline b condensed">[@L[cds.sales/homepage/segments/default:whyus-text-area]@L]</span></div>
+        <div class="why-us-circles">
+          <ul>
+            <li>
+              <div class="circle1"></div>
+              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-1]@L]</div>
+            </li>
+            <li>
+              <div class="circle2"></div>
+              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-2]@L]</div>
+            </li>
+            <li>
+              <div class="circle3"></div>
+              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-3]@L]</div>
+            </li>
+            <li>
+              <div class="circle4"></div>
+              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-4]@L]</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- FAQ Section-->
+    <div id="faqSlider">
+      <div class="gd-nav-container">
+        <div data-gd-swipe="{'auto':0}" class="gd-swipe">
+          <div class="gd-swipe-wrap">
+            <div class="gd-swipe-item">
+              <div class="gd-swipe-head">
+                <h2>[@L[cds.sales/homepage:faq-slide-1-title]@L]</h2>
+              </div>
+              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-1-content]@L]</div>
+            </div>
+            <div class="gd-swipe-item">
+              <div class="gd-swipe-head"></div>
+              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-2-content]@L]</div>
+            </div>
+            <div class="gd-swipe-item">
+              <div class="gd-swipe-head">
+                <h2>[@L[cds.sales/homepage:faq-slide-3-title]@L]</h2>
+              </div>
+              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-3-content]@L]</div>
+            </div>
+            <div class="gd-swipe-item">
+              <div class="gd-swipe-head"></div>
+              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-4-content]@L]</div>
+            </div>
+          </div>
+        </div><a href="#" data-slide="prev" data-ci="84408" class="arrow-left"><i class="ico ico-carousel-arrow-left"></i></a><a href="#" data-slide="next" data-ci="84409" class="arrow-right"><i class="ico ico-carousel-arrow-right"></i></a>
+        <div class="gd-swipe-bottom-nav"></div>
+      </div>
+    </div>
+    <!-- Disclaimers Section-->
+    <div id="disclaimers">
+      <section class="container l-main-container content-disclaimer">
+        <p class="no-margin-bottom"><a href="#" data-toggle="modal" data-target="#myModal" data-ci="86765" class="simple-link">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p>
+      </section>
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+              <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+            </div>
+            <div class="modal-body">
+              <div class="g-modal-content">
+                <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]</p>
+                <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
+                <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
+    <!-- End Main Content-->
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20141215.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.2.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
+      qs = [],
+      date = new Date();
+      for(var i = 0; i < hashes.length; i++) {
+      var hash = hashes[i].split('=');
+      qs.push(hash[0]);
+      qs[hash[0]] = hash[1];
+      }
+      $('#shareme').fosShare({});
+      if($("#searchDomainName").val().length) {
+      $("#searchDomainName").val("");
+      }
+        $('.search-form').on('submit', function (e){
+              e.preventDefault();
+      
+              $('button[name="searchButton"]', this).addClass('disabled');
+      
+              var params = {
+                  query:$(this).serialize(),
+                  searchUrl:$(this).attr('data-url')
+              };
+              DomainSearch(params,function(err,NextStepUrl){
+            if(err == null ){
+              if(typeof NextStepUrl === 'undefined'){
+                NextStepUrl = '[@T[link:<relative path="~/domains/domain-name-search.aspx" />]@T]';
+                  }
+                      window.location = NextStepUrl;
+            }else{
+                      if(console != "undefined")
+                      console.log(err);
+                  }
+              });
+          });
+      
+          function DomainSearch(params, cb) {
+                $.ajax({
+                  url: params.searchUrl,
+                  type: 'POST',
+                  data: params.query,
+                  error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    var data = { Error: errorThrown, Success: false };
+                    cb(errorThrown,null);
+                  },
+                  success: function (data) {
+                    cb(null,data.NextStepUrl);
+                  }
+                });
+          }
+        $("#disclaimers > p > a").click(function () {
+              $("#g-modal").modal({
+                overlayId: "g-modal-overlay",
+                close: "false", // disables default close button
+                autoPosition: "true"
+              });
+            });
+            $(".g-modal-close").click(function () {
+              // Closes the last modal
+              $.modal.close();
+            });
+      });
+      $('.uk-cookie-close').click(function() {
+            $('.uk-cookie-banner').css("display","none");
+            var CookieDate = new Date;
+            CookieDate.setFullYear(CookieDate.getFullYear( ) +10);
+            document.cookie = 'uk_banner=closed; expires=' + CookieDate.toGMTString( ) + '; path=/';
+            })
+      if (document.cookie.indexOf("uk_banner") >= 0) {
+             $('.uk-cookie-banner').css("display","none"); 
+             } else {
+             $('.uk-cookie-banner').css("display","block");
+             }     
+      if(navigator.userAgent.match(/iPad|iPhone|iPod/i)) {
+      $('head').append('<meta name="viewport" content="width=1150px">');
+      }
+      $('body').on('click','.js-gdhpclick',function(event){
+        var $clickedElement = $(event.currentTarget);
+        var $clickedUrl = $clickedElement.attr('data-url'); 
+        event.stopPropagation();
+        switch($clickedUrl)
+        {
+          case "video":
+             $('div#myVideoModal').modal('show');
+          break;
+          case "none":
+          break;
+          case "video-close":
+            $('div#myVideoModal').modal('hide');
+          break;
+          default:
+            window.location.href=$clickedUrl;
+        }
+      });
+      $(window).load(function () {
+        $('.bigtext').bigtext().css('visibility', 'visible');
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+      });
+    </script><!--[if IE]><script type="text/javascript">$(function(){$('[placeholder]').focus(function(){var input = $(this);if (input.val() == input.attr('placeholder')){input.val('');input.removeClass('placeholder');}}).blur(function(){var input = $(this);if (input.val() == '' || input.val() == input.attr('placeholder')){input.addClass('placeholder');input.val(input.attr('placeholder'));}}).blur().parents('form').submit(function(){$(this).find('[placeholder]').each(function(){var input = $(this);if (input.val() == input.attr('placeholder')){input.val('');}});});});</script><![endif]-->
+  </body>
+</html>

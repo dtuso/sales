@@ -1,0 +1,134 @@
+atlantis:webstash(type="css")
+  style.
+    #marquee {
+      margin:0 auto; 
+      background-color: #77c043;
+    }
+    
+    #default-marquee-view,
+    #domain-available-marquee-view,
+    #domain-not-available-marquee-view {
+      padding-top:15px;
+    }
+
+    #api-failure,
+    #domain-available-marquee-view,
+    #domain-not-available-marquee-view,
+    #step2-choose-product {display: none; }
+
+
+    #marquee .domain-name-displayed {
+      font-size: 60px;
+      text-transform: lowercase; 
+      color: #333; 
+      background: #fedc45; 
+      padding: 0 5px;
+      line-height: 1.29em; /* to line up with the button height */
+      margin: 0;
+      display: inline;
+      display: -ms-inline-grid;
+    }
+
+
+    #marquee h2.availability-header {
+      color: #333333; 
+      margin: 20px 0 0; 
+      font-size: 40px;
+      color: #333; 
+    }
+
+    .offer-search-box { padding-bottom:20px;}
+    .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
+    .domain-search-messaging-row {padding-bottom: 40px;}
+    h2.get-a-domain-text {
+      margin: 20px 0 5px;
+      font-size:24px;
+    }
+
+    /*  speech */
+
+    .speech-shape-upsidedown {
+      line-height: 1.9em;
+      font-size: 18px;
+      padding: 5px 17px;
+      color: #fff;
+      display: inline-block;
+      position: relative;
+      margin-bottom: 20px;
+      z-index: 2;
+    }
+    .speech-shape-upsidedown .shape-text {
+      position: relative;
+      z-index: 40;
+    }
+    .speech-shape-upsidedown:before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      left: 0;
+      border-bottom: 15px solid;
+      border-right: 15px solid transparent;
+    }
+    .speech-shape-upsidedown:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width:20px;
+      right: -6px;
+      top: 0;
+      transform: skew(12deg, 0);
+      z-index: 1;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green {
+      background-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+      border-bottom-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+      background-color: #008a32;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+      background-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+      border-bottom-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+      background-color: #ef6c0f;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white {
+      background-color: #fff;
+      color: #333;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+      border-bottom-color: #fff;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+      background-color: #fff;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+      background-color: #fedc45;
+      color: #333;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+      border-bottom-color: #fedc45;
+    }
+    .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+      background-color: #fedc45;
+    }
+
+    /* (end) speech */
+
+section#marquee
+  include ./_1_default-marquee-view.jade
+  include ./_2_domain-available-marquee-view.jade
+  include ./_3_domain-not-available-marquee-view.jade
+  include ./_4_step2-choose-product.jade
+
+
+#api-failure.sf-dialog.api-B-failure
+  h2.api-error-header
+    img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+    div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
+  p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]

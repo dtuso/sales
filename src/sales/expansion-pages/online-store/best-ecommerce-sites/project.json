@@ -1,0 +1,25 @@
+{
+  "best-ecommerce-sites.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:meta-keywords]@L]",
+    "metaCanonicalPath": "/ecommerce/online-store/best-ecommerce-sites",
+    "metaOgTitle": "[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/expansion-pages/online-store/best-ecommerce-sites:og-description]@L]"
+  },
+  "best-ecommerce-sites.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}

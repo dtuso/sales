@@ -1,3 +1,4 @@
+
 try {
 
   // Gulp plugins
@@ -5,6 +6,7 @@ try {
   var cdsm        = require('gulp-cdsm');
   var changed     = require('gulp-changed');
   var concat      = require('gulp-concat');
+  var extReplace = require('gulp-ext-replace');
   var cssmin      = require('gulp-minify-css');
   var frontMatter = require('gulp-front-matter');
   var fm          = require('front-matter');
@@ -29,12 +31,12 @@ try {
   var argv        = require('minimist')(process.argv.slice(2));
   var getData     = require('./lib/project-data.js');
   var extras      = require('./lib/swig-extras');
+  var exec        = require('child_process').exec;
 
   // underscore and mixins
   var _           = require('underscore');
   var underscoreDeepExtend = require('underscore-deep-extend');
   _.mixin({deepExtend: underscoreDeepExtend(_)});
-
 } catch (e) {
 
   console.log(e.toString());
@@ -47,7 +49,6 @@ var theme = 'scotty';
 var rootAssetPath = (process.platform === 'win32')
   ? '\\\\g1dwimages001\\images\\fos\\sales\\themes\\' + theme + '\\'
   : '/Volumes/images/fos/sales/themes/' + theme + '/';
-
 
 
 var assetSrcPaths = require('./paths.json');
@@ -70,6 +71,7 @@ if (!assetSrcPath) {
 }
 
 var ignoreCDS = argv['ignore-cds'] || false;
+var rebuild = argv['rebuild'] || false;
 
 if (!argv.src || argv.src == 'all') {
   ignoreCDS = true;
@@ -129,6 +131,11 @@ var cdsmOpts = {
   dest: argv.dest || 'dev'
 };
 
+// use current git branch as default "name" for CDSM
+exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
+  cdsmOpts.branchName = stdout.trim();
+});
+
 //homepage
 var getJsonData = function(file) {
   var jsonPath = file.path.replace('.jade','') + '.json';
@@ -143,19 +150,66 @@ var getLocalJson = function(file) {
   return false;
 };
 
+// copied from gulp-changed,  ignores missing file error
+function fsOperationFailed(stream, sourceFile, err) {
+  if (err) {
+    if (err.code !== 'ENOENT') {
+      stream.emit('error', new gutil.PluginError('gulp-changed', err, {
+        fileName: sourceFile.path
+      }));
+    }
+
+    stream.push(sourceFile);
+  }
+
+  return err;
+}
+
+// passed to gulp-changed, allows for compares when file has no extension (default implementation doesn't)
+function customCompareLastModifiedTime(stream, cb, sourceFile, targetPath) {
+  targetPath = targetPath.replace(".jade","");
+  fs.stat(targetPath, function (err, targetStat) {
+    if (!fsOperationFailed(stream, sourceFile, err)) {
+      if (sourceFile.stat.mtime > targetStat.mtime) {
+        console.log("Processing " + sourceFile.path);
+        stream.push(sourceFile);
+      }
+    }
+    cb();
+  });
+}
+
+gulp.task('cds', function() {
+  gulp.watch('build/cds/**/*', function(event) {
+    console.log('File ' + event.path + ' was ' + event.type + ', uploading to CDS... (' + path.resolve(__dirname, 'build/cds/') + ')');
+    gulp.src(event.path, { cwd: path.resolve(__dirname, 'build/cds/') })
+      .pipe(cdsm(cdsmOpts))
+
+  });
+});
+
 gulp.task('jade', function() {
   var jadeStream = jade({pretty: true});
   jadeStream.on('error',function(e){
     console.log(e.message);
     jadeStream.end();
   });
-  return gulp.src(['./**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade','!./**/layouts/mixins/*.jade'], {cwd: path.join('./src/')})
-    .pipe(changed(paths.cdsBuild))
-    .pipe(frontMatter({remove:true}))
-    .pipe(data(function(file) { return file.frontMatter; }))
-    .pipe(jadeStream)
-    .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
-    .pipe(gulp.dest(paths.cdsBuild));
+
+  // undo the setting that sets ignore-cds if src isn't specified
+  ignoreCDS = argv['ignore-cds'] || false;
+
+  // use current git branch as default "name" for CDSM
+  exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
+    cdsmOpts.branchName = stdout.trim();
+    return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+      .pipe(gulpif(!rebuild,changed(paths.cdsBuild, {hasChanged: customCompareLastModifiedTime})))
+      .pipe(frontMatter({remove:true}))
+      .pipe(data(function(file) { return file.frontMatter; }))
+      .pipe(jadeStream)
+      .pipe(extReplace(''))
+      .pipe(gulpif(!ignoreCDS, cdsm(cdsmOpts)))
+      .pipe(gulp.dest(paths.cdsBuild));
+  });
 });
 
 gulp.task('html', function() {

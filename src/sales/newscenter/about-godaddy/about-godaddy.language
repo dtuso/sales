@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 5488cd56f778fc16ec4de589
-name: GCE-32100, 33789
-comments: About Us ... India News Releases section -  URL for India News Release / Update PR contacts on the About Us Page
+id: false
+name: GCE-35279
+comments: 59 million domains
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -35,6 +35,8 @@ GoDaddy is&hellip;
 The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
 <strong>58 million domains</strong><br /> under management
+<phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement_35279" />
+<strong>59 million domains</strong><br /> under management
 <phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
 <strong>12 million<br />customers</strong>
 <phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" />
@@ -74,6 +76,10 @@ Chief Marketing<br />Officer
 Elissa Murphy
 <phrase key="NewsCenterAbout-5-ChiefTechnologyOfficerExecutiveVicePresident" />
 Chief Technology Officer &amp; Executive Vice President, Cloud
+<phrase key="NewsCenterAbout-2-ArneJosefsberg" />
+Arne Josefsberg
+<phrase key="NewsCenterAbout-5-ChiefInfrastructureOfficerExecutiveVicePresident" />
+EVP, Chief Infrastructure Officer and Chief Information Officer 
 <phrase key="NewsCenterAbout-2-AugusteGoldman" />
 Auguste Goldman
 <phrase key="NewsCenterAbout-3-ChiefPeopleOfficer" />
@@ -182,6 +188,14 @@ As CTO, Elissa is leading GoDaddy's evolution toward a powerful and unified plat
 Prior to her time at Yahoo!, Elissa spent 13 years at Microsoft in various engineering positions including High Performance Computing. She began her technology career designing and building many of the best-selling computer security and system utilities with 5th Generation Systems, Quarterdeck and the Norton Group, a division at Symantec responsible for Norton Antivirus and other Norton products.
 <phrase key="NewsCenterAbout-46-ElissaIsAWomanWithAPassionForProblem" />
 Elissa is a woman with a passion for problem solving. She brings expertise in global-scale platforms, big data and predictive analytics. She currently has 15 patents issued and more than 19 patents pending in the areas of distributed systems, cloud, machine learning and security.
+<phrase key="NewsCenterAbout-60-ArneAbout1" />
+Arne is responsible for overseeing GoDaddy’s global cloud infrastructure as well as information systems, linking the latest advances in technology to GoDaddy’s cloud and IT strategy.
+<phrase key="NewsCenterAbout-60-ArneAbout2" />
+Arne joined GoDaddy in 2014 from ServiceNow where he served as Chief Technology Officer and oversaw the expansion of the company’s cloud strategy. 
+<phrase key="NewsCenterAbout-46-ArneAbout3" />
+Prior to his time at ServiceNow, Arne had a more than 25 year career at Microsoft in various leadership positions. His roles there included General Manager building and operating Microsoft’s global cloud infrastructure, and most recently General Manager in Windows Azure.
+<phrase key="NewsCenterAbout-46-ArneAbout4" />
+Arne kicked off his career as an engineer at Bofors Aerotronics and Intel before moving over to Microsoft. He has a passion for driving technological innovations to help GoDaddy’s more than 12 million small business customers. 
 <phrase key="NewsCenterAbout-60-AsHeadOfGoDaddySPeopleOperationsGroupAuguste" />
 As head of GoDaddy's People Operations group, Auguste leads the charge to hire and develop the greatest team of talented individuals on the planet. Having previously led technology teams as GoDaddy's CIO (including Product Development, IT Operations, Information Security and R&amp;D) Auguste brings a perspective and skillset to human resources that is unique in the industry.
 <phrase key="NewsCenterAbout-47-PriorTo2010AugusteServedAsTheCEOOf" />
@@ -526,6 +540,8 @@ There was an problem sending your message.
 Invalid Code Entered
 <phrase key="NewsCenterAbout-Domains" />
 58
+<phrase key="NewsCenterAbout-Domains_35279" />
+59
 <phrase key="NewsCenterAbout-Customers" />
 12
 <phrase key="NewsCenterAbout-Employees" />
@@ -602,10 +618,25 @@ Enjoying a beer with friends is one thing, but having a passion for it is anothe
 With GoDaddy Website Builder, Marc created a website perfectly suited to his business. Plus, the reliability of GoDaddy hosting and domain services keeps Marc’s business open online 24/7/365.
 <phrase key="NewscenterAbout-BetsyRafaelTitle" />
 Former Chief Accounting Officer at Apple
-
 <phrase key="NewsCenterAbout-33789-pportin" />
 Pamela Portin
 <phrase key="NewsCenterAbout-33789-pportin-Phone" />
 +1.425.947.3117
 <phrase key="NewsCenterAbout-33789-pportin-Department" />
 International
+<phrase key="NewsCenterAbout-BuddyName" />
+Buddy
+<phrase key="NewsCenterAbout-BuddyTitle" />
+Chief Companion Officer
+<phrase key="NewsCenterAbout-BuddyBio1" />
+Unlimited time-off, check. Top-tier benefits, yep. Flexible work schedule, you got it. GoDaddy has it all, including a…
+<phrase key="NewsCenterAbout-BuddyBio2" />
+Chief Companion Officer.
+<phrase key="NewsCenterAbout-BuddyBio3" />
+As GoDaddy’s CCO, Buddy is responsible for fetching, tail-wagging, stress relief and “awwwwwwww.”
+<phrase key="NewsCenterAbout-BuddyBio4" />
+Prior to joining GoDaddy, Buddy was one of six adorable Golden Retriever puppies born October 6, 2014, outside Hollywood, in the hills of Ventura, California.
+<phrase key="NewsCenterAbout-BuddyBio5" />
+After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the litter was easy, and at 9 weeks of age, Buddy was cast in his first Super Bowl commercial with GoDaddy and a short time later he was adopted into the GoDaddy family.
+<phrase key="NewsCenterAbout-BuddyBio6" />
+Equally at home in the customer care center, on the office putting green or visiting business owners and employees to help them chill, Buddy’s expertise in making “ruff” days a little better continues to garner accolades including, ‘Who’s a good boy?’

@@ -1,0 +1,107 @@
+.bg-gray-light {
+  background-color: #d9d9d9;
+}
+
+.bg-green-new {
+  background-color: #5caf2b;
+}
+
+.include-check-black, .include-check-green, .include-check-none {
+  padding-left: 33px;
+  position: relative;
+  margin-top: 20px;
+}
+.include-check-black:before {
+  content: "";
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -700px;
+  background-size: 205px auto;
+  width: 25px;
+  height: 27px;
+  padding-right: 5px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+.include-check-green:before {
+  content: "";
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -668px;
+  background-size: 205px auto;
+  width: 25px;
+  height: 27px;
+  padding-right: 5px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+
+*[data-tokenize] {visibility: hidden;}
+
+.tld-list { display: none;}
+
+
+#default-marquee-view h2.get-a-domain-text,
+#step2-choose-product h2.step-2-choose-header {
+  font-size: 24px; 
+  color: #333;
+}
+
+.disclaimers-row {
+  margin: 20px 0;
+  font-size:14px;
+  color:#666;
+}
+
+.vat-price-disclaimer {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+.bg-yellow {
+    background-color: #ffde2d;
+}
+.bg-gray-lighter, .bg-pro-gray {
+    background-color: #e8e8e8;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.bg-green-official {
+    background-color: #77c043;
+}
+.bg-green-new {
+    background-color: #5caf2b;
+}
+.bg-green-official-light {
+    background-color: #84d54a;
+}
+.bg-gray-darkest {
+    background-color: #333333;
+}
+
+h2.api-error-header {
+  font-size: 30px;
+  color: #333;
+  font-family: "Walsheim-Black";
+}
+h2.api-error-header img {
+  float:left;
+  margin-right: 10px;
+}
+
+h2.api-error-header {
+
+}
+
+.bigtext {visibility: hidden;}
+
+.btn, .word-break {
+  word-wrap: break-word;
+  word-break: break-all;
+}
