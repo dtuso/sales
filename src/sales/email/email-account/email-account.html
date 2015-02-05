@@ -1,8 +1,8 @@
 ---
 location: sales/email-account.aspx
-id: 5485eac5f778fc2bc8b3b79c
-name: GCE-33609
-comments: Mouse over text displaying incorrect version.
+id: 54b82b9ef778fc1c443c2033
+name: GCE-34935
+comments: Prep for uxcore - css updates
 cssVersionOverride: 3
 ---
 {% extends 'layouts/base-no-border-box.html' %}
@@ -33,6 +33,37 @@ cssVersionOverride: 3
       }
     </style>  
   <![endif]-->
+
+##if(appSettingEnabled(UXCORE_ENABLED))
+  <style>
+    body {
+      font-size: 10px;
+      background-color: #F8F8F8;;
+    }
+    h3 {
+      margin-top: 0px;
+    }
+    a, a:hover {
+      color: #7db701;
+    }
+    .main-banner-subtitle {
+      font-size: 4.4em;
+    }
+    .faq-uxcore-fix {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .modal-dialog {
+      left: 0%;
+    }
+    #footer-legal {
+      background-color: #fff;
+    }
+    #footer-legal a {
+      color: #3282e6;
+    }
+  </style>
+##endif
 
 {% endblock metahead %} 
 
@@ -412,7 +443,7 @@ cssVersionOverride: 3
 
   <section id="faq-section" class="white-bg">
     <h2 class="section-header">[@L[cds.sales/gd/email/email-account:faqs]@L]</h2>
-    <div class="container l-main-container"> 
+    <div class="container l-main-container faq-uxcore-fix"> 
     <div class="question-section">
       <div class="show-hide-question-section">
         <a class="open-button plus" href="#" data-ci="94320"></a>
@@ -589,7 +620,11 @@ cssVersionOverride: 3
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              ##if(appSettingEnabled(UXCORE_ENABLED))
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              ##else
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              ##endif
             <p class="modal-title"><strong>[@L[cds.sales/gd/email/email-account:disclaimer]@L]</strong></p>
           </div>
           <div class="modal-body">

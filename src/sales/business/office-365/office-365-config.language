@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365-config/en
-id: 546afbcbf778fc10909ad891
-name: GCE-32012, 32531, 32197
-comments: Cart link issue, support phone issue, microsoft url issue.
+id:  54cfd7bef778fc20ac262edb
+name: GCE-32258
+comments: Config page verbage update
 max: "{{max}}"
 ---
 {% include 'modules/doc-block.html' %}
@@ -178,3 +178,13 @@ Free automatic Office upgrades
 Get more done with Microsoft Office 365 from GoDaddy
 <phrase key="og-description" />
 Work anywhere with professional email and productivity tools that are always accessible and in sync. Manage your email, schedule, contacts, even your documents on any device. And if you ever have questions, you can call our award-winning support anytime, day or night, and talk to a real person.
+<phrase key="cp-3-PerUserMonth-32258" comment="price amount is placed in the front of this phrase"/>
+per user/month. 1st year only.
+<phrase key="cp-3-ExtendYourTerm-32258" />
+Extend your term
+<phrase key="cp-14-AvoidAnnualRenewals-32258" />
+Avoid annual renewals with a multi-year term.
+<phrase key="AdditionalYear" />
+add&#39;l year
+<phrase key="AdditionalYears" />
+add&#39;l years

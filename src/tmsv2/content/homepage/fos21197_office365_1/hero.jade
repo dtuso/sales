@@ -1,0 +1,19 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "91192";
+  - rightArrow.ctaLink = "[@T[link:<external linktype='MYAURL' path='/default.aspx'><param name='accid' value='43' /><param name='ci' value='93636' /></external>]@T]";
+  - rightArrow.classes += " office365-1";
+block leftContent
+  .bigtext
+    .line1.walsheim-black WORK ANYTIME, ANYWHERE
+    .line2.tungsten SET UP YOUR EMAIL
+    .line3.walsheim-black IN JUST ONE STEP.
+    .line4.tungsten 
+      span.dash ———————————
+      span EASY, PEASY.
+block rightContent
+  .bigtext
+    .line1.walsheim-black ACTIVATE
+    .line2.tungsten OFFICE 365 EMAIL
+  button.btn.btn-lg.btn-purchase START NOW

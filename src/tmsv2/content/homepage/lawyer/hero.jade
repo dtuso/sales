@@ -1,0 +1,30 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "93464";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/tlds/lawyer'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " lawyer";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.lawyer{
+        .leftContent {
+        .line3{width:50%}
+        }
+        .rightContent {
+        .line3{font-size:65%}
+        }
+      }
+block leftContent
+  .bigtext
+    .line1.walsheim-black FINALLY, A DOMAIN FOR
+    .line2.tungsten 
+      span PEOPLE WHO READ 
+      span.dash ——————
+    .line3.walsheim-black THE DISCLAIMERS.
+block rightContent
+  .bigtext
+    .line1.tungsten GET YOUR .LAWYER
+    .line2.price.walsheim-black JUST [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR*
+  a.btn.btn-lg.btn-purchase GET STARTED
+  .line3.walsheim-black *Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.

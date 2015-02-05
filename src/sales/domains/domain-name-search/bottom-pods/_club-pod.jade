@@ -1,0 +1,11 @@
+extend ../../../../templates/plan-tile
+
+block vars
+  - title = ".club";
+  - description = "[@L[cds.sales/gd/domains/domain-name-search:PodDotClubText]@L]";
+  - pfid = "[@T[productprice:<template productid='172137' period='yearly'><nostrike><![CDATA[<span class='plan-price text-warning'>{0}*</span>]]></nostrike><strike><![CDATA[<span class='plan-price text-warning'>{0}*</span><br /> <strong>was <strike>{1}</strike></strong>]]></strike></template>]@T]";
+  - buttonText = "REGISTER";
+  - buttonUrl = "[@T[link:<relative path='/tlds/club'><param name='ci' value='xxxxx' /></relative>]@T]"
+
+block price
+  .plan-price-wrap !{pfid}

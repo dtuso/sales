@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id: 547cdeecf778fc1db8259f20
-name: GCE-20285
+id: 54b82ec3f778fc1c443c203b
+name: SEM-271
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -167,7 +167,7 @@ Choose the theme and colors that best support your brand and give your customers
 <phrase key="FaqTitleSlide1" />
 How do I add products to my <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide1Text" />
-Our <strong>eCommerce solution </strong> allows you to add all of your products, regardless of the various colors, sizes, or styles you offer. Just use our <strong> eCommerce website builder </strong> to add and organize all of your products. You can even track your inventory by price and SKU. See <a target="blank" href="https://support.godaddy.com/help/article/12072/creating-online-store-product-options">Creating Online Store Product Options for more information.</a>
+Our <strong>eCommerce solution </strong> allows you to add all of your products, regardless of the various colors, sizes, or styles you offer. Just use our <strong> eCommerce website builder </strong> to add and organize all of your products. You can even track your inventory by price and SKU. <span class="expansion-page-2-link">See <a target="blank" href="https://support.godaddy.com/help/article/12072/creating-online-store-product-options">Creating Online Store Product Options for more information.</a></span>
 <phrase key="FaqTitleSlide2" />
 Is it possible to offer customized products, such as monogramming, through the <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide2Text" />

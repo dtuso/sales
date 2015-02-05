@@ -1,0 +1,27 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "94095";
+  - rightArrow.ctaLink = "[@T[link:<external linktype='myaurl'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.classes += " hosting-paid-for-it";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.hosting-paid-for-it{
+        .leftContent {
+        .top{width:70%}
+        }
+      }
+block leftContent
+  .bigtext.top
+    .line1.tungsten YOU BOUGHT IT.
+  .bigtext
+    .line2.walsheim-black PAID FOR IT.
+    .line3.tungsten 
+      span.dash ———
+      span SO USE IT.
+block rightContent
+  .bigtext
+    .line1.tungsten ACTIVATE
+    .line2.walsheim-black YOUR HOSTING PLAN 
+  a.btn.btn-lg.btn-purchase GET STARTED

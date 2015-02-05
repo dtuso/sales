@@ -1,0 +1,33 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #support-promo{background-color:#333;padding-bottom:50px;}
+      #support-promo h2{margin:35px 0 50px}
+      #support-promo h3{margin-top:0;text-transform:uppercase;font-size:4rem;}
+      #support-promo p{max-width:390px;}
+      #support-promo .support-promo-text .container{padding:0}
+      .support-promo-img{width:100%;
+        @media only screen and (min-width:768px){width:80%;margin-left:10%;}
+        @media only screen and (min-width:1200px){width:60%;margin-left:20%;}
+      }
+      .support-promo-number{font-size:2.0rem;margin-top:2%}
+
+section#support-promo
+  .container
+    h2.text-center.walsheim-black.text-white [@L[cds.sales/homepage/sections/_support-promo:header-text]@L]
+    .row
+      .col-xs-6.text-center
+        <!--[if lt IE 9]>
+        +lazyImg('support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
+        <![endif]-->
+        +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
+      .col-xs-6
+        .support-promo-text.text-white
+          h3.walsheim-black [@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]
+          p [@L[cds.sales/homepage/sections/_support-promo:body-text]@L]
+          .container
+            .row
+              .col-md-4.col-xs-12
+                a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") [@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]
+              .col-md-8.col-xs-12
+                .support-promo-number.walsheim-medium [@T[supportphone:<technical />]@T]

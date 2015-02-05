@@ -1,0 +1,18 @@
+---
+location: sales/email-account.aspx.rule
+id:  54b68e81f778fc0f24ed2034
+name: GCE-35024
+comments: Turn On Additional Markets for O365 (GD markets) & PC Changes
+---
+[
+  { 
+    'Type': 'Redirect', 
+    'Condition': '!siteContextAny(gd) && !isManager()', 
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/email/email-hosting.aspx\"></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect', 
+    'Condition': '!productIsOffered(99) && !isManager()', 
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\"></relative>]@T]' }"
+  }
+]

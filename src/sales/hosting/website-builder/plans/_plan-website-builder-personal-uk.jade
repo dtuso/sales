@@ -1,0 +1,55 @@
+extend ../../../../../src/templates/plan-tile
+
+block vars
+  - title = "[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]";
+  - description = "[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]"
+  - features = ['[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span>',"[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]"];
+  //- pfid = "7524";
+  - ci = "87842"
+  - buttonid="product-A";
+  - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
+  //- term ="/[@L[cds.sales/_common:month]@L]"
+  - defaultPlan = "wsb_personal_12month";
+  //- vat = true;
+
+block price
+  .plan-price-wrap.row
+    span.plan-price.text-warning [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+    span.plan-duration.text-warning /[@L[cds.sales/_common:month]@L]
+    | 
+    |##if(productHasSavingsMoreThan(7524, 7524, 0))
+    | 
+    br
+    strong
+      | 
+      | ##if(splitTestingSideIsActive(1349, A))
+      | 
+      | [@L[cds.sales/_common:was]@L] 
+      strike [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+      |  
+      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
+      | 
+      | ##else
+      | 
+      | [@L[cds.sales/_common:onsale-all-cap]@L] -
+      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
+      | 
+      | ##endif
+      | 
+    | 
+    |##endif
+    | 
+    | 
+    | ##if(splitTestingSideIsActive(1349, B))
+    | 
+    p.h6 [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
+    | 
+    | ##endif
+    | 
+    | 
+    |##if(countrySiteAny(uk))
+    | 
+    p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+    | 
+    |##endif
+    | 

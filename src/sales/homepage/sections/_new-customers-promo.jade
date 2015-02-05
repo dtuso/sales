@@ -1,0 +1,45 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #new-customers-promo{background-color:#e8e8e8;}
+      #new-customers-promo h2{margin:30px 0 25px;}
+      #new-customers-promo p.text-center{font-size:2.5rem;margin-bottom:30px;}
+      #new-customers-promo .new-customers-get-found img{height:132px;}
+      #new-customers-promo .new-customers-ssl img{height:132px;}
+      .new-customers-gd-pro img{width:42%}
+      h2.two-up-title{margin:20px 0}
+      .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after {background-color: #fedc45;}
+      .two-up-speech-shape.two-up-speech-shape-gold:before {border-top-color: #fedc45;}
+
+section#new-customers-promo.bg-gray-lighter
+  .container
+    h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_new-customers-promo:header-text]@L]
+    p.text-center.walsheim-bold [@L[cds.sales/homepage/sections/_new-customers-promo:body-text]@L]
+    .row
+      .col-sm-4
+        .feature.new-customers-get-found
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.png','Get Found Logo')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/get_found_icon.svg','Get Found Logo')
+          h3.walsheim-bold [@L[cds.sales/homepage/sections/_new-customers-promo:get-found-header]@L]
+          p [@L[cds.sales/homepage/sections/_new-customers-promo:get-found-body]@L]
+          a.btn.btn-default-dark.walsheim-black(data-url!="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95784' /></relative>]@T]") [@L[cds.sales/homepage/sections/_new-customers-promo:cta-text]@L]
+      .col-sm-4
+        .feature.new-customers-ssl
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg','SSL Logo')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/ssl_icon.svg','SSL Logo')
+          h3.walsheim-bold [@L[cds.sales/homepage/sections/_new-customers-promo:ssl-cert-header]@L]
+          p [@L[cds.sales/homepage/sections/_new-customers-promo:ssl-cert-body]@L]
+          a.btn.btn-default-dark.walsheim-black(data-url!="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95785' /></relative>]@T]") [@L[cds.sales/homepage/sections/_new-customers-promo:cta-text]@L]
+      .col-sm-4
+        .feature.new-customers-gd-pro
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg','GoDaddy Pro Logo')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd-pro-icon.svg','GoDaddy Pro Logo')
+          h3.walsheim-bold [@L[cds.sales/homepage/sections/_new-customers-promo:godaddy-pro-header]@L]
+          p [@L[cds.sales/homepage/sections/_new-customers-promo:godaddy-pro-body]@L]
+          a.btn.btn-default-dark.walsheim-black(data-url!="[@T[link:<relative path='/pro'><param name='ci' value='95783' /></relative>]@T]") [@L[cds.sales/homepage/sections/_new-customers-promo:cta-text]@L]
