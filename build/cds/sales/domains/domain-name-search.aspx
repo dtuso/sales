@@ -3759,6 +3759,12 @@ top: -6px;
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
+      
+        // tokenize any icann fees
+        var bodyHtml = $(document).html();
+        bodyHtml = bodyHtml.replace(/\{icannfee\}/gi, '[@T[domains:<icannfee/>]@T]');
+        $(document).html(bodyHtml);
+      
       });
       
     </script>
