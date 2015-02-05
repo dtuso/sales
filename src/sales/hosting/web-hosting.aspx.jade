@@ -248,12 +248,11 @@ block plans
           ul.green-check
             li [@L[cds.sales/hosting/web-hosting-rebrand:storageOptions]@L]
             li [@L[cds.sales/hosting/web-hosting-rebrand:securityMonitoring]@L]
-            li [@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]
         .col-sm-4
           ul.green-check
             li [@L[cds.sales/hosting/web-hosting-rebrand:compatible]@L]
-            li [@L[cds.sales/hosting/web-hosting-rebrand:sslCert]@L]
             li [@L[cds.sales/hosting/web-hosting-rebrand:oneClickGoDaddy]@L]
+            li [@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]
 
 block sections
   +renderMidPageNav
@@ -382,16 +381,7 @@ block sections
       +columnListMember("key-benefit")
         .key-benefits-img-wrap
           +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
-        | 
-        |##if(activeLanguageAny([en-US]))
-        | 
-        h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]
-        | 
-        |##else
-        | 
         h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]
-        | 
-        |##endif
         | 
         |##if(activeLanguageAny([en-US]))
         | 

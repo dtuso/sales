@@ -35,7 +35,7 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
@@ -1408,6 +1408,7 @@ cursor: pointer;
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]"></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]"></span></div>
@@ -1888,6 +1889,7 @@ cursor: pointer;
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedBand]@L]</strong></div>
+                <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:oneThousandEMail]@L]</div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:freeDomain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:freeDomainRestrictions]@L]"></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerLinux]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/web-hosting-rebrand:twoXPowerToolTip]@L]'></span></div>
                 <div class="plan-item">[@L[cds.sales/hosting/web-hosting-rebrand:premiumdns]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:premiumDNSToolTip]@L]"></span></div>
@@ -1983,14 +1985,13 @@ cursor: pointer;
             <ul class="green-check">
               <li>[@L[cds.sales/hosting/web-hosting-rebrand:storageOptions]@L]</li>
               <li>[@L[cds.sales/hosting/web-hosting-rebrand:securityMonitoring]@L]</li>
-              <li>[@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]</li>
             </ul>
           </div>
           <div class="col-sm-4">
             <ul class="green-check">
               <li>[@L[cds.sales/hosting/web-hosting-rebrand:compatible]@L]</li>
-              <li>[@L[cds.sales/hosting/web-hosting-rebrand:sslCert]@L]</li>
               <li>[@L[cds.sales/hosting/web-hosting-rebrand:oneClickGoDaddy]@L]</li>
+              <li>[@L[cds.sales/hosting/web-hosting-rebrand:easyPanel]@L]</li>
             </ul>
           </div>
         </div>
@@ -2380,15 +2381,8 @@ cursor: pointer;
             </div>
             <div class="col-sm-4 key-benefit">
               <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div> 
-              ##if(activeLanguageAny([en-US]))
-               
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestionRebrand]@L]</h3> 
-              ##else
-               
+              </div>
               <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
-              ##endif
-               
               ##if(activeLanguageAny([en-US]))
                
               <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 

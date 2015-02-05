@@ -11,7 +11,7 @@ atlantis:webstash(type="css")
       margin: 62px 0 40px;
     }
     
-    #domain-available-marquee-view h2.domain-name-displayed {
+    #domain-available-marquee-view h2.available-domain-name-text {
       margin: 0;
     }
     #domain-available-marquee-view .reseach-container {
@@ -28,11 +28,21 @@ section#domain-available-marquee-view.js-marquee-section
           h2.h0.availability-header.domain-available-heading-text [@L[cds.sales/offers/online-business:32573-good-news-domain-available]@L]
       .row.available-domain-name-row
         .col-md-8.col-sm-12
-          h2.available-domain-name-text.domain-name-displayed
-            span#available-domain-name 
+          h2.available-domain-name-text.domain-name-displayed.word-break#available-domain-name 
         .col-md-4.col-sm-12.get-it-now-btn
           button.btn.btn-purchase.purchase-btn(data-ci="92733") [@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]
 
   .bg-white.reseach-container
     .container
-      +domainSearchOffersInput('[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]', '95737', '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-search]@L]', '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]','[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]')
+      +domainSearchOffersInput({
+          'tlds': 'got1Page.tldInfo.tlds',
+          'defaultTld': 'got1Page.tldInfo.defaultTld',
+          'formId': 'domain-available-marquee-view-form',
+          'title': '[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]', 
+          'cicode': '95737', 
+          'placeholderText': '[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]', 
+          'buttonText': '[@L[cds.sales/offers/online-business:32573-search]@L]', 
+          'infoTypeHere': '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', 
+          'infoErrorEligibility': '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]',
+          'infoInvalidTld': '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]'
+          })

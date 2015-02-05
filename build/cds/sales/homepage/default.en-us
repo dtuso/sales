@@ -33,7 +33,7 @@
          if (document.getElementById(id)) {return;}
          js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
          js.id = id;
-         js.src = "[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2";
+         js.src = sourceUrl;
          fjs.parentNode.insertBefore(js, fjs);
       }
       
@@ -195,6 +195,9 @@ ul li.no-check {
 }
 #domain-search {
   margin-top: 10px;
+}
+#domain-name-input {
+  text-transform: inherit;
 }
 .price,
 .icann-disclaimer {
@@ -452,8 +455,8 @@ ul li.no-check {
                   </div>
                   <div class="promo-text walsheim-black">HOSTING THAT WON'T KEEP YOU... WAITING.</div>
                   <div class="promo-cta">
-                    ##if(productHasSavingsMoreThan(32051, 32051, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32051' secondaryproductid='32051' showsymbol='true'/>]@T]</a>
+                    ##if(productHasSavingsMoreThan(32413, 32413, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32413' secondaryproductid='32413' showsymbol='true'/>]@T]</a>
                     ##else
                     <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">LEARN MORE</a>
                     ##endif
@@ -646,11 +649,11 @@ text-transform: uppercase;
                 });
               </script>
             </atlantis:webstash>
-            <div style="" data-lazyload-source="" data-icode="code" data-ci="" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
+            <div style="" data-lazyload-source="" data-icode="code" data-ci="95781" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
               <div class="container relative-position video-info">
                 <div class="row">
                   <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
-                    <h3 class="h1">NO TIME FOR 7-LAYER DIP?<br />WE SALUTE YOU.</h3><span class="cta">WATCH OUR SUPER BOWL COMMERCIAL</span>
+                    <h3 class="h1">[@L[cds.sales/homepage/sections/_nacho-full-video:tagline]@L]</h3><span class="cta">[@L[cds.sales/homepage/sections/_nacho-full-video:cta]@L]</span>
                   </div>
                 </div>
               </div>
@@ -694,8 +697,8 @@ text-transform: uppercase;
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-offset-sm-6">
-            <h2 class="walsheim-black">Your new hire,<br />Danica Patrick</h2>
-            <h3 class="walsheim-regular">Have Danica pay a visit to your business.</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">ENTER TO WIN </a>
+            <h2 class="walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
+            <h3 class="walsheim-regular">[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
           </div>
         </div>
       </div>
@@ -748,14 +751,14 @@ text-transform: uppercase;
       </style>
     </atlantis:webstash>
     <section id="domain-promo" class="bg-green-official">
-      <h2 class="text-center walsheim-black">It All Starts With A Domain Name.</h2>
+      <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
       <div class="domain-promo-content">
         <div class="container">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text text-white">
-              <h3 class="walsheim-black">Find Your<br />Perfect Name</h3>
-              <div>From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.org</strong> to new domain names like <strong>.menu</strong>, <strong>.repair</strong>, even <strong>.ninja</strong> (seriously), we can help you find the right name for your business.</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">Get Started</a>
-              <p class="customer-website"><b>Candis Jones</b>, Business Owner & GoDaddy Customer, <span>TheJonesMarket.com</span></p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]</h3>
+              <div>[@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]</a>
+              <p class="customer-website">[@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]</p>
             </div>
           </div>
         </div>
@@ -773,24 +776,24 @@ text-transform: uppercase;
     </atlantis:webstash>
     <section id="why-godaddy">
       <div class="container">
-        <h2 class="text-center walsheim-black">Why get online with us?</h2>
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]</h2>
         <div class="row">
           <div class="col-sm-4">
-            <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">World's Leading<br />Domain Registrar</h3>
-              <p>With over 12 million happy customers and 59 million domains under management, we know how to set you up for success online.</p>
+            <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">More Names<br />at Better Prices</h3>
-              <p>We have 100s of domains to choose from, not to mention prices that other companies only dream about.  </p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
-              <p>Not sure what you need? You're not alone. That's why we have hundreds of smart, friendly web pros waiting by the phone, ready to help.  </p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]</p>
             </div>
           </div>
         </div>
@@ -1132,7 +1135,7 @@ text-transform: uppercase;
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="h0 text-center two-up-title">Get Your Website Online Today.</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]</h2>
               </div>
             </div>
           </div>
@@ -1143,15 +1146,15 @@ text-transform: uppercase;
               <div class="col-md-5 or-container-none col-sm-6  bg-gray-darkest">
                 <div style="" class="two-up-text-wrap white-text">
                   <div class="two-up-speech-shape two-up-speech-shape-gold">
-                    <div class="shape-text">WEBSITE BUILDER</div>
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]</div>
                   </div>
-                  <h2 class="h0"><br />No Time?<br />No Problem.</h2>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
-                        <li>Start with your choice of 100s of professional designs.</li>
-                        <li>Customize it with our simple drag-&-drop tools.</li>
-                        <li>Put your beautiful new site online with free hosting.</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]</li>
                       </ul><a data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]" class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
                     </div>
                   </div>
@@ -1160,15 +1163,15 @@ text-transform: uppercase;
               <div class="col-md-5 col-md-offset-2 col-sm-6  gb-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="two-up-speech-shape two-up-speech-shape-gold">
-                    <div class="shape-text">WEB HOSTING</div>
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]</div>
                   </div>
-                  <h2 class="h0">Already<br />Have a Site?<br />Host it with us.</h2>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
-                        <li>Industry-leading page load times.</li>
-                        <li>Powered by cPanel&reg; or Parallels&reg; Plesk</li>
-                        <li>Guaranteed 99.9% uptime + 24/7 support</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]</li>
                       </ul><a data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]" class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
                     </div>
                   </div>
@@ -1224,19 +1227,19 @@ text-transform: uppercase;
     </atlantis:webstash>
     <section id="o365-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black">The Right Email Makes A Difference.</h2>
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:header-text]@L]</h2>
         <div class="row">
           <div class="col-sm-6 o365-promo-text">
-            <h3 class="walsheim-black">Look like the<br />pro you are</h3>
-            <p>Did you know that customers are nine times more likely to choose a business that has a professional email address?<br/>With Microsoft Office 365, you'll:</p>
+            <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:sub-header-text]@L]</h3>
+            <p>[@L[cds.sales/homepage/sections/_o365-promo:body-text]@L]</p>
             <ul>
-              <li><b>Get a professional address</b>, like yourname@coolexample.com.</li>
-              <li><b>Sync email across all your computers</b>, smartphones and more.</li>
-              <li><b>Store more of your email</b> with 50 GB of secure online storage. </li>
-            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">Learn More</a>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line1]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line2]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line3]@L]</li>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
           </div>
           <div class="col-sm-6">
-            <div class="promo-flag">Easy Setup</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
+            <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
           </div>
         </div>
       </div>
@@ -1284,17 +1287,17 @@ text-transform: uppercase;
     </atlantis:webstash>
     <section id="support-promo">
       <div class="container">
-        <h2 class="text-center walsheim-black text-white">We're Always Here To Help.</h2>
+        <h2 class="text-center walsheim-black text-white">[@L[cds.sales/homepage/sections/_support-promo:header-text]@L]</h2>
         <div class="row">
           <div class="col-xs-6 text-center"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload support-promo-img"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload svgfallback support-promo-img"/>
           </div>
           <div class="col-xs-6">
             <div class="support-promo-text text-white">
-              <h3 class="walsheim-black">Award-Winning<br />24/7 Support</h3>
-              <p>We make it easy to get online, but if you do need help or just wanna talk to someone, our online experts are available 24/7/365.</p>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_support-promo:body-text]@L]</p>
               <div class="container">
                 <div class="row">
-                  <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">Learn More</a></div>
+                  <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]</a></div>
                   <div class="col-md-8 col-xs-12">
                     <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
                   </div>
