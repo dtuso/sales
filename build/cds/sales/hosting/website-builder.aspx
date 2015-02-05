@@ -5483,9 +5483,9 @@ margin-bottom: 20px;
         }
       
         // tokenize any icann fees
-        var bodyHtml = $(document).html();
+        var bodyHtml = $('body').html();
         bodyHtml = bodyHtml.replace(/\{icannfee\}/gi, '[@T[domains:<icannfee/>]@T]');
-        $(document).html(bodyHtml);
+        $('body').html(bodyHtml);
       
       });
       
