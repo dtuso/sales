@@ -1,8 +1,9 @@
 extends ./templates/_p4p.jade
 
+block marquee
+
 block getItNow
-  //div.text-center
-  //  +renderDomainstringWithPrice("testingJade", "$1.00")
+  +renderGoodNews("testingJade","$1.00","image")
   hr
 
 block product
@@ -13,3 +14,4 @@ block product
       //h2 Website builder
       //a.btn.btn-default-light View All Templates
       //img(src="/main-image.png")
+  hr

@@ -1,0 +1,29 @@
+include _domain-starting-at-mixin.jade
+mixin renderGoodNews(domain, price, image)
+  append pageStyles
+    atlantis:webstash(type="js")
+      style.
+        .container .hero-guy{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat bottom;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+
+  section#getItNow
+    .container
+      //.col-sm-1.hero-guy
+      .row
+        div.text-center.green-background
+          h2 GOOD NEWS!
+          +renderDomainstringWithPrice(domain, price)
+      .row
+        div.topSpacing
+          .good-news-image
+      .row
+        .col-sm-4
+          label DOMAIN
+        .col-sm-4
+          label WEBSITE BUILDER
+        .col-sm-4
+          label OFFICE 365 EMAIL

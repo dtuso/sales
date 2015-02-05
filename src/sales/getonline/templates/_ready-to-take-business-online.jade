@@ -10,7 +10,10 @@ mixin renderReadyToTakeBusinessOnline(domain, price)
         .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
         .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
         .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        .domain-icon-spacing {margin-right: 60px;}
+        .col-spacer2{width:43%;}
+        .col-spacer1{width: 30%;}
 
   section#got
     .container
@@ -26,7 +29,7 @@ mixin renderReadyToTakeBusinessOnline(domain, price)
               .domain-icon
               p
                 label Domain
-              span.tooltip-icon
+              span.tooltip-icon.domain-icon-spacing
 
           .col-sm-3
             .icon-spacing
@@ -40,3 +43,13 @@ mixin renderReadyToTakeBusinessOnline(domain, price)
               p
                 label Office 365 email
               span.tooltip-icon
+      .row
+        .col-sm-4.col-spacer1
+        p.h3.center Get the bundle for $1/month for the first year*
+      .row(style={'padding-top':'30px','padding-bottom':'10px'})
+        .col-sm-4.col-spacer2
+        .col-sm-3
+          btn.btn-purchase.btn-plan.btn-lg Get it now
+      .row(style={'padding-top':'10px'})
+        .col-sm-4
+        p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

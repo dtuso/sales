@@ -3,17 +3,14 @@ extends ../../../templates/pages/landing-page
 include _ready-to-take-business-online.jade
 include _office365-email-mixin.jade
 
+include _good-news-get-it-now.jade
+
 block domainSearch
 
-block marqueeContent
-
-
 block sections
-
+ 
   block getItNow
-
-  block domainName
-    //include ../shared/domain-search-widget
+    +renderGoodNews("domain","price","image-path")
 
   block product
 
@@ -21,7 +18,9 @@ block sections
     +renderOffice365Email("domain")
 
   block whyUs
-    
+    include -why-us.jade
+    hr
+  
   block got
     +renderReadyToTakeBusinessOnline("domain","price")
          

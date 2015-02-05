@@ -12,8 +12,8 @@
     </div>
     <div class="promo-text walsheim-black">HOSTING THAT WON'T KEEP YOU... WAITING.</div>
     <div class="promo-cta">
-      ##if(productHasSavingsMoreThan(32051, 32051, 0))
-      <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32051' secondaryproductid='32051' showsymbol='true'/>]@T]</a>
+      ##if(productHasSavingsMoreThan(32413, 32413, 0))
+      <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32413' secondaryproductid='32413' showsymbol='true'/>]@T]</a>
       ##else
       <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">LEARN MORE</a>
       ##endif
