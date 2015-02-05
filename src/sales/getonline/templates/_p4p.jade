@@ -2,27 +2,24 @@ extends ../../../templates/pages/landing-page
 
 include _ready-to-take-business-online-mixin.jade
 
+include _good-news-get-it-now.jade
+
 block domainSearch
 
-block marqueeContent
-
-
 block sections
-  div
-    block getItNow
+ 
+  block getItNow
+    +renderGoodNews("domain","price","image-path")
 
-    block domainName
-      //include ../shared/domain-search-widget
+  block product
 
-    block product
+  block office365
+    //- define shared ofice 365 HTML here
 
-    block office365
-      //- define shared ofice 365 HTML here
-
-    block whyUs
-      include -why-us.jade
-      hr
-      
-    block got
-      +renderReadyToTakeBusinessOnline("domain","price")
+  block whyUs
+    include -why-us.jade
+    hr
+  
+  block got
+    +renderReadyToTakeBusinessOnline("domain","price")
          
