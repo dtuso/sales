@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/online-business/en
-id:  54c9772ff778fc10543b3cf2
-name: GCE-32573
-comments: GOT rebrand 2015 SuperBowl
+id:  
+name: GCE-36256
+comments: update text for online store
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -278,7 +278,7 @@ Business email
 <phrase key="32573-godaddy-ols-bullet-5" />
 Beautiful themes &amp; simple setup
 <phrase key="32573-godaddy-ols-bullet-6" />
-Unlimited pages &amp; products
+Unlimited products
 <phrase key="32573-godaddy-ols-bullet-7" />
 Built-in SEO features
 <phrase key="32573-godaddy-ols-bullet-8" />
