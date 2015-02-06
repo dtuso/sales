@@ -1,8 +1,17 @@
 extends ./templates/_p4p.jade
 
+block marquee
+
 block getItNow
-  //- define online store get it now section
+  +renderGoodNews("testingJade","$1.00","image")
+  hr
 
 block product
   //- define online store product section
-  
+  //section#websitenode-builder
+    //div
+      //img(src="/headrer-image.pnodeng")
+      //h2 Website builder
+      //a.btn.btn-default-light View All Templates
+      //img(src="/main-image.png")
+  hr
