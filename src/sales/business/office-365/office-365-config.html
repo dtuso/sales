@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 54cfe4cbf778fc20ac262ef5
+id: 54d3bc60f778fc11345455bc
 name: GCE-32258
 comments: Update verbage on page
 ---
@@ -1077,8 +1077,8 @@ comments: Update verbage on page
           if(planInvalidsQty == 0 ){            
             var val = cartTotalPrice;
             var newVal = office365config.wrapSymbol(val,"sup-symbol-price","span");
-            if(val!=newVal){
-              
+            
+            if(typeof newVal != 'undefined' && val!=newVal){
               $currencyAmount.html(newVal);
               $currencyAmount.wrapInner('<div class="split-symbol-price-wrap"></div>');
             } else {
@@ -1295,7 +1295,7 @@ comments: Update verbage on page
         },
        
         "wrapSymbol" : function (val,classToAdd,tagName){
-          var symbols = ['د.إ', 'AR$', 'A$', 'R$', 'C$', 'CHF', 'CL$', '¥', 'CO$', 'kr', '£', '€', '£', 'HK$', 'Rp', '₪', 'Rs', '₩', '.د.م', 'MXN', 'RM', 'NZ$', 'S/.', '₱', '₨', 'zł', '﷼', 'kr', 'SG$', '฿', 'TL', 'NT$', '₴', '$U', '$', 'Bs.', '₫', 'R'];
+          var symbols = ['د.إ', 'AR$', 'A$', 'R$', 'C$', 'CHF', 'CL$', '¥', 'CO$', 'kr', '£', '€', '£', 'HK$', 'Rp', '₪', 'Rs', '₩', '.د.م', 'MXN', 'RM', 'NZ$', 'S/.', '₱', '₨', 'zł', '﷼', 'kr', 'SG$', '฿', 'TL', 'NT$', '₴', '$U', '$', 'Bs.', '₫', 'R', 'руб'];
           for(var i = 0 ; i < symbols.length;i++){
             if(val.indexOf(symbols[i])>-1){
               if(office365config.checkRtl(val)){
