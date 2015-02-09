@@ -2856,13 +2856,6 @@ $(window).load(function () {
           
         </script>
       </atlantis:webstash>
-      <div data-icode="" class="carousel-panel container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-            <div></div>
-          </div>
-        </div>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-push-1 center-block">
@@ -4911,7 +4904,15 @@ section h2 {
   font-family: 'Walsheim-Black';
   font-weight: 100;
   line-height: 1.1;
-  color: #333;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
 }
 .feature img {
   height: 100px;
@@ -5159,8 +5160,7 @@ h2.api-error-header {
   word-break: break-all;
 }
       </style>
-      <style>
-.plan-tile { 
+      <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -5196,6 +5196,11 @@ h2.api-error-header {
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {

@@ -1,4 +1,4 @@
-include ./helper-mixin.jade
+include ./_helpers.jade
 
 block vars
   - page = page || {};
@@ -68,7 +68,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block headScripts
       script        
-        include ./js/jquery.lazyload.2.0.0.min.js
+        include ./_page/jquery.lazyload.2.0.0.min.js
       script.
         function loadJsAsync(sourceUrl, id) {
            var js, fjs = document.getElementsByTagName('script')[0];
@@ -126,6 +126,9 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
 
+    link(href!="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+
+
     //- inherited pages should attempt to use the correct head block for adding head content
     //- however, if the content doesn't fit logically into those, the "head" block can be used
     //- keep in mind this is loaded last and (intentionally or unintentionally) overrides above JS/CSS/meta stuff
@@ -180,7 +183,15 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
                 font-family: 'Walsheim-Black';
                 font-weight: 100;
                 line-height: 1.1;
-                color: #333;
+                color: inherit;
+              }
+              h3 {
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-family: 'Walsheim-Bold';
+                font-weight: 300;
+                line-height: 1.1;
+                color: inherit;
               }
             }
             .feature img { height: 100px; max-width: 100%; margin: 0 auto; }

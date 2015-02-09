@@ -13,11 +13,12 @@ mixin tldBugs(tlds)
       .tld-links a:hover>.price{text-decoration:underline}
       .tld-image {vertical-align: top; margin-right: 8px;}
 
-include ../../templates/domain-search-mixin.jade
-include ../../templates/two-up-compare-mixin.jade
-include ../../templates/full-video-mixin.jade
-include ../../templates/helper-mixin.jade
-extends ../../templates/page
+include ../shared/_domain-search.jade
+include ../shared/_two-up-compare.jade
+include ../shared/_full-width-video.jade
+include ../shared/_helpers.jade
+
+extends ../shared/_page
 
 block vars
   - page = page || {};

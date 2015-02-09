@@ -106,8 +106,7 @@
     </section>
     <section id="plans">
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -143,6 +142,11 @@
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -505,7 +509,7 @@
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
@@ -547,7 +551,7 @@
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
@@ -590,7 +594,7 @@
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7509, 7509, 0))
@@ -633,7 +637,7 @@
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7514, 7514, 0))
@@ -729,156 +733,158 @@
         </div>
       </div>
     </section>
-    <style>.fix-body {
-  margin-top: 130px;
-}
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  .mid-page-nav {
-    display: none;
-  }
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li.open > a {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li.open > a:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li > a.active,
-.mid-page-nav .nav > li > a:focus,
-.mid-page-nav .nav > li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li > a.active:before,
-.mid-page-nav .nav > li > a:focus:before,
-.mid-page-nav .nav > li > a:hover:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav > li a span > em {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #555555;
-  display: inline-block;
-  margin-top: -5px;
-  border: 0;
-  padding: 0;
-  font-style: normal;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav .open > .dropdown-menu {
-  opacity: 1;
-  -webkit-transform: scale(1, 1) rotateX(0deg);
-  -moz-transform: scale(1, 1) rotateX(0deg);
-  -ms-transform: scale(1, 1) rotateX(0deg);
-  transform: scale(1, 1) rotateX(0deg);
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-.mid-page-nav .nav .dropdown-menu li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.mid-page-nav .price span {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
+    <style>
+      .fix-body {
+        margin-top: 130px;
+      }
+      .mid-page-nav {
+        background-color: #333333;
+        font-family: 'Walsheim-Bold';
+        height: 130px;
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 768px) {
+        .mid-page-nav {
+          display: none;
+        }
+      }
+      .mid-page-nav .navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .mid-page-nav.sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .mid-page-nav .nav {
+        height: 130px;
+      }
+      .mid-page-nav .nav > li {
+        display: table;
+      }
+      .mid-page-nav .nav > li.open > a {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li.open > a:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li > a {
+        display: table-cell;
+        height: 130px;
+        vertical-align: middle;
+      }
+      .mid-page-nav .nav > li > a.active,
+      .mid-page-nav .nav > li > a:focus,
+      .mid-page-nav .nav > li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li > a.active:before,
+      .mid-page-nav .nav > li > a:focus:before,
+      .mid-page-nav .nav > li > a:hover:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li a {
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: 'Walsheim-Bold';
+        color: #808080;
+        padding: 0;
+        text-align: center;
+      }
+      .mid-page-nav .nav > li a span {
+        display: table-cell;
+        vertical-align: middle;
+        border-left: 1px solid #232323;
+        padding: 7px 40px;
+      }
+      .mid-page-nav .nav > li a span > em {
+        font-size: 40px;
+        font-size: 4rem;
+        color: #555555;
+        display: inline-block;
+        margin-top: -5px;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .mid-page-nav .nav > li:first-child a span {
+        border-left: 0;
+      }
+      .mid-page-nav .nav .open > .dropdown-menu {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) rotateX(0deg);
+        -moz-transform: scale(1, 1) rotateX(0deg);
+        -ms-transform: scale(1, 1) rotateX(0deg);
+        transform: scale(1, 1) rotateX(0deg);
+      }
+      .mid-page-nav .nav .dropdown-menu {
+        background-clip: padding-box;
+        border: 0;
+        background-color: #333333;
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(1, 0) rotateX(90deg);
+        -moz-transform: scale(1, 0) rotateX(90deg);
+        -ms-transform: scale(1, 0) rotateX(90deg);
+        transform: scale(1, 0) rotateX(90deg);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a {
+        display: block;
+        background-color: #333333;
+        padding: 20px;
+        border-bottom: #333333;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .price-text {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      .mid-page-nav .price {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .mid-page-nav .price span {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -2630,39 +2636,43 @@ var PlanBox6UI = {
 </atlantis:webstash>
 ##if(activeLanguageAny(en))
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          .video-marquee {
+            background-position: top center;
+          }
+          .video-marquee {
+            background-size: cover;
+            position: relative;
+            background-position: bottom center;
+            background-color: #fff;
+          }
+          .video-marquee.video-marquee-white {
+            color: #fff;
+          }
+          .video-marquee.full-video {
+            height: 535px;
+            padding-top: 1px;
+          }
+          .video-marquee.full-video .video-info {
+            margin-top: 150px;
+          }
+          .video-marquee .relative-position {
+            position: relative;
+          }
+          .video-marquee .video-marquee-all-centered {
+            text-align: center;
+          }
+          .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+            color: #fff;
+          }
+          .video-marquee.full-video .video-info .cta {
+            font-family: 'Walsheim-Black';
+            text-transform: uppercase;
+          }
+          
+        </style>
+      </atlantis:webstash>
       <atlantis:webstash type="js">
         <script>
           // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -2756,39 +2766,43 @@ text-transform: uppercase;
       </div> 
       ##elseif(activeLanguageAny(es))
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          .video-marquee {
+            background-position: top center;
+          }
+          .video-marquee {
+            background-size: cover;
+            position: relative;
+            background-position: bottom center;
+            background-color: #fff;
+          }
+          .video-marquee.video-marquee-white {
+            color: #fff;
+          }
+          .video-marquee.full-video {
+            height: 535px;
+            padding-top: 1px;
+          }
+          .video-marquee.full-video .video-info {
+            margin-top: 150px;
+          }
+          .video-marquee .relative-position {
+            position: relative;
+          }
+          .video-marquee .video-marquee-all-centered {
+            text-align: center;
+          }
+          .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+            color: #fff;
+          }
+          .video-marquee.full-video .video-info .cta {
+            font-family: 'Walsheim-Black';
+            text-transform: uppercase;
+          }
+          
+        </style>
+      </atlantis:webstash>
       <atlantis:webstash type="js">
         <script>
           // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -2882,38 +2896,39 @@ text-transform: uppercase;
       </div> 
       ##else
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
+      <style>
+        .video-marquee {
+          background-position: top center;
+        }
+        .video-marquee {
+          background-size: cover;
+          position: relative;
+          background-position: bottom center;
+          background-color: #fff;
+        }
+        .video-marquee.video-marquee-white {
+          color: #fff;
+        }
+        .video-marquee.full-video {
+          height: 535px;
+          padding-top: 1px;
+        }
+        .video-marquee.full-video .video-info {
+          margin-top: 150px;
+        }
+        .video-marquee .relative-position {
+          position: relative;
+        }
+        .video-marquee .video-marquee-all-centered {
+          text-align: center;
+        }
+        .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+          color: #fff;
+        }
+        .video-marquee.full-video .video-info .cta {
+          font-family: 'Walsheim-Black';
+          text-transform: uppercase;
+        }
       </style>
       <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
@@ -2930,69 +2945,64 @@ text-transform: uppercase;
          
         ##if(countrySiteAny(www))
          
-        <div data-icode="" class="carousel-panel container">
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-              <div></div>
-            </div>
-          </div>
-        </div>
-                <style>.features-tabbed-carousel-top {
-  text-align: center;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
+                <style>
+                  .features-tabbed-carousel-top {
+                    text-align: center;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                    text-align: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+                  max-width: 70%;
+                  vertical-align: middle;
+                  display: inline-block;
+                  }
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+                  margin-bottom: 10px;
+                  }
+                  .img-center {
+                  margin: 0 auto;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+                  color: #008a32;
+                  font-family: 'Walsheim-Black';
+                  }
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+                  font-family: 'Walsheim-Bold';
+                  font-size: 18px;
+                  font-size: 1.8rem;
+                  line-height: 1.1;
+                  text-transform: uppercase;
+                  }
+                  .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+                  
+                  @media only screen and (min-width: 992px){
+                    .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                    border-left: 1px solid #808080;
+                    }
+                  }
+                  @media only screen and (min-width: 992px){
+                    .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 15px solid #008a32;
+                    border-right: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    position: absolute;
+                    bottom: -15px;
+                    margin-left: -20px;
+                    left: 50%;
+                    }
+                  }
+                  
                 </style>
                 <div data-icode="" id="" class="features-tabbed-carousel-top ">
                   <div class="container">
@@ -3544,69 +3554,64 @@ top: -6px;
                 </div> 
         ##else
          
-        <div data-icode="" class="carousel-panel container">
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-              <div></div>
-            </div>
-          </div>
-        </div>
-                <style>.features-tabbed-carousel-top {
-  text-align: center;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
+                <style>
+                  .features-tabbed-carousel-top {
+                    text-align: center;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                    text-align: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+                  max-width: 70%;
+                  vertical-align: middle;
+                  display: inline-block;
+                  }
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+                  margin-bottom: 10px;
+                  }
+                  .img-center {
+                  margin: 0 auto;
+                  }
+                  
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+                  color: #008a32;
+                  font-family: 'Walsheim-Black';
+                  }
+                  .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+                  font-family: 'Walsheim-Bold';
+                  font-size: 18px;
+                  font-size: 1.8rem;
+                  line-height: 1.1;
+                  text-transform: uppercase;
+                  }
+                  .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+                  
+                  @media only screen and (min-width: 992px){
+                    .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                    border-left: 1px solid #808080;
+                    }
+                  }
+                  @media only screen and (min-width: 992px){
+                    .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-top: 15px solid #008a32;
+                    border-right: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    position: absolute;
+                    bottom: -15px;
+                    margin-left: -20px;
+                    left: 50%;
+                    }
+                  }
+                  
                 </style>
                 <div data-icode="" id="" class="features-tabbed-carousel-top ">
                   <div class="container">
@@ -4090,35 +4095,36 @@ top: -6px;
         ##endif
          
         <div class="bg-gray-light">
-                    <style>
-.features-two-up {
-  min-height: 940px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  padding: 50px 0;
-}
-.features-two-up .feature-row-height {
-margin-top: 40px;
-}
-.features-two-up .feature-row {
-}
-.features-two-up .feature-image {
-margin-top: 15px;
-margin-bottom: 20px;
-}
-.features-two-up .feature-title {
-font-size: 24px;
-font-size: 2.4rem;
-margin-bottom: 10px;
-font-family: 'Walsheim-Bold';
-line-height: 1.1;
-margin-top: 15px;
-}
-.features-two-up .feature-row-text {
-margin-bottom: 20px;
-}
-                    </style>
+                    <atlantis:webstash type="css">
+                      <style>
+                        .features-two-up {
+                          min-height: 940px;
+                          background-size: cover;
+                          background-repeat: no-repeat;
+                          background-position: top center;
+                          padding: 50px 0;
+                        }
+                        .features-two-up .feature-row-height {
+                          margin-top: 40px;
+                        }
+                        .features-two-up .feature-image {
+                          margin-top: 15px;
+                          margin-bottom: 20px;
+                        }
+                        .features-two-up .feature-title {
+                          font-size: 24px;
+                          font-size: 2.4rem;
+                          margin-bottom: 10px;
+                          font-family: 'Walsheim-Bold';
+                          line-height: 1.1;
+                          margin-top: 15px;
+                        }
+                        .features-two-up .feature-row-text {
+                          margin-bottom: 20px;
+                        }
+                        
+                      </style>
+                    </atlantis:webstash>
                     <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
                       <div class="container">
                         <div class="row">
@@ -4186,7 +4192,8 @@ margin-bottom: 20px;
     ##endif
      
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="87759">
-      <style>.accordion-group {
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -4216,24 +4223,20 @@ margin-bottom: 20px;
 
 .accordion-group li.accordion-dropdown .carett {
   display: inline-block;
-  vertical-align: middle;
-  float: left;
-  margin-top: 7px;
-  margin-right: 10px;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-down {
-  border-top: 8px solid;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
+  border-top: 0.5em solid;
+  border-right: 0.5em solid transparent;
+  border-left: 0.5em solid transparent;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-right {
-  border-left: 8px solid;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  border-left: 0.5em solid;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
   margin-top: 1px;
-  margin-right: 18px;
+  margin-right: 0.7em;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -4265,7 +4268,8 @@ margin-bottom: 20px;
 .dropdown li {
   font-family: Arial;
 }
-      </style>
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -4310,37 +4314,39 @@ margin-bottom: 20px;
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".accordion-dropdown").click(function() {
-          var dropdownGroup = $(this).parent(".accordion-group");
-          var dropdownOptions = $(this).find(".dropdown");
-          var dropdownCaret = $(this).find(".carett");
-          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-        
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
-        
-          if (!$(dropdownOptions).is(":visible")) {
-            $(this).addClass("active");
-            $(dropdownOptions).slideDown();
-            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-            event.stopPropagation();
-          }
-        });
-        $(window).load(function() {
-          $("#faq-accordion .accordion-dropdown:first").click();
-        });
-        $("#faq-button").click(function() {
-          $('#faq-accordion').find('.dropdown').slideDown();
-          $('#faq-accordion').find('.accordion-dropdown').find('.carett')
-                          .removeClass("caret-right")
-                          .addClass("caret-down");
-          $('#faq-accordion').find('.accordion-dropdown').addClass("active");
-         });
-      </script>
+      <atlantis:webstash type="script">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#faq-accordion .accordion-dropdown:first").click();
+          });
+          $("#faq-button").click(function() {
+            $('#faq-accordion').find('.dropdown').slideDown();
+            $('#faq-accordion').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#faq-accordion').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
     </section> 
     ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
      
@@ -4877,7 +4883,15 @@ section h2 {
   font-family: 'Walsheim-Black';
   font-weight: 100;
   line-height: 1.1;
-  color: #333;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
 }
 .feature img {
   height: 100px;

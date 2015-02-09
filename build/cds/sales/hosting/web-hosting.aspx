@@ -116,8 +116,7 @@
       ##if(activeLanguageAny([en-IN])) 
        
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -153,6 +152,11 @@
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -511,7 +515,7 @@
           <div class="row"> 
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -537,7 +541,7 @@
             </div>
             <div id="planTileOne" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -564,7 +568,7 @@
             </div>
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -592,7 +596,7 @@
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -626,8 +630,7 @@
       ##else
        
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -663,6 +666,11 @@
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -1021,7 +1029,7 @@
           <div class="row"> 
             <div id="planTileOne" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
@@ -1047,7 +1055,7 @@
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32059, 32059, 0))
@@ -1074,7 +1082,7 @@
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32082, 32082, 0))
@@ -1202,156 +1210,158 @@
         </div>
       </div>
     </section>
-    <style>.fix-body {
-  margin-top: 130px;
-}
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  .mid-page-nav {
-    display: none;
-  }
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li.open > a {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li.open > a:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li > a.active,
-.mid-page-nav .nav > li > a:focus,
-.mid-page-nav .nav > li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li > a.active:before,
-.mid-page-nav .nav > li > a:focus:before,
-.mid-page-nav .nav > li > a:hover:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav > li a span > em {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #555555;
-  display: inline-block;
-  margin-top: -5px;
-  border: 0;
-  padding: 0;
-  font-style: normal;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav .open > .dropdown-menu {
-  opacity: 1;
-  -webkit-transform: scale(1, 1) rotateX(0deg);
-  -moz-transform: scale(1, 1) rotateX(0deg);
-  -ms-transform: scale(1, 1) rotateX(0deg);
-  transform: scale(1, 1) rotateX(0deg);
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-.mid-page-nav .nav .dropdown-menu li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.mid-page-nav .price span {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
+    <style>
+      .fix-body {
+        margin-top: 130px;
+      }
+      .mid-page-nav {
+        background-color: #333333;
+        font-family: 'Walsheim-Bold';
+        height: 130px;
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 768px) {
+        .mid-page-nav {
+          display: none;
+        }
+      }
+      .mid-page-nav .navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .mid-page-nav.sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .mid-page-nav .nav {
+        height: 130px;
+      }
+      .mid-page-nav .nav > li {
+        display: table;
+      }
+      .mid-page-nav .nav > li.open > a {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li.open > a:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li > a {
+        display: table-cell;
+        height: 130px;
+        vertical-align: middle;
+      }
+      .mid-page-nav .nav > li > a.active,
+      .mid-page-nav .nav > li > a:focus,
+      .mid-page-nav .nav > li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li > a.active:before,
+      .mid-page-nav .nav > li > a:focus:before,
+      .mid-page-nav .nav > li > a:hover:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li a {
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: 'Walsheim-Bold';
+        color: #808080;
+        padding: 0;
+        text-align: center;
+      }
+      .mid-page-nav .nav > li a span {
+        display: table-cell;
+        vertical-align: middle;
+        border-left: 1px solid #232323;
+        padding: 7px 40px;
+      }
+      .mid-page-nav .nav > li a span > em {
+        font-size: 40px;
+        font-size: 4rem;
+        color: #555555;
+        display: inline-block;
+        margin-top: -5px;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .mid-page-nav .nav > li:first-child a span {
+        border-left: 0;
+      }
+      .mid-page-nav .nav .open > .dropdown-menu {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) rotateX(0deg);
+        -moz-transform: scale(1, 1) rotateX(0deg);
+        -ms-transform: scale(1, 1) rotateX(0deg);
+        transform: scale(1, 1) rotateX(0deg);
+      }
+      .mid-page-nav .nav .dropdown-menu {
+        background-clip: padding-box;
+        border: 0;
+        background-color: #333333;
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(1, 0) rotateX(90deg);
+        -moz-transform: scale(1, 0) rotateX(90deg);
+        -ms-transform: scale(1, 0) rotateX(90deg);
+        transform: scale(1, 0) rotateX(90deg);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a {
+        display: block;
+        background-color: #333333;
+        padding: 20px;
+        border-bottom: #333333;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .price-text {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      .mid-page-nav .price {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .mid-page-nav .price span {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -1547,60 +1557,58 @@
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section">
-      <div style="background-image: url(); background-color: #fff;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div> 
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/> 
               ##if(activeLanguageAny([en-US]))
                
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
               ##else
                
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
               ##endif
                
               ##if(activeLanguageAny([en-US]))
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
               ##else
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
-              ##endif
-               
-            </div>
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div>
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
-              ##if(activeLanguageAny([en-US]))
-               
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
-              ##else
-               
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
               ##endif
                
             </div>
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div>
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+          </div>
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
               ##if(activeLanguageAny([en-US]))
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
               ##else
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              ##endif
+               
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              ##else
+               
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
               ##endif
                
               <ul>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]</li>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]</li>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]</li>
-                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L] </li>
               </ul>
             </div>
           </div>
@@ -3863,7 +3871,8 @@ height: 27px;
     ##endif
      
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="95879" class="tile-section">
-      <style>.accordion-group {
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -3942,7 +3951,8 @@ height: 27px;
 .dropdown li {
   font-family: Arial;
 }
-      </style>
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -4011,37 +4021,39 @@ height: 27px;
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".accordion-dropdown").click(function() {
-          var dropdownGroup = $(this).parent(".accordion-group");
-          var dropdownOptions = $(this).find(".dropdown");
-          var dropdownCaret = $(this).find(".carett");
-          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-        
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
-        
-          if (!$(dropdownOptions).is(":visible")) {
-            $(this).addClass("active");
-            $(dropdownOptions).slideDown();
-            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-            event.stopPropagation();
-          }
-        });
-        $(window).load(function() {
-          $("#test-faq .accordion-dropdown:first").click();
-        });
-        $("#test-button").click(function() {
-          $('#test-faq').find('.dropdown').slideDown();
-          $('#test-faq').find('.accordion-dropdown').find('.carett')
-                          .removeClass("caret-right")
-                          .addClass("caret-down");
-          $('#test-faq').find('.accordion-dropdown').addClass("active");
-         });
-      </script>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#test-faq .accordion-dropdown:first").click();
+          });
+          $("#test-button").click(function() {
+            $('#test-faq').find('.dropdown').slideDown();
+            $('#test-faq').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#test-faq').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
     </section> 
     ##if(activeLanguageAny([en-US]))
      
@@ -4745,7 +4757,15 @@ section h2 {
   font-family: 'Walsheim-Black';
   font-weight: 100;
   line-height: 1.1;
-  color: #333;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
 }
 .feature img {
   height: 100px;
@@ -5539,6 +5559,8 @@ cursor: pointer;
         .pro-banner { color: #fff; }
         
         #speed-chart h2 { margin-bottom: 10px; }
+        
+        #features { background-color: #fff; }
         
       </style>
     </atlantis:webstash>

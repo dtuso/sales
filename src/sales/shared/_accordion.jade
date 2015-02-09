@@ -21,8 +21,10 @@ mixin renderAccordion(options)
   - options.buttonText = options.buttonText || "";
   - options.ci = options.ci || "";
 
-  style
-    include:css styles/accordion-styles.css
+  atlantis:webstash(type="css")
+    style
+      include:css ./_accordion/accordion-styles.css
+      
   .container
     .row
       .col-sm-12
@@ -30,7 +32,9 @@ mixin renderAccordion(options)
           block
           .text-center
             button(data-ci="#{options.ci}", id=options.buttonID class="btn btn-default-dark") #{options.buttonText}
-  script(type="text/javascript").
+  
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
       $(".accordion-dropdown").click(function() {
         var dropdownGroup = $(this).parent(".accordion-group");
         var dropdownOptions = $(this).find(".dropdown");

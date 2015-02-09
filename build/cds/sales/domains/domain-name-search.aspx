@@ -238,8 +238,7 @@
         </style>
       </atlantis:webstash>
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -275,6 +274,11 @@
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -1069,156 +1073,158 @@ top: -6px;
         </div>
       </div>
     </section>
-    <style>.fix-body {
-  margin-top: 130px;
-}
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  .mid-page-nav {
-    display: none;
-  }
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li.open > a {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li.open > a:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li > a.active,
-.mid-page-nav .nav > li > a:focus,
-.mid-page-nav .nav > li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li > a.active:before,
-.mid-page-nav .nav > li > a:focus:before,
-.mid-page-nav .nav > li > a:hover:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav > li a span > em {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #555555;
-  display: inline-block;
-  margin-top: -5px;
-  border: 0;
-  padding: 0;
-  font-style: normal;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav .open > .dropdown-menu {
-  opacity: 1;
-  -webkit-transform: scale(1, 1) rotateX(0deg);
-  -moz-transform: scale(1, 1) rotateX(0deg);
-  -ms-transform: scale(1, 1) rotateX(0deg);
-  transform: scale(1, 1) rotateX(0deg);
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-.mid-page-nav .nav .dropdown-menu li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.mid-page-nav .price span {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
+    <style>
+      .fix-body {
+        margin-top: 130px;
+      }
+      .mid-page-nav {
+        background-color: #333333;
+        font-family: 'Walsheim-Bold';
+        height: 130px;
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 768px) {
+        .mid-page-nav {
+          display: none;
+        }
+      }
+      .mid-page-nav .navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .mid-page-nav.sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .mid-page-nav .nav {
+        height: 130px;
+      }
+      .mid-page-nav .nav > li {
+        display: table;
+      }
+      .mid-page-nav .nav > li.open > a {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li.open > a:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li > a {
+        display: table-cell;
+        height: 130px;
+        vertical-align: middle;
+      }
+      .mid-page-nav .nav > li > a.active,
+      .mid-page-nav .nav > li > a:focus,
+      .mid-page-nav .nav > li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li > a.active:before,
+      .mid-page-nav .nav > li > a:focus:before,
+      .mid-page-nav .nav > li > a:hover:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li a {
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: 'Walsheim-Bold';
+        color: #808080;
+        padding: 0;
+        text-align: center;
+      }
+      .mid-page-nav .nav > li a span {
+        display: table-cell;
+        vertical-align: middle;
+        border-left: 1px solid #232323;
+        padding: 7px 40px;
+      }
+      .mid-page-nav .nav > li a span > em {
+        font-size: 40px;
+        font-size: 4rem;
+        color: #555555;
+        display: inline-block;
+        margin-top: -5px;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .mid-page-nav .nav > li:first-child a span {
+        border-left: 0;
+      }
+      .mid-page-nav .nav .open > .dropdown-menu {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) rotateX(0deg);
+        -moz-transform: scale(1, 1) rotateX(0deg);
+        -ms-transform: scale(1, 1) rotateX(0deg);
+        transform: scale(1, 1) rotateX(0deg);
+      }
+      .mid-page-nav .nav .dropdown-menu {
+        background-clip: padding-box;
+        border: 0;
+        background-color: #333333;
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(1, 0) rotateX(90deg);
+        -moz-transform: scale(1, 0) rotateX(90deg);
+        -ms-transform: scale(1, 0) rotateX(90deg);
+        transform: scale(1, 0) rotateX(90deg);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a {
+        display: block;
+        background-color: #333333;
+        padding: 20px;
+        border-bottom: #333333;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .price-text {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      .mid-page-nav .price {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .mid-page-nav .price span {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -1370,20 +1376,15 @@ top: -6px;
     <section id="bottom-pods">
       <atlantis:webstash type="css">
         <style>
-          #bottom-pods #plans {background-color: #77c043;height:250px;}
-          #bottom-pods .plan-tile{margin-top:0;}
-          #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:65px;}
-          #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
-          #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;}
-          #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
+          #bottom-pods #plans {background-color: #77c043;}
+          #bottom-pods .plan-tile {margin-top:0;}
+          #bottom-pods .plan-title {text-transform:none;}
           #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
         </style>
       </atlantis:webstash>
-      <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
+      <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -1419,6 +1420,11 @@ top: -6px;
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -1780,7 +1786,7 @@ top: -6px;
                 <div class="col-sm-4 plan-tile plan-pro">
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
-                    <p ng-bind-html="pod.PodTLD" class="plan-title"></p>
+                    <h3 ng-bind-html="pod.PodTLD" class="plan-title"></h3>
                     <p ng-bind-html="pod.PodText" class="plan-text"> </p>
                     <div class="plan-price-wrap">
                       <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
@@ -1798,22 +1804,17 @@ top: -6px;
       <div class="container">
         <atlantis:webstash type="css">
           <style>
-            #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
-            #new-domains .container{margin:0 auto;padding-left:0px;}
-            #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
-            #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
-            #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
-            #new-domains ul li a{float:right;}
-            #new-domains .col-tld-title {padding-left: 10px;}
-            #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
+            #new-domains { background-color: #e8e8e8; }
+            #new-domains h2 { font-size: 2rem; margin-bottom: 0; }
+            #new-domains ul{ list-style-type:none; padding-left:0; }
+            #new-domains ul li  { background-color:#ffffff; height:46px; }
+            #new-domains ul li span { font-family: "Walsheim-Black"; font-size: 3rem; padding-left:10px; }
+            #new-domains ul li a { float:right; }
           </style>
         </atlantis:webstash>
         <div class="row">
-          <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
-          <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
-        </div>
-        <div class="row">
           <div class="col-md-6">
+            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></h2>
             <ul>
               <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
               </li>
@@ -1826,6 +1827,7 @@ top: -6px;
             </ul>
           </div>
           <div class="col-md-6">
+            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></h2>
             <ul>
               <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
               </li>
@@ -1843,18 +1845,22 @@ top: -6px;
     <section id="find-your-domain">
       <atlantis:webstash type="css">
         <style>
-          #find-your-domain{background-color:#77c043;}
-          #find-your-domain .container{padding-left:10px;}
-          #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
-          #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
-          #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:80px;font-family:'Walsheim-Black';margin-bottom:0px;}
-          #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:100px;display:block;}
+          #find-your-domain { background-color:#77c043; color: #fff; }
+          #find-your-domain h2 { margin-bottom: 0; }
+          #find-your-domain a { color:#ffffff; text-decoration:none; }
+          #find-your-domain .caret-right {
+            border-left: 0.5em solid;
+            border-top: 0.5em solid transparent;
+            border-bottom: 0.5em solid transparent;
+            margin-right: 0.7em;
+            display: inline-block;
+          }
           #find-your-domain .find-cta-text:hover{text-decoration:underline;}
           #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
         </style>
       </atlantis:webstash>
       <div class="container">
-        <h3>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h3><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><i class="ico ico-gt-circle-small"></i>
+        <h2>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h2><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><span class="caret-right"></span>
           <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
       </div>
     </section>
@@ -1874,62 +1880,64 @@ top: -6px;
           #options .headline-primary {text-transform:none;}
         </style>
       </atlantis:webstash>
-      <style>.features-tabbed-carousel-top {
-  text-align: center;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
+      <style>
+        .features-tabbed-carousel-top {
+          text-align: center;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+          text-align: center;
+          cursor: pointer;
+          position: relative;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+        max-width: 70%;
+        vertical-align: middle;
+        display: inline-block;
+        }
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+        margin-bottom: 10px;
+        }
+        .img-center {
+        margin: 0 auto;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+        color: #008a32;
+        font-family: 'Walsheim-Black';
+        }
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+        font-family: 'Walsheim-Bold';
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        }
+        .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+        
+        @media only screen and (min-width: 992px){
+          .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+          border-left: 1px solid #808080;
+          }
+        }
+        @media only screen and (min-width: 992px){
+          .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 15px solid #008a32;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          position: absolute;
+          bottom: -15px;
+          margin-left: -20px;
+          left: 50%;
+          }
+        }
+        
       </style>
       <div data-icode="" id="" class="features-tabbed-carousel-top ">
         <div class="container">
@@ -2410,7 +2418,8 @@ top: -6px;
           #questions .accordion-group button {margin-bottom: 110px;}
         </style>
       </atlantis:webstash><span class="question-headline">[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestionAns]@L]</span>
-      <style>.accordion-group {
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -2440,24 +2449,20 @@ top: -6px;
 
 .accordion-group li.accordion-dropdown .carett {
   display: inline-block;
-  vertical-align: middle;
-  float: left;
-  margin-top: 7px;
-  margin-right: 10px;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-down {
-  border-top: 8px solid;
-  border-right: 8px solid transparent;
-  border-left: 8px solid transparent;
+  border-top: 0.5em solid;
+  border-right: 0.5em solid transparent;
+  border-left: 0.5em solid transparent;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-right {
-  border-left: 8px solid;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
+  border-left: 0.5em solid;
+  border-top: 0.5em solid transparent;
+  border-bottom: 0.5em solid transparent;
   margin-top: 1px;
-  margin-right: 18px;
+  margin-right: 0.7em;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -2489,7 +2494,8 @@ top: -6px;
 .dropdown li {
   font-family: Arial;
 }
-      </style>
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -2533,37 +2539,39 @@ top: -6px;
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".accordion-dropdown").click(function() {
-          var dropdownGroup = $(this).parent(".accordion-group");
-          var dropdownOptions = $(this).find(".dropdown");
-          var dropdownCaret = $(this).find(".carett");
-          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-        
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
-        
-          if (!$(dropdownOptions).is(":visible")) {
-            $(this).addClass("active");
-            $(dropdownOptions).slideDown();
-            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-            event.stopPropagation();
-          }
-        });
-        $(window).load(function() {
-          $("#question-accordion .accordion-dropdown:first").click();
-        });
-        $("#question-btn").click(function() {
-          $('#question-accordion').find('.dropdown').slideDown();
-          $('#question-accordion').find('.accordion-dropdown').find('.carett')
-                          .removeClass("caret-right")
-                          .addClass("caret-down");
-          $('#question-accordion').find('.accordion-dropdown').addClass("active");
-         });
-      </script>
+      <atlantis:webstash type="script">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#question-accordion .accordion-dropdown:first").click();
+          });
+          $("#question-btn").click(function() {
+            $('#question-accordion').find('.dropdown').slideDown();
+            $('#question-accordion').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#question-accordion').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
     </section>
     <section class="container content-disclaimer">
       <atlantis:webstash type="css">
@@ -2637,7 +2645,15 @@ section h2 {
   font-family: 'Walsheim-Black';
   font-weight: 100;
   line-height: 1.1;
-  color: #333;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
 }
 .feature img {
   height: 100px;
