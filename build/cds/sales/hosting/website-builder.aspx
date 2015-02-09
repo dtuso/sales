@@ -578,7 +578,15 @@ width: 50%;
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
             <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
+               
+              ##if(countrySiteAny(www))
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1-35874]@L]</li> 
+              ##else
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li> 
+              ##endif
+               
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
@@ -4782,7 +4790,18 @@ margin-bottom: 20px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                    <div>
+                       
+                      ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]]@L]
+                       
+                      ##else
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                       
+                      ##endif
+                       
                     </div>
                   </li>
                 </ul>
