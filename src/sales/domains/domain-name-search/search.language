@@ -15,10 +15,10 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2015-01-15
+      Modified Date:  2015-01-28
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCE-34816
-      Comments:       Merchandising Updates 01/15/2015 - sync for translations pickup
+      JIRA Ticket:    GCE-35724
+      Comments:       Merchandising Updates for 02/04/2015
       
 
 
@@ -47,7 +47,7 @@ Search Domain
 <phrase key="CarouselSideLink1" />
 Domain Pricing
 <phrase key="CarouselSideLink2" />
-Bulk Search
+Bulk Domain Search
 <phrase key="CarouselSideLink3" />
 Transfer Domains
 <phrase key="Register" />
@@ -478,6 +478,8 @@ Make <strong>.casa</strong> your home online.
 Get your <strong>.pizza</strong> while it’s hot!
 <phrase key="PodDotBerlinText" />
 Cater to millions with <strong>.berlin</strong>
+<phrase key="PodDotIoText" />
+Start something with <strong>.io</strong>
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -630,6 +632,10 @@ Cater to millions with <strong>.berlin</strong>
 <strong>.online</strong>
 <phrase key="TldDotCompany" />
 <strong>.company</strong>
+<phrase key="TldDotIo" />
+<strong>.io</strong>
+<phrase key="TldDotWorld" />
+<strong>.world</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.website</strong>, <strong>.business</strong>, <strong>.company</strong>, and <strong>.global</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1AU" />
@@ -809,3 +815,5 @@ SEE ALL QUESTIONS
 24/7 Customer Support for GoDaddy Users
 <phrase key="PerfectDomain"/>
 FIND YOUR PERFECT DOMAIN NAME.
+<phrase key="NowAvailable"/>
+NOW AVAILABLE
