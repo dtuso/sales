@@ -211,7 +211,32 @@
         </div>
       </div>
     </section>
-    <!--include ../shared/domain-search-widget-->
+    <section id="features" data-mid-nav-title="[@L[cds.sales/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
+    <div style="background-image: url(); background-color: #fff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-leader-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-leader-content]@L]</p>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-support-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-support-content]@L]</p>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-trust-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-trust-content]@L]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
     <atlantis:webstash type="js">
       <style>
         .container .row .topSpacing{padding-top:20px;}
@@ -221,7 +246,10 @@
         .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
         .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
         .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        .domain-icon-spacing {margin-right: 60px;}
+        .col-spacer2{width:43%;}
+        .col-spacer1{width: 30%;}
         
       </style>
     </atlantis:webstash>
@@ -244,7 +272,7 @@
                 <div class="domain-icon"></div>
                 <p>
                   <label>Domain</label>
-                </p><span class="tooltip-icon"></span>
+                </p><span class="tooltip-icon domain-icon-spacing"></span>
               </div>
             </div>
             <div class="col-sm-3">
@@ -264,6 +292,20 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-spacer1"></div>
+          <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+        </div>
+        <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div class="col-sm-4 col-spacer2"></div>
+          <div class="col-sm-3">
+            <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
+          </div>
+        </div>
+        <div style="padding-top:10px" class="row">
+          <div class="col-sm-4"></div>
+          <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
         </div>
       </div>
     </section>
