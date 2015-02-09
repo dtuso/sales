@@ -1,6 +1,6 @@
 ---
 location: sales/research/mobile-ready-carnival
-id: 54d530b7f778fc20c82c2150
+id: 54d8f877f778fc2a88214013
 name: SEM-360
 comments: Infographic - Mobile Ready Carnival
 ---
@@ -35,7 +35,7 @@ comments: Infographic - Mobile Ready Carnival
       height: 4645px;
       ##else
       background-image: url([@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/mobile-ready-carnival/img/godaddy-mobile-ready-carnival-uk.png);
-      height: 4570px;
+      height: 4560px;
       ##endif
       width: 1000px;
       position: relative;
@@ -100,7 +100,14 @@ comments: Infographic - Mobile Ready Carnival
             </div>            
           </div>
           <div class="infographic-image">
-            <a href="https://br.godaddy.com/?ci=95975" data-ci="95975"></a>
+            <a 
+              ##if(activeLanguageAny([pt-br]))
+              href="https://br.godaddy.com/?ci=95975" 
+              ##else
+              href="https://uk.godaddy.com/?ci=95975" 
+              ##endif
+              data-ci="95975"
+            ></a>
           </div>
           <div class="infographic-bottom">
             <div class="infographic-view text-center">

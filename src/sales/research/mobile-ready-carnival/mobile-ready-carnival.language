@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/research/mobile-ready-carnival/en
-id: 54d3ad9ef778fc1134545587
+id: 54d8fe10f778fc2a88214014
 name: SEM-360
 ---
 {% include '../../../modules/doc-block.html' %}
@@ -27,9 +27,9 @@ Click here to download a .pdf version of this infographic &raquo;
 <phrase key="facts-stats-title" />
 Facts and Stats to Tweet:
 <phrase key="facts-stats-1" />
-There are more than 2 million people on the streets in Brazil every day during the Carnival
+There are more than 2 million people on the streets in Brazil every day during Carnival
 <phrase key="facts-stats-1-encoded" />
-%22There%20are%20more%20than%202%20million%20people%20on%20the%20streets%20in%20Brazil%20every%20day%20during%20the%20Carnival%22
+%22There%20are%20more%20than%202%20million%20people%20on%20the%20streets%20in%20Brazil%20every%20day%20during%20Carnival%22
 <phrase key="facts-stats-2" />
 Smartphone use in Brazil increased by 43% from 2013-2014
 <phrase key="facts-stats-2-encoded" />
