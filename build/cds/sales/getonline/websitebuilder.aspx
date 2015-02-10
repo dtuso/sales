@@ -304,6 +304,8 @@
               <h3>We have an excellent starter pack for</h3>
               <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
             </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-leader-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-leader-content]@L]</p>
           </div>
         </div>
         <div class="row">

@@ -1,15 +1,15 @@
 include _domain-starting-at-mixin.jade
 mixin renderReadyToTakeBusinessOnline(domain, price)
   append pageStyles
-    atlantis:webstash(type="js")
+    atlantis:webstash(type="css")
       style.
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
         .icon-spacing{text-align: center;font-size: 2em;}
-        .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
         .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
         .domain-icon-spacing {margin-right: 60px;}
         .col-spacer2{width:43%;}
@@ -26,20 +26,20 @@ mixin renderReadyToTakeBusinessOnline(domain, price)
           div.col-xss-1
           .col-sm-3
             .icon-spacing
-              .domain-icon
+              .features-domain-name
               p
                 label Domain
               span.tooltip-icon.domain-icon-spacing
 
           .col-sm-3
             .icon-spacing
-              .wsb-icon
+              .features-wordpress
               p
-                label Website builder
+                label Website builder (wrong image)
               span.tooltip-icon
           .col-sm-3
             .icon-spacing
-              .email-icon
+              .features-email
               p
                 label Office 365 email
               span.tooltip-icon

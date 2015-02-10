@@ -201,12 +201,117 @@
       }
       
     </style>
+    <style>
+      .gray{background-color:lightgray;}
+      .green{background-color:green}
+      .uppercase{text-transform:uppercase}
+      
+    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="marquee">
-      <div class="container marquee marquee-white">
+    <!-- onlineStore.marquee-->
+    <!-- onlineStore.getItNow-->
+    <!--+renderGoodNews("testingJade","$1.00","image")-->
+    <!--hr-->
+    <!-- p4p.domainMultipleSelection-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="domainSearch" class="green">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-7 marquee-content-wrapper">
+          <div style="margin-top:35px" class="domain-icon"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>yourname@billy bikes</mark></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 plan-flag">
+              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- onlineStore.product-->
+    <!--section#websitenode-builder
+    //div
+      //img(src="/headrer-image.pnodeng")
+      //h2 Website builder
+      //a.btn.btn-default-light View All Templates
+      //img(src="/main-image.png")
+    -->
+    <hr>
+    <!-- p4p.office365-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .did-you-know-email{height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="O365-email" class="gray">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:35px" class="email-icon"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
+            <h2 style="margin-bottom:0px" class="uppercase"><mark>yourname@billysbikes.org</mark></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 plan-flag">
+              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+              <h5 style="margin-top:10px;text-transform:none">Did you know customers are 9x more likely to choose a business with a professional email address?*</h5>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -236,16 +341,16 @@
         </div>
       </div>
     </div>
-    <hr>
-    <atlantis:webstash type="js">
+    <!-- p4p.got-->
+    <atlantis:webstash type="css">
       <style>
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
         .icon-spacing{text-align: center;font-size: 2em;}
-        .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
         .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
         .domain-icon-spacing {margin-right: 60px;}
         .col-spacer2{width:43%;}
@@ -260,7 +365,7 @@
             <h2>Ready to take your business online</h2>
             <div class="section">
               <h3>We have an excellent starter pack for</h3>
-              <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+              <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
             </div>
           </div>
         </div>
@@ -269,7 +374,7 @@
             <div class="col-xss-1"></div>
             <div class="col-sm-3">
               <div class="icon-spacing">
-                <div class="domain-icon"></div>
+                <div class="features-domain-name"></div>
                 <p>
                   <label>Domain</label>
                 </p><span class="tooltip-icon domain-icon-spacing"></span>
@@ -277,15 +382,15 @@
             </div>
             <div class="col-sm-3">
               <div class="icon-spacing">
-                <div class="wsb-icon"></div>
+                <div class="features-wordpress"></div>
                 <p>
-                  <label>Website builder</label>
+                  <label>Website builder (wrong image)</label>
                 </p><span class="tooltip-icon"></span>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="icon-spacing">
-                <div class="email-icon"></div>
+                <div class="features-email"></div>
                 <p>
                   <label>Office 365 email</label>
                 </p><span class="tooltip-icon"></span>

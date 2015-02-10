@@ -1,27 +1,41 @@
 extends ../../../templates/pages/landing-page
 
+include _domain-multiple-selection-mixin.jade
 include _ready-to-take-business-online.jade
 include _office365-email-mixin.jade
 include _ready-to-take-business-online-mixin.jade
 
 include _good-news-get-it-now.jade
 
+append pageStyles
+  style.
+    .gray{background-color:lightgray;}
+    .green{background-color:green}
+    .uppercase{text-transform:uppercase}
+
 block domainSearch
 
 block sections
  
   block getItNow
+    // p4p.getItNow
     +renderGoodNews("domain","price","image-path")
 
+  block domainMultipleSelection
+    // p4p.domainMultipleSelection
+    +renderDomainMultipleSelection("billy bikes")
+  
   block product
 
   block office365
-    +renderOffice365Email("domain")
+    // p4p.office365
+    +renderOffice365Email("billysbikes.org")
 
   block whyUs
+    // p4p.whyUs
     include -why-us.jade
-    hr
   
   block got
-    +renderReadyToTakeBusinessOnline("domain","price")
+    // p4p.got
+    +renderReadyToTakeBusinessOnline("billysbikes.org","price")
          

@@ -12,8 +12,8 @@
     </div>
     <div class="promo-text walsheim-black">WORK ANYWHERE WITH MICROSOFT OFFICE.</div>
     <div class="promo-cta">
-      ##if(productHasSavingsMoreThan(543628, 543628, 0))
-      <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='543628' secondaryproductid='543628' showsymbol='true'/>]@T]</a>
+      ##if(productHasSavingsMoreThan(31841, 31841, 0))
+      <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='31841' secondaryproductid='31841' showsymbol='true'/>]@T]</a>
       ##else
       <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">LEARN MORE</a>
       ##endif
