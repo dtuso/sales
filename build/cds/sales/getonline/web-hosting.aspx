@@ -201,57 +201,174 @@
       }
       
     </style>
+    <style>
+      .gray{background-color:lightgray;}
+      .green{background-color:green}
+      .uppercase{text-transform:uppercase}
+      
+    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <atlantis:webstash type="js">
+    <atlantis:webstash type="css">
       <style>
-        .container .hero-guy{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat bottom;}
+        .container .hero-guy{height:709px; width:338px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 80%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
         .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+        .get-it-now{margin-top: 35px;}
+        .heading{padding-top: 110px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px;}
+        .left-side{position: relative; top: 4px;}
+        .right-side{position:relative;}
         
       </style>
     </atlantis:webstash>
     <section id="getItNow">
       <div class="container">
-        <div class="row">
-          <div class="text-center green-background">
-            <h2>GOOD NEWS!</h2>
-            <div class="section">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark>testingJade</mark> – Starting at <mark>$1.00</mark>	</h3>
+        <div class="col-xs-3 left-side">
+          <div class="row">
+            <div class="hero-guy"></div>
+          </div>
+        </div>
+        <div class="col-xs-9 right-side">
+          <div class="row">
+            <div class="text-center good-news-shape">
+              <h2 class="heading">GOOD NEWS!</h2>
+              <div class="section">
+                <h3>We have an excellent starter pack for</h3>
+                <h3><mark>Billy Bikes</mark> – Starting at <mark>$1.00</mark>	</h3>
+              </div>
+            </div>
+          </div>
+          <div class="container bottom">
+            <div class="row">
+              <div class="topSpacing">
+                <div class="good-news-image"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>DOMAIN NAME</h3>
+                <p>Domain is the name of your</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>WEBSITE BUILDER</h3>
+                <p>Website builder is a tool we have</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>OFFICE 365 EMAIL</h3>
+                <p>Office 365 email is the simplest email tool</p>
+              </div>
+            </div>
+            <div class="get-it-now">
+              <div class="row text-center">
+                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+              </div>
+              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                <btn class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
+              </div>
+              <div style="padding-top:10px" class="row text-center">
+                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <!-- p4p.domainMultipleSelection-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="domainSearch" class="green">
+      <div class="container">
         <div class="row">
-          <div class="topSpacing">
-            <div class="good-news-image"></div>
+          <div style="margin-top:35px" class="domain-icon"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
-            <label>DOMAIN</label>
-            <p>Domain is the name of your</p>
-          </div>
-          <div class="col-sm-4">
-            <label>WEBSITE BUILDER</label>
-            <p>Website builder is a tool we have</p>
-          </div>
-          <div class="col-sm-4">
-            <label>OFFICE 365 EMAIL</label>
-            <p>Office 365 email is the simplest email tool</p>
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>yourname@billy bikes</mark></h4>
           </div>
         </div>
-        <div class="row text-center">
-          <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 plan-flag">
+              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
+          </div>
         </div>
-        <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-          <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
+      </div>
+    </section>
+    <!-- p4p.office365-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .did-you-know-email{height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="O365-email" class="gray">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:35px" class="email-icon"></div>
         </div>
-        <div style="padding-top:10px" class="row text-center">
-          <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
+            <h2 style="margin-bottom:0px" class="uppercase"><mark>yourname@billysbikes.org</mark></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 plan-flag">
+              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+              <h5 style="margin-top:10px;text-transform:none">Did you know customers are 9x more likely to choose a business with a professional email address?*</h5>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
