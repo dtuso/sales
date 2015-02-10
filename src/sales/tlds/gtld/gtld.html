@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: false
-name: GCE-34935
-comments: Prep for uxcore - css updates
+id: 54da4053f778fc1bb4408c31
+name: GCEMO-450
+comments: gTLD LP - merchandising updates for 2/18
 ---
 {% extends 'layouts/base.html' %}
 
@@ -30,9 +30,9 @@ comments: Prep for uxcore - css updates
 
     .bg-images > .bg-slide2 {
       ##if(countrySiteAny(www, ca))
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/US_bg-main-banner-rocks.jpg") !important;
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-photography.jpg") !important;
       ##else
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-rocks.jpg") !important;
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-photography.jpg") !important;
       ##endif
     }
 
@@ -52,7 +52,7 @@ comments: Prep for uxcore - css updates
       ##elseif(activeLanguageAny([en-CA], [fr-CA]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-quebec.jpg");
       ##else
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-reviews.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-ninja.jpg");
       ##endif
     }
   </style>
@@ -64,10 +64,7 @@ comments: Prep for uxcore - css updates
   .idp-modal-wrap {top: 35%!important;}
 </style>
 
-  </head>
 
-  <body>
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
 
 {% endblock metahead %}
 
@@ -115,9 +112,9 @@ comments: Prep for uxcore - css updates
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.rocks</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextRocks]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="94265" href="[@T[link:<relative path="~/tlds/rocks"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.photography</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextPhotography]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="96010" href="[@T[link:<relative path="~/tlds/photography"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
@@ -142,9 +139,9 @@ comments: Prep for uxcore - css updates
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##else
-                        <p class="domain no-margin-bottom"><strong>.reviews</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineReviews]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90921" href="[@T[link:<relative path="~/tlds/reviews"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:NinjaHeader]@L]</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2TextNinja]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="94859" href="[@T[link:<relative path="~/tlds/ninja"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##endif
                       </div>
                     </div>
