@@ -1,0 +1,22 @@
+---
+location: sales/offers/default.aspx.rule
+id: 
+name: GCE-34369
+comments: Various VAT fixes
+---[
+{ 
+    'Type': 'Redirect', 
+    'Condition': '(!siteContextAny(gd) || !hasISC()) && !isManager()', 
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"\"></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!queryValueHas(nosplit,1) && splitTestingSideIsActive(1390, A) && (queryValueHas(tmskey,[1domwebhost_1]) || queryValueHas(tmskey,[1domwebhost_2]) || queryValueHas(tmskey,[1domwebhost_3]) || queryValueHas(tmskey,[1domwebhost_4]) || queryValueHas(tmskey,[1domwebhost_5]) || queryValueHas(tmskey,[1domwebhost_6]))',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/hosting/web-hosting.aspx\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!queryValueHas(nosplit,1) && splitTestingSideIsActive(1323, B) && (queryValueHas(tmskey,[1domwsb_1]) || queryValueHas(tmskey,[1domwsb_2]) || queryValueHas(tmskey,[1domwsb_3]) || queryValueHas(tmskey,[1domwsb_4]) || queryValueHas(tmskey,[1domwsb_5]) || queryValueHas(tmskey,[1domwsb_6]) || queryValueHas(tmskey,[1domwsb_7]) || queryValueHas(tmskey,[1domwsb_8]) || queryValueHas(tmskey,[1domwsb_9]) || queryValueHas(tmskey,[1domwsb_10]) || queryValueHas(tmskey,[1domwsb_11]) || queryValueHas(tmskey,[1domwsb_12]))',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/hosting/website-builder.aspx\" />]@T]' }"
+  }
+]

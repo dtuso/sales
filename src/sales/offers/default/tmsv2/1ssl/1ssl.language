@@ -1,0 +1,76 @@
+---
+location: localization/tms/lp/advertising/1ssl/en
+id: 54d114c0f778fc20ac262ff8
+name: GCE-34369
+comments: Various VAT fixes
+---
+<phrase key="headline-1ssl_1" />
+Same Security. Amazing Price. <br class="hide-non-en"/>Standard SSL Only <strong><span class="price nobreak"></span>/yr</strong>
+<phrase key="headline-1ssl_2" />
+Security with an Amazing Price. <br class="hide-non-en"/>SSL Only <strong><span class="price nobreak"></span>/yr</strong>
+<phrase key="headline-1ssl_3" />
+Why Pay More? Security with an <br class="hide-non-en"/>Amazing Price. SSL Only <strong><span class="price nobreak"></span>/yr</strong>
+<phrase key="headline-1ssl_4" />
+<strong><span class="price nobreak"></span>/yr</strong> SSL Certificates. <br class="hide-non-en"/>Security with an Amazing Price.
+<phrase key="headline-1ssl_5" />
+Secure your Site at an Amazing Price. <br class="hide-non-en"/>Only <strong><span class="price nobreak"></span>/yr</strong>
+<phrase key="headline-1ssl_6" />
+Affordable EV SSL Certificate <br class="hide-non-en"/>Extended Validation SSL only <strong><span class="price nobreak"></span>/yr</strong>
+<phrase key="banner-title-ssl" />
+SSL CERTIFICATES
+<phrase key="banner-item-4" />
+Standard SSL, issued in minutes
+<phrase key="banner-item-5" />
+Industry-leading encryption
+<phrase key="banner-item-6" />
+Dedicated 24/7 support
+<phrase key="premium-banner-item-1" />
+High-security green bar in browser
+<phrase key="premium-banner-item-2" />
+SHA-2 and 2048-bit encryption
+<phrase key="premium-banner-item-3" />
+Up to $1M warranty
+<phrase key="premium-banner-item-4" />
+Free 24/7 security support [@T[supportphone:<ssl/>]@T]
+<phrase key="ssl-chart-stckup" />
+See how we stack up
+<phrase key="ssl-chart-oneyrprice" />
+One-year price
+<phrase key="ssl-chart-sha2alg" />
+SHA-2 hashing algorithm
+<phrase key="ssl-chart-enc-strength" />
+encryption strength
+<phrase key="ssl-chart-servcov" />
+Unlimited server coverage
+<phrase key="ssl-chart-freere" />
+Free reissues
+<phrase key="ssl-chart-sec-seal" />
+Secure site seal
+<phrase key="ssl-chart-browsersupp" />
+99.9% browser support
+<phrase key="ssl-chart-browsersupp_34369" />
+[@T[localization:<display type="percent" number="99.9" />]@T] browser support
+<phrase key="ssl-chart-freecust-supp" />
+Free 24/7 customer support
+<phrase key="ssl-chart-warranty" />
+Warranty
+<phrase key="ssl-chart-money-back" />
+Money-back guarantee
+<phrase key="ssl-chart-45d" />
+45-day
+<phrase key="ssl-chart-30d" />
+30-day
+<phrase key="ssl-chart-7d" />
+7-day
+<phrase key="ssl-chart-data-accurate" />
+Data accurate as of November 1, 2014
+<phrase key="ssl-add-to-cart" />
+Add to Cart
+<phrase key="ssl-disclaimer" />
+Promotional pricing for the first year only. After the initial purchase term, discounted products will renew at the then-current renewal list price. Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="ssl-disclaimer1" />
+ One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" /> ]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="ssl-disclaimer1_34369" />
+ One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="vat-price" />
+Price does not include taxes, where applicable
