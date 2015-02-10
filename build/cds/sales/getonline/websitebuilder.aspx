@@ -253,6 +253,7 @@
       //img(src="/main-image.png")
     -->
     <hr>
+<<<<<<< HEAD
     <atlantis:webstash type="js">
       <style>
         .container .row .topSpacing{padding-top:20px;}
@@ -326,11 +327,7 @@
                   <label>Office 365 email</label>
                 </p><span class="tooltip-icon"></span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+=======
     <section id="features" data-mid-nav-title="[@L[cds.sales/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
     <div style="background-image: url(); background-color: #fff;">
       <div class="container">
@@ -341,6 +338,62 @@
             <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-leader-title]@L]</h3>
             <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-leader-content]@L]</p>
           </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-support-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-support-content]@L]</p>
+          </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+>>>>>>> 93aea41dfde85e6661bd313fd994c6dd86ac548a
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-trust-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-trust-content]@L]</p>
+          </div>
+        </div>
+      </div>
+<<<<<<< HEAD
+    </section>
+    <section id="features" data-mid-nav-title="[@L[cds.sales/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
+    <div style="background-image: url(); background-color: #fff;">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+=======
+    </div>
+    <hr>
+    <atlantis:webstash type="js">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        .domain-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .wsb-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .email-icon{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        .domain-icon-spacing {margin-right: 60px;}
+        .col-spacer2{width:43%;}
+        .col-spacer1{width: 30%;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="got">
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+            <h2>Ready to take your business online</h2>
+            <div class="section">
+              <h3>We have an excellent starter pack for</h3>
+              <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+>>>>>>> 93aea41dfde85e6661bd313fd994c6dd86ac548a
+            </div>
+            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-leader-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-leader-content]@L]</p>
+          </div>
+<<<<<<< HEAD
           <div class="col-sm-4 key-benefit">
             <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
@@ -403,6 +456,28 @@
                 </p><span class="tooltip-icon"></span>
               </div>
             </div>
+=======
+        </div>
+        <div class="row">
+          <div class="topSpacing">
+            <div class="col-xss-1"></div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="domain-icon"></div>
+                <p>
+                  <label>Domain</label>
+                </p><span class="tooltip-icon domain-icon-spacing"></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="wsb-icon"></div>
+                <p>
+                  <label>Website builder</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+>>>>>>> 93aea41dfde85e6661bd313fd994c6dd86ac548a
             <div class="col-sm-3">
               <div class="icon-spacing">
                 <div class="email-icon"></div>

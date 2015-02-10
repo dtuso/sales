@@ -1,8 +1,9 @@
 extends ../../../templates/pages/landing-page
 
 include _domain-multiple-selection-mixin.jade
-include _ready-to-take-business-online.jade
+include _ready-to-take-business-online-mixin.jade
 include _office365-email-mixin.jade
+include _ready-to-take-business-online-mixin.jade
 
 include _good-news-get-it-now.jade
 
@@ -10,7 +11,9 @@ append pageStyles
   style.
     .gray{background-color:lightgray;}
     .green{background-color:green}
+    .white{background-color:white}
     .uppercase{text-transform:uppercase}
+    .lowercase{text-transform:lowercase}
 
 block domainSearch
 
