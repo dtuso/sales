@@ -1,8 +1,8 @@
 ---
 location: sales/offers/default.aspx
-id: 5417402bf778fc205c2b5bfc
-name: GCE-27211
-comments: TMS version based on key not isc
+id: 54d15736f778fc21301a88cd
+name: GCE-34369
+comments: Various VAT fixes
 ---
 {% extends 'sales/offers/default/layouts/base.html' %} 
 {% block pageTitle %}<title>[@L[cds.sales/offers/default:page-title]@L]</title>{% endblock %}
@@ -41,7 +41,7 @@ comments: TMS version based on key not isc
 
 
 {% block body -%}
-  [@P[tmscontent:<data appproduct="lp" interactionpoint="advertising"><default app="tms" location="lp/advertising/default/default_template"/></data>]@P]
+  [@P[tmscontent:<data product="lp" interaction="advertising" channel="advlp" template="offer" />]@P]
 {%- endblock %} 
 
 
@@ -155,5 +155,6 @@ comments: TMS version based on key not isc
       }
       return [foundStart,foundEnd];      
     }
+    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);$.cookie("fb_tmsclick",null,{domain:url,path:"/"});$("div[data-tms-trackingid]").on("click",function(e){try{$.cookie("fb_tmsclick",$(this).data("tms-trackingid"),{domain:url,path:"/"})}catch(t){}return true})})
   </script>
 {% endblock %}
