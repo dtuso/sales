@@ -1,4 +1,4 @@
-extends ../../templates/pages/landing-page
+extends ../shared/_landing-page
 
 append vars 
   - page.title = "[@L[cds.sales/gd/hosting/web-hosting:page-title]@L]";
@@ -79,10 +79,27 @@ append pageStyles
   style
     include ./web-hosting/styles.css
   style.
+    /* page-specific overrides of common styling here */
     #speed-chart, #features, #reviews, #faq, #disclaimers { background-color: #fff; }
+    #platforms { background-color: #5caf2b; padding-top: 0; padding-bottom: 0; }
     #plans { padding-bottom: 40px; }
+    #speed-chart h2 { margin-bottom: 10px; }
+    #features { background-color: #fff; }
+    #alternate-products { padding-top: 0; padding-bottom: 0; }
+    #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
 
-    /* TODO: can this styling be abstracted into landing-page.jade? */
+    .plan-tile { 
+      margin-top: 0; 
+      margin-bottom: 0; 
+    }
+    .pro-plans { 
+      margin-top: -120px; 
+      padding-bottom: 20px; 
+      padding-top: 0; 
+    }
+    .pro-banner { color: #fff; }
+
+    /* TODO: can/should this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
     #marquee { 
       background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
@@ -152,18 +169,6 @@ append pageStyles
     html[lang="uk-ua"] #marquee {
       background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_emea_host.jpg);
     }
-
-    .plan-tile { 
-      margin-top: 0; 
-      margin-bottom: 0; 
-    }
-    .pro-plans { 
-      margin-top: -120px; 
-      padding-bottom: 20px; 
-      padding-top: 0; 
-    }
-
-    .pro-banner { color: #fff; }
 
 block domainSearch
   //- nothing to see here
@@ -256,9 +261,6 @@ block sections
   +renderMidPageNav
     +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#planTileOne", {"ci":"95886"})
 
-  //- section#test
-  //-   button.btn.btn-default-dark.view-all.btn-md(data-toggle='bsModal', data-target='#g-modal') [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
-  //-   include ../../templates/wsb-templates.html
   section#one-click-install.features.tile-section.one-click-wrapper
     .container
       .row
@@ -297,11 +299,11 @@ block sections
         | 
         |##if(activeLanguageAny([en-US]))
         | 
-        h3 People <span class='heartIcon'></span> Fast Websites
+        h2.text-center People <span class='heartIcon'></span> Fast Websites
         | 
         |##else
         | 
-        h3 [@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]
+        h2.text-center [@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]
         | 
         |##endif
         | 
@@ -335,67 +337,68 @@ block sections
           |##endif
           | 
 
-  section#features.key-benefits-wrap.tile-section(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]",data-ciCode="95794")
-    +renderColumnList(3, {backgroundColor: "#fff"})
-      +columnListMember("key-benefit")
-        .key-benefits-img-wrap
-          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-        | 
-        |##if(activeLanguageAny([en-US]))
-        | 
-        h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]
-        | 
-        |##else
-        | 
-        h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]
-        | 
-        |##endif
-        | 
-        |##if(activeLanguageAny([en-US]))
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]
-        | 
-        |##else
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]
-        | 
-        |##endif
-        | 
-      +columnListMember("key-benefit")
-        .key-benefits-img-wrap
-          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")
-        h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]
-        | 
-        |##if(activeLanguageAny([en-US]))
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]
-        | 
-        |##else
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]
-        | 
-        |##endif
-        | 
-      +columnListMember("key-benefit")
-        .key-benefits-img-wrap
-          +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
-        h3.key-benefits-title [@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]
-        | 
-        |##if(activeLanguageAny([en-US]))
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]
-        | 
-        |##else
-        | 
-        p.key-benefits-text [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]
-        | 
-        |##endif
-        | 
-        ul
-          li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]
-          li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]
-          li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]
-          li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]
+  section#features(data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]",data-ciCode="95794")
+    .container
+      .row
+        .col-sm-4
+          .feature
+            +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+            | 
+            |##if(activeLanguageAny([en-US]))
+            | 
+            h3 [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]
+            | 
+            |##else
+            | 
+            h3 [@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]
+            | 
+            |##endif
+            | 
+            |##if(activeLanguageAny([en-US]))
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]
+            | 
+            |##else
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]
+            | 
+            |##endif
+            | 
+        .col-sm-4
+          .feature
+            +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png")         
+            h3 [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]
+            | 
+            |##if(activeLanguageAny([en-US]))
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]
+            | 
+            |##else
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]
+            | 
+            |##endif
+            |  
+        .col-sm-4
+          .feature
+            +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png")
+            h3 [@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]
+            | 
+            |##if(activeLanguageAny([en-US]))
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]
+            | 
+            |##else
+            | 
+            p [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]
+            | 
+            |##endif
+            | 
+            ul
+              li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]
+              li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]
+              li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]
+              li [@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L] 
 
   | 
   |##if(activeLanguageAny([en-IN]))

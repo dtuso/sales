@@ -79,7 +79,8 @@ mixin renderTwoUpCompare(twoUpOptions)
 
   if typeof(twoUpOptions.includeStyles) == 'undefined'
     style
-      include:css styles/two-up-compare-styles.css
+      include:css ./_two-up-compare/two-up-compare-styles.css
+      
   div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "two-up-title-wrap #{twoUpOptions.titleBackgroundColor}")
     if (twoUpOptions.title)
       div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
