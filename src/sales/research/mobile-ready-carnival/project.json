@@ -1,0 +1,25 @@
+{
+  "mobile-ready-carnival.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/research/mobile-ready-carnival:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/research/mobile-ready-carnival:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/research/mobile-ready-carnival:meta-keywords]@L]",
+    "metaCanonicalPath": "/research/mobile-ready-carnival",
+    "metaOgTitle": "[@L[cds.sales/gd/research/mobile-ready-carnival:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/research/mobile-ready-carnival:og-description]@L]"
+  },
+  "mobile-ready-carnival.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}

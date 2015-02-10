@@ -265,116 +265,87 @@
         </div>
       </div>
     </section>
-    <atlantis:webstash type="css">
-      <style>#marquee {
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #f3f3f4;
-  overflow-y: hidden;
-}
-#marquee .promo-wrapper,
-#marquee .price-wrapper {
-  margin-top: 20px;
-}
-#marquee .inline-dash {
-  display: inline-block;
-  overflow: hidden;
-  letter-spacing: -0.5em;
-  font-size: 1.4em;
-  vertical-align: top;
-  line-height: 50%;
-}
-#marquee .headline-wrapper {
-  margin-top: 1em;
-  line-height: 1;
-}
-#marquee .promo-wrapper {
-  color: #77c043;
-}
-#marquee .disclaimer {
-  font-size: 0.6em;
-  margin-bottom: 2%;
-}
-#marquee .hero-wrapper > .row img {
-  margin: 0 auto;
-  display: block;
-}
-#marquee .dash {
-  letter-spacing: -0.3em;
-}
-#marquee button.btn-purchase {
-  margin: 3% 0;
-}
-#marquee .line1,
-#marquee .line2 {
-  color: #008b2d;
-}
-#marquee .chips {
-  max-height: 219px;
-  height: 100%;
-}
-#marquee .line1,
-#marquee .line2 {
-  font-size: 1.2em;
-}
-#marquee .line3 {
-  font-size: 1.67em;
-}
-#marquee .line5 {
-  font-size: 2.7em;
-}
-@media only screen and (min-width: 401px) {
-  #marquee {
-    font-size: 29px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #marquee {
-    font-size: 16px;
-  }
-  #marquee .headline-wrapper {
-    margin-top: 2.4em;
-  }
-  #marquee .chips {
-    max-height: none;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #marquee {
-    font-size: 20px;
-  }
-  #marquee .image {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #marquee {
-    font-size: 24px;
-  }
-  #marquee .image {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="marquee" data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]">
-      <!--remove rems-->
+    <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-5 image"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyNy42IDE0MSAzMDIuNCAzMTUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMjcuNiAxNDEgMzAyLjQgMzE1IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMzE1LDQxMy40IDMwMi45LDQyMS4zIDI1Ny42LDQyNy4zIDE1Mi45LDQwOC4zIDEzMi41LDQwNi42IDEyNy41LDM5OC41IDE1OS4xLDQwMS4zIDI1NC4yLDQxOS45IA0KCTI5Mi45LDQxNi4xICIvPg0KPHBhdGggZmlsbD0iIzAwOEEzMiIgZD0iTTMxMC4xLDQwOC41TDI3Ni40LDM5M2wtMzUuMi0zLjFsLTI4LjktNi4xYzAsMC0yMy41LTAuOC0yNy42LTEuN2MtNC4xLTAuOS0yOS44LDMuMy0yOS44LDMuM2wtMzIuNCw2LjQNCglsMjQtMWwyOS4yLTAuNWwxNi41LTEuNmwyMC45LDEuOGwyOS4xLDUuNmwyOS41LDIuNkwzMTAuMSw0MDguNXoiLz4NCjxwb2x5Z29uIGZpbGw9IiM0Mjk5NDUiIHBvaW50cz0iMTM4LjcsNDU2IDI5NS4yLDQ1NiAzMDMuMiw0MjguOSAyNTEuNyw0MzAuNCAyMDMuOCw0MjEuNCAxNTIuNCw0MTIgMTMxLjgsNDE1LjEgMTM1LjQsNDMzLjIgIi8+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjI4Mi40LDM3Ni43IDIzNC44LDMxOSAyMDUsNDA4ICIvPg0KPHBvbHlnb24gZmlsbD0iIzMzMzMzMyIgcG9pbnRzPSIzMDUuMSwyNDcuMyAzMDQuOCwyNDcuMiAzMDQuNywyNDcgMzA0LjYsMjQ3IDI1Ny43LDIyOS4yIDI5MS44LDIyNS44IDMxMS4zLDIyOSAzMjEuNywyMjcuMiANCgkzMjAuNywyMTguOCAyOTQuNCwyMTAuOSAyNjMuNywyMDguNyAyNzAuOCwyMDEuNSAyODEuNiwxOTQuOSAyODYuOSwxODguNiAyODIuNywxODQuMSAyNjkuNCwxODkgMjQ5LjUsMTk3LjUgMTYxLjgsMjA3LjggDQoJMTMzLjEsMTQxIDI3LjYsMTQxIDg0LjYsMjExLjMgMTI3LjUsMjY0LjcgMTY4LjMsMzA1LjQgMTcxLjgsMzA3LjkgMjA3LjEsMzIyLjggMjIyLjEsMzQwLjEgMjI2LjcsMzM2LjMgMjI5LjEsMzI1IDIxMi45LDMwNC41IA0KCTIwMC4yLDI4OS42IDIwMC40LDI4OS40IDIwOS43LDI3NS42IDIyNy4xLDI2OSAyNTYuOCwyODguMyAyNDQuNiwzMTMuOSAyNDUuNSwzMjQuMiAyNDkuNiwzMjguNSAyNzkuMiwyODQuMiAyNzcuMiwyNzIuNiANCgkyNTIuMiwyNTIuOSAyOTQuMSwyNjMuMyAzMTMuNiwyNzUuNiAzMjYuMSwyNzguMyAzMzAsMjcxLjcgMzA1LjEsMjQ3LjQgIi8+DQo8cGF0aCBmaWxsPSIjMDA4QTMyIiBkPSJNMjc4LjIsNDU2YzIuMy04LjgsNC4zLTE2LjEsNC4zLTE2LjFsLTQxLjcsNi42bC04NS4yLTE3LjhsMTAuMiwyNy4zSDI3OC4yeiIvPg0KPC9zdmc+DQo=" class="svgfallback chips"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-nacho.png"><![endif]--></div>
-          <div class="col-xs-12 col-sm-7">
-            <div class="headline-wrapper walsheim-black">
-              <div class="line1">TO BUSINESS OWNERS, WE RAISE </div>
-              <div class="line2"><span>A CHIP AND DROP&nbsp;</span><span class="dash"> ———— </span><span>&nbsp; OUR PRICES.</span></div>
-              <div class="line3">DOMAIN + WEBSITE + EMAIL</div>
-              <div class="line4">ALL STARTING AT JUST</div>
-              <div class="line5 price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO</div>
-              <button data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95902' /></relative>]@T]" class="btn btn-purchase">GET STARTED</button>
+          <div class="col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-6">
+                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+                </div>
+                <div class="col-md-12 col-sm-6"> 
+                  <div class="tile-wrapper">
+                    <style>.gtld-marquee-tile {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
+}
+.gtld-marquee-tile .left-content-wrapper {
+  padding-left: 10%;
+}
+.gtld-marquee-tile .header-text {
+  font-size: 40px;
+  color: #333;
+  margin: 25px 0 0 10px;
+}
+.gtld-marquee-tile .gtld-links-wrapper {
+  padding-left: -15px;
+}
+.gtld-marquee-tile ul {
+  list-style-type: none;
+  padding: 20px 0 0 20px;
+}
+.gtld-marquee-tile li {
+  color: #77c043;
+  font-size: 20px;
+  line-height: 25px;
+  margin: 0;
+}
+.gtld-marquee-tile li:hover {
+  color: #00a55e;
+}
+.Explorer8 .gtld-marquee-tile,
+.Explorer7 .gtld-marquee-tile {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
+}
+
+                    </style>
+                    <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
+                      <div class="tile-content-wrapper">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-sm-6">
+                              <div class="left-content-wrapper">
+                                <div class="header-wrapper">
+                                  <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="right-content-wrapper">
+                                <div class="gtld-links-wrapper">
+                                  <ul>
+                                    <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
+                                    <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
+                                    <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
+                                    <li data-url="[@T[link:<relative path='/tlds/email'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="disclaimer">First year only. Annual purchase required.</div>
           </div>
         </div>
       </div>
@@ -396,7 +367,12 @@
                   <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/get-found-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTg5LjY5MSAzOC45OTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE4OS42OTEgMzguOTk2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik02OC41NjIsMTcuMDExaDIuNzg0Yy0wLjI0LDEuMjk2LTEuMjQ4LDIuMzc2LTMuMTkyLDIuMzc2Yy0yLjczNiwwLTQuMDgtMi4xMTItNC4wOC00LjYwOA0KCWMwLTIuNDQ4LDEuMjcyLTQuNzI4LDMuODQtNC43MjhjMS43MjgsMCwyLjY2NCwxLjA1NiwyLjgzMiwyLjAxNmg1LjUyMWMtMC4zMTItMy40NTYtMy41NzYtNi4yODktOC4yODEtNi4yODkNCgljLTUuNzEzLDAtOS4wMDEsNC4xNTItOS4wMDEsOC45NTNjMCw0LjcyOCwzLjE2OCw4Ljc2MSw5LjA0OSw4Ljc2MWM0Ljc1MiwwLDcuNzc3LTIuNjE2LDguMzc3LTYuNDhoMS42MDh2LTMuMjg4aC05LjQ1N1YxNy4wMTF6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNODkuOTA2LDkuOTc4VjYuMjM0SDc5LjA4MXYxNi44MDJoMTAuODI1di0zLjc0NGgtNS44MzJ2LTIuODA4aDUuODMydi0zLjU3NmgtNS44MzJWOS45NzhIODkuOTA2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTk0LjgzNCwyMy4wMzVoNC45OTJWMTAuNTA2aDMuNDU2VjYuMjM0SDkxLjM3N3Y0LjI3MmgzLjQ1NlYyMy4wMzV6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTIwLjc0NiwxMC4zMTR2LTQuMDhoLTEwLjgyNXYxNi44MDJoNC45OTJ2LTUuMDY1aDUuODMzdi0zLjkzNmgtNS44MzN2LTMuNzJIMTIwLjc0NnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xMzAuNDU4LDIzLjQ5MWM1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJUzEyNC42OTgsMjMuNDkxLDEzMC40NTgsMjMuNDkxeiBNMTMwLjQ1OCwxOC45MzFjLTIuNTQ0LDAtNC4wNTYtMi4wNjQtNC4wNTYtNC4yOTZjMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5Ng0KCWMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzEzNC41MTQsMTYuODY3LDEzMy4wMjYsMTguOTMxLDEzMC40NTgsMTguOTMxeiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4wNzMsMTcuMjAzYzAsMy42NDgsMi42NjQsNi4yODgsNy4wMzMsNi4yODhjNC4zNjgsMCw3LjAwOS0yLjY0LDcuMDA5LTYuMjg4VjYuMjM0aC00Ljk5MnYxMC45MjENCgljMCwxLjE1Mi0wLjg0LDIuMTEyLTIuMDE2LDIuMTEyYy0xLjE3NiwwLTIuMDQtMC45Ni0yLjA0LTIuMTEyVjYuMjM0aC00Ljk5M1YxNy4yMDN6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTYwLjg1LDYuMjM0aC01LjA4OHYxNi44MDJoNC45OTJWMTMuNDFsNS40OTcsOS42MjVoNS4wODhWNi4yMzRoLTUuMDE2djkuOTYxTDE2MC44NSw2LjIzNHoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xNzQuMDQxLDYuMjM0djE2LjgwMmg2Ljg2NWM1LjYxNiwwLDguNzg1LTQuMDMyLDguNzg1LTguNDAxYzAtNC4zNjgtMy4yMTYtOC40MDEtOC43ODUtOC40MDFIMTc0LjA0MXoNCgkgTTE4MC41NDYsMTAuNDU4YzIuNTIsMCw0LjAzMiwyLjAxNiw0LjAzMiw0LjE3NmMwLDIuMTYtMS41MTIsNC4xNzYtNC4wMzIsNC4xNzZoLTEuNTEydi04LjM1M0gxODAuNTQ2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM4Ljc1Niw0LjI5M0wyNC45OTksMEwxMS4yNDIsNC4yOTNMMCwxNC42NTdsMTEuMjQyLDEwLjM2NGw1LjQ4OCwxLjcxM2wtNC4yMjEtNC44MzdsMC40OC0xMC4zODQNCglsNy4zOTQtNi45ODlsOS45NzcsMC40OTlsNi43MTUsNy42OTVsLTAuNDgsMTAuMzgzbC00LjA5NiwzLjg3Mmw2LjI1Ny0xLjk1M2wxMS4yNDEtMTAuMzY0TDM4Ljc1Niw0LjI5M3oiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0yNS4wNTksMTEuNTk5bC0zLjk1NywxLjQ3NWwtMS43OTYsMy45NTVsMS40MTgsNC4xMThsMy44LDEuODY5bDMuOTU3LTEuNDc1bDEuNzk2LTMuOTU1bC0xLjQxNy00LjExOA0KCUwyNS4wNTksMTEuNTk5eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTM1LjM2MiwzMi4xNjhMMjUuMDk4LDE0LjY1N2wtMS41MjQsMC42MzNsLTEuMjM4LDEuMTIxbDEwLjI2NSwxNy41MTFsLTUuMzg5LDMuNDIybDEwLjI1OCwxLjY1Mw0KCWwzLjI4MS0xMC4yNUwzNS4zNjIsMzIuMTY4eiIvPg0KPC9zdmc+DQo=" class="promo-logo svgfallback">
                   </div>
                   <div class="promo-text walsheim-black">GET YOUR BUSINESS LISTED EVERYWHERE.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95778' /></relative>]@T]" class="walsheim-black">LEARN MORE </a>
+                  <div class="promo-cta">
+                    ##if(productHasSavingsMoreThan(37975, 37975, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95778' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='37975' secondaryproductid='37975' showsymbol='true'/>]@T]</a>
+                    ##else
+                    <a class="walsheim-black" href="[@T[link:<relative path='/products/business-marketing.aspx'><param name='ci' value='95778' /></relative>]@T]">LEARN MORE</a>
+                    ##endif
                   </div>
                 </div>
               </div>
@@ -417,8 +393,8 @@
                   </div>
                   <div class="promo-text walsheim-black">WORK ANYWHERE WITH MICROSOFT OFFICE.</div>
                   <div class="promo-cta">
-                    ##if(productHasSavingsMoreThan(543628, 543628, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='543628' secondaryproductid='543628' showsymbol='true'/>]@T]</a>
+                    ##if(productHasSavingsMoreThan(31841, 31841, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='31841' secondaryproductid='31841' showsymbol='true'/>]@T]</a>
                     ##else
                     <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">LEARN MORE</a>
                     ##endif
@@ -442,8 +418,8 @@
                   </div>
                   <div class="promo-text walsheim-black">HOSTING THAT WON'T KEEP YOU... WAITING.</div>
                   <div class="promo-cta">
-                    ##if(productHasSavingsMoreThan(32413, 32413, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32413' secondaryproductid='32413' showsymbol='true'/>]@T]</a>
+                    ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32082' secondaryproductid='32082' showsymbol='true'/>]@T]</a>
                     ##else
                     <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">LEARN MORE</a>
                     ##endif
@@ -471,221 +447,6 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <atlantis:webstash type="css">
-      <style>#nacho-promo {
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nacho-video.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: -1200px 0;
-}
-@media only screen and (min-width: 480px) {
-  #nacho-promo {
-    background-position: -950px 0;
-  }
-}
-@media only screen and (min-width: 768px) {
-  #nacho-promo {
-    background-position: -700px 0;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #nacho-promo {
-    background-position: -450px 0;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #nacho-promo {
-    background-position: -200px 0;
-  }
-}
-@media only screen and (min-width: 1500px) {
-  #nacho-promo {
-    background-position: 0 0;
-  }
-}
-.Explorer8 #nacho-promo {
-  background-position: 0 0;
-}
-div.video-marquee {
-  background-color: transparent;
-}
-
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="script"></atlantis:webstash>
-    <section id="nacho-promo">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
-            </style>
-            <atlantis:webstash type="js">
-              <script>
-                // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-                $(document).ready(function(){
-                  if(typeof youtubeVideo === 'undefined'){
-                    window.youtubeVideo = {
-                      _src: 'https://www.youtube.com/embed/',
-                      loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
-                        if(typeof parameters === 'object'){
-                          var paramString = '';
-                          
-                          // add origin to src
-                          parameters.origin = window.location.protocol+'//'+window.location.host
-                
-                          if(youtubeVideo._src.indexOf('?') === -1){
-                            paramString += '?';
-                          }else{
-                            paramString += '&';
-                          }
-                
-                          for(param in parameters){
-                            if(paramString.length > 2){
-                              paramString += '&';
-                            }
-                            paramString += param+'='+parameters[param];
-                          }
-                          parameters = paramString;
-                        }
-                        
-                        var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
-                
-                        // append/prepend to container
-                        if(typeof container === 'string'){
-                          container = $(container);
-                        }
-                
-                        if(typeof insertType === 'undefined' || insertType === 'append'){
-                          container.append($video);
-                        }else{
-                          container.prepend($video);
-                        }
-                
-                        if(typeof callback === 'function'){
-                          $video.load(function(){
-                            callback($video[0]);
-                          });
-                        }
-                
-                        return $video[0];
-                      }
-                    };
-                  }
-                  
-                  var $containers = $('[data-tile="NachoVideo"]');
-                  $containers.each(function(){
-                    var $this = $(this);
-                    var videoId = $this.data('youtube-id');
-                    $this.find('.play-button, .cta').bind('click.youtube',function(event){
-                      // remove this event
-                      $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
-                
-                      // load the video
-                      youtubeVideo.loadVideo(
-                          videoId,
-                          '100%',
-                          '100%',
-                          function(video){
-                              var $videoInfo = $this.find('.video-info');
-                              $videoInfo.animate({'opacity':0.0},1000,function(){
-                                  $videoInfo.css({'display':'none'});
-                              });
-                              //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
-                          },
-                          {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
-                          $this,
-                          'prepend'
-                      );
-                    }).css({'cursor':'pointer'});
-                  });
-                });
-              </script>
-            </atlantis:webstash>
-            <div style="" data-lazyload-source="" data-icode="code" data-ci="95781" data-tile="NachoVideo" data-youtube-id="FT7lLnd_DYE" class=" video-marquee video-marquee-white full-video">
-              <div class="container relative-position video-info">
-                <div class="row">
-                  <div class="col-sm-10 col-sm-offset-1 col-xs-12 video-marquee-all-centered"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png" class="play-button"/>
-                    <h3 class="h1">[@L[cds.sales/homepage/sections/_nacho-full-video:tagline]@L]</h3><span class="cta">[@L[cds.sales/homepage/sections/_nacho-full-video:cta]@L]</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <atlantis:webstash type="css">
-      <style>#nascar-contest {
-  background: #fff center center;
-  background-size: cover;
-}
-#nascar-contest h2 {
-  margin: 80px 0 0;
-}
-#nascar-contest h3 {
-  margin-top: 0;
-  font-size: 1.6rem;
-}
-@media only screen and (max-width: 680px) {
-  #nascar-contest h3 {
-    width: 180px;
-  }
-}
-#nascar-contest a {
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 1400px) {
-  #nascar-contest a {
-    margin-bottom: 100px;
-  }
-}
-#nascar-contest .nascar-contest-btn {
-  font-size: 1.4rem;
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-offset-sm-6">
-            <h2 class="walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
-            <h3 class="walsheim-regular">[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
           </div>
         </div>
       </div>
@@ -1313,6 +1074,47 @@ text-transform: uppercase;
         </div>
       </div>
     </section>
+    <atlantis:webstash type="css">
+      <style>#nascar-contest {
+  background: #fff center center;
+  background-size: cover;
+}
+#nascar-contest h2 {
+  margin: 80px 0 0;
+}
+#nascar-contest h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 680px) {
+  #nascar-contest h3 {
+    width: 180px;
+  }
+}
+#nascar-contest a {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1400px) {
+  #nascar-contest a {
+    margin-bottom: 100px;
+  }
+}
+#nascar-contest .nascar-contest-btn {
+  font-size: 1.4rem;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <h2 class="walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
+            <h3 class="walsheim-regular">[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="limitations-social">
       <div class="container">
         <div class="row">
@@ -1380,6 +1182,7 @@ text-transform: uppercase;
           $('#shareme').fosShare({});
         }, 2000);
       });
+      $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
       
     </script>
   </body>

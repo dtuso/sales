@@ -1,8 +1,3 @@
----
-id:  54c937b2f778fc2bc0f8d8a1
-name: GCE-35463
-comments: Icann fee token replaced
----
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Get Online | Business Email, Domain, and Web Builder Software
@@ -277,7 +272,7 @@ Business email
 <phrase key="32573-godaddy-ols-bullet-5" />
 Beautiful themes &amp; simple setup
 <phrase key="32573-godaddy-ols-bullet-6" />
-Unlimited pages &amp; products
+Unlimited products
 <phrase key="32573-godaddy-ols-bullet-7" />
 Built-in SEO features
 <phrase key="32573-godaddy-ols-bullet-8" />
