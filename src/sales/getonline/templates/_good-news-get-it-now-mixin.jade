@@ -3,7 +3,7 @@ mixin renderGoodNews(domain, price, image)
   append pageStyles
     atlantis:webstash(type="css")
       style.
-        .container .hero-guy{height:709px; width:338px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 80%;}
+        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
@@ -12,9 +12,12 @@ mixin renderGoodNews(domain, price, image)
         .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
         .get-it-now{margin-top: 35px;}
         .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
 
   section#getItNow
     .container
@@ -28,17 +31,17 @@ mixin renderGoodNews(domain, price, image)
             +renderDomainstringWithPrice(domain, price)
         .container.bottom
           .row
-            div.topSpacing
-              .good-news-image
-          .row
             .col-sm-4
-              h3 DOMAIN NAME
+              .features-domain-name
+              label.h3 DOMAIN NAME
               p Domain is the name of your
             .col-sm-4
-              h3 WEBSITE BUILDER
+              .wsb-icon
+              label.h3 WEBSITE BUILDER
               p Website builder is a tool we have
             .col-sm-4
-              h3 OFFICE 365 EMAIL
+              .features-email
+              label.h3 OFFICE 365 EMAIL
               p Office 365 email is the simplest email tool
           .get-it-now
             .row.text-center

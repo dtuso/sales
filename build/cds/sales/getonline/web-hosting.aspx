@@ -211,7 +211,7 @@
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
-        .container .hero-guy{height:709px; width:338px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 80%;}
+        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
@@ -220,9 +220,12 @@
         .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
         .get-it-now{margin-top: 35px;}
         .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
         
       </style>
     </atlantis:webstash>
@@ -245,21 +248,19 @@
           </div>
           <div class="container bottom">
             <div class="row">
-              <div class="topSpacing">
-                <div class="good-news-image"></div>
-              </div>
-            </div>
-            <div class="row">
               <div class="col-sm-4">
-                <h3>DOMAIN NAME</h3>
+                <div class="features-domain-name"></div>
+                <label class="h3">DOMAIN NAME</label>
                 <p>Domain is the name of your</p>
               </div>
               <div class="col-sm-4">
-                <h3>WEBSITE BUILDER</h3>
+                <div class="wsb-icon"></div>
+                <label class="h3">WEBSITE BUILDER</label>
                 <p>Website builder is a tool we have</p>
               </div>
               <div class="col-sm-4">
-                <h3>OFFICE 365 EMAIL</h3>
+                <div class="features-email"></div>
+                <label class="h3">OFFICE 365 EMAIL</label>
                 <p>Office 365 email is the simplest email tool</p>
               </div>
             </div>
