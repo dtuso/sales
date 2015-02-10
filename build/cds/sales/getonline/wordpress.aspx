@@ -211,27 +211,115 @@
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
+    <!--div.text-center-->
+    <!--  +renderDomainstringWithPrice("testingKAT", "$1.00")-->
+    <hr>
+    <!--section#websitenode-builder
+    //div
+      //img(src="/headrer-image.pnodeng")
+      //h2 Website builder
+      //a.btn.btn-default-light View All Templates
+      //img(src="/main-image.png")
+    -->
+    <atlantis:webstash type="js">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        .email-icon{width:84px;height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .did-you-know-domain-name{width:802px;height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-domainName.png) no-repeat center bottom;}
+        .did-you-know-email{width:783px;height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;}
+        .did-you-know-website-builder{width:699px;height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-WB.png) no-repeat center bottom;}
+        .domain-icon{width:85px;height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .features-complete{width: 793px;height: 125px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+        .features-domain-name{width:105px;height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{width:109px;height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{width:114px;height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .good-news-shape{width:1120px;height:331px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom;}
+        .half-hero-left{width:203px;height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .half-hero-right{width:203px;height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-right.png) no-repeat center bottom;}
+        .hero-guy{width:338px;height:709px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom;}
+        .illustration-complete{width:693px;height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png) no-repeat center bottom;}
+        .illustration-get-online{width:283px;height:193px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-getOnline.png) no-repeat center bottom;}
+        .illustration-my-business{width:273px;height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-myBusiness.png) no-repeat center bottom;}
+        .illustration-white-arrow{width:132px;height:55px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-whiteArrow.png) no-repeat center bottom;}
+        .play-button{width:117px;height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-play.png) no-repeat center bottom;}
+        .why-us-security{width:139px;height:98px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png) no-repeat center bottom;}
+        .why-us-speed{width:118px;height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png) no-repeat center bottom;}
+        .why-us-support{width:142px;height:100px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png) no-repeat center bottom;}
+        .wsb-monitor{width:789px;height:556px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-monitor.png) no-repeat center bottom;}
+        .wsb-icon{width:101px;height:93px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .tooltip-icon{width:15;height:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat center bottom;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="O365-email">
+      <div class="container">
+        <div class="row">
+          <div class="text-center features-email"></div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h2>OFFICE 365 EMAIL</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h3>Branded email to talk to your customers</h3>
+            <h3><mark>domain</mark> – Starting at <mark></mark></h3>
+          </div>
+          <div class="col-xss-1">
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="domain-icon"></div>
+                <p>
+                  <label>Domain</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="wsb-icon"></div>
+                <p>
+                  <label>Website builder</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="email-icon"></div>
+                <p>
+                  <label>Office 365 email</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
     <div style="background-image: url(); background-color: #fff;">
       <div class="container">
         <div class="row">
           <div class="col-sm-4 key-benefit">
             <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-leader-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-leader-content]@L]</p>
+            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-leader-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-leader-content]@L]</p>
           </div>
           <div class="col-sm-4 key-benefit">
             <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-support-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-support-content]@L]</p>
+            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-support-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-support-content]@L]</p>
           </div>
           <div class="col-sm-4 key-benefit">
             <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
             </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/getonline:why-us-world-trust-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/getonline:why-us-world-trust-content]@L]</p>
+            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-trust-title]@L]</h3>
+            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-trust-content]@L]</p>
           </div>
         </div>
       </div>
