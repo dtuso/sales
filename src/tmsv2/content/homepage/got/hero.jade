@@ -6,32 +6,25 @@ atlantis:webstash(type="css")
     :less
       #marquee{background-color: #ecedee;}
       .hero.got{
-        .products{text-align:center;margin-top:15%}
-        .product{font-size:170%;max-width:50%;margin:auto}
-        .product div{font-size:50%}
+        font-size:16px;
+        width:100%;position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
+        .products{text-align:center;}
+        .product{max-width:50%;margin:auto}
         img.www{width:100%}
         img.pencil{padding: 4%;width:107%}
         img.envelope{padding: 8% 0;width:115%}
-        .addition{text-align:center;font-size:200%;}
-        .cta{width:100%}
+        .addition{position: absolute;top: 50%;-webkit-transform: translateY(-33%);-ms-transform: translateY(-33%);transform: translateY(-33%)}
+        .addition-wrapper{height:3em; width:12% }
         .pricing {font-size:150%}
         .price-wrapper{width:30%;display:inline-block}
         .disclaimer{font-size:55%;padding: 1% 0}
-        @media only screen and (min-width : 480px){
-         .addition{font-size:350%;}
-         .product div{font-size:70%;}
-        }
-        @media only screen and (min-width : 650px){
-         .products {margin-top:2%}
-        }
-        @media only screen and (min-width : 768px){
-         .addition{font-size:450%;}
-         .product div{font-size:100%;}
-        }
-        @media only screen and (min-width : 992px){
-         .addition{font-size:550%;}
+      }
+      @media only screen and (min-width: 768px){
+        #marquee{ 
+          .product div {font-size:1.5em}
         }
       }
+      @media screen
 div(class="hero got", data-url!="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='"+heroParams.ci+"'/></relative>]@T]", data-ci=heroParams.ci)
   .products.walsheim-black
     .product.col-xs-2
@@ -40,14 +33,16 @@ div(class="hero got", data-url!="[@T[link:<relative path='/offers/online-busines
       <![endif]-->
       img.www.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=")
       .domain [@L[cds.sales/homepage/heros/got:domain]@L]
-    .addition.col-xs-2.col-sm-2 [@L[cds.sales/homepage/heros/got:additionSign]@L]
+    .addition-wrapper.col-xs-2.bigtext
+      .addition [@L[cds.sales/homepage/heros/got:additionSign]@L]
     .product.col-xs-2
       <!--[if lt IE 9]>
       img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website.png").pencil
       <![endif]-->
       img.pencil.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=")
       .website [@L[cds.sales/homepage/heros/got:website]@L]
-    .addition.col-xs-2.col-sm-2 [@L[cds.sales/homepage/heros/got:additionSign]@L]
+    .addition-wrapper.col-xs-2.bigtext
+      .addition [@L[cds.sales/homepage/heros/got:additionSign]@L]
     .product.col-xs-2
       <!--[if lt IE 9]>
       img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-email.png").envelope
