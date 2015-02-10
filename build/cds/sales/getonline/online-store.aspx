@@ -202,8 +202,8 @@
       
     </style>
     <style>
-      .gray{background-color:lightgray;}
-      .green{background-color:green}
+      .gray{background-color:#E8E8E8;}
+      .green{background-color:#78C043}
       .white{background-color:white}
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
@@ -277,8 +277,10 @@
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
         .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
         
-        .btn-select{margin:0 15px;float:right;}
-        .domainName{margin:0 15px;color:#333;font-size:40px;font-weight:400;display:block;}
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
         
       </style>
     </atlantis:webstash>
@@ -307,6 +309,27 @@
           </div>
         </div>
         <div class="row">
+          <div class="container">
+            <h5 style="margin-top:20px"><strong>Here are some alternative options available:</strong></h5>
+          </div>
+        </div>
+        <div class="row domainSelect">
+          <div class="container white">
+            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongBusiness.com</span></div>
+            <div class="col-sm-3">
+              <button class="btn btn-primary btn-select uppercase">Select</button>
+            </div>
+          </div>
+        </div>
+        <div class="row domainSelect">
+          <div class="container white">
+            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongSuites.com</span></div>
+            <div class="col-sm-3">
+              <button class="btn btn-primary btn-select uppercase">Select</button>
+            </div>
+          </div>
+        </div>
+        <div class="row domainSelect">
           <div style="margin-top:30px">
             <div class="col-sm-9 plan-flag">
               <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
@@ -327,7 +350,6 @@
       //a.btn.btn-default-light View All Templates
       //img(src="/main-image.png")
     -->
-    <hr>
     <!-- p4p.office365-->
     <atlantis:webstash type="css">
       <style>
@@ -417,13 +439,16 @@
         .col-spacer2{width:43%;}
         .col-spacer1{width: 30%;}
         
+        h2{margin-top:0px;margin-bottom:0px;}
+        h3{margin-top:0px;margin-bottom:0px;}
+        
       </style>
     </atlantis:webstash>
     <section id="got">
       <div class="container">
         <div class="row">
           <div class="text-center">
-            <h2>Ready to take your business online</h2>
+            <h2 class="uppercase">Ready to take your business online?</h2>
             <div class="section">
               <h3>We have an excellent starter pack for</h3>
               <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>

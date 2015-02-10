@@ -18,6 +18,7 @@ mixin renderDomainMultipleSelection(businessName)
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
 
   section#domainSearch.green
     .container
@@ -37,18 +38,21 @@ mixin renderDomainMultipleSelection(businessName)
             button.btn.btn-primary.btn-select.uppercase Select
             //<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>
       .row
+        div.container
+          h5(style={'margin-top':'20px'}) <strong>Here are some alternative options available:</strong>
+      .row.domainSelect
         div.container.white
           div.col-sm-9
             span.domainName.lowercase ReallyLongBusiness.com
           div.col-sm-3
             button.btn.btn-primary.btn-select.uppercase Select
-      .row
+      .row.domainSelect
         div.container.white
           div.col-sm-9
             span.domainName.lowercase ReallyLongSuites.com
           div.col-sm-3
             button.btn.btn-primary.btn-select.uppercase Select
-      .row
+      .row.domainSelect
         div(style={'margin-top':'30px'})
           .col-sm-9.plan-flag
             h5.uppercase(style={'margin-top':'20px'}) <mark><strong>did you know...</strong></mark>
