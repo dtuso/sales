@@ -2941,1239 +2941,1239 @@ var PlanBox6UI = {
       </div> 
       ##endif
        
-      <section id="social-media">
-         
-        ##if(countrySiteAny(www))
-         
-                <style>
-                  .features-tabbed-carousel-top {
-                    text-align: center;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon {
-                    text-align: center;
-                    cursor: pointer;
-                    position: relative;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-                  max-width: 70%;
-                  vertical-align: middle;
-                  display: inline-block;
-                  }
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-                  margin-bottom: 10px;
-                  }
-                  .img-center {
-                  margin: 0 auto;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-                  color: #008a32;
-                  font-family: 'Walsheim-Black';
-                  }
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-                  font-family: 'Walsheim-Bold';
-                  font-size: 18px;
-                  font-size: 1.8rem;
-                  line-height: 1.1;
-                  text-transform: uppercase;
-                  }
-                  .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-                  
-                  @media only screen and (min-width: 992px){
-                    .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-                    border-left: 1px solid #808080;
-                    }
-                  }
-                  @media only screen and (min-width: 992px){
-                    .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-                    content: "";
-                    width: 0;
-                    height: 0;
-                    border-top: 15px solid #008a32;
-                    border-right: 15px solid transparent;
-                    border-left: 15px solid transparent;
-                    position: absolute;
-                    bottom: -15px;
-                    margin-left: -20px;
-                    left: 50%;
-                    }
-                  }
-                  
-                </style>
-                <div data-icode="" id="" class="features-tabbed-carousel-top ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
-                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
-                                </div>
-                              </div>
-                    </div>
+    </section>
+    <section id="social-media">
+       
+      ##if(countrySiteAny(www))
+       
+            <style>
+              .features-tabbed-carousel-top {
+                text-align: center;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                padding-top: 15px;
+                padding-bottom: 15px;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              max-width: 70%;
+              vertical-align: middle;
+              display: inline-block;
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              margin-bottom: 10px;
+              }
+              .img-center {
+              margin: 0 auto;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+              color: #008a32;
+              font-family: 'Walsheim-Black';
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+              font-family: 'Walsheim-Bold';
+              font-size: 18px;
+              font-size: 1.8rem;
+              line-height: 1.1;
+              text-transform: uppercase;
+              }
+              .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+              
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                border-left: 1px solid #808080;
+                }
+              }
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 15px solid #008a32;
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                position: absolute;
+                bottom: -15px;
+                margin-left: -20px;
+                left: 50%;
+                }
+              }
+              
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                    <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                    <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
                   </div>
                 </div>
-                <atlantis:webstash type="js">
-                  <script type="text/javascript">
-                    $(window).load(function() {
-                      setTimeout(function() {
-                        $(".features-tabbed-carousel-icon:first").click();
-                      }, 500);
-                    
-                      var maxTabHeight = 0;
-                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                      }).css("height", maxTabHeight);
-                    
-                      var maxFeatureTextHeight = 0;
-                      $(".feature-text").each(function(index, featureText) {
-                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                      }).css({height: maxFeatureTextHeight});
-                    
-                    });
-                    
-                    $(".features-tabbed-carousel-icon").click(function() {
-                      var slideNum = $(this).data("begin");
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                      $('#carousel-social-media').carousel(slideNum);
-                    });
-                    
-                    $('#carousel-social-media').on('slid.bs.carousel', function () {
-                      var carouselData = $(this).data('bs.carousel');
-                      var currentIndex = carouselData.getActiveIndex();
-                      $(".features-tabbed-carousel-icon").each(function() {
-                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                          $(".features-tabbed-carousel-icon").removeClass("active");
-                          $(this).addClass("active");
-                        }
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash>
-                <style>.item-wrapper { padding: 35px 0 20px; }
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -35px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 15px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-                </style>
-                <div class="carousel-wrap">
-                  <div class="carousel-container container">
-                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
-                      </ol>
-                      <div class="carousel-inner">
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                      </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
-                    </div>
-                    <script>
-                      $('.carousel .carousel-indicators li:first-child').addClass("active");
-                      $('.carousel .carousel-inner .item:first-child').addClass("active");
-                    </script>
-                  </div>
-                </div> 
-        ##else
-         
-                <style>
-                  .features-tabbed-carousel-top {
-                    text-align: center;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon {
-                    text-align: center;
-                    cursor: pointer;
-                    position: relative;
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-                  max-width: 70%;
-                  vertical-align: middle;
-                  display: inline-block;
-                  }
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-                  margin-bottom: 10px;
-                  }
-                  .img-center {
-                  margin: 0 auto;
-                  }
-                  
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-                  color: #008a32;
-                  font-family: 'Walsheim-Black';
-                  }
-                  .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-                  font-family: 'Walsheim-Bold';
-                  font-size: 18px;
-                  font-size: 1.8rem;
-                  line-height: 1.1;
-                  text-transform: uppercase;
-                  }
-                  .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-                  
-                  @media only screen and (min-width: 992px){
-                    .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-                    border-left: 1px solid #808080;
-                    }
-                  }
-                  @media only screen and (min-width: 992px){
-                    .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-                    content: "";
-                    width: 0;
-                    height: 0;
-                    border-top: 15px solid #008a32;
-                    border-right: 15px solid transparent;
-                    border-left: 15px solid transparent;
-                    position: absolute;
-                    bottom: -15px;
-                    margin-left: -20px;
-                    left: 50%;
-                    }
-                  }
-                  
-                </style>
-                <div data-icode="" id="" class="features-tabbed-carousel-top ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
-                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
-                                </div>
-                              </div>
-                    </div>
-                  </div>
-                </div>
-                <atlantis:webstash type="js">
-                  <script type="text/javascript">
-                    $(window).load(function() {
-                      setTimeout(function() {
-                        $(".features-tabbed-carousel-icon:first").click();
-                      }, 500);
-                    
-                      var maxTabHeight = 0;
-                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                      }).css("height", maxTabHeight);
-                    
-                      var maxFeatureTextHeight = 0;
-                      $(".feature-text").each(function(index, featureText) {
-                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                      }).css({height: maxFeatureTextHeight});
-                    
-                    });
-                    
-                    $(".features-tabbed-carousel-icon").click(function() {
-                      var slideNum = $(this).data("begin");
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                      $('#carousel-social-media').carousel(slideNum);
-                    });
-                    
-                    $('#carousel-social-media').on('slid.bs.carousel', function () {
-                      var carouselData = $(this).data('bs.carousel');
-                      var currentIndex = carouselData.getActiveIndex();
-                      $(".features-tabbed-carousel-icon").each(function() {
-                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                          $(".features-tabbed-carousel-icon").removeClass("active");
-                          $(this).addClass("active");
-                        }
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash>
-                <style>.item-wrapper { padding: 35px 0 20px; }
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -35px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 15px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-                </style>
-                <div class="carousel-wrap">
-                  <div class="carousel-container container">
-                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
-                      </ol>
-                      <div class="carousel-inner">
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                      </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
-                    </div>
-                    <script>
-                      $('.carousel .carousel-indicators li:first-child').addClass("active");
-                      $('.carousel .carousel-inner .item:first-child').addClass("active");
-                    </script>
-                  </div>
-                </div> 
-        ##endif
-         
-        <div class="bg-gray-light">
-                    <atlantis:webstash type="css">
-                      <style>
-                        .features-two-up {
-                          min-height: 940px;
-                          background-size: cover;
-                          background-repeat: no-repeat;
-                          background-position: top center;
-                          padding: 50px 0;
-                        }
-                        .features-two-up .feature-row-height {
-                          margin-top: 40px;
-                        }
-                        .features-two-up .feature-image {
-                          margin-top: 15px;
-                          margin-bottom: 20px;
-                        }
-                        .features-two-up .feature-title {
-                          font-size: 24px;
-                          font-size: 2.4rem;
-                          margin-bottom: 10px;
-                          font-family: 'Walsheim-Bold';
-                          line-height: 1.1;
-                          margin-top: 15px;
-                        }
-                        .features-two-up .feature-row-text {
-                          margin-bottom: 20px;
-                        }
-                        
-                      </style>
-                    </atlantis:webstash>
-                    <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h2>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                           </div>
-                                    <div class="row feature-row-height">
-                                      <div class="col-sm-7">
-                                        <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" alt="" class="lazyload feature-image img-responsive">
-                                          </div>
-                                          <div class="col-sm-7">
-                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
-                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row feature-row-height">
-                                      <div class="col-sm-7">
-                                        <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" alt="" class="lazyload feature-image img-responsive">
-                                          </div>
-                                          <div class="col-sm-7">
-                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
-                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
                         </div>
-                      </div>
-                    </div>
-        </div>
-        <div class="bg-black">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9">
-                <h2 style="color:#FFF;margin-top:40px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
-              </div>
-              <div class="col-sm-3">
-                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
-                  <button data-ci="91392" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
+                          </div>
+                        </div>
                 </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-social-media').carousel(slideNum);
+                });
+                
+                $('#carousel-social-media').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div> 
+      ##else
+       
+            <style>
+              .features-tabbed-carousel-top {
+                text-align: center;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                padding-top: 15px;
+                padding-bottom: 15px;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              max-width: 70%;
+              vertical-align: middle;
+              display: inline-block;
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              margin-bottom: 10px;
+              }
+              .img-center {
+              margin: 0 auto;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+              color: #008a32;
+              font-family: 'Walsheim-Black';
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+              font-family: 'Walsheim-Bold';
+              font-size: 18px;
+              font-size: 1.8rem;
+              line-height: 1.1;
+              text-transform: uppercase;
+              }
+              .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+              
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                border-left: 1px solid #808080;
+                }
+              }
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 15px solid #008a32;
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                position: absolute;
+                bottom: -15px;
+                margin-left: -20px;
+                left: 50%;
+                }
+              }
+              
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                    <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                    <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
+                  </div>
+                </div>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-social-media').carousel(slideNum);
+                });
+                
+                $('#carousel-social-media').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div> 
+      ##endif
+       
+      <div class="bg-gray-light">
+                <atlantis:webstash type="css">
+                  <style>
+                    .features-two-up {
+                      min-height: 940px;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-position: top center;
+                      padding: 50px 0;
+                    }
+                    .features-two-up .feature-row-height {
+                      margin-top: 40px;
+                    }
+                    .features-two-up .feature-image {
+                      margin-top: 15px;
+                      margin-bottom: 20px;
+                    }
+                    .features-two-up .feature-title {
+                      font-size: 24px;
+                      font-size: 2.4rem;
+                      margin-bottom: 10px;
+                      font-family: 'Walsheim-Bold';
+                      line-height: 1.1;
+                      margin-top: 15px;
+                    }
+                    .features-two-up .feature-row-text {
+                      margin-bottom: 20px;
+                    }
+                    
+                  </style>
+                </atlantis:webstash>
+                <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h2>
+                      </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" alt="" class="lazyload feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" alt="" class="lazyload feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+      <div class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9">
+              <h2 style="color:#FFF;margin-top:40px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
+            </div>
+            <div class="col-sm-3">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
+                <button data-ci="91392" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section> 
     ##if(activeLanguageAny([en-us]))
      
@@ -4223,20 +4223,24 @@ top: -6px;
 
 .accordion-group li.accordion-dropdown .carett {
   display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-top: 7px;
+  margin-right: 10px;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-down {
-  border-top: 0.5em solid;
-  border-right: 0.5em solid transparent;
-  border-left: 0.5em solid transparent;
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-right {
-  border-left: 0.5em solid;
-  border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
+  border-left: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
   margin-top: 1px;
-  margin-right: 0.7em;
+  margin-right: 18px;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -4314,7 +4318,7 @@ top: -6px;
           </div>
         </div>
       </div>
-      <atlantis:webstash type="script">
+      <atlantis:webstash type="js">
         <script type="text/javascript">
           $(".accordion-dropdown").click(function() {
             var dropdownGroup = $(this).parent(".accordion-group");
@@ -5313,9 +5317,11 @@ width: 50%;
           font-size: 24px;
           font-size: 2.4rem;
         }
-        #plans { padding-bottom: 40px; }
+        
         #social-media, #reviews, #faq, #disclaimers { background: #fff; }
-        #social-media { padding-top: 50px; }
+        #social-media { padding-bottom: 0; }
+        #features, #faq, #other-products, #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
+        
         /* TODO: can this styling be abstracted into landing-page.jade? */
         body { background-color: #d9d9d9; }
         #marquee { 

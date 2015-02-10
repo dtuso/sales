@@ -27,9 +27,11 @@ append pageStyles
       font-size: 24px;
       font-size: 2.4rem;
     }
-    #plans { padding-bottom: 40px; }
+
     #social-media, #reviews, #faq, #disclaimers { background: #fff; }
-    #social-media { padding-top: 50px; }
+    #social-media { padding-bottom: 0; }
+    #features, #faq, #other-products, #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
+
     /* TODO: can this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
     #marquee { 
@@ -279,29 +281,30 @@ block sections
     |##endif
     | 
 
-    section#social-media
-      | 
-      |##if(countrySiteAny(www))
-      | 
-      include ./website-builder/_tabbed-carousel.jade
-      | 
-      |##else
-      | 
-      include ./website-builder/_tabbed-carousel-nonUS.jade
-      | 
-      |##endif
-      | 
+  section#social-media
+    | 
+    |##if(countrySiteAny(www))
+    | 
+    include ./website-builder/_tabbed-carousel.jade
+    | 
+    |##else
+    | 
+    include ./website-builder/_tabbed-carousel-nonUS.jade
+    | 
+    |##endif
+    | 
 
-      .bg-gray-light
-        include ./website-builder/_business-exclusives.jade
-      .bg-black
-          .container
-            .row
-              .col-sm-9
-                h2.text-center.h3(style="color:#FFF;margin-top:40px;") [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
-              .col-sm-3
-                .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-                  button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-ci='91392', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
+    .bg-gray-light
+      include ./website-builder/_business-exclusives.jade
+    .bg-black
+        .container
+          .row
+            .col-sm-9
+              h2.text-center.h3(style="color:#FFF;margin-top:40px;") [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+            .col-sm-3
+              .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+                button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-ci='91392', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
+
   | 
   |##if(activeLanguageAny([en-us]))
   | 

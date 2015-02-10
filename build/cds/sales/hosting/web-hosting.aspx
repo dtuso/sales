@@ -5472,10 +5472,27 @@ cursor: pointer;
 ##endif
       </style>
       <style>
+        /* page-specific overrides of common styling here */
         #speed-chart, #features, #reviews, #faq, #disclaimers { background-color: #fff; }
+        #platforms { background-color: #5caf2b; padding-top: 0; padding-bottom: 0; }
         #plans { padding-bottom: 40px; }
+        #speed-chart h2 { margin-bottom: 10px; }
+        #features { background-color: #fff; }
+        #alternate-products { padding-top: 0; padding-bottom: 0; }
+        #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
         
-        /* TODO: can this styling be abstracted into landing-page.jade? */
+        .plan-tile { 
+          margin-top: 0; 
+          margin-bottom: 0; 
+        }
+        .pro-plans { 
+          margin-top: -120px; 
+          padding-bottom: 20px; 
+          padding-top: 0; 
+        }
+        .pro-banner { color: #fff; }
+        
+        /* TODO: can/should this styling be abstracted into landing-page.jade? */
         body { background-color: #d9d9d9; }
         #marquee { 
           background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
@@ -5545,22 +5562,6 @@ cursor: pointer;
         html[lang="uk-ua"] #marquee {
           background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_emea_host.jpg);
         }
-        
-        .plan-tile { 
-          margin-top: 0; 
-          margin-bottom: 0; 
-        }
-        .pro-plans { 
-          margin-top: -120px; 
-          padding-bottom: 20px; 
-          padding-top: 0; 
-        }
-        
-        .pro-banner { color: #fff; }
-        
-        #speed-chart h2 { margin-bottom: 10px; }
-        
-        #features { background-color: #fff; }
         
       </style>
     </atlantis:webstash>

@@ -1,8 +1,8 @@
 ---
 location: sales/domains/discount-domains.aspx
 id: 54b426f9f778fc2aa474479c
-name: GCE-33979
-comments: Prepare for uxcore
+name: GCE-34159
+comments: add TLDs and update pricing
 ---
 {% extends 'layouts/base.html' %} 
 {% block metahead %} 
@@ -57,6 +57,12 @@ comments: Prepare for uxcore
   .select-box-options label span {
     padding: 0px;
     margin: 0px;
+  }
+  
+  .discountPriceDisc {
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 15px; 
   }
 
   </style>
@@ -274,6 +280,7 @@ comments: Prepare for uxcore
         <div class="row tab-content">
           <div class="col-xs-12">
             <div class="grid-column tab-content-column-alternate">
+              <div class="discountPriceDisc">[@L[cds.sales/gd/domains/discount-domains2:domainsPriceDisclaimer]@L]</div>
               <table>
                 <thead>
                   <tr class="thead-row thead-row-4c">
@@ -286,6 +293,11 @@ comments: Prepare for uxcore
                       <span class="th-column">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2Sub1]@L]</span>
                     </th>
                   </tr>
+                  <tr class="thead-row thead-row-4c bg-gray">
+                    <th colspan="4">[@L[cds.sales/gd/domains/discount-domains2:ComparePlansTabTitle2]@L]</th>
+                  </tr>
+                </thead>
+                <tbody>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.asia</th>
                     <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
@@ -313,11 +325,11 @@ comments: Prepare for uxcore
                   <tr class="tbody-row tbody-row-4c">
                     <th>.co</th>
                     <td>[@T[currencyprice:<price usdamount="2999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2499" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
-                      %20
+                      %17
                       ##else
-                      20%
+                      17%
                       ##endif
                        [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
                     <td class="td-active left-border"></td>
@@ -373,11 +385,11 @@ comments: Prepare for uxcore
                   <tr class="tbody-row tbody-row-4c">
                     <th>.net</th>
                     <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="799" />]@T]* - 
+                    <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
-                      %53
+                      %47
                       ##else
-                      53%
+                      47%
                       ##endif
                        [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
                     <td class="td-active left-border"></td>
@@ -1415,9 +1427,69 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.AIRFORCE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ARMY</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.ASSOCIATES</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ATTORNEY</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.AUCTION</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.AUDIO</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1440,6 +1512,18 @@ comments: Prepare for uxcore
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.BARGAINS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.BEER</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -1478,6 +1562,18 @@ comments: Prepare for uxcore
                     <th>.BLACK</th>
                     <td>[@T[currencyprice:<price usdamount="5999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.BLACKFRIDAY</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1526,6 +1622,18 @@ comments: Prepare for uxcore
                     <th>.BUILDERS</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.BUSINESS</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1679,6 +1787,42 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.CHRISTMAS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.CHURCH</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.CITY</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.CLAIMS</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
@@ -1694,6 +1838,18 @@ comments: Prepare for uxcore
                     <th>.CLEANING</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.CLICK</th>
+                    <td>[@T[currencyprice:<price usdamount="999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="599" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1730,6 +1886,18 @@ comments: Prepare for uxcore
                     <th>.CLUB</th>
                     <td>[@T[currencyprice:<price usdamount="1499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.COACH</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1847,7 +2015,31 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.COOKING</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.COOL</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.COUNTRY</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -1874,6 +2066,18 @@ comments: Prepare for uxcore
                     <th>.CREDITCARD</th>
                     <td>[@T[currencyprice:<price usdamount="19999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="11999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.CRICKET</th>
+                    <td>[@T[currencyprice:<price usdamount="9999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="5999" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -1919,6 +2123,30 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.DEALS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.DEGREE</th>
+                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.DEMOCRAT</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -1943,6 +2171,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.DENTIST</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.DIAMONDS</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
@@ -1955,7 +2195,31 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.DIET</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.DIGITAL</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.DIRECT</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -2018,6 +2282,18 @@ comments: Prepare for uxcore
                     <th>.EMAIL</th>
                     <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ENGINEER</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2183,6 +2459,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.FISHING</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.FITNESS</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -2219,9 +2507,33 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.FORSALE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.FOUNDATION</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.FUND</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2258,6 +2570,42 @@ comments: Prepare for uxcore
                     <th>.GALLERY</th>
                     <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.GIFT</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.GIFTS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.GIVES</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2315,9 +2663,45 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.GREEN</th>
+                    <td>[@T[currencyprice:<price usdamount="9999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="5999" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.GRIPE</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.GUIDE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.GUITARS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2351,6 +2735,42 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.HEALTHCARE</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.HELP</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.HIPHOP</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.HOLDINGS</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
@@ -2375,7 +2795,55 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.HORSE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.HOST</th>
+                    <td>[@T[currencyprice:<price usdamount="12999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="7799" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.HOSTING</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.HOUSE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.IMMO</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -2471,6 +2939,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.JUEGOS</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.KAUFEN</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -2531,9 +3011,57 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.LAWYER</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.LEASE</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.LEGAL</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.LGBT</th>
+                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.LIFE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2579,9 +3107,45 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.LINK</th>
+                    <td>[@T[currencyprice:<price usdamount="1299" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="779" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.LOANS</th>
+                    <td>[@T[currencyprice:<price usdamount="12999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="7799" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.LONDON</th>
                     <td>[@T[currencyprice:<price usdamount="4199" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2519" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.LTDA</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2627,6 +3191,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.MARKET</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.MARKETING</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -2642,6 +3218,18 @@ comments: Prepare for uxcore
                     <th>.MEDIA</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.MEMORIAL</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2675,6 +3263,42 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.MOE</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.MONEY</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.MORTGAGE</th>
+                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.NAGOYA</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1019" />]@T]* - 
@@ -2687,9 +3311,69 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.NAVY</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.NETWORK</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.NINJA</th>
                     <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.NYC</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.OKINAWA</th>
+                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1019" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.ONL</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2712,6 +3396,30 @@ comments: Prepare for uxcore
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.PARTS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.PARTY</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.PHOTO</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -2747,6 +3455,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.PICS</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.PICTURES</th>
                     <td>[@T[currencyprice:<price usdamount="1499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
@@ -2771,9 +3491,45 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.PIZZA</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.PLACE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.PLUMBING</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.PRESS</th>
+                    <td>[@T[currencyprice:<price usdamount="9999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="5999" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2807,9 +3563,45 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.PROPERTY</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.PUB</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.QPON</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.QUEBEC</th>
+                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2834,6 +3626,18 @@ comments: Prepare for uxcore
                     <th>.RED</th>
                     <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.REHAB</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2891,9 +3695,33 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.REPUBLICAN</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.REST</th>
                     <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.RESTAURANT</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2915,9 +3743,57 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.RICH</th>
+                    <td>[@T[currencyprice:<price usdamount="349999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="209999" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.ROCKS</th>
                     <td>[@T[currencyprice:<price usdamount="1499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="899" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.RODEO</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.RYUKYU</th>
+                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1019" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.SARL</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2939,9 +3815,45 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.SCIENCE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.SERVICES</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.SEXY</th>
+                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.SHIKSHA</th>
+                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -2987,6 +3899,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.SOFTWARE</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.SOLAR</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -3006,6 +3930,18 @@ comments: Prepare for uxcore
                       %40
                       ##else
                       40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.SPACE</th>
+                    <td>[@T[currencyprice:<price usdamount="1199" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="799" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %33
+                      ##else
+                      33%
                       ##endif
                        [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
                     <td class="td-active left-border"></td>
@@ -3047,6 +3983,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.SURF</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.SURGERY</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
@@ -3062,6 +4010,18 @@ comments: Prepare for uxcore
                     <th>.SYSTEMS</th>
                     <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.TATTOO</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -3110,6 +4070,18 @@ comments: Prepare for uxcore
                     <th>.TIPS</th>
                     <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.TIRES</th>
+                    <td>[@T[currencyprice:<price usdamount="12999" />]@T]</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="7799" />]@T] - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -3239,9 +4211,33 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.VEGAS</th>
+                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.VENTURES</th>
                     <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.VET</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
                       %40
                       ##else
@@ -3276,6 +4272,18 @@ comments: Prepare for uxcore
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.VISION</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.VODKA</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -3323,6 +4331,18 @@ comments: Prepare for uxcore
                     <td class="td-active left-border"></td>
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
+                    <th>.WEBSITE</th>
+                    <td>[@T[currencyprice:<price usdamount="2999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="1799" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
                     <th>.WIKI</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
@@ -3336,6 +4356,18 @@ comments: Prepare for uxcore
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.WORKS</th>
+                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
+                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
+                      ##if(activeLanguageAny([tr-tr]))
+                      %40
+                      ##else
+                      40%
+                      ##endif
+                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
+                    <td class="td-active left-border"></td>
+                  </tr>
+                  <tr class="tbody-row tbody-row-4c">
+                    <th>.WORLD</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))
@@ -3384,894 +4416,6 @@ comments: Prepare for uxcore
                   </tr>
                   <tr class="tbody-row tbody-row-4c">
                     <th>.ZONE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.AIRFORCE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.ARMY</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.ATTORNEY</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.AUCTION</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.AUDIO</th>
-                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.BEER</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.BLACKFRIDAY</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.BUSINESS</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.CHRISTMAS</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.CHURCH</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.CITY</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.CLICK</th>
-                    <td>[@T[currencyprice:<price usdamount="999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="599" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.COOKING</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.COUNTRY</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.DEALS</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.DEGREE</th>
-                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.DENTIST</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.DIET</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.DIRECT</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.ENGINEER</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.FISHING</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.FORSALE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.GIFT</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.GIFTS</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.GIVES</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.GUIDE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.GUITARS</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HEALTHCARE</th>
-                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HELP</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HIPHOP</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HORSE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HOST</th>
-                    <td>[@T[currencyprice:<price usdamount="12999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="7799" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.HOSTING</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.IMMO</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.JUEGOS</th>
-                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.LAWYER</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.LIFE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.LINK</th>
-                    <td>[@T[currencyprice:<price usdamount="1299" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="779" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.LOANS</th>
-                    <td>[@T[currencyprice:<price usdamount="12999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="7799" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.LTDA</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.MARKET</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.MOE</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.MORTGAGE</th>
-                    <td>[@T[currencyprice:<price usdamount="5999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="3599" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.NAVY</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.NETWORK</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.NYC</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.OKINAWA</th>
-                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1019" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.ONL</th>
-                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PHOTO</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PICS</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PIZZA</th>
-                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PLACE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PRESS</th>
-                    <td>[@T[currencyprice:<price usdamount="9999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="5999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.PROPERTY</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.QPON</th>
-                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.QUEBEC</th>
-                    <td>[@T[currencyprice:<price usdamount="4999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.REHAB</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.REPUBLICAN</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.RESTAURANT</th>
-                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.RICH</th>
-                    <td>[@T[currencyprice:<price usdamount="349999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="209999" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.RODEO</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.RYUKYU</th>
-                    <td>[@T[currencyprice:<price usdamount="1699" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1019" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.SARL</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.SEXY</th>
-                    <td>[@T[currencyprice:<price usdamount="2499" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1499" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.SHIKSHA</th>
-                    <td>[@T[currencyprice:<price usdamount="1999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.SOFTWARE</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.SURF</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.TATTOO</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T] - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.VEGAS</th>
-                    <td>[@T[currencyprice:<price usdamount="6999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="4199" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.VET</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.VODKA</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.WEBSITE</th>
-                    <td>[@T[currencyprice:<price usdamount="2999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="1799" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.WORLD</th>
-                    <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
-                    <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
-                      ##if(activeLanguageAny([tr-tr]))
-                      %40
-                      ##else
-                      40%
-                      ##endif
-                       [@L[cds.sales/gd/domains/discount-domains2:Off]@L]</td>
-                    <td class="td-active left-border"></td>
-                  </tr>
-                  <tr class="tbody-row tbody-row-4c">
-                    <th>.</th>
                     <td>[@T[currencyprice:<price usdamount="3999" />]@T]*</td>
                     <td class="td-active">[@T[currencyprice:<price usdamount="2399" />]@T]* - 
                       ##if(activeLanguageAny([tr-tr]))

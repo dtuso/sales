@@ -2449,20 +2449,24 @@ top: -6px;
 
 .accordion-group li.accordion-dropdown .carett {
   display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-top: 7px;
+  margin-right: 10px;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-down {
-  border-top: 0.5em solid;
-  border-right: 0.5em solid transparent;
-  border-left: 0.5em solid transparent;
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
 }
 
 .accordion-group li.accordion-dropdown .carett.caret-right {
-  border-left: 0.5em solid;
-  border-top: 0.5em solid transparent;
-  border-bottom: 0.5em solid transparent;
+  border-left: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
   margin-top: 1px;
-  margin-right: 0.7em;
+  margin-right: 18px;
 }
 
 .accordion-group li.accordion-dropdown.active > span:first-child {
@@ -2539,7 +2543,7 @@ top: -6px;
           </div>
         </div>
       </div>
-      <atlantis:webstash type="script">
+      <atlantis:webstash type="js">
         <script type="text/javascript">
           $(".accordion-dropdown").click(function() {
             var dropdownGroup = $(this).parent(".accordion-group");
