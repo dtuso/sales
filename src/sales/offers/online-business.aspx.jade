@@ -1,5 +1,5 @@
 
-extends ../../templates/pages/landing-page
+extends ../shared/_landing-page
 
 append vars
   - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
@@ -34,7 +34,7 @@ append pageStyles
   style
     include:css ./online-business/styles.css
   style
-    include:css ../../templates/styles/plan-tiles.css
+    include:css ../shared/_plan-tiles/plan-tiles.css
 
 block domainSearch
   //- nothing to see here
