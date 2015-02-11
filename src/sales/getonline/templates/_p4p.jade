@@ -13,6 +13,11 @@ append pageStyles
     .uppercase{text-transform:uppercase}
     .lowercase{text-transform:lowercase}
 
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js ../p4p.js
+
 block domainSearch
 
 block sections

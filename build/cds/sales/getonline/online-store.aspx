@@ -71,7 +71,26 @@
         });
       }
       
-    </script><!--[if lt IE 9]>
+    </script>
+    <atlantis:webstash type="js">
+      <script>$(document).ready(function(){
+   stripDomainName();
+});
+
+function stripDomainName(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "domain"){
+         $("#business-idea").text(inputValue);
+       }
+        
+    }
+}
+      </script>
+    </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
@@ -253,7 +272,7 @@
               <h2 class="heading">GOOD NEWS!</h2>
               <div class="starter-pack">
                 <h3>We have an excellent starter pack for</h3>
-                <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+                <h3><mark id="business-idea">domain</mark> – Starting at <mark>price</mark>	</h3>
               </div>
             </div>
           </div>
@@ -481,7 +500,7 @@
             <h2 class="uppercase">Ready to take your business online?</h2>
             <div class="starter-pack">
               <h3>We have an excellent starter pack for</h3>
-              <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
+              <h3><mark id="business-idea">billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
             </div>
           </div>
         </div>
