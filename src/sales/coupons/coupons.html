@@ -1,25 +1,27 @@
 ---
 location: sales/coupons.aspx
-id: 54c133c7f778fc07e885c12a
-name: GCE-34015
-comments: Initial page 
+devid: 54d4f186f778fc20c82c211f
+id: 
+name: GCE-35734
+comments: Fast Follow
 L1: "[@L[cds.sales/coupons:"
 L2: "]@L]"
+cssVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
 {% import './_pod-layout.html' as macros %}
 {% block metahead %} 
-
 {% parent %} 
+
   [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
 {% endblock %} 
 {% block body %}
 <!-- Start main-banner -->
 
 
-<!------------------------------------>
-<!--        EMAIL SIGN UP           -->
-<!------------------------------------>
+    <!------------------------------------>
+    <!--        EMAIL SIGN UP           -->
+    <!------------------------------------>
     <section class="email-offer-banner light-grey-bg">
       <div class="l-main-container container main-banner-content">
         <div class="main-banner-text">
@@ -30,7 +32,7 @@ L2: "]@L]"
                 <div class="coupons-special-offers-form-email-input-wrapper">
                   <input type="text" id="coupons_email" placeholder="{{L1}}EmailPlaceholder{{L2}}" class="coupons-special-offers-form-email-input" value="" />
                 </div>
-                <a class="btn btn-warning"  id="coupons_email_button" title="{{L1}}EmailSubmit{{L2}}"  data-ci="{{cicodes.emailsignup}}">{{L1}}EmailSubmit{{L2}}</a>
+                <a class="btn btn-warning ff-walsheim-medium"  id="coupons_email_button" title="{{L1}}EmailSubmit{{L2}}"  data-ci="{{cicodes.emailsignup}}">{{L1}}EmailSubmit{{L2}}</a>
               </div>
             </div>
           </div>
@@ -76,19 +78,23 @@ L2: "]@L]"
 <!------------------------------------>
 
 <section class="main-marquee-carousel">
-  <div class="container l-main-container">
+  <div>
     <div id="marquee-slider">
-      <div class="gd-nav-container">
+      <div class="">
         <div class="gd-swipe" data-gd-swipe={"auto":false,"pauseOnHover":true}>
           <div class="gd-swipe-wrap">
+          ##if(productIsOffered(99) && !countrySiteAny(mx,au))
           {% include 'marquee/_gybo.html' %}
+          ##else
+          {% include 'marquee/_wsb.html' %}
+          ##endif
           </div>
         </div>
-        <a id="marqueeSlidePreviousSlideLink" href="#" data-slide="prev" class="arrow-left" data-ci="{{cicodes.marquee_left}}">
+        {# <a id="marqueeSlidePreviousSlideLink" href="#" data-slide="prev" class="arrow-left" data-ci="{{cicodes.marquee_left}}">
           {{L1}}previous{{L2}}</a>
         <a id="marqueeSlideNextSlideLink" href="#" data-slide="next" class="arrow-right" data-ci="{{cicodes.marquee_right}}">
             {{L1}}next{{L2}}</a>
-        <div class="gd-swipe-bottom-nav" data-ci="{{cicodes.marquee_index}}"></div>
+        <div class="gd-swipe-bottom-nav" data-ci="{{cicodes.marquee_index}}"></div> #}
       </div>
     </div> <!-- end id tools-slider --> 
   </div>
@@ -116,29 +122,27 @@ L2: "]@L]"
 <!--        MAIN TABS NAV         -->
 <!------------------------------------>
 <section id="midPageNav">
-  <div class="mid-page-nav main-tabs dark-grey-bg">
+  <div class="mid-page-nav main-tabs">
     <div class="container l-main-container">
-      <span class="navigation-heading">{{L1}}filter-search{{L2}}:</span>
-      <ul id="tabNavigation" class="nav nav-tabs">
+      {# <span class="navigation-heading">{{L1}}filter-search{{L2}}:</span> #}
+      <ul id="tabNavigation" class="nav nav-tabs text-left">
         <li class="nav-tabs-item">
             <a class="nav-tabs-link" href="#top_deals" data-gd-sidebyside-target="#top_deals" data-toggle="tab" data-ci="{{cicodes.deals_nav_top_deals}}">
-            <h1>{{L1}}tab-nav-text-top-deals{{L2}}</h1>
+            <h1 class="ff-walsheim-medium">{{L1}}tab-nav-text-top-deals{{L2}}</h1>
             </a>
-            <i class="ico ico-shape ico-shape-arrow-down"></i>
         </li>
         <li class="nav-tabs-item">
           <a class="nav-tabs-link" href="#domain_deals" data-gd-sidebyside-target="#domain_deals" data-toggle="tab" data-ci="{{cicodes.deals_nav_dom_deals}}">
-            <h2>{{L1}}tab-nav-text-domain-deals{{L2}}</h2>
+            <h2 class="ff-walsheim-medium">{{L1}}tab-nav-text-domain-deals{{L2}}</h2>
           </a>
-          <i class="ico ico-shape ico-shape-arrow-down"></i>
         </li>
         {# <li class="nav-tabs-item">
           <a class="nav-tabs-link" href="#on_sale" data-gd-sidebyside-target="#on_sale" data-toggle="tab" data-ci="{{cicodes.deals_nav_on_sale}}">{{L1}}tab-nav-text-on-sale{{L2}}</a>
-          <i class="ico ico-shape ico-shape-arrow-down"></i>
         </li> #}
         <li class="nav-tabs-item">
-          <a class="nav-tabs-link" href="#view_all" data-gd-sidebyside-target="#view_all" data-toggle="tab" data-ci="{{cicodes.deals_nav_view_all}}">{{L1}}tab-nav-text-view-all{{L2}}</a>
-          <i class="ico ico-shape ico-shape-arrow-down"></i>
+          <a class="nav-tabs-link" href="#view_all" data-gd-sidebyside-target="#view_all" data-toggle="tab" data-ci="{{cicodes.deals_nav_view_all}}">
+            <span class="ff-walsheim-medium">{{L1}}tab-nav-text-view-all{{L2}}</span>
+          </a>
         </li>
       </ul>
     </div>
@@ -150,30 +154,29 @@ L2: "]@L]"
 <!------------------------------------>
 <section class="">
   <div id="tabContent" class="tab-content no-margin-top">
-    <div id="top_deals" class="tab-pane l-main-container container">
-      <h3 class="condensed">{{L1}}tab-title-text-top-deals{{L2}}</h3>
+    <div id="top_deals" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"9"}'>
+      <h3 class="ff-walsheim-bold">{{L1}}tab-title-text-top-deals{{L2}}</h3>
       <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
         <div data-gd-sidebysidealign-col="1">
 {{macros.product_pod_data(x)}}
           
           {{ macros.pod_1("got_bundle") }} 
           {{ macros.pod_1("domain_com_top_deal") }}
-          {{ macros.pod_1("web_hosting") }}
-
           {{ macros.pod_1("mwp") }}
+          {{ macros.pod_1("web_hosting") }}
           {{ macros.pod_1("domain_new_extensions") }}
           {{ macros.pod_1("o365_bundle") }}
-
           {{ macros.pod_1("wsb") }}
-          {{ macros.pod_1("o365") }} 
+          {{ macros.pod_1("online_store_free_trial") }} 
+          {{ macros.pod_1("get_found") }} 
+          {{ macros.pod_1("o365") }}
           {{ macros.pod_2("domain_based_email") }}
-
           {{ macros.pod_1("premium_ssl") }}
           
         </div>
         
       </div>
-      <div class="view-more" data-ci="{{cicodes.deals_nav_top_dlsvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_top_dlsvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
     </div>
 
 
@@ -181,14 +184,15 @@ L2: "]@L]"
 
 
 
-    <div id="domain_deals" class="tab-pane l-main-container container">
+    <div id="domain_deals" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"9"}'>
       {# <h3 class="condensed">{{L1}}tab-title-text-domain-deals{{L2}}</h3> #}
       <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
         <div data-gd-sidebysidealign-col="1">
 
           {{ macros.pod_1("domain_com") }}
           {{ macros.pod_1("domain_com_no_promo") }}
-          {{ macros.pod_1("domain_biz") }}
+          {{ macros.pod_1("domain_co") }}
+          {{ macros.pod_1("domain_co_no_promo") }}
           {{ macros.pod_1("domain_net") }}
 
           {{ macros.pod_1("domain_us") }}
@@ -200,6 +204,7 @@ L2: "]@L]"
           {{ macros.pod_1("domain_com_mx") }}
           {{ macros.pod_1("domain_com_mx_no_promo") }}
 
+          {{ macros.pod_1("domain_biz") }}
           {{ macros.pod_1("domain_org") }}
           {{ macros.pod_1("domain_guru") }}
 
@@ -221,7 +226,7 @@ L2: "]@L]"
         </div>
         
       </div>
-      <div class="view-more" data-ci="{{cicodes.deals_nav_domdealvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_domdealvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
     </div>
 
 
@@ -229,56 +234,32 @@ L2: "]@L]"
 
 
 
-{# 
-    <div id="on_sale" class="tab-pane l-main-container container">
-      <h3 class="condensed">{{L1}}tab-title-text-on-sale{{L2}}</h3>
-      <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
-        <div class="col-xs-4" data-gd-sidebysidealign-col="1">
-          <div class="pods-column-1 grid-column no-padding-bottom relative">
-          </div>
-        </div>
-        <div class="col-xs-4" data-gd-sidebysidealign-col="2">
-          <div class="pods-column-2 grid-column no-padding-bottom relative">
-          </div>
-        </div>
-        <div class="col-xs-4" data-gd-sidebysidealign-col="3">
-          <div class="pods-column-3 grid-column no-padding-bottom relative">
-          </div>
-        </div>
-      </div>
-      <div class="view-more" data-ci="{{cicodes.deals_nav_onsalevm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
-    </div>
-
-
- #}
 
 
 
-
-
-
-    <div id="view_all" class="tab-pane l-main-container container">
+    <div id="view_all" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"0"}'>
       {# <h3 class="condensed">{{L1}}tab-title-text-view-all{{L2}}</h3> #}
       <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
         <div data-gd-sidebysidealign-col="1">
           
           {{ macros.pod_1("got_bundle") }} 
           {{ macros.pod_1("domain_com_top_deal") }}
-          {{ macros.pod_1("web_hosting") }}
-
           {{ macros.pod_1("mwp") }}
+          {{ macros.pod_1("web_hosting") }}
           {{ macros.pod_1("domain_new_extensions") }}
           {{ macros.pod_1("o365_bundle") }}
-
           {{ macros.pod_1("wsb") }}
-          {{ macros.pod_1("o365") }} 
+          {{ macros.pod_1("online_store_free_trial") }} 
+          {{ macros.pod_1("get_found") }} 
+          {{ macros.pod_1("o365") }}
           {{ macros.pod_2("domain_based_email") }}
-
           {{ macros.pod_1("premium_ssl") }}
+
 
           {{ macros.pod_1("domain_com") }}
           {{ macros.pod_1("domain_com_no_promo") }}
-          {{ macros.pod_1("domain_biz") }}
+          {{ macros.pod_1("domain_co") }}
+          {{ macros.pod_1("domain_co_no_promo") }}
           {{ macros.pod_1("domain_net") }}
 
           {{ macros.pod_1("domain_us") }}
@@ -290,6 +271,7 @@ L2: "]@L]"
           {{ macros.pod_1("domain_com_mx") }}
           {{ macros.pod_1("domain_com_mx_no_promo") }}
 
+          {{ macros.pod_1("domain_biz") }}
           {{ macros.pod_1("domain_org") }}
           {{ macros.pod_1("domain_guru") }}
 
@@ -311,7 +293,7 @@ L2: "]@L]"
         </div>
         
       </div>
-      <div class="view-more" data-ci="{{cicodes.deals_nav_viewallvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_viewallvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
     </div>
 
   </div>
@@ -324,41 +306,8 @@ L2: "]@L]"
   <p class="no-margin-bottom"><small class="small-print">*, ++ <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="{{cicodes.disclaimers}}">{{L1}}disclaimer-modal-link{{L2}}</a></small></p>
 </section>
 
-{# 
-<!------------------------------------>
-<!--        NAV ITEM TEMPLATE       -->
-<!------------------------------------>
-<div id="tab_navigation_template" style="display:none">
-  <li class="nav-tabs-item"><a class="nav-tabs-link" href="#x" data-gd-sidebyside-target="#x" data-toggle="tab" data-ci="x"></a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
-</div>
- #}
-{# 
 
-<!------------------------------------>
-<!--      TAB CONTENT TEMPLATE      -->
-<!------------------------------------>
-<div id="tab_content_template" style="display:none">
-  <div class="tab-pane l-main-container container">
-    <h3 class="condensed"></h3>
-    <div class="row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
-      <div class="col-xs-4" data-gd-sidebysidealign-col="1">
-        <div class="pods-column-1 grid-column no-padding-bottom relative">
-        </div>
-      </div>
-      <div class="col-xs-4" data-gd-sidebysidealign-col="2">
-        <div class="pods-column-2 grid-column no-padding-bottom relative">
-        </div>
-      </div>
-      <div class="col-xs-4" data-gd-sidebysidealign-col="3">
-        <div class="pods-column-3 grid-column no-padding-bottom relative">
-        </div>
-      </div>
-    </div>
-    <div class="view-more" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
-  </div> 
-</div>
 
-#}
 
 <!------------------------------------>
 <!--           POD TEMPLATE         -->
@@ -437,477 +386,32 @@ L2: "]@L]"
 
 {% block footer %}
 
-<script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
-<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
-{# <script src="[@T[link:<js path='{{ assetPath }}js/script.js' />]@T]" type="text/javascript" ></script> #}
-
-
-
-
-
-
-
 
 <script>
-
-var gdSwipeNeeded = 0;
-$("[data-gd-swipe]").each(function(){
-    var marqueeLength = $(this).find(".gd-swipe-item").length;
-    if(marqueeLength <= 1){
-      var $controls = $(this).parent().find("[data-slide], .gd-swipe-bottom-nav");
-      $controls.addClass("gd-swipe-hide-controls")
-      if(marqueeLength == 0){
-        $(this).hide();
-      }
-    } else {
-
-      gdSwipeNeeded++;
-
-    }
-  });
-
-if(gdSwipeNeeded > 0){
-    // defer load swipe
-  var scriptResource1 = document.createElement('script');
-  var scriptResource2 = document.createElement('script');
-  scriptResource1.src = "[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js";
-  scriptResource2.src = "[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js";
-
-  var script = document.getElementsByTagName('script')[0];
-  script.parentNode.insertBefore(scriptResource1, script);
-  script.parentNode.insertBefore(scriptResource2, script);
-
-}
-
-if($("html.lt-ie9").length != 1){
-  var classStr = "currency-"+$.cookie("currency")
-  $("html").addClass(classStr.toLowerCase());
-}
-
-$(function () {
-  if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
-    $('[data-ci]').click(function(e){
-      $this = $(this);
-      FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
-      fbiLibCheckQueue();
-    });
-  }
-});
-
-var podsData = {}
-$(document).ready(function() {
-
-
-  $("#coupons_email").bind("focus.initiate-sign-up",function(){
-    // setup these functions only once the textarea has been clicked once
-    $(this).unbind('focus.initiate-sign-up');
-    $("#coupons_email").bind("keypress",function(event){
-      pcj_key(email_signup,event);
-    });
-    $("#coupons_email_button").bind("click",function(){
-      email_signup();
-    });
-    var localization =
+var couponsData = {
+  "apiUrl": "[@T[link:<relative path='/api/package/config/coupons_lp_pods'/>]@T]",
+  "signupURL": "[@T[link:<relative path='~/subscription/signup.aspx' />]@T]",
+  "localization":
     {
-      EmailAddressTooLong:"{{L1}}email-address-too-long{{L2}}",
-      ThankYou: "{{L1}}thank-you{{L2}}",
-      EnterValidEmail: "{{L1}}enter-valid-email{{L2}}"
-    };
-    var redirectUrl = "coupons.aspx";
-    var signupURL = "[@T[link:<relative path="~/subscription/signup.aspx" />]@T]";
-
-    function email_signup() {
-      var em = document.getElementById('coupons_email');
-      var message;
-      if (em.value.length > 100) {
-        message = localization.EmailAddressTooLong;
-      } else if (validateEmail(em.value)) {
-        var signupUrl = signupURL + '?EmailSub=' + em.value + '&endPage=' + encodeURIComponent(document.location) + '&finalredirectPage='+redirectUrl;
-        /*+'&RedirectToPage=' + redirectUrl + "?qa--AVOID_UXCORE=true&version=sales/design/web-design.aspx|53879cb09faf7008b4687249";*/
-        em.value = localization.ThankYou;
-        document.location = signupUrl;
-        remove_messenger($(em));
-      } else {
-        message = localization.EnterValidEmail;
-      }
-      if (typeof message != 'undefined') {
-        send_messenger($(em), message);
-      }
-    }
-    function validateEmail(val) {
-      var result = true; var index = -1; var pindex = -1;
-      if (result) {
-        tmp = val; index = tmp.indexOf("@");
-        if ((index > 0) && (tmp != "YourEmail@YourWebsite.com") && (tmp.length <= 500)) {
-          pindex = tmp.indexOf(".", index);
-          if (tmp.length <= pindex + 2) {
-            result = false;
-          }
-        } else {
-          result = false;
-        }
-      }
-      return result;
-    }
-    function pcj_key(fcn, e) {
-      if ((e && e.which && e.which == 13) || (e && e.keyCode && e.keyCode == 13)) {
-        fcn();  // TODO is this really working? yes, the string, converts to a function via, I guess, eval... bad!
-      }
-    }
-    function remove_messenger($element) {
-      $element.prev('.messenger').animate({ opacity: '0.0' }, 300, function () {
-        $(this).remove();
-      });
-    }
-    function send_messenger($element, message) {
-      var $messenger = $element.prev('.messenger');
-      if ($messenger.length >= 1) {
-        $messenger.find('.content').html(message);
-      } else {
-        $messenger = $('<div class="messenger"><span class="message error"><span class="arrow-down"></span><span class="content">' + message + '</span></span></div>').insertBefore($element);
-        $messenger.css({ visibility: 'visible', opacity: '0.0' }).animate({ opacity: '1.0' }, 300, function () {
-          setTimeout(function () {
-            $element.val('').focus();
-            remove_messenger($element);
-          }, 2000);
-        });
-      }
-    }
-
-  });
-
-
-
-{#
-/*
-  var shopperDataApiUrl = "[@T[link:<external parammode="explicit" linktype="GUIURL" secure="true" path="/pcjson/standardheaderfooter" />]@T]";
-      
-  $.ajax({
-    type: 'POST',
-    url: shopperDataApiUrl
-    ,complete: function (data) {
-      var shopperData = $.parseJSON(data.responseText);
-      
+      "EmailAddressTooLong":"{{L1}}email-address-too-long{{L2}}",
+      "ThankYou": "{{L1}}thank-you{{L2}}",
+      "EnterValidEmail": "{{L1}}enter-valid-email{{L2}}",
+      "PerMonthShort": "{{L1}}per-month-short{{L2}}",
+      "PerMonthFull": "{{L1}}per-month-full{{L2}}",
+      "PerYearShort": "{{L1}}per-year-short{{L2}}",
+      "PerYearFull": "{{L1}}per-year-full{{L2}}"
     },
-    dataType: 'json'
-  });  
-
-*/
-#}
-  var apiUrl = '[@T[link:<relative path="/api/package/config/coupons_lp_pods"/>]@T]';
-  $.ajax({
-    type: 'POST',
-    url: apiUrl
-    ,complete: function (data) {
-      var productPricing = $.parseJSON(data.responseText);
-      createPageContent(productPricing);
-    },
-    dataType: 'json'
-  });
-
-  
-
-  
-
-  
-
-
-
-  // this sets the nav to fixed when scrolled past and fixes the body for the height of the nav
-  var $nav = $('.mid-page-nav');
-  var pos = $nav.offset().top;
-  $(window).scroll(function () {
-    $nav.parent().css("min-height", $nav.outerHeight());
-    var fix = ($(this).scrollTop() > pos) ? true : false;
-    $nav.toggleClass("sticky", fix);
-    $('body').toggleClass("fix-body", fix);
-  });
-
-
-
-
-
-  function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-  }
-
-
-
-
-
-{#
-/*  function tokenizeValue($jqueryObj, value) {
-    $jqueryObj.each(function(){
-      $(this)
-        .html(value)
-        .closest('.tokenize-hide')
-        .removeClass("tokenize-hide");
-    });
-  };*/
-#}
-
-
-
-
-
-
-
-
-  var initiatedGDSideBySideAlign;
-
-  // gdSideBySideAlign plugin
-  (function ( $, window, document, undefined ) {
-
-    var pluginName = 'gdSideBySideAlign',
-        defaults = {
-          bailIfRowCountsMismatch : true
-    };
-
-    function GDSideBySideAlign( element, options ) {
-      this.element = element;
-      this.options = $.extend( {}, defaults, options);
-      this._defaults = defaults;
-      this._name = pluginName;
-      this.init();
-    }
-
-    GDSideBySideAlign.prototype.init = function () {
-
-        // Find the columns
-        var $sideBySideGroup = $(this.element);
-        var $columns = $(this.element).find('[data-gd-sidebysidealign-col]');
-
-        if($columns.length == 0) {
-          return; // bail if no columns found
-        }
-
-        // Make sure columns have an equal number of rows
-        var numRows = 0, equalLength = true;
-        $.each($columns, function(idx,item){
-          var $rows = $(item).find('[data-gd-sidebysidealign-row]');
-          if(numRows == 0) {
-            numRows = $rows.length;
-          }
-          if(equalLength) {
-            if(numRows != $rows.length) equalLength = false;
-          }
-        });
-        if(numRows==0 || !equalLength && this.options.bailIfRowCountsMismatch) {
-          return; // bail if no rows, or rows are not equal length
-        }
-
-        // keep running over sideBySideGroups to see if the html has changed
-        $sideBySideGroup.eq(0)[0]["html"] = $sideBySideGroup.html()
-        setInterval(function(){
-          var savedHTML = $sideBySideGroup.eq(0)[0]["html"];
-          var currentHTML = $sideBySideGroup.html();
-
-          if(savedHTML != currentHTML){
-            $sideBySideGroup.eq(0)[0]["html"] = currentHTML;
-            alignRows();
-          }
-        },200);
-        
-        function alignRows(){
-          // loop thru each row and grab the largest cell height and apply to each cell in that row
-          for(var i=1; i<=numRows; i++) {
-            var $cells = $columns.find('[data-gd-sidebysidealign-row="' + i + '"]' );
-            if($cells.is(":visible")){
-              $cells.height('')
-              var maxHeight = 0;
-              $.each($cells,function(idx, cell){
-                var cellHeight = $(cell).outerHeight() - 
-                  (parseFloat($(cell).css("paddingTop")) || 0) - 
-                  (parseFloat($(cell).css("paddingBottom")) || 0) -
-                  (parseFloat($(cell).css("borderTopWidth")) || 0) -
-                  (parseFloat($(cell).css("borderBottomWidth")) || 0);
-                maxHeight = Math.max(maxHeight, cellHeight);
-              });
-              $cells.height(maxHeight);
-            }
-          }
-          podsData.correctColumns();
-        }
-        alignRows();
-    }; /* end GDSideBySideAlign.prototype.init */
-
-    // register the function to be used
-    $.fn[pluginName] = function ( options ) {
-      return this.each(function () {
-        if (!$.data(this, 'plugin_' + pluginName)) {
-          $.data(this, 'plugin_' + pluginName, new GDSideBySideAlign( this, $(this).data('gd-sidebysidealign') || options ));
-        }
-      });
-    };
-
-    // load the plugin
-    initiatedGDSideBySideAlign = function(){
-      var $sideBySideGroups = $("[data-gd-sidebysidealign]");
-      $sideBySideGroups.each(function(){
-        var $thisGroup = $(this);
-        if($thisGroup.is(":visible")){
-          $thisGroup.gdSideBySideAlign();
-        }
-      });
-    }
-  })( jQuery, window, document );
-  
-  (function(){
-    // Select Navigation Tab
-    var focusedTab = "view_all";
-    var urlFocusedTab = getParameterByName("deal-section");
-    if(urlFocusedTab != "" && $("#tabNavigation").find("a[href='#"+urlFocusedTab+"']").length == 1){
-      focusedTab = urlFocusedTab;
-    } 
-
-    var findNavItem = $("#tabNavigation").find("a[href='#"+focusedTab+"']").length;
-    if(typeof findNavItem == "number" && findNavItem != 1){
-      focusedTab = $("#tabNavigation").find("a[href*='#']").eq(0).attr("href").slice(1);
-    } 
-
-    $("#tabNavigation").find("a[href='#"+focusedTab+"']").parents(".nav-tabs-item").addClass("active");
-    $("#"+focusedTab).addClass("active");
-  })();
-
-
-
-
-
-  function createPageContent(productPricing){
-
-    var qaShowNoSaleItems = (getParameterByName('qa-show-no-sale-items').toLowerCase() == "true")? true : false;
-
-    var periodText = {
-      "monthly":{
-        "abbrev":"{{L1}}per-month-short{{L2}}",
-        "full":"{{L1}}per-month-full{{L2}}"
-      },
-      "yearly":{
-        "abbrev":"{{L1}}per-year-short{{L2}}",
-        "full":"{{L1}}per-year-full{{L2}}"
-      }
-    }
-
-    $("[class*='\"']").each(function(){
-      var fixedClass = $(this).attr("class").replace(/[\'\"\\]/g,"");
-      $(this).addClass(fixedClass);
-    });
-
-
-
-    $.each(productPricing,function(i,thisProduct){
-
-      var $syncPods = $("[rel='" + i + "']");
-      if($syncPods.length > 0){
-            var data = $syncPods.data("pod-details") || {};
-            var period = data.period || "yearly";
-            var list_price = thisProduct[data.period].list_price || "";
-            var current_price = thisProduct[data.period].current_price || "";
-            var perc_save = thisProduct[data.period].perc_save || "";
-      
-            if(perc_save == "" && qaShowNoSaleItems != true){
-              $syncPods.remove();
-            } else {
-            $syncPods.find(".price").each(function(){
-              $(this).html(current_price);
-              $(this).find("span").addClass("currency-symbol");
-            })
-            $syncPods.find(".original-price").each(function(){$(this).html(list_price);})
-            $syncPods.find(".pod-price-wrapper .line-through").each(function(){$(this).html(list_price);})
-            $syncPods.find(".percent").each(function(){$(this).html(perc_save);})
-            $syncPods.find(".period").each(function(){$(this).html(periodText[period].abbrev);})
-          }
-      }
-    });
-
-    ##if(!isManager())
-
-    function checkDiscountClub(){
-      if(typeof pcIsDiscount =="undefined"){
-        setTimeout(function(){
-          checkDiscountClub();
-        },1000);
-      } else {
-
-        if(typeof pcIsDiscount !="undefined" && pcIsDiscount === true){
-          $(".ddchide").remove();
-          $(".ddcshow").removeClass('ddcshow');
-          
-
-        } else {
-          $(".ddcshow").remove();
-          $(".ddchide").removeClass('ddchide');
-          
-
-        }
-      }
-    }
-      
-    checkDiscountClub();
-    ##endif
-    
-    podsData.correctColumns = function(){
-      $.each($("[data-gd-sidebysidealign]"),function(i0,thisTab){
-            var $allPods = $(thisTab).find(".pod-outer-wrapper");
-            if($allPods.length  > 9){
-              $(thisTab).parent().find(".view-more").show().bind("click",function(){
-                $(this).remove();
-                $allPods.removeClass("hidden");
-              });
-            } else {
-              $(thisTab).parent().find(".view-more").hide();
-            }
-            $.each($allPods,function(i1,thisPod){
-
-                    if(i1 < 9){
-                        $(thisPod).removeClass("hidden");
-                    } else if($(thisTab).parent().find(".view-more").length == 1) {
-                      $(thisPod).addClass("hidden");
-                      $(thisTab).parent().find(".view-more").show();
-                    }
-                    var $podRows = $(thisPod).find("[data-gd-sidebysidealign-row]");
-                    var row = Math.floor(i1/3);
-                    var col = i1 % 3 + 1;
-                    $(thisPod)
-                      .removeClass("pod-column-1")
-                      .removeClass("pod-column-2")
-                      .removeClass("pod-column-3")
-                      .addClass("pod-column-"+col);
-                    $.each($podRows,function(i2,thisRow){
-                          var rowNumber = $(thisRow).data("gd-sidebysidealign-row") + (row*10);
-                          $(thisRow).attr("data-gd-sidebysidealign-row",rowNumber);
-                    });
-            });
-      });
-    }
-    $('a[data-toggle="tab"]').on('shown.bs.tab',function(e){
-      $('html, body').animate({ scrollTop: $("#midPageNav").offset().top }, 500);
-      initiatedGDSideBySideAlign();
-    });
-    initiatedGDSideBySideAlign();
-  }
-  
-
-
-  if(navigator.userAgent.match(/iPad|iPhone|iPod/i)){
-    $('head').append('<meta name="viewport" content="width=1150px">');
-  }
-
-
-});
-
-
-
-
+##if(ShopperPriceTypeAny(8,32))
+  "qualifiedShopper":false
+##else
+  "qualifiedShopper":true
+##endif
+}
 
 </script>
 
-
-
-
-
+<script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+<script src="[@T[link:<js path='{{ assetPath }}js/script.js' />]@T]" type="text/javascript" ></script>
 
 {% endblock %}
