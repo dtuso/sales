@@ -212,20 +212,20 @@
     <atlantis:webstash type="css">
       <style>
         .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
-        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
         .get-it-now{margin-top: 35px;}
         .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .plus{font-weight: bold;}
         
       </style>
     </atlantis:webstash>
@@ -240,7 +240,7 @@
           <div class="row">
             <div class="text-center good-news-shape">
               <h2 class="heading">GOOD NEWS!</h2>
-              <div class="section">
+              <div class="starter-pack">
                 <h3>We have an excellent starter pack for</h3>
                 <h3><mark>Billy Bikes</mark> – Starting at <mark>$1.00</mark>	</h3>
               </div>

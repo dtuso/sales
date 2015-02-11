@@ -369,7 +369,7 @@
         <div class="row">
           <div class="text-center">
             <h2>Ready to take your business online</h2>
-            <div class="section">
+            <div class="starter-pack">
               <h3>We have an excellent starter pack for</h3>
               <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
             </div>
