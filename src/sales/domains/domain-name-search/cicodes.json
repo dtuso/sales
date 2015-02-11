@@ -313,6 +313,12 @@
           { "ITC Code" : "TopPodBERLINLink" },
           { "Description" : "Top Pod - .BERLIN link" }
         ]
+      },
+      { "Top TLD Pods - .GLOBAL link" : [
+          { "ITC ID" : "95881" },
+          { "ITC Code" : "TopPodGLOBALLink" },
+          { "Description" : "Top Pod - .GLOBAL link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -525,6 +531,12 @@
           { "ITC Code" : "ButtomPodOrg" },
           { "Description" : "Buttom TLD Pods - .ORG" }
         ]
+      },
+      { "Buttom TLD Pods - .IO" : [
+          { "ITC ID" : "95890" },
+          { "ITC Code" : "ButtomPodIo" },
+          { "Description" : "Buttom TLD Pods - .IO" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -720,6 +732,12 @@
           { "Description" : "New Available TLD's Column - .SARL" }
         ]
       },
+      { "New Domains Available TLD's Column - .WORLD" : [
+          { "ITC ID" : "95891" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .WORLD" }
+        ]
+      }
     ],
   "Coming Soon Tlds" : [
      { "Coming Soon TLD's Column - .NYC" : [

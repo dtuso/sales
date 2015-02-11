@@ -204,7 +204,9 @@
     <style>
       .gray{background-color:lightgray;}
       .green{background-color:green}
+      .white{background-color:white}
       .uppercase{text-transform:uppercase}
+      .lowercase{text-transform:lowercase}
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -279,7 +281,6 @@
         </div>
       </div>
     </section>
-    <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
         .container .row .topSpacing{padding-top:20px;}

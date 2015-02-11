@@ -53,9 +53,9 @@
   </script>
   <div class="right col-xs-5">
     <div class="rightContent">
-      <div class="bigtext">
-        <div class="line1 walsheim-bold">BUILD A WEBSITE</div>
-        <div class="line2 walsheim-bold">FOR AS LOW AS</div>
+      <div class="bigtext walsheim-bold">
+        <div class="line1">BUILD A WEBSITE</div>
+        <div class="line2">FOR AS LOW AS</div>
         <div class="line3 price">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MO</div>
       </div><a class="btn btn-lg btn-purchase">START NOW</a>
     </div>
