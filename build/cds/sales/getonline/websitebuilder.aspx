@@ -202,8 +202,8 @@
       
     </style>
     <style>
-      .gray{background-color:lightgray;}
-      .green{background-color:green}
+      .gray{background-color:#E8E8E8;}
+      .green{background-color:#78C043}
       .white{background-color:white}
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
@@ -301,6 +301,7 @@
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
         
       </style>
     </atlantis:webstash>
@@ -329,6 +330,11 @@
           </div>
         </div>
         <div class="row">
+          <div class="container">
+            <h5 style="margin-top:20px"><strong>Here are some alternative options available:</strong></h5>
+          </div>
+        </div>
+        <div class="row domainSelect">
           <div class="container white">
             <div class="col-sm-9"><span class="domainName lowercase">ReallyLongBusiness.com</span></div>
             <div class="col-sm-3">
@@ -336,7 +342,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row domainSelect">
           <div class="container white">
             <div class="col-sm-9"><span class="domainName lowercase">ReallyLongSuites.com</span></div>
             <div class="col-sm-3">
@@ -344,7 +350,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row domainSelect">
           <div style="margin-top:30px">
             <div class="col-sm-9 plan-flag">
               <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
@@ -357,15 +363,6 @@
         </div>
       </div>
     </section>
-    <!--section#websitenode-builder
-    //div
-      //img(src="/headrer-image.pnodeng")
-      //h2 Website builder
-      //a.btn.btn-default-light View All Templates
-      //img(src="/main-image.png")
-    
-    -->
-    <hr>
     <!-- p4p.office365-->
     <atlantis:webstash type="css">
       <style>
@@ -455,13 +452,16 @@
         .col-spacer2{width:43%;}
         .col-spacer1{width: 30%;}
         
+        h2{margin-top:0px;margin-bottom:0px;}
+        h3{margin-top:0px;margin-bottom:0px;}
+        
       </style>
     </atlantis:webstash>
     <section id="got">
       <div class="container">
         <div class="row">
           <div class="text-center">
-            <h2>Ready to take your business online</h2>
+            <h2 class="uppercase">Ready to take your business online?</h2>
             <div class="starter-pack">
               <h3>We have an excellent starter pack for</h3>
               <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>

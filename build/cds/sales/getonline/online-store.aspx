@@ -222,45 +222,75 @@
     <!-- p4p.getItNow-->
     <atlantis:webstash type="css">
       <style>
-        .container .hero-guy{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat bottom;}
+        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
-        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+        .get-it-now{margin-top: 35px;}
+        .heading{padding-top: 110px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .left-side{position: relative; top: 4px;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .plus{font-weight: bold;}
         
       </style>
     </atlantis:webstash>
     <section id="getItNow">
       <div class="container">
-        <!--.col-sm-1.hero-guy-->
-        <div class="row">
-          <div class="text-center green-background">
-            <h2>GOOD NEWS!</h2>
-            <div class="section">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+        <div class="col-xs-3 left-side">
+          <div class="row">
+            <div class="hero-guy"></div>
+          </div>
+        </div>
+        <div class="col-xs-9 right-side">
+          <div class="row">
+            <div class="text-center good-news-shape">
+              <h2 class="heading">GOOD NEWS!</h2>
+              <div class="starter-pack">
+                <h3>We have an excellent starter pack for</h3>
+                <h3><mark>domain</mark> – Starting at <mark>price</mark>	</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="topSpacing">
-            <div class="good-news-image"></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4">
-            <label>DOMAIN</label>
-          </div>
-          <div class="col-sm-4">
-            <label>WEBSITE BUILDER</label>
-          </div>
-          <div class="col-sm-4">
-            <label>OFFICE 365 EMAIL</label>
+          <div class="container bottom">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="features-domain-name"></div>
+                <label class="h3">DOMAIN NAME</label>
+                <p>Domain is the name of your</p>
+              </div>
+              <div class="col-sm-4">
+                <div class="wsb-icon"></div>
+                <label class="h3">WEBSITE BUILDER</label>
+                <p>Website builder is a tool we have</p>
+              </div>
+              <div class="col-sm-4">
+                <div class="features-email"></div>
+                <label class="h3">OFFICE 365 EMAIL</label>
+                <p>Office 365 email is the simplest email tool</p>
+              </div>
+            </div>
+            <div class="get-it-now">
+              <div class="row text-center">
+                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+              </div>
+              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                <btn class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
+              </div>
+              <div style="padding-top:10px" class="row text-center">
+                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <hr>
     <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
@@ -448,7 +478,7 @@
       <div class="container">
         <div class="row">
           <div class="text-center">
-            <h2>Ready to take your business online</h2>
+            <h2 class="uppercase">Ready to take your business online?</h2>
             <div class="starter-pack">
               <h3>We have an excellent starter pack for</h3>
               <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>

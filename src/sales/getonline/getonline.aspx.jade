@@ -1,15 +1,64 @@
 extends ../../templates/pages/landing-page
 
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js questions-lp.js
+
+append pageStyles
+  style.
+    .gray{background-color:#E8E8E8;}
+    .green{background-color:#78C043}
+    .white{background-color:white}
+    .uppercase{text-transform:uppercase}
+    .lowercase{text-transform:lowercase}
+    .text-center{text-align:cneter}
+    .illustration-complete{height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png) no-repeat center bottom;}
+    .bottom-space{margin-bottom:50px}
+    .search-bar{width:100%}
+    .step-1{padding-right: 50px}
+    .step-2{padding-left: 50px; border-left: lightgray solid}
+    .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .dropdown1{width: 100%}
+    .dropdown2{width: 100%}
+    #questions-bottom{padding-bottom: 50px}
+
 block sections
 
   block domainSearch
 
   block marquee
 
-  block test
-    section#questions-top
+  block top
+    section#questions-top.green
+      .container.text-center
+        h1.uppercase This doesn't have to be <mark>confusing!</mark>
+        .row
+          .illustration-complete.bottom-space
+
+  block bottom
+    section#questions-bottom.white
       .container
-        h1 Testing 1234
+        .top-half.text-center
+          h3.uppercase We can get your business online
+          p Tell us a little about yourself.  We will step you from A to Z, no porblem.
+        .col-xs-6.step-1
+          h3.uppercase Step 1
+          p What's your business name? Don't have a name? An idea for your business is perfect!
+          input(class='search-bar', id='search-input', type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='75')
+          p.validate-message
+        .col-xs-6.step-2
+          h3.uppercase Step 2
+          p We've given you some options of how to set up your business online.  Just fill in the blanks!
+          .dropdowns
+            h4.uppercase I'm interested in
+            #first-dropdown
+            h4.uppercase I have the resources and time to
+            #second-dropdown
+          button.get-running-btn(id='get-running-butt', type='submit', name='searchButton', class='btn btn-warning btn-lg hp-search') GET ME UP AND RUNNING
+
+
 
   block decision
     //define decisions section here
