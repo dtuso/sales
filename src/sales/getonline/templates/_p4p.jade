@@ -1,11 +1,9 @@
 extends ../../../templates/pages/landing-page
 
 include _domain-multiple-selection-mixin.jade
-include _ready-to-take-business-online-mixin.jade
 include _office365-email-mixin.jade
 include _ready-to-take-business-online-mixin.jade
-
-include _good-news-get-it-now.jade
+include _good-news-get-it-now-mixin.jade
 
 append pageStyles
   style.
@@ -21,17 +19,17 @@ block sections
  
   block getItNow
     // p4p.getItNow
-    +renderGoodNews("domain","price","image-path")
+    //+renderGoodNews("domain","price","image-path")
 
   block domainMultipleSelection
     // p4p.domainMultipleSelection
-    +renderDomainMultipleSelection("billy bikes")
+    +renderDomainMultipleSelection()
   
   block product
 
   block office365
     // p4p.office365
-    +renderOffice365Email("billysbikes.org")
+    +renderOffice365Email()
 
   block whyUs
     // p4p.whyUs
@@ -39,5 +37,31 @@ block sections
   
   block got
     // p4p.got
-    +renderReadyToTakeBusinessOnline("billysbikes.org","price")
-         
+    //+renderReadyToTakeBusinessOnline("billysbikes.org","price")
+
+prepend endOfPageScripts
+  script.
+    $(document).ready(function(){
+      var domainInfo = {
+        businessName  : 'Billys bikes',
+        domainName    : 'billysbikes.com',
+        emailName     : 'yourname',
+        domainOption2 : 'billysbikesLong.com',
+        domainOption3 : 'billysbikesReallyLong.com',
+        dealPrice     : '$1.00'
+      };
+
+      $(".O365-domain-email").html("<mark>" + domainInfo.emailName + "@" + domainInfo.domainName + "</mark>");
+
+      var goodNewsStarter = "We have an excellent starter pack for <mark>{0}</mark> – Starting at <mark>{1}</mark>";
+      goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
+      $(".good-news-starter").html(goodNewsStarter);
+
+      var startsWith = "It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>{0}</mark>";
+      startsWith = startsWith.replace("{0}",domainInfo.businessName);
+      $(".domain-starts").html(startsWith);
+
+      $(".domainOption1").html(domainInfo.domainName);
+      $(".domainOption2").html(domainInfo.domainOption2);
+      $(".domainOption3").html(domainInfo.domainOption3);
+    });

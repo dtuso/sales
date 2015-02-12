@@ -1,5 +1,8 @@
 extends ./templates/_p4p.jade
 
+block getItNow
+  +renderGoodNews("image-path")
+
 block product
   // onlineStore.product
   //- define online store product section
@@ -9,3 +12,6 @@ block product
       //h2 Website builder
       //a.btn.btn-default-light View All Templates
       //img(src="/main-image.png")
+
+block got
+    //+renderReadyToTakeBusinessOnline("billysbikes.org","price")

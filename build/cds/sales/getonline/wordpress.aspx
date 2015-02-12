@@ -204,9 +204,13 @@
     <style>
       .gray{background-color:lightgray;}
       .green{background-color:green}
+<<<<<<< HEAD
       .white{background-color:white}
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
+=======
+      .uppercase{text-transform:uppercase}
+>>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -238,10 +242,13 @@
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
         .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
         
+<<<<<<< HEAD
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         .domainNameDiv{line-height:1}
         
+=======
+>>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
       </style>
     </atlantis:webstash>
     <section id="domainSearch" class="green">
@@ -256,6 +263,7 @@
         </div>
         <div class="row">
           <div class="text-center">
+<<<<<<< HEAD
             <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>billy bikes</mark></h4>
           </div>
         </div>
@@ -282,6 +290,9 @@
             <div class="col-sm-3">
               <button class="btn btn-primary btn-select uppercase">Select</button>
             </div>
+=======
+            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>yourname@billy bikes</mark></h4>
+>>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
           </div>
         </div>
         <div class="row">

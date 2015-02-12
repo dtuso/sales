@@ -1,0 +1,53 @@
+include _domain-starting-at-mixin.jade
+mixin renderGoodNews(prod-image-class)
+  append pageStyles
+    atlantis:webstash(type="css")
+      style.
+        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
+        .get-it-now{margin-top: 35px;}
+        .heading{padding-top: 110px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
+        .left-side{position: relative; top: 4px;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+
+  section#getItNow
+    .container
+      .col-xs-3.left-side
+        .row
+          .hero-guy
+      .col-xs-9.right-side
+        .row
+          .text-center.good-news-shape
+            h2.heading GOOD NEWS!
+            div.section
+              h3.good-news-starter
+        .container.bottom
+          .row
+            .col-sm-4
+              .features-domain-name
+              label.h3 DOMAIN NAME
+              p Domain is the name of your
+            .col-sm-4
+              .wsb-icon
+              label.h3 WEBSITE BUILDER
+              p Website builder is a tool we have
+            .col-sm-4
+              .features-email
+              label.h3 OFFICE 365 EMAIL
+              p Office 365 email is the simplest email tool
+          .get-it-now
+            .row.text-center
+              p.h3.center Get the bundle for $1/month for the first year*
+            .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+              btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+            .row.text-center(style={'padding-top':'10px'})
+              p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
