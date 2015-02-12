@@ -1,0 +1,113 @@
+.coupons-sprite {
+    background-image: url(../coupons-sprite-35734.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-arrow-left-green {
+    width: 46px;
+    height: 44px;
+    background-position: -1px -1px;
+}
+
+.sprite-arrow-right-green {
+    width: 46px;
+    height: 44px;
+    background-position: -49px -1px;
+}
+
+.sprite-builder-dark-160 {
+    width: 160px;
+    height: 160px;
+    background-position: -97px -1px;
+}
+
+.sprite-builder-green-160 {
+    width: 160px;
+    height: 160px;
+    background-position: -259px -1px;
+}
+
+.sprite-domain-dark-160 {
+    width: 160px;
+    height: 160px;
+    background-position: -1px -163px;
+}
+
+.sprite-domain-green-160 {
+    width: 160px;
+    height: 160px;
+    background-position: -163px -163px;
+}
+
+.sprite-domain-green-55 {
+    width: 45px;
+    height: 55px;
+    background-position: -325px -163px;
+}
+
+.sprite-dot-green-15 {
+    width: 14px;
+    height: 15px;
+    background-position: -372px -163px;
+}
+
+.sprite-dot-grey-15 {
+    width: 14px;
+    height: 15px;
+    background-position: -388px -163px;
+}
+
+.sprite-email-green-160 {
+    width: 160px;
+    height: 160px;
+    background-position: -421px -1px;
+}
+
+.sprite-email-green-55 {
+    width: 53px;
+    height: 55px;
+    background-position: -404px -163px;
+}
+
+.sprite-getfound-green-55 {
+    width: 66px;
+    height: 55px;
+    background-position: -459px -163px;
+}
+
+.sprite-got-green-55 {
+    width: 228px;
+    height: 55px;
+    background-position: -325px -220px;
+}
+
+.sprite-hosting-green-55 {
+    width: 51px;
+    height: 55px;
+    background-position: -527px -163px;
+}
+
+.sprite-o365-green-55 {
+    width: 166px;
+    height: 55px;
+    background-position: -325px -277px;
+}
+
+.sprite-onlinestore-green-55 {
+    width: 45px;
+    height: 55px;
+    background-position: -493px -277px;
+}
+
+.sprite-wp-green-55 {
+    width: 53px;
+    height: 55px;
+    background-position: -1px -334px;
+}
+
+.sprite-wsb-green-55 {
+    width: 41px;
+    height: 55px;
+    background-position: -540px -277px;
+}
