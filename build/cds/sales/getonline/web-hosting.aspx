@@ -232,7 +232,7 @@ function stripDomainName(){
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
-        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .hero-guy{height:774px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
@@ -243,10 +243,10 @@ function stripDomainName(){
         .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .plus{font-weight: bold;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
         
       </style>
     </atlantis:webstash>
@@ -269,17 +269,23 @@ function stripDomainName(){
           </div>
           <div class="container bottom">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-md-2 col-md-offset-1">
                 <div class="features-domain-name"></div>
                 <label class="h3">DOMAIN NAME</label>
                 <p>Domain is the name of your</p>
               </div>
-              <div class="col-sm-4">
+              <div class="col-md-2">
+                <div class="img-plus"></div>
+              </div>
+              <div class="col-md-2">
                 <div class="wsb-icon"></div>
                 <label class="h3">WEBSITE BUILDER</label>
                 <p>Website builder is a tool we have</p>
               </div>
-              <div class="col-sm-4">
+              <div class="col-md-2">
+                <div class="img-plus"></div>
+              </div>
+              <div class="col-md-2">
                 <div class="features-email"></div>
                 <label class="h3">OFFICE 365 EMAIL</label>
                 <p>Office 365 email is the simplest email tool</p>
