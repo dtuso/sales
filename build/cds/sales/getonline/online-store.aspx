@@ -240,21 +240,22 @@ function stripDomainName(){
     </section>
     <atlantis:webstash type="css">
       <style>
-        .container .hero-guy{height:774px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
+        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
         .get-it-now{margin-top: 35px;}
-        .heading{padding-top: 110px;}
+        .heading{padding-top:30px;}
         .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative; top: 4px;}
+        .left-side{position: relative;}
         .right-side{position:relative;}
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
         .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
         .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .starter-pack{padding-bottom: 35px;}
         
       </style>
     </atlantis:webstash>
@@ -266,12 +267,12 @@ function stripDomainName(){
           </div>
         </div>
         <div class="col-xs-9 right-side">
-          <div class="row">
-            <div class="text-center good-news-shape">
+          <div class="row text-center good-news-shape">
+            <div class="wrapper">
               <h2 class="heading">GOOD NEWS!</h2>
               <div class="starter-pack">
                 <h3>We have an excellent starter pack for</h3>
-                <h3><mark id="business-idea">domain</mark> – Starting at <mark>price</mark>	</h3>
+                <h3><mark id="business-idea">image-path</mark> – Starting at <mark></mark>	</h3>
               </div>
             </div>
           </div>
@@ -314,7 +315,6 @@ function stripDomainName(){
         </div>
       </div>
     </section>
-    <hr>
     <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
@@ -484,83 +484,7 @@ function stripDomainName(){
         </div>
       </div>
     </div>
-    <!-- p4p.got-->
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        .domain-icon-spacing {margin-right: 60px;}
-        .col-spacer2{width:43%;}
-        .col-spacer1{width: 30%;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h3{margin-top:0px;margin-bottom:0px;}
-        
-      </style>
-    </atlantis:webstash>
-    <section id="got">
-      <div class="container">
-        <div class="row">
-          <div class="text-center">
-            <h2 class="uppercase">Ready to take your business online?</h2>
-            <div class="starter-pack">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark id="business-idea">billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="topSpacing">
-            <div class="col-xss-1"></div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-domain-name"></div>
-                <p>
-                  <label>Domain</label>
-                </p><span class="tooltip-icon domain-icon-spacing"></span>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-wordpress"></div>
-                <p>
-                  <label>Website builder (wrong image)</label>
-                </p><span class="tooltip-icon"></span>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-email"></div>
-                <p>
-                  <label>Office 365 email</label>
-                </p><span class="tooltip-icon"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-spacer1"></div>
-          <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-        </div>
-        <div style="padding-top:30px;padding-bottom:10px" class="row">
-          <div class="col-sm-4 col-spacer2"></div>
-          <div class="col-sm-3">
-            <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
-          </div>
-        </div>
-        <div style="padding-top:10px" class="row">
-          <div class="col-sm-4"></div>
-          <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-        </div>
-      </div>
-    </section>
->>>>>>> 7c8152887098e361d5aa6d77a7b38b32d97d3db1
+    <!--+renderReadyToTakeBusinessOnline("billysbikes.org","price")-->
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
