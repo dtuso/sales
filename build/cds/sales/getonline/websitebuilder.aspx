@@ -325,7 +325,6 @@ function stripDomainName(){
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         .domainNameDiv{line-height:1}
-        .domainSelect{margin-top:10px;}
         
       </style>
     </atlantis:webstash>
@@ -387,6 +386,15 @@ function stripDomainName(){
         </div>
       </div>
     </section>
+    <!--section#websitenode-builder
+    //div
+      //img(src="/headrer-image.pnodeng")
+      //h2 Website builder
+      //a.btn.btn-default-light View All Templates
+      //img(src="/main-image.png")
+    
+    -->
+    <hr>
     <!-- p4p.office365-->
     <atlantis:webstash type="css">
       <style>

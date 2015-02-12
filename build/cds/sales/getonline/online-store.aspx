@@ -238,7 +238,6 @@ function stripDomainName(){
         </div>
       </div>
     </section>
-    <!-- p4p.getItNow-->
     <atlantis:webstash type="css">
       <style>
         .container .hero-guy{height:774px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
@@ -330,7 +329,8 @@ function stripDomainName(){
         .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
         
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
@@ -351,12 +351,12 @@ function stripDomainName(){
         </div>
         <div class="row">
           <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>billy bikes</mark></h4>
+            <h4 style="margin-top:10px" class="domain-starts strong"> </h4>
           </div>
         </div>
         <div class="row">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLong.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption1"></span></div>
             <div class="col-sm-3">
               <button class="btn btn-primary btn-select uppercase">Select</button>
               <!--<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>-->
@@ -370,7 +370,7 @@ function stripDomainName(){
         </div>
         <div class="row domainSelect">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongBusiness.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption2"></span></div>
             <div class="col-sm-3">
               <button class="btn btn-primary btn-select uppercase">Select</button>
             </div>
@@ -378,17 +378,19 @@ function stripDomainName(){
         </div>
         <div class="row domainSelect">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongSuites.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption3"></span></div>
             <div class="col-sm-3">
               <button class="btn btn-primary btn-select uppercase">Select</button>
             </div>
           </div>
         </div>
-        <div class="row domainSelect">
+        <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 plan-flag">
-              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
+            <div class="col-sm-9 speach-bubble-left-white">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
+              </div>
             </div>
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
@@ -404,6 +406,7 @@ function stripDomainName(){
       //h2 Website builder
       //a.btn.btn-default-light View All Templates
       //img(src="/main-image.png")
+    
     -->
     <!-- p4p.office365-->
     <atlantis:webstash type="css">
@@ -418,9 +421,9 @@ function stripDomainName(){
         
         .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .did-you-know-email{height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
         
       </style>
     </atlantis:webstash>
@@ -437,14 +440,16 @@ function stripDomainName(){
         <div class="row">
           <div class="text-center">
             <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
-            <h2 style="margin-bottom:0px" class="uppercase"><mark>yourname@billysbikes.org</mark></h2>
+            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"></h2>
           </div>
         </div>
         <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 plan-flag">
-              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-              <h5 style="margin-top:10px;text-transform:none">Did you know customers are 9x more likely to choose a business with a professional email address?*</h5>
+            <div class="col-sm-9 speach-bubble-left-green">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">Did you know customers are 9x more likely to choose a business with a professional email address?*</h5>
+              </div>
             </div>
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
@@ -555,6 +560,7 @@ function stripDomainName(){
         </div>
       </div>
     </section>
+>>>>>>> 7c8152887098e361d5aa6d77a7b38b32d97d3db1
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
@@ -562,6 +568,32 @@ function stripDomainName(){
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script>
+      $(document).ready(function(){
+        var domainInfo = {
+          businessName  : 'Billys bikes',
+          domainName    : 'billysbikes.com',
+          emailName     : 'yourname',
+          domainOption2 : 'billysbikesLong.com',
+          domainOption3 : 'billysbikesReallyLong.com',
+          dealPrice     : '$1.00'
+        };
+      
+        $(".O365-domain-email").html("<mark>" + domainInfo.emailName + "@" + domainInfo.domainName + "</mark>");
+      
+        var goodNewsStarter = "We have an excellent starter pack for <mark>{0}</mark> – Starting at <mark>{1}</mark>";
+        goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
+        $(".good-news-starter").html(goodNewsStarter);
+      
+        var startsWith = "It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>{0}</mark>";
+        startsWith = startsWith.replace("{0}",domainInfo.businessName);
+        $(".domain-starts").html(startsWith);
+      
+        $(".domainOption1").html(domainInfo.domainName);
+        $(".domainOption2").html(domainInfo.domainOption2);
+        $(".domainOption3").html(domainInfo.domainOption3);
+      });
     </script>
     <script>
       $(window).load(function() {

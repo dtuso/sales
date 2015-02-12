@@ -1,5 +1,5 @@
 include _domain-starting-at-mixin.jade
-mixin renderReadyToTakeBusinessOnline(domain, price)
+mixin renderReadyToTakeBusinessOnline(offer-icon-class)
   append pageStyles
     atlantis:webstash(type="css")
       style.
@@ -47,12 +47,8 @@ mixin renderReadyToTakeBusinessOnline(domain, price)
                 label Office 365 email
               span.tooltip-icon
       .row
-        .col-sm-4.col-spacer1
         p.h3.center Get the bundle for $1/month for the first year*
       .row(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-sm-4.col-spacer2
-        .col-sm-3
-          btn.btn-purchase.btn-plan.btn-lg Get it now
+        btn.btn-purchase.btn-plan.btn-lg Get it now
       .row(style={'padding-top':'10px'})
-        .col-sm-4
         p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

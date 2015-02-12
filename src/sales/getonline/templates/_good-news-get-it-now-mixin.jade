@@ -1,5 +1,5 @@
 include _domain-starting-at-mixin.jade
-mixin renderGoodNews(domain, price, image)
+mixin renderGoodNews(prod-image-class)
   append pageStyles
     atlantis:webstash(type="css")
       style.
@@ -28,7 +28,8 @@ mixin renderGoodNews(domain, price, image)
         .row
           .text-center.good-news-shape
             h2.heading GOOD NEWS!
-            +renderDomainstringWithPrice(domain, price)
+            div.section
+              h3.good-news-starter
         .container.bottom
           .row
             .col-md-2.col-md-offset-1
