@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 54d93902f778fc1bb4408c03
+id: 54dbdb08f778fc1120b67d5d
 name: GCE-32258
 comments: Update verbage on page
 ---
@@ -984,7 +984,12 @@ comments: Update verbage on page
               {
                 durationDisplayLabel = office365config.planDuration/12;
 
-                if(office365config.productOrder[k].comparePrice > 0)
+                if(overOneYear && office365config.productOrder[k].firstYearComparePrice > 0)
+                {
+                  var percentOffString = stringData['percentOff'].replace('{0}', office365config.productOrder[k].firstYearComparePrice + '%');
+                  termString = stringData['year'] + ' ' + percentOffString;
+                }
+                else if(office365config.productOrder[k].comparePrice)
                 {
                   var percentOffString = stringData['percentOff'].replace('{0}', office365config.productOrder[k].comparePrice + '%');
                   termString = stringData['year'] + ' ' + percentOffString;
@@ -1134,6 +1139,15 @@ comments: Update verbage on page
           return listPrice;
         },
 
+        "getOneYearProductValueComparePrice":function(varProduct,varPlanName){
+          var listPrice = 0;
+          if(office365config.planDuration > 12)
+          {
+            listPrice = office365config.configData[varProduct][varPlanName][12]["comparePrice"];
+          }
+          return listPrice;
+        },
+
         "setDuration":function(){ 
           var $durationsSelectBox = $(".js-duration");
           $durationsSelectBox.val(office365config.planDuration);
@@ -1154,6 +1168,7 @@ comments: Update verbage on page
             var thisListPrice = office365config.getProductValue(thisProduct,thisPlan,"listPrice");
             var thisFirstYearSalePrice = office365config.getOneYearProductValueSale(thisProduct,thisPlan);
             var thisFirstYearListPrice = office365config.getOneYearProductValueList(thisProduct,thisPlan);
+            var thisFirstYearComparePrice = office365config.getOneYearProductValueComparePrice(thisProduct,thisPlan);
             var comparePrice = office365config.getProductValue(thisProduct,thisPlan,"comparePrice");
 
             office365config.productOrder[thisPlan]={
@@ -1165,7 +1180,8 @@ comments: Update verbage on page
               "productListPrice":thisListPrice,
               "firstYearProductPrice": thisFirstYearSalePrice,
               "firstYearProductListPrice":thisFirstYearListPrice,
-              "comparePrice":comparePrice
+              "comparePrice":comparePrice,
+              "firstYearComparePrice": thisFirstYearComparePrice
             };
           });
           office365config.refreshCart(); 
