@@ -183,21 +183,6 @@
         window.location = resultPage;
       }
     }
-    
-    $("#search-input").bind("keypress", function (event) {
-           if (event.charCode!=0) {
-             $('.validate-message').text('*Invalid character in name. Only letters, numbers, or hyphens are allowed.');
-             $('.validate-message').hide();
-             var regex = new RegExp("^[a-zA-Z0-9.-]+$");
-             var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
-             if (!regex.test(key) && event.which != 13) {
-                $('.validate-message').show();
-                $('.validate-message').fadeOut(3000);   
-                event.preventDefault();
-                return false;
-            }
-        }
-      });
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">

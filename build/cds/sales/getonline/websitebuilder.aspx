@@ -300,7 +300,6 @@ function stripDomainName(){
         </div>
       </div>
     </section>
-    <hr>
     <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
