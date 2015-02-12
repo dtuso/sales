@@ -71,7 +71,26 @@
         });
       }
       
-    </script><!--[if lt IE 9]>
+    </script>
+    <atlantis:webstash type="js">
+      <script>$(document).ready(function(){
+   stripDomainName();
+});
+
+function stripDomainName(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "domain"){
+         $("#business-idea").text(inputValue);
+       }
+        
+    }
+}
+      </script>
+    </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
@@ -222,20 +241,20 @@
     <atlantis:webstash type="css">
       <style>
         .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
-        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
         .get-it-now{margin-top: 35px;}
         .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .plus{font-weight: bold;}
         
       </style>
     </atlantis:webstash>
@@ -250,8 +269,9 @@
           <div class="row">
             <div class="text-center good-news-shape">
               <h2 class="heading">GOOD NEWS!</h2>
-              <div class="section">
-                <h3 class="good-news-starter"></h3>
+              <div class="starter-pack">
+                <h3>We have an excellent starter pack for</h3>
+                <h3><mark id="business-idea">domain</mark> – Starting at <mark>price</mark>	</h3>
               </div>
             </div>
           </div>
@@ -288,6 +308,7 @@
         </div>
       </div>
     </section>
+    <hr>
     <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
@@ -457,7 +478,83 @@
         </div>
       </div>
     </div>
-    <!--+renderReadyToTakeBusinessOnline("billysbikes.org","price")-->
+    <!-- p4p.got-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        .domain-icon-spacing {margin-right: 60px;}
+        .col-spacer2{width:43%;}
+        .col-spacer1{width: 30%;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h3{margin-top:0px;margin-bottom:0px;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="got">
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+            <h2 class="uppercase">Ready to take your business online?</h2>
+            <div class="starter-pack">
+              <h3>We have an excellent starter pack for</h3>
+              <h3><mark id="business-idea">billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="topSpacing">
+            <div class="col-xss-1"></div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="features-domain-name"></div>
+                <p>
+                  <label>Domain</label>
+                </p><span class="tooltip-icon domain-icon-spacing"></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="features-wordpress"></div>
+                <p>
+                  <label>Website builder (wrong image)</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="icon-spacing">
+                <div class="features-email"></div>
+                <p>
+                  <label>Office 365 email</label>
+                </p><span class="tooltip-icon"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 col-spacer1"></div>
+          <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+        </div>
+        <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div class="col-sm-4 col-spacer2"></div>
+          <div class="col-sm-3">
+            <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
+          </div>
+        </div>
+        <div style="padding-top:10px" class="row">
+          <div class="col-sm-4"></div>
+          <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+        </div>
+      </div>
+    </section>
+>>>>>>> 7c8152887098e361d5aa6d77a7b38b32d97d3db1
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->

@@ -71,7 +71,26 @@
         });
       }
       
-    </script><!--[if lt IE 9]>
+    </script>
+    <atlantis:webstash type="js">
+      <script>$(document).ready(function(){
+   stripDomainName();
+});
+
+function stripDomainName(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "domain"){
+         $("#business-idea").text(inputValue);
+       }
+        
+    }
+}
+      </script>
+    </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
@@ -202,15 +221,11 @@
       
     </style>
     <style>
-      .gray{background-color:lightgray;}
-      .green{background-color:green}
-<<<<<<< HEAD
+      .gray{background-color:#E8E8E8;}
+      .green{background-color:#78C043}
       .white{background-color:white}
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
-=======
-      .uppercase{text-transform:uppercase}
->>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -218,20 +233,20 @@
     <atlantis:webstash type="css">
       <style>
         .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%;}
+        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
-        .good-news-image{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-complete.png) no-repeat center bottom;}
         .get-it-now{margin-top: 35px;}
         .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 20px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative; top: 4px;}
         .right-side{position:relative;}
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+        .plus{font-weight: bold;}
         
       </style>
     </atlantis:webstash>
@@ -242,7 +257,6 @@
             <div class="hero-guy"></div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
     </section>
     <!-- p4p.domainMultipleSelection-->
@@ -378,17 +392,11 @@
             </div>
             <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-leader-title]@L]</h3>
             <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-leader-content]@L]</p>
-=======
-        <div class="col-xs-9 right-side">
-          <div class="row">
-            <div class="text-center good-news-shape">
-              <h2 class="heading">GOOD NEWS!</h2>
-              <div class="section">
+              <div class="starter-pack">
                 <h3>We have an excellent starter pack for</h3>
-                <h3><mark>Billy Bikes</mark> – Starting at <mark>$1.00</mark>	</h3>
+                <h3><mark id="business-idea">Billy's Bikes</mark> – Starting at <mark>$1.00</mark>	</h3>
               </div>
             </div>
->>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
           </div>
           <div class="container bottom">
             <div class="row">
@@ -408,7 +416,6 @@
                 <p>Office 365 email is the simplest email tool</p>
               </div>
             </div>
-<<<<<<< HEAD
             <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-support-title]@L]</h3>
             <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-support-content]@L]</p>
           </div>
@@ -422,39 +429,12 @@
       </div>
     </div>
     <!-- p4p.got-->
-=======
-            <div class="get-it-now">
-              <div class="row text-center">
-                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-              </div>
-              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
-              </div>
-              <div style="padding-top:10px" class="row text-center">
-                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- p4p.domainMultipleSelection-->
->>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
     <atlantis:webstash type="css">
       <style>
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
         .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
         .icon-spacing{text-align: center;font-size: 2em;}
-<<<<<<< HEAD
-        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        .domain-icon-spacing {margin-right: 60px;}
-        .col-spacer2{width:43%;}
-        .col-spacer1{width: 30%;}
-=======
         
         h2{margin-top:0px;margin-bottom:0px;}
         h5{margin-top:0px;margin-bottom:0px;}
@@ -463,7 +443,11 @@
         .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
         .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
->>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
+        
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
         
       </style>
     </atlantis:webstash>
@@ -479,32 +463,44 @@
         </div>
         <div class="row">
           <div class="text-center">
-<<<<<<< HEAD
-            <h2>Ready to take your business online</h2>
-            <div class="section">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark>billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
+            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>billy bikes</mark></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container white">
+            <div class="col-sm-9"><span class="domainName lowercase">ReallyLong.com</span></div>
+            <div class="col-sm-3">
+              <button class="btn btn-primary btn-select uppercase">Select</button>
+              <!--<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>-->
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="topSpacing">
-            <div class="col-xss-1"></div>
+          <div class="container">
+            <h5 style="margin-top:20px"><strong>Here are some alternative options available:</strong></h5>
+          </div>
+        </div>
+        <div class="row domainSelect">
+          <div class="container white">
+            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongBusiness.com</span></div>
             <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-domain-name"></div>
-                <p>
-                  <label>Domain</label>
-                </p><span class="tooltip-icon domain-icon-spacing"></span>
-              </div>
+              <button class="btn btn-primary btn-select uppercase">Select</button>
             </div>
+          </div>
+        </div>
+        <div class="row domainSelect">
+          <div class="container white">
+            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongSuites.com</span></div>
             <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-wordpress"></div>
-                <p>
-                  <label>Website builder (wrong image)</label>
-                </p><span class="tooltip-icon"></span>
-              </div>
+              <button class="btn btn-primary btn-select uppercase">Select</button>
+            </div>
+          </div>
+        </div>
+        <div class="row domainSelect">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 plan-flag">
+              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
             </div>
             <div class="col-sm-3">
               <div class="icon-spacing">
@@ -513,19 +509,7 @@
                   <label>Office 365 email</label>
                 </p><span class="tooltip-icon"></span>
               </div>
-=======
-            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>yourname@billy bikes</mark></h4>
-          </div>
-        </div>
-        <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-sm-9 plan-flag">
-              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
-            </div>
-            <div class="col-sm-3">
               <div class="half-hero-left"></div>
->>>>>>> f0acb46cb6b0cb5aeabcfbb06361049d666c0b6f
             </div>
           </div>
         </div>

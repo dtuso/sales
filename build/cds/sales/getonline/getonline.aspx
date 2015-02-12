@@ -71,7 +71,120 @@
         });
       }
       
-    </script><!--[if lt IE 9]>
+    </script>
+    <atlantis:webstash type="js">
+      <script>    var p4pConfigData = {};
+    var url2 = window.location.protocol+'//'+ window.location.host+'/api/package/config/p4p_get_online';
+    var domainName;
+    
+    $.ajax({
+      type: 'POST',
+      url: url2
+      ,complete: function (data) {
+      processP4PData(data);
+      },
+      dataType: 'json'
+    });
+    
+    function processP4PData(data){
+      p4pConfigData = $.parseJSON(data.responseText);
+      var dropDown1 = '<select class="dropdown1">';
+      var dropDown2 = '<select class="dropdown2">';
+      var drop1Size = p4pConfigData.step2_dropdown1.length;
+      var drop2Size = p4pConfigData.step2_dropdown2.length;
+      
+      for(var i = 0; i < drop1Size; i++){
+        dropDown1 += '<option value="' + p4pConfigData.step2_dropdown1[i].value + '" id="' + p4pConfigData.step2_dropdown1[i].value + '">' + p4pConfigData.step2_dropdown1[i].interest + '</option>';
+      }
+      dropDown1 += '</select>';
+      
+      for(var i = 0; i < drop2Size; i++){
+        dropDown2 += '<option value="' + p4pConfigData.step2_dropdown2[i].value + '" id="' + p4pConfigData.step2_dropdown2[i].value + '">' + p4pConfigData.step2_dropdown2[i].resource + '</option>';
+      }
+      dropDown2 += '</select>';
+      
+      $("#first-dropdown").html(dropDown1);
+      $("#second-dropdown").html(dropDown2);
+      
+    }
+    
+    $('#get-running-butt').click(function(){
+        domainName = $('#search-input').val();
+        calculateResultsPage();
+    });
+    
+    function calculateResultsPage(){
+      var resultPage = " ";
+      var whiteListSpoof = "sales/whitelist%7C54ca63b0f778fc10543b3d15";
+      //------------------NEW OR EXISTING BUSINESS--------------------------------------
+      if(($('.dropdown1').val() == "new_business" || $('.dropdown1').val() == "existing_business")) {
+        if($('.dropdown2').val() == "build_myself" && domainName != ""){
+          //WEBSITE BUILDER 
+          resultPage = '[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]';
+          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/websitebuilder.aspx|54d3a061f778fc1134545580';
+        
+          window.location = resultPage;
+        }
+        else if($('.dropdown2').val() == "hire_someone" && domainName != ""){
+          //PRO SERVICES
+          resultPage = '[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]';
+          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/pro-basic.aspx|54dba076f778fc1120b67d3d';
+        
+          window.location = resultPage;
+        }
+        else if($('.dropdown2').val() == "know_someone" && domainName != ""){
+          //WEBSITE HOSTING 
+          resultPage = '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]';
+          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/web-hosting.aspx|54d916f8f778fc2a88214035';
+        
+          window.location = resultPage;
+        }
+      }
+      //--------------------BLOG--------------------------------------------------------
+      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "build_myself" && domainName != ""){
+        //WORDPRESS
+        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
+        
+        window.location = resultPage;
+      }
+      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "hire_someone" && domainName != ""){
+        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
+        
+        window.location = resultPage;
+      }
+      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "know_someone" && domainName != ""){
+        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
+        
+        window.location = resultPage;
+      }
+      //------------SELLING PRODUCTS--------------------------------------------------
+      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "build_myself" && domainName != ""){
+        //ONLINE STORE
+        resultPage = '[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54d28923f778fc21301a8966';
+        
+        window.location = resultPage;
+      }
+      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "hire_someone" && domainName != ""){
+          //PRO SERVICES
+        resultPage = '[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/pro-ecomm.aspx|54dba062f778fc1120b67d3b';
+        
+        window.location = resultPage;
+      }
+      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "know_someone" && domainName != ""){
+        //Website Hosting Result Page
+        resultPage = '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/web-hosting.aspx|54d916f8f778fc2a88214035';
+        
+        window.location = resultPage;
+      }
+    }
+      </script>
+    </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
@@ -201,11 +314,58 @@
       }
       
     </style>
+    <style>
+      .gray{background-color:#E8E8E8;}
+      .green{background-color:#78C043}
+      .white{background-color:white}
+      .uppercase{text-transform:uppercase}
+      .lowercase{text-transform:lowercase}
+      .text-center{text-align:cneter}
+      .illustration-complete{height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png) no-repeat center bottom;}
+      .bottom-space{margin-bottom:50px}
+      .search-bar{width:100%}
+      .step-1{padding-right: 50px}
+      .step-2{padding-left: 50px; border-left: lightgray solid}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .dropdown1{width: 100%}
+      .dropdown2{width: 100%}
+      #questions-bottom{padding-bottom: 50px}
+      
+    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="questions-top">
+    <section id="questions-top" class="green">
+      <div class="container text-center">
+        <h1 class="uppercase">This doesn't have to be <mark>confusing!</mark></h1>
+        <div class="row">
+          <div class="illustration-complete bottom-space"></div>
+        </div>
+      </div>
+    </section>
+    <section id="questions-bottom" class="white">
       <div class="container">
-        <h1>Testing 1234</h1>
+        <div class="top-half text-center">
+          <h3 class="uppercase">We can get your business online</h3>
+          <p>Tell us a little about yourself.  We will step you from A to Z, no porblem.</p>
+        </div>
+        <div class="col-xs-6 step-1">
+          <h3 class="uppercase">Step 1</h3>
+          <p>What's your business name? Don't have a name? An idea for your business is perfect!</p>
+          <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="75" class="search-bar">
+          <p class="validate-message"></p>
+        </div>
+        <div class="col-xs-6 step-2">
+          <h3 class="uppercase">Step 2</h3>
+          <p>We've given you some options of how to set up your business online.  Just fill in the blanks!</p>
+          <div class="dropdowns">
+            <h4 class="uppercase">I'm interested in</h4>
+            <div id="first-dropdown"></div>
+            <h4 class="uppercase">I have the resources and time to</h4>
+            <div id="second-dropdown"></div>
+          </div>
+          <button id="get-running-butt" type="submit" name="searchButton" class="get-running-btn btn btn-warning btn-lg hp-search">GET ME UP AND RUNNING!</button>
+        </div>
       </div>
     </section>
     <!--define decisions section here-->
