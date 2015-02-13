@@ -15,14 +15,14 @@ block append tileStyles
   style
     :less
       #marquee .tld-sale-tile.com-sale img.com-sale-tile-logo{height:30px;width:115px;float:left;margin:12px 8px;}
-       #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE4MyA1MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgzIDUzIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkREQzQ2IiBkPSJNMCAwbDE5IDM1aDE0N2wxNyAxOFYzNS42IDBIMHoiLz48L3N2Zz4=);}
-      .Explorer8 #marquee .tld-sale-tile.com-sale .sale-ends-text, .Explorer7 #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/);}
+      #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE4MyA1MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgzIDUzIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkREQzQ2IiBkPSJNMCAwbDE5IDM1aDE0N2wxNyAxOFYzNS42IDBIMHoiLz48L3N2Zz4=");background-repeat: no-repeat;background-position: center right;float: right;background-size: cover;color: #333;font-size: 26px;padding-bottom: 20px;padding-left: 25px;padding-right: 20px;margin-right: -15px;margin-top: -10px;margin-bottom: -15px;text-transform: uppercase;}
+      .Explorer #marquee .tld-sale-tile.com-sale .sale-ends-text,.Mozilla #marquee .tld-sale-tile.com-sale .sale-ends-text{margin-right:-21px;}
+      .Explorer8 #marquee .tld-sale-tile.com-sale .sale-ends-text, .Explorer7 #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image: url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-tile-flag.png");}
 
 block prepend tileContent
-  | 
-  | ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
-  |
-    .sale-ends-wrap 
-      .sale-ends-text Sale ends 02-17-2015
-  | 
-  | ##endif
+  |  
+  |  ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+  .sale-ends-wrap.clearfix 
+    .sale-ends-text.tungsten Sale ends 02-17-2015
+  |  
+  |  ##endif
