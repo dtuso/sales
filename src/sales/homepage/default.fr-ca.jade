@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.fr-ca
 id: false
-name: GCE-34120
+name: GCE-553
 ---
 extends ../../layouts/homepage/default_base
 block styles
@@ -49,6 +49,5 @@ block tiles
         |  ##endif
 
 block bugBar
-  +tldBugs(["club","co","quebec"])
-
+    +tldBugs(["ca","co","com", "club", "quebec"])
 block cookieWarning

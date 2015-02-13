@@ -154,12 +154,13 @@ block content
             +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814"})
 
   //- Bugbar
-  block bugBar
-    section#bugbar
-      .container
-        .row
-          .col-sm-12
-            +tldBugs(["co","org","net","biz"])
+  
+  section#bugbar
+    .container
+      .row
+        .col-sm-12
+          block bugBar
+            +tldBugs(["co","org"])
 
   //-  Marquee Section
   block marquee
