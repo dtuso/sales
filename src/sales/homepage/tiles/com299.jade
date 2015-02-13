@@ -19,6 +19,22 @@ append downArrowTileStyles
     .com299.tile .btn{width:auto; max-width:285px}
     .com299.tile .body-wrapper {display:table;}
     .com299.tile .body-text {display: table-cell; vertical-align:middle}
+
+block prepend header
+  |  
+  |  ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+  atlantis:webstash(type="css")
+    style.
+      .com299.tile .sale-ends-wrap{position:absolute;top:0;left:-1px;}
+      .com299.tile .header-wrapper .sale-ends-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDMyMSA5NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzIxIDk2IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkVEQzQ1IiBkPSJNMzIxIDBsLTM5IDY0TDMxLjcgNjQuNSAwIDk2VjY0LjUgMEgzMjF6Ii8+PC9zdmc+");background-repeat: no-repeat;background-position: center left;font-size:30px;padding:10px 70px 35px 33px;}
+      .com299.tile .header-text{margin-top:40px;}
+      .Explorer8 .com299.tile .header-wrapper .sale-ends-text, .Explorer7 .com299.tile .header-wrapper .sale-ends-text{background-image: url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/hero-big-tile-flag.png");}
+
+  .sale-ends-wrap.clearfix 
+    .sale-ends-text.tungsten Sale ends 02-17-2015
+  |  
+  |  ##endif
+
 block body
   h3.body-text
     .price-text [@L[cds.sales/homepage/tile/com299:com299-tile-subtext]@L]
