@@ -19,6 +19,23 @@ append downArrowTileStyles
     .com299.tile .btn{width:auto; max-width:285px}
     .com299.tile .body-wrapper {display:table;}
     .com299.tile .body-text {display: table-cell; vertical-align:middle}
+
+block prepend header
+  |  
+  |  ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+  atlantis:webstash(type="css")
+    style.
+      .com299.tile .header-wrapper .sale-ends-text{font-size:30px;padding:3px 20px;background-color:#fedc45;position:absolute;top:0;left:0}
+      .com299.tile .header-text{margin-top:40px;}        
+
+  span.sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
+  script(type='text/javascript').
+    var d = new Date("2015","01","17");
+    saleEndDate = d.toLocaleDateString();   
+    $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));
+  |  
+  |  ##endif
+
 block body
   h3.body-text
     .price-text [@L[cds.sales/homepage/tile/com299:com299-tile-subtext]@L]
