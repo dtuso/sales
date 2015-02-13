@@ -1,53 +1,85 @@
 include _domain-starting-at-mixin.jade
-mixin renderGoodNews(prod-image-class)
+mixin renderGoodNews(productToDisplay)
   append pageStyles
-    atlantis:webstash(type="css")
-      style.
-        .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
-        .container .row .green-background h2{ margin-bottom: 0;}
-        .get-it-now{margin-top: 35px;}
-        .heading{padding-top: 110px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative; top: 4px;}
-        .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .plus{font-weight: bold;}
+    // atlantis:webstash(type="css")
+    style.
+      .container .hero-guy{height:709px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+      .container .good-news-shape{height:331px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; margin-top: -84px; background-size:95%; margin-bottom: 45px;}
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+      .container .row .green-background h2{ margin-bottom: 0;}
+      .get-it-now{margin-top: 35px;}
+      .heading{padding-top: 110px;}
+      .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;text-align:center;}
+      .product-price{font-weight:bold;}
+
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .speach-bubble-left-div {margin-left:5%;width:90%;}
+      .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
 
   section#getItNow
     .container
-      .col-xs-3.left-side
-        .row
-          .hero-guy
-      .col-xs-9.right-side
-        .row
-          .text-center.good-news-shape
-            h2.heading GOOD NEWS!
+      .col-xs-3
+        div.hero-guy
+      .col-xs-9
+        .row.speach-bubble-left-green.text-center
+          div.speach-bubble-left-div
+            h2.uppercase Here you go...
             div.section
               h3.good-news-starter
-        .container.bottom
-          .row
-            .col-sm-4
-              .features-domain-name
-              label.h3 DOMAIN NAME
-              p Domain is the name of your
-            .col-sm-4
-              .wsb-icon
-              label.h3 WEBSITE BUILDER
-              p Website builder is a tool we have
-            .col-sm-4
-              .features-email
-              label.h3 OFFICE 365 EMAIL
-              p Office 365 email is the simplest email tool
-          .get-it-now
-            .row.text-center
-              p.h3.center Get the bundle for $1/month for the first year*
-            .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-              btn.btn-purchase.btn-plan.btn-lg GET IT NOW
-            .row.text-center(style={'padding-top':'10px'})
-              p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
+        .row
+          .container.bottom
+            .row
+              .col-sm-4.center
+                .features-domain-name
+                label.h3.uppercase.product-name Domain Name
+                p Get a memorable online address, like dummy.com
+                p.product-price $99.99/yr
+              if productToDisplay == "WSB"
+                .col-sm-4
+                  .features-wsb
+                  label.h3.uppercase.product-name Website Builder
+                  p Easily create a professional website with simple drag-&-drop tools.
+                  p.product-price $99.99/yr
+              else if productToDisplay == "Hosting"
+                .col-sm-4
+                  .features-hosting
+                  label.h3.uppercase.product-name Website Hosting
+                  p Give your site a home that’ll keep it secure and running like sports car.
+                  p THIS IS THE WRONG IMAGE
+                  p.product-price $99.99/yr
+              else if productToDisplay == "Store"
+                .col-sm-4
+                  .features-online-store
+                  label.h3.uppercase.product-name Online Store
+                  p Easily create a site that let’s you sell your stuff, accept credit cards and more.
+                  p THIS IS THE WRONG IMAGE
+                  p.product-price $99.99/yr
+              else if productToDisplay == "WP"
+                .col-sm-4
+                  .features-wordpress
+                  label.h3.uppercase.product-name Managed Wordpress
+                  p Start a blog with WordPress and let us manage the technical stuff.
+                  p.product-price $99.99/yr
+              .col-sm-4
+                .features-email
+                label.h3.uppercase.product-name Office 365 Email
+                p Get a professional email address, like yourname@dummy.com
+                p.product-price $99.99/yr
+            .get-it-now
+              .row.text-center
+                p.h3.center Get the bundle for $1/month for the first year*
+              .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+                btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+              .row.text-center(style={'padding-top':'10px'})
+                p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

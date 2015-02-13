@@ -12,6 +12,7 @@ append pageStyles
     .white{background-color:white}
     .uppercase{text-transform:uppercase}
     .lowercase{text-transform:lowercase}
+    .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
 
 append headScripts
   atlantis:webstash(type="js")
@@ -19,6 +20,7 @@ append headScripts
       include:js ../p4p.js
 
 block domainSearch
+block marquee
 
 block sections
  
@@ -40,6 +42,10 @@ block sections
     // p4p.whyUs
     include -why-us.jade
   
+  block divider
+    .container
+      .col-xs-12.section-divider(style={'margin-top':'10px','margin-bottom':'10px'})
+
   block got
     // p4p.got
     //+renderReadyToTakeBusinessOnline("billysbikes.org","price")
@@ -58,11 +64,11 @@ prepend endOfPageScripts
 
       $(".O365-domain-email").html("<mark>" + domainInfo.emailName + "@" + domainInfo.domainName + "</mark>");
 
-      var goodNewsStarter = "We have an excellent starter pack for <mark>{0}</mark> – Starting at <mark>{1}</mark>";
+      var goodNewsStarter = "A great package deal for <mark>{0}</mark> starting at just <mark>{1}</mark>";
       goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
       $(".good-news-starter").html(goodNewsStarter);
 
-      var startsWith = "It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>{0}</mark>";
+      var startsWith = "It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark>{0}</mark>";
       startsWith = startsWith.replace("{0}",domainInfo.businessName);
       $(".domain-starts").html(startsWith);
 
