@@ -42,7 +42,12 @@
       </style>
     </atlantis:webstash>
     <div class="sale-ends-wrap clearfix"> 
-      <div class="sale-ends-text tungsten">Sale ends 02-17-2015</div>
+      <div class="sale-ends-text tungsten">[@L[cds.sales/homepage:saleEnds]@L]</div>
+      <script type="text/javascript">
+        var d = new Date("2015","01","17");
+        saleEndDate = d.toLocaleDateString();   
+        $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));    
+      </script>
     </div> 
      ##endif
     <div class="clearfix">

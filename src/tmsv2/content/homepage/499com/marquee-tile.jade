@@ -26,6 +26,10 @@ block prepend tileContent
       .Explorer8 #marquee .tld-sale-tile.com-sale .sale-ends-text, .Explorer7 #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image: url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-tile-flag.png");}
 
   .sale-ends-wrap.clearfix 
-    .sale-ends-text.tungsten Sale ends 02-17-2015
+    .sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
+    script(type='text/javascript').
+      var d = new Date("2015","01","17");
+      saleEndDate = d.toLocaleDateString();   
+      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));    
   |  
   |  ##endif
