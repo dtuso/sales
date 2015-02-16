@@ -141,7 +141,7 @@ block endOfPageScripts
         $('#shareme').fosShare({});
       }, 2000);
     });
-    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,false,{domain:url,path:"/"});$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,{domain:url,path:"/"})}catch(t){}return true})});
+    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
 
 block content
   
@@ -154,12 +154,13 @@ block content
             +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814"})
 
   //- Bugbar
-  block bugBar
-    section#bugbar
-      .container
-        .row
-          .col-sm-12
-            +tldBugs(["co","org","net","biz"])
+  
+  section#bugbar
+    .container
+      .row
+        .col-sm-12
+          block bugBar
+            +tldBugs(["co","org"])
 
   //-  Marquee Section
   block marquee

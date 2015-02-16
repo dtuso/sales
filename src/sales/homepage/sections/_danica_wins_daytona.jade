@@ -1,0 +1,19 @@
+extends ./_rightArrowTwoColumn.jade
+
+block append vars
+  - sectionID = "danica-wins-daytona";
+  - bkgImage = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg";
+block append rightArrowTwoColumnsStyles
+  style
+    :less
+      #danica-wins-daytona .TopText{color:#77C043;font-size:37px;text-transform:uppercase;margin-top:82px;}
+      #danica-wins-daytona .MiddleText{color:#77C043;font-size:39px;text-transform:uppercase;line-height: 25px;}
+      #danica-wins-daytona .BottomText{color:#77C043;font-size:48px;text-transform:uppercase;line-height: 60px;}
+      .dash{letter-spacing: -.5rem;margin-right:15px;}
+      #danica-wins-daytona{height:300px;}
+block leftContent
+  .TopText.walsheim-black Congratulations, Danica!
+  .MiddleText.tungsten 
+    span.dash ------------------------------------- 
+    |  We're Proud to be a part of your
+  .BottomText.walsheim-black Daytona 500 Win!
