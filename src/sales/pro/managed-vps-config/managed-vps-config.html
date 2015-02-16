@@ -1,8 +1,8 @@
 ---
 location: sales/pro/managed-vps-config
-id: 54c1c38df778fc1dd09be011
-name: GCE-32525
-comment: Update javascript with 2 skills to implement Pro-Active Chat for Hosting LP - Pro pages
+id: 
+name: GCE-35068
+comment: VPS SALE: Config Page Sale and Term Offering Update
 configPage: true
 sitecore: true 
 cssVersionOverride: 2
@@ -209,7 +209,7 @@ cssVersionOverride: 2
           var defaultPackageId=plan; 
           var planMonths =  plan.split('_').pop(1);
           plan = plan.replace('_'+ planMonths,'');
-          // spoof url for confing and packagegrouping removed when both are published
+          // spoof url for config and packagegrouping removed when both are published
           var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]'.replace('{0}',plan);
           //url=url + "?configdocid=54120f73f778fc0f24cc8f04&groupdocid=54120fe4f778fc0f24cc8f06";
 
@@ -272,15 +272,25 @@ cssVersionOverride: 2
           
           $("#termOptions").find("input[type=radio]").each(function(){
             var term = $(this);
-            var totalAddonPrice  =currencyCalc.evaluate([osAddonPrice,"+",managedAddonPrice]); 
-            var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
-          
+            var termLength = parseInt(term.data('term'));
+            var totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+",managedAddonPrice]);
+            var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
+            if(selectedAddonValue == 'pro_vps_managed_plus'){
+              if(termLength == 12){
+                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+",'[@T[productprice:<current productid="483562" period="monthly" percentoff="25.00" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]']);
+              }else if(termLength > 12 ){
+                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+",'[@T[productprice:<current productid="483562" period="monthly" percentoff="25.00" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]']);
+              }
+            }
+            //var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
             var totalPrice = currencyCalc.evaluate([totalAddonPrice,"+",currencyCalc.stripFormat(term.data('price'))]); 
+
             term.attr('data-price',totalPrice);
             term.parent().find('.price').text(totalPrice + "[@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L]");
 
           });
-         
+
+
          var oneMonthPrice = $("#termOptions").find("input[type=radio]").first().attr('data-price');
           $("#termOptions").find("input[type=radio]").each(function(){
             var secondaryPrice = $(this).attr('data-price');
@@ -291,7 +301,7 @@ cssVersionOverride: 2
                $(this).parent().find('.price').append(savingsString + strikeString);
             }
           });
-           
+
         },
         buildProductOrder: function(data){
          
@@ -407,20 +417,30 @@ cssVersionOverride: 2
         var optionname= "termOption"
         var parentid = $("#termOptions");
         parentid.empty();
+        var showTerms;
+        ##if(isManager())
+        showTerms = ['1','3','6','12','24','36','48','60'];
+        ##else
+        showTerms = ['1','3','12','24'];
+        ##endif
         $.each(terms,function (){
-            if(this != '')
+          if(this != '')
             {
                 var planItem=this.split('-');
-                var monthString =  (planItem[0] > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
+                var period = planItem[0];
+                var monthString =  (period > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
                 var packageId= planItem[1];
                 var price =  planItem[3];
                 var addonDiscount =planItem[2];
                 var checkedRadiobutton= (defaultPackageId ===  packageId) ?"checked='checked'" : '';
                 
             }
-            var content='';
-            content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-addondiscount="'+ addonDiscount+'" data-term="' +  planItem[0] + '" data-price="'+price+'"'+ checkedRadiobutton + '/><span><strong> '+planItem[0] +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price + ' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
-            parentid.append(content);
+            if ($.inArray(period, showTerms) !== -1)
+            {
+              var content='';
+              content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-addondiscount="'+ addonDiscount+'" data-term="' +  period + '" data-price="'+price+'"'+ checkedRadiobutton + '/><span><strong> '+period +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price + ' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
+              parentid.append(content);
+            }
                            
         });       
 
