@@ -32,6 +32,9 @@ block prepend sections
   |  ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
   include ./sections/_danica_wins_additional_race.jade
   |  
+  |  ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
+  include ./sections/_danica_wins_2nd_pole.jade
+  |  
   |  ##endif
 block bugBar
   +tldBugs(["co","org","net", "biz"])
