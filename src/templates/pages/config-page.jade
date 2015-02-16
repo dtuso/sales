@@ -1,6 +1,8 @@
 extends ../page
 
 include ../domain-search-mixin.jade
+include ../config-helper.jade
+
 
 
 append head
@@ -254,32 +256,33 @@ block content
           span.product-added-to-cart-text Microsoft Office 365 is in your cart!
 
     //- there's always a catch... show it here.
-    .row
-      block addons
+    .col-sm-9
+      .row
+        block addons
       //- 
-      block orderSummary
-        .config-cart-wrapper.col-sm-3
-          .row
-            .order-summary-wrapper
-              h3 Order Summary
-              .order-total-wrapper
-                .order-item-details-wrapper
-                .order-item-addons-wrapper
-                  p#summaryAddon.order-item-title
-                  span
-                    span#summaryTerm
-                    span#addonPrice.plan-price
-                .subtotal-disclaimer
-                  p {{ configSummarytotal }}
-            div
-              span.order-total
-                span#summaryPrice.currency-amount
-            .subtotal-disclaimer
-              p
-                | [@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]
-            .scroll-down-wrapper.move(data-ci='', data-scroll='.config-cart-wrapper')
-              p.green-text {{ configSummarytotalDisc }}
-              span.icon-down.green-down-arrow-icon
+    block orderSummary
+      .config-cart-wrapper.col-sm-3
+        .row
+          .order-summary-wrapper
+            h3 Order Summary
+            .order-total-wrapper
+              .order-item-details-wrapper
+              .order-item-addons-wrapper
+                p#summaryAddon.order-item-title
+                span
+                  span#summaryTerm
+                  span#addonPrice.plan-price
+              .subtotal-disclaimer
+                p {{ configSummarytotal }}
+          div
+            span.order-total
+              span#summaryPrice.currency-amount
+          .subtotal-disclaimer
+            p
+              | [@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]
+          .scroll-down-wrapper.move(data-ci='', data-scroll='.config-cart-wrapper')
+            p.green-text {{ configSummarytotalDisc }}
+            span.icon-down.green-down-arrow-icon
         
     //- domain search section
     block domainSearch
