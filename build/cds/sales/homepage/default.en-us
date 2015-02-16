@@ -168,7 +168,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0YxODEyRCIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzc3YzA0MyIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
 }
 .gtld-marquee-tile .left-content-wrapper {
   padding-left: 10%;
@@ -186,13 +186,13 @@
   padding: 20px 0 0 20px;
 }
 .gtld-marquee-tile li {
-  color: #77c043;
+  color: #F1812D;
   font-size: 20px;
   line-height: 25px;
   margin: 0;
 }
 .gtld-marquee-tile li:hover {
-  color: #00a55e;
+  color: #F1812D;
 }
 .Explorer8 .gtld-marquee-tile,
 .Explorer7 .gtld-marquee-tile {
@@ -336,6 +336,180 @@
         </div>
       </div>
     </section>
+     
+     ##if(appSettingEnabled(Danica_Win_Daytona))
+    <atlantis:webstash type="css">
+      <style>
+      </style>
+      <style>#danica-wins-daytona .TopText {
+  color: #77C043;
+  font-size: 37px;
+  text-transform: uppercase;
+  margin-top: 82px;
+}
+#danica-wins-daytona .MiddleText {
+  color: #77C043;
+  font-size: 39px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+#danica-wins-daytona .BottomText {
+  color: #77C043;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.dash {
+  letter-spacing: -0.5rem;
+  margin-right: 15px;
+}
+#danica-wins-daytona {
+  height: 300px;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="danica-wins-daytona" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <div class="TopText walsheim-black">Congratulations, Danica!</div>
+            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
+            <div class="BottomText walsheim-black">Daytona 500 Win!</div>
+          </div>
+        </div>
+      </div>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_WIN_FIRST_RACE))
+    <atlantis:webstash type="css">
+      <style>
+      </style>
+      <style>#danica-wins-daytona .TopText {
+  color: #77C043;
+  font-size: 37px;
+  text-transform: uppercase;
+  margin-top: 82px;
+}
+#danica-wins-daytona .MiddleText {
+  color: #77C043;
+  font-size: 39px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+#danica-wins-daytona .BottomText {
+  color: #77C043;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.dash {
+  letter-spacing: -0.5rem;
+  margin-right: 15px;
+}
+#danica-wins-daytona {
+  height: 300px;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="danica-wins-daytona" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <div class="TopText walsheim-black">Congratulations, Danica!</div>
+            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
+            <div class="BottomText walsheim-black">1ST Nascar Win!</div>
+          </div>
+        </div>
+      </div>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
+    <atlantis:webstash type="css">
+      <style>
+      </style>
+      <style>#danica-wins-daytona .TopText {
+  color: #77C043;
+  font-size: 37px;
+  text-transform: uppercase;
+  margin-top: 82px;
+}
+#danica-wins-daytona .MiddleText {
+  color: #77C043;
+  font-size: 39px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+#danica-wins-daytona .BottomText {
+  color: #77C043;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.dash {
+  letter-spacing: -0.5rem;
+  margin-right: 15px;
+}
+#danica-wins-daytona {
+  height: 300px;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="danica-wins-daytona" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <div class="TopText walsheim-black">Congratulations, Danica!</div>
+            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
+            <div class="BottomText walsheim-black">Nascar Win!</div>
+          </div>
+        </div>
+      </div>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
+    <atlantis:webstash type="css">
+      <style>
+      </style>
+      <style>#danica-wins-daytona .TopText {
+  color: #77C043;
+  font-size: 37px;
+  text-transform: uppercase;
+  margin-top: 82px;
+}
+#danica-wins-daytona .MiddleText {
+  color: #77C043;
+  font-size: 39px;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+#danica-wins-daytona .BottomText {
+  color: #77C043;
+  font-size: 44px;
+  text-transform: uppercase;
+  line-height: 60px;
+}
+.dash {
+  letter-spacing: -0.5rem;
+  margin-right: 15px;
+}
+#danica-wins-daytona {
+  height: 300px;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="danica-wins-daytona" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <div class="TopText walsheim-black">Congratulations, Danica!</div>
+            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
+            <div class="BottomText walsheim-black">2nd Daytona 500 Pole!</div>
+          </div>
+        </div>
+      </div>
+    </section> 
+     ##endif
     <atlantis:webstash type="css">
       <style>#domain-promo {
   color: #fff;
