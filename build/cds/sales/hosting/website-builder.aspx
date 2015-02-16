@@ -4743,7 +4743,7 @@ margin-bottom: 20px;
                        
                       ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
                        
-                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]]@L]
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]@L]
                        
                       ##else
                        
