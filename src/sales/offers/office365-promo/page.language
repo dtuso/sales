@@ -1,8 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo/en
-id: 5460eb86f778fc26a885edd9
-name: GCE-31871
-comments: GOT2 POB rename of Productivity Plus plan to Business Premium
+id: 
+name: GCE-33745
+comments: POB for sage
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -65,14 +65,20 @@ Get the best of Microsoft Office
 Microsoft Office on up to 5 devices
 <phrase key="included-office-five-devices-desc" />
 Get the latest version of Word, Excel, PowerPoint and Outlook for your desktop, as well as licenses for your laptops, tablets and smartphones – up to 5 devices per single user.
+<phrase key="included-office-five-devices-desc-33745" />
+Get the latest version of Word, Excel, PowerPoint and Outlook for your desktop, as well as licenses for your laptop, smartphone, iPad® or other tablets – up to 5 devices per single user.
 <phrase key="included-office-email" />
 Professional domain-based email
 <phrase key="included-office-email-desc" />
 Show your customers you take your business seriously with memorable email built on your domain name. You can even create multiple addresses, like yourname@ and support@, that deliver to a single inbox.
 <phrase key="included-office-storage" comment="TB is short for terabyte" />
 1 TB of secure online storage
+<phrase key="included-office-storage-33745"/>
+Secure online storage for peace of mind
 <phrase key="included-office-storage-desc" />
 Always have the files you need, no matter where you are. Access, edit and save your important files anywhere from your laptop, tablet or smartphone. And with your files saved online, your data is always backed up.
+<phrase key="included-office-storage-desc-33745" />
+Always have the files you need, backed up and available no matter where you are. Access, edit and save your important files anywhere from your laptop, tablet or smartphone with enough online storage (1TB) for all your files. 
 <phrase key="included-best-of-godaddy" />
 Get the best of GoDaddy
 <phrase key="included-godaddy-support" />
@@ -91,6 +97,8 @@ Let our payment system make it easy to get the money you’ve earned. Use our mo
 Team up with the best.
 <phrase key="team-promo-text-content" />
 GoDaddy has over 57 million domains under management, more than anyone on the planet. Microsoft builds the tools that every successful company relies on. With us powering your business, there’s no limit to what you can do.
+<phrase key="team-promo-text-content-33745" />
+GoDaddy has over 59 million domains under management, more than anyone on the planet. Microsoft builds the tools that every successful company relies on. With us powering your business, there’s no limit to what you can do.
 <phrase key="disclaimer-modal-title" />
 Disclaimers
 <phrase key="disclaimer-modal-content" comment="Things in {0} will be tokenized with pricing." />
