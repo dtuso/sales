@@ -232,6 +232,7 @@ function stripDomainName(){
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
         .container .row .topSpacing{padding-top:20px;}
         .container .row .leftSpacing{padding-left:50px;}
