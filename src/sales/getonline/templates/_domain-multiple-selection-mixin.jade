@@ -36,28 +36,28 @@ mixin renderDomainMultipleSelection()
           div.col-sm-9
             span.domainName.lowercase.domainOption1
           div.col-sm-3
-            button.btn.btn-primary.btn-select.uppercase Select
+            button.btn.btn-primary.btn-select.uppercase(id='select1') Select
             //<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>
       .row
         div.container
-          h5(style={'margin-top':'20px'}) <strong>Here are some alternative options available:</strong>
+          h5(style={'margin-top':'20px'}) <strong>That one not moving you? Here are some alternatives:</strong>
       .row.domainSelect
         div.container.white
           div.col-sm-9
             span.domainName.lowercase.domainOption2
           div.col-sm-3
-            button.btn.btn-primary.btn-select.uppercase Select
+            button.btn.btn-primary.btn-select.uppercase(id='select2') Select
       .row.domainSelect
         div.container.white
           div.col-sm-9
             span.domainName.lowercase.domainOption3
           div.col-sm-3
-            button.btn.btn-primary.btn-select.uppercase Select
+            button.btn.btn-primary.btn-select.uppercase(id='select3') Select
       .row
         div(style={'margin-top':'30px'})
           .col-sm-9.speach-bubble-left-white
             div.speach-bubble-left-div
               h5.uppercase <mark><strong>did you know...</strong></mark>
-              h5(style={'margin-top':'10px','text-transform':'none'}) More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.
+              h5(style={'margin-top':'10px','text-transform':'none'}) Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.
           .col-sm-3
             div.half-hero-left
