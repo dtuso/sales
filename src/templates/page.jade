@@ -124,7 +124,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     //- the delayed load can be overridden by appending the JS file to the headScripts block
     script(type='text/javascript').
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
 
     //- inherited pages should attempt to use the correct head block for adding head content
     //- however, if the content doesn't fit logically into those, the "head" block can be used
