@@ -219,43 +219,8 @@
         font-size: 25px;
       }
     </style>
-    <style>.config-step {
-  background: #FCFCFC;
-  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
-  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-  border: 1px solid #ccc;
-  float: left;
-  min-height: 460px;
-  position: relative;
-}
-.config-step .flag {
-  color: white;
-  font-size: 19px;
-  height: 34px;
-  line-height: 30px;
-  left: 0;
-  padding: 2px 16px 4px;
-  position: absolute;
-  top: 10px;
-}
-.config-step .blue {
-background: #0da8e5;
-}
-.config-step .blue::after {
-border-color: #0da8e5 transparent #0da8e5 #0da8e5;
-}
-.config-step .flag::after {
-border-style: solid;
-border-width: 17px;
-content: "";
-left: 100%;
-position: absolute;
-top: 0;
-}
+    <style>
+
 .step-ribbon {
 height: 36px;
 background-color: #333;
@@ -293,7 +258,7 @@ margin-top: 40px;
 margin-bottom: 15px;
 margin-left: 15px;
 }
-}
+
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -303,38 +268,217 @@ margin-left: 15px;
           <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-9">
-          <div class="row">
-            <div class="col-sm-11 config-step medium-margin-top-step"><span class="flag blue"><span class="step-number-text">Step 2 | Choose your plan term</span></span>
-              <div class="row">
-                <h2>Extend and save</h2>
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-10 config-step">
               </div>
-              <p class="lead">Lock in your savings and avoid annual renewals with a multi-year term.</p>
+            </div>
+            <atlantis:webstash type="css">
+              <style>
+                .config-step {
+                  background: #FCFCFC;
+                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
+                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  border: 1px solid #ccc;
+                  float: left;
+                  min-height: 460px;
+                  position: relative;
+                }
+                .config-step .flag {
+                  color: white;
+                  font-size: 19px;
+                  height: 34px;
+                  line-height: 30px;
+                  left: 0;
+                  padding: 2px 16px 4px;
+                  position: absolute;
+                  top: 10px;
+                }
+                .config-step .blue {
+                  background: #0da8e5;
+                }
+                .config-step .blue::after {
+                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+                }
+                .config-step .flag::after {
+                  border-style: solid;
+                  border-width: 17px;
+                  content: "";
+                  left: 100%;
+                  position: absolute;
+                  top: 0;
+                }
+                @media only screen and (min-width: 1200px) {
+                  .config-step::after {
+                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
+                    background-size: cover;
+                    bottom: -10px;
+                    content: "";
+                    height: 10px;
+                    left: 0;
+                    position: absolute;
+                    width: 700px;
+                  }
+                }
+              </style>
+            </atlantis:webstash>
+          </div><br><br>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-10 config-step">
+              </div>
+            </div>
+            <atlantis:webstash type="css">
+              <style>
+                .config-step {
+                  background: #FCFCFC;
+                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
+                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  border: 1px solid #ccc;
+                  float: left;
+                  min-height: 460px;
+                  position: relative;
+                }
+                .config-step .flag {
+                  color: white;
+                  font-size: 19px;
+                  height: 34px;
+                  line-height: 30px;
+                  left: 0;
+                  padding: 2px 16px 4px;
+                  position: absolute;
+                  top: 10px;
+                }
+                .config-step .blue {
+                  background: #0da8e5;
+                }
+                .config-step .blue::after {
+                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+                }
+                .config-step .flag::after {
+                  border-style: solid;
+                  border-width: 17px;
+                  content: "";
+                  left: 100%;
+                  position: absolute;
+                  top: 0;
+                }
+                @media only screen and (min-width: 1200px) {
+                  .config-step::after {
+                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
+                    background-size: cover;
+                    bottom: -10px;
+                    content: "";
+                    height: 10px;
+                    left: 0;
+                    position: absolute;
+                    width: 700px;
+                  }
+                }
+              </style>
+            </atlantis:webstash>
+          </div><br><br>
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-10 config-step">
+              </div>
+            </div>
+            <atlantis:webstash type="css">
+              <style>
+                .config-step {
+                  background: #FCFCFC;
+                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
+                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
+                  border: 1px solid #ccc;
+                  float: left;
+                  min-height: 460px;
+                  position: relative;
+                }
+                .config-step .flag {
+                  color: white;
+                  font-size: 19px;
+                  height: 34px;
+                  line-height: 30px;
+                  left: 0;
+                  padding: 2px 16px 4px;
+                  position: absolute;
+                  top: 10px;
+                }
+                .config-step .blue {
+                  background: #0da8e5;
+                }
+                .config-step .blue::after {
+                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+                }
+                .config-step .flag::after {
+                  border-style: solid;
+                  border-width: 17px;
+                  content: "";
+                  left: 100%;
+                  position: absolute;
+                  top: 0;
+                }
+                @media only screen and (min-width: 1200px) {
+                  .config-step::after {
+                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
+                    background-size: cover;
+                    bottom: -10px;
+                    content: "";
+                    height: 10px;
+                    left: 0;
+                    position: absolute;
+                    width: 700px;
+                  }
+                }
+              </style>
+            </atlantis:webstash>
+          </div><br><br>
+          <div class="col-sm-11">
+            <div class="row">
+              <div class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text">Step 2 | Choose your plan term</span></span>
+                <div class="row">
+                  <h2>Extend and save</h2>
+                </div>
+                <p class="lead">Lock in your savings and avoid annual renewals with a multi-year term.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="config-cart-wrapper col-sm-3">
-          <div class="row">
-            <div class="order-summary-wrapper">
-              <h3>Order Summary</h3>
-              <div class="order-total-wrapper">
-                <div class="order-item-details-wrapper"></div>
-                <div class="order-item-addons-wrapper">
-                  <p id="summaryAddon" class="order-item-title"></p><span><span id="summaryTerm"></span><span id="addonPrice" class="plan-price"></span></span>
-                </div>
-                <div class="subtotal-disclaimer">
-                  <p>{{ configSummarytotal }}</p>
-                </div>
+      </div>
+      <div class="config-cart-wrapper col-sm-3">
+        <div class="row">
+          <div class="order-summary-wrapper">
+            <h3>Order Summary</h3>
+            <div class="order-total-wrapper">
+              <div class="order-item-details-wrapper"></div>
+              <div class="order-item-addons-wrapper">
+                <p id="summaryAddon" class="order-item-title"></p><span><span id="summaryTerm"></span><span id="addonPrice" class="plan-price"></span></span>
+              </div>
+              <div class="subtotal-disclaimer">
+                <p>{{ configSummarytotal }}</p>
               </div>
             </div>
-            <div><span class="order-total"><span id="summaryPrice" class="currency-amount"></span></span></div>
-            <div class="subtotal-disclaimer">
-              <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
-            </div>
-            <div data-ci="" data-scroll=".config-cart-wrapper" class="scroll-down-wrapper move">
-              <p class="green-text">{{ configSummarytotalDisc }}</p><span class="icon-down green-down-arrow-icon"></span>
-            </div>
+          </div>
+          <div><span class="order-total"><span id="summaryPrice" class="currency-amount"></span></span></div>
+          <div class="subtotal-disclaimer">
+            <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
+          </div>
+          <div data-ci="" data-scroll=".config-cart-wrapper" class="scroll-down-wrapper move">
+            <p class="green-text">{{ configSummarytotalDisc }}</p><span class="icon-down green-down-arrow-icon"></span>
           </div>
         </div>
       </div>
