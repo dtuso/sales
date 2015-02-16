@@ -463,7 +463,7 @@ cssVersionOverride: 2
           $('body').append($('<div id="lpButtonDiv"></div>'))
           
           var scriptResource = document.createElement('script');
-          scriptResource.src = "[@T[link:<external parammode="explicit" linktype="IMAGEURL" secure="true" path="fos/liveperson/js/liveperson_20150122.min.js"/>]@T]";
+          scriptResource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]";
 
           var styleResource = document.createElement('link');
           styleResource.rel = "stylesheet";
