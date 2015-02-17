@@ -369,8 +369,8 @@
     "pod_footer":""
   },
   "domain_ca":{
-    "rule": "##if(countrySiteAny(ca))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(ca) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
 
@@ -391,8 +391,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_ca_no_promo":{
-    "rule": "##if(countrySiteAny(ca))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(ca) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
 
@@ -413,8 +413,8 @@
     "pod_footer": ""
   },
   "domain_co_uk":{
-    "rule": "##if(countrySiteAny(uk))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(uk) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -435,8 +435,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_co_uk_no_promo":{
-    "rule": "##if(countrySiteAny(uk))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(uk) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -457,8 +457,8 @@
     "pod_footer": ""
   },
   "domain_com_mx":{
-    "rule": "##if(countrySiteAny(mx))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(mx) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -479,8 +479,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_com_mx_no_promo":{
-    "rule": "##if(countrySiteAny(mx))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(mx) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -509,8 +509,8 @@
 
 
   "domain_com_top_deal":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -531,7 +531,7 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_com_top_deal_no_promo":{
-    "rule": "",
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
     "class":"",
 
     "pod_flag_text":"",
@@ -706,8 +706,8 @@
 
 
   "domain_com":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -728,7 +728,7 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_com_no_promo":{
-    "rule": "",
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
     "class":"",
 
     "pod_flag_text":"",
@@ -752,8 +752,8 @@
 
 
   "domain_co":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -774,7 +774,7 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-no-asterisk" + L2
   },
   "domain_co_no_promo":{
-    "rule": "",
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
     "class":"",
 
     "pod_flag_text":"",
