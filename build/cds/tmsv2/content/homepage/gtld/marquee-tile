@@ -27,7 +27,7 @@
   margin: 0;
 }
 .gtld-marquee-tile li:hover {
-  color: #F1812D;
+  color: #77c043;
 }
 .Explorer8 .gtld-marquee-tile,
 .Explorer7 .gtld-marquee-tile {
