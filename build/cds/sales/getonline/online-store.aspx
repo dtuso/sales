@@ -84,6 +84,7 @@ function stripDomainName(){
        var inputName = params[i].split("=")[0];
        var inputValue = params[i].split("=")[1];
        if(inputName == "domain"){
+         inputValue = decodeURIComponent(inputValue);
          $("#business-idea").text(inputValue);
        }
         
@@ -261,7 +262,6 @@ function stripDomainName(){
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
         .get-it-now{margin-top: 35px;}
-        .heading{padding-top:30px;}
         .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative;}
         .right-side{position:relative;}
@@ -271,9 +271,11 @@ function stripDomainName(){
         .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
         .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
         .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:15px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
         .logo-label{padding-top: 15px;}
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        .head-wrapper{padding-top: 65px; padding-bottom: 25px;}
         
       </style>
     </atlantis:webstash>
@@ -286,11 +288,11 @@ function stripDomainName(){
         </div>
         <div class="col-xs-9 right-side">
           <div class="row text-center good-news-shape">
-            <div class="wrapper">
+            <div class="head-wrapper">
               <h2 class="heading">GOOD NEWS!</h2>
               <div class="starter-pack">
                 <h3>We have an excellent starter pack for</h3>
-                <h3><mark id="business-idea"></mark> – Starting at <mark></mark>  </h3>
+                <h3><mark id="business-idea"></mark> – Starting at <mark>$1.00</mark>  </h3>
               </div>
             </div>
           </div>
@@ -304,9 +306,9 @@ function stripDomainName(){
               <div class="col-md-2">
                 <div class="img-plus"></div>
               </div>
-              <div class="col-md-2">
-                <label class="h3 logo-label"></label>
-                <p></p>
+              <div class="col-md-2"><div class='online-store-icon'></div>
+                <label class="h3 logo-label">Online Store</label>
+                <p>Online Store stuff here</p>
               </div>
               <div class="col-md-2">
                 <div class="img-plus"></div>

@@ -110,6 +110,7 @@
     
     $('#get-running-butt').click(function(){
         domainName = $('#search-input').val();
+        domainName = encodeURIComponent(domainName);
         calculateResultsPage();
     });
     
@@ -122,7 +123,6 @@
           //WEBSITE BUILDER 
           resultPage = '[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]';
           resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/websitebuilder.aspx|54d3a061f778fc1134545580';
-        
           window.location = resultPage;
         }
         else if($('.dropdown2').val() == "hire_someone" && domainName != ""){
