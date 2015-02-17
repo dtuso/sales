@@ -1,15 +1,7 @@
 extends ./templates/_p4p.jade
 
 block getItNow
-  //div.text-center
-  //  +renderDomainstringWithPrice("testingKAT", "$1.00")
-  hr
+  - var productToDisplay = {name: "Wordpress", info: "Wordpress Stuff", cssClass: "<div class='features-wordpress'></div>", price: "$2.00"};
+  +renderGoodNews(productToDisplay)
 
 block product
-  //- define WSB product section
-  //section#websitenode-builder
-    //div
-      //img(src="/headrer-image.pnodeng")
-      //h2 Website builder
-      //a.btn.btn-default-light View All Templates
-      //img(src="/main-image.png")

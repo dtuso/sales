@@ -1,7 +1,8 @@
 extends ./templates/_p4p.jade
 
 block getItNow
-  +renderGoodNews("Store")
+  - var productToDisplay = {name: "Online Store", info: "Online Store stuff here", cssClass: "<div class='online-store-icon'></div>", price: "$1.00"};
+  +renderGoodNews(productToDisplay)
 
 block product
   // onlineStore.product
