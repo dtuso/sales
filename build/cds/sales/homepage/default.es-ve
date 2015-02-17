@@ -64,11 +64,7 @@
          [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
        ##endif
      ##else
-       ##if(splitTestingSideIsActive(1417, A))
-         [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-       ##else
-         [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
-       ##endif
+       [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
      ##endif
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
@@ -105,17 +101,9 @@
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
          
          ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-           ##if(splitTestingSideIsActive(1416, A))
-             [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
-           ##else
-             [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-           ##endif
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
          ##else
-           ##if(splitTestingSideIsActive(1417, A))
-             [@P[cdsDocument:<data app="sales" location="homepage/tile/com299/default_template" /> ]@P]
-           ##else
-             [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-           ##endif
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
          ##endif
          </div>
     </div>
