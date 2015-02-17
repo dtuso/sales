@@ -63,7 +63,7 @@
      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
      ##else
-      [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
      ##endif
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
@@ -96,7 +96,7 @@
     </atlantis:webstash>
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area"> 
-        [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/ch-free-transfer/default_template" /> ]@P]
       </div>
