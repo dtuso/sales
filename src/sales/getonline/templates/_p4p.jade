@@ -19,8 +19,10 @@ append headScripts
   atlantis:webstash(type="js")
     script
       include:js ../p4p.js
+      include:js ../domain-selection.js
 
 block domainSearch
+
 block marquee
 
 block sections
@@ -29,9 +31,9 @@ block sections
     // p4p.getItNow
     //+renderGoodNews("domain","price","image-path")
 
-  block domainMultipleSelection
+  block domainSearchWizard
     // p4p.domainMultipleSelection
-    +renderDomainMultipleSelection()
+    include _domain-search-wizard
 
   block proSpecific
     +renderProSection()
@@ -52,7 +54,7 @@ block sections
 
   block got
     // p4p.got
-    //+renderReadyToTakeBusinessOnline("billysbikes.org","price")
+    +renderReadyToTakeBusinessOnline("billysbikes.org","price")
 
 prepend endOfPageScripts
   script.
