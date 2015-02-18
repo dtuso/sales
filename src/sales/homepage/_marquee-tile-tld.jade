@@ -1,0 +1,33 @@
+extends ./_tile.jade
+
+append vars
+  - tld = tld || "";
+  - tldSVG = tldSVG || "";
+  - tldFallbackPNG = tldFallbackPNG || "";
+  - headline = headline || "[@L[cds.tmsv2/content/homepage/marquee-tile-tld:"+tld+"-headline]@L]";
+  - tldPfid = tldPfid || "";
+  - ctaText = ctaText || "[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]"
+  - tldLeafUrl = tldLeafUrl || "/tlds/gtld.aspx";
+  - ctaLink =  "[@T[link:<relative path='"+tldLeafUrl+"'><param name='ci' value='"+dataCi+"'/></relative>]@T]";
+  - containerClass = (containerClass? containerClass +" " + tld + " marquee-tile-tld": tld+" marquee-tile-tld")
+  - imageWidth = imageWidth || "100%";
+block append tileStyles
+  style.
+    .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
+    .marquee-tile-tld .price-text {color:#fff;}
+    .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
+    .marquee-tile-tld .cta {display:none}
+    .marquee-tile-tld .price {font-size:1.5em}
+    .!{tld}.marquee-tile-tld img{width:!{imageWidth}}
+
+block tileContent
+  img.tld.svgfallback(src!=tldSVG)
+  <!--[if lt IE 9]>
+  img.img-responsive(src!=tldFallbackPNG)
+  <![endif]-->
+  .headline !{headline}
+  .cta !{ctaText}
+  atlantis:webstash(type="js")
+    block tldTileScript
+      script.
+        (function(){var $price = $('.!{tld}.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{tldPfid}" period="yearly" />]@T]'));$('.!{tld}.marquee-tile-tld .cta').show();})();

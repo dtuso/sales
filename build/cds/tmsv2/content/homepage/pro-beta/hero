@@ -64,7 +64,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<external linktype="PRO" path="/beta_invite" />]@T]" class=" pro-beta hero left-content">
+<div data-url="[@T[link:<external linktype="PRO" path="/beta_invite"> <param name="ci" value="96045" /></external>]@T]" data-ci="96045" class=" pro-beta hero left-content">
   <div class="left col-xs-12 col-md-7">
     <div class="leftContent">
       <div class="headline walsheim-black">CLIENT MANAGEMENT TOOLS FOR DESIGNERS AND DEVELOPERS</div>

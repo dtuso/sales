@@ -369,8 +369,8 @@
     "pod_footer":""
   },
   "domain_ca":{
-    "rule": "##if(countrySiteAny(ca))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(ca) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
 
@@ -391,8 +391,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_ca_no_promo":{
-    "rule": "##if(countrySiteAny(ca))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(ca) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
 
@@ -413,8 +413,8 @@
     "pod_footer": ""
   },
   "domain_co_uk":{
-    "rule": "##if(countrySiteAny(uk))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(uk) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -435,8 +435,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_co_uk_no_promo":{
-    "rule": "##if(countrySiteAny(uk))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(uk) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -457,8 +457,8 @@
     "pod_footer": ""
   },
   "domain_com_mx":{
-    "rule": "##if(countrySiteAny(mx))",
-    "class":"ddchide",
+    "rule": "##if(countrySiteAny(mx) && !ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -479,8 +479,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_com_mx_no_promo":{
-    "rule": "##if(countrySiteAny(mx))",
-    "class":"ddcshow",
+    "rule": "##if(countrySiteAny(mx) && ShopperPriceTypeAny(8,32))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -509,8 +509,8 @@
 
 
   "domain_com_top_deal":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -529,6 +529,28 @@
     "pod_button_text": L1 + "find-your-dotcom" + L2,
     
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
+  },
+  "domain_com_top_deal_no_promo":{
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-com tldlogo'></span>",
+    "pod_title": L1 + "pod-title-domain_com-1" + L2,
+    "pod_subtitle":"",
+    "pod_description":"",
+    
+    "pod_price_prefix":  L1 + "pod-price-prefix-domain_com" + L2,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/domains/domain-name-search.aspx'><param name='ci' value='" + cicodes.pod_dom_com_topdeal + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com_topdeal,
+    "pod_button_text": L1 + "find-your-dotcom" + L2,
+    
+    "pod_footer": ""
   },
   "web_hosting":{
     "rule": "",
@@ -684,8 +706,8 @@
 
 
   "domain_com":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -706,8 +728,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
   },
   "domain_com_no_promo":{
-    "rule": "",
-    "class":"ddcshow",
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -730,8 +752,8 @@
 
 
   "domain_co":{
-    "rule": "",
-    "class":"ddchide",
+    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
@@ -752,8 +774,8 @@
     "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-no-asterisk" + L2
   },
   "domain_co_no_promo":{
-    "rule": "",
-    "class":"ddcshow",
+    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
+    "class":"",
 
     "pod_flag_text":"",
     
