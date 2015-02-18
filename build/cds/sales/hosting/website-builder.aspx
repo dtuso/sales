@@ -77,7 +77,7 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -578,7 +578,15 @@ width: 50%;
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
             <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
+               
+              ##if(countrySiteAny(www))
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1-35874]@L]</li> 
+              ##else
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li> 
+              ##endif
+               
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
@@ -1500,58 +1508,7 @@ width: 50%;
             <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
             <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
-          <div class="templates-image-container">
-             
-             
-            ##if(countrySiteAny(ca))
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canada-hockey.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/art-and-culture.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##elseif(countrySiteAny(uk))
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/india-online.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##else
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/auto.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/photography.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/education.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##endif
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/ecommerce.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/travel.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/non-profit.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/business.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/health-beauty.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/creative-design.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div>
-          </div>
+          <div class="templates-image-container"> </div>
         </div>
       </div><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -4782,7 +4739,18 @@ margin-bottom: 20px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                    <div>
+                       
+                      ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]@L]
+                       
+                      ##else
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                       
+                      ##endif
+                       
                     </div>
                   </li>
                 </ul>
@@ -5380,8 +5348,28 @@ margin-bottom: 20px;
        ##endif
       
        $(document).ready(function(){
-          showTldsInList('#disclaimers');
+         showTldsInList('#disclaimers');
+         var recommendedThemes = [[@T[wsbthemes:]@T]];
       
+         if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
+           recommendedThemes = recommendedThemes[0].slice(0,9);
+           // populate images
+           var column = 0;
+           var $row;
+           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+           $.each(recommendedThemes,function(index){
+             if(column == 0)
+               $row = $("<div>", {class: "row"});
+             column++;
+             var itemData = {url:recommendedThemes[index]['URL']};
+             var itemElement = recommendedImagesTemplates(itemData);
+             $row.append(itemElement)
+             if(column == 3 ){
+               $('.templates-image-container').append($row);
+               column = 0;
+             }
+           });
+         }
        });
       
        function showTldsInList(selector) {

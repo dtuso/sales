@@ -1,5 +1,6 @@
 
-<style>.gtld-marquee-tile {
+<atlantis:webstash type="css">
+  <style>.gtld-marquee-tile {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -27,14 +28,15 @@
   margin: 0;
 }
 .gtld-marquee-tile li:hover {
-  color: #F1812D;
+  color: #77c043;
 }
 .Explorer8 .gtld-marquee-tile,
 .Explorer7 .gtld-marquee-tile {
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
 }
 
-</style>
+  </style>
+</atlantis:webstash>
 <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
   <div class="tile-content-wrapper">
     <div class="container">

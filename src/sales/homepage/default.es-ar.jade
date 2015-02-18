@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.es-ar
 id: false
-name: BigTextFix
+name: GCEMO-544
 ---
 extends ../../layouts/homepage/default_base
 append styles
@@ -12,7 +12,7 @@ block marquee
   |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |   [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
   |  ##else
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
 
 block primaryTile
