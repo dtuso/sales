@@ -4905,7 +4905,6 @@ section h2 {
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
-  text-align: center;
 }
 section h3 {
   font-size: 3rem;
@@ -5042,6 +5041,7 @@ ul li.no-check {
           margin-top:0;
           margin-bottom: 20px;
           font-family: 'Walsheim-Bold';
+          text-align: left;
         }
         .sf-tipper-target {
           background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
