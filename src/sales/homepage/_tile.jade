@@ -3,9 +3,9 @@ block vars
   - ctaText = ctaText || "";
   - dataCi = dataCi || "";
   - containerClass = containerClass || "";
-
-block tileStyles
-
+  
+atlantis:webstash(type="css")
+  block tileStyles
 .tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
   .tile-content-wrapper
     block tileContent
