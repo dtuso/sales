@@ -4758,6 +4758,7 @@ section h2 {
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
+  text-align: center;
 }
 section h3 {
   font-size: 3rem;
