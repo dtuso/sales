@@ -220,27 +220,118 @@ function stripDomainName(){
       }
       
     </style>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .why-us-title{margin-top:10px;}
+      .why-us-text{margin-top:10px;}
+      
+      .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png) no-repeat bottom;}
+      .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png) no-repeat bottom;}
+      .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png) no-repeat bottom;}
+      
+    </style>
     <style>
       .gray{background-color:#E8E8E8;}
       .green{background-color:#78C043}
       .white{background-color:white}
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
+      .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="marquee">
-      <div class="container marquee marquee-white">
-        <div class="row">
-          <div class="col-sm-7 marquee-content-wrapper">
+    <atlantis:webstash type="css">
+      <style>
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .get-it-now{margin-top: 35px;}
+        .heading{padding-top:30px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .starter-pack{padding-bottom: 35px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:15px;}
+        .logo-label{padding-top: 15px;}
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="getItNow">
+      <div class="container">
+        <div class="col-xs-3 left-side">
+          <div class="row">
+            <div class="hero-guy"></div>
+          </div>
+        </div>
+        <div class="col-xs-9 right-side">
+          <div class="row text-center good-news-shape">
+            <div class="wrapper">
+              <h2 class="heading">GOOD NEWS!</h2>
+              <div class="starter-pack">
+                <h3>We have an excellent starter pack for</h3>
+                <h3><mark id="business-idea"></mark> – Starting at <mark>$2.00</mark>  </h3>
+              </div>
+            </div>
+          </div>
+          <div class="container bottom">
+            <div class="row">
+              <div class="col-md-2 col-md-offset-1">
+                <div class="features-domain-name"></div>
+                <label class="h3 logo-label">DOMAIN NAME</label>
+                <p>Domain is the name of your</p>
+              </div>
+              <div class="col-md-2">
+                <div class="img-plus"></div>
+              </div>
+              <div class="col-md-2"><div class='features-wordpress'></div>
+                <label class="h3 logo-label">Wordpress</label>
+                <p>Wordpress Stuff</p>
+              </div>
+              <div class="col-md-2">
+                <div class="img-plus"></div>
+              </div>
+              <div class="col-md-2">
+                <div class="features-email"></div>
+                <label class="h3 logo-label">OFFICE 365 EMAIL</label>
+                <p>Office 365 email is the simplest email tool</p>
+              </div>
+            </div>
+            <div class="get-it-now">
+              <div class="row text-center">
+                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+              </div>
+              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                <btn class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
+              </div>
+              <div style="padding-top:10px" class="row text-center">
+                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <!--div.text-center-->
-    <!--  +renderDomainstringWithPrice("testingKAT", "$1.00")-->
-    <hr>
     <!-- p4p.domainMultipleSelection-->
     <atlantis:webstash type="css">
       <style>
@@ -255,7 +346,8 @@ function stripDomainName(){
         .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
         
         .btn-select{margin:12px 0;float:right;}
         .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
@@ -276,44 +368,46 @@ function stripDomainName(){
         </div>
         <div class="row">
           <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">It all starts with a name. Choosing a domain name is tough! Here are some available domains that match <mark>billy bikes</mark></h4>
+            <h4 style="margin-top:10px" class="domain-starts strong"> </h4>
           </div>
         </div>
         <div class="row">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLong.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption1"></span></div>
             <div class="col-sm-3">
-              <button class="btn btn-primary btn-select uppercase">Select</button>
+              <button id="select1" class="btn btn-primary btn-select uppercase">Select</button>
               <!--<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>-->
             </div>
           </div>
         </div>
         <div class="row">
           <div class="container">
-            <h5 style="margin-top:20px"><strong>Here are some alternative options available:</strong></h5>
+            <h5 style="margin-top:20px"><strong>That one not moving you? Here are some alternatives:</strong></h5>
           </div>
         </div>
         <div class="row domainSelect">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongBusiness.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption2"></span></div>
             <div class="col-sm-3">
-              <button class="btn btn-primary btn-select uppercase">Select</button>
+              <button id="select2" class="btn btn-primary btn-select uppercase">Select</button>
             </div>
           </div>
         </div>
         <div class="row domainSelect">
           <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase">ReallyLongSuites.com</span></div>
+            <div class="col-sm-9"><span class="domainName lowercase domainOption3"></span></div>
             <div class="col-sm-3">
-              <button class="btn btn-primary btn-select uppercase">Select</button>
+              <button id="select3" class="btn btn-primary btn-select uppercase">Select</button>
             </div>
           </div>
         </div>
-        <div class="row domainSelect">
+        <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 plan-flag">
-              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-              <h5 style="margin-top:10px;text-transform:none">More than 12 million customers count on GoDaddy to help them find the right name and turn it into a one-of-a-kind digital identity.</h5>
+            <div class="col-sm-9 speach-bubble-left-white">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
+              </div>
             </div>
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
@@ -322,13 +416,6 @@ function stripDomainName(){
         </div>
       </div>
     </section>
-    <!--section#websitenode-builder
-    //div
-      //img(src="/headrer-image.pnodeng")
-      //h2 Website builder
-      //a.btn.btn-default-light View All Templates
-      //img(src="/main-image.png")
-    -->
     <!-- p4p.office365-->
     <atlantis:webstash type="css">
       <style>
@@ -342,9 +429,9 @@ function stripDomainName(){
         
         .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
         .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .did-you-know-email{height:150px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .plan-flag {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=) no-repeat center center;background-size: cover;overflow: visible;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
         
       </style>
     </atlantis:webstash>
@@ -361,14 +448,16 @@ function stripDomainName(){
         <div class="row">
           <div class="text-center">
             <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
-            <h2 style="margin-bottom:0px" class="uppercase"><mark>yourname@billysbikes.org</mark></h2>
+            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"></h2>
           </div>
         </div>
         <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 plan-flag">
-              <h5 style="margin-top:20px" class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-              <h5 style="margin-top:10px;text-transform:none">Did you know customers are 9x more likely to choose a business with a professional email address?*</h5>
+            <div class="col-sm-9 speach-bubble-left-green">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
+              </div>
             </div>
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
@@ -378,107 +467,79 @@ function stripDomainName(){
       </div>
     </section>
     <!-- p4p.whyUs-->
-    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/getonline:why-us-heading]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section"></section>
-    <div style="background-image: url(); background-color: #fff;">
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .why-us-title{margin-top:10px;}
+      .why-us-text{margin-top:10px;}
+      
+      .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png) no-repeat bottom;}
+      .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png) no-repeat bottom;}
+      .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png) no-repeat bottom;}
+      
+    </style>
+    <style>
+      .gray{background-color:#E8E8E8;}
+      .green{background-color:#78C043}
+      .white{background-color:white}
+      .uppercase{text-transform:uppercase}
+      .lowercase{text-transform:lowercase}
+      .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+      
+    </style>
+    <section id="features">
       <div class="container">
         <div class="row">
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-            </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-leader-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-leader-content]@L]</p>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-            </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-support-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-support-content]@L]</p>
-          </div>
-          <div class="col-sm-4 key-benefit">
-            <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-            </div>
-            <h3 class="key-benefits-title">[@L[cds.sales/gd/getonline:why-us-world-trust-title]@L]</h3>
-            <p class="key-benefits-text">[@L[cds.sales/gd/getonline:why-us-world-trust-content]@L]</p>
+          <div style="margin-top:30px" class="text-center">
+            <h2 class="uppercase">[@L[cds.sales/gd/getonline:why-us-heading]@L]</h2>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- p4p.got-->
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        .features-domain-name{height:115px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        .domain-icon-spacing {margin-right: 60px;}
-        .col-spacer2{width:43%;}
-        .col-spacer1{width: 30%;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h3{margin-top:0px;margin-bottom:0px;}
-        
-      </style>
-    </atlantis:webstash>
-    <section id="got">
-      <div class="container">
-        <div class="row">
-          <div class="text-center">
-            <h2 class="uppercase">Ready to take your business online?</h2>
-            <div class="starter-pack">
-              <h3>We have an excellent starter pack for</h3>
-              <h3><mark id="business-idea">billysbikes.org</mark> – Starting at <mark>price</mark>	</h3>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="topSpacing">
-            <div class="col-xss-1"></div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-domain-name"></div>
-                <p>
-                  <label>Domain</label>
-                </p><span class="tooltip-icon domain-icon-spacing"></span>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-wordpress"></div>
-                <p>
-                  <label>Website builder (wrong image)</label>
-                </p><span class="tooltip-icon"></span>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="icon-spacing">
-                <div class="features-email"></div>
-                <p>
-                  <label>Office 365 email</label>
-                </p><span class="tooltip-icon"></span>
+        <div class="container bottom">
+          <div style="background-image: url(); background-color: #fff;">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-4 ">
+                  <!-- .key-benefits-img-wrap+lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png")
+                  -->
+                  <div class="why-world-leader"></div>
+                  <h3 class="why-us-title">[@L[cds.sales/gd/getonline:why-us-world-leader-title]@L]</h3>
+                  <p class="why-us-text">[@L[cds.sales/gd/getonline:why-us-world-leader-content]@L]</p>
+                </div>
+                <div class="col-sm-4 ">
+                  <!-- .key-benefits-img-wrap+lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png")
+                  -->
+                  <div class="why-support"></div>
+                  <h3 class="why-us-title">[@L[cds.sales/gd/getonline:why-us-world-support-title]@L]</h3>
+                  <p class="why-us-text">[@L[cds.sales/gd/getonline:why-us-world-support-content]@L]</p>
+                </div>
+                <div class="col-sm-4 ">
+                  <!-- .key-benefits-img-wrap+lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png")
+                  -->
+                  <div class="why-trust"></div>
+                  <h3 class="why-us-title">[@L[cds.sales/gd/getonline:why-us-world-trust-title]@L]</h3>
+                  <p class="why-us-text">[@L[cds.sales/gd/getonline:why-us-world-trust-content]@L]</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-spacer1"></div>
-          <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-        </div>
-        <div style="padding-top:30px;padding-bottom:10px" class="row">
-          <div class="col-sm-4 col-spacer2"></div>
-          <div class="col-sm-3">
-            <btn class="btn-purchase btn-plan btn-lg">Get it now</btn>
-          </div>
-        </div>
-        <div style="padding-top:10px" class="row">
-          <div class="col-sm-4"></div>
-          <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
         </div>
       </div>
     </section>
+    <div class="container">
+      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
+    </div>
+    <!-- p4p.got-->
+    <!--+renderReadyToTakeBusinessOnline("billysbikes.org","price")-->
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
@@ -486,6 +547,32 @@ function stripDomainName(){
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script>
+      $(document).ready(function(){
+        var domainInfo = {
+          businessName  : 'Billys bikes',
+          domainName    : 'billysbikes.com',
+          emailName     : 'yourname',
+          domainOption2 : 'billysbikesLong.com',
+          domainOption3 : 'billysbikesReallyLong.com',
+          dealPrice     : '$1.00'
+        };
+      
+        $(".O365-domain-email").html("<mark>" + domainInfo.emailName + "@" + domainInfo.domainName + "</mark>");
+      
+        var goodNewsStarter = "A great package deal for <mark>{0}</mark> starting at just <mark>{1}</mark>";
+        goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
+        $(".good-news-starter").html(goodNewsStarter);
+      
+        var startsWith = "It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark>{0}</mark>";
+        startsWith = startsWith.replace("{0}",domainInfo.businessName);
+        $(".domain-starts").html(startsWith);
+      
+        $(".domainOption1").html(domainInfo.domainName);
+        $(".domainOption2").html(domainInfo.domainOption2);
+        $(".domainOption3").html(domainInfo.domainOption3);
+      });
     </script>
     <script>
       $(window).load(function() {

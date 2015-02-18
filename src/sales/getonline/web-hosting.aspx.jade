@@ -3,7 +3,8 @@ extends ./templates/_p4p.jade
 block marquee
 
 block getItNow
-  +renderGoodNews("Billy's Bikes","$1.00","img")
+  - var productToDisplay = {name: "Web Hosting", info: "Web Hosting stuff here", cssClass: "<div class='web-hosting-icon'></div>", price: "$1.00"};
+  +renderGoodNews(productToDisplay)
 
 //block product
   //- define hosting product section
