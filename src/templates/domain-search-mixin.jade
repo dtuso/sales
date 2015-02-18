@@ -76,15 +76,22 @@ mixin domainSearchOffersInput(prms)
               button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{prms.cicode}") !{prms.buttonText}
     .row.domain-search-messaging-row
       .col-md-12
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{prms.infoTypeHere}
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{prms.dupDomainInCartCiCode}" /></external>]@T]') !{prms.infoDupDomainInCart}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{prms.infoTypeHere}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{prms.dupDomainInCartCiCode}" /></external>]@T]') !{prms.infoDupDomainInCart}
   
   unless(domainSearchOffersInputCssRendered )
     - domainSearchOffersInputCssRendered = true;
     atlantis:webstash(type="css")
       style.
+        .search-message { 
+          display: none; 
+          margin-top:20px; 
+        }
+        .domain-search-messaging-row {
+          padding-bottom: 40px;
+        }
         /*  speech */
         .speech-shape-upsidedown {
           line-height: 1.9em;
@@ -312,7 +319,5 @@ mixin domainSearchOffersInput(prms)
           $('##{prms.formId} .search-message').hide();
           $('##{prms.formId} .type-your-business-name').show();
         }
-
-
 
       });
