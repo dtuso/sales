@@ -4758,7 +4758,6 @@ section h2 {
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
-  text-align: center;
 }
 section h3 {
   font-size: 3rem;
@@ -4895,6 +4894,7 @@ ul li.no-check {
           margin-top:0;
           margin-bottom: 20px;
           font-family: 'Walsheim-Bold';
+          text-align: left;
         }
         .sf-tipper-target {
           background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
@@ -5479,8 +5479,8 @@ cursor: pointer;
         #plans { padding-bottom: 40px; }
         #speed-chart h2 { margin-bottom: 10px; }
         #features { background-color: #fff; }
-        #alternate-products { padding-top: 0; padding-bottom: 0; }
-        #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
+        
+        #platforms, #alternate-products, #renderMidPageNavBottom, #bazaarvoicemodal { padding-top: 0; padding-bottom: 0; }
         
         .plan-tile { 
           margin-top: 0; 

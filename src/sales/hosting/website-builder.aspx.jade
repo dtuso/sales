@@ -30,7 +30,7 @@ append pageStyles
 
     #social-media, #reviews, #faq, #disclaimers { background: #fff; }
     #social-media { padding-bottom: 0; }
-    #features, #faq, #other-products, #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
+    #features, #faq, #other-products, #renderMidPageNavBottom, #modals { padding-top: 0; padding-bottom: 0; }
 
     /* TODO: can this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
@@ -302,25 +302,6 @@ block sections
         | 
         |##endif
         | 
-
-  section#alt-other-products
-    h2.container Not Finding What You Need?
-    .container-fluid
-      .row
-        .col-sm-2.col-xs-4
-          img(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/website-builder/img-tools.png")
-        .col-sm-3.col-xs-8
-          h3 Managed wordpress
-          h4 [@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]
-          p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-          a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
-        .col-sm-3.col-sm-offset-2.col-xs-8
-          h3 Managed wordpress
-          h4 [@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]
-          p [@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]
-          a.btn.btn-default-light(href!='[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]') [@L[cds.sales/gd/hosting/website-builder:learn-more]@L]
-        .col-sm-2.col-xs-4
-          img(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/website-builder/img-tools.png")
 
   | 
   |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))

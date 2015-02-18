@@ -1335,6 +1335,9 @@ section {
   padding-top: 0;
   padding-bottom: 0;
 }
+#why-godaddy {
+  padding-bottom: 50px;
+}
 #domain-name-input::-webkit-input-placeholder {
   color: #008a32;
 }

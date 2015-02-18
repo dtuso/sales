@@ -4319,25 +4319,6 @@ top: -6px;
            });
         </script>
       </atlantis:webstash>
-    </section>
-    <section id="alt-other-products">
-      <h2 class="container">Not Finding What You Need?</h2>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-2 col-xs-4"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/website-builder/img-tools.png"></div>
-          <div class="col-sm-3 col-xs-8">
-            <h3>Managed wordpress</h3>
-            <h4>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h4>
-            <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
-          </div>
-          <div class="col-sm-3 col-sm-offset-2 col-xs-8">
-            <h3>Managed wordpress</h3>
-            <h4>[@L[cds.sales/gd/hosting/website-builder:sb_xsell_qs_1]@L]</h4>
-            <p>[@L[cds.sales/gd/hosting/website-builder:sb_qs_2]@L]</p><a href="[@T[link:<relative path="~/ecommerce/shopping-cart.aspx"><param name="ci" value="88754" /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]</a>
-          </div>
-          <div class="col-sm-2 col-xs-4"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/hosting/website-builder/img-tools.png"></div>
-        </div>
-      </div>
     </section> 
     ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
      
@@ -4875,7 +4856,6 @@ section h2 {
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
-  text-align: center;
 }
 section h3 {
   font-size: 3rem;
@@ -5012,6 +4992,7 @@ ul li.no-check {
           margin-top:0;
           margin-bottom: 20px;
           font-family: 'Walsheim-Bold';
+          text-align: left;
         }
         .sf-tipper-target {
           background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
@@ -5308,7 +5289,7 @@ width: 50%;
         
         #social-media, #reviews, #faq, #disclaimers { background: #fff; }
         #social-media { padding-bottom: 0; }
-        #features, #faq, #other-products, #renderMidPageNavBottom { padding-top: 0; padding-bottom: 0; }
+        #features, #faq, #other-products, #renderMidPageNavBottom, #modals { padding-top: 0; padding-bottom: 0; }
         
         /* TODO: can this styling be abstracted into landing-page.jade? */
         body { background-color: #d9d9d9; }
