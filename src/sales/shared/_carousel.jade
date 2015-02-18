@@ -1,5 +1,3 @@
-include ./panel.jade
-
 mixin carouselItem(itemOptions)
   - itemOptions = itemOptions || {};
   - itemOptions.textCenter = itemOptions.textCenter || false;
@@ -23,7 +21,7 @@ mixin carousel(id, numberOfPanels, options)
 
   if(options.css)
     style
-        include:css ./styles/carousel.css
+        include:css ./_carousel/carousel-styles.css
   .carousel-wrap
     .carousel-container.container
       .carousel.slide(id=id data-ride="carousel" data-interval="#{options.autoRotateSpeed}")
