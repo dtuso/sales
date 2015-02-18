@@ -24,6 +24,8 @@ mixin renderGoodNews(productToDisplay)
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
         .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
         .head-wrapper{padding-top: 65px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
 
   section#getItNow
     .container
@@ -35,30 +37,32 @@ mixin renderGoodNews(productToDisplay)
           .head-wrapper
             h2.heading GOOD NEWS!
             .starter-pack
+            block goodNewsHead
               h3 We have an excellent starter pack for
-              h3 <mark id="business-idea"></mark> – Starting at <mark>#{productToDisplay.price}</mark>  
-        .container.bottom
-          .row
-            .col-md-2.col-md-offset-1
-              .features-domain-name
-              label.h3.logo-label DOMAIN NAME
-              p Domain is the name of your
-            .col-md-2
-              .img-plus
-            .col-md-2
-              !{productToDisplay.cssClass}
-              label.h3.logo-label #{productToDisplay.name}
-              p #{productToDisplay.info}
-            .col-md-2
-              .img-plus
-            .col-md-2
-              .features-email
-              label.h3.logo-label OFFICE 365 EMAIL
-              p Office 365 email is the simplest email tool
-          .get-it-now
-            .row.text-center
-              p.h3.center Get the bundle for $1/month for the first year*
-            .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-              btn.btn-purchase.btn-plan.btn-lg GET IT NOW
-            .row.text-center(style={'padding-top':'10px'})
-              p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
+              h3 <mark id="business-idea"></mark> – Starting at <mark>#{productToDisplay.price}</mark>
+        block check-pro-goodNews  
+          .container.bottom
+            .row
+              .col-md-2.col-md-offset-1
+                .features-domain-name
+                label.h3.logo-label DOMAIN NAME
+                p Domain is the name of your
+              .col-md-2
+                .img-plus
+              .col-md-2
+                !{productToDisplay.cssClass}
+                label.h3.logo-label #{productToDisplay.name}
+                p #{productToDisplay.info}
+              .col-md-2
+                .img-plus
+              .col-md-2
+                .features-email
+                label.h3.logo-label OFFICE 365 EMAIL
+                p Office 365 email is the simplest email tool
+            .get-it-now
+              .row.text-center
+                p.h3.center Get the bundle for $1/month for the first year*
+              .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+                btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+              .row.text-center(style={'padding-top':'10px'})
+                p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

@@ -276,6 +276,8 @@ function stripDomainName(){
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
         .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
         .head-wrapper{padding-top: 65px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
         
       </style>
     </atlantis:webstash>
@@ -290,10 +292,9 @@ function stripDomainName(){
           <div class="row text-center good-news-shape">
             <div class="head-wrapper">
               <h2 class="heading">GOOD NEWS!</h2>
-              <div class="starter-pack">
-                <h3>We have an excellent starter pack for</h3>
-                <h3><mark id="business-idea"></mark> – Starting at <mark>$1.00</mark>  </h3>
-              </div>
+              <div class="starter-pack"></div>
+              <h3>We have an excellent starter pack for</h3>
+              <h3><mark id="business-idea"></mark> – Starting at <mark>$1.00</mark></h3>
             </div>
           </div>
           <div class="container bottom">

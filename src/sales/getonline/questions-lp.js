@@ -1,6 +1,12 @@
     var p4pConfigData = {};
     var url2 = window.location.protocol+'//'+ window.location.host+'/api/package/config/p4p_get_online';
     var domainName;
+    var p4pPage = {
+      tlds: {
+        valid: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],
+        restricted: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T]
+      }
+    };
     
     $.ajax({
       type: 'POST',
@@ -35,8 +41,14 @@
     
     $('#get-running-butt').click(function(){
         domainName = $('#search-input').val();
+        var checkInput = validateInput(domainName);
         domainName = encodeURIComponent(domainName);
-        calculateResultsPage();
+        if(checkInput === 0){
+          domainName = " ";
+        }
+        else{
+          calculateResultsPage();
+        }
     });
     
     function calculateResultsPage(){
@@ -107,4 +119,25 @@
         
         window.location = resultPage;
       }
+    }
+
+    function validateInput(domainName){
+       var validFlag = 0;
+
+       if(domainName.indexOf('.') > -1){
+           var domainSplit = domainName.split('.');
+           for(var i = 0; i < p4pPage.tlds.valid.length; i++){
+               if(domainSplit[1] === p4pPage.tlds.valid[i]){
+                  validFlag = 1;
+                  $(".validate-message").text("");
+                  return validFlag;
+               }    
+              else{
+                  $(".validate-message").text("Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, or .ORG");
+                  validFlag = 0;
+              }
+           }
+
+           return validFlag;
+       }
     }

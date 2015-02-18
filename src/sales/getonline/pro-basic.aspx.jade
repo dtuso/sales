@@ -1,13 +1,42 @@
 extends ./templates/_p4p.jade
 
+append pageStyles
+  style.
+    .btn-lg{padding: 14px 15px 9px!important;}
+    .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+    .right-side{margin-top: 25px;}
+    .pro-wrapper{margin-top: 50px;}
+    .product-name{padding-bottom: 15px;}
+    .p1{margin-bottom: 25px;}
+    .p2{margin-top: 15px;}
+    .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .head-wrapper{padding-top:30px;!important}
+
 block marquee
 
 block getItNow
-  +renderGoodNews("Billy Bikes","$1.00","img")
+  - var productToDisplay = {name: "PROFESSIONAL DESIGN SERVICES", info: "Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business", cssClass: "<div class='pro-computer'></div>", price: "$149.99/mo*"};
+  +renderGoodNews(productToDisplay)
+    block goodNewsHead
+      h3 We have an ecommerce design service for
+      h3 <mark id="business-idea"></mark> – Starting at <mark>#{productToDisplay.price}</mark>
+    block check-pro-goodNews
+      .pro-wrapper
+        .col-xs-6
+          !{productToDisplay.cssClass}
+        .col-xs-6
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.info}
+          .col-xs-6
+            btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+            p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+          .col-xs-6
+            p Starting at <mark>#{productToDisplay.price}</mark>
 
-//block product
-  //- define hosting product section
-  
-//block whyUs
-  
-//block got
+block domainMultipleSelection
+
+block proSpecific
+  +renderProSection()
+
+block office365
