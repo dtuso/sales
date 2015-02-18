@@ -981,8 +981,8 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-offset-sm-6">
-            <h2 class="walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
-            <h3 class="walsheim-regular">[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</h3><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark nascar-contest-btn walsheim-black">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
+            <h2>[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
+            <p>[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</p><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
           </div>
         </div>
       </div>
@@ -1021,7 +1021,6 @@ section h2 {
   font-weight: 100;
   line-height: 1.1;
   color: inherit;
-  text-align: center;
 }
 section h3 {
   font-size: 3rem;
