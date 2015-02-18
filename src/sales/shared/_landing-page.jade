@@ -1,23 +1,18 @@
-extends ../page
+extends ./_page
 
-include ../domain-search-mixin.jade
-include ../mid-page-nav-mixin.jade
-include ../plan-tiles-mixin.jade
-include ../carousel-mixin.jade
-include ../compare-features-table-mixin.jade
-include ../compare-features-view-all-mixin.jade
-include ../column-list-mixin.jade
-include ../accordion-mixin.jade
-include ../two-up-compare-mixin.jade
-include ../tabbed-carousel-mixin.jade
-include ../features-templates-mixin.jade
-include ../full-video-mixin.jade
-
-
-append head
-  link(href!="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
+include ./_domain-search.jade
+include ./_mid-page-nav.jade
+include ./_plan-tiles-mixin.jade
+include ./_carousel.jade
+include ./_compare-features-table.jade
+include ./_accordion.jade
+include ./_two-up-compare.jade
+include ./_tabbed-carousel.jade
+include ./_features-templates.jade
+include ./_full-width-video.jade
 
 append pageStyles
+  // landing page styling
   style.
     /* fix the greek font styling issue here */
     ##if(countrySiteAny(gr))
@@ -71,10 +66,6 @@ append pageStyles
     .marquee-content-wrapper:not(old) {
       background-image: none;
       background-color: rgba(0,138,50,0.9);    
-    }    
-    .marquee { 
-      padding-top: 40px; 
-      padding-bottom: 40px; 
     }
     .marquee.marquee-white {
         color: #fff;
@@ -107,12 +98,11 @@ append pageStyles
       margin-top:0;
     }
     .marquee h2 { 
-      font-size: 4rem;
       font-weight: 100;
-      line-height: 1.1;
       margin-top:0;
       margin-bottom: 20px;
       font-family: 'Walsheim-Bold';
+      text-align: left;
     }
     .sf-tipper-target {
       background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);

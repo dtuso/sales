@@ -1,6 +1,32 @@
 mixin twoUp(options)
-  style
-    include:css ./styles/featuresLeftTwoUp.css
+  atlantis:webstash(type="css")
+    style.
+      .features-two-up {
+        min-height: 940px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        padding: 50px 0;
+      }
+      .features-two-up .feature-row-height {
+        margin-top: 40px;
+      }
+      .features-two-up .feature-image {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+      .features-two-up .feature-title {
+        font-size: 24px;
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+        font-family: 'Walsheim-Bold';
+        line-height: 1.1;
+        margin-top: 15px;
+      }
+      .features-two-up .feature-row-text {
+        margin-bottom: 20px;
+      }
+
   div(class="features-two-up #{options.lazyLoad ? 'lazyload' : ''} #{options.featuresWrapClass ? options.featuresWrapClass : ''} #{options.whiteText ? 'text-white' : ''} #{options.backgroundColor ? options.backgroundColor : ''}", style != (typeof options.backgroundImage != 'undefined' && !options.lazyLoad ? 'background-image: url(' + options.backgroundImage + ');' : ''), data-lazyload-source !=(typeof options.backgroundImage!='undefined' && options.lazyLoad ? '#{options.backgroundImage}' : ''))
     .container
       .row

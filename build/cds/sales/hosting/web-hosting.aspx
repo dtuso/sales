@@ -88,775 +88,6 @@
     ##endif
   </head>
   <body ng-controller="">
-    <style>
-      .svgfallback{display:none}
-      .svgfallback:not(old){display:block}
-      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
-      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
-      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
-      ul li.no-check { background-image: none !important; }
-      
-    </style>
-    <style>
-      /* fix the greek font styling issue here */
-      ##if(countrySiteAny(gr))
-      * {
-        font-family: arial !important;
-      }
-      .close {
-        font-family: uxfont !important;
-      }
-      .uxicon {
-        font-family: uxfont !important;
-      }
-      ##endif
-      
-      /* override UXCORE font settings for all LPs */
-      h2 {
-        margin-bottom: 40px;
-        margin-top: 0;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        font-weight: 300;
-        line-height: 1.1;
-        color: #333;
-      }
-      h3 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-      
-      /* default LP marquee styling */
-      .dash { 
-        letter-spacing: -10px; 
-        font-size: 1.5em; 
-        line-height: 0.6; 
-        vertical-align: -0.1em; 
-      }
-      .marquee-content-wrapper { 
-        padding: 40px; 
-        margin-left: 10px; 
-        margin-right: 10px; 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-        background-color: rgba(0,138,50,0.9); 
-        color: white; 
-      }
-      .marquee-content-wrapper:not(old) {
-        background-image: none;
-        background-color: rgba(0,138,50,0.9);    
-      }    
-      .marquee { 
-        padding-top: 40px; 
-        padding-bottom: 40px; 
-      }
-      .marquee.marquee-white {
-          color: #fff;
-      }
-      .marquee.marquee-white h1,
-      .marquee.marquee-white h2,
-      .marquee.marquee-white h3,
-      .marquee.marquee-white h4,
-      .marquee.marquee-white h5,
-      .marquee.marquee-white h6 {
-          color: #fff;
-      }
-      .marquee.marquee-white .dashed-underline {
-          border-bottom-color: #fff;
-      }
-      .marquee.marquee-white a:not(.btn) {
-          color: #fff;
-          text-decoration: underline;
-      }
-      .marquee.marquee-white a:not(.btn):hover {
-          text-decoration: none;
-      }
-      .marquee .jump-arrow-btn { margin-top:30px;}
-      .marquee h1 { 
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: #ef6c0f;
-        font-family: 'Walsheim-Bold';
-        margin-bottom: 10px;
-        margin-top:0;
-      }
-      .marquee h2 { 
-        font-size: 4rem;
-        font-weight: 100;
-        line-height: 1.1;
-        margin-top:0;
-        margin-bottom: 20px;
-        font-family: 'Walsheim-Bold';
-      }
-      .sf-tipper-target {
-        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        vertical-align: baseline;
-        cursor: pointer;
-      }
-      
-    </style>
-    <style>
-.tile-section {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.compare-table-view-all {
-  text-align: center;
-  margin-top: 50px;
-  cursor: pointer;
-  margin-bottom: -80px;
-}
-.arrow-down-icon {
-    margin-top: 10px;
-}
-.include-check-black {
-        position: relative;
-        padding-left: 45px;
-        margin-top: 20px;
-}
-.include-check-black:before {
-  content: "";
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-  background-position: 0 -700px;
-  background-size: 205px auto;
-  width: 25px;
-  height: 27px;
-  padding-right: 5px;
-  position: absolute;
-  left: 0;
-  top: -6px;
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-
-.pro-banner {
-  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-webpro-promo.png"); 
-  background-repeat: no-repeat; background-size: 100% 100%; 
-}
-.pro-banner a {
-  white-space: normal;
-  max-width: 100%;
-}
-.proBannerIcon {
-  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png");
-  display: inline-block;
-  vertical-align: middle;
-  height: 100px;
-  width: 275px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.pro-banner .top-text {
-  font-size: 20px;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-  margin-top: 11px;
-  margin-bottom: 0;
-}
-.pro-banner .bottom-text {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black';
-}
-
-.pro-banner .pro-banner-image {
-  padding-top: 20px;
-}
-.pro-banner .pro-banner-button {
-  padding-top: 30px;
-}
-
-@media (min-width: 1200px) {
-  .pro-banner {
-    width: 1135px;
-    margin-left: 10px;
-  }
-  .pro-banner .pro-banner-text {
-    width:55%;
-  }
-  .pro-banner .pro-banner-button {
-    
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .pro-banner {
-    width: 925px;
-    margin-left: 10px;
-  }
-  .pro-banner .pro-banner-image {
-    width: 29%;
-  }
-  .pro-banner .pro-banner-text {
-    width:50%;
-  }
-  .pro-banner .pro-banner-button {
-    width: 21%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .pro-banner {
-    background-image: none;
-    background-color: #ef6b0d;
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-    width: 700px;
-    margin-left: 10px;
-  }
-  .pro-banner .pro-banner-image {
-    width: 38%;
-  }
-  .pro-banner .pro-banner-text {
-    width: 62%;
-  }
-  .pro-banner .pro-banner-button {
-    width: 100%;
-    text-align: center;
-    padding-top: 0;
-    padding-bottom: 30px;
-  }
-}
-
-@media (max-width: 767px) {
-  .pro-banner {
-    background-image: none;
-    background-color: #ef6b0d;
-    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-  }
-  .pro-banner .pro-banner-image {
-    width: 100%;
-  }
-  .pro-banner .pro-banner-text {
-    width: 100%;
-  }
-  .pro-banner .pro-banner-button {
-    width: 100%;
-    text-align: center;
-    padding-top: 0;
-    padding-bottom: 30px;
-  }
-}
-
-
-
-
-
-
-
-#one-click-install { 
-  background: #77c043; transition: background 750ms ease-in-out; 
-  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
-  background-repeat: no-repeat; background-size: 100% 100%; 
-}
-
-.one-click-right img {
-  height:auto; 
-  max-width:100%;
-}
-
-@media (max-width: 767px) {
-  #one-click-install {
-    background-image: none !important;
-    background-color: transparent;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-  .one-click-right {
-    padding-top: 40px;
-    padding-bottom: 70px;
-    background-color: #5caf2b;
-  }
-  .one-click-left {
-    padding-top: 70px;
-    padding-bottom: 40px;
-    background-color: #78c043;
-  }
-  .key-benefits-img-wrap {
-    text-align: center;
-  }
-}
-
-@media (max-width: 991px) {
-  #choose-platform {
-    background-image: none !important;
-  }
-
-  #choose-platform.left-side {
-    padding-left: 0;
-  }
-
-  #alt-products {
-    background-image: none !important;
-  }
-}
-
-@media (min-width: 992px) {
-  #choose-platform .left-sideee {
-    padding-left: 11.666666667%;
-  }
-}
-
-.up-compare-wrap {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  #choose-platform .or-container:after {
-    bottom: 360px;
-  }
-}
-.bg-gray-light {
-    background-color: #d9d9d9;
-}
-.BVDITitle {
-  text-transform: uppercase !important;
-  text-align: center !important;
-  font-family: 'Walsheim-Black' !important;
-  font-weight: 300 !important;
-  line-height: 1.1 !important;
-  color: #333 !important;
-}
-
-#BVRRDisplayContentLinkWriteID a {
-  -webkit-font-smoothing: antialiased !important;
-  -webkit-transition-delay: 0s !important;
-  -webkit-transition-duration: 0.1s !important;
-  -webkit-transition-property: transform !important;
-  -webkit-transition-timing-function: ease !important;
-  -webkit-user-select: none !important;
-  background-color: rgb(0, 138, 50) !important;
-  border-bottom-color: rgb(0, 112, 41) !important;
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-bottom-style: solid !important;
-  border-bottom-width: 4px !important;
-  border-image-outset: 0px !important;
-  border-image-repeat: stretch !important;
-  border-image-slice: 100% !important;
-  border-image-source: none !important;
-  border-image-width: 1 !important;
-  border-left-color: rgb(0, 112, 41) !important;
-  border-left-style: solid !important;
-  border-left-width: 0px !important;
-  border-right-color: rgb(0, 112, 41) !important;
-  border-right-style: solid !important;
-  border-right-width: 0px !important;
-  border-top-color: rgb(0, 112, 41) !important;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  border-top-style: solid !important;
-  border-top-width: 0px !important;
-  box-sizing: border-box !important;
-  color: rgb(255, 255, 255) !important;
-  cursor: pointer !important;
-  display: inline-block !important;
-  font-family: Walsheim-Medium, Arial, sans-serif !important;
-  font-size: 18px !important;
-  font-weight: normal !important;
-  height: 46px !important;
-  line-height: 25.7142868041992px !important;
-  margin-bottom: 0px !important;
-  min-width: 88px !important;
-  padding-bottom: 7px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  padding-top: 10px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-  transition-delay: 0s !important;
-  transition-duration: 0.1s !important;
-  transition-property: transform !important;
-  transition-timing-function: ease !important;
-  vertical-align: middle !important;
-  white-space: nowrap !important;
-  background-image: none !important;
-}
-
-.isToolTip {
-color: #333;
-text-decoration: none;
-cursor: pointer;
-}
-
-.sf-tip.underline {
-  text-decoration: underline;
-  width: auto;
-  height: auto;
-  background-image: none;
-}
-
-.heartIcon {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
-  display: inline-block;
-  width: 59px;
-  height: 50px;
-  vertical-align: middle;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-#speed-chart { min-height: 400px; }
-#speed-chart h3 { margin: 50px auto; text-align: center; }
-
-#speed-chart img { 
-  margin-bottom: 0;
-  margin-top: 20px;
-  max-width: 100%;
-  height: auto;
-}
-
-#speed-chart p {text-align: right; }
-
-.tool-tip-black {
-  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-  width: 14px;
-  height: 14px;
-  display: inline-block;
-  vertical-align: baseline;
-  cursor: pointer;
-}
-
-.compareButtons {
-  height: 54px;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding-top: 11px;
-}
-
-.compareButtons.leftActive {
-    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-cpanel.png); 
-}
-
-.compareButtons.rightActive {
-    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-parallels.png); 
-}
-
-.compareButtons a {
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: 'Walsheim-Black';
-  font-size: 20px;
-}
-
-.compareButtons .activeButton a {
-  color: #088A44;
-}
-
-.compareButtons .inactiveButton a {
-  color: #666666;
-}
-
-.compareButtonsLeft {
-  width: 180px;
-}
-.compareButtonsRight {
-  width: 180px;
-}
-
-
-
-@media (min-width: 1200px) {
-  .compareButtons {
-    padding-left: 395px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .compareButtons {
-    padding-left: 290px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .compareButtons {
-    padding-left: 180px;
-  }
-}
-
-@media (max-width: 767px) {
-  .compareButtons {
-    padding-left: 25px;
-  }
-}
-
-
-  .modal-open {
-    overflow: hidden;
-  }
-
-  #login-modal.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: none;
-    overflow: auto;
-    overflow-y: scroll;
-  }
-
-  #login-modal.modal.fade .modal-dialog {
-    -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-       -moz-transition: -moz-transform 0.3s ease-out;
-         -o-transition: -o-transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-  }
-
-  #login-modal.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  #login-modal .modal-dialog {
-    position: relative;
-    z-index: 1050;
-    width: auto;
-    margin: 10px;
-  }
-
-  #login-modal .modal-content {
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    outline: none;
-    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
-  }
-
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: #000000;
-  }
-
-  .modal-backdrop.fade {
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-
-  .modal-backdrop.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-
-  #login-modal .modal-header {
-    min-height: 16.428571429px;
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-header .close {
-    margin-top: -2px;
-  }
-
-  #login-modal .modal-title {
-    margin: 0;
-    line-height: 1.428571429;
-  }
-
-  #login-modal .modal-body {
-    position: relative;
-    padding: 20px;
-  }
-
-  #login-modal .modal-footer {
-    padding: 19px 20px 20px;
-    margin-top: 15px;
-    text-align: right;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer .btn + .btn {
-    margin-bottom: 0;
-    margin-left: 5px;
-  }
-
-  #login-modal .modal-footer .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-
-  #login-modal .modal-footer .btn-block + .btn-block {
-    margin-left: 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    #login-modal .modal-dialog {
-      width: 600px;
-      margin: 30px auto;
-    }
-    #login-modal .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-  }
-
-.marquee-content-wrapper { 
-  padding: 40px; 
-  margin-left: 10px; 
-  margin-right: 10px; 
-  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-  background-color: rgba(0,138,50,0.9); 
-  color: white; 
-}
-.marquee-content-wrapper:not(old) {
-  background-image: none;
-  background-color: rgba(0,138,50,0.9);
-}
-
-#disclaimersModal a {
-  text-decoration: none;
-}
-
-##if(countrySiteAny(ru,ua))
-.plan-tile .plan-flag {
-  top: -55px;
-}
-.pro-banner a {
-  max-width: 120%;
-}
-##endif
-    </style>
-    <style>
-      #speed-chart, #features, #reviews, #faq, #disclaimers { background-color: #fff; }
-      #plans { padding-bottom: 40px; }
-      
-      /* TODO: can this styling be abstracted into landing-page.jade? */
-      body { background-color: #d9d9d9; }
-      #marquee { 
-        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
-        padding-bottom: 120px;
-        margin-bottom: 0;
-        background-size: cover;
-      }
-      
-      /* latam */
-      html[lang="es-ar"] #marquee,
-      html[lang="pt-br"] #marquee,
-      html[lang="es-cl"] #marquee,
-      html[lang="es-co"] #marquee,
-      html[lang="es-mx"] #marquee,
-      html[lang="es-pe"] #marquee,
-      html[lang="es-ve"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_lam_host.jpg);
-      }
-      
-      /* general */
-      html[lang="en-us"] #marquee,
-      html[lang="es-us"] #marquee,
-      html[lang="en-au"] #marquee,
-      html[lang="en-ca"] #marquee,
-      html[lang="en-nz"] #marquee,
-      html[lang="fr-be"] #marquee,
-      html[lang="fr-ca"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);
-      }
-      
-      /* asia */
-      html[lang="en-my"] #marquee,
-      html[lang="en-ph"] #marquee,
-      html[lang="en-sg"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_asia_host.jpg);
-      }
-      
-      /* in-pk */
-      html[lang="en-in"] #marquee,
-      html[lang="en-pk"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_in-pk_host.jpg);
-      }
-      
-      /* emea */
-      html[lang="nl-be"] #marquee,
-      html[lang="da-dk"] #marquee,
-      html[lang="de-de"] #marquee,
-      html[lang="es-es"] #marquee,
-      html[lang="fr-fr"] #marquee,
-      html[lang="en-ie"] #marquee,
-      html[lang="it-it"] #marquee,
-      html[lang="nb-no"] #marquee,
-      html[lang="nl-nl"] #marquee,
-      html[lang="de-at"] #marquee,
-      html[lang="pl-pl"] #marquee,
-      html[lang="pt-pt"] #marquee,
-      html[lang="fr-ch"] #marquee,
-      html[lang="it-ch"] #marquee,
-      html[lang="de-ch"] #marquee,
-      html[lang="en-za"] #marquee,
-      html[lang="fi-fi"] #marquee,
-      html[lang="sv-se"] #marquee,
-      html[lang="tr-tr"] #marquee,
-      html[lang="en-gb"] #marquee,
-      html[lang="el-gr"] #marquee,
-      html[lang="ru-ru"] #marquee,
-      html[lang="uk-ua"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_emea_host.jpg);
-      }
-      
-      .plan-tile { 
-        margin-top: 0; 
-        margin-bottom: 0; 
-      }
-      .pro-plans { 
-        margin-top: -120px; 
-        padding-bottom: 20px; 
-        padding-top: 0; 
-      }
-      
-      .pro-banner { color: #fff; }
-      
-    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
@@ -885,8 +116,7 @@ cursor: pointer;
       ##if(activeLanguageAny([en-IN])) 
        
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -895,7 +125,6 @@ cursor: pointer;
 }
 .pro-plans {
     margin-top: 0px;
-    padding-bottom: 80px;
 }
 
 .pro-plans .tld-col-title {
@@ -923,6 +152,11 @@ cursor: pointer;
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -1281,7 +515,7 @@ cursor: pointer;
           <div class="row"> 
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/web-hosting:compare-plans-starter-11166]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/web-hosting:starter-plan-website]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -1307,7 +541,7 @@ cursor: pointer;
             </div>
             <div id="planTileOne" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -1334,7 +568,7 @@ cursor: pointer;
             </div>
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -1362,7 +596,7 @@ cursor: pointer;
             <div class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
                   <div class="plan-duration-div-four"><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span></div> 
@@ -1396,8 +630,7 @@ cursor: pointer;
       ##else
        
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -1406,7 +639,6 @@ cursor: pointer;
 }
 .pro-plans {
     margin-top: 0px;
-    padding-bottom: 80px;
 }
 
 .pro-plans .tld-col-title {
@@ -1434,6 +666,11 @@ cursor: pointer;
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -1792,7 +1029,7 @@ cursor: pointer;
           <div class="row"> 
             <div id="planTileOne" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:economyPlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:basicPrice]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32051, 32051, 0))
@@ -1818,7 +1055,7 @@ cursor: pointer;
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:deluxePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:greatHome]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32059, 32059, 0))
@@ -1845,7 +1082,7 @@ cursor: pointer;
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/hosting/web-hosting-rebrand:ultFlag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/hosting/web-hosting-rebrand:ultimatePlan]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/hosting/web-hosting-rebrand:handlesMost]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(32082, 32082, 0))
@@ -1973,156 +1210,158 @@ cursor: pointer;
         </div>
       </div>
     </section>
-    <style>.fix-body {
-  margin-top: 130px;
-}
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  .mid-page-nav {
-    display: none;
-  }
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li.open > a {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li.open > a:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li > a.active,
-.mid-page-nav .nav > li > a:focus,
-.mid-page-nav .nav > li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li > a.active:before,
-.mid-page-nav .nav > li > a:focus:before,
-.mid-page-nav .nav > li > a:hover:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav > li a span > em {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #555555;
-  display: inline-block;
-  margin-top: -5px;
-  border: 0;
-  padding: 0;
-  font-style: normal;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav .open > .dropdown-menu {
-  opacity: 1;
-  -webkit-transform: scale(1, 1) rotateX(0deg);
-  -moz-transform: scale(1, 1) rotateX(0deg);
-  -ms-transform: scale(1, 1) rotateX(0deg);
-  transform: scale(1, 1) rotateX(0deg);
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-.mid-page-nav .nav .dropdown-menu li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.mid-page-nav .price span {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
+    <style>
+      .fix-body {
+        margin-top: 130px;
+      }
+      .mid-page-nav {
+        background-color: #333333;
+        font-family: 'Walsheim-Bold';
+        height: 130px;
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 768px) {
+        .mid-page-nav {
+          display: none;
+        }
+      }
+      .mid-page-nav .navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .mid-page-nav.sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .mid-page-nav .nav {
+        height: 130px;
+      }
+      .mid-page-nav .nav > li {
+        display: table;
+      }
+      .mid-page-nav .nav > li.open > a {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li.open > a:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li > a {
+        display: table-cell;
+        height: 130px;
+        vertical-align: middle;
+      }
+      .mid-page-nav .nav > li > a.active,
+      .mid-page-nav .nav > li > a:focus,
+      .mid-page-nav .nav > li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li > a.active:before,
+      .mid-page-nav .nav > li > a:focus:before,
+      .mid-page-nav .nav > li > a:hover:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li a {
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: 'Walsheim-Bold';
+        color: #808080;
+        padding: 0;
+        text-align: center;
+      }
+      .mid-page-nav .nav > li a span {
+        display: table-cell;
+        vertical-align: middle;
+        border-left: 1px solid #232323;
+        padding: 7px 40px;
+      }
+      .mid-page-nav .nav > li a span > em {
+        font-size: 40px;
+        font-size: 4rem;
+        color: #555555;
+        display: inline-block;
+        margin-top: -5px;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .mid-page-nav .nav > li:first-child a span {
+        border-left: 0;
+      }
+      .mid-page-nav .nav .open > .dropdown-menu {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) rotateX(0deg);
+        -moz-transform: scale(1, 1) rotateX(0deg);
+        -ms-transform: scale(1, 1) rotateX(0deg);
+        transform: scale(1, 1) rotateX(0deg);
+      }
+      .mid-page-nav .nav .dropdown-menu {
+        background-clip: padding-box;
+        border: 0;
+        background-color: #333333;
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(1, 0) rotateX(90deg);
+        -moz-transform: scale(1, 0) rotateX(90deg);
+        -ms-transform: scale(1, 0) rotateX(90deg);
+        transform: scale(1, 0) rotateX(90deg);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a {
+        display: block;
+        background-color: #333333;
+        padding: 20px;
+        border-bottom: #333333;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .price-text {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      .mid-page-nav .price {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .mid-page-nav .price span {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -2283,10 +1522,10 @@ cursor: pointer;
            
           ##if(activeLanguageAny([en-US]))
            
-          <h3>People <span class='heartIcon'></span> Fast Websites</h3> 
+          <h2 class="text-center">People <span class='heartIcon'></span> Fast Websites</h2> 
           ##else
            
-          <h3>[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h3> 
+          <h2 class="text-center">[@L[cds.sales/hosting/web-hosting-rebrand:fastWeb]@L]</h2> 
           ##endif
            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img-graph-chart.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
         </div>
@@ -2318,60 +1557,58 @@ cursor: pointer;
         </div>
       </div>
     </section>
-    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794" class="key-benefits-wrap tile-section">
-      <div style="background-image: url(); background-color: #fff;">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div> 
+    <section id="features" data-mid-nav-title="[@L[cds.sales/hosting/web-hosting-rebrand:midpagefeatures]@L]" data-ciCode="95794">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/> 
               ##if(activeLanguageAny([en-US]))
                
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesRebrand]@L]</h3> 
               ##else
                
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:moreResources]@L]</h3> 
               ##endif
                
               ##if(activeLanguageAny([en-US]))
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDescRebrand]@L]</p> 
               ##else
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
-              ##endif
-               
-            </div>
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div>
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
-              ##if(activeLanguageAny([en-US]))
-               
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
-              ##else
-               
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:moreResourcesDesc]@L]</p> 
               ##endif
                
             </div>
-            <div class="col-sm-4 key-benefit">
-              <div class="key-benefits-img-wrap"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
-              </div>
-              <h3 class="key-benefits-title">[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+          </div>
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_Security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurity]@L]</h3> 
               ##if(activeLanguageAny([en-US]))
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDescRebrand]@L]</p> 
               ##else
                
-              <p class="key-benefits-text">[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:awardSecurityDesc]@L]</p> 
+              ##endif
+               
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/GD_WebHosting_Module_Feature_Group_WhatIsHosting.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+              <h3>[@L[cds.sales/hosting/web-hosting-rebrand:hostingQuestion]@L]</h3> 
+              ##if(activeLanguageAny([en-US]))
+               
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerRebrand]@L]</p> 
+              ##else
+               
+              <p>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswer]@L]</p> 
               ##endif
                
               <ul>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList1]@L]</li>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList2]@L]</li>
                 <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList3]@L]</li>
-                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L]</li>
+                <li>[@L[cds.sales/hosting/web-hosting-rebrand:hostingAnswerList4]@L] </li>
               </ul>
             </div>
           </div>
@@ -4634,7 +3871,8 @@ height: 27px;
     ##endif
      
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="95879" class="tile-section">
-      <style>.accordion-group {
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -4713,7 +3951,8 @@ height: 27px;
 .dropdown li {
   font-family: Arial;
 }
-      </style>
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -4782,37 +4021,39 @@ height: 27px;
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".accordion-dropdown").click(function() {
-          var dropdownGroup = $(this).parent(".accordion-group");
-          var dropdownOptions = $(this).find(".dropdown");
-          var dropdownCaret = $(this).find(".carett");
-          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-        
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
-        
-          if (!$(dropdownOptions).is(":visible")) {
-            $(this).addClass("active");
-            $(dropdownOptions).slideDown();
-            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-            event.stopPropagation();
-          }
-        });
-        $(window).load(function() {
-          $("#test-faq .accordion-dropdown:first").click();
-        });
-        $("#test-button").click(function() {
-          $('#test-faq').find('.dropdown').slideDown();
-          $('#test-faq').find('.accordion-dropdown').find('.carett')
-                          .removeClass("caret-right")
-                          .addClass("caret-down");
-          $('#test-faq').find('.accordion-dropdown').addClass("active");
-         });
-      </script>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#test-faq .accordion-dropdown:first").click();
+          });
+          $("#test-button").click(function() {
+            $('#test-faq').find('.dropdown').slideDown();
+            $('#test-faq').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#test-faq').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
     </section> 
     ##if(activeLanguageAny([en-US]))
      
@@ -5504,6 +4745,827 @@ height: 27px;
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- landing page styling-->
+      <style>
+        /* fix the greek font styling issue here */
+        ##if(countrySiteAny(gr))
+        * {
+          font-family: arial !important;
+        }
+        .close {
+          font-family: uxfont !important;
+        }
+        .uxicon {
+          font-family: uxfont !important;
+        }
+        ##endif
+        
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
+        
+        /* default LP marquee styling */
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee-content-wrapper:not(old) {
+          background-image: none;
+          background-color: rgba(0,138,50,0.9);    
+        }
+        .marquee.marquee-white {
+            color: #fff;
+        }
+        .marquee.marquee-white h1,
+        .marquee.marquee-white h2,
+        .marquee.marquee-white h3,
+        .marquee.marquee-white h4,
+        .marquee.marquee-white h5,
+        .marquee.marquee-white h6 {
+            color: #fff;
+        }
+        .marquee.marquee-white .dashed-underline {
+            border-bottom-color: #fff;
+        }
+        .marquee.marquee-white a:not(.btn) {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .marquee.marquee-white a:not(.btn):hover {
+            text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-weight: 100;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
+          text-align: left;
+        }
+        .sf-tipper-target {
+          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: baseline;
+          cursor: pointer;
+        }
+        
+      </style>
+      <style>
+.tile-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.compare-table-view-all {
+  text-align: center;
+  margin-top: 50px;
+  cursor: pointer;
+  margin-bottom: -80px;
+}
+.arrow-down-icon {
+    margin-top: 10px;
+}
+.include-check-black {
+        position: relative;
+        padding-left: 45px;
+        margin-top: 20px;
+}
+.include-check-black:before {
+  content: "";
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-position: 0 -700px;
+  background-size: 205px auto;
+  width: 25px;
+  height: 27px;
+  padding-right: 5px;
+  position: absolute;
+  left: 0;
+  top: -6px;
+}
+.mid-page-nav .navbar-collapse {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-page-nav.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.pro-banner {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/bg-webpro-promo.png"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+.pro-banner a {
+  white-space: normal;
+  max-width: 100%;
+}
+.proBannerIcon {
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/img-webpro-logo.png");
+  display: inline-block;
+  vertical-align: middle;
+  height: 100px;
+  width: 275px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pro-banner .top-text {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  margin-top: 11px;
+  margin-bottom: 0;
+}
+.pro-banner .bottom-text {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+}
+
+.pro-banner .pro-banner-image {
+  padding-top: 20px;
+}
+.pro-banner .pro-banner-button {
+  padding-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .pro-banner {
+    width: 1135px;
+    margin-left: 10px;
+  }
+  .pro-banner .pro-banner-text {
+    width:55%;
+  }
+  .pro-banner .pro-banner-button {
+    
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pro-banner {
+    width: 925px;
+    margin-left: 10px;
+  }
+  .pro-banner .pro-banner-image {
+    width: 29%;
+  }
+  .pro-banner .pro-banner-text {
+    width:50%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 21%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin-left: 10px;
+  }
+  .pro-banner .pro-banner-image {
+    width: 38%;
+  }
+  .pro-banner .pro-banner-text {
+    width: 62%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pro-banner {
+    background-image: none;
+    background-color: #ef6b0d;
+    box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+  }
+  .pro-banner .pro-banner-image {
+    width: 100%;
+  }
+  .pro-banner .pro-banner-text {
+    width: 100%;
+  }
+  .pro-banner .pro-banner-button {
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+}
+
+
+
+
+
+
+
+#one-click-install { 
+  background: #77c043; transition: background 750ms ease-in-out; 
+  background-image: url("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_AppInstalls_Banner.jpg"); 
+  background-repeat: no-repeat; background-size: 100% 100%; 
+}
+
+.one-click-right img {
+  height:auto; 
+  max-width:100%;
+}
+
+@media (max-width: 767px) {
+  #one-click-install {
+    background-image: none !important;
+    background-color: transparent;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .one-click-right {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    background-color: #5caf2b;
+  }
+  .one-click-left {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-color: #78c043;
+  }
+  .key-benefits-img-wrap {
+    text-align: center;
+  }
+}
+
+@media (max-width: 991px) {
+  #choose-platform {
+    background-image: none !important;
+  }
+
+  #choose-platform.left-side {
+    padding-left: 0;
+  }
+
+  #alt-products {
+    background-image: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  #choose-platform .left-sideee {
+    padding-left: 11.666666667%;
+  }
+}
+
+.up-compare-wrap {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #choose-platform .or-container:after {
+    bottom: 360px;
+  }
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
+}
+
+.isToolTip {
+color: #333;
+text-decoration: none;
+cursor: pointer;
+}
+
+.sf-tip.underline {
+  text-decoration: underline;
+  width: auto;
+  height: auto;
+  background-image: none;
+}
+
+.heartIcon {
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-feature2-heart.png);
+  display: inline-block;
+  width: 59px;
+  height: 50px;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#speed-chart { min-height: 400px; }
+#speed-chart h3 { margin: 50px auto; text-align: center; }
+
+#speed-chart img { 
+  margin-bottom: 0;
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+#speed-chart p {text-align: right; }
+
+.tool-tip-black {
+  background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.compareButtons {
+  height: 54px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 11px;
+}
+
+.compareButtons.leftActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-cpanel.png); 
+}
+
+.compareButtons.rightActive {
+    background-image:url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-toggle-parallels.png); 
+}
+
+.compareButtons a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Walsheim-Black';
+  font-size: 20px;
+}
+
+.compareButtons .activeButton a {
+  color: #088A44;
+}
+
+.compareButtons .inactiveButton a {
+  color: #666666;
+}
+
+.compareButtonsLeft {
+  width: 180px;
+}
+.compareButtonsRight {
+  width: 180px;
+}
+
+
+
+@media (min-width: 1200px) {
+  .compareButtons {
+    padding-left: 395px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .compareButtons {
+    padding-left: 290px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .compareButtons {
+    padding-left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .compareButtons {
+    padding-left: 25px;
+  }
+}
+
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  #login-modal.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  #login-modal.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
+
+  #login-modal.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  #login-modal .modal-dialog {
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    margin: 10px;
+  }
+
+  #login-modal .modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+  }
+
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #login-modal .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-header .close {
+    margin-top: -2px;
+  }
+
+  #login-modal .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+  }
+
+  #login-modal .modal-body {
+    position: relative;
+    padding: 20px;
+  }
+
+  #login-modal .modal-footer {
+    padding: 19px 20px 20px;
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+
+  #login-modal .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+
+  #login-modal .modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    #login-modal .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    #login-modal .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+.marquee-content-wrapper { 
+  padding: 40px; 
+  margin-left: 10px; 
+  margin-right: 10px; 
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
+  background-color: rgba(0,138,50,0.9); 
+  color: white; 
+}
+.marquee-content-wrapper:not(old) {
+  background-image: none;
+  background-color: rgba(0,138,50,0.9);
+}
+
+#disclaimersModal a {
+  text-decoration: none;
+}
+
+##if(countrySiteAny(ru,ua))
+.plan-tile .plan-flag {
+  top: -55px;
+}
+.pro-banner a {
+  max-width: 120%;
+}
+##endif
+      </style>
+      <style>
+        /* page-specific overrides of common styling here */
+        #speed-chart, #features, #reviews, #faq, #disclaimers { background-color: #fff; }
+        #platforms { background-color: #5caf2b; padding-top: 0; padding-bottom: 0; }
+        #plans { padding-bottom: 40px; }
+        #speed-chart h2 { margin-bottom: 10px; }
+        #features { background-color: #fff; }
+        
+        #platforms, #alternate-products, #renderMidPageNavBottom, #bazaarvoicemodal { padding-top: 0; padding-bottom: 0; }
+        
+        .plan-tile { 
+          margin-top: 0; 
+          margin-bottom: 0; 
+        }
+        .pro-plans { 
+          margin-top: -120px; 
+          padding-bottom: 20px; 
+          padding-top: 0; 
+        }
+        .pro-banner { color: #fff; }
+        
+        /* TODO: can/should this styling be abstracted into landing-page.jade? */
+        body { background-color: #d9d9d9; }
+        #marquee { 
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg) no-repeat top center; 
+          padding-bottom: 120px;
+          margin-bottom: 0;
+          background-size: cover;
+        }
+        
+        /* latam */
+        html[lang="es-ar"] #marquee,
+        html[lang="pt-br"] #marquee,
+        html[lang="es-cl"] #marquee,
+        html[lang="es-co"] #marquee,
+        html[lang="es-mx"] #marquee,
+        html[lang="es-pe"] #marquee,
+        html[lang="es-ve"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_lam_host.jpg);
+        }
+        
+        /* general */
+        html[lang="en-us"] #marquee,
+        html[lang="es-us"] #marquee,
+        html[lang="en-au"] #marquee,
+        html[lang="en-ca"] #marquee,
+        html[lang="en-nz"] #marquee,
+        html[lang="fr-be"] #marquee,
+        html[lang="fr-ca"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);
+        }
+        
+        /* asia */
+        html[lang="en-my"] #marquee,
+        html[lang="en-ph"] #marquee,
+        html[lang="en-sg"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_asia_host.jpg);
+        }
+        
+        /* in-pk */
+        html[lang="en-in"] #marquee,
+        html[lang="en-pk"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_in-pk_host.jpg);
+        }
+        
+        /* emea */
+        html[lang="nl-be"] #marquee,
+        html[lang="da-dk"] #marquee,
+        html[lang="de-de"] #marquee,
+        html[lang="es-es"] #marquee,
+        html[lang="fr-fr"] #marquee,
+        html[lang="en-ie"] #marquee,
+        html[lang="it-it"] #marquee,
+        html[lang="nb-no"] #marquee,
+        html[lang="nl-nl"] #marquee,
+        html[lang="de-at"] #marquee,
+        html[lang="pl-pl"] #marquee,
+        html[lang="pt-pt"] #marquee,
+        html[lang="fr-ch"] #marquee,
+        html[lang="it-ch"] #marquee,
+        html[lang="de-ch"] #marquee,
+        html[lang="en-za"] #marquee,
+        html[lang="fi-fi"] #marquee,
+        html[lang="sv-se"] #marquee,
+        html[lang="tr-tr"] #marquee,
+        html[lang="en-gb"] #marquee,
+        html[lang="el-gr"] #marquee,
+        html[lang="ru-ru"] #marquee,
+        html[lang="uk-ua"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/img_bgrnd_sb15_marquee_emea_host.jpg);
+        }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       

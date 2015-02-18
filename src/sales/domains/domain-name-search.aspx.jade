@@ -1,4 +1,4 @@
-extends ../../templates/pages/landing-page
+extends ../shared/_landing-page
 
 mixin tldMini(tldName, bntText, btnUrl)
   span !{tldName}
@@ -21,37 +21,43 @@ prepend headScripts
   script(src!="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js")
 
 append pageStyles
-  atlantis:webstash(type="css")
-    style.
-      .modal-open {overflow: hidden;}
-      body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
-      .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
-      .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
-      .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
-      .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
-      .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
-      .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
-      .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
-      .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
-      .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
-      .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
-      .modal-header .close {margin-top: -2px;}
-      .modal-title {margin: 0;line-height: 1.428571429;}
-      .modal-body {overflow: auto;border: 0;}
-      .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
-      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-      .modal-footer:after {clear: both;}
-      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-      .modal-footer:after {clear: both;}
-      .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
-      .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
-      .modal-footer .btn-block + .btn-block {margin-left: 0;}
-      @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
-      .search-template .search-template-box { margin-bottom: 10px;}
-      .bg-green-official { background-color: #77c043; }
-      #what-do-you-get {background-color: #e8e8e8;}
-      #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
-      #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
+  // domain-name-search page styling
+  style.
+    .modal-open {overflow: hidden;}
+    body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+    .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+    .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+    .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+    .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+    .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+    .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+    .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+    .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+    .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+    .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+    .modal-header .close {margin-top: -2px;}
+    .modal-title {margin: 0;line-height: 1.428571429;}
+    .modal-body {overflow: auto;border: 0;}
+    .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+    .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+    .modal-footer:after {clear: both;}
+    .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+    .modal-footer:after {clear: both;}
+    .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+    .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+    .modal-footer .btn-block + .btn-block {margin-left: 0;}
+    @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+    
+    #marquee { padding-bottom: 20px; }
+
+    #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
+    #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
+    #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+    #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+
+    #what-do-you-get {background-color: #e8e8e8;}
+
+    #bottom-pods { background-color: #77c043; }
 
 append endOfPageScripts
   script(type="text/javascript").
@@ -169,31 +175,19 @@ block domainSearch
 
 block marquee
   section#marquee
-    include ./domain-name-search/_marquee.jade
-  section#domainSearch.bg-green-official
-    atlantis:webstash(type="css")
-      style.
-        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
-        #domainSearch { padding-bottom: 10px; }
-        #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
-        #domainSearch #domain-name-input {font-size: 18px; font-family: Arial; color:#333333;}
-        #domainSearch #domain-name-input::-webkit-input-placeholder { color: #333333; font-family: Arial; }
-        #domainSearch #domain-name-input:-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
-        #domainSearch #domain-name-input::-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
-        #domainSearch #domain-name-input:-ms-input-placeholder { color: #333333; font-family: Arial; }
-        #domainSearch #domain-name-input.headline-primary {text-transform:none;}
-        #domainSearch .form-control {height:62px;}
-        #domainSearch .input-group-btn .btn {margin-left: 10px;}
-        #domainSearch .input-group-btn .search-text {font-size: 30px; font-family: 'Walsheim-Bold'; padding: 8px 15px 5px; }
-        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
-        #domainSearch h1 {font-size:inherit;font-family:inherit;display:inline;color:inherit;}
+    .container.marquee
+      .row
+        .col-sm-12
+          h2 [@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]
+          ul.green-check
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]
+
+  section#domainSearch
     .container
-      .row
-        .col-xs-12(style="padding-top:10px;")
-          #main-panel-title [@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeadingRebrand]@L]
-      .row
-        .col-xs-12
-          +domainSearchInput({"placeholderText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]", "buttonText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]"})
+      h2 START YOUR DOMAIN SEARCH NOW.
+      +domainSearchInput({"placeholderText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]", "buttonText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]"})
       .row.domain-links
         .col-xs-12
           a.btn-link(href="#" data-toggle="modal" data-target="#bulkModal") [@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink1]@L]
@@ -205,8 +199,7 @@ block plans
     atlantis:webstash(type="css")
       style.
         #top-pods {background-color: #e8e8e8;}
-        #top-pods .plan-tile {margin-top: 55px; }
-        #top-pods .pro-plans{padding-bottom:45px;}
+        #top-pods .plan-tile {margin-top: 0; }
         #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
         #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
         #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
@@ -299,10 +292,8 @@ block plans
     atlantis:webstash(type="css")
       style.
         #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
-        #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
-        #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
-        #promo-carousel .btn { margin-top: 40px; }
-        #promo-carousel .greenText { color: #77c043;}
+        #promo-carousel .plan-carousel-copy a {text-decoration:none; color:#77c043;}
+        #promo-carousel .plan-carousel-copy a:hover {text-decoration:underline;}
     +carousel("top-carousel", 3, {"css":"true"})
       +carouselItem()
         .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]
@@ -319,137 +310,124 @@ block plans
         |##endif
 
   section#what-do-you-get
-    atlantis:webstash(type="css")
-      style.
-        #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:60px;}
-        #what-do-you-get .container{padding-bottom: 70px;}
     .container
+      h2.text-center [@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]
       .row
-        .col-sm-12
-          h3.text-center [@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]
-      .row
-        .col-md-4.col-sm-6
-          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]
-          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]
-        .col-md-4.col-sm-6
-          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]
-          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]
-        .col-md-4.col-sm-6
-          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]
+        .col-sm-4
+          ul.green-check
+            li [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]
+        .col-sm-4
+          ul.green-check
+            li [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]
+        .col-sm-4
+          ul.green-check
+            li [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]
 
 block sections  
   +renderMidPageNav
 
-  section#why-godaddy.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title!="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]")
+  section#why-godaddy
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          h2.text-center [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]
+          p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]
+      .row
+        .col-sm-4
+          .feature.why-gd-registrar
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]
+        .col-sm-4
+          .feature.why-gd-prices
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]  
+        .col-sm-4
+          .feature.why-gd-support
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+            h3.walsheim-black [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]
+            p [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]  
+
+  section#bottom-pods
     atlantis:webstash(type="css")
       style.
-        #why-godaddy .why-gd-container{padding:30px 0 80px;}
-        #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
-        #why-godaddy h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;}
-        #why-godaddy h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;}
-        #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
-        #why-godaddy .key-benefits-text{padding-top:20px;}
-        #why-godaddy .key-benefits-img-wrap {height:154px;}
-        #why-godaddy .icon-domain {padding-top:33px;}
-        #why-godaddy .icon-headset {padding-top:34px;}
-    .container.why-gd-container
-      .row
-        .col-sm-10.why-gd-banner
-          h2 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]
-          h3 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]
-      .row
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
-            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img.icon-domain(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]
-        .col-sm-4.key-benefit
-          .key-benefits-img-wrap
-            img.key-benefits-img.icon-headset(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png")
-          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]
-          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]
+        #bottom-pods #plans {background-color: #77c043;}
+        #bottom-pods .plan-tile {margin-top:0;}
+        #bottom-pods .plan-title {text-transform:none;}
+        #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+    h2.text-center [@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]
+    +renderPlanTiles(3,{})
+      .ng-scope
+        .col-sx-3(id!="{{pod.PodId}}" ng-repeat="pod in podsDataBottom")
+          +planTile()
+            include ./domain-name-search/_bottom-pod.jade
 
-    section#bottom-pods.bg-green-official
+  section#new-domains.bg-pro-gray
+    .container
       atlantis:webstash(type="css")
         style.
-          #bottom-pods #plans {background-color: #77c043;height:250px;}
-          #bottom-pods .plan-tile{margin-top:60px;}
-          #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:65px;}
-          #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
-          #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;}
-          #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
-          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
-      h2.bottom-headline [@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]
-      +renderPlanTiles(3,{})
-        .ng-scope
-          .col-sx-3(id!="{{pod.PodId}}" ng-repeat="pod in podsDataBottom")
-            +planTile()
-              include ./domain-name-search/_bottom-pod.jade
-
-    section#new-domains.bg-pro-gray
-      .container
-        atlantis:webstash(type="css")
-          style.
-            #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
-            #new-domains .container{margin:0 auto;padding-left:0px;}
-            #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
-            #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
-            #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
-            #new-domains ul li a{float:right;}
-            #new-domains .col-tld-title {padding-left: 10px;}
-            #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
-        .row
-          .col-md-6
-            span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
-            span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]
-          .col-md-6
-            span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
-            span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]
-        .row
-          .col-md-6
-            ul
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]")  
-          .col-md-6
-            ul
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]")
-              li
-                +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]")  
+          #new-domains { background-color: #e8e8e8; }
+          #new-domains h2 { font-size: 2rem; margin-bottom: 0; }
+          #new-domains ul{ list-style-type:none; padding-left:0; }
+          #new-domains ul li  { background-color:#ffffff; height:46px; }
+          #new-domains ul li span { font-family: "Walsheim-Black"; font-size: 3rem; padding-left:10px; }
+          #new-domains ul li a { float:right; }
+      .row
+        .col-md-6
+          h2 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span>
+          ul
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]")  
+        .col-md-6
+          h2 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span>
+          ul
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]")
+            li
+              +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]")  
     
-    section#find-your-domain
-      atlantis:webstash(type="css")
-        style.
-          #find-your-domain{background-color:#77c043;}
-          #find-your-domain .container{padding-left:10px;}
-          #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
-          #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
-          #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:80px;font-family:'Walsheim-Black';margin-bottom:0px;}
-          #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:100px;display:block;}
-          #find-your-domain .find-cta-text:hover{text-decoration:underline;}
-          #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
-      .container
-        h3 [@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]
-        a(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]")
-          i.ico.ico-gt-circle-small
-          .find-cta-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]
+  section#find-your-domain
+    atlantis:webstash(type="css")
+      style.
+        #find-your-domain { background-color:#77c043; color: #fff; }
+        #find-your-domain h2 { margin-bottom: 0; }
+        #find-your-domain a { color:#ffffff; text-decoration:none; }
+        #find-your-domain .caret-right {
+          border-left: 0.5em solid;
+          border-top: 0.5em solid transparent;
+          border-bottom: 0.5em solid transparent;
+          margin-right: 0.7em;
+          display: inline-block;
+        }
+        #find-your-domain .find-cta-text:hover{text-decoration:underline;}
+        #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+    .container
+      h2 [@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]
+      a(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]")
+        span.caret-right
+        .find-cta-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]
 
   section#options.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]")
     atlantis:webstash(type="css")
