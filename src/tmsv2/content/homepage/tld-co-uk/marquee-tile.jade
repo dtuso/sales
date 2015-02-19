@@ -3,6 +3,7 @@ extends ../../../../sales/homepage/_marquee-tile-tld.jade
 block prepend vars
   - dataCi = "96168";
   - headline = '[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] OFF 100% BRILLIANT';
+  - headlineNoDiscount = '100% BRILLIANT';
   - tldPfid = "57465";
   - tld = "co-uk";
   - tldLeafUrl = "/tlds/co-uk.aspx";
@@ -14,3 +15,13 @@ block append tileStyles
   style.
     .co-uk.marquee-tile-tld{background-color:#fff}
     .co-uk .price-text{color:#333}
+block tileContentHeadline
+  | ##if(productHasDiscountMoreThan(57465, 5)) 
+  | 
+  .headline !{headline}
+  | 
+  | ##else
+  | 
+  .headline !{headlineNoDiscount}
+  | 
+  | ##endif

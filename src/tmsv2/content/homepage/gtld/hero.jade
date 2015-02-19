@@ -1,0 +1,14 @@
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee{background-color:#f47f00}
+      #gtld .headline {font-size:26px;line-height:26px;color:#fff}
+      #gtld .maintext { display: block; font-size:42px; line-height:42px; padding-top: 12px;color:#fff}
+      #gtld .subtext { display: block; font-size:24px; line-height:24px; margin-top:10px; }
+#gtld.container
+  .row
+    .col-xs-12.col-sm-6
+      .headline.Walsheim-Black [@L[cds.sales/homepage/locales/en:gtld-tile-headline]@L]
+      .maintext.tungsten [@L[cds.sales/homepage/locales/en:gtld-tile-maintext]@L]
+      .subtext [@L[cds.sales/homepage/locales/en:gtld-tile-subtext]@L]
+      a.btn.btn-purchase(href!=ctaLink) [@L[cds.sales/homepage/locales/en:gtld-tile-btn]@L]
