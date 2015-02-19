@@ -1031,12 +1031,12 @@ $(window).load(function () {
       ##if(productIsOffered(105)) 
        
       <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
+        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-both-content]@L]</p>
       </div> 
       ##else
        
       <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
       </div> 
       ##endif
        
@@ -1587,10 +1587,10 @@ $(window).load(function () {
           <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
         </div>
         <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+          <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
         </div>
         <div id="step2-choose-product-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+          <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-ols-content]@L]</p>
         </div>
       </section>
     </section>
@@ -2780,7 +2780,7 @@ $(window).load(function () {
       </div>
     </section>
     <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
+      <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-ols-content]@L]</p>
     </div>
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
@@ -3314,7 +3314,7 @@ top: -6px;
     ##endif
      
     <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
+      <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
     </div>
     <section><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -5582,6 +5582,11 @@ h2.api-error-header {
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
+        $('[data-icann-fee]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
+      
       });
       
     </script>
