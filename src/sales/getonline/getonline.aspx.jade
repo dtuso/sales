@@ -20,6 +20,7 @@ append pageStyles
     .step-2{padding-left: 50px; border-left: lightgray solid}
     .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
     .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .get-running-btn:active{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
     .dropdown1{width: 100%}
     .dropdown2{width: 100%}
     #questions-bottom{padding-bottom: 50px}
@@ -33,7 +34,7 @@ block sections
   block top
     section#questions-top.green
       .container.text-center
-        h1.uppercase This doesn't have to be <mark>confusing!</mark>
+        h1.uppercase This doesn't have to be <mark id="homepage-selection">confusing!</mark>
         .row
           .illustration-complete.bottom-space
 
@@ -46,7 +47,7 @@ block sections
         .col-xs-6.step-1
           h3.uppercase Step 1
           p What's your business name? Don't have a name? An idea for your business is perfect!
-          input(class='search-bar', id='search-input', type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='75')
+          input(class='search-bar', id='search-input', type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='63')
           p.validate-message
         .col-xs-6.step-2
           h3.uppercase Step 2

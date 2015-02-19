@@ -40,7 +40,7 @@
     }
     
     $('#get-running-butt').click(function(){
-        domainName = $('#search-input').val();
+        domainName = $('#search-input').val().toLowerCase();
         var checkInput = validateInput(domainName);
         domainName = encodeURIComponent(domainName);
         if(checkInput === 0){
@@ -124,6 +124,8 @@
     function validateInput(domainName){
        var validFlag = 0;
 
+       domainName.toLowerCase();
+
        if(domainName.indexOf('.') > -1){
            var domainSplit = domainName.split('.');
            for(var i = 0; i < p4pPage.tlds.valid.length; i++){
@@ -141,3 +143,20 @@
            return validFlag;
        }
     }
+
+    function stripHomePageParameter(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "p4p"){
+         $("#homepage-selection").text(inputValue);
+       }
+      }
+        
+    }
+
+    $(document).ready(function(){
+      stripHomePageParameter();
+    });

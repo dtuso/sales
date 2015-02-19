@@ -5,13 +5,13 @@ append pageStyles
     .btn-lg{padding: 14px 15px 9px!important;}
     .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
     .right-side{margin-top: 25px;}
-    .pro-wrapper{margin-top: 50px;}
+    .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
     .product-name{padding-bottom: 15px;}
     .p1{margin-bottom: 25px;}
     .p2{margin-top: 15px;}
     .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
     .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .head-wrapper{padding-top:30px;!important}
+    .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
 
 block marquee
 
@@ -29,14 +29,31 @@ block getItNow
           h3.product-name #{productToDisplay.name}
           p.p1 #{productToDisplay.info}
           .col-xs-6
-            btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+            btn.btn-purchase.btn-plan.btn-lg#get-it-now-btn GET IT NOW
             p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
           .col-xs-6
             p Starting at <mark>#{productToDisplay.price}</mark>
 
-block domainMultipleSelection
+block domainSearchWizard
 
 block proSpecific
   +renderProSection()
 
 block office365
+
+block got
+  - var productToDisplay = {name: "ECOMMERCE DESIGN SERVICES", info: "Our Professional Web Services team will work with you to build a complete online store your customers will love.", cssClass: "<div class='pro-computer'></div>", price: "$149.99/mo*"};
+  +renderReadyToTakeBusinessOnline(productToDisplay)
+    block checkPro
+      h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark id="business-idea2"></mark> starting at <mark>#{productToDisplay.price}</mark>
+    block checkPro-bottom
+      .pro-wrapper.row
+        .col-xs-6
+          !{productToDisplay.cssClass}
+        .col-xs-6
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.info}
+          .row
+            .col-xs-12
+              btn.btn-purchase.btn-plan.btn-lg#get-it-now-btn GET IT NOW
+              p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>

@@ -115,7 +115,7 @@
     }
     
     $('#get-running-butt').click(function(){
-        domainName = $('#search-input').val();
+        domainName = $('#search-input').val().toLowerCase();
         var checkInput = validateInput(domainName);
         domainName = encodeURIComponent(domainName);
         if(checkInput === 0){
@@ -199,6 +199,8 @@
     function validateInput(domainName){
        var validFlag = 0;
 
+       domainName.toLowerCase();
+
        if(domainName.indexOf('.') > -1){
            var domainSplit = domainName.split('.');
            for(var i = 0; i < p4pPage.tlds.valid.length; i++){
@@ -216,6 +218,23 @@
            return validFlag;
        }
     }
+
+    function stripHomePageParameter(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "p4p"){
+         $("#homepage-selection").text(inputValue);
+       }
+      }
+        
+    }
+
+    $(document).ready(function(){
+      stripHomePageParameter();
+    });
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -361,6 +380,7 @@
       .step-2{padding-left: 50px; border-left: lightgray solid}
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:active{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .dropdown1{width: 100%}
       .dropdown2{width: 100%}
       #questions-bottom{padding-bottom: 50px}
@@ -370,7 +390,7 @@
     <!-- HEADEREND-->
     <section id="questions-top" class="green">
       <div class="container text-center">
-        <h1 class="uppercase">This doesn't have to be <mark>confusing!</mark></h1>
+        <h1 class="uppercase">This doesn't have to be <mark id="homepage-selection">confusing!</mark></h1>
         <div class="row">
           <div class="illustration-complete bottom-space"></div>
         </div>
@@ -385,7 +405,7 @@
         <div class="col-xs-6 step-1">
           <h3 class="uppercase">Step 1</h3>
           <p>What's your business name? Don't have a name? An idea for your business is perfect!</p>
-          <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="75" class="search-bar">
+          <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="63" class="search-bar">
           <p class="validate-message"></p>
         </div>
         <div class="col-xs-6 step-2">

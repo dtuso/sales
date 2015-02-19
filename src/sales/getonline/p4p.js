@@ -11,6 +11,7 @@ function stripDomainName(){
        if(inputName == "domain"){
          inputValue = decodeURIComponent(inputValue);
          $("#business-idea").text(inputValue);
+         $("#business-idea2").text(inputValue);
        }
         
     }

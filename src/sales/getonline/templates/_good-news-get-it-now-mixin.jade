@@ -23,7 +23,7 @@ mixin renderGoodNews(productToDisplay)
         .logo-label{padding-top: 15px;}
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
         .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
-        .head-wrapper{padding-top: 65px; padding-bottom: 25px;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
 
@@ -35,10 +35,10 @@ mixin renderGoodNews(productToDisplay)
       .col-xs-9.right-side
         .row.text-center.good-news-shape
           .head-wrapper
-            h2.heading GOOD NEWS!
+            h2.heading Here you go...
             .starter-pack
             block goodNewsHead
-              h3 We have an excellent starter pack for
+              h3 A great package deal for
               h3 <mark id="business-idea"></mark> – Starting at <mark>#{productToDisplay.price}</mark>
         block check-pro-goodNews  
           .container.bottom
@@ -63,6 +63,6 @@ mixin renderGoodNews(productToDisplay)
               .row.text-center
                 p.h3.center Get the bundle for $1/month for the first year*
               .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                btn.btn-purchase.btn-plan.btn-lg GET IT NOW
+                btn.btn-purchase.btn-plan.btn-lg#get-it-now-btn GET IT NOW
               .row.text-center(style={'padding-top':'10px'})
                 p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
