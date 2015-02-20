@@ -428,7 +428,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_WIN_FIRST_RACE))
     <atlantis:webstash type="css">
       <style>
       </style>
@@ -510,7 +511,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
     <atlantis:webstash type="css">
       <style>
       </style>
@@ -592,7 +594,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+     ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
     <atlantis:webstash type="css">
       <style>
       </style>
