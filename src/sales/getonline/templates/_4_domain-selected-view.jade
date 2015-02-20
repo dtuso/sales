@@ -15,20 +15,18 @@ atlantis:webstash(type="css")
 
 selected-domain-name
 
-section#domain-selected-view.js-domain-search-wizard-section
-
-  .bg-green-official
-    .container
-      .row(style={'margin-top':'10px'})
-        div.text-center
-          h4.strong Congratulations! You have selected the following domain name:
-      .row.available-domain-name-row
-        div.text-center
-          h2.available-domain-name-text.domain-name-displayed.word-break#selected-domain-name
-      .row(style={'margin-top':'35px'})
-        .col-md-2.col-sm-2
-        .col-md-4.col-sm-4.get-it-now-btn
-          button.btn.btn-purchase.btn-select.uppercase.purchase-btn(data-ci="92733") Get it now
-        .col-md-4.col-sm-4
-          button.btn.btn-primary.btn-select.uppercase(id='select2') Search Again
-        .col-md-2.col-sm-2
+#domain-selected-view.js-domain-search-wizard-section
+  .container#selected-domain.bg-green-official
+    .row(style={'margin-top':'10px'})
+      div.text-center
+        h4.strong Congratulations! You have selected the following domain name:
+    .row.available-domain-name-row
+      div.text-center
+        h2.available-domain-name-text.domain-name-displayed.word-break#selected-domain-name
+    .row(style={'margin-top':'35px'})
+      .col-md-2.col-sm-2
+      .col-md-4.col-sm-4.get-it-now-btn
+        button.btn.btn-purchase.btn-select.uppercase.purchase-btn(data-ci="92733") Get it now
+      .col-md-4.col-sm-4
+        button#btnSelectedViewSearchAgain.btn.btn-primary.btn-select.btn-search-again.uppercase Search Again
+      .col-md-2.col-sm-2

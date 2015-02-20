@@ -1,4 +1,4 @@
-extends ../../../templates/pages/landing-page
+extends ../../../sales/shared/_landing-page.jade
 
 include _domain-multiple-selection-mixin.jade
 include _office365-email-mixin.jade
@@ -29,11 +29,6 @@ block sections
   block getItNow
     // p4p.getItNow
     //+renderGoodNews("domain","price","image-path")
-
-  block domainSearchWizard
-    // p4p.domainMultipleSelection
-    //+renderDomainMultipleSelection()
-    include _domain-search-wizard
   
   block product
 
@@ -43,7 +38,12 @@ block sections
 
   block whyUs
     // p4p.whyUs
-    include -why-us.jade
+    // include _why-us
+
+  block domainSearchWizard
+    // p4p.domainMultipleSelection
+    //+renderDomainMultipleSelection()
+    include _domain-search-wizard
   
   block divider
     .container

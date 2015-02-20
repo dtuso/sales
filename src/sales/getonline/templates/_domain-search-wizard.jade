@@ -38,7 +38,7 @@ atlantis:webstash(type="css")
 
     .offer-search-box { padding-bottom:20px;}
     .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-    .domain-search-messaging-row {padding-bottom: 40px;}
+    .domain-search-messaging-row {padding-bottom: 40px; display: none;}
     h2.get-a-domain-text {
       margin: 20px 0 5px;
       font-size:24px;
@@ -124,31 +124,31 @@ atlantis:webstash(type="css")
 
     /* (end) speech */
 
-section#domainSearchHeader.green
-  .container
+section#domainSearchWizardSection.green
+  .container#domainSearchHeader
     .row
       div.domain-icon(style={'margin-top':'35px'})
     .row
       div.text-center(style={'margin-top':'15px'})
         h2.uppercase(style={'margin-bottom':'0px'}) domain name
 
-section#domainSearchWizard
-  include ../../../sales/getonline/templates/_domain-search-mixin.jade
-  include ../../../sales/getonline/templates/_1_domain-entry-view.jade
-  include ../../../sales/getonline/templates/_2_domain-available-view.jade
-  include ../../../sales/getonline/templates/_3_domain-not-available-view.jade
-  include ../../../sales/getonline/templates/_4_domain-selected-view.jade
-  // include ../../../sales/getonline/templates/_4_checkout-view.jade
+  .container#domainSearchWizard
+    include ../../../sales/getonline/templates/_domain-search-mixin.jade
+    // include ../../../sales/getonline/templates/_1_domain-entry-view.jade
+    include ../../../sales/getonline/templates/_2_domain-available-view.jade
+    include ../../../sales/getonline/templates/_3_domain-not-available-view.jade
+    include ../../../sales/getonline/templates/_4_domain-spinner-view.jade
+    // include ../../../sales/getonline/templates/_4_domain-selected-view.jade
+    // include ../../../sales/getonline/templates/_4_checkout-view.jade
 
 
-#api-failure.sf-dialog.api-B-failure
-  h2.api-error-header
-    img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
-    div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
-  p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
+  #api-failure.sf-dialog.api-B-failure
+    h2.api-error-header
+      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+      div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
+    p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
 
-section#domainSearchFooter.green
-  .container
+  .container#domainSearchFooter.green
     .row
       div(style={'margin-top':'30px'})
         .col-md-9.col-sm-9.domain-search-wizard.speach-bubble-left-white
