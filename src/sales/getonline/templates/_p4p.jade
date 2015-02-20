@@ -4,6 +4,7 @@ include _domain-multiple-selection-mixin.jade
 include _office365-email-mixin.jade
 include _ready-to-take-business-online-mixin.jade
 include _good-news-get-it-now-mixin.jade
+include _product-section.jade
 
 append pageStyles
   style.
@@ -25,7 +26,7 @@ block domainSearch
 block marquee
 
 block sections
- 
+
   block getItNow
     // p4p.getItNow
     //+renderGoodNews("domain","price","image-path")
@@ -34,7 +35,7 @@ block sections
     // p4p.domainMultipleSelection
     //+renderDomainMultipleSelection()
     include _domain-search-wizard
-  
+
   block product
 
   block office365
@@ -44,7 +45,7 @@ block sections
   block whyUs
     // p4p.whyUs
     include -why-us.jade
-  
+
   block divider
     .container
       .col-xs-12.section-divider(style={'margin-top':'10px','margin-bottom':'10px'})
