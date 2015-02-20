@@ -656,7 +656,7 @@
     font-size: 37px;
   }
   #danica-pole-position .MiddleText {
-    font-size: 40px;
+    font-size: 39px;
     line-height: 25px;
   }
   #danica-pole-position .BottomText {
