@@ -851,6 +851,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -867,7 +869,7 @@ function getParameterByName(name) {
               <h2 class="heading">Here you go...</h2>
               <div class="starter-pack"></div>
               <h3>A great package deal for</h3>
-              <h3><mark id="business-idea"></mark> – Starting at <mark id="product-price">$1.00</mark></h3>
+              <h3><span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h3>
             </div>
           </div>
           <div class="container bottom">
@@ -898,7 +900,7 @@ function getParameterByName(name) {
                 <p class="h3 center">Get the bundle for $1/month for the first year*</p>
               </div>
               <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</btn>
+                <button id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
               </div>
               <div style="padding-top:10px" class="row text-center">
                 <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
@@ -1714,6 +1716,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="got">
@@ -1721,7 +1725,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an excellent starter pack for <mark id="business-idea2"></mark> starting at <mark>$1.00</mark></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an excellent starter pack for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
           </div>
           <div class="container bottom">
             <div class="row">
@@ -1744,7 +1748,7 @@ function getParameterByName(name) {
                     <p class="h3 center">Get the bundle for $1/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn id="get-it-btn" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
                   </div>
                   <div style="padding-top:10px" class="row text-center">
                     <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>

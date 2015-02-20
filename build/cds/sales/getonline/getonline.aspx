@@ -375,22 +375,29 @@
       .text-center{text-align:cneter}
       .illustration-complete{height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png) no-repeat center bottom;}
       .bottom-space{margin-bottom:50px}
-      .search-bar{width:100%}
+      .search-bar{width:100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 46px; border-top: 4px solid #FFCC00; padding: 15px; font-family: 'Walsheim-Medium';}
       .step-1{padding-right: 50px}
-      .step-2{padding-left: 50px; border-left: lightgray solid}
+      .drop-label{font-size:20px!important;}
+      .step-2{padding-left: 50px; border-left: 2px solid lightgray}
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:active{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .dropdown1{width: 100%}
-      .dropdown2{width: 100%}
+      .dropdown1{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
+      .dropdown2{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
       #questions-bottom{padding-bottom: 50px}
+      #questions-bottom p{font-family: 'Walsheim-Medium';}
+      #homepage-selection{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      input::-webkit-input-placeholder {color: #333;}
+      input::-moz-placeholder {color: #333;}
+      input:-moz-placeholder {color: #333;}
+      input:-ms-input-placeholder {color: #333;}
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="questions-top" class="green">
       <div class="container text-center">
-        <h1 class="uppercase">This doesn't have to be <mark id="homepage-selection">confusing!</mark></h1>
+        <h1 class="uppercase">This doesn't have to be <span id="homepage-selection">confusing!</span></h1>
         <div class="row">
           <div class="illustration-complete bottom-space"></div>
         </div>
@@ -399,8 +406,8 @@
     <section id="questions-bottom" class="white">
       <div class="container">
         <div class="top-half text-center">
-          <h3 class="uppercase">We can get your business online</h3>
-          <p>Tell us a little about yourself.  We will step you from A to Z, no porblem.</p>
+          <h3 class="uppercase">We can get your business online.</h3>
+          <p>Tell us a little about yourself.  We will step you from A to Z, no problem.</p>
         </div>
         <div class="col-xs-6 step-1">
           <h3 class="uppercase">Step 1</h3>
@@ -412,9 +419,9 @@
           <h3 class="uppercase">Step 2</h3>
           <p>We've given you some options of how to set up your business online.  Just fill in the blanks!</p>
           <div class="dropdowns">
-            <h4 class="uppercase">I'm interested in</h4>
+            <h3 class="uppercase drop-label">I'm interested in</h3>
             <div id="first-dropdown"></div>
-            <h4 class="uppercase">I have the resources and time to</h4>
+            <h3 class="uppercase drop-label">I have the resources and time to</h3>
             <div id="second-dropdown"></div>
           </div>
           <button id="get-running-butt" type="submit" name="searchButton" class="get-running-btn btn btn-warning btn-lg hp-search">GET ME UP AND RUNNING!</button>

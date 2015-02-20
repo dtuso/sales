@@ -851,6 +851,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -867,7 +869,7 @@ function getParameterByName(name) {
               <h2 class="heading">Here you go...</h2>
               <div class="starter-pack"></div>
               <h3>A great package deal for</h3>
-              <h3><mark id="business-idea"></mark> – Starting at <mark id="product-price">$2.00</mark></h3>
+              <h3><span id="business-idea"></span> – Starting at <span id="product-price">$2.00</span></h3>
             </div>
           </div>
           <div class="container bottom">
@@ -898,7 +900,7 @@ function getParameterByName(name) {
                 <p class="h3 center">Get the bundle for $1/month for the first year*</p>
               </div>
               <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</btn>
+                <button id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
               </div>
               <div style="padding-top:10px" class="row text-center">
                 <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
@@ -1692,8 +1694,72 @@ function getParameterByName(name) {
     <div class="container">
       <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
     </div>
-    <!-- p4p.got-->
-    <!--+renderReadyToTakeBusinessOnline("billysbikes.org","price")-->
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <section id="got">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:30px" class="text-center">
+            <h2 class="uppercase">Ready to take your business online?</h2>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an excellent starter pack for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
+          </div>
+          <div class="container bottom">
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                <div class="features-domain-name"></div>
+                <label class="h3 uppercase product-name">Domain Name</label>
+              </div>
+              <div class="col-sm-4 text-center"><div class='features-wordpress'></div>
+                <label class="h3 uppercase product-name">Wordpress</label>
+              </div>
+              <div class="col-sm-4 text-center">
+                <div class="features-email"></div>
+                <label class="h3 uppercase product-name">Office 365 Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="get-it-now">
+                <div class="container">
+                  <div class="row text-center">
+                    <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+                  </div>
+                  <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                  </div>
+                  <div style="padding-top:10px" class="row text-center">
+                    <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->

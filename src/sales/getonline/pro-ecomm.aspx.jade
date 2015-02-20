@@ -12,6 +12,7 @@ append pageStyles
     .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
     .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
     .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+    #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
 
 block marquee
 
@@ -20,7 +21,7 @@ block getItNow
   +renderGoodNews(productToDisplay) 
     block goodNewsHead
       h3 We have an ecommerce design service for
-      h3 <mark id="business-idea"></mark> – Starting at <mark><span id="product-price">!{productToDisplay.price}</span>/mo*</mark>
+      h3 <span id="business-idea"></span> – Starting at <span id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
     block check-pro-goodNews
       .pro-wrapper
         .col-xs-6
@@ -43,7 +44,7 @@ block getItNow
               button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn(type="submit" data-form="addtocart-form") GET IT NOW
               p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
           .col-xs-6
-            p Starting at <mark><span id="product-price">!{productToDisplay.price}</span>/mo*</mark>
+            p Starting at <span id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
 
 block domainSearchWizard
 
@@ -56,7 +57,7 @@ block got
   - var productToDisplay = {name: "ECOMMERCE DESIGN SERVICES", info: "Our Professional Web Services team will work with you to build a complete online store your customers will love.", cssClass: "<div class='pro-computer'></div>", price: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]", formAction: "[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]"};
   +renderReadyToTakeBusinessOnline(productToDisplay)
     block checkPro
-      h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark id="business-idea2"></mark> starting at <mark><span id="product-price">!{productToDisplay.price}</span>/mo*</mark>
+      h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
     block checkPro-bottom
       .pro-wrapper.row
         .col-xs-6
@@ -77,5 +78,5 @@ block got
                 input(type="hidden", name="newxs", value="False")
                 input(type="hidden", name="cicode", value="58348")
                 input(type="hidden", name="prog_id", value="GoDaddy")
-                button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn(type="submit" data-form="addtocart-form") GET IT NOW
+                button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn2(type="submit" data-form="addtocart-form") GET IT NOW
                 p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>

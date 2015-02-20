@@ -837,6 +837,7 @@ function getParameterByName(name) {
         .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
         .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
         .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -865,6 +866,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -890,6 +893,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -960,6 +965,7 @@ function getParameterByName(name) {
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -989,6 +995,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1014,6 +1022,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -1084,6 +1094,7 @@ function getParameterByName(name) {
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="getItNow">
@@ -1099,7 +1110,7 @@ function getParameterByName(name) {
               <h2 class="heading">Here you go...</h2>
               <div class="starter-pack"></div>
               <h3>We have an ecommerce design service for</h3>
-              <h3><mark id="business-idea"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
+              <h3><span id="business-idea"></span> – Starting at <span id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></h3>
             </div>
           </div>
           <div class="pro-wrapper">
@@ -1124,7 +1135,7 @@ function getParameterByName(name) {
                 </form>
               </div>
               <div class="col-xs-6">
-                <p>Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></p>
+                <p>Starting at <span id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></p>
               </div>
             </div>
           </div>
@@ -1144,6 +1155,7 @@ function getParameterByName(name) {
         .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
         .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
         .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1172,6 +1184,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1197,6 +1211,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -1267,6 +1283,7 @@ function getParameterByName(name) {
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="pro-specific">
@@ -1279,19 +1296,19 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-4 first">
             <div class="pro-expand"></div>
-            <h4 class="uppercase"><mark>Step One</mark></h4>
+            <h4 class="uppercase"><span class="steps">Step One</span></h4>
             <h3>Share your vision</h3>
             <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
           </div>
           <div class="col-xs-4">
             <div class="pro-share"></div>
-            <h4 class="uppercase"><mark>Step Two</mark></h4>
+            <h4 class="uppercase"><span class="steps">Step Two</span></h4>
             <h3>We go to work</h3>
             <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
           </div>
           <div class="col-xs-4">
             <div class="pro-work"></div>
-            <h4 class="uppercase"><mark>Step Three</mark></h4>
+            <h4 class="uppercase"><span class="steps">Step Three</span></h4>
             <h3>Enhance & Expand</h3>
             <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
           </div>
@@ -1300,7 +1317,7 @@ function getParameterByName(name) {
           <div style="margin-top:30px">
             <div class="col-sm-9 speach-bubble-left-white">
               <div class="speach-bubble-left-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
                 <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
               </div>
             </div>
@@ -1355,6 +1372,7 @@ function getParameterByName(name) {
         .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
         .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
         .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1383,6 +1401,8 @@ function getParameterByName(name) {
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
         .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1408,6 +1428,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -1478,6 +1500,7 @@ function getParameterByName(name) {
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="features">
@@ -1543,6 +1566,8 @@ function getParameterByName(name) {
       .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -1613,6 +1638,7 @@ function getParameterByName(name) {
       .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
       .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="got">
@@ -1620,7 +1646,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <mark id="business-idea2"></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></h3>
           </div>
           <div class="pro-wrapper row">
             <div class="col-xs-6"><div class='pro-computer'></div></div>
@@ -1640,7 +1666,7 @@ function getParameterByName(name) {
                     <input type="hidden" name="newxs" value="False"/>
                     <input type="hidden" name="cicode" value="58348"/>
                     <input type="hidden" name="prog_id" value="GoDaddy"/>
-                    <button id="get-it-btn" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                    <button id="get-it-btn2" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
                     <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
                   </form>
                 </div>

@@ -13,6 +13,7 @@ mixin renderProSection()
         .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
         .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
         .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
 
   section#pro-specific
     .container
@@ -23,24 +24,24 @@ mixin renderProSection()
       .row
         .col-xs-4.first
           .pro-expand
-          h4.uppercase <mark>Step One</mark>
+          h4.uppercase <span class="steps">Step One</span>
           h3 Share your vision
           p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
         .col-xs-4
           .pro-share
-          h4.uppercase <mark>Step Two</mark>
+          h4.uppercase <span class="steps">Step Two</span>
           h3 We go to work
           p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
         .col-xs-4
           .pro-work
-          h4.uppercase <mark>Step Three</mark>
+          h4.uppercase <span class="steps">Step Three</span>
           h3 Enhance & Expand
           p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
       .row
         div(style={'margin-top':'30px'})
           .col-sm-9.speach-bubble-left-white
             div.speach-bubble-left-div
-              h5.uppercase <mark><strong>did you know...</strong></mark>
+              h5.uppercase <span class="steps"><strong>did you know...</strong></span>
               h5(style={'margin-top':'10px','text-transform':'none'}) Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.
           .col-sm-3
             div.half-hero-left
