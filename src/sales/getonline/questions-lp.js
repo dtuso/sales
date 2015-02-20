@@ -101,7 +101,7 @@
       else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "build_myself" && domainName != ""){
         //ONLINE STORE
         resultPage = '[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54d28923f778fc21301a8966';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54de7adff778fc03ac812903';
         
         window.location = resultPage;
       }

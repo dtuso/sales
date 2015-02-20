@@ -90,8 +90,7 @@ function stripDomainName(){
        }
         
     }
-};
-// Array indexOf shim for IE9 and below
+};// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
     var len = this.length >>> 0;
@@ -1100,7 +1099,7 @@ function getParameterByName(name) {
               <h2 class="heading">Here you go...</h2>
               <div class="starter-pack"></div>
               <h3>We have an ecommerce design service for</h3>
-              <h3><mark id="business-idea"></mark> – Starting at <mark>$149.99/mo*</mark></h3>
+              <h3><mark id="business-idea"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
             </div>
           </div>
           <div class="pro-wrapper">
@@ -1109,11 +1108,23 @@ function getParameterByName(name) {
               <h3 class="product-name">ECOMMERCE DESIGN SERVICES</h3>
               <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
               <div class="col-xs-6">
-                <btn id="get-it-now-btn" class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
-                <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                  <input type="hidden" name="product" value="1023|1|1"/>
+                  <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan"/>
+                  <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
+                  <input type="hidden" name="itc" value="slp_webdesign2"/>
+                  <input type="hidden" name="nocos" value="False"/>
+                  <input type="hidden" name="config" value="customsite"/>
+                  <input type="hidden" name="sdc" value="True"/>
+                  <input type="hidden" name="newxs" value="False"/>
+                  <input type="hidden" name="cicode" value="58348"/>
+                  <input type="hidden" name="prog_id" value="GoDaddy"/>
+                  <button id="get-it-btn" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                </form>
               </div>
               <div class="col-xs-6">
-                <p>Starting at <mark>$149.99/mo*</mark></p>
+                <p>Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></p>
               </div>
             </div>
           </div>
@@ -1609,7 +1620,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <mark id="business-idea2"></mark> starting at <mark>$149.99/mo*</mark></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <mark id="business-idea2"></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
           </div>
           <div class="pro-wrapper row">
             <div class="col-xs-6"><div class='pro-computer'></div></div>
@@ -1618,8 +1629,20 @@ function getParameterByName(name) {
               <p class="p1">Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
               <div class="row">
                 <div class="col-xs-12">
-                  <btn id="get-it-now-btn" class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
-                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                  <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                    <input type="hidden" name="product" value="1023|1|1"/>
+                    <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan"/>
+                    <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
+                    <input type="hidden" name="itc" value="slp_webdesign2"/>
+                    <input type="hidden" name="nocos" value="False"/>
+                    <input type="hidden" name="config" value="customsite"/>
+                    <input type="hidden" name="sdc" value="True"/>
+                    <input type="hidden" name="newxs" value="False"/>
+                    <input type="hidden" name="cicode" value="58348"/>
+                    <input type="hidden" name="prog_id" value="GoDaddy"/>
+                    <button id="get-it-btn" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                    <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                  </form>
                 </div>
               </div>
             </div>

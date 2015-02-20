@@ -39,7 +39,7 @@ mixin renderGoodNews(productToDisplay)
             .starter-pack
             block goodNewsHead
               h3 A great package deal for
-              h3 <mark id="business-idea"></mark> – Starting at <mark>#{productToDisplay.price}</mark>
+              h3 <mark id="business-idea"></mark> – Starting at <mark id="product-price">#{productToDisplay.price}</mark>
         block check-pro-goodNews  
           .container.bottom
             .row
@@ -63,6 +63,6 @@ mixin renderGoodNews(productToDisplay)
               .row.text-center
                 p.h3.center Get the bundle for $1/month for the first year*
               .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                btn.btn-purchase.btn-plan.btn-lg#get-it-now-btn GET IT NOW
+                btn.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn GET IT NOW
               .row.text-center(style={'padding-top':'10px'})
                 p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

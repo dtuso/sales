@@ -90,8 +90,7 @@ function stripDomainName(){
        }
         
     }
-};
-// Array indexOf shim for IE9 and below
+};// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
     var len = this.length >>> 0;
@@ -868,7 +867,7 @@ function getParameterByName(name) {
               <h2 class="heading">Here you go...</h2>
               <div class="starter-pack"></div>
               <h3>A great package deal for</h3>
-              <h3><mark id="business-idea"></mark> – Starting at <mark>$2.00</mark></h3>
+              <h3><mark id="business-idea"></mark> – Starting at <mark id="product-price">$2.00</mark></h3>
             </div>
           </div>
           <div class="container bottom">
@@ -899,7 +898,7 @@ function getParameterByName(name) {
                 <p class="h3 center">Get the bundle for $1/month for the first year*</p>
               </div>
               <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn id="get-it-now-btn" class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
+                <btn id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</btn>
               </div>
               <div style="padding-top:10px" class="row text-center">
                 <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
