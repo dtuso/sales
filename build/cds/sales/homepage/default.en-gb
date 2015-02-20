@@ -153,49 +153,142 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div class="col-lg-8 col-md-12 col-sm-12">
             <div class="hero-wrapper">
               <atlantis:webstash type="css">
                 <style>#marquee {
   background-color: #f47f00;
 }
-#gtld .headline {
+#gtld-hero {
+  color: #fff;
+}
+#gtld-hero .headline {
   font-size: 26px;
   line-height: 26px;
-  color: #ffffff;
 }
-#gtld .maintext {
-  display: block;
-  font-size: 42px;
-  line-height: 42px;
+#gtld-hero .maintext {
+  font-size: 60px;
+  line-height: 60px;
   padding-top: 12px;
-  color: #ffffff;
 }
-#gtld .subtext {
-  display: block;
-  font-size: 24px;
-  line-height: 24px;
+#gtld-hero .subtext {
+  font-size: 15px;
+  line-height: 15px;
   margin-top: 10px;
+}
+#gtld-hero .gtld-phone {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAAFFCAYAAACzGBWLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDhBNjdGODZCMEEyMTFFNDlDNURFNEU5NDlCRTRBM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDhBNjdGODdCMEEyMTFFNDlDNURFNEU5NDlCRTRBM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOEE2N0Y4NEIwQTIxMUU0OUM1REU0RTk0OUJFNEEzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOEE2N0Y4NUIwQTIxMUU0OUM1REU0RTk0OUJFNEEzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoP1eRwAAATUSURBVHja7Nm7bcJAAIBh26ICp0NMwiSMkgVggozCJOwRiTqQJsLhpCSiSINB9/L3Sa4t3+PnbNphGBoAHtcZAgBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFQBBBRBUgIzNYtxkvV7nPAa76/VqKcDD3n72U5YOh0MdQc08plv7AJ5ie7OvvPKLKfCEqAqqmAKiKqhiCqIqqGIKoiqoYgqI6mSDKqYgqoIqpiCqgiqmwMSiWnNQxRREVVDFFERVUMUUmHBUawuqmIKoCqqYgqgKqpgColpNUMUURFVQxRSoKaolB1VMQVQFVUyBGqNaYlDFFERVUMUUqDmqJQVVTEFUBVVMgSlEtYSgiilQRFRzD6qYAsVENeegiilQVFRzDaqYAsVFdVZ6TNu2bS6XS3M6nZphGCw1KEzYw4vFoum67p49vL3phaA+62QaYhomZLVaWZlQqPP5/LeX7zypZhXVnII66jU/nExDTPf7fTOfz61MKDCmm82mOR6PTd/3Y17/s4lqLkEdFdPbE+pyubQyoUDhIPT76W6kbKKaw59So2MahIkI313CrxxQ5gk17OE7X/f/i+rkg/pQTAFyimrKoIopUFVUUwVVTIHqopoiqGIKVBnV2EEVU6DaqMYMqpgCVUe1i/hQYgqkimqU/sQK6s6cAglFaVCsoH6aTyChKA2KFdQv8wkkFKVBnXEGEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBRBUAAQVQFABBBUAQQUQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQAQQVAUAEEFUBQARBUAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQUQVAAEFUBQAQQVAEEFEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBRBUAAQVQFABBBUAQQUQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFYAcg/piqIGEojRoFulh3q9Xb06BRD5i3ORbgAEABlWSZRWC0tkAAAAASUVORK5CYII=) no-repeat center center;
+  background-size: cover;
+}
+#gtld-hero .gtld-phone ul {
+  padding: 55px 50px 0 51px;
+  list-style: none;
+  margin-bottom: 0;
+}
+#gtld-hero .gtld-phone li {
+  margin: 0;
+  padding: 10px 0;
+  min-height: 50px;
+  border-bottom: #b9babb solid 1px;
+}
+#gtld-hero .gtld-phone li a {
+  text-decoration: none;
+  color: #333333;
+}
+#gtld-hero .gtld-phone li .gtld {
+  font-size: 1.2em;
+  display: inline-block;
+  float: left;
+}
+#gtld-hero .gtld-phone li .arrow {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141024.png) scroll -392px -10px no-repeat;
+  width: 8px;
+  height: 35px;
+  display: inline-block;
+  float: right;
+  margin: 0 10px;
+}
+#gtld-hero .gtld-phone li .price-container {
+  font-size: 1.2em;
+  display: table;
+  float: right;
+  text-align: right;
+}
+#gtld-hero .gtld-phone li .price {
+  display: table-cell;
+  vertical-align: middle;
+  color: #f2812e;
+}
+#gtld-hero .gtld-phone li .price strike,
+#gtld-hero .gtld-phone li .price nostrike {
+  display: block;
+  color: #333;
+}
+#gtld-hero .gtld-phone li:last-child {
+  border-bottom: 0px;
 }
 
                 </style>
               </atlantis:webstash>
-              <div id="gtld" class="container">
+              <div id="gtld-hero" class="container">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-6">
-                    <div class="headline Walsheim-Black">[@L[cds.sales/homepage/locales/en:gtld-tile-headline]@L]</div>
+                  <div class="col-sm-12 col-lg-6">
+                    <div class="headline walsheim-black">[@L[cds.sales/homepage/locales/en:gtld-tile-headline]@L]</div>
                     <div class="maintext tungsten">[@L[cds.sales/homepage/locales/en:gtld-tile-maintext]@L]</div>
                     <div class="subtext">[@L[cds.sales/homepage/locales/en:gtld-tile-subtext]@L]</div><a class="btn btn-purchase">[@L[cds.sales/homepage/locales/en:gtld-tile-btn]@L]</a>
+                  </div>
+                  <div class="col-xs-6 col-sm-6 col-lg-6">
+                    <div class="gtld-phone">
+                      <ul>
+                        <li> <a id="gdhp-marq-gtld-1" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-1]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-1]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-1]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-1]@L]</span></span></a></li>
+                        <li> <a id="gdhp-marq-gtld-2" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-2]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-2]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-2]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-2]@L]</span></span></a></li>
+                        <li> <a id="gdhp-marq-gtld-3" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-3]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-3]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-3]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-3]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-4" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-4]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-4]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-4]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-4]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-5" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-5]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-5]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-5]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-5]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-6" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-6]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-6]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-6]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-6]@L]</span></span></a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+                  <div class="tile-wrapper">
+                    <atlantis:webstash type="css">
+                      <style>
+                        .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
+                        .marquee-tile-tld .price-text {color:#fff;}
+                        .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
+                        .marquee-tile-tld .cta {display:none}
+                        .marquee-tile-tld .price {font-size:1.5em}
+                        .co-uk.marquee-tile-tld img{width:25%}
+                        
+                      </style>
+                      <style>
+                        .co-uk.marquee-tile-tld{background-color:#fff}
+                        .co-uk .price-text{color:#333}
+                      </style>
+                    </atlantis:webstash>
+                    <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld">
+                      <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NCAxMDYuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDEwNi44IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMjAyQzU1IiBkPSJNNC44IDYzLjhDMi4yIDYzLjggMCA2NiAwIDY4LjdjMCAyLjcgMi4yIDQuOCA0LjggNC44IDIuNyAwIDQuOC0yLjIgNC44LTQuOEM5LjcgNjYgNy41IDYzLjggNC44IDYzLjhNMTQ5IDcxLjVjLTMuMSAwLTQuNS0xLjUtNi0zLjNsLTExLjMtMTQgNi4xLTUuMWMyLjUtMi4xIDQuOC0zLjcgNy44LTMuNyAwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xaC0xMi44Yy0wLjUgMC0wLjggMC4zLTAuOCAxIDAgMC43IDAuMiAxIDAuOCAxaDAuN2MyLjEgMCAyLjIgMS40IDAuOCAyLjdsLTkuNCA3LjdWMTkuNmMwLTEuNS0xLTIuMS0yLjctMS4zbC0xMC4yIDUuMWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43bDAgMzguNGMwIDIuNS0xLjMgMy42LTMgMy42IC0xLjggMC0zLTEuMS0zLTMuNlY0MS42YzAtMS41LTEtMi4xLTIuNy0xLjNsLTEwLjIgNS4xYy0wLjggMC40LTAuNyAxLjIgMCAxLjMgMS43IDAuMyAzLjQgMC40IDMuNCA0Ljd2MTIuM2MwIDIuNS0yLjEgNi4yLTUuMSA2LjIgLTMuMiAwLTQuOS0yLjUtNC45LTcuM1Y0NS4xYzAtMS41LTEtMi4xLTIuNy0xLjNMNzcgNDguOWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43VjY0YzAgNy4xIDQuNSAxMC4zIDkuNSAxMC4zIDQuMSAwIDguNC0xLjYgMTAuNi01LjIgMC4yIDIuNyAwLjkgNC41IDQuNCA0LjVoMjIuN2MwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xIC0xLjggMC0yLjYtMC44LTIuNi0yLjl2LTExbDguOSAxMi4zYzAuOSAxLjIgMC4yIDEuNy0xIDEuNyAtMC41IDAtMC44IDAuMy0wLjggMSAwIDAuNyAwLjIgMSAwLjggMUgxNDljMC42IDAgMC44LTAuMyAwLjgtMUMxNDkuOCA3MS44IDE0OS42IDcxLjUgMTQ5IDcxLjVNMjcuMSA3MC4xYy02LjUgMC0xMC41LTQuMy0xMC41LTExLjMgMC02LjkgNC4xLTExLjUgMTAuMy0xMS41IDIuNCAwIDQuMSAwLjQgNy4yIDEuN2wwLjYgMC4ydi00LjNMMzQuNCA0NWMtMy4zLTEuMS01LjItMS40LTcuNy0xLjQgLTguNCAwLTE0LjIgNi40LTE0LjIgMTUuNiAwIDguOCA1LjggMTQuOCAxNC4zIDE0LjggMi43IDAgNC43LTAuNCA4LTEuNWwwLjMtMC4xdi00LjFsLTAuNiAwLjJDMzEuNiA2OS43IDI5LjcgNzAuMSAyNy4xIDcwLjFNNTEuMSA0My41Yy04LjUgMC0xNC45IDYuNS0xNC45IDE1LjIgMCA4LjYgNi40IDE1LjIgMTQuOSAxNS4yIDguNSAwIDE0LjgtNi41IDE0LjgtMTUuMkM2NS45IDUwLjEgNTkuNiA0My41IDUxLjEgNDMuNU01MS4xIDcwLjFjLTYuMyAwLTEwLjgtNC44LTEwLjgtMTEuMyAwLTYuNiA0LjYtMTEuNCAxMC44LTExLjQgNi4xIDAgMTAuOCA0LjkgMTAuOCAxMS40QzYxLjkgNjUuMiA1Ny4yIDcwLjEgNTEuMSA3MC4xTTEyMC42IDBjLTE1LjQgMC0zMCA2LjYtNDAuMSAxOC4yIC0xLjIgMS40LTEuMSAzLjQgMC4zIDQuNiAwLjYgMC41IDEuNCAwLjggMi4yIDAuOCAwLjkgMCAxLjgtMC40IDIuNS0xLjEgOC45LTEwLjEgMjEuNy0xNS45IDM1LjItMTUuOSAyNS44IDAgNDYuOSAyMSA0Ni45IDQ2LjkgMCAyNS44LTIxIDQ2LjktNDYuOSA0Ni45IC0xNi4xIDAtMzAuOS04LjEtMzkuNi0yMS44IC0xLTEuNS0zLTItNC41LTEgLTEuNSAxLTIgMy0xIDQuNSA5LjkgMTUuNSAyNi43IDI0LjggNDUuMSAyNC44IDI5LjQgMCA1My40LTI0IDUzLjQtNTMuNEMxNzQgMjQgMTUwIDAgMTIwLjYgME03Ny42IDY4LjVjMC0yLjctMi4yLTQuOC00LjgtNC44IC0yLjcgMC00LjggMi4yLTQuOCA0LjggMCAyLjcgMi4yIDQuOCA0LjggNC44Qzc1LjQgNzMuMyA3Ny42IDcxLjEgNzcuNiA2OC41Ii8+PC9zdmc+" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIMAAABPCAMAAAD/aYabAAAAn1BMVEVMaXEgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFVIuu/rAAAANHRSTlMADyM1/vH6YCCu9m4LgQaR0AMB2CpS6TuWy3QUxL2gnS8dhrNM4O5oehlZAkSMuKXd5UDf5BmFXgAABU1JREFUeAHF2ud2qlAQBeChSxERxS7W2LFlv/+z3cUQFBRCXAsu3z+jnGwp42lUuvZcC/ThzQCAzXXi79Z7+q9E86zgzXXmWfR/jEdD5DH0dZsqN7+o+NVtJFScYIU04/bVU5CmNC2qzN6X8XC9mCfRJjaWtOXUwENPO1Il3K2CH+p5u6BXdn/5hdikSxXYn/HjOhrnxbzP1Dim6VLZ7j1EHO/4a9TAQEQXqFxbGex2OFKB8UAG64hUIjcAkwOL/mA+BOtJJUYYgH336W/spoyQ0qeyDMBWAv3ZaROFkKgcO7CgTZkk/3KkN2IHoU2XSqEgNMpJcAawoHfjIULfYypB2wCALWW5TxFqUAYhCjFtUwmWAHaU4TQF8jOQ0EGoSWU4jfr07jgBcjOwBdc1uU/VOfhyfgbWV7lW2VShoCAD7eKrUR2pKEN0vYwFVadRlIFEvhqzWjPwQwVZrDWDxUV7UGsGagKAIdSaQeBSb9aagVoAMKw3wxwhsdYM5FRzMdzTyCrOkCyWUyrX8eAAXjJDcTU12uUm6ACA9ucMbQUAJHrh9peroTP1zbn7HM9fJs7kYi4oy2JwM6MGtSuQmWGnxDYSpazizyetO4jd9hSSpoituvRKHKiATkTkcYLMDGs/atWYzhYZ9bpFSfYMT3y825TxpI5eEvj8LmcYOdkZ2D1MsBPolcZfjRKOOoBN6ySORa91C493LwBU3+vuuwddBhDQU/cig+nEmnkZuBc7FPNuSuf1UbnEYdtrIWp21UgOkrYU82QglcGSczLMv4GZTRkWANCjp4YKDFxKmMvA7EgxawoYjcer9TmdgXrZGTwDqkmZBL7C6UGTk067evmLcEv1OuxbOsNXVga3CWzulAOhRIsb4PB2ptJHbwHDoge/OIMQfo8G5VHTGfqAYb/+xw6l2Arg0UOrMMOpk+iwFZ8HEzhTig+0KE0Hmp9kUBEyiRXfD8Fbx2r6fvQS8D/JYCAkn4gVPhcDIKCUyXsd3QH6Jxk0GaGNSKyoPrT+ch4CYPZJhkYTrCMQK6iTO36VNHtLRasP74dGewp2bhP7/ffCA5T263NxpRTbANZvGc6/ZKD9Biwglv272fWHq7DdsQx4lLSXgTUlmVF9mOu9zs4mWoJNfq2Ta0S0/P6DZMRzKWfAaVOS/jI03vf46syNnyswAtscKSQiMwMFYGo/tx81QUgdc5FCy6WErgrodmr+RNlztCj/GpEThQY5Gex4QrCR15+UwdY/pVffPwJI0RedzCly7yCq5lewLVkqmGMR0UFGZJs4JyKfICX+WE6/WgHrE5E1AWBctP5c8pYOmj93nXze3ucnc4J45mfyiN1C5LrbXgAdzA8DIXInSryaWtnjiwFCHb4RLB1PnIFMFU+GlmjyahONr3haimDyTjr0EJn0BSLrLiPyZUrjjHGWtQJw7VLEcxD78igkXuIU6qM3ODIAh0/zYpL8eAvvdKIACU7meFPS1jY9zM2ZftZb2y7FxoeWftaDg0APQj9+++jp38rG8T1uonvQXklEXS3hXv24+1XF8w+WTcUqnYdpz2S1ScWqnI/SwNWiWIXzcnxHKcVtVDk/eUJoaFOx6uZpfXx4QSuYrxa+EdpRserm7SUVoS0VqHT9QgMzqUCV6zjUBAtcKlDhehYNwPS61vWS65vXv7bYLn99k9wWmLysaZ2XmTLYt+fWst7NTs91f7eOdX+2mOJHx8zd/9Cvbv8Dc00DP9SVtq9hH0hoccFTxzdPolXtfpj81e0ko/d/9wUxqe79UWy/c2reJ8a6o6lR43655L7B1Uf7Bv8BlY+nc7oIlB4AAAAASUVORK5CYII=" class="img-responsive"><![endif]-->
+                        ##if(productHasDiscountMoreThan(57465, 5)) 
+                         
+                        <div class="headline">[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] OFF 100% BRILLIANT</div> 
+                        ##else
+                         
+                        <div class="headline">100% BRILLIANT</div> 
+                        ##endif
+                        <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
+                        <atlantis:webstash type="js">
+                          <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
+                        </atlantis:webstash>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-12 col-sm-6"> 
                   <div class="tile-wrapper">
@@ -214,7 +307,7 @@
                         .co-uk .price-text{color:#333}
                       </style>
                     </atlantis:webstash>
-                    <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld">
+                    <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld co-uk marquee-tile-tld">
                       <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NCAxMDYuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDEwNi44IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMjAyQzU1IiBkPSJNNC44IDYzLjhDMi4yIDYzLjggMCA2NiAwIDY4LjdjMCAyLjcgMi4yIDQuOCA0LjggNC44IDIuNyAwIDQuOC0yLjIgNC44LTQuOEM5LjcgNjYgNy41IDYzLjggNC44IDYzLjhNMTQ5IDcxLjVjLTMuMSAwLTQuNS0xLjUtNi0zLjNsLTExLjMtMTQgNi4xLTUuMWMyLjUtMi4xIDQuOC0zLjcgNy44LTMuNyAwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xaC0xMi44Yy0wLjUgMC0wLjggMC4zLTAuOCAxIDAgMC43IDAuMiAxIDAuOCAxaDAuN2MyLjEgMCAyLjIgMS40IDAuOCAyLjdsLTkuNCA3LjdWMTkuNmMwLTEuNS0xLTIuMS0yLjctMS4zbC0xMC4yIDUuMWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43bDAgMzguNGMwIDIuNS0xLjMgMy42LTMgMy42IC0xLjggMC0zLTEuMS0zLTMuNlY0MS42YzAtMS41LTEtMi4xLTIuNy0xLjNsLTEwLjIgNS4xYy0wLjggMC40LTAuNyAxLjIgMCAxLjMgMS43IDAuMyAzLjQgMC40IDMuNCA0Ljd2MTIuM2MwIDIuNS0yLjEgNi4yLTUuMSA2LjIgLTMuMiAwLTQuOS0yLjUtNC45LTcuM1Y0NS4xYzAtMS41LTEtMi4xLTIuNy0xLjNMNzcgNDguOWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43VjY0YzAgNy4xIDQuNSAxMC4zIDkuNSAxMC4zIDQuMSAwIDguNC0xLjYgMTAuNi01LjIgMC4yIDIuNyAwLjkgNC41IDQuNCA0LjVoMjIuN2MwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xIC0xLjggMC0yLjYtMC44LTIuNi0yLjl2LTExbDguOSAxMi4zYzAuOSAxLjIgMC4yIDEuNy0xIDEuNyAtMC41IDAtMC44IDAuMy0wLjggMSAwIDAuNyAwLjIgMSAwLjggMUgxNDljMC42IDAgMC44LTAuMyAwLjgtMUMxNDkuOCA3MS44IDE0OS42IDcxLjUgMTQ5IDcxLjVNMjcuMSA3MC4xYy02LjUgMC0xMC41LTQuMy0xMC41LTExLjMgMC02LjkgNC4xLTExLjUgMTAuMy0xMS41IDIuNCAwIDQuMSAwLjQgNy4yIDEuN2wwLjYgMC4ydi00LjNMMzQuNCA0NWMtMy4zLTEuMS01LjItMS40LTcuNy0xLjQgLTguNCAwLTE0LjIgNi40LTE0LjIgMTUuNiAwIDguOCA1LjggMTQuOCAxNC4zIDE0LjggMi43IDAgNC43LTAuNCA4LTEuNWwwLjMtMC4xdi00LjFsLTAuNiAwLjJDMzEuNiA2OS43IDI5LjcgNzAuMSAyNy4xIDcwLjFNNTEuMSA0My41Yy04LjUgMC0xNC45IDYuNS0xNC45IDE1LjIgMCA4LjYgNi40IDE1LjIgMTQuOSAxNS4yIDguNSAwIDE0LjgtNi41IDE0LjgtMTUuMkM2NS45IDUwLjEgNTkuNiA0My41IDUxLjEgNDMuNU01MS4xIDcwLjFjLTYuMyAwLTEwLjgtNC44LTEwLjgtMTEuMyAwLTYuNiA0LjYtMTEuNCAxMC44LTExLjQgNi4xIDAgMTAuOCA0LjkgMTAuOCAxMS40QzYxLjkgNjUuMiA1Ny4yIDcwLjEgNTEuMSA3MC4xTTEyMC42IDBjLTE1LjQgMC0zMCA2LjYtNDAuMSAxOC4yIC0xLjIgMS40LTEuMSAzLjQgMC4zIDQuNiAwLjYgMC41IDEuNCAwLjggMi4yIDAuOCAwLjkgMCAxLjgtMC40IDIuNS0xLjEgOC45LTEwLjEgMjEuNy0xNS45IDM1LjItMTUuOSAyNS44IDAgNDYuOSAyMSA0Ni45IDQ2LjkgMCAyNS44LTIxIDQ2LjktNDYuOSA0Ni45IC0xNi4xIDAtMzAuOS04LjEtMzkuNi0yMS44IC0xLTEuNS0zLTItNC41LTEgLTEuNSAxLTIgMy0xIDQuNSA5LjkgMTUuNSAyNi43IDI0LjggNDUuMSAyNC44IDI5LjQgMCA1My40LTI0IDUzLjQtNTMuNEMxNzQgMjQgMTUwIDAgMTIwLjYgME03Ny42IDY4LjVjMC0yLjctMi4yLTQuOC00LjgtNC44IC0yLjcgMC00LjggMi4yLTQuOCA0LjggMCAyLjcgMi4yIDQuOCA0LjggNC44Qzc1LjQgNzMuMyA3Ny42IDcxLjEgNzcuNiA2OC41Ii8+PC9zdmc+" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,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" class="img-responsive"><![endif]-->
                         ##if(productHasDiscountMoreThan(57465, 5)) 
                          

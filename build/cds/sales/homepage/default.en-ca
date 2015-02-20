@@ -153,10 +153,10 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div class="col-lg-8 col-md-12 col-sm-12">
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-sm-6">
