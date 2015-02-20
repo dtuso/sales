@@ -84,11 +84,585 @@ function stripDomainName(){
        var inputName = params[i].split("=")[0];
        var inputValue = params[i].split("=")[1];
        if(inputName == "domain"){
+         inputValue = decodeURIComponent(inputValue);
          $("#business-idea").text(inputValue);
+         $("#business-idea2").text(inputValue);
        }
         
     }
+};// Array indexOf shim for IE9 and below
+if (!Array.prototype.indexOf){
+  Array.prototype.indexOf = function(elt /*, from*/) {
+    var len = this.length >>> 0;
+    var from = Number(arguments[1]) || 0;
+    from = (from < 0) ? Math.ceil(from) : Math.floor(from);
+    if (from < 0) from += len;
+    for (; from < len; from++) {
+      if (from in this && this[from] === elt) return from;
+    }
+    return -1;
+  };
 }
+
+var domainSearch = {
+  tldInfo: {
+    defaultTld: 'com', 
+    lastTldInList: 'org', 
+    tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
+    possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
+  },
+  sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
+  maxNumberOfSpinsToShowByDefault: 3,
+  totalSpinResults: 0,
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+  offersCodes: {
+    packageId_wsb: 'gybo_1email_1yr',
+    packageId_ols: 'gybo_1email_1yr_ols',
+    itc_wsb: 'slp_GYBO1',
+    itc_ols: 'slp_GYBO2',
+  },
+  pricing: {
+    promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
+    bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
+    bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+  },
+  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
+  canOfferOls: true,
+  animationTime: 800,
+  animationEasingType: 'swing',
+  isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
+  showChoicesWithAvailableDomain: true
+};
+
+##if(!productIsOffered(105))
+  domainSearch.canOfferOls = false;
+##endif
+
+##if(countrySiteAny(ca) || isManager())  
+  if(domainSearch.tldInfo.isPossibleAdditionalTld('ca')) {
+    domainSearch.tldInfo.tlds.push('ca');
+    domainSearch.tldInfo.defaultTld = 'ca';
+  }
+##endif
+##if(countrySiteAny(br) || isManager())
+  if(domainSearch.tldInfo.isPossibleAdditionalTld('br')) {
+    domainSearch.tldInfo.tlds.push('br');
+    domainSearch.tldInfo.defaultTld = 'br';
+  }
+##endif
+##if(countrySiteAny(in) || isManager())
+  if(domainSearch.tldInfo.isPossibleAdditionalTld('in')) {
+    domainSearch.tldInfo.tlds.push('in');
+    domainSearch.tldInfo.defaultTld = 'in';
+  }
+##endif
+##if(countrySiteAny(uk) || isManager())
+  if(domainSearch.tldInfo.isPossibleAdditionalTld('co.uk')) {
+    domainSearch.tldInfo.tlds.push('co.uk');
+    domainSearch.tldInfo.defaultTld = 'co.uk';
+  }
+  if(domainSearch.tldInfo.isPossibleAdditionalTld('uk')) {
+    domainSearch.tldInfo.tlds.push('uk');
+    domainSearch.tldInfo.defaultTld = 'uk';
+  }
+##endif
+
+//- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
+domainSearch.tldInfo.tlds.sort();
+domainSearch.tldInfo.tlds.splice(domainSearch.tldInfo.tlds.indexOf(domainSearch.tldInfo.defaultTld), 1); //- remove default from list
+domainSearch.tldInfo.tlds.unshift(domainSearch.tldInfo.defaultTld); //- add default to the beginning
+domainSearch.tldInfo.tlds.splice(domainSearch.tldInfo.tlds.indexOf(domainSearch.tldInfo.lastTldInList), 1); //- remove  lastTldInList from list
+domainSearch.tldInfo.tlds.push(domainSearch.tldInfo.lastTldInList); //- add to the end of the list
+
+$(document).ready(function() {
+
+  showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
+  
+  //- fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#products .TLD-token");
+  showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
+  showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
+  showAndOrderDynamicTldsInList("#domain-entry-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
+
+  tokenizeDisclaimerModals(); 
+  tokenizeTheDataTokenizeAttribute();
+
+  wireupModals();
+
+  //- display error on return from DPP's TLD eligibility requirements failure
+  if(getParameterByName('tldRegErr').length > 0) {
+    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
+  } else {
+    showTypeYourDomain();
+  }
+
+  // set up verify buttons on spin results to do validation before sending to DPP
+  $('#domain-available-view').on('click', '.purchase-btn', showSelectedView);
+  
+  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  $('#domain-selected-view').on('click','.btn-purchase', goToDppCheckoutPage);
+
+  displayMoreResultsLinks();
+
+  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
+  $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
+
+  $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+
+  $("[data-ci-workaround]").click(function(a){
+    var $this=$(this);
+    FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
+    fbiLibCheckQueue();
+  });
+
+});
+
+function showAndOrderDynamicTldsInList(selector) {
+
+  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
+  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
+
+  var $this = $(selector),
+    formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
+    tldList = domainSearch.tldInfo.tlds,
+    removedSpansArr = [],
+    $sortedArea = $this.find(".sorted-tld-list");
+
+  //- remove all dynamic tlds from this
+  $.each(tldList, function(idx, tld){
+    var $tldItem = $this.find(formatTldSelector(tld));
+    removedSpansArr.push($tldItem);
+  });
+
+  //- insert sorted HTML back into the original object and show the ones that are turned on
+  $sortedArea.empty();
+  $.each(removedSpansArr, function(idx, tldSpan) {
+    $sortedArea.append(tldSpan);
+  });
+
+  //- show sorted list
+  $this.find('.tld-list').show();
+}
+
+function tokenizeTheDataTokenizeAttribute() {
+  $('[data-tokenize]').each(function(){
+    var $this = $(this),
+      html = $this.html(),
+      val = $this.data('tokenize'),
+        tokenizedHtml = html.replace(/\{0\}/gi, val);
+    $this
+      .html(tokenizedHtml)
+      .removeAttr('data-tokenize');
+  });
+}
+
+function tokenizeDisclaimerModals() {
+
+  var tokenizeDisclaimerModal = function(selector, price0, price1) {
+    $(selector).each(function(idx, modal) {
+      var $modal = $(modal);
+      var htmlTokenized = $modal.html();
+      htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+      htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+      $modal.html(htmlTokenized);
+    });
+  };
+  
+  if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
+  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
+  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+}
+
+function wireupModals() {
+
+  // wire up see details links  
+
+  $('#domain-entry-view').on('click', '.see-details-disclaimer-link', function(){
+    $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
+      .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+  });
+}
+
+
+function showTldImagesInDomainArea() {
+  //dynamically build the tld images in the #findYourPerfectDomain section
+  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
+  $.each(domainSearch.tldInfo.tlds, function(idx, tld){
+    var $img = $('<img>')
+      .addClass('tld-image lazyload')
+      .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
+    $imageDiv.append($img);
+    lazyload.add($img);
+  });
+
+  // rerun the height alignment
+  $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
+  $(window).trigger('resize');
+}
+
+function domainSearchFormSubmit(e, domain) { 
+
+  var $this = $(e.target);
+
+  var newItc = domainSearch.offersCodes.itc_wsb;
+  ##if(isManager())
+    newItc = 'mgr_' + newItc;
+  ##endif
+
+  apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint1,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){ 
+
+      var 
+        exactMatchDomain = data.ExactMatchDomain || {},
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+        alternateDomains = data.RecommendedDomains || [];
+
+      if(isAvailable) {
+        $('#domainSearchWizard').find('.search-form-input').val(''); 
+
+        // Domain is available, so allow them to search again or to select this available domain        
+        showTypeYourDomain();// setup search box
+
+//        if(!domainSearch.showChoicesWithAvailableDomain) {
+        // tokenize header on search available page
+        $('#available-domain-name').text(exactMatchDomain.Fqdn);
+
+        var $thisSection = $this.closest('.js-domain-search-wizard-section');       
+
+        $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
+        $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
+
+        // Domain is taken, show spins if possible
+        if(alternateDomains.length > 0) {
+
+          // SHOW SPINS
+          showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+          $('#domainSearchWizard').find('.search-form-input').val(''); 
+
+        }
+
+        animateWizard($thisSection, $('#domain-available-view') /*toView*/);
+
+//        } else {
+//          // tokenize header on search available page
+//          $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
+
+//          // var $thisSection = $this.closest('.js-domain-search-wizard-section');
+//          var $thisSection = $('#domain-selection-view').find('.select-and-continue.recommended-domain-name');
+
+//          $('#domain-selection-view').find('.select-and-continue.recommended-domain-name').data('domain', exactMatchDomain);
+
+//          // Domain is taken, show spins if possible
+//          if(alternateDomains.length > 0) {
+
+//            // SHOW SPINS
+//            showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+//            $('#domainSearchWizard').find('.search-form-input').val(''); 
+
+//          }
+//        }
+
+      } else {
+
+        // tokenize header on search available page
+        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
+
+        var $thisSection = $this.closest('.js-domain-search-wizard-section');       
+
+        // Domain is taken, show spins if possible
+        if(alternateDomains.length > 0) {
+
+          // SHOW SPINS
+          showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+          $('#domainSearchWizard').find('.search-form-input').val(''); 
+          
+        } else {
+          // NO SPINS
+          showApi1or2SearchError(e, domain);
+        }
+
+        animateWizard($thisSection, $('#domain-not-available-view') /*toView*/);
+      }    
+
+    },
+    error: function(){
+      showApi1or2SearchError(e, domain);
+    }
+  });
+
+}
+
+
+function verifyDomainIsStillAvailable(e) {
+
+  var $this = $(e.target),
+    $thisParent = $this.parent(),
+    domain = $this.data('domain'),
+    apiEndpoint2;
+
+  $thisParent.find('.spin-results-message').hide(); // aka $this, but code is easier to read with the find()
+  $thisParent.find('.checking-availability').show();
+
+  apiEndpoint2 = '[@T[link:<relative path="~/domains/actions/json/domainavailabilitycheck.aspx"><param name="sld" value="sld" /><param name="tld" value="tld" /><param name="targetdivid" value="x" /><param name="source" value="domaincheck" /><param name="addIfAvailable" value="false" /></relative>]@T]';
+  apiEndpoint2 = apiEndpoint2.replace('sld=sld', 'sld=' + encodeURIComponent(domain.NameWithoutExtension));
+  apiEndpoint2 = apiEndpoint2.replace('tld=tld', 'tld=' + encodeURIComponent(domain.Extension));
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint2,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+      data = data || {};
+      data.Properties = data.Properties || {};
+      data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
+      if(data.Properties.domainInfo[0].isAvailable) {
+        showSelectedView(e);
+      } else {
+        // display domain is now unavailable message
+        $thisParent.find('.spin-results-message').hide();
+        $thisParent.find('.now-unavailable').show();
+      }
+    },
+    error: function(){
+      showApi1or2SearchError(e, domain);
+    }
+  });
+
+}
+
+function showSelectedView(e){
+
+  // bypass the choices if OLS is not available for their market
+  if(!domainSearch.canOfferOls) {
+    goToDppCheckoutPage(e);
+    return;
+  }
+  var $this = $(e.target),
+    domain = $this.data('domain');
+
+  // tokenize header on search available page
+  $('#selected-domain-name').text(domain.Fqdn);
+  $('#domain-selected-view').find('.btn-purchase').data('domain', domain);
+  $('#products, #domains').hide();
+  var $thisSection = $this.closest('.js-domain-search-wizard-section');
+
+  animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
+}
+
+function goToDppCheckoutPage(e) {
+  var $this = $(e.target),
+    domain = $this.data('domain'),
+    isOLS = $this.hasClass('product-ols'),
+    apiEndpoint3,
+    sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? domainSearch.offersCodes.packageId_ols : domainSearch.offersCodes.packageId_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? domainSearch.offersCodes.itc_ols : domainSearch.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
+
+  $.ajaxSetup({cache:false});
+  $.ajax({
+    url: apiEndpoint3,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+      if(data && data.Success) {
+        window.location = data.NextStepUrl;
+        return;
+      } else {
+        showApi3SearchError(e, domain);
+      }
+    },
+    error: function(){
+      showApi3SearchError(e, domain);
+    }
+  });
+
+}
+
+function showSearchSpins($this, domain, alternateDomains){  
+
+  // setup search box  
+  showTypeYourDomain();
+
+  displayMoreResultsLinks(alternateDomains.length);
+
+  // clear any spins from the DOM
+  $('#spin-results .spin-result').remove();
+  totalSpinResults =  0;
+  var $spinResults = $('#spin-results');
+  var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
+  $.each(alternateDomains, function(idx,domain){
+    var $newSpin = $spinTemplate.clone();
+    $newSpin.removeClass('spin-template');
+    $newSpin.find('.domain-name-display').text(domain.Fqdn);
+    // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
+    $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $spinResults.append($newSpin);
+  });
+  domainSearch.totalSpinResults = alternateDomains.length;
+  
+  if(domainSearch.totalSpinResults <= domainSearch.maxNumberOfSpinsToShowByDefault) {
+    hideMoreResultsLinks();
+  } else {
+    updateDomainCountText(domainSearch.maxNumberOfSpinsToShowByDefault);
+  }
+  
+  $("#spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
+}
+
+function showApi1or2SearchError(e,domain){
+  var $modal = $("#api-failure");
+  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+}
+
+function showApi3SearchError(e,domain){  
+  var $modal = $("#domain-selected-view .api-c-failure-modal");
+  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+}
+
+function showDomainRegistrationFailure(tld) {
+  var 
+    $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
+    html = $failArea.html();
+  html = html.replace(/\{0\}/gi, tld)
+  $failArea.html(html);
+  $('#domainSearchWizard .search-message').hide();
+  $('#domainSearchWizard .domain-eligibility-fail').show();
+}
+
+function showTypeYourDomain() {  
+  $('#domainSearchWizard .search-message').hide();
+  $('#domainSearchWizard .type-your-business-name').show();
+}
+
+function displayMoreResultsLinks() {
+  $("#domain-available-view .view-all-button").show();
+  $("#show-more-section").show();
+}
+
+function hideMoreResultsLinks() {
+  $("#domain-available-view .view-all-button").hide();
+  $("#show-more-section").hide();
+}
+
+function displayMoreResultsArea() {
+  $("#spin-results .spin-result").slideDown(domainSearch.animationTime);
+  hideMoreResultsLinks();
+  updateDomainCountText(domainSearch.totalSpinResults);
+}
+
+function updateDomainCountText(numberShowing) {
+  var $spinCounts = $('#spin-counts');
+  var templateHtml = $spinCounts.data("result-count-template");
+  templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
+  templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
+  $spinCounts.html(templateHtml);
+}
+
+function animateWizard($currentView, $animateToView) {  
+
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
+
+  var currentViewHeight = $currentView.height(),
+    windowWidth = $(window).width(),
+    $wizard = $('#domainSearchWizard'),
+    wizardHeight = $('#domainSearchWizard').height();
+
+  // show view offscreen to get height
+  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // can only get height when shown      
+  var toViewHeight = $animateToView.height(),
+    maxHeight = Math.max(currentViewHeight, toViewHeight),
+    minHeight = Math.min(currentViewHeight, toViewHeight);
+  
+  //run the animations
+  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+}
+
+function animateHeight($obj, startHeight, finishHeight, zIndex) {
+  $obj
+    .css({"height": startHeight + "px", "z-index": zIndex})
+    .animate({
+      "height": finishHeight + "px"
+    },{ 
+      duration: domainSearch.animationTime, 
+      easing: domainSearch.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "height": "auto", "z-index": "1"});
+      }
+  });
+}
+
+function animateObjectOffToTheLeft($obj, windowWidth, zIndex) {
+  $obj
+    .css({"position":"absolute", "left": "0px", "width": windowWidth + "px", "z-index": zIndex})
+    .animate({
+      "left": "-" + windowWidth + "px"
+    },{ 
+      duration: domainSearch.animationTime, 
+      easing: domainSearch.animationEasingType, 
+      complete:function(){
+
+        // clean up the views of the screens
+        $obj.hide().css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"});
+      }
+  });
+}
+
+function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
+
+  $obj
+    .css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px", "z-index": zIndex})
+    .show()
+    .animate({
+      "left": "0px"
+    },{ 
+      duration: domainSearch.animationTime , 
+      easing: domainSearch.animationEasingType, 
+      complete:function(){
+        $obj.css({"position":"relative", "width": "auto", "left": "0px", "z-index": "1"}).show();  
+      }
+    });
+  $(document).trigger('resize');
+}
+
+
+// Page Global script -- changes will effect all campaigns 
+// get url parameter by parameter name
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -250,8 +824,23 @@ function stripDomainName(){
       .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
       
     </style>
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
-    <!-- HEADEREND-->
+    <atlantis:webstash type="css">
+      <style>
+        #pro-specific{background-color:#77c043;}
+        .uppercase{text-transform:uppercase;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .text-center{text-align:center;}
+        .titles{margin-top:50px;}
+        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
+        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
+        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
+        .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
     <atlantis:webstash type="css">
       <style>
         .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
@@ -261,7 +850,6 @@ function stripDomainName(){
         .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
         .container .row .green-background h2{ margin-bottom: 0;}
         .get-it-now{margin-top: 35px;}
-        .heading{padding-top:30px;}
         .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
         .left-side{position: relative;}
         .right-side{position:relative;}
@@ -271,68 +859,62 @@ function stripDomainName(){
         .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
         .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
         .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:15px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
         .logo-label{padding-top: 15px;}
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
-    <section id="getItNow">
-      <div class="container">
-        <div class="col-xs-3 left-side">
-          <div class="row">
-            <div class="hero-guy"></div>
-          </div>
-        </div>
-        <div class="col-xs-9 right-side">
-          <div class="row text-center good-news-shape">
-            <div class="wrapper">
-              <h2 class="heading">GOOD NEWS!</h2>
-              <div class="starter-pack">
-                <h3>We have an excellent starter pack for</h3>
-                <h3><mark id="business-idea"></mark> – Starting at <mark></mark>  </h3>
-              </div>
-            </div>
-          </div>
-          <div class="container bottom">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-1">
-                <div class="features-domain-name"></div>
-                <label class="h3 logo-label">DOMAIN NAME</label>
-                <p>Domain is the name of your</p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2">
-                <label class="h3 logo-label"></label>
-                <p></p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2">
-                <div class="features-email"></div>
-                <label class="h3 logo-label">OFFICE 365 EMAIL</label>
-                <p>Office 365 email is the simplest email tool</p>
-              </div>
-            </div>
-            <div class="get-it-now">
-              <div class="row text-center">
-                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-              </div>
-              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn class="btn-purchase btn-plan btn-lg">GET IT NOW</btn>
-              </div>
-              <div style="padding-top:10px" class="row text-center">
-                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- p4p.domainMultipleSelection-->
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
     <atlantis:webstash type="css">
       <style>
         .container .row .topSpacing{padding-top:20px;}
@@ -354,69 +936,96 @@ function stripDomainName(){
         .domainNameDiv{line-height:1}
         .domainSelect{margin-top:10px;}
         
+        #domain-available-view .purchase-btn {
+          margin: 0;
+          font-size: 30px;
+          padding-top: 17px;
+          padding-bottom: 14px;
+        }
+        
+        #domain-available-view .available-domain-name-row {
+          margin: 62px 0 40px;
+        }
+        
+        #domain-available-view h2.available-domain-name-text {
+          margin: 0;
+        }
+        
+        
       </style>
     </atlantis:webstash>
-    <section id="domainSearch" class="green">
-      <div class="container">
-        <div class="row">
-          <div style="margin-top:35px" class="domain-icon"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="text-center">
-            <h4 style="margin-top:10px" class="domain-starts strong"> </h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase domainOption1"></span></div>
-            <div class="col-sm-3">
-              <button id="select1" class="btn btn-primary btn-select uppercase">Select</button>
-              <!--<a href="#" class="btn flt-btn flt-btn-grn btn-lg" data-bind="visible: !fullAvailCheck() &amp;&amp; !fullAvailCheckError(), css: {'btn-sm': 'header' != context, 'btn-lg': context == 'header' }, click: UpdateCart, clickBubble: false">Select</a>-->
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="container">
-            <h5 style="margin-top:20px"><strong>That one not moving you? Here are some alternatives:</strong></h5>
-          </div>
-        </div>
-        <div class="row domainSelect">
-          <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase domainOption2"></span></div>
-            <div class="col-sm-3">
-              <button id="select2" class="btn btn-primary btn-select uppercase">Select</button>
-            </div>
-          </div>
-        </div>
-        <div class="row domainSelect">
-          <div class="container white">
-            <div class="col-sm-9"><span class="domainName lowercase domainOption3"></span></div>
-            <div class="col-sm-3">
-              <button id="select3" class="btn btn-primary btn-select uppercase">Select</button>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-sm-9 speach-bubble-left-white">
-              <div class="speach-bubble-left-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="half-hero-left"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- p4p.office365-->
+    <style>
+      .btn-lg{padding: 14px 15px 9px!important;}
+      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+      .right-side{margin-top: 25px;}
+      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+      .product-name{padding-bottom: 15px;}
+      .p1{margin-bottom: 25px;}
+      .p2{margin-top: 15px;}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADEREND-->
+    <atlantis:webstash type="css">
+      <style>
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .get-it-now{margin-top: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .starter-pack{padding-bottom: 35px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
+        .logo-label{padding-top: 15px;}
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
     <atlantis:webstash type="css">
       <style>
         .container .row .topSpacing{padding-top:20px;}
@@ -435,28 +1044,281 @@ function stripDomainName(){
         
       </style>
     </atlantis:webstash>
-    <section id="O365-email" class="gray">
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
+        
+        #domain-available-view .purchase-btn {
+          margin: 0;
+          font-size: 30px;
+          padding-top: 17px;
+          padding-bottom: 14px;
+        }
+        
+        #domain-available-view .available-domain-name-row {
+          margin: 62px 0 40px;
+        }
+        
+        #domain-available-view h2.available-domain-name-text {
+          margin: 0;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
+    <style>
+      .btn-lg{padding: 14px 15px 9px!important;}
+      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+      .right-side{margin-top: 25px;}
+      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+      .product-name{padding-bottom: 15px;}
+      .p1{margin-bottom: 25px;}
+      .p2{margin-top: 15px;}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <section id="getItNow">
       <div class="container">
-        <div class="row">
-          <div style="margin-top:35px" class="email-icon"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
+        <div class="col-xs-3 left-side">
+          <div class="row">
+            <div class="hero-guy"></div>
           </div>
         </div>
+        <div class="col-xs-9 right-side">
+          <div class="row text-center good-news-shape">
+            <div class="head-wrapper">
+              <h2 class="heading">Here you go...</h2>
+              <div class="starter-pack"></div>
+              <h3>We have an ecommerce design service for</h3>
+              <h3><span id="business-idea"></span> – Starting at <span id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></h3>
+            </div>
+          </div>
+          <div class="pro-wrapper">
+            <div class="col-xs-6"><div class='pro-computer'></div></div>
+            <div class="col-xs-6">
+              <h3 class="product-name">ECOMMERCE DESIGN SERVICES</h3>
+              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+              <div class="col-xs-6">
+                <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                  <input type="hidden" name="product" value="1023|1|1"/>
+                  <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan"/>
+                  <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
+                  <input type="hidden" name="itc" value="slp_webdesign2"/>
+                  <input type="hidden" name="nocos" value="False"/>
+                  <input type="hidden" name="config" value="customsite"/>
+                  <input type="hidden" name="sdc" value="True"/>
+                  <input type="hidden" name="newxs" value="False"/>
+                  <input type="hidden" name="cicode" value="58348"/>
+                  <input type="hidden" name="prog_id" value="GoDaddy"/>
+                  <button id="get-it-btn" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                </form>
+              </div>
+              <div class="col-xs-6">
+                <p>Starting at <span id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>
+        #pro-specific{background-color:#77c043;}
+        .uppercase{text-transform:uppercase;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .text-center{text-align:center;}
+        .titles{margin-top:50px;}
+        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
+        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
+        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
+        .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .get-it-now{margin-top: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .starter-pack{padding-bottom: 35px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
+        .logo-label{padding-top: 15px;}
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
+        
+        #domain-available-view .purchase-btn {
+          margin: 0;
+          font-size: 30px;
+          padding-top: 17px;
+          padding-bottom: 14px;
+        }
+        
+        #domain-available-view .available-domain-name-row {
+          margin: 62px 0 40px;
+        }
+        
+        #domain-available-view h2.available-domain-name-text {
+          margin: 0;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
+    <style>
+      .btn-lg{padding: 14px 15px 9px!important;}
+      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+      .right-side{margin-top: 25px;}
+      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+      .product-name{padding-bottom: 15px;}
+      .p1{margin-bottom: 25px;}
+      .p2{margin-top: 15px;}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <section id="pro-specific">
+      <div class="container">
+        <div class="row col-xs-12 text-center titles">
+          <h3 class="uppercase">Let us build a web store that will </h3>
+          <h3 class="uppercase">help you build your business</h3>
+          <h4>Complete the online interview and our Web designers can create an eye-catching online store.</h4>
+        </div>
         <div class="row">
-          <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
-            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"></h2>
+          <div class="col-xs-4 first">
+            <div class="pro-expand"></div>
+            <h4 class="uppercase"><span class="steps">Step One</span></h4>
+            <h3>Share your vision</h3>
+            <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
+          </div>
+          <div class="col-xs-4">
+            <div class="pro-share"></div>
+            <h4 class="uppercase"><span class="steps">Step Two</span></h4>
+            <h3>We go to work</h3>
+            <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
+          </div>
+          <div class="col-xs-4">
+            <div class="pro-work"></div>
+            <h4 class="uppercase"><span class="steps">Step Three</span></h4>
+            <h3>Enhance & Expand</h3>
+            <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
           </div>
         </div>
         <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 speach-bubble-left-green">
+            <div class="col-sm-9 speach-bubble-left-white">
               <div class="speach-bubble-left-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
+                <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
+                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
               </div>
             </div>
             <div class="col-sm-3">
@@ -495,6 +1357,150 @@ function stripDomainName(){
       .uppercase{text-transform:uppercase}
       .lowercase{text-transform:lowercase}
       .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+      
+    </style>
+    <atlantis:webstash type="css">
+      <style>
+        #pro-specific{background-color:#77c043;}
+        .uppercase{text-transform:uppercase;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .text-center{text-align:center;}
+        .titles{margin-top:50px;}
+        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
+        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
+        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
+        .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        .container .row .green-background h2{ margin-bottom: 0;}
+        .get-it-now{margin-top: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .starter-pack{padding-bottom: 35px;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
+        .logo-label{padding-top: 15px;}
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        .orange-text{color:#f1751d;}
+        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
+        
+        #domain-available-view .purchase-btn {
+          margin: 0;
+          font-size: 30px;
+          padding-top: 17px;
+          padding-bottom: 14px;
+        }
+        
+        #domain-available-view .available-domain-name-row {
+          margin: 62px 0 40px;
+        }
+        
+        #domain-available-view h2.available-domain-name-text {
+          margin: 0;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
+    <style>
+      .btn-lg{padding: 14px 15px 9px!important;}
+      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+      .right-side{margin-top: 25px;}
+      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+      .product-name{padding-bottom: 15px;}
+      .p1{margin-bottom: 25px;}
+      .p2{margin-top: 15px;}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="features">
@@ -538,8 +1544,138 @@ function stripDomainName(){
     <div class="container">
       <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
     </div>
-    <!-- p4p.got-->
-    <!--+renderReadyToTakeBusinessOnline("billysbikes.org","price")-->
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+        .btn-select{margin:12px 0;float:right;}
+        .domainName{margin:15px 0;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        .domainNameDiv{line-height:1}
+        .domainSelect{margin-top:10px;}
+        
+        #domain-available-view .purchase-btn {
+          margin: 0;
+          font-size: 30px;
+          padding-top: 17px;
+          padding-bottom: 14px;
+        }
+        
+        #domain-available-view .available-domain-name-row {
+          margin: 62px 0 40px;
+        }
+        
+        #domain-available-view h2.available-domain-name-text {
+          margin: 0;
+        }
+        
+        
+      </style>
+    </atlantis:webstash>
+    <style>
+      .btn-lg{padding: 14px 15px 9px!important;}
+      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+      .right-side{margin-top: 25px;}
+      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+      .product-name{padding-bottom: 15px;}
+      .p1{margin-bottom: 25px;}
+      .p2{margin-top: 15px;}
+      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <section id="got">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:30px" class="text-center">
+            <h2 class="uppercase">Ready to take your business online?</h2>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></h3>
+          </div>
+          <div class="pro-wrapper row">
+            <div class="col-xs-6"><div class='pro-computer'></div></div>
+            <div class="col-xs-6">
+              <h3 class="product-name">ECOMMERCE DESIGN SERVICES</h3>
+              <p class="p1">Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+              <div class="row">
+                <div class="col-xs-12">
+                  <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                    <input type="hidden" name="product" value="1023|1|1"/>
+                    <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan"/>
+                    <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
+                    <input type="hidden" name="itc" value="slp_webdesign2"/>
+                    <input type="hidden" name="nocos" value="False"/>
+                    <input type="hidden" name="config" value="customsite"/>
+                    <input type="hidden" name="sdc" value="True"/>
+                    <input type="hidden" name="newxs" value="False"/>
+                    <input type="hidden" name="cicode" value="58348"/>
+                    <input type="hidden" name="prog_id" value="GoDaddy"/>
+                    <button id="get-it-btn2" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                    <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->

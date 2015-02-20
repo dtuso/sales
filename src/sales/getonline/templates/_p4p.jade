@@ -4,6 +4,7 @@ include _domain-multiple-selection-mixin.jade
 include _office365-email-mixin.jade
 include _ready-to-take-business-online-mixin.jade
 include _good-news-get-it-now-mixin.jade
+include _new-pro-section-mixin.jade
 
 append pageStyles
   style.
@@ -29,6 +30,9 @@ block sections
   block getItNow
     // p4p.getItNow
     //+renderGoodNews("domain","price","image-path")
+
+  block proSpecific
+    +renderProSection()
   
   block product
 

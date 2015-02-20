@@ -1,6 +1,12 @@
     var p4pConfigData = {};
     var url2 = window.location.protocol+'//'+ window.location.host+'/api/package/config/p4p_get_online';
     var domainName;
+    var p4pPage = {
+      tlds: {
+        valid: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],
+        restricted: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T]
+      }
+    };
     
     $.ajax({
       type: 'POST',
@@ -34,8 +40,15 @@
     }
     
     $('#get-running-butt').click(function(){
-        domainName = $('#search-input').val();
-        calculateResultsPage();
+        domainName = $('#search-input').val().toLowerCase();
+        var checkInput = validateInput(domainName);
+        domainName = encodeURIComponent(domainName);
+        if(checkInput === 0){
+          domainName = " ";
+        }
+        else{
+          calculateResultsPage();
+        }
     });
     
     function calculateResultsPage(){
@@ -47,7 +60,6 @@
           //WEBSITE BUILDER 
           resultPage = '[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]';
           resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/websitebuilder.aspx|54d3a061f778fc1134545580';
-        
           window.location = resultPage;
         }
         else if($('.dropdown2').val() == "hire_someone" && domainName != ""){
@@ -89,7 +101,7 @@
       else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "build_myself" && domainName != ""){
         //ONLINE STORE
         resultPage = '[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54d28923f778fc21301a8966';
+        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54de7adff778fc03ac812903';
         
         window.location = resultPage;
       }
@@ -108,3 +120,43 @@
         window.location = resultPage;
       }
     }
+
+    function validateInput(domainName){
+       var validFlag = 0;
+
+       domainName.toLowerCase();
+
+       if(domainName.indexOf('.') > -1){
+           var domainSplit = domainName.split('.');
+           for(var i = 0; i < p4pPage.tlds.valid.length; i++){
+               if(domainSplit[1] === p4pPage.tlds.valid[i]){
+                  validFlag = 1;
+                  $(".validate-message").text("");
+                  return validFlag;
+               }    
+              else{
+                  $(".validate-message").text("Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, or .ORG");
+                  validFlag = 0;
+              }
+           }
+
+           return validFlag;
+       }
+    }
+
+    function stripHomePageParameter(){
+      var windowParams = window.location.search.replace("?","");
+      var params = windowParams.split("&");
+      for(var i = 0; i < params.length;i++){
+       var inputName = params[i].split("=")[0];
+       var inputValue = params[i].split("=")[1];
+       if(inputName == "p4p"){
+         $("#homepage-selection").text(inputValue);
+       }
+      }
+        
+    }
+
+    $(document).ready(function(){
+      stripHomePageParameter();
+    });

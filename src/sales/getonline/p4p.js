@@ -9,7 +9,9 @@ function stripDomainName(){
        var inputName = params[i].split("=")[0];
        var inputValue = params[i].split("=")[1];
        if(inputName == "domain"){
+         inputValue = decodeURIComponent(inputValue);
          $("#business-idea").text(inputValue);
+         $("#business-idea2").text(inputValue);
        }
         
     }
