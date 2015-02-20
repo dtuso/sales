@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
 id: 
-name: GCE-29677
-comments: Updating slider content.
+name: GCEMO-559
+comments: Update 30% off gTLDs.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -494,4 +494,4 @@ You have the answers. Share them with <strong>.expert</strong>
 <phrase key="MainBannerCarouselSlideSave" />
 SAVE 30% or more
 <phrase key="MainBannerCarouselSlideList" comment="only need to translate the word 'and' " />
-<a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="89140" /></relative>]@T]">.club</a>, <a href="[@T[link:<relative path="/tlds/coach"><param name="ci" value="95839" /></relative>]@T]">.coach</a>, <a href="[@T[link:<relative path="/tlds/company"><param name="ci" value="90067" /></relative>]@T]">.company</a>, <a href="[@T[link:<relative path="/tlds/email"><param name="ci" value="92569" /></relative>]@T]">.email</a>, <a href="[@T[link:<relative path="/tlds/forsale"><param name="ci" value="95842" /></relative>]@T]">.forsale</a>, <a href="[@T[link:<relative path="/tlds/guru"><param name="ci" value="89138" /></relative>]@T]">.guru</a>, <a href="[@T[link:<relative path="/tlds/legal"><param name="ci" value="95844" /></relative>]@T]">.legal</a>, <a href="[@T[link:<relative path="/tlds/memorial"><param name="ci" value="95845" /></relative>]@T]">.memorial</a>, <a href="[@T[link:<relative path="/tlds/money"><param name="ci" value="95846" /></relative>]@T]">.money</a>, <a href="[@T[link:<relative path="/tlds/press"><param name="ci" value="95868" /></relative>]@T]">.press</a>, <a href="[@T[link:<relative path="/tlds/website"><param name="ci" value="93501" /></relative>]@T]">.website</a>, and <a href="[@T[link:<relative path="/tlds/work"><param name="ci" value="95848" /></relative>]@T]">.work</a>
+<a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="89140" /></relative>]@T]">.club</a>, <a href="[@T[link:<relative path="/tlds/coach"><param name="ci" value="95839" /></relative>]@T]">.coach</a>, <a href="[@T[link:<relative path="/tlds/company"><param name="ci" value="90067" /></relative>]@T]">.company</a>, <a href="[@T[link:<relative path="/tlds/email"><param name="ci" value="92569" /></relative>]@T]">.email</a>, <a href="[@T[link:<relative path="/tlds/estate"><param name="ci" value="96175" /></relative>]@T]">.estate</a>, <a href="[@T[link:<relative path="/tlds/expert"><param name="ci" value="95107" /></relative>]@T]">.expert</a>, <a href="[@T[link:<relative path="/tlds/guru"><param name="ci" value="89138" /></relative>]@T]">.guru</a>, <a href="[@T[link:<relative path="/tlds/legal"><param name="ci" value="95844" /></relative>]@T]">.legal</a>, <a href="[@T[link:<relative path="/tlds/memorial"><param name="ci" value="95845" /></relative>]@T]">.memorial</a>, <a href="[@T[link:<relative path="/tlds/money"><param name="ci" value="95846" /></relative>]@T]">.money</a>, <a href="[@T[link:<relative path="/tlds/party"><param name="ci" value="96176" /></relative>]@T]">.party</a>, <a href="[@T[link:<relative path="/tlds/photography"><param name="ci" value="89731" /></relative>]@T]">.photography</a>, <a href="[@T[link:<relative path="/tlds/press"><param name="ci" value="95868" /></relative>]@T]">.press</a>, and <a href="[@T[link:<relative path="/tlds/website"><param name="ci" value="93501" /></relative>]@T]">.website</a>

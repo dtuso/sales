@@ -1,0 +1,30 @@
+---
+location: localization/sales/gd/research/en
+id: 54da9d6ff778fc1bb4408d4c
+name: SEM-348
+---
+{% include '../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Infographics & More | Digestible Data - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Check out [@T[companyname:name]@T]'s infographics and research articles that can help you better understand and navigate the online world.
+<phrase key="og-title" />
+Infographics & More | Digestible Data - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Check out [@T[companyname:name]@T]'s infographics and research articles that can help you better understand and navigate the online world.
+<phrase key="page-title-h1" />
+Infographics
+<phrase key="intro-paragraph" />
+There's a lot of information out there. Stay in the know about websites and the online world with our visually-rich infographics and noteworthy data tidbits.
+<phrase key="view-featured-button-label" />
+View Featured
+<phrase key="infographics-1-title" />
+Get Mobile Ready for Carnival
+<phrase key="infographics-1-intro" />
+Smartphone usage in Brazil is on the rise, and when people hit the streets during Carnival, mobile usage is bound to go up even more. Is your website ready for all that mobile traffic?
+<phrase key="coming-soon-image-text" />
+Coming Soon
+<phrase key="coming-soon-title" />
+Check Back Later
+<phrase key="coming-soon-paragraph" />
+More new infographics are on the way.
