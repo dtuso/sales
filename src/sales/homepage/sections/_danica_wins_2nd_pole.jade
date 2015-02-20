@@ -1,16 +1,41 @@
 extends ./_rightArrowTwoColumn.jade
 
 block append vars
-  - sectionID = "danica-wins-daytona";
+  - sectionID = "danica-pole-position";
   - bkgImage = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg";
 block append rightArrowTwoColumnsStyles
   style
     :less
-      #danica-wins-daytona .TopText{color:#77C043;font-size:37px;text-transform:uppercase;margin-top:82px;}
-      #danica-wins-daytona .MiddleText{color:#77C043;font-size:39px;text-transform:uppercase;line-height: 25px;}
-      #danica-wins-daytona .BottomText{color:#77C043;font-size:44px;text-transform:uppercase;line-height: 60px;}
-      .dash{letter-spacing: -.5rem;margin-right:15px;}
-      #danica-wins-daytona{height:300px;}
+      #danica-pole-position{
+        max-height:300px;
+        background-size:cover;
+        background-position:center center;
+        .TopText{color:#77C043;font-size:37px;text-transform:uppercase;margin-top:82px;}
+        .MiddleText{color:#77C043;font-size:39px;text-transform:uppercase;}
+        .BottomText{color:#77C043;font-size:48px;text-transform:uppercase;margin-bottom:82px;}
+        .dash{letter-spacing: -.5rem;margin-right:15px;}
+      }
+      @media only screen and (min-width:480px) {
+        #danica-pole-position{
+          .TopText{font-size:22px}
+          .MiddleText{font-size:28px;line-height:20px;}
+          .BottomText{font-size:27px;line-height:40px;}
+        }
+      }
+      @media only screen and (min-width:992px) {
+        #danica-pole-position{
+          .TopText{font-size:30px}
+          .MiddleText{font-size:34px;line-height:20px;}
+          .BottomText{font-size:36px;line-height:50px;}
+        }
+      }
+      @media only screen and (min-width:1200px) {
+        #danica-pole-position{
+          .TopText{font-size:37px}
+          .MiddleText{font-size:40px;line-height:25px;}
+          .BottomText{font-size:43px;line-height:60px;}
+        }
+      }
 block leftContent
   .TopText.walsheim-black Congratulations, Danica!
   .MiddleText.tungsten 
