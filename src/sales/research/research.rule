@@ -1,0 +1,17 @@
+---
+location: sales/research.rule
+id: 54cbef34f778fc29c03a66a8
+name: SEM-348
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en],[pt-br])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]
