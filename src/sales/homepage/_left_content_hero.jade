@@ -17,7 +17,7 @@ atlantis:webstash(type="css")
           .rightContent,.leftContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); width:100%;}
         }
 
-div(class!=leftContent.classes data-url!= leftContent.ctaLink)
+div(class!=leftContent.classes data-url!= leftContent.ctaLink data-ci!=leftContent.ci)
   block heroContent
     .left.col-xs-12.col-md-7
       .leftContent

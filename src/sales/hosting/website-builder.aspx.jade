@@ -1,4 +1,4 @@
-extends ../../templates/pages/landing-page
+extends ../shared/_landing-page
 
 append vars
   - page.title = "[@L[cds.sales/gd/hosting/website-builder:page-title]@L]";
@@ -27,9 +27,11 @@ append pageStyles
       font-size: 24px;
       font-size: 2.4rem;
     }
-    #plans { padding-bottom: 40px; }
+
     #social-media, #reviews, #faq, #disclaimers { background: #fff; }
-    #social-media { padding-top: 50px; }
+    #social-media { padding-bottom: 0; }
+    #features, #faq, #other-products, #renderMidPageNavBottom, #modals { padding-top: 0; padding-bottom: 0; }
+
     /* TODO: can this styling be abstracted into landing-page.jade? */
     body { background-color: #d9d9d9; }
     #marquee { 
@@ -119,7 +121,17 @@ block marqueeContent
   h1.marquee-product-name [@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]
   h2.marquee-product-description [@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]
   ul.green-check
+    | 
+    |##if(countrySiteAny(www))
+    | 
+    li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1-35874]@L]
+    | 
+    |##else
+    | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]
+    | 
+    |##endif
+    | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]
   button.btn.btn-default-light.btn-plan(data-plan="wsb_personal_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
@@ -176,56 +188,8 @@ block sections
           .headline-primary [@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]
           button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
         .templates-image-container  
-          | 
-          | ##if(countrySiteAny(ca))
-          | 
-          .row
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canada-hockey.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/art-and-culture.png")
-          | 
-          | ##elseif(countrySiteAny(uk))
-          | 
-          .row
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/india-online.jpg")
 
-          | 
-          | ##else
-          | 
-          .row
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/auto.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/photography.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/education.jpg")
-          | 
-          | ##endif
-          | 
-          .row
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/ecommerce.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/travel.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/non-profit.jpg")
-          .row
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/business.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/health-beauty.jpg")
-            .col-md-4.text-center
-              +lazyImg("templates-image",'', "[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/creative-design.jpg")
-
-    include ../../templates/wsb-templates.html
+    include ../shared/wsb-templates.html
     |##if(activeLanguageAny(en))
     | 
     +fullVideoModule({"ci":"87762","backgroundImage":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg","playButton":"[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rb-play-button.png","tagline":"[@L[cds.sales/gd/hosting/website-builder:testimony-title]@L]","lazyLoad":true,"cta":"[@L[cds.sales/gd/hosting/website-builder:testimony-description]@L]","youtubeId":"-HtVJyxSQmw","tileName":"wsbVideo"})
@@ -236,8 +200,39 @@ block sections
     | 
     |##else
     | 
-    style
-      include:css ../../templates/styles/full-video.css
+    style.
+      .video-marquee {
+        background-position: top center;
+      }
+      .video-marquee {
+        background-size: cover;
+        position: relative;
+        background-position: bottom center;
+        background-color: #fff;
+      }
+      .video-marquee.video-marquee-white {
+        color: #fff;
+      }
+      .video-marquee.full-video {
+        height: 535px;
+        padding-top: 1px;
+      }
+      .video-marquee.full-video .video-info {
+        margin-top: 150px;
+      }
+      .video-marquee .relative-position {
+        position: relative;
+      }
+      .video-marquee .video-marquee-all-centered {
+        text-align: center;
+      }
+      .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+        color: #fff;
+      }
+      .video-marquee.full-video .video-info .cta {
+        font-family: 'Walsheim-Black';
+        text-transform: uppercase;
+      }
     .lazyload.video-marquee.video-marquee-white.full-video(style='', data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg', data-ci='87762', data-tile='wsbVideo', data-youtube-id='-HtVJyxSQmw')
       .container.relative-position.video-info
         .row
@@ -248,29 +243,30 @@ block sections
     |##endif
     | 
 
-    section#social-media
-      | 
-      |##if(countrySiteAny(www))
-      | 
-      include ./website-builder/_tabbed-carousel.jade
-      | 
-      |##else
-      | 
-      include ./website-builder/_tabbed-carousel-nonUS.jade
-      | 
-      |##endif
-      | 
+  section#social-media
+    | 
+    |##if(countrySiteAny(www))
+    | 
+    include ./website-builder/_tabbed-carousel.jade
+    | 
+    |##else
+    | 
+    include ./website-builder/_tabbed-carousel-nonUS.jade
+    | 
+    |##endif
+    | 
 
-      .bg-gray-light
-        include ./website-builder/_business-exclusives.jade
-      .bg-black
-          .container
-            .row
-              .col-sm-9
-                h2.text-center.h3(style="color:#FFF;margin-top:40px;") [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
-              .col-sm-3
-                .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-                  button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-ci='91392', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
+    .bg-gray-light
+      include ./website-builder/_business-exclusives.jade
+    .bg-black
+        .container
+          .row
+            .col-sm-9
+              h2.text-center.h3(style="color:#FFF;margin-top:40px;") [@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+            .col-sm-3
+              .right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".bg-black"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+                button.btn.btn-purchase.btn-plan.btn-md.btn-block(data-ci='91392', data-plan='wsb_businessplus_12month') [@L[cds.sales/_common:add-to-cart-cap]@L]
+
   | 
   |##if(activeLanguageAny([en-us]))
   | 
@@ -295,7 +291,18 @@ block sections
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-third-slide-title]@L]")
         | [@L[cds.sales/gd/hosting/website-builder:faq-third-slide-content]@L]
       +accordionTab("[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]")
+        | 
+        |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
+        | 
+        | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]@L]
+        | 
+        |##else
+        | 
         | [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+        | 
+        |##endif
+        | 
+
   | 
   |##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
   | 
@@ -352,7 +359,7 @@ block sections
           | 
           |##endif
           | 
-        p.h5[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
+        p.h5 [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_3p]@L]
 
   | 
   |##if(activeLanguageAny([en-US]))
@@ -406,8 +413,28 @@ prepend endOfPageScripts
     ##endif
 
     $(document).ready(function(){
-       showTldsInList('#disclaimers');
-
+      showTldsInList('#disclaimers');
+      var recommendedThemes = [[@T[wsbthemes:]@T]];
+  
+      if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
+        recommendedThemes = recommendedThemes[0].slice(0,9);
+        // populate images
+        var column = 0;
+        var $row;
+        var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+        $.each(recommendedThemes,function(index){
+          if(column == 0)
+            $row = $("<div>", {class: "row"});
+          column++;
+          var itemData = {url:recommendedThemes[index]['URL']};
+          var itemElement = recommendedImagesTemplates(itemData);
+          $row.append(itemElement)
+          if(column == 3 ){
+            $('.templates-image-container').append($row);
+            column = 0;
+          }
+        });
+      }
     });
 
     function showTldsInList(selector) {

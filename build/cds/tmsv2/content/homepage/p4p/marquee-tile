@@ -1,8 +1,7 @@
 
 <atlantis:webstash type="css">
   <link href="[@T[link:&lt;css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit'/&gt;]@T]" rel="stylesheet" media="screen"/>
-</atlantis:webstash>
-<style>#p4p-list {
+  <style>#p4p-list {
   border-top-width: 3px;
   border-bottom-width: 1px;
   width: 80%;
@@ -62,7 +61,8 @@
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
 }
 
-</style>
+  </style>
+</atlantis:webstash>
 <div data-url="[@T[link:<relative path='p4p/questions-config'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
   <div class="tile-content-wrapper">
     <div class="container">
