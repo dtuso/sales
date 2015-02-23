@@ -22,7 +22,126 @@ append pageStyles
       font-family: uxfont !important;
     }
     ##endif
-
+    /* uxcore doesn't include col-xs-offset-x */
+    @media (max-width: 768px) {
+      .col-xs-pull-12 {
+        right: 100%;
+      }
+      .col-xs-pull-11 {
+        right: 91.66666667%;
+      }
+      .col-xs-pull-10 {
+        right: 83.33333333%;
+      }
+      .col-xs-pull-9 {
+        right: 75%;
+      }
+      .col-xs-pull-8 {
+        right: 66.66666667%;
+      }
+      .col-xs-pull-7 {
+        right: 58.33333333%;
+      }
+      .col-xs-pull-6 {
+        right: 50%;
+      }
+      .col-xs-pull-5 {
+        right: 41.66666667%;
+      }
+      .col-xs-pull-4 {
+        right: 33.33333333%;
+      }
+      .col-xs-pull-3 {
+        right: 25%;
+      }
+      .col-xs-pull-2 {
+        right: 16.66666667%;
+      }
+      .col-xs-pull-1 {
+        right: 8.33333333%;
+      }
+      .col-xs-pull-0 {
+        right: auto;
+      }
+      .col-xs-push-12 {
+        left: 100%;
+      }
+      .col-xs-push-11 {
+        left: 91.66666667%;
+      }
+      .col-xs-push-10 {
+        left: 83.33333333%;
+      }
+      .col-xs-push-9 {
+        left: 75%;
+      }
+      .col-xs-push-8 {
+        left: 66.66666667%;
+      }
+      .col-xs-push-7 {
+        left: 58.33333333%;
+      }
+      .col-xs-push-6 {
+        left: 50%;
+      }
+      .col-xs-push-5 {
+        left: 41.66666667%;
+      }
+      .col-xs-push-4 {
+        left: 33.33333333%;
+      }
+      .col-xs-push-3 {
+        left: 25%;
+      }
+      .col-xs-push-2 {
+        left: 16.66666667%;
+      }
+      .col-xs-push-1 {
+        left: 8.33333333%;
+      }
+      .col-xs-push-0 {
+        left: auto;
+      }
+      .col-xs-offset-12 {
+        margin-left: 100%;
+      }
+      .col-xs-offset-11 {
+        margin-left: 91.66666667%;
+      }
+      .col-xs-offset-10 {
+        margin-left: 83.33333333%;
+      }
+      .col-xs-offset-9 {
+        margin-left: 75%;
+      }
+      .col-xs-offset-8 {
+        margin-left: 66.66666667%;
+      }
+      .col-xs-offset-7 {
+        margin-left: 58.33333333%;
+      }
+      .col-xs-offset-6 {
+        margin-left: 50%;
+      }
+      .col-xs-offset-5 {
+        margin-left: 41.66666667%;
+      }
+      .col-xs-offset-4 {
+        margin-left: 33.33333333%;
+      }
+      .col-xs-offset-3 {
+        margin-left: 25%;
+      }
+      .col-xs-offset-2 {
+        margin-left: 16.66666667%;
+      }
+      .col-xs-offset-1 {
+        margin-left: 8.33333333%;
+      }
+      .col-xs-offset-0 {
+        margin-left: 0;
+      }
+    }
     /* override UXCORE font settings for all LPs */
     h2 {
       margin-bottom: 40px;
@@ -52,86 +171,7 @@ append pageStyles
       vertical-align: baseline;
       cursor: pointer;
     }
-    .order-summary-wrapper h3{
-      background-color: #EBEBEB;
-      padding: 10px;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .order-item-details-wrapper{
-      overflow: hidden;
-      font-size: 13px;
-    }
-    .order-total{
-      float: right;
-      font-size: 28px;
-      font-weight: 500;
-      color: #579006;
-      vertical-align: top;
-    }
-    .order-item-details-wrapper {
-      font-size: 14px;
-      font-weight: 600;
-      border-bottom: 1px solid #333;
-      margin-bottom: 7px;
-      padding-bottom: 3px;
-    }
-    .subtotal-disclaimer p{
-      margin-top: 20px;
-      font-size: 13px;
-      color: #777;
-    }
-    .scroll-down-wrapper{
-      cursor: pointer;
-      margin-top: 15px;
-    }
-    .scroll-down-wrapper p{
-      font-size: 12px;
-      text-align: center;
-      margin-bottom: 0px;
-      color: #579006;
-    }
-    .scroll-down-wrapper span{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20px;
-      height: 15px;
-    }
-    .icon-down{
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 20px;
-      height: 15px;
-      background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -49px -2px transparent;
-    }
 
-    .green-down-arrow-icon{
-      background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -70px -2px transparent;
-    }
-    .green-check {
-      background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
-      width: 34px;
-      height: 27px;
-      cursor: pointer;
-      display: inline-block;
-      padding: 4px 10px 0;
-      position: relative;
-    }
-    .product-added-to-cart {
-      padding: 0 10px;
-      float: left;
-      color: #679B08;
-      position: relative;
-    }
-    .product-added-to-cart-text {
-      position: relative;
-      left: 10px;
-      font-size: 25px;
-    }
 block endOfPageScripts
 
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
@@ -144,32 +184,7 @@ block endOfPageScripts
 
   script(src!="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript")
   script(type="text/javascript").
-    (function($){
-        /**
-         * Scroll to a section of the page
-         */
-        $.fn.extend({ 
-          scrollToSection : function(options) {
-              
-            var defaults = {},
-                options = $.extend(defaults, options);
 
-            function scrollBody() {
-              var el = $(options.$el.attr('data-scroll')),
-                  px = el.offset().top;
-              options.$el.on('click', function(e){
-               e.preventDefault();
-               $('html,body').animate({scrollTop:px}, '1000', 'swing');
-              });
-            }
-
-            return this.each(function() {
-              options.$el = $(this);
-              scrollBody();
-            });
-          }
-        });
-    })(jQuery);
     $(document).ready(function() {
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
@@ -178,66 +193,6 @@ block endOfPageScripts
         var hash = hashes[i].split('=');
         qs.push(hash[0]);
         qs[hash[0]] = hash[1];
-      }
-      $('.move').scrollToSection();
-      $(window).scroll(function() {
-        //updateOrderSummaryPosition();
-      });
-      $(window).resize(function() {
-        //updateOrderSummaryPosition();
-      });
-      //updateOrderSummaryPosition();        
-
-      function updateOrderSummaryPosition() {
-        var paddingTop = 20/* for prettiness when scrolling */,
-          $configCartWrapper = $('.config-cart-wrapper'),
-          scrollTop = $(window).scrollTop(),
-          scrollLeft = $(window).scrollLeft(),
-          topStep1 = $("div.config-step:first").offset().top,
-          topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
-          $footer = $('.scroll-down-wrapper');
-
-        $footer.css('visibility','visible');
-        $configCartWrapper.css({'top':'0px','position':'static'});
-
-        if(!topOfWindowAboveTopOfStep1) {
-          //check for if summary can fit without going below the bottom of the last step      
-          var proposedNewTop = scrollTop - (topStep1 - paddingTop),
-            proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
-            $lastStep = $("div.config-step").eq(1),
-            bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
-            canFit = (proposedNewBottom <= bottomOfLastStep);
-
-          if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
-            try{
-              var configCartWrapperLeft = $configCartWrapper.offset().left;
-              $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-            }catch(err){
-              //if errors don't float the $confiCartWrapper
-              $configCartWrapper.css({'top':'0px','position':'static'});
-            }
-            if((scrollTop+paddingTop)>=$lastStep.offset().top){
-              $footer.css('visibility','hidden');
-            }else{
-              $footer.css('visibility','visible');
-            }
-          } else {
-            try{
-              var configCartWrapperLeft = $configCartWrapper.offset().left;
-              $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-            }catch(err){
-              //if errors don't float the $confiCartWrapper
-              $configCartWrapper.css({'top':'0px','position':'static'});
-
-            }
-            // affix the summary so the bottom lines up with the bottom of the last step
-            $footer.css('visibility','hidden');
-            var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
-            //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
-            $configCartWrapper
-              .css({'top': topForBottomAligned + 'px'});
-          }
-        }    
       }
 
       window.setTimeout(function() {
@@ -251,44 +206,19 @@ block content
   .container
     .row
       .col-sm-12
-        p.product-added-to-cart
-          span.green-check
-          span.product-added-to-cart-text Microsoft Office 365 is in your cart!
-
-    //- there's always a catch... show it here.
-    .col-sm-9
-      .row
+        block header
+    .row
+      .col-sm-9
         block addons
-      //- 
-    block orderSummary
-      .config-cart-wrapper.col-sm-3
-        .row
-          .order-summary-wrapper
-            h3 Order Summary
-            .order-total-wrapper
-              .order-item-details-wrapper
-              .order-item-addons-wrapper
-                p#summaryAddon.order-item-title
-                span
-                  span#summaryTerm
-                  span#addonPrice.plan-price
-              .subtotal-disclaimer
-                p {{ configSummarytotal }}
-          div
-            span.order-total
-              span#summaryPrice.currency-amount
-          .subtotal-disclaimer
-            p
-              | [@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]
-          .scroll-down-wrapper.move(data-ci='', data-scroll='.config-cart-wrapper')
-            p.green-text {{ configSummarytotalDisc }}
-            span.icon-down.green-down-arrow-icon
+        //- 
+      .col-sm-3
+        block orderSummary
+    .row
+      //- there's always a catch... show it here.
+      block disclaimers
         
     //- domain search section
     block domainSearch
       .container(style="display:none")
         +domainSearchInput()
 
-
-    //- there's always a catch... show it here.
-    block disclaimers
