@@ -1,0 +1,13 @@
+extends ./templates/_p4p.jade
+
+block getItNow
+  - var productToDisplay = {name: "Wordpress", info: "Wordpress Stuff", cssClass: "<div class='features-wordpress'></div>", price: "$2.00"};
+  +renderGoodNews(productToDisplay)
+
+block proSpecific
+
+block product
+
+block got
+   - var productToDisplay = {name: "Wordpress", info: "Wordpress stuff here", cssClass: "<div class='features-wordpress'></div>", price: "$1.00"};
+   +renderReadyToTakeBusinessOnline(productToDisplay)

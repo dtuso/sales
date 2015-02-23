@@ -1,0 +1,72 @@
+extends ../shared/_page
+
+append headScripts
+  script
+    include:js questions-lp.js
+
+append pageStyles
+  style.
+    /* copied from landing-page */
+    h2 {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .gray{background-color:#E8E8E8;}
+    .green{background-color:#78C043}
+    .white{background-color:white}
+
+    .search-bar{width:100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 46px; border-top: 4px solid #FFCC00; padding: 15px; font-family: 'Walsheim-Medium';}
+    .step-1{padding-right: 50px}
+    .drop-label{font-size:20px!important;}
+    .step-2{padding-left: 50px; border-left: 2px solid lightgray}
+    .get-running-btn{margin-top: 50px; float:right;}
+
+    .dropdown1{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
+    .dropdown2{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
+    #questions-bottom{padding-bottom: 50px}
+    #questions-bottom p{font-family: 'Walsheim-Medium';}
+    input::-webkit-input-placeholder {color: #333;}
+    input::-moz-placeholder {color: #333;}
+    input:-moz-placeholder {color: #333;}
+    input:-ms-input-placeholder {color: #333;}
+
+    #questions-bottom h2 { font-size: 3rem; margin-bottom: 10px; }
+
+    /* keep marquee section condensed so questions appear above the fold on desktop */
+    #marquee { padding-top: 30px; padding-bottom: 30px; }
+    #marquee h2 { margin-bottom: 20px; }
+
+
+block content
+
+  section#marquee.green
+    .container.text-center
+      h2 This doesn't have to be <mark>confusing!</mark>
+      .row
+        .col-xs-12
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png")
+
+  section#questions-bottom.white
+    .container
+      h2.text-center We can get your business online.
+      p.text-center Tell us a little about yourself.  We will step you from A to Z, no problem.
+      .row
+        .col-sm-6.step-1
+          h3 Step 1
+          p What's your business name? Don't have a name? An idea for your business is perfect!
+          input#search-input.search-bar(type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='63')
+          p.validate-message
+        .col-sm-6.step-2
+          h3 Step 2
+          p We've given you some options of how to set up your business online.  Just fill in the blanks!
+          .dropdowns
+            h3.drop-label I'm interested in
+            #first-dropdown
+            h3.drop-label I have the resources and time to
+            #second-dropdown
+          button.btn.btn-purchase.btn-lg.get-running-btn GET ME UP AND RUNNING!

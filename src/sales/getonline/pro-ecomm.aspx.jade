@@ -1,0 +1,82 @@
+extends ./templates/_p4p.jade
+
+append pageStyles
+  style.
+    .btn-lg{padding: 14px 15px 9px!important;}
+    .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
+    .right-side{margin-top: 25px;}
+    .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
+    .product-name{padding-bottom: 15px;}
+    .p1{margin-bottom: 25px;}
+    .p2{margin-top: 15px;}
+    .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
+    .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+    #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+
+block marquee
+
+block getItNow
+  - var productToDisplay = {name: "ECOMMERCE DESIGN SERVICES", info: "Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business", cssClass: "<div class='pro-computer'></div>", price: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]", formAction: "[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]"};
+  +renderGoodNews(productToDisplay) 
+    block goodNewsHead
+      h3 We have an ecommerce design service for
+      h3 <span id="business-idea"></span> – Starting at <span id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
+    block check-pro-goodNews
+      .pro-wrapper
+        .col-xs-6
+          !{productToDisplay.cssClass}
+        .col-xs-6
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.info}
+          .col-xs-6
+            form(action!="#{productToDisplay.formAction}", name="frmWebDesign", id="addtocart-form", method="post")
+              input(type="hidden", name="product", value="1023|1|1")
+              input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
+              input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
+              input(type="hidden", name="itc", value="slp_webdesign2")
+              input(type="hidden", name="nocos", value="False")
+              input(type="hidden", name="config", value="customsite")
+              input(type="hidden", name="sdc", value="True")
+              input(type="hidden", name="newxs", value="False")
+              input(type="hidden", name="cicode", value="58348")
+              input(type="hidden", name="prog_id", value="GoDaddy")
+              button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn(type="submit" data-form="addtocart-form") GET IT NOW
+              p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+          .col-xs-6
+            p Starting at <span id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
+
+block domainSearchWizard
+
+block proSpecific
+  +renderProSection()
+
+block office365
+
+block got
+  - var productToDisplay = {name: "ECOMMERCE DESIGN SERVICES", info: "Our Professional Web Services team will work with you to build a complete online store your customers will love.", cssClass: "<div class='pro-computer'></div>", price: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]", formAction: "[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]"};
+  +renderReadyToTakeBusinessOnline(productToDisplay)
+    block checkPro
+      h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
+    block checkPro-bottom
+      .pro-wrapper.row
+        .col-xs-6
+          !{productToDisplay.cssClass}
+        .col-xs-6
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.info}
+          .row
+            .col-xs-12
+              form(action!="#{productToDisplay.formAction}", name="frmWebDesign", id="addtocart-form", method="post")
+                input(type="hidden", name="product", value="1023|1|1")
+                input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
+                input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
+                input(type="hidden", name="itc", value="slp_webdesign2")
+                input(type="hidden", name="nocos", value="False")
+                input(type="hidden", name="config", value="customsite")
+                input(type="hidden", name="sdc", value="True")
+                input(type="hidden", name="newxs", value="False")
+                input(type="hidden", name="cicode", value="58348")
+                input(type="hidden", name="prog_id", value="GoDaddy")
+                button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn2(type="submit" data-form="addtocart-form") GET IT NOW
+                p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
