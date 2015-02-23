@@ -876,14 +876,14 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-md-2 col-md-offset-1">
                 <div class="features-domain-name"></div>
-                <label class="h3 logo-label">DOMAIN NAME</label>
+                <h3 class="logo-label">DOMAIN NAME</h3>
                 <p>Domain is the name of your</p>
               </div>
               <div class="col-md-2">
                 <div class="img-plus"></div>
               </div>
               <div class="col-md-2"><div class='wsb-icon'></div>
-                <label class="h3 logo-label">Website Builder</label>
+                <h3 class="logo-label">Website Builder</h3>
                 <p>Website builder stuff here</p>
               </div>
               <div class="col-md-2">
@@ -891,7 +891,7 @@ function getParameterByName(name) {
               </div>
               <div class="col-md-2">
                 <div class="features-email"></div>
-                <label class="h3 logo-label">OFFICE 365 EMAIL</label>
+                <h3 class="logo-label">OFFICE 365 EMAIL</h3>
                 <p>Office 365 email is the simplest email tool</p>
               </div>
             </div>
