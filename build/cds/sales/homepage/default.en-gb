@@ -181,7 +181,7 @@
   margin-top: 31px;
   background-color: #fff;
   border: solid #000;
-  border-width: 5px 5px 0 5px;
+  border-width: 10px 7px 0 7px;
 }
 #gtld-hero .gtld-phone ul {
   list-style: none;
@@ -190,7 +190,6 @@
 }
 #gtld-hero .gtld-phone li {
   margin: 0;
-  border-bottom: #b9babb solid 1px;
 }
 #gtld-hero .gtld-phone li a {
   text-decoration: none;
@@ -228,7 +227,7 @@
 #gtld-hero .gtld-phone li:hover a {
   color: #f5811f;
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 480px) {
   #gtld-hero .gtld-phone {
     border-width: 0;
     background-color: transparent;
@@ -236,10 +235,18 @@
     background-size: cover;
   }
   #gtld-hero .gtld-phone ul {
-    padding: 30px 50px 0 50px;
+    padding: 40px 50px 0 50px;
   }
   #gtld-hero .gtld-phone li .price-container {
     font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #gtld-hero .gtld-phone ul {
+    padding: 30px 50px 0 50px;
+  }
+  #gtld-hero .gtld-phone li {
+    border-bottom: #b9babb solid 1px;
   }
   #gtld-hero .gtld-phone li .price {
     padding-right: 15px;
