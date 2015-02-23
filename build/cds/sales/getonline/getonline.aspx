@@ -71,60 +71,6 @@
         });
       }
       
-    </script>
-    <script>
-      // update the form's submit URL based on the user's selections
-      $('#questions select').change(e) {
-        var interest = $('#interest-select').val();
-        var resources = $('#resources-select').val();
-      
-        // routing logic embedded here
-        if (interest === "blog") {
-          // anytime the interest is in blogging, suggest the wordpress product
-          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
-        } else if (resources === "know_someone") {
-          // anytime the user "knows someone", suggest web hosting
-          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
-        } else if (resources === "build_myself") {
-          // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
-          if (interest === "selling_products") {
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
-          } else {
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
-          }
-        } else if (resources === "hire_someone") {
-          // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
-          if (interest === "selling_products") {
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
-          } else {
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
-          }
-        }
-      }
-      
-      $('#questions form').submit(e) {
-        // retrieve valid TLDs from our app setting
-        // TODO: do these need to be market specific?
-        // TODO: is it worth trying to use the UXCorevalidation library?
-        var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
-      
-        // if user specified a TLD, make sure it's valid for this promotion
-        var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
-      
-        if (tldSpecified && validTlds.indexOf(tldSpecified)) {
-          $(".validation-message").show();
-          e.preventDefault();
-        }
-      }
-      
-      $(document).ready(function(){
-        // set highlighted marquee text if passed by referring page
-        var p4p = window.location.search.split('foo=');
-        if (p4p.length > 1) {
-          $("#marquee mark").text(p4p[1].split("&"));
-        }
-      });
-      
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -279,6 +225,60 @@ ul li.no-check {
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
+      
+    </script>
+    <script>
+      // update the form's submit URL based on the user's selections
+      $('#questions select').change(function(e) {
+        var interest = $('#interest-select').val();
+        var resources = $('#resources-select').val();
+      
+        // routing logic embedded here
+        if (interest === "blog") {
+          // anytime the interest is in blogging, suggest the wordpress product
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
+        } else if (resources === "know_someone") {
+          // anytime the user "knows someone", suggest web hosting
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
+        } else if (resources === "build_myself") {
+          // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
+          if (interest === "selling_products") {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
+          } else {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
+          }
+        } else if (resources === "hire_someone") {
+          // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
+          if (interest === "selling_products") {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
+          } else {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
+          }
+        }
+      });
+      
+      $('#questions form').submit(function(e) {
+        // retrieve valid TLDs from our app setting
+        // TODO: do these need to be market specific?
+        // TODO: is it worth trying to use the UXCorevalidation library?
+        var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
+      
+        // if user specified a TLD, make sure it's valid for this promotion
+        var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
+      
+        if (tldSpecified && validTlds.indexOf(tldSpecified)) {
+          $(".validation-message").show();
+          e.preventDefault();
+        }
+      });
+      
+      $(document).ready(function(){
+        // set highlighted marquee text if passed by referring page
+        var p4p = window.location.search.split('p4p=');
+        if (p4p.length > 1) {
+          $("#marquee mark").text(p4p[1].split("&")[0]);
+        }
+      });
       
     </script>
   </body>
