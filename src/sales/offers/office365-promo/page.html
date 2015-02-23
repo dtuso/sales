@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 5490b25ff778fc1cd843c6e2
-name: GCE-34126
-comments: GOT2 POB Change promo to use multipleproductprice token
+id: 
+name: GCE-33745
+comments: POB for sage
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
 metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
@@ -637,12 +637,18 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       $dsd.find('.add-domain-loading').fadeIn();
 
       var domain = $dsd.find('[name="domaintoadd"]').val();
-      
+      var sageIsc = getParameterByName("isc");
+      var packageId = got2Page.packageId;
+      if(sageIsc != undefined && (sageIsc === "sageonea") || (sageIsc === "sageoneb") || (sageIsc === "sageonec"))
+      {
+          packageId = got2Page.sagePackageId;
+      }
+
       // add Got2 to the cart  
       var urlFragment = '/' + got2Page.itcCode;   //itc code
       urlFragment    += '/' + $(this).data('ci'); //ci code
       urlFragment    += '/' + '1';                // quantity
-      urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
+      urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
       var addUrl = got2Page.apiUrl.add.replace('{0}', urlFragment);
 
       addUrl += ((addUrl.indexOf('?') > -1) ? '&' : '?') + 'domain=' + domain + '&sourceCode=domaincheck';
@@ -803,7 +809,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
               <p>[@L[cds.sales/offers/office365-promo:included-office-email-desc]@L]</p>
             </li>
             <li>
-              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage]@L]</h4>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage-33745]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc-33745]@L]</p>
             </li>
           </ul>
@@ -818,8 +824,8 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-domain]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-domain-desc]@L]</p>
             </li>
-            ##if(productIsOffered(98))
-            <li>
+            ##if(productIsOffered(98) && !queryValueHas(isc,sageonea) && !queryValueHas(isc,sageoneb) && !queryValueHas(isc,sageoneC))
+            <li class="getpaid">
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping-desc]@L]</p>
             </li>
@@ -839,8 +845,8 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-domain]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-domain-desc]@L]</p>
             </li>
-            ##if(productIsOffered(98))
-            <li>
+            ##if(productIsOffered(98) && !queryValueHas(isc,sageonea) && !queryValueHas(isc,sageoneb) && !queryValueHas(isc,sageoneC))
+            <li class="getpaid">
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-godaddy-bookkeeping-desc]@L]</p>
             </li>
@@ -851,15 +857,15 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
           <ul class="details">
             <li>
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-five-devices]@L]</h4>
-              <p>[@L[cds.sales/offers/office365-promo:included-office-five-devices-desc]@L]</p>
+              <p>[@L[cds.sales/offers/office365-promo:included-office-five-devices-desc-33745]@L]</p>
             </li>
             <li>
               <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-email]@L]</h4>
               <p>[@L[cds.sales/offers/office365-promo:included-office-email-desc]@L]</p>
             </li>
             <li>
-              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage]@L]</h4>
-              <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc]@L]</p>
+              <h4 class="condensed">[@L[cds.sales/offers/office365-promo:included-office-storage-33745]@L]</h4>
+              <p>[@L[cds.sales/offers/office365-promo:included-office-storage-desc-33745]@L]</p>
             </li>
           </ul>
 
@@ -969,7 +975,11 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         </h4>
       </div>
       <div class="modal-body">
+        ##if(queryValueHas(isc,sageonea) || queryValueHas(isc,sageoneb) || queryValueHas(isc,sageonec))
+        <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-33745]@L]</p>
+        ##else
         <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-31871]@L]</p>
+        ##endif
       </div>
     </div>
   </div>
@@ -1120,7 +1130,13 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
       }
     }
     return [foundStart,foundEnd];      
-  }
+  } 
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  } 
 </script>
 
 {% endblock %}

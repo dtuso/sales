@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 5490b270f778fc1cd843c6e3
-name: GCE-34126
-comments: GOT2 POB Change promo to use multipleproductprice token
+id: 
+name: GCE-33745
+comments: POB for sage
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
 metaCanonicalPath:  /offers/office365-promo-config.aspx
 assetPath: false
@@ -703,11 +703,17 @@ assetPath: false
         }
         $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
 
+      var sageIsc = getParameterByName("isc");
+      var packageId = got2Page.packageId;
+      if(sageIsc != undefined && (sageIsc === "sageonea") || (sageIsc === "sageoneb") || (sageIsc === "sageonec"))
+      {
+          packageId = got2Page.sagePackageId;
+      }
         // add Got2 to the cart  
         var urlFragment = '/' + got2Page.itcCode; //itc code
         urlFragment += '/' + $(thisClick).data('ci'); //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment    += '/' + got2Page.packageId  //Plan Name (aka Package Id)
+        urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
         var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
