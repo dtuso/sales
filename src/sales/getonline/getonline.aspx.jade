@@ -1,9 +1,9 @@
 extends ../shared/_page
 
-append headScripts
+append endOfPageScripts
   script.
     // update the form's submit URL based on the user's selections
-    $('#questions select').change(e) {
+    $('#questions select').change(function(e) {
       var interest = $('#interest-select').val();
       var resources = $('#resources-select').val();
 
@@ -29,9 +29,9 @@ append headScripts
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
         }
       }
-    }
+    });
 
-    $('#questions form').submit(e) {
+    $('#questions form').submit(function(e) {
       // retrieve valid TLDs from our app setting
       // TODO: do these need to be market specific?
       // TODO: is it worth trying to use the UXCorevalidation library?
@@ -44,13 +44,13 @@ append headScripts
         $(".validation-message").show();
         e.preventDefault();
       }
-    }
+    });
 
     $(document).ready(function(){
       // set highlighted marquee text if passed by referring page
-      var p4p = window.location.search.split('foo=');
+      var p4p = window.location.search.split('p4p=');
       if (p4p.length > 1) {
-        $("#marquee mark").text(p4p[1].split("&"));
+        $("#marquee mark").text(p4p[1].split("&")[0]);
       }
     });
 
