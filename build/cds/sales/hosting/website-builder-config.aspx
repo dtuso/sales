@@ -108,7 +108,126 @@
         font-family: uxfont !important;
       }
       ##endif
-      
+      /* uxcore doesn't include col-xs-offset-x */
+      @media (max-width: 768px) {
+        .col-xs-pull-12 {
+          right: 100%;
+        }
+        .col-xs-pull-11 {
+          right: 91.66666667%;
+        }
+        .col-xs-pull-10 {
+          right: 83.33333333%;
+        }
+        .col-xs-pull-9 {
+          right: 75%;
+        }
+        .col-xs-pull-8 {
+          right: 66.66666667%;
+        }
+        .col-xs-pull-7 {
+          right: 58.33333333%;
+        }
+        .col-xs-pull-6 {
+          right: 50%;
+        }
+        .col-xs-pull-5 {
+          right: 41.66666667%;
+        }
+        .col-xs-pull-4 {
+          right: 33.33333333%;
+        }
+        .col-xs-pull-3 {
+          right: 25%;
+        }
+        .col-xs-pull-2 {
+          right: 16.66666667%;
+        }
+        .col-xs-pull-1 {
+          right: 8.33333333%;
+        }
+        .col-xs-pull-0 {
+          right: auto;
+        }
+        .col-xs-push-12 {
+          left: 100%;
+        }
+        .col-xs-push-11 {
+          left: 91.66666667%;
+        }
+        .col-xs-push-10 {
+          left: 83.33333333%;
+        }
+        .col-xs-push-9 {
+          left: 75%;
+        }
+        .col-xs-push-8 {
+          left: 66.66666667%;
+        }
+        .col-xs-push-7 {
+          left: 58.33333333%;
+        }
+        .col-xs-push-6 {
+          left: 50%;
+        }
+        .col-xs-push-5 {
+          left: 41.66666667%;
+        }
+        .col-xs-push-4 {
+          left: 33.33333333%;
+        }
+        .col-xs-push-3 {
+          left: 25%;
+        }
+        .col-xs-push-2 {
+          left: 16.66666667%;
+        }
+        .col-xs-push-1 {
+          left: 8.33333333%;
+        }
+        .col-xs-push-0 {
+          left: auto;
+        }
+        .col-xs-offset-12 {
+          margin-left: 100%;
+        }
+        .col-xs-offset-11 {
+          margin-left: 91.66666667%;
+        }
+        .col-xs-offset-10 {
+          margin-left: 83.33333333%;
+        }
+        .col-xs-offset-9 {
+          margin-left: 75%;
+        }
+        .col-xs-offset-8 {
+          margin-left: 66.66666667%;
+        }
+        .col-xs-offset-7 {
+          margin-left: 58.33333333%;
+        }
+        .col-xs-offset-6 {
+          margin-left: 50%;
+        }
+        .col-xs-offset-5 {
+          margin-left: 41.66666667%;
+        }
+        .col-xs-offset-4 {
+          margin-left: 33.33333333%;
+        }
+        .col-xs-offset-3 {
+          margin-left: 25%;
+        }
+        .col-xs-offset-2 {
+          margin-left: 16.66666667%;
+        }
+        .col-xs-offset-1 {
+          margin-left: 8.33333333%;
+        }
+        .col-xs-offset-0 {
+          margin-left: 0;
+        }
+      }
       /* override UXCORE font settings for all LPs */
       h2 {
         margin-bottom: 40px;
@@ -138,127 +257,68 @@
         vertical-align: baseline;
         cursor: pointer;
       }
-      .order-summary-wrapper h3{
-        background-color: #EBEBEB;
-        padding: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-size: 14px;
-        font-weight: 600;
-      }
-      .order-item-details-wrapper{
-        overflow: hidden;
-        font-size: 13px;
-      }
-      .order-total{
-        float: right;
-        font-size: 28px;
-        font-weight: 500;
-        color: #579006;
-        vertical-align: top;
-      }
-      .order-item-details-wrapper {
-        font-size: 14px;
-        font-weight: 600;
-        border-bottom: 1px solid #333;
-        margin-bottom: 7px;
-        padding-bottom: 3px;
-      }
-      .subtotal-disclaimer p{
-        margin-top: 20px;
-        font-size: 13px;
-        color: #777;
-      }
-      .scroll-down-wrapper{
-        cursor: pointer;
-        margin-top: 15px;
-      }
-      .scroll-down-wrapper p{
-        font-size: 12px;
-        text-align: center;
-        margin-bottom: 0px;
-        color: #579006;
-      }
-      .scroll-down-wrapper span{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 20px;
-        height: 15px;
-      }
-      .icon-down{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 20px;
-        height: 15px;
-        background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -49px -2px transparent;
-      }
       
-      .green-down-arrow-icon{
-        background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -70px -2px transparent;
-      }
-      .green-check {
-        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
-        width: 34px;
-        height: 27px;
-        cursor: pointer;
-        display: inline-block;
-        padding: 4px 10px 0;
-        position: relative;
-      }
-      .product-added-to-cart {
-        padding: 0 10px;
-        float: left;
-        color: #679B08;
-        position: relative;
-      }
-      .product-added-to-cart-text {
-        position: relative;
-        left: 10px;
-        font-size: 25px;
-      }
     </style>
     <style>
-
-.step-ribbon {
-height: 36px;
-background-color: #333;
-position: relative;
-top: -10px;
-left: -40px;
-color: #FFF;
-padding: 7px 20px;
-}
-
-.orange-step-ribbon {
-background-color: #fea700;
-}
-.config-step {
-background-color: #F5F5F5;
-border: 1px solid #C3C3C3;
-padding: 20px;
-padding-left: 40px;
-padding-right: 40px;
-background: #eae9e9;
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
-background: -webkit-gradient(linear,left top,right top,color-stop(0%,#eae9e9),color-stop(50%,#fcfcfc),color-stop(100%,#eae9e9));
-background: -webkit-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
-background: -o-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
-background: -ms-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
-background: linear-gradient(to right,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae9e9',endColorstr='#eae9e9',GradientType=1);
-}
-
-.config-step h2 {
-font-weight: 100;
+.config-step .step-title {
 font-size: 36px;
 margin-top: 40px;
 margin-bottom: 15px;
 margin-left: 15px;
+font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+font-weight: 100;
+line-height: 1.1;
+color: #333;
+}
+.config-step .step-subtitle {
+margin-left: 15px;
+}
+.config-text-primary {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+.config-text-lead {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 16px;
+  color: #333;
+font-weight: 200;
+
+}
+.config-text-price {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.config-text-secondary {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.config-text-save {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+}
+.config-text-disclaimer {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.green-check {
+  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
+  width: 34px;
+  height: 27px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 10px 0;
+  position: relative;
+}
+.disclaimers-section{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.product-options {
+list-style: none;
 }
 
+@media (max-width: 768px) {
+    .text-xs-right{
+      text-align: right;
+    }
     </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
@@ -268,219 +328,565 @@ margin-left: 15px;
           <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
         </div>
       </div>
-      <div class="col-sm-9">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-10 config-step">
-              </div>
-            </div>
-            <atlantis:webstash type="css">
-              <style>
-                .config-step {
-                  background: #FCFCFC;
-                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
-                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  border: 1px solid #ccc;
-                  float: left;
-                  min-height: 460px;
-                  position: relative;
-                }
-                .config-step .flag {
-                  color: white;
-                  font-size: 19px;
-                  height: 34px;
-                  line-height: 30px;
-                  left: 0;
-                  padding: 2px 16px 4px;
-                  position: absolute;
-                  top: 10px;
-                }
-                .config-step .blue {
-                  background: #0da8e5;
-                }
-                .config-step .blue::after {
-                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
-                }
-                .config-step .flag::after {
-                  border-style: solid;
-                  border-width: 17px;
+      <div class="row">
+        <div class="col-sm-9">
+          <atlantis:webstash type="css">
+            <style>
+              .config-step {
+              background-color: #F5F5F5;
+              border: 1px solid #C3C3C3;
+              padding: 20px;
+              padding-left: 40px;
+              padding-right: 40px;
+              background: #eae9e9;
+              background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+              background: -moz-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+              background: -webkit-gradient(linear,left top,right top,color-stop(0%,#eae9e9),color-stop(50%,#fcfcfc),color-stop(100%,#eae9e9));
+              background: -webkit-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+              background: -o-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+              background: -ms-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+              background: linear-gradient(to right,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae9e9',endColorstr='#eae9e9',GradientType=1);
+              }
+              .config-step .flag {
+                color: white;
+                font-size: 19px;
+                height: 34px;
+                line-height: 30px;
+                left: 0;
+                padding: 2px 16px 4px;
+                position: absolute;
+                top: 10px;
+              }
+              .config-step .blue {
+                background: #0da8e5;
+              }
+              .config-step .blue::after {
+                border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+              }
+              .config-step .red {
+                background: #f26c4f;
+              }
+              .config-step .red::after {
+                border-color: #f26c4f transparent #f26c4f #f26c4f;
+              }
+              .config-step .orange {
+                background: #fea700;
+              }
+              .config-step .orange::after {
+                border-color: #fea700 transparent #fea700 #fea700;
+              }
+              .config-step .flag::after {
+                border-style: solid;
+                border-width: 17px;
+                content: "";
+                left: 100%;
+                position: absolute;
+                top: 0;
+              }
+              .step-number-text {
+                font-size: 19px;
+                line-height: 28px;
+                text-transform: capitalize;
+              }
+              @media only screen and (min-width: 1200px) {
+                .config-step::after {
+                  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
+                  background-size: cover;
+                  bottom: -10px;
                   content: "";
-                  left: 100%;
-                  position: absolute;
-                  top: 0;
-                }
-                @media only screen and (min-width: 1200px) {
-                  .config-step::after {
-                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
-                    background-size: cover;
-                    bottom: -10px;
-                    content: "";
-                    height: 10px;
-                    left: 0;
-                    position: absolute;
-                    width: 700px;
-                  }
-                }
-              </style>
-            </atlantis:webstash>
-          </div><br><br>
-          <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-10 config-step">
-              </div>
-            </div>
-            <atlantis:webstash type="css">
-              <style>
-                .config-step {
-                  background: #FCFCFC;
-                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
-                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  border: 1px solid #ccc;
-                  float: left;
-                  min-height: 460px;
-                  position: relative;
-                }
-                .config-step .flag {
-                  color: white;
-                  font-size: 19px;
-                  height: 34px;
-                  line-height: 30px;
+                  height: 10px;
                   left: 0;
-                  padding: 2px 16px 4px;
                   position: absolute;
-                  top: 10px;
+                  width: 700px;
                 }
-                .config-step .blue {
-                  background: #0da8e5;
-                }
-                .config-step .blue::after {
-                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
-                }
-                .config-step .flag::after {
-                  border-style: solid;
-                  border-width: 17px;
-                  content: "";
-                  left: 100%;
-                  position: absolute;
-                  top: 0;
-                }
-                @media only screen and (min-width: 1200px) {
-                  .config-step::after {
-                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
-                    background-size: cover;
-                    bottom: -10px;
-                    content: "";
-                    height: 10px;
-                    left: 0;
-                    position: absolute;
-                    width: 700px;
-                  }
-                }
-              </style>
-            </atlantis:webstash>
-          </div><br><br>
-          <div class="col-sm-12">
-            <div class="row">
-              <div class="col-sm-10 config-step">
+              }
+            </style>
+          </atlantis:webstash>
+          <div class="row">
+            <div class="col-sm-10 config-step"><span class="flag blue"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_plan]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:plan_title]@L]</div>
               </div>
-            </div>
-            <atlantis:webstash type="css">
-              <style>
-                .config-step {
-                  background: #FCFCFC;
-                  background-image: -moz-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -ms-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -o-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,#EAE9E9),color-stop(0.5,#FCFCFC),color-stop(1,#EAE9E9));
-                  background-image: -webkit-linear-gradient(right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  background-image: linear-gradient(to right,#EAE9E9 0,#FCFCFC 50%,#EAE9E9 100%);
-                  border: 1px solid #ccc;
-                  float: left;
-                  min-height: 460px;
-                  position: relative;
-                }
-                .config-step .flag {
-                  color: white;
-                  font-size: 19px;
-                  height: 34px;
-                  line-height: 30px;
-                  left: 0;
-                  padding: 2px 16px 4px;
-                  position: absolute;
-                  top: 10px;
-                }
-                .config-step .blue {
-                  background: #0da8e5;
-                }
-                .config-step .blue::after {
-                  border-color: #0da8e5 transparent #0da8e5 #0da8e5;
-                }
-                .config-step .flag::after {
-                  border-style: solid;
-                  border-width: 17px;
-                  content: "";
-                  left: 100%;
-                  position: absolute;
-                  top: 0;
-                }
-                @media only screen and (min-width: 1200px) {
-                  .config-step::after {
-                    background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
-                    background-size: cover;
-                    bottom: -10px;
-                    content: "";
-                    height: 10px;
-                    left: 0;
-                    position: absolute;
-                    width: 700px;
-                  }
-                }
-              </style>
-            </atlantis:webstash>
-          </div><br><br>
-          <div class="col-sm-11">
-            <div class="row">
-              <div class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text">Step 2 | Choose your plan term</span></span>
-                <div class="row">
-                  <h2>Extend and save</h2>
-                </div>
-                <p class="lead">Lock in your savings and avoid annual renewals with a multi-year term.</p>
+              <div class="row">
+                <p class="text-secondary step-subtitle">[@L[cds.sales/gd/hosting/website-builder-config:plan_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="tiers" class="product-options">
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:personal]@L]</div>
+                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:personal_text]@L]</div>
+                      <div class="col-xs-4">
+                         
+                         
+                        ##if(true)
+                         
+                        <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
+                        ##endif
+                         
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:50_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:1GB_space]@L]</div>
+                      <div class="col-xs-4">
+                         
+                         
+                        ##if(true)
+                         
+                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+                         
+                        ##endif
+                         
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
+                      </div>
+                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:business]@L]</div>
+                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]</div>
+                      <div class="col-xs-4">
+                         
+                         
+                        ##if(true)
+                         
+                        <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
+                        ##endif
+                         
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]</div>
+                      <div class="col-xs-4">
+                         
+                        ##if(true)
+                         
+                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+                         
+                        ##endif
+                         
+                      </div>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
+                      </div>
+                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]</div>
+                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]</div>
+                      <div class="col-xs-4">
+                         
+                         
+                        ##if(true)
+                         
+                        <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
+                        ##endif
+                         
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]</div>
+                      <div class="col-xs-4">
+                         
+                         
+                        ##if(true)
+                         
+                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+                         
+                        ##endif
+                         
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+          <atlantis:webstash type="css">
+            <style>
+              .config-step-break {
+                margin-top: 15px;
+                margin-bottom: 15px;
+              }
+              .config-step-break .icon-down {
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+              }
+              .icon-down {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20px;
+                height: 15px;
+                background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) -49px -2px no-repeat;
+              }
+            </style>
+          </atlantis:webstash>
+          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+          <div class="row">
+            <div class="col-sm-10 config-step"><span class="flag orange"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_term]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="terms" class="product-options">
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-sm-2 col-xs-6">1 month</div>
+                      <div class="col-sm-2 col-xs-5">$1.00</div>
+                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
+                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-sm-2 col-xs-6">1 month</div>
+                      <div class="col-sm-2 col-xs-5">$1.00</div>
+                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
+                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-sm-2 col-xs-6">1 month</div>
+                      <div class="col-sm-2 col-xs-5">$1.00</div>
+                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
+                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
+                    </div>
+                  </li>
+                  <li> 
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-sm-2 col-xs-6">1 month</div>
+                      <div class="col-sm-2 col-xs-5">$1.00</div>
+                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
+                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+          <div class="row">
+            <div class="col-sm-10 config-step"><span class="flag blue"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="ssl" class="product-options">
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="sslOption" value="no" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-xs-8">No Thanks</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="sslOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
+                      </div>
+                      <div class="col-xs-11">Add Standard SSL Certificate $50.00</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+          <div class="row">
+            <div class="col-sm-10 config-step"><span class="flag red"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_gf_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_gf_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="get-found" class="product-options">
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="sslOption" value="no" data-price="$10.00" data-name="Managed" checked="checked">
+                      </div>
+                      <div class="col-xs-8">No Thanks</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row">
+                      <div class="col-xs-1">
+                        <input type="radio" style="margin-right:4px;" name="sslOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
+                      </div>
+                      <div class="col-xs-11">Add Get Found $50.00</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <atlantis:webstash type="css">
+            <style>
+              .order-summary-wrapper h3{
+                background-color: #EBEBEB;
+                padding: 10px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 14px;
+                font-weight: 600;
+              }
+              .order-item-details-wrapper{
+                overflow: hidden;
+                font-size: 13px;
+              }
+              .order-total{
+                float: right;
+                font-size: 28px;
+                font-weight: 500;
+                color: #579006;
+                vertical-align: top;
+              }
+              .order-item-details-wrapper {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 7px;
+                padding-bottom: 3px;
+              }
+              .subtotal{
+                border-bottom: 1px solid #333;
+              }
+              .subtotal-disclaimer p{
+                margin-top: 20px;
+                font-size: 13px;
+                color: #777;
+              }
+              .scroll-down-wrapper{
+                cursor: pointer;
+                margin-top: 15px;
+              }
+              .scroll-down-wrapper p{
+                font-size: 12px;
+                text-align: center;
+                margin-bottom: 0px;
+                color: #579006;
+              }
+              .scroll-down-wrapper span{
+                margin-left: auto;
+                margin-right: auto;
+                width: 20px;
+                height: 15px;
+              }
+              
+              .green-down-arrow-icon{
+                display: block;
+                background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -70px -2px transparent;
+              }
+              
+              .product-added-to-cart {
+                padding: 0 10px;
+                float: left;
+                color: #679B08;
+                position: relative;
+              }
+              .product-added-to-cart-text {
+                position: relative;
+                left: 10px;
+                font-size: 25px;
+              }
+              @media only screen and (max-width: 768px) {
+                .green-down-arrow-icon {
+                  display:none;
+                }
+              }
+            </style>
+          </atlantis:webstash>
+          <div class="config-cart-wrapper col-sm-12">
+            <div class="row order-summary-wrapper">
+              <h3>Order Summary</h3>
+            </div>
+            <div class="row order-item-details-wrapper"></div>
+            <div class="row subtotal">Subtotal</div>
+            <div class="row subtotalPrice">$1.00</div>
+            <div class="row savings">Total Savings $2.00</div>
+            <div class="row subtoal-disclaimer">[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</div>
+            <div data-ci="" data-scroll="" class="row scroll-down-wrapper move">
+              <p class="green-text">{{ configSummarytotalDisc }}</p><span class="green-down-arrow-icon"></span>
+            </div>
+            <!--
+            .order-summary-wrapper
+              h3 Order Summary
+              .order-total-wrapper
+                .order-item-details-wrapper
+            
+                .subtotal-disclaimer
+                  p {{ configSummarytotal }}
+            div
+              span.order-total
+                span#summaryPrice.currency-amount
+            .subtotal-disclaimer
+              p
+                | [@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]
+            .scroll-down-wrapper.move(data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
+              p.green-text {{ configSummarytotalDisc }}
+              span.green-down-arrow-icon
+            
+            -->
+          </div>
+          <atlantis:webstash type="js">
+            <script>
+              (function($){
+                /**
+                 * Scroll to a section of the page
+                 */
+                $.fn.extend({ 
+                  scrollToSection : function(options) {
+                      
+                    var defaults = {},
+                        options = $.extend(defaults, options);
+              
+                    function scrollBody() {
+                      if(options.$el.attr('data-scroll')!=''){
+                        var el = $(options.$el.attr('data-scroll')),
+                            px = el.offset().top;
+                        options.$el.on('click', function(e){
+                         e.preventDefault();
+                         $('html,body').animate({scrollTop:px}, '1000', 'swing');
+                        });
+                      }
+                    }
+              
+                    return this.each(function() {
+                      options.$el = $(this);
+                      scrollBody();
+                    });
+                  }
+                });
+              })(jQuery);
+              $(document).ready(function() {
+                $('.move').scrollToSection();
+                $(window).scroll(function() {
+                  updateOrderSummaryPosition();
+                });
+                $(window).resize(function() {
+                  updateOrderSummaryPosition();
+                });
+                updateOrderSummaryPosition();        
+              
+                function updateOrderSummaryPosition() {
+                  if($(window).width() < 768){
+                    console.log('small');
+                    return;
+                  }
+                  var paddingTop = 20/* for prettiness when scrolling */,
+                    $configCartWrapper = $('.config-cart-wrapper'),
+                    scrollTop = $(window).scrollTop(),
+                    scrollLeft = $(window).scrollLeft(),
+                    topStep1 = $("div.config-step:first").offset().top,
+                    topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+                    $footer = $('.scroll-down-wrapper');
+              
+                  $footer.css('visibility','visible');
+                  $configCartWrapper.css({'top':'0px','position':'static'});
+              
+                  if(!topOfWindowAboveTopOfStep1) {
+                    //check for if summary can fit without going below the bottom of the last step      
+                    var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+                      proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+                      $lastStep = $("div.config-step:last"),
+                      bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+                      canFit = (proposedNewBottom <= bottomOfLastStep);
+              
+                    if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+                      try{
+                        var configCartWrapperLeft = $configCartWrapper.offset().left;
+                        $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+                      }catch(err){
+                        //if errors don't float the $confiCartWrapper
+                        $configCartWrapper.css({'top':'0px','position':'static'});
+                      }
+                      if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                        $footer.css('visibility','hidden');
+                      }else{
+                        $footer.css('visibility','visible');
+                      }
+                    } else {
+                      try{
+                        var configCartWrapperLeft = $configCartWrapper.offset().left;
+                        $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+                      }catch(err){
+                        //if errors don't float the $confiCartWrapper
+                        $configCartWrapper.css({'top':'0px','position':'static'});
+              
+                      }
+                      // affix the summary so the bottom lines up with the bottom of the last step
+                      $footer.css('visibility','hidden');
+                      var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+                      //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+                      $configCartWrapper
+                        .css({'top': topForBottomAligned + 'px'});
+                    }
+                  }    
+                }
+              
+                window.setTimeout(function() {
+                  $('#shareme').fosShare({});
+                }, 2000);
+              });
+              
+            </script>
+          </atlantis:webstash>
         </div>
       </div>
-      <div class="config-cart-wrapper col-sm-3">
-        <div class="row">
-          <div class="order-summary-wrapper">
-            <h3>Order Summary</h3>
-            <div class="order-total-wrapper">
-              <div class="order-item-details-wrapper"></div>
-              <div class="order-item-addons-wrapper">
-                <p id="summaryAddon" class="order-item-title"></p><span><span id="summaryTerm"></span><span id="addonPrice" class="plan-price"></span></span>
-              </div>
-              <div class="subtotal-disclaimer">
-                <p>{{ configSummarytotal }}</p>
+      <div class="row">
+        <section id="disclaimers" class="disclaimers-section row">
+          <div class="col-sm-9">
+            <div class="col-sm-5">
+              <p class="h5"><a onClick="disclaimersModal()" data-ci="87766">Legal Disclaimers</a></p>
+              <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
+                <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
+                <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
+            <div class="col-sm-3 col-sm-push-2"><a data-ci="" class="btn btn-purchase btn-plan btn-md btn-block">Continue</a></div>
           </div>
-          <div><span class="order-total"><span id="summaryPrice" class="currency-amount"></span></span></div>
-          <div class="subtotal-disclaimer">
-            <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
-          </div>
-          <div data-ci="" data-scroll=".config-cart-wrapper" class="scroll-down-wrapper move">
-            <p class="green-text">{{ configSummarytotalDisc }}</p><span class="icon-down green-down-arrow-icon"></span>
-          </div>
-        </div>
+        </section>
       </div>
       <div style="display:none" class="container">
         <atlantis:webstash type="css">
@@ -557,32 +963,6 @@ margin-left: 15px;
     </script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
     <script type="text/javascript">
-      (function($){
-          /**
-           * Scroll to a section of the page
-           */
-          $.fn.extend({ 
-            scrollToSection : function(options) {
-                
-              var defaults = {},
-                  options = $.extend(defaults, options);
-      
-              function scrollBody() {
-                var el = $(options.$el.attr('data-scroll')),
-                    px = el.offset().top;
-                options.$el.on('click', function(e){
-                 e.preventDefault();
-                 $('html,body').animate({scrollTop:px}, '1000', 'swing');
-                });
-              }
-      
-              return this.each(function() {
-                options.$el = $(this);
-                scrollBody();
-              });
-            }
-          });
-      })(jQuery);
       $(document).ready(function() {
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
@@ -591,66 +971,6 @@ margin-left: 15px;
           var hash = hashes[i].split('=');
           qs.push(hash[0]);
           qs[hash[0]] = hash[1];
-        }
-        $('.move').scrollToSection();
-        $(window).scroll(function() {
-          //updateOrderSummaryPosition();
-        });
-        $(window).resize(function() {
-          //updateOrderSummaryPosition();
-        });
-        //updateOrderSummaryPosition();        
-      
-        function updateOrderSummaryPosition() {
-          var paddingTop = 20/* for prettiness when scrolling */,
-            $configCartWrapper = $('.config-cart-wrapper'),
-            scrollTop = $(window).scrollTop(),
-            scrollLeft = $(window).scrollLeft(),
-            topStep1 = $("div.config-step:first").offset().top,
-            topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
-            $footer = $('.scroll-down-wrapper');
-      
-          $footer.css('visibility','visible');
-          $configCartWrapper.css({'top':'0px','position':'static'});
-      
-          if(!topOfWindowAboveTopOfStep1) {
-            //check for if summary can fit without going below the bottom of the last step      
-            var proposedNewTop = scrollTop - (topStep1 - paddingTop),
-              proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
-              $lastStep = $("div.config-step").eq(1),
-              bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
-              canFit = (proposedNewBottom <= bottomOfLastStep);
-      
-            if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
-              try{
-                var configCartWrapperLeft = $configCartWrapper.offset().left;
-                $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-              }catch(err){
-                //if errors don't float the $confiCartWrapper
-                $configCartWrapper.css({'top':'0px','position':'static'});
-              }
-              if((scrollTop+paddingTop)>=$lastStep.offset().top){
-                $footer.css('visibility','hidden');
-              }else{
-                $footer.css('visibility','visible');
-              }
-            } else {
-              try{
-                var configCartWrapperLeft = $configCartWrapper.offset().left;
-                $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
-              }catch(err){
-                //if errors don't float the $confiCartWrapper
-                $configCartWrapper.css({'top':'0px','position':'static'});
-      
-              }
-              // affix the summary so the bottom lines up with the bottom of the last step
-              $footer.css('visibility','hidden');
-              var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
-              //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
-              $configCartWrapper
-                .css({'top': topForBottomAligned + 'px'});
-            }
-          }    
         }
       
         window.setTimeout(function() {

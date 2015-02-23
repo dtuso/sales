@@ -17,28 +17,191 @@ append vars
 
 append pageStyles
   style
-    include ./website-builder-config/styles.css
+    include ./website-builder-config/styles.css 
 
+block header
+  p.product-added-to-cart
+    span.green-check
+    span.product-added-to-cart-text Microsoft Office 365 is in your cart!
 
 block addons
-  +configStep
-  br
-  br 
-  +configStep
-  br
-  br
-  +configStep
-  br
-  br 
-  .col-sm-11
+  +configStep({"flagColor":"blue","flagText":"[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_plan]@L]"})
     .row
-      .col-sm-11.config-step
-        span.flag.blue
-          span.step-number-text Step 2 | Choose your plan term
-        .row
-          h2 Extend and save
-        p.lead Lock in your savings and avoid annual renewals with a multi-year term.
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:plan_title]@L]
+    .row
+      p.text-secondary.step-subtitle [@L[cds.sales/gd/hosting/website-builder-config:plan_subtitle]@L]
+    .row.options-wrapper
+      ul#tiers.product-options
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='planOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-xs-7.config-text-primary[@L[cds.sales/gd/hosting/website-builder-config:personal]@L]
+            .col-xs-4 [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:personal_text]@L]
+            .col-xs-4 
+              | 
+              |##if(true)
+              | 
+              strike [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+              | 
+              |##endif
+              |  
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:50_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:1GB_space]@L]
+            .col-xs-4 
+              | 
+              |##if(true)
+              | 
+              | ON SALE (Save [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+              | 
+              |##endif
+              |  
 
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='planOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed') 
+            .col-xs-7.config-text-primary [@L[cds.sales/gd/hosting/website-builder-config:business]@L]
+            .col-xs-4 [@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]
+            .col-xs-4 
+              | 
+              |##if(true)
+              | 
+              strike [@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+              | 
+              |##endif
+              |  
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]
+            .col-xs-4
+              | 
+              |##if(true)
+              | 
+              | ON SALE (Save [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+              | 
+              |##endif
+              |  
+        li 
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='planOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed') 
+            .col-xs-7.config-text-primary [@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]
+            .col-xs-4 [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]
+            .col-xs-4 
+              | 
+              |##if(true)
+              | 
+              strike [@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo
+              | 
+              |##endif
+              |  
+          .row
+            .col-xs-7.col-xs-offset-1.col-sm-offset-1 [@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]
+            .col-xs-4 
+              | 
+              |##if(true)
+              | 
+              | ON SALE (Save [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
+              | 
+              |##endif
+              |  
+  +configStepBreak
+  +configStep({"flagColor":"orange","flagText":"[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_term]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]
+    .row
+      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]
+    .row.options-wrapper
+      ul#terms.product-options
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='termOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-sm-2.col-xs-6 1 month
+            .col-sm-2.col-xs-5 $1.00
+            .col-sm-2.col-xs-5.col-xs-offset-7 $5.99
+            .col-sm-4.col-xs-11.text-xs-right ON SALE (SAVE 40%)
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='termOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-sm-2.col-xs-6 1 month
+            .col-sm-2.col-xs-5 $1.00
+            .col-sm-2.col-xs-5.col-xs-offset-7 $5.99
+            .col-sm-4.col-xs-11.text-xs-right ON SALE (SAVE 40%)
+        li 
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='termOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-sm-2.col-xs-6 1 month
+            .col-sm-2.col-xs-5 $1.00
+            .col-sm-2.col-xs-5.col-xs-offset-7 $5.99
+            .col-sm-4.col-xs-11.text-xs-right ON SALE (SAVE 40%)
+        li 
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='termOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-sm-2.col-xs-6 1 month
+            .col-sm-2.col-xs-5 $1.00
+            .col-sm-2.col-xs-5.col-xs-offset-7 $5.99
+            .col-sm-4.col-xs-11.text-xs-right ON SALE (SAVE 40%)
+  +configStepBreak
+  +configStep({"flagColor":"blue","flagText":"[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]
+    .row
+      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]
+    .row.options-wrapper
+      ul#ssl.product-options
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='sslOption', value='no', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-xs-8 No Thanks
 
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='sslOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed') 
+            .col-xs-11 Add Standard SSL Certificate $50.00
+  +configStepBreak
+  +configStep({"flagColor":"red","flagText":"[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:add_gf_title]@L]
+    .row
+      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:add_gf_subtitle]@L]
+    .row.options-wrapper
+      ul#get-found.product-options
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='sslOption', value='no', data-price='$10.00', data-name='Managed', checked='checked') 
+            .col-xs-8 No Thanks
+
+        li
+          .row
+            .col-xs-1
+              input(type='radio', style='margin-right:4px;', name='sslOption', value='pro_vps_managed', data-price='$10.00', data-name='Managed') 
+            .col-xs-11 Add Get Found $50.00
+block orderSummary
+  +configSummary
+
+block disclaimers
+  section#disclaimers.disclaimers-section.row
+    .col-sm-9
+      .col-sm-5
+        p.h5
+          a(onClick="disclaimersModal()", data-ci="87766") Legal Disclaimers
+        #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
+          p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
+          p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
+      .col-sm-3.col-sm-push-2
+        a.btn.btn-purchase.btn-plan.btn-md.btn-block(data-ci="") Continue
 
 prepend endOfPageScripts
