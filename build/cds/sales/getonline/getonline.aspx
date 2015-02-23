@@ -72,168 +72,59 @@
       }
       
     </script>
-    <script>    var p4pConfigData = {};
-    var url2 = window.location.protocol+'//'+ window.location.host+'/api/package/config/p4p_get_online';
-    var domainName;
-    var p4pPage = {
-      tlds: {
-        valid: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],
-        restricted: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T]
-      }
-    };
-    
-    $.ajax({
-      type: 'POST',
-      url: url2
-      ,complete: function (data) {
-      processP4PData(data);
-      },
-      dataType: 'json'
-    });
-    
-    function processP4PData(data){
-      p4pConfigData = $.parseJSON(data.responseText);
-      var dropDown1 = '<select class="dropdown1">';
-      var dropDown2 = '<select class="dropdown2">';
-      var drop1Size = p4pConfigData.step2_dropdown1.length;
-      var drop2Size = p4pConfigData.step2_dropdown2.length;
+    <script>
+      // update the form's submit URL based on the user's selections
+      $('#questions select').change(e) {
+        var interest = $('#interest-select').val();
+        var resources = $('#resources-select').val();
       
-      for(var i = 0; i < drop1Size; i++){
-        dropDown1 += '<option value="' + p4pConfigData.step2_dropdown1[i].value + '" id="' + p4pConfigData.step2_dropdown1[i].value + '">' + p4pConfigData.step2_dropdown1[i].interest + '</option>';
+        // routing logic embedded here
+        if (interest === "blog") {
+          // anytime the interest is in blogging, suggest the wordpress product
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
+        } else if (resources === "know_someone") {
+          // anytime the user "knows someone", suggest web hosting
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
+        } else if (resources === "build_myself") {
+          // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
+          if (interest === "selling_products") {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
+          } else {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
+          }
+        } else if (resources === "hire_someone") {
+          // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
+          if (interest === "selling_products") {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
+          } else {
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
+          }
+        }
       }
-      dropDown1 += '</select>';
       
-      for(var i = 0; i < drop2Size; i++){
-        dropDown2 += '<option value="' + p4pConfigData.step2_dropdown2[i].value + '" id="' + p4pConfigData.step2_dropdown2[i].value + '">' + p4pConfigData.step2_dropdown2[i].resource + '</option>';
-      }
-      dropDown2 += '</select>';
+      $('#questions form').submit(e) {
+        // retrieve valid TLDs from our app setting
+        // TODO: do these need to be market specific?
+        // TODO: is it worth trying to use the UXCorevalidation library?
+        var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
       
-      $("#first-dropdown").html(dropDown1);
-      $("#second-dropdown").html(dropDown2);
+        // if user specified a TLD, make sure it's valid for this promotion
+        var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
-    }
-    
-    $('#questions-bottom .btn-purchase').click(function(){
-        domainName = $('#search-input').val().toLowerCase();
-        var checkInput = validateInput(domainName);
-        domainName = encodeURIComponent(domainName);
-        if(checkInput === 0){
-          domainName = " ";
-        }
-        else{
-          calculateResultsPage();
-        }
-    });
-    
-    function calculateResultsPage(){
-      var resultPage = " ";
-      var whiteListSpoof = "sales/whitelist%7C54ca63b0f778fc10543b3d15";
-      //------------------NEW OR EXISTING BUSINESS--------------------------------------
-      if(($('.dropdown1').val() == "new_business" || $('.dropdown1').val() == "existing_business")) {
-        if($('.dropdown2').val() == "build_myself" && domainName != ""){
-          //WEBSITE BUILDER 
-          resultPage = '[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]';
-          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/websitebuilder.aspx|54d3a061f778fc1134545580';
-          window.location = resultPage;
-        }
-        else if($('.dropdown2').val() == "hire_someone" && domainName != ""){
-          //PRO SERVICES
-          resultPage = '[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]';
-          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/pro-basic.aspx|54dba076f778fc1120b67d3d';
-        
-          window.location = resultPage;
-        }
-        else if($('.dropdown2').val() == "know_someone" && domainName != ""){
-          //WEBSITE HOSTING 
-          resultPage = '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]';
-          resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/web-hosting.aspx|54d916f8f778fc2a88214035';
-        
-          window.location = resultPage;
+        if (tldSpecified && validTlds.indexOf(tldSpecified)) {
+          $(".validation-message").show();
+          e.preventDefault();
         }
       }
-      //--------------------BLOG--------------------------------------------------------
-      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "build_myself" && domainName != ""){
-        //WORDPRESS
-        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
-        
-        window.location = resultPage;
-      }
-      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "hire_someone" && domainName != ""){
-        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
-        
-        window.location = resultPage;
-      }
-      else if($('.dropdown1').val() == "blog" && $('.dropdown2').val() == "know_someone" && domainName != ""){
-        resultPage = '[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/wordpress.aspx|54db8f88f778fc1120b67d32';
-        
-        window.location = resultPage;
-      }
-      //------------SELLING PRODUCTS--------------------------------------------------
-      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "build_myself" && domainName != ""){
-        //ONLINE STORE
-        resultPage = '[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/online-store.aspx|54de7adff778fc03ac812903';
-        
-        window.location = resultPage;
-      }
-      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "hire_someone" && domainName != ""){
-          //PRO SERVICES
-        resultPage = '[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/pro-ecomm.aspx|54dba062f778fc1120b67d3b';
-        
-        window.location = resultPage;
-      }
-      else if($('.dropdown1').val() == "selling_products" && $('.dropdown2').val() == "know_someone" && domainName != ""){
-        //Website Hosting Result Page
-        resultPage = '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]';
-        resultPage += (resultPage.indexOf('?') > 0 ? '&' : '?') + 'domain=' + domainName + '&version=' + whiteListSpoof + '&version=sales/getonline/web-hosting.aspx|54d916f8f778fc2a88214035';
-        
-        window.location = resultPage;
-      }
-    }
-
-    function validateInput(domainName){
-       var validFlag = 0;
-
-       domainName.toLowerCase();
-
-       if(domainName.indexOf('.') > -1){
-           var domainSplit = domainName.split('.');
-           for(var i = 0; i < p4pPage.tlds.valid.length; i++){
-               if(domainSplit[1] === p4pPage.tlds.valid[i]){
-                  validFlag = 1;
-                  $(".validate-message").text("");
-                  return validFlag;
-               }    
-              else{
-                  $(".validate-message").text("Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, or .ORG");
-                  validFlag = 0;
-              }
-           }
-
-           return validFlag;
-       }
-    }
-
-    function stripHomePageParameter(){
-      var windowParams = window.location.search.replace("?","");
-      var params = windowParams.split("&");
-      for(var i = 0; i < params.length;i++){
-       var inputName = params[i].split("=")[0];
-       var inputValue = params[i].split("=")[1];
-       if(inputName == "p4p"){
-         $("#homepage-selection").text(inputValue);
-       }
-      }
-        
-    }
-
-    $(document).ready(function(){
-      stripHomePageParameter();
-    });
+      
+      $(document).ready(function(){
+        // set highlighted marquee text if passed by referring page
+        var p4p = window.location.search.split('foo=');
+        if (p4p.length > 1) {
+          $("#marquee mark").text(p4p[1].split("&"));
+        }
+      });
+      
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -251,7 +142,7 @@
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <section id="marquee" class="green">
+    <section id="marquee">
       <div class="container text-center">
         <h2>This doesn't have to be <mark>confusing!</mark></h2>
         <div class="row">
@@ -259,29 +150,49 @@
         </div>
       </div>
     </section>
-    <section id="questions-bottom" class="white">
+    <section id="questions">
       <div class="container">
         <h2 class="text-center">We can get your business online.</h2>
         <p class="text-center">Tell us a little about yourself.  We will step you from A to Z, no problem.</p>
-        <div class="row">
-          <div class="col-sm-6 step-1">
-            <h3>Step 1</h3>
-            <p>What's your business name? Don't have a name? An idea for your business is perfect!</p>
-            <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="63" class="search-bar">
-            <p class="validate-message"></p>
-          </div>
-          <div class="col-sm-6 step-2">
-            <h3>Step 2</h3>
-            <p>We've given you some options of how to set up your business online.  Just fill in the blanks!</p>
-            <div class="dropdowns">
-              <h3 class="drop-label">I'm interested in</h3>
-              <div id="first-dropdown"></div>
-              <h3 class="drop-label">I have the resources and time to</h3>
-              <div id="second-dropdown"></div>
+        <form method="GET" action="[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]">
+          <div class="row">
+            <div class="col-sm-6">
+              <fieldset class="step-1">
+                <legend>Step 1</legend>
+                <p>What's your business name? Don't have a name? An idea for your business is perfect!</p>
+                <div class="form-group">
+                  <label for="search-input" class="sr-only">What's your business name?</label>
+                  <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
+                </div>
+                <p class="validation-message">Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG</p>
+              </fieldset>
             </div>
-            <button class="btn btn-purchase btn-lg get-running-btn">GET ME UP AND RUNNING!</button>
+            <div class="col-sm-6">
+              <fieldset class="step-2">
+                <legend>Step 2</legend>
+                <p>We've given you some options of how to set up your business online.  Just fill in the blanks!</p>
+                <div class="form-group">
+                  <label for="interest-select">I'm interested in</label>
+                  <select id="interest-select" name="interest" class="form-control">
+                    <option value="existing_business">Getting my existing business online</option>
+                    <option value="new_business">Starting a new business online</option>
+                    <option value="selling_products">Selling products online</option>
+                    <option value="blog">Starting my own blog</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="resources-select">I have the resources and time to</label>
+                  <select id="resources-select" name="resource" class="form-control">
+                    <option value="build_myself">Build it myself (if it's easy)</option>
+                    <option value="know_someone">I have a guy who knows how to code (he has skills)</option>
+                    <option value="hire_someone">Hire someone to do it all for me (no time)</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-purchase btn-lg">Get me up and running!</button>
+              </fieldset>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </section>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
@@ -348,41 +259,21 @@ ul li.no-check {
 
       </style>
       <style>
-        /* copied from landing-page */
-        h2 {
-          margin-bottom: 20px;
-          margin-top: 0;
-        }
-        h3 {
-          margin-top: 20px;
-          margin-bottom: 10px;
-        }
-        
-        .gray{background-color:#E8E8E8;}
-        .green{background-color:#78C043}
-        .white{background-color:white}
-        
-        .search-bar{width:100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 46px; border-top: 4px solid #FFCC00; padding: 15px; font-family: 'Walsheim-Medium';}
-        .step-1{padding-right: 50px}
-        .drop-label{font-size:20px!important;}
-        .step-2{padding-left: 50px; border-left: 2px solid lightgray}
-        .get-running-btn{margin-top: 50px; float:right;}
-        
-        .dropdown1{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
-        .dropdown2{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
-        #questions-bottom{padding-bottom: 50px}
-        #questions-bottom p{font-family: 'Walsheim-Medium';}
-        input::-webkit-input-placeholder {color: #333;}
-        input::-moz-placeholder {color: #333;}
-        input:-moz-placeholder {color: #333;}
-        input:-ms-input-placeholder {color: #333;}
-        
-        #questions-bottom h2 { font-size: 3rem; margin-bottom: 10px; }
-        
         /* keep marquee section condensed so questions appear above the fold on desktop */
-        #marquee { padding-top: 30px; padding-bottom: 30px; }
-        #marquee h2 { margin-bottom: 20px; }
+        #marquee { padding-top: 30px; padding-bottom: 30px; background-color:#78C043;}
+        #marquee h2 { margin-bottom: 20px; margin-top: 0; }
         
+        #questions h2 { font-size: 3rem; margin-bottom: 5px; margin-top: 0;}
+        #questions legend { font-size: 3rem; text-transform: uppercase; font-family: 'Walsheim-Bold'; border-bottom: none; }
+        #questions p { font-family: Walsheim-Medium; }
+        #questions input, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
+        #questions .btn-purchase { float:right;}
+        #questions .validation-message { display: none; }
+        
+        @media (min-width: 768px) {
+          .step-1{padding-right: 50px;}
+          .step-2{padding-left: 50px; border-left: 2px solid lightgray;}
+        }
         
       </style>
     </atlantis:webstash>
