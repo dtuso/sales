@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.en-ie
 id: false
-name: BigTextFix
+name: GCEMO-636
 ---
 extends ../../layouts/homepage/default_base
 
@@ -25,7 +25,7 @@ block secondaryTile
   |  ##endif
 
 block bugBar
-  +tldBugs(["co","club","org"])
+  +tldBugs(["club","org"])
 
 append cookieWarning
   script(type="text/javascript").
