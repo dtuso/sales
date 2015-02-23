@@ -31,6 +31,26 @@ mixin renderGoodNews(productToDisplay)
 
   section#getItNow
     .container
+      .row
+        .col-xs-10.col-xs-offset-1
+          span Here you go...
+          h2 A great package deal for <br> <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
+      .row
+        .col-xs-2.col-xs-offset-2
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+          h3.logo-label DOMAIN NAME
+          p Domain is the name of your
+        .col-xs-1
+        .col-xs-2
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+          h3.logo-label DOMAIN NAME
+          p Domain is the name of your
+        .col-xs-1
+        .col-xs-2
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+          h3.logo-label DOMAIN NAME
+          p Domain is the name of your
+    .container
       .col-xs-3.left-side
         .row
           .hero-guy

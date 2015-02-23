@@ -1,7 +1,5 @@
 extends ./templates/_p4p.jade
 
-block marquee
-
 block getItNow
   - var productToDisplay = {name: "Web Hosting", info: "Give your site a home that’ll keep it secure and running like sports car.", cssClass: "<div class='web-hosting-icon'></div>", price: "$1.00"};
   +renderGoodNews(productToDisplay)
