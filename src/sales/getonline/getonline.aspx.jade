@@ -50,7 +50,7 @@ append endOfPageScripts
       // set highlighted marquee text if passed by referring page
       var p4p = window.location.search.split('p4p=');
       if (p4p.length > 1) {
-        $("#marquee mark").text(p4p[1].split("&")[0]);
+        $("#marquee span").text(p4p[1].split("&")[0]);
       }
     });
 
@@ -66,6 +66,7 @@ append pageStyles
     #questions input, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
     #questions .btn-purchase { float:right;}
     #questions .validation-message { display: none; }
+    .callout{background-color: #fedc45; padding-left: 2px; padding-right: 2px;}
 
     @media (min-width: 768px) {
       .step-1{padding-right: 50px;}
@@ -76,7 +77,7 @@ block content
 
   section#marquee
     .container.text-center
-      h2 This doesn't have to be <mark>confusing!</mark>
+      h2 This doesn't have to be <span class="callout">confusing!</span>
       .row
         .col-xs-12
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png")

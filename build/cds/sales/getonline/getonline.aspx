@@ -90,7 +90,7 @@
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container text-center">
-        <h2>This doesn't have to be <mark>confusing!</mark></h2>
+        <h2>This doesn't have to be <span class="callout">confusing!</span></h2>
         <div class="row">
           <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png" class="img-responsive center-block"></div>
         </div>
@@ -152,6 +152,8 @@
   padding-bottom: 50px;
 }
 section h2 {
+  margin-bottom: 40px;
+  margin-top: 0;
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -160,6 +162,8 @@ section h2 {
   color: inherit;
 }
 section h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -215,6 +219,7 @@ ul li.no-check {
         #questions input, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
         #questions .btn-purchase { float:right;}
         #questions .validation-message { display: none; }
+        .callout{background-color: #fedc45; padding-left: 2px; padding-right: 2px;}
         
         @media (min-width: 768px) {
           .step-1{padding-right: 50px;}
@@ -276,7 +281,7 @@ ul li.no-check {
         // set highlighted marquee text if passed by referring page
         var p4p = window.location.search.split('p4p=');
         if (p4p.length > 1) {
-          $("#marquee mark").text(p4p[1].split("&")[0]);
+          $("#marquee span").text(p4p[1].split("&")[0]);
         }
       });
       

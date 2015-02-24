@@ -714,7 +714,7 @@ function getParameterByName(name) {
     <section id="getItNow">
       <div class="container">
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1"><span>Here you go...</span>
+          <div class="col-xs-10 col-"><span>Here you go...</span>
             <h2>A great package deal for <br> <span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h2>
           </div>
         </div>
@@ -902,7 +902,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an excellent starter pack for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
           </div>
           <div class="container bottom">
             <div class="row">
