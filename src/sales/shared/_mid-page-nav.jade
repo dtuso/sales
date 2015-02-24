@@ -1,0 +1,295 @@
+mixin priceBlock(price, duration, link, options)
+  - price = price || "$X.XX"
+  - duration = duration || "year"
+  - link = link || "#"
+  - options = options || {}
+  - options.priceText = options.priceText || "[@L[cds.sales/_common:plans-starting-at]@L]"
+  - options.buttonColor = options.buttonColor || "btn-purchase"
+  - options.buttonText = options.buttonText || "[@L[cds.sales/_common:see-the-plans]@L]"
+  - options.ci = options.ci || ""
+  
+  //- allow consumers to pass a block for full flexiblity
+  if block
+    block
+  else
+    .navbar-right(data-center-element='{"vertical":{"target":{"method":"parents","selector":".mid-page-nav"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
+      .price-text #{options.priceText}
+      .price !{price}
+        span !{"/" + duration}
+      a(data-ci="#{options.ci}", href="#{link}" class="#{options.buttonColor} btn btn-sm") !{options.buttonText}
+
+mixin renderMidPageNavBottom()
+  section#renderMidPageNavBottom
+    div
+
+mixin renderMidPageNav(options)
+  - options = options || {};
+  - options.icode = options.icode || "";
+  style.
+    .fix-body {
+      margin-top: 130px;
+    }
+    .mid-page-nav {
+      background-color: #333333;
+      font-family: 'Walsheim-Bold';
+      height: 130px;
+      color: #fff;
+      -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+    }
+    @media only screen and (max-width: 768px) {
+      .mid-page-nav {
+        display: none;
+      }
+    }
+    .mid-page-nav .navbar-collapse {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .mid-page-nav.sticky {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+    }
+    .mid-page-nav .nav {
+      height: 130px;
+    }
+    .mid-page-nav .nav > li {
+      display: table;
+    }
+    .mid-page-nav .nav > li.open > a {
+      background-color: #232323;
+    }
+    .mid-page-nav .nav > li.open > a:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 15px solid #008a32;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+      position: absolute;
+      bottom: 14px;
+      margin-left: -20px;
+      left: 50%;
+    }
+    .mid-page-nav .nav > li > a {
+      display: table-cell;
+      height: 130px;
+      vertical-align: middle;
+    }
+    .mid-page-nav .nav > li > a.active,
+    .mid-page-nav .nav > li > a:focus,
+    .mid-page-nav .nav > li > a:hover {
+      background-color: #232323;
+    }
+    .mid-page-nav .nav > li > a.active:before,
+    .mid-page-nav .nav > li > a:focus:before,
+    .mid-page-nav .nav > li > a:hover:before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 15px solid #008a32;
+      border-right: 20px solid transparent;
+      border-left: 20px solid transparent;
+      position: absolute;
+      bottom: 14px;
+      margin-left: -20px;
+      left: 50%;
+    }
+    .mid-page-nav .nav > li a {
+      font-size: 24px;
+      font-size: 2.4rem;
+      font-family: 'Walsheim-Bold';
+      color: #808080;
+      padding: 0;
+      text-align: center;
+    }
+    .mid-page-nav .nav > li a span {
+      display: table-cell;
+      vertical-align: middle;
+      border-left: 1px solid #232323;
+      padding: 7px 40px;
+    }
+    .mid-page-nav .nav > li a span > em {
+      font-size: 40px;
+      font-size: 4rem;
+      color: #555555;
+      display: inline-block;
+      margin-top: -5px;
+      border: 0;
+      padding: 0;
+      font-style: normal;
+    }
+    .mid-page-nav .nav > li:first-child a span {
+      border-left: 0;
+    }
+    .mid-page-nav .nav .open > .dropdown-menu {
+      opacity: 1;
+      -webkit-transform: scale(1, 1) rotateX(0deg);
+      -moz-transform: scale(1, 1) rotateX(0deg);
+      -ms-transform: scale(1, 1) rotateX(0deg);
+      transform: scale(1, 1) rotateX(0deg);
+    }
+    .mid-page-nav .nav .dropdown-menu {
+      background-clip: padding-box;
+      border: 0;
+      background-color: #333333;
+      display: block;
+      opacity: 0;
+      -webkit-transform: scale(1, 0) rotateX(90deg);
+      -moz-transform: scale(1, 0) rotateX(90deg);
+      -ms-transform: scale(1, 0) rotateX(90deg);
+      transform: scale(1, 0) rotateX(90deg);
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      -webkit-transform-origin: 50% 0;
+      -moz-transform-origin: 50% 0;
+      -ms-transform-origin: 50% 0;
+      transform-origin: 50% 0;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+    .mid-page-nav .nav .dropdown-menu li > a {
+      display: block;
+      background-color: #333333;
+      padding: 20px;
+      border-bottom: #333333;
+    }
+    .mid-page-nav .nav .dropdown-menu li > a:hover {
+      background-color: #232323;
+    }
+    .mid-page-nav .price-text {
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+    .mid-page-nav .price {
+      font-size: 24px;
+      font-size: 2.4rem;
+    }
+    .mid-page-nav .price span {
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+
+  .mid-page-nav
+    .container
+      .navbar-header
+        button.navbar-toggle.collapsed(type="button", data-toggle="collapse", data-target="")
+
+      .collapse.navbar-collapse#midPageNav
+        ul.nav.navbar-nav
+
+        block
+  
+  script.
+    $(function(){ 
+      var midPageNavItemTemplate = _.template('<li><a href="#<%= url %>" data-ci="<%= ci %>"  data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 0px;"><span><%= text %></span></a></li>');
+      $('[data-mid-nav-title]').each(function(index) {
+        var itemData = { text: $(this).data('mid-nav-title'), url: this.id , ci: $(this).data('cicode') };
+        var itemElement = midPageNavItemTemplate(itemData);
+        $('#midPageNav ul.nav').append(itemElement);
+      });
+    });
+    $(window).load(function() {
+      var midPageMenuItem = 0;
+      $(".mid-page-nav .nav > li a span").each(function(index, tab) {
+        midPageMenuItem = $(tab).outerHeight() > midPageMenuItem ? $(tab).outerHeight() : midPageMenuItem;
+      }).css("height", midPageMenuItem);
+    });
+    $(document).ready(function(){
+      // this sets the nav to fixed when scrolled past and fixed the body for the height of the nav
+      if($('.mid-page-nav').is(':visible')){
+        setTimeout(function(){
+          organizeNavBar()
+        },3000);
+      }
+
+      var nav = $('.mid-page-nav');
+      var navTop = nav.offset().top;
+      var sections = [];
+
+      $('[data-mid-nav-title]').each(function(){
+        //titles.push($(this).data('mid-nav-title'));
+        sections.push($(this).attr('id'));
+      });
+      $(window).scroll(function () {
+        var scroll = $(this).scrollTop();
+        var footerBot = $('#renderMidPageNavBottom').offset().top-130;
+        var belowNavTop=(scroll+2 > navTop) ? true : false;
+        var aboveFooterTop=(scroll < footerBot) ? true : false;
+        var InNavZone = (belowNavTop && aboveFooterTop) ? true : false;
+        nav.toggleClass("sticky", InNavZone);
+        $('body').toggleClass("fix-body", InNavZone);
+        if(!InNavZone){
+          $('.mid-page-nav a').each(function(){
+            $(this).blur();
+            $(this).toggleClass("active",InNavZone);
+          });
+        }
+
+        if(InNavZone){
+          $.each(sections,function(index,value){
+              var top = ((scroll+131) > $('#'+value).offset().top) ? true : false;
+              var bottom = ((scroll+131) < $('#'+value).offset().top + $('#'+value).outerHeight()) ? true : false;
+              var activeNav = (top && bottom) ? true : false;
+              $('a[href="#'+value+'"').toggleClass("active",activeNav);
+              $('.mid-page-nav a').each(function(i,v){
+                  if(v!=value){
+                    $(this).blur();
+                  }
+                });
+            });
+        }
+      });
+      $('.dropdown-menu').on("click",function(){
+        $('#midPageNav .dropdown-toggle').dropdown('toggle');
+      });
+      $('#midPageNav .dropdown-toggle').dropdown();
+    });
+    function organizeNavBar(){
+      var linkArea = $('.navbar-nav').width()+ 150;
+      var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
+      dropdownItem = "";
+      $dropdownMenu = "";
+      if(linkArea > navBarArea)
+      {
+        $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
+      }
+      while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        dropdownItem =$('.navbar-nav li').last().detach();
+        $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
+      }
+      if(linkArea > navBarArea)
+      {
+        $dropdownMenu.appendTo('.navbar-nav');
+      }
+    }
+    function scroll_if_anchor(href) {
+      href = typeof(href) == "string" ? href : $(this).attr("href");
+
+      var fromTop = 130;
+
+      if(href.indexOf("#") == 0) {
+        var $target = $(href);
+
+        // Older browser without pushState might flicker here, as they momentarily
+        // jump to the wrong position (IE < 10)
+        if($target.length) {
+          $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+          if(history && "pushState" in history) {
+            history.pushState({}, document.title, window.location.pathname + window.location.search + href);
+            return false;
+          }
+        }
+      }
+    }
+
+    scroll_if_anchor(window.location.hash);
+
+    $("#midPageNav").on("click", "a", scroll_if_anchor);

@@ -1,7 +1,7 @@
 ---
 location: sales/homepage/default.en-au
 id: false
-name: BigTextFix
+name: GCEMO-636
 ---
 extends ../../layouts/homepage/default_base
 append styles
@@ -12,7 +12,7 @@ block marquee
   |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
   |  ##else
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/499com/default_template" /> ]@P]
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/wsb-free-domain-typo/default_template" /> ]@P]
   |  ##endif
 
 block primaryTile
@@ -28,7 +28,7 @@ block secondaryTile
   |  ##endif
   
 block bugBar
-  +tldBugs(["co","club","org"])
+  +tldBugs(["club","org"])
 
 block cookieWarning
   script(type="text/javascript").

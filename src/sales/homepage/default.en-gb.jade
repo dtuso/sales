@@ -1,8 +1,7 @@
 ---
 location: sales/homepage/default.en-gb
 id: false
-name: GCE-33227
-comment: Templatizing en-gb homepage
+name: GCEMO-636
 ---
 extends ../../layouts/homepage/default_base
 
@@ -23,21 +22,17 @@ block domainSearch
 
 block marquee
   #marquee-container-orig
-    |  ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-    |    ##if(splitTestingSideIsActive(1395, A))  
-    |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]     
-    |    ##else
-    |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-    |    ##endif
+    |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+    |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
     |  ##else
-    |    [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+    |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
     |  ##endif
 
   #marquee-container-isc(style="display:none")
     |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
 
 block bugBar
-  +tldBugs(["co","org","net"])
+  +tldBugs(["org","net"])
 
 
 block primaryTile

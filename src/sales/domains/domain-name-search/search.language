@@ -15,10 +15,10 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2015-01-15
+      Modified Date:  2015-02-11
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCE-34816
-      Comments:       Merchandising Updates 01/15/2015 - sync for translations pickup
+      JIRA Ticket:    GCEMO-456
+      Comments:       Merchandising Updates for 02/11/2015
       
 
 
@@ -47,7 +47,7 @@ Search Domain
 <phrase key="CarouselSideLink1" />
 Domain Pricing
 <phrase key="CarouselSideLink2" />
-Bulk Search
+Bulk Domain Search
 <phrase key="CarouselSideLink3" />
 Transfer Domains
 <phrase key="Register" />
@@ -478,6 +478,12 @@ Make <strong>.casa</strong> your home online.
 Get your <strong>.pizza</strong> while it’s hot!
 <phrase key="PodDotBerlinText" />
 Cater to millions with <strong>.berlin</strong>
+<phrase key="PodDotIoText" />
+Start something with <strong>.io</strong>
+<phrase key="PodDotWorldText" />
+Have it all? <strong>.world</strong> is for you.
+<phrase key="PodDotSpaceText" />
+Claim your <strong>.space</strong> on the web.
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -630,12 +636,18 @@ Cater to millions with <strong>.berlin</strong>
 <strong>.online</strong>
 <phrase key="TldDotCompany" />
 <strong>.company</strong>
+<phrase key="TldDotIo" />
+<strong>.io</strong>
+<phrase key="TldDotWorld" />
+<strong>.world</strong>
+<phrase key="TldDotSpace" />
+<strong>.space</strong>
 <phrase key="CarouselSlide1Default" />
-Get a web address that tells the world what you do. New domains available now: <strong>.website</strong>, <strong>.business</strong>, <strong>.company</strong>, and <strong>.global</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do. New domains available now: <strong>.photography</strong>, <strong>.ninja</strong>, <strong>.guru</strong>, <strong>.club</strong> and <strong>.world</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.auction</strong>, <strong>.software</strong>, <strong>.world</strong>, <strong>.website</strong>, and <strong>.immo</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.auction</strong>, <strong>.software</strong>, <strong>.world</strong>, <strong>.website</strong>, and <strong>.berlin</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1ES" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.digital</strong>, <strong>.tips</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
@@ -659,13 +671,13 @@ Get a web address that tells the world what you do. <strong>.club</strong>, <str
 <phrase key="CarouselSlide2IN" />
 [@T[companyname:name]@T]'s competitive pricing and excellent customer service personalized to my business reminds me every day that I made the right decision.
 <phrase key="CarouselSlide3Default" />
-SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a> and <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a>
+SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="94372" href="[@T[link:<relative path="/tlds/info"></relative>]@T]"><strong>.info</strong></a> and <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a>
 <phrase key="CarouselSlide3US" />
-SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="90058" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><strong>.us</strong></a>
+SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="94372" href="[@T[link:<relative path="/tlds/info"></relative>]@T]"><strong>.info</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="90058" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><strong>.us</strong></a>
 <phrase key="CarouselSlide3AU" />
 It's Go Time! Get online now with your own domain name. Save 50% and more on <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a> and <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>.
 <phrase key="CarouselSlide3ES" />
-SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="90888" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><strong>.me</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
+SAVE up to 50% or more when you get online today with these popular domains: <a data-ci="88402" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><strong>.com</strong></a>, <a data-ci="91412" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><strong>.net</strong></a>, <a data-ci="88582" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><strong>.co</strong></a>, <a data-ci="88404" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><strong>.org</strong></a>, <a data-ci="94372" href="[@T[link:<relative path="/tlds/info"></relative>]@T]"><strong>.info</strong></a>, <a data-ci="88401" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><strong>.biz</strong></a> and <a data-ci="93946" href="[@T[link:<relative path="/tlds/eu-domain"></relative>]@T]"><strong>.eu</strong></a>
 <phrase key="CarouselSlide3IN" />
 [@T[companyname:name]@T] is not only a well-known name in the industry that understand your requirements, but they can also help you decide what's best suited for your needs.
 <phrase key="SalesHeaderMainHeadingRebrand" />
@@ -740,11 +752,11 @@ Publishes an online business card so customers and partners can find you.
 <phrase key="CertifiedRegistrationTitleRebrand" />
 HELP VISITORS GET COMFORTABLE WITH A CERTIFIED DOMAIN SEAL.
 <phrase key="CarouselSlide1DefaultRebrand" />
-Finally! A web address that tells people exactly what you do. <br> <a data-ci="92815" href="[@T[link:<relative path="/tlds/website"></relative>]@T]"><span class="greenText">.website</span></a>, <a data-ci="95395" href="[@T[link:<relative path="/tlds/business"></relative>]@T]"><span class="greenText">.business</span></a>, <a data-ci="90324" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText">.company</span></a> and <a data-ci="90588" href="[@T[link:<relative path="/tlds/global"></relative>]@T]"><span class="greenText">.global</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
+Finally! A web address that tells people exactly what you do. <br> <a data-ci="96166" href="[@T[link:<relative path="/tlds/photography"></relative>]@T]"><span class="greenText">.photography</span></a>, <a data-ci="96165" href="[@T[link:<relative path="/tlds/ninja"></relative>]@T]"><span class="greenText">.ninja</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, <a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, and <a data-ci="96167" href="[@T[link:<relative path="/tlds/world"></relative>]@T]"><span class="greenText">.world</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
 <phrase key="CarouselSlide2DefaultRebrand" />
 30% OFF <br /><a data-ci="95443" href="[@T[link:<relative path="/tlds/global"></relative>]@T]"><span class="greenText"><strong>.global</strong></span></a>, <a data-ci="95442" href="[@T[link:<relative path="/tlds/email"></relative>]@T]"><span class="greenText"><strong>.email</strong></span></a>, <a data-ci="95440" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText"><strong>.club</strong></span></a>, <a data-ci="95444" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText"><strong>.guru</strong></span></a> and <a data-ci="95441" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText"><strong>.company</strong></span></a> now.
 <phrase key="CarouselSlide3USRebrand" />
-SAVE up to 50% when you get online with <a data-ci="95435" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><span class="greenText"><strong>.com</strong></span></a>, <a data-ci="95437" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><span class="greenText"><strong>.net</strong></span></a>, <a data-ci="95434" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><span class="greenText"><strong>.co</strong></span></a>, <a data-ci="95438" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><span class="greenText"><strong>.org</strong></span></a>, <a data-ci="95436" href="[@T[link:<relative path="/tlds/me"></relative>]@T]"><span class="greenText"><strong>.me</strong></span></a>, <a data-ci="95433" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><span class="greenText"><strong>.biz</strong></span></a> or <a data-ci="95439" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><span class="greenText"><strong>.us</strong></span></a>
+SAVE up to 50% when you get online with <a data-ci="95435" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><span class="greenText"><strong>.com</strong></span></a>, <a data-ci="95437" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><span class="greenText"><strong>.net</strong></span></a>, <a data-ci="95434" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><span class="greenText"><strong>.co</strong></span></a>, <a data-ci="95438" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><span class="greenText"><strong>.org</strong></span></a>, <a data-ci="94372" href="[@T[link:<relative path="/tlds/info"></relative>]@T]"><span class="greenText"><strong>.info</strong></span></a>, <a data-ci="95433" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><span class="greenText"><strong>.biz</strong></span></a> or <a data-ci="95439" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><span class="greenText"><strong>.us</strong></span></a>
 <phrase key="MainHeadingText" />
 CUSTOMERS ARE LOOKING FOR <span class="br"></span>YOU ONLINE - A DOMAIN SAYS<span class="br"></span> "HEY <span class="rebrand-dash">&mdash;&mdash;&mdash;</span> OVER HERE!"
 <phrase key="MainHeadingSubText1" />
@@ -809,3 +821,5 @@ SEE ALL QUESTIONS
 24/7 Customer Support for GoDaddy Users
 <phrase key="PerfectDomain"/>
 FIND YOUR PERFECT DOMAIN NAME.
+<phrase key="NowAvailable"/>
+NOW AVAILABLE

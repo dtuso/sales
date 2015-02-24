@@ -27,7 +27,7 @@
     #gybo .price-text{text-align:center;}
     #gybo .text>.headline{font-size:66px;line-height:66px; display:block; font-family:'walsheim-black'; margin:0;}
     html[lang|="el"] #gybo .text>.headline{font-family:Arial, Sans-serif;font-weight:700;}
-    #gybo .product-text{font-size:28px;line-height:28px;text-align:center;}
+    #gybo .product-text{font-size:28px;line-height:28px;text-align:center;max-width:160px}
     #gybo .product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
     html[lang|="el"] #gybo .product-subtext{font-family:Arial, Sans-serif;}
     #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:10px;}
@@ -56,12 +56,11 @@
     html[lang|="fr"] #gybo .product-text{font-size:24px;}
     html[lang|="fr"] #gybo .btn-wrap>.btn{font-size:14px;}
     html[lang|="fr"] #gybo .rest-text,html[lang|="uk"] #gybo .rest-text,html[lang|="it"] #gybo .rest-text,html[lang|="de"] #gybo .rest-text,html[lang|="da"] #gybo .rest-text,html[lang|="pt"] #gybo .rest-text,html[lang|="ru"] #gybo .rest-text{width:168px;}
-    html[lang|="uk"] #gybo .product-text,html[lang|="el"] #gybo .product-text,html[lang|="ru"] #gybo .product-text{font-size:22px;width:160px}
+    html[lang|="uk"] #gybo .product-text,html[lang|="el"] #gybo .product-text,html[lang|="ru"] #gybo .product-text{font-size:22px;}
     html[lang|="uk"] #gybo .btn-wrap>.btn{font-size:16px;}
     html[lang|="uk"] #gybo .cond-text,html[lang|="el"] #gybo .cond-text{font-size:26px;}
     html[lang|="tr"] #gybo .btn-wrap>.btn,html[lang|="fi"] #gybo .btn-wrap>.btn{font-size: 20px;}
     html[lang|="fi"] #gybo .cond-text{font-size:33px;}
-    html[lang|="pt"] #gybo .product-text,html[lang|="sv"] #gybo .product-text{width:160px;}
     html[lang|="pt"] #gybo .btn-wrap>.btn,html[lang|="el"] #gybo .btn-wrap>.btn,html[lang|="ru"] #gybo .btn-wrap>.btn{font-size:17px;}
     html[lang|="ru"] #gybo .cond-text{font-size:30px;}
     html[lang|="sv"] #gybo .text>.headline{font-size:33px;}
