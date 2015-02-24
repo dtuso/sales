@@ -657,7 +657,7 @@ $(window).load(function () {
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -5156,6 +5156,7 @@ ul li.no-check {
           margin-top:0;
           margin-bottom: 20px;
           font-family: 'Walsheim-Bold';
+          text-align: left;
         }
         .sf-tipper-target {
           background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);

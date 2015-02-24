@@ -1,0 +1,32 @@
+block heroVars
+  - leftContent = leftContent || {};
+  - leftContent.ci = leftContent.ci || "";
+  - leftContent.ctaLink = leftContent.ctaLink || "";
+  - leftContent.classes = (leftContent.classes? leftContent.classes + " hero left-content" : "hero left-content");
+  - leftContent.marqueeColor = leftContent.marqueeColor || "#ecedee";
+  - leftContent.rightImage = leftContent.rightImage || "";
+  - leftContent.rightImageFallback = leftContent.rightImageFallback || "";
+
+// start left-content hero section
+atlantis:webstash(type="css")
+  block leftContentStyles
+    style
+      :less
+        #marquee{
+          .hero-wrapper > div,.right,.hero,.left{min-height:inherit;}
+          .rightContent,.leftContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); width:100%;}
+        }
+
+div(class!=leftContent.classes data-url!= leftContent.ctaLink data-ci!=leftContent.ci)
+  block heroContent
+    .left.col-xs-12.col-md-7
+      .leftContent
+        block leftContent
+    .right.col-xs-12.col-md-5
+      .rightContent
+        block rightContent
+          <!--[if lt IE 9]>
+          img.img-responsive(src!='[@T[link:<imageroot />]@T]fos/hp/rebrand/img/'+leftContent.rightImageFallback)
+          <![endif]-->
+          img.svgfallback(src=leftContent.rightImage)
+// end left-content hero section

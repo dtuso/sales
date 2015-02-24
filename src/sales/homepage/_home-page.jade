@@ -3,7 +3,7 @@ mixin tldBugs(tlds)
     each tld in tlds
       a.tld-link(class=tldData[tld].cssClass href!="[@T[link:<relative path='" + tldData[tld].path + "'><param name='ci' value='" + tldData[tld].ci + "' /><param name='tld' value='" + tldData[tld].tld + "' /></relative>]@T]")
         img.tld-image(class=tldData[tld].cssClass src=tldData[tld].uri)
-        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]"
+        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]"
         if tldData[tld].showIcannDisclaimer
           span.icann-disclaimer *
   atlantis:webstash(type="css")
@@ -96,6 +96,7 @@ block append pageStyles
         .tile-wrapper{min-height:140px;margin:5px 0}
       }
       section { padding-top: 0; padding-bottom: 0;}
+      #why-godaddy { padding-bottom: 50px; }
 
       #domain-name-input::-webkit-input-placeholder { color: #008a32; }
       #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
@@ -119,7 +120,7 @@ block endOfPageScripts
         }).css("min-height", maxTitleHeight + 10);
 
         var maxHeroHeight = 0;
-        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).height();});
+        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
         $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
     }
     $(window).load(reSizeTiles);
@@ -159,12 +160,13 @@ block content
             +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
 
   //- Bugbar
-  block bugBar
-    section#bugbar
-      .container
-        .row
-          .col-sm-12
-            +tldBugs(["co","org","net","biz"])
+  
+  section#bugbar
+    .container
+      .row
+        .col-sm-12
+          block bugBar
+            +tldBugs(["co","org"])
 
   //-  Marquee Section
   block marquee

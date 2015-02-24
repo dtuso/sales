@@ -1,0 +1,94 @@
+---
+location: localization/sales/offers/default/en
+id: 54d1158af778fc20ac262ff9
+name: GCE-34369
+comments: Various VAT fixes
+---
+<phrase key="page-title" />
+Domain Names, Web Hosting and SSL Certificates - [@T[companyname:name]@T]
+<phrase key="headline-offer-1" />
+<strong><em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span></em> gets you...</strong>
+One website.  One domain.  One full year.
+<phrase key="headline-offer-2" />
+Get your own website and domain.
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span></em> per month</strong>
+<phrase key="headline-offer-3" />
+Get your own website and domain.
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span></em> for a year</strong>
+<phrase key="headline-offer-4" />
+<strong><em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span>/mo</em> Website</strong>
+Includes Free Domain &amp; Hosting. 
+<phrase key="headline-offer-5" />
+<strong><em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/yr</em> Website</strong>
+Includes Free Domain &amp; Hosting. 
+<phrase key="headline-offer-6" />
+<strong><em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span>/mo</em> Domain</strong>
+Includes Free Website Builder &amp; Hosting.
+<phrase key="headline-offer-7" />
+<strong><em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/yr</em> Domain</strong>
+Includes Free Website Builder &amp; Hosting.
+<phrase key="headline-offer-8" />
+Website Builder with Free Domain 
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span>/mo</em></strong>
+<phrase key="headline-offer-9" />
+Website Builder with Free Domain 
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/yr</em></strong>
+<phrase key="headline-offer-10" />
+Domain with Website Builder 
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span>/mo</em></strong>
+<phrase key="headline-offer-11" />
+Domain with Website Builder 
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/yr</em></strong>
+<phrase key="headline-offer-12" />
+Build your website easily
+<strong>Only <em><span class="price">[@T[productprice:<current productid="7524" period="monthly" />]@T]</span>/mo</em> with a FREE Domain</strong>
+<phrase key="start-here" />
+Start Here
+<phrase key="domain-search-placeholder" />
+Enter a domain name
+<phrase key="search" />
+Search
+<phrase key="domain-not-available" />
+<span class="searched-domain"></span> is not available. Please try again.
+<phrase key="domain-is-available" />
+<span class="searched-domain"></span> is available.
+<phrase key="domain-is-invalid" />
+Invalid character(s) error
+<phrase key="checkout" />
+Perfect! Check Out Now
+<phrase key="banner-title" />
+Website Builder
+<phrase key="banner-item-1" />
+Easy to use -- no technical skills required
+<phrase key="banner-item-2" />
+Beautiful, customizable designs
+<phrase key="banner-item-3" />
+<strong>FREE HOSTING</strong> and <strong>UNLIMITED</strong> pages
+<phrase key="disclaimer-text" />
+Product Disclaimers
+<phrase key="disclaimer-modal-title" />
+Disclaimers
+<phrase key="whyus-text-area" />
+WHY US? IT'S SIMPLE.
+<phrase key="whyus-img-text-1" />
+Award-winning 24/7 support.
+<phrase key="whyus-img-text-2" />
+More than 12 million customers.
+<phrase key="whyus-img-text-3" />
+World's #1 domain name registrar.
+<phrase key="whyus-img-text-4" />
+More than 57 million domains under management.
+<phrase key="whyus-img-text-4_34369" />
+More than 59 million domains under management.
+<phrase key="disclaimer-1-year" />
+<span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/year price applies to first year of new Personal Website Builder plans (not renewals) and can be used once per customer. One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. After the initial purchase term, domains and Website Builder will renew at the then-current renewal prices. Go Daddy reserves the right to deny use of this offer and/or cancel domains purchased using this offer if the offer is abused or used fraudulently, as determined by Go Daddy in its sole discretion. 
+<phrase key="disclaimer-2-year-uk" />
+<span class="price">[@T[productprice:<current productid="7524" period="yearly" />]@T]</span>/year price applies to first year of new Personal Website Builder plans (not renewals) and can be used once per customer. One FREE .COM, .CO, .NET .UK, .CO.UK, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. After the initial purchase term, domains and Website Builder will renew at the then-current renewal prices. Go Daddy reserves the right to deny use of this offer and/or cancel domains purchased using this offer if the offer is abused or used fraudulently, as determined by Go Daddy in its sole discretion. 
+<phrase key="disclaimer-3-month" />
+∗ One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="disclaimer-4-month-uk" />
+∗ One FREE .COM, .CO, .NET, .UK, .CO.UK or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="disclaimer-3-month_34369" />
+∗ One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="disclaimer-4-month-uk_34369" />
+∗ One FREE .COM, .CO, .NET, .UK, .CO.UK or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.

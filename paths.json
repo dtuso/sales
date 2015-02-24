@@ -10,6 +10,7 @@
   "cce":                     "./cce/",
   "contact-us":              "./contact-us/",
   "csc":                     "./ssl/code-signing-certificate/",
+  "coupons":                 "./coupons/",
   "demo-bv-reviews":         "./demo/lazy-loader/",
   "demo-home":               "./demo/homepage/",
   "domain-auctions":         "./product-pages/domain-auctions/",

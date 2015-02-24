@@ -16,9 +16,26 @@ block merch-tile3
 block merch-tile4
   include ./tiles/online-store-tile.jade
 block prepend sections
+  |  
+  |  ##if(appSettingEnabled(Danica_Win_Daytona))
+  include ./sections/_danica_wins_daytona.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_WIN_FIRST_RACE))
+  include ./sections/_danica_wins_first_race.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
+  include ./sections/_danica_wins_additional_race.jade
+  |  
+  |  ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
+  include ./sections/_danica_wins_2nd_pole.jade
+  |  
+  |  ##endif
   include ./sections/_domain-promo.jade
   include ./sections/_why-godaddy.jade
   include ./sections/_website-promo.jade
   include ./sections/_o365-promo.jade
   include ./sections/_support-promo.jade
   include ./sections/_nascar-contest.jade
+
+block bugBar
+  +tldBugs(["org","net", "biz"])

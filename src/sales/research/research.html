@@ -1,0 +1,102 @@
+---
+location: sales/research
+id: 54e6741ff778fc0fb81adf97
+name: SEM-348
+comments: New Research Repository Page
+assetPath: false
+---
+{% extends 'layouts/base-Q1-2015-lite.html' %} 
+{% block metahead %} 
+<style type="text/css">
+#gd-research .center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#gd-research .banner {
+  margin-bottom: 6em;
+}
+#gd-research .banner-img {
+  margin-top: 3em;
+}
+#gd-research .banner-text {
+  padding-bottom: 1.75em;
+}
+#gd-research .banner-text h1 {
+  margin-top: 1em;
+  margin-bottom: .1em;
+}
+#gd-research .banner-text p {
+  font-family: 'Walsheim-Medium';
+  padding-bottom: .25em;
+  font-size: 1.3em;
+}
+#gd-research .infographic-container {
+  padding-bottom: 4em;
+}
+#gd-research .ux-card a {
+  text-decoration: none;
+}
+#gd-research .extra-shadow {
+  -webkit-box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
+}
+#gd-research .coming-soon {
+  max-width: 389px;
+  background-color: #666;
+  padding: 31px 5px 29px;
+}
+#gd-research .coming-soon .h2 {
+  color: #fff;
+  margin-top: .75em;
+}
+</style>
+{% endblock %} 
+{% block body %}
+<div id="gd-research" class="ux-app">
+  <div class="banner bg-primary-o">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 banner-img">
+          <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-marquee-img.png" class="img-responsive center-block">
+        </div>
+        <div class="col-sm-4 banner-text">
+          <h1 class="h0 headline-primary">[@L[cds.sales/gd/research:page-title-h1]@L]</h1>
+          <p>[@L[cds.sales/gd/research:intro-paragraph]@L]</p>
+          <button id="gd-research-view-featured" class="btn btn-lg btn-purchase" onclick="location.href='[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96171' /></relative>]@T]';" data-ci="96171">[@L[cds.sales/gd/research:view-featured-button-label]@L]</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container infographic-container">
+    <div class="ux-card">
+      <div class="row">
+        <div class="col-sm-5">
+          <a href="[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96170' /></relative>]@T]" data-ci="96170">
+            <img id="gd-research-image-1"
+              ##if(activeLanguageAny([pt-br]))
+              src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-pt-br.png"
+              ##else
+              src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-uk.png"
+              ##endif
+              class="img-responsive center-block extra-shadow" 
+            />
+            <h3 id="gd-research-title-1" class="headline-primary">[@L[cds.sales/gd/research:infographics-1-title]@L]</h3>
+          </a>
+          <p>[@L[cds.sales/gd/research:infographics-1-intro]@L]</p>
+        </div>
+        <div class="col-sm-5 col-sm-push-2">
+          <div class="coming-soon extra-shadow text-center center-block clearfix">
+            <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/coming-soon-img.png" class="img-responsive center-block">
+            <div class="h2 headline-primary">[@L[cds.sales/gd/research:coming-soon-image-text]@L]</div>
+          </div>
+          <h3 class="headline-primary">[@L[cds.sales/gd/research:coming-soon-title]@L]</h3>
+          <p>[@L[cds.sales/gd/research:coming-soon-paragraph]@L]</p>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+{% endblock %} 
+{% block footer %}
+{% endblock %}

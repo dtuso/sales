@@ -1,0 +1,13 @@
+block vars
+  - sectionID = sectionID || "";
+  - bkgImage = bkgImage || "";
+
+atlantis:webstash(type="css")
+  block rightArrowTwoColumnsStyles
+    style
+      :less
+section.lazyload(id="#{sectionID}" data-lazyload-source!="#{bkgImage}")
+  .container
+    .row
+      .col-sm-6
+        block leftContent
