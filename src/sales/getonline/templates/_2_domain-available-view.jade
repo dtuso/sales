@@ -43,19 +43,18 @@ atlantis:webstash(type="css")
       margin: 0;
     }
 
-available-domain-name
-
 #domain-available-view.js-domain-search-wizard-section
   .container
     .row
       .col-md-12
         .text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'})
+          h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
 
   .container.bg-green-official.main-marquee
     +domainSearchOffersInput2({
         'tlds': 'domainSearch.tldInfo.tlds',
         'defaultTld': 'domainSearch.tldInfo.defaultTld',
+        'searchNowCallbackFn': 'domainSearchFormSubmit',
         'formId': 'domainAvailableViewForm',
         'title': '', 
         'cicode': '95738', 
@@ -64,7 +63,8 @@ available-domain-name
         'infoTypeHere': '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', 
         'infoErrorEligibility': '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]',
         'infoInvalidTld': '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]',
-        'showSearchButton': true
+        'showSearchButton': true,
+        'saveEnteredDomainFn': 'updateSearchedDomain'
         })
 
   .container.bg-green-official
@@ -75,3 +75,25 @@ available-domain-name
         button.btn.btn-primary.select-and-continue.available-domain-name.uppercase Select
         .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
         .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+
+  .container.other-domains.spin-container
+    .row
+      .col-md-12
+        h5(style={'margin-top':'20px'}) <strong>That one not moving you? Here are some alternatives:</strong>
+        h6.results-list-heading-text 
+          span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
+          button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+    .spin-results(style={'margin-top':'10px'})
+    .spin-template-wrap
+      .row.spin-template.spin-result.available-domain-name-row
+        .col-md-9.white
+          span.domain-name-display.lowercase
+        .col-md-3.white
+          button.btn.btn-primary.select-and-continue.uppercase Select
+          .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+          .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+
+    .show-more-section
+      h6.text-center(style={'margin-top':'10px'})
+        span.clickable-show-more(data-ci="95268") See more
+        span.show-more-arrow

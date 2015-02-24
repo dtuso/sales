@@ -13,8 +13,6 @@ atlantis:webstash(type="css")
 
     h4{margin-top:0px;margin-bottom:0px;}
 
-selected-domain-name
-
 #domain-selected-view.js-domain-search-wizard-section
   .container#selected-domain.bg-green-official
     .row(style={'margin-top':'10px'})
@@ -22,7 +20,7 @@ selected-domain-name
         h4.strong Congratulations! You have selected the following domain name:
     .row.available-domain-name-row
       div.text-center
-        h2.available-domain-name-text.domain-name-displayed.word-break#selected-domain-name
+        h2.available-domain-name-text.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
     .row(style={'margin-top':'35px'})
       .col-md-2.col-sm-2
       .col-md-4.col-sm-4.get-it-now-btn

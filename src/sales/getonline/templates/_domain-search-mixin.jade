@@ -59,6 +59,7 @@ mixin domainSearchOffersInput2(prms)
   - prms.infoErrorEligibility     = prms.infoErrorEligibility || "placeholderText";
   - prms.infoInvalidTld           = prms.infoInvalidTld || "placeholderText";
   - prms.showSearchButton         = prms.showSearchButton || true;
+  - prms.saveEnteredDomainFn      = prms.saveEnteredDomainFn || ""; /* you need to code a function taking the domain name as a string input */
     
   form(id!="#{prms.formId}")
     .row
@@ -97,6 +98,10 @@ mixin domainSearchOffersInput2(prms)
 
         e.preventDefault();
         var domainName = #{prms.formId}.trimmedDomainName(false);
+        var functionSaveName = '#{prms.saveEnteredDomainFn}';
+        if(functionSaveName.length > 0) {
+          #{prms.formId}.executeFnByName(functionSaveName, window, e, domainName);
+        }
         if((domainName && domainName.length==0) || !domainName) return false;
 
         domainName = domainName.toLowerCase();

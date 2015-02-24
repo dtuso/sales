@@ -2,32 +2,33 @@ include _domain-starting-at-mixin.jade
 mixin renderGoodNews(productToDisplay)
   append pageStyles
     atlantis:webstash(type="css")
-      style.
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
-        .container .row .green-background h2{ margin-bottom: 0;}
-        .get-it-now{margin-top: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
-        .logo-label{padding-top: 15px;}
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
-        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
-        .orange-text{color:#f1751d;}
-        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      style
+        | .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        | .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        | .container .row .topSpacing{padding-top:20px;}
+        | .container .row .leftSpacing{padding-left:50px;}
+        | .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
+        | .container .row .green-background h2{ margin-bottom: 0;}
+        | .get-it-now{margin-top: 35px;}
+        | .heading{padding-top:30px;}
+        | .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        | .left-side{position: relative;}
+        | .right-side{position:relative;}
+        | .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
+        | .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
+        | .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
+        | .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        | .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        | .starter-pack{padding-bottom: 35px;}
+        | .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:15px;}
+        | .logo-label{padding-top: 15px;}
+        | .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
+        | .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
+        | .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        | .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
+        | .orange-text{color:#f1751d;}
+        | #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        | #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
 
   section#getItNow
     .container
@@ -41,30 +42,30 @@ mixin renderGoodNews(productToDisplay)
             .starter-pack
             block goodNewsHead
               h3 A great package deal for
-              h3 <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
+              h3 <span id="business-idea" class="business-name-display"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
         block check-pro-goodNews  
-          .container.bottom
-            .row
-              .col-md-2.col-md-offset-1
-                .features-domain-name
-                label.h3.logo-label DOMAIN NAME
-                p Domain is the name of your
-              .col-md-2
-                .img-plus
-              .col-md-2
-                !{productToDisplay.cssClass}
-                label.h3.logo-label #{productToDisplay.name}
-                p #{productToDisplay.info}
-              .col-md-2
-                .img-plus
-              .col-md-2
-                .features-email
-                label.h3.logo-label OFFICE 365 EMAIL
-                p Office 365 email is the simplest email tool
-            .get-it-now
-              .row.text-center
-                p.h3.center Get the bundle for $1/month for the first year*
-              .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn GET IT NOW
-              .row.text-center(style={'padding-top':'10px'})
-                p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
+        .container.bottom
+          .row
+            .col-md-2.col-md-offset-1
+              .features-domain-name
+              label.h3.logo-label DOMAIN NAME
+              p Domain is the name of your
+            .col-md-2
+              .img-plus
+            .col-md-2
+              | !{productToDisplay.cssClass}
+              label.h3.logo-label #{productToDisplay.name}
+              p #{productToDisplay.info}
+            .col-md-2
+              .img-plus
+            .col-md-2
+              .features-email
+              label.h3.logo-label OFFICE 365 EMAIL
+              p Office 365 email is the simplest email tool
+          .get-it-now
+            .row.text-center
+              p.h3.center Get the bundle for $1/month for the first year*
+            .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+                btn.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn GET IT NOW
+            .row.text-center(style={'padding-top':'10px'})
+              p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year

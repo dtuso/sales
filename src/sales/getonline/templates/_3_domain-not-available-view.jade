@@ -16,10 +16,10 @@ atlantis:webstash(type="css")
     .spin-results .spin-result, 
     .spin-template-wrap .spin-template {display:none;}
     .spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
-    #spin-results .spin-results-message {margin-top:15px;}
-    #spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-    #spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
-    #spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
+    .spin-results .spin-results-message {margin-top:15px;}
+    .spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
+    .spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
+    .spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
     #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
     #spin-results .domain-tile {margin-top: 0px;}
 
@@ -43,6 +43,7 @@ atlantis:webstash(type="css")
     +domainSearchOffersInput2({
         'tlds': 'domainSearch.tldInfo.tlds',
         'defaultTld': 'domainSearch.tldInfo.defaultTld',
+        'searchNowCallbackFn': 'domainSearchFormSubmit',
         'formId': 'domainNotAvailableViewForm',
         'title': '', 
         'cicode': '95738', 
@@ -51,5 +52,27 @@ atlantis:webstash(type="css")
         'infoTypeHere': '[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]', 
         'infoErrorEligibility': '[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]',
         'infoInvalidTld': '[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]',
-        'showSearchButton': true
+        'showSearchButton': true,
+        'saveEnteredDomainFn': 'updateSearchedDomain'
         })
+
+  .container.other-domains.spin-container
+    .row
+      .col-md-12
+        h6.results-list-heading-text 
+          span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
+          button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+    .spin-results(style={'margin-top':'10px'})
+    .spin-template-wrap
+      .row.spin-template.spin-result.available-domain-name-row
+        .col-md-9.white
+          span.domain-name-display.lowercase
+        .col-md-3.white
+          button.btn.btn-primary.select-and-continue.uppercase Select
+          .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+          .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+
+    .show-more-section
+      h6.text-center(style={'margin-top':'10px'})
+        span.clickable-show-more(data-ci="95268") See more
+        span.show-more-arrow
