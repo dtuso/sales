@@ -19,33 +19,31 @@ atlantis:webstash(type="css")
 
 section#domains
 
-  //- mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses, lazyLoad, backgroundImage, featuresImg, featuresImgAltText, title, subtitle, text, buttonText, buttonUrl, buttonColor )
-  +featuresTemplates(
-    "featuresLeftText", 
-    "domainSection1What", 
-    null, 
-    true, 
-    "", 
-    "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    null, 
-    "<mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]", 
-    "[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]", 
-    domainSectionOneText, 
-    null, null, null)
+  +featuresTemplates({
+    presentationTemplate: "featuresLeftText", 
+    featuresId: "domainSection1What", 
+    additionalWrapClasses: null, 
+    lazyLoad: true, 
+    backgroundImage: "", 
+    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
+    featuresImgAltText: null, 
+    title: "<mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]", 
+    subtitle: "[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]", 
+    text: domainSectionOneText, 
+    buttonText: null, buttonUrl: null, buttonColor: null})
 
-  +featuresTemplates(
-    "featuresLeftText", 
-    "domainSection2Email", 
-    null, 
-    true, 
-    "", 
-    "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png", 
-    null, 
-    "[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]", 
-    "[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]", 
-    domainSectionTwoText, 
-    null, null, null)
-
+  +featuresTemplates({
+    presentationTemplate: "featuresLeftText", 
+    featuresId: "domainSection2Email", 
+    additionalWrapClasses: null, 
+    lazyLoad: true, 
+    backgroundImage: "", 
+    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png", 
+    featuresImgAltText: null, 
+    title: "[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]", 
+    subtitle: "[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]", 
+    text: domainSectionTwoText, 
+    buttonText: null, buttonUrl: null, buttonColor: null})
 
   .container
     .row.disclaimer
@@ -67,17 +65,16 @@ section#domains
         background-color: #F3F3F3;
       }
 
-  //- mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses, lazyLoad, backgroundImage, featuresImg, featuresImgAltText, title, subtitle, text, buttonText, buttonUrl, buttonColor )
-  +featuresTemplates(
-    "featuresSlim", 
-    "findYourPerfectDomain", 
-    null, 
-    true, 
-    "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg", 
-    "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png", 
-    null, 
-    "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]", 
-    null, 
-    "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]", 
-    null, null, null)
+  +featuresTemplates({
+    presentationTemplate: "featuresSlim", 
+    featuresId: "findYourPerfectDomain", 
+    additionalWrapClasses: null, 
+    lazyLoad: true, 
+    backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg", 
+    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png", 
+    featuresImgAltText: null, 
+    title: "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]", 
+    subtitle: null, 
+    text: "[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]", 
+    buttonText: null, buttonUrl: null, buttonColor: null})
 

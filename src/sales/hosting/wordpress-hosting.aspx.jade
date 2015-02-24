@@ -1,0 +1,73 @@
+extends ../shared/_landing-page
+
+append vars 
+  - page.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]";
+  - page.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/wordpress-hosting:Meta0Keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg";
+
+prepend endOfPageScripts
+  atlantis:webstash(type="js")
+    script
+      include:js wordpress-hosting/wph.js
+
+append pageStyles
+  style
+    include:css ./wordpress-hosting/wph.css
+  style
+    include:css ../shared/_plan-tiles/plan-tiles.css
+
+block domainSearch
+  //- nothing to see here
+  //- override the landing-page.jade with a blank section
+
+//- top marquee 
+block marquee  
+  include ./wordpress-hosting/_marquee.jade
+
+//- side by side plan comparisons go here
+block plans
+  include ./wordpress-hosting/_plans.jade
+
+//- horizontal nav with jumps to anchor tags (that affixes to top)
+block sections
+  include ./wordpress-hosting/_sections.jade
+
+//- suggested alternative products
+block alternatives
+  include ./wordpress-hosting/_alternatives.jade
+
+//- there's always a catch... show it here.
+block disclaimers
+  section#disclaimers.content-disclaimer.disclaimers-section 
+    .disclaimers-row
+      .container
+        .row
+          .col-sm-12
+            .disclaimers-text [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]
+            | 
+            | ##if(areAdCreditsEnabled(google))
+            | 
+            .disclaimers-text USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-GoogleAdWordsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='86790' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+            | 
+            | ##endif
+            | 
+            | 
+            | ##if(areAdCreditsEnabled(bing))
+            | 
+            .disclaimers-text USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
+            | 
+            | ##endif
+            | 
+            | 
+            | ##if(areAdCreditsEnabled(facebook))
+            | 
+            .disclaimers-text USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>                    
+            | 
+            | ##endif                                  
+            | 

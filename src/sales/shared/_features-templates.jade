@@ -2,14 +2,28 @@
 //- DEPENDENCIES
 //-   lazyImg mixin
 //-   lazyload jquery plugin v2.0
-//-   
-mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses, lazyLoad, backgroundImage, featuresImg, featuresImgAltText, title, subtitle, text, buttonText, buttonUrl, buttonColor )
+//- options parameter
+//-  * presentationTemplate
+//-  * featuresId
+//-  * additionalWrapClasses
+//-  * lazyLoad
+//-  * backgroundImage
+//-  * featuresImg
+//-  * featuresImgAltText
+//-  * title
+//-  * subtitle
+//-  * text
+//-  * buttonText
+//-  * buttonUrl
+//-  * buttonColor
+mixin featuresTemplates( options )
+
   - var featuresWrapClass = ""
   - var imgClass = ""
   - var firstColClass = ""
   - var secondColClass = ""
 
-  case presentationTemplate
+  case options.presentationTemplate
     when "featuresRightText"
       - featuresWrapClass = "features-wrap"
       - imgClass = "features-img-right"
@@ -84,30 +98,30 @@ mixin featuresTemplates(presentationTemplate, featuresId, additionalWrapClasses,
 
 
   //- Features layouts
-  div(id="#{featuresId ? featuresId : ''}", 
-    class="features tile-section #{featuresWrapClass ? featuresWrapClass : ''} #{additionalWrapClasses ? additionalWrapClasses : ''} #{lazyLoad ? 'lazyload' : ''}", 
-    style!=(typeof backgroundImage!='undefined' && !lazyLoad ? 'background-image: url(\'#{backgroundImage}\');' : ''), 
-    data-lazyload-source!=(typeof backgroundImage!='undefined' && lazyLoad ? '#{backgroundImage}' : ''), 
+  div(id="#{options.featuresId ? options.featuresId : ''}", 
+    class="features tile-section #{featuresWrapClass ? featuresWrapClass : ''} #{options.additionalWrapClasses ? options.additionalWrapClasses : ''} #{options.lazyLoad ? 'lazyload' : ''}", 
+    style!=(typeof options.backgroundImage!='undefined' && !options.lazyLoad ? 'background-image: url(\'#{options.backgroundImage}\');' : ''), 
+    data-lazyload-source!=(typeof options.backgroundImage!='undefined' && options.lazyLoad ? '#{options.backgroundImage}' : ''), 
     data-lazyload-callback!='triggerResize')
     .container
       .row
         .col-sm-6(class="#{firstColClass ? firstColClass : ''}")
-          if (featuresImg)
+          if (options.featuresImg)
             div.text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-              if(lazyLoad)
-                +lazyImg("features-img " + imgClass, null, featuresImg, featuresImgAltText, "triggerResize", null)
+              if(options.lazyLoad)
+                +lazyImg("features-img " + imgClass, null, options.featuresImg, options.featuresImgAltText, "triggerResize", null)
               else
-                img.features-img(class="#{imgClass ? imgClass : ''}", src!="#{featuresImg}", alt="#{featuresImgAltText ? featuresImgAltText : ''}")
+                img.features-img(class="#{imgClass ? imgClass : ''}", src!="#{options.featuresImg}", alt="#{options.featuresImgAltText ? options.featuresImgAltText : ''}")
         .col-sm-6(class="#{secondColClass ? secondColClass : ''}")
           div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-            if (title)
-              h2.h0 !{title}
+            if (options.title)
+              h2.h0 !{options.title}
 
-            if (subtitle)
-              h4.headline-primary.features-subtitle !{subtitle}
+            if (options.subtitle)
+              h4.headline-primary.features-subtitle !{options.subtitle}
 
-            if (text)
-              .features-text !{text}
+            if (options.text)
+              .features-text !{options.text}
 
-            if (buttonText && buttonUrl)
-              a(href!="#{buttonUrl}", class="btn #{buttonColor ? buttonColor : 'btn-default'}" ) !{buttonText}
+            if (options.buttonText && options.buttonUrl)
+              a(href!="#{options.buttonUrl}", class="btn #{options.buttonColor ? options.buttonColor : 'btn-default'}" ) !{options.buttonText}

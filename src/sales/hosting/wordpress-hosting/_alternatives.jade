@@ -1,0 +1,34 @@
+atlantis:webstash(type="css")
+  style.
+    #alternate-products {
+    }
+
+section#alternate-products
+
+  +renderTwoUpCompare({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]", 
+                      twoUpCompareId: "alternate-products-compare", 
+                      titleBackgroundColor: "bg-white", 
+                      backgroundColor: "bg-green-official", 
+                      backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
+                      style: "min-height: 580px;", 
+                      includeStyles: false})
+
+    +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]", 
+                          backgroundColor: "bg-green-official-light", 
+                          shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
+                          shapeColor: "orange"})
+      ul
+        li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]
+        li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]
+        li [@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]
+      button.btn.btn-default-dark(data-ci="xxxx", href!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]
+    +twoUpCompareColumn({ title: "[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]", 
+                          backgroundColor: "bg-gray-darkest", 
+                          shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]", 
+                          shapeColor: "orange", 
+                          whiteText: "white-text"})
+      ul
+        li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]
+        li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]
+        li [@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]
+      button.btn.btn-default-light(data-ci="xxxx", href!="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]") [@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]

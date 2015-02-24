@@ -1,0 +1,17 @@
+atlantis:webstash(type="css")
+  style.
+    #plans {
+      margin:0 auto; 
+      background-color: #77c043;
+    }
+
+section#marquee
+  +renderPlanTiles(4) 
+    +planTile("planTileA")
+      include ./_plan-A.jade
+    +planTile("planTileB")
+      include ./_plan-B.jade
+    +planTile("planTileC")
+      include ./_plan-C.jade
+    +planTile("planTileD")
+      include ./_plan-D.jade
