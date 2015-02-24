@@ -1,5 +1,6 @@
 
-<style>.gtld-marquee-got {
+<atlantis:webstash type="css">
+  <style>.gtld-marquee-got {
   background-color: #333;
   font-family: 'Walsheim-Black';
 }
@@ -29,7 +30,8 @@
   margin: 5px 0 0;
 }
 
-</style>
+  </style>
+</atlantis:webstash>
 <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile gtld-marquee-got">
   <div class="tile-content-wrapper">
     <h2 class="header-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]</h2>

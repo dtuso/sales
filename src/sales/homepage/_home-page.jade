@@ -3,7 +3,7 @@ mixin tldBugs(tlds)
     each tld in tlds
       a.tld-link(class=tldData[tld].cssClass href!="[@T[link:<relative path='" + tldData[tld].path + "'><param name='ci' value='" + tldData[tld].ci + "' /><param name='tld' value='" + tldData[tld].tld + "' /></relative>]@T]")
         img.tld-image(class=tldData[tld].cssClass src=tldData[tld].uri)
-        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='444888'/>]@T]"
+        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]"
         if tldData[tld].showIcannDisclaimer
           span.icann-disclaimer *
   atlantis:webstash(type="css")
@@ -13,11 +13,12 @@ mixin tldBugs(tlds)
       .tld-links a:hover>.price{text-decoration:underline}
       .tld-image {vertical-align: top; margin-right: 8px;}
 
-include ../../templates/domain-search-mixin.jade
-include ../../templates/two-up-compare-mixin.jade
-include ../../templates/full-video-mixin.jade
-include ../../templates/helper-mixin.jade
-extends ../../templates/page
+include ../shared/_domain-search.jade
+include ../shared/_two-up-compare.jade
+include ../shared/_full-width-video.jade
+include ../shared/_helpers.jade
+
+extends ../shared/_page
 
 block vars
   - page = page || {};
@@ -54,6 +55,7 @@ block vars
   - tldData["pe"]    = { path: "/tlds/pe-domain",       ci: 91790,  cssClass: "pe",      productId: 34452,       tld:"pe",     showIcannDisclaimer:false,    uri:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowRUY4M0U1NTNFOUFFMzExQURGQUQwNjk0NEVBQzZCMSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxRjg1REU3QThEMjkxMUU0OTdENjkwNDBGREEwRTgzQyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxRjg1REU3OThEMjkxMUU0OTdENjkwNDBGREEwRTgzQyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpkM2VlNWVlYy1mYzIxLTQ1ZTMtYmE1OC1mNzlmOTgxOTM4OGIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEVGODNFNTUzRTlBRTMxMUFERkFEMDY5NDRFQUM2QjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5ODpD3AAAC4klEQVR42pSVW0gUURjH/zM7q66uurYVmkmal4eygrAbCUbS5aEIQruQ+iZiPfQQ9ZC9VaSCEiIW9VIUkT4kVChaIEl0lR4Mu0CRGZGiq+662+auM9P/zE6Q6yq73/A7zMyZ8z/f+b7vnJFGsApR2DJSRkrJBpJKfOQjeUbayc/wQVIU4mdJnSm4mAVIi/lt1OKPyAFEb69JCZkVD/ISHz6MUVjYNvLm38Ni4jXkYOhWDyPcxDvNxOjfSFoXC0uyBGVCxVicGlrd/CQRBavZBnmNRfRMQRq9Ts5SFnbJVXOYiFMcWXBeqoO1cD0VVWKBNu2Gt/UmvL0dnMSCtOozSDxeDlhlw2tJk+Hv6sF0QwPX4atVFi7St0+ySEh/2wsldw18nQ8gzSnQpQCUzGys6GmHutWF+KLNSGtrxHR9PeAOmmuW4bhyng4VYLTySGkk8fw4ZyGUvByMlxzGZH8nrGZEheX6/LBXnoCSn4Pg0CcEBt5B1pONPhWTmPv2A4kV5ZAqsTZSWFJ1OSSlTrmNGEtm5o2U+f8wqAyRawrxxVuQcuokZFtKKJm6BcHBD/BcvsoxNrsQF9k5TYbILTKlBwIZCAZhr62CMpBNYQc0bQbK8gzITgf8j7th278Xkj0JnpY2aL9ckCRbyA1dx9zX7xyT9FuIvzQnQGgCvRuquk7XNCRVlMF2aI+RzFDMZHguNsHbdR/+J30UT4CzqRma3zOvqn3X72CqtXFYlOL/xbtdg8uurCx4mjk2CNfRGkx33GDM04zBOktThZfP6aIaeD9jlB1DMG8P0He+szYLz4vJBfJZbF8JqYn6pBsTZdWY7XvBgkswo66xjadwsjGRjBSxdAoFiD9sL8SJ9lqETSRCEDwXxGiDwrNKJsKTGO0uqVzq4HpOdiJ2GyEF4vBa6uDaRV7FKPyFFEVzKopY7CCNUQrfJpvIeCw/C2F55BjZTfLFRjf/RMOkn9wj78MH/RVgAEhe7l8hxjuOAAAAAElFTkSuQmCC"};
 
 block append pageStyles
+  // home page styling
   style
     :less
       @light-gray:#f5f5f5;
@@ -65,9 +67,6 @@ block append pageStyles
       @desktop: ~"only screen and (min-width:991px)";
       @desktop-lg: ~"only screen and (min-width:1200px)";
       @desktop-sm: ~"only screen and (min-width:768px)";
-      h2{
-        @media @desktop {font-size:4rem;} 
-      }
       .text-white{color:#fff}
       .bg-green-official{background-color:#77c043;}
       .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
@@ -96,6 +95,13 @@ block append pageStyles
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
         .tile-wrapper{min-height:140px;margin:5px 0}
       }
+      section { padding-top: 0; padding-bottom: 0;}
+      #why-godaddy { padding-bottom: 50px; }
+
+      #domain-name-input::-webkit-input-placeholder { color: #008a32; }
+      #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
+      #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
+      #domain-name-input:-ms-input-placeholder { color: #008a32; }
 
 block endOfPageScripts
 
@@ -114,8 +120,8 @@ block endOfPageScripts
         }).css("min-height", maxTitleHeight + 10);
 
         var maxHeroHeight = 0;
-        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).height();});
-        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
+        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
     }
     $(window).load(reSizeTiles);
     $(window).load(function () {
@@ -141,6 +147,7 @@ block endOfPageScripts
         $('#shareme').fosShare({});
       }, 2000);
     });
+    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
 
 block content
   
@@ -150,15 +157,16 @@ block content
       .container
         .row
           .col-xs-12
-            +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814"})
+            +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
 
   //- Bugbar
-  block bugBar
-    section#bugbar
-      .container
-        .row
-          .col-sm-12
-            +tldBugs(["co","org","net","biz"])
+  
+  section#bugbar
+    .container
+      .row
+        .col-sm-12
+          block bugBar
+            +tldBugs(["co","org"])
 
   //-  Marquee Section
   block marquee

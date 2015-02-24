@@ -1,10 +1,10 @@
-extend ../../../templates/plan-tile
+extend ../../shared/_plan-tile
 
 block vars
   -flagText = "[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]"
 
 block title
-  p.plan-title(ng-bind-html="pod.PodTLD")
+  h3.plan-title(ng-bind-html="pod.PodTLD")
 
 block description
   p.plan-text(ng-bind-html="pod.PodText") 

@@ -77,7 +77,7 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -86,489 +86,6 @@
     ##endif
   </head>
   <body ng-controller="">
-    <style>
-      .svgfallback{display:none}
-      .svgfallback:not(old){display:block}
-      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
-      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
-      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
-      ul li.no-check { background-image: none !important; }
-      
-    </style>
-    <style>
-      /* fix the greek font styling issue here */
-      ##if(countrySiteAny(gr))
-      * {
-        font-family: arial !important;
-      }
-      .close {
-        font-family: uxfont !important;
-      }
-      .uxicon {
-        font-family: uxfont !important;
-      }
-      ##endif
-      
-      /* override UXCORE font settings for all LPs */
-      h2 {
-        margin-bottom: 40px;
-        margin-top: 0;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        font-weight: 300;
-        line-height: 1.1;
-        color: #333;
-      }
-      h3 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-      
-      /* default LP marquee styling */
-      .dash { 
-        letter-spacing: -10px; 
-        font-size: 1.5em; 
-        line-height: 0.6; 
-        vertical-align: -0.1em; 
-      }
-      .marquee-content-wrapper { 
-        padding: 40px; 
-        margin-left: 10px; 
-        margin-right: 10px; 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-        background-color: rgba(0,138,50,0.9); 
-        color: white; 
-      }
-      .marquee-content-wrapper:not(old) {
-        background-image: none;
-        background-color: rgba(0,138,50,0.9);    
-      }    
-      .marquee { 
-        padding-top: 40px; 
-        padding-bottom: 40px; 
-      }
-      .marquee.marquee-white {
-          color: #fff;
-      }
-      .marquee.marquee-white h1,
-      .marquee.marquee-white h2,
-      .marquee.marquee-white h3,
-      .marquee.marquee-white h4,
-      .marquee.marquee-white h5,
-      .marquee.marquee-white h6 {
-          color: #fff;
-      }
-      .marquee.marquee-white .dashed-underline {
-          border-bottom-color: #fff;
-      }
-      .marquee.marquee-white a:not(.btn) {
-          color: #fff;
-          text-decoration: underline;
-      }
-      .marquee.marquee-white a:not(.btn):hover {
-          text-decoration: none;
-      }
-      .marquee .jump-arrow-btn { margin-top:30px;}
-      .marquee h1 { 
-        font-size: 2rem;
-        text-transform: uppercase;
-        color: #ef6c0f;
-        font-family: 'Walsheim-Bold';
-        margin-bottom: 10px;
-        margin-top:0;
-      }
-      .marquee h2 { 
-        font-size: 4rem;
-        font-weight: 100;
-        line-height: 1.1;
-        margin-top:0;
-        margin-bottom: 20px;
-        font-family: 'Walsheim-Bold';
-      }
-      .sf-tipper-target {
-        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        vertical-align: baseline;
-        cursor: pointer;
-      }
-      
-    </style>
-    <style>
-.bg-black {
-  background-color: #333333;
-}
-.bg-gray-light {
-    background-color: #d9d9d9;
-}
-.dash{
-  letter-spacing: -.5rem;
-}
-.BVBrowserWebkit{
-  margin-top:  50px;
-}
-.BVDITitle {
-  text-transform: uppercase !important;
-  text-align: center !important;
-  font-family: 'Walsheim-Black' !important;
-  font-weight: 300 !important;
-  line-height: 1.1 !important;
-  color: #333 !important;
-}
-
-#BVRRDisplayContentLinkWriteID a {
-  -webkit-font-smoothing: antialiased !important;
-  -webkit-transition-delay: 0s !important;
-  -webkit-transition-duration: 0.1s !important;
-  -webkit-transition-property: transform !important;
-  -webkit-transition-timing-function: ease !important;
-  -webkit-user-select: none !important;
-  background-color: rgb(0, 138, 50) !important;
-  border-bottom-color: rgb(0, 112, 41) !important;
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
-  border-bottom-style: solid !important;
-  border-bottom-width: 4px !important;
-  border-image-outset: 0px !important;
-  border-image-repeat: stretch !important;
-  border-image-slice: 100% !important;
-  border-image-source: none !important;
-  border-image-width: 1 !important;
-  border-left-color: rgb(0, 112, 41) !important;
-  border-left-style: solid !important;
-  border-left-width: 0px !important;
-  border-right-color: rgb(0, 112, 41) !important;
-  border-right-style: solid !important;
-  border-right-width: 0px !important;
-  border-top-color: rgb(0, 112, 41) !important;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  border-top-style: solid !important;
-  border-top-width: 0px !important;
-  box-sizing: border-box !important;
-  color: rgb(255, 255, 255) !important;
-  cursor: pointer !important;
-  display: inline-block !important;
-  font-family: Walsheim-Medium, Arial, sans-serif !important;
-  font-size: 18px !important;
-  font-weight: normal !important;
-  height: 46px !important;
-  line-height: 25.7142868041992px !important;
-  margin-bottom: 0px !important;
-  min-width: 88px !important;
-  padding-bottom: 7px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-  padding-top: 10px !important;
-  text-align: center !important;
-  text-decoration: none !important;
-  text-transform: uppercase !important;
-  transition-delay: 0s !important;
-  transition-duration: 0.1s !important;
-  transition-property: transform !important;
-  transition-timing-function: ease !important;
-  vertical-align: middle !important;
-  white-space: nowrap !important;
-  background-image: none !important;
-}
-.templates-chart {
-padding-top: 70px;
-padding-bottom: 70px;
-}
-.templates-container{
-background-color: #fff;
--webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
--moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
-padding-top: 40px;
-padding-bottom: 50px;
-}
-.templates-image{
-  margin: 25px auto;
-  box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
-  width: 200px;
-  overflow: hidden;
-}
-.templates-image-container{
-  margin: 30px 110px 40px 110px;
-}
-.templates-container .header-section{
-  margin: 30px 110px 0px 110px;
-
-}
-.view-all{
-  margin-top: 31px;
-}
-.condensed{
-  font-weight: bold;
-}
-.tlds-all{
-  display: none;
-}
-.carousel-panel .img-center {
-width: 50%;
-}
-  #login-modal button.close {
-    -webkit-appearance: none;
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-  }
-
-  .modal-open {
-    overflow: hidden;
-  }
-
-  #login-modal.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: none;
-    overflow: auto;
-    overflow-y: scroll;
-  }
-
-  #login-modal.modal.fade .modal-dialog {
-    -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-       -moz-transition: -moz-transform 0.3s ease-out;
-         -o-transition: -o-transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-  }
-
-  #login-modal.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  #login-modal .modal-dialog {
-    position: relative;
-    z-index: 1050;
-    width: auto;
-    margin: 10px;
-  }
-
-  #login-modal .modal-content {
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    outline: none;
-    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
-  }
-
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: #000000;
-  }
-
-  .modal-backdrop.fade {
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-
-  .modal-backdrop.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-
-  #login-modal .modal-header {
-    min-height: 16.428571429px;
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-header .close {
-    margin-top: -2px;
-  }
-
-  #login-modal .modal-title {
-    margin: 0;
-    line-height: 1.428571429;
-  }
-
-  #login-modal .modal-body {
-    position: relative;
-    padding: 20px;
-  }
-
-  #login-modal .modal-footer {
-    padding: 19px 20px 20px;
-    margin-top: 15px;
-    text-align: right;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer:before,
-  #login-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #login-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #login-modal .modal-footer .btn + .btn {
-    margin-bottom: 0;
-    margin-left: 5px;
-  }
-
-  #login-modal .modal-footer .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-
-  #login-modal .modal-footer .btn-block + .btn-block {
-    margin-left: 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    #login-modal .modal-dialog {
-      width: 600px;
-      margin: 30px auto;
-    }
-    #login-modal .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-  }
-
-  .features {
-    background-color: #62A92F;
-  }
-  .disclaimers-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-    </style>
-    <style>
-      html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
-      font-size: 26px;
-      font-size: 2.6rem;
-      }
-      html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
-        font-size: 24px;
-        font-size: 2.4rem;
-      }
-      #plans { padding-bottom: 40px; }
-      #social-media, #reviews, #faq, #disclaimers { background: #fff; }
-      #social-media { padding-top: 50px; }
-      /* TODO: can this styling be abstracted into landing-page.jade? */
-      body { background-color: #d9d9d9; }
-      #marquee { 
-        background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
-        padding-bottom: 120px;
-        margin-bottom: 0;
-        background-size: cover;
-      }
-      
-      /* latam */
-      html[lang="es-ar"] #marquee,
-      html[lang="pt-br"] #marquee,
-      html[lang="es-cl"] #marquee,
-      html[lang="es-co"] #marquee,
-      html[lang="es-mx"] #marquee,
-      html[lang="es-pe"] #marquee,
-      html[lang="es-ve"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg);
-      }
-      
-      /* general */
-      html[lang="en-us"] #marquee,
-      html[lang="es-us"] #marquee,
-      html[lang="en-au"] #marquee,
-      html[lang="en-ca"] #marquee,
-      html[lang="en-nz"] #marquee,
-      html[lang="fr-be"] #marquee,
-      html[lang="fr-ca"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
-      }
-      
-      /* asia */
-      html[lang="en-my"] #marquee,
-      html[lang="en-ph"] #marquee,
-      html[lang="en-sg"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_Asia.jpg);
-      }
-      
-      /* in-pk */
-      html[lang="en-in"] #marquee,
-      html[lang="en-pk"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_in-pk_wsb.jpg);
-      }
-      
-      /* emea */
-      html[lang="nl-be"] #marquee,
-      html[lang="da-dk"] #marquee,
-      html[lang="de-de"] #marquee,
-      html[lang="es-es"] #marquee,
-      html[lang="fr-fr"] #marquee,
-      html[lang="en-ie"] #marquee,
-      html[lang="it-it"] #marquee,
-      html[lang="nb-no"] #marquee,
-      html[lang="nl-nl"] #marquee,
-      html[lang="de-at"] #marquee,
-      html[lang="pl-pl"] #marquee,
-      html[lang="pt-pt"] #marquee,
-      html[lang="fr-ch"] #marquee,
-      html[lang="it-ch"] #marquee,
-      html[lang="de-ch"] #marquee,
-      html[lang="en-za"] #marquee,
-      html[lang="fi-fi"] #marquee,
-      html[lang="sv-se"] #marquee,
-      html[lang="tr-tr"] #marquee,
-      html[lang="en-gb"] #marquee,
-      html[lang="el-gr"] #marquee,
-      html[lang="ru-ru"] #marquee,
-      html[lang="uk-ua"] #marquee {
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_EMEA.jpg);
-      }
-      
-      .plan-tile { 
-        margin-top: 0; 
-        margin-bottom: 0; 
-      }
-      .pro-plans { 
-        margin-top: -120px; 
-        padding-bottom: 20px; 
-        padding-top: 0; 
-      }
-      .marquee ul { padding: 0; }
-      
-    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
@@ -578,7 +95,15 @@ width: 50%;
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/website-builder:main-banner-subtitle]@L]</h1>
             <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/website-builder:header_subtitle_1]@L]</br>[@L[cds.sales/gd/hosting/website-builder:header_subtitle_2]@L]</h2>
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li>
+               
+              ##if(countrySiteAny(www))
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1-35874]@L]</li> 
+              ##else
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li> 
+              ##endif
+               
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
@@ -589,8 +114,7 @@ width: 50%;
     </section>
     <section id="plans">
       <atlantis:webstash type="css">
-        <style>
-.plan-tile { 
+        <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -599,7 +123,6 @@ width: 50%;
 }
 .pro-plans {
     margin-top: 0px;
-    padding-bottom: 80px;
 }
 
 .pro-plans .tld-col-title {
@@ -627,6 +150,11 @@ width: 50%;
 .pro-plans .sub-plan-text {
     margin-top: 30px;
     margin-bottom: -30px;
+}
+
+.pro-plans .plan-tile h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .pro-plans h2 {
@@ -989,7 +517,7 @@ width: 50%;
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
@@ -1031,7 +559,7 @@ width: 50%;
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7524, 7524, 0))
@@ -1074,7 +602,7 @@ width: 50%;
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7509, 7509, 0))
@@ -1117,7 +645,7 @@ width: 50%;
             <div class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
-                <h2 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h2>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h3>
                 <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
                 <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                   ##if(productHasSavingsMoreThan(7514, 7514, 0))
@@ -1213,156 +741,158 @@ width: 50%;
         </div>
       </div>
     </section>
-    <style>.fix-body {
-  margin-top: 130px;
-}
-.mid-page-nav {
-  background-color: #333333;
-  font-family: 'Walsheim-Bold';
-  height: 130px;
-  color: #fff;
-  -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
-}
-@media only screen and (max-width: 768px) {
-  .mid-page-nav {
-    display: none;
-  }
-}
-.mid-page-nav .navbar-collapse {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.mid-page-nav.sticky {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-}
-.mid-page-nav .nav {
-  height: 130px;
-}
-.mid-page-nav .nav > li {
-  display: table;
-}
-.mid-page-nav .nav > li.open > a {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li.open > a:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li > a {
-  display: table-cell;
-  height: 130px;
-  vertical-align: middle;
-}
-.mid-page-nav .nav > li > a.active,
-.mid-page-nav .nav > li > a:focus,
-.mid-page-nav .nav > li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .nav > li > a.active:before,
-.mid-page-nav .nav > li > a:focus:before,
-.mid-page-nav .nav > li > a:hover:before {
-  content: '';
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  position: absolute;
-  bottom: 14px;
-  margin-left: -20px;
-  left: 50%;
-}
-.mid-page-nav .nav > li a {
-  font-size: 24px;
-  font-size: 2.4rem;
-  font-family: 'Walsheim-Bold';
-  color: #808080;
-  padding: 0;
-  text-align: center;
-}
-.mid-page-nav .nav > li a span {
-  display: table-cell;
-  vertical-align: middle;
-  border-left: 1px solid #232323;
-  padding: 7px 40px;
-}
-.mid-page-nav .nav > li a span > em {
-  font-size: 40px;
-  font-size: 4rem;
-  color: #555555;
-  display: inline-block;
-  margin-top: -5px;
-  border: 0;
-  padding: 0;
-  font-style: normal;
-}
-.mid-page-nav .nav > li:first-child a span {
-  border-left: 0;
-}
-.mid-page-nav .nav .open > .dropdown-menu {
-  opacity: 1;
-  -webkit-transform: scale(1, 1) rotateX(0deg);
-  -moz-transform: scale(1, 1) rotateX(0deg);
-  -ms-transform: scale(1, 1) rotateX(0deg);
-  transform: scale(1, 1) rotateX(0deg);
-}
-.mid-page-nav .nav .dropdown-menu {
-  background-clip: padding-box;
-  border: 0;
-  background-color: #333333;
-  display: block;
-  opacity: 0;
-  -webkit-transform: scale(1, 0) rotateX(90deg);
-  -moz-transform: scale(1, 0) rotateX(90deg);
-  -ms-transform: scale(1, 0) rotateX(90deg);
-  transform: scale(1, 0) rotateX(90deg);
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-.mid-page-nav .nav .dropdown-menu li > a {
-  display: block;
-  background-color: #333333;
-  padding: 20px;
-  border-bottom: #333333;
-}
-.mid-page-nav .nav .dropdown-menu li > a:hover {
-  background-color: #232323;
-}
-.mid-page-nav .price-text {
-  font-size: 12px;
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.mid-page-nav .price {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
-.mid-page-nav .price span {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
+    <style>
+      .fix-body {
+        margin-top: 130px;
+      }
+      .mid-page-nav {
+        background-color: #333333;
+        font-family: 'Walsheim-Bold';
+        height: 130px;
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 0 0 rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 768px) {
+        .mid-page-nav {
+          display: none;
+        }
+      }
+      .mid-page-nav .navbar-collapse {
+        margin-left: -15px;
+        margin-right: -15px;
+      }
+      .mid-page-nav.sticky {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+      }
+      .mid-page-nav .nav {
+        height: 130px;
+      }
+      .mid-page-nav .nav > li {
+        display: table;
+      }
+      .mid-page-nav .nav > li.open > a {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li.open > a:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li > a {
+        display: table-cell;
+        height: 130px;
+        vertical-align: middle;
+      }
+      .mid-page-nav .nav > li > a.active,
+      .mid-page-nav .nav > li > a:focus,
+      .mid-page-nav .nav > li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .nav > li > a.active:before,
+      .mid-page-nav .nav > li > a:focus:before,
+      .mid-page-nav .nav > li > a:hover:before {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 15px solid #008a32;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+        position: absolute;
+        bottom: 14px;
+        margin-left: -20px;
+        left: 50%;
+      }
+      .mid-page-nav .nav > li a {
+        font-size: 24px;
+        font-size: 2.4rem;
+        font-family: 'Walsheim-Bold';
+        color: #808080;
+        padding: 0;
+        text-align: center;
+      }
+      .mid-page-nav .nav > li a span {
+        display: table-cell;
+        vertical-align: middle;
+        border-left: 1px solid #232323;
+        padding: 7px 40px;
+      }
+      .mid-page-nav .nav > li a span > em {
+        font-size: 40px;
+        font-size: 4rem;
+        color: #555555;
+        display: inline-block;
+        margin-top: -5px;
+        border: 0;
+        padding: 0;
+        font-style: normal;
+      }
+      .mid-page-nav .nav > li:first-child a span {
+        border-left: 0;
+      }
+      .mid-page-nav .nav .open > .dropdown-menu {
+        opacity: 1;
+        -webkit-transform: scale(1, 1) rotateX(0deg);
+        -moz-transform: scale(1, 1) rotateX(0deg);
+        -ms-transform: scale(1, 1) rotateX(0deg);
+        transform: scale(1, 1) rotateX(0deg);
+      }
+      .mid-page-nav .nav .dropdown-menu {
+        background-clip: padding-box;
+        border: 0;
+        background-color: #333333;
+        display: block;
+        opacity: 0;
+        -webkit-transform: scale(1, 0) rotateX(90deg);
+        -moz-transform: scale(1, 0) rotateX(90deg);
+        -ms-transform: scale(1, 0) rotateX(90deg);
+        transform: scale(1, 0) rotateX(90deg);
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+        -webkit-transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a {
+        display: block;
+        background-color: #333333;
+        padding: 20px;
+        border-bottom: #333333;
+      }
+      .mid-page-nav .nav .dropdown-menu li > a:hover {
+        background-color: #232323;
+      }
+      .mid-page-nav .price-text {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+      }
+      .mid-page-nav .price {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .mid-page-nav .price span {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      
     </style>
     <div class="mid-page-nav">
       <div class="container">
@@ -1500,58 +1030,7 @@ width: 50%;
             <div class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:sb_templates_text]@L]</div>
             <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
-          <div class="templates-image-container">
-             
-             
-            ##if(countrySiteAny(ca))
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canada-hockey.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/art-and-culture.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##elseif(countrySiteAny(uk))
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/canadian-fashion-news.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/india-online.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##else
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/auto.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/photography.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/education.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div> 
-            ##endif
-             
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/ecommerce.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/travel.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/non-profit.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/business.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/health-beauty.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-              <div class="col-md-4 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/wsb/100150/img/wsb-templates/creative-design.jpg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/>
-              </div>
-            </div>
-          </div>
+          <div class="templates-image-container"> </div>
         </div>
       </div><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -3114,39 +2593,43 @@ var PlanBox6UI = {
 </atlantis:webstash>
 ##if(activeLanguageAny(en))
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          .video-marquee {
+            background-position: top center;
+          }
+          .video-marquee {
+            background-size: cover;
+            position: relative;
+            background-position: bottom center;
+            background-color: #fff;
+          }
+          .video-marquee.video-marquee-white {
+            color: #fff;
+          }
+          .video-marquee.full-video {
+            height: 535px;
+            padding-top: 1px;
+          }
+          .video-marquee.full-video .video-info {
+            margin-top: 150px;
+          }
+          .video-marquee .relative-position {
+            position: relative;
+          }
+          .video-marquee .video-marquee-all-centered {
+            text-align: center;
+          }
+          .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+            color: #fff;
+          }
+          .video-marquee.full-video .video-info .cta {
+            font-family: 'Walsheim-Black';
+            text-transform: uppercase;
+          }
+          
+        </style>
+      </atlantis:webstash>
       <atlantis:webstash type="js">
         <script>
           // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -3240,39 +2723,43 @@ text-transform: uppercase;
       </div> 
       ##elseif(activeLanguageAny(es))
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          .video-marquee {
+            background-position: top center;
+          }
+          .video-marquee {
+            background-size: cover;
+            position: relative;
+            background-position: bottom center;
+            background-color: #fff;
+          }
+          .video-marquee.video-marquee-white {
+            color: #fff;
+          }
+          .video-marquee.full-video {
+            height: 535px;
+            padding-top: 1px;
+          }
+          .video-marquee.full-video .video-info {
+            margin-top: 150px;
+          }
+          .video-marquee .relative-position {
+            position: relative;
+          }
+          .video-marquee .video-marquee-all-centered {
+            text-align: center;
+          }
+          .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+            color: #fff;
+          }
+          .video-marquee.full-video .video-info .cta {
+            font-family: 'Walsheim-Black';
+            text-transform: uppercase;
+          }
+          
+        </style>
+      </atlantis:webstash>
       <atlantis:webstash type="js">
         <script>
           // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -3366,38 +2853,39 @@ text-transform: uppercase;
       </div> 
       ##else
        
-      <style>.video-marquee {
-	background-position: top center;
-}
-.video-marquee {
-	background-size: cover;
-	position: relative;
-	background-position: bottom center;
-	background-color: #fff;
-}
-.video-marquee.video-marquee-white {
-color: #fff;
-}
-.video-marquee.full-video {
-height: 535px;
-padding-top: 1px;
-}
-.video-marquee.full-video .video-info {
-margin-top: 150px;
-}
-.video-marquee .relative-position {
-position: relative;
-}
-.video-marquee .video-marquee-all-centered {
-text-align: center;
-}
-.video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
-color: #fff;
-}
-.video-marquee.full-video .video-info .cta {
-font-family: 'Walsheim-Black';
-text-transform: uppercase;
-}
+      <style>
+        .video-marquee {
+          background-position: top center;
+        }
+        .video-marquee {
+          background-size: cover;
+          position: relative;
+          background-position: bottom center;
+          background-color: #fff;
+        }
+        .video-marquee.video-marquee-white {
+          color: #fff;
+        }
+        .video-marquee.full-video {
+          height: 535px;
+          padding-top: 1px;
+        }
+        .video-marquee.full-video .video-info {
+          margin-top: 150px;
+        }
+        .video-marquee .relative-position {
+          position: relative;
+        }
+        .video-marquee .video-marquee-all-centered {
+          text-align: center;
+        }
+        .video-marquee.video-marquee-white h1, .video-marquee.video-marquee-white h2, .video-marquee.video-marquee-white h3, .video-marquee.video-marquee-white h4, .video-marquee.video-marquee-white h5, .video-marquee.video-marquee-white h6 {
+          color: #fff;
+        }
+        .video-marquee.full-video .video-info .cta {
+          font-family: 'Walsheim-Black';
+          text-transform: uppercase;
+        }
       </style>
       <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/bg-video-international.jpg" data-ci="87762" data-tile="wsbVideo" data-youtube-id="-HtVJyxSQmw" class="lazyload video-marquee video-marquee-white full-video">
         <div class="container relative-position video-info">
@@ -3410,1248 +2898,1239 @@ text-transform: uppercase;
       </div> 
       ##endif
        
-      <section id="social-media">
-         
-        ##if(countrySiteAny(www))
-         
-        <div data-icode="" class="carousel-panel container">
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-              <div></div>
-            </div>
-          </div>
-        </div>
-                <style>.features-tabbed-carousel-top {
-  text-align: center;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
-                </style>
-                <div data-icode="" id="" class="features-tabbed-carousel-top ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
-                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
-                                <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
-                                </div>
-                              </div>
-                    </div>
+    </section>
+    <section id="social-media">
+       
+      ##if(countrySiteAny(www))
+       
+            <style>
+              .features-tabbed-carousel-top {
+                text-align: center;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                padding-top: 15px;
+                padding-bottom: 15px;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              max-width: 70%;
+              vertical-align: middle;
+              display: inline-block;
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              margin-bottom: 10px;
+              }
+              .img-center {
+              margin: 0 auto;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+              color: #008a32;
+              font-family: 'Walsheim-Black';
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+              font-family: 'Walsheim-Bold';
+              font-size: 18px;
+              font-size: 1.8rem;
+              line-height: 1.1;
+              text-transform: uppercase;
+              }
+              .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+              
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                border-left: 1px solid #808080;
+                }
+              }
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 15px solid #008a32;
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                position: absolute;
+                bottom: -15px;
+                margin-left: -20px;
+                left: 50%;
+                }
+              }
+              
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                    <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                    <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
                   </div>
                 </div>
-                <atlantis:webstash type="js">
-                  <script type="text/javascript">
-                    $(window).load(function() {
-                      setTimeout(function() {
-                        $(".features-tabbed-carousel-icon:first").click();
-                      }, 500);
-                    
-                      var maxTabHeight = 0;
-                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                      }).css("height", maxTabHeight);
-                    
-                      var maxFeatureTextHeight = 0;
-                      $(".feature-text").each(function(index, featureText) {
-                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                      }).css({height: maxFeatureTextHeight});
-                    
-                    });
-                    
-                    $(".features-tabbed-carousel-icon").click(function() {
-                      var slideNum = $(this).data("begin");
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                      $('#carousel-social-media').carousel(slideNum);
-                    });
-                    
-                    $('#carousel-social-media').on('slid.bs.carousel', function () {
-                      var carouselData = $(this).data('bs.carousel');
-                      var currentIndex = carouselData.getActiveIndex();
-                      $(".features-tabbed-carousel-icon").each(function() {
-                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                          $(".features-tabbed-carousel-icon").removeClass("active");
-                          $(this).addClass("active");
-                        }
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash>
-                <style>.item-wrapper { padding: 35px 0 20px; }
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -35px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 15px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-                </style>
-                <div class="carousel-wrap">
-                  <div class="carousel-container container">
-                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
-                      </ol>
-                      <div class="carousel-inner">
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                      </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
-                    </div>
-                    <script>
-                      $('.carousel .carousel-indicators li:first-child').addClass("active");
-                      $('.carousel .carousel-inner .item:first-child').addClass("active");
-                    </script>
-                  </div>
-                </div> 
-        ##else
-         
-        <div data-icode="" class="carousel-panel container">
-          <div class="row">
-            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-              <div></div>
-            </div>
-          </div>
-        </div>
-                <style>.features-tabbed-carousel-top {
-  text-align: center;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-max-width: 70%;
-vertical-align: middle;
-display: inline-block;
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon img {
-margin-bottom: 10px;
-}
-.img-center {
-margin: 0 auto;
-}
-
-.features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
-color: #008a32;
-font-family: 'Walsheim-Black';
-}
-.features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
-font-family: 'Walsheim-Bold';
-font-size: 18px;
-font-size: 1.8rem;
-line-height: 1.1;
-text-transform: uppercase;
-}
-.feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
-
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
-  border-left: 1px solid #808080;
-  }
-}
-@media only screen and (min-width: 992px){
-  .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-top: 15px solid #008a32;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  position: absolute;
-  bottom: -15px;
-  margin-left: -20px;
-  left: 50%;
-  }
-}
-                </style>
-                <div data-icode="" id="" class="features-tabbed-carousel-top ">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
-                        <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
-                      </div>
-                    </div>
-                    <div class="row">
-                              <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
-                                </div>
-                              </div>
-                              <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
-                                <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                                  <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
-                                  <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
-                                </div>
-                              </div>
-                    </div>
-                  </div>
-                </div>
-                <atlantis:webstash type="js">
-                  <script type="text/javascript">
-                    $(window).load(function() {
-                      setTimeout(function() {
-                        $(".features-tabbed-carousel-icon:first").click();
-                      }, 500);
-                    
-                      var maxTabHeight = 0;
-                      $(".features-tabbed-carousel-icon").each(function(index, tab) {
-                        maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
-                      }).css("height", maxTabHeight);
-                    
-                      var maxFeatureTextHeight = 0;
-                      $(".feature-text").each(function(index, featureText) {
-                        maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
-                      }).css({height: maxFeatureTextHeight});
-                    
-                    });
-                    
-                    $(".features-tabbed-carousel-icon").click(function() {
-                      var slideNum = $(this).data("begin");
-                      $(".features-tabbed-carousel-icon").removeClass("active");
-                      $(this).addClass("active");
-                      $('#carousel-social-media').carousel(slideNum);
-                    });
-                    
-                    $('#carousel-social-media').on('slid.bs.carousel', function () {
-                      var carouselData = $(this).data('bs.carousel');
-                      var currentIndex = carouselData.getActiveIndex();
-                      $(".features-tabbed-carousel-icon").each(function() {
-                        if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
-                          $(".features-tabbed-carousel-icon").removeClass("active");
-                          $(this).addClass("active");
-                        }
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash>
-                <style>.item-wrapper { padding: 35px 0 20px; }
-.carousel-wrap { padding-bottom: 70px; }
-
-@media only screen and (min-width: 768px){
-  .carousel-container .carousel {
-    padding: 0 120px;
-  }
-}
-
-.carousel {
-  position: relative;
-  padding: 0 0 45px 0;
-}
-
-.carousel-container .carousel .carousel-indicators {
-  bottom: -35px;
-}
-
-@media screen and (min-width: 768px){
-  .carousel-indicators {
-    bottom: -5px;
-  }
-}
-.carousel-indicators {
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  z-index: 15;
-  width: 80%;
-  margin-left: -40%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-
-.carousel-container .carousel .carousel-indicators li.active {
-  background-color: #77c043;
-}
-.carousel-container .carousel .carousel-indicators li {
-  width: 15px;
-  height: 15px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  margin: 5px;
-  background-color: #d9d9d9;
-}
-.carousel-indicators .active {
-  background-color: #008a32;
-}
-.carousel-indicators li {
-  display: inline-block;
-  width: 32px;
-  height: 10px;
-  margin: 8px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: #d9d9d9;
-}
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-.carousel-inner > .active {
-  
-}
-.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
-  display: block;
-}
-.carousel-inner > .item {
-  display: none;
-  position: relative;
-  -webkit-transition: left 0.6s ease-in-out;
-  -moz-transition: left 0.6s ease-in-out;
-  transition: left 0.6s ease-in-out;
-  overflow: hidden;
-}
-.carousel-container .carousel-panel, .carousel-container .testimonial {
-  padding: 0;
-}
-.carousel-panel .img-center {
-  margin: 15px auto;
-}
-.carousel-panel .carousel-panel-text {
-  margin-bottom: 25px;
-}
-.carousel-panel h2 {
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-
-.carousel-container .carousel-control.left {
-  left: 0px;
-}
-.carousel-control {
-  position: absolute;
-  top: -11%;
-  bottom: 0;
-  color: #999999;
-  text-align: center;
-}
-.carousel-icon.arrow-left-icon {
-  background-position: 0 0;
-  width: 51px;
-  height: 50px;
-}
-
-.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
-  left: 50%;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-.carousel-icon {
-  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
-  display: inline-block;
-  background-size: 205px auto;
-}
-.carousel-container .carousel-control.right {
-  right: 0px;
-}
-.carousel-icon.arrow-right-icon {
-  background-position: 0 -52px;
-  width: 51px;
-  height: 50px;
-}
-.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
-  position: absolute;
-  top: 50%;
-}
-
-.carousel {
-    position: relative;
-    padding: 0 0 45px 0;
-}
-
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner > .item {
-    display: none;
-    position: relative;
-    -webkit-transition: left 0.6s ease-in-out;
-    -moz-transition: left 0.6s ease-in-out;
-    transition: left 0.6s ease-in-out;
-    overflow: hidden;
-}
-
-.carousel-inner > .item.show-item {
-    display: block;
-}
-
-.carousel-inner > .item > h1,
-.carousel-inner > .item > h2,
-.carousel-inner > .item > h3,
-.carousel-inner > .item > h4,
-.carousel-inner > .item > h5,
-.carousel-inner > .item > h6 {
-    margin-top: 0;
-}
-
-.carousel-inner > .active,
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    display: block;
-}
-
-.carousel-inner > .active {
-    left: 0;
-}
-
-.carousel-inner > .next,
-.carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.carousel-inner > .next {
-    left: 100%;
-}
-
-.carousel-inner > .prev {
-    left: -100%;
-}
-
-.carousel-inner > .next.left,
-.carousel-inner > .prev.right {
-    left: 0;
-}
-
-.carousel-inner > .active.left {
-    left: -100%;
-}
-
-.carousel-inner > .active.right {
-    left: 100%;
-}
-
-.carousel-text-item {
-    margin-bottom: 20px;
-}
-
-.carousel-text-item h1 {
-    font-size: 14px;
-    display: inline;
-    margin: 0;
-    font-weight: bold;
-    font-weight: 600;
-}
-
-.carousel-control {
-    position: absolute;
-    top: -11%;
-    bottom: 0;
-    color: #999999;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    .carousel-control {
-        top: -6%;
-    }
-}
-
-.carousel-control:hover,
-.carousel-control:focus {
-    outline: none;
-    color: #000;
-    text-decoration: none;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .uxicon-chevron-right-lt {
-    position: absolute;
-    top: 50%;
-    z-index: 5;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    font-size: 40px;
-    margin-top: -15px;
-}
-
-.carousel-control .arrow-left-white-icon,
-.carousel-control .arrow-right-white-icon,
-.carousel-control .arrow-left-icon,
-.carousel-control .arrow-right-icon {
-    position: absolute;
-    top: 50%;
-}
-
-.carousel-control .uxicon-chevron-left-lt,
-.carousel-control .arrow-left-icon {
-    left: 50%;
-}
-
-.carousel-control .uxicon-chevron-right-lt,
-.carousel-control .arrow-right-icon {
-    right: 50%;
-}
-
-.carousel-control.left {
-    left: -40px;
-}
-@media only screen and (max-width: 768px){
-  .carousel-container .carousel-control {
-    display: none;
-  }
-}
-@media only screen and (max-width: 768px) {
-    .carousel-control.left {
-        left: -10px;
-    }
-}
-
-.carousel-control.right {
-    right: -40px;
-}
-
-@media only screen and (max-width: 768px) {
-    .carousel-control.right {
-        right: -10px;
-    }
-}
-
-.carousel-indicators {
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    z-index: 15;
-    width: 80%;
-    margin-left: -40%;
-    padding-left: 0;
-    list-style: none;
-    text-align: center;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    width: 32px;
-    height: 10px;
-    margin: 8px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #d9d9d9;
-}
-
-.carousel-indicators .active {
-    background-color: #008a32;
-}
-
-@media screen and (min-width: 768px) {
-    .carousel-indicators {
-        bottom: -5px;
-    }
-}
-.carousel-panel .include-check {
-position: relative;
-padding-left: 45px;
-margin-top: 20px;
-}
-.carousel-panel .include-check:before {
-content: "";
-background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
-background-position: 0 -668px;
-background-size: 205px auto;
-width: 25px;
-height: 27px;
-padding-right: 5px;
-position: absolute;
-left: 0;
-top: -6px;
-}
-                </style>
-                <div class="carousel-wrap">
-                  <div class="carousel-container container">
-                    <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
-                        <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
-                      </ol>
-                      <div class="carousel-inner">
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="item">
-                                  <div class="item-wrapper text-center">
-                                    <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                        </div>
-                                      </div>
-                                      <div class="row">
-                                        <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                          <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                      </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
-                    </div>
-                    <script>
-                      $('.carousel .carousel-indicators li:first-child').addClass("active");
-                      $('.carousel .carousel-inner .item:first-child').addClass("active");
-                    </script>
-                  </div>
-                </div> 
-        ##endif
-         
-        <div class="bg-gray-light">
-                    <style>
-.features-two-up {
-  min-height: 940px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  padding: 50px 0;
-}
-.features-two-up .feature-row-height {
-margin-top: 40px;
-}
-.features-two-up .feature-row {
-}
-.features-two-up .feature-image {
-margin-top: 15px;
-margin-bottom: 20px;
-}
-.features-two-up .feature-title {
-font-size: 24px;
-font-size: 2.4rem;
-margin-bottom: 10px;
-font-family: 'Walsheim-Bold';
-line-height: 1.1;
-margin-top: 15px;
-}
-.features-two-up .feature-row-text {
-margin-bottom: 20px;
-}
-                    </style>
-                    <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h2>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                           </div>
-                                    <div class="row feature-row-height">
-                                      <div class="col-sm-7">
-                                        <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" alt="" class="lazyload feature-image img-responsive">
-                                          </div>
-                                          <div class="col-sm-7">
-                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
-                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="row feature-row-height">
-                                      <div class="col-sm-7">
-                                        <div class="row feature-row">
-                                          <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" alt="" class="lazyload feature-image img-responsive">
-                                          </div>
-                                          <div class="col-sm-7">
-                                            <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
-                                            <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
                         </div>
-                      </div>
-                    </div>
-        </div>
-        <div class="bg-black">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-9">
-                <h2 style="color:#FFF;margin-top:40px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
-              </div>
-              <div class="col-sm-3">
-                <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
-                  <button data-ci="91392" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
+                          <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
+                          </div>
+                        </div>
                 </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-social-media').carousel(slideNum);
+                });
+                
+                $('#carousel-social-media').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-yelp.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-desc]@L]<sup class="supsymbol">&reg;</sup></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-paypal.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div> 
+      ##else
+       
+            <style>
+              .features-tabbed-carousel-top {
+                text-align: center;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                padding-top: 15px;
+                padding-bottom: 15px;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              max-width: 70%;
+              vertical-align: middle;
+              display: inline-block;
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+              margin-bottom: 10px;
+              }
+              .img-center {
+              margin: 0 auto;
+              }
+              
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+              color: #008a32;
+              font-family: 'Walsheim-Black';
+              }
+              .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+              font-family: 'Walsheim-Bold';
+              font-size: 18px;
+              font-size: 1.8rem;
+              line-height: 1.1;
+              text-transform: uppercase;
+              }
+              .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+              
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+                border-left: 1px solid #808080;
+                }
+              }
+              @media only screen and (min-width: 992px){
+                .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-top: 15px solid #008a32;
+                border-right: 15px solid transparent;
+                border-left: 15px solid transparent;
+                position: absolute;
+                bottom: -15px;
+                margin-left: -20px;
+                left: 50%;
+                }
+              }
+              
+            </style>
+            <div data-icode="" id="" class="features-tabbed-carousel-top ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                    <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:apps-modal-header]@L]</h2>
+                    <h4 class="headline-primary">[@L[cds.sales/gd/hosting/website-builder:apps-modal-description]@L]</h4>
+                  </div>
+                </div>
+                <div class="row">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
+                          </div>
+                        </div>
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+                          <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                            <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
+                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <atlantis:webstash type="js">
+              <script type="text/javascript">
+                $(window).load(function() {
+                  setTimeout(function() {
+                    $(".features-tabbed-carousel-icon:first").click();
+                  }, 500);
+                
+                  var maxTabHeight = 0;
+                  $(".features-tabbed-carousel-icon").each(function(index, tab) {
+                    maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+                  }).css("height", maxTabHeight);
+                
+                  var maxFeatureTextHeight = 0;
+                  $(".feature-text").each(function(index, featureText) {
+                    maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+                  }).css({height: maxFeatureTextHeight});
+                
+                });
+                
+                $(".features-tabbed-carousel-icon").click(function() {
+                  var slideNum = $(this).data("begin");
+                  $(".features-tabbed-carousel-icon").removeClass("active");
+                  $(this).addClass("active");
+                  $('#carousel-social-media').carousel(slideNum);
+                });
+                
+                $('#carousel-social-media').on('slid.bs.carousel', function () {
+                  var carouselData = $(this).data('bs.carousel');
+                  var currentIndex = carouselData.getActiveIndex();
+                  $(".features-tabbed-carousel-icon").each(function() {
+                    if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                      $(".features-tabbed-carousel-icon").removeClass("active");
+                      $(this).addClass("active");
+                    }
+                  });
+                });
+                
+                
+              </script>
+            </atlantis:webstash>
+            <style>.item-wrapper { padding: 35px 0 20px; }
+.carousel-wrap { padding-bottom: 70px; }
+
+@media only screen and (min-width: 768px){
+  .carousel-container .carousel {
+    padding: 0 120px;
+  }
+}
+
+.carousel {
+  position: relative;
+  padding: 0 0 45px 0;
+}
+
+.carousel-container .carousel .carousel-indicators {
+  bottom: -35px;
+}
+
+@media screen and (min-width: 768px){
+  .carousel-indicators {
+    bottom: -5px;
+  }
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  z-index: 15;
+  width: 80%;
+  margin-left: -40%;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+
+.carousel-container .carousel .carousel-indicators li.active {
+  background-color: #77c043;
+}
+.carousel-container .carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  margin: 5px;
+  background-color: #d9d9d9;
+}
+.carousel-indicators .active {
+  background-color: #008a32;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 32px;
+  height: 10px;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .active {
+  
+}
+.carousel-inner > .active, .carousel-inner > .next, .carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: left 0.6s ease-in-out;
+  -moz-transition: left 0.6s ease-in-out;
+  transition: left 0.6s ease-in-out;
+  overflow: hidden;
+}
+.carousel-container .carousel-panel, .carousel-container .testimonial {
+  padding: 0;
+}
+.carousel-panel .img-center {
+  margin: 15px auto;
+}
+.carousel-panel .carousel-panel-text {
+  margin-bottom: 25px;
+}
+.carousel-panel h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.carousel-container .carousel-control.left {
+  left: 0px;
+}
+.carousel-control {
+  position: absolute;
+  top: -11%;
+  bottom: 0;
+  color: #999999;
+  text-align: center;
+}
+.carousel-icon.arrow-left-icon {
+  background-position: 0 0;
+  width: 51px;
+  height: 50px;
+}
+
+.carousel-control .uxicon-chevron-left-lt, .carousel-control .arrow-left-icon, .carousel-control .arrow-left-white-icon {
+  left: 50%;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+.carousel-icon {
+  background-image: url('[@T[link:<imageroot />]@T]/fos/hp/sahara-rebrand-sprite-20141114.png');
+  display: inline-block;
+  background-size: 205px auto;
+}
+.carousel-container .carousel-control.right {
+  right: 0px;
+}
+.carousel-icon.arrow-right-icon {
+  background-position: 0 -52px;
+  width: 51px;
+  height: 50px;
+}
+.carousel-control .arrow-left-white-icon, .carousel-control .arrow-right-white-icon, .carousel-control .arrow-left-icon, .carousel-control .arrow-right-icon {
+  position: absolute;
+  top: 50%;
+}
+
+.carousel {
+    position: relative;
+    padding: 0 0 45px 0;
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner > .item {
+    display: none;
+    position: relative;
+    -webkit-transition: left 0.6s ease-in-out;
+    -moz-transition: left 0.6s ease-in-out;
+    transition: left 0.6s ease-in-out;
+    overflow: hidden;
+}
+
+.carousel-inner > .item.show-item {
+    display: block;
+}
+
+.carousel-inner > .item > h1,
+.carousel-inner > .item > h2,
+.carousel-inner > .item > h3,
+.carousel-inner > .item > h4,
+.carousel-inner > .item > h5,
+.carousel-inner > .item > h6 {
+    margin-top: 0;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    display: block;
+}
+
+.carousel-inner > .active {
+    left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.carousel-inner > .next {
+    left: 100%;
+}
+
+.carousel-inner > .prev {
+    left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+    left: 0;
+}
+
+.carousel-inner > .active.left {
+    left: -100%;
+}
+
+.carousel-inner > .active.right {
+    left: 100%;
+}
+
+.carousel-text-item {
+    margin-bottom: 20px;
+}
+
+.carousel-text-item h1 {
+    font-size: 14px;
+    display: inline;
+    margin: 0;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.carousel-control {
+    position: absolute;
+    top: -11%;
+    bottom: 0;
+    color: #999999;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-control {
+        top: -6%;
+    }
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+    outline: none;
+    color: #000;
+    text-decoration: none;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .uxicon-chevron-right-lt {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-top: -15px;
+}
+
+.carousel-control .arrow-left-white-icon,
+.carousel-control .arrow-right-white-icon,
+.carousel-control .arrow-left-icon,
+.carousel-control .arrow-right-icon {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-control .uxicon-chevron-left-lt,
+.carousel-control .arrow-left-icon {
+    left: 50%;
+}
+
+.carousel-control .uxicon-chevron-right-lt,
+.carousel-control .arrow-right-icon {
+    right: 50%;
+}
+
+.carousel-control.left {
+    left: -40px;
+}
+@media only screen and (max-width: 768px){
+  .carousel-container .carousel-control {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .carousel-control.left {
+        left: -10px;
+    }
+}
+
+.carousel-control.right {
+    right: -40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-control.right {
+        right: -10px;
+    }
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: 15;
+    width: 80%;
+    margin-left: -40%;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 32px;
+    height: 10px;
+    margin: 8px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #d9d9d9;
+}
+
+.carousel-indicators .active {
+    background-color: #008a32;
+}
+
+@media screen and (min-width: 768px) {
+    .carousel-indicators {
+        bottom: -5px;
+    }
+}
+.carousel-panel .include-check {
+position: relative;
+padding-left: 45px;
+margin-top: 20px;
+}
+.carousel-panel .include-check:before {
+content: "";
+background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+background-position: 0 -668px;
+background-size: 205px auto;
+width: 25px;
+height: 27px;
+padding-right: 5px;
+position: absolute;
+left: 0;
+top: -6px;
+}
+            </style>
+            <div class="carousel-wrap">
+              <div class="carousel-container container">
+                <div id="carousel-social-media" data-ride="carousel" data-interval="false" class="carousel slide">
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-social-media" data-slide-to="0" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="1" data-ci=""></li>
+                    <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
+                  </ol>
+                  <div class="carousel-inner">
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-fb.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-twitter.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="item-wrapper text-center">
+                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-youtube.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]<sup class="supsymbol">&reg;</sup></h2>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-desc]@L]</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  </div><a href="#carousel-social-media" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-social-media" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+                </div>
+                <script>
+                  $('.carousel .carousel-indicators li:first-child').addClass("active");
+                  $('.carousel .carousel-inner .item:first-child').addClass("active");
+                </script>
+              </div>
+            </div> 
+      ##endif
+       
+      <div class="bg-gray-light">
+                <atlantis:webstash type="css">
+                  <style>
+                    .features-two-up {
+                      min-height: 940px;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      background-position: top center;
+                      padding: 50px 0;
+                    }
+                    .features-two-up .feature-row-height {
+                      margin-top: 40px;
+                    }
+                    .features-two-up .feature-image {
+                      margin-top: 15px;
+                      margin-bottom: 20px;
+                    }
+                    .features-two-up .feature-title {
+                      font-size: 24px;
+                      font-size: 2.4rem;
+                      margin-bottom: 10px;
+                      font-family: 'Walsheim-Bold';
+                      line-height: 1.1;
+                      margin-top: 15px;
+                    }
+                    .features-two-up .feature-row-text {
+                      margin-bottom: 20px;
+                    }
+                    
+                  </style>
+                </atlantis:webstash>
+                <div style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/rebrand-features-bg-ph_v2.png" class="features-two-up lazyload   ">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h2 class="h1">[@L[cds.sales/gd/hosting/website-builder:business-plus-badge-2]@L]</h2>
+                      </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-getAwebsite2.png" alt="" class="lazyload feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:oneclick-header]@L]</div>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:oneclick-body-text]@L]</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row feature-row-height">
+                                <div class="col-sm-7">
+                                  <div class="row feature-row">
+                                    <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-gettingGoogle2.png" alt="" class="lazyload feature-image img-responsive">
+                                    </div>
+                                    <div class="col-sm-7">
+                                      <div class="feature-title">[@L[cds.sales/gd/hosting/website-builder:seofs-header]@L]</div>
+                                      <div class="feature-row-text">[@L[cds.sales/gd/hosting/website-builder:seofs-body-text]@L]</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </div>
+                  </div>
+                </div>
+      </div>
+      <div class="bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9">
+              <h2 style="color:#FFF;margin-top:40px;" class="text-center h3">[@L[cds.sales/gd/hosting/website-builder:sb_bpp_starting_at]@L] [@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</h2>
+            </div>
+            <div class="col-sm-3">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.bg-black&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="right">
+                <button data-ci="91392" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-md btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section> 
     ##if(activeLanguageAny([en-us]))
      
@@ -4670,7 +4149,8 @@ margin-bottom: 20px;
     ##endif
      
     <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/website-builder:sb_nav_3]@L]" data-ciCode="87759">
-      <style>.accordion-group {
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
   border-top: 2px solid #e8e8e8;
   border-bottom: 2px solid #e8e8e8;
   list-style: none;
@@ -4749,7 +4229,8 @@ margin-bottom: 20px;
 .dropdown li {
   font-family: Arial;
 }
-      </style>
+        </style>
+      </atlantis:webstash>
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -4782,7 +4263,18 @@ margin-bottom: 20px;
               <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-title]@L]</span>
                 <ul class="dropdown">
                   <li>
-                    <div>[@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                    <div>
+                       
+                      ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content-non-ols]@L]
+                       
+                      ##else
+                       
+                      [@L[cds.sales/gd/hosting/website-builder:faq-fourth-slide-content]@L]
+                       
+                      ##endif
+                       
                     </div>
                   </li>
                 </ul>
@@ -4794,37 +4286,39 @@ margin-bottom: 20px;
           </div>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".accordion-dropdown").click(function() {
-          var dropdownGroup = $(this).parent(".accordion-group");
-          var dropdownOptions = $(this).find(".dropdown");
-          var dropdownCaret = $(this).find(".carett");
-          var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
-        
-          $(dropdowns).removeClass("active");
-          $(dropdownGroup).find(".dropdown").slideUp();
-          $(dropdownGroup).find(".carett")
-                          .removeClass("caret-down")
-                          .addClass("caret-right");
-        
-          if (!$(dropdownOptions).is(":visible")) {
-            $(this).addClass("active");
-            $(dropdownOptions).slideDown();
-            $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
-            event.stopPropagation();
-          }
-        });
-        $(window).load(function() {
-          $("#faq-accordion .accordion-dropdown:first").click();
-        });
-        $("#faq-button").click(function() {
-          $('#faq-accordion').find('.dropdown').slideDown();
-          $('#faq-accordion').find('.accordion-dropdown').find('.carett')
-                          .removeClass("caret-right")
-                          .addClass("caret-down");
-          $('#faq-accordion').find('.accordion-dropdown').addClass("active");
-         });
-      </script>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#faq-accordion .accordion-dropdown:first").click();
+          });
+          $("#faq-button").click(function() {
+            $('#faq-accordion').find('.dropdown').slideDown();
+            $('#faq-accordion').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#faq-accordion').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
     </section> 
     ##if(activeLanguageAny([fr-CA],[en-IN],[en-PK],[es-AR],[es-CL],[es-CO],[es-MX],[es-PE],[es-VE],[pt-BR]) || countrySiteAny(at,be,ch,dk,da,de,es,fi,fr,gr,it,nb,nl,no,pl,pt,ru,se,tr,ua))
      
@@ -5349,6 +4843,538 @@ margin-bottom: 20px;
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- landing page styling-->
+      <style>
+        /* fix the greek font styling issue here */
+        ##if(countrySiteAny(gr))
+        * {
+          font-family: arial !important;
+        }
+        .close {
+          font-family: uxfont !important;
+        }
+        .uxicon {
+          font-family: uxfont !important;
+        }
+        ##endif
+        
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
+        
+        /* default LP marquee styling */
+        .dash { 
+          letter-spacing: -10px; 
+          font-size: 1.5em; 
+          line-height: 0.6; 
+          vertical-align: -0.1em; 
+        }
+        .marquee-content-wrapper { 
+          padding: 40px; 
+          margin-left: 10px; 
+          margin-right: 10px; 
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
+          background-color: rgba(0,138,50,0.9); 
+          color: white; 
+        }
+        .marquee-content-wrapper:not(old) {
+          background-image: none;
+          background-color: rgba(0,138,50,0.9);    
+        }
+        .marquee.marquee-white {
+            color: #fff;
+        }
+        .marquee.marquee-white h1,
+        .marquee.marquee-white h2,
+        .marquee.marquee-white h3,
+        .marquee.marquee-white h4,
+        .marquee.marquee-white h5,
+        .marquee.marquee-white h6 {
+            color: #fff;
+        }
+        .marquee.marquee-white .dashed-underline {
+            border-bottom-color: #fff;
+        }
+        .marquee.marquee-white a:not(.btn) {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .marquee.marquee-white a:not(.btn):hover {
+            text-decoration: none;
+        }
+        .marquee .jump-arrow-btn { margin-top:30px;}
+        .marquee h1 { 
+          font-size: 2rem;
+          text-transform: uppercase;
+          color: #ef6c0f;
+          font-family: 'Walsheim-Bold';
+          margin-bottom: 10px;
+          margin-top:0;
+        }
+        .marquee h2 { 
+          font-weight: 100;
+          margin-top:0;
+          margin-bottom: 20px;
+          font-family: 'Walsheim-Bold';
+          text-align: left;
+        }
+        .sf-tipper-target {
+          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: baseline;
+          cursor: pointer;
+        }
+        
+      </style>
+      <style>
+.bg-black {
+  background-color: #333333;
+}
+.bg-gray-light {
+    background-color: #d9d9d9;
+}
+.dash{
+  letter-spacing: -.5rem;
+}
+.BVBrowserWebkit{
+  margin-top:  50px;
+}
+.BVDITitle {
+  text-transform: uppercase !important;
+  text-align: center !important;
+  font-family: 'Walsheim-Black' !important;
+  font-weight: 300 !important;
+  line-height: 1.1 !important;
+  color: #333 !important;
+}
+
+#BVRRDisplayContentLinkWriteID a {
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-transition-delay: 0s !important;
+  -webkit-transition-duration: 0.1s !important;
+  -webkit-transition-property: transform !important;
+  -webkit-transition-timing-function: ease !important;
+  -webkit-user-select: none !important;
+  background-color: rgb(0, 138, 50) !important;
+  border-bottom-color: rgb(0, 112, 41) !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-style: solid !important;
+  border-bottom-width: 4px !important;
+  border-image-outset: 0px !important;
+  border-image-repeat: stretch !important;
+  border-image-slice: 100% !important;
+  border-image-source: none !important;
+  border-image-width: 1 !important;
+  border-left-color: rgb(0, 112, 41) !important;
+  border-left-style: solid !important;
+  border-left-width: 0px !important;
+  border-right-color: rgb(0, 112, 41) !important;
+  border-right-style: solid !important;
+  border-right-width: 0px !important;
+  border-top-color: rgb(0, 112, 41) !important;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+  border-top-style: solid !important;
+  border-top-width: 0px !important;
+  box-sizing: border-box !important;
+  color: rgb(255, 255, 255) !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  font-family: Walsheim-Medium, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  height: 46px !important;
+  line-height: 25.7142868041992px !important;
+  margin-bottom: 0px !important;
+  min-width: 88px !important;
+  padding-bottom: 7px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition-delay: 0s !important;
+  transition-duration: 0.1s !important;
+  transition-property: transform !important;
+  transition-timing-function: ease !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  background-image: none !important;
+}
+.templates-chart {
+padding-top: 70px;
+padding-bottom: 70px;
+}
+.templates-container{
+background-color: #fff;
+-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+padding-top: 40px;
+padding-bottom: 50px;
+}
+.templates-image{
+  margin: 25px auto;
+  box-shadow: 0 3px 7px -3px #282828;
+  height: 260px;
+  width: 200px;
+  overflow: hidden;
+}
+.templates-image-container{
+  margin: 30px 110px 40px 110px;
+}
+.templates-container .header-section{
+  margin: 30px 110px 0px 110px;
+
+}
+.view-all{
+  margin-top: 31px;
+}
+.condensed{
+  font-weight: bold;
+}
+.tlds-all{
+  display: none;
+}
+.carousel-panel .img-center {
+width: 50%;
+}
+  #login-modal button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  .modal-open {
+    overflow: hidden;
+  }
+
+  #login-modal.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+  }
+
+  #login-modal.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+       -moz-transition: -moz-transform 0.3s ease-out;
+         -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
+
+  #login-modal.modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  #login-modal .modal-dialog {
+    position: relative;
+    z-index: 1050;
+    width: auto;
+    margin: 10px;
+  }
+
+  #login-modal .modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #999999;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: none;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    background-color: #000000;
+  }
+
+  .modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+
+  .modal-backdrop.in {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #login-modal .modal-header {
+    min-height: 16.428571429px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-header .close {
+    margin-top: -2px;
+  }
+
+  #login-modal .modal-title {
+    margin: 0;
+    line-height: 1.428571429;
+  }
+
+  #login-modal .modal-body {
+    position: relative;
+    padding: 20px;
+  }
+
+  #login-modal .modal-footer {
+    padding: 19px 20px 20px;
+    margin-top: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer:before,
+  #login-modal .modal-footer:after {
+    display: table ;
+    content: " ";
+  }
+
+  #login-modal .modal-footer:after {
+    clear: both;
+  }
+
+  #login-modal .modal-footer .btn + .btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+  }
+
+  #login-modal .modal-footer .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+
+  #login-modal .modal-footer .btn-block + .btn-block {
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    #login-modal .modal-dialog {
+      width: 600px;
+      margin: 30px auto;
+    }
+    #login-modal .modal-content {
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .features {
+    background-color: #62A92F;
+  }
+  .disclaimers-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+      </style>
+      <style>
+        html[lang="fi-fi"] .pro-plans .pro-plan-wrap .plan-title {
+        font-size: 26px;
+        font-size: 2.6rem;
+        }
+        html[lang="it-it"] .pro-plans .pro-plan-wrap .plan-flag {
+          font-size: 24px;
+          font-size: 2.4rem;
+        }
+        
+        #social-media, #reviews, #faq, #disclaimers { background: #fff; }
+        #social-media { padding-bottom: 0; }
+        #features, #faq, #other-products, #renderMidPageNavBottom, #modals { padding-top: 0; padding-bottom: 0; }
+        
+        /* TODO: can this styling be abstracted into landing-page.jade? */
+        body { background-color: #d9d9d9; }
+        #marquee { 
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
+          padding-bottom: 120px;
+          margin-bottom: 0;
+          background-size: cover;
+        }
+        
+        /* latam */
+        html[lang="es-ar"] #marquee,
+        html[lang="pt-br"] #marquee,
+        html[lang="es-cl"] #marquee,
+        html[lang="es-co"] #marquee,
+        html[lang="es-mx"] #marquee,
+        html[lang="es-pe"] #marquee,
+        html[lang="es-ve"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_lam_wsb.jpg);
+        }
+        
+        /* general */
+        html[lang="en-us"] #marquee,
+        html[lang="es-us"] #marquee,
+        html[lang="en-au"] #marquee,
+        html[lang="en-ca"] #marquee,
+        html[lang="en-nz"] #marquee,
+        html[lang="fr-be"] #marquee,
+        html[lang="fr-ca"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+        }
+        
+        /* asia */
+        html[lang="en-my"] #marquee,
+        html[lang="en-ph"] #marquee,
+        html[lang="en-sg"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_Asia.jpg);
+        }
+        
+        /* in-pk */
+        html[lang="en-in"] #marquee,
+        html[lang="en-pk"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img_bgrnd_sb15_marquee_in-pk_wsb.jpg);
+        }
+        
+        /* emea */
+        html[lang="nl-be"] #marquee,
+        html[lang="da-dk"] #marquee,
+        html[lang="de-de"] #marquee,
+        html[lang="es-es"] #marquee,
+        html[lang="fr-fr"] #marquee,
+        html[lang="en-ie"] #marquee,
+        html[lang="it-it"] #marquee,
+        html[lang="nb-no"] #marquee,
+        html[lang="nl-nl"] #marquee,
+        html[lang="de-at"] #marquee,
+        html[lang="pl-pl"] #marquee,
+        html[lang="pt-pt"] #marquee,
+        html[lang="fr-ch"] #marquee,
+        html[lang="it-ch"] #marquee,
+        html[lang="de-ch"] #marquee,
+        html[lang="en-za"] #marquee,
+        html[lang="fi-fi"] #marquee,
+        html[lang="sv-se"] #marquee,
+        html[lang="tr-tr"] #marquee,
+        html[lang="en-gb"] #marquee,
+        html[lang="el-gr"] #marquee,
+        html[lang="ru-ru"] #marquee,
+        html[lang="uk-ua"] #marquee {
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/SB15_Marquee_Website-Builder_EMEA.jpg);
+        }
+        
+        .plan-tile { 
+          margin-top: 0; 
+          margin-bottom: 0; 
+        }
+        .pro-plans { 
+          margin-top: -120px; 
+          padding-bottom: 20px; 
+          padding-top: 0; 
+        }
+        .marquee ul { padding: 0; }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
@@ -5380,8 +5406,28 @@ margin-bottom: 20px;
        ##endif
       
        $(document).ready(function(){
-          showTldsInList('#disclaimers');
+         showTldsInList('#disclaimers');
+         var recommendedThemes = [[@T[wsbthemes:]@T]];
       
+         if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
+           recommendedThemes = recommendedThemes[0].slice(0,9);
+           // populate images
+           var column = 0;
+           var $row;
+           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+           $.each(recommendedThemes,function(index){
+             if(column == 0)
+               $row = $("<div>", {class: "row"});
+             column++;
+             var itemData = {url:recommendedThemes[index]['URL']};
+             var itemElement = recommendedImagesTemplates(itemData);
+             $row.append(itemElement)
+             if(column == 3 ){
+               $('.templates-image-container').append($row);
+               column = 0;
+             }
+           });
+         }
        });
       
        function showTldsInList(selector) {
