@@ -28,28 +28,32 @@ mixin renderGoodNews(productToDisplay)
         .orange-text{color:#f1751d;}
         #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        .column{width: 24%; display: inline-block;}
+        .plus{width: 11%; display: inline-block;}
 
   section#getItNow
     .container
       .row
-        .col-xs-10.col-
+        .col-xs-12.col-sm-9.col-sm-offset-3
           span Here you go...
-          h2 A great package deal for <br> <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
+          h2 A great package deal for <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
       .row
-        .col-xs-2.col-xs-offset-2
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
-          h3.logo-label DOMAIN NAME
-          p Domain is the name of your
-        .col-xs-1
-        .col-xs-2
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
-          h3.logo-label DOMAIN NAME
-          p Domain is the name of your
-        .col-xs-1
-        .col-xs-2
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
-          h3.logo-label DOMAIN NAME
-          p Domain is the name of your
+        .col-xs-12.col-sm-9.col-sm-offset-3
+          .three-product-wrapper
+            .column.domain
+              //- IE 8 fallback img here
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
+              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
+            .plus +
+            .column.website
+              //- IE 8 fallback img here
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
+              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
+            .plus +
+            .column.email
+              //- IE 8 fallback img here
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
+              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
     .container
       .col-xs-3.left-side
         .row

@@ -708,30 +708,30 @@ function getParameterByName(name) {
         .orange-text{color:#f1751d;}
         #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        .column{width: 24%; display: inline-block;}
+        .plus{width: 11%; display: inline-block;}
         
       </style>
     </atlantis:webstash>
     <section id="getItNow">
       <div class="container">
         <div class="row">
-          <div class="col-xs-10 col-"><span>Here you go...</span>
-            <h2>A great package deal for <br> <span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h2>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3"><span>Here you go...</span>
+            <h2>A great package deal for <span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-2 col-xs-offset-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
-            <h3 class="logo-label">DOMAIN NAME</h3>
-            <p>Domain is the name of your</p>
-          </div>
-          <div class="col-xs-1"></div>
-          <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
-            <h3 class="logo-label">DOMAIN NAME</h3>
-            <p>Domain is the name of your</p>
-          </div>
-          <div class="col-xs-1"></div>
-          <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
-            <h3 class="logo-label">DOMAIN NAME</h3>
-            <p>Domain is the name of your</p>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+            <div class="three-product-wrapper">
+              <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
+              </div>
+              <div class="plus">+</div>
+              <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
+              </div>
+              <div class="plus">+</div>
+              <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
