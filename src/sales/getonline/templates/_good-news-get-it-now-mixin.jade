@@ -48,27 +48,29 @@ mixin renderGoodNews(productToDisplay)
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           h2.text-center Here you go...
           h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">#{productToDisplay.price}</mark>
-      .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.products
-          .column.domain
-            //- IE 8 fallback img here
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
-            h3.text-center Domain Name
-            p Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark>
-          .plus +
-          .column.website
-            //- IE 8 fallback img here
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
-            h3.text-center Web Hosting
-            p Give your site a home that’ll keep it secure and running like sports car.
-          .plus +
-          .column.email
-            //- IE 8 fallback img here
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
-            h3.text-center Office 365 Email
-            p Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. 
-      .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.cta
-          p.text-center Get the bundle for $1/month for the first year*
-          button.btn.btn-purchase.btn-lg.center-block Get It Now
-          small.text-center *Bundle cost is $12/year and $XXX.XX/year after the first year
+      block productRow
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3.products
+            .column.domain
+              //- IE 8 fallback img here
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+              h3.text-center Domain Name
+              p Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark>
+            .plus +
+            block targetedProduct
+              .column.website
+                //- IE 8 fallback img here
+                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+                h3.text-center Web Hosting
+                p Give your site a home that’ll keep it secure and running like sports car.
+            .plus +
+            .column.email
+              //- IE 8 fallback img here
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+              h3.text-center Office 365 Email
+              p Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. 
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3.cta
+            p.text-center Get the bundle for $1/month for the first year*
+            button.btn.btn-purchase.btn-lg.center-block Get It Now
+            small.text-center *Bundle cost is $12/year and $XXX.XX/year after the first year
