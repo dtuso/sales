@@ -1,8 +1,13 @@
 extends ./templates/_p4p.jade
 
-block getItNow
-  - var productToDisplay = {name: "Wordpress", info: "Start a blog with WordPress and let us manage the technical stuff.", cssClass: "<div class='features-wordpress'></div>", price: "$2.00"};
-  +renderGoodNews(productToDisplay)
+block price
+  h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$2.00</mark>
+
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+    h3.text-center Wordpress
+    p Start a blog with WordPress and let us manage the technical stuff.
 
 block proSpecific
 

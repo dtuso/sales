@@ -680,50 +680,8 @@ function getParameterByName(name) {
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <atlantis:webstash type="css">
-      <style>
-        #getItNow { padding-bottom: 0; }
-        #getItNow .container { position: relative; }
-        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
-        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
-        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
-        #getItNow .bubble h3 { font-family: Walsheim-Black; }
-        #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
-        
-        @media (min-width: 768px) {
-          #getItNow .bubble {
-            background-color: white;
-            background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin-left: 20%;
-          }
-          #getItNow .bubble h2 { padding-top: 0; }
-          #getItNow .hero-guy { left: -15%; }
-        }
-        
-        @media (min-width: 992px) {
-          #getItNow .hero-guy { left: -50px; }
-        }
-        
-      </style>
-    </atlantis:webstash>
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs"/>
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
@@ -732,17 +690,17 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">Domain Name</h3>
               <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block"/>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
               <h3 class="text-center">Web Hosting</h3>
               <p>Give your site a home that’ll keep it secure and running like sports car.</p>
             </div>
             <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block"/>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
               <h3 class="text-center">Office 365 Email</h3>
               <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
             </div>
@@ -862,7 +820,6 @@ function getParameterByName(name) {
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
       #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <section id="got">
@@ -870,7 +827,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <mark class="business-idea"></mark> starting at <mark id="product-price">$1.00</mark></h3>
           </div>
           <div class="container bottom">
             <div class="row">
@@ -981,6 +938,43 @@ ul li.no-check {
         .uppercase{text-transform:uppercase}
         .lowercase{text-transform:lowercase}
         .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+        #getItNow { padding-bottom: 0; }
+        #getItNow .container { position: relative; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
+        
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+        
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+        
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
         
       </style>
     </atlantis:webstash>

@@ -1,10 +1,13 @@
 extends ./templates/_p4p.jade
 
-block marquee
+block price
+  h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.50</mark>
 
-block getItNow
-  - var productToDisplay = {name: "Website Builder", info: "Easily create a professional website with simple drag-&-drop tools.", cssClass: "<div class='wsb-icon'></div>", price: "$1.00"};
-  +renderGoodNews(productToDisplay)
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
+    h3.text-center Website Builder
+    p Easily create a professional website with simple drag-&-drop tools.
 
 block proSpecific
 
