@@ -59,7 +59,7 @@
       <div class="bigtext">
         <div class="line1 walsheim-black">.TAX</div>
         <div class="line2 walsheim-bold">IS FOR YOU</div>
-        <div class="line3 price walsheim-regular">JUST [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</div>
+        <div class="line3 price walsheim-bold">JUST [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</div>
       </div><a class="btn btn-lg btn-purchase">GET STARTED</a>
     </div>
   </div>

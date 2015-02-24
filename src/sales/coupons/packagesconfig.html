@@ -1,0 +1,194 @@
+---
+location: packages/coupons/config
+id: 
+name: GCE-35734
+---
+{#
+
+Build process loops through each key of productData and uses a template. The templates are used based on having certain keys:
+only use one: "bundle" or "allPlans" or "noPfId"
+---------------------------------------------------------
+
+"bundle": [array of PFID's] 
+  // each PFID will be added for the total
+  // This will use the multipleproductprice token
+
+  "got_bundle": {"period":"monthly",  "bundle":    ["464069","101","7524"],  "promocode":"24681357"},
+  =============
+      'got_bundle': [
+        {
+          'period':'monthly',
+          'compare_price':'[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" dropsymbol="true" promocode="24681357" />]@T]',
+          'display_price':'[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" dropsymbol="false" promocode="24681357" symboltagname="span" />]@T]',
+          'compare_percent':'[@T[productcompare:<percent primaryproductid="464069" secondaryproductid="464069" secondaryperiod="yearly" hidebelow="0" showsymbol="false" promocode="24681357" />]@T]',
+          'display_percent':'[@T[productcompare:<percent primaryproductid="464069" secondaryproductid="464069" secondaryperiod="yearly" hidebelow="1" showsymbol="true" promocode="24681357" />]@T]',
+          'list_price':'[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+          'disableSavingCheck':'true'
+        }
+      ],
+
+  ---------------------------------------------------------
+
+"allPlans": [array of PFID's] 
+  // each PFID will allow the page to find lowest price on the landing page and highest percentage 
+  // This means if the economy plan is $3.99 with 10% OFF and the premium plan is 14.99 with 50% OFF
+  // the page will show "as low as $3.99" and "Up to 50% OFF"
+
+  "wsb":                           {"period":"monthly",  "allPlans":  ["7524","7509","7514"],  "promocode":"0"},
+  =============
+  'wsb': [
+        {
+          'period':'monthly',
+          'compare_price':'[@T[productprice:<current productid="7524" period="monthly" dropsymbol="true" promocode="0" />]@T]',
+          'display_price':'[@T[productprice:<current productid="7524" period="monthly" dropsymbol="false" promocode="0" symboltagname="span" />]@T]',
+          'compare_percent':'[@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" secondaryperiod="yearly" hidebelow="0" showsymbol="false" promocode="0" />]@T]',
+          'display_percent':'[@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" secondaryperiod="yearly" hidebelow="1" showsymbol="true" promocode="0" />]@T]',
+          'list_price':'[@T[productprice:<list productid="7524" period="monthly" />]@T]'
+        },{
+          'period':'monthly',
+          'compare_price':'[@T[productprice:<current productid="7509" period="monthly" dropsymbol="true" promocode="0" />]@T]',
+          'display_price':'[@T[productprice:<current productid="7509" period="monthly" dropsymbol="false" promocode="0" symboltagname="span" />]@T]',
+          'compare_percent':'[@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" secondaryperiod="yearly" hidebelow="0" showsymbol="false" promocode="0" />]@T]',
+          'display_percent':'[@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" secondaryperiod="yearly" hidebelow="1" showsymbol="true" promocode="0" />]@T]',
+          'list_price':'[@T[productprice:<list productid="7509" period="monthly" />]@T]'
+        },{
+          'period':'monthly',
+          'compare_price':'[@T[productprice:<current productid="7514" period="monthly" dropsymbol="true" promocode="0" />]@T]',
+          'display_price':'[@T[productprice:<current productid="7514" period="monthly" dropsymbol="false" promocode="0" symboltagname="span" />]@T]',
+          'compare_percent':'[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" secondaryperiod="yearly" hidebelow="0" showsymbol="false" promocode="0" />]@T]',
+          'display_percent':'[@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" secondaryperiod="yearly" hidebelow="1" showsymbol="true" promocode="0" />]@T]',
+          'list_price':'[@T[productprice:<list productid="7514" period="monthly" />]@T]'
+        }
+      ],
+
+---------------------------------------------------------
+
+"noPfId": "true"
+  // Some pods are not associated with a PFID
+  // if this is the case then additional keys will render exactly as the key value pair shows
+
+  "domain_new_extensions": {"period":"yearly",   "noPfId": "true",  "display_price": '[@T[localization:<display type="percent" number="30" />]@T]'}
+  =============
+  'domain_new_extensions': [
+      {
+        'period':'yearly',
+        'compare_price':'',
+        'display_price':'[@T[localization:<display type="percent" number="30" />]@T]',
+        'compare_percent':'',
+        'display_percent':'',
+        'list_price':'',
+        'disableSavingCheck':'true'
+      }
+    ]
+
+---------------------------------------------------------
+
+"disableSavingCheck":"true"
+// The page has a javascript check to see if the product or array of products is on sale,
+// for promo bundles and pods that do not have a PFID the additional key value is added so the javascript will not hide the pod
+
+This can be added to the Object for "allPlans", but normally should not be added,
+By default this is added to "bundles" and "noPfId"
+
+disableSavingCheck is being added to Online Store since that product is not on sale but is offering a free trial
+disableSavingCheck is needed since the product token would show as being no sale and be hidden 
+
+---------------------------------------------------------
+
+"period":"yearly or monthly"
+// determine how the product is normally sold, by the month or by the year
+// percentages always use the product tokens for the year since products are not normally discounted with only monthly plans
+
+#}{
+  'coupons_lp_pods':{
+
+
+  {%- set productData = {
+
+      "got_bundle":                    {"period":"monthly",  "bundle":    ["464069","101","7524"],          "promocode":"24681357"},
+      "o365_bundle":                   {"period":"monthly",  "bundle":    ["31841","101","7524","326366"],  "promocode":"33572469"},
+
+      "domain_com_top_deal":           {"period":"yearly",   "allPlans":  ["101"],    "promocode":"444888"},
+      "domain_com":                    {"period":"yearly",   "allPlans":  ["101"],    "promocode":"444888"},
+      "domain_co":                     {"period":"yearly",   "allPlans":  ["56401"],  "promocode":"444888"},
+      "domain_com_mx":                 {"period":"yearly",   "allPlans":  ["12801"],  "promocode":"444888"},
+      "domain_co_uk":                  {"period":"yearly",   "allPlans":  ["57465"],  "promocode":"444888"},
+      "domain_ca":                     {"period":"yearly",   "allPlans":  ["9405"],   "promocode":"444888"},
+      "domain_com_top_deal_no_promo":  {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
+      "domain_com_no_promo":           {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
+      "domain_co_no_promo":            {"period":"yearly",   "allPlans":  ["56401"],  "promocode":"0"},
+      "domain_com_mx_no_promo":        {"period":"yearly",   "allPlans":  ["12801"],  "promocode":"0"},
+      "domain_co_uk_no_promo":         {"period":"yearly",   "allPlans":  ["57465"],  "promocode":"0"},
+      "domain_ca_no_promo":            {"period":"yearly",   "allPlans":  ["9405"],   "promocode":"0"},
+      "domain_in":                     {"period":"yearly",   "allPlans":  ["9850"],   "promocode":"0"},
+
+      "wsb":                           {"period":"monthly",  "allPlans":  ["7524","7509","7514"],  "promocode":"0"},
+      "mwp":                           {"period":"monthly",  "allPlans":  ["32759","32767","32790"]},
+      "domain_based_email":            {"period":"monthly",  "allPlans":  ["31805","31825","31841"]},
+      "web_hosting":                   {"period":"monthly",  "allPlans":  ["32051","32059","32082"]},
+      "o365":                          {"period":"monthly",  "allPlans":  ["31825","543628","31841"]},
+
+      "domain_transfers":              {"period":"yearly",   "allPlans":  ["111"]},
+      "domain_biz":                    {"period":"yearly",   "allPlans":  ["11301"]},
+      "domain_net":                    {"period":"yearly",   "allPlans":  ["12001"]},
+      "domain_us":                     {"period":"yearly",   "allPlans":  ["11601"]},
+      "domain_org":                    {"period":"yearly",   "allPlans":  ["12101"]},
+      "domain_guru":                   {"period":"yearly",   "allPlans":  ["53465"]},
+      "domain_photography":            {"period":"yearly",   "allPlans":  ["51415"]},
+      "premium_ssl":                   {"period":"yearly",   "allPlans":  ["3645"]},
+      "get_found":                     {"period":"monthly",  "allPlans":  ["37975"]},
+      "domain_today":                  {"period":"yearly",   "allPlans":  ["76981"]},
+      "domain_property":               {"period":"yearly",   "allPlans":  ["546028"]},
+      "domain_global":                 {"period":"yearly",   "allPlans":  ["483124"]},
+      "domain_business":               {"period":"yearly",   "allPlans":  ["510853"]},
+      "domain_rocks":                  {"period":"yearly",   "allPlans":  ["221207"]},
+      "domain_city":                   {"period":"yearly",   "allPlans":  ["460047"]},
+      "domain_company":                {"period":"yearly",   "allPlans":  ["86592"]},
+      "domain_club":                   {"period":"yearly",   "allPlans":  ["172137"]},
+      "online_store_free_trial":       {"period":"monthly",  "allPlans":  ["40972"],  "disableSavingCheck":"true"},
+
+      "domain_bargain_bin":            {"period":"yearly",   "noPfId": "true",  "display_price": '[@T[currencyprice:<price usdamount="500" symboltagname="span" /> ]@T]'},
+      "domain_new_extensions":         {"period":"yearly",   "noPfId": "true",  "display_price": '[@T[localization:<display type="percent" number="30" />]@T]'}
+
+   
+    }
+  -%}
+  {% for product in productData %}
+    '{{ loop.key }}': [{% if product.promocode %}{% set promocode = ' promocode="' + product.promocode + '"' %}{% else %}{% set promocode = '' %}{% endif %}
+      {% for plan in product.allPlans -%}
+      {
+        'period':'{{ product.period }}',
+        'compare_price':'[@T[productprice:<current productid="{{ plan }}" period="{{ product.period }}" dropsymbol="true"{{ promocode | safe }} />]@T]',
+        'display_price':'[@T[productprice:<current productid="{{ plan }}" period="{{ product.period }}" dropsymbol="false"{{ promocode | safe }} symboltagname="span" />]@T]',
+        'compare_percent':'[@T[productcompare:<percent primaryproductid="{{ plan }}" secondaryproductid="{{ plan }}" secondaryperiod="yearly" hidebelow="0" showsymbol="false"{{ promocode | safe }} />]@T]',
+        'display_percent':'[@T[productcompare:<percent primaryproductid="{{ plan }}" secondaryproductid="{{ plan }}" secondaryperiod="yearly" hidebelow="1" showsymbol="true"{{ promocode | safe }} />]@T]',
+        'list_price':'[@T[productprice:<list productid="{{ plan }}" period="{{ product.period }}" symboltagname="span" />]@T]'{% if product.disableSavingCheck %},
+        'disableSavingCheck':'true'{% endif %}
+      }{% if !loop.last %},{% endif -%}
+      {%- endfor -%}
+    
+      {%- if product.bundle -%}
+      {
+        'period':'{{ product.period }}',
+        'compare_price':'[@T[multipleproductprice:<current productidlist="{{ product.bundle|join('|') }}" period="{{ product.period }}" dropsymbol="true"{{ promocode | safe }} />]@T]',
+        'display_price':'[@T[multipleproductprice:<current productidlist="{{ product.bundle|join('|') }}" period="{{ product.period }}" dropsymbol="false"{{ promocode | safe }} symboltagname="span" />]@T]',
+        'compare_percent':'[@T[productcompare:<percent primaryproductid="{{ product.bundle|first }}" secondaryproductid="{{ product.bundle|first }}" secondaryperiod="yearly" hidebelow="0" showsymbol="false"{{ promocode | safe }} />]@T]',
+        'display_percent':'[@T[productcompare:<percent primaryproductid="{{ product.bundle|first }}" secondaryproductid="{{ product.bundle|first }}" secondaryperiod="yearly" hidebelow="1" showsymbol="true"{{ promocode | safe }} />]@T]',
+        'list_price':'[@T[multipleproductprice:<list productidlist="{{ product.bundle|join('|') }}" period="{{ product.period }}" symboltagname="span" ></list>]@T]',
+        'disableSavingCheck':'true'
+      }{%- endif -%}
+
+      {%- if product.noPfId -%}
+      {
+        'period':'{{ product.period |safe }}',
+        'compare_price':'{{ product.compare_price |safe }}',
+        'display_price':'{{ product.display_price |safe }}',
+        'compare_percent':'{{ product.compare_percent |safe }}',
+        'display_percent':'{{ product.display_percent |safe }}',
+        'list_price':'{{ product.list_price |safe }}',
+        'disableSavingCheck':'true'
+      }{% endif %}
+    ]{% if !loop.last %},{% endif %}
+  {%- endfor %}
+  }
+}
