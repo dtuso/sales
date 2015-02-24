@@ -85,8 +85,7 @@ function stripDomainName(){
        var inputValue = params[i].split("=")[1];
        if(inputName == "domain"){
          inputValue = decodeURIComponent(inputValue);
-         $("#business-idea").text(inputValue);
-         $("#business-idea2").text(inputValue);
+         $(".business-idea").text(inputValue);
        }
         
     }
@@ -683,107 +682,76 @@ function getParameterByName(name) {
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
-        .container .row .green-background h2{ margin-bottom: 0;}
-        .get-it-now{margin-top: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
-        .logo-label{padding-top: 15px;}
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
-        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
-        .orange-text{color:#f1751d;}
-        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        .column{width: 24%; display: inline-block;}
-        .plus{width: 11%; display: inline-block;}
+        #getItNow { padding-bottom: 0; }
+        #getItNow .container { position: relative; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
+        
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+        
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+        
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
         
       </style>
     </atlantis:webstash>
     <section id="getItNow">
-      <div class="container">
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs"/>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3"><span>Here you go...</span>
-            <h2>A great package deal for <span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h2>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
+            <h2 class="text-center">Here you go...</h2>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.00</mark></h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3">
-            <div class="three-product-wrapper">
-              <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
-              </div>
-              <div class="plus">+</div>
-              <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
-              </div>
-              <div class="plus">+</div>
-              <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="img-responsive center-block"/><span class="text-center">[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
-              </div>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Domain Name</h3>
+              <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Web Hosting</h3>
+              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Office 365 Email</h3>
+              <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
             </div>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <div class="col-xs-3 left-side">
-          <div class="row">
-            <div class="hero-guy"></div>
-          </div>
-        </div>
-        <div class="col-xs-9 right-side">
-          <div class="row text-center good-news-shape">
-            <div class="head-wrapper">
-              <h2 class="heading">Here you go...</h2>
-              <div class="starter-pack"></div>
-              <h3>A great package deal for</h3>
-              <h3><span id="business-idea"></span> – Starting at <span id="product-price">$1.00</span></h3>
-            </div>
-          </div>
-          <div class="container bottom">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-1">
-                <div class="features-domain-name"></div>
-                <h3 class="logo-label">DOMAIN NAME</h3>
-                <p>Domain is the name of your</p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2"><div class='web-hosting-icon'></div>
-                <h3 class="logo-label">Web Hosting</h3>
-                <p>Give your site a home that’ll keep it secure and running like sports car.</p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2">
-                <div class="features-email"></div>
-                <h3 class="logo-label">OFFICE 365 EMAIL</h3>
-                <p>Office 365 email is the simplest email tool</p>
-              </div>
-            </div>
-            <div class="get-it-now">
-              <div class="row text-center">
-                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-              </div>
-              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <button id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
-              </div>
-              <div style="padding-top:10px" class="row text-center">
-                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
+            <p class="text-center">Get the bundle for $1/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is $12/year and $XXX.XX/year after the first year</small>
           </div>
         </div>
       </div>
@@ -947,7 +915,8 @@ function getParameterByName(name) {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2 {
+section h2,
+section .h2 {
   margin-bottom: 40px;
   margin-top: 0;
   font-size: 4rem;
@@ -957,7 +926,8 @@ section h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3 {
+section h3,
+section .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 3rem;

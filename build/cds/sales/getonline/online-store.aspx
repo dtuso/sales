@@ -85,8 +85,7 @@ function stripDomainName(){
        var inputValue = params[i].split("=")[1];
        if(inputName == "domain"){
          inputValue = decodeURIComponent(inputValue);
-         $("#business-idea").text(inputValue);
-         $("#business-idea2").text(inputValue);
+         $(".business-idea").text(inputValue);
        }
         
     }
@@ -681,6 +680,240 @@ function getParameterByName(name) {
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+    <atlantis:webstash type="css">
+      <style>
+        #getItNow { padding-bottom: 0; }
+        #getItNow .container { position: relative; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
+        
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+        
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+        
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
+        
+      </style>
+    </atlantis:webstash>
+    <section id="getItNow">
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs"/>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
+            <h2 class="text-center">Here you go...</h2>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.00</mark></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Domain Name</h3>
+              <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Web Hosting</h3>
+              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block"/>
+              <h3 class="text-center">Office 365 Email</h3>
+              <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
+            <p class="text-center">Get the bundle for $1/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is $12/year and $XXX.XX/year after the first year</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- onlineStore.product-->
+    <!--section#websitenode-builder
+    //div
+      //img(src="/headrer-image.pnodeng")
+      //h2 Website builder
+      //a.btn.btn-default-light View All Templates
+      //img(src="/main-image.png")
+    
+    -->
+    <!-- p4p.office365-->
+    <atlantis:webstash type="css">
+      <style>
+        .container .row .topSpacing{padding-top:20px;}
+        .container .row .leftSpacing{padding-left:50px;}
+        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+        .icon-spacing{text-align: center;font-size: 2em;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="O365-email" class="gray">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:35px" class="email-icon"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
+            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 speach-bubble-left-green">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- p4p.whyUs-->
+    <section id="why-godaddy">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="text-center">Why get online with us?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+              <h3>We're the world leader</h3>
+              <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+              <h3>Our 24/7 support is awesome</h3>
+              <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+              <h3>12 million people trust us</h3>
+              <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
+    </div>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .container .row .topSpacing{padding-top:20px;}
+      .container .row .leftSpacing{padding-left:50px;}
+      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
+      .icon-spacing{text-align: center;font-size: 2em;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      .domain-icon-spacing {margin-right: 60px;}
+      .col-spacer2{width:43%;}
+      .col-spacer1{width: 30%;}
+      
+      h2{margin-top:0px;margin-bottom:0px;}
+      h3{margin-top:0px;margin-bottom:0px;}
+      .product-name{font-weight:800;padding-top:10px;}
+      
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
+      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
+      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      
+    </style>
+    <section id="got">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:30px" class="text-center">
+            <h2 class="uppercase">Ready to take your business online?</h2>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <span id="business-idea2"></span> starting at <span id="product-price"></span></h3>
+          </div>
+          <div class="container bottom">
+            <div class="row">
+              <div class="col-sm-4 text-center">
+                <div class="features-domain-name"></div>
+                <label class="h3 uppercase product-name">Domain Name</label>
+              </div>
+              <div class="col-sm-4 text-center">
+                <label class="h3 uppercase product-name"></label>
+              </div>
+              <div class="col-sm-4 text-center">
+                <div class="features-email"></div>
+                <label class="h3 uppercase product-name">Office 365 Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="get-it-now">
+                <div class="container">
+                  <div class="row text-center">
+                    <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+                  </div>
+                  <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                  </div>
+                  <div style="padding-top:10px" class="row text-center">
+                    <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
@@ -691,7 +924,10 @@ function getParameterByName(name) {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2 {
+section h2,
+section .h2 {
+  margin-bottom: 40px;
+  margin-top: 0;
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -699,7 +935,10 @@ section h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3 {
+section h3,
+section .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -743,27 +982,6 @@ ul li.no-check {
   background-image: none !important;
 }
 
-      </style>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        .domain-icon-spacing {margin-right: 60px;}
-        .col-spacer2{width:43%;}
-        .col-spacer1{width: 30%;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h3{margin-top:0px;margin-bottom:0px;}
-        .why-us-title{margin-top:10px;}
-        .why-us-text{margin-top:10px;}
-        
-        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png) no-repeat bottom;}
-        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png) no-repeat bottom;}
-        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png) no-repeat bottom;}
-        
       </style>
       <style>
         .gray{background-color:#E8E8E8;}

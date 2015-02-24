@@ -151,7 +151,8 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2 {
+section h2,
+section .h2 {
   margin-bottom: 40px;
   margin-top: 0;
   font-size: 4rem;
@@ -161,7 +162,8 @@ section h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3 {
+section h3,
+section .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
   font-size: 3rem;

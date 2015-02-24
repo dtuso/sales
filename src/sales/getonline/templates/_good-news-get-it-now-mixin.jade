@@ -3,92 +3,72 @@ mixin renderGoodNews(productToDisplay)
   append pageStyles
     atlantis:webstash(type="css")
       style.
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
-        .container .row .green-background h2{ margin-bottom: 0;}
-        .get-it-now{margin-top: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:20px;}
-        .logo-label{padding-top: 15px;}
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
-        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
-        .orange-text{color:#f1751d;}
-        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        .column{width: 24%; display: inline-block;}
-        .plus{width: 11%; display: inline-block;}
+        #getItNow { padding-bottom: 0; }
+        #getItNow .container { position: relative; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
 
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
+        
   section#getItNow
     .container
+      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
-          span Here you go...
-          h2 A great package deal for <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
+        .col-xs-12.col-sm-9.col-sm-offset-3.bubble
+          h2.text-center Here you go...
+          h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">#{productToDisplay.price}</mark>
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
-          .three-product-wrapper
-            .column.domain
-              //- IE 8 fallback img here
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
-              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
-            .plus +
-            .column.website
-              //- IE 8 fallback img here
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
-              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
-            .plus +
-            .column.email
-              //- IE 8 fallback img here
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png")
-              .text-center [@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]
-    .container
-      .col-xs-3.left-side
-        .row
-          .hero-guy
-      .col-xs-9.right-side
-        .row.text-center.good-news-shape
-          .head-wrapper
-            h2.heading Here you go...
-            .starter-pack
-            block goodNewsHead
-              h3 A great package deal for
-              h3 <span id="business-idea"></span> – Starting at <span id="product-price">#{productToDisplay.price}</span>
-        block check-pro-goodNews  
-          .container.bottom
-            .row
-              .col-md-2.col-md-offset-1
-                .features-domain-name
-                h3.logo-label DOMAIN NAME
-                p Domain is the name of your
-              .col-md-2
-                .img-plus
-              .col-md-2
-                !{productToDisplay.cssClass}
-                h3.logo-label #{productToDisplay.name}
-                p #{productToDisplay.info}
-              .col-md-2
-                .img-plus
-              .col-md-2
-                .features-email
-                h3.logo-label OFFICE 365 EMAIL
-                p Office 365 email is the simplest email tool
-            .get-it-now
-              .row.text-center
-                p.h3.center Get the bundle for $1/month for the first year*
-              .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                button.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn GET IT NOW
-              .row.text-center(style={'padding-top':'10px'})
-                p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
+        .col-xs-12.col-sm-9.col-sm-offset-3.products
+          .column.domain
+            //- IE 8 fallback img here
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+            h3.text-center Domain Name
+            p Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark>
+          .plus +
+          .column.website
+            //- IE 8 fallback img here
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+            h3.text-center Web Hosting
+            p Give your site a home that’ll keep it secure and running like sports car.
+          .plus +
+          .column.email
+            //- IE 8 fallback img here
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+            h3.text-center Office 365 Email
+            p Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. 
+      .row
+        .col-xs-12.col-sm-9.col-sm-offset-3.cta
+          p.text-center Get the bundle for $1/month for the first year*
+          button.btn.btn-purchase.btn-lg.center-block Get It Now
+          small.text-center *Bundle cost is $12/year and $XXX.XX/year after the first year
