@@ -49,7 +49,7 @@
   margin-left: 5px;
 }
 #gtld-hero .gtld-phone li .price-container {
-  font-size: 1em;
+  font-size: .9em;
   display: table;
   float: right;
   text-align: right;
@@ -91,6 +91,9 @@
   }
   #gtld-hero .gtld-phone li {
     border-bottom: #b9babb solid 1px;
+  }
+  #gtld-hero .gtld-phone li .price-container {
+    font-size: 1em;
   }
   #gtld-hero .gtld-phone li .price {
     padding-right: 15px;
