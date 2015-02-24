@@ -28,8 +28,24 @@ append marqueeStyles
 
 block marqueeContent
   .main-content
+    |  
+    |  ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+    atlantis:webstash(type="css")
+      style.
+        #com499 .sale-ends-text{font-size:30px;padding:3px 20px;color:#333;background-color:#fedc45;}
+        #com499 .main-content .main-content-container{display:block;margin:0 0 0 125px;}
+
+    span.sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
+    script(type='text/javascript').
+      var d = new Date("2015","01","17");
+      saleEndDate = d.toLocaleDateString();   
+      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));
+    |  
+    |  ##else
     .sale-flag
       div(style="РАСПРОДАЖА") [@L[cds.sales/homepage/marquee/499com:sale]@L]
+    |  
+    |  ##endif
     .main-content-container
       .headline.line1 [@L[cds.sales/homepage/marquee/499com:first-year]@L]
       .headline.line2 [@L[cds.sales/homepage/marquee/499com:sub-text]@L]

@@ -90,6 +90,24 @@
           { "Description" : "Slide .LONDON Link" }
         ]
       },
+      { "Slide .WORLD Link" : [
+          { "ITC ID" : "96167" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .WORLD Link" }
+        ]
+      },
+      { "Slide .PHOTOGRAPHY Link" : [
+          { "ITC ID" : "96166" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .PHOTOGRAPHY Link" }
+        ]
+      },
+      { "Slide .NINJA Link" : [
+          { "ITC ID" : "96165" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .NINJA Link" }
+        ]
+      },
       { "Slide Expression of Interrest Link" : [
           { "ITC ID" : "88394" },
           { "ITC Code" : "" },
@@ -313,6 +331,30 @@
           { "ITC Code" : "TopPodBERLINLink" },
           { "Description" : "Top Pod - .BERLIN link" }
         ]
+      },
+      { "Top TLD Pods - .GLOBAL link" : [
+          { "ITC ID" : "95881" },
+          { "ITC Code" : "TopPodGLOBALLink" },
+          { "Description" : "Top Pod - .GLOBAL link" }
+        ]
+      },
+      { "Top TLD Pods - .WORLD link" : [
+          { "ITC ID" : "96018" },
+          { "ITC Code" : "TopPodWORLDLink" },
+          { "Description" : "Top Pod - .WORLD link" }
+        ]
+      },
+      { "Top TLD Pods - .CO.UK link" : [
+          { "ITC ID" : "96019" },
+          { "ITC Code" : "TopPodCOUKLink" },
+          { "Description" : "Top Pod - .CO.UK link" }
+        ]
+      },
+      { "Top TLD Pods - .SPACE link" : [
+          { "ITC ID" : "96020" },
+          { "ITC Code" : "TopPodSPACELink" },
+          { "Description" : "Top Pod - .SPACE link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -525,6 +567,12 @@
           { "ITC Code" : "ButtomPodOrg" },
           { "Description" : "Buttom TLD Pods - .ORG" }
         ]
+      },
+      { "Buttom TLD Pods - .IO" : [
+          { "ITC ID" : "95890" },
+          { "ITC Code" : "ButtomPodIo" },
+          { "Description" : "Buttom TLD Pods - .IO" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -718,6 +766,18 @@
           { "ITC ID" : "94893" },
           { "ITC Code" : "" },
           { "Description" : "New Available TLD's Column - .SARL" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .WORLD" : [
+          { "ITC ID" : "95891" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .WORLD" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SPACE" : [
+          { "ITC ID" : "96021" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .SPACE" }
         ]
       }
     ],

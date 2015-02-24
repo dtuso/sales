@@ -1,0 +1,40 @@
+---
+location: localization/sales/gd/research/mobile-ready-carnival/en
+id: 54d8fe10f778fc2a88214014
+name: SEM-360
+---
+{% include '../../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Get Mobile Ready for Carnival | Infographic - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Carnival brings everyone out into the streets. Check out this infographic to see why it's so important to make sure your website is mobile ready.
+<phrase key="og-title" />
+Get Mobile Ready for Carnival | Infographic - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Carnival brings everyone out into the streets. Check out this infographic to see why it's so important to make sure your website is mobile ready.
+<phrase key="meta-keywords" />
+
+<phrase key="page-title-h1" />
+Get Mobile Ready for Carnival
+<phrase key="page-intro" />
+It's Carnival time! People are leaving their homes and flooding the streets, but they're keeping their smartphones in their pockets. Make sure you benefit from the increase in mobile usage by ensuring that your website is mobile ready. Not convinced? Check out the below stats on mobile usage in Brazil.
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] Mobile Ready Carnival
+<phrase key="view-enlarged-version" />
+View an enlarged version of this infographic &raquo;
+<phrase key="download-pdf-version" />
+Click here to download a .pdf version of this infographic &raquo;
+<phrase key="facts-stats-title" />
+Facts and Stats to Tweet:
+<phrase key="facts-stats-1" />
+There are more than 2 million people on the streets in Brazil every day during Carnival
+<phrase key="facts-stats-1-encoded" />
+%22There%20are%20more%20than%202%20million%20people%20on%20the%20streets%20in%20Brazil%20every%20day%20during%20Carnival%22
+<phrase key="facts-stats-2" />
+Smartphone use in Brazil increased by 43% from 2013-2014
+<phrase key="facts-stats-2-encoded" />
+%22Smartphone%20use%20in%20Brazil%20increased%20by%2043%25%20from%202013-2014%22
+<phrase key="facts-stats-3" />
+Mobile app use in Brazil grew by 76% from 2013-2014
+<phrase key="facts-stats-3-encoded" />
+%22Mobile%20app%20use%20in%20Brazil%20grew%20by%2076%25%20from%202013-2014%22

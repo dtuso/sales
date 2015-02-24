@@ -1,5 +1,5 @@
 
-<link href="[@T[link:<javascriptroot />]@T]fos/eldorado/1.3.14/css/salesheader.min.css" rel="stylesheet"/>
+<link href="[@T[link:<javascriptroot />]@T]fos/eldorado/1.4.1/css/salesheader.min.css" rel="stylesheet"/>
 <style>
   .pc-sprite { background-image:url([@T[link:<javascriptroot />]@T]pc/img/1/20150114_pc_sprite.png); }
   .ux-content-box *, .ux-content-box *:before, .ux-content-box *:after { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }      
@@ -64,7 +64,7 @@
       var checkOnTabFocus = true;
       var tabFocusInitialized = false;
   
-      function setUpDelegationBar(bar, delegate, customer) {
+      function setUpDelegationBar(bar, delegate, customer, refreshed) {
           if (!customer || !delegate || bar.length === 0) {
               return;
           }
@@ -90,10 +90,12 @@
               .replace('{2}', oneName ? '' : customer.lastName)
           );
   
+          label[refreshed === true ? 'addClass' : 'removeClass']('refreshed');
+  
           bar.show();
       }
   
-      function showDelegationBar(delType, delInfo, custInfo) {
+      function showDelegationBar(delType, delInfo, custInfo, refreshed) {
           var acctDelegateBar = $('#uxh-acct-delegate');
           if (acctDelegateBar.length === 0) {
               return;
@@ -101,9 +103,9 @@
   
           if ('customer c3 both'.indexOf(delType) > -1) {
               var which = 'both customer'.indexOf(delType) > -1 ? '-cust' : '-rep';
-              setUpDelegationBar(acctDelegateBar.find('.delegate' + which), delInfo, custInfo);
+              setUpDelegationBar(acctDelegateBar.find('.delegate' + which), delInfo, custInfo, refreshed);
               if ('both'.indexOf(delType) > -1) {
-                  setUpDelegationBar(acctDelegateBar.find('.delegate-rep'), delInfo.del, delInfo);
+                  setUpDelegationBar(acctDelegateBar.find('.delegate-rep'), delInfo.del, delInfo, refreshed);
                   acctDelegateBar.addClass('delegate-db-shim');
               }
               if (which === '-rep') {
@@ -128,9 +130,9 @@
               uad.turnOffTabFocusCheck();
           }
           uad.turnOnTabFocusCheck({
-              callback: function(delegationType, delegateInfo, customerInfo) {
+              callback: function(delegationType, delegateInfo, customerInfo, refreshed) {
                   if (checkOnTabFocus) {
-                      showDelegationBar(delegationType, delegateInfo, customerInfo);
+                      showDelegationBar(delegationType, delegateInfo, customerInfo, refreshed);
                   }
               }
           });
@@ -779,30 +781,6 @@
           if (loggedIn) $('.ux-noauth').removeClass('ux-noauth');
       }
   
-      function setUpLocaleMenuLinks() {
-          $('div.locale-options div.columns-wrap div.col')
-              .filter(':has(a[data-pc-href]) :has(a[data-pc-qry])')
-              .click(function(e) {
-                  e.preventDefault();
-                  e.stopImmediatePropagation();
-  
-                  var targetLink = $(e.target).closest("a.country-language-link");
-                  if (targetLink.length === 0) {
-                      targetLink = $(e.target).find("a.country-language-link").eq(0);
-                  }
-  
-                  var pcHref = targetLink.attr('data-pc-href');
-                  var link = (pcHref !== '') ? pcHref : targetLink.href;
-                  link += targetLink.attr('data-pc-qry');
-  
-                  if (targetLink.attr('target') === '_blank') {
-                      window.open(link);
-                  } else {
-                      window.location = link;
-                  }
-              });
-      }
-  
       function getShopperData() {
           $.ajax({
               dataType: 'jsonp',
@@ -827,7 +805,6 @@
           setUpTriangleMarkers();
           setUpCreateAccountModals();
           setUpBannerClick();
-          setUpLocaleMenuLinks();
           ux.eldorado.currencyList.init();
           ux.eldorado.supportInfo.init();
           ux.eldorado.headerSubMenu.init();

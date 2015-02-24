@@ -1,0 +1,419 @@
+---
+location: sales/coupons.aspx
+id: 54e7bda9f778fc0fb81adfba
+name: GCE-36891
+comments: Remove COM and CO pods
+L1: "[@L[cds.sales/coupons:"
+L2: "]@L]"
+cssVersionOverride: 3
+jsVersionOverride: 2
+---
+{% extends 'layouts/base.html' %} 
+{% import './_pod-layout.html' as macros %}
+{% block metahead %} 
+{% parent %} 
+
+  [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
+{% endblock %} 
+{% block body %}
+<!-- Start main-banner -->
+
+
+    <!------------------------------------>
+    <!--        EMAIL SIGN UP           -->
+    <!------------------------------------>
+    <section class="email-offer-banner light-grey-bg">
+      <div class="l-main-container container main-banner-content">
+        <div class="main-banner-text">
+          <div class="col-xs-6">
+            <div class="coupons-special-offers-wrapper coupons-offers-col-pos-0">
+              <div class="coupons-special-offers-form-container" id="ftrEmailSignUp">
+                <label for="coupons_email" class="coupons-special-offers-label">{{L1}}SpecialOffers{{L2}}</label>
+                <div class="coupons-special-offers-form-email-input-wrapper">
+                  <input type="text" id="coupons_email" placeholder="{{L1}}EmailPlaceholder{{L2}}" class="coupons-special-offers-form-email-input" value="" />
+                </div>
+                <a class="btn btn-warning ff-walsheim-medium"  id="coupons_email_button" title="{{L1}}EmailSubmit{{L2}}"  data-ci="{{cicodes.emailsignup}}">{{L1}}EmailSubmit{{L2}}</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <div class="gdhp-share">
+            ##if(countrySiteAny(ca))
+            <div class="fosshare" data-twshareurl="[@T[link:<external linktype='XDOTCO' path='/gdCanada' />]@T]" data-twtext="{{L1}}twitter-text-gdbl{{L2}}" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/coupons.aspx'/>]@T]" data-buttons="google,facebook,twitter"></div>
+            ##elseif(countrySiteAny(uk))
+            <div class="fosshare" data-twshareurl="[@T[link:<external linktype='XDOTCO' path='/gdUnitedK' />]@T]" data-twtext="{{L1}}twitter-text-gdbl{{L2}}" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/coupons.aspx'/>]@T]" data-buttons="google,facebook,twitter"></div>
+            ##elseif(countrySiteAny(au))
+            <div class="fosshare" data-twshareurl="[@T[link:<external linktype='XDOTCO' path='/gdAustrali' />]@T]" data-twtext="{{L1}}twitter-text-gdbl{{L2}}" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/coupons.aspx'/>]@T]" data-buttons="google,facebook,twitter"></div>
+            ##else
+            <div class="fosshare" data-twshareurl="[@T[link:<external linktype='XDOTCO' path='/wwwGD' />]@T]" data-twtext="{{L1}}twitter-text-gdbl{{L2}}" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/coupons.aspx'/>]@T]" data-buttons="google,facebook,twitter"></div>
+            ##endif
+            </div>
+          </div> 
+          
+        </div>
+      </div>
+    </section>          
+{#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#}
+<!------------------------------------>
+<!--         HERO CAROUSEL          -->
+<!------------------------------------>
+
+<section class="main-marquee-carousel">
+  <div>
+    <div id="marquee-slider">
+      <div class="">
+        <div class="gd-swipe" data-gd-swipe={"auto":false,"pauseOnHover":true}>
+          <div class="gd-swipe-wrap">
+          ##if(productIsOffered(99) && !countrySiteAny(mx,au))
+          {% include 'marquee/_gybo.html' %}
+          ##else
+          {% include 'marquee/_wsb.html' %}
+          ##endif
+          </div>
+        </div>
+        {# <a id="marqueeSlidePreviousSlideLink" href="#" data-slide="prev" class="arrow-left" data-ci="{{cicodes.marquee_left}}">
+          {{L1}}previous{{L2}}</a>
+        <a id="marqueeSlideNextSlideLink" href="#" data-slide="next" class="arrow-right" data-ci="{{cicodes.marquee_right}}">
+            {{L1}}next{{L2}}</a>
+        <div class="gd-swipe-bottom-nav" data-ci="{{cicodes.marquee_index}}"></div> #}
+      </div>
+    </div> <!-- end id tools-slider --> 
+  </div>
+</section>
+{#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#}
+<!------------------------------------>
+<!--        MAIN TABS NAV         -->
+<!------------------------------------>
+<section id="midPageNav">
+  <div class="mid-page-nav main-tabs">
+    <div class="container l-main-container">
+      {# <span class="navigation-heading">{{L1}}filter-search{{L2}}:</span> #}
+      <ul id="tabNavigation" class="nav nav-tabs text-left">
+        <li class="nav-tabs-item">
+            <a class="nav-tabs-link" href="#top_deals" data-gd-sidebyside-target="#top_deals" data-toggle="tab" data-ci="{{cicodes.deals_nav_top_deals}}">
+            <h1 class="ff-walsheim-medium">{{L1}}tab-nav-text-top-deals{{L2}}</h1>
+            </a>
+        </li>
+        <li class="nav-tabs-item">
+          <a class="nav-tabs-link" href="#domain_deals" data-gd-sidebyside-target="#domain_deals" data-toggle="tab" data-ci="{{cicodes.deals_nav_dom_deals}}">
+            <h2 class="ff-walsheim-medium">{{L1}}tab-nav-text-domain-deals{{L2}}</h2>
+          </a>
+        </li>
+        {# <li class="nav-tabs-item">
+          <a class="nav-tabs-link" href="#on_sale" data-gd-sidebyside-target="#on_sale" data-toggle="tab" data-ci="{{cicodes.deals_nav_on_sale}}">{{L1}}tab-nav-text-on-sale{{L2}}</a>
+        </li> #}
+        <li class="nav-tabs-item">
+          <a class="nav-tabs-link" href="#view_all" data-gd-sidebyside-target="#view_all" data-toggle="tab" data-ci="{{cicodes.deals_nav_view_all}}">
+            <span class="ff-walsheim-medium">{{L1}}tab-nav-text-view-all{{L2}}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!------------------------------------>
+<!--        MAIN TABS CONTENT       -->
+<!------------------------------------>
+<section class="">
+  <div id="tabContent" class="tab-content no-margin-top">
+    <div id="top_deals" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"9"}'>
+      <h3 class="ff-walsheim-bold">{{L1}}tab-title-text-top-deals{{L2}}</h3>
+      <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
+        <div data-gd-sidebysidealign-col="1">
+{{macros.product_pod_data(x)}}
+          
+          {{ macros.pod_1("got_bundle") }} 
+          {{ macros.pod_1("domain_com_top_deal") }}
+          {#{ macros.pod_1("domain_com_top_deal_no_promo") }#}
+          {{ macros.pod_1("mwp") }}
+          {{ macros.pod_1("web_hosting") }}
+          {{ macros.pod_1("domain_new_extensions") }}
+          {{ macros.pod_1("o365_bundle") }}
+          {{ macros.pod_1("wsb") }}
+          {{ macros.pod_1("online_store_free_trial") }} 
+          {{ macros.pod_1("get_found") }} 
+          {{ macros.pod_1("o365") }}
+          {{ macros.pod_2("domain_based_email") }}
+          {{ macros.pod_1("premium_ssl") }}
+          
+        </div>
+        
+      </div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_top_dlsvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+    </div>
+
+
+
+
+
+
+    <div id="domain_deals" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"9"}'>
+      {# <h3 class="condensed">{{L1}}tab-title-text-domain-deals{{L2}}</h3> #}
+      <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
+        <div data-gd-sidebysidealign-col="1">
+
+          {{ macros.pod_1("domain_com") }}
+          {#{ macros.pod_1("domain_com_no_promo") }#}
+          {{ macros.pod_1("domain_co") }}
+          {#{ macros.pod_1("domain_co_no_promo") }#}
+          {{ macros.pod_1("domain_net") }}
+
+          {{ macros.pod_1("domain_us") }}
+          {{ macros.pod_1("domain_in") }}
+          {{ macros.pod_1("domain_ca") }}
+          {{ macros.pod_1("domain_ca_no_promo") }}
+          {{ macros.pod_1("domain_co_uk") }}
+          {{ macros.pod_1("domain_co_uk_no_promo") }}
+          {{ macros.pod_1("domain_com_mx") }}
+          {{ macros.pod_1("domain_com_mx_no_promo") }}
+
+          {{ macros.pod_1("domain_biz") }}
+          {{ macros.pod_1("domain_org") }}
+          {{ macros.pod_1("domain_guru") }}
+
+          {{ macros.pod_1("domain_photography") }}
+          {{ macros.pod_1("domain_club") }}
+          {{ macros.pod_1("domain_company") }}
+
+          {{ macros.pod_1("domain_city") }}
+          {{ macros.pod_1("domain_rocks") }}
+          {{ macros.pod_1("domain_business") }}
+
+          {{ macros.pod_1("domain_global") }}
+          {{ macros.pod_1("domain_property") }}
+          {{ macros.pod_1("domain_today") }}
+
+          {{ macros.pod_1("domain_transfers") }}
+          {{ macros.pod_1("domain_bargain_bin") }}
+
+        </div>
+        
+      </div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_domdealvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="view_all" class="tab-pane l-main-container container" data-tab-prefs='{"viewMoreTrigger":"0"}'>
+      {# <h3 class="condensed">{{L1}}tab-title-text-view-all{{L2}}</h3> #}
+      <div class="row tab-pane-row" data-gd-sidebysidealign='{"bailIfRowCountsMismatch":false}'>
+        <div data-gd-sidebysidealign-col="1">
+          
+          {{ macros.pod_1("got_bundle") }} 
+          {{ macros.pod_1("domain_com_top_deal") }}
+          {#{ macros.pod_1("domain_com_top_deal_no_promo") }#}
+          {{ macros.pod_1("mwp") }}
+          {{ macros.pod_1("web_hosting") }}
+          {{ macros.pod_1("domain_new_extensions") }}
+          {{ macros.pod_1("o365_bundle") }}
+          {{ macros.pod_1("wsb") }}
+          {{ macros.pod_1("online_store_free_trial") }} 
+          {{ macros.pod_1("get_found") }} 
+          {{ macros.pod_1("o365") }}
+          {{ macros.pod_2("domain_based_email") }}
+          {{ macros.pod_1("premium_ssl") }}
+
+
+          {{ macros.pod_1("domain_com") }}
+          {#{ macros.pod_1("domain_com_no_promo") }#}
+          {{ macros.pod_1("domain_co") }}
+          {#{ macros.pod_1("domain_co_no_promo") }#}
+          {{ macros.pod_1("domain_net") }}
+
+          {{ macros.pod_1("domain_us") }}
+          {{ macros.pod_1("domain_in") }}
+          {{ macros.pod_1("domain_ca") }}
+          {{ macros.pod_1("domain_ca_no_promo") }}
+          {{ macros.pod_1("domain_co_uk") }}
+          {{ macros.pod_1("domain_co_uk_no_promo") }}
+          {{ macros.pod_1("domain_com_mx") }}
+          {{ macros.pod_1("domain_com_mx_no_promo") }}
+
+          {{ macros.pod_1("domain_biz") }}
+          {{ macros.pod_1("domain_org") }}
+          {{ macros.pod_1("domain_guru") }}
+
+          {{ macros.pod_1("domain_photography") }}
+          {{ macros.pod_1("domain_club") }}
+          {{ macros.pod_1("domain_company") }}
+
+          {{ macros.pod_1("domain_city") }}
+          {{ macros.pod_1("domain_rocks") }}
+          {{ macros.pod_1("domain_business") }}
+
+          {{ macros.pod_1("domain_global") }}
+          {{ macros.pod_1("domain_property") }}
+          {{ macros.pod_1("domain_today") }}
+
+          {{ macros.pod_1("domain_transfers") }}
+          {{ macros.pod_1("domain_bargain_bin") }}
+
+        </div>
+        
+      </div>
+      <div class="view-more ff-walsheim-medium" data-ci="{{cicodes.deals_nav_viewallvm}}" style="display:none;">{{L1}}view-more{{L2}} <i class="ico ico-shape ico-solid-arrow-down"></i></div>
+    </div>
+
+  </div>
+</section>
+
+<!------------------------------------>
+<!--        DISCLAIMER FOOTER       -->
+<!------------------------------------>
+<section class="container l-main-container content-disclaimer">
+  <p class="no-margin-bottom"><small class="small-print">*, ++ <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="{{cicodes.disclaimers}}">{{L1}}disclaimer-modal-link{{L2}}</a></small></p>
+</section>
+
+
+
+
+<!------------------------------------>
+<!--           POD TEMPLATE         -->
+<!------------------------------------>
+<div id="pod_template" style="display:none">
+  <div class="pod-outer-wrapper">
+    <div class="pod-flag-wrapper" data-gd-sidebysidealign-row="">
+      <img class="pod-flag-left" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-left1.png" />
+        
+      <div class="pod-flag">
+        <img class="pod-flag-middle" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-middle2.png" />
+        <span class="pod-flag-text" data-gd-sidebysidealign-row="">&nbsp;</span>
+      </div>
+      <img class="pod-flag-right" src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/coupons/img/yellow-shapes-right3.png" />
+      
+    </div>
+    <div class="pod-wrapper">
+      <div class="pod-content" data-gd-sidebysidealign-row="">
+        <div class="pod-top-content" data-gd-sidebysidealign-row="">
+          <div class="pod-title"></div>
+          <div class="pod-subtitle"></div>
+          <div class="pod-description"></div>
+        </div>
+        <div class="pod-price-wrapper" data-gd-sidebysidealign-row="">
+          <div class="pod-price-prefix"></div>
+          <div class="pod-price"></div>
+          <div class="pod-price-suffix"></div>
+        </div>
+        <div class="pod-button" data-gd-sidebysidealign-row="">
+          <a class="btn-lg btn-custom-green"></a>
+        </div>
+        <div class="pod-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-ci="{{cicodes.disclaimers_x}}">&times;</button>
+        <p class="modal-title"><strong>{{L1}}disclaimer-modal-title{{L2}}</strong></p>
+      </div>
+      <div class="modal-body">
+        <ul class="disclaimer-modal-list">
+          <li>{{L1}}disclaimer-modal-content-item-1{{L2}}</li>
+          <li>{{L1}}disclaimer-modal-content-item-2{{L2}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="disclaimerModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+        <strong>{{L1}}disclaimer-modal-title{{L2}}</strong>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>{{L1}}disclaimer-modal-content{{L2}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %} 
+
+{% block footer %}
+
+
+<script>
+var couponsData = {
+  "apiUrl": "[@T[link:<relative path='/api/package/config/coupons_lp_pods'/>]@T]",
+  "signupURL": "[@T[link:<relative path='~/subscription/signup.aspx' />]@T]",
+  "localization":
+    {
+      "EmailAddressTooLong":"{{L1}}email-address-too-long{{L2}}",
+      "ThankYou": "{{L1}}thank-you{{L2}}",
+      "EnterValidEmail": "{{L1}}enter-valid-email{{L2}}",
+      "PerMonthShort": "{{L1}}per-month-short{{L2}}",
+      "PerMonthFull": "{{L1}}per-month-full{{L2}}",
+      "PerYearShort": "{{L1}}per-year-short{{L2}}",
+      "PerYearFull": "{{L1}}per-year-full{{L2}}"
+    },
+##if(ShopperPriceTypeAny(8,32))
+  "qualifiedShopper":false
+##else
+  "qualifiedShopper":true
+##endif
+}
+
+</script>
+
+<script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+<script src="[@T[link:<js path='{{ assetPath }}js/script.js' />]@T]" type="text/javascript" ></script>
+
+{% endblock %}

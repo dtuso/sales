@@ -1,0 +1,159 @@
+---
+location: sales/research/mobile-ready-carnival
+id: 54d8f877f778fc2a88214013
+name: SEM-360
+comments: Infographic - Mobile Ready Carnival
+---
+{% extends 'layouts/base.html' %} 
+{% block metahead %} 
+{% parent %}
+  <style type="text/css">
+    #gd-research-carnival .infographic-container {
+      margin-bottom: 42px;
+    }
+    #gd-research-carnival .infographic-top {
+      margin-top: 42px;
+      padding: 40px 54px 25px;
+      background-color: #fff;      
+    }
+    #gd-research-carnival .infographic-top h1 {
+      font-size: 44px;
+      color: #000;
+      margin-bottom: 0;
+    }
+    #gd-research-carnival .share-container {
+      float: right;
+      margin-bottom: 10px;
+    }
+    #gd-research-carnival .infographic-top p {
+      margin-top: 25px;
+      font-size: 18px;
+    }
+    #gd-research-carnival .infographic-image {
+      ##if(activeLanguageAny([pt-br]))
+      background-image: url([@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/mobile-ready-carnival/img/godaddy-mobile-ready-carnival-pt-br.png);
+      height: 4645px;
+      ##else
+      background-image: url([@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/mobile-ready-carnival/img/godaddy-mobile-ready-carnival-uk.png);
+      height: 4560px;
+      ##endif
+      width: 1000px;
+      position: relative;
+    }
+    #gd-research-carnival .infographic-image a {
+      display: block;
+      position: absolute;
+      width: 396px;
+      height: 58px;
+      ##if(activeLanguageAny([pt-br]))
+      top: 4260px;
+      left: 20px;
+      ##else
+      top: 4193px;
+      left: 41px;
+      ##endif
+    }
+    #gd-research-carnival .infographic-bottom {
+      font-size: 16px;
+      background-color: #fff;
+      padding: 30px 47px 50px;
+    }
+    #gd-research-carnival .infographic-view, #gd-research-carnival .infographic-download {
+      margin-top: 15px;
+    }
+    #gd-research-carnival .infographic-download {
+      margin-bottom: 50px;
+    }
+    #gd-research-carnival .infographic-facts-stats {
+      font-size: 26px; 
+    }
+    #gd-research-carnival .infographic-facts-stats h2 {
+      font-size: 40px; 
+      font-weight: bold;
+    }
+    #gd-research-carnival ul {
+      margin-left: 15px;
+    }
+    #gd-research-carnival li {
+      margin-left: 18px;
+    }    
+    #gd-research-carnival .about-the-author {
+      font-size: 26px;
+    }
+    #pcf .pc-support-wrapper {
+      margin-top: 5px;
+    }
+  </style>
+{% endblock %} 
+{% block body %}
+  <div id="gd-research-carnival">
+    <section class="infographic-section">
+      <div class="l-main-container container infographic-container">
+        <div class="col-sm-12">
+          <div class="infographic-top">
+            <h1>[@L[cds.sales/gd/research/mobile-ready-carnival:page-title-h1]@L]</h1>
+            <p>
+              [@L[cds.sales/gd/research/mobile-ready-carnival:page-intro]@L]
+            </p>
+            <div class="share-container">
+              <div class="fosshare" data-twshareurl="[@T[link:<relative path='~/research/mobile-ready-carnival' secure='true' />]@T]" data-twtext="[@L[cds.sales/gd/research/mobile-ready-carnival:page-title]@L]" data-twrelated="[@L[cds.sales/gd/research/mobile-ready-carnival:share-twitter-related]@L]" data-shareurl="[@T[link:<relative path='~/research/mobile-ready-carnival' secure='true' />]@T]" data-buttons="google,facebook,twitter"></div>
+            </div>            
+          </div>
+          <div class="infographic-image">
+            <a 
+              ##if(activeLanguageAny([pt-br]))
+              href="https://br.godaddy.com/?ci=95975" 
+              ##else
+              href="https://uk.godaddy.com/?ci=95975" 
+              ##endif
+              data-ci="95975"
+            ></a>
+          </div>
+          <div class="infographic-bottom">
+            <div class="infographic-view text-center">
+              <a href="[@T[link:<external parammode='explicit' linktype='IMAGEURL' secure='false' 
+                ##if(activeLanguageAny([pt-br]))
+                path='fos/sales/themes/scotty/research/mobile-ready-carnival/img/godaddy-mobile-ready-carnival-pt-br.png'
+                ##else
+                path='fos/sales/themes/scotty/research/mobile-ready-carnival/img/godaddy-mobile-ready-carnival-uk.png'
+                ##endif
+              ><param name='ci' value='95977' /></external>]@T]" data-ci="95977" target="mobile-ready-carnival-image">[@L[cds.sales/gd/research/mobile-ready-carnival:view-enlarged-version]@L]</a>
+            </div>
+            <div class="infographic-download text-center">
+              <a href="[@T[link:<external parammode='explicit' linktype='IMAGEURL' secure='false' 
+                ##if(activeLanguageAny([pt-br]))
+                path='fos/sales/themes/scotty/research/mobile-ready-carnival/pdf/GoDaddy_Mobile_Ready_Carnival_pt_br.pdf'
+                ##else
+                path='fos/sales/themes/scotty/research/mobile-ready-carnival/pdf/GoDaddy_Mobile_Ready_Carnival_uk.pdf'
+                ##endif
+              ><param name='ci' value='95978' /></external>]@T]" data-ci="95978" target="mobile-ready-carnival-pdf">[@L[cds.sales/gd/research/mobile-ready-carnival:download-pdf-version]@L]</a>
+            </div>
+            <div class="infographic-facts-stats">
+              <h2>[@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-title]@L]</h2>
+              <ul>
+                <li>
+                  [@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-1]@L]
+                  <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=[@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-1-encoded]@L]&related=[@T[companyname:name]@T]&via=[@T[companyname:name]@T]&url=[@T[link:<relative path='~/research/mobile-ready-carnival' secure='true' />]@T]" data-related="twitterdev" data-size="medium" data-count="none">Tweet</a>
+                </li>
+                <li>
+                  [@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-2]@L]
+                  <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=[@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-2-encoded]@L]&related=[@T[companyname:name]@T]&via=[@T[companyname:name]@T]&url=[@T[link:<relative path='~/research/mobile-ready-carnival' secure='true' />]@T]" data-related="twitterdev" data-size="medium" data-count="none">Tweet</a>
+                </li>
+                <li>
+                  [@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-3]@L]
+                  <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=[@L[cds.sales/gd/research/mobile-ready-carnival:facts-stats-3-encoded]@L]&related=[@T[companyname:name]@T]&via=[@T[companyname:name]@T]&url=[@T[link:<relative path='~/research/mobile-ready-carnival' secure='true' />]@T]" data-related="twitterdev" data-size="medium" data-count="none">Tweet</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %} 
+{% block footer %}
+  <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript" ></script>
+  <script>
+    window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+  </script>
+{% endblock %}

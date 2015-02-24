@@ -1,0 +1,48 @@
+mixin carouselItem(itemOptions)
+  - itemOptions = itemOptions || {};
+  - itemOptions.textCenter = itemOptions.textCenter || false;
+  - itemOptions.ci = itemOptions.ci || {};
+  - itemOptions.ci.panelContainer = itemOptions.ci.panelContainer || '';
+  .item
+    .item-wrapper(class= "#{itemOptions.textCenter ? 'text-center' : ''}")
+      .carousel-panel.container(data-icode="#{itemOptions.icode ? icode : ''}" data-ci="#{(itemOptions.ci.panelContainer) ? itemOptions.ci.panelContainer : ''}")
+        block
+
+mixin carousel(id, numberOfPanels, options)
+
+  - options = options || {};
+  - options.css = options.css || false;
+  - options.autoRotateSpeed = options.autoRotateSpeed || false;
+  - options.backgroundColor = options.backgroundColor || "bg-pro-gray";
+  - options.ci = options.ci || {};
+  - options.ci.carouselIndicator = options.ci.carouselIndicator || '';
+  - options.ci.prev = options.ci.prev || '';
+  - options.ci.next = options.ci.next || '';
+
+  if(options.css)
+    style
+        include:css ./_carousel/carousel-styles.css
+  .carousel-wrap
+    .carousel-container.container
+      .carousel.slide(id=id data-ride="carousel" data-interval="#{options.autoRotateSpeed}")
+
+        if (numberOfPanels > 1)
+          ol.carousel-indicators
+            - for (var index = 0; index < numberOfPanels; index++)
+              li(data-target="#"+id data-slide-to="#{index}" data-ci="#{(options.ci.carouselIndicator) ? options.ci.carouselIndicator : ''}")
+
+        .carousel-inner
+          block
+
+        - var arrowType = "icon"
+        if (options.backgroundColor !== 'bg-pro-gray')
+          - arrowType = "white-icon"
+
+        if (numberOfPanels > 1)
+          a.left.carousel-control(href="#"+id data-slide="prev" data-ci="#{(options.ci.carouselIndicator) ? options.ci.prev : ''}")
+            span.carousel-icon(class="arrow-left-#{arrowType}")
+          a.right.carousel-control(href="#"+id data-slide="next")
+            span.carousel-icon(class="arrow-right-#{arrowType}" data-ci="#{(options.ci.carouselIndicator) ? options.ci.next : ''}")
+      script.
+        $('.carousel .carousel-indicators li:first-child').addClass("active");
+        $('.carousel .carousel-inner .item:first-child').addClass("active");

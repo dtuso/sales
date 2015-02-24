@@ -1,0 +1,57 @@
+mixin compareViewAllButton(tableIDs)
+
+  -numberOfTableIDs = tableIDs.length || 1
+
+  .compare-table-view-all
+    div
+      strong [@L[cds.sales/hosting/web-hosting-rebrand:viewAllButton]@L]
+    .icon.arrow-down-icon
+    case numberOfTableIDs
+      when 3
+        script(type="text/javascript").
+          $(".compare-table-view-all").click(function() {
+            var chart = $(this).closest("##{tableIDs[0]}");
+            $("##{tableIDs[0]} tr").show();
+            var chart = $(this).closest("##{tableIDs[1]}");
+            $("##{tableIDs[1]} tr").show();
+            var chart = $(this).closest("##{tableIDs[2]}");
+            $("##{tableIDs[2]} tr").show();
+           $(this).hide();
+           });
+      when 2
+        script(type="text/javascript").
+          $(".compare-table-view-all").click(function() {
+            var chart = $(this).closest("##{tableIDs[0]}");
+            $("##{tableIDs[0]} tr").show();
+            var chart = $(this).closest("##{tableIDs[1]}");
+            $("##{tableIDs[1]} tr").show();
+           $(this).hide();
+           });
+      default
+        script(type="text/javascript").
+          $(".compare-table-view-all").click(function() {
+            var chart = $(this).closest("##{tableIDs[0]}");
+            $("##{tableIDs[0]} tr").show();
+           $(this).hide();
+           });
+          
+mixin compareFeaturesTable(compareFeaturesOptions)
+  - compareFeaturesOptions = compareFeaturesOptions || {};
+  - compareFeaturesOptions.numberOfRowsNotHidden = compareFeaturesOptions.numberOfRowsNotHidden || 999;
+  - compareFeaturesOptions.showViewAllButton = compareFeaturesOptions.showViewAllButton || false;
+  - compareFeaturesOptions.tableID = compareFeaturesOptions.tableID || ""
+  - compareFeaturesOptions.includeStyles = compareFeaturesOptions.includeStyles
+
+  if typeof(compareFeaturesOptions.includeStyles) == 'undefined'
+    style
+      include:css ./_compare-features-table/compare-features-table-styles.css
+
+  table.compare-table(id = compareFeaturesOptions.tableID)
+    block
+    script(type="text/javascript").
+      $(window).load(function() {
+        var chart = $(this).closest(".compare-table");
+        $("##{compareFeaturesOptions.tableID} tr:gt(#{compareFeaturesOptions.numberOfRowsNotHidden})").hide();
+       });
+  if compareFeaturesOptions.showViewAllButton
+    +compareViewAllButton(compareFeaturesOptions.tableID)

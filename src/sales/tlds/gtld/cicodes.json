@@ -209,6 +209,18 @@
           { "ITC Code" : "GtldEoiPressLink" },
           { "Description" : ".PRESS Slide Link" }
           ]
+      },
+      { ".ESTATE Slide Link" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "GtldEoiEstateLink" },
+          { "Description" : ".ESTATE Slide Link" }
+          ]
+      },
+      { ".PARTY Slide Link" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "GtldEoiPartyLink" },
+          { "Description" : ".PARTY Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [

@@ -24,10 +24,26 @@
     .com299.tile .btn{width:auto; max-width:285px}
     .com299.tile .body-wrapper {display:table;}
     .com299.tile .body-text {display: table-cell; vertical-align:middle}
+    
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='92432' /></relative>]@T]" data-ci="92432" class="tile down-arrow-tile js-gdhpclick com299">
   <div class="header-wrapper">
+     
+     ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+    <atlantis:webstash type="css">
+      <style>
+        .com299.tile .header-wrapper .sale-ends-text{font-size:30px;padding:3px 20px;background-color:#fedc45;position:absolute;top:0;left:0}
+        .com299.tile .header-text{margin-top:40px;}        
+        
+      </style>
+    </atlantis:webstash><span class="sale-ends-text tungsten">[@L[cds.sales/homepage:saleEnds]@L]</span>
+    <script type="text/javascript">
+      var d = new Date("2015","01","17");
+      saleEndDate = d.toLocaleDateString();   
+      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));
+    </script> 
+     ##endif
     <h2 class="header-text">[@L[cds.sales/homepage/tile/com299:com299-tile-headline]@L] </br> [@L[cds.sales/homepage/tile/com299:com299-tile-maintext]@L]</h2>
   </div>
   <div class="arrow-separator"></div>

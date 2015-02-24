@@ -1,0 +1,1126 @@
+---
+location: tmsv2/content/advlp/1ssl/offer
+id: 
+name: GCE-34369
+comments: Various VAT fixes
+---
+
+##if(false)
+<!--
+
+pcode=310211712
+pcode=310211713
+pcode=310211721
+compchart=1 shows chart in cultures below
+clientCountryAny(www)
+clientCountryAny(ca)
+clientCountryAny(uk)
+clientCountryAny(de)
+clientCountryAny(br)
+clientCountryAny(mx)
+clientCountryAny(au)
+
+https://ie.test-godaddy.com/offers/default.aspx?version=tmsv2/content/advlp/1ssl/offer|54cf9c899faf701b88f5b2ec&isc=599SSLNEWX&pcode=310211713&tmskey=1ssl_1
+-->
+##endif
+<script>
+// name = does not need to match anything and may not be needed
+// plan =  package name for api
+  var offersCodes = {
+    'name': '1ssl',
+    'plan': 'ssl_std_1',
+    'itc': 'dlp_ssl',
+    'ci': {
+      'domainSearchClick': '92206',
+      'domainSearchSubmit': '92209',
+      'addDomainBtn': '92207',
+      'apiAddCi': '92210',
+      'apiDomainAddToCart': '92296',      
+      'addSSLButton': '94048',
+      'disclaimerLink': '94047'
+    }
+  }
+##if(isManager())
+  offersCodes.itc = 'mgr_' + offersCodes.itc;
+##endif 
+
+</script>
+
+
+<div style="display:none;">
+  <div id="tms-modal-body">    
+    <p class="tms-hide tms-disclaimer-year-[@D[tms.message.tag]@D]">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-disclaimer]@L]</p>    
+  </div>
+</div>
+
+
+<atlantis:webstash type="js">
+  <script>    
+    $(document).ready(function(){
+    var param=getParameterByName('isc');
+    
+        $(".price").each(function(){
+        var $this = $(this);    
+    
+    ##if('[@D[tms.message.tag]@D]'=='1ssl_6')
+    // update product and pricing, 1ssl_6 is premium ssl has different product id and no promocode
+    offersCodes.plan = 'ssl_prm_1';
+    var val = '[@T[productprice:<current productid="3645" period="yearly" />]@T]';    
+    ##elseif(queryValueHas(pcode,310211712))
+    var val = '[@T[productprice:<current productid="3604" promocode="310211712" period="yearly" />]@T]';    
+    ##elseif(queryValueHas(pcode,310211713))
+    var val = '[@T[productprice:<current productid="3604" promocode="310211713" period="yearly" />]@T]';
+    ##elseif(queryValueHas(pcode,310211721))
+    var val = '[@T[productprice:<current productid="3604" promocode="310211721" period="yearly" />]@T]';
+    ##else
+    var val = '[@T[productprice:<current productid="3604" period="yearly" />]@T]';
+    ##endif
+    
+        $this.html(val.replace(/(.+)(.00)+?$/,'$1<span class="decim">$2</span>'));
+
+        $this.addClass("price-show");
+      });
+    
+    $('.ssl-add-cart').bind('click', (function (event) {
+    var param=getParameterByName('isc');
+    
+    }));
+       
+     
+    });
+  </script>
+</atlantis:webstash>
+
+<atlantis:webstash type="css">
+  <style>
+    body{min-width:1100px;}
+    /* variant 1 */
+    #sslRow h1.alt-title-1ssl_1{font-size: 60px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_1 strong{color:#ff8a00;white-space: nowrap;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_1{display:block;}
+
+    /* variant 2 */
+    #sslRow h1.alt-title-1ssl_2{font-size: 60px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_2 strong{color:#ff8a00;white-space: nowrap;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_2{display:block;}
+    
+     /* variant 3 */
+    #sslRow h1.alt-title-1ssl_3{font-size: 60px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_3 strong{color:#ff8a00;white-space: nowrap;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_3{display:block;}
+    
+     /* variant 4 */
+    #sslRow h1.alt-title-1ssl_4{font-size: 60px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_4 strong{color:#ff8a00;white-space: nowrap;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_4{display:block;}
+ 
+     /* variant 5 */
+    #sslRow h1.alt-title-1ssl_5{font-size: 53px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_5 strong{color:#ff8a00;white-space: nowrap;}
+    #sslRow h1.alt-title-1ssl_5 span.price{font-size: 53px;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_5{display:block;}
+    
+    
+    /* variant 6 */
+    #sslRow h1.alt-title-1ssl_6{font-size: 53px;font-weight: 100;line-height: 1.3em;width: 90%;font-family:HelveticaNeueLTStd,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    #sslRow h1.alt-title-1ssl_6 strong{color:#ff8a00;white-space: nowrap;}
+    #sslRow h1.alt-title-1ssl_6 span.price{font-size: 53px;}
+    html body .tms-hide.tms-disclaimer-year-1ssl_6{display:block;}
+   
+  </style>
+</atlantis:webstash>  
+  
+
+
+<atlantis:webstash type="css">
+  <style>
+    /* Domain Search CSS Start  */
+    #sslRow {background-color:#f0f1ec;padding:60px 0 30px;min-height:360px}
+    #sslRow h1{color:#333;font-size:60px;font-weight:100;line-height:1.3em}
+    html[lang*='en'] #sslRow h1{margin-left:auto}
+    #sslRow h1{margin-left:-10px}
+    .marquee-flag{position: absolute;right: 0;}
+    #sslRow h1 strong{font-size:70px;font-weight:500!important;}
+    #sslRow h1 strong em{color:#ff8a00;font-style:normal}
+    
+    
+    #sslRow form{width:auto;margin:30px auto auto;padding:8px;display:table}
+    #sslRow form .highlight-tooltip{display:none}
+    #sslRow form.highlight{background-color:#fc0}
+    #sslRow form.highlight .highlight-tooltip{display:block;background-color:#fc0;color:#630;position:absolute;right:106%;top:-8px;text-transform:uppercase;text-align:center;padding:13px 23px}
+    #sslRow form.highlight .highlight-tooltip:after{content:"";border-width:10px 0 10px 17px;border-style:solid;border-color:transparent transparent transparent #fc0;position:absolute;right:-17px;top:34%}
+    #sslRow #add-domain-btn,
+    #sslRow .flt-btn-grn,
+    #sslRow .flt-btn-orng{font-size:24px;padding:18px 36px;font-weight:400}
+    #sslRow .search-result .search-result-invalid,
+    #sslRow .search-result .search-result-is-available,
+    #sslRow .search-result .search-result-not-available{display:none}
+    #sslRow .search-result .result-message{margin:20px auto;display:table}
+    #sslRow .search-result.available .search-result-is-available{display:block;color:#70a100}
+    #sslRow .search-result.invalid .search-result-invalid,
+    #sslRow .search-result.not-available .search-result-not-available{display:block;color:#000}
+    #sslRow #add-domain-btn{font-size:24px;padding:18px 36px}
+    #sslRow .searched-domain{font-weight:600}
+    #sslRow .spc-off{font-size:28px;font-family:HelveticaNeue-CondensedBold,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:700;}
+    .domain-check-buttons {clear:both; text-align:right;}    
+    #add-domain-btn {margin-top:10px!important;margin-bottom:4px!important;}
+    #no-domain-loading, 
+    #add-domain-loading {margin-top:14px!important; margin-left:auto;margin-right:auto;}
+
+    .search-input-wrapper{width:453px}
+    .search-input-label{min-width:500px}
+    .domain-search{background-color:#fff;border:1px solid #a4a4a4;height:53px;position:relative;margin-right:6px;min-width:375px;display:table;float:left}
+    .domain-search>div{display:inline-block;vertical-align:top}
+    .domain-search>.tld-input{border:0;float:none;font-size:24px;height:51px;outline:0;position:relative;min-width:120px;z-index:2;border-left:1px solid #a4a4a4}
+    #domain_search_input.search-input,.search-input[type=text]{background-color:transparent;border:0;color:#333;font-family:"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:24px;font-weight:300;line-height:1.4;height:30px;left:13px;outline:0;padding:0;position:absolute;right:9px;top:10px;width:70%}
+    .search-input.allow-placeholder{background-color:transparent}
+    .search-input-label{color:#333;display:block;font-size:24px;font-weight:300;outline:0;overflow:hidden;padding:13px 0 8px 13px;white-space:nowrap}
+    .tld-input-selected{float:left;padding:13px 0 4px 14px;width:120px}
+    .tld-input.droplist-open{overflow:visible}
+    .tld-input>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;top:-9999em;width:112px;z-index:3}
+    .tld-input.droplist-open>ul{width:155px;top:52px;z-index:1000}
+    .tld-input.droplist-open>ul>li{padding:5px 10px}
+    .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
+    .tld-input.droplist-open>ul>li.selected,.tld-input.droplist-open>ul>li.selected:hover{background:#e4efc7}
+    .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:31px;padding:0;position:relative}
+    .domain-search .g-btn-sec{border-radius:0}
+    .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:22px;left:7px}
+    /* Domain Search CSS End  */
+    
+    .ssl-add-cart{font-size: 18px;padding: 18px 36px;margin-top: 30px;background-color: #ff8a00;border-color: #ff8a00;color:white;}
+    .ssl-add-cart:hover{background-color: #ef8002;border-color: #ef8002;}
+    .sub-headers{font-family:HelveticaNeue,"Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif; width:auto; margin:auto; display:table;}
+    .sub-headers div{font-weight: 400;font-size: 16pt;line-height: 28px;display:block;text-align:left;min-width:450px;width:auto;max-width:800px;}
+    .sub-headers > div:before{ content:" ";display:inline-block;background: url('[@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png') no-repeat -702px 0;width: 14px;
+height: 12px;
+position: relative;
+margin-top: 5px;
+margin-right:20px;}
+    .ssl-btn-wrapper{display: flex;justify-content:center;font-family:HelveticaNeue,"Helvetica Neue", Regular, "Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    
+    .main-banner{
+      background-size:cover;
+      background-image: url('[@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/SSL_marquee.jpg');
+      background-repeat:no-repeat;
+      background-position:top center;
+      background-color: #f0f1ec; 
+      min-height:492px;
+    }
+    span.price-period, span.price, #sslRow h1 strong{color:#ff8a00;font-size:60px; font-weight:500;font-family:HelveticaNeueLTStd, Bold, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;}
+    .sale-banner{display:block;float:right;margin-top:-60px;}
+    
+    .hide-non-en{
+    display:none;
+    }
+     html[lang*='en'] .hide-non-en{
+    display:block;
+    }
+    .nobreak{
+      white-space:nowrap;
+    }
+  </style>
+</atlantis:webstash>
+
+
+<section class="main-banner main-banner-offers section-[@D[tms.message.tag]@D]" id="sslRow">
+        <div class="l-main-container container main-banner-content">
+          <div class="marquee-flag sale sale-banner [@T[localization:<language full="true" />]@T] [@T[localization:<language />]@T]"></div>
+          <h1 class="main-banner-subtitle alt-title-[@D[tms.message.tag]@D]">
+            [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:headline-[@D[tms.message.tag]@D]]@L]         
+          </h1> 
+          <div class="sub-headers">
+##if('[@D[tms.message.tag]@D]'=='1ssl_6') 
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:premium-banner-item-1]@L]</div>
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:premium-banner-item-2]@L]</div>
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:premium-banner-item-3]@L]</div>
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:premium-banner-item-4]@L]</div>
+##else
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:banner-item-4]@L]</div>
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:banner-item-5]@L]</div>
+            <div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:banner-item-6]@L]</div>
+##endif
+          </div>
+       </div>
+       <div class="l-main-container container main-banner-content">
+         <div class="ssl-btn-wrapper">
+             <button id="add-product-btn" type="button" class="btn btn-lg ssl-add-cart" data-ci="addSSLButton">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-add-to-cart]@L]</button>
+         </div>
+       </div>
+</section>
+
+<atlantis:webstash type="js">
+  <script>
+  /* Domain Search JS Start  */
+    $.ajaxSetup({cache:false});
+    var nextStepUrl;
+    
+    var PlanBox6UI = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $('#txtTld').val(li.attr('data-view'));
+        }
+      },
+      recordClick: function (c, a, b) {
+        if (typeof (FastballEvent_MouseClick) !== "undefined") {
+          FastballEvent_MouseClick(c, a, b, "a");
+        }
+      }
+    };
+
+    var PlanConfig = {
+      changeSelected: function (li, parent) {
+        var content = li.find('div[data-main=true]').html();
+        parent.find('div:first').html(content);
+        if (li.hasClass('availabletld')) {
+          $('#txtTld').val(li.attr('data-view'));
+        }
+      }, apiPlantoCart: function (data,cb) {
+        if(typeof data != "object") return;
+
+        data = data || {};
+        
+        data.action = data.action || 'add';
+        data.itcCode = data.itcCode || false;
+        data.ciCode = data.ciCode || false;
+        data.quantity = data.quantity || '1';
+        data.planSelected = data.planSelected || false;
+
+        for(key in data){
+          if(data[key]===false) return;
+        }
+        
+        var url = PlanConfig.getCartAPIUrl(data.action, data.itcCode, data.ciCode, data.quantity, data.planSelected);
+        $.getJSON(url, function (data) {
+          if (data.Success == true) {                                 
+            if(typeof cb == 'function'){
+              cb();
+            } else {   
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+            ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
+            ##endif
+            }    
+          }
+        });
+         
+      }, getCartAPIUrl:function(action,itcCode,ciCode,quantity,planSelected) {
+            var url = '[@T[link:<relative path="/api/package" parammode="explicit"/>]@T]';
+            url += '/'+ action; //action
+            url += '/'+ itcCode; //itc code
+            url += '/'+ ciCode; //ci code
+            url += '/'+ quantity;
+            url += '/' + planSelected; //Plan Name
+           
+            return url;
+        }
+    };
+
+    $(document).ready(function () {
+
+         
+
+        $('#planSelected').val(offersCodes.plan)
+        
+ 
+  
+
+       
+        $('#add-product-btn').bind('click', function (e) {
+          $('#domain-search-click').addClass('disabled');
+          $('#add-domain-btn').addClass('disabled');
+          $('#add-domain-loading').fadeIn();
+          
+          var data = {
+            ciCode: offersCodes.ci.apiAddCi,
+            itcCode: offersCodes.itc, 
+            planSelected: offersCodes.plan
+          }
+      
+          PlanBox6UI.recordClick(e, offersCodes.ci.apiAddCi, $(this)[0]);
+          PlanBox6UI.recordClick(e, offersCodes.ci.apiDomainAddToCart, $(this)[0]);
+          
+          PlanConfig.apiPlantoCart(data);
+        });
+
+         
+
+         
+    });
+/* Domain Search JS End  */
+  </script>
+</atlantis:webstash>
+
+<!-- Domain Search Block End --> 
+
+
+
+<atlantis:webstash type="css">
+  <style> 
+
+
+#sslChartRow{background-position:top center;background-repeat:repeat-x;min-height:460px; margin-top:55px;}
+    
+    #sslChartRow table{border-collapse:collapse;border-color:lightgray;width:1000px; border-style: none; margin:auto;}
+    #sslChartRow table td{padding:15px;}
+    
+    .ssl-chart{padding-top:20px;font-size:16px;}
+    .ssl-chart > div{white-space:nowrap;}
+    .ssl-chart > div >div{color:#333;}
+    .ssl-chart > .col-md-1{padding-left:0px;}
+    .ssl-chart > div >div{height: 100%;line-height: 55px;}    
+    .ssl-chart > div >div.top-price{}  
+    .ssl-chart > div >div.col-md-2, .ssl-chart > div >div.col-md-3, .ssl-chart > div >div.col-md-1{font-weight: bold;}
+    .ssl-chart > div >div.col-md-3{padding-left:0px;
+    font-family:Helvetica Neue, Regular, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 18pt;
+    font-weight:normal;
+    }
+
+    .ssl-chart > div >div.lft-bd{border-left-color:lightgray; border-left-style:solid;border-width:2.5px;}
+    .ssl-chart > div >div.rt-bd{border-left-color:lightgray; border-left-style:solid;border-width:2.5px;}
+    
+    
+    .ssl-chart > table  tr td.top-row{font-size:16px;border-top-style:none;border-left-style:none; border-right-style:none; line-height: normal;font-family:HelveticaNeue, Regular, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif; padding-bottom:20px;}
+    .ssl-chart > table  tr td.rt-spc-nbd{border-right-style: none;}
+    .ssl-chart > table  tr td.left-spc-nbd{border-left-style: none;vertical-align:middle;height:85px;}
+    .ssl-chart > div >div.btm-row{border-bottom-color:lightgray; border-bottom-style:solid;border-width:2.5px;}
+    hr{margin: 1em;}
+    
+    .ssl-chart table  tr td.stck-up > div{font-size: 42px;font-weight: 700;padding-top:0px;padding-left: 0px; font-family:HelveticaNeue, Bold, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;text-transform: capitalize;}
+    
+    .ssl-chart table  tr td.highlighted-row span.wt-check{width: 50px;height: 50px;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -592px 0;display: inline-block;margin:0 auto;}
+    .ssl-chart table  tr td div span.check{width: 50px;height: 50px;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -647px 0;display: inline-block;;margin:0 auto;}
+    .ssl-chart  table  tr td.highlighted-row{color: #fff;background-color: #ff910f;border-color: #f58400;border-top-style:none;
+    font-family:Helvetica Neue, Bold, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+      text-align:center;
+    }
+    
+    .ssl-chart > div >div.no-left-brd{border-left-style:none;font-size: 16px;}
+    .ssl-chart > div.row.title-row{height:4.5em;}
+    .ssl-chart table  tr div.center{text-align:center;font-family:Helvetica Neue, Bold, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:bold;}
+    .ssl-chart table  tr div.center.chart-dash{font-family:Helvetica Neue, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:normal;}
+    .ssl-chart table  tr div.center-dif-logo{padding-top:40px;text-align:center;font-family:Helvetica Neue, Bold, "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:bold;}
+    .ssl-chart table  tr td div span.gd-logo{margin:0 auto 15px;width: 51px;height: 73px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat 0 0;}
+    .ssl-chart > table  tr td div span.comodo{margin:0 auto 15px;margin-top: 15px;width: 47px;height: 59px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -315px 0;}
+    .ssl-chart > table  tr td div span.geotrust{margin:0 auto 15px;margin-top: 15px;width:65px;height: 59px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -182px 0;}
+    .ssl-chart > table  tr td div span.thawte{margin:0 auto 15px;margin-top: 15px;width: 59px;height: 59px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -252px 0;}
+    .ssl-chart > table  tr td div span.verisign{margin:0 auto 15px;margin-top: 12px;width: 110px;height: 60px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -366px 0;} 
+    .ssl-chart > table  tr td div span.digicert{margin:0 auto 15px;margin-top:15px;width: 59px;height: 59px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -56px 0;} 
+    .ssl-chart > table  tr td div span.globalsign{margin:0 auto 15px;margin-top:15px;width: 59px;height: 58px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -120px 0;} 
+    .ssl-chart > table  tr td div span.rapidssl{margin:0 auto 15px;width: 110px;height: 33px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -477px -13px;} 
+    .ssl-chart > table  tr td div span.superfast{margin:0 auto 15px;width: 167px;height: 33px; display:block;background: url([@T[link:<imageroot />]@T]/fos/hp/ssl_offer_2014-10-20/ssl_icon_sprite3.png) no-repeat -721px -8px;} 
+    
+    .ssl-chart > table  tr td div span.no-logo{margin:0 auto 15px;width: 59px;height: 73px; display:block;} 
+    <!--.ssl-chart > table  tr td div.min-height{min-height:60px;}!-->
+  </style>
+</atlantis:webstash>
+##if(queryValueHas(compchart,1))
+<section class="alt-img-1 section-[@D[tms.message.tag]@D]" id="sslChartRow">
+
+<!--USA CHART-------------------------------------------------------------------------------------------------------!-->
+##if(clientCountryAny(us))
+    <div class="ssl-chart">
+      <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="comodo"></span>Comodo</div></td>
+      <td class="top-row"><div class="center"><span class="geotrust"></span>GeoTrust</div></td>
+      <td class="top-row"><div class="center"><span class="thawte"></span>Thawte</div></td>
+      <td class="top-row"><div class="center"><span class="verisign"></span>VeriSign</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="6495" /> ]@T]</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="14900" /> ]@T]</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="14900" /> ]@T]</div></td>
+      <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="39900" /> ]@T]</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="25000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="150000000" dropdecimal="true"  /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END USA CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(ca))
+
+<!--CANADA CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+      <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center-dif-logo"><span class="rapidssl"></span>RapidSSL</div></td>
+      <td class="top-row"><div class="center"><span class="digicert"></span>DigiCert</div></td>
+      <td class="top-row"><div class="center"><span class="geotrust"></span>GeoTrust</div></td>
+      <td class="top-row"><div class="center"><span class="thawte"></span>Thawte</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="4999" /> ]@T]</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="17500" /> ]@T]</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="14900" /> ]@T]</div></td>
+      <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="14900" /> ]@T]</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="100000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true"  /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END Canada CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(uk))
+
+          <!--UK CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+        <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="geotrust"></span>GeoTrust</div></td>
+      <td class="top-row"><div class="center"><span class="globalsign"></span>GlobalSign</div></td>
+      <td class="top-row"><div class="center"><span class="digicert"></span>DigiCert</div></td>
+      <td class="top-row"><div class="center"><span class="verisign"></span>VeriSign</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">£99.00</div></td>
+      <td><div class="center">£49.99</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="17500" /> ]@T]</div></td>
+      <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="39900" /> ]@T]</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">£10,000</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="100000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="150000000" dropdecimal="true"  /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-7d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END UK CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(de))
+
+                    <!--GERMANY CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+                <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="digicert"></span>DigiCert</div></td>
+      <td class="top-row"><div class="center"><span class="geotrust"></span>GeoTrust</div></td>
+      <td class="top-row"><div class="center"><span class="globalsign"></span>GlobalSign</div></td>
+      <td class="top-row"><div class="center"><span class="verisign"></span>VeriSign</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="17500" /> ]@T]</div></td>
+      <td><div class="center">€149,00</div></td>
+      <td><div class="center">€49,99</div></td>
+      <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="39900" /> ]@T]</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="100000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">£10.000</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="150000000" dropdecimal="true"  /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-7d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END GERMANY CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(br))
+        
+<!--BRAZIL CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+                        <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="comodo"></span>Comodo</div></td>
+      <td class="top-row"><div class="center"><span class="globalsign"></span>GlobalSign</div></td>
+      <td class="top-row"><div class="center-dif-logo"><span class="rapidssl"></span>RapidSSL</div></td>
+      
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">R$ 99,90</div></td>
+      <td><div class="center">R$ 99,90</div></td>
+      <td class="rt-spc-nbd"><div class="center">R$ 89,00</div></td>
+      
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-7d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END BRAZIL CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(mx))
+
+          <!--MEXICO CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+            <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="comodo"></span>Comodo</div></td>
+      <td class="top-row"><div class="center-dif-logo"><span class="rapidssl"></span>RapidSSL</div></td>
+      <td class="top-row"><div class="center-dif-logo"><span class="superfast"></span>SuperFast</div></td>
+      <td class="top-row"><div class="center"><span class="thawte"></span>Thawte</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">MXN 345.38</div></td>
+      <td><div class="center">MXN 405.65</div></td>
+      <td><div class="center">MXN 341.93</div></td>
+      <td class="rt-spc-nbd"><div class="center">MXN 149.00</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center chart-dash">—</div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="1000000" dropdecimal="true" /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true" /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-7d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END MEXICO CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+##if(clientCountryAny(au))
+
+            <!--Australia CHART-------------------------------------------------------------------------------------------------------!-->
+    <div class="ssl-chart">
+                    <table border="1" cellpadding="2" cellspacing="2">
+  <tr>
+  <td width="300px" class="top-row stck-up left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-stckup]@L]</div></td>
+      <td class="top-row"><div class="center"><span class="gd-logo"></span>[@T[companyname:name]@T]</div></td>
+      <td class="top-row"><div class="center"><span class="comodo"></span>Comodo</div></td>
+      <td class="top-row"><div class="center"><span class="digicert"></span>DigiCert</div></td>
+      <td class="top-row"><div class="center"><span class="thawte"></span>Thawte</div></td>      
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-oneyrprice]@L]</div></td>
+      <td class="highlighted-row"><div class="price"></div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="6495"  /> ]@T]</div></td>
+      <td><div class="center">[@T[currencyprice:<price usdamount="17500"  /> ]@T]</div></td>      
+      <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="14900"  /> ]@T]</div></td>
+    
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>SHA-2 & 2048-bit [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-enc-strength]@L]</div></td>
+      <td class="highlighted-row"><span class="wt-check"></span></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-servcov]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center chart-dash">—</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-freere]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-sec-seal]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>
+      <td><div class="center"><span class="check"></span></div></td>      
+      <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-browsersupp_34369]@L]</div></td>
+      <td class="highlighted-row"><div class="center"><span class="wt-check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td><div class="center"><span class="check"></span></div></td>
+    <td class="rt-spc-nbd"><div class="center"><span class="check"></span></div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-warranty]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@T[currencyprice:<price usdamount="10000000" dropdecimal="true"  /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="25000000" dropdecimal="true" /> ]@T]</div></td>
+    <td><div class="center">[@T[currencyprice:<price usdamount="100000000" dropdecimal="true" /> ]@T]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@T[currencyprice:<price usdamount="50000000" dropdecimal="true" /> ]@T]</div></td>
+  </tr>
+  <tr>
+      <td class="left-spc-nbd"><div>[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-money-back]@L]</div></td>
+    <td class="highlighted-row"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-45d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+    <td class="rt-spc-nbd"><div class="center">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-30d]@L]</div></td>
+  </tr>
+  
+</table>
+      <div>
+          <div class="col-md-2 "></div>          
+          <div class="col-sm-3  col-sm-offset-6">[@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:ssl-chart-data-accurate]@L]</div>
+          <div class="col-md-2 "></div>
+      </div>
+    </div>
+          <!--END Australia CHART-------------------------------------------------------------------------------------------------------!-->
+##endif
+            </section> 
+##endif
+
+
+
+<atlantis:webstash type="css">
+  <style>
+#whyUsRow{padding-top:30px}
+#whyUsRow .l-main-container{width:960px;padding:auto 20px}
+#whyUsRow .why-us-wrap{width:100%;height:415px}
+#whyUsRow .why-us-headline-wrap{margin:57px auto 0;text-align:center}
+#whyUsRow .why-us-headline{text-transform:uppercase;font-size:24px}
+#whyUsRow .col-lg-3{padding:0;width:25%}
+#whyUsRow .circle1,#whyUsRow .circle2,#whyUsRow .circle3,#whyUsRow .circle4{width:170px;height:170px}
+#whyUsRow .circle1{background-position:0 0}
+#whyUsRow .circle2{background-position:-174px 0}
+#whyUsRow .circle3{background-position:-348px 0}
+#whyUsRow .circle4{background-position:-522px 0}
+#whyUsRow .circle-text{width:170px;text-align:center;color:#7db701;line-height:20px;font-size:20px;font-weight:200;margin-top:20px;overflow:visible}
+.why-us-circles{margin:30px auto 0;width:1000px}
+.why-us-circles>ul>li{float:left;list-style-type:none;margin-left:56px;overflow:visible}
+.why-us-circles>ul>li>div>span{display:block}
+  </style>
+</atlantis:webstash>
+
+
+<section class="misc-banner-generic section-[@D[tms.message.tag]@D]" id="whyUsRow">
+        <div class="l-main-container container main-banner-content">
+          <div class="why-us-wrap">
+            <div class="why-us-content">
+              <div class="why-us-headline-wrap text-center">
+                <span class="why-us-headline b condensed">[@L[cds.sales/offers/default:whyus-text-area]@L]</span>
+              </div>
+              <div class="why-us-circles">
+                <ul>
+                  <li>
+                    <div class="circle1 offers-sprite"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-1]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle2 offers-sprite"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-2]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle3 offers-sprite"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-3]@L]</div>
+                  </li>
+                  <li>
+                    <div class="circle4 offers-sprite"></div><div class="circle-text">[@L[cds.sales/offers/default:whyus-img-text-4_34369]@L]</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+ 
+
+
+
+<!-- Disclaimers Block Start -->
+<atlantis:webstash type="css">
+  <style>
+    /* disclaimers css start */
+    .modal-title{font-size:24px}
+    .modal-dialog{width: 600px}
+    #disclaimers{font-size:14px;margin:0 auto;line-height:18px;width:1000px}
+    #disclaimers a,#disclaimers a:link,#disclaimers a:visited{color:#333;text-decoration:underline}
+    #disclaimers a:active,#disclaimers a:hover{color:#7db701}
+    /* disclaimers end */
+  </style>
+</atlantis:webstash>
+
+<section class="misc-banner-generic section-[@D[tms.message.tag]@D]">
+  <div class="l-main-container container main-banner-content">
+  <!-- Page Disclaimer -->
+    <div id="disclaimers">
+       
+        <a class="simple-link" href="#" data-toggle="modal" data-target="#myModal" data-ci="disclaimerLink">[@L[cds.sales/offers/default:disclaimer-text]@L]</a>
+      ##if(countrySiteAny(uk))  
+      <div class="vat-disclaimer-text"> 
+          [@L[cds.tms/lp/advertising/[@D[tms.message.name]@D]:vat-price]@L]
+        </div>
+      ##endif
+      
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">
+        <strong>[@L[cds.sales/offers/default:disclaimer-modal-title]@L]</strong>
+        </h4>
+      </div>
+      <div class="modal-body">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Disclaimers Block End --> 

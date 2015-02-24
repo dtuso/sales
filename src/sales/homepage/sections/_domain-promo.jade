@@ -1,7 +1,9 @@
 atlantis:webstash(type="css")
   style
     :less
-      .domain-promo-content{background-color:#333;
+      #domain-promo { color: #fff; }
+      .domain-promo-content{
+        background-color:#333;
         @media only screen and (min-width:768px) {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;background-size:cover;}
       }
       .Explorer8 .domain-promo-content{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;background-size:cover;}
@@ -16,12 +18,12 @@ atlantis:webstash(type="css")
       }
 
 section#domain-promo.bg-green-official
-  h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
+  h2.text-center [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
   div.domain-promo-content
     .container
       .row
-        .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text.text-white
+        .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
           h3.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]
           div [@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]
           a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]") [@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]
-          p.customer-website [@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]
+          p.customer-website.hidden-xs [@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]
