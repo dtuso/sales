@@ -1,0 +1,38 @@
+extends ../../../../sales/homepage/_right_arrow.jade
+
+block append heroVars
+  - rightArrow.ci = "96198";
+  - rightArrow.ctaLink = "[@T[link:<external linktype='myaurl'><param name='ci' value='"+rightArrow.ci+"' /><param name='accid' value='3' /></external>]@T]";
+  - rightArrow.classes += " hosting-upgrade";
+block append rightArrowStyles
+  style
+    :less
+      .hero.right-arrow.hosting-upgrade{
+      text-transform: uppercase;
+        .leftContent {
+            .line1{
+              width:50%;
+              }
+            .line4{
+              .dash{letter-spacing: -.4rem;}
+              }
+        }
+        .rightContent {
+          .line3{font-size:65%}
+          }
+      }
+block leftContent
+  .bigtext
+    .line1.tungsten.bigtext
+      span [@L[cds.sales/homepage/heros/hosting-upgrade:yourSiteNeeds]@L]
+    .line2.walsheim-black [@L[cds.sales/homepage/heros/hosting-upgrade:moreResources]@L]
+    .line3.tungsten 
+      span [@L[cds.sales/homepage/heros/hosting-upgrade:priceOfBeing]@L]
+    .line4.walsheim-black 
+      span.dash ——— &nbsp;&nbsp;
+      span [@L[cds.sales/homepage/heros/hosting-upgrade:soPopular]@L]
+block rightContent
+  .bigtext
+    .line1.walsheim-black [@L[cds.sales/homepage/heros/hosting-upgrade:upgrade]@L] 
+    .line2.walsheim-black [@L[cds.sales/homepage/heros/hosting-upgrade:yourHosting]@L] 
+  a.btn.btn-md.btn-purchase [@L[cds.sales/homepage/heros/hosting-upgrade:goToMyAccount]@L] 
