@@ -1047,7 +1047,6 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .search-message').hide();
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
-              
               });
             </script>
           </atlantis:webstash>
@@ -1281,7 +1280,6 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .search-message').hide();
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
-                
                 });
               </script>
             </atlantis:webstash>
@@ -1504,7 +1502,6 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .search-message').hide();
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
-                
                 });
               </script>
             </atlantis:webstash>
