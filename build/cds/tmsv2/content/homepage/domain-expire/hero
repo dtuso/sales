@@ -18,8 +18,20 @@
   <style>.hero.right-arrow.domain-expire {
   text-transform: uppercase;
 }
+.hero.right-arrow.domain-expire .leftContent .line1 {
+  font-size: 32px;
+}
+.hero.right-arrow.domain-expire .leftContent .line2 {
+  font-size: 17px;
+}
 .hero.right-arrow.domain-expire .leftContent .line4 .dash {
   letter-spacing: -0.4rem;
+}
+.hero.right-arrow.domain-expire .rightContent .line1 {
+  font-size: 23px;
+}
+.hero.right-arrow.domain-expire .rightContent .line2 {
+  font-size: 18px;
 }
 .hero.right-arrow.domain-expire .rightContent .line3 {
   font-size: 65%;
