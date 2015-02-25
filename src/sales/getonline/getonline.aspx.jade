@@ -1,72 +1,115 @@
-extends ../../templates/pages/landing-page
+extends ../shared/_page
 
-append headScripts
-  atlantis:webstash(type="js")
-    script
-      include:js questions-lp.js
+append endOfPageScripts
+  script.
+    // update the form's submit URL based on the user's selections
+    $('#questions select').change(function(e) {
+      var interest = $('#interest-select').val();
+      var resources = $('#resources-select').val();
+
+      // routing logic embedded here
+      if (interest === "blog") {
+        // anytime the interest is in blogging, suggest the wordpress product
+        $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
+      } else if (resources === "know_someone") {
+        // anytime the user "knows someone", suggest web hosting
+        $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
+      } else if (resources === "build_myself") {
+        // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
+        if (interest === "selling_products") {
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
+        } else {
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
+        }
+      } else if (resources === "hire_someone") {
+        // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
+        if (interest === "selling_products") {
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
+        } else {
+          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
+        }
+      }
+    });
+
+    $('#questions form').submit(function(e) {
+      // retrieve valid TLDs from our app setting
+      // TODO: do these need to be market specific?
+      // TODO: is it worth trying to use the UXCorevalidation library?
+      var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
+
+      // if user specified a TLD, make sure it's valid for this promotion
+      var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
+
+      if (tldSpecified && validTlds.indexOf(tldSpecified)) {
+        $(".validation-message").show();
+        e.preventDefault();
+      }
+    });
+
+    $(document).ready(function(){
+      // set highlighted marquee text if passed by referring page
+      var p4p = window.location.search.split('p4p=');
+      if (p4p.length > 1) {
+        $("#marquee mark").text(p4p[1].split("&")[0]);
+      }
+    });
 
 append pageStyles
   style.
-    .gray{background-color:#E8E8E8;}
-    .green{background-color:#78C043}
-    .white{background-color:white}
-    .uppercase{text-transform:uppercase}
-    .lowercase{text-transform:lowercase}
-    .text-center{text-align:cneter}
-    .illustration-complete{height:212px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png) no-repeat center bottom;}
-    .bottom-space{margin-bottom:50px}
-    .search-bar{width:100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 46px; border-top: 4px solid #FFCC00; padding: 15px; font-family: 'Walsheim-Medium';}
-    .step-1{padding-right: 50px}
-    .drop-label{font-size:20px!important;}
-    .step-2{padding-left: 50px; border-left: 2px solid lightgray}
-    .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .get-running-btn:active{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .dropdown1{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
-    .dropdown2{width: 100%; background-color: #fedf54; border: 1px solid #FFCC00; height: 30px; border-top: 3px solid #FFCC00; padding: 2px; font-family: 'Walsheim-Medium'; line-height: 1px;}
-    #questions-bottom{padding-bottom: 50px}
-    #questions-bottom p{font-family: 'Walsheim-Medium';}
-    #homepage-selection{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-    input::-webkit-input-placeholder {color: #333;}
-    input::-moz-placeholder {color: #333;}
-    input:-moz-placeholder {color: #333;}
-    input:-ms-input-placeholder {color: #333;}
+    /* keep marquee section condensed so questions appear above the fold on desktop */
+    #marquee { padding-top: 30px; padding-bottom: 30px; background-color:#78C043;}
+    #marquee h2 { margin-bottom: 20px; margin-top: 0; }
 
-block sections
+    #questions h2 { font-size: 3rem; margin-bottom: 5px; margin-top: 0;}
+    #questions legend { font-size: 3rem; text-transform: uppercase; font-family: 'Walsheim-Bold'; border-bottom: none; }
+    #questions p { font-family: Walsheim-Medium; }
+    #questions input, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
+    #questions .btn-purchase { float:right;}
+    #questions .validation-message { display: none; }
 
-  block domainSearch
+    @media (min-width: 768px) {
+      .step-1{padding-right: 50px;}
+      .step-2{padding-left: 50px; border-left: 2px solid lightgray;}
+    }
 
-  block marquee
+block content
 
-  block top
-    section#questions-top.green
-      .container.text-center
-        h1.uppercase This doesn't have to be <span id="homepage-selection">confusing!</span>
+  section#marquee
+    .container.text-center
+      h2 This doesn't have to be <mark>confusing!</mark>
+      .row
+        .col-xs-12
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png")
+
+  section#questions
+    .container
+      h2.text-center We can get your business online.
+      p.text-center Tell us a little about yourself.  We will step you from A to Z, no problem.
+      form(method='GET' action!='[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]')
         .row
-          .illustration-complete.bottom-space
-
-  block bottom
-    section#questions-bottom.white
-      .container
-        .top-half.text-center
-          h3.uppercase We can get your business online.
-          p Tell us a little about yourself.  We will step you from A to Z, no problem.
-        .col-xs-6.step-1
-          h3.uppercase Step 1
-          p What's your business name? Don't have a name? An idea for your business is perfect!
-          input(class='search-bar', id='search-input', type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='63')
-          p.validate-message
-        .col-xs-6.step-2
-          h3.uppercase Step 2
-          p We've given you some options of how to set up your business online.  Just fill in the blanks!
-          .dropdowns
-            h3.uppercase.drop-label I'm interested in
-            #first-dropdown
-            h3.uppercase.drop-label I have the resources and time to
-            #second-dropdown
-          button.get-running-btn(id='get-running-butt', type='submit', name='searchButton', class='btn btn-warning btn-lg hp-search') GET ME UP AND RUNNING!
-
-
-
-  block decision
-    //define decisions section here
+          .col-sm-6
+            fieldset.step-1
+              legend Step 1
+              p What's your business name? Don't have a name? An idea for your business is perfect!
+              .form-group
+                label.sr-only(for="search-input") What's your business name?
+                input#search-input.form-control.search-bar(type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='63', aria-describedby="inputWarning2Status")
+              p.validation-message Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG
+          .col-sm-6
+            fieldset.step-2
+              legend Step 2
+              p We've given you some options of how to set up your business online.  Just fill in the blanks!
+              .form-group
+                label(for="interest-select") I'm interested in
+                select#interest-select.form-control(name="interest")
+                  option(value="existing_business") Getting my existing business online
+                  option(value="new_business") Starting a new business online
+                  option(value="selling_products") Selling products online
+                  option(value="blog") Starting my own blog
+              .form-group
+                label(for="resources-select") I have the resources and time to
+                select#resources-select.form-control(name="resource")
+                  option(value="build_myself") Build it myself (if it's easy)
+                  option(value="know_someone") I have a guy who knows how to code (he has skills)
+                  option(value="hire_someone") Hire someone to do it all for me (no time)
+              button.btn.btn-purchase.btn-lg(type="submit") Get me up and running!

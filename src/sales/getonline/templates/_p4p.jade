@@ -1,36 +1,177 @@
-extends ../../../sales/shared/_landing-page.jade
+extends ../../shared/_page
 
-include _domain-multiple-selection-mixin.jade
-include _office365-email-mixin.jade
-include _ready-to-take-business-online-mixin.jade
-include _good-news-get-it-now-mixin.jade
-include _new-pro-section-mixin.jade
-include _product-section.jade
+// include _domain-multiple-selection-mixin.jade
+// include _office365-email-mixin.jade
+// include _ready-to-take-business-online-mixin.jade
+// include _good-news-get-it-now-mixin.jade
+// include _new-pro-section-mixin.jade
+// include _product-section.jade
+
+append vars
+  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
+  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
+  // P4P variables
+  - productToDisplay = {};
+  - productToDisplay.name = "";
+  - productToDisplay.getItNowDescription = "";
+  - productToDisplay.imgClass = "";
+  - productToDisplay.productIconClass = "";
+  - productToDisplay.price = "";
+  - productToDisplay.productDescription = "";
+  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productYouTubeId = "";
+  - productToDisplay.productVideoInfoText = "";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.productDidYouKnowText = "";
+
+append seo
+  meta(name="twitter:card" content="summary")
+  meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
+  meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
+  meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
+
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js ../domain-selection.js
 
 append pageStyles
-  style.
+  style.  // Page
     .gray{background-color:#E8E8E8;}
     .green{background-color:#78C043}
     .white{background-color:white}
     .uppercase{text-transform:uppercase}
     .lowercase{text-transform:lowercase}
-    .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+    section{padding-top:0px;padding-bottom:0px}
+    .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-2px-line.png') no-repeat 0 0;}
 
-append headScripts
-  atlantis:webstash(type="js")
-    script
-      // include:js ../p4p.js
-      include:js ../domain-selection.js
+    .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+    .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+    .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+    .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+    .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+    .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
 
-block domainSearch
+    .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+    .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
 
-block marquee
+    .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+    .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+    .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+    .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
 
-block sections
+    h2{margin-top:0px;margin-bottom:0px;}
+    h3{margin-top:0px;margin-bottom:0px;}
+    h5{margin-top:0px;margin-bottom:0px;}
 
-  block getItNow
-    // p4p.getItNow
-    //+renderGoodNews("domain","price","image-path")
+    /* speech bubbles */
+    .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+    .speech-bubble-right-div {margin-left:5%;width:90%;}
+    .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+    .speech-bubble-left-div {margin-left:5%;width:90%;}
+
+  // GetItNow section
+  // atlantis:webstash(type="css")
+  style.
+    .left-side{position: relative;}
+    .right-side{position:relative;}
+    .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+    .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+    .heading{padding-top:30px;}
+    .starter-pack{padding-bottom: 35px;}
+    .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+    .logo-label{padding-top: 15px;}
+
+  // Product section
+  // atlantis:webstash(type="css")
+  style.
+    /* video button */
+    .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+    .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+    .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+    .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+    .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+    .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+    .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+
+    /* Layout */
+    .view-all{margin:20px auto;}
+
+  // O365 section
+  // atlantis:webstash(type="css")
+  // style.
+
+  // Why-us section
+  // atlantis:webstash(type="css")
+  style.
+    .why-us-title{margin-top:10px;}
+    .why-us-text{margin-top:10px;}
+
+    .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+    .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+    .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+
+  // atlantis:webstash(type="css")
+  style.
+    .product-name{font-weight:800;padding-top:10px;}
+
+    .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
+    #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
+    #got-domain-selected{display:none;}
+
+block content
+  section#getItNow
+    .container
+      .col-xs-3.left-side
+        .row
+          .hero-guy
+      .col-xs-9.right-side
+        .row.text-center.good-news-shape
+          .head-wrapper
+            h2.heading Here you go...
+            .starter-pack
+              block goodNewsHead
+                h3 A great package deal for
+                h3 <mark id="business-idea" class="business-name-display"></mark> – Starting at <mark id="product-price">#{productToDisplay.price}</mark>
+        block check-pro-goodNews  
+        .container.bottom
+          .row
+            .col-md-2.col-md-offset-1
+              .features-domain-name
+              label.h3.logo-label domain name
+              p Get a memorable online address, like <mark>BillyBikes.org</mark> MXNXXX.XX/yr
+            .col-md-2
+              .img-plus
+            .col-md-2
+              div(class="#{productToDisplay.imgClass}")
+              label.h3.logo-label #{productToDisplay.name}
+              p #{productToDisplay.getItNowDescription}
+            .col-md-2
+              .img-plus
+            .col-md-2
+              .features-email
+              label.h3.logo-label office 365 email
+              p Get a professional email address, like <mark>yourname@billybikes.org</mark>. MXNXXX.XX/yr
+          .get-it-now
+            .row.text-center
+              p.h3.center Get the bundle for $1/month for the first year*
+            .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+                btn.btn-purchase.btn-plan.btn-lg.p4p#get-it-btn GET IT NOW
+            .row.text-center(style={'padding-top':'10px'})
+              p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
 
   block proSpecific
     +renderProSection()
@@ -40,26 +181,138 @@ block sections
     //+renderDomainMultipleSelection()
     include _domain-search-wizard
   
-  block product
+  section#product.white
+    .container
+      .row
+        div(class="#{productToDisplay.productIconClass}",style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) #{productToDisplay.name}
+      .row
+        div.text-center
+          h4.strong(style={'margin-top':'10px'})
+            div 
+              | #{productToDisplay.productDescription}
+    block productViewTemplates
+      .row
+        div.text-center
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+    block productVideo
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+            div.video-info.col-sm-4
+              div.video-marquee-info.text-center
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+    block productInfo
 
-  block office365
-    // p4p.office365
-    +renderOffice365Email()
+    .container
+      .row
+        div
+          .col-sm-3
+            div.half-hero-right(style={'margin-top':'-65px'})
+          .col-sm-5.speech-bubble-right-green(style={'margin-top':'-10px'})
+            div.speech-bubble-right-div
+              h5.uppercase <mark><strong>did you know...</strong></mark>
+              h5(style={'margin-top':'10px','text-transform':'none'}) #{productToDisplay.productDidYouKnowText}
+    block productTemplates
 
-  block whyUs
-    // p4p.whyUs
-    // include _why-us
+  section#O365-email.gray
+    .container
+      .row
+        div.email-icon(style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) office 365 email
+      .row
+        div.text-center
+          h4.strong(style={'margin-top':'10px'}) Branded email to talk to your customers
+          h2.uppercase.O365-domain-email(style={'margin-bottom':'0px'})
+      .row
+        div(style={'margin-top':'30px'})
+          .col-sm-9.speech-bubble-left-green
+            div.speech-bubble-left-div
+              h5.uppercase <mark><strong>did you know...</strong></mark>
+              h5(style={'margin-top':'10px','text-transform':'none'}) Customers are 9 times more likely to choose a business with a professional email address?*
+          .col-sm-3
+            div.half-hero-left
 
-  block divider
+  section#why-us.white
+    .container
+      .row
+        div.text-center(style={'margin-top':'30px'})
+          h2.uppercase [@L[cds.sales/gd/getonline:why-us-heading]@L]
+      .container.bottom
+        .col-sm-3
+          // .row
+            // +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png")
+          .row
+            .why-world-leader
+          .row
+            h3.why-us-title [@L[cds.sales/gd/getonline:why-us-world-leader-title]@L]
+          .row
+            p.why-us-text [@L[cds.sales/gd/getonline:why-us-world-leader-content]@L]
+        .col-sm-3.col-sm-offset-1
+          // .row
+            // +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png")
+          .row
+            .why-support
+          .row
+            h3.why-us-title [@L[cds.sales/gd/getonline:why-us-world-support-title]@L]
+          .row
+            p.why-us-text [@L[cds.sales/gd/getonline:why-us-world-support-content]@L]
+        .col-sm-3.col-sm-offset-1
+          // .row
+            // +lazyImg("","","[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png")
+          .row
+            .why-trust
+          .row
+            h3.why-us-title [@L[cds.sales/gd/getonline:why-us-world-trust-title]@L]
+          .row
+            p.why-us-text [@L[cds.sales/gd/getonline:why-us-world-trust-content]@L]
+
+  section#divider1
     .container
       .col-xs-12.section-divider(style={'margin-top':'10px','margin-bottom':'10px'})
 
-  block got
-    // p4p.got
-    //+renderReadyToTakeBusinessOnline("billysbikes.org","price")
+  section#got
+    .container
+      .row
+        div.text-center(style={'margin-top':'30px'})
+          h2.uppercase Ready to take <mark class="business-name-display"></mark> online?
+          block checkPro
+            h3.header-detail-text.uppercase#got-domain-not-selected First select your perfect domain
+            h3.header-detail-text.uppercase#got-domain-selected You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+        block checkPro-bottom
+          .container.bottom
+            .row
+              .col-sm-4.text-center
+                .features-domain-name
+                label.h3.uppercase.product-name Domain Name
+              .col-sm-4.text-center
+                div(class="#{productToDisplay.imgClass}")
+                label.h3.uppercase.product-name #{productToDisplay.name}
+              .col-sm-4.text-center
+                .features-email
+                label.h3.uppercase.product-name Office 365 Email
+            .row
+              .get-it-now
+                .container
+                  .row.text-center
+                    p.h3.center Get the bundle for $1/month for the first year*
+                  .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+                    btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
+                    btn.btn-primary.btn-search-again.btn-lg.uppercase#btn-search-again Search Again
+                  .row.text-center(style={'padding-top':'10px'})
+                    p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
 
 prepend endOfPageScripts
-  script.
+  script.  // Page
     $(document).ready(function(){
       var domainInfo = {
         businessName  : 'Billys bikes',
@@ -83,4 +336,85 @@ prepend endOfPageScripts
       // $(".domainOption1").html(domainInfo.domainName);
       // $(".domainOption2").html(domainInfo.domainOption2);
       // $(".domainOption3").html(domainInfo.domainOption3);
+    });
+
+  // atlantis:webstash(type="js")
+  script.  // Product section
+    // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+    $(document).ready(function(){
+      if(typeof youtubeVideo === 'undefined'){
+        window.youtubeVideo = {
+          _src: 'https://www.youtube.com/embed/',
+          loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+            if(typeof parameters === 'object'){
+              var paramString = '';
+                
+              // add origin to src
+              parameters.origin = window.location.protocol+'//'+window.location.host
+
+              if(youtubeVideo._src.indexOf('?') === -1){
+                paramString += '?';
+              }else{
+                paramString += '&';
+              }
+
+              for(param in parameters){
+                if(paramString.length > 2){
+                  paramString += '&';
+                }
+                paramString += param+'='+parameters[param];
+              }
+              parameters = paramString;
+            }
+
+            var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+
+            // append/prepend to container
+            if(typeof container === 'string'){
+              container = $(container);
+            }
+
+            if(typeof insertType === 'undefined' || insertType === 'append'){
+              container.append($video);
+            }else{
+              container.prepend($video);
+            }
+
+            if(typeof callback === 'function'){
+              $video.load(function(){
+                callback($video[0]);
+              });
+            }
+
+            return $video[0];
+          }
+        };
+      }
+        
+      var $containers = $('.video-marquee-wrapper');
+      $containers.each(function(){
+        var $this = $(this);
+        var videoId = $this.data('youtube-id');
+        $this.find('.play-button, .cta').bind('click.youtube',function(event){
+          // remove this event
+          $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+
+          // load the video
+          youtubeVideo.loadVideo(
+              videoId,
+              '100%',
+              '100%',
+              function(video){
+                  var $videoInfo = $this.find('.video-info');
+                  $videoInfo.animate({'opacity':0.0},1000,function(){
+                      $videoInfo.css({'display':'none'});
+                  });
+                  //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+              },
+              {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
+              $(".video-marquee"),
+              'prepend'
+          );
+        }).css({'cursor':'pointer'});
+      });
     });

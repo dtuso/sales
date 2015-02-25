@@ -1,13 +1,21 @@
 extends ./templates/_p4p.jade
 
-block marquee
-
-block getItNow
-  - var productToDisplay = {name: "Website Builder", info: "Website builder stuff here", cssClass: "<div class='wsb-icon'></div>", price: "$1.00"};
-  +renderGoodNews(productToDisplay)
+append vars
+  - productToDisplay.name = "Website Builder";
+  - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools. MXNXXX.XX/yr";
+  - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.imgClass = "features-wsb";
+  - productToDisplay.productIconClass = "features-wsb";
+  - productToDisplay.price = "$1.00";
+  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
+  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
+  - productToDisplay.productVideoInfoText = "What is Website Builder?";
+  - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
 
 block proSpecific
 
-block got
-   - var productToDisplay = {name: "Website Builder", info: "Website builder stuff here", cssClass: "<div class='wsb-icon'></div>", price: "$1.00"};
-   +renderReadyToTakeBusinessOnline(productToDisplay)
+block productInfo
+
+block productTemplates
+  include ../../sales/shared/wsb-templates.html

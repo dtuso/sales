@@ -1,14 +1,22 @@
 extends ./templates/_p4p.jade
 
-block getItNow
-  - var productToDisplay = {name: "Online Store", info: "Online Store stuff here", cssClass: "<div class='online-store-icon'></div>", price: "$1.00"};
-  +renderGoodNews(productToDisplay)
+append vars
+  - productToDisplay.name = "Online Store";
+  - productToDisplay.getItNowDescription = "Easily create a site that let’s you sell your stuff, accept credit cards and more. MXNXXX.XX/yr";
+  - productToDisplay.productDescription = "Online Store includes everything you need for a complete eCommerce website. See how easy it is.";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.imgClass = "features-online-store";
+  - productToDisplay.productIconClass = "features-online-store";
+  - productToDisplay.price = "$1.00";
+  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
+  - productToDisplay.productYouTubeId = "rMF9d8-3WBA";
+  - productToDisplay.productVideoInfoText = "What is Online Store?";
+  - productToDisplay.productDidYouKnowText = "With built-in payment processing, you can accept all major credit cards and the funds are automatically transferred to you bank account.";
 
 block proSpecific
 
-block product
-  +renderProductSection('onlinestore')
+block productViewTemplates
 
-block got
-  - var productToDisplay = {name: "Online Store", info: "Online Store stuff here", cssClass: "<div class='online-store-icon'></div>", price: "$1.00"};
-  +renderReadyToTakeBusinessOnline(productToDisplay)
+block productInfo
+
+block productTemplates
