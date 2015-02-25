@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,20 +12,25 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
+    <title>[@L[cds.sales/offers/online-business:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/offers/online-business:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/offers/online-business:meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/offers/online-business:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/offers/online-business:og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta property="fb:admins" content="633356800">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
+    <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
+    <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -73,8 +79,7 @@
       
     </script>
     <atlantis:webstash type="js">
-      <script>
-        <!-- include:js ../p4p.js-->// Array indexOf shim for IE9 and below
+      <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
     var len = this.length >>> 0;
@@ -695,92 +700,40 @@ function getParameterByName(name) {
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <atlantis:webstash type="css">
-      <style>
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .container .row .green-background{background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png) no-repeat center bottom; background-size: 65%; padding-top: 35px; padding-bottom: 25px;}
-        .container .row .green-background h2{ margin-bottom: 0;}
-        .get-it-now{margin-top: 35px;}
-        .heading{padding-top:30px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom; margin-top:15px;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom; margin-top:15px}
-        .wsb-icon{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom; margin-top:15px;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .starter-pack{padding-bottom: 35px;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom; margin-top:15px;}
-        .logo-label{padding-top: 15px;}
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom; margin-top:15px;}
-        .online-store-icon{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png) no-repeat center bottom; margin-top:15px;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .pro-computer{height:193px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png) no-repeat center bottom;}
-        .orange-text{color:#f1751d;}
-        #business-idea{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      </style>
-    </atlantis:webstash>
     <section id="getItNow">
-      <div class="container">
-        <div class="col-xs-3 left-side">
-          <div class="row">
-            <div class="hero-guy"></div>
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
+            <h2 class="text-center">Here you go...</h2>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]</mark></h3>
           </div>
         </div>
-        <div class="col-xs-9 right-side">
-          <div class="row text-center good-news-shape">
-            <div class="head-wrapper">
-              <h2 class="heading">Here you go...</h2>
-              <div class="starter-pack"></div>
-              <h3>A great package deal for</h3>
-              <h3><span id="business-idea" class="business-name-display"></span> – Starting at <span id="product-price">$1.00</span></h3>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+              <h3 class="text-center">Domain Name</h3>
+              <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
+              <h3 class="text-center">Web Hosting</h3>
+              <p>SWITCH THIS TO ONLINE STORE</p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+              <h3 class="text-center">Office 365 Email</h3>
+              <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
             </div>
           </div>
-          <div class="container bottom">
-            <div class="row">
-              <div class="col-md-2 col-md-offset-1">
-                <div class="features-domain-name"></div>
-                <label class="h3 logo-label">DOMAIN NAME</label>
-                <p>Domain is the name of your</p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2"><div class='online-store-icon'></div>
-                <label class="h3 logo-label">Online Store</label>
-                <p>Online Store stuff here</p>
-              </div>
-              <div class="col-md-2">
-                <div class="img-plus"></div>
-              </div>
-              <div class="col-md-2">
-                <div class="features-email"></div>
-                <label class="h3 logo-label">OFFICE 365 EMAIL</label>
-                <p>Office 365 email is the simplest email tool</p>
-              </div>
-            </div>
-            <div class="get-it-now">
-              <div class="row text-center">
-                <p class="h3 center">Get the bundle for $1/month for the first year*</p>
-              </div>
-              <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                <btn id="get-it-btn" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</btn>
-              </div>
-              <div style="padding-top:10px" class="row text-center">
-                <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-              </div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
+            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
           </div>
         </div>
       </div>
     </section>
-    <!-- p4p.domainMultipleSelection-->
-    <!--+renderDomainMultipleSelection()-->
     <atlantis:webstash type="css">
       <style>
         #domainSearchWizard {
@@ -1431,1679 +1384,11 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-    </section><style>
-  #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
-  #faqSlider .gd-swipe-head,#faqSlider .gd-swipe-head h1,#faqSlider .gd-swipe-head h2{color:#222;font-size:20px}#faqSlider .gd-swipe-body p{margin-bottom:15px;font-size:14px;line-height:24px}#faqSlider .gd-swipe-body p span{font-weight:700}.arrow-left:hover,.arrow-right:hover{background-color:#ededed;-webkit-transition:all .3s ease-in-out;-moz-transition:all .3s ease-in-out;-ms-transition:all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
-  #faqSlider a.arrow-left,#faqSlider a.arrow-right,#templates .arrow-left,#templates .arrow-right{top:42%}#templates{position:relative;padding-top:35px;margin:40px auto 0;width:1000px;clear:both}#templates>h2{display:block;text-align:center;font-size:36px;color:#333;margin:0 auto}
-  #templates>p{display:block;text-align:center;font-size:14px;color:#666;width:400px;margin:8px auto 0;line-height:24px}#templates>a{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}#templates>form{display:block;text-align:center;font-size:14px;color:#666;width:515px;margin:8px auto 0;line-height:24px}
-  #templates .templates-slider .left-arrow,#templates .templates-slider .right-arrow{position:absolute;width:60px;height:60px;z-index:1;margin-top:96px}#templates .templates-slider>ul{height:357px;margin:25px 0 -10px 40px;overflow:hidden;padding:0 0 0 8px;position:relative;width:916px}
-  #templates .templates-slider>ul li{position:relative;display:block;width:212px;float:left;margin-right:19px}#templates .templates-slider>ul li>.wsl-img{position:absolute;width:212px;height:268px;top:0;left:0;-moz-box-shadow:0 3px 7px -3px #282828;-webkit-box-shadow:0 3px 7px -3px #282828;box-shadow:0 3px 7px -3px #282828;background-color:#fff;*z-index:3}
-  #templates .templates-slider>ul li .hover{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsb_templates_hover.jpg) transparent;position:absolute;height:100%;width:100%;display:none}.templates-dialog{left:0;margin:auto;position:relative;width:1000px;height:706px;z-index:1050}
-  @media screen and (min-width:900px){.templates-dialog{margin:auto;width:1000px;padding-top:30px;padding-bottom:30px}}.templates-slider>ul li .hover>div{margin:45px 0 0;text-align:center}.templates-slider>ul li .hover>div>p{color:#fff;font-size:20px;margin-top:25px}
-  .templates-slider>ul li .hover>div>p>span{color:#354e00;display:block;font-size:14px;margin-top:10px;padding:0 25px;*line-height:18px}#templates .templates-slider>ul li>a{display:block;width:192px;height:62px;line-height:62px;text-align:center;background-color:#fff;margin:268px auto 0;color:#3282e6;font-size:16px;text-decoration:none;*position:absolute;*left:10px;*z-index:1}
-  #templates .view-all{text-decoration:none}#templates .view-all:hover{text-decoration:underline}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}.templates-modal{background-color:#EEE;box-shadow:0 0 6px rgba(0,0,0,.8);color:#333;font-size:14px;height:644px;line-height:1.3;padding:0;width:1002px;z-index:21;display: none;}
-  .templates-modal-content{background-color:#fff;height:527px;overflow-x:hidden;padding:20px;position:relative;width:auto}.templates-modal-close{right:8px;top:25px}.templates-modal-header{background:none repeat scroll 0 0 #FFF;border-bottom:1px solid #CCC;padding:20px}
-  .templates-slider>ul li .hover>div>p{color:#fff;font:inherit;font-size:20px;margin-top:25px;margin:0;padding:0}.templates-slider>ul li .hover>div>p>span{color:#354e00;display:block;font:inherit;font-size:14px;margin-top:10px;padding:0 25px;margin:0;padding:0}
-  a.arrow-left{left:-60px;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat scroll -30px -28px transparent;display:block;height:60px;outline:0 none;position:absolute;text-decoration:none;text-indent:-9999em;top:140px;width:60px;z-index:1}
-  a.arrow-right{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat scroll 22px -28px transparent;display:block;height:60px;outline:0 none;position:absolute;right:-60px;text-decoration:none;text-indent:-9999em;top:140px;width:60px;z-index:1;-moz-outline-style:none}
-  #templates .arrow-left,#templates .arrow-right{top:42%}#g-modal-overlay{display:none;position:absolute;top:0;left:0;width:100%;height:100%;zoom:1}#simplemodal-container{position:absolute!important}.g-modal{background-color:#FFF;box-shadow:0 0 6px rgba(0,0,0,.8);box-shadow:0 0 12px rgba(0,0,0,.8) 9;color:#707070;display:none;font-size:14px;line-height:1.3;padding:15px 20px 20px;position:absolute}
-  .g-modal-close{background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/wsbv7_sprite.png) no-repeat scroll -245px -112px transparent;display:block;height:15px;overflow:hidden;position:absolute;right:15px;text-indent:-9999em;top:15px;width:15px;cursor:pointer}
-  .g-modal-header{border-bottom:1px solid #CCC;color:#333;font-size:24px;font-weight:400;padding-bottom:2px}.g-modal-content{overflow:auto;position:relative}.g-modal-content p{margin:15px 0}.g-modal-buttonpane{margin-top:8px;text-align:center;font-size:12px;position:relative}
-  .g-modal-footer{background:#dbdbdb;padding:15px;text-align:center}#app-modal>ul{background:#dbdbdb;list-style-type:none;margin:10px 0 0;padding:0 0 20px 10px;width:100%}#app-modal>ul:after{clear:both;content:"";display:table}
-  #app-modal>ul>h3{color:#333;font-size:24px;font-weight:400;margin:0}#app-modal>ul>li{background:none repeat scroll 0 0 #FFF;float:left;height:202px;margin:15px 20px 0 0;padding-top:7px;text-align:center;width:213px}#app-modal>ul>li>div{overflow:hidden;width:201px;height:146px;margin:0 auto}
-  #app-modal>ul>li>div>div>img{width:201px}#app-modal>ul>li>span{color:#333;display:block;font-size:12px;font-weight:700;margin-top:8px}#g-modal .plan-droplist-select{background-color:#fff;border:1px solid #a4a4a4;font-size:14px;height:37px;line-height:1.6em;padding:0;width:200px;position:absolute;overflow:hidden;left:700px;margin:14px 30px 10px;z-index:3}
-  #g-modal .plan-droplist-select a{color:#333;text-decoration:none;width:218px;min-height:35px;}#g-modal .plan-droplist-select:hover{cursor:pointer}#g-modal .plan-droplist-select>.plan-droplist-selected{padding:6px 52px 0 15px}#g-modal .plan-droplist-select>.plan-droplist-selectbtn{width:20px;position:absolute;right:0;display:block;background:url([@T[link:<imageroot />]@T]fos/wsb/rebrand/img/lp_sprite.png) no-repeat -49px -2px transparent;height:9px;top:17px}
-  #g-modal .plan-droplist-select>ul{padding:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;left:-999em;z-index:1000}#g-modal .plan-droplist-select.droplist-open{overflow:visible}
-  #g-modal .plan-droplist-select.droplist-open>ul{left:0;right:0;width:100%;top:100%}#g-modal .plan-droplist-select>ul>li{border-top:1px solid #bcbcbc;-ms-word-wrap:break-word;word-wrap:break-word;text-decoration:none;padding:0 10px;display:block;position:relative;_zoom:1;overflow:hidden}
-  #g-modal .plan-droplist-select>ul>li>div{overflow:hidden}#g-modal .plan-droplist-select>ul>li:first-child{border-top:0 none}#g-modal .plan-droplist-select>ul>li:hover{background-color:#f5f5f5}#g-modal .plan-droplist-select>ul>li.selected,#g-modal .plan-droplist-select>ul>li.selected:hover{background-color:#e4efc7}
-  #g-modal .plan-droplist-select>.plan-droplist-selected>span,#g-modal .plan-droplist-select>ul>li span{text-align:left;width:auto;min-height:35px}#g-modal-overlay{background-color:#000;opacity:.8;filter:alpha(opacity=80)}
-  #g-modal button.close {
-    -webkit-appearance: none;
-    padding: 0;
-    cursor: pointer;
-    background: transparent;
-    border: 0;
-  }
-
-  .modal-open {
-    overflow: hidden;
-  }
-
-  #g-modal.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1040;
-    display: none;
-    overflow: auto;
-    overflow-y: scroll;
-  }
-
-  #g-modal.modal.fade .modal-dialog {
-    -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
-            transform: translate(0, -25%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-       -moz-transition: -moz-transform 0.3s ease-out;
-         -o-transition: -o-transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
-  }
-
-  #g-modal.modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-
-  #g-modal .modal-dialog {
-    position: relative;
-    z-index: 1050;
-    width: auto;
-    margin: 10px;
-  }
-
-  #g-modal .modal-content {
-    position: relative;
-    background-color: #ffffff;
-    border: 1px solid #999999;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    outline: none;
-    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-    background-clip: padding-box;
-  }
-
-  .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: #000000;
-  }
-
-  .modal-backdrop.fade {
-    opacity: 0;
-    filter: alpha(opacity=0);
-  }
-
-  .modal-backdrop.in {
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-  }
-
-  #g-modal .modal-header {
-    min-height: 16.428571429px;
-    padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
-  }
-
-  #g-modal .modal-header .close {
-    margin-top: -2px;
-  }
-
-  #g-modal .modal-title {
-    margin: 0;
-    line-height: 1.428571429;
-  }
-
-  #g-modal .modal-body {
-    position: relative;
-    padding: 20px;
-  }
-
-  #g-modal .modal-footer {
-    padding: 19px 20px 20px;
-    margin-top: 15px;
-    text-align: right;
-    border-top: 1px solid #e5e5e5;
-  }
-
-  #g-modal .modal-footer:before,
-  #g-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #g-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #g-modal .modal-footer:before,
-  #g-modal .modal-footer:after {
-    display: table ;
-    content: " ";
-  }
-
-  #g-modal .modal-footer:after {
-    clear: both;
-  }
-
-  #g-modal .modal-footer .btn + .btn {
-    margin-bottom: 0;
-    margin-left: 5px;
-  }
-
-  #g-modal .modal-footer .btn-group .btn + .btn {
-    margin-left: -1px;
-  }
-
-  #g-modal .modal-footer .btn-block + .btn-block {
-    margin-left: 0;
-  }
-
-  @media screen and (min-width: 768px) {
-    #g-modal .modal-dialog {
-      width: 600px;
-      margin: 30px auto;
-    }
-    #g-modal .modal-content {
-      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    }
-  }
-</style>
-
-##if(!activeLanguageAny([en-us]))
-<script>
-$(document).ready(function(){
-  // RECOMMENDED THEMES //
-  var recommendedThemes = [[@T[wsbthemes:]@T]];
-  
-  if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
-    recommendedThemes = recommendedThemes[0].slice(0,40);
-  
-    // modal select option
-    var $selectUl = $('#template-select > ul');
-    var recommendedOption = ''
-      +'<li data-view="recommended" data-main="recommended" data-ci="89632">'
-        +'<div data-main="true">'
-          +'<span><a href="#recommended">[@L[cds.sales/gd/hosting/website-builder:recommended]@L]</a></span>'
-        +'</div>'
-      +'</li>';
-    $selectUl.prepend(recommendedOption);
-  
-    // modal recommended section
-    var $recommendedUl = $('<ul></ul>');
-    for(var i=0; i<recommendedThemes.length; i++){
-      var recommendedLi = ''
-        +'<li>'
-          +'<div style="overflow: hidden;width:201px;height:146px;">'
-            +'<div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="'+recommendedThemes[i]['URL']+'" data-wsl-error="hide-parent|#app-modal > ul > li"></div>'
-          +'</div>'
-          +'<span>'+recommendedThemes[i]['NAME']+'</span>'
-        +'</li>';
-      $recommendedUl.append(recommendedLi);
-    }
-    var recommendedSection = ''
-      +'<a name="recommended"></a>'
-      +'<h3>[@L[cds.sales/gd/hosting/website-builder:recommended]@L]</h3>';
-    var $appModal = $('#app-modal');
-    $appModal.prepend($recommendedUl);
-    $appModal.prepend(recommendedSection);
-  }
-});
-</script>
-##endif
-<!-- Temaplte Slider -->
-<div class="container">
-  <div id="g-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="templates-dialog">
-      <div class="modal-content templates-modal">
-          <div class="plan-droplist-select" data-ci="80965" id="template-select">
-            <div class="plan-droplist-selected">
-              <span>[@L[cds.sales/gd/hosting/website-builder:templates-menu-all]@L]</span>
-            </div>
-
-            <div class="plan-droplist-selectbtn"></div>
-
-            <ul>
-              <li data-ci="80949" data-main="autotransportation" data-view="autotransportation">
-                <div data-main="true">
-                  <span><a href="#autotransportation">[@L[cds.sales/gd/hosting/website-builder:templates-menu-auto]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80950" data-main="businessfinancelaw" data-view="businessfinancelaw">
-                <div data-main="true">
-                  <span><a href="#businessfinancelaw">[@L[cds.sales/gd/hosting/website-builder:templates-menu-business]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80951" data-main="creativedesign" data-view="creativedesign">
-                <div data-main="true">
-                  <span><a href="#creativedesign">[@L[cds.sales/gd/hosting/website-builder:templates-menu-design]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80952" data-main="e-commerceproducts" data-view="e-commerceproducts">
-                <div data-main="true">
-                  <span><a href="#e-commerceproducts">[@L[cds.sales/gd/hosting/website-builder:templates-menu-commerce]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80953" data-main="education" data-view="education">
-                <div data-main="true">
-                  <span><a href="#education">[@L[cds.sales/gd/hosting/website-builder:templates-menu-education]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80954" data-main="foodrestaurant" data-view="foodrestaurant">
-                <div data-main="true">
-                  <span><a href="#foodrestaurant">[@L[cds.sales/gd/hosting/website-builder:templates-menu-food]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80955" data-main="healthbeauty" data-view="healthbeauty">
-                <div data-main="true">
-                  <span><a href="#healthbeauty">[@L[cds.sales/gd/hosting/website-builder:templates-menu-health]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80956" data-main="miscellaneousother" data-view="miscellaneousother">
-                <div data-main="true">
-                  <span><a href="#miscellaneousother">[@L[cds.sales/gd/hosting/website-builder:templates-menu-misc]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80957" data-main="music&entertainment" data-view="music&entertainment">
-                <div data-main="true">
-                  <span><a href="#music&entertainment">[@L[cds.sales/gd/hosting/website-builder:templates-menu-music]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80958" data-main="non-profitcausesreligion" data-view="non-profitcausesreligion">
-                <div data-main="true">
-                  <span><a href="#non-profitcausesreligion">[@L[cds.sales/gd/hosting/website-builder:templates-menu-non-profit]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80959" data-main="personalfamily" data-view="personalfamily">
-                <div data-main="true">
-                  <span><a href="#personalfamily">[@L[cds.sales/gd/hosting/website-builder:templates-menu-personal]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80960" data-main="petsanimals" data-view="petsanimals">
-                <div data-main="true">
-                  <span><a href="#petsanimals">[@L[cds.sales/gd/hosting/website-builder:templates-menu-pets]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80961" data-main="photographyart" data-view="photographyart">
-                <div data-main="true">
-                  <span><a href="#photographyart">[@L[cds.sales/gd/hosting/website-builder:templates-menu-photog]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80962" data-main="realestate" data-view="realestate">
-                <div data-main="true">
-                  <span><a href="#realestate">[@L[cds.sales/gd/hosting/website-builder:templates-menu-real-estate]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80963" data-main="sportsrecreation" data-view="sportsrecreation">
-                <div data-main="true">
-                  <span><a href="#sportsrecreation">[@L[cds.sales/gd/hosting/website-builder:templates-menu-sports]@L]</a></span>
-                </div>
-              </li>
-
-              <li data-ci="80964" data-main="travelhotels" data-view="travelhotels">
-                <div data-main="true">
-                  <span><a href="#travelhotels">[@L[cds.sales/gd/hosting/website-builder:templates-menu-travel]@L]</a></span>
-                </div>
-              </li>
-            </ul>
-          </div>
-        <div class="modal-header g-modal-header templates-modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-          <h4 class="modal-title" id="myModalLabel">[@L[cds.sales/gd/hosting/website-builder:templates-modal-header]@L]</h4>
-        </div>
-        <div class="modal-body g-modal-content templates-modal-content" id="app-modal">
-                <a name="autotransportation"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-auto]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/luxury-transport.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/car-repair-company.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/car-repair-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/trucking-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/on-time-trucking.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-auto-eighth]@L]</span>
-                    </li>
-                </ul>
-                <a name="businessfinancelaw"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-business]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tm-accountants.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/classic-legal.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-law-office.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/accounting-service.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/law-firm.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/welding-company.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-twelve]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/vivid-paint.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-business-thirteen]@L]</span>
-                    </li>
-                </ul>
-                <a name="creativedesign"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-design]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-photographer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/unique-boutique.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-planner.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/photography-business.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-eleven]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-designer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-thirteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/digital-world.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-fourteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/childrens-author.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-eighteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/blurb.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-nineteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twenty]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/continent-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twentyone]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/professional-photography.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-design-twentytwo]@L]</span>
-                    </li>
-                </ul>
-                <a name="e-commerceproducts"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-commerce]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/elegant-florist.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/watch-store.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/crop-farmer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/smart-phone-app.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-commerce-seventh]@L]</span>
-                    </li>
-                </ul>
-                <a name="education"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-education]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/preschool-education.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-education-third]@L]</span>
-                    </li>
-                </ul>
-                <a name="foodrestaurant"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-food]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/sweets-bakery.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/tea-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/casual-brewery.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/gourmet-restaurant.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/sumptuous-cuisine.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-fourteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/happy-hour.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-sixteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/so-thai.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-eighteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/british-pub.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-nineteen]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/china-china.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-food-twenty]@L]</span>
-                    </li>
-                </ul>
-                <a name="healthbeauty"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-health]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/contemporary-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/serenity-spa.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/lotus-yoga-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/unique-boutique.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/fitness-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/fitness-boot-camp.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/power-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/classic-barber-shop.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-health-thirteen]@L]</span>
-                    </li>
-                </ul>
-                <a name="miscellaneousother"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-misc]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-planner.jpg" data-wsl-error="hide-parent|#app-modal > ul > li"></div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/christian-church.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/childrens-author.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/blurb.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-misc-eighth]@L]</span>
-                    </li>
-                </ul>
-                <a name="music&entertainment"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-music]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-musician.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-lessons-dark.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/feel-the-music.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-lessons-light.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/music-venue.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-music-fifth]@L]</span>
-                    </li>
-                </ul>
-                <a name="non-profitcausesreligion"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-non-profit]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/hopeful-message.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/christian-church.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-non-profit-seventh]@L]</span>
-                    </li>
-                </ul>
-                <a name="personalfamily"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-personal]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/family-pet.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-bliss.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/bulletin-board.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/baby-girl-announcement.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/baby-boy-announcement.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-personal-ninth]@L]</span>
-                    </li>
-                </ul>
-                <a name="petsanimals"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-pets]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/family-pet.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/pampered-pets.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/premier-pet-sitters.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-fourth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/animal-shelter.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-pets-seventh]@L]</span>
-                    </li>
-                </ul>
-                <a name="photographyart"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-photog]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/wedding-photographer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/photography-business.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-designer.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-studio.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/professional-photography.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-photog-tenth]@L]</span>
-                    </li>
-                </ul>
-                <a name="realestate"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-real-estate]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-first]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/modern-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/hometown-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/southwest-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-fifth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/we-find-homes.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/smith-real-estate.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-seventh]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/urban-apartments.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-real-estate-eleven]@L]</span>
-                    </li>
-                </ul>
-                <a name="sportsrecreation"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-sports]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/contemporary-fitness.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/little-league.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-eighth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/skydiving-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-ninth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/golf-club.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-sports-tenth]@L]</span>
-                    </li>
-                </ul>
-                <a name="travelhotels"></a>
-                <h3>[@L[cds.sales/gd/hosting/website-builder:templates-menu-travel]@L]</h3>
-                <ul>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/caribbean-vacation.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-second]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/boutique-hotel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-third]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/180-south.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-sixth]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/continent-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-twelve]@L]</span>
-                    </li>
-                    <li>
-                        <div style="overflow: hidden;width: 201px;height: 146px;">
-                            <div class="wsbsolazy wsl-img" data-wsl-condition=".templates-modal|display:block" data-wsl-src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/wsb-templates/best-travel.jpg" data-wsl-error="hide-parent|#app-modal > ul > li">
-                            </div>
-                        </div>
-                        <span>[@L[cds.sales/gd/hosting/website-builder:templates-modal-travel-thirteen]@L]</span>
-                    </li>
-                </ul>
-        </div>
-        <div class="g-modal-footer">
-          <button type="button" class="btn btn-primary" data-dismiss="modal">[@L[cds.sales/_common:close-cap]@L]</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-<!-- How to Call it Modal
-  <button class="btn btn-primary view-all btn-lg" data-toggle="modal" data-target="#g-modal">
-    View All Designs
-  </button>
-
--->
-</div>
-<!-- End Template Modal -->
-
-
-<!-- JavaScript Test -->
-<atlantis:webstash type="js">
-<script type="text/javascript">
-/* ========================================================================
- * Bootstrap: modal.js v3.0.3
- * http://getbootstrap.com/javascript/#modals
- * ========================================================================
- * Copyright 2013 Twitter, Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- * ======================================================================== */
-
-
-+function ($) { "use strict";
-
-  // MODAL CLASS DEFINITION
-  // ======================
-
-  var Modal = function (element, options) {
-    this.options   = options
-    this.$element  = $(element)
-    this.$backdrop =
-    this.isShown   = null
-
-    if (this.options.remote) this.$element.load(this.options.remote)
-  }
-
-  Modal.DEFAULTS = {
-      backdrop: true
-    , keyboard: true
-    , show: true
-  }
-
-  Modal.prototype.toggle = function (_relatedTarget) {
-    return this[!this.isShown ? 'show' : 'hide'](_relatedTarget)
-  }
-
-  Modal.prototype.show = function (_relatedTarget) {
-    var that = this
-    var e    = $.Event('show.bs.modal', { relatedTarget: _relatedTarget })
-
-    this.$element.trigger(e)
-
-    if (this.isShown || e.isDefaultPrevented()) return
-
-    this.isShown = true
-
-    this.escape()
-
-    this.$element.on('click.dismiss.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
-
-    this.backdrop(function () {
-      var transition = $.support.transition && that.$element.hasClass('fade')
-
-      if (!that.$element.parent().length) {
-        that.$element.appendTo(document.body) // don't move modals dom position
-      }
-
-      that.$element.show()
-
-      if (transition) {
-        that.$element[0].offsetWidth // force reflow
-      }
-
-      that.$element
-        .addClass('in')
-        .attr('aria-hidden', false)
-
-      that.enforceFocus()
-
-      var e = $.Event('shown.bs.modal', { relatedTarget: _relatedTarget })
-
-      transition ?
-        that.$element.find('.modal-dialog') // wait for modal to slide in
-          .one($.support.transition.end, function () {
-            that.$element.focus().trigger(e)
-          })
-          .emulateTransitionEnd(300) :
-        that.$element.focus().trigger(e)
-    })
-  }
-
-  Modal.prototype.hide = function (e) {
-    if (e) e.preventDefault()
-
-    e = $.Event('hide.bs.modal')
-
-    this.$element.trigger(e)
-
-    if (!this.isShown || e.isDefaultPrevented()) return
-
-    this.isShown = false
-
-    this.escape()
-
-    $(document).off('focusin.bs.modal')
-
-    this.$element
-      .removeClass('in')
-      .attr('aria-hidden', true)
-      .off('click.dismiss.modal')
-
-    $.support.transition && this.$element.hasClass('fade') ?
-      this.$element
-        .one($.support.transition.end, $.proxy(this.hideModal, this))
-        .emulateTransitionEnd(300) :
-      this.hideModal()
-  }
-
-  Modal.prototype.enforceFocus = function () {
-    $(document)
-      .off('focusin.bs.modal') // guard against infinite focus loop
-      .on('focusin.bs.modal', $.proxy(function (e) {
-        if (this.$element[0] !== e.target && !this.$element.has(e.target).length) {
-          this.$element.focus()
-        }
-      }, this))
-  }
-
-  Modal.prototype.escape = function () {
-    if (this.isShown && this.options.keyboard) {
-      this.$element.on('keyup.dismiss.bs.modal', $.proxy(function (e) {
-        e.which == 27 && this.hide()
-      }, this))
-    } else if (!this.isShown) {
-      this.$element.off('keyup.dismiss.bs.modal')
-    }
-  }
-
-  Modal.prototype.hideModal = function () {
-    var that = this
-    this.$element.hide()
-    this.backdrop(function () {
-      that.removeBackdrop()
-      that.$element.trigger('hidden.bs.modal')
-    })
-  }
-
-  Modal.prototype.removeBackdrop = function () {
-    this.$backdrop && this.$backdrop.remove()
-    this.$backdrop = null
-  }
-
-  Modal.prototype.backdrop = function (callback) {
-    var that    = this
-    var animate = this.$element.hasClass('fade') ? 'fade' : ''
-
-    if (this.isShown && this.options.backdrop) {
-      var doAnimate = $.support.transition && animate
-
-      this.$backdrop = $('<div class="modal-backdrop ' + animate + '" />')
-        .appendTo(document.body)
-
-      this.$element.on('click.dismiss.modal', $.proxy(function (e) {
-        if (e.target !== e.currentTarget) return
-        this.options.backdrop == 'static'
-          ? this.$element[0].focus.call(this.$element[0])
-          : this.hide.call(this)
-      }, this))
-
-      if (doAnimate) this.$backdrop[0].offsetWidth // force reflow
-
-      this.$backdrop.addClass('in')
-
-      if (!callback) return
-
-      doAnimate ?
-        this.$backdrop
-          .one($.support.transition.end, callback)
-          .emulateTransitionEnd(150) :
-        callback()
-
-    } else if (!this.isShown && this.$backdrop) {
-      this.$backdrop.removeClass('in')
-
-      $.support.transition && this.$element.hasClass('fade')?
-        this.$backdrop
-          .one($.support.transition.end, callback)
-          .emulateTransitionEnd(150) :
-        callback()
-
-    } else if (callback) {
-      callback()
-    }
-  }
-
-
-  // MODAL PLUGIN DEFINITION
-  // =======================
-
-  var old = $.fn.modal
-
-  $.fn.modal = function (option, _relatedTarget) {
-    return this.each(function () {
-      var $this   = $(this)
-      var data    = $this.data('bs.modal')
-      var options = $.extend({}, Modal.DEFAULTS, $this.data(), typeof option == 'object' && option)
-
-      if (!data) $this.data('bs.modal', (data = new Modal(this, options)))
-      if (typeof option == 'string') data[option](_relatedTarget)
-      else if (options.show) data.show(_relatedTarget)
-    })
-  }
-
-  $.fn.modal.Constructor = Modal
-
-
-  // MODAL NO CONFLICT
-  // =================
-
-  $.fn.modal.noConflict = function () {
-    $.fn.modal = old
-    return this
-  }
-
-
-  // MODAL DATA-API
-  // ==============
-
-  $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
-    var $this   = $(this)
-    var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, ''))) //strip for ie7
-    var option  = $target.data('modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
-
-    e.preventDefault()
-
-    $target
-      .modal(option, this)
-      .one('hide', function () {
-        $this.is(':visible') && $this.focus()
-      })
-  })
-
-  $(document)
-    .on('show.bs.modal',  '.modal', function () { $(document.body).addClass('modal-open') })
-    .on('hidden.bs.modal', '.modal', function () { $(document.body).removeClass('modal-open') })
-
-}(jQuery);
-
-
-/*! jQuery So Lazy (Loader)
- * Author: Dave Utley
- * 
- * 
- * --v1.1.0--
- * - improved performance on conditional check
- * - improved performance on position check
- * - added hide onerror feature
- * 
- */
-if(typeof wsbsolazy == 'undefined'){
-    var wsbsolazy = {};
-    (function(jQuery){
-        var $lazyObjects,$window;
-        var fadeInSpeed = 750;
-        var fadeInDelay = 0;
-        var distanceBuffer = 100; // distance in pixels
-        var scrollCheckDelay = 300;
-        var scrollCheckInterval;
-        var isScrolling = false;
-        
-        $(document).ready(function(){
-            $lazyObjects = $('.wsbsolazy');
-            $window = $(window);
-            $scrollElements = $('div,ul');
-            $triggerObjects = $window.add($scrollElements);
-        
-            setupAllLazyObjects();
-        
-            setTimeout(function(){ wsbsolazy.check(); },500);
-
-            $triggerObjects.bind('scroll',function(e){
-                // interval while scrolling method
-                var resetTopValues = false;
-                if(!isScrolling){
-                    wsbsolazy.check(this);
-                    // clear interval
-                    clearInterval(scrollCheckInterval);
-                    // set interval
-                    scrollCheckInterval = setInterval(function(){
-                        wsbsolazy.check(this);
-                        clearInterval(scrollCheckInterval);
-                        isScrolling = false;
-                    },scrollCheckDelay);
-                }
-                isScrolling = true;
-            });
-        });
-    
-    
-        function setupAllLazyObjects(){
-            $lazyObjects.each(function(){
-                setupLazyObject($(this));
-            });
-        }
-    
-        function setupLazyObject($obj){
-            var $this = $obj;
-            var condition = $this.attr('data-wsl-condition');
-            if(typeof condition != 'undefined'){
-                var conditionParts = condition.split('|');
-                var conditionCss = conditionParts[1].split(':');
-                $this[0]['wsl-condition-property'] = conditionCss[0];
-                $this[0]['wsl-condition-css-value'] = conditionCss[1];       
-                $this[0]['wsl-condition-target'] = $(conditionParts[0]);
-            }
-            var error = $this.attr('data-wsl-error');
-            if(typeof error != 'undefined'){
-                var errorParts = error.split('|');
-                $this[0]['wsl-error-action'] = errorParts[0];
-                $this[0]['wsl-error-selector'] = errorParts[1];
-            }
-        }
-    
-        function loadObject($obj){
-            var src = $obj.attr('data-wsl-src');
-            
-            // load the image
-            var image = new Image();
-            
-            image.onload = function(){
-                $('<img src="'+src+'" />')
-                    .css({opacity:0.0,width:'100%',height:'100%'})
-                    .appendTo($obj)
-                    .delay(fadeInDelay)
-                    .animate({opacity:1.0},fadeInSpeed,function(){
-                        $obj.css('background-image','none');
-                    });
-            };
-            
-            image.onerror = function(){
-                var action = $obj[0]['wsl-error-action'];
-                var selector = $obj[0]['wsl-error-selector'];
-                if(typeof action != 'undefined' && typeof selector != 'undefined'){
-                    if(action == 'hide-parent'){
-                        $obj.parents(selector).hide();
-                    }
-                }
-            };
-            
-            // set the image source
-            image.src = src;
-            
-            // remove from $lazyObjects
-            $lazyObjects = $lazyObjects.not($obj);
-        }
-    
-        // functions that need to be called from outside the scope of the main function
-        // wsbsolazy.functionName();
-        $.extend(wsbsolazy,{
-        
-            check:function(scrolledElement){
-                var windowTop = $window.scrollTop();
-                var windowBottom = windowTop+$window.height();
-                var setTopValues = false;
-                        
-                if(typeof scrolledElement != 'undefined'){
-                    if(scrolledElement.nodeName != undefined){
-                        setTopValues = true;
-                    }
-                }else{
-                    setTopValues = true;
-                }
-                
-                $lazyObjects.each(function(){
-                    var $this = $(this);
-                    var performPositionCheck = true;
-                    
-                    // check if condition is met
-                    if(typeof $this[0]['wsl-condition-target'] != 'undefined'){
-                        performPositionCheck = false;
-                        
-                        if($($this[0]['wsl-condition-target']).css($this[0]['wsl-condition-property']) == $this[0]['wsl-condition-css-value']){
-                            performPositionCheck = true;
-                        }
-                    }
-                    
-                    // check to see if in window
-                    if(performPositionCheck){
-                        // get previously stored vertical element position and height
-                        var top = $this[0]['wsl-top'];
-                        var height = $this[0]['wsl-height'];
-                        
-                        // if position and height hasn't been stored yet store it
-                        if(typeof top == 'undefined' || setTopValues){
-                            top = $this[0]['wsl-top'] = $this.offset().top;
-                        }
-                        if(typeof height == 'undefined'){
-                            height = $this[0]['wsl-height'] = $this.height();
-                        }
-                        
-                        // check if element is in viewport
-                        if(top > (windowTop-height)-distanceBuffer && top < windowBottom+distanceBuffer){
-                            loadObject($this);
-                        }
-                    }
-                });
-            },
-        
-            // add new or re-add removed elements
-            addLazyOjects:function(target){
-                var $addElements = $(target).find('.wsbsolazy');
-                $addElements.each(function(){
-                    setupLazyObject($(this));
-                });
-                $lazyObjects = $lazyObjects.add($addElements);
-            },
-            
-            loadObject:function($obj){
-                // applies loadObject function above
-                loadObject($obj);
-            }
-        });
-    })(wsbsolazy.$);
-}
-/*TEMPLATE MODAL */
-
-function onTemplateModalShown (e) {
-  $('.templates-modal').show();
-  $this = $(e.relatedTarget);
-  if(!$this.hasClass('view-all')){
-      var hash = $this.find('a').attr('href');
-      hash = hash.replace('#','');
-      setTimeout(function(){
-          var $targetElement = $('a[name="'+hash+'"]');
-          $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){wsbsolazy.check();}});
-      },500);
-      
-  }else{
-      setTimeout(function(){
-          wsbsolazy.check(true);
-      },500);
-  }               
-}
-function onTemplateModalHidden (e) {
-  $('.templates-modal').hide();
-}
-    $(document).ready(function () {
-         $('#g-modal').on('show.bs.modal', function (e) {
-            $('.templates-modal').show();
-            $this = $(e.relatedTarget);
-            if(!$this.hasClass('view-all')){
-                var hash = $this.find('a').attr('href');
-                hash = hash.replace('#','');
-                setTimeout(function(){
-                    var $targetElement = $('a[name="'+hash+'"]');
-                    $('.templates-modal-content').scrollTo($targetElement,1000,{/*offset:{top:-20},*/onAfter:function(){wsbsolazy.check();}});
-                },500);
-                
-            }else{
-                setTimeout(function(){
-                    wsbsolazy.check(true);
-                },500);
-            }               
-        });
-
-        $('#g-modal').on('hide.bs.modal', function(e){
-            $('.templates-modal').hide();
-        });
-    });
-// planbox select boxes
-var PlanBox6UI = {
-  showTerm: function (li) {
-    if (li) {
-      var viewData = li.attr('data-view').split("|");
-      var container = li.parents('.plan');
-      if (container) {
-        container.children(".price").html(viewData[0] + "<span>/month</span>");
-        container.find(".reg-price").css("visibility", 0 < parseInt(viewData[2]) ? "visible" : "hidden");
-        container.find(".reg-price").html('<strike>' + viewData[1] + '</strike>' + '<span>SAVE ' + viewData[2] +'%</span>');
-      }
-    }
-  },
-
-  changeSelected: function (li, parent) {
-    var content = li.find('div[data-main=true]').html(); //Find new content
-    parent.find('.plan-droplist-selected').html(content); //Place new content
-    li.parents('.plan').find("a.flt-btn-orng").attr("data-cart", li.data("main"));
-    $("#frmAddToCart input#product").val(li.attr("data-main"));
-    }
-  }
-  $(document).ready(function () {
-    $("a.flt-btn-orng, .slideshow-description>a.flt-btn-grn").click(function (event) {
-      var selected = $(this).attr("data-cart");
-      if (selected && selected != "") {
-        var $form = $("#frmAddToCart");
-        $form.find('input[name="formSubmitButton"]').val("Add-to-Cart");
-        $form.find('input#product').val(selected);
-        var data = $form.serialize();
-        var url = $form.attr("action");
-        $form.submit();
-        }
-    });
-  $('.plan-droplist-select').click(function () { //Open & close dropdown
-    var wrap = $(this);
-    if (wrap.hasClass('droplist-open')) {
-      wrap.removeClass('droplist-open');
-    } else {
-      wrap.addClass('droplist-open');
-    }
-  });
-
-  $('.plan-droplist-select').mouseleave(function () { //Close dropdown is mouse leaves
-    $(this).removeClass('droplist-open');
-  });
-  
-  $('.plan-droplist-select > ul > li').click(function () {
-    var li = $(this);
-    var parent = li.parents('.plan-droplist-select');
-    li.siblings('li').removeClass('selected'); //Remove current selected
-    li.addClass('selected'); //Mark new selected
-    PlanBox6UI.showTerm(li); //Show term content
-    PlanBox6UI.changeSelected(li, parent); //Change selectbox content
-  });
-  // template slider rollovers
-        $('#templates .templates-slider .slidethis li').each(function(){
-            var $this = $(this);
-            $this.hover(function(){
-                $this.find('.wsl-img').animate({top:-10,left:-10,width:232,height:288},150);
-                $this.find('.hover').css({display:'block',opacity:'0.0'}).animate({opacity:'1.0'},150);
-            },function(){
-                $this.find('.wsl-img').animate({top:0,left:0,width:212,height:268},150);
-                $this.find('.hover').animate({opacity:'0.0'},150,function(){
-                    $(this).css({display:'none'})
-                });
-            });
-        });
-});
-</script>
-</atlantis:webstash>
-
-    <atlantis:webstash type="css">
-      <style>
-        /* video button */
-        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
-        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
-        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
-        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
-        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
-        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
-        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
-        /* product specific */
-        
-        /* Layout */
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        .view-all{margin:20px auto;}
-        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-right.png) no-repeat center bottom;}
-        
-        /* speach bubbles */
-        .speach-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-didYouKnow-email.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speach-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/speach-bubble-left-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speach-bubble-right-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/speach-bubble-left-white.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="js">
-      <script>
-        // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-        $(document).ready(function(){
-          if(typeof youtubeVideo === 'undefined'){
-            window.youtubeVideo = {
-              _src: 'https://www.youtube.com/embed/',
-              loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
-                if(typeof parameters === 'object'){
-                  var paramString = '';
-                  
-                  // add origin to src
-                  parameters.origin = window.location.protocol+'//'+window.location.host
-        
-                  if(youtubeVideo._src.indexOf('?') === -1){
-                    paramString += '?';
-                  }else{
-                    paramString += '&';
-                  }
-        
-                  for(param in parameters){
-                    if(paramString.length > 2){
-                      paramString += '&';
-                    }
-                    paramString += param+'='+parameters[param];
-                  }
-                  parameters = paramString;
-                }
-                
-                var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
-        
-                // append/prepend to container
-                if(typeof container === 'string'){
-                  container = $(container);
-                }
-        
-                if(typeof insertType === 'undefined' || insertType === 'append'){
-                  container.append($video);
-                }else{
-                  container.prepend($video);
-                }
-        
-                if(typeof callback === 'function'){
-                  $video.load(function(){
-                    callback($video[0]);
-                  });
-                }
-        
-                return $video[0];
-              }
-            };
-          }
-          
-          var $containers = $('.video-marquee-wrapper');
-          $containers.each(function(){
-            var $this = $(this);
-            var videoId = $this.data('youtube-id');
-            $this.find('.play-button, .cta').bind('click.youtube',function(event){
-              // remove this event
-              $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
-        
-              // load the video
-              youtubeVideo.loadVideo(
-                  videoId,
-                  '100%',
-                  '100%',
-                  function(video){
-                      var $videoInfo = $this.find('.video-info');
-                      $videoInfo.animate({'opacity':0.0},1000,function(){
-                          $videoInfo.css({'display':'none'});
-                      });
-                      //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
-                  },
-                  {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
-                  $(".video-marquee"),
-                  'prepend'
-              );
-            }).css({'cursor':'pointer'});
-          });
-        });
-        
-      </script>
-    </atlantis:webstash>
-    <section id="onlinestore" class="white">
+    </section>
+    <section id="product" class="white">
       <div class="container">
         <div class="row">
-          <div style="margin-top:35px" class="onlinestore-icon"></div>
+          <div style="margin-top:35px" class="features-online-store"></div>
         </div>
         <div class="row">
           <div style="margin-top:15px" class="text-center">
@@ -3115,27 +1400,21 @@ var PlanBox6UI = {
             <h4 style="margin-top:10px" class="strong">
               <div>
                  
-                We created website builder to make constructing a website easy
+                Online Store includes everything you need for a complete eCommerce website. See how easy it is.
               </div>
-              <div>See what <mark>BillyBikes.org</mark> could be!</div>
             </h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="text-center">
-            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
         </div>
       </div>
       <section data-youtube-id="rMF9d8-3WBA" class="video-marquee-wrapper">
         <div class="container">
-          <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+          <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
           <div class="row">
             <div class="col-sm-4"></div>
-            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
             <div class="video-info col-sm-4">
               <div class="video-marquee-info text-center">
-                <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
+                <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
                 <h4 class="uppercase walsheim-bold">What is Online Store?</h4>
                 <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
               </div>
@@ -3149,35 +1428,16 @@ var PlanBox6UI = {
             <div class="col-sm-3">
               <div style="margin-top:-65px" class="half-hero-right"></div>
             </div>
-            <div style="margin-top:-10px" class="col-sm-5 speach-bubble-right-green">
-              <div class="speach-bubble-right-div">
+            <div style="margin-top:-10px" class="col-sm-5 speech-bubble-right-green">
+              <div class="speech-bubble-right-div">
                 <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
+                <h5 style="margin-top:10px;text-transform:none">With built-in payment processing, you can accept all major credit cards and the funds are automatically transferred to you bank account.</h5>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- p4p.office365-->
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        
-        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-      </style>
-    </atlantis:webstash>
     <section id="O365-email" class="gray">
       <div class="container">
         <div class="row">
@@ -3196,8 +1456,8 @@ var PlanBox6UI = {
         </div>
         <div class="row">
           <div style="margin-top:30px">
-            <div class="col-sm-9 speach-bubble-left-green">
-              <div class="speach-bubble-left-div">
+            <div class="col-sm-9 speech-bubble-left-green">
+              <div class="speech-bubble-left-div">
                 <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
                 <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
               </div>
@@ -3209,39 +1469,36 @@ var PlanBox6UI = {
         </div>
       </div>
     </section>
-    <!-- p4p.whyUs-->
-    <!-- include _why-us-->
-    <div class="container">
-      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
-    </div>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .container .row .topSpacing{padding-top:20px;}
-      .container .row .leftSpacing{padding-left:50px;}
-      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-      .icon-spacing{text-align: center;font-size: 2em;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      .domain-icon-spacing {margin-right: 60px;}
-      .col-spacer2{width:43%;}
-      .col-spacer1{width: 30%;}
-      
-      h2{margin-top:0px;margin-bottom:0px;}
-      h3{margin-top:0px;margin-bottom:0px;}
-      .product-name{font-weight:800;padding-top:10px;}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-      // #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      // #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
-      #got-domain-selected{display:none;}
-      
-    </style>
+    <section id="why-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <h2 class="text-center">Why get online with us?</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+              <h3>We're the world leader</h3>
+              <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+              <h3>Our 24/7 support is awesome</h3>
+              <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+              <h3>12 million people trust us</h3>
+              <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr>
     <section id="got">
       <div class="container">
         <div class="row">
@@ -3256,7 +1513,8 @@ var PlanBox6UI = {
                 <div class="features-domain-name"></div>
                 <label class="h3 uppercase product-name">Domain Name</label>
               </div>
-              <div class="col-sm-4 text-center"><div class='online-store-icon'></div>
+              <div class="col-sm-4 text-center">
+                <div class="features-online-store"></div>
                 <label class="h3 uppercase product-name">Online Store</label>
               </div>
               <div class="col-sm-4 text-center">
@@ -3294,7 +1552,10 @@ var PlanBox6UI = {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2 {
+section h2,
+section .h2 {
+  margin-bottom: 40px;
+  margin-top: 0;
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -3302,7 +1563,10 @@ section h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3 {
+section h3,
+section .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -3347,115 +1611,112 @@ ul li.no-check {
 }
 
       </style>
-      <!-- landing page styling-->
-      <style>
-        /* fix the greek font styling issue here */
-        ##if(countrySiteAny(gr))
-        * {
-          font-family: arial !important;
-        }
-        .close {
-          font-family: uxfont !important;
-        }
-        .uxicon {
-          font-family: uxfont !important;
-        }
-        ##endif
-        
-        /* override UXCORE font settings for all LPs */
-        h2 {
-          margin-bottom: 40px;
-          margin-top: 0;
-          font-size: 4rem;
-          text-transform: uppercase;
-          font-family: 'Walsheim-Black';
-          font-weight: 300;
-          line-height: 1.1;
-          color: #333;
-        }
-        h3 {
-          font-size: 3rem;
-          text-transform: uppercase;
-          font-family: 'Walsheim-Black';
-          margin-top: 20px;
-          margin-bottom: 10px;
-          font-weight: 300;
-          line-height: 1.1;
-        }
-        
-        /* default LP marquee styling */
-        .dash { 
-          letter-spacing: -10px; 
-          font-size: 1.5em; 
-          line-height: 0.6; 
-          vertical-align: -0.1em; 
-        }
-        .marquee-content-wrapper { 
-          padding: 40px; 
-          margin-left: 10px; 
-          margin-right: 10px; 
-          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/img/ie_marquee_bg.png);
-          background-color: rgba(0,138,50,0.9); 
-          color: white; 
-        }
-        .marquee-content-wrapper:not(old) {
-          background-image: none;
-          background-color: rgba(0,138,50,0.9);    
-        }
-        .marquee.marquee-white {
-            color: #fff;
-        }
-        .marquee.marquee-white h1,
-        .marquee.marquee-white h2,
-        .marquee.marquee-white h3,
-        .marquee.marquee-white h4,
-        .marquee.marquee-white h5,
-        .marquee.marquee-white h6 {
-            color: #fff;
-        }
-        .marquee.marquee-white .dashed-underline {
-            border-bottom-color: #fff;
-        }
-        .marquee.marquee-white a:not(.btn) {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .marquee.marquee-white a:not(.btn):hover {
-            text-decoration: none;
-        }
-        .marquee .jump-arrow-btn { margin-top:30px;}
-        .marquee h1 { 
-          font-size: 2rem;
-          text-transform: uppercase;
-          color: #ef6c0f;
-          font-family: 'Walsheim-Bold';
-          margin-bottom: 10px;
-          margin-top:0;
-        }
-        .marquee h2 { 
-          font-weight: 100;
-          margin-top:0;
-          margin-bottom: 20px;
-          font-family: 'Walsheim-Bold';
-          text-align: left;
-        }
-        .sf-tipper-target {
-          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-          width: 14px;
-          height: 14px;
-          display: inline-block;
-          vertical-align: baseline;
-          cursor: pointer;
-        }
-        
-      </style>
       <style>
         .gray{background-color:#E8E8E8;}
         .green{background-color:#78C043}
         .white{background-color:white}
         .uppercase{text-transform:uppercase}
         .lowercase{text-transform:lowercase}
-        .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+        
+        #getItNow { padding-bottom: 0; padding-top: 0;}
+        #getItNow .container { position: relative; }
+        #getItNow mark { line-height: 1.1em; }
+        #getItNow mark::after { height: 1.21em; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
+        
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+        
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+        
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
+        section{padding-top:0px;padding-bottom:0px}
+        
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+        
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        
+        h2{margin-top:0px;margin-bottom:0px;}
+        h3{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        /* speech bubbles */
+        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-right-div {margin-left:5%;width:90%;}
+        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-left-div {margin-left:5%;width:90%;}
+        
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .heading{padding-top:30px;}
+        .starter-pack{padding-bottom: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .logo-label{padding-top: 15px;}
+        
+        /* video button */
+        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+        
+        /* Layout */
+        .view-all{margin:20px auto;}
+        
+        .why-us-title{margin-top:10px;}
+        .why-us-text{margin-top:10px;}
+        
+        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+        
+        .product-name{font-weight:800;padding-top:10px;}
+        
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
+        #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
+        #got-domain-selected{display:none;}
         
       </style>
     </atlantis:webstash>
@@ -3488,58 +1749,88 @@ ul li.no-check {
         // $(".domainOption2").html(domainInfo.domainOption2);
         // $(".domainOption3").html(domainInfo.domainOption3);
       });
+      
     </script>
+    <!-- atlantis:webstash(type="js")-->
     <script>
-      $(window).load(function() {
-        var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
-          maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-        }).css("min-height", maxTitleHeight);
+      // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+      $(document).ready(function(){
+        if(typeof youtubeVideo === 'undefined'){
+          window.youtubeVideo = {
+            _src: 'https://www.youtube.com/embed/',
+            loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+              if(typeof parameters === 'object'){
+                var paramString = '';
+                  
+                // add origin to src
+                parameters.origin = window.location.protocol+'//'+window.location.host
       
-        var maxIconHeight = 0;
-        $(".plan-image").each(function(index, image) {
-          maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
-        }).css({height: maxIconHeight, marginBottom: 10});
+                if(youtubeVideo._src.indexOf('?') === -1){
+                  paramString += '?';
+                }else{
+                  paramString += '&';
+                }
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
+                for(param in parameters){
+                  if(paramString.length > 2){
+                    paramString += '&';
+                  }
+                  paramString += param+'='+parameters[param];
+                }
+                parameters = paramString;
+              }
+      
+              var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+      
+              // append/prepend to container
+              if(typeof container === 'string'){
+                container = $(container);
+              }
+      
+              if(typeof insertType === 'undefined' || insertType === 'append'){
+                container.append($video);
+              }else{
+                container.prepend($video);
+              }
+      
+              if(typeof callback === 'function'){
+                $video.load(function(){
+                  callback($video[0]);
+                });
+              }
+      
+              return $video[0];
+            }
+          };
         }
+          
+        var $containers = $('.video-marquee-wrapper');
+        $containers.each(function(){
+          var $this = $(this);
+          var videoId = $this.data('youtube-id');
+          $this.find('.play-button, .cta').bind('click.youtube',function(event){
+            // remove this event
+            $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+      
+            // load the video
+            youtubeVideo.loadVideo(
+                videoId,
+                '100%',
+                '100%',
+                function(video){
+                    var $videoInfo = $this.find('.video-info');
+                    $videoInfo.animate({'opacity':0.0},1000,function(){
+                        $videoInfo.css({'display':'none'});
+                    });
+                    //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                },
+                {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
+                $(".video-marquee"),
+                'prepend'
+            );
+          }).css({'cursor':'pointer'});
+        });
       });
-      
-    </script>
-    <script type="text/javascript">
-      jQuery.query={get:function(c){var b=window.location.search.substring(1);var a=b.split("&");for(i=0;i<a.length;i++){ft=a[i].split("=");if(ft[0]==c){return ft[1]}}return""}};(function(a){a.fn.wresize=function(b){version="1.1";wresize={fired:false,width:0};function d(){if(a.browser.msie){if(!wresize.fired){wresize.fired=true}else{var e=parseInt(a.browser.version,10);wresize.fired=false;if(e<7){return false}else{if(e==7){var f=a(window).width();if(f!=wresize.width){wresize.width=f;return false}}}}}return true}function c(f){if(d()){return b.apply(this,[f])}}this.each(function(){if(this==window){a(this).resize(c)}else{a(this).resize(b)}});return this}})(jQuery);function getMaxZ(){var a=Math.max.apply(null,$.map($("body > *"),function(b,c){if($(b).css("position")=="absolute"){return parseInt($(b).css("z-index"),10)||1}else{return 1}}));return a}function getMaxZ(a){var c="body *:not(#"+a+")";var b=Math.max.apply(null,$.map($(c),function(d,f){if($(d).css("position")=="absolute"){return parseInt($(d).css("z-index"),10)||1}else{return 1}}));return b}jQuery.fn.currentMousePosition=function(b){var a=$("#[isjsonrendercontainer]");if(b!==null&&b!==undefined){$(a).data("currentMousePosition",b)}else{if($(a).data("currentMousePosition")==null||$(a).data("currentMousePosition")==undefined){$(a).data("currentMousePosition",{left:0,top:0})}return $(a).data("currentMousePosition")}};jQuery.fn.lockMousePosition=function(b){var a=$(this).getJsonContainerDiv();$(a).data("lockedMousePosition",$(a).currentMousePosition())};jQuery.fn.lockedMousePosition=function(){return $(this).getJsonContainerDiv().data("lockedMousePosition")};jQuery.fn.getJsonContainerDiv=function(){var a=$(this).parents().andSelf().filter("#[isjsonrendercontainer]:first");return a};var atl_HideInvoked=false;function atl_ToggleDisplay(b){var a=document.getElementById(b);if(a){a.style.display=(a.style.display=="block"?"none":"block")}return true}function atl_SwapDisplay(a,b){atl_ToggleDisplay(a);atl_ToggleDisplay(b);return true}function atl_Go(b,a){if((a==null)||(a=="")){a="_self"}window.open(b,a)}function atl_PopHelp(a){var b=window.open(a,"spop","left=20,top=20,resizable=yes,scrollbars=yes,width=610,height=620")}function atl_PopUp(c,b,a){var d=window.open(c,b,a)}var atl_quickhelp_source;function atl_OnQuickHelpError(a){}function atl_GetQuickHelpContent(b,d,c,e){if(typeof(atl_GetQuickHelpUrl)!="undefined"){var f=atl_GetQuickHelpUrl();var a=(f.indexOf("?")<0)?"?":"&";atl_quickhelp_source=e;$.ajax({type:"GET",url:f+a+"targetDivId=qh&name="+b,contentType:"application/json; charset=utf-8",dataType:"json",success:d,error:c})}}function atl_ShowDivContent(a){if(a!=null&&!atl_HideInvoked){a.style.display="block";a.style.visibility="visible"}}function atl_ShowHelp(a){var c=a.offsetTop;var b=a.offsetParent;while(b){c+=b.offsetTop;b=b.offsetParent}return c}function atl_getOffsetLeft(a){var b=a.offsetLeft;var c=a.offsetParent;while(c){b+=c.offsetLeft;c=c.offsetParent}return b}function atl_getScrollY(){var a=0;if(typeof(window.pageYOffset)=="number"){a=window.pageYOffset}else{if(document.body&&(document.body.scrollLeft||document.body.scrollTop)){a=document.body.scrollTop}else{if(document.documentElement&&(document.documentElement.scrollLeft||document.documentElement.scrollTop)){a=document.documentElement.scrollTop}}}return a}function atl_ShowHelpById(d,c){if(c){var b=340;var e=atl_getOffsetLeft(d);var h=(window.innerWidth)?window.innerWidth-25:document.body.clientWidth;if((e+b)>h){e=h-b}newX=e;var a=c.offsetHeight;var f=atl_ShowHelp(d)+d.offsetHeight;var g=(window.innerHeight)?window.innerHeight-25:document.body.clientHeight;if((f+a)>g+atl_getScrollY()){f=atl_ShowHelp(d)-a}newY=f;c.style.top=newY+"px";c.style.left=newX+"px";c.left=newX+"px";c.left=newY+"px"}}function atl_SetQuickHelpDiv(b,c){c=atl_quickhelp_source;var a=document.getElementById("atl_quickhelp");if(a!=null&&b!=null){a.innerHTML=b.Html;atl_ShowHelpById(c,a);atl_ShowDivContent(a);if(!$.jCache.hasItem(b.Data)){$.jCache.setItem(b.Data,b.Html)}}}function atl_ShowQuickHelp(a,c,e){atl_HideInvoked=false;var d=document.getElementById("atl_quickhelp");if(d==null){return}var f;if(a.target!=null){f=a.target}else{if(a.srcElement!=null){f=a.srcElement}else{return}}if(e){var b=getMaxZ(d.id);if(d.style.zIndex<=b){d.style.zIndex=b+1}}if(!$.jCache.hasItem(c)){atl_GetQuickHelpContent(c,atl_SetQuickHelpDiv,atl_OnQuickHelpError,f)}else{d.innerHTML=$.jCache.getItem(c);atl_ShowHelpById(f,d);atl_ShowDivContent(d)}}function atl_HideQuickHelp(){atl_HideInvoked=true;var a=document.getElementById("atl_quickhelp");if(a!=null){a.style.display="none";a.style.visibility="hidden"}}function atlCookieDomain(){var b=window.location.hostname;var c=b.lastIndexOf(".");if(c<0){return"."+b}else{var a="";if(b.lastIndexOf(".",c-1)>-1){a=b.substr(b.lastIndexOf(".",c-1))}else{a="."+b}return a}}function atlSetMemCookie(c,d,e){var b=new Date();var a=c+"="+d+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlSetCookie(d,e,f){var b=new Date();var c=new Date(Date.parse(b.getDay()+"/"+b.getMonth()+"/"+(b.getFullYear()+f)));var a=d+"="+e+"; expires="+c.toGMTString()+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlReadCookie(e){var b="";if(document.cookie.length>0){var d=e+"=";var a=document.cookie.indexOf(d);var c=0;if(a>-1){a+=d.length;c=document.cookie.indexOf(";",a);if(c<a){c=document.cookie.length}b=document.cookie.substring(a,c)}}return unescape(b)}function atl_isemailvalid(c){var a="@";var b=".";var d=c.indexOf(a);var f=c.length;var e=c.indexOf(b);if(c.indexOf(a)==-1){return false}if(c.indexOf(a)==-1||c.indexOf(a)==0||c.indexOf(a)==f){return false}if(c.indexOf(b)==-1||c.indexOf(b)==0||c.indexOf(b)==f){return false}if(c.indexOf(a,(d+1))!=-1){return false}if(c.substring(d-1,d)==b||c.substring(d+1,d+2)==b){return false}if(c.indexOf(b,(d+2))==-1){return false}if(c.indexOf(" ")!=-1){return false}return true}function atl_isnoscript(b){var a=/[<>]+/;if(a.test(b)){return false}return true}function atl_textarea_trim(a,b){if(a.value.length<=b){return}a.value=a.value.substr(0,b)}function atl_textarea_canaddchar(b,d){var c=null;if(typeof(b.onkeypress.arguments[0])!="undefined"){c=b.onkeypress.arguments[0].keyCode}else{if(document.selection.createRange().text.length!=0){return true}var c=event.keyCode}var a=[8,37,38,39,40,46];for(var e=0;e<a.length;e++){if(a[e]==c){return true}}if(b.value.length<d){return true}return false}(function(a){this.version="(beta)(0.0.1)";this.maxSize=10;this.keys=[];this.cache_length=0;this.items=[];this.setItem=function(b,c){if(typeof(c)!="undefined"){if(typeof(this.items[b])=="undefined"){this.cache_length++}this.keys.push(b);this.items[b]=c;if(this.cache_length>this.maxSize){this.removeOldestItem()}}return c};this.removeItem=function(b){var c;if(typeof(this.items[b])!="undefined"){this.cache_length--;var c=this.items[b];delete this.items[b]}return c};this.getItem=function(b){return this.items[b]};this.hasItem=function(b){return typeof(this.items[b])!="undefined"};this.removeOldestItem=function(){this.removeItem(this.keys.shift())};this.clear=function(){var b=this.cache_length;this.keys=[];this.cache_length=0;this.items=[];return b};a.jCache=this;return a})(jQuery);var stDivsLoadedList="";function piPositionDiv(c){var d=-1;var e=-1;if($(c).args().doCenterToScreen===true){$(c).centerToScreen()}else{var b=$(c).lockedMousePosition();if(b!==undefined&&b!==null){d=b.left-10;e=b.top-10}if($(c).args().overridePosition!==undefined&&$(c).args().overridePosition!==null){e=$(c).args().overridePosition.top;d=$(c).args().overridePosition.left}var a=document.body.clientWidth;if((d+$(c).width())>a){d=d-$(c).width()+20}if($(c).args().doOffsetFromBottom===true){e-=$(c).height()-20}if(d>0&&e>0){$(c).css({position:"absolute",top:e,left:d})}}}function stHideElement(a,b){for(i=0;i<document.getElementsByTagName(a).length;i++){obj=document.getElementsByTagName(a)[i];if(!obj||!obj.offsetParent){continue}objLeft=obj.offsetLeft-b.offsetParent.offsetLeft;objTop=obj.offsetTop;objParent=obj.offsetParent;while((objParent.tagName.toUpperCase()!="BODY")&&(objParent.tagName.toUpperCase()!="HTML")){objLeft+=objParent.offsetLeft;objTop+=objParent.offsetTop;objParent=objParent.offsetParent}objHeight=obj.offsetHeight;objWidth=obj.offsetWidth;if((b.offsetLeft+b.offsetWidth)<=objLeft){}else{if((b.offsetParent.offsetTop+b.offsetHeight+20)<=objTop){}else{if(b.offsetParent.offsetTop>=objTop+objHeight){}else{if(b.offsetLeft>=objLeft+objWidth){}else{obj.style.visibility="hidden"}}}}}}function getJsonCallback(a,c){var b=document.getElementById(a.TargetDivID);if(jQuery.trim(a.Html)==""){$(b).trigger("popInLoadCompleteWithNoData",a)}$(b).html(a.Html);if($(b).args()==undefined&&$(b).doCacheContent===false){return}if(stDivsLoadedList.indexOf(a.TargetDivID+";")<0){stDivsLoadedList+=a.TargetDivID+";"}$(b).trigger("jsonCallbackComplete",a)}function stShowTarget(a){if(a!=null){$(a).show()}}function stContentIsLoaded(a){if(a!=null){return stDivsLoadedList.indexOf(a.id+";")>=0}else{return true}}function stHideSiblings(a){if(a!=null){$(a).siblings().hide()}}function stShowInt(a){if(a!=null){stHideSiblings(a);stShowTarget(a)}}function stShow(a,c){var b=document.getElementById(c);stShowInt(b);if(a!=""&&!stContentIsLoaded(b)){$.ajax({url:a,dataType:"json",success:getJsonCallback,error:function(){var d=$("#"+c);$(d).html("<div style='width:100%; text-align:center; padding:14px;'>No Results Available.</div>");stShowTarget(d)}})}}function stTabActivate(b){var c=document.getElementById(b);var a=$(c).attr("src");var e=$(c).attr("targetdiv");$(c).parent().siblings(".simple_tab_active").addClass("simple_tab_inactive");$(c).parent().siblings(".simple_tab_active").removeClass("simple_tab_active");$(c).parent().addClass("simple_tab_active");$(c).parent().removeClass("simple_tab_inactive");var d=$("#"+e);stShow(a,e)}jQuery.fn.jsonGet=function(b){if(b==undefined||b==null){b=$(this).args()}var c=b.cache!==false;var d=b.url;if(d==undefined||d==null){d=$(this).attr("src")}if(d==undefined||d==null||d.length<=0){handleJsonError("failed","No URL Specified on jsonGet call")}d=appendQueryStringArguments(b,d);var a={url:d,dataType:"json",cache:b.doCacheContent==true,success:b.success,error:function(g,f,e){handleJsonError(f,b,e,g)}};$.ajax(a)};function appendQueryStringArguments(a,c){if(a.queryStringArguments!=undefined&&a.queryStringArguments!=null){c+=(c.indexOf("?")>=0)?"&":"?";var b;for(b in a.queryStringArguments){c+=b+"="+escape(a.queryStringArguments[b])+"&"}c=c.substring(0,c.length-1)}return c}function jsonPost(b){var c=appendQueryStringArguments(b,b.url);var a={url:c,type:"POST",dataType:"json",data:b.postData,success:b.success,error:function(f,e,d){handleJsonError(e,b)}};$.ajax(a)}jQuery.fn.jsonPost=function(){var a=$(this).args().url;if(a==undefined||a==null){$(this).args().url=$(this).attr("src")}jsonPost($(this).args())};function handleJsonError(c,a,b,d){if(c=="timeout"&&a.timeoutFunction!=undefined&&a.timeoutFunction!=null){a.timeoutFunction()}else{if(a.generalErrorFunction!=undefined&&a.generalErrorFunction!=null){a.generalErrorFunction(c,a)}else{}}}jQuery.fn.args=function(a,b){if(a!==null&&a!==undefined){if(typeof(a)=="object"){this.data("args",a);this.data("lockedMousePosition",null)}else{if(b!=undefined){arguments=this.data("args");arguments[a]=b}else{return this.data("args")[a]}}}else{a=this.data("args");if((a==null)||(a==undefined)){a={};this.data("args",a)}return a}};jQuery.fn.showAndSetVisible=function(){$(this).getJsonContainerDiv().show();this.css({visibility:"visible"});this.show()};jQuery.fn.piSetTimeout=function(){var a="piHidePopIn({targetDivId:'"+this[0].id+"', doNotCloseModal: true})";var b=setTimeout(a,2000);if($(this).args().timerIds==null&&$(this).args().timerIds==undefined){$(this).args().timerIds=[]}$(this).args().timerIds.push(b)};jQuery.fn.piClearMousedOverPopInTimeout=function(){if($(this).args().timerIds!=null){$.each($(this).args().timerIds,function(){clearTimeout(this)})}};function piJsonCallback(a,c){var b=$("#"+a.TargetDivID);getJsonCallback(a,c);if(jQuery.trim(a.Html)==""){return}else{$(b).piClearMousedOverPopInTimeout();$(b).trigger("popInLoadCompleteInternal");$(b).trigger("popInLoadComplete")}}function piRenderPopIn(d){var a=$(d).args();if(a.showBeforeContentLoaded===true){$(d).getJsonContainerDiv().showAndSetVisible();piPositionDiv(d)}if(a.sourceUrl!=null&&a.sourceUrl!=""){var c="?";if(a.sourceUrl.indexOf("?")>=0){c="&"}var b=a.sourceUrl+c+"TargetDivID="+a.targetDivId;a.url=b;a.success=piJsonCallback;if(a.postData!=null&&a.postData!=undefined&&a.postData.length>0){$(d).jsonPost()}else{$(d).jsonGet()}}}jQuery.fn.hideSelectsForIE6PopIn=function(){if($.browser.msie&&$.browser.version.substr(0,1)<7){$("select:visible").each(function(){$(this).attr("hideForIE6PopIn",1);$(this).hide()});$(this).bind("popInHideComplete",function(){$(this).showSelectsForIE6PopIn()});$(this).bind("dialogclose",function(){$(this).showSelectsForIE6PopIn()})}};jQuery.fn.showSelectsForIE6PopIn=function(){$("select[hideForIE6PopIn=1]").each(function(){$(this).attr("hideForIE6PopIn","");$(this).show()})};function piShowPopIn(b,a){var c=$("#"+a.targetDivId);if(a.sourceUrl){$(c).attr("isJsonTargetDiv",true)}$(c).piClearMousedOverPopInTimeout();$(c).hideSelectsForIE6PopIn();$(c).args(a);if(a.doMoveToMousePosition==true){b=b||window.event;$(c).currentMousePosition({left:b.clientX+$(document).scrollLeft(),top:b.clientY+$(document).scrollTop()});$(c).lockMousePosition();if(a.showBeforeContentLoaded===true){$(c).getJsonContainerDiv().showAndSetVisible();piPositionDiv(c)}}piRenderPopIn(c);if(a.doAutoHideOnMouseLeave){$(c).mouseover(function(){$(c).piClearMousedOverPopInTimeout()});$(c).mouseenter(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout()}});$(c).mouseleave(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout();$(c).piSetTimeout()}})}$(c).one("popInLoadCompleteInternal",function(d){if($(c).args().doCenterToScreen===true){$(c).centerToScreen();$(c).getJsonContainerDiv().showAndSetVisible()}else{piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}})}function piShowPopInWithStaticContent(b,a){var c=$("#"+a.targetDivId);piShowPopIn(b,a);piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}function piHidePopIn(a){var c=$("#"+a.targetDivId);a=$(c).mergeArgs(a);var b=$(c).data("forcePageRefreshOnClose");if(b!=undefined&&b!=null&&(b===true||b===false)){a.forcePageRefreshOnClose=b}$(c).piClearMousedOverPopInTimeout();if($(c).args().forcePageRefreshOnClose===true){reloadPage()}$(c).getJsonContainerDiv().fadeOut("fast");if(a.doNotCloseModal!==true){$(".ui-widget-overlay").fadeOut("fast",function(){if(typeof($(c).dialog)=="function"){$(c).dialog("close")}})}$(c).args({});$(c).trigger("popInHideComplete",a)}jQuery.fn.hideJsonPopIn=function(a){if(a==null||a==undefined){a={}}var b=$(this).parents("[isJsonTargetDiv]");if(a.targetDivId==undefined||a.targetDivId==null){a.targetDivId=$(b).attr("id")}piHidePopIn(a)};function piShowPopInModal(a){var c=a.targetDivId;var b=$("#"+c);if(a.sourceUrl){$(b).attr("isJsonTargetDiv",true)}$(b).args(a);$(b).hideSelectsForIE6PopIn();$(b).showAndSetVisible();$(b).css("z-index",getMaxZ()+100);$(b).dialog({draggable:false,resizable:false,modal:true,position:"center",width:$(b).width()+10,closeOnEscape:false});$(b).bind("popInLoadCompleteInternal",function(d){piBindContainerDivToAutoHideOnClick(a);if($(b).args().doCenterToScreen===true){$(b).dialog("option","position",$(b).dialog("option","position"))}});$(b).dialog("open");piRenderPopIn(b);if(a.autoHideOnClickOutBeforeLoadComplete!==false){piBindContainerDivToAutoHideOnClick(a)}$(b).click=function(d){$(d).stopPropagation()}}function piBindContainerDivToAutoHideOnClick(a){var b=$(".ui-widget-overlay");var c=$(b).data("events");var d=$("#"+a.targetDivId);if(c==null||c.click==null){$(b).bind("click",function(){if($(d).args().autoHideOnClickOut!==false){piHidePopIn(a)}})}}jQuery.fn.centerToScreen=function(){return this.each(function(){var k=$(this).width();var e=$(this).height();var d=$(window).width();var a=d/2;var b=$(window).height();var c=b/2;var g=$(document).scrollLeft();var h=$(document).scrollTop();var j=c+h-(e/2);var f=a+g-(k/2);$(this).css({top:j+"px"});$(this).css({left:f+"px"})})};jQuery.fn.setAutoEllipseDomain=function(a){$(this).each(function(){var c=$.trim($(this).html());$(this).html("");$(this).show();if(a==null||a==undefined){a=$(this).width()}var e=document.createElement("label");$(e).attr("title",c);var h=c.split(".",2)[1];if(h==undefined){h=""}$(e).html(c);$(this)[0].appendChild(e);var g=$(e).width();if(g>=a){var d=10;var f;$(e).html("");while(e.offsetWidth<a&&d<c.length){var b=c.substr(0,d)+"..."+h;$(e).html(b);d++;g=e.offsetWidth;if(g>a){break}f=b}$(e).html(f)}})};function reloadPage(){document.body.style.cursor="wait";var a=location.toString().replace(window.location.hash,"");document.location.replace(a)}jQuery.fn.mergeArgs=function(a){if(a&&a!=null){var b;for(b in a){$(this).args(b,a[b])}}return $(this).args()};jQuery.fn.rebind=function(b,a){$(this).unbind(b).bind(b,a);return this};function formatCurrency(f,b,h,d,m,j){if(b===undefined){b="$"}if(h===undefined){h=2}if(d===undefined){d="."}if(m===undefined){m=","}if(j===undefined){j=true}function g(n,p,o){var q=""+n;while(q.length<p){q=o+q}return q}f=f.toString().replace(/\$|\,/g,"");if(isNaN(f)){f="0"}var c=Math.pow(10,h);var l=(f==(f=Math.abs(f)));f=Math.floor(f*c+0.50000000001);var a=(f%c);f=Math.floor(f/c).toString();a=g(a,h,"0");for(var e=0;e<Math.floor((f.length-(1+e))/3);e++){f=f.substring(0,f.length-(4*e+3))+m+f.substring(f.length-(4*e+3))}var k=(((l)?"":"-")+f);if(h>0){k=k+d+a}if(j){k=b+k}else{k=k+b}return k}jQuery.fn.onenter=function(a){$(this).live("keypress",function(b){if((b.which&&b.which==13)||(b.keyCode&&b.keyCode==13)){a()}});return this};function LogFastballPageEvent(a,c,d){var b=new fbiEventObject(new Object(),"click",a,"");b.AddUserInput(c,d);fbiRecordFastballEvent(b)}jQuery.fn.validateDomainNames=function(b){var a=$(this).val();if(a.length==0){b("Enter a domain name to search.");return false}return true};function LogFastballEvent(a,b,c){LogFastballPageEvent(a,b,c)}function stripSpecialCharacters(b){var a=b.replace(/\s*/g,"").replace(/[^a-zA-Z0-9-\s.]+/g,"");return a}jQuery.fn.stripSpecialCharacters=function(){$(this).val(stripSpecialCharacters($(this).val()))};
-      
-    </script>
-    <script type="text/javascript">
-      !function(a){function c(a,b,c){var d=c.replace("px","");if(b.length>6){var e=d-4;$(a).css({"font-size":e+"px"})}else $(a).css({"font-size":c});$(a).val(b)}function e(b,c,d){a(c).length>0&&a(d).css({display:"none"})}function f(b,c){a(c).hasClass("stoggledown")?a(c).html("&#9650;").removeClass("stoggledown").addClass("stoggleup"):a(c).html("&#9660;").removeClass("stoggleup").addClass("stoggledown"),a(b).toggle()}function g(b,c,d,e,g){var h=document.layers?c.which:document.all?event.keyCode:document.getElementById?c.keyCode:0;a(e).is(":hidden")&&f(e,g);var i=a(d);if(h!==a.ui.keyCode.UP&&h!==a.ui.keyCode.DOWN){var j=i.val();a(e).is(":hidden")&&f(e,g),IntialTLD?IntialTLD=!1:a(e+" li").each(function(){a(this).html().indexOf(j)>=0?a(this).removeClass("tldhidden").addClass("tldshown").show():a(this).removeClass("tldshown").addClass("tldhidden").hide()})}}function h(b,c,d,e,f){var g=document.layers?c.which:document.all?event.keyCode:document.getElementById?c.keyCode:0,h=a(".t-hilite");(g===a.ui.keyCode.DOWN||g===a.ui.keyCode.UP)&&(0===h.length?a("li.tldshown").eq(0).addClass("t-hilite"):g===a.ui.keyCode.DOWN?a("li.t-hilite").removeClass("t-hilite").nextAll(":visible").eq(0).addClass("t-hilite"):a("li.t-hilite").removeClass("t-hilite").prevAll(":visible").eq(0).addClass("t-hilite"),null===a("li.t-hilite").html()||a(f).val(a(".t-hilite").html()))}a.gdhpSearchUI=function(){},a.gdhpSearchUI.defaults={searchUrl:null,idnUrl:null,domainInputId:"#searchDomainName",tldInputId:"#searchTldName",tldToggleId:"#searchTldToggle",tldListId:"#searchTldList",searchButton:"#searchButton",tldListHighlightColor:"#E4EFC7",domainInputLabelText:"Search for a new domain",initialTld:!0,focusOnLoad:!0},a.fn.gdhpDomainSearch=function(b){var d=a.extend({},a.gdhpSearchUI.defaults,b||{}),i=a(d.tldInputId).css("font-size"),j=d.domainInputId+"-label";a("<div id='"+j.replace("#","")+"' unselectable='on'>"+d.domainInputLabelText+"</div>").appendTo(a(d.domainInputId).parent()),a("<style type='text/css'> .t-hilite{ background-color:"+d.tldListHighlightColor+"} </style>").appendTo("head"),a(j).bind("click",function(){a(d.domainInputId).focus()}).addClass(a(d.domainInputId).attr("class")).css({position:"absolute",color:"#CCCCCC",top:"0px",left:"0px"}),d.focusOnLoad&&a(d.domainInputId).focus(),a(d.domainInputId).bind("paste",function(a){e(a,d.domainInputId,j)}).bind("click",function(a){e(a,d.domainInputId,j)}).bind("keypress",function(a){e(a,d.domainInputId,j)}).bind("focus",function(){"Start your domain search"===a(this).val()&&a(this).val("")}).bind("blur",function(){""===a(d.domainInputId).val()&&a(j).css({display:"block"})}),a(d.tldInputId).focus(function(){f(d.tldListId,d.tldToggleId)}).keyup(function(a){g(this,a,d.tldInputId,d.tldListId,d.tldToggleId)}).keydown(function(a){h(this,a,d.tldListId,d.tldToggleId,d.tldInputId)}),a(d.tldToggleId).html("&#9660;").addClass("stoggledown").bind("click",function(){f(d.tldListId,d.tldToggleId)}),a(d.tldListId+" li").each(function(){a(this).bind("click",function(){c(d.tldInputId,this.innerHTML,i),f(d.tldListId,d.tldToggleId)}).bind("mouseover mouseout",function(){a(this).toggleClass("t-hilite")})}),IntialTLD=d.initialTld,a(d.domainInputId).keypress(function(b){b&&b.which===a.ui.keyCode.ENTER&&(a(d.domainInputId),a(d.tldInputId))}),a(d.searchButton).click(function(b){var c=a(d.domainInputId),e=a(d.tldInputId);domainSearch(d.searchUrl,d.idnUrl,c,e,d.tldListId),b.preventDefault(),b.stopPropagation()})}}(jQuery);var gdhpCaptcha={showCaptcha:function(a,b,c,d,e,f,g){if(jsonModal.display(a,"gdhp-captcha-modal"),$("#captchaContentDiv").length>0){$(".captcha-submt-btn").unbind("click").bind("click",function(){gdhpCaptcha.validateCaptcha(b,c,d,e,f,g)}),$(".gdhp-captcha-input").unbind("keypress").bind("keypress",function(a){a&&13===a.which&&gdhpCaptcha.validateCaptcha(b,c,d,e,f,g)});var h=new Object,i=b;i+=i.indexOf("?")>=0?"&":"?",i+="TargetDivID=captchaContentDiv",h.url=i,h.success=function(a,b){getJsonCallback(a,b),$("#captcha").show()},h.timeout=1e4,$(this).args(h),$(this).jsonGet()}},validateCaptcha:function(a,b,c,d,e,f){var g=new Object,h=a,i=$("#captchaInputDiv");h+=h.indexOf("?")>=0?"&":"?",h+="TargetDivID=captchaContentDiv&cac="+i.val(),g.url=h,g.success=function(a,g){a.Properties.IsSolved?(modal.close("gdhp-captcha-modal",!0),$(this).gdhpBulkSearch("search",{bulkSearchUrl:b,domains:c,tlds:d,searchtype:e,pageSource:f})):(alertBox.showAlertErrorBox("107"),getJsonCallback(a,g),__initiateCaptcha=!1,i.focus())},g.timeout=1e4,$(this).args(g),$(this).jsonGet()}};$("[data-ci]").click(function(a){$this=$(this),FastballEvent_MouseClick(a,$this.attr("data-ci"),$(this)[0],"a"),fbiLibCheckQueue()});var jsonModal={display:function(a,b,c,d,e){if($("#"+b).length<=0){var f=$("<div>").attr("id",b).css({position:"absolute"}).appendTo("body");"undefined"!==d&&f.width(d),"undefined"!==e&&f.height(e)}jsonContent.load(b,a,!1),modal.display(b,"popUpDiv ui-widget-overlay",".modal_close_btn",c)}},jsonContent={load:function(a,b,c){0===$("#"+a).html().length?null!==b&&(b+=b.indexOf("?")>=0?"&":"?",b+="callback=jsonContent._fill&targetDivId="+a,jsonContent._call("jsonContent._fill",b,c)):this._fill({TargetDivID:a})},_call:function(a,b,c){$.ajax({dataType:"jsonp",jsonp:a,url:b,async:c})},_fill:function(a){if(null!==a){var b=a.TargetDivID;null!==a.Html&&$("#"+b).html(a.Html)}}},globalModal={display:function(a){$(a).modal({overlayId:"g-modal-overlay",close:!0,autoPosition:!0}),$("#g-modal-overlay").bind("click",function(){$.modal.close()})}},modal={display:function(a,b,c,d){if($("#curtain").length<=0){var e=$("<div>").attr("id","curtain").addClass(b).css({"z-index":getMaxZ(),display:"none",filter:"alpha(opacity=50)"}).height($(document).height()).width($(document).width()).bind("click",function(){d?modal.remove(a):modal.close(a)}).appendTo("body").fadeIn("slow");$(c).live("click",function(){d?modal.remove(a):modal.close(a)}),$(window).bind("resize scroll",function(){e.height($(document).height()).width($(document).width())}),$("body").css("overflow-x","hidden\0/IE9")}else $("#curtain").css("z-index",getMaxZ()-1).height($(document).height()).width($(document).width()).bind("click",function(){d?modal.remove(a):modal.close(a)}).show(),$(c).live("click",function(){d?modal.remove(a):modal.close(a)}),$("body").css("overflow-x","hidden\0/IE9");modal._center(a)},_center:function(a){var b=$(window).width()/2+$(document).scrollLeft()-$("#"+a).width()/2,c=$(window).height()/2+$(document).scrollTop()-$("#"+a).height()/2;0>c&&(c=0),0>b&&(b=0),$("#"+a).css({top:c+"px",left:b+"px","z-index":getMaxZ()+100}).show()},close:function(a){$("#"+a).hide(),$("#curtain").css("filter","alpha(opacity=50)").fadeOut("fast",function(){$(this).remove()}),$(window).unbind("resize"),$("body").css("overflow-x","auto\0/IE9")},remove:function(a){var b=$("#"+a),c=b.find("iframe");c.length&&c.attr("src","");try{setTimeout(function(){b.remove(),$("#curtain").css("filter","alpha(opacity=50)").fadeOut("fast",function(){$(this).remove()}),$(window).unbind("resize"),$("body").css("overflow-x","auto\0/IE9")},100)}catch(d){}}},alertBox={showAlertErrorBox:function(a){var b=a,c=$("#gdhp-errors\\.error\\["+a+"\\]");c.length>0&&(b=c.html()),$("#gdhp-alert-box").length<=0&&$("<div>").attr("id","gdhp-alert-box").addClass("gdhp-alert-box").css({display:"none",position:"absolute",width:"300px"}).appendTo("body"),$("#gdhp-alert-box").html("<div class='g-alert g-err'><a href='#' class='g-close-notify' onclick='alertBox.closeAlertErrorBox();return false;'><span>Close</span></a><p>"+b+"</p></div>"),alertBox._center("gdhp-alert-box")},closeAlertErrorBox:function(){$("#gdhp-alert-box").html("").css({display:"none"})},_center:function(a){var b=$(window).width()/2+$(document).scrollLeft()-$("#"+a).width()/2,c=$(window).height()/2+$(document).scrollTop()-$("#"+a).height()/2;0>c&&(c=0),0>b&&(b=0),$.browser.safari&&"523.12.9"===$.browser.version?$("#"+a).css({top:"200px",left:"320px","z-index":getMaxZ()+100,display:"block"}):$("#"+a).css({top:c+"px",left:b+"px","z-index":getMaxZ()+100,display:"block"})}},solazy={};!function(){function j(){b.each(function(){k($(this))})}function k(a){var b=a,c=b.attr("data-sl-condition");if("undefined"!=typeof c){var d=c.split("|"),e=d[1].split(":");b[0]["sl-condition-property"]=e[0],b[0]["sl-condition-css-value"]=e[1],b[0]["sl-condition-target"]=$(d[0])}}var b,c,h,d=750,e=0,f=100,g=300,i=!1;$(document).ready(function(){b=$(".solazy"),c=$(window);var a=$("div,ul"),d=c.add(a);j(),$('[data-sl-type="request"]').each(function(){b=b.not($(this))}),setTimeout(function(){solazy.check()},500),$(d).bind("scroll",function(){i||(solazy.check(),clearInterval(h),h=setInterval(function(){solazy.check(),clearInterval(h),i=!1},g)),i=!0})}),$.extend(solazy,{check:function(){var a=c.scrollTop(),d=a+c.height();b.each(function(){var b=$(this),c=b.offset().top,e=b.height(),g=!0;"undefined"!=typeof b[0]["sl-condition-target"]&&(g=!1,$(b[0]["sl-condition-target"]).css(b[0]["sl-condition-property"])===b[0]["sl-condition-css-value"]&&(g=!0)),c>a-e-f&&d+f>c&&g&&solazy.loadObject(b)})},addLazyOjects:function(a){var c=$(a).find(".solazy");c.each(function(){k($(this))}),b=b.add(c)},loadObject:function(a){var c=a.attr("data-sl-src"),f=a.attr("data-sl-alt");b=b.not(a);var g=$('<img src="'+c+'" alt="'+f+'" />').css({opacity:0,width:"100%",height:"100%"});g.load(function(){g.appendTo(a),setTimeout(function(){g.animate({opacity:1},d,function(){a.css("background-image","none")})},e)})}})}(solazy.$);
-      
-    </script>
-    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
-                     qs = [],
-                     date = new Date();
-        for(var i = 0; i < hashes.length; i++) {
-          var hash = hashes[i].split('=');
-          qs.push(hash[0]);
-          qs[hash[0]] = hash[1];
-        }
-      
-        window.setTimeout(function() {
-          $('#shareme').fosShare({});
-        }, 2000);
-      });
-      
     </script>
   </body>
 </html>

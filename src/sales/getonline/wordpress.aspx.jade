@@ -1,4 +1,4 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
 append vars
   - productToDisplay.name = "Managed Wordpress";
@@ -13,7 +13,11 @@ append vars
   - productToDisplay.productInfoText = "WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.";
   - productToDisplay.productDidYouKnowText = "As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?";
 
-block proSpecific
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+    h3.text-center Wordpress
+    p Start a blog with WordPress and let us manage the technical stuff.
 
 block productViewTemplates
 

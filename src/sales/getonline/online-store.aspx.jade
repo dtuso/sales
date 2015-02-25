@@ -1,4 +1,4 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
 append vars
   - productToDisplay.name = "Online Store";
@@ -13,7 +13,11 @@ append vars
   - productToDisplay.productVideoInfoText = "What is Online Store?";
   - productToDisplay.productDidYouKnowText = "With built-in payment processing, you can accept all major credit cards and the funds are automatically transferred to you bank account.";
 
-block proSpecific
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    h3.text-center Web Hosting
+    p SWITCH THIS TO ONLINE STORE
 
 block productViewTemplates
 

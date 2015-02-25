@@ -1,6 +1,8 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
 append vars
+  - primary_pfid = 32051
+  - primary_promo = 521092015;
   - productToDisplay.name = "Web Hosting";
   - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car. MXNXXX.XX/yr";
   - productToDisplay.imgClass = "features-hosting";
@@ -13,7 +15,11 @@ append vars
   - productToDisplay.productInfoText = "Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.";
   - productToDisplay.productDidYouKnowText = "Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?";
 
-block proSpecific
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    h3.text-center Web Hosting
+    p Give your site a home that’ll keep it secure and running like a sports car.
 
 block productViewTemplates
 

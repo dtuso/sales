@@ -1,4 +1,4 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
 append vars
   - productToDisplay.name = "Website Builder";
@@ -13,7 +13,17 @@ append vars
   - productToDisplay.productVideoInfoText = "What is Website Builder?";
   - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
 
-block proSpecific
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    h3.text-center Web Hosting
+    p SWITCH THIS TO WSB
+
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
+    h3.text-center Website Builder
+    p Easily create a professional website with simple drag-&-drop tools.
 
 block productInfo
 

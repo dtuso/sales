@@ -4751,7 +4751,10 @@ height: 27px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2 {
+section h2,
+section .h2 {
+  margin-bottom: 40px;
+  margin-top: 0;
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -4759,7 +4762,10 @@ section h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3 {
+section h3,
+section .h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -4818,27 +4824,6 @@ ul li.no-check {
           font-family: uxfont !important;
         }
         ##endif
-        
-        /* override UXCORE font settings for all LPs */
-        h2 {
-          margin-bottom: 40px;
-          margin-top: 0;
-          font-size: 4rem;
-          text-transform: uppercase;
-          font-family: 'Walsheim-Black';
-          font-weight: 300;
-          line-height: 1.1;
-          color: #333;
-        }
-        h3 {
-          font-size: 3rem;
-          text-transform: uppercase;
-          font-family: 'Walsheim-Black';
-          margin-top: 20px;
-          margin-bottom: 10px;
-          font-weight: 300;
-          line-height: 1.1;
-        }
         
         /* default LP marquee styling */
         .dash { 
