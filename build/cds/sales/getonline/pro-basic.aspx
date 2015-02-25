@@ -680,136 +680,21 @@ function getParameterByName(name) {
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <atlantis:webstash type="css">
-      <style>
-        #getItNow { padding-bottom: 0; }
-        #getItNow .container { position: relative; }
-        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
-        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
-        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
-        #getItNow .bubble h3 { font-family: Walsheim-Black; }
-        #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
-        
-        @media (min-width: 768px) {
-          #getItNow .bubble {
-            background-color: white;
-            background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin-left: 20%;
-          }
-          #getItNow .bubble h2 { padding-top: 0; }
-          #getItNow .hero-guy { left: -15%; }
-        }
-        
-        @media (min-width: 992px) {
-          #getItNow .hero-guy { left: -50px; }
-        }
-        
-      </style>
-    </atlantis:webstash>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .container .row .topSpacing{padding-top:20px;}
-      .container .row .leftSpacing{padding-left:50px;}
-      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-      .icon-spacing{text-align: center;font-size: 2em;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      .domain-icon-spacing {margin-right: 60px;}
-      .col-spacer2{width:43%;}
-      .col-spacer1{width: 30%;}
-      
-      h2{margin-top:0px;margin-bottom:0px;}
-      h3{margin-top:0px;margin-bottom:0px;}
-      .product-name{font-weight:800;padding-top:10px;}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        
-        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-      </style>
-    </atlantis:webstash>
-    <style>
-      .btn-lg{padding: 14px 15px 9px!important;}
-      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-      .right-side{margin-top: 25px;}
-      .pro-wrapper{margin-top: 50px;}
-      .product-name{padding-bottom: 15px;}
-      .p1{margin-bottom: 25px;}
-      .p2{margin-top: 15px;}
-      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .head-wrapper{padding-top:30px;!important}
-      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs"/>
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[productprice:&lt;current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/&gt;]@T]</mark></h3>
+            <h3 class="text-center">A professional design service for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/mo</mark></h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
-              <h3 class="text-center">Domain Name</h3>
-              <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
-            </div>
-            <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block"/>
-              <h3 class="text-center">Web Hosting</h3>
-              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
-            </div>
-            <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block"/>
-              <h3 class="text-center">Office 365 Email</h3>
-              <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for $1/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is $12/year and $XXX.XX/year after the first year</small>
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png"></div>
+          <div class="col-xs-8 col-sm-6 products">
+            <h3>ECommerce Design Services</h3>
+            <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+            <button class="btn btn-purchase btn-lg">Get it now for [@T[productprice:<current productid="32051" period="monthly" dropdecimal="false" htmlsymbol="false" negative="parentheses" promocode="521092015"/>]@T]/mo</button>
+            <p>or give us a call at <span>(480) 366-3344</span></p>
           </div>
         </div>
       </div>
@@ -896,7 +781,6 @@ function getParameterByName(name) {
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
       #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -973,7 +857,6 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <!-- p4p.whyUs-->
     <section id="why-godaddy">
       <div class="container">
         <div class="row">
@@ -983,19 +866,19 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
               <h3>We're the world leader</h3>
               <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
               <h3>Our 24/7 support is awesome</h3>
               <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
               <h3>12 million people trust us</h3>
               <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
             </div>
@@ -1003,9 +886,7 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <div class="container">
-      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
-    </div>
+    <hr>
     <!-- atlantis:webstash(type="css")-->
     <style>
       .container .row .topSpacing{padding-top:20px;}
@@ -1029,7 +910,6 @@ function getParameterByName(name) {
       .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
       .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
       #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
       
     </style>
     <atlantis:webstash type="css">
@@ -1172,7 +1052,46 @@ ul li.no-check {
         .white{background-color:white}
         .uppercase{text-transform:uppercase}
         .lowercase{text-transform:lowercase}
-        .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
+        
+        #getItNow { padding-bottom: 0; padding-top: 0;}
+        #getItNow .container { position: relative; }
+        #getItNow mark { line-height: 1.1em; }
+        #getItNow mark::after { height: 1.21em; }
+        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
+        
+        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
+        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
+        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
+        #getItNow .bubble h3 { font-family: Walsheim-Black; }
+        #getItNow .products { margin-top: 40px; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products img { max-height: 110px; }
+        
+        #getItNow .cta { margin-top: 20px;}
+        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        
+        @media (min-width: 768px) {
+          #getItNow .bubble {
+            background-color: white;
+            background-position: center center;
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            overflow: visible;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-left: 20%;
+          }
+          #getItNow .bubble h2 { padding-top: 0; }
+          #getItNow .hero-guy { left: -15%; }
+        }
+        
+        @media (min-width: 992px) {
+          #getItNow .hero-guy { left: -50px; }
+        }
         
       </style>
       <atlantis:webstash type="css">
@@ -1257,7 +1176,6 @@ ul li.no-check {
         .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
         #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        #product-price{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
       <atlantis:webstash type="css">

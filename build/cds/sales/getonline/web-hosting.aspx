@@ -685,7 +685,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.00</mark></h3>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -697,7 +697,7 @@ function getParameterByName(name) {
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
               <h3 class="text-center">Web Hosting</h3>
-              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
+              <p>Give your site a home that’ll keep it secure and running like a sports car.</p>
             </div>
             <div class="plus">+</div>
             <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
@@ -708,8 +708,67 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for $1/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is $12/year and $XXX.XX/year after the first year</small>
+            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>
+        #pro-specific{background-color:#77c043;}
+        .uppercase{text-transform:uppercase;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .text-center{text-align:center;}
+        .titles{margin-top:50px;}
+        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
+        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
+        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
+        .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+      </style>
+    </atlantis:webstash>
+    <section id="pro-specific">
+      <div class="container">
+        <div class="row col-xs-12 text-center titles">
+          <h3 class="uppercase">Let us build a web store that will </h3>
+          <h3 class="uppercase">help you build your business</h3>
+          <h4>Complete the online interview and our Web designers can create an eye-catching online store.</h4>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 first">
+            <div class="pro-expand"></div>
+            <h4 class="uppercase"><span class="steps">Step One</span></h4>
+            <h3>Share your vision</h3>
+            <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
+          </div>
+          <div class="col-xs-4">
+            <div class="pro-share"></div>
+            <h4 class="uppercase"><span class="steps">Step Two</span></h4>
+            <h3>We go to work</h3>
+            <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
+          </div>
+          <div class="col-xs-4">
+            <div class="pro-work"></div>
+            <h4 class="uppercase"><span class="steps">Step Three</span></h4>
+            <h3>Enhance & Expand</h3>
+            <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 speach-bubble-left-white">
+              <div class="speach-bubble-left-div">
+                <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
+                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -764,7 +823,6 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <!-- p4p.whyUs-->
     <section id="why-godaddy">
       <div class="container">
         <div class="row">
@@ -794,9 +852,7 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <div class="container">
-      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
-    </div>
+    <hr>
     <!-- atlantis:webstash(type="css")-->
     <style>
       .container .row .topSpacing{padding-top:20px;}
@@ -937,9 +993,11 @@ ul li.no-check {
         .white{background-color:white}
         .uppercase{text-transform:uppercase}
         .lowercase{text-transform:lowercase}
-        .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
-        #getItNow { padding-bottom: 0; }
+        
+        #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
+        #getItNow mark { line-height: 1.1em; }
+        #getItNow mark::after { height: 1.21em; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
         
         #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
@@ -962,8 +1020,8 @@ ul li.no-check {
             background-repeat: no-repeat;
             background-size: 100% 100%;
             overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 40px;
+            padding-bottom: 40px;
             padding-left: 100px;
             padding-right: 100px;
             margin-left: 20%;

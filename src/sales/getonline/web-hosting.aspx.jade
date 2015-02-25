@@ -1,13 +1,14 @@
 extends ./templates/_p4p.jade
 
-block price
-  h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.00</mark>
+append vars
+  - primary_pfid = 32051
+  - primary_promo = 521092015;
 
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
     h3.text-center Web Hosting
-    p Give your site a home that’ll keep it secure and running like sports car.
+    p Give your site a home that’ll keep it secure and running like a sports car.
 
 block proSpecific
 

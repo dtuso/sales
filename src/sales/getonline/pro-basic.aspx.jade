@@ -1,5 +1,9 @@
 extends ./templates/_p4p.jade
 
+append vars
+  - primary_pfid = 32051
+  - primary_promo = 521092015;
+
 append pageStyles
   style.
     .btn-lg{padding: 14px 15px 9px!important;}
@@ -14,14 +18,24 @@ append pageStyles
     .head-wrapper{padding-top:30px;!important}
     #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
 
-block marquee
+block bubbleContent
+  h2.text-center Here you go...
+  h3.text-center A professional design service for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/mo</mark>
+
+block productContent
+  .row
+    .col-xs-4.col-sm-3.col-sm-offset-3
+      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+    .col-xs-8.col-sm-6.products
+      h3 ECommerce Design Services
+      p Our Professional Web Services team will work with you to build a complete online store your customers will love.
+      button.btn.btn-purchase.btn-lg Get it now for [@T[productprice:<current productid="#{primary_pfid}" period="monthly" dropdecimal="false" htmlsymbol="false" negative="parentheses" promocode="#{primary_promo}"/>]@T]/mo
+      p or give us a call at <span>(480) 366-3344</span>
 
 block getItNow
   - var productToDisplay = {name: "PROFESSIONAL DESIGN SERVICES", info: "Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business", cssClass: "<div class='pro-computer'></div>", price: "[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]", formAction: "[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]"};
   +renderGoodNews(productToDisplay)
     block goodNewsHead
-      h3 A proffesional design service for <span id="business-idea"></span> –  
-      h3 Starting at <span id="price-per-month"><span id="product-price">!{productToDisplay.price}</span>/mo*</span>
     block check-pro-goodNews
       .pro-wrapper
         .col-xs-6

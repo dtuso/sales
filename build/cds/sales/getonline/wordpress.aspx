@@ -827,7 +827,7 @@ function getParameterByName(name) {
         <div class="row">
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <span id="business-idea2"></span> starting at <span id="product-price">$1.00</span></h3>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">Here's everything you need for <mark class="business-idea"></mark> starting at <mark id="product-price">$1.00</mark></h3>
           </div>
           <div class="container bottom">
             <div class="row">
