@@ -705,27 +705,28 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]</mark></h3>
+            <h3 class="text-center">An ecommerce design service for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark></h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
-              <h3 class="text-center">Domain Name</h3>
-              <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
-            </div>
-            <div class="plus">+</div>
-            <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
-              <h3 class="text-center">Office 365 Email</h3>
-              <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png"></div>
+          <div class="col-xs-8 col-sm-6 products">
+            <h3>Ecommerce Design Services</h3>
+            <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+            <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
+              <input type="hidden" name="product" value="1023|1|1">
+              <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
+              <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+              <input type="hidden" name="itc" value="slp_webdesign2">
+              <input type="hidden" name="nocos" value="False">
+              <input type="hidden" name="config" value="customsite">
+              <input type="hidden" name="sdc" value="True">
+              <input type="hidden" name="newxs" value="False">
+              <input type="hidden" name="cicode" value="58348">
+              <input type="hidden" name="prog_id" value="GoDaddy">
+              <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
+              <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+            </form>
           </div>
         </div>
       </div>
@@ -865,31 +866,29 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price"></span>/mo*</span></h3>
+            <h2 class="uppercase">Ready to get online?</h2>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an eccomerce design service for <span class="business-name"></span> starting at [@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
           </div>
-          <div class="pro-wrapper row">
-            <div class="col-xs-6"></div>
+          <div class="pro-wrapper">
+            <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png" class="img-responsive center-block"></div>
             <div class="col-xs-6">
-              <h3 class="product-name"></h3>
-              <p class="p1"></p>
-              <div class="row">
-                <div class="col-xs-12">
-                  <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
-                    <input type="hidden" name="product" value="1023|1|1">
-                    <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
-                    <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
-                    <input type="hidden" name="itc" value="slp_webdesign2">
-                    <input type="hidden" name="nocos" value="False">
-                    <input type="hidden" name="config" value="customsite">
-                    <input type="hidden" name="sdc" value="True">
-                    <input type="hidden" name="newxs" value="False">
-                    <input type="hidden" name="cicode" value="58348">
-                    <input type="hidden" name="prog_id" value="GoDaddy">
-                    <button id="get-it-btn2" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
-                    <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
-                  </form>
-                </div>
+              <h3 class="product-name">Ecommerce Design Services</h3>
+              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+              <div class="col-xs-12 text-center">
+                <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
+                  <input type="hidden" name="product" value="1023|1|1">
+                  <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
+                  <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+                  <input type="hidden" name="itc" value="slp_webdesign2">
+                  <input type="hidden" name="nocos" value="False">
+                  <input type="hidden" name="config" value="customsite">
+                  <input type="hidden" name="sdc" value="True">
+                  <input type="hidden" name="newxs" value="False">
+                  <input type="hidden" name="cicode" value="58348">
+                  <input type="hidden" name="prog_id" value="GoDaddy">
+                  <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
+                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                </form>
               </div>
             </div>
           </div>
@@ -1071,6 +1070,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
       <style>
