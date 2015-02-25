@@ -216,10 +216,16 @@ block content
         div
           .col-sm-3
             div.half-hero-right(style={'margin-top':'-65px'})
-          .col-sm-5.speech-bubble-right-green(style={'margin-top':'-10px'})
-            div.speech-bubble-right-div
-              h5.uppercase <mark><strong>did you know...</strong></mark>
-              h5(style={'margin-top':'10px','text-transform':'none'}) #{productToDisplay.productDidYouKnowText}
+          if productToDisplay.productYouTubeId
+            .col-sm-5.speech-bubble-right-green(style={'margin-top':'-10px'})
+              div.speech-bubble-right-div
+                h5.uppercase <mark><strong>did you know...</strong></mark>
+                h5(style={'margin-top':'10px','text-transform':'none'}) #{productToDisplay.productDidYouKnowText}
+          else
+            .col-sm-8.speech-bubble-right-green(style={'margin-top':'-10px'})
+              div.speech-bubble-right-div
+                h5.uppercase <mark><strong>did you know...</strong></mark>
+                h5(style={'margin-top':'10px','text-transform':'none'}) #{productToDisplay.productDidYouKnowText}
     block productTemplates
 
   section#O365-email.gray
