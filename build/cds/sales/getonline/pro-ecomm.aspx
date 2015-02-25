@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+<!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,20 +12,25 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
+    <title>[@L[cds.sales/offers/online-business:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/offers/online-business:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/offers/online-business:meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/offers/online-business:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/offers/online-business:og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta property="fb:admins" content="633356800">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
+    <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
+    <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -73,23 +79,7 @@
       
     </script>
     <atlantis:webstash type="js">
-      <script>$(document).ready(function(){
-   stripDomainName();
-});
-
-function stripDomainName(){
-      var windowParams = window.location.search.replace("?","");
-      var params = windowParams.split("&");
-      for(var i = 0; i < params.length;i++){
-       var inputName = params[i].split("=")[0];
-       var inputValue = params[i].split("=")[1];
-       if(inputName == "domain"){
-         inputValue = decodeURIComponent(inputValue);
-         $(".business-idea").text(inputValue);
-       }
-        
-    }
-};// Array indexOf shim for IE9 and below
+      <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
     var len = this.length >>> 0;
@@ -133,7 +123,8 @@ var domainSearch = {
   animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
-  showChoicesWithAvailableDomain: true
+  showChoicesWithAvailableDomain: true,
+  selectedDomainName: ''
 };
 
 ##if(!productIsOffered(105))
@@ -196,22 +187,28 @@ $(document).ready(function() {
   //- display error on return from DPP's TLD eligibility requirements failure
   if(getParameterByName('tldRegErr').length > 0) {
     showDomainRegistrationFailure(getParameterByName('tldRegErr'));
-  } else {
-    showTypeYourDomain();
   }
 
   // set up verify buttons on spin results to do validation before sending to DPP
-  $('#domain-available-view').on('click', '.purchase-btn', showSelectedView);
+  // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
   
   $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#domain-selected-view').on('click','.btn-purchase', goToDppCheckoutPage);
+  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  $('#spin-results').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
-  displayMoreResultsLinks();
+  // wireupCheckoutBtns();
+
+  // displayMoreResultsLinks();
 
   $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
   $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
 
   $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+
+  $('#got').on('click', '.btn-search-again', function(e){navigateToSearchAgain(e)});
+  $('#get-it-btn').on('click', function(e){goToCheckOut(e)});
+  $('#get-it-btn2').on('click', function(e){goToCheckOut(e)});
+  $('#btn-search-again').on('click', goToDomainSearchWizard);
 
   $("[data-ci-workaround]").click(function(a){
     var $this=$(this);
@@ -219,7 +216,19 @@ $(document).ready(function() {
     fbiLibCheckQueue();
   });
 
+  var passedBusinessName = getParameterByName('domain');
+  if(passedBusinessName != '') {
+    $(document).find('.business-name-display').text(passedBusinessName);
+    updateSearchedDomain('', passedBusinessName);
+    domainSearchFormSubmit('', passedBusinessName);
+  }
 });
+
+function updateSearchedDomain(e, domain) {
+  domainSearch.searchedForDomain = domain;
+  $('#domain-available-view').find('.search-form-input').val(domain);
+  $('#domain-not-available-view').find('.search-form-input').val(domain);
+}
 
 function showAndOrderDynamicTldsInList(selector) {
 
@@ -306,7 +315,13 @@ function showTldImagesInDomainArea() {
 
 function domainSearchFormSubmit(e, domain) { 
 
-  var $this = $(e.target);
+  var $thisSection;
+
+  if(e != '') {
+    var $this = $(e.target);
+
+    $thisSection = $this.closest('.js-domain-search-wizard-section');       
+  }
 
   var newItc = domainSearch.offersCodes.itc_wsb;
   ##if(isManager())
@@ -332,17 +347,11 @@ function domainSearchFormSubmit(e, domain) {
         alternateDomains = data.RecommendedDomains || [];
 
       if(isAvailable) {
-        $('#domainSearchWizard').find('.search-form-input').val(''); 
 
-        // Domain is available, so allow them to search again or to select this available domain        
-        showTypeYourDomain();// setup search box
-
-//        if(!domainSearch.showChoicesWithAvailableDomain) {
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-domain-search-wizard-section');       
-
+        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -350,46 +359,22 @@ function domainSearchFormSubmit(e, domain) {
         if(alternateDomains.length > 0) {
 
           // SHOW SPINS
-          showSearchSpins($this, exactMatchDomain, alternateDomains);
-
-          $('#domainSearchWizard').find('.search-form-input').val(''); 
-
+          showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
         }
 
-        animateWizard($thisSection, $('#domain-available-view') /*toView*/);
-
-//        } else {
-//          // tokenize header on search available page
-//          $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
-
-//          // var $thisSection = $this.closest('.js-domain-search-wizard-section');
-//          var $thisSection = $('#domain-selection-view').find('.select-and-continue.recommended-domain-name');
-
-//          $('#domain-selection-view').find('.select-and-continue.recommended-domain-name').data('domain', exactMatchDomain);
-
-//          // Domain is taken, show spins if possible
-//          if(alternateDomains.length > 0) {
-
-//            // SHOW SPINS
-//            showSearchSpins($this, exactMatchDomain, alternateDomains);
-
-//            $('#domainSearchWizard').find('.search-form-input').val(''); 
-
-//          }
-//        }
+        animateWizard($thisSection, $('#domain-available-view'));
 
       } else {
 
         // tokenize header on search available page
         $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
-
-        var $thisSection = $this.closest('.js-domain-search-wizard-section');       
+        $('#domain-not-available-view').show();
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
 
           // SHOW SPINS
-          showSearchSpins($this, exactMatchDomain, alternateDomains);
+          showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
           $('#domainSearchWizard').find('.search-form-input').val(''); 
           
@@ -398,7 +383,7 @@ function domainSearchFormSubmit(e, domain) {
           showApi1or2SearchError(e, domain);
         }
 
-        animateWizard($thisSection, $('#domain-not-available-view') /*toView*/);
+        animateWizard($thisSection, $('#domain-not-available-view'));
       }    
 
     },
@@ -408,7 +393,6 @@ function domainSearchFormSubmit(e, domain) {
   });
 
 }
-
 
 function verifyDomainIsStillAvailable(e) {
 
@@ -435,7 +419,8 @@ function verifyDomainIsStillAvailable(e) {
       data.Properties = data.Properties || {};
       data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
       if(data.Properties.domainInfo[0].isAvailable) {
-        showSelectedView(e);
+        $thisParent.find('.checking-availability').hide();
+        validDomainSelected(e);
       } else {
         // display domain is now unavailable message
         $thisParent.find('.spin-results-message').hide();
@@ -449,31 +434,56 @@ function verifyDomainIsStillAvailable(e) {
 
 }
 
-function showSelectedView(e){
+function validDomainSelected(e){
 
-  // bypass the choices if OLS is not available for their market
-  if(!domainSearch.canOfferOls) {
-    goToDppCheckoutPage(e);
-    return;
-  }
+  // // bypass the choices if OLS is not available for their market
+  // if(!domainSearch.canOfferOls) {
+    // goToDppCheckoutPage(e);
+    // return;
+  // }
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  // tokenize header on search available page
-  $('#selected-domain-name').text(domain.Fqdn);
-  $('#domain-selected-view').find('.btn-purchase').data('domain', domain);
-  $('#products, #domains').hide();
+  domainSearch.selectedDomainName = domain.Fqdn;
+  // $('#selected-domain-name').text(domain.Fqdn);
+  $(document).find('.selected-domain-name-display').text(domain.Fqdn);
+  // $.each('.btn-purchase').data('domain', domain);
+  $('#get-it-btn').data('domain', domain);
+  $('#get-it-btn2').data('domain', domain);
+  $('#got-domain-selected').show();
+  $('#got-domain-not-selected').hide();
+
+  // $('#domainSearchWizard').hide();
+  // $('#domainSelected').show();
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
+}
+
+function goToCheckout2() {
+}
+
+function goToCheckOut(e) {
+  if(domainSearch.selectedDomainName == '') {
+    goToDomainSearchWizard();
+  }
+  else {
+    goToDppCheckoutPage(e);
+  }
+}
+
+function goToDomainSearchWizard()
+{
+  $('#domainSearchWizardSection').show();
+  window.location.href = '#domainSearchWizardSection';
 }
 
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
-    apiEndpoint3,
-    sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+    apiEndpoint3;
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -503,18 +513,15 @@ function goToDppCheckoutPage(e) {
 
 }
 
-function showSearchSpins($this, domain, alternateDomains){  
+function showSearchSpins($view, domain, alternateDomains){  
 
-  // setup search box  
-  showTypeYourDomain();
-
-  displayMoreResultsLinks(alternateDomains.length);
+  displayMoreResultsLinks($view, alternateDomains.length);
 
   // clear any spins from the DOM
-  $('#spin-results .spin-result').remove();
+  $view.find('.spin-results .spin-result').remove();
   totalSpinResults =  0;
-  var $spinResults = $('#spin-results');
-  var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
+  var $spinResults = $view.find('.spin-results');
+  var $spinTemplate = $view.find('.spin-template-wrap').find('.spin-template');
   $.each(alternateDomains, function(idx,domain){
     var $newSpin = $spinTemplate.clone();
     $newSpin.removeClass('spin-template');
@@ -526,12 +533,12 @@ function showSearchSpins($this, domain, alternateDomains){
   domainSearch.totalSpinResults = alternateDomains.length;
   
   if(domainSearch.totalSpinResults <= domainSearch.maxNumberOfSpinsToShowByDefault) {
-    hideMoreResultsLinks();
+    hideMoreResultsLinks($view);
   } else {
-    updateDomainCountText(domainSearch.maxNumberOfSpinsToShowByDefault);
+    updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
   
-  $("#spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
+  $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 }
 
 function showApi1or2SearchError(e,domain){
@@ -559,38 +566,52 @@ function showTypeYourDomain() {
   $('#domainSearchWizard .type-your-business-name').show();
 }
 
-function displayMoreResultsLinks() {
-  $("#domain-available-view .view-all-button").show();
-  $("#show-more-section").show();
+function displayMoreResultsLinks($view) {
+  $view.find(".domain-available-view .view-all-button").show();
+  $view.find(".show-more-section").show();
 }
 
-function hideMoreResultsLinks() {
-  $("#domain-available-view .view-all-button").hide();
-  $("#show-more-section").hide();
+function hideMoreResultsLinks($view) {
+  $view.find(".view-all-button").hide();
+  $view.find(".show-more-section").hide();
 }
 
-function displayMoreResultsArea() {
-  $("#spin-results .spin-result").slideDown(domainSearch.animationTime);
-  hideMoreResultsLinks();
-  updateDomainCountText(domainSearch.totalSpinResults);
+function displayMoreResultsArea($view) {
+  $view.find(".spin-results .spin-result").slideDown(domainSearch.animationTime);
+  hideMoreResultsLinks($view);
+  updateDomainCountText($view, domainSearch.totalSpinResults);
 }
 
-function updateDomainCountText(numberShowing) {
-  var $spinCounts = $('#spin-counts');
+function updateDomainCountText($view, numberShowing) {
+  var $spinCounts = $view.find('.spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
   $spinCounts.html(templateHtml);
 }
 
+function navigateToSearchAgain(e) { 
+  // var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  // animateWizard($thisSection, $('#domain-entry-view'));
+  $('#domainSearchWizard').show();
+}
+
 function animateWizard($currentView, $animateToView) {  
 
-  if($currentView[0].id === $animateToView[0].id) return; // we're there!
+  var currentViewHeight;
+  var windowWidth = $(window).width();
 
-  var currentViewHeight = $currentView.height(),
-    windowWidth = $(window).width(),
-    $wizard = $('#domainSearchWizard'),
-    wizardHeight = $('#domainSearchWizard').height();
+  if($currentView == undefined)
+    currentViewHeight = 0;
+  else {
+    if($currentView[0].id === $animateToView[0].id) return; // we're there!
+
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    currentViewHeight = $currentView.height();
+  }
+
+  var $wizard = $('#domainSearchWizard'),
+  wizardHeight = $('#domainSearchWizard').height();
 
   // show view offscreen to get height
   $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
@@ -601,7 +622,6 @@ function animateWizard($currentView, $animateToView) {
   
   //run the animations
   animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  animateObjectOffToTheLeft($currentView, windowWidth, 2);
   animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
@@ -680,126 +700,23 @@ function getParameterByName(name) {
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <atlantis:webstash type="css">
-      <style>
-        #getItNow { padding-bottom: 0; }
-        #getItNow .container { position: relative; }
-        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
-        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
-        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
-        #getItNow .bubble h3 { font-family: Walsheim-Black; }
-        #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
-        
-        @media (min-width: 768px) {
-          #getItNow .bubble {
-            background-color: white;
-            background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin-left: 20%;
-          }
-          #getItNow .bubble h2 { padding-top: 0; }
-          #getItNow .hero-guy { left: -15%; }
-        }
-        
-        @media (min-width: 992px) {
-          #getItNow .hero-guy { left: -50px; }
-        }
-        
-      </style>
-    </atlantis:webstash>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .container .row .topSpacing{padding-top:20px;}
-      .container .row .leftSpacing{padding-left:50px;}
-      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-      .icon-spacing{text-align: center;font-size: 2em;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      .domain-icon-spacing {margin-right: 60px;}
-      .col-spacer2{width:43%;}
-      .col-spacer1{width: 30%;}
-      
-      h2{margin-top:0px;margin-bottom:0px;}
-      h3{margin-top:0px;margin-bottom:0px;}
-      .product-name{font-weight:800;padding-top:10px;}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        
-        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-      </style>
-    </atlantis:webstash>
-    <style>
-      .btn-lg{padding: 14px 15px 9px!important;}
-      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-      .right-side{margin-top: 25px;}
-      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
-      .product-name{padding-bottom: 15px;}
-      .p1{margin-bottom: 25px;}
-      .p2{margin-top: 15px;}
-      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs"/>
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">price</mark></h3>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]</mark></h3>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block"/>
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">Domain Name</h3>
               <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block"/>
-              <h3 class="text-center">Web Hosting</h3>
-              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
-            </div>
             <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block"/>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
               <h3 class="text-center">Office 365 Email</h3>
               <p>Get a professional email address, like <mark>yourname@<span class="business-idea">billybikes.org</span></mark>. </p>
             </div>
@@ -807,133 +724,17 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for $1/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is $12/year and $XXX.XX/year after the first year</small>
+            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
           </div>
         </div>
       </div>
     </section>
-    <atlantis:webstash type="css">
-      <style>
-        #pro-specific{background-color:#77c043;}
-        .uppercase{text-transform:uppercase;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .text-center{text-align:center;}
-        .titles{margin-top:50px;}
-        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
-        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
-        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
-        .col-xs-4.first{padding-top: 30px;}
-        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="css">
-      <style>
-        #getItNow { padding-bottom: 0; }
-        #getItNow .container { position: relative; }
-        #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
-        #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
-        #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
-        #getItNow .bubble h3 { font-family: Walsheim-Black; }
-        #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
-        
-        @media (min-width: 768px) {
-          #getItNow .bubble {
-            background-color: white;
-            background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
-            background-repeat: no-repeat;
-            background-size: 100% 100%;
-            overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            padding-left: 100px;
-            padding-right: 100px;
-            margin-left: 20%;
-          }
-          #getItNow .bubble h2 { padding-top: 0; }
-          #getItNow .hero-guy { left: -15%; }
-        }
-        
-        @media (min-width: 992px) {
-          #getItNow .hero-guy { left: -50px; }
-        }
-        
-      </style>
-    </atlantis:webstash>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .container .row .topSpacing{padding-top:20px;}
-      .container .row .leftSpacing{padding-left:50px;}
-      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-      .icon-spacing{text-align: center;font-size: 2em;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      .domain-icon-spacing {margin-right: 60px;}
-      .col-spacer2{width:43%;}
-      .col-spacer1{width: 30%;}
-      
-      h2{margin-top:0px;margin-bottom:0px;}
-      h3{margin-top:0px;margin-bottom:0px;}
-      .product-name{font-weight:800;padding-top:10px;}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        
-        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-      </style>
-    </atlantis:webstash>
-    <style>
-      .btn-lg{padding: 14px 15px 9px!important;}
-      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-      .right-side{margin-top: 25px;}
-      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
-      .product-name{padding-bottom: 15px;}
-      .p1{margin-bottom: 25px;}
-      .p2{margin-top: 15px;}
-      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
     <section id="pro-specific">
       <div class="container">
         <div class="row col-xs-12 text-center titles">
-          <h3 class="uppercase">Let us build a web store that will </h3>
-          <h3 class="uppercase">help you build your business</h3>
+          <h3>Let us build a web store that will </h3>
+          <h3>help you build your business</h3>
           <h4>Complete the online interview and our Web designers can create an eye-catching online store.</h4>
         </div>
         <div class="row">
@@ -971,8 +772,66 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <!-- p4p.whyUs-->
-    <section id="why-godaddy">
+    <section id="product" class="white">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:35px"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase"></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">
+              <div>
+                 
+                
+              </div>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-center">
+          <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
+        </div>
+      </div>
+      <section data-youtube-id="" class="video-marquee-wrapper">
+        <div class="container">
+          <div data-lazyload-source="" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+            <div class="video-info col-sm-4">
+              <div class="video-marquee-info text-center">
+                <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
+                <h4 class="uppercase walsheim-bold"></h4>
+                <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div>
+            <div class="col-sm-3">
+              <div style="margin-top:-65px" class="half-hero-right"></div>
+            </div>
+            <div style="margin-top:-10px" class="col-sm-5 speech-bubble-right-green">
+              <div class="speech-bubble-right-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none"></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hide this on pro landing pages-->
+    <section id="why-us">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
@@ -1001,91 +860,32 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <div class="container">
-      <div style="margin-top:10px;margin-bottom:10px" class="col-xs-12 section-divider"></div>
-    </div>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .container .row .topSpacing{padding-top:20px;}
-      .container .row .leftSpacing{padding-left:50px;}
-      .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-      .icon-spacing{text-align: center;font-size: 2em;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      .domain-icon-spacing {margin-right: 60px;}
-      .col-spacer2{width:43%;}
-      .col-spacer1{width: 30%;}
-      
-      h2{margin-top:0px;margin-bottom:0px;}
-      h3{margin-top:0px;margin-bottom:0px;}
-      .product-name{font-weight:800;padding-top:10px;}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-      #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
-    <atlantis:webstash type="css">
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
-        
-        .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        
-      </style>
-    </atlantis:webstash>
-    <style>
-      .btn-lg{padding: 14px 15px 9px!important;}
-      .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-      .right-side{margin-top: 25px;}
-      .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
-      .product-name{padding-bottom: 15px;}
-      .p1{margin-bottom: 25px;}
-      .p2{margin-top: 15px;}
-      .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-      #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-      
-    </style>
+    <hr>
     <section id="got">
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take your business online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</span></h3>
+            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price"></span>/mo*</span></h3>
           </div>
           <div class="pro-wrapper row">
-            <div class="col-xs-6"><div class='pro-computer'></div></div>
+            <div class="col-xs-6"></div>
             <div class="col-xs-6">
-              <h3 class="product-name">ECOMMERCE DESIGN SERVICES</h3>
-              <p class="p1">Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+              <h3 class="product-name"></h3>
+              <p class="p1"></p>
               <div class="row">
                 <div class="col-xs-12">
-                  <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
-                    <input type="hidden" name="product" value="1023|1|1"/>
-                    <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan"/>
-                    <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart"/>
-                    <input type="hidden" name="itc" value="slp_webdesign2"/>
-                    <input type="hidden" name="nocos" value="False"/>
-                    <input type="hidden" name="config" value="customsite"/>
-                    <input type="hidden" name="sdc" value="True"/>
-                    <input type="hidden" name="newxs" value="False"/>
-                    <input type="hidden" name="cicode" value="58348"/>
-                    <input type="hidden" name="prog_id" value="GoDaddy"/>
+                  <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
+                    <input type="hidden" name="product" value="1023|1|1">
+                    <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
+                    <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+                    <input type="hidden" name="itc" value="slp_webdesign2">
+                    <input type="hidden" name="nocos" value="False">
+                    <input type="hidden" name="config" value="customsite">
+                    <input type="hidden" name="sdc" value="True">
+                    <input type="hidden" name="newxs" value="False">
+                    <input type="hidden" name="cicode" value="58348">
+                    <input type="hidden" name="prog_id" value="GoDaddy">
                     <button id="get-it-btn2" type="submit" data-form="addtocart-form" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
                     <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
                   </form>
@@ -1171,9 +971,11 @@ ul li.no-check {
         .white{background-color:white}
         .uppercase{text-transform:uppercase}
         .lowercase{text-transform:lowercase}
-        .section-divider{height: 2px;background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-2px-line.png') no-repeat 0 0;}
-        #getItNow { padding-bottom: 0; }
+        
+        #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
+        #getItNow mark { line-height: 1.1em; }
+        #getItNow mark::after { height: 1.21em; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
         
         #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
@@ -1196,8 +998,8 @@ ul li.no-check {
             background-repeat: no-repeat;
             background-size: 100% 100%;
             overflow: visible;
-            padding-top: 50px;
-            padding-bottom: 50px;
+            padding-top: 40px;
+            padding-bottom: 40px;
             padding-left: 100px;
             padding-right: 100px;
             margin-left: 20%;
@@ -1209,110 +1011,68 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
+        section{padding-top:0px;padding-bottom:0px}
         
-      </style>
-      <atlantis:webstash type="css">
-        <style>
-          #pro-specific{background-color:#77c043;}
-          .uppercase{text-transform:uppercase;}
-          .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-          .speach-bubble-left-div {margin-left:5%;width:90%;}
-          .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-          .text-center{text-align:center;}
-          .titles{margin-top:50px;}
-          .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
-          .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
-          .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
-          .col-xs-4.first{padding-top: 30px;}
-          .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-          
-        </style>
-      </atlantis:webstash>
-      <atlantis:webstash type="css">
-        <style>
-          #getItNow { padding-bottom: 0; }
-          #getItNow .container { position: relative; }
-          #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-          
-          #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-          #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
-          #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
-          #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
-          #getItNow .bubble h3 { font-family: Walsheim-Black; }
-          #getItNow .products { margin-top: 40px; }
-          #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-          #getItNow .products img { max-height: 110px; }
-          
-          #getItNow .cta { margin-top: 20px;}
-          #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
-          
-          @media (min-width: 768px) {
-            #getItNow .bubble {
-              background-color: white;
-              background-position: center center;
-              background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
-              background-repeat: no-repeat;
-              background-size: 100% 100%;
-              overflow: visible;
-              padding-top: 50px;
-              padding-bottom: 50px;
-              padding-left: 100px;
-              padding-right: 100px;
-              margin-left: 20%;
-            }
-            #getItNow .bubble h2 { padding-top: 0; }
-            #getItNow .hero-guy { left: -15%; }
-          }
-          
-          @media (min-width: 992px) {
-            #getItNow .hero-guy { left: -50px; }
-          }
-          
-        </style>
-      </atlantis:webstash>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .container .row .topSpacing{padding-top:20px;}
-        .container .row .leftSpacing{padding-left:50px;}
-        .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-        .icon-spacing{text-align: center;font-size: 2em;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        .domain-icon-spacing {margin-right: 60px;}
-        .col-spacer2{width:43%;}
-        .col-spacer1{width: 30%;}
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+        
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
         
         h2{margin-top:0px;margin-bottom:0px;}
         h3{margin-top:0px;margin-bottom:0px;}
+        h5{margin-top:0px;margin-bottom:0px;}
+        
+        /* speech bubbles */
+        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-right-div {margin-left:5%;width:90%;}
+        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-left-div {margin-left:5%;width:90%;}
+        
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .heading{padding-top:30px;}
+        .starter-pack{padding-bottom: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .logo-label{padding-top: 15px;}
+        
+        /* video button */
+        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+        
+        /* Layout */
+        .view-all{margin:20px auto;}
+        
+        .why-us-title{margin-top:10px;}
+        .why-us-text{margin-top:10px;}
+        
+        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+        
         .product-name{font-weight:800;padding-top:10px;}
         
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png) no-repeat center bottom;}
-        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .features-online-store{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-websiteBuilder-icon.png) no-repeat center bottom;}
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png) no-repeat center bottom;}
-        #business-idea2{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
+        #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
+        #got-domain-selected{display:none;}
         
       </style>
-      <atlantis:webstash type="css">
-        <style>
-          .container .row .topSpacing{padding-top:20px;}
-          .container .row .leftSpacing{padding-left:50px;}
-          .col-xss-1{width: 13%;float: left;position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;}
-          .icon-spacing{text-align: center;font-size: 2em;}
-          
-          h2{margin-top:0px;margin-bottom:0px;}
-          h5{margin-top:0px;margin-bottom:0px;}
-          
-          .container .row .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png) no-repeat center bottom;}
-          .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-365email-icon.png) no-repeat center bottom;}
-          .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-          .speach-bubble-left-div {margin-left:5%;width:90%;}
-          .speach-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-          
-        </style>
-      </atlantis:webstash>
       <style>
         .btn-lg{padding: 14px 15px 9px!important;}
         .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
@@ -1325,6 +1085,19 @@ ul li.no-check {
         .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
         .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
         #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+        
+        #pro-specific{background-color:#77c043;}
+        .uppercase{text-transform:uppercase;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .speach-bubble-left-div {margin-left:5%;width:90%;}
+        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .text-center{text-align:center;}
+        .titles{margin-top:50px;}
+        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
+        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
+        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
+        .col-xs-4.first{padding-top: 30px;}
+        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
         
       </style>
     </atlantis:webstash>
@@ -1345,17 +1118,99 @@ ul li.no-check {
       
         $(".O365-domain-email").html("<mark>" + domainInfo.emailName + "@" + domainInfo.domainName + "</mark>");
       
-        var goodNewsStarter = "A great package deal for <mark>{0}</mark> starting at just <mark>{1}</mark>";
-        goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
-        $(".good-news-starter").html(goodNewsStarter);
+        // var goodNewsStarter = "A great package deal for <mark>{0}</mark> starting at just <mark>{1}</mark>";
+        // goodNewsStarter = goodNewsStarter.replace("{0}",domainInfo.businessName).replace("{1}",domainInfo.dealPrice);
+        // $(".good-news-starter").html(goodNewsStarter);
       
-        var startsWith = "It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark>{0}</mark>";
-        startsWith = startsWith.replace("{0}",domainInfo.businessName);
-        $(".domain-starts").html(startsWith);
+        // var startsWith = "It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>";
+        // startsWith = startsWith.replace("{0}",domainInfo.businessName);
+        // $(".domain-starts").html(startsWith);
       
-        $(".domainOption1").html(domainInfo.domainName);
-        $(".domainOption2").html(domainInfo.domainOption2);
-        $(".domainOption3").html(domainInfo.domainOption3);
+        // $(".domainOption1").html(domainInfo.domainName);
+        // $(".domainOption2").html(domainInfo.domainOption2);
+        // $(".domainOption3").html(domainInfo.domainOption3);
+      });
+      
+    </script>
+    <!-- atlantis:webstash(type="js")-->
+    <script>
+      // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
+      $(document).ready(function(){
+        if(typeof youtubeVideo === 'undefined'){
+          window.youtubeVideo = {
+            _src: 'https://www.youtube.com/embed/',
+            loadVideo: function(videoId, height, width, callback, parameters, container, insertType){
+              if(typeof parameters === 'object'){
+                var paramString = '';
+                  
+                // add origin to src
+                parameters.origin = window.location.protocol+'//'+window.location.host
+      
+                if(youtubeVideo._src.indexOf('?') === -1){
+                  paramString += '?';
+                }else{
+                  paramString += '&';
+                }
+      
+                for(param in parameters){
+                  if(paramString.length > 2){
+                    paramString += '&';
+                  }
+                  paramString += param+'='+parameters[param];
+                }
+                parameters = paramString;
+              }
+      
+              var $video = $('<iframe height="'+height+'" width="'+width+'" style="position:absolute" frameBorder="0" src="'+youtubeVideo._src+videoId+parameters+'" />');
+      
+              // append/prepend to container
+              if(typeof container === 'string'){
+                container = $(container);
+              }
+      
+              if(typeof insertType === 'undefined' || insertType === 'append'){
+                container.append($video);
+              }else{
+                container.prepend($video);
+              }
+      
+              if(typeof callback === 'function'){
+                $video.load(function(){
+                  callback($video[0]);
+                });
+              }
+      
+              return $video[0];
+            }
+          };
+        }
+          
+        var $containers = $('.video-marquee-wrapper');
+        $containers.each(function(){
+          var $this = $(this);
+          var videoId = $this.data('youtube-id');
+          $this.find('.play-button, .cta').bind('click.youtube',function(event){
+            // remove this event
+            $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
+      
+            // load the video
+            youtubeVideo.loadVideo(
+                videoId,
+                '100%',
+                '100%',
+                function(video){
+                    var $videoInfo = $this.find('.video-info');
+                    $videoInfo.animate({'opacity':0.0},1000,function(){
+                        $videoInfo.css({'display':'none'});
+                    });
+                    //$(video).css({'opacity':0.0}).animate({'opacity':1.0});
+                },
+                {'autoplay':1,'controls':2,'showinfo':0,'playsinline':1,'modestbranding':1,'rel':0,'iv_load_policy':3},
+                $(".video-marquee"),
+                'prepend'
+            );
+          }).css({'cursor':'pointer'});
+        });
       });
     </script>
   </body>

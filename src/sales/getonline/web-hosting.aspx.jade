@@ -1,8 +1,19 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
 append vars
   - primary_pfid = 32051
   - primary_promo = 521092015;
+  - productToDisplay.name = "Web Hosting";
+  - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car. MXNXXX.XX/yr";
+  - productToDisplay.imgClass = "features-hosting";
+  - productToDisplay.productIconClass = "features-hosting";
+  - productToDisplay.price = "$1.00";
+  - productToDisplay.productDescription = "Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.";
+  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productYouTubeId = "";
+  - productToDisplay.productVideoInfoText = "";
+  - productToDisplay.productInfoText = "Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.";
+  - productToDisplay.productDidYouKnowText = "Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?";
 
 block targetedProduct
   .column.website
@@ -10,11 +21,29 @@ block targetedProduct
     h3.text-center Web Hosting
     p Give your site a home that’ll keep it secure and running like a sports car.
 
-block proSpecific
+block productViewTemplates
 
-//block product
-  //- define hosting product section
+block productVideo
 
-block got
-   - var productToDisplay = {name: "Web Hosting", info: "Web Hosting stuff here", cssClass: "<div class='web-hosting-icon'></div>", price: "$1.00"};
-   +renderReadyToTakeBusinessOnline(productToDisplay)
+block productInfo
+  style.
+    .hosting-servers{height:117px;margin-top:38px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+    .hosting-arrows{height:39px;margin-top:10px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-arrows.png) no-repeat center bottom;}
+    .hosting-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
+    .product-info-text{margin-top:20px;margin-bottom:85px;}
+
+  section#productInfo
+    .container(style={'margin-top':'60px'})
+      .col-sm-4
+        .hosting-servers
+        h5.uppercase.text-center(style={'margin-top':'10px'}) enter your blog post
+      .col-sm-4
+        h5.uppercase.text-center(style={'margin-top':'100px'}) publish
+        .hosting-arrows
+      .col-sm-4
+        .hosting-browser
+        h5.uppercase.text-center(style={'margin-top':'10px'}) <mark>domainName.org</mark>
+    .container
+      .col-sm-12.product-info-text #{productToDisplay.productInfoText}
+
+block productTemplates

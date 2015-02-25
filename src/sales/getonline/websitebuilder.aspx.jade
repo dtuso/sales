@@ -1,7 +1,23 @@
-extends ./templates/_p4p.jade
+extends _p4p.jade
 
-block price
-  h3.text-center A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">$1.50</mark>
+append vars
+  - productToDisplay.name = "Website Builder";
+  - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools. MXNXXX.XX/yr";
+  - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.imgClass = "features-wsb";
+  - productToDisplay.productIconClass = "features-wsb";
+  - productToDisplay.price = "$1.00";
+  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
+  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
+  - productToDisplay.productVideoInfoText = "What is Website Builder?";
+  - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
+
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    h3.text-center Web Hosting
+    p SWITCH THIS TO WSB
 
 block targetedProduct
   .column.website
@@ -9,8 +25,7 @@ block targetedProduct
     h3.text-center Website Builder
     p Easily create a professional website with simple drag-&-drop tools.
 
-block proSpecific
+block productInfo
 
-block got
-   - var productToDisplay = {name: "Website Builder", info: "Website builder stuff here", cssClass: "<div class='wsb-icon'></div>", price: "$1.00"};
-   +renderReadyToTakeBusinessOnline(productToDisplay)
+block productTemplates
+  include ../../sales/shared/wsb-templates.html
