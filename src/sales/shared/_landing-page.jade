@@ -138,6 +138,12 @@ block endOfPageScripts
           if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
         });
       }
+
+      // tokenize any icann fees
+      var bodyHtml = $('body').html();
+      bodyHtml = bodyHtml.replace(/\{icannfee\}/gi, '[@T[domains:<icannfee/>]@T]');
+      $('body').html(bodyHtml);
+
     });
  
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
