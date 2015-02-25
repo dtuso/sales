@@ -1513,9 +1513,9 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
-            <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
+            <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
           </div>
           <div class="container bottom">
             <div class="row">
@@ -1539,7 +1539,7 @@ function getParameterByName(name) {
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
                     <button id="get-it-btn2" class="btn btn-purchase btn-lg center-blockp">Get it now</button>
-                    <button id="btn-search-again" class="btn btn-primary btn-lg center-block">Search Again</button>
+                    <button id="btn-search-again" class="btn btn-primary btn-lg">Search Again</button>
                   </div>
                   <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>
@@ -1724,6 +1724,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
     </atlantis:webstash>

@@ -151,6 +151,7 @@ append pageStyles
     .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
     #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
     #got-domain-selected{display:none;}
+    #got small { display: block; padding-top: 10px; padding-bottom:5px;}
 
 block content
  
@@ -276,10 +277,10 @@ block content
     .container
       .row
         div.text-center(style={'margin-top':'30px'})
-          h2.uppercase Ready to take <mark class="business-name-display"></mark> online?
+          h2.uppercase Ready to get online?
           block checkPro
             h3.header-detail-text.uppercase#got-domain-not-selected First select your perfect domain
-            h3.header-detail-text.uppercase#got-domain-selected You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+            h3.header-detail-text.uppercase#got-domain-selected You've found the perfect domain, <mark class="domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
         block checkPro-bottom
           .container.bottom
             .row
@@ -300,7 +301,7 @@ block content
                     p.h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
                   .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
                     button.btn.btn-purchase.btn-lg.center-blockp#get-it-btn2 Get it now
-                    button.btn.btn-primary.btn-lg.center-block#btn-search-again Search Again
+                    button.btn.btn-primary.btn-lg#btn-search-again Search Again
                   .row.text-center(style={'padding-top':'10px'})
                     small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
 
