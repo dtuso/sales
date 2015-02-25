@@ -267,6 +267,8 @@ function domainSearchFormSubmit(e, domain) {
 
       if(isAvailable) {
 
+        updateSelectedDomain(exactMatchDomain.Fqdn);
+        
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
