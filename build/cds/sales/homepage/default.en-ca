@@ -1195,7 +1195,7 @@ section {
       
           var maxHeroHeight = 0;
           $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
+          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
       }
       $(window).load(reSizeTiles);
       $(window).load(function () {
