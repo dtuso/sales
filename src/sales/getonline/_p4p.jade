@@ -91,8 +91,25 @@ append pageStyles
     @media (min-width: 992px) {
       #getItNow .hero-guy { left: -50px; }
     }
-    section{padding-top:0px;padding-bottom:0px}
     
+    #product h2 { margin-top: 20px; margin-bottom: 20px; }
+    #product h3 { text-transform: none; }
+    #product .how-it-works { margin: 20px auto; }
+
+    #product .bubble {
+      background-color: white;
+      background-position: center center;
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      overflow: visible;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-left: 20%;
+    }
+
     .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
     .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
     .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
@@ -153,7 +170,7 @@ append pageStyles
     #got-domain-selected{display:none;}
 
 block content
- 
+
   section#getItNow
     .container
       img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
@@ -186,6 +203,8 @@ block content
   block domainOrPro
     include templates/_domain-search-wizard
   
+  block productSection
+
   section#product.white
     .container
       .row
@@ -226,6 +245,23 @@ block content
               h5.uppercase <mark><strong>did you know...</strong></mark>
               h5(style={'margin-top':'10px','text-transform':'none'}) #{productToDisplay.productDidYouKnowText}
     block productTemplates
+
+
+  section#O365-email
+    .container
+      .row
+        .col-xs-12
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
+          h2.text-center Office 365 Email
+          h3.text-center Branded email to talk to your customers
+          span.h2 <mark>yourname@<span class="business-idea">billybikes.org</span></mark>
+      .row
+        .col-xs-3
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+        .col-xs-6.bubble
+          mark Did you know...
+          p As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?
+
 
   block office365
     section#O365-email.gray
@@ -304,6 +340,25 @@ block content
                     p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
 
 prepend endOfPageScripts
+  script.
+    $(document).ready(function(){
+      stripDomainName();
+    });
+
+    function stripDomainName(){
+         var windowParams = window.location.search.replace("?","");
+         var params = windowParams.split("&");
+         for(var i = 0; i < params.length;i++){
+          var inputName = params[i].split("=")[0];
+          var inputValue = params[i].split("=")[1];
+          if(inputName == "domain"){
+            inputValue = decodeURIComponent(inputValue);
+            $(".business-idea").text(inputValue);
+          }
+           
+       }
+    };
+
   script.  // Page
     $(document).ready(function(){
       var domainInfo = {
