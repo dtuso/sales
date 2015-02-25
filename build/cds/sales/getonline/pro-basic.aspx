@@ -709,9 +709,9 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png"></div>
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png"></div>
           <div class="col-xs-8 col-sm-6 products">
-            <h3>ECommerce Design Services</h3>
+            <h3>Professional Design Services</h3>
             <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
             <button class="btn btn-purchase btn-lg">Get it now for [@T[productprice:<current productid="32051" period="monthly" dropdecimal="false" htmlsymbol="false" negative="parentheses" promocode="521092015"/>]@T]/mo</button>
             <p>or give us a call at <span>(480) 366-3344</span></p>
@@ -858,11 +858,11 @@ function getParameterByName(name) {
             <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <span id="price-per-month"><span id="product-price"></span>/mo*</span></h3>
           </div>
           <div class="pro-wrapper">
-            <div class="col-xs-6"></div>
+            <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png" class="img-responsive center-block"></div>
             <div class="col-xs-6">
-              <h3 class="product-name"></h3>
-              <p class="p1"></p>
-              <div class="col-xs-12">
+              <h3 class="product-name">Professional Design Services</h3>
+              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+              <div class="col-xs-12 text-center">
                 <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
                   <input type="hidden" name="product" value="6520|1|1">
                   <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
@@ -874,7 +874,7 @@ function getParameterByName(name) {
                   <input type="hidden" name="newxs" value="False">
                   <input type="hidden" name="cicode" value="56910">
                   <input type="hidden" name="prog_id" value="GoDaddy">
-                  <button id="get-it-btn2" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                  <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
                   <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
                 </form>
               </div>

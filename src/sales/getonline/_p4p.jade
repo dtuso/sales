@@ -285,23 +285,24 @@ block content
             .row
               .col-sm-4.text-center
                 .features-domain-name
-                label.h3.uppercase.product-name Domain Name
+                label.h3.product-name Domain Name
               .col-sm-4.text-center
-                div(class="#{productToDisplay.imgClass}")
-                label.h3.uppercase.product-name #{productToDisplay.name}
+                block gotProduct
+                  //div(class="#{productToDisplay.imgClass}")
+                  //label.h3.product-name #{productToDisplay.name}
               .col-sm-4.text-center
                 .features-email
-                label.h3.uppercase.product-name Office 365 Email
+                label.h3.product-name Office 365 Email
             .row
               .get-it-now
                 .container
                   .row.text-center
-                    p.h3.center Get the bundle for $1/month for the first year*
+                    p.h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
                   .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                    btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
-                    btn.btn-primary.btn-search-again.btn-lg.uppercase#btn-search-again Search Again
+                    button.btn.btn-purchase.btn-lg.center-blockp#get-it-btn2 Get it now
+                    button.btn.btn-primary.btn-lg.center-block#btn-search-again Search Again
                   .row.text-center(style={'padding-top':'10px'})
-                    p.h6 *Bundle cost is $12/year and $XXX.XX/year after the first year
+                    small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
 
 prepend endOfPageScripts
   script.  // Page

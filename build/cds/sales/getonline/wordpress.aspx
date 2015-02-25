@@ -716,7 +716,7 @@ function getParameterByName(name) {
             </div>
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
-              <h3 class="text-center">Wordpress</h3>
+              <h3 class="text-center">Managed Wordpress</h3>
               <p>Start a blog with WordPress and let us manage the technical stuff.</p>
             </div>
             <div class="plus">+</div>
@@ -1521,15 +1521,15 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-sm-4 text-center">
                 <div class="features-domain-name"></div>
-                <label class="h3 uppercase product-name">Domain Name</label>
+                <label class="h3 product-name">Domain Name</label>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-wordpress"></div>
-                <label class="h3 uppercase product-name">Managed Wordpress</label>
+                <label class="h3 product-name">Managed Wordpress</label>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-email"></div>
-                <label class="h3 uppercase product-name">Office 365 Email</label>
+                <label class="h3 product-name">Office 365 Email</label>
               </div>
             </div>
             <div class="row">

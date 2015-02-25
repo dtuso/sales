@@ -715,9 +715,9 @@ function getParameterByName(name) {
               <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
-              <h3 class="text-center">Web Hosting</h3>
-              <p>SWITCH THIS TO WSB</p>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png" class="img-responsive center-block">
+              <h3 class="text-center">Website Builder</h3>
+              <p>Easily create a professional website with simple drag-&-drop tools.</p>
             </div>
             <div class="plus">+</div>
             <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
@@ -3075,15 +3075,15 @@ var PlanBox6UI = {
             <div class="row">
               <div class="col-sm-4 text-center">
                 <div class="features-domain-name"></div>
-                <label class="h3 uppercase product-name">Domain Name</label>
+                <label class="h3 product-name">Domain Name</label>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-wsb"></div>
-                <label class="h3 uppercase product-name">Website Builder</label>
+                <label class="h3 product-name">Website Builder</label>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-email"></div>
-                <label class="h3 uppercase product-name">Office 365 Email</label>
+                <label class="h3 product-name">Office 365 Email</label>
               </div>
             </div>
             <div class="row">
@@ -3093,8 +3093,8 @@ var PlanBox6UI = {
                     <p class="h3 center">Get the bundle for $1/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
-                    <btn id="btn-search-again" class="btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+                    <button id="get-it-btn2" class="btn btn-purchase btn-lg center-blockp">Get it now</button>
+                    <button id="btn-search-again" class="btn btn-primary btn-lg center-block">Search Again</button>
                   </div>
                   <div style="padding-top:10px" class="row text-center">
                     <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
