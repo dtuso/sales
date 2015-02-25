@@ -283,11 +283,14 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section');       
+        var $thisSection = $this.closest('.js-marquee-section'); 
 
-        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+        var $toView = $('#domain-available-marquee-view');
+        $toView.find('.purchase-btn').data('domain', exactMatchDomain);
+        $toView.find('.search-message').hide();
+        $toView.find('.search-message.type-your-business-name').show();
 
-        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        animateMarquee($thisSection, $toView /*toView*/);
 
       } else {
 
@@ -447,8 +450,12 @@ function showSearchSpins($this, domain, alternateDomains){
   
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
+
   var $thisSection = $this.closest('.js-marquee-section');
-  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  var $toView = $('#domain-not-available-marquee-view');
+  $toView.find('.search-message').hide();
+  $toView.find('.search-message.type-your-business-name').show();
+  animateMarquee($thisSection, $toView /*toView*/);
 
 }
 

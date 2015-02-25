@@ -5527,11 +5527,10 @@ width: 50%;
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
-      
-        // tokenize any icann fees
-        var bodyHtml = $('body').html();
-        bodyHtml = bodyHtml.replace(/\{icannfee\}/gi, '[@T[domains:<icannfee/>]@T]');
-        $('body').html(bodyHtml);
+        $('[data-icann-fee]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
       
       });
       
