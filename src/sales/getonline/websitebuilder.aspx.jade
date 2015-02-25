@@ -1,6 +1,8 @@
 extends _p4p.jade
 
 append vars
+  - primary_pfid = 7524;
+  - primary_promo = 24681357;
   - productToDisplay.name = "Website Builder";
   - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools. MXNXXX.XX/yr";
   - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
@@ -23,3 +25,8 @@ block productInfo
 
 block productTemplates
   include ../../sales/shared/wsb-templates.html
+
+block gotProduct
+  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
+  h3.text-center Website Builder
+

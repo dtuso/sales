@@ -1,6 +1,8 @@
 extends _p4p.jade
 
 append vars
+  - primary_pfid = 47902;
+  - primary_promo = 75315678;
   - productToDisplay.name = "Online Store";
   - productToDisplay.getItNowDescription = "Easily create a site that let’s you sell your stuff, accept credit cards and more. MXNXXX.XX/yr";
   - productToDisplay.productDescription = "Online Store includes everything you need for a complete eCommerce website. See how easy it is.";
@@ -15,12 +17,16 @@ append vars
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
-    h3.text-center Web Hosting
-    p SWITCH THIS TO ONLINE STORE
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png")
+    h3.text-center Online Store
+    p Easily create a site that let’s you sell your stuff, accept credit cards and more.
 
 block productViewTemplates
 
 block productInfo
 
 block productTemplates
+
+block gotProduct
+  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png")
+  h3.text-center Online Store
