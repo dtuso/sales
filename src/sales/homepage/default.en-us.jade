@@ -1,3 +1,4 @@
+
 extends ./_home-page.jade
 
 block hero
@@ -15,13 +16,6 @@ block merch-tile3
 block merch-tile4
   include ./tiles/online-store-tile.jade
 block prepend sections
-  include ./sections/_domain-promo.jade
-  include ./sections/_why-godaddy.jade
-  include ./sections/_website-promo.jade
-  include ./sections/_o365-promo.jade
-  include ./sections/_support-promo.jade
-  include ./sections/_nascar-contest.jade
-block prepend sections
   |  
   |  ##if(appSettingEnabled(Danica_Win_Daytona))
   include ./sections/_danica_wins_daytona.jade
@@ -36,5 +30,12 @@ block prepend sections
   include ./sections/_danica_wins_2nd_pole.jade
   |  
   |  ##endif
+  include ./sections/_domain-promo.jade
+  include ./sections/_why-godaddy.jade
+  include ./sections/_website-promo.jade
+  include ./sections/_o365-promo.jade
+  include ./sections/_support-promo.jade
+  include ./sections/_nascar-contest.jade
+
 block bugBar
-  +tldBugs(["co","org","net", "biz"])
+  +tldBugs(["org","net", "biz"])

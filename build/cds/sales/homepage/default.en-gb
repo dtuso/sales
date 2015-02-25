@@ -3,222 +3,383 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
     <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
     <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/homepage:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
     <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
-    <meta name="format-detection" content="telephone=no">
     <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
-    <meta property="og:site_name" content="GoDaddy">
+    <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">
-    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
-    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
-    <link href="[@T[link:<cssroot />]@T]fos/201401/global/css/global-1.8.3.min.css" rel="stylesheet" type="text/css"> 
-    [@P[cdsDocument:<data app="sales" location="fonts/fonts" /> ]@P]
-    <style>
-      .uk-cookie-banner{background: #8a8a8a; color: #fff; font-size: 12px; padding: 10px;position:fixed;bottom:0;width: 100%;z-index:999}
-      .uk-cookie-banner a{color:#fff;text-decoration: underline}
-      .uk-cookie-banner span {display:block}
-      .uk-cookie-banner i {background-image: url([@T[link:<imageroot />]@T]fos/base/1/alerts.png)}
-      .uk-cookie-ico{background-position: 0 0;height:20px;display: block;float: left;margin: 10px;width: 20px}
-      .uk-cookie-wrap{margin: 0 auto;width: 1000px}
-      .uk-cookie-close{background-position: 4px -228px;cursor:pointer;height: 20px;display: block;position: absolute;top:10px;right:25px;margin: 10px;width: 20px}
-      .tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
-      .walsheim-black{font-family:'Walsheim-Black';}
-      .hp-sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) scroll no-repeat; vertical-align: top; }
+    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
+    </script>
+    <script>
+      function loadJsAsync(sourceUrl, id) {
+         var js, fjs = document.getElementsByTagName('script')[0];
+         if (document.getElementById(id)) {return;}
+         js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
+         js.id = id;
+         js.src = sourceUrl;
+         fjs.parentNode.insertBefore(js, fjs);
+      }
       
-    </style> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
-    <style>
-      .top-banner-lower-content{height:45px;background-color:#fff;width:100%}
-      .top-lower-content{margin:0 auto;position:relative;width:1000px;padding-top:13px}
-      .gdhp-share{position:relative;float:right;}
-      #pcf .pc-support-wrapper{margin-top:0px !important;}
-      body {font-family:'Walsheim-Regular'; background-color:#ededed;}
-      body .gdhp-tile-wrap{background-color:#ededed;}
-      .atn-btn-wrap{padding-top:20px;width:450px;height:54px;}
-      .atn-btn-wrap>span {visibility: visible;margin-right: 20px;float: left;}
-      .b {font-family: 'Walsheim-Bold'}
+      function endOfPageScripts() {
       
-    </style>
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript"></script>
-  </head>
-  <body>
-     
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
-    <atlantis:webstash type="css">
-      <style>
-        .gdhp-main-top{margin:0 auto;padding:10px 0 0;position:relative;width:1000px;z-index:2;*margin-top:-3px}
-        .search-form{width:1000px;max-width:1000px}
-        .gdhp-search-box{background-color:#fff;border:2px solid #ccc;border-top:3px solid #939597;height:38px;position:relative;width:700px;float:left;margin-right:20px}
-        .search-form-input{width:98.8%}
-        .gdhp-main-top .btn-lg {padding: 0 0;height:44px;width:240px;}
-        .gdhp-search-box .domainSearchBox{float:left;height:40px;margin:0;padding:0;position:relative;z-index:1}
-        .gdhp-search-box input,.gdhp-search-box .searchInput{background:transparent;border:0;color:#999!important;float:left;font-size:20px;height:26px;line-height:25px;margin:0!important;outline:0;padding:6px 0 1px 10px!important;max-width:800px}
-        #searchDomainName-label{top:1px;}
-        .gdhp-search-box .hp-search{float:right;font-size:20px;line-height:20px;padding:15px 30px 15px;background-color:#7db701}
-        .btn{font-family:'Walsheim-Medium';}
-        .gdhp-main-top .btn-lg{padding:0 0;height:44px;width:240px;text-transform:uppercase;}
-        
-      </style>
-    </atlantis:webstash>
-    <div class="gdhp-search-section">
-      <div class="gdhp-main-top">
-        <form method="post" data-url="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]" class="search-form search-form-alternate search-form-certified">
-          <div class="gdhp-search-box">
-            <input type="text" id="searchDomainName" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" class="search-form-input searchInput helveticafont">
-          </div>
-          <button type="submit" name="searchButton" data-ci="54814" class="btn btn-warning btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
-          <div class="clearfix"></div>
-        </form>
-      </div>
-    </div>
-    <div id="marquee-container-orig">
-       ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-        [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
-       ##else
-        [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-       ##endif
-    </div>
-    <div id="marquee-container-isc" style="display:none"> [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]</div>
-    <!-- Bugbar (and social links) Sections-->
-    <div class="top-banner-lower-content">
-      <div class="top-lower-content"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='org' /></relative>]@T]" class="tld-link org"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAATCAMAAAAgYzSBAAAATlBMVEVMaXExNTwuNTg0NjonLDUyNTv/igAUPFAuMDIUQVA1Nz0rMDT/gAD/hQD+fAD+hwD/iAD/fAAICQk7OTv/igD7fgD/iQD/igD/gAD/iADJaA/nAAAAGHRSTlMAgZhBDmrF/sTdVa2Im0kPZa8aLvMs2HhQ3/01AAAAz0lEQVR4XtWQyRLDIAxDFTazhiTd6P//aLHh0FzSczUDM8IPI4y/V26uiomBiEIEPJEl0kZ1r/ohgNU5lxmyNGQ7xToCTQEPbPeCR4Xp1i9cMYPiW8oyipK31lpZnzVyXdjYKW+gOgQcTLXSWKW9FqIEybT0pUc6AIGpfG9vprYzZYDEvaQ5trzKizvOL87fWJ2YQsXqct+lHiQ9mJKDqTmJ/XsScVK4yfzCMNntFSzpnjSgvGd/QGstua4Uglo4gr+CLE3drigjX6E0oN/6AHKzCygF6jg1AAAAAElFTkSuQmCC" class="tld-image org"/><span class="price">[@T[productprice:<current productid='12101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='93298' /><param name='tld' value='net' /></relative>]@T]" class="tld-link net"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAATCAMAAADCvy/4AAAARVBMVEVMaXEICQkmKjE7OTs1Nz0iHyA1NTUrMDQuMDIyNTsxNTwuNTg0NjouS2n/0wD/1wD/zgT2xQD/zwD/2AD/lQAiHiD/zQBwNP4IAAAAFXRSTlMAGg8uVencrcRqgZhBCYrfRf1XMBp0hYENAAAArElEQVR4Xs2QSw7DIAwFnYBjG8i3de5/1D4aJaJZdFl1FmiMBgmZ/oI0ePle9O5u59BZ6U1UbMQQMixCChJJsIo4s1eUyPywUf3gTE5CgPAAM74nXN7vY4L2hFNDnXMMVzIQdTVRaIwZYfPde3LQJsv2vCWslXwl076vjybJ0GYvCbKDqUmKw0WUjciBGM1Itia5FiB0KNMyrxNF1UQ0impHZAMCloCLzDX9FS+SmxC3lyWwXgAAAABJRU5ErkJggg==" class="tld-image net"/><span class="price">[@T[productprice:<current productid='12001' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
-        <atlantis:webstash type="css">
-          <style>
-            .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
-            .tld-links span, .tld-links img { display: inline-block; }
-            .tld-links a:hover>.price{text-decoration:underline}
-            .tld-image {vertical-align: top; margin-right: 8px;}
-          </style>
-        </atlantis:webstash>
-        <div class="gdhp-share">
-          <div data-twshareurl="[@T[link:<relative path=''></relative>]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter" class="fosshare"></div>
-        </div>
-      </div>
-    </div>
-    <!-- Tiles Section-->
-    <atlantis:webstash type="css">
-      <style>
-        .gdhp-tile-wrap{height:580px;width:100%;background-color:#d4d4d4}
-        .gdhp-tile-area{width:1000px;margin:0 auto}
-        .gdhp-tile{width:480px;height:480px;background-color:#fff;float:left;margin:40px 10px 0;cursor:pointer;}
-        .gdhp-tile span{display:block;}
-        .gdhp-tile .btn-lrg{font-size:24px;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
-        .gdhp-tile .btn-orange{color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;}
-        .gdhp-tile .btn-orange:hover{background-color:#ff9b39;border-color:#cc7832}
-        .tile-sprite{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_tile_sprite_20141205.png) scroll no-repeat;}
-      </style>
-    </atlantis:webstash>
-    <div class="gdhp-tile-wrap">
-      <div class="gdhp-tile-area">
-        <div id="tile-container-got">
-           
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-        </div>
-        <div id="tile-container-30-percent-gtld" style="display:none">
-           
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
-        </div>
-        <script type="text/javascript">
-          if ($('#gybo').length) {
-            $('#tile-container-got').hide();
-            $('#tile-container-30-percent-gtld').show();
+        $(document).ready(function(){
+          // fix centering elements
+          window.triggerResize = function(){
+            setTimeout(function(){
+              $(window).trigger('resize');
+            },50);
+          }
+          setTimeout(function(){
+            triggerResize();
+          },200);
+      
+          // Wire up tooltips
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
           }
           
-        </script>
-         
-        [@P[cdsDocument:<data app="sales" location="homepage/tile/co-uk-brilliant/default_template" /> ]@P]
-      </div>
-    </div>
-    <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" data-dismiss="modal" aria-hidden="true" class="modal-header-close close">&times;</button>
-          </div>
-          <div class="modal-body">
-            <iframe width="854" height="480" src="" autoplay scrolling="no" frameborder="0" allowfullscreen></iframe>
+        });
+      
+        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+          return false;
+        });
+      
+        // Track all the icodes (tcodes handled by gtm.js)
+        window._trfq = window._trfq || [];
+        $('[data-icode]').each(function(index, element) {
+          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+        });
+      }
+      
+    </script><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      
+    </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+    ##if(IsManager())
+    <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    ##endif
+  </head>
+  <body>
+    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADEREND-->
+    <section id="domain-search">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <atlantis:webstash type="css">
+              <style>.search-text {
+  display: none;
+}
+.search-icon {
+  font-size: 22px;
+}
+@media (min-width: 768px) {
+  .search-text {
+    display: inline;
+  }
+  .search-icon {
+    display: none;
+  }
+}
+
+              </style>
+            </atlantis:webstash>
+            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+              <input type="hidden" name="ci" value="54814"/>
+              <input type="hidden" name="checkAvail" value="1"/>
+              <div class="input-group">
+                <label for="domain-name-input" class="searchInput sr-only">Find your perfect domain name</label>
+                <input id="domain-name-input" type="text" placeholder="Find your perfect domain name" name="domainToCheck" maxlength="63" class="searchInput form-control"/><span class="input-group-btn">
+                  <button type="submit" data-ci="54814" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+              </div>
+            </form>
+            <script>
+              $(".domain-search-form").on('submit', function(e) {
+                var input = $(this).find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
+                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                }
+              });
+              
+            </script>
           </div>
         </div>
       </div>
-    </div>
-    <atlantis:webstash type="css">
-      <style>
-        .why-us-wrap{width:100%;height:520px;background:radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
-        .why-us-content{width:1000px;margin:0 auto;border-top:15px solid green;background-color:#fff;height:485px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/WWD-background.png) scroll no-repeat;}
-        .why-us-text{width:52%;padding:5px 0 0 20px;font-size:13px;float:left;box-sizing:border-box;position:relative;}
-        .why-us-text h1 {font-size:14px;line-height:12px;display:inline;color:#333;}
-        .why-us-headline{font-size:56px;font-family:'Walsheim-Black'}
-        .why-us-maintext>div{margin-bottom:.8em}
-        .why-us-logos{width:48%;height:100%;float:left;}
-        .why-us-logos>ul{list-style:none;margin:30px 0 0 100px}
-        .why-us-logos>ul>li{line-height:0px;height:80px;}
-        .why-us-btn{cursor:pointer;}
-        .why-us-btn:hover span{text-decoration:underline;}
-        .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo,.gdhp-hosting-logo,.gdhp-o365-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat;display:inline-block;}
-        .gdhp-domains-logo{background-position:-410px -170px;width:50px;height:56px;margin:12px 50px 0 0}
-        .gdhp-wsb-logo{background-position:-410px -236px;width:45px;height:47px;margin:16.5px 55px 0 0}
-        .gdhp-store-logo{background-position:-410px -293px;width:47px;height:52px;margin:14px 53px 0 0}
-        .gdhp-getfound-logo{background-position:-410px -355px;width:68px;height:51px;margin:15px 42px 0 -10px}
-        .gdhp-support-logo{background-position:-410px -416px;width:52px;height:58px;margin:11px 48px 0 0}
-        .gdhp-hosting-logo{background-position: -476px -170px;width: 50px;height: 50px;margin: 10px 50px 0 0;}
-        .gdhp-o365-logo{background-position: -476px -235px;width: 52px;height: 45px;margin: 10px 0 0 0;position: absolute;}
-        .gdhp-domains-text,.gdhp-wsb-text,.gdhp-store-text,.gdhp-getfound-text,.gdhp-support-text,.gdhp-hosting-text,.gdhp-o365-text{font-size:24px;}
-        .gdhp-domains-text{vertical-align:21px;}
-        .gdhp-wsb-text{vertical-align:18px;}
-        .gdhp-store-text{vertical-align:20px;}
-        .gdhp-getfound-text{vertical-align:24px;}
-        .gdhp-support-text{vertical-align:24px;}
-        .gdhp-hosting-text{vertical-align:18px;}
-        .gdhp-o365-text{display: inline-block;line-height: 30px;margin-left: 100px;}
-        .why-us-wrap #disclaimers a{font-size: 12px;line-height: 14px;text-decoration: none;color: #333;}
-        .why-us-wrap #gdhp-support-scope-link:hover,.why-us-wrap #gdhp-disclaimer-lnk:hover{color: #7db701;text-decoration: underline;}
-        .why-us-wrap .content-disclaimer {padding-left:0px; line-height:14px}
-        
-      </style>
-    </atlantis:webstash>
-    <div class="why-us-wrap">
-      <div class="why-us-content">
-        <div class="why-us-text"><span class="why-us-headline">[@L[cds.sales/homepage/locales/en:why-us-headline]@L]</span>
-          <div class="why-us-maintext">
-            ##if(countrySiteAny(in))
-            [@L[cds.sales/homepage/locales/en:why-us-maintext-india]@L]
-            ##else
-            [@L[cds.sales/homepage/locales/en:why-us-maintext]@L]
-            ##endif
+    </section>
+    <section id="bugbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/org.aspx'><param name='ci' value='93297' /><param name='tld' value='org' /></relative>]@T]" class="tld-link org"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAATCAMAAAAgYzSBAAAATlBMVEVMaXExNTwuNTg0NjonLDUyNTv/igAUPFAuMDIUQVA1Nz0rMDT/gAD/hQD+fAD+hwD/iAD/fAAICQk7OTv/igD7fgD/iQD/igD/gAD/iADJaA/nAAAAGHRSTlMAgZhBDmrF/sTdVa2Im0kPZa8aLvMs2HhQ3/01AAAAz0lEQVR4XtWQyRLDIAxDFTazhiTd6P//aLHh0FzSczUDM8IPI4y/V26uiomBiEIEPJEl0kZ1r/ohgNU5lxmyNGQ7xToCTQEPbPeCR4Xp1i9cMYPiW8oyipK31lpZnzVyXdjYKW+gOgQcTLXSWKW9FqIEybT0pUc6AIGpfG9vprYzZYDEvaQ5trzKizvOL87fWJ2YQsXqct+lHiQ9mJKDqTmJ/XsScVK4yfzCMNntFSzpnjSgvGd/QGstua4Uglo4gr+CLE3drigjX6E0oN/6AHKzCygF6jg1AAAAAElFTkSuQmCC" class="tld-image org"/><span class="price">[@T[productprice:<current productid='12101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/net.aspx'><param name='ci' value='93298' /><param name='tld' value='net' /></relative>]@T]" class="tld-link net"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAATCAMAAADCvy/4AAAARVBMVEVMaXEICQkmKjE7OTs1Nz0iHyA1NTUrMDQuMDIyNTsxNTwuNTg0NjouS2n/0wD/1wD/zgT2xQD/zwD/2AD/lQAiHiD/zQBwNP4IAAAAFXRSTlMAGg8uVencrcRqgZhBCYrfRf1XMBp0hYENAAAArElEQVR4Xs2QSw7DIAwFnYBjG8i3de5/1D4aJaJZdFl1FmiMBgmZ/oI0ePle9O5u59BZ6U1UbMQQMixCChJJsIo4s1eUyPywUf3gTE5CgPAAM74nXN7vY4L2hFNDnXMMVzIQdTVRaIwZYfPde3LQJsv2vCWslXwl076vjybJ0GYvCbKDqUmKw0WUjciBGM1Itia5FiB0KNMyrxNF1UQ0impHZAMCloCLzDX9FS+SmxC3lyWwXgAAAABJRU5ErkJggg==" class="tld-image net"/><span class="price">[@T[productprice:<current productid='12001' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
+            <atlantis:webstash type="css">
+              <style>
+                .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
+                .tld-links span, .tld-links img { display: inline-block; }
+                .tld-links a:hover>.price{text-decoration:underline}
+                .tld-image {vertical-align: top; margin-right: 8px;}
+                
+              </style>
+            </atlantis:webstash>
           </div>
-          <div id="disclaimers">
-            <section class="container l-main-container content-disclaimer">
-              <p class="no-margin-bottom"><a id="gdhp-disclaimer-lnk" href="#" data-toggle="modal" data-target="#myModal" data-ci="93289" class="simple-link">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p> 
-              ##if(countrySiteAny(in))
-              <p class="no-margin-bottom"><a id="gdhp-support-scope-link" href="[@T[link:<external parammode="explicit" path="/help/article/9522/godaddy-statement-of-support" linktype="COMMUNITYURL"><param name="countrysite" value="in" /><param name="ci" value="94858" /></external>]@T]" target="_blank">[@L[cds.sales/homepage/locales/en:scopesupport]@L]</a></p> 
-              ##endif
-            </section>
-            <div id="myModal" class="modal fade">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-                    <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+        </div>
+      </div>
+    </section>
+    <section id="marquee">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="hero-wrapper">
+              <atlantis:webstash type="css">
+                <style>#marquee {
+  background-color: #f47f00;
+  font-size: 12px;
+}
+#gtld-hero {
+  color: #fff;
+}
+#gtld-hero .headline {
+  font-size: 1.3em;
+  padding-top: 3.5em;
+  line-height: 1em;
+}
+#gtld-hero .maintext {
+  font-size: 3.15em;
+  padding-top: .1em;
+  line-height: .8em;
+}
+#gtld-hero .subtext {
+  font-size: 1em;
+  margin: 1em 0;
+}
+#gtld-hero .gtld-phone {
+  margin-top: 31px;
+  background-color: #fff;
+  border: solid #000;
+  border-width: 10px 7px 0 7px;
+}
+#gtld-hero .gtld-phone ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+#gtld-hero .gtld-phone li {
+  margin: 0;
+}
+#gtld-hero .gtld-phone li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  height: 40px;
+  padding: 10px 0;
+}
+#gtld-hero .gtld-phone li .gtld {
+  font-size: 1.2em;
+  display: inline-block;
+  float: left;
+  margin-left: 5px;
+}
+#gtld-hero .gtld-phone li .price-container {
+  font-size: .9em;
+  display: table;
+  float: right;
+  text-align: right;
+}
+#gtld-hero .gtld-phone li .price {
+  display: table-cell;
+  vertical-align: middle;
+  color: #f2812e;
+  padding-right: 5px;
+}
+#gtld-hero .gtld-phone li .price strike,
+#gtld-hero .gtld-phone li .price nostrike {
+  display: block;
+  color: #333;
+}
+#gtld-hero .gtld-phone li .price strike {
+  margin-top: -10px;
+}
+#gtld-hero .gtld-phone li:last-child {
+  border-bottom: 0px;
+}
+#gtld-hero .gtld-phone li:hover a {
+  color: #f5811f;
+}
+@media only screen and (min-width: 480px) {
+  #gtld-hero .gtld-phone {
+    border-width: 0;
+    background-color: transparent;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVQAAAFFCAYAAACzGBWLAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDhBNjdGODZCMEEyMTFFNDlDNURFNEU5NDlCRTRBM0YiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDhBNjdGODdCMEEyMTFFNDlDNURFNEU5NDlCRTRBM0YiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowOEE2N0Y4NEIwQTIxMUU0OUM1REU0RTk0OUJFNEEzRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowOEE2N0Y4NUIwQTIxMUU0OUM1REU0RTk0OUJFNEEzRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PoP1eRwAAATUSURBVHja7Nm7bcJAAIBh26ICp0NMwiSMkgVggozCJOwRiTqQJsLhpCSiSINB9/L3Sa4t3+PnbNphGBoAHtcZAgBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFQBBBRBUgIzNYtxkvV7nPAa76/VqKcDD3n72U5YOh0MdQc08plv7AJ5ie7OvvPKLKfCEqAqqmAKiKqhiCqIqqGIKoiqoYgqI6mSDKqYgqoIqpiCqgiqmwMSiWnNQxRREVVDFFERVUMUUmHBUawuqmIKoCqqYgqgKqpgColpNUMUURFVQxRSoKaolB1VMQVQFVUyBGqNaYlDFFERVUMUUqDmqJQVVTEFUBVVMgSlEtYSgiilQRFRzD6qYAsVENeegiilQVFRzDaqYAsVFdVZ6TNu2bS6XS3M6nZphGCw1KEzYw4vFoum67p49vL3phaA+62QaYhomZLVaWZlQqPP5/LeX7zypZhXVnII66jU/nExDTPf7fTOfz61MKDCmm82mOR6PTd/3Y17/s4lqLkEdFdPbE+pyubQyoUDhIPT76W6kbKKaw59So2MahIkI313CrxxQ5gk17OE7X/f/i+rkg/pQTAFyimrKoIopUFVUUwVVTIHqopoiqGIKVBnV2EEVU6DaqMYMqpgCVUe1i/hQYgqkimqU/sQK6s6cAglFaVCsoH6aTyChKA2KFdQv8wkkFKVBnXEGEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBRBUAAQVQFABBBUAQQUQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFQBBBRBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQABBVAUAEEFUBQARBUAEEFEFQAQQVAUAEEFUBQARBUAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQVAUAEEFUBQAQQVAEEFEFQAQQUQVAAEFUBQAQQVAEEFEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVAAEFUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABEFQAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBUBQAQQVQFABBBUAQQUQVABBBRBUAAQVQFABBBUAQQUQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAAQVQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEQVABBBRBUAEEFQFABBBVAUAEEFQBBBRBUAEEFQFABBBVAUAEEFYAcg/piqIGEojRoFulh3q9Xb06BRD5i3ORbgAEABlWSZRWC0tkAAAAASUVORK5CYII=) no-repeat center center;
+    background-size: cover;
+  }
+  #gtld-hero .gtld-phone ul {
+    padding: 40px 50px 0 50px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #gtld-hero .gtld-phone ul {
+    padding: 30px 50px 0 50px;
+  }
+  #gtld-hero .gtld-phone li {
+    border-bottom: #b9babb solid 1px;
+  }
+  #gtld-hero .gtld-phone li .price-container {
+    font-size: 1em;
+  }
+  #gtld-hero .gtld-phone li .price {
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee {
+    font-size: 14px;
+  }
+  #gtld-hero .headline {
+    padding-top: 1.5em;
+    line-height: 1em;
+  }
+  #gtld-hero .maintext {
+    padding-top: 0.1em;
+  }
+  #gtld-hero .subtext {
+    margin: 1em 0;
+  }
+  #gtld-hero .gtld-phone {
+    margin-top: 31px;
+  }
+  #gtld-hero .gtld-phone ul {
+    padding: 30px 50px 0 50px;
+  }
+  #gtld-hero .gtld-phone li a {
+    height: 40px;
+  }
+  #gtld-hero .gtld-phone li .price {
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #marquee {
+    font-size: 16px;
+  }
+  #gtld-hero .headline {
+    padding-top: 3.5em;
+    line-height: 1.3em;
+  }
+  #gtld-hero .maintext {
+    padding-top: 0;
+  }
+  #gtld-hero .subtext {
+    margin: 2em 0;
+  }
+  #gtld-hero .gtld-phone {
+    margin-top: 0;
+  }
+  #gtld-hero .gtld-phone ul {
+    padding: 55px 50px 0 49px;
+  }
+  #gtld-hero .gtld-phone li a {
+    height: 49px;
+  }
+  #gtld-hero .gtld-phone li .price {
+    padding-right: 0;
+  }
+  #gtld-hero .gtld-phone li .arrow {
+    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141024.png) scroll -392px -10px no-repeat;
+    width: 8px;
+    height: 35px;
+    display: inline-block;
+    float: right;
+    margin: 0 10px;
+  }
+}
+
+                </style>
+              </atlantis:webstash>
+              <div id="gtld-hero" data-url="[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='96197' /></relative>]@T]" class="container">
+                <div class="row">
+                  <div class="col-xs-6 col-sm-6 col-md-5 col-lg-6">
+                    <div class="headline walsheim-black">[@L[cds.sales/homepage/locales/en:gtld-tile-headline]@L]</div>
+                    <div class="maintext tungsten">[@L[cds.sales/homepage/locales/en:gtld-tile-maintext]@L]</div>
+                    <div class="subtext">[@L[cds.sales/homepage/locales/en:gtld-tile-subtext]@L]</div><a class="btn btn-dark">[@L[cds.sales/homepage/locales/en:gtld-tile-btn]@L]</a>
                   </div>
-                  <div class="modal-body">
-                    <div class="g-modal-content">
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]</p>
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p> 
-                      ##if(countrySiteAny(au))
-                      <p>[@L[cds.sales/homepage:disclaimer-modal-second-content]@L]</p> 
-                      ##endif
+                  <div class="col-xs-6 col-sm-6 col-md-7 col-lg-6">
+                    <div class="gtld-phone">
+                      <ul>
+                        <li> <a id="gdhp-marq-gtld-1" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-1]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-1]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-1]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-1]@L]</span></span></a></li>
+                        <li> <a id="gdhp-marq-gtld-2" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-2]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-2]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-2]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-2]@L]</span></span></a></li>
+                        <li> <a id="gdhp-marq-gtld-3" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-3]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-3]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-3]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-3]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-4" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-4]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-4]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-4]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-4]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-5" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-5]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-5]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-5]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-5]@L]</span></span></a></li>
+                        <li><a id="gdhp-marq-gtld-6" href="[@L[cds.sales/homepage/marquee/gtld:gtld-li-url-6]@L]" data-ci="[@L[cds.sales/homepage/marquee/gtld:gtld-li-ci-6]@L]"><span class="gtld">[@L[cds.sales/homepage/marquee/gtld:gtld-li-text-6]@L]</span><span class="arrow"></span><span class="price-container"><span class="price">[@L[cds.sales/homepage/marquee/gtld:gtld-li-price-6]@L]</span></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 col-sm-6">
+                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+                </div>
+                <div class="col-md-12 col-sm-6"> 
+                  <div class="tile-wrapper">
+                    <atlantis:webstash type="css">
+                      <style>
+                        .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
+                        .marquee-tile-tld .price-text {color:#fff;}
+                        .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
+                        .marquee-tile-tld .cta {display:none}
+                        .marquee-tile-tld .price {font-size:1.5em}
+                        .co-uk.marquee-tile-tld img{width:25%}
+                        
+                      </style>
+                      <style>
+                        .co-uk.marquee-tile-tld{background-color:#fff}
+                        .co-uk .price-text{color:#333}
+                      </style>
+                    </atlantis:webstash>
+                    <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld">
+                      <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NCAxMDYuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDEwNi44IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMjAyQzU1IiBkPSJNNC44IDYzLjhDMi4yIDYzLjggMCA2NiAwIDY4LjdjMCAyLjcgMi4yIDQuOCA0LjggNC44IDIuNyAwIDQuOC0yLjIgNC44LTQuOEM5LjcgNjYgNy41IDYzLjggNC44IDYzLjhNMTQ5IDcxLjVjLTMuMSAwLTQuNS0xLjUtNi0zLjNsLTExLjMtMTQgNi4xLTUuMWMyLjUtMi4xIDQuOC0zLjcgNy44LTMuNyAwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xaC0xMi44Yy0wLjUgMC0wLjggMC4zLTAuOCAxIDAgMC43IDAuMiAxIDAuOCAxaDAuN2MyLjEgMCAyLjIgMS40IDAuOCAyLjdsLTkuNCA3LjdWMTkuNmMwLTEuNS0xLTIuMS0yLjctMS4zbC0xMC4yIDUuMWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43bDAgMzguNGMwIDIuNS0xLjMgMy42LTMgMy42IC0xLjggMC0zLTEuMS0zLTMuNlY0MS42YzAtMS41LTEtMi4xLTIuNy0xLjNsLTEwLjIgNS4xYy0wLjggMC40LTAuNyAxLjIgMCAxLjMgMS43IDAuMyAzLjQgMC40IDMuNCA0Ljd2MTIuM2MwIDIuNS0yLjEgNi4yLTUuMSA2LjIgLTMuMiAwLTQuOS0yLjUtNC45LTcuM1Y0NS4xYzAtMS41LTEtMi4xLTIuNy0xLjNMNzcgNDguOWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43VjY0YzAgNy4xIDQuNSAxMC4zIDkuNSAxMC4zIDQuMSAwIDguNC0xLjYgMTAuNi01LjIgMC4yIDIuNyAwLjkgNC41IDQuNCA0LjVoMjIuN2MwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xIC0xLjggMC0yLjYtMC44LTIuNi0yLjl2LTExbDguOSAxMi4zYzAuOSAxLjIgMC4yIDEuNy0xIDEuNyAtMC41IDAtMC44IDAuMy0wLjggMSAwIDAuNyAwLjIgMSAwLjggMUgxNDljMC42IDAgMC44LTAuMyAwLjgtMUMxNDkuOCA3MS44IDE0OS42IDcxLjUgMTQ5IDcxLjVNMjcuMSA3MC4xYy02LjUgMC0xMC41LTQuMy0xMC41LTExLjMgMC02LjkgNC4xLTExLjUgMTAuMy0xMS41IDIuNCAwIDQuMSAwLjQgNy4yIDEuN2wwLjYgMC4ydi00LjNMMzQuNCA0NWMtMy4zLTEuMS01LjItMS40LTcuNy0xLjQgLTguNCAwLTE0LjIgNi40LTE0LjIgMTUuNiAwIDguOCA1LjggMTQuOCAxNC4zIDE0LjggMi43IDAgNC43LTAuNCA4LTEuNWwwLjMtMC4xdi00LjFsLTAuNiAwLjJDMzEuNiA2OS43IDI5LjcgNzAuMSAyNy4xIDcwLjFNNTEuMSA0My41Yy04LjUgMC0xNC45IDYuNS0xNC45IDE1LjIgMCA4LjYgNi40IDE1LjIgMTQuOSAxNS4yIDguNSAwIDE0LjgtNi41IDE0LjgtMTUuMkM2NS45IDUwLjEgNTkuNiA0My41IDUxLjEgNDMuNU01MS4xIDcwLjFjLTYuMyAwLTEwLjgtNC44LTEwLjgtMTEuMyAwLTYuNiA0LjYtMTEuNCAxMC44LTExLjQgNi4xIDAgMTAuOCA0LjkgMTAuOCAxMS40QzYxLjkgNjUuMiA1Ny4yIDcwLjEgNTEuMSA3MC4xTTEyMC42IDBjLTE1LjQgMC0zMCA2LjYtNDAuMSAxOC4yIC0xLjIgMS40LTEuMSAzLjQgMC4zIDQuNiAwLjYgMC41IDEuNCAwLjggMi4yIDAuOCAwLjkgMCAxLjgtMC40IDIuNS0xLjEgOC45LTEwLjEgMjEuNy0xNS45IDM1LjItMTUuOSAyNS44IDAgNDYuOSAyMSA0Ni45IDQ2LjkgMCAyNS44LTIxIDQ2LjktNDYuOSA0Ni45IC0xNi4xIDAtMzAuOS04LjEtMzkuNi0yMS44IC0xLTEuNS0zLTItNC41LTEgLTEuNSAxLTIgMy0xIDQuNSA5LjkgMTUuNSAyNi43IDI0LjggNDUuMSAyNC44IDI5LjQgMCA1My40LTI0IDUzLjQtNTMuNEMxNzQgMjQgMTUwIDAgMTIwLjYgME03Ny42IDY4LjVjMC0yLjctMi4yLTQuOC00LjgtNC44IC0yLjcgMC00LjggMi4yLTQuOCA0LjggMCAyLjcgMi4yIDQuOCA0LjggNC44Qzc1LjQgNzMuMyA3Ny42IDcxLjEgNzcuNiA2OC41Ii8+PC9zdmc+" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIMAAABPCAMAAAD/aYabAAAAn1BMVEVMaXEgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFUgLFVIuu/rAAAANHRSTlMADyM1/vH6YCCu9m4LgQaR0AMB2CpS6TuWy3QUxL2gnS8dhrNM4O5oehlZAkSMuKXd5UDf5BmFXgAABU1JREFUeAHF2ud2qlAQBeChSxERxS7W2LFlv/+z3cUQFBRCXAsu3z+jnGwp42lUuvZcC/ThzQCAzXXi79Z7+q9E86zgzXXmWfR/jEdD5DH0dZsqN7+o+NVtJFScYIU04/bVU5CmNC2qzN6X8XC9mCfRJjaWtOXUwENPO1Il3K2CH+p5u6BXdn/5hdikSxXYn/HjOhrnxbzP1Dim6VLZ7j1EHO/4a9TAQEQXqFxbGex2OFKB8UAG64hUIjcAkwOL/mA+BOtJJUYYgH336W/spoyQ0qeyDMBWAv3ZaROFkKgcO7CgTZkk/3KkN2IHoU2XSqEgNMpJcAawoHfjIULfYypB2wCALWW5TxFqUAYhCjFtUwmWAHaU4TQF8jOQ0EGoSWU4jfr07jgBcjOwBdc1uU/VOfhyfgbWV7lW2VShoCAD7eKrUR2pKEN0vYwFVadRlIFEvhqzWjPwQwVZrDWDxUV7UGsGagKAIdSaQeBSb9aagVoAMKw3wxwhsdYM5FRzMdzTyCrOkCyWUyrX8eAAXjJDcTU12uUm6ACA9ucMbQUAJHrh9peroTP1zbn7HM9fJs7kYi4oy2JwM6MGtSuQmWGnxDYSpazizyetO4jd9hSSpoituvRKHKiATkTkcYLMDGs/atWYzhYZ9bpFSfYMT3y825TxpI5eEvj8LmcYOdkZ2D1MsBPolcZfjRKOOoBN6ySORa91C493LwBU3+vuuwddBhDQU/cig+nEmnkZuBc7FPNuSuf1UbnEYdtrIWp21UgOkrYU82QglcGSczLMv4GZTRkWANCjp4YKDFxKmMvA7EgxawoYjcer9TmdgXrZGTwDqkmZBL7C6UGTk067evmLcEv1OuxbOsNXVga3CWzulAOhRIsb4PB2ptJHbwHDoge/OIMQfo8G5VHTGfqAYb/+xw6l2Arg0UOrMMOpk+iwFZ8HEzhTig+0KE0Hmp9kUBEyiRXfD8Fbx2r6fvQS8D/JYCAkn4gVPhcDIKCUyXsd3QH6Jxk0GaGNSKyoPrT+ch4CYPZJhkYTrCMQK6iTO36VNHtLRasP74dGewp2bhP7/ffCA5T263NxpRTbANZvGc6/ZKD9Biwglv272fWHq7DdsQx4lLSXgTUlmVF9mOu9zs4mWoJNfq2Ta0S0/P6DZMRzKWfAaVOS/jI03vf46syNnyswAtscKSQiMwMFYGo/tx81QUgdc5FCy6WErgrodmr+RNlztCj/GpEThQY5Gex4QrCR15+UwdY/pVffPwJI0RedzCly7yCq5lewLVkqmGMR0UFGZJs4JyKfICX+WE6/WgHrE5E1AWBctP5c8pYOmj93nXze3ucnc4J45mfyiN1C5LrbXgAdzA8DIXInSryaWtnjiwFCHb4RLB1PnIFMFU+GlmjyahONr3haimDyTjr0EJn0BSLrLiPyZUrjjHGWtQJw7VLEcxD78igkXuIU6qM3ODIAh0/zYpL8eAvvdKIACU7meFPS1jY9zM2ZftZb2y7FxoeWftaDg0APQj9+++jp38rG8T1uonvQXklEXS3hXv24+1XF8w+WTcUqnYdpz2S1ScWqnI/SwNWiWIXzcnxHKcVtVDk/eUJoaFOx6uZpfXx4QSuYrxa+EdpRserm7SUVoS0VqHT9QgMzqUCV6zjUBAtcKlDhehYNwPS61vWS65vXv7bYLn99k9wWmLysaZ2XmTLYt+fWst7NTs91f7eOdX+2mOJHx8zd/9Cvbv8Dc00DP9SVtq9hH0hoccFTxzdPolXtfpj81e0ko/d/9wUxqe79UWy/c2reJ8a6o6lR43655L7B1Uf7Bv8BlY+nc7oIlB4AAAAASUVORK5CYII=" class="img-responsive"><![endif]-->
+                        ##if(productHasDiscountMoreThan(57465, 5)) 
+                         
+                        <div class="headline">[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] OFF 100% BRILLIANT</div> 
+                        ##else
+                         
+                        <div class="headline">100% BRILLIANT</div> 
+                        ##endif
+                        <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
+                        <atlantis:webstash type="js">
+                          <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
+                        </atlantis:webstash>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -226,192 +387,994 @@
             </div>
           </div>
         </div>
-        <div class="why-us-logos">
-          <ul>
-            <li data-url="[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="93299" /></relative>]@T]" data-ci="93299" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-domains" class="gdhp-domains-logo"></span><span class="gdhp-domains-text">[@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]</span></li>
-            <li data-url="[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="93300" /></relative>]@T]" data-ci="93300" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-wsb" class="gdhp-wsb-logo"></span><span class="gdhp-wsb-text">[@L[cds.sales/homepage/locales/en:whyus-logo-wsb]@L]</span></li> 
-            ##if(countrySiteAny(www,uk))
-            <li data-url="[@T[link:<relative path="/ecommerce/shopping-cart.aspx"><param name="ci" value="93301" /></relative>]@T]" data-ci="93301" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-store" class="gdhp-store-logo"></span><span class="gdhp-store-text">[@L[cds.sales/homepage/locales/en:whyus-logo-onlinestore]@L]</span></li> 
-            ##elseif(countrySiteAny(in))
-            <li data-url="[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="94309" /></relative>]@T]" data-ci="94309" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-hosting" class="gdhp-hosting-logo"></span><span class="gdhp-hosting-text">[@L[cds.sales/homepage/locales/en:whyus-logo-hosting]@L]</span></li>
-            <li data-url="[@T[link:<relative path="/business/office-365.aspx"><param name="ci" value="94310" /></relative>]@T]" data-ci="94310" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-o365" class="gdhp-o365-logo"></span><span class="gdhp-o365-text">[@L[cds.sales/homepage/locales/en:whyus-logo-o365]@L]</span></li> 
-            ##endif
-            ##if(countrySiteAny(www))
-            <li data-url="[@T[link:<relative path="/products/business-marketing.aspx"><param name="ci" value="93302" /></relative>]@T]" data-ci="93302" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-getfound" class="gdhp-getfound-logo"></span><span class="gdhp-getfound-text">[@L[cds.sales/homepage/locales/en:whyus-logo-getfound]@L]</span></li> 
-            ##endif
-            <li data-url="[@T[link:<external parammode="explicit" linktype="COMMUNITYURL"><param name="ci" value="93303" /></external>]@T]" data-ci="93303" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-support" class="gdhp-support-logo"></span><span class="gdhp-support-text">[@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]</span></li>
-          </ul>
+      </div>
+    </section>
+    <section id="merchandising">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper"> 
+              <atlantis:webstash type="css">
+                <style>
+                  .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
+                  .gdpro-tile .promo-logo{width:80%}
+                  .gdpro-tile .promo-text{padding-top:10px}
+                  .gdpro-tile .promo-cta{position:absolute;bottom:5px}
+                  .gdpro-tile a{text-decoration:underline;color:#f2812e}
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="tile gdpro-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkY4MzAwIiBwb2ludHM9IjM5My40NDksMTgzLjI4NCAzNDIuNzA4LDIyOC4yNDkgMzQ3LjUxLDI4Mi45ODggNDIxLjM1NiwzMTYuNzE2IDUwMCwyNzkuNTczIDQ4NS44MjIsMjEyLjYxICIvPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTM1LjIzOSwyNDguNjAzaDI0LjI5N3Y3LjUxNWgtNS42MThjLTIuMjYyLDExLjQ1NC0xMC43MjUsMTkuMzM1LTI0Ljg3OSwxOS4zMzUNCgkJYy0xNi43MDgsMC0yNi4yNjYtMTIuOTE0LTI2LjI2Ni0yNi43NzZjMC0xMy44NjIsMTAuMTQyLTI2Ljc3NiwyNi4yNjYtMjYuNzc2YzEyLjAzOSwwLDIwLjk0LDcuNTE1LDIxLjc0MiwxNi41NjFoLTguNDYzDQoJCWMtMC44NzYtNS4wMzQtNi4yMDMtOS4wNDctMTMuMjc5LTkuMDQ3Yy0xMC45NDQsMC0xNy42NTUsOS4yNjYtMTcuNjU1LDE5LjI2MWMwLDkuOTk2LDYuMTI5LDE5LjI2MywxOC43NTIsMTkuMjYzDQoJCWM4LjY4MiwwLDEzLjg2Mi01LjU0NSwxNC44ODMtMTEuODE5aC05Ljc3N3YtNy41MTVIMzUuMjM5eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYyLjUyOCwyNTcuMjEzYzAtOS42MzEsNy4wNzctMTcuODc3LDE3Ljg3NS0xNy44NzdjMTAuOTQ0LDAsMTguMDIyLDguMjQ1LDE4LjAyMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIyLDE3Ljg3NUM2OS42MDQsMjc1LjA4OCw2Mi41MjgsMjY2Ljg0Myw2Mi41MjgsMjU3LjIxM3ogTTkwLjQ3MSwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM4Ni41MywyNjguMDEyLDkwLjQ3MSwyNjMuMDQ5LDkwLjQ3MSwyNTcuMjEzeiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMjEuODQyLDIyMy4xNDFjMTYuOTI2LDAsMjYuNDg1LDEyLjYyMSwyNi40ODUsMjUuNTM2cy05LjU1OCwyNS41MzYtMjYuNDg1LDI1LjUzNkgxMDUuMjh2LTUxLjA3MQ0KCQlIMTIxLjg0MnogTTExMy42NzEsMjMwLjY1N3YzNi4wNDNoOC4xNzFjMTEuMzgxLDAsMTcuODc1LTguOTAxLDE3Ljg3NS0xOC4wMjJjMC05LjExOS02LjQ5NC0xOC4wMi0xNy44NzUtMTguMDINCgkJQzEyMS44NDIsMjMwLjY1NywxMTMuNjcxLDIzMC42NTcsMTEzLjY3MSwyMzAuNjU3eiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xODguNTI5LDI0MC4yMTJ2MzMuOTk4aC03Ljk1MnYtNC41OTdjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczDQoJCWMtMTAuMzYsMC0xNy40MzgtOC4yNDUtMTcuNDM4LTE3Ljg3NWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi00LjU5N2g3Ljk1MlYyNDAuMjEyeg0KCQkgTTE4MC41NzcsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMxNzYuNjM2LDI2OC4wMTIsMTgwLjU3NywyNjMuMDQ5LDE4MC41NzcsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yMjMuMTExLDI2OS42MTVjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MkwyMjMuMTExLDI2OS42MTUNCgkJTDIyMy4xMTEsMjY5LjYxNXogTTIyMy4xMTEsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OA0KCQlzMy45MzksMTAuNzk4LDkuOTIzLDEwLjc5OEMyMTkuMTcyLDI2OC4wMTIsMjIzLjExMSwyNjMuMDQ5LDIyMy4xMTEsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yNjUuNTAyLDI2OS42MTVjLTIuMTE0LDMuNDMtNi41NjYsNS40NzMtMTAuNTA1LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTM5LDAsOC4zOTEsMi4wNDQsMTAuNTA1LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MlYyNjkuNjE1eiBNMjY1LjUwMiwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMyNjEuNTYxLDI2OC4wMTIsMjY1LjUwMiwyNjMuMDQ5LDI2NS41MDIsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yODAuNzUyLDI3OC4wNzhoNy43MzNjMC4wNzIsMy43OTQsMi41NTMsNi45MzEsOC4wOTgsNi45MzFjNS42OSwwLDguNTM2LTIuNTUzLDguNTM2LTkuMTkzdi02LjM0Nw0KCQljLTIuMTE2LDMuNjQ4LTYuMDU1LDUuNjE4LTExLjA5LDUuNjE4Yy00Ljg4OCwwLTguMzE3LTEuNzUxLTEwLjIxNC00LjU5N2MtMS42NzctMi41NTMtMi4xODgtNS4zOTktMi4xODgtMTAuMDY4di0yMC4yMWg3Ljk1Mg0KCQl2MTcuNTg0YzAsNS44MzYsMS42NzcsMTAuMjg4LDcuMzY4LDEwLjI4OGM1LjU0NSwwLDguMTcxLTQuNDUyLDguMTcxLTEwLjI4OHYtMTcuNTg0aDcuOTUydjM1LjYwNA0KCQljMCwxMS42LTYuMzQ4LDE2LjI2OS0xNy41MSwxNi4yNjlDMjg2LjgwOCwyOTIuMDg3LDI4MC44MjQsMjg1LjUyMiwyODAuNzUyLDI3OC4wNzh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNMzE2LjcxNCwyNDAuOTExYzAtMy4zMjcsMi4zOTktNi40MjcsNi4zMzgtNi40MjdzNi4zMzgsMy4xLDYuMzM4LDYuNDI3YzAsMy4zMjctMi4zOTksNi40MjYtNi4zMzgsNi40MjYNCgkJUzMxNi43MTQsMjQ0LjIzOCwzMTYuNzE0LDI0MC45MTF6IE0zMjguMzQxLDI0MC45MTFjMC0yLjg3Mi0xLjk5Ny01LjUzMi01LjI4OS01LjUzMmMtMy4yNzQsMC01LjI3MSwyLjY2Mi01LjI3MSw1LjUzMg0KCQljMCwyLjg1MywxLjk5Nyw1LjUxNyw1LjI3MSw1LjUxN0MzMjYuMzQ0LDI0Ni40MjYsMzI4LjM0MSwyNDMuNzY0LDMyOC4zNDEsMjQwLjkxMXogTTMyMC44ODIsMjQ0LjIwM3YtNy4xMjdoMi42MjcNCgkJYzEuNDE4LDAsMi4zNDYsMS4xMDQsMi4zNDYsMi4zODFjMCwxLjAzMi0wLjYzLDEuOTQyLTEuNjQ2LDIuMjIzbDEuNTkzLDIuNTIxaC0wLjk2M2wtMS41MjMtMi40MTZoLTEuNTkzdjIuNDE2aC0wLjg0MVYyNDQuMjAzeg0KCQkgTTMyMy40MzgsMjQxLjAzNGMwLjkyNiwwLDEuNTIzLTAuNzE4LDEuNTIzLTEuNTc2YzAtMC44NzYtMC41OTctMS42MTEtMS41MjMtMS42MTFoLTEuNzE4djMuMTg2DQoJCUMzMjEuNzIsMjQxLjAzNCwzMjMuNDM4LDI0MS4wMzQsMzIzLjQzOCwyNDEuMDM0eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM3My4wMzIsMjIzLjE0MWgxOC4zMTNjMTAuOTQ0LDAsMTguMDIyLDguMjQzLDE4LjAyMiwxNy44NzVzLTcuMDc3LDE3Ljg3NS0xOC4wMjIsMTcuODc1aC05LjkyMXYxNS4zMjINCgkJaC04LjM5MXYtNTEuMDcxSDM3My4wMzJ6IE00MDAuOTc3LDI0MS4wMTZjMC01LjYxOC0zLjc5NC0xMC4zNi05LjYzMS0xMC4zNmgtOS45MjF2MjAuNzIxaDkuOTIxDQoJCUMzOTcuMTgyLDI1MS4zNzYsNDAwLjk3NywyNDYuNjMzLDQwMC45NzcsMjQxLjAxNnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzYuMjg4LDI0Ny41ODJjLTEuMjQxLTAuMjkzLTEuODk3LTAuMzY1LTMuMTM3LTAuMzY1Yy02Ljc4NCwwLTEwLjUwNSwzLjg2Ny0xMC41MDUsMTIuMzN2MTQuNjY0aC03Ljk1Mg0KCQl2LTMzLjk5OGg3Ljk1MnY1LjQ3M2MxLjUzMi0zLjEzNyw1Ljk4My01LjkxLDEwLjUwNS01LjkxYzEuMjQxLDAsMi4yNjIsMC4xNDYsMy4xMzcsMC41MTFWMjQ3LjU4MnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzcuMDkyLDI1Ny4yMTNjMC05LjYzMSw3LjA3Ny0xNy44NzcsMTcuODc3LTE3Ljg3N2MxMC45NDIsMCwxOC4wMiw4LjI0NSwxOC4wMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIsMTcuODc1QzQ0NC4xNjgsMjc1LjA4OCw0MzcuMDkyLDI2Ni44NDMsNDM3LjA5MiwyNTcuMjEzeiBNNDY1LjAzMywyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM0NjEuMDk0LDI2OC4wMTIsNDY1LjAzMywyNjMuMDQ5LDQ2NS4wMzMsMjU3LjIxM3oiLz4NCjwvZz4NCjwvc3ZnPg0K" class="promo-logo svgfallback">
+                  </div>
+                  <div class="promo-text walsheim-black">BUILDING SITES FOR OTHERS? CHECK OUT GODADDY PRO.</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" class="walsheim-black">LEARN MORE </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <atlantis:webstash type="css">
+                <style>
+                  .o365-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                  .o365-tile .promo-logo{width:80%}
+                  .o365-tile .promo-text{padding-top:10px}
+                  .o365-tile .promo-cta{position:absolute;bottom:5px}
+                  .o365-tile a{text-decoration:underline;color:#f2812e}
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]" data-ci='95779' class="tile o365-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/O365-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDExLjQzOCA5MC41MzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxMS40MzggOTAuNTM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xNTQuMjI1LDQ0LjY0MmMwLDUuNzc4LTEuMDUyLDEwLjg0NC0zLjE1NywxNS4xOTVjLTIuMTExLDQuMzUxLTUuMTM3LDcuNzAxLTkuMDg3LDEwLjA0Nw0KCQljLTMuOTQ4LDIuMzQ2LTguNDk0LDMuNTIyLTEzLjY0MywzLjUyMmMtNC45NzMsMC05LjM5Mi0xLjE0Mi0xMy4yNjYtMy40MjRjLTMuODc2LTIuMjgzLTYuODY4LTUuNTI0LTguOTg3LTkuNzMNCgkJYy0yLjEyMS00LjE5OS0zLjE4Mi04Ljk2LTMuMTgyLTE0LjI4NGMwLTUuNzMxLDEuMDczLTEwLjc3MywzLjIxOS0xNS4xNGMyLjE0LTQuMzYyLDUuMjIzLTcuNzEzLDkuMjMzLTEwLjA0Ng0KCQljNC4wMTEtMi4zMzQsOC42NTUtMy41MDMsMTMuOTI3LTMuNTAzYzQuODIsMCw5LjE0MywxLjE0OSwxMi45NjcsMy40NDRjMy44MTksMi4yOTUsNi43NzIsNS41MjcsOC44NTQsOS42ODcNCgkJQzE1My4xODYsMzQuNTczLDE1NC4yMjUsMzkuMzE4LDE1NC4yMjUsNDQuNjQyIE0xNDcuNTY2LDQ1LjQ3NWMwLTcuMDY3LTEuNjUzLTEyLjU4LTQuOTU3LTE2LjU0DQoJCWMtMy4zMTEtMy45NTktNy45MTQtNS45NDItMTMuODE1LTUuOTQyYy0zLjcxLDAtNy4wMzYsMC45NDItOS45NzQsMi44MThjLTIuOTM4LDEuODgxLTUuMjE3LDQuNTQ3LTYuODMzLDguMDA2DQoJCWMtMS42MTMsMy40Ni0yLjQyMiw3LjMxOC0yLjQyMiwxMS41NzljMCw0LjMzOSwwLjc3Niw4LjIwOSwyLjMzLDExLjYwMmMxLjU1MiwzLjM5MywzLjc2Myw2LjAxNiw2LjY0LDcuODczDQoJCWMyLjg3OSwxLjg1Myw2LjE0NSwyLjc4Myw5LjgwNCwyLjc4M2M2LjAwNCwwLDEwLjcxMS0xLjk3LDE0LjExOC01LjkwNkMxNDUuODY0LDU3LjgxMywxNDcuNTY2LDUyLjM4NywxNDcuNTY2LDQ1LjQ3NSIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xODEuNTEzLDIwLjUzNWMtMS4yMTQtMC42ODQtMi41ODYtMS4wMjQtNC4xMjgtMS4wMjRjLTQuMzM5LDAtNi41MDksMi43NC02LjUwOSw4LjIxN3Y1Ljk3N2g5LjA4M3Y1LjI1OA0KCQloLTkuMDgzVjcyLjQ2aC02LjIwOFYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4MS05LjUzOWMyLjMyMi0yLjQyMyw1LjI3Ny0zLjYzNSw4Ljg2LTMuNjM1DQoJCWMxLjg5MiwwLDMuMzg5LDAuMjI3LDQuNTAzLDAuNjg0VjIwLjUzNXoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjAyLjkwNCwyMC41MzVjLTEuMjEyLTAuNjg0LTIuNTg2LTEuMDI0LTQuMTI2LTEuMDI0Yy00LjMzOSwwLTYuNTA5LDIuNzQtNi41MDksOC4yMTd2NS45NzdoOS4wODN2NS4yNTgNCgkJaC05LjA4M1Y3Mi40NmgtNi4yMVYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4My05LjUzOWMyLjMyMi0yLjQyMyw1LjI3NS0zLjYzNSw4Ljg1OC0zLjYzNQ0KCQljMS44OTQsMCwzLjM5MSwwLjIyNyw0LjUwNCwwLjY4NFYyMC41MzV6Ii8+DQoJPHBhdGggZmlsbD0iI0VCM0QwMSIgZD0iTTIxNC4zNSwxOS44MTZjMCwxLjE2MS0wLjQwMywyLjEyNy0xLjIxMiwyLjg5M2MtMC44MDksMC43Ny0xLjc2NSwxLjE1My0yLjg3NSwxLjE1Mw0KCQljLTEuMTM1LDAtMi4wOTctMC4zNjgtMi44NzctMS4xMTRjLTAuNzgyLTAuNzQzLTEuMTcyLTEuNzI0LTEuMTcyLTIuOTMyYzAtMS4wODcsMC4zODMtMi4wMjUsMS4xNTMtMi44MTgNCgkJYzAuNzcyLTAuNzk4LDEuNzM1LTEuMTkyLDIuODk2LTEuMTkyYzEuMTU3LDAsMi4xMzEsMC4zODcsMi45MTQsMS4xNzJDMjEzLjk1OCwxNy43NTYsMjE0LjM1LDE4LjcwMSwyMTQuMzUsMTkuODE2IE0yMTMuMjksNzIuNDU2DQoJCWgtNi4yMDlWMzMuNzAxaDYuMjA5VjcyLjQ1NnoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjQ4LjcxNSw3MC42ODJjLTMuMDAyLDEuODE4LTYuNTUsMi43MjUtMTAuNjM3LDIuNzI1Yy0zLjUzLDAtNi43MDQtMC44MTctOS41MTktMi40MzkNCgkJYy0yLjgxNS0xLjYzLTUtMy45MzMtNi41NjYtNi45MTFjLTEuNTY1LTIuOTc1LTIuMzQ1LTYuMzE3LTIuMzQ1LTEwLjAyN2MwLTYuNDA3LDEuODMzLTExLjU1Niw1LjUwNC0xNS40NDUNCgkJYzMuNjcxLTMuODgyLDguNTYzLTUuODI4LDE0LjY2Ny01LjgyOGMzLjM4MywwLDYuMzcyLDAuNjU3LDguOTcyLDEuOTd2Ni4zNTZjLTIuOTAyLTIuMDE3LTUuOTgxLTMuMDI2LTkuMjM1LTMuMDI2DQoJCWMtNC4wMTEsMC03LjI3MywxLjQzNS05Ljc4NSw0LjI5NmMtMi41MSwyLjg2Ni0zLjc2Nyw2LjU2My0zLjc2NywxMS4xMWMwLDQuNTE5LDEuMTk1LDguMDg0LDMuNTc5LDEwLjcxMQ0KCQljMi4zODIsMi42MjMsNS41OCwzLjkzMyw5LjU5MSwzLjkzM2MzLjM4MywwLDYuNTYxLTEuMTA3LDkuNTQtMy4zMzFWNzAuNjgyeiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0yODYuODUyLDU0LjYzNWgtMjcuMzY0YzAuMTA0LDQuMzY2LDEuMjU3LDcuNywzLjQ2NiwxMC4wMTFjMi4yMDYsMi4zMDYsNS4yNjMsMy40Niw5LjE3NSwzLjQ2DQoJCWM0LjM5MSwwLDguMzkxLTEuNDExLDEyLjAwMS00LjIzOHY1Ljc5M2MtMy4zODEsMi40OTgtNy44NzQsMy43NDUtMTMuNDczLDMuNzQ1Yy01LjUyOSwwLTkuODM5LTEuNzg3LTEyLjk0Ny01LjM1Ng0KCQljLTMuMTAyLTMuNTY5LTQuNjU1LTguNTEtNC42NTUtMTQuODE5YzAtMy44MzUsMC43NzgtNy4zMzMsMi4zMy0xMC41YzEuNTUtMy4xNjcsMy42OTItNS42MTcsNi40MTMtNy4zNjENCgkJYzIuNzI3LTEuNzQsNS43NTYtMi42MTUsOS4wODMtMi42MTVjNS4wMTksMCw4LjkzOCwxLjYzNCwxMS43NTMsNC45MDZjMi44MTQsMy4yNjQsNC4yMiw3LjgzOCw0LjIyLDEzLjcxN1Y1NC42MzV6DQoJCSBNMjgwLjQ5Niw0OS4zNzNjLTAuMDUzLTMuNTgxLTAuOTE2LTYuMzY0LTIuNTk2LTguMzQ2Yy0xLjY3Ny0xLjk4MS00LjA0Mi0yLjk3MS03LjA5My0yLjk3MWMtMi44NzcsMC01LjM0LDEuMDM2LTcuMzgsMy4xMDQNCgkJYy0yLjA0NiwyLjA2OC0zLjMzMSw0LjgwOC0zLjg1OCw4LjIxM0gyODAuNDk2eiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0zMzQuMDc5LDU3LjA5M2MwLDQuODk0LTEuNzUzLDguODM5LTUuMjYsMTEuODI5Yy0zLjUwNywyLjk5LTguMTE1LDQuNDg0LTEzLjgxNSw0LjQ4NA0KCQljLTUuMTcyLDAtOS4yODYtMC45ODUtMTIuMzQxLTIuOTUxdi02LjY2MWMzLjY2MiwyLjg3Myw3Ljg0OSw0LjMxMiwxMi41NjUsNC4zMTJjMy44MTIsMCw2Ljg0Ni0wLjk0Myw5LjEwMy0yLjgxOQ0KCQljMi4yNjEtMS44NzYsMy4zOTEtNC40MjEsMy4zOTEtNy42MjdjMC03LjA4Ny01LjA0OS0xMC42MzMtMTUuMTQtMTAuNjMzaC00LjUwNHYtNS4yNjJoNC4yNzVjOC45MzEsMCwxMy4zOTktMy4zMzEsMTMuMzk5LTkuOTkyDQoJCWMwLTYuMTU3LTMuNDA3LTkuMjMzLTEwLjIyLTkuMjMzYy0zLjgzNSwwLTcuNDI5LDEuMjg2LTEwLjc4MywzLjg1OHYtNi4wMTdjMy40NTYtMi4wNjgsNy41NjYtMy4xMDQsMTIuMzM3LTMuMTA0DQoJCWM0LjQ5MiwwLDguMTE3LDEuMTg5LDEwLjg4MiwzLjU3N2MyLjc2MiwyLjM4NCw0LjE0Miw1LjUwOCw0LjE0Miw5LjM2NmMwLDcuMTQyLTMuNjA3LDExLjczMi0xMC44MjQsMTMuNzh2MC4xNDkNCgkJYzMuODM1LDAuNDMsNi45MzEsMS44MTMsOS4yNzYsNC4xNjNDMzMyLjkwNiw1MC42NTksMzM0LjA3OSw1My41ODcsMzM0LjA3OSw1Ny4wOTMiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMzc0LjkxMyw1NS4yNDFjMCwzLjQzMi0wLjczNyw2LjU0Ny0yLjIxMiw5LjM0NmMtMS40NzQsMi43OTktMy41MSw0Ljk3Mi02LjExNCw2LjUwOQ0KCQljLTIuNTk3LDEuNTQtNS41MTIsMi4zMS04Ljc0MSwyLjMxYy01LjQyNCwwLTkuNjc5LTIuMTgxLTEyLjc3Ni02LjU0OGMtMy4wOS00LjM2My00LjYzNC0xMC40NjEtNC42MzQtMTguMjgzDQoJCWMwLTYuMjA0LDAuOTE2LTExLjY4OCwyLjc0Ni0xNi40NDJjMS44MjktNC43NTgsNC40MTktOC40MjEsNy43NzMtMTAuOTkyYzMuMzU4LTIuNTc3LDcuMjMtMy44NjMsMTEuNjItMy44NjMNCgkJYzMuNzM1LDAsNi43MzgsMC41MTYsOS4wMTEsMS41NTJ2NS44NjhjLTIuODAxLTEuNDM5LTUuNzU2LTIuMTU4LTguODU5LTIuMTU4Yy00Ljc5NCwwLTguNjMzLDIuMTUtMTEuNTI0LDYuNDU0DQoJCWMtMi44OTEsNC4zMDEtNC4zMzYsMTAuMDM1LTQuMzM2LDE3LjIwMWgwLjE1MmMyLjQ5OC01LjEyNSw2LjYyNS03LjY4NSwxMi4zNzctNy42ODVjNC42OTMsMCw4LjQ1NiwxLjUzMiwxMS4yODIsNC42MDENCgkJQzM3My41MDQsNDYuMTc1LDM3NC45MTMsNTAuMjE3LDM3NC45MTMsNTUuMjQxIE0zNjguNTU3LDU2LjAzNGMwLTMuNzg4LTAuOTI5LTYuNzc1LTIuNzgxLTguOTcyDQoJCWMtMS44NTUtMi4xOTMtNC40NDktMy4yODgtNy43NzktMy4yODhjLTMuMDI2LDAtNS41NzQsMS4wNjQtNy42NDUsMy4xOThjLTIuMDY5LDIuMTI3LTMuMTAyLDQuNzExLTMuMTAyLDcuNzM2DQoJCWMwLDMuODEyLDEuMDI4LDYuOTk4LDMuMDgyLDkuNTU1YzIuMDU3LDIuNTY0LDQuNjUsMy44NDMsNy43ODEsMy44NDNjMy4xMDIsMCw1LjYyLTEuMTE0LDcuNTQ5LTMuMzUxDQoJCUMzNjcuNTkxLDYyLjUyMywzNjguNTU3LDU5LjYxNSwzNjguNTU3LDU2LjAzNCIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik00MTEuNDM4LDU1Ljg4MmMwLDUuMjc3LTEuNzQ1LDkuNTExLTUuMjQsMTIuNzIxYy0zLjQ5NSwzLjIwMS04LjE1OSw0LjgtMTMuOTg3LDQuOA0KCQljLTUuMDQ3LDAtOC43OTMtMC43NTQtMTEuMjM4LTIuMjY3di02LjU4N2MzLjY4MiwyLjM3Nyw3LjQ1MywzLjU2MiwxMS4zMTUsMy41NjJjMy44MzUsMCw2LjkyNS0xLjA3NSw5LjI3MS0zLjIyMQ0KCQljMi4zNTEtMi4xNDYsMy41MjQtNS4wMTksMy41MjQtOC42MjRjMC0zLjUzNy0xLjE5LTYuMzA1LTMuNTU5LTguMzExYy0yLjM3My0yLjAwNS01LjgxNy0zLjAwNi0xMC4zMzItMy4wMDYNCgkJYy0zLjYxLDAtNi42NzcsMC4xNDgtOS4xOTgsMC40NDlsMS44NTMtMjcuMjEyaDI1LjA5NXY1LjYwMmgtMTkuNzE5bC0xLjA5NywxNS45MzRsNC45OTYtMC4xOTJjNS42NTIsMCwxMC4xMiwxLjQzMSwxMy4zOTksNC4yOA0KCQlDNDA5Ljc5Nyw0Ni42Niw0MTEuNDM4LDUwLjY4Niw0MTEuNDM4LDU1Ljg4MiIvPg0KCTxwb2x5Z29uIGZpbGw9IiNFQjNEMDEiIHBvaW50cz0iNzUuNTIxLDgyLjk5MiA3NS41MTMsODIuOTg3IDc1LjUxMyw3Ljc3NiA0OC41NjUsMCAwLjEyMSwxOC4xOSAwLDE4LjIxMyAwLjAwNiw3Mi41OTcgDQoJCTE2LjUzNyw2Ni4xMjcgMTYuNTM3LDIxLjg4IDQ4LjU2NSwxNC4yMjIgNDguNTYxLDc5LjI3OCAwLjAzMyw3Mi41OTcgNDguNTYxLDkwLjUxNyA0OC41NjEsOTAuNTM2IDc1LjUxMyw4My4wNzcgNzUuNTEzLDgyLjk5MiAJDQoJCSIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="promo-logo svgfallback">
+                  </div>
+                  <div class="promo-text walsheim-black">WORK ANYWHERE WITH MICROSOFT OFFICE.</div>
+                  <div class="promo-cta">
+                    ##if(productHasSavingsMoreThan(31841, 31841, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='31841' secondaryproductid='31841' showsymbol='true'/>]@T]</a>
+                    ##else
+                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">LEARN MORE</a>
+                    ##endif
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <atlantis:webstash type="css">
+                <style>
+                  .merch-tile-web-hosting .tile-content-wrapper{padding:20px 15px;color:#333}
+                  .merch-tile-web-hosting .promo-logo{width:80%}
+                  .merch-tile-web-hosting .promo-text{padding-top:10px}
+                  .merch-tile-web-hosting .promo-cta{position:absolute;bottom:5px}
+                  .merch-tile-web-hosting a{text-decoration:underline;color:#f2812e}
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]" data-ci='95801' class="tile merch-tile-web-hosting">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/web-hosting-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTg0LjIzIDM5Ljk5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODQuMjMgMzkuOTkiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTYwLjYxNSwyNy4wNzZoMy42MTRsNS4wMDMtMTMuOTk2aC00LjM2OGwtMi40ODIsOC4zNTdsLTIuNDIyLTguMzU3aC0zLjI5NmwtMi40NDIsOC4zNTdsLTIuNDYyLTguMzU3DQoJaC00LjM2OGw1LjAwMywxMy45OTZoMy41OTRsMi4zMjMtNy42MThMNjAuNjE1LDI3LjA3NnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik03OC43MjQsMTYuMnYtMy4xMTlINjkuNzd2MTMuOTk2aDguOTU0di0zLjExOUg3My45di0yLjMzOWg0LjgyNXYtMi45NzlINzMuOVYxNi4ySDc4LjcyNHoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik04MC4yNSwyNy4wNzZoNi45MjljMy44MTIsMCw0LjUwNy0yLjQ1OSw0LjUwNy0zLjg5OWMwLTIuMDk5LTEuNDg5LTIuOTc5LTIuMzAzLTMuMTc5DQoJYzAuOTUzLTAuMjgsMi4yMDQtMS4yNiwyLjIwNC0zLjExOWMwLTEuNC0wLjcxNS0zLjc5OS00LjUyNy0zLjc5OWgtNi44MVYyNy4wNzZ6IE04NS44MDksMjEuMjk4YzEuMzcsMCwxLjY4OCwwLjg0LDEuNjg4LDEuNDINCgljMCwwLjctMC40MzcsMS40NC0xLjY4OCwxLjQ0aC0xLjQxdi0yLjg1OUg4NS44MDl6IE04NC4zOTksMTguNTc5VjE1Ljc2aDEuMzdjMS40MSwwLDEuNjg4LDAuODIsMS42ODgsMS40DQoJYzAsMC43LTAuNDM3LDEuNDItMS42ODgsMS40Mkg4NC4zOTl6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTA0LjU1MywyNy4wNzZoNC4xNVYxMy4wODFoLTQuMTV2NS4zMThoLTMuODcydi01LjMxOGgtNC4xM3YxMy45OTZoNC4xM3YtNS4yMThoMy44NzJWMjcuMDc2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTExNy41MDMsMjcuNDU2YzQuNzg1LDAsNy41NDUtMy41MTksNy41NDUtNy4zNzhzLTIuNzYtNy4zNzgtNy41NDUtNy4zNzhjLTQuNzY1LDAtNy41MjUsMy41MTktNy41MjUsNy4zNzgNCglTMTEyLjczOCwyNy40NTYsMTE3LjUwMywyNy40NTZ6IE0xMTcuNTAzLDIzLjY1N2MtMi4xMDUsMC0zLjM1NS0xLjcyLTMuMzU1LTMuNTc5czEuMjUxLTMuNTc5LDMuMzU1LTMuNTc5DQoJYzIuMTI0LDAsMy4zNTUsMS43MTksMy4zNTUsMy41NzlTMTE5LjYyNywyMy42NTcsMTE3LjUwMywyMy42NTd6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTI1Ljk5LDIyLjM1OGMwLDMuMjc5LDIuMjI0LDUuMDk4LDUuNzU4LDUuMDk4YzMuNDc1LDAsNS42MzktMS43NCw1LjYzOS00LjQ5OQ0KCWMwLTMuMTc5LTIuODk5LTMuOTE5LTUuMDQzLTQuNzM5Yy0xLjI5LTAuNDgtMS45MDYtMC44Ni0xLjkwNi0xLjYxOWMwLTAuNzQsMC41OTYtMS4wOCwxLjI3MS0xLjA4YzAuOTMzLDAsMS4zNywwLjYyLDEuMzcsMS43NA0KCWg0LjEzYzAtMi4xOTktMS4zNy00LjU1OS01LjQtNC41NTljLTIuNzk5LDAtNS41MiwxLjE0LTUuNTIsNC4xMTljMCwyLjg3OSwyLjU2MSwzLjczOSw0Ljg0NCw0LjYzOQ0KCWMxLjQ2OSwwLjU4LDIuMTA1LDAuOSwyLjEwNSwxLjY3OWMwLDAuNzQtMC41MzYsMS4yLTEuMzcsMS4yYy0xLjA1MiwwLTEuNzQ3LTAuNzItMS43NDctMS45NzlIMTI1Ljk5eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4wOTUsMjcuMDc2aDQuMTNWMTYuNjM5aDIuODU5di0zLjU1OWgtOS44NDh2My41NTloMi44NTlWMjcuMDc2eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0Ny44NDMsMjcuMDc2aDQuMTdWMTMuMDgxaC00LjE3VjI3LjA3NnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xNTguMzgyLDEzLjA4MWgtNC4yMDl2MTMuOTk2aDQuMTN2LTguMDE3bDQuNTQ3LDguMDE3aDQuMjA5VjEzLjA4MWgtNC4xNXY4LjI5N0wxNTguMzgyLDEzLjA4MXoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xNzYuNDA3LDIyLjA1OGgyLjMwM2MtMC4xOTgsMS4wOC0xLjAzMiwxLjk3OS0yLjY0MSwxLjk3OWMtMi4yNjMsMC0zLjM3NS0xLjc1OS0zLjM3NS0zLjgzOQ0KCWMwLTIuMDM5LDEuMDUyLTMuOTM5LDMuMTc3LTMuOTM5YzEuNDI5LDAsMi4yMDQsMC44OCwyLjM0MywxLjY4aDQuNTY3Yy0wLjI1OC0yLjg3OS0yLjk1OC01LjIzOC02Ljg1LTUuMjM4DQoJYy00LjcyNSwwLTcuNDQ2LDMuNDU5LTcuNDQ2LDcuNDU4YzAsMy45MzksMi42MjEsNy4yOTgsNy40ODUsNy4yOThjMy45MzEsMCw2LjQzMy0yLjE3OSw2LjkyOS01LjM5OGgxLjMzdi0yLjczOWgtNy44MjNWMjIuMDU4eiIvPg0KPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTAsMzkuNTYyaDIyLjUzTDIzLjIzNCwwTDAsMC40MjhWMzkuNTYyeiBNMTIuNzczLDM2Ljk3NmwtMS45NzktMC4wODhsLTAuMDUzLTIuMDczaDIuMDZMMTIuNzczLDM2Ljk3NnoNCgkgTTE5LjI1NCwyNy45NDVMNC40MTgsMjguMjA4bC0wLjA1My0xLjk1OGgxNC45NDNMMTkuMjU0LDI3Ljk0NXogTTE5LjI1NSwyNC42MThINC4zNjV2LTEuOTU3aDE0Ljk0M0wxOS4yNTUsMjQuNjE4eiBNMTkuMzA4LDQuNzEzDQoJTDE5LjI1NSw2LjY3TDQuNDE4LDYuNDA3TDQuMzY1LDQuNzEzSDE5LjMwOHogTTQuMzY1LDguMzAzaDE0Ljk0M3YxLjgzTDQuMzYxLDkuODdMNC4zNjUsOC4zMDN6IE0xOS4zMDgsMTUuNDgybC0wLjA1MywxLjk1Nw0KCUw0LjQxOCwxNy4xNzZsLTAuMDUzLTEuNjk0SDE5LjMwOHogTTQuMzY1LDEzLjY2OGwwLjEzOS0xLjg0MmwxNC43MywwLjA2NmwwLjAyMSwxLjk1OEw0LjM2NSwxMy42Njh6IE00LjQ0NSwxOS4wNzJoMTQuODYzDQoJbDAuMDczLDEuODExSDQuMjk3TDQuNDQ1LDE5LjA3MnoiLz4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0yNS42MjcsMC40MjhWMzkuOTlsMTMuMzc3LTAuNDI5VjAuODU3TDI1LjYyNywwLjQyOHogTTM1Ljc3Myw0LjcxM2wtMC4wMjUsMS42OTRMMjguODg2LDYuNjdsLTAuMDI1LTEuOTU3DQoJSDM1Ljc3M3ogTTI4Ljg2MSw4LjMwM2g2LjkxMmwwLjAwMiwxLjU2N2wtNi45MTQsMC4yNjNWOC4zMDN6IE0zNS43NzMsMTMuNjY4bC02Ljg4NiwwLjE4MmwwLjAxLTEuOTU4bDYuODEyLTAuMDY2TDM1Ljc3MywxMy42Njh6DQoJIE0zNS43NzMsMTUuNDgybC0wLjAyNSwxLjY5NGwtNi44NjEsMC4yNjNsLTAuMDI1LTEuOTU3SDM1Ljc3M3ogTTMzLjM2LDM2Ljg0NGwtMi4wMDgsMC4wNDVMMzEuMywzNC44MTVoMi4wNlYzNi44NDR6DQoJIE0zNS43NDgsMjguMjA4bC02Ljg2MS0wLjI2NGwtMC4wMjUtMS42OTRoNi45MTJMMzUuNzQ4LDI4LjIwOHogTTM1Ljc3MywyNC42MThoLTYuODg2bC0wLjAyNS0xLjk1N2g2LjkxMlYyNC42MTh6IE0yOC44MjcsMjAuODgzDQoJbDAuMDM0LTEuODExaDYuODc0bDAuMDY5LDEuODExSDI4LjgyN3oiLz4NCjwvc3ZnPg0K" class="promo-logo svgfallback">
+                  </div>
+                  <div class="promo-text walsheim-black">HOSTING THAT WON'T KEEP YOU... WAITING.</div>
+                  <div class="promo-cta">
+                    ##if(productHasSavingsMoreThan(32082, 32082, 0))
+                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='32082' secondaryproductid='32082' showsymbol='true'/>]@T]</a>
+                    ##else
+                    <a class="walsheim-black" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">LEARN MORE</a>
+                    ##endif
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6">
+            <div class="tile-wrapper">
+              <atlantis:webstash type="css">
+                <style>
+                  .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
+                  .online-store-tile .promo-logo{width:80%}
+                  .online-store-tile .promo-text{padding-top:10px;}
+                  .online-store-tile .promo-cta{position:absolute;bottom:5px}
+                  .online-store-tile a{text-decoration:underline;color:#f2812e}
+                </style>
+              </atlantis:webstash>
+              <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="tile online-store-tile">
+                <div class="tile-content-wrapper">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/online-store-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjExLjcxMyA0NS4wMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjExLjcxMyA0NS4wMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNNTguMDY0LDMwLjU2M2M1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJCVM1Mi4zMDQsMzAuNTYzLDU4LjA2NCwzMC41NjN6IE01OC4wNjQsMjYuMDAzYy0yLjU0NCwwLTQuMDU2LTIuMDY0LTQuMDU2LTQuMjk2YzAtMi4yMzIsMS41MTItNC4yOTYsNC4wNTYtNC4yOTYNCgkJYzIuNTY4LDAsNC4wNTYsMi4wNjQsNC4wNTYsNC4yOTZDNjIuMTIxLDIzLjkzOCw2MC42MzMsMjYuMDAzLDU4LjA2NCwyNi4wMDN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTczLjE3NiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTYsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUw3My4xNzYsMTMuMzA2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05MS4zNiwyNS44MzVWMTMuMzA2aC00Ljk5MnYxNi44MDFoOS4zODV2LTQuMjcySDkxLjM2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05Ni42NDgsMzAuMTA3aDUuMDRWMTMuMzA2aC01LjA0VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTA5LjAxNiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTcsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUwxMDkuMDE2LDEzLjMwNnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMzLjAzMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NEgxMjcuMnYtMi44MDhoNS44MzJ2LTMuNTc2SDEyNy4yVjE3LjA1SDEzMy4wMzN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4xMiwyNC40NDNjMCwzLjkzNiwyLjY4OCw2LjEyMSw2Ljk2MSw2LjEyMWM0LjIsMCw2LjgxNy0yLjA4OCw2LjgxNy01LjQNCgkJYzAtMy44MTYtMy41MDQtNC43MDUtNi4wOTctNS42ODljLTEuNTYtMC41NzYtMi4zMDQtMS4wMzItMi4zMDQtMS45NDRjMC0wLjg4OCwwLjcyLTEuMjk2LDEuNTM2LTEuMjk2DQoJCWMxLjEyOCwwLDEuNjU2LDAuNzQ0LDEuNjU2LDIuMDg4aDQuOTkzYzAtMi42NC0xLjY1Ni01LjQ3Mi02LjUyOS01LjQ3MmMtMy4zODQsMC02LjY3MywxLjM2OC02LjY3Myw0Ljk0NA0KCQljMCwzLjQ1NiwzLjA5Niw0LjQ4OCw1Ljg1Nyw1LjU2OGMxLjc3NiwwLjY5NiwyLjU0NCwxLjA4LDIuNTQ0LDIuMDE2YzAsMC44ODgtMC42NDgsMS40NC0xLjY1NiwxLjQ0DQoJCWMtMS4yNzIsMC0yLjExMi0wLjg2NC0yLjExMi0yLjM3NkgxNDAuMTJ6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE1Ny41MiwzMC4xMDdoNC45OTJWMTcuNTc4aDMuNDU2di00LjI3MmgtMTEuOTA1djQuMjcyaDMuNDU2VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTc0LjU4NCwzMC41NjNjNS43ODUsMCw5LjEyMS00LjIyNCw5LjEyMS04Ljg1N3MtMy4zMzYtOC44NTctOS4xMjEtOC44NTcNCgkJYy01Ljc2LDAtOS4wOTcsNC4yMjQtOS4wOTcsOC44NTdTMTY4LjgyNCwzMC41NjMsMTc0LjU4NCwzMC41NjN6IE0xNzQuNTg0LDI2LjAwM2MtMi41NDQsMC00LjA1Ni0yLjA2NC00LjA1Ni00LjI5Ng0KCQljMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5NmMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzE3OC42NDEsMjMuOTM4LDE3Ny4xNTMsMjYuMDAzLDE3NC41ODQsMjYuMDAzeiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xODQuNjA4LDMwLjEwN2g0Ljk5MnYtNC4yOTZoMC45MzZsMi44NTYsNC4yOTZoNS44ODFsLTMuMzYtNS4xMTJjMS45Mi0xLjA4LDMuMDcyLTMuMTQ0LDMuMDcyLTUuNDI0DQoJCWMwLTMuMzg0LTIuNDcyLTYuMjY1LTYuMzEyLTYuMjY1aC04LjA2NVYzMC4xMDd6IE0xOTEuNjY0LDIxLjk0NkgxODkuNnYtNC43NTJoMi4wODhjMS4zNDQsMCwyLjIwOCwxLjA4LDIuMjA4LDIuMzc2DQoJCVMxOTMuMDA4LDIxLjk0NiwxOTEuNjY0LDIxLjk0NnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMjExLjcxMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NGgtNS44MzN2LTIuODA4aDUuODMzdi0zLjU3NmgtNS44MzNWMTcuMDVIMjExLjcxM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMuNjg1LDM4LjIxMmwtMi4wNTUsMS45MDNsLTAuMDkyLDIuNzgybDEuOTI0LDIuMDMybDIuODEzLDAuMDkybDIuMDU1LTEuOTAybDAuMDkzLTIuNzgybC0xLjkyNC0yLjAzMg0KCQlMMTMuNjg1LDM4LjIxMnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMzEuMTQ1LDM1LjcwM2wtMC40MTktMy40NTFsMi4yNi0xMy45MzNsNi4wMTMtNC4zMTZsLTEuNjM5LTMuMTcyTDI1LjcxNywwTDIwLjY2LDUuMDE4bC0wLjAxMywwLjEzNg0KCQljLTIuNDE1LDEuMjA3LTE5LjM4NSwxMC41OS0xOS4zODUsMTAuNTlsMC41NjIsMC44MjZsMTcuOTY0LTguMTI3bDcuNTgsNi41MzNoMi45ODRsLTguNjc1LTcuOTNsNC45NTEtMy43NzJsOS4wMDIsOS4wMzMNCgkJbC01LjI3OCw0LjUwMmwwLjAyNCwwLjAzNkw2LjI4OCwyMi40NDNsMC44LDE0LjkyNmwyMC45NjUtNC41MzlsMC41NzQsMy4zNTZsLTEuNjA2LDEuMDAxbC0wLjc0MiwzLjI0bDEuNzkyLDIuODExbDMuMjc3LDAuNzM0DQoJCWwyLjg0Mi0xLjc3MmwwLjc0My0zLjI0MWwtMS43OTItMi44MTFMMzEuMTQ1LDM1LjcwM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMCwxNi4wMjhsMS42MSwxMS43NDZsMy44NzMsOC4yMzJMNC42NzgsMjEuNzRMMCwxNi4wMjh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==" class="promo-logo svgfallback">
+                  </div>
+                  <div class="promo-text walsheim-black">EVERYTHING YOU NEED TO START SELLING ONLINE.</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" class="walsheim-black">Start your FREE TRIAL </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- EU Cookie Warning Section-->
-    <div class="uk-cookie-banner">
-      <div class="uk-cookie-wrap"><i class="uk-cookie-ico"></i>[@L[cds.sales/homepage:eu-cookie-disclaimer]@L]</div><i class="uk-cookie-close"></i>
-    </div> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
-    <!-- End Main Content-->
-    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/script/sales17.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20140410.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#domain-promo {
+  color: #fff;
+}
+.domain-promo-content {
+  background-color: #333;
+}
+@media only screen and (min-width: 768px) {
+  .domain-promo-content {
+    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
+    background-size: cover;
+  }
+}
+.Explorer8 .domain-promo-content {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
+  background-size: cover;
+}
+.domain-promo-text {
+  padding: 7% 2% 1%;
+}
+#domain-promo .text-center {
+  color: #333;
+  margin: 0;
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+#domain-promo h1 {
+  display: inline;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.6rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+#domain-promo h3 {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+}
+#domain-promo .btn {
+  margin-top: 20px;
+}
+#domain-promo .domain-promo-text div {
+  max-width: 360px;
+}
+#domain-promo .domain-promo-text .customer-website {
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="domain-promo" class="bg-green-official">
+      <h2 class="text-center">[@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]</h2>
+      <div class="domain-promo-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-2 domain-promo-text">
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]</h3>
+              <div>[@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]</div><a data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]</a>
+              <p class="customer-website hidden-xs">[@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#why-godaddy {
+  background-color: #ccc;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="why-godaddy">
+      <div class="container">
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#website-promo .shape-text {
+  color: #333333;
+}
+#website-promo ul {
+  margin-left: -20px;
+}
+@media (min-width: 1000px) {
+  #website-promo .bg-gray-darkest .two-up-text-wrap {
+    margin-left: 8.333333333333332%;
+  }
+}
+.two-up-speech-shape.two-up-speech-shape-gold,
+.two-up-speech-shape.two-up-speech-shape-gold:after {
+  background-color: #fedc45;
+}
+.two-up-speech-shape.two-up-speech-shape-gold:before {
+  border-top-color: #fedc45;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="website-promo">
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: #ffde2d;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: #e8e8e8;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: #d9d9d9;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: #77c043;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: #333333;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #232323;
+}
+.two-up-wrap-compare h3.headline-primary {
+  font-size: 3rem;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #232323;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
+
+##if(activeLanguageAny([en-US]))
+.or-container:after {
+  content: '';
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+  width: 94px;
+  height: 98px;
+  background-position: 0 0;
+  background-size: auto auto;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    left: 50%
+  }
+}
+##else
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+##endif
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%;
+    bottom: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%;
+    bottom: 50%;
+  }
+}
+
+.two-up-title.h0 {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: 300;
+  color: #232323;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
+
+      </style>
+      <div id="website-promo" class="two-up-title-wrap bg-green-official">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="min-height: 100%;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg" class="two-up-wrap-compare  lazyload">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5 or-container-none col-sm-6  bg-gray-darkest">
+                <div style="" class="two-up-text-wrap white-text">
+                  <div class="two-up-speech-shape two-up-speech-shape-gold">
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]</div>
+                  </div>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <ul>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]</li>
+                      </ul><a data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]" class="btn btn-default-light website-promo-wsb-btn">LEARN MORE</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 col-md-offset-2 col-sm-6  gb-green-official-light">
+                <div style="" class="two-up-text-wrap ">
+                  <div class="two-up-speech-shape two-up-speech-shape-gold">
+                    <div class="shape-text">[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]</div>
+                  </div>
+                  <h2 class="h0">[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]</h2>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <ul>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]</li>
+                        <li>[@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]</li>
+                      </ul><a data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]" class="btn btn-default-dark website-promo-hosting-btn">LEARN MORE    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#o365-promo {
+  padding-bottom: 105px;
+}
+#o365-promo h2 {
+  font-size: 4.5rem;
+}
+#o365-promo h3 {
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+#o365-promo .o365-promo-text p {
+  max-width: 420px;
+}
+#o365-promo .promo-flag {
+  color: #000;
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
+  font-size: 28px;
+  font-size: 2.8rem;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  line-height: 1;
+  background-size: cover;
+  overflow: visible;
+  position: absolute;
+  margin-top: 100px;
+  right: 50px;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
+}
+.Explorer8 #o365-promo .promo-flag {
+  background-color: #fedc45;
+}
+.o365-promo-text ul {
+  list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);
+  margin: 0 0 20px -12px;
+}
+.o365-promo-image {
+  padding-top: 115px;
+  width: 140%;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="o365-promo">
+      <div class="container">
+        <h2 class="text-center walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:header-text]@L]</h2>
+        <div class="row">
+          <div class="col-sm-6 o365-promo-text">
+            <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_o365-promo:sub-header-text]@L]</h3>
+            <p>[@L[cds.sales/homepage/sections/_o365-promo:body-text]@L]</p>
+            <ul>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line1]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line2]@L]</li>
+              <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line3]@L]</li>
+            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
+          </div>
+          <div class="col-sm-6">
+            <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#support-promo {
+  background-color: #333;
+  padding-bottom: 50px;
+}
+#support-promo h2 {
+  margin: 35px 0 50px;
+}
+#support-promo h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+#support-promo p {
+  max-width: 390px;
+}
+#support-promo .support-promo-text .container {
+  padding: 0;
+}
+.support-promo-img {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .support-promo-img {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .support-promo-img {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+.support-promo-number {
+  font-size: 2.0rem;
+  margin-top: 2%;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="support-promo">
+      <div class="container">
+        <h2 class="text-center walsheim-black text-white">[@L[cds.sales/homepage/sections/_support-promo:header-text]@L]</h2>
+        <div class="row">
+          <div class="col-xs-6 text-center"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload support-promo-img"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="GoDaddy Support" class="lazyload svgfallback support-promo-img"/>
+          </div>
+          <div class="col-xs-6">
+            <div class="support-promo-text text-white">
+              <h3 class="walsheim-black">[@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]</h3>
+              <p>[@L[cds.sales/homepage/sections/_support-promo:body-text]@L]</p>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]</a></div>
+                  <div class="col-md-8 col-xs-12">
+                    <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <atlantis:webstash type="css">
+      <style>#nascar-contest {
+  background: #fff center center;
+  background-size: cover;
+}
+#nascar-contest h2 {
+  margin: 80px 0 0;
+}
+#nascar-contest h3 {
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 680px) {
+  #nascar-contest h3 {
+    width: 180px;
+  }
+}
+#nascar-contest a {
+  margin-bottom: 30px;
+}
+@media only screen and (min-width: 1400px) {
+  #nascar-contest a {
+    margin-bottom: 100px;
+  }
+}
+#nascar-contest .nascar-contest-btn {
+  font-size: 1.4rem;
+}
+
+      </style>
+    </atlantis:webstash>
+    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg" class="lazyload">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-offset-sm-6">
+            <h2>[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
+            <p>[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</p><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="limitations-social">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm 12">
+            <p>‡, *, ‡‡, ºº, †† Product limitations and legal policies, <a onClick="limitationsModal()">View</a></p>
+            <div id="limitationsModal" data-title="Limitations" style="display:none">
+              <p>One FREE .COM,<span class="tlds-all tlds-mx"> .COM.MX,</span><span class="tlds-all tlds-br"> .COM.BR,</span><span class="tlds-all tlds-ca"> .CA,</span><span class="tlds-all tlds-uk"> .UK., .CO.UK,</span> .CO, .NET, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</p>
+            </div><span>Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.</span>
+          </div>
+          <div class="col-md-4 col-sm 12">
+            <div class="gdhp-share">
+              <div data-twshareurl="[@T[link:<relative path=''></relative>]@T]" data-twtext="[@L[cds.sales/homepage:twitter-text-gdbl]@L]" data-twrelated="GoDaddy" data-shareurl="[@T[link:<relative path='/'/>]@T]" data-buttons="google,facebook,twitter" class="fosshare"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTEREND-     -->
+    <!-- liveperson includes -->
+    <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- home page styling-->
+      <style>.text-white {
+  color: #ffffff;
+}
+.bg-green-official {
+  background-color: #77c043;
+}
+.walsheim-regular {
+  font-family: 'Walsheim-Regular', Arial, sans-serif;
+}
+.walsheim-medium {
+  font-family: 'Walsheim-Medium', Arial, sans-serif;
+}
+.walsheim-bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.walsheim-black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+.tungsten {
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
+}
+#marquee {
+  position: relative;
+}
+#marquee .tile-wrapper {
+  margin-top: 6.5px;
+}
+#marquee .tile-wrapper:last-child {
+  margin-bottom: 6.5px;
+}
+#marquee .tile {
+  min-height: 140px;
+}
+.hero-wrapper {
+  min-height: 300px;
+  cursor: pointer;
+}
+.tile {
+  cursor: pointer;
+}
+.top-banner-lower-content {
+  min-height: 40px;
+}
+#limitations-social {
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+#limitations-social p {
+  margin: 0;
+}
+#limitations-social a {
+  cursor: pointer;
+}
+.gdhp-share {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+}
+.fosfbbox {
+  height: 25px !important;
+}
+#bugbar {
+  margin: 10px 0;
+}
+#domain-search {
+  margin-top: 10px;
+}
+#domain-name-input {
+  text-transform: inherit;
+}
+.price,
+.icann-disclaimer {
+  color: #ff8a00;
+}
+#merchandising {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+#merchandising .tile-wrapper {
+  min-height: 140px;
+  margin: 5px 0;
+}
+section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#why-godaddy {
+  padding-bottom: 50px;
+}
+#domain-name-input::-webkit-input-placeholder {
+  color: #008a32;
+}
+#domain-name-input:-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input::-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input:-ms-input-placeholder {
+  color: #008a32;
+}
+
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
-      if (/isc=ENGONGROW/i.test(self.location.href)) {
-        $('#marquee-container-orig').hide();
-        $('#marquee-container-isc').show();
-        $('.gtld-tiles').hide();
-        $('.gdhp-tile-wrap').hide();
-      }
-      var ignoreLivePerson = true;
-      $(document).ready(function() {
-      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
-      qs = [],
-      date = new Date();
-      for(var i = 0; i < hashes.length; i++) {
-      var hash = hashes[i].split('=');
-      qs.push(hash[0]);
-      qs[hash[0]] = hash[1];
-      }
-      $('#shareme').fosShare({});
-      if($("#searchDomainName").val().length) {
-      $("#searchDomainName").val("");
-      }
-      $(".gdhp-search-box2").gdhpDomainSearch({
-      'domainInputId': '#searchDomainName2',
-      'tldInputId': '#searchTldName2',
-      'tldToggleId': '#searchTldToggle',
-      'tldListId': '#searchTldList',
-      'searchButton': '#domainSearchAction2',
-      'searchUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='54814' /></relative>]@T]',
-      'idnUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='82474' /></relative>]@T]',
-      'domainInputLabelText': '[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]',
-      'focusOnLoad' : false
-      });
-      $(".gdhp-search-box").gdhpDomainSearch({
-      'domainInputId': '#searchDomainName',
-      'tldInputId': '#searchTldName',
-      'tldToggleId': '#searchTldToggle',
-      'tldListId': '#searchTldList',
-      'searchButton': '#domainSearchAction',
-      'searchUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='54814' /></relative>]@T]',
-      'idnUrl': '[@T[link:<relative path='/domains/search.aspx'><param name='ci' value='82474' /></relative>]@T]',
-      'domainInputLabelText': '[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]'
-      });
-        $('.search-form').on('submit', function (e){
-              e.preventDefault();
+      endOfPageScripts();
       
-              $('button[name="searchButton"]', this).addClass('disabled');
-      
-              var params = {
-                  query:$(this).serialize(),
-                  searchUrl:$(this).attr('data-url')
-              };
-              DomainSearch(params,function(err,NextStepUrl){
-                  if(typeof NextStepUrl === 'undefined')
-                  {
-                    NextStepUrl = '[@T[link:<relative path="/domains/search-new.aspx"></relative>]@T]';
-                  }
-                  if(err == null )
-                  {
-                      window.location = NextStepUrl;
-                  }
-                  else{
-                      if(console != "undefined")
-                      console.log(err);
-                  }
-              });
-          });
-      
-          function DomainSearch(params, cb) {
-                $.ajax({
-                  url: params.searchUrl,
-                  type: 'POST',
-                  data: params.query,
-                  error: function (XMLHttpRequest, textStatus, errorThrown) {
-                    var data = { Error: errorThrown, Success: false };
-                    cb(errorThrown,null);
-                  },
-                  success: function (data) {
-                    cb(null,data.NextStepUrl);
-                  }
-                });
-          }
-        $("#disclaimers > p > a").click(function () {
-              $("#g-modal").modal({
-                overlayId: "g-modal-overlay",
-                close: "false", // disables default close button
-                autoPosition: "true"
-              });
-            });
-            $(".g-modal-close").click(function () {
-              // Closes the last modal
-              $.modal.close();
-            });
-      });
-      $('.uk-cookie-close').click(function() {
-            $('.uk-cookie-banner').css("display","none");
-            var CookieDate = new Date;
-            CookieDate.setFullYear(CookieDate.getFullYear( ) +10);
-            document.cookie = 'uk_banner=closed; expires=' + CookieDate.toGMTString( ) + '; path=/';
-            })
-      if (document.cookie.indexOf("uk_banner") >= 0) {
-             $('.uk-cookie-banner').css("display","none"); 
-             } else {
-             $('.uk-cookie-banner').css("display","block");
-             }     
-      if(navigator.userAgent.match(/iPad|iPhone|iPod/i)) {
-      $('head').append('<meta name="viewport" content="width=1150px">');
-      }
-      $('body').on('click','.js-gdhpclick',function(event){
+    </script>
+    <script type="text/javascript">
+      $('body').on('click','[data-url]',function(event){
         var $clickedElement = $(event.currentTarget);
         var $clickedUrl = $clickedElement.attr('data-url'); 
         event.stopPropagation();
-        switch($clickedUrl)
-        {
-          case "video":
-             $('div#myVideoModal').modal('show');
-          break;
-          case "none":
-          break;
-          case "video-close":
-            $('div#myVideoModal').modal('hide');
-          break;
-          default:
-            window.location.href=$clickedUrl;
-        }
+        window.location.href=$clickedUrl;
       });
+      function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
+      var reSizeTiles = function(){
+        var maxTitleHeight = 0;
+          $("#merchandising .tile-wrapper").each(function(index, title) {
+            maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
+          }).css("min-height", maxTitleHeight + 10);
+      
+          var maxHeroHeight = 0;
+          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+      }
+      $(window).load(reSizeTiles);
       $(window).load(function () {
         $('.bigtext').bigtext().css('visibility', 'visible');
-        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+          setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
-      var $resizeElements = $('.js-gdhpPriceResize');
-      if($resizeElements){
-      $resizeElements.each(function(){
-        var currentFontSize = parseInt($(this).css("font-size"));
-        var currentWidth = parseInt($(this).css("width"));
-        var maxCharOvrd = $(this).attr('data-maxchar');
-        var numOfChar = $(this).text().length;
-        var containsSymbol =  $(this).text().match(/[₪|₨|￦|﷼]/i);
-        var maxChar = Math.ceil((currentWidth/currentFontSize) * 2);
-        if(maxCharOvrd){maxChar = parseInt(maxCharOvrd);}
-        if(containsSymbol && numOfChar <= maxChar){maxChar -= 1;}
-        if(numOfChar > maxChar){
-          var newFontSize =  currentFontSize - (Math.ceil(((numOfChar - maxChar)/numOfChar) * 100));
-          if($(this).hasClass("tungsten")){
-            newFontSize *= .82;
-          }
-          else if(!containsSymbol){
-            newFontSize += 10;
-          }
-            $(this).css("font-size",newFontSize +"px").css("line-height",newFontSize +"px");
-          }
-        });
-      }
+    </script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+    <script type="text/javascript">
+      var ignoreLivePerson = true;
+      $(document).ready(function() {
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
+                     qs = [],
+                     date = new Date();
+        for(var i = 0; i < hashes.length; i++) {
+          var hash = hashes[i].split('=');
+          qs.push(hash[0]);
+          qs[hash[0]] = hash[1];
+        }
+      
+        window.setTimeout(function() {
+          $('#shareme').fosShare({});
+        }, 2000);
+      });
+      $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
+      
     </script>
   </body>
 </html>

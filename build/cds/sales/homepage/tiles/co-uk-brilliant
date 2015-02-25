@@ -15,14 +15,14 @@
 </atlantis:webstash>
 <div id="gdhp-dotcodotuktile" data-url="[@T[link:<relative path="/tlds/co-uk.aspx"><param name="ci" value="93445" /></relative>]@T]" data-ci="93445" class="gdhp-tile co_uk-tile js-gdhpclick">
   <div class="co_uk-tile-logo">    </div>
-  <div class="co_uk-tile-text"><span data-maxchar="24" class="co_uk-tile-headline tungsten js-gdhpPriceResize">[@L[cds.sales/homepage/locales/en:co-uk-tile-headline]@L]</span><span class="co_uk-tile-maintext">
+  <div class="co_uk-tile-text"><span data-maxchar="24" class="co_uk-tile-headline tungsten js-gdhpPriceResize">
        
-      ##if(productHasDiscountMoreThan(57465, 5))
-       <span class="gdhp-dash-sale"></span> 
-      [@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] [@L[cds.sales/homepage/locales/en:co-uk-tile-maintext-off]@L]
+       
+      ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+      [@L[cds.sales/homepage/locales/en:co-uk-tile-headline]@L]
       ##else
-       <span class="gdhp-dash-nosale"></span> 
+      [@L[cds.sales/homepage/locales/en:co-uk-tile-headline-2]@L]
       ##endif
-      [@L[cds.sales/homepage/locales/en:co-uk-tile-maintext-brilliant]@L]</span></div>
+       </span><span class="co_uk-tile-maintext"><span class="gdhp-dash-nosale"></span>[@L[cds.sales/homepage/locales/en:co-uk-tile-maintext-brilliant]@L]</span></div>
   <div class="atn-btn-wrap"><a id="gdhp-dotcodotuktile-btn" href="javascript:void(0)" data-ci="93445" class="btn btn-top-img">[@L[cds.sales/homepage/locales/en:stickit-marq-get-started]@L]</a></div>
 </div>

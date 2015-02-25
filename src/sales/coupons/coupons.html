@@ -1,12 +1,12 @@
 ---
 location: sales/coupons.aspx
-devid: 54d4f186f778fc20c82c211f
-id: 
-name: GCE-35734
-comments: Fast Follow
+id: 54e7bda9f778fc0fb81adfba
+name: GCE-36891
+comments: Remove COM and CO pods
 L1: "[@L[cds.sales/coupons:"
 L2: "]@L]"
-cssVersionOverride: 2
+cssVersionOverride: 3
+jsVersionOverride: 2
 ---
 {% extends 'layouts/base.html' %} 
 {% import './_pod-layout.html' as macros %}
@@ -162,7 +162,7 @@ cssVersionOverride: 2
           
           {{ macros.pod_1("got_bundle") }} 
           {{ macros.pod_1("domain_com_top_deal") }}
-          {{ macros.pod_1("domain_com_top_deal_no_promo") }}
+          {#{ macros.pod_1("domain_com_top_deal_no_promo") }#}
           {{ macros.pod_1("mwp") }}
           {{ macros.pod_1("web_hosting") }}
           {{ macros.pod_1("domain_new_extensions") }}
@@ -191,9 +191,9 @@ cssVersionOverride: 2
         <div data-gd-sidebysidealign-col="1">
 
           {{ macros.pod_1("domain_com") }}
-          {{ macros.pod_1("domain_com_no_promo") }}
+          {#{ macros.pod_1("domain_com_no_promo") }#}
           {{ macros.pod_1("domain_co") }}
-          {{ macros.pod_1("domain_co_no_promo") }}
+          {#{ macros.pod_1("domain_co_no_promo") }#}
           {{ macros.pod_1("domain_net") }}
 
           {{ macros.pod_1("domain_us") }}
@@ -245,7 +245,7 @@ cssVersionOverride: 2
           
           {{ macros.pod_1("got_bundle") }} 
           {{ macros.pod_1("domain_com_top_deal") }}
-          {{ macros.pod_1("domain_com_top_deal_no_promo") }}
+          {#{ macros.pod_1("domain_com_top_deal_no_promo") }#}
           {{ macros.pod_1("mwp") }}
           {{ macros.pod_1("web_hosting") }}
           {{ macros.pod_1("domain_new_extensions") }}
@@ -259,9 +259,9 @@ cssVersionOverride: 2
 
 
           {{ macros.pod_1("domain_com") }}
-          {{ macros.pod_1("domain_com_no_promo") }}
+          {#{ macros.pod_1("domain_com_no_promo") }#}
           {{ macros.pod_1("domain_co") }}
-          {{ macros.pod_1("domain_co_no_promo") }}
+          {#{ macros.pod_1("domain_co_no_promo") }#}
           {{ macros.pod_1("domain_net") }}
 
           {{ macros.pod_1("domain_us") }}
