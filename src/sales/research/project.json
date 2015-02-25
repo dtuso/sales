@@ -1,0 +1,25 @@
+{
+  "research.html": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    },
+    "metaTitle": "[@L[cds.sales/gd/research:page-title]@L]",
+    "metaDescription": "[@L[cds.sales/gd/research:meta-description]@L]",
+    "metaKeywords": "[@L[cds.sales/gd/research:meta-keywords]@L]",
+    "metaCanonicalPath": "/research",
+    "metaOgTitle": "[@L[cds.sales/gd/research:og-title]@L]",
+    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
+    "metaOgDescription": "[@L[cds.sales/gd/research:og-description]@L]"
+  },
+  "research.language": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Victor Songco",
+        "email": "vsongco@godaddy.com"
+      }
+    }
+  }
+}

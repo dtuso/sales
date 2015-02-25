@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="[@T[localization:<language full='true' />]@T]">
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
+<meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
+<meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
+<meta name="y_key" content="1e39c508e0d87750">
+
+<link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]">
+<link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
+<link rel="publisher" href="https://plus.google.com/108306343581548568740">
+
+{% block pageTitle %}<title>{{ metaTitle }}</title>{% endblock %}
+{% block pageDescription %}<meta name="description" content="{{ metaDescription }}">{% endblock %}
+{% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}">{% endblock %}
+
+<meta property="og:title" content="{{ metaOgTitle }}">
+<meta property="og:description" content="{{ metaOgDescription }}">
+<meta property="og:type" content="product">
+<meta property="og:url" content="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}'  parammode='explicit'/>]@T]">
+<meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+<meta property="og:site_name" content="[@T[companyname:name]@T]">
+<meta property="fb:app_id" content="{{ metaOgAppID }}">
+<meta property="fb:admins" content="{{ metaOgAdmins }}">
+
+[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+<!--[if lt IE 9]>
+<link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+<link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+<script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+{% if assetPath %}<link href="[@T[link:<css path='{{ assetPath }}css/styles.css' />]@T]{% if cssVersionOverride %}?v={{cssVersionOverride}}{% endif %}" rel="stylesheet" type="text/css">{% endif %}
+{% block metahead %}{% endblock %}
+
+</head>
+<body class="ux-app">
+
+[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+<!-- MAIN-CONTENT BEGIN -->{% block body %}{% endblock %}<!-- MAIN-CONTENT END -->
+[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+{% block footer %}{% endblock %}
+
+</body>
+</html>
