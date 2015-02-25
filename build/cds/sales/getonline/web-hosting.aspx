@@ -1513,7 +1513,7 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
             <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
           </div>
@@ -1521,30 +1521,27 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-sm-4 text-center">
                 <div class="features-domain-name"></div>
-                <label class="h3 uppercase product-name">Domain Name</label>
+                <label class="h3 product-name">Domain Name</label>
               </div>
-              <div class="col-sm-4 text-center">
-                <div class="features-hosting"></div>
-                <label class="h3 uppercase product-name">Web Hosting</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
+                <h3 class="text-center">Web Hosting</h3>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-email"></div>
-                <label class="h3 uppercase product-name">Office 365 Email</label>
+                <label class="h3 product-name">Office 365 Email</label>
               </div>
             </div>
             <div class="row">
               <div class="get-it-now">
                 <div class="container">
                   <div class="row text-center">
-                    <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+                    <p class="h3">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
-                    <btn id="btn-search-again" class="btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+                    <button id="get-it-btn2" class="btn btn-purchase btn-lg center-blockp">Get it now</button>
+                    <button id="btn-search-again" class="btn btn-primary btn-lg">Search Again</button>
                   </div>
-                  <div style="padding-top:10px" class="row text-center">
-                    <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-                  </div>
+                  <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>
               </div>
             </div>
@@ -1727,6 +1724,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
     </atlantis:webstash>

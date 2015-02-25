@@ -1,6 +1,8 @@
 extends _p4p.jade
 
 append vars
+  - primary_pfid = 32759;
+  - primary_promo = 511092015;
   - productToDisplay.name = "Managed Wordpress";
   - productToDisplay.getItNowDescription = "Start a blog with WordPress and let us manage the technical stuff. MXNXXX.XX/yr";
   - productToDisplay.imgClass = "features-wordpress";
@@ -16,7 +18,7 @@ append vars
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
-    h3.text-center Wordpress
+    h3.text-center Managed Wordpress
     p Start a blog with WordPress and let us manage the technical stuff.
 
 block productViewTemplates
@@ -45,3 +47,7 @@ block productInfo
       .col-sm-12.product-info-text #{productToDisplay.productInfoText}
 
 block productTemplates
+
+block gotProduct
+  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+  h3.text-center Managed Wordpress

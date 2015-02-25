@@ -705,7 +705,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]</mark></h3>
+            <h3 class="text-center">A great package deal for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|7524|464069" period="monthly" promocode="24681357"></current>]@T]</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -715,9 +715,9 @@ function getParameterByName(name) {
               <p>Get a memorable online address, like <mark class="business-idea">BillyBikes.org</mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
-              <h3 class="text-center">Web Hosting</h3>
-              <p>SWITCH THIS TO WSB</p>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png" class="img-responsive center-block">
+              <h3 class="text-center">Website Builder</h3>
+              <p>Easily create a professional website with simple drag-&-drop tools.</p>
             </div>
             <div class="plus">+</div>
             <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
@@ -728,8 +728,8 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
+            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|7524|464069" period="monthly" promocode="24681357"></current>]@T]/month for the first year*</p>
+            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly" promocode="24681357"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly"></current>]@T]/year after the first year</small>
           </div>
         </div>
       </div>
@@ -3067,7 +3067,7 @@ var PlanBox6UI = {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
             <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
           </div>
@@ -3075,30 +3075,27 @@ var PlanBox6UI = {
             <div class="row">
               <div class="col-sm-4 text-center">
                 <div class="features-domain-name"></div>
-                <label class="h3 uppercase product-name">Domain Name</label>
+                <label class="h3 product-name">Domain Name</label>
               </div>
-              <div class="col-sm-4 text-center">
-                <div class="features-wsb"></div>
-                <label class="h3 uppercase product-name">Website Builder</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png" class="img-responsive center-block">
+                <h3 class="text-center">Website Builder</h3>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-email"></div>
-                <label class="h3 uppercase product-name">Office 365 Email</label>
+                <label class="h3 product-name">Office 365 Email</label>
               </div>
             </div>
             <div class="row">
               <div class="get-it-now">
                 <div class="container">
                   <div class="row text-center">
-                    <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+                    <p class="h3">[@T[multipleproductprice:<current productidlist="101|7524|464069" period="monthly" promocode="24681357"></current>]@T]/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
-                    <btn id="btn-search-again" class="btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+                    <button id="get-it-btn2" class="btn btn-purchase btn-lg center-blockp">Get it now</button>
+                    <button id="btn-search-again" class="btn btn-primary btn-lg">Search Again</button>
                   </div>
-                  <div style="padding-top:10px" class="row text-center">
-                    <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-                  </div>
+                  <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly" promocode="24681357"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>
               </div>
             </div>
@@ -3281,6 +3278,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
     </atlantis:webstash>
