@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/email/email-account/en
-id: 548a09c5f778fc0b68fecd97
-name: GCE-33609
-comments: Mouse over text displaying incorrect version.
+id: 54ebc182f778fc0acccea4a8
+name: GCE-35999
+comments: Renewal message disclaimer
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -287,3 +287,13 @@ ON SALE
 Exclusive discount for [@T[companyname:name]@T] customers
 <phrase key="money_back" />
 Money-back guarantee
+<phrase key="35999-disclaimer_link" />
+*, **, +, <sup>4</sup> Click here for product disclaimers and legal policies.
+<phrase key="35999-Disclaimers-four" />
+<sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
+<phrase key="35999-superscript-4" />
+<sup>4</sup>
+<phrase key="35999-disclaimer_1" />
+* Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Publisher and One Note Desktop are Windows PC client programs and/or features only. Cannot be used across devices. Install on up to 5 PCs or Macs. Includes automatic updates and upgrades so you always have the newest versions of these tools.
+<phrase key="35999-faq_bp_plan_text" />
+This depends on whether you are using a PC or a Mac. PC users can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote, Publisher, and the desktop version of Lync. Mac users will be able to download the latest version of Word, PowerPoint, Excel, and Outlook as part of the Business Premium plan.
