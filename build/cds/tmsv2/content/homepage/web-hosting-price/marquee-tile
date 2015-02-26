@@ -1,0 +1,21 @@
+
+<atlantis:webstash type="css">
+  <style>.web-hosting-price {
+  background-color: #333;
+  color: #fff;
+}
+.web-hosting-price .tile-content-wrapper {
+  padding: 20px 0 0 15px;
+}
+.web-hosting-price .tile-content-wrapper img {
+  width: 15%;
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='11111'/></relative>]@T]" data-ci="111111" class="tile web-hosting-price">
+  <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDkgNTAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ5IDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0wLDQ5LjVoMjguM0wyOS4yLDBMMCwwLjVWNDkuNXogTTE2LDQ2LjJsLTIuNS0wLjFsLTAuMS0yLjZoMi42TDE2LDQ2LjJ6IE0yNC4yLDM0LjlMNS42LDM1LjNsLTAuMS0yLjQNCgloMTguOEwyNC4yLDM0Ljl6IE0yNC4yLDMwLjhINS41di0yLjRoMTguOEwyNC4yLDMwLjh6IE0yNC4zLDUuOWwtMC4xLDIuNEw1LjYsOEw1LjUsNS45SDI0LjN6IE01LjUsMTAuNGgxOC44djIuM0w1LjUsMTIuMw0KCUw1LjUsMTAuNHogTTI0LjMsMTkuNGwtMC4xLDIuNEw1LjYsMjEuNWwtMC4xLTIuMUgyNC4zeiBNNS41LDE3LjFsMC4yLTIuM2wxOC41LDAuMWwwLDIuNEw1LjUsMTcuMXogTTUuNiwyMy44aDE4LjdsMC4xLDIuM2gtMTkNCglMNS42LDIzLjh6Ii8+DQo8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMzIuMiwwLjVWNTBMNDksNDkuNVYxLjFMMzIuMiwwLjV6IE00NC45LDUuOWwwLDIuMWwtOC42LDAuM2wwLTIuNEg0NC45eiBNMzYuMywxMC40aDguN2wwLDJsLTguNywwLjNWMTAuNA0KCXogTTQ0LjksMTcuMWwtOC43LDAuMmwwLTIuNGw4LjYtMC4xTDQ0LjksMTcuMXogTTQ0LjksMTkuNGwwLDIuMWwtOC42LDAuM2wwLTIuNEg0NC45eiBNNDEuOSw0Ni4xbC0yLjUsMC4xbC0wLjEtMi42aDIuNlY0Ni4xeg0KCSBNNDQuOSwzNS4zbC04LjYtMC4zbDAtMi4xaDguN0w0NC45LDM1LjN6IE00NC45LDMwLjhoLTguN2wwLTIuNGg4LjdWMzAuOHogTTM2LjIsMjYuMWwwLTIuM2g4LjZsMC4xLDIuM0gzNi4yeiIvPg0KPC9zdmc+DQo=" class="tld svgfallback"/><!--[if lt IE 9]><img class="img-responsive"/><![endif]-->
+    <div class="product-name">[@L[cds.tmsv2/content/homepage/web-hosting-price/marquee-tile:product]@L]</div>
+    <div class="headline">[@L[cds.tmsv2/content/homepage/web-hosting-price/marquee-tile:headline]@L]</div><a class="cta">[@L[cds.tmsv2/content/homepage/web-hosting-price/marquee-tile:saveupto]@L]</a>
+  </div>
+</div>
