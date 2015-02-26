@@ -103,7 +103,7 @@ var got1Page = {
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /><param name="dppDom" value="dppDom" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -190,6 +190,13 @@ $(document).ready(function() {
   // when on the English page (US only) show the words OR rather than the universal OR graphic
   if(got1Page.isEnUs) {
     $("#site-choice-compare, #step2-choose-product").find('.or-container').addClass('or-container-en-us');
+  }
+
+  //- display error on return from DPP's TLD eligibility requirements failure
+  if(getParameterByName('tldRegErr').length > 0) {
+    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
+  } else {
+    showTypeYourDomain();
   }
 
   // set up verify buttons on spin results to do validation before sending to DPP
@@ -360,17 +367,17 @@ function domainSearchFormSubmit(e, domain) {
       if(isAvailable) {
         $('#marquee').find('.search-form-input').val(''); 
 
+        // Domain is available, so allow them to search again or to select this available domain        
+        showTypeYourDomain();// setup search box
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section'); 
+        var $thisSection = $this.closest('.js-marquee-section');       
 
-        var $toView = $('#domain-available-marquee-view');
-        $toView.find('.purchase-btn').data('domain', exactMatchDomain);
-        $toView.find('.search-message').hide();
-        $toView.find('.search-message.type-your-business-name').show();
+        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
 
-        animateMarquee($thisSection, $toView /*toView*/);
+        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
 
       } else {
 
@@ -474,13 +481,14 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain.Fqdn)));
+    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  returnUrl );
+  apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -504,6 +512,9 @@ function goToDppCheckoutPage(e) {
 }
 
 function showSearchSpins($this, domain, alternateDomains){  
+
+  // setup search box  
+  showTypeYourDomain();
 
   displayMoreResultsLinks(alternateDomains.length);
 
@@ -530,12 +541,8 @@ function showSearchSpins($this, domain, alternateDomains){
   
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
-
   var $thisSection = $this.closest('.js-marquee-section');
-  var $toView = $('#domain-not-available-marquee-view');
-  $toView.find('.search-message').hide();
-  $toView.find('.search-message.type-your-business-name').show();
-  animateMarquee($thisSection, $toView /*toView*/);
+  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
 
 }
 
@@ -547,6 +554,21 @@ function showApi1or2SearchError(e,domain){
 function showApi3SearchError(e,domain){  
   var $modal = $("#step2-choose-product .api-c-failure-modal");
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
+}
+
+function showDomainRegistrationFailure(tld) {
+  var 
+    $failArea = $('#marquee .domain-eligibility-fail'), 
+    html = $failArea.html();
+  html = html.replace(/\{0\}/gi, tld)
+  $failArea.html(html);
+  $('#marquee .search-message').hide();
+  $('#marquee .domain-eligibility-fail').show();
+}
+
+function showTypeYourDomain() {  
+  $('#marquee .search-message').hide();
+  $('#marquee .type-your-business-name').show();
 }
 
 function displayMoreResultsLinks() {
@@ -643,6 +665,15 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
 }
 
 
+// Page Global script -- changes will effect all campaigns 
+// get url parameter by parameter name
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      results = regex.exec(location.search);
+  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
 $(window).load(function () {
   $('.bigtext').bigtext({maxfontsize: 160});
   setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
@@ -708,12 +739,88 @@ $(window).load(function () {
           color: #333; 
         }
         
+        .offer-search-box { padding-bottom:20px;}
+        .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
+        .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
           margin: 20px 0 5px;
           font-size:24px;
         }
         
+        /*  speech */
         
+        .speech-shape-upsidedown {
+          line-height: 1.9em;
+          font-size: 18px;
+          padding: 5px 17px;
+          color: #fff;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 20px;
+          z-index: 2;
+        }
+        .speech-shape-upsidedown .shape-text {
+          position: relative;
+          z-index: 40;
+        }
+        .speech-shape-upsidedown:before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: 0;
+          border-bottom: 15px solid;
+          border-right: 15px solid transparent;
+        }
+        .speech-shape-upsidedown:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width:20px;
+          right: -6px;
+          top: 0;
+          transform: skew(12deg, 0);
+          z-index: 1;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+          border-bottom-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+          border-bottom-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white {
+          background-color: #fff;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+          border-bottom-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+          background-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+          background-color: #fedc45;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+          border-bottom-color: #fedc45;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+          background-color: #fedc45;
+        }
+        
+        /* (end) speech */
         
       </style>
     </atlantis:webstash>
@@ -805,7 +912,7 @@ $(window).load(function () {
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
               </div>
             </div>
           </form>
@@ -1055,12 +1162,12 @@ $(window).load(function () {
       ##if(productIsOffered(105)) 
        
       <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-both-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
       </div> 
       ##else
        
       <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div> 
       ##endif
        
@@ -1125,7 +1232,7 @@ $(window).load(function () {
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                  <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                  <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
                 </div>
               </div>
             </form>
@@ -1347,7 +1454,7 @@ $(window).load(function () {
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                  <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                  <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
                 </div>
               </div>
             </form>
@@ -1699,10 +1806,10 @@ $(window).load(function () {
           <p>[@L[cds.sales/offers/online-business:32573-get-it-now-error]@L]</p>
         </div>
         <div id="step2-choose-product-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
         </div>
         <div id="step2-choose-product-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-ols-content]@L]</p>
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
         </div>
       </section>
     </section>
@@ -2892,7 +2999,7 @@ $(window).load(function () {
       </div>
     </section>
     <div id="site-choice-ols-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-      <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-ols-content]@L]</p>
+      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-ols-content]@L]</p>
     </div>
     <div id="site-choice-ols-stores-modal" class="sf-dialog">
       <atlantis:webstash type="css">
@@ -3426,7 +3533,7 @@ top: -6px;
     ##endif
      
     <div id="site-choice-wsb-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-      <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
+      <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
     </div>
     <section><style>
   #faqSlider{margin:20px 0}#faqSlider .gd-swipe{box-sizing:border-box;border:1px solid #ededed;background-color:#ededed;color:#595959;margin:0 auto;position:relative;width:1000px}#faqSlider .gd-swipe-wrap .gd-swipe-item{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:40px 70px 50px;line-height:1.5;*width:860px!important}
@@ -5694,11 +5801,6 @@ h2.api-error-header {
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
-        $('[data-icann-fee]').each(function(){
-          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
-          $(this).html(tokenized);
-        });
-      
       });
       
     </script>
