@@ -201,7 +201,7 @@ gulp.task('jade', function() {
   // use current git branch as default "name" for CDSM
   exec("git symbolic-ref --short HEAD", function(error, stdout, stderr) {
     cdsmOpts.branchName = stdout.trim();
-    return gulp.src(['./**/default.en*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
+    return gulp.src(['./**/*.jade', '!./**/templates/**/*.jade', '!./**/layouts/**/*.jade', '!./**/_*.jade'], {cwd: path.join('./src/')})
       .pipe(gulpif(!rebuild,changed(paths.cdsBuild, {hasChanged: customCompareLastModifiedTime})))
       .pipe(frontMatter({remove:true}))
       .pipe(data(function(file) { return file.frontMatter; }))
