@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: false
-name: GCE-35279
-comments: 59 million domains
+id: 54ee5b7afb574c186854ac0d
+name: GCE-37094
+comments: Replace bio on About us page with new image and name
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -130,6 +130,16 @@ Managing Director, Silver Lake
 Herald Chen
 <phrase key="NewsCenterAbout-3-MemberPrivateEquityKKR" />
 Member, Private<br />Equity &amp; Co-Head of Technology, KKR
+<phrase key="37094-JohnPark" />
+John I. Park
+<phrase key="37094-JohnPark-big-bio-title" />
+Director, Private Equity<br />KKR
+<phrase key="37094-JohnPark-big-bio-1" />
+John I. Park has served as a member of the board of directors of GoDaddy Inc. since February 2015.
+<phrase key="37094-JohnPark-big-bio-2" />
+Since May 2013, he has worked in various roles at Kohlberg Kravis Roberts &amp; Co. L.P. and is currently a Director. From June 2006 to April 2013, Mr. Park served in a similar role at Apax Partners LP, and from July 2004 to May 2006, as an investment banker at Morgan Stanley &amp; Co. Mr. Park currently serves on the board of directors of several private companies. 
+<phrase key="37094-JohnPark-big-bio-3" />
+Mr. Park holds an A.B. degree in Economics, cum laude, from Princeton University and an M.B.A. degree from Harvard Business School.
 <phrase key="NewsCenterAbout-3-AdamHerbertClammer" />
 Adam Herbert Clammer
 <phrase key="NewsCenterAbout-7-FmrHeadOfGlobalTechnologyGroupKKR" />
