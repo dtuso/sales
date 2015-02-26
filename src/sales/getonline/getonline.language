@@ -1,21 +1,47 @@
 ---
-location: localization/sales/gd/getonline/en
+location: localization/sales/getonline/en
 id: 
 name: P4P
 ---
 
 {% include 'modules/doc-block.html' %}
-<phrase key="why-us-heading" />
-WHY GET ONLINE WITH US?
-<phrase key="why-us-world-leader-title" />
-WE’RE THE WORLD LEADER
-<phrase key="why-us-world-leader-content" />
-It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world. 
-<phrase key="why-us-world-support-title" />
-OUR 24/7 SUPPORT IS AWESOME
-<phrase key="why-us-world-support-content" />
-That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
-<phrase key="why-us-world-trust-title" />
-12 MILLION PEOPLE TRUST US
-<phrase key="why-us-world-trust-content" />
-We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could. 
+<phrase key="QuestionsLP-8-ThisDoesnTHaveToBeConfusing" />
+This doesn't have to be <span class="callout">confusing!</span>
+<phrase key="QuestionsLP-7-WeCanGetYourBusinessOnline" />
+We can get your business online.
+<phrase key="QuestionsLP-17-TellUsALittleAboutYourselfWeWill" />
+Tell us a little about yourself.  We will step you from A to Z, no problem.
+<phrase key="QuestionsLP-18-WhatSYourBusinessNameDonTHave" />
+What's your business name? Don't have a name? An idea for your business is perfect!
+<phrase key="QuestionsLP-6-WhatSYourBusinessName" />
+What's your business name?
+<phrase key="QuestionsLP-7-EnterYourBusinessNameOrIdea" />
+Enter your business name or idea
+<phrase key="QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET" />
+Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG
+<phrase key="QuestionsLP-20-WeVeGivenYouSomeOptionsOfHow" />
+We've given you some options of how to set up your business online.  Just fill in the blanks!
+<phrase key="QuestionsLP-4-IMInterestedIn" />
+I'm interested in
+<phrase key="QuestionsLP-5-GettingMyExistingBusinessOnline" />
+Getting my existing business online
+<phrase key="QuestionsLP-5-StartingANewBusinessOnline" />
+Starting a new business online
+<phrase key="QuestionsLP-3-SellingProductsOnline" />
+Selling products online
+<phrase key="QuestionsLP-4-StartingMyOwnBlog" />
+Starting my own blog
+<phrase key="QuestionsLP-7-IHaveTheResourcesAndTimeTo" />
+I have the resources and time to
+<phrase key="QuestionsLP-8-BuildItMyselfIfItSEasy" />
+Build it myself (if it's easy)
+<phrase key="QuestionsLP-13-IHaveAGuyWhoKnowsHowTo" />
+I have a guy who knows how to code (he has skills)
+<phrase key="QuestionsLP-11-HireSomeoneToDoItAllForMe" />
+Hire someone to do it all for me (no time)
+<phrase key="QuestionsLP-6-GetMeUpAndRunning" />
+Get me up and running!
+<phrase key="QuestionsLP-2-Step2" />
+Step 2
+<phrase key="QuestionsLP-2-Step1" />
+Step 1

@@ -107,41 +107,41 @@ block content
 
   section#marquee
     .container.text-center
-      h2 This doesn't have to be <span class="callout">confusing!</span>
+      h2 [@L[cds.sales/getonline:QuestionsLP-8-ThisDoesnTHaveToBeConfusing]@L]
       .row
         .col-xs-12
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png")
 
   section#questions
     .container
-      h2.text-center We can get your business online.
-      p.text-center Tell us a little about yourself.  We will step you from A to Z, no problem.
+      h2.text-center [@L[cds.sales/getonline:QuestionsLP-7-WeCanGetYourBusinessOnline]@L]
+      p.text-center [@L[cds.sales/getonline:QuestionsLP-17-TellUsALittleAboutYourselfWeWill]@L]
       form(method='GET' action!='[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]')
         input(type="hidden" name="ci" value="12345")
         .row
           .col-sm-6
             fieldset.step-1
-              legend Step 1
-              p What's your business name? Don't have a name? An idea for your business is perfect!
+              legend [@L[cds.sales/getonline:QuestionsLP-2-Step1]@L]
+              p [@L[cds.sales/getonline:QuestionsLP-18-WhatSYourBusinessNameDonTHave]@L]
               .form-group
-                label.sr-only(for="search-input") What's your business name?
-                input#search-input.form-control.search-bar(type='text', autocomplete='off', placeholder='Enter your business name or idea', name='domain', maxlength='63', aria-describedby="inputWarning2Status")
-              p.validation-message Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG
+                label.sr-only(for="search-input") [@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]
+                input#search-input.form-control.search-bar(type='text', autocomplete='off', placeholder='[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]', name='domain', maxlength='63', aria-describedby="inputWarning2Status")
+              p.validation-message [@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]
           .col-sm-6
             fieldset.step-2
-              legend Step 2
-              p We've given you some options of how to set up your business online.  Just fill in the blanks!
+              legend [@L[cds.sales/getonline:QuestionsLP-2-Step2]@L]
+              p [@L[cds.sales/getonline:QuestionsLP-20-WeVeGivenYouSomeOptionsOfHow]@L]
               .form-group
-                label(for="interest-select") I'm interested in
+                label(for="interest-select") [@L[cds.sales/getonline:QuestionsLP-4-IMInterestedIn]@L]
                 select#interest-select.form-control(name="interest")
-                  option(value="existing_business") Getting my existing business online
-                  option(value="new_business") Starting a new business online
-                  option(value="selling_products") Selling products online
-                  option(value="blog") Starting my own blog
+                  option(value="existing_business") [@L[cds.sales/getonline:QuestionsLP-5-GettingMyExistingBusinessOnline]@L]
+                  option(value="new_business") [@L[cds.sales/getonline:QuestionsLP-5-StartingANewBusinessOnline]@L]
+                  option(value="selling_products") [@L[cds.sales/getonline:QuestionsLP-3-SellingProductsOnline]@L]
+                  option(value="blog") [@L[cds.sales/getonline:QuestionsLP-4-StartingMyOwnBlog]@L]
               .form-group
-                label(for="resources-select") I have the resources and time to
+                label(for="resources-select") [@L[cds.sales/getonline:QuestionsLP-7-IHaveTheResourcesAndTimeTo]@L]
                 select#resources-select.form-control(name="resource")
-                  option(value="build_myself") Build it myself (if it's easy)
-                  option(value="know_someone") I have a guy who knows how to code (he has skills)
-                  option(value="hire_someone") Hire someone to do it all for me (no time)
-              button.btn.btn-purchase.btn-lg(type="submit") Get me up and running!
+                  option(value="build_myself") [@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]
+                  option(value="know_someone") [@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]
+                  option(value="hire_someone") [@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]
+              button.btn.btn-purchase.btn-lg(type="submit") [@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]
