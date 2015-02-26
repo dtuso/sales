@@ -280,10 +280,14 @@ ul li.no-check {
         var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
       
         // if user specified a TLD, make sure it's valid for this promotion
+        var business_idea = $('#search-input').val().toLowerCase();
         var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
         if (tldSpecified && validTlds.indexOf(tldSpecified)) {
           $(".validation-message").show();
+          e.preventDefault();
+        }
+        else if(!business_idea){
           e.preventDefault();
         }
       });
