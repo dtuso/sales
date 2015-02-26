@@ -1511,16 +1511,14 @@ function getParameterByName(name) {
           </div>
           <div class="container bottom">
             <div class="row">
-              <div class="col-sm-4 text-center">
-                <div class="features-domain-name"></div>
-                <label class="h3 product-name">Domain Name</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
+                <h3>Domain Name</h3>
               </div>
               <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
                 <h3 class="text-center">Web Hosting</h3>
               </div>
-              <div class="col-sm-4 text-center">
-                <div class="features-email"></div>
-                <label class="h3 product-name">Office 365 Email</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
+                <h3>Office 365 Email</h3>
               </div>
             </div>
             <div class="row">
