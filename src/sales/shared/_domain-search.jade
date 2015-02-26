@@ -47,7 +47,9 @@ mixin domainSearchInput(domainSearchParams)
       }
     });
 
+- domainSearchOffersInputCssRendered = false;
 mixin domainSearchOffersInput(prms)
+  
   - prms                          = prms || {};
   - prms.tlds                     = prms.tlds || ['com','co','org','net'];
   - prms.defaultTld               = prms.defaultTld || 'com';
@@ -61,6 +63,8 @@ mixin domainSearchOffersInput(prms)
   - prms.infoTypeHere             = prms.infoTypeHere || "placeholderText";
   - prms.infoErrorEligibility     = prms.infoErrorEligibility || "placeholderText";
   - prms.infoInvalidTld           = prms.infoInvalidTld || "placeholderText";
+  - prms.infoDupDomainInCart      = prms.infoDupDomainInCart || "placeholderText";
+  - prms.dupDomainInCartCiCode    = prms.dupDomainInCartCiCode || "";
     
   form(id!="#{prms.formId}")
     .row
@@ -75,120 +79,248 @@ mixin domainSearchOffersInput(prms)
               button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{prms.cicode}") !{prms.buttonText}
     .row.domain-search-messaging-row
       .col-md-12
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{prms.infoTypeHere}
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
-        span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
-  script.
-    var #{prms.formId} = {
-       executeFnByName: function(name, context) {
-        
-        var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
-        for(var i=2; i < arguments.length; i++){
-          args.push(arguments[i]);
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{prms.infoTypeHere}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{prms.infoErrorEligibility}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{prms.infoInvalidTld}
+        .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{prms.dupDomainInCartCiCode}" /></external>]@T]') !{prms.infoDupDomainInCart}
+  
+  unless(domainSearchOffersInputCssRendered )
+    - domainSearchOffersInputCssRendered = true;
+    atlantis:webstash(type="css")
+      style.
+        .search-message { 
+          display: none; 
+          margin-top:20px; 
         }
-        var namespaces = name.split(".");
-        var func = namespaces.pop();
-        for(var i = 0; i < namespaces.length; i++) {
-          context = context[namespaces[i]];
+        .domain-search-messaging-row {
+          padding-bottom: 40px;
         }
-        return context[func].apply(this, args);
-
-      },
-      validateSubmit: function(e){
-
-        e.preventDefault();
-        var domainName = #{prms.formId}.trimmedDomainName(false);
-        if((domainName && domainName.length==0) || !domainName) return false;
-
-        domainName = domainName.toLowerCase();
-        domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-        if(!#{prms.formId}.ensureValidTld(domainName)) {
-          return;
+        /*  speech */
+        .speech-shape-upsidedown {
+          line-height: 1.9em;
+          font-size: 18px;
+          padding: 5px 17px;
+          color: #fff;
+          display: inline-block;
+          position: relative;
+          margin-bottom: 20px;
+          z-index: 2;
         }
-        var functionName = '#{prms.searchNowCallbackFn}';
-        if(functionName.length > 0)  {
-          #{prms.formId}.executeFnByName(functionName, window, e, domainName);
+        .speech-shape-upsidedown .shape-text {
+          position: relative;
+          z-index: 40;
+        }
+        .speech-shape-upsidedown:before {
+          content: '';
+          position: absolute;
+          top: -15px;
+          left: 0;
+          border-bottom: 15px solid;
+          border-right: 15px solid transparent;
+        }
+        .speech-shape-upsidedown:after {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width:20px;
+          right: -6px;
+          top: 0;
+          transform: skew(12deg, 0);
+          z-index: 1;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+          border-bottom-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+          background-color: #008a32;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
+          color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+          border-bottom-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+          background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white {
+          background-color: #fff;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+          border-bottom-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+          background-color: #fff;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+          background-color: #fedc45;
+          color: #333;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+          border-bottom-color: #fedc45;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+          background-color: #fedc45;
         }
 
-      },
-      trimmedDomainName: function(isKeyPress){
-        
-        var $form = $("##{prms.formId}"),
-          $textInput = $form.find('input[name="domainToCheck"]'),
-          domainName = $textInput.val();
-        if((domainName && domainName.length==0) || !domainName) return null;
-
-        domainName = #{prms.formId}.reformatDomainToValidLength($textInput, domainName, isKeyPress);
-        return domainName;
-
-      },
-      reformatDomainToValidLength: function($textInput, domain, isKeyPress){
-
-        var idx = domain.indexOf('.'),
-            hasTld = idx > -1,
-            sld = hasTld ? domain.substring(0, idx) : domain,
-            tld = hasTld ? domain.substring(idx+1) : '',
-            needsTrimmed = ((idx == -1) ? domain.length > #{prms.maxDomainLength} : idx > #{prms.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
-        sld = needsTrimmed ? sld.substring(0, #{prms.maxDomainLength}) : sld;
-        
-        var domainName = sld + ((tld!='') ? '.' + tld : '');
-        if(needsTrimmed) {
-          $textInput.val(domainName);
-        }
-        return domainName;
-
-      },
-      ensureValidTld: function() {
-
-        var $form = $("##{prms.formId}"),
-            $textInput = $form.find('input[name="domainToCheck"]'),
-            domainName = $textInput.val(); 
-            validTld = #{prms.formId}.hasTldValid(domainName);
-        $form.find('.search-message').hide();
-        if(validTld) {
-          $form.find('.type-your-business-name').show();
-        } else {
-          $form.find('.invalid-TLD-entered').show();
-        }
-        return validTld;
-        
-      },
-      hasTldValid: function(domain) {
-
-        domain = $.trim(domain || "");
-        var idx = domain.indexOf('.'), isValid = false;
-        if(!domain || domain.length == 0 || idx == -1) return true;
-
-        var domainsTld = domain.substring(idx+1).toLowerCase();
-        $.each(#{prms.tlds}, function(idx, tld) {
-          if(tld.toLowerCase() === domainsTld) {
-            isValid = true;
+        /* (end) speech */
+  atlantis:webstash(type="js")
+    script.
+      var #{prms.formId} = {
+         executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
           }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+
+        },
+        validateSubmit: function(e){
+
+          e.preventDefault();
+          var domainName = #{prms.formId}.trimmedDomainName(false);
+          if((domainName && domainName.length==0) || !domainName) return false;
+
+          domainName = domainName.toLowerCase();
+          domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!#{prms.formId}.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = '#{prms.searchNowCallbackFn}';
+          if(functionName.length > 0)  {
+            #{prms.formId}.executeFnByName(functionName, window, e, domainName);
+          }
+
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("##{prms.formId}"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+
+          domainName = #{prms.formId}.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > #{prms.maxDomainLength} : idx > #{prms.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, #{prms.maxDomainLength}) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+
+        },
+        ensureValidTld: function() {
+
+          var $form = $("##{prms.formId}"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = #{prms.formId}.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(#{prms.tlds}, function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + #{prms.defaultTld};
+
+        },
+        getParameterByName: function (name) {
+
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+
+        }
+      };
+
+      $(document).ready(function(){
+
+        $("##{prms.formId}").on('click', 'button.offer-search-btn', function(){
+          $("##{prms.formId}").submit();
         });
-        return isValid;
 
-      },
-      formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+        $("##{prms.formId}").on('submit', #{prms.formId}.validateSubmit);
+        $("##{prms.formId}").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = #{prms.formId}.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          #{prms.formId}.ensureValidTld(domainName);
+        });
 
-        if(domain.indexOf('.') > 0) return domain;
-        return domain + '.' + #{prms.defaultTld};
 
-      }
-    };
+        //- display error on return from DPP's TLD eligibility requirements failure
+        var tldErr = #{prms.formId}.getParameterByName('tldRegErr'),
+            dppHasError = tldErr.length > 0,
+            dupErr = #{prms.formId}.getParameterByName('dppError');
 
-    $(document).ready(function(){
+        if(dppHasError) {
+          //- note by default tldRegErr will be on the url query string
+          //- if it's a dup, dpp will add in an additional parameter to let us know
+          switch(dupErr){
+            
+            case("dup"):
+              $('##{prms.formId} .search-message').hide();
+              $('##{prms.formId} .dup-domain-fail').show();
+              break;
 
-      $("##{prms.formId}").on('click', 'button.offer-search-btn', function(){
-        $("##{prms.formId}").submit();
+            default:
+              var $failArea = $('##{prms.formId} .domain-eligibility-fail'), 
+                  html = $failArea.html();
+              html = html.replace(/\{0\}/gi, tldErr)
+              $failArea.html(html);
+              $('##{prms.formId} .search-message').hide();
+              $('##{prms.formId} .domain-eligibility-fail').show();
+              break;
+
+          }
+        } else {
+          $('##{prms.formId} .search-message').hide();
+          $('##{prms.formId} .type-your-business-name').show();
+        }
+
       });
-
-      $("##{prms.formId}").on('submit', #{prms.formId}.validateSubmit);
-      $("##{prms.formId}").on('keyup', function(e){ 
-        if(e.which == 13) return;
-        var domainName = #{prms.formId}.trimmedDomainName(true);
-        if(!domainName || domainName.length == 0) return;
-        domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-        #{prms.formId}.ensureValidTld(domainName);
-      });
-
-    });
