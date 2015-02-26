@@ -1,7 +1,7 @@
 //-
 //- PC HEAD
 //-
-link(href!="[@T[link:<javascriptroot />]@T]fos/eldorado/1.4.1/css/salesheader.min.css" rel="stylesheet")
+link(href!="[@T[link:<javascriptroot />]@T]fos/eldorado/1.4.2/css/salesheader.min.css" rel="stylesheet")
 style.
   .pc-sprite { background-image:url([@T[link:<javascriptroot />]@T]pc/img/1/20150114_pc_sprite.png); }
   .ux-content-box *, .ux-content-box *:before, .ux-content-box *:after { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }      
@@ -69,15 +69,29 @@ script(src!="[@T[link:<external linktype='uxcoreurl' path='' parammode='explicit
 | ##endif 
 
 script(type="text/javascript").
-  ux.jQuery = $;
   ux.data = {
-    app: 'sales',
-    urlArgs: '{{pc:urlargs}}',
-    mgrShopper: '{{pc:mgrshopper}}'
+     app: 'sales',
+     plId: '1',
+     shopperId: '[@T[shopperdata:<id/>]@T]',
+     env: 'test',
+     manifest: 'salesheader',
+     thirdParty: {}
   };
+
+  ux.jQuery = $;
+  _.extend(ux.data, {
+     urlArgs: '{{pc:urlargs}}',
+     mgrShopper: '{{pc:mgrshopper}}'
+  });
   window.config = {};
   window.config.env = 'test';
   window.config.manifest = 'salesheader';
+
+  _.extend(ux.data.thirdParty, {
+     tealium: {
+         js: '//tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js'
+     }
+  });
 
 script(type="text/javascript").
   ux.eldorado = {};
@@ -213,6 +227,81 @@ script(type="text/javascript").
 
   })(jQuery, ux.i18n["header"], ux.util, ux.acctDelegation);
 
+
+  ;
+
+  ux.eldorado.thirdParty = (function($, __, undefined) {
+
+   function initTealium(paths) {
+       if (!paths || !paths.js) {
+           return;
+       }
+       __.load.script({
+           url: paths.js,
+           preLoad: function() {
+               var w = window;
+               w.utag_data = w.utag_data || {};
+               w.utag_data.pl_id = ux.data.plId;
+               w.utag_data.shopper_id = ux.data.shopperId;
+               w.utag_data.app_name = ux.data.app;
+           }
+       });
+   }
+
+   function initLivePerson() {
+       __.load.files([{
+           typ: 'script',
+           url: 'https://img1.wsimg-com.ide/fos/liveperson/js/liveperson_20150217.min.js',
+           preLoad: function() {
+               $('body').append($('<div id="lpButtonDiv"></div>'));
+           },
+           when: 'documentReady'
+       }, {
+           typ: 'css',
+           url: 'https://img1.wsimg-com.ide/fos/liveperson/css/chat-window_20140205.css',
+           when: 'documentReady'
+       }]);
+   }
+
+   function initGATagManager(gaTagManagerId) {
+       __.load.script({
+           url: '//www.googletagmanager.com/gtm.js?id=' + gaTagManagerId + '&l=_gaDataLayer',
+           preLoad: function() {
+               var w = window;
+               var l = '_gaDataLayer';
+               w[l] = w[l] || [];
+               w[l].push({
+                   'gtm.start': new Date().getTime(),
+                   event: 'gtm.js'
+               });
+           },
+           attrs: {
+               async: true
+           },
+           anchor: document.getElementsByTagName('script')[0],
+           where: 'before'
+       });
+   }
+
+   function configGATagManager(options) {
+       var w = window;
+       var data = _.union(options.data, ux.gaconfig || []);
+       w._gaDataLayer = w._gaDataLayer || [];
+       for (var item in data) {
+           w._gaDataLayer.push(item);
+       }
+       w._gaq = w._gaq || [];
+       w._gaq.push(['_setDomainName', options.domain]);
+   }
+
+   return {
+       initTealium: initTealium,
+       initLivePerson: initLivePerson,
+       initGATagManager: initGATagManager,
+       configGATagManager: configGATagManager
+   };
+
+  })(jQuery, ux.util);
 
   ;
   ux.eldorado.jQuery = ux.jQuery;
@@ -719,7 +808,7 @@ script(type="text/javascript").
 
       function updateCartLink(data) {
           if (data.carttotal > 0) {
-              var $cartLink = $('#cart-link');
+              var $cartLink = $('#cart-link, .nav-cart');
               $cartLink.removeClass('is-empty').addClass('not-empty');
               $cartLink.find('span.is-empty').hide();
               $cartLink.find('span.not-empty').show();
@@ -929,22 +1018,6 @@ script(type="text/javascript").
           }
       }
 
-      function initLivePerson() {
-          // defer load liveperson
-          $(window).load(function() {
-              $('body').append($('<div id="lpButtonDiv"></div>'));
-              var scriptResource = document.createElement('script');
-              scriptResource.src = "[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js";
-              var styleResource = document.createElement('link');
-              styleResource.rel = "stylesheet";
-              styleResource.type = "text/css";
-              styleResource.href = "[@T[link:<javascriptroot />]@T]fos/liveperson/css/chat-window_20140205.css";
-              var script = document.getElementsByTagName('script')[0];
-              script.parentNode.insertBefore(scriptResource, script);
-              script.parentNode.insertBefore(styleResource, script);
-          });
-      }
-
       function init(options) {
           texts = options.texts;
           setEmailSignupHandler();
@@ -953,9 +1026,10 @@ script(type="text/javascript").
           }
           /* maybe revist this after SuperBowl 2015, removed for now ELD-195
           if (options.app === 'sales') {
-          initLivePerson();
+          ux.eldorado.thirdParty.initLivePerson();
           }
           */
+          ux.eldorado.thirdParty.initTealium(ux.data.thirdParty.tealium);
       }
 
       return {
