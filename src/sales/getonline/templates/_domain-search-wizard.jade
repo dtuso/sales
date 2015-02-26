@@ -23,12 +23,14 @@ append pageStyles
       background-color: #77c043;
     }
     
+    #domain-search-view,
     #domain-available-view,
     #domain-not-available-view {
       padding-top:15px;
     }
 
     #api-failure,
+    #domain-search-view,
     #domain-available-view,
     #domain-not-available-view,
     #domain-selected-view {display: none; }
@@ -203,19 +205,17 @@ append pageStyles
     #domain-selected-view .reseach-container {padding-top: 10px;}
 
 section#domainSearchWizardSection.green
-  .container#domainSearchHeader
-    .row
-      div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
-    .row
-      div.text-center(style={'margin-top':'15px'})
-        h2.uppercase(style={'margin-bottom':'0px'}) domain name
-    .row
-      .col-md-12
-        .text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
-
-  .container#domainSearchWizard
-    #domain-entry-view
+  #domain-search-view.js-domain-search-wizard-section
+    .container.bg-green-official
+      .row
+        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) domain name
+      .row
+        .col-md-12
+          .text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
       form(id!="#{domainSearch.formId}")
         .row
           .col-md-12
@@ -236,6 +236,15 @@ section#domainSearchWizardSection.green
 
   #domain-available-view.js-domain-search-wizard-section
     .container.bg-green-official
+      .row
+        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) domain name
+      .row
+        .col-md-12
+          .text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
       .row#available-domain
         .col-md-9.white
           span.domain-name-display.lowercase.available-domain-name#available-domain-name
@@ -269,6 +278,15 @@ section#domainSearchWizardSection.green
   #domain-not-available-view.js-domain-search-wizard-section
     .container
       .row
+        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) domain name
+      .row
+        .col-md-12
+          .text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
+      .row
         .col-md-12
           h2.h0.availability-header.domain-not-available-heading-text [@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]
       .row.not-available-domain-name-row 
@@ -298,19 +316,22 @@ section#domainSearchWizardSection.green
 
   #domain-selected-view.js-domain-search-wizard-section
     .container#selected-domain.bg-green-official
+      .row
+        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+      .row
+        div.text-center(style={'margin-top':'15px'})
+          h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row(style={'margin-top':'10px'})
         div.text-center
           h4.strong Congratulations! You have selected the following domain name:
       .row.available-domain-name-row
         div.text-center
           h2.available-domain-name-text.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
-      .row(style={'margin-top':'35px'})
-        .col-md-2.col-sm-2
-        .col-md-4.col-sm-4.get-it-now-btn
-          button.btn.btn-purchase.btn-select.uppercase.purchase-btn(data-ci="92733") Get it now
-        .col-md-4.col-sm-4
-          button#btnSelectedViewSearchAgain.btn.btn-primary.btn-select.btn-search-again.uppercase Search Again
-        .col-md-2.col-sm-2
+      .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+        btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
+      .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
+        btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
+        btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
 
   #api-failure.sf-dialog.api-B-failure
     h2.api-error-header
@@ -321,11 +342,10 @@ section#domainSearchWizardSection.green
   .container#domainSearchFooter.green
     .row
       div(style={'margin-top':'30px'})
-        .col-md-9.col-sm-9
-          .domain-search-wizard.speach-bubble-left-white
-            .domain-search-wizard.speach-bubble-left-div
-              h5.uppercase <mark><strong>did you know...</strong></mark>
-              h5(style={'margin-top':'10px','text-transform':'none'}) Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.
+        .col-md-9.col-sm-9.speech-bubble-left-white
+          .speech-bubble-left-div
+            h5.uppercase <mark><strong>did you know...</strong></mark>
+            h5(style={'margin-top':'10px','text-transform':'none'}) Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.
         .col-md-3.col-sm-3
           div.domain-search-wizard.half-hero-left
 

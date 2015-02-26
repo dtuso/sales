@@ -124,9 +124,8 @@ $(document).ready(function() {
 
   $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
-  $('#got').on('click', '.btn-search-again', function(e){navigateToSearchAgain(e)});
-  $('#get-it-btn').on('click', function(e){goToCheckOut(e)});
-  $('#get-it-btn2').on('click', function(e){goToCheckOut(e)});
+  $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
+  $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   $('#btn-search-again').on('click', goToDomainSearchWizard);
 
   $("[data-ci-workaround]").click(function(a){
@@ -234,12 +233,14 @@ function showTldImagesInDomainArea() {
 
 function domainSearchFormSubmit(e, domain) { 
 
-  var $thisSection;
+  var $thisSection,
+      pageStartupSearch = true;
 
   if(e != '') {
     var $this = $(e.target);
 
-    $thisSection = $this.closest('.js-domain-search-wizard-section');       
+    $thisSection = $this.closest('.js-domain-search-wizard-section');
+    pageStartupSearch = false;
   }
 
   var newItc = domainSearch.offersCodes.itc_wsb;
@@ -265,10 +266,18 @@ function domainSearchFormSubmit(e, domain) {
         isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
         alternateDomains = data.RecommendedDomains || [];
 
+      if(!isAvailable && pageStartupSearch) {
+        if(alternateDomains.length > 0) {
+          exactMatchDomain = alternateDomains[0];
+          alternateDomains.shift();
+          isAvailable = true;
+        }
+      }
+
       if(isAvailable) {
 
         updateSelectedDomain(exactMatchDomain.Fqdn);
-        
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
@@ -369,8 +378,7 @@ function validDomainSelected(e){
   // $('#selected-domain-name').text(domain.Fqdn);
   $(document).find('.selected-domain-name-display').text(domain.Fqdn);
   // $.each('.btn-purchase').data('domain', domain);
-  $('#get-it-btn').data('domain', domain);
-  $('#get-it-btn2').data('domain', domain);
+  $(document).find('.btn-purchase').data('domain', domain);
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
 
@@ -379,9 +387,6 @@ function validDomainSelected(e){
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
-}
-
-function goToCheckout2() {
 }
 
 function goToCheckOut(e) {
@@ -519,31 +524,39 @@ function navigateToSearchAgain(e) {
 
 function animateWizard($currentView, $animateToView) {  
 
-  var currentViewHeight;
-  var windowWidth = $(window).width();
-
-  if($currentView == undefined)
-    currentViewHeight = 0;
-  else {
+  if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-    animateObjectOffToTheLeft($currentView, windowWidth, 2);
-    currentViewHeight = $currentView.height();
+    $currentView.hide();
   }
 
-  var $wizard = $('#domainSearchWizard'),
-  wizardHeight = $('#domainSearchWizard').height();
+  $animateToView.show();
 
-  // show view offscreen to get height
-  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // can only get height when shown      
-  var toViewHeight = $animateToView.height(),
-    maxHeight = Math.max(currentViewHeight, toViewHeight),
-    minHeight = Math.min(currentViewHeight, toViewHeight);
+  // var currentViewHeight;
+  // var windowWidth = $(window).width();
+
+  // if($currentView == undefined)
+  //   currentViewHeight = 0;
+  // else {
+  //   if($currentView[0].id === $animateToView[0].id) return; // we're there!
+
+  //   animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  //   currentViewHeight = $currentView.height();
+  // }
+
+  // var $wizard = $('#domainSearchWizard'),
+  // wizardHeight = $('#domainSearchWizard').height();
+
+  // // show view offscreen to get height
+  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // // can only get height when shown      
+  // var toViewHeight = $animateToView.height(),
+  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
+  //   minHeight = Math.min(currentViewHeight, toViewHeight);
   
-  //run the animations
-  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  // //run the animations
+  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
