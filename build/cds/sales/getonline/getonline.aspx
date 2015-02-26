@@ -101,6 +101,7 @@
         <h2 class="text-center">We can get your business online.</h2>
         <p class="text-center">Tell us a little about yourself.  We will step you from A to Z, no problem.</p>
         <form method="GET" action="[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]">
+          <input type="hidden" name="ci" value="12345">
           <div class="row">
             <div class="col-sm-6">
               <fieldset class="step-1">
@@ -243,6 +244,7 @@ ul li.no-check {
         // routing logic embedded here
         if (interest === "blog") {
           // anytime the interest is in blogging, suggest the wordpress product
+          $("#questions form input[name='ci']").val("96292");
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
           $("select#resources-select option[value='hire_someone']").hide();
           $("select#resources-select option[value='build_myself']").attr('selected','true');
@@ -251,22 +253,38 @@ ul li.no-check {
         } else if (resources === "know_someone") {
           // anytime the user "knows someone", suggest web hosting
           $("select#resources-select option[value='hire_someone']").show();
+          if(interest === "selling_products")
+            $("#questions form input[name='ci']").val("96279");
+          if(interest === "new_business")
+            $("#questions form input[name='ci']").val("96273");
+          if(interest === "exisitng_business")
+            $("#questions form input[name='ci']").val("96276");
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
         } else if (resources === "build_myself") {
           // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
           if (interest === "selling_products") {
+            $("#questions form input[name='ci']").val("96278");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
           } else {
+            if(interest === "existing_business")
+              $("#questions form input[name='ci']").val("96275");
+            if(interest === "new_business")
+              $("#questions form input[name='ci']").val("96272");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
           }
         } else if (resources === "hire_someone") {
           // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
           if (interest === "selling_products") {
+            $("#questions form input[name='ci']").val("96280");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
           } else {
+            if(interest === "new_business")
+              $("#questions form input[name='ci']").val("96274");
+            if(interest === "existing_business")
+              $("#questions form input[name='ci']").val("96277");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
           }
@@ -296,7 +314,7 @@ ul li.no-check {
         // set highlighted marquee text if passed by referring page
         var p4p = window.location.search.split('p4p=');
         if (p4p.length > 1) {
-          $("#marquee span").text(p4p[1].split("&")[0]);
+          $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
         }
       });
       
