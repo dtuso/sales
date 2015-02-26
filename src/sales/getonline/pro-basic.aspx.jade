@@ -1,9 +1,5 @@
 extends _p4p.jade
 
-append vars
-  - primary_pfid = 32051
-  - primary_promo = 521092015;
-
 append pageStyles
   style.
     .btn-lg{padding: 14px 15px 9px!important;}
@@ -30,15 +26,17 @@ append pageStyles
     .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
     .col-xs-4.first{padding-top: 30px;}
     .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+    .products{margin-top: 5px!important;}
+    .computer{margin-top: 25px;}
 
 block bubbleContent
   h2.text-center Here you go...
-  h3.text-center A professional design service for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
+  h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
 
 block productContent
   .row
     .col-xs-4.col-sm-3.col-sm-offset-3
-      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
+      img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
     .col-xs-8.col-sm-6.products
       h3 Professional Design Services
       p Our Professional Web Services team will work with you to build a complete online store your customers will love.
@@ -115,11 +113,13 @@ block domainOrPro
           .col-sm-3
             div.half-hero-left
 
+hr
+
 block office365
   // hide this on pro landing pages
 
 block checkPro
-  h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <span class="business-name"></span> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
+  h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
 block checkPro-bottom
   .pro-wrapper
     .col-xs-6

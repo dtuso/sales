@@ -11,21 +11,30 @@ append endOfPageScripts
       if (interest === "blog") {
         // anytime the interest is in blogging, suggest the wordpress product
         $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
+        $("select#resources-select option[value='hire_someone']").hide();
+        $("select#resources-select option[value='build_myself']").attr('selected','true');
+        if(resources === "know_someone")
+          $("select#resources-select option[value='know_someone']").attr('selected','true');
       } else if (resources === "know_someone") {
         // anytime the user "knows someone", suggest web hosting
+        $("select#resources-select option[value='hire_someone']").show();
         $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
       } else if (resources === "build_myself") {
         // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
         if (interest === "selling_products") {
+          $("select#resources-select option[value='hire_someone']").show();
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
         } else {
+          $("select#resources-select option[value='hire_someone']").show();
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
         }
       } else if (resources === "hire_someone") {
         // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
         if (interest === "selling_products") {
+          $("select#resources-select option[value='hire_someone']").show();
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
         } else {
+          $("select#resources-select option[value='hire_someone']").show();
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
         }
       }

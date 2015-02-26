@@ -26,6 +26,8 @@ append pageStyles
     .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
     .col-xs-4.first{padding-top: 30px;}
     .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+    .products{margin-top: 5px!important;}
+    .computer{margin-top: 25px;}
 
 //- block getItNow
 //-   - var productToDisplay = {name: "ECOMMERCE DESIGN SERVICES", info: "Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business", cssClass: "<div class='pro-computer'></div>", price: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]", formAction: "[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]"};
@@ -59,12 +61,12 @@ append pageStyles
 
 block bubbleContent
   h2.text-center Here you go...
-  h3.text-center An ecommerce design service for <mark class="business-idea"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
+  h3.text-center An ecommerce design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
 
 block productContent
   .row
     .col-xs-4.col-sm-3.col-sm-offset-3
-      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
+      img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
     .col-xs-8.col-sm-6.products
       h3 Ecommerce Design Services
       p Our Professional Web Services team will work with you to build a complete online store your customers will love.
@@ -118,11 +120,11 @@ block office365
   // hide this on pro landing pages
 
 block checkPro
-  h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have an eccomerce design service for <span class="business-name"></span> starting at [@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
+  h3.uppercase(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have an eccomerce design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
 block checkPro-bottom
   .pro-wrapper
     .col-xs-6
-      img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
+      img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png")
     .col-xs-6
       h3.product-name Ecommerce Design Services
       p.p1 Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business
