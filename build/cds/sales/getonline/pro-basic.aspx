@@ -709,9 +709,9 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png"></div>
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png"></div>
           <div class="col-xs-8 col-sm-6 products">
-            <h3>ECommerce Design Services</h3>
+            <h3>Professional Design Services</h3>
             <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
             <button class="btn btn-purchase btn-lg">Get it now for [@T[productprice:<current productid="32051" period="monthly" dropdecimal="false" htmlsymbol="false" negative="parentheses" promocode="521092015"/>]@T]/mo</button>
             <p>or give us a call at <span>(480) 366-3344</span></p>
@@ -819,6 +819,23 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
+    <section id="O365-email">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
+            <h2 class="text-center">Office 365 Email</h2>
+            <h3 class="text-center">Branded email to talk to your customers</h3><span class="h2"><mark>yourname@<span class="business-idea">billybikes.org</span></mark></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-6 bubble">
+            <mark>Did you know...</mark>
+            <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- hide this on pro landing pages-->
     <section id="why-us">
       <div class="container">
@@ -854,15 +871,15 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <span id="price-per-month"><span id="product-price"></span>/mo*</span></h3>
           </div>
           <div class="pro-wrapper">
-            <div class="col-xs-6"></div>
+            <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png" class="img-responsive center-block"></div>
             <div class="col-xs-6">
-              <h3 class="product-name"></h3>
-              <p class="p1"></p>
-              <div class="col-xs-12">
+              <h3 class="product-name">Professional Design Services</h3>
+              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+              <div class="col-xs-12 text-center">
                 <form action="undefined" name="frmWebDesign" id="addtocart-form" method="post">
                   <input type="hidden" name="product" value="6520|1|1">
                   <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
@@ -874,7 +891,7 @@ function getParameterByName(name) {
                   <input type="hidden" name="newxs" value="False">
                   <input type="hidden" name="cicode" value="56910">
                   <input type="hidden" name="prog_id" value="GoDaddy">
-                  <button id="get-it-btn2" class="btn-purchase btn-plan btn-lg p4p">GET IT NOW</button>
+                  <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
                   <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
                 </form>
               </div>
@@ -998,7 +1015,24 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
-        section{padding-top:0px;padding-bottom:0px}
+        
+        #product h2 { margin-top: 20px; margin-bottom: 20px; }
+        #product h3 { text-transform: none; }
+        #product .how-it-works { margin: 20px auto; }
+        
+        #product .bubble {
+          background-color: white;
+          background-position: center center;
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          overflow: visible;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 100px;
+          padding-right: 100px;
+          margin-left: 20%;
+        }
         
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
@@ -1058,6 +1092,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
       <style>
@@ -1090,6 +1125,26 @@ ul li.no-check {
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
+      
+    </script>
+    <script>
+      $(document).ready(function(){
+        stripDomainName();
+      });
+      
+      function stripDomainName(){
+           var windowParams = window.location.search.replace("?","");
+           var params = windowParams.split("&");
+           for(var i = 0; i < params.length;i++){
+            var inputName = params[i].split("=")[0];
+            var inputValue = params[i].split("=")[1];
+            if(inputName == "domain"){
+              inputValue = decodeURIComponent(inputValue);
+              $(".business-idea").text(inputValue);
+            }
+             
+         }
+      };
       
     </script>
     <script>

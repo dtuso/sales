@@ -830,6 +830,23 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
+    <section id="O365-email">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
+            <h2 class="text-center">Office 365 Email</h2>
+            <h3 class="text-center">Branded email to talk to your customers</h3><span class="h2"><mark>yourname@<span class="business-idea">billybikes.org</span></mark></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-6 bubble">
+            <mark>Did you know...</mark>
+            <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- hide this on pro landing pages-->
     <section id="why-us">
       <div class="container">
@@ -865,7 +882,7 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <span id="business-idea2"></span> starting at <spna id="price-per-month"><span id="product-price"></span>/mo*</span></h3>
           </div>
           <div class="pro-wrapper row">
@@ -1011,7 +1028,24 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
-        section{padding-top:0px;padding-bottom:0px}
+        
+        #product h2 { margin-top: 20px; margin-bottom: 20px; }
+        #product h3 { text-transform: none; }
+        #product .how-it-works { margin: 20px auto; }
+        
+        #product .bubble {
+          background-color: white;
+          background-position: center center;
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          overflow: visible;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 100px;
+          padding-right: 100px;
+          margin-left: 20%;
+        }
         
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
@@ -1071,6 +1105,7 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
       <style>
@@ -1103,6 +1138,26 @@ ul li.no-check {
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
+      
+    </script>
+    <script>
+      $(document).ready(function(){
+        stripDomainName();
+      });
+      
+      function stripDomainName(){
+           var windowParams = window.location.search.replace("?","");
+           var params = windowParams.split("&");
+           for(var i = 0; i < params.length;i++){
+            var inputName = params[i].split("=")[0];
+            var inputValue = params[i].split("=")[1];
+            if(inputName == "domain"){
+              inputValue = decodeURIComponent(inputValue);
+              $(".business-idea").text(inputValue);
+            }
+             
+         }
+      };
       
     </script>
     <script>

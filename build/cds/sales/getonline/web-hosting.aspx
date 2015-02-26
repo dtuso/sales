@@ -1448,6 +1448,23 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
+    <section id="O365-email">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
+            <h2 class="text-center">Office 365 Email</h2>
+            <h3 class="text-center">Branded email to talk to your customers</h3><span class="h2"><mark>yourname@<span class="business-idea">billybikes.org</span></mark></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-6 bubble">
+            <mark>Did you know...</mark>
+            <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="O365-email" class="gray">
       <div class="container">
         <div class="row">
@@ -1513,7 +1530,7 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to take <mark class="business-name-display"></mark> online?</h2>
+            <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
             <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
           </div>
@@ -1521,30 +1538,27 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-sm-4 text-center">
                 <div class="features-domain-name"></div>
-                <label class="h3 uppercase product-name">Domain Name</label>
+                <label class="h3 product-name">Domain Name</label>
               </div>
-              <div class="col-sm-4 text-center">
-                <div class="features-hosting"></div>
-                <label class="h3 uppercase product-name">Web Hosting</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
+                <h3 class="text-center">Web Hosting</h3>
               </div>
               <div class="col-sm-4 text-center">
                 <div class="features-email"></div>
-                <label class="h3 uppercase product-name">Office 365 Email</label>
+                <label class="h3 product-name">Office 365 Email</label>
               </div>
             </div>
             <div class="row">
               <div class="get-it-now">
                 <div class="container">
                   <div class="row text-center">
-                    <p class="h3 center">Get the bundle for $1/month for the first year*</p>
+                    <p class="h3">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn id="get-it-btn2" class="btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
-                    <btn id="btn-search-again" class="btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+                    <button id="get-it-btn2" class="btn btn-purchase btn-lg center-blockp">Get it now</button>
+                    <button id="btn-search-again" class="btn btn-primary btn-lg">Search Again</button>
                   </div>
-                  <div style="padding-top:10px" class="row text-center">
-                    <p class="h6">*Bundle cost is $12/year and $XXX.XX/year after the first year</p>
-                  </div>
+                  <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>
               </div>
             </div>
@@ -1667,7 +1681,24 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
-        section{padding-top:0px;padding-bottom:0px}
+        
+        #product h2 { margin-top: 20px; margin-bottom: 20px; }
+        #product h3 { text-transform: none; }
+        #product .how-it-works { margin: 20px auto; }
+        
+        #product .bubble {
+          background-color: white;
+          background-position: center center;
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          overflow: visible;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 100px;
+          padding-right: 100px;
+          margin-left: 20%;
+        }
         
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
@@ -1727,11 +1758,32 @@ ul li.no-check {
         .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
+        #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
+      
+    </script>
+    <script>
+      $(document).ready(function(){
+        stripDomainName();
+      });
+      
+      function stripDomainName(){
+           var windowParams = window.location.search.replace("?","");
+           var params = windowParams.split("&");
+           for(var i = 0; i < params.length;i++){
+            var inputName = params[i].split("=")[0];
+            var inputValue = params[i].split("=")[1];
+            if(inputName == "domain"){
+              inputValue = decodeURIComponent(inputValue);
+              $(".business-idea").text(inputValue);
+            }
+             
+         }
+      };
       
     </script>
     <script>
