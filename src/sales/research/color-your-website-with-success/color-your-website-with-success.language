@@ -1,0 +1,35 @@
+---
+location: localization/sales/gd/research/color-your-website-with-success/en
+id: 54ef60f1f778fc203043be0b
+name: SEM-388
+---
+{% include '../../../modules/doc-block.html' %}
+## DO NOT TRANSLATE THE FILE
+<phrase key="page-title" />
+Color Your Website with Success | Holi Infographic - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+People celebrate Holi in many ways, including by spending more. Check out this infographic to learn how to get your online business ready for this festive time!
+<phrase key="og-title" />
+Color Your Website with Success | Holi Infographic - [@T[companyname:name]@T]
+<phrase key="og-description" />
+People celebrate Holi in many ways, including by spending more. Check out this infographic to learn how to get your online business ready for this festive time!
+<phrase key="page-title-h1" />
+Color Your Online Business with Success
+<phrase key="page-intro" />
+The festival of Holi is about to kick off. As the celebratory mood spreads, consumers tend to spend more on their favorite products. Take a look at the stats and learn how to liven up your website to capture the increase in online business.
+<phrase key="share-twitter-related" />
+[@T[companyname:name]@T] - Color Your Website with Success
+<phrase key="view-enlarged-version" />
+View an enlarged version of this infographic &raquo;
+<phrase key="download-pdf-version" />
+Click here to download a .pdf version of this infographic &raquo;
+<phrase key="facts-stats-title" />
+Facts and Stats to Tweet:
+<phrase key="facts-stats-1" />
+Many Indian companies make 20-35% of their yearly revenue during the festival season
+<phrase key="facts-stats-1-encoded" />
+%22Many%20Indian%20companies%20make%2020-35%25%20of%20their%20yearly%20revenue%20during%20the%20festival%20season%22
+<phrase key="facts-stats-2" />
+The Holi colors and accessories industry is expected to increase by 20% this year
+<phrase key="facts-stats-2-encoded" />
+%22The%20Holi%20colors%20and%20accessories%20industry%20is%20expected%20to%20increase%20by%2020%25%20this%20year%22
