@@ -51,7 +51,7 @@ mixin domainSearchInput(domainSearchParams)
 mixin domainSearchOffersInput(prms)
   
   - prms                          = prms || {};
-  - prms.tlds                     = prms.tlds || ['com','co','org','net'];
+  - prms.tlds                     = prms.tlds || "['com','co','org','net']"; /* or can be a name of your variable that holds them ... like "myObj.tldArrary" */
   - prms.defaultTld               = prms.defaultTld || 'com';
   - prms.searchNowCallbackFn      = prms.searchNowCallbackFn || "domainSearchFormSubmit"; /* you need to code a function taking the domain name as a string input */
   - prms.maxDomainLength          = prms.maxDomainLength || 63;
@@ -214,116 +214,6 @@ mixin domainSearchOffersInput(prms)
 
           domainName = #{prms.formId}.reformatDomainToValidLength($textInput, domainName, isKeyPress);
           return domainName;
-<<<<<<< HEAD
-
-        },
-        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
-
-          var idx = domain.indexOf('.'),
-              hasTld = idx > -1,
-              sld = hasTld ? domain.substring(0, idx) : domain,
-              tld = hasTld ? domain.substring(idx+1) : '',
-              needsTrimmed = ((idx == -1) ? domain.length > #{prms.maxDomainLength} : idx > #{prms.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
-          sld = needsTrimmed ? sld.substring(0, #{prms.maxDomainLength}) : sld;
-          
-          var domainName = sld + ((tld!='') ? '.' + tld : '');
-          if(needsTrimmed) {
-            $textInput.val(domainName);
-          }
-          return domainName;
-
-        },
-        ensureValidTld: function() {
-
-          var $form = $("##{prms.formId}"),
-              $textInput = $form.find('input[name="domainToCheck"]'),
-              domainName = $textInput.val(); 
-              validTld = #{prms.formId}.hasTldValid(domainName);
-          $form.find('.search-message').hide();
-          if(validTld) {
-            $form.find('.type-your-business-name').show();
-          } else {
-            $form.find('.invalid-TLD-entered').show();
-          }
-          return validTld;
-          
-        },
-        hasTldValid: function(domain) {
-
-          domain = $.trim(domain || "");
-          var idx = domain.indexOf('.'), isValid = false;
-          if(!domain || domain.length == 0 || idx == -1) return true;
-
-          var domainsTld = domain.substring(idx+1).toLowerCase();
-          $.each(#{prms.tlds}, function(idx, tld) {
-            if(tld.toLowerCase() === domainsTld) {
-              isValid = true;
-            }
-          });
-          return isValid;
-
-        },
-        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
-
-          if(domain.indexOf('.') > 0) return domain;
-          return domain + '.' + #{prms.defaultTld};
-
-        },
-        getParameterByName: function (name) {
-
-          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-
-        }
-      };
-
-      $(document).ready(function(){
-
-        $("##{prms.formId}").on('click', 'button.offer-search-btn', function(){
-          $("##{prms.formId}").submit();
-        });
-
-        $("##{prms.formId}").on('submit', #{prms.formId}.validateSubmit);
-        $("##{prms.formId}").on('keyup', function(e){ 
-          if(e.which == 13) return;
-          var domainName = #{prms.formId}.trimmedDomainName(true);
-          if(!domainName || domainName.length == 0) return;
-          domainName = #{prms.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-          #{prms.formId}.ensureValidTld(domainName);
-        });
-
-
-        //- display error on return from DPP's TLD eligibility requirements failure
-        var tldErr = #{prms.formId}.getParameterByName('tldRegErr'),
-            dppHasError = tldErr.length > 0,
-            dupErr = #{prms.formId}.getParameterByName('dppError');
-
-        if(dppHasError) {
-          //- note by default tldRegErr will be on the url query string
-          //- if it's a dup, dpp will add in an additional parameter to let us know
-          switch(dupErr){
-            
-            case("dup"):
-              $('##{prms.formId} .search-message').hide();
-              $('##{prms.formId} .dup-domain-fail').show();
-              break;
-
-            default:
-              var $failArea = $('##{prms.formId} .domain-eligibility-fail'), 
-                  html = $failArea.html();
-              html = html.replace(/\{0\}/gi, tldErr)
-              $failArea.html(html);
-              $('##{prms.formId} .search-message').hide();
-              $('##{prms.formId} .domain-eligibility-fail').show();
-              break;
-
-          }
-        } else {
-          $('##{prms.formId} .search-message').hide();
-          $('##{prms.formId} .type-your-business-name').show();
-        }        
-=======
 
         },
         reformatDomainToValidLength: function($textInput, domain, isKeyPress){
@@ -432,6 +322,4 @@ mixin domainSearchOffersInput(prms)
           $('##{prms.formId} .search-message').hide();
           $('##{prms.formId} .type-your-business-name').show();
         }
-
->>>>>>> 475f8fa13ab417dcb96440a1411a0e368f8be759
       });

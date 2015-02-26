@@ -128,33 +128,58 @@ var got1Page = {
   got1Page.canOfferOls = false;
 ##endif
 
-##if(countrySiteAny(ca) || isManager())  
-  if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
-    got1Page.tldInfo.tlds.push('ca');
-    got1Page.tldInfo.defaultTld = 'ca';
+function addTldIf(tld, isDefault) {
+  if(got1Page.tldInfo.isPossibleAdditionalTld(tld)) {
+    got1Page.tldInfo.tlds.push(tld);
+    if(isDefault) got1Page.tldInfo.defaultTld = tld;
   }
+}
+
+##if(countrySiteAny(ca) || isManager())
+  addTldIf('ca', true);
 ##endif
 ##if(countrySiteAny(br) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
-    got1Page.tldInfo.tlds.push('br');
-    got1Page.tldInfo.defaultTld = 'br';
-  }
+  addTldIf('br', true);
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
-    got1Page.tldInfo.tlds.push('in');
-    got1Page.tldInfo.defaultTld = 'in';
-  }
+  addTldIf('in', true);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('co.uk')) {
-    got1Page.tldInfo.tlds.push('co.uk');
-    got1Page.tldInfo.defaultTld = 'co.uk';
-  }
-  if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
-    got1Page.tldInfo.tlds.push('uk');
-    got1Page.tldInfo.defaultTld = 'uk';
-  }
+  addTldIf('co.uk', true);
+  addTldIf('uk', false);
+##endif
+##if(countrySiteAny(fr) || isManager())
+  addTldIf('fr', true);
+##endif
+##if(countrySiteAny(it) || isManager())
+  addTldIf('it', true);
+##endif
+##if(countrySiteAny(at) || isManager())
+  addTldIf('at', true);
+##endif
+##if(countrySiteAny(es) || isManager())
+  addTldIf('es', true);
+##endif
+##if(countrySiteAny(nl) || isManager())
+  addTldIf('nl', true);
+##endif
+##if(countrySiteAny(de) || isManager())
+  addTldIf('de', true);
+##endif
+##if(countrySiteAny(ch) || isManager())
+  addTldIf('ch', true);
+##endif
+##if(countrySiteAny(be) || isManager())
+  addTldIf('be', true);
+##endif
+##if(countrySiteAny(pl) || isManager())
+  addTldIf('pl', true);
+##endif
+##if(countrySiteAny(ru) || isManager())
+  addTldIf('ru', true);
+##endif
+##if(countrySiteAny(dk) || isManager())
+  addTldIf('dk', true);
 ##endif
 
 //- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
@@ -1124,10 +1149,6 @@ $(window).load(function () {
                   defaultmarqueeviewform.ensureValidTld(domainName);
                 });
               
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 475f8fa13ab417dcb96440a1411a0e368f8be759
               
                 //- display error on return from DPP's TLD eligibility requirements failure
                 var tldErr = defaultmarqueeviewform.getParameterByName('tldRegErr'),
@@ -1158,249 +1179,6 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .search-message').hide();
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
-<<<<<<< HEAD
-              });
-            </script>
-          </atlantis:webstash>
-        </div>
-      </section> 
-      ##if(productIsOffered(105)) 
-       
-      <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-both-content]@L]</p>
-      </div> 
-      ##else
-       
-      <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
-      </div> 
-      ##endif
-       
-      <atlantis:webstash type="css">
-        <style>
-          #domain-available-marquee-view .purchase-btn {
-            margin: 0;
-            font-size: 30px;
-            padding-top: 17px;
-            padding-bottom: 14px;
-          }
-          
-          #domain-available-marquee-view .available-domain-name-row {
-            margin: 62px 0 40px;
-          }
-          
-          #domain-available-marquee-view h2.available-domain-name-text {
-            margin: 0;
-          }
-          #domain-available-marquee-view .reseach-container {
-            padding-top: 10px;
-          }
-        </style>
-      </atlantis:webstash>
-      <available-domain-name></available-domain-name>
-      <section id="domain-available-marquee-view" class="js-marquee-section">
-        <div class="bg-green-official">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <h2 class="h0 availability-header domain-available-heading-text">[@L[cds.sales/offers/online-business:32573-good-news-domain-available]@L]</h2>
-              </div>
-            </div>
-            <div class="row available-domain-name-row">
-              <div class="col-md-8 col-sm-12">
-                <h2 id="available-domain-name" class="available-domain-name-text domain-name-displayed word-break"> </h2>
-              </div>
-              <div class="col-md-4 col-sm-12 get-it-now-btn">
-                <button data-ci="92733" class="btn btn-purchase purchase-btn">[@L[cds.sales/offers/online-business:32573-get-it-now-button]@L]</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white reseach-container">
-          <div class="container">
-            <form id="domainavailablemarqueeviewform">
-              <div class="row">
-                <div class="col-md-12">
-                  <h2 class="headline-primary get-a-domain-text">[@L[cds.sales/offers/online-business:32573-or-search-for-a-new-one]@L]</h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 offer-search-box">
-                  <div class="input-group">
-                    <input type="text" placeholder="[@L[cds.sales/offers/online-business:32573-try-a-different-domain-name-placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                      <button type="button" name="searchButton" data-ci="95737" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
-                  </div>
-                </div>
-              </div>
-              <div class="row domain-search-messaging-row">
-                <div class="col-md-12">
-                  <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
-                  <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
-                  <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                  <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="95949" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
-                </div>
-              </div>
-            </form>
-            <atlantis:webstash type="js">
-              <script>
-                var domainavailablemarqueeviewform = {
-                   executeFnByName: function(name, context) {
-                    
-                    var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
-                    for(var i=2; i < arguments.length; i++){
-                      args.push(arguments[i]);
-                    }
-                    var namespaces = name.split(".");
-                    var func = namespaces.pop();
-                    for(var i = 0; i < namespaces.length; i++) {
-                      context = context[namespaces[i]];
-                    }
-                    return context[func].apply(this, args);
-                
-                  },
-                  validateSubmit: function(e){
-                
-                    e.preventDefault();
-                    var domainName = domainavailablemarqueeviewform.trimmedDomainName(false);
-                    if((domainName && domainName.length==0) || !domainName) return false;
-                
-                    domainName = domainName.toLowerCase();
-                    domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-                    if(!domainavailablemarqueeviewform.ensureValidTld(domainName)) {
-                      return;
-                    }
-                    var functionName = 'domainSearchFormSubmit';
-                    if(functionName.length > 0)  {
-                      domainavailablemarqueeviewform.executeFnByName(functionName, window, e, domainName);
-                    }
-                
-                  },
-                  trimmedDomainName: function(isKeyPress){
-                    
-                    var $form = $("#domainavailablemarqueeviewform"),
-                      $textInput = $form.find('input[name="domainToCheck"]'),
-                      domainName = $textInput.val();
-                    if((domainName && domainName.length==0) || !domainName) return null;
-                
-                    domainName = domainavailablemarqueeviewform.reformatDomainToValidLength($textInput, domainName, isKeyPress);
-                    return domainName;
-                
-                  },
-                  reformatDomainToValidLength: function($textInput, domain, isKeyPress){
-                
-                    var idx = domain.indexOf('.'),
-                        hasTld = idx > -1,
-                        sld = hasTld ? domain.substring(0, idx) : domain,
-                        tld = hasTld ? domain.substring(idx+1) : '',
-                        needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
-                    sld = needsTrimmed ? sld.substring(0, 63) : sld;
-                    
-                    var domainName = sld + ((tld!='') ? '.' + tld : '');
-                    if(needsTrimmed) {
-                      $textInput.val(domainName);
-                    }
-                    return domainName;
-                
-                  },
-                  ensureValidTld: function() {
-                
-                    var $form = $("#domainavailablemarqueeviewform"),
-                        $textInput = $form.find('input[name="domainToCheck"]'),
-                        domainName = $textInput.val(); 
-                        validTld = domainavailablemarqueeviewform.hasTldValid(domainName);
-                    $form.find('.search-message').hide();
-                    if(validTld) {
-                      $form.find('.type-your-business-name').show();
-                    } else {
-                      $form.find('.invalid-TLD-entered').show();
-                    }
-                    return validTld;
-                    
-                  },
-                  hasTldValid: function(domain) {
-                
-                    domain = $.trim(domain || "");
-                    var idx = domain.indexOf('.'), isValid = false;
-                    if(!domain || domain.length == 0 || idx == -1) return true;
-                
-                    var domainsTld = domain.substring(idx+1).toLowerCase();
-                    $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-                      if(tld.toLowerCase() === domainsTld) {
-                        isValid = true;
-                      }
-                    });
-                    return isValid;
-                
-                  },
-                  formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
-                
-                    if(domain.indexOf('.') > 0) return domain;
-                    return domain + '.' + got1Page.tldInfo.defaultTld;
-                
-                  },
-                  getParameterByName: function (name) {
-                
-                    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-                    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-                
-                  }
-                };
-                
-                $(document).ready(function(){
-                
-                  $("#domainavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
-                    $("#domainavailablemarqueeviewform").submit();
-                  });
-                
-                  $("#domainavailablemarqueeviewform").on('submit', domainavailablemarqueeviewform.validateSubmit);
-                  $("#domainavailablemarqueeviewform").on('keyup', function(e){ 
-                    if(e.which == 13) return;
-                    var domainName = domainavailablemarqueeviewform.trimmedDomainName(true);
-                    if(!domainName || domainName.length == 0) return;
-                    domainName = domainavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-                    domainavailablemarqueeviewform.ensureValidTld(domainName);
-                  });
-                
-                
-                  //- display error on return from DPP's TLD eligibility requirements failure
-                  var tldErr = domainavailablemarqueeviewform.getParameterByName('tldRegErr'),
-                      dppHasError = tldErr.length > 0,
-                      dupErr = domainavailablemarqueeviewform.getParameterByName('dppError');
-                
-                  if(dppHasError) {
-                    //- note by default tldRegErr will be on the url query string
-                    //- if it's a dup, dpp will add in an additional parameter to let us know
-                    switch(dupErr){
-                      
-                      case("dup"):
-                        $('#domainavailablemarqueeviewform .search-message').hide();
-                        $('#domainavailablemarqueeviewform .dup-domain-fail').show();
-                        break;
-                
-                      default:
-                        var $failArea = $('#domainavailablemarqueeviewform .domain-eligibility-fail'), 
-                            html = $failArea.html();
-                        html = html.replace(/\{0\}/gi, tldErr)
-                        $failArea.html(html);
-                        $('#domainavailablemarqueeviewform .search-message').hide();
-                        $('#domainavailablemarqueeviewform .domain-eligibility-fail').show();
-                        break;
-                
-                    }
-                  } else {
-                    $('#domainavailablemarqueeviewform .search-message').hide();
-                    $('#domainavailablemarqueeviewform .type-your-business-name').show();
-                  }
-                });
-              </script>
-            </atlantis:webstash>
-=======
-              });
-            </script>
->>>>>>> ca65f6ceb2e1caa5570d798f1461d8e39667c322
-=======
-              
               });
             </script>
           </atlantis:webstash>
@@ -1634,11 +1412,9 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .search-message').hide();
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
-                
                 });
               </script>
             </atlantis:webstash>
->>>>>>> 475f8fa13ab417dcb96440a1411a0e368f8be759
           </div>
         </div>
       </section>
@@ -1745,31 +1521,6 @@ $(window).load(function () {
                     
                     var $form = $("#domainnotavailablemarqueeviewform"),
                       $textInput = $form.find('input[name="domainToCheck"]'),
-<<<<<<< HEAD
-                      domainName = $textInput.val(); 
-                      validTld = domainnotavailablemarqueeviewform.hasTldValid(domainName);
-                  $form.find('.search-message').hide();
-                  if(validTld) {
-                    $form.find('.type-your-business-name').show();
-                  } else {
-                    $form.find('.invalid-TLD-entered').show();
-                  }
-<<<<<<< HEAD
-=======
-                  return validTld;
-                  
-                },
-                hasTldValid: function(domain) {
-              
-                  domain = $.trim(domain || "");
-                  var idx = domain.indexOf('.'), isValid = false;
-                  if(!domain || domain.length == 0 || idx == -1) return true;
-              
-                  var domainsTld = domain.substring(idx+1).toLowerCase();
-                  $.each(got1Page.tldInfo.tlds, function(idx, tld) {
-                    if(tld.toLowerCase() === domainsTld) {
-                      isValid = true;
-=======
                       domainName = $textInput.val();
                     if((domainName && domainName.length==0) || !domainName) return null;
                 
@@ -1789,7 +1540,6 @@ $(window).load(function () {
                     var domainName = sld + ((tld!='') ? '.' + tld : '');
                     if(needsTrimmed) {
                       $textInput.val(domainName);
->>>>>>> 475f8fa13ab417dcb96440a1411a0e368f8be759
                     }
                     return domainName;
                 
@@ -1844,33 +1594,6 @@ $(window).load(function () {
                   $("#domainnotavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
                     $("#domainnotavailablemarqueeviewform").submit();
                   });
-<<<<<<< HEAD
-                  return isValid;
-              
-                },
-                formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
-              
-                  if(domain.indexOf('.') > 0) return domain;
-                  return domain + '.' + got1Page.tldInfo.defaultTld;
-              
-                }
-              };
-              
-              $(document).ready(function(){
-              
-                $("#domainnotavailablemarqueeviewform").on('click', 'button.offer-search-btn', function(){
-                  $("#domainnotavailablemarqueeviewform").submit();
->>>>>>> ca65f6ceb2e1caa5570d798f1461d8e39667c322
-                });
-              
-                $("#domainnotavailablemarqueeviewform").on('submit', domainnotavailablemarqueeviewform.validateSubmit);
-                $("#domainnotavailablemarqueeviewform").on('keyup', function(e){ 
-                  if(e.which == 13) return;
-                  var domainName = domainnotavailablemarqueeviewform.trimmedDomainName(true);
-                  if(!domainName || domainName.length == 0) return;
-                  domainName = domainnotavailablemarqueeviewform.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-                  domainnotavailablemarqueeviewform.ensureValidTld(domainName);
-=======
                 
                   $("#domainnotavailablemarqueeviewform").on('submit', domainnotavailablemarqueeviewform.validateSubmit);
                   $("#domainnotavailablemarqueeviewform").on('keyup', function(e){ 
@@ -1911,8 +1634,6 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .search-message').hide();
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
-                
->>>>>>> 475f8fa13ab417dcb96440a1411a0e368f8be759
                 });
               </script>
             </atlantis:webstash>
