@@ -335,17 +335,6 @@ prepend endOfPageScripts
       return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
 
-    function updateSearchedDomain(e, domain) {
-      domainSearch.searchedForDomain = domain;
-      $('#domain-available-view').find('.search-form-input').val(domain);
-      $('#domain-not-available-view').find('.search-form-input').val(domain);
-    }
-
-    function updateSelectedDomain(domain) {
-      domainSearch.selectedDomain = domain;
-      $(document).find('.selected-domain-name-display').text(domain);
-    }
-
   script.  // Page
     $(document).ready(function(){
       var passedBusinessName = getParameterByName('domain');
