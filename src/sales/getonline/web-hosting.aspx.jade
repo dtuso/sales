@@ -1,13 +1,17 @@
 extends _p4p.jade
 
 append vars
-  - primary_pfid = 32051;
-  - primary_promo = 521092015;
+  - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "Web Hosting";
-  - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car. MXNXXX.XX/yr";
+  - productToDisplay.landingPage = "web-hosting.aspx"
+  - productToDisplay.packageId = "getonline_web_hosting";
+  - productToDisplay.itcCode = "slp_getonline_store";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='monthly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32051' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car.";
   - productToDisplay.imgClass = "features-hosting";
   - productToDisplay.productIconClass = "features-hosting";
-  - productToDisplay.price = "$1.00";
   - productToDisplay.productDescription = "Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.";
   - productToDisplay.productVideoImage = "";
   - productToDisplay.productYouTubeId = "";
@@ -17,7 +21,7 @@ append vars
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png")
     h3.text-center Web Hosting
     p Give your site a home that’ll keep it secure and running like a sports car.
 
@@ -49,5 +53,5 @@ block productInfo
 block productTemplates
 
 block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png")
   h3.text-center Web Hosting

@@ -18,6 +18,10 @@ append vars
   // P4P variables
   - productToDisplay = {};
   - productToDisplay.name = "";
+  - productToDisplay.landingPage = "";
+  - productToDisplay.packageId = "";
+  - productToDisplay.itcCode = "";
+  - productToDisplay.pricing = {};
   - productToDisplay.getItNowDescription = "";
   - productToDisplay.imgClass = "";
   - productToDisplay.productIconClass = "";
@@ -29,8 +33,6 @@ append vars
   - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "";
 
-  - primary_pfid = "";
-  - primary_promo = "";
 
 append seo
   meta(name="twitter:card" content="summary")
@@ -41,6 +43,34 @@ append seo
 
 append headScripts
   atlantis:webstash(type="js")
+    script.
+      var offerInfo = {
+        dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/#{productToDisplay.landingPage}"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+        packageId: "#{productToDisplay.packageId}",
+        itcCode: "#{productToDisplay.itcCode}",
+        pricing: {
+          promo_monthly: "!{productToDisplay.pricing.promo_monthly}",
+          promo_annual: "!{productToDisplay.pricing.promo_annual}",
+          renewal_annual: "!{productToDisplay.pricing.renewal_annual}"
+        }
+      };
+      // Page Global script -- changes will effect all campaigns 
+      // get url parameter by parameter name
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+    script.  // Page
+      $(document).ready(function(){
+        var passedBusinessName = getParameterByName('domain');
+        if(passedBusinessName != '') {
+          $(document).find('.business-name-display').text(passedBusinessName);
+          updateSearchedDomain('', passedBusinessName);
+          domainSearchFormSubmit('', passedBusinessName);
+       }
+      });
     script
       include:js domain-selection.js
 
@@ -112,7 +142,7 @@ append pageStyles
       #getItNow .bubble {
         background-color: white;
         background-position: center center;
-        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: visible;
@@ -170,17 +200,17 @@ block content
  
   section#getItNow
     .container
-      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
       .row
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
             h2.text-center Here you go...
-            h3.text-center A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]</mark>
+            h3.text-center A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
             .column.domain
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
               h3.text-center Domain Name
               p Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
             .plus +
@@ -188,14 +218,14 @@ block content
               //- each derived page must insert its own content here
             .plus +
             .column.email
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
               h3.text-center Office 365 Email
               p Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. 
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta
-            p.text-center Get the bundle for [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+            p.text-center Get the bundle for {price_monthly}/month for the first year*
             button.btn.btn-purchase.btn-lg.center-block Get It Now
-            small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+            small.text-center *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
   block domainOrPro
     include templates/_domain-search-wizard
@@ -276,17 +306,17 @@ block content
       .row
         .col-sm-4
           .feature.why-gd-world-leader.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png','Pin Point Globe')
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png','Pin Point Globe')
             h3 We're the world leader
             p It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
         .col-sm-4
           .feature.why-gd-support.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png','TLD Boards')          
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png','TLD Boards')          
             h3 Our 24/7 support is awesome
             p That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
         .col-sm-4
           .feature.why-gd-trust.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png','Support Icon')
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','Support Icon')
             h3 12 million people trust us
             p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
  
@@ -317,33 +347,15 @@ block content
               .get-it-now
                 .container
                   .row.text-center
-                    p.h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+                    p.h3 {price_monthly}/month for the first year*
                   .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
                     btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
                     btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
                   .row.text-center(style={'padding-top':'10px'})
-                    small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+                    small.text-center *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 prepend endOfPageScripts
-  script.
-    // Page Global script -- changes will effect all campaigns 
-    // get url parameter by parameter name
-    function getParameterByName(name) {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-          results = regex.exec(location.search);
-      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
 
-  script.  // Page
-    $(document).ready(function(){
-      var passedBusinessName = getParameterByName('domain');
-      if(passedBusinessName != '') {
-        $(document).find('.business-name-display').text(passedBusinessName);
-        updateSearchedDomain('', passedBusinessName);
-        domainSearchFormSubmit('', passedBusinessName);
-     }
-    });
 
   // atlantis:webstash(type="js")
   script.  // Product section

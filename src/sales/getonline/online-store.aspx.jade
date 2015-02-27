@@ -1,18 +1,22 @@
 extends _p4p.jade
 
 append vars
-  - primary_pfid = 47902;
-  - primary_promo = 75315678;
+  - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "Online Store";
-  - productToDisplay.getItNowDescription = "Easily create a site that let’s you sell your stuff, accept credit cards and more. MXNXXX.XX/yr";
-  - productToDisplay.productDescription = "Online Store includes everything you need for a complete eCommerce website. See how easy it is.";
-  - productToDisplay.productInfoText = "";
+  - productToDisplay.landingPage = "online-store.aspx"
+  - productToDisplay.packageId = "getonline_online_store";
+  - productToDisplay.itcCode = "slp_getonline_store";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|40972' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "Easily create a site that let’s you sell your stuff, accept credit cards and more.";
   - productToDisplay.imgClass = "features-online-store";
   - productToDisplay.productIconClass = "features-online-store";
-  - productToDisplay.price = "$1.00";
+  - productToDisplay.productDescription = "Online Store includes everything you need for a complete eCommerce website. See how easy it is.";
   - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
   - productToDisplay.productYouTubeId = "rMF9d8-3WBA";
   - productToDisplay.productVideoInfoText = "What is Online Store?";
+  - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "With built-in payment processing, you can accept all major credit cards and the funds are automatically transferred to you bank account.";
 
 block targetedProduct

@@ -1,13 +1,17 @@
 extends _p4p.jade
 
 append vars
-  - primary_pfid = 32759;
-  - primary_promo = 511092015;
+  - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "Managed Wordpress";
-  - productToDisplay.getItNowDescription = "Start a blog with WordPress and let us manage the technical stuff. MXNXXX.XX/yr";
+  - productToDisplay.landingPage = "wordpress.aspx"
+  - productToDisplay.packageId = "getonline_wordpress";
+  - productToDisplay.itcCode = "slp_getonline_wordpress";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='monthly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "Start a blog with WordPress and let us manage the technical stuff.";
   - productToDisplay.imgClass = "features-wordpress";
   - productToDisplay.productIconClass = "features-wordpress";
-  - productToDisplay.price = "$1.00";
   - productToDisplay.productDescription = "We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.";
   - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
   - productToDisplay.productYouTubeId = "";
@@ -17,7 +21,7 @@ append vars
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png")
     h3.text-center Managed Wordpress
     p Start a blog with WordPress and let us manage the technical stuff.
 
@@ -49,5 +53,5 @@ block productInfo
 block productTemplates
 
 block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png")
   h3.text-center Managed Wordpress
