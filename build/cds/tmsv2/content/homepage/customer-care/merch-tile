@@ -1,0 +1,18 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .merch-tile-support .tile-content-wrapper{padding:20px 15px;color:#333;cursor:default;}
+    .merch-tile-support .promo-logo{width:60%}
+    .merch-tile-support .promo-text{padding-top:10px}
+    .merch-tile-support .promo-cta{position:absolute;bottom:5px;color:#f2812e}
+    .merch-tile-support span{color:#f2812e}
+  </style>
+</atlantis:webstash>
+<div data-ci='11111' data-message-name="" class="tile merch-tile-support">
+  <div class="tile-content-wrapper">
+    <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/merch-tile/C3-support-logo.png" class="promo-logo"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDEyMy40IDM1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjMuNCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTMuNSAxNy4zbC0wLjkgMC42IDAuOCA3LjMgMSAxIDIuOS0wLjQgLTAuNy04LjVIMy41ek0yMC44IDAuMkw3LjkgMCAwIDkuOWwxLjkgMTIgMC43IDBMMS43IDEwLjRsNi02LjRMMjAuMSA0bDcuNSA2IC0xLjEgMTYuNyAtMS42IDIuNCAtNi41IDIuNiAtMy4yLTFMMTUgMzAuN2wtMC42IDIuMSAxLjQgMi4yIDIuNSAwIDcuMi00LjkgMi4xLTMuM0wyOSA5LjcgMjAuOCAwLjJ6TTI1LjkgMjVsMC41LTYuOSAtMS4xLTEgLTIuNiAwTDIyIDI2LjNsMy4xIDBMMjUuOSAyNXpNMzUuMiAxNS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgzNS4yek00Ny44IDE1LjJjMCAzIDIuMiA1LjIgNS44IDUuMiAzLjYgMCA1LjgtMi4yIDUuOC01LjJWNi4xaC00LjF2OS4xYzAgMS0wLjcgMS44LTEuNyAxLjhzLTEuNy0wLjgtMS43LTEuOFY2LjFoLTQuMVYxNS4yek02MC41IDIwLjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNNjYuMyAxMy4zaC0xLjd2LTRoMS43YzEuMSAwIDEuOCAwLjkgMS44IDJDNjguMiAxMi40IDY3LjUgMTMuMyA2Ni4zIDEzLjN6TTcyLjkgMjAuMUg3N3YtMy42aDIuNWMzLjIgMCA1LjItMi40IDUuMi01LjIgMC0yLjgtMi01LjItNS4yLTUuMmgtNi43VjIwLjF6TTc4LjcgMTMuM0g3N3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM4MC42IDEyLjQgNzkuOCAxMy4zIDc4LjcgMTMuM3pNOTIuMSAyMC41YzQuOCAwIDcuNS0zLjUgNy41LTcuNHMtMi44LTcuNC03LjUtNy40Yy00LjggMC03LjUgMy41LTcuNSA3LjRTODcuNCAyMC41IDkyLjEgMjAuNXpNOTIuMSAxNi43Yy0yLjEgMC0zLjQtMS43LTMuNC0zLjZzMS4zLTMuNiAzLjQtMy42YzIuMSAwIDMuNCAxLjcgMy40IDMuNlM5NC4yIDE2LjcgOTIuMSAxNi43ek0xMDEuMSAyMC4xaDQuMXYtMy42aDAuOGwyLjQgMy42aDQuOWwtMi44LTQuM2MxLjYtMC45IDIuNS0yLjYgMi41LTQuNSAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNMTA3IDEzLjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkMxMDguOCAxMi40IDEwOC4xIDEzLjMgMTA3IDEzLjN6TTExNi40IDIwLjFoNC4xVjkuNmgyLjlWNi4xaC05Ljh2My42aDIuOVYyMC4xeiIvPjwvc3ZnPg==" class="promo-logo svgfallback"/>
+    </div>
+    <div class="promo-text walsheim-black">AWARD-WINNING, 24/7 SERVICE AND SUPPORT.</div>
+    <div class="promo-cta walsheim-black">CALL [@T[supportphone:<technical />]@T]</div>
+  </div>
+</div>

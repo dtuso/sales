@@ -9,10 +9,19 @@ section#why-godaddy
     .row
       .col-sm-4
         .feature.why-gd-registrar
+          | ##if(activeLanguageAny([en-gb]) || activeLanguageAny([en-in]))
+          <!--[if lt IE 9]>
+          +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+          <![endif]-->
+          +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+          | 
+          | ##else
           <!--[if lt IE 9]>
           +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
           <![endif]-->
           +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
+          | 
+          | ##endif
           h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
           p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
       .col-sm-4
