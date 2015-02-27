@@ -94,7 +94,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-entry-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -110,42 +110,37 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
-  
-  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#spin-results').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
   // wireupCheckoutBtns();
 
   // displayMoreResultsLinks();
+  
+  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
 
-  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
-  $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
+  $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
+  $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-  $('#btn-search-again').on('click', goToDomainSearchWizard);
+  // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
+  $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
   $("[data-ci-workaround]").click(function(a){
     var $this=$(this);
     FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
     fbiLibCheckQueue();
   });
-
-  var passedBusinessName = getParameterByName('domain');
-  if(passedBusinessName != '') {
-    $(document).find('.business-name-display').text(passedBusinessName);
-    updateSearchedDomain('', passedBusinessName);
-    domainSearchFormSubmit('', passedBusinessName);
-  }
 });
 
 function updateSearchedDomain(e, domain) {
-  domainSearch.searchedForDomain = domain;
-  $('#domain-available-view').find('.search-form-input').val(domain);
-  $('#domain-not-available-view').find('.search-form-input').val(domain);
+  $(document).find('.searched-domain-name-display').text(domain);
+}
+
+function updateSelectedDomain(domain) {
+  domainSearch.selectedDomainName = domain.Fqdn;
+  $(document).find('.selected-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -208,7 +203,7 @@ function wireupModals() {
 
   // wire up see details links  
 
-  $('#domain-entry-view').on('click', '.see-details-disclaimer-link', function(){
+  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
   });
@@ -374,10 +369,8 @@ function validDomainSelected(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  domainSearch.selectedDomainName = domain.Fqdn;
-  // $('#selected-domain-name').text(domain.Fqdn);
-  $(document).find('.selected-domain-name-display').text(domain.Fqdn);
-  // $.each('.btn-purchase').data('domain', domain);
+  updateSelectedDomain(domain.Fqdn);
+
   $(document).find('.btn-purchase').data('domain', domain);
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
@@ -389,8 +382,13 @@ function validDomainSelected(e){
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
+function navigateToSearchAgain(e) { 
+  var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  animateWizard($thisSection, $('#domain-search-view'));
+}
+
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.selectedDomainName == undefined) {
     goToDomainSearchWizard();
   }
   else {
@@ -402,6 +400,11 @@ function goToDomainSearchWizard()
 {
   $('#domainSearchWizardSection').show();
   window.location.href = '#domainSearchWizardSection';
+}
+
+function goToShowProducts()
+{
+  window.location.href = '#got';
 }
 
 function goToDppCheckoutPage(e) {
@@ -454,6 +457,7 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
@@ -514,12 +518,6 @@ function updateDomainCountText($view, numberShowing) {
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
   $spinCounts.html(templateHtml);
-}
-
-function navigateToSearchAgain(e) { 
-  // var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
-  // animateWizard($thisSection, $('#domain-entry-view'));
-  $('#domainSearchWizard').show();
 }
 
 function animateWizard($currentView, $animateToView) {  
