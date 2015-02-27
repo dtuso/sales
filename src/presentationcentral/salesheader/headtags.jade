@@ -335,6 +335,7 @@ script(type="text/javascript").
       function retrieveData(callback, url) {
           $.ajax({
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               jsonp: callback,
               url: url
           });
@@ -390,6 +391,7 @@ script(type="text/javascript").
               url: module.initUrl,
               type: 'get',
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   $('#loginModal').html(data.content);
                   loadScript.call(module, data.scripts[0], newShopper);
@@ -466,6 +468,7 @@ script(type="text/javascript").
               url: "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/external/json/savepreferences.aspx?currency=" + newCurrency,
               crossDomain: true,
               dataType: "jsonp",
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   location.reload();
               }
@@ -670,6 +673,7 @@ script(type="text/javascript").
               url: ux.eldorado.guiDomain + 'pcjson/support/includemarket',
               crossDomain: true,
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   // save support data to storage
                   if (typeof marketSupportPhone !== 'undefined') {
@@ -807,6 +811,7 @@ script(type="text/javascript").
       function getShopperData() {
           $.ajax({
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               url: pcjsonUrl,
               success: function loadShopperData(data) {
                   // Wrap legacy data handler with new handler
@@ -841,6 +846,7 @@ script(type="text/javascript").
           } else {
               $.ajax({
                   dataType: 'jsonp',
+                  contentType: 'text/javascript; charset=utf-8',
                   url: url,
                   success: loadManagerData,
                   error: function() {

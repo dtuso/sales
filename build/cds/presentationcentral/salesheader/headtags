@@ -312,6 +312,7 @@
       function retrieveData(callback, url) {
           $.ajax({
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               jsonp: callback,
               url: url
           });
@@ -367,6 +368,7 @@
               url: module.initUrl,
               type: 'get',
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   $('#loginModal').html(data.content);
                   loadScript.call(module, data.scripts[0], newShopper);
@@ -443,6 +445,7 @@
               url: "[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/external/json/savepreferences.aspx?currency=" + newCurrency,
               crossDomain: true,
               dataType: "jsonp",
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   location.reload();
               }
@@ -647,6 +650,7 @@
               url: ux.eldorado.guiDomain + 'pcjson/support/includemarket',
               crossDomain: true,
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               success: function(data) {
                   // save support data to storage
                   if (typeof marketSupportPhone !== 'undefined') {
@@ -784,6 +788,7 @@
       function getShopperData() {
           $.ajax({
               dataType: 'jsonp',
+              contentType: 'text/javascript; charset=utf-8',
               url: pcjsonUrl,
               success: function loadShopperData(data) {
                   // Wrap legacy data handler with new handler
@@ -818,6 +823,7 @@
           } else {
               $.ajax({
                   dataType: 'jsonp',
+                  contentType: 'text/javascript; charset=utf-8',
                   url: url,
                   success: loadManagerData,
                   error: function() {
