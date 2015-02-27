@@ -1,4 +1,4 @@
 <phrase key="headline">
-Hosting that won't keep you ... waiting.
-<phrase key="saveupto" comment="{0} will be replaced with the percentage off" />
-Save up to {0}
+HOSTING THAT WON'T KEEP YOU ... WAITING.
+<phrase key="saveupto" comment="{0} will be replaced with the monetary amount" />
+STARTING AT {0}
