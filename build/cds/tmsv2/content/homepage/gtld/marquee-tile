@@ -37,7 +37,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
+<div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' data-message-name="" class="tile gtld-marquee-tile">
   <div class="tile-content-wrapper">
     <div class="container">
       <div class="row">

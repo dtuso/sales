@@ -123,8 +123,19 @@ block endOfPageScripts
         $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
         $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
     }
-    $(window).load(reSizeTiles);
+    function tokenizeTheDataTokenizeAttribute() {
+      $('[data-tokenize]').each(function(){
+        var $this = $(this),
+          html = $this.html(),
+          val = $this.data('tokenize'),
+            tokenizedHtml = html.replace(/\{0\}/gi, val);
+        $this
+          .html(tokenizedHtml)
+          .removeAttr('data-tokenize');
+      });
+    }
     $(window).load(function () {
+      reSizeTiles();
       $('.bigtext').bigtext().css('visibility', 'visible');
         setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
     });
@@ -134,6 +145,7 @@ block endOfPageScripts
   script(type="text/javascript").
     var ignoreLivePerson = true;
     $(document).ready(function() {
+      tokenizeTheDataTokenizeAttribute();
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
                    date = new Date();
