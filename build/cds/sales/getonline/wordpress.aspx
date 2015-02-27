@@ -943,23 +943,23 @@ function getParameterByName(name) {
       
     </style>
     <style>
+      mark { line-height: 1.1em; word-break: break-all; }
+      mark::after { height: 1.21em; }
+      h3 { text-transform: none; }
+      
       #getItNow { padding-bottom: 0; padding-top: 0;}
       #getItNow .container { position: relative; }
-      #getItNow mark { line-height: 1.1em; }
-      #getItNow mark::after { height: 1.21em; }
       #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-      
-      #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-      #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+      .column {width: 24%; display: inline-block;vertical-align:top;}
+      .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
       #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
       #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
       #getItNow .bubble h3 { font-family: Walsheim-Black; }
       #getItNow .products { margin-top: 40px; }
       #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
       #getItNow .products img { max-height: 110px; }
-      
-      #getItNow .cta { margin-top: 20px;}
-      #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+      .cta { margin-top: 20px;}
+      .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
       
       @media (min-width: 768px) {
         #getItNow .bubble {
@@ -971,8 +971,8 @@ function getParameterByName(name) {
           overflow: visible;
           padding-top: 40px;
           padding-bottom: 40px;
-          padding-left: 100px;
-          padding-right: 100px;
+          padding-left: 10%;
+          padding-right: 10%;
           margin-left: 20%;
         }
         #getItNow .bubble h2 { padding-top: 0; }
@@ -985,17 +985,23 @@ function getParameterByName(name) {
       
       .product-section { padding-bottom: 0; }
       .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
-      .product-section h3 { text-transform: none; }
-      .product-section .product-summary { margin: 20px auto; word-break: break-all; }
+      .product-section .product-summary { margin: 20px auto; }
       .product-section .hero-guy { 
         max-width: 80%; 
         position: absolute; 
         height: auto; 
+        margin-top: 60px;
       }
+      
+      @media (min-width: 768px) {
+        .product-section .hero-guy { 
+          margin-top: 20px;
+        }
+      }
+      
       .bubble-row { overflow-y: hidden; margin-top: 30px; }
       
       .bubble-row .bubble {
-        background-color: white;
         background-position: center center;
         background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
         background-repeat: no-repeat;
@@ -1071,19 +1077,6 @@ function getParameterByName(name) {
       
       /* Layout */
       .view-all{margin:20px auto;}
-      
-    </style>
-    <!-- O365 section-->
-    <!-- atlantis:webstash(type="css")-->
-    <!-- style.-->
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .why-us-title{margin-top:10px;}
-      .why-us-text{margin-top:10px;}
-      
-      .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-      .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-      .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
       
     </style>
     <!-- atlantis:webstash(type="css")-->
@@ -1472,26 +1465,49 @@ function getParameterByName(name) {
       </div>
     </section>
     <hr>
+    <section id="bottomGetItNow">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">Ready to Get Online?</h2>
+          <h3 id="got-domain-not-selected" class="text-center">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
+        </div>
+        <div class="row">
+          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+            <h3 class="text-center">Domain Name</h3>
+          </div>
+          <div class="plus">+</div>
+          <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
+            <h3 class="text-center">Managed Wordpress</h3>
+          </div>
+          <div class="plus">+</div>
+          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+            <h3 class="text-center">Office 365 Email</h3>
+          </div>
+        </div>
+        <div class="row">
+          <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32759|464069" period="monthly" promocode="511092015"></current>]@T]/month for the first year*</p>
+          <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly" promocode="511092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly"></current>]@T]/year after the first year</small>
+        </div>
+      </div>
+    </section>
     <section id="got">
       <div class="container">
         <div class="row">
-          <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to get online?</h2>
-            <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
-            <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
-          </div>
+          <h2 class="text-center">Ready to get online?</h2>
+          <h3 id="got-domain-not-selected" class="text-center">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
           <div class="container bottom">
             <div class="row">
-              <div class="col-sm-4 text-center">
-                <div class="features-domain-name"></div>
-                <label class="h3 product-name">Domain Name</label>
-              </div>
-              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
-                <h3 class="text-center">Managed Wordpress</h3>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
+                <h3>Domain Name</h3>
               </div>
               <div class="col-sm-4 text-center">
-                <div class="features-email"></div>
-                <label class="h3 product-name">Office 365 Email</label>
+                <!--div(class="#{productToDisplay.imgClass}")-->
+                <!--label.h3.product-name #{productToDisplay.name}-->
+              </div>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
+                <h3>Office 365 Email</h3>
               </div>
             </div>
             <div class="row">
@@ -1774,23 +1790,23 @@ ul li.no-check {
         
       </style>
       <style>
+        mark { line-height: 1.1em; word-break: break-all; }
+        mark::after { height: 1.21em; }
+        h3 { text-transform: none; }
+        
         #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
-        #getItNow mark { line-height: 1.1em; }
-        #getItNow mark::after { height: 1.21em; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        .column {width: 24%; display: inline-block;vertical-align:top;}
+        .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
         #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
         #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
         #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        .cta { margin-top: 20px;}
+        .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -1802,8 +1818,8 @@ ul li.no-check {
             overflow: visible;
             padding-top: 40px;
             padding-bottom: 40px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 10%;
+            padding-right: 10%;
             margin-left: 20%;
           }
           #getItNow .bubble h2 { padding-top: 0; }
@@ -1816,17 +1832,23 @@ ul li.no-check {
         
         .product-section { padding-bottom: 0; }
         .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
-        .product-section h3 { text-transform: none; }
-        .product-section .product-summary { margin: 20px auto; word-break: break-all; }
+        .product-section .product-summary { margin: 20px auto; }
         .product-section .hero-guy { 
           max-width: 80%; 
           position: absolute; 
           height: auto; 
+          margin-top: 60px;
         }
+        
+        @media (min-width: 768px) {
+          .product-section .hero-guy { 
+            margin-top: 20px;
+          }
+        }
+        
         .bubble-row { overflow-y: hidden; margin-top: 30px; }
         
         .bubble-row .bubble {
-          background-color: white;
           background-position: center center;
           background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
           background-repeat: no-repeat;
@@ -1902,19 +1924,6 @@ ul li.no-check {
         
         /* Layout */
         .view-all{margin:20px auto;}
-        
-      </style>
-      <!-- O365 section-->
-      <!-- atlantis:webstash(type="css")-->
-      <!-- style.-->
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .why-us-title{margin-top:10px;}
-        .why-us-text{margin-top:10px;}
-        
-        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->

@@ -1028,6 +1028,7 @@ function getParameterByName(name) {
         #getItNow .hero-guy { left: -50px; }
       }
       
+<<<<<<< HEAD
       #product h2 { margin-top: 20px; margin-bottom: 20px; }
       #product h3 { text-transform: none; }
       #product .how-it-works { margin: 20px auto; }
@@ -1081,6 +1082,8 @@ function getParameterByName(name) {
       .logo-label{padding-top: 15px;}
       
       
+=======
+>>>>>>> kflandell/p4p
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
@@ -1180,6 +1183,7 @@ function getParameterByName(name) {
               <button class="btn btn-primary select-and-continue available-domain-name uppercase">Select</button>
               <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
               <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1202,6 +1206,33 @@ function getParameterByName(name) {
                 <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
               </div>
             </div>
+=======
+            </div>
+          </div>
+        </div>
+        <div class="container other-domains spin-container">
+          <div class="row">
+            <div class="col-md-12">
+              <h5 style="margin-top:20px"><strong>That one not moving you? Here are some alternatives:</strong></h5>
+              <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]" class="spin-counts"></span>
+                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
+              </h6>
+            </div>
+          </div>
+          <div style="margin-top:10px" class="spin-results"></div>
+          <div class="spin-template-wrap">
+            <div class="row spin-template spin-result available-domain-name-row">
+              <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
+              <div class="col-md-3 white">
+                <button class="btn btn-primary select-and-continue uppercase">Select</button>
+                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
+                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+              </div>
+            </div>
+          </div>
+          <div class="show-more-section">
+            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+>>>>>>> kflandell/p4p
           </div>
           <div class="show-more-section">
             <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
@@ -1947,6 +1978,7 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
+<<<<<<< HEAD
         
         #product h2 { margin-top: 20px; margin-bottom: 20px; }
         #product h3 { text-transform: none; }
@@ -2001,6 +2033,9 @@ ul li.no-check {
         .logo-label{padding-top: 15px;}
         
         
+=======
+        
+>>>>>>> kflandell/p4p
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -2046,7 +2081,30 @@ ul li.no-check {
       
     </script>
     <script>
+      // Page Global script -- changes will effect all campaigns 
+      // get url parameter by parameter name
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+      
+      function updateSearchedDomain(e, domain) {
+        domainSearch.searchedForDomain = domain;
+        $('#domain-available-view').find('.search-form-input').val(domain);
+        $('#domain-not-available-view').find('.search-form-input').val(domain);
+      }
+      
+      function updateSelectedDomain(domain) {
+        domainSearch.selectedDomain = domain;
+        $(document).find('.selected-domain-name-display').text(domain);
+      }
+      
+    </script>
+    <script>
       $(document).ready(function(){
+<<<<<<< HEAD
         stripDomainName();
       });
       
@@ -2087,6 +2145,8 @@ ul li.no-check {
     </script>
     <script>
       $(document).ready(function(){
+=======
+>>>>>>> kflandell/p4p
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           $(document).find('.business-name-display').text(passedBusinessName);

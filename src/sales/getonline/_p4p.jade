@@ -46,23 +46,23 @@ append headScripts
 
 append pageStyles
   style. 
+    mark { line-height: 1.1em; word-break: break-all; }
+    mark::after { height: 1.21em; }
+    h3 { text-transform: none; }
+    
     #getItNow { padding-bottom: 0; padding-top: 0;}
     #getItNow .container { position: relative; }
-    #getItNow mark { line-height: 1.1em; }
-    #getItNow mark::after { height: 1.21em; }
     #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-
-    #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-    #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+    .column {width: 24%; display: inline-block;vertical-align:top;}
+    .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
     #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
     #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
     #getItNow .bubble h3 { font-family: Walsheim-Black; }
     #getItNow .products { margin-top: 40px; }
     #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
     #getItNow .products img { max-height: 110px; }
-
-    #getItNow .cta { margin-top: 20px;}
-    #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+    .cta { margin-top: 20px;}
+    .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
 
     @media (min-width: 768px) {
       #getItNow .bubble {
@@ -74,8 +74,8 @@ append pageStyles
         overflow: visible;
         padding-top: 40px;
         padding-bottom: 40px;
-        padding-left: 100px;
-        padding-right: 100px;
+        padding-left: 10%;
+        padding-right: 10%;
         margin-left: 20%;
       }
       #getItNow .bubble h2 { padding-top: 0; }
@@ -88,17 +88,23 @@ append pageStyles
     
     .product-section { padding-bottom: 0; }
     .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
-    .product-section h3 { text-transform: none; }
-    .product-section .product-summary { margin: 20px auto; word-break: break-all; }
+    .product-section .product-summary { margin: 20px auto; }
     .product-section .hero-guy { 
       max-width: 80%; 
       position: absolute; 
       height: auto; 
+      margin-top: 60px;
     }
+
+    @media (min-width: 768px) {
+      .product-section .hero-guy { 
+        margin-top: 20px;
+      }
+    }
+
     .bubble-row { overflow-y: hidden; margin-top: 30px; }
 
     .bubble-row .bubble {
-      background-color: white;
       background-position: center center;
       background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
       background-repeat: no-repeat;
@@ -173,19 +179,6 @@ append pageStyles
 
     /* Layout */
     .view-all{margin:20px auto;}
-
-  // O365 section
-  // atlantis:webstash(type="css")
-  // style.
-
-  // atlantis:webstash(type="css")
-  style.  // Why-us section
-    .why-us-title{margin-top:10px;}
-    .why-us-text{margin-top:10px;}
-
-    .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-    .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-    .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
 
   // atlantis:webstash(type="css")
   style.  // got section
@@ -272,27 +265,51 @@ block content
  
   hr
 
+
+  block bottomGetItNow
+    section#bottomGetItNow
+      .container
+        .row
+          h2.text-center Ready to Get Online?
+          h3.text-center#got-domain-not-selected First select your perfect domain
+          h3.text-center#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+        .row
+          .column.domain
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+            h3.text-center Domain Name
+          .plus +
+          block bottomTargetedProduct
+            //- each derived page must insert its own content here
+          .plus +
+          .column.email
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+            h3.text-center Office 365 Email
+        .row
+          p.text-center Get the bundle for [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+          button.btn.btn-purchase.btn-lg.center-block Get It Now
+          small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+
   section#got
     .container
       .row
-        div.text-center(style={'margin-top':'30px'})
-          h2.uppercase Ready to get online?
-          block checkPro
-            h3.header-detail-text.uppercase#got-domain-not-selected First select your perfect domain
-            h3.header-detail-text.uppercase#got-domain-selected You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+        h2.text-center Ready to get online?
+        block checkPro
+          h3#got-domain-not-selected.text-center First select your perfect domain
+          h3#got-domain-selected.text-center(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+
         block checkPro-bottom
           .container.bottom
             .row
               .col-sm-4.text-center
-                .features-domain-name
-                label.h3.product-name Domain Name
+                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+                h3 Domain Name
               .col-sm-4.text-center
                 block gotProduct
                   //div(class="#{productToDisplay.imgClass}")
                   //label.h3.product-name #{productToDisplay.name}
               .col-sm-4.text-center
-                .features-email
-                label.h3.product-name Office 365 Email
+                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
+                h3 Office 365 Email
             .row
               .get-it-now
                 .container
