@@ -1,7 +1,7 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 54ee5b7afb574c186854ac0d
-name: GCE-37094
+id: 54ef971df778fc203043be39
+name: GCE-37164
 comments: Replace bio on About us page with new image and name
 ---
 {% include 'modules/doc-block.html' %}
@@ -140,8 +140,10 @@ John I. Park has served as a member of the board of directors of GoDaddy Inc. si
 Since May 2013, he has worked in various roles at Kohlberg Kravis Roberts &amp; Co. L.P. and is currently a Director. From June 2006 to April 2013, Mr. Park served in a similar role at Apax Partners LP, and from July 2004 to May 2006, as an investment banker at Morgan Stanley &amp; Co. Mr. Park currently serves on the board of directors of several private companies. 
 <phrase key="37094-JohnPark-big-bio-3" />
 Mr. Park holds an A.B. degree in Economics, cum laude, from Princeton University and an M.B.A. degree from Harvard Business School.
-<phrase key="NewsCenterAbout-3-AdamHerbertClammer" />
-Adam Herbert Clammer
+<phrase key="37164-JohnPark" />
+John Park
+<phrase key="37164-JohnPark-big-bio-1" />
+John Park joined KKR in 2013 and is a member of the Technology industry team. In addition to GoDaddy, he is currently a member of the board of directors of SunGard Data Systems, Mitchell International, and Internet Brands, and is also involved with KKR's investment in Ping Identity.Prior to joining KKR, Mr. Park was with Apax Partners, where he focused on investments in technology and participated in transactions involving Epicor Software Corporation, Activant Solutions, Paradigm Geophysical and Sophos. Previously, Mr. Park was a member of the mergers &amp; acquisitions practice at Morgan Stanley. Mr. Park holds an A.B., cum laude, in Economics from Princeton University and an M.B.A. from Harvard Business School.
 <phrase key="NewsCenterAbout-7-FmrHeadOfGlobalTechnologyGroupKKR" />
 Senior Advisor and<br/>Fmr Head of Global Technology Group, KKR
 <phrase key="NewsCenterAbout-3-RichardHerrickKimball" />
@@ -326,16 +328,6 @@ Prior to that, Antony was a management consultant at Bain &amp; Company where he
 He holds an M.B.A from the Harvard Business School and an A.B. in Economics from Harvard College. He currently serves on the board of IPC Systems, Inc. and GoDaddy, Inc.
 <phrase key="NewsCenterAbout-6-MemberHeadOfGlobalTechnologyGroupKKR" />
 Member &amp; Head of Global Technology Group<br />KKR
-<phrase key="NewsCenterAbout-17-AdamClammerIsTheFormerHeadOfTheGlobal" />
-Adam Clammer is the former head of the Global Technology Group at KKR, a GoDaddy investor.
-<phrase key="NewsCenterAbout-26-SinceJoiningKKRIn1995AdamHasBeenActively" />
-Since joining KKR in 1995, Adam has been actively involved with Aricent, Avago, Borden, GoDaddy, Intermedia, Jazz, MedCath, NuVox, NXP, RELTEC, SunGard, TASC and Zhone.
-<phrase key="NewsCenterAbout-22-PriorToJoiningKKRHeWorkedInTheMergers" />
-Prior to joining KKR, he worked in the Mergers &amp; Acquisitions department of Morgan Stanley &amp; Co. in Hong Kong and New York.
-<phrase key="NewsCenterAbout-54-AdamHoldsABSFromTheUniversityOf" />
-Adam holds a B.S. from the University of California and an M.B.A. with high distinction from Harvard Business School. He is currently on the boards of Aricent, Avago, GoDaddy, and TASC and is a member of the Operating Committee of SunGard. He is also a trustee of the San Francisco MoMA
-<phrase key="NewsCenterAbout-2-BoardDirector" />
-Board Director
 <phrase key="NewsCenterAbout-28-LeeWittlingerJoinedSilverLakeAndIsDirector" />
 Lee Wittlinger joined Silver Lake in 2007 and is a Director. Previously, Mr. Wittlinger worked as an investment banker in the Technology, Media, and Telecom Group at Goldman, Sachs &amp; Co., where he focused on mergers and acquisitions, and financing transactions in the technology industry.
 <phrase key="NewsCenterAbout-28-LeeWittlingerCurrentlyDirectorGdAndVantageFinanceAccnting" />
