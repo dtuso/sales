@@ -743,7 +743,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
             <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
+            <button data-ci="96307" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
           </div>
         </div>
       </div>
@@ -1602,8 +1602,8 @@ function getParameterByName(name) {
                     <p class="h3">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
-                    <btn id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                    <button data-ci="96310" class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</button>
+                    <button data-ci="96306" id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</button>
                   </div>
                   <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>

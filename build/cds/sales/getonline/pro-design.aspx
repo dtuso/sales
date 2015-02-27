@@ -736,7 +736,7 @@ function getParameterByName(name) {
               <input type="hidden" name="config" value="customsite">
               <input type="hidden" name="sdc" value="True">
               <input type="hidden" name="newxs" value="False">
-              <input type="hidden" name="cicode" value="58348">
+              <input type="hidden" name="cicode" value="96312">
               <input type="hidden" name="prog_id" value="GoDaddy">
               <button class="btn btn-purchase btn-lg">GET IT NOW</button>
               <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
@@ -911,7 +911,7 @@ function getParameterByName(name) {
                   <input type="hidden" name="config" value="customsite">
                   <input type="hidden" name="sdc" value="True">
                   <input type="hidden" name="newxs" value="False">
-                  <input type="hidden" name="cicode" value="56910">
+                  <input type="hidden" name="cicode" value="96311">
                   <input type="hidden" name="prog_id" value="GoDaddy">
                   <button class="btn btn-purchase btn-lg">GET IT NOW</button>
                   <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
