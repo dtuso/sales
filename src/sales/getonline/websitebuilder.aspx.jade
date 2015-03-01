@@ -3,30 +3,42 @@ extends _p4p.jade
 append vars
   - primary_pfid = 7524;
   - primary_promo = 24681357;
-  - productToDisplay.name = "Website Builder";
-  - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools. MXNXXX.XX/yr";
-  - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
-  - productToDisplay.productInfoText = "";
-  - productToDisplay.imgClass = "features-wsb";
-  - productToDisplay.productIconClass = "features-wsb";
-  - productToDisplay.price = "$1.00";
-  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
-  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
-  - productToDisplay.productVideoInfoText = "What is Website Builder?";
-  - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
 
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
     h3.text-center Website Builder
-    p Easily create a professional website with simple drag-&-drop tools.
+    p Easily create a professional website with simple drag &amp; drop tools.
 
-block productInfo
+block productSection
+  section#wordpress.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+          h2.text-center Website Builder
+          h3.text-center Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.
+          button.btn.btn-default-dark(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
 
-block productTemplates
-  include ../../sales/shared/wsb-templates.html
+          div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+            div.video-info.col-sm-4
+              div.video-marquee-info.text-center
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+      //    img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark Did you know...
+          p Customers are more likely to contact you if you have a website for your local business.
+  include ../shared/wsb-templates.html
 
-block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
-  h3.text-center Website Builder
-
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
+    h3 Website Builder

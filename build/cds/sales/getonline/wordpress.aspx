@@ -1466,28 +1466,29 @@ function getParameterByName(name) {
     </section>
     <hr>
     <section id="bottomGetItNow">
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
-          <h2 class="text-center">Ready to Get Online?</h2>
-          <h3 id="got-domain-not-selected" class="text-center">First select your perfect domain</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
+          <h2>Ready to Get Online?</h2>
+          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
         </div>
         <div class="row">
           <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
-            <h3 class="text-center">Domain Name</h3>
+            <h3>Domain Name</h3>
           </div>
           <div class="plus">+</div>
           <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
-            <h3 class="text-center">Managed Wordpress</h3>
+            <h3>Managed Wordpress</h3>
           </div>
           <div class="plus">+</div>
           <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
-            <h3 class="text-center">Office 365 Email</h3>
+            <h3>Office 365 Email</h3>
           </div>
         </div>
         <div class="row">
-          <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32759|464069" period="monthly" promocode="511092015"></current>]@T]/month for the first year*</p>
-          <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly" promocode="511092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly"></current>]@T]/year after the first year</small>
+          <h3>[@T[multipleproductprice:<current productidlist="101|32759|464069" period="monthly" promocode="511092015"></current>]@T]/month for the first year*</h3>
+          <button class="btn btn-primary btn-lg">Search Again</button>
+          <button class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly" promocode="511092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1496,7 +1497,7 @@ function getParameterByName(name) {
         <div class="row">
           <h2 class="text-center">Ready to get online?</h2>
           <h3 id="got-domain-not-selected" class="text-center">First select your perfect domain</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
+          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
           <div class="container bottom">
             <div class="row">
               <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
@@ -1517,8 +1518,8 @@ function getParameterByName(name) {
                     <p class="h3">[@T[multipleproductprice:<current productidlist="101|32759|464069" period="monthly" promocode="511092015"></current>]@T]/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
-                    <btn id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                    <div class="btn btn-primary btn-lg">Search Again</div>
+                    <div id="get-it-btn2" class="btn btn-purchase btn-lg">Get it now</div>
                   </div>
                   <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly" promocode="511092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly"></current>]@T]/year after the first year</small></div>
                 </div>

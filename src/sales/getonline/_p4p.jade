@@ -49,6 +49,7 @@ append pageStyles
     mark { line-height: 1.1em; word-break: break-all; }
     mark::after { height: 1.21em; }
     h3 { text-transform: none; }
+    small { display: block; }
     
     #getItNow { padding-bottom: 0; padding-top: 0;}
     #getItNow .container { position: relative; }
@@ -62,7 +63,7 @@ append pageStyles
     #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
     #getItNow .products img { max-height: 110px; }
     .cta { margin-top: 20px;}
-    .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+    .cta small { padding-top: 10px; padding-bottom:5px;}
 
     @media (min-width: 768px) {
       #getItNow .bubble {
@@ -125,7 +126,7 @@ append pageStyles
       background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
     }
 
-    #O365-email .hero-guy {
+    .hero-guy.left {
       -moz-transform: scaleX(-1);
       -o-transform: scaleX(-1);
       -webkit-transform: scaleX(-1);
@@ -239,7 +240,7 @@ block content
             mark Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
-            img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
 
   section#why-us
     .container
@@ -262,64 +263,30 @@ block content
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png','Support Icon')
             h3 12 million people trust us
             p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
- 
-  hr
-
 
   block bottomGetItNow
     section#bottomGetItNow
-      .container
+      .container.text-center
         .row
-          h2.text-center Ready to Get Online?
-          h3.text-center#got-domain-not-selected First select your perfect domain
-          h3.text-center#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+          h2 Ready to Get Online?
+          h3#got-domain-not-selected First select your perfect domain
+          h3#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
         .row
           .column.domain
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
-            h3.text-center Domain Name
+            h3 Domain Name
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
-            h3.text-center Office 365 Email
+            h3 Office 365 Email
         .row
-          p.text-center Get the bundle for [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-          button.btn.btn-purchase.btn-lg.center-block Get It Now
-          small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
-
-  section#got
-    .container
-      .row
-        h2.text-center Ready to get online?
-        block checkPro
-          h3#got-domain-not-selected.text-center First select your perfect domain
-          h3#got-domain-selected.text-center(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
-
-        block checkPro-bottom
-          .container.bottom
-            .row
-              .col-sm-4.text-center
-                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-                h3 Domain Name
-              .col-sm-4.text-center
-                block gotProduct
-                  //div(class="#{productToDisplay.imgClass}")
-                  //label.h3.product-name #{productToDisplay.name}
-              .col-sm-4.text-center
-                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
-                h3 Office 365 Email
-            .row
-              .get-it-now
-                .container
-                  .row.text-center
-                    p.h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-                  .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                    btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
-                    btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
-                  .row.text-center(style={'padding-top':'10px'})
-                    small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+          h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+          button.btn.btn-primary.btn-lg Search Again
+          button.btn.btn-purchase.btn-lg Get It Now
+          small *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
 
 prepend endOfPageScripts
   script.
