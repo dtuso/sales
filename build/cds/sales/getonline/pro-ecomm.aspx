@@ -1,4 +1,5 @@
 
+<!-- Need to dynamically build tld list.-->
 <!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -175,7 +176,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-entry-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -191,42 +192,37 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
-  
-  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#spin-results').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
   // wireupCheckoutBtns();
 
   // displayMoreResultsLinks();
+  
+  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
 
-  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
-  $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
+  $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
+  $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-  $('#btn-search-again').on('click', goToDomainSearchWizard);
+  // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
+  $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
   $("[data-ci-workaround]").click(function(a){
     var $this=$(this);
     FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
     fbiLibCheckQueue();
   });
-
-  var passedBusinessName = getParameterByName('domain');
-  if(passedBusinessName != '') {
-    $(document).find('.business-name-display').text(passedBusinessName);
-    updateSearchedDomain('', passedBusinessName);
-    domainSearchFormSubmit('', passedBusinessName);
-  }
 });
 
 function updateSearchedDomain(e, domain) {
-  domainSearch.searchedForDomain = domain;
-  $('#domain-available-view').find('.search-form-input').val(domain);
-  $('#domain-not-available-view').find('.search-form-input').val(domain);
+  $(document).find('.searched-domain-name-display').text(domain);
+}
+
+function updateSelectedDomain(domain) {
+  domainSearch.selectedDomainName = domain.Fqdn;
+  $(document).find('.selected-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -289,7 +285,7 @@ function wireupModals() {
 
   // wire up see details links  
 
-  $('#domain-entry-view').on('click', '.see-details-disclaimer-link', function(){
+  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
   });
@@ -455,10 +451,8 @@ function validDomainSelected(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  domainSearch.selectedDomainName = domain.Fqdn;
-  // $('#selected-domain-name').text(domain.Fqdn);
-  $(document).find('.selected-domain-name-display').text(domain.Fqdn);
-  // $.each('.btn-purchase').data('domain', domain);
+  updateSelectedDomain(domain.Fqdn);
+
   $(document).find('.btn-purchase').data('domain', domain);
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
@@ -470,8 +464,13 @@ function validDomainSelected(e){
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
+function navigateToSearchAgain(e) { 
+  var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  animateWizard($thisSection, $('#domain-search-view'));
+}
+
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.selectedDomainName == undefined) {
     goToDomainSearchWizard();
   }
   else {
@@ -483,6 +482,11 @@ function goToDomainSearchWizard()
 {
   $('#domainSearchWizardSection').show();
   window.location.href = '#domainSearchWizardSection';
+}
+
+function goToShowProducts()
+{
+  window.location.href = '#got';
 }
 
 function goToDppCheckoutPage(e) {
@@ -535,6 +539,7 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
@@ -595,12 +600,6 @@ function updateDomainCountText($view, numberShowing) {
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
   $spinCounts.html(templateHtml);
-}
-
-function navigateToSearchAgain(e) { 
-  // var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
-  // animateWizard($thisSection, $('#domain-entry-view'));
-  $('#domainSearchWizard').show();
 }
 
 function animateWizard($currentView, $animateToView) {  
@@ -723,9 +722,9 @@ function getParameterByName(name) {
             <h3 class="text-center">An ecommerce design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark></h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png" class="img-responsive center-block computer"></div>
-          <div class="col-xs-8 col-sm-6 products">
+        <div style="margin-top:35px" class="row">
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block computer"></div>
+          <div class="col-xs-8 col-sm-6 products text-center">
             <h3>Ecommerce Design Services</h3>
             <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -737,9 +736,9 @@ function getParameterByName(name) {
               <input type="hidden" name="config" value="customsite">
               <input type="hidden" name="sdc" value="True">
               <input type="hidden" name="newxs" value="False">
-              <input type="hidden" name="cicode" value="58348">
+              <input type="hidden" name="cicode" value="96315">
               <input type="hidden" name="prog_id" value="GoDaddy">
-              <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
+              <button class="btn btn-purchase btn-lg">GET IT NOW</button>
               <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
             </form>
           </div>
@@ -749,25 +748,21 @@ function getParameterByName(name) {
     <section id="pro-specific">
       <div class="container">
         <div class="row col-xs-12 text-center titles">
-          <h3>Let us build a web store that will </h3>
-          <h3>help you build your business</h3>
-          <h4>Complete the online interview and our Web designers can create an eye-catching online store.</h4>
+          <h3>We'll build a website that will help you build your business</h3>
+          <h4>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h4>
         </div>
-        <div class="row">
-          <div class="col-xs-4 first">
-            <div class="pro-expand"></div>
+        <div style="margin-top:35px" class="row">
+          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" style="height:131px;padding-bottom:15px" class="img-responsive">
             <h4 class="uppercase"><span class="steps">Step One</span></h4>
             <h3>Share your vision</h3>
             <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
           </div>
-          <div class="col-xs-4">
-            <div class="pro-share"></div>
+          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" style="height:131px;padding-bottom:15px" class="img-responsive">
             <h4 class="uppercase"><span class="steps">Step Two</span></h4>
             <h3>We go to work</h3>
             <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
           </div>
-          <div class="col-xs-4">
-            <div class="pro-work"></div>
+          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" style="height:131px;padding-bottom:15px" class="img-responsive">
             <h4 class="uppercase"><span class="steps">Step Three</span></h4>
             <h3>Enhance & Expand</h3>
             <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
@@ -778,7 +773,7 @@ function getParameterByName(name) {
             <div class="col-sm-9 speach-bubble-left-white">
               <div class="speach-bubble-left-div">
                 <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
-                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
+                <h5 style="margin-top:10px;text-transform:none">We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</h5>
               </div>
             </div>
             <div class="col-sm-3">
@@ -818,59 +813,27 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <hr>
     <section id="bottomGetItNow">
-      <div class="container">
+      <div class="container text-center">
         <div class="row">
-          <h2 class="text-center">Ready to Get Online?</h2>
-          <h3 id="got-domain-not-selected" class="text-center">First select your perfect domain</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="text-center">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
+          <h2>Ready to Get Online?</h2>
+          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
         </div>
         <div class="row">
           <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
-            <h3 class="text-center">Domain Name</h3>
+            <h3>Domain Name</h3>
           </div>
           <div class="plus">+</div>
           <div class="plus">+</div>
           <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
-            <h3 class="text-center">Office 365 Email</h3>
+            <h3>Office 365 Email</h3>
           </div>
         </div>
-        <div class="row text-center">
-          <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
-          <button class="btn btn-primary btn-lg">Search Again</button>
-          <button class="btn btn-purchase btn-lg">Search Again</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
-        </div>
-      </div>
-    </section>
-    <section id="got">
-      <div class="container">
         <div class="row">
-          <h2 class="text-center">Ready to get online?</h2>
-          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have an eccomerce design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
-          <div class="pro-wrapper">
-            <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProComputer.png" class="img-responsive center-block computer"></div>
-            <div class="col-xs-6">
-              <h3 class="product-name">Ecommerce Design Services</h3>
-              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
-              <div class="col-xs-12 text-center">
-                <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
-                  <input type="hidden" name="product" value="1023|1|1">
-                  <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
-                  <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
-                  <input type="hidden" name="itc" value="slp_webdesign2">
-                  <input type="hidden" name="nocos" value="False">
-                  <input type="hidden" name="config" value="customsite">
-                  <input type="hidden" name="sdc" value="True">
-                  <input type="hidden" name="newxs" value="False">
-                  <input type="hidden" name="cicode" value="58348">
-                  <input type="hidden" name="prog_id" value="GoDaddy">
-                  <button id="get-it-btn2" class="btn btn-purchase btn-lg">GET IT NOW</button>
-                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
-                </form>
-              </div>
-            </div>
-          </div>
+          <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
+          <button data-ci="" class="btn btn-primary btn-lg">Search Again</button>
+          <button data-ci="" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -910,6 +873,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -1086,29 +1050,37 @@ ul li.no-check {
         .spin-results .spin-results-message, 
         .spin-results .spin-result, 
         .spin-template-wrap .spin-template {display:none;}
-        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #available-domain .spin-results-message,
         .spin-results .spin-results-message {margin-top:15px;}
         
+        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         
-        #domain-available-view .available-domain-name-row {margin: 5px 0 10px;}
-        #domain-available-view h2.available-domain-name-text {margin: 0;}
+        #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-available-view h2.searched-domain-name-display {margin: 0;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-not-available-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-        #domain-not-available-view .pro-plans {margin-top: 0px; }
-        
-        #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-        #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-        #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-        #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-        #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-view .clickable-show-more {cursor: pointer;}
         #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+        #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+        
+        #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
+        #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
+        #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        
+        #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
+        
+        //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+        //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+        //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+        //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
+        //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
         
         //- #available-domain .spin-results-message,
         //- .spin-results .spin-results-message, 
@@ -1122,7 +1094,7 @@ ul li.no-check {
         //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         //- #spin-results .domain-tile {margin-top: 0px;}
         
-        #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px;}
+        #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
         
         // Turn off search input message display
         .search-message {display: none; text-transform: none; }
@@ -1130,8 +1102,8 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-selected-view .available-domain-name-row {margin: 20px 0 20px;}
-        #domain-selected-view h2.available-domain-name-text {margin: 0;}
+        #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
+        #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
@@ -1139,6 +1111,7 @@ ul li.no-check {
         mark { line-height: 1.1em; word-break: break-all; }
         mark::after { height: 1.21em; }
         h3 { text-transform: none; }
+        small { display: block; }
         
         #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
@@ -1152,7 +1125,7 @@ ul li.no-check {
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
         #getItNow .products img { max-height: 110px; }
         .cta { margin-top: 20px;}
-        .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        .cta small { padding-top: 10px; padding-bottom:5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -1215,7 +1188,7 @@ ul li.no-check {
           background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
         }
         
-        #O365-email .hero-guy {
+        .hero-guy.left {
           -moz-transform: scaleX(-1);
           -o-transform: scaleX(-1);
           -webkit-transform: scaleX(-1);

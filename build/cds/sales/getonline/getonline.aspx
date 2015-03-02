@@ -178,6 +178,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -286,7 +287,7 @@ ul li.no-check {
             if(interest === "existing_business")
               $("#questions form input[name='ci']").val("96277");
             $("select#resources-select option[value='hire_someone']").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-design.aspx"></relative>]@T]");
           }
         }
       });

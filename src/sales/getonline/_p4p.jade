@@ -28,6 +28,11 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "";
+  - productToDisplay.topButtonCI = "";
+  - productToDisplay.bottomButtonCI = "";
+  - productToDisplay.bottomSearchCI = "";
+  - productToDisplay.viewTemplatesCI = "";
+  - productToDisplay.playButtonCI = "";
 
   - primary_pfid = "";
   - primary_promo = "";
@@ -218,7 +223,7 @@ block content
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta
             p.text-center Get the bundle for [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-            button.btn.btn-purchase.btn-lg.center-block Get It Now
+            button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
             small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
 
   block domainOrPro
@@ -284,8 +289,8 @@ block content
             h3 Office 365 Email
         .row
           h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-          button.btn.btn-primary.btn-lg Search Again
-          button.btn.btn-purchase.btn-lg Get It Now
+          button(data-ci="#{productToDisplay.bottomSearchCI}").btn.btn-primary.btn-lg Search Again
+          button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
           small *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
 
 prepend endOfPageScripts

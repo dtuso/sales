@@ -722,9 +722,9 @@ function getParameterByName(name) {
             <h3 class="text-center">A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark></h3>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png"></div>
-          <div class="col-xs-8 col-sm-6 products">
+        <div style="margin-top:35px" class="row">
+          <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block computer"></div>
+          <div class="col-xs-8 col-sm-6 products text-center">
             <h3>Website Design Services</h3>
             <p>Our Professional Web Services team will work with you to create a site that’s perfect for your business.</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -736,7 +736,7 @@ function getParameterByName(name) {
               <input type="hidden" name="config" value="customsite">
               <input type="hidden" name="sdc" value="True">
               <input type="hidden" name="newxs" value="False">
-              <input type="hidden" name="cicode" value="58348">
+              <input type="hidden" name="cicode" value="96312">
               <input type="hidden" name="prog_id" value="GoDaddy">
               <button class="btn btn-purchase btn-lg">GET IT NOW</button>
               <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
@@ -747,44 +747,9 @@ function getParameterByName(name) {
     </section>
     <section id="pro-specific" class="bg-primary-o product-section">
       <div class="container">
-<<<<<<< HEAD
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
             <h2>We'll Build a Website That Will Help You Build Your Business</h2>
-=======
-        <div class="row col-xs-12 text-center titles">
-          <h3>We'll build a website that will help you build your business</h3>
-          <h4>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h4>
-        </div>
-        <div style="margin-top:25px" class="row">
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step One</span></h4>
-            <h3>Share your vision</h3>
-            <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
-          </div>
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step Two</span></h4>
-            <h3>We go to work</h3>
-            <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
-          </div>
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step Three</span></h4>
-            <h3>Enhance & Expand</h3>
-            <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-sm-9 speach-bubble-left-white">
-              <div class="speach-bubble-left-div">
-                <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
-                <h5 style="margin-top:10px;text-transform:none">We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</h5>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="half-hero-left"></div>
-            </div>
->>>>>>> kflandell/p4p
           </div>
         </div>
         <div class="row">
@@ -857,7 +822,6 @@ function getParameterByName(name) {
     <section id="bottomGetItNow">
       <div class="container text-center">
         <div class="row">
-<<<<<<< HEAD
           <h2>Ready to Get Online?</h2>
           <h3 id="got-domain-not-selected">First select your perfect domain</h3>
           <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
@@ -870,40 +834,12 @@ function getParameterByName(name) {
           <div class="plus">+</div>
           <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
             <h3>Office 365 Email</h3>
-=======
-          <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to get online?</h2>
-            <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
-          </div>
-          <div class="pro-wrapper">
-            <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
-            <div class="col-xs-6">
-              <h3 class="product-name">Professional Design Services</h3>
-              <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
-              <div class="col-xs-12 text-center">
-                <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
-                  <input type="hidden" name="product" value="6520|1|1">
-                  <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
-                  <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
-                  <input type="hidden" name="itc" value="slp_webdesign2">
-                  <input type="hidden" name="nocos" value="False">
-                  <input type="hidden" name="config" value="customsite">
-                  <input type="hidden" name="sdc" value="True">
-                  <input type="hidden" name="newxs" value="False">
-                  <input type="hidden" name="cicode" value="56910">
-                  <input type="hidden" name="prog_id" value="GoDaddy">
-                  <button class="btn btn-purchase btn-lg">GET IT NOW</button>
-                  <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
-                </form>
-              </div>
-            </div>
->>>>>>> kflandell/p4p
           </div>
         </div>
         <div class="row">
           <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
-          <button class="btn btn-primary btn-lg">Search Again</button>
-          <button class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
+          <button data-ci="" class="btn btn-primary btn-lg">Search Again</button>
+          <button data-ci="" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1358,10 +1294,7 @@ ul li.no-check {
              
          }
       };
-<<<<<<< HEAD
       
-=======
->>>>>>> kflandell/p4p
       // Page Global script -- changes will effect all campaigns 
       // get url parameter by parameter name
       function getParameterByName(name) {
@@ -1381,6 +1314,7 @@ ul li.no-check {
         domainSearch.selectedDomain = domain;
         $(document).find('.selected-domain-name-display').text(domain);
       }
+      
     </script>
     <script>
       $(document).ready(function(){

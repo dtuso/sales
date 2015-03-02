@@ -1,4 +1,5 @@
 
+<!-- Need to dynamically build tld list.-->
 <!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -175,7 +176,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-entry-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -191,42 +192,37 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
-  
-  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#spin-results').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
   // wireupCheckoutBtns();
 
   // displayMoreResultsLinks();
+  
+  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
 
-  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
-  $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
+  $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
+  $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-  $('#btn-search-again').on('click', goToDomainSearchWizard);
+  // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
+  $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
   $("[data-ci-workaround]").click(function(a){
     var $this=$(this);
     FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
     fbiLibCheckQueue();
   });
-
-  var passedBusinessName = getParameterByName('domain');
-  if(passedBusinessName != '') {
-    $(document).find('.business-name-display').text(passedBusinessName);
-    updateSearchedDomain('', passedBusinessName);
-    domainSearchFormSubmit('', passedBusinessName);
-  }
 });
 
 function updateSearchedDomain(e, domain) {
-  domainSearch.searchedForDomain = domain;
-  $('#domain-available-view').find('.search-form-input').val(domain);
-  $('#domain-not-available-view').find('.search-form-input').val(domain);
+  $(document).find('.searched-domain-name-display').text(domain);
+}
+
+function updateSelectedDomain(domain) {
+  domainSearch.selectedDomainName = domain.Fqdn;
+  $(document).find('.selected-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -289,7 +285,7 @@ function wireupModals() {
 
   // wire up see details links  
 
-  $('#domain-entry-view').on('click', '.see-details-disclaimer-link', function(){
+  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
   });
@@ -455,10 +451,8 @@ function validDomainSelected(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  domainSearch.selectedDomainName = domain.Fqdn;
-  // $('#selected-domain-name').text(domain.Fqdn);
-  $(document).find('.selected-domain-name-display').text(domain.Fqdn);
-  // $.each('.btn-purchase').data('domain', domain);
+  updateSelectedDomain(domain.Fqdn);
+
   $(document).find('.btn-purchase').data('domain', domain);
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
@@ -470,8 +464,13 @@ function validDomainSelected(e){
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
+function navigateToSearchAgain(e) { 
+  var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  animateWizard($thisSection, $('#domain-search-view'));
+}
+
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.selectedDomainName == undefined) {
     goToDomainSearchWizard();
   }
   else {
@@ -483,6 +482,11 @@ function goToDomainSearchWizard()
 {
   $('#domainSearchWizardSection').show();
   window.location.href = '#domainSearchWizardSection';
+}
+
+function goToShowProducts()
+{
+  window.location.href = '#got';
 }
 
 function goToDppCheckoutPage(e) {
@@ -535,6 +539,7 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
@@ -595,12 +600,6 @@ function updateDomainCountText($view, numberShowing) {
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
   $spinCounts.html(templateHtml);
-}
-
-function navigateToSearchAgain(e) { 
-  // var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
-  // animateWizard($thisSection, $('#domain-entry-view'));
-  $('#domainSearchWizard').show();
 }
 
 function animateWizard($currentView, $animateToView) {  
@@ -744,11 +743,12 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
             <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
+            <button data-ci="96307" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
           </div>
         </div>
       </div>
     </section>
+    <!-- Need to dynamically build tld list.-->
     <!-- P4P variables-->
     <!-- atlantis:webstash(type="css")-->
     <style>
@@ -893,29 +893,37 @@ function getParameterByName(name) {
       .spin-results .spin-results-message, 
       .spin-results .spin-result, 
       .spin-template-wrap .spin-template {display:none;}
-      #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
       #available-domain .spin-results-message,
       .spin-results .spin-results-message {margin-top:15px;}
       
+      #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
       #domain-available-view .select-and-continue{margin:10px 0;float:right;}
       #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
       
-      #domain-available-view .available-domain-name-row {margin: 5px 0 10px;}
-      #domain-available-view h2.available-domain-name-text {margin: 0;}
+      #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-available-view h2.searched-domain-name-display {margin: 0;}
       
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
-      #domain-not-available-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-      #domain-not-available-view .pro-plans {margin-top: 0px; }
-      
-      #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-      #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-      #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-      #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-      #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
       #domain-not-available-view .clickable-show-more {cursor: pointer;}
       #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+      #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+      
+      #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
+      #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
+      #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+      
+      #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
+      
+      //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+      //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+      //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+      //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+      //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+      //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
+      //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
       
       //- #available-domain .spin-results-message,
       //- .spin-results .spin-results-message, 
@@ -929,7 +937,7 @@ function getParameterByName(name) {
       //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
       //- #spin-results .domain-tile {margin-top: 0px;}
       
-      #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px;}
+      #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
       
       // Turn off search input message display
       .search-message {display: none; text-transform: none; }
@@ -937,8 +945,8 @@ function getParameterByName(name) {
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
-      #domain-selected-view .available-domain-name-row {margin: 20px 0 20px;}
-      #domain-selected-view h2.available-domain-name-text {margin: 0;}
+      #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
+      #domain-selected-view h2.searched-domain-name-display {margin: 0;}
       #domain-selected-view .reseach-container {padding-top: 10px;}
       
     </style>
@@ -1023,7 +1031,7 @@ function getParameterByName(name) {
         background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
       }
       
-      #O365-email .hero-guy {
+      .hero-guy.left {
         -moz-transform: scaleX(-1);
         -o-transform: scaleX(-1);
         -webkit-transform: scaleX(-1);
@@ -1108,7 +1116,7 @@ function getParameterByName(name) {
               </div>
             </div>
           </div>
-          <form id="domainAvailableViewForm">
+          <form id="domainSearchViewForm">
             <div class="row">
               <div class="col-md-12">
               </div>
@@ -1117,7 +1125,7 @@ function getParameterByName(name) {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1164,7 +1172,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result available-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1191,24 +1199,20 @@ function getParameterByName(name) {
           <div class="row">
             <div class="col-md-12">
               <div class="text-center">
-                <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
+                <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="h0 availability-header domain-not-available-heading-text">[@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]</h2>
-            </div>
-          </div>
-          <div class="row not-available-domain-name-row"> 
-            <div class="col-md-8 col-sm-12">
-              <h2 id="not-available-domain-name" class="not-available-domain-name-text domain-name-displayed word-break"></h2>
+          <div class="row searched-domain-name-row">
+            <div class="text-center">
+              <h2 class="domain-name-displayed word-break">Sorry, <mark class="searched-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
         </div>
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
+              <h5 style="margin-top:20px"><strong>Here are some alternative options alternatives:</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
               </h6>
@@ -1216,7 +1220,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result available-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1245,9 +1249,9 @@ function getParameterByName(name) {
               <h4 class="strong">Congratulations! You have selected the following domain name:</h4>
             </div>
           </div>
-          <div class="row available-domain-name-row">
+          <div class="row searched-domain-name-row">
             <div class="text-center">
-              <h2 class="available-domain-name-text domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
+              <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
@@ -1265,7 +1269,7 @@ function getParameterByName(name) {
         </h2>
         <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
       </div>
-      <div id="domainSearchFooter" class="container green">
+      <div id="domainSearchWizardFooter" class="container green">
         <div class="row">
           <div style="margin-top:30px">
             <div class="col-md-9 col-sm-9 speech-bubble-left-white">
@@ -1282,7 +1286,7 @@ function getParameterByName(name) {
       </div>
     </section>
     <script>
-      var domainAvailableViewForm = {
+      var domainSearchViewForm = {
          executeFnByName: function(name, context) {
           
           var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
@@ -1300,32 +1304,32 @@ function getParameterByName(name) {
         validateSubmit: function(e){
       
           e.preventDefault();
-          var domainName = domainAvailableViewForm.trimmedDomainName(false);
+          var domainName = domainSearchViewForm.trimmedDomainName(false);
           var functionSaveName = 'updateSearchedDomain';
           if(functionSaveName.length > 0) {
-            domainAvailableViewForm.executeFnByName(functionSaveName, window, e, domainName);
+            domainSearchViewForm.executeFnByName(functionSaveName, window, e, domainName);
           }
           if((domainName && domainName.length==0) || !domainName) return false;
       
           domainName = domainName.toLowerCase();
-          domainName = domainAvailableViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-          if(!domainAvailableViewForm.ensureValidTld(domainName)) {
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainSearchViewForm.ensureValidTld(domainName)) {
             return;
           }
           var functionName = 'domainSearchFormSubmit';
           if(functionName.length > 0)  {
-            domainAvailableViewForm.executeFnByName(functionName, window, e, domainName);
+            domainSearchViewForm.executeFnByName(functionName, window, e, domainName);
           }
       
         },
         trimmedDomainName: function(isKeyPress){
           
-          var $form = $("#domainAvailableViewForm"),
+          var $form = $("#domainSearchViewForm"),
             $textInput = $form.find('input[name="domainToCheck"]'),
             domainName = $textInput.val();
           if((domainName && domainName.length==0) || !domainName) return null;
       
-          domainName = domainAvailableViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          domainName = domainSearchViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
           return domainName;
       
         },
@@ -1347,10 +1351,10 @@ function getParameterByName(name) {
         },
         ensureValidTld: function() {
       
-          var $form = $("#domainAvailableViewForm"),
+          var $form = $("#domainSearchViewForm"),
               $textInput = $form.find('input[name="domainToCheck"]'),
               domainName = $textInput.val(); 
-              validTld = domainAvailableViewForm.hasTldValid(domainName);
+              validTld = domainSearchViewForm.hasTldValid(domainName);
           $form.find('.search-message').hide();
           if(validTld) {
             $form.find('.type-your-business-name').show();
@@ -1367,7 +1371,7 @@ function getParameterByName(name) {
           if(!domain || domain.length == 0 || idx == -1) return true;
       
           var domainsTld = domain.substring(idx+1).toLowerCase();
-          $.each(com,co,org,net, function(idx, tld) {
+          $.each(['com','co','org','net'], function(idx, tld) {
             if(tld.toLowerCase() === domainsTld) {
               isValid = true;
             }
@@ -1378,24 +1382,24 @@ function getParameterByName(name) {
         formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
       
           if(domain.indexOf('.') > 0) return domain;
-          return domain + '.' + com;
+          return domain + '.' + 'com';
       
         }
       };
       
       $(document).ready(function(){
       
-        $("#domainAvailableViewForm").on('click', 'button.offer-search-btn', function(){
-          $("#domainAvailableViewForm").submit();
+        $("#domainSearchViewForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainSearchViewForm").submit();
         });
       
-        $("#domainAvailableViewForm").on('submit', domainAvailableViewForm.validateSubmit);
-        $("#domainAvailableViewForm").on('keyup', function(e){ 
+        $("#domainSearchViewForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainSearchViewForm").on('keyup', function(e){ 
           if(e.which == 13) return;
-          var domainName = domainAvailableViewForm.trimmedDomainName(true);
+          var domainName = domainSearchViewForm.trimmedDomainName(true);
           if(!domainName || domainName.length == 0) return;
-          domainName = domainAvailableViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-          domainAvailableViewForm.ensureValidTld(domainName);
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
         });
       
       });
@@ -1432,7 +1436,7 @@ function getParameterByName(name) {
             <mark>Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
           </div>
-          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
@@ -1465,7 +1469,6 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <hr>
     <section id="bottomGetItNow">
       <div class="container text-center">
         <div class="row">
@@ -1488,8 +1491,8 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <h3>[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</h3>
-          <button class="btn btn-primary btn-lg">Search Again</button>
-          <button class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
+          <button data-ci="96310" class="btn btn-primary btn-lg">Search Again</button>
+          <button data-ci="96306" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1529,6 +1532,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -1705,29 +1709,37 @@ ul li.no-check {
         .spin-results .spin-results-message, 
         .spin-results .spin-result, 
         .spin-template-wrap .spin-template {display:none;}
-        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #available-domain .spin-results-message,
         .spin-results .spin-results-message {margin-top:15px;}
         
+        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         
-        #domain-available-view .available-domain-name-row {margin: 5px 0 10px;}
-        #domain-available-view h2.available-domain-name-text {margin: 0;}
+        #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-available-view h2.searched-domain-name-display {margin: 0;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-not-available-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-        #domain-not-available-view .pro-plans {margin-top: 0px; }
-        
-        #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-        #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-        #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-        #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-        #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-view .clickable-show-more {cursor: pointer;}
         #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+        #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+        
+        #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
+        #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
+        #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        
+        #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
+        
+        //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+        //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+        //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+        //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
+        //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
         
         //- #available-domain .spin-results-message,
         //- .spin-results .spin-results-message, 
@@ -1741,7 +1753,7 @@ ul li.no-check {
         //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         //- #spin-results .domain-tile {margin-top: 0px;}
         
-        #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px;}
+        #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
         
         // Turn off search input message display
         .search-message {display: none; text-transform: none; }
@@ -1749,8 +1761,8 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-selected-view .available-domain-name-row {margin: 20px 0 20px;}
-        #domain-selected-view h2.available-domain-name-text {margin: 0;}
+        #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
+        #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
@@ -1835,7 +1847,7 @@ ul li.no-check {
           background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
         }
         
-        #O365-email .hero-guy {
+        .hero-guy.left {
           -moz-transform: scaleX(-1);
           -o-transform: scaleX(-1);
           -webkit-transform: scaleX(-1);
