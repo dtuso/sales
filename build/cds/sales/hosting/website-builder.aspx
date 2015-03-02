@@ -940,6 +940,7 @@
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
+          var defaultActive = "false";
           var scroll = $(this).scrollTop();
           var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -952,6 +953,9 @@
               $(this).blur();
               $(this).toggleClass("active",InNavZone);
             });
+            if(defaultActive){
+              $('.mid-page-nav a:first').addClass("active");
+            }
           }
       
           if(InNavZone){
