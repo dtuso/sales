@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/research/en
-id: 54da9d6ff778fc1bb4408d4c
-name: SEM-348
+id: 54ef9e13f778fc203043be41
+name: SEM-420
 ---
 {% include '../../modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -22,6 +22,10 @@ View Featured
 Get Mobile Ready for Carnival
 <phrase key="infographics-1-intro" />
 Smartphone usage in Brazil is on the rise, and when people hit the streets during Carnival, mobile usage is bound to go up even more. Is your website ready for all that mobile traffic?
+<phrase key="infographics-2-title" />
+Color Your Online Business with Success
+<phrase key="infographics-2-intro" />
+Holi brings about a celebratory mood...and celebratory spending. Learn how to color your online business with success during this festive time!
 <phrase key="coming-soon-image-text" />
 Coming Soon
 <phrase key="coming-soon-title" />
