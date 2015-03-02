@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/design/web-design/en
-id: false
+id: 54f4d41ff778fc0de4d09c23
 name: GCEMO-554
 ---
 {% include 'modules/doc-block.html' %}
@@ -272,5 +272,5 @@ Let the [@T[companyname:dotcom]@T] Professional Web Design team; create an eye-c
 View Designs
 <phrase key="vat-price" />
 Price does not include taxes, where applicable
-<phrase key="TabContentPlanPricingTabSubHeaderTextGCEMO554" />
-Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
+<phrase key="FAQ0FAQListItems60136890TextGCEMO554" />
+Want the website of your dreams, but struggle with <strong>web page design</strong>? Why not let the Professional Web Services Team create your website? They build your custom website, with <strong>Web design</strong> and Web hosting included at an incredible value.
