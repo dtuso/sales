@@ -8,6 +8,9 @@ append vars
   - productToDisplay.bottomSearchCI = "96296";
   - productToDisplay.viewTemplatesCI = "96299";
   - productToDisplay.playButtonCI = "96300";
+  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
+  - productToDisplay.productYouTubeId = "rMF9d8-3WBA";
+  - productToDisplay.productVideoInfoText = "What is Online Store?";
 
 block targetedProduct
   .column.website
@@ -20,11 +23,22 @@ block productSection
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png")
           h2.text-center Online Store
           h3.text-center Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.
-          img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
-          p.text-center Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it. 
+          //img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png")
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+            div.video-info.col-sm-4
+              div.video-marquee-info.text-center
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")

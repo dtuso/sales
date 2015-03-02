@@ -1407,12 +1407,28 @@ function getParameterByName(name) {
     <section id="online-store" class="product-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
+          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
             <h2 class="text-center">Online Store</h2>
-            <h3 class="text-center">Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.</h3><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png" class="img-responsive product-summary">
-            <p class="text-center">Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it. </p>
+            <h3 class="text-center">Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.</h3>
+            <!--img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png")-->
           </div>
         </div>
+        <section data-youtube-id="rMF9d8-3WBA" class="video-marquee-wrapper">
+          <div class="container">
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+              <div class="video-info col-sm-4">
+                <div class="video-marquee-info text-center">
+                  <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
+                  <h4 class="uppercase walsheim-bold">What is Online Store?</h4>
+                  <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <div class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
@@ -1469,7 +1485,7 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <section id="bottomGetItNow">
+    <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
           <h2>Ready to Get Online?</h2>

@@ -1410,22 +1410,25 @@ function getParameterByName(name) {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
             <h2 class="text-center">Website Builder</h2>
             <h3 class="text-center">Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.</h3>
-            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
-            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
+          </div>
+        </div>
+        <section data-youtube-id="-HtVJyxSQmw" class="video-marquee-wrapper">
+          <div class="container">
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
               <div class="col-sm-4"></div>
               <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
               <div class="video-info col-sm-4">
                 <div class="video-marquee-info text-center">
                   <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
-                  <h4 class="uppercase walsheim-bold"></h4>
+                  <h4 class="uppercase walsheim-bold">What is Website Builder?</h4>
                   <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!--    img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")-->
+        </section>
         <div class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
@@ -3041,7 +3044,7 @@ var PlanBox6UI = {
         </div>
       </div>
     </section>
-    <section id="bottomGetItNow">
+    <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
           <h2>Ready to Get Online?</h2>

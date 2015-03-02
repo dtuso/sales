@@ -813,7 +813,7 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <section id="bottomGetItNow">
+    <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
           <h2>Ready to Get Online?</h2>
