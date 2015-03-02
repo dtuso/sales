@@ -75,7 +75,7 @@
   margin-top: 20px;
 }
 #domain-wales.marquee .cta img {
-  margin: 10px 0 0 25px;
+  margin: 20px 0 0 25px;
 }
 #domain-wales.marquee .disclaimer {
   font-family: 'Walsheim-Regular', Arial, sans-serif;
