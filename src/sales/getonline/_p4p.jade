@@ -32,6 +32,11 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "";
+  - productToDisplay.topButtonCI = "";
+  - productToDisplay.bottomButtonCI = "";
+  - productToDisplay.bottomSearchCI = "";
+  - productToDisplay.viewTemplatesCI = "";
+  - productToDisplay.playButtonCI = "";
 
 
 append seo
@@ -62,8 +67,25 @@ append headScripts
             results = regex.exec(location.search);
         return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
       }
+
+      function tokenizePrices() {
+
+        var tokenizePrice = function(selector, price0, price1, price2) {
+          $(selector).each(function(idx, element) {
+            var $element = $(element);
+            var htmlTokenized = $element.html();
+            htmlTokenized = htmlTokenized.replace(/\{price_monthly\}/gi, price0);
+            htmlTokenized = htmlTokenized.replace(/\{price_annual\}/gi, price1);
+            htmlTokenized = htmlTokenized.replace(/\{renewal_annual\}/gi, price2);
+            $element.html(htmlTokenized);
+          });
+        };
+
+        tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
+      }
     script.  // Page
       $(document).ready(function(){
+        tokenizePrices();
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           $(document).find('.business-name-display').text(passedBusinessName);
@@ -173,6 +195,24 @@ append pageStyles
 
     /* Layout */
     .view-all{margin:20px auto;}
+    
+    #product h2 { margin-top: 20px; margin-bottom: 20px; }
+    #product h3 { text-transform: none; }
+    #product .how-it-works { margin: 20px auto; }
+
+    #product .bubble {
+      background-color: white;
+      background-position: center center;
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      overflow: visible;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 100px;
+      padding-right: 100px;
+      margin-left: 20%;
+    }
 
   // O365 section
   // atlantis:webstash(type="css")
@@ -191,13 +231,12 @@ append pageStyles
   style.  // got section
     .product-name{font-weight:800;padding-top:10px;}
 
-    .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
     #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
 
 block content
- 
+
   section#getItNow
     .container
       img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -205,7 +244,7 @@ block content
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
             h2.text-center Here you go...
-            h3.text-center A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
+            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
@@ -223,13 +262,15 @@ block content
               p Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. 
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta
-            p.text-center Get the bundle for {price_monthly}/month for the first year*
-            button.btn.btn-purchase.btn-lg.center-block Get It Now
-            small.text-center *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+            p.text-center.price-token Get the bundle for {price_monthly}/month for the first year*
+            button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
+            small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
   block domainOrPro
     include templates/_domain-search-wizard
   
+  block productSection
+
   section#product.white
     .container
       .row
@@ -245,7 +286,7 @@ block content
     block productViewTemplates
       .row
         div.text-center
-          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.view-all.btn-md(data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
     block productVideo
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
@@ -255,9 +296,9 @@ block content
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
             div.video-info.col-sm-4
               div.video-marquee-info.text-center
-                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button", data-ci='#{productToDisplay.playButtonCI}')
                 h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
-                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal', data-ci='#{productToDisplay.playButtonCI}') Watch Now
     block productInfo
 
     .container
@@ -329,34 +370,32 @@ block content
           h2.uppercase Ready to get online?
           block checkPro
             h3.header-detail-text.uppercase#got-domain-not-selected First select your perfect domain
-            h3.header-detail-text.uppercase#got-domain-selected You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+            h3.header-detail-text.uppercase.price-token#got-domain-selected You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{price_monthly}</mark>
         block checkPro-bottom
           .container.bottom
             .row
               .col-sm-4.text-center
-                .features-domain-name
-                label.h3.product-name Domain Name
+                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+                h3 Domain Name
               .col-sm-4.text-center
                 block gotProduct
                   //div(class="#{productToDisplay.imgClass}")
                   //label.h3.product-name #{productToDisplay.name}
               .col-sm-4.text-center
-                .features-email
-                label.h3.product-name Office 365 Email
+                img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
+                h3 Office 365 Email
             .row
               .get-it-now
                 .container
                   .row.text-center
-                    p.h3 {price_monthly}/month for the first year*
+                    p.h3.price-token {price_monthly}/month for the first year*
                   .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-                    btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
-                    btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
+                    button(data-ci="#{productToDisplay.bottomSearchCI}").btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
+                    button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p#get-it-btn2 Get it now
                   .row.text-center(style={'padding-top':'10px'})
-                    small.text-center *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+                    small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 prepend endOfPageScripts
-
-
   // atlantis:webstash(type="js")
   script.  // Product section
     // https://developers.google.com/youtube/player_parameters#IFrame_Player_API

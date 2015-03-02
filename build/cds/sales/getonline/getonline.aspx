@@ -90,7 +90,7 @@
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container text-center">
-        <h2>This doesn't have to be <span class="callout">confusing!</span></h2>
+        <h2>[@L[cds.sales/getonline:QuestionsLP-8-ThisDoesnTHaveToBeConfusing]@L]</h2>
         <div class="row">
           <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png" class="img-responsive center-block"></div>
         </div>
@@ -98,43 +98,44 @@
     </section>
     <section id="questions">
       <div class="container">
-        <h2 class="text-center">We can get your business online.</h2>
-        <p class="text-center">Tell us a little about yourself.  We will step you from A to Z, no problem.</p>
+        <h2 class="text-center">[@L[cds.sales/getonline:QuestionsLP-7-WeCanGetYourBusinessOnline]@L]</h2>
+        <p class="text-center">[@L[cds.sales/getonline:QuestionsLP-17-TellUsALittleAboutYourselfWeWill]@L]</p>
         <form method="GET" action="[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]">
+          <input type="hidden" name="ci" value="12345">
           <div class="row">
             <div class="col-sm-6">
               <fieldset class="step-1">
-                <legend>Step 1</legend>
-                <p>What's your business name? Don't have a name? An idea for your business is perfect!</p>
+                <legend>[@L[cds.sales/getonline:QuestionsLP-2-Step1]@L]</legend>
+                <p>[@L[cds.sales/getonline:QuestionsLP-18-WhatSYourBusinessNameDonTHave]@L]</p>
                 <div class="form-group">
-                  <label for="search-input" class="sr-only">What's your business name?</label>
-                  <input id="search-input" type="text" autocomplete="off" placeholder="Enter your business name or idea" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
+                  <label for="search-input" class="sr-only">[@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]</label>
+                  <input id="search-input" type="text" autocomplete="off" placeholder="[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
                 </div>
-                <p class="validation-message">Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG</p>
+                <p class="validation-message">[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
               </fieldset>
             </div>
             <div class="col-sm-6">
               <fieldset class="step-2">
-                <legend>Step 2</legend>
-                <p>We've given you some options of how to set up your business online.  Just fill in the blanks!</p>
+                <legend>[@L[cds.sales/getonline:QuestionsLP-2-Step2]@L]</legend>
+                <p>[@L[cds.sales/getonline:QuestionsLP-20-WeVeGivenYouSomeOptionsOfHow]@L]</p>
                 <div class="form-group">
-                  <label for="interest-select">I'm interested in</label>
+                  <label for="interest-select">[@L[cds.sales/getonline:QuestionsLP-4-IMInterestedIn]@L]</label>
                   <select id="interest-select" name="interest" class="form-control">
-                    <option value="existing_business">Getting my existing business online</option>
-                    <option value="new_business">Starting a new business online</option>
-                    <option value="selling_products">Selling products online</option>
-                    <option value="blog">Starting my own blog</option>
+                    <option value="existing_business">[@L[cds.sales/getonline:QuestionsLP-5-GettingMyExistingBusinessOnline]@L]</option>
+                    <option value="new_business">[@L[cds.sales/getonline:QuestionsLP-5-StartingANewBusinessOnline]@L]</option>
+                    <option value="selling_products">[@L[cds.sales/getonline:QuestionsLP-3-SellingProductsOnline]@L]</option>
+                    <option value="blog">[@L[cds.sales/getonline:QuestionsLP-4-StartingMyOwnBlog]@L]</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="resources-select">I have the resources and time to</label>
+                  <label for="resources-select">[@L[cds.sales/getonline:QuestionsLP-7-IHaveTheResourcesAndTimeTo]@L]</label>
                   <select id="resources-select" name="resource" class="form-control">
-                    <option value="build_myself">Build it myself (if it's easy)</option>
-                    <option value="know_someone">I have a guy who knows how to code (he has skills)</option>
-                    <option value="hire_someone">Hire someone to do it all for me (no time)</option>
+                    <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
+                    <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>
+                    <option value="hire_someone">[@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]</option>
                   </select>
                 </div>
-                <button type="submit" class="btn btn-purchase btn-lg">Get me up and running!</button>
+                <button type="submit" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]</button>
               </fieldset>
             </div>
           </div>
@@ -243,6 +244,7 @@ ul li.no-check {
         // routing logic embedded here
         if (interest === "blog") {
           // anytime the interest is in blogging, suggest the wordpress product
+          $("#questions form input[name='ci']").val("96292");
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
           $("select#resources-select option[value='hire_someone']").hide();
           $("select#resources-select option[value='build_myself']").attr('selected','true');
@@ -251,24 +253,40 @@ ul li.no-check {
         } else if (resources === "know_someone") {
           // anytime the user "knows someone", suggest web hosting
           $("select#resources-select option[value='hire_someone']").show();
+          if(interest === "selling_products")
+            $("#questions form input[name='ci']").val("96279");
+          if(interest === "new_business")
+            $("#questions form input[name='ci']").val("96273");
+          if(interest === "exisitng_business")
+            $("#questions form input[name='ci']").val("96276");
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
         } else if (resources === "build_myself") {
           // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
           if (interest === "selling_products") {
+            $("#questions form input[name='ci']").val("96278");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
           } else {
+            if(interest === "existing_business")
+              $("#questions form input[name='ci']").val("96275");
+            if(interest === "new_business")
+              $("#questions form input[name='ci']").val("96272");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
           }
         } else if (resources === "hire_someone") {
           // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
           if (interest === "selling_products") {
+            $("#questions form input[name='ci']").val("96280");
             $("select#resources-select option[value='hire_someone']").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
           } else {
+            if(interest === "new_business")
+              $("#questions form input[name='ci']").val("96274");
+            if(interest === "existing_business")
+              $("#questions form input[name='ci']").val("96277");
             $("select#resources-select option[value='hire_someone']").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-basic.aspx"></relative>]@T]");
+            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-design.aspx"></relative>]@T]");
           }
         }
       });
@@ -280,10 +298,14 @@ ul li.no-check {
         var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
       
         // if user specified a TLD, make sure it's valid for this promotion
+        var business_idea = $('#search-input').val().toLowerCase();
         var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
         if (tldSpecified && validTlds.indexOf(tldSpecified)) {
           $(".validation-message").show();
+          e.preventDefault();
+        }
+        else if(!business_idea){
           e.preventDefault();
         }
       });
@@ -292,7 +314,7 @@ ul li.no-check {
         // set highlighted marquee text if passed by referring page
         var p4p = window.location.search.split('p4p=');
         if (p4p.length > 1) {
-          $("#marquee span").text(p4p[1].split("&")[0]);
+          $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
         }
       });
       

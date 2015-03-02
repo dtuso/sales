@@ -18,6 +18,9 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.";
   - productToDisplay.productDidYouKnowText = "As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?";
+  - productToDisplay.topButtonCI = "96305";
+  - productToDisplay.bottomButtonCI = "96304";
+  - productToDisplay.bottomSearchCI = "96301";
 
 block targetedProduct
   .column.website
@@ -28,6 +31,23 @@ block targetedProduct
 block productViewTemplates
 
 block productVideo
+
+block productSection
+  section#product
+    .container
+      .row
+        .col-xs-12
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+          h2.text-center WordPress
+          h3.text-center We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.
+          img.img-responsive.how-it-works(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
+          p.text-center WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.
+      .row
+        .col-xs-3
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+        .col-xs-6.bubble
+          mark Did you know...
+          p As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?
 
 block productInfo
   style.
@@ -49,8 +69,6 @@ block productInfo
         h5.uppercase.text-center(style={'margin-top':'10px'}) <mark>domainName.org</mark>
     .container
       .col-sm-12.product-info-text #{productToDisplay.productInfoText}
-
-block productTemplates
 
 block gotProduct
   img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png")

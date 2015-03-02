@@ -1,4 +1,5 @@
 
+<!-- Need to dynamically build tld list.-->
 <!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -79,6 +80,53 @@
       
     </script>
     <atlantis:webstash type="js">
+      <script>
+        var offerInfo = {
+          dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/web-hosting.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+          packageId: "getonline_web_hosting",
+          itcCode: "slp_getonline_store",
+          pricing: {
+            promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='monthly' promocode='75315678' />]@T]",
+            promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='yearly' promocode='75315678' />]@T]",
+            renewal_annual: "[@T[multipleproductprice:<list productidlist='464069|101|32051' period='yearly'></list>]@T]"
+          }
+        };
+        // Page Global script -- changes will effect all campaigns 
+        // get url parameter by parameter name
+        function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        
+        function tokenizePrices() {
+        
+          var tokenizePrice = function(selector, price0, price1, price2) {
+            $(selector).each(function(idx, element) {
+              var $element = $(element);
+              var htmlTokenized = $element.html();
+              htmlTokenized = htmlTokenized.replace(/\{price_monthly\}/gi, price0);
+              htmlTokenized = htmlTokenized.replace(/\{price_annual\}/gi, price1);
+              htmlTokenized = htmlTokenized.replace(/\{renewal_annual\}/gi, price2);
+              $element.html(htmlTokenized);
+            });
+          };
+        
+          tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
+        }
+      </script>
+      <script>
+        $(document).ready(function(){
+          tokenizePrices();
+          var passedBusinessName = getParameterByName('domain');
+          if(passedBusinessName != '') {
+            $(document).find('.business-name-display').text(passedBusinessName);
+            updateSearchedDomain('', passedBusinessName);
+            domainSearchFormSubmit('', passedBusinessName);
+         }
+        });
+      </script>
       <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
@@ -105,12 +153,6 @@ var domainSearch = {
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  offersCodes: {
-    packageId_wsb: 'gybo_1email_1yr',
-    packageId_ols: 'gybo_1email_1yr_ols',
-    itc_wsb: 'slp_GYBO1',
-    itc_ols: 'slp_GYBO2',
-  },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
     promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
@@ -175,12 +217,12 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-entry-view .invalid-TLD-entered");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals(); 
-  tokenizeTheDataTokenizeAttribute();
+  // tokenizeDisclaimerModals(); 
+  // tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
 
@@ -191,42 +233,37 @@ $(document).ready(function() {
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
-  
-  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
-  $('#spin-results').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
 
   // wireupCheckoutBtns();
 
   // displayMoreResultsLinks();
+  
+  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
 
-  $('#show-more-section').on('click', '.clickable-show-more', displayMoreResultsArea);
-  $('#domain-available-view').on('click', '.view-all-button', displayMoreResultsArea);
+  $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
+  $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-entry-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-  $('#btn-search-again').on('click', goToDomainSearchWizard);
+  // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
+  $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
   $("[data-ci-workaround]").click(function(a){
     var $this=$(this);
     FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
     fbiLibCheckQueue();
   });
-
-  var passedBusinessName = getParameterByName('domain');
-  if(passedBusinessName != '') {
-    $(document).find('.business-name-display').text(passedBusinessName);
-    updateSearchedDomain('', passedBusinessName);
-    domainSearchFormSubmit('', passedBusinessName);
-  }
 });
 
 function updateSearchedDomain(e, domain) {
-  domainSearch.searchedForDomain = domain;
-  $('#domain-available-view').find('.search-form-input').val(domain);
-  $('#domain-not-available-view').find('.search-form-input').val(domain);
+  $(document).find('.searched-domain-name-display').text(domain);
+}
+
+function updateSelectedDomain(domain) {
+  domainSearch.selectedDomainName = domain;
+  $(document).find('.selected-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -289,7 +326,7 @@ function wireupModals() {
 
   // wire up see details links  
 
-  $('#domain-entry-view').on('click', '.see-details-disclaimer-link', function(){
+  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
   });
@@ -324,14 +361,13 @@ function domainSearchFormSubmit(e, domain) {
     pageStartupSearch = false;
   }
 
-  var newItc = domainSearch.offersCodes.itc_wsb;
   ##if(isManager())
-    newItc = 'mgr_' + newItc;
+    offerInfo.itcCode = 'mgr_' + offerInfo.itcCode;
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -455,10 +491,8 @@ function validDomainSelected(e){
   var $this = $(e.target),
     domain = $this.data('domain');
 
-  domainSearch.selectedDomainName = domain.Fqdn;
-  // $('#selected-domain-name').text(domain.Fqdn);
-  $(document).find('.selected-domain-name-display').text(domain.Fqdn);
-  // $.each('.btn-purchase').data('domain', domain);
+  updateSelectedDomain(domain.Fqdn);
+
   $(document).find('.btn-purchase').data('domain', domain);
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
@@ -470,8 +504,13 @@ function validDomainSelected(e){
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
+function navigateToSearchAgain(e) { 
+  var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  animateWizard($thisSection, $('#domain-search-view'));
+}
+
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.selectedDomainName == undefined) {
     goToDomainSearchWizard();
   }
   else {
@@ -485,17 +524,21 @@ function goToDomainSearchWizard()
   window.location.href = '#domainSearchWizardSection';
 }
 
+function goToShowProducts()
+{
+  window.location.href = '#got';
+}
+
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
-    isOLS = $this.hasClass('product-ols'),
     apiEndpoint3;
   var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
-  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? domainSearch.offersCodes.packageId_ols : domainSearch.offersCodes.packageId_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? domainSearch.offersCodes.itc_ols : domainSearch.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + offerInfo.packageId);
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + offerInfo.itcCode);
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
@@ -535,6 +578,7 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
@@ -595,12 +639,6 @@ function updateDomainCountText($view, numberShowing) {
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
   $spinCounts.html(templateHtml);
-}
-
-function navigateToSearchAgain(e) { 
-  // var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
-  // animateWizard($thisSection, $('#domain-entry-view'));
-  $('#domainSearchWizard').show();
 }
 
 function animateWizard($currentView, $animateToView) {  
@@ -716,26 +754,26 @@ function getParameterByName(name) {
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">Domain Name</h3>
               <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
               <h3 class="text-center">Web Hosting</h3>
               <p>Give your site a home that’ll keep it secure and running like a sports car.</p>
             </div>
             <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
               <h3 class="text-center">Office 365 Email</h3>
               <p>Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. </p>
             </div>
@@ -743,12 +781,13 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
-            <button class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small>
+            <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
+            <button data-ci="96307" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
           </div>
         </div>
       </div>
     </section>
+    <!-- Need to dynamically build tld list.-->
     <!-- P4P variables-->
     <!-- atlantis:webstash(type="css")-->
     <style>
@@ -893,29 +932,37 @@ function getParameterByName(name) {
       .spin-results .spin-results-message, 
       .spin-results .spin-result, 
       .spin-template-wrap .spin-template {display:none;}
-      #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
       #available-domain .spin-results-message,
       .spin-results .spin-results-message {margin-top:15px;}
       
+      #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
       #domain-available-view .select-and-continue{margin:10px 0;float:right;}
       #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
       
-      #domain-available-view .available-domain-name-row {margin: 5px 0 10px;}
-      #domain-available-view h2.available-domain-name-text {margin: 0;}
+      #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-available-view h2.searched-domain-name-display {margin: 0;}
       
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
-      #domain-not-available-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-      #domain-not-available-view .pro-plans {margin-top: 0px; }
-      
-      #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-      #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-      #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-      #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-      #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
       #domain-not-available-view .clickable-show-more {cursor: pointer;}
       #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+      #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+      
+      #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
+      #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
+      #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+      
+      #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
+      
+      //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+      //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+      //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+      //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+      //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+      //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
+      //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
       
       //- #available-domain .spin-results-message,
       //- .spin-results .spin-results-message, 
@@ -929,7 +976,7 @@ function getParameterByName(name) {
       //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
       //- #spin-results .domain-tile {margin-top: 0px;}
       
-      #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px;}
+      #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
       
       // Turn off search input message display
       .search-message {display: none; text-transform: none; }
@@ -937,8 +984,8 @@ function getParameterByName(name) {
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
-      #domain-selected-view .available-domain-name-row {margin: 20px 0 20px;}
-      #domain-selected-view h2.available-domain-name-text {margin: 0;}
+      #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
+      #domain-selected-view h2.searched-domain-name-display {margin: 0;}
       #domain-selected-view .reseach-container {padding-top: 10px;}
       
     </style>
@@ -1010,7 +1057,7 @@ function getParameterByName(name) {
         #getItNow .bubble {
           background-color: white;
           background-position: center center;
-          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
           background-repeat: no-repeat;
           background-size: 100% 100%;
           overflow: visible;
@@ -1043,6 +1090,24 @@ function getParameterByName(name) {
       /* Layout */
       .view-all{margin:20px auto;}
       
+      #product h2 { margin-top: 20px; margin-bottom: 20px; }
+      #product h3 { text-transform: none; }
+      #product .how-it-works { margin: 20px auto; }
+      
+      #product .bubble {
+        background-color: white;
+        background-position: center center;
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        overflow: visible;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-left: 20%;
+      }
+      
     </style>
     <!-- O365 section-->
     <!-- atlantis:webstash(type="css")-->
@@ -1061,7 +1126,6 @@ function getParameterByName(name) {
     <style>
       .product-name{font-weight:800;padding-top:10px;}
       
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
       #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
       #got-domain-selected{display:none;}
       #got small { display: block; padding-top: 10px; padding-bottom:5px;}
@@ -1085,7 +1149,7 @@ function getParameterByName(name) {
               </div>
             </div>
           </div>
-          <form id="domainAvailableViewForm">
+          <form id="domainSearchViewForm">
             <div class="row">
               <div class="col-md-12">
               </div>
@@ -1094,7 +1158,7 @@ function getParameterByName(name) {
               <div class="col-md-12 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="95738" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
@@ -1141,7 +1205,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result available-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1168,24 +1232,20 @@ function getParameterByName(name) {
           <div class="row">
             <div class="col-md-12">
               <div class="text-center">
-                <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
+                <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="h0 availability-header domain-not-available-heading-text">[@L[cds.sales/offers/online-business:32573-sorry-domain-unavailable]@L]</h2>
-            </div>
-          </div>
-          <div class="row not-available-domain-name-row"> 
-            <div class="col-md-8 col-sm-12">
-              <h2 id="not-available-domain-name" class="not-available-domain-name-text domain-name-displayed word-break"></h2>
+          <div class="row searched-domain-name-row">
+            <div class="text-center">
+              <h2 class="domain-name-displayed word-break">Sorry, <mark class="searched-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
         </div>
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
+              <h5 style="margin-top:20px"><strong>Here are some alternative options alternatives:</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
               </h6>
@@ -1193,7 +1253,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result available-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1222,9 +1282,9 @@ function getParameterByName(name) {
               <h4 class="strong">Congratulations! You have selected the following domain name:</h4>
             </div>
           </div>
-          <div class="row available-domain-name-row">
+          <div class="row searched-domain-name-row">
             <div class="text-center">
-              <h2 class="available-domain-name-text domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
+              <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
@@ -1242,7 +1302,7 @@ function getParameterByName(name) {
         </h2>
         <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
       </div>
-      <div id="domainSearchFooter" class="container green">
+      <div id="domainSearchWizardFooter" class="container green">
         <div class="row">
           <div style="margin-top:30px">
             <div class="col-md-9 col-sm-9 speech-bubble-left-white">
@@ -1259,7 +1319,7 @@ function getParameterByName(name) {
       </div>
     </section>
     <script>
-      var domainAvailableViewForm = {
+      var domainSearchViewForm = {
          executeFnByName: function(name, context) {
           
           var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
@@ -1277,32 +1337,32 @@ function getParameterByName(name) {
         validateSubmit: function(e){
       
           e.preventDefault();
-          var domainName = domainAvailableViewForm.trimmedDomainName(false);
+          var domainName = domainSearchViewForm.trimmedDomainName(false);
           var functionSaveName = 'updateSearchedDomain';
           if(functionSaveName.length > 0) {
-            domainAvailableViewForm.executeFnByName(functionSaveName, window, e, domainName);
+            domainSearchViewForm.executeFnByName(functionSaveName, window, e, domainName);
           }
           if((domainName && domainName.length==0) || !domainName) return false;
       
           domainName = domainName.toLowerCase();
-          domainName = domainAvailableViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-          if(!domainAvailableViewForm.ensureValidTld(domainName)) {
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainSearchViewForm.ensureValidTld(domainName)) {
             return;
           }
           var functionName = 'domainSearchFormSubmit';
           if(functionName.length > 0)  {
-            domainAvailableViewForm.executeFnByName(functionName, window, e, domainName);
+            domainSearchViewForm.executeFnByName(functionName, window, e, domainName);
           }
       
         },
         trimmedDomainName: function(isKeyPress){
           
-          var $form = $("#domainAvailableViewForm"),
+          var $form = $("#domainSearchViewForm"),
             $textInput = $form.find('input[name="domainToCheck"]'),
             domainName = $textInput.val();
           if((domainName && domainName.length==0) || !domainName) return null;
       
-          domainName = domainAvailableViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          domainName = domainSearchViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
           return domainName;
       
         },
@@ -1324,10 +1384,10 @@ function getParameterByName(name) {
         },
         ensureValidTld: function() {
       
-          var $form = $("#domainAvailableViewForm"),
+          var $form = $("#domainSearchViewForm"),
               $textInput = $form.find('input[name="domainToCheck"]'),
               domainName = $textInput.val(); 
-              validTld = domainAvailableViewForm.hasTldValid(domainName);
+              validTld = domainSearchViewForm.hasTldValid(domainName);
           $form.find('.search-message').hide();
           if(validTld) {
             $form.find('.type-your-business-name').show();
@@ -1344,7 +1404,7 @@ function getParameterByName(name) {
           if(!domain || domain.length == 0 || idx == -1) return true;
       
           var domainsTld = domain.substring(idx+1).toLowerCase();
-          $.each(com,co,org,net, function(idx, tld) {
+          $.each(['com','co','org','net'], function(idx, tld) {
             if(tld.toLowerCase() === domainsTld) {
               isValid = true;
             }
@@ -1355,24 +1415,24 @@ function getParameterByName(name) {
         formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
       
           if(domain.indexOf('.') > 0) return domain;
-          return domain + '.' + com;
+          return domain + '.' + 'com';
       
         }
       };
       
       $(document).ready(function(){
       
-        $("#domainAvailableViewForm").on('click', 'button.offer-search-btn', function(){
-          $("#domainAvailableViewForm").submit();
+        $("#domainSearchViewForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainSearchViewForm").submit();
         });
       
-        $("#domainAvailableViewForm").on('submit', domainAvailableViewForm.validateSubmit);
-        $("#domainAvailableViewForm").on('keyup', function(e){ 
+        $("#domainSearchViewForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainSearchViewForm").on('keyup', function(e){ 
           if(e.which == 13) return;
-          var domainName = domainAvailableViewForm.trimmedDomainName(true);
+          var domainName = domainSearchViewForm.trimmedDomainName(true);
           if(!domainName || domainName.length == 0) return;
-          domainName = domainAvailableViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-          domainAvailableViewForm.ensureValidTld(domainName);
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
         });
       
       });
@@ -1480,19 +1540,19 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
               <h3>We're the world leader</h3>
               <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
               <h3>Our 24/7 support is awesome</h3>
               <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
               <h3>12 million people trust us</h3>
               <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
             </div>
@@ -1507,33 +1567,31 @@ function getParameterByName(name) {
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
-            <h3 id="got-domain-selected" class="header-detail-text uppercase">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">$1.00</mark></h3>
+            <h3 id="got-domain-selected" class="header-detail-text uppercase price-token">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
           </div>
           <div class="container bottom">
             <div class="row">
-              <div class="col-sm-4 text-center">
-                <div class="features-domain-name"></div>
-                <label class="h3 product-name">Domain Name</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
+                <h3>Domain Name</h3>
               </div>
-              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png" class="img-responsive center-block">
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png" class="img-responsive center-block">
                 <h3 class="text-center">Web Hosting</h3>
               </div>
-              <div class="col-sm-4 text-center">
-                <div class="features-email"></div>
-                <label class="h3 product-name">Office 365 Email</label>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
+                <h3>Office 365 Email</h3>
               </div>
             </div>
             <div class="row">
               <div class="get-it-now">
                 <div class="container">
                   <div class="row text-center">
-                    <p class="h3">[@T[multipleproductprice:<current productidlist="101|32051|464069" period="monthly" promocode="521092015"></current>]@T]/month for the first year*</p>
+                    <p class="h3 price-token">{price_monthly}/month for the first year*</p>
                   </div>
                   <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
-                    <btn id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+                    <button data-ci="96310" class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</button>
+                    <button data-ci="96306" id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</button>
                   </div>
-                  <div style="padding-top:10px" class="row text-center"><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly" promocode="521092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32051|464069" period="yearly"></current>]@T]/year after the first year</small></div>
+                  <div style="padding-top:10px" class="row text-center"><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small></div>
                 </div>
               </div>
             </div>
@@ -1753,29 +1811,37 @@ ul li.no-check {
         .spin-results .spin-results-message, 
         .spin-results .spin-result, 
         .spin-template-wrap .spin-template {display:none;}
-        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #available-domain .spin-results-message,
         .spin-results .spin-results-message {margin-top:15px;}
         
+        #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         
-        #domain-available-view .available-domain-name-row {margin: 5px 0 10px;}
-        #domain-available-view h2.available-domain-name-text {margin: 0;}
+        #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-available-view h2.searched-domain-name-display {margin: 0;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-not-available-view .pro-plans .pro-plan-wrap {border-top: 10px solid #008a32; padding: 20px;}
-        #domain-not-available-view .pro-plans {margin-top: 0px; }
-        
-        #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-        #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-        #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-        #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-        #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
         #domain-not-available-view .clickable-show-more {cursor: pointer;}
         #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
+        #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
+        
+        #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
+        #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
+        #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        
+        #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
+        
+        //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
+        //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
+        //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
+        //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
+        //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
+        //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
         
         //- #available-domain .spin-results-message,
         //- .spin-results .spin-results-message, 
@@ -1789,7 +1855,7 @@ ul li.no-check {
         //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         //- #spin-results .domain-tile {margin-top: 0px;}
         
-        #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px;}
+        #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
         
         // Turn off search input message display
         .search-message {display: none; text-transform: none; }
@@ -1797,8 +1863,8 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domain-selected-view .available-domain-name-row {margin: 20px 0 20px;}
-        #domain-selected-view h2.available-domain-name-text {margin: 0;}
+        #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
+        #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
@@ -1870,7 +1936,7 @@ ul li.no-check {
           #getItNow .bubble {
             background-color: white;
             background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             overflow: visible;
@@ -1903,6 +1969,24 @@ ul li.no-check {
         /* Layout */
         .view-all{margin:20px auto;}
         
+        #product h2 { margin-top: 20px; margin-bottom: 20px; }
+        #product h3 { text-transform: none; }
+        #product .how-it-works { margin: 20px auto; }
+        
+        #product .bubble {
+          background-color: white;
+          background-position: center center;
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+          overflow: visible;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-left: 100px;
+          padding-right: 100px;
+          margin-left: 20%;
+        }
+        
       </style>
       <!-- O365 section-->
       <!-- atlantis:webstash(type="css")-->
@@ -1921,7 +2005,6 @@ ul li.no-check {
       <style>
         .product-name{font-weight:800;padding-top:10px;}
         
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
@@ -1930,39 +2013,6 @@ ul li.no-check {
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
-      
-    </script>
-    <script>
-      // Page Global script -- changes will effect all campaigns 
-      // get url parameter by parameter name
-      function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-      
-      function updateSearchedDomain(e, domain) {
-        domainSearch.searchedForDomain = domain;
-        $('#domain-available-view').find('.search-form-input').val(domain);
-        $('#domain-not-available-view').find('.search-form-input').val(domain);
-      }
-      
-      function updateSelectedDomain(domain) {
-        domainSearch.selectedDomain = domain;
-        $(document).find('.selected-domain-name-display').text(domain);
-      }
-      
-    </script>
-    <script>
-      $(document).ready(function(){
-        var passedBusinessName = getParameterByName('domain');
-        if(passedBusinessName != '') {
-          $(document).find('.business-name-display').text(passedBusinessName);
-          updateSearchedDomain('', passedBusinessName);
-          domainSearchFormSubmit('', passedBusinessName);
-       }
-      });
       
     </script>
     <!-- atlantis:webstash(type="js")-->
