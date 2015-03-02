@@ -770,7 +770,7 @@ function getParameterByName(name) {
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
               <h3 class="text-center">Online Store</h3>
-              <p>Easily create a site that let’s you sell your stuff, accept credit cards and more.</p>
+              <p>Easily create a site that lets you sell your stuff, accept credit cards and more.</p>
             </div>
             <div class="plus">+</div>
             <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
@@ -990,68 +990,24 @@ function getParameterByName(name) {
       
     </style>
     <style>
-      .gray{background-color:#E8E8E8;}
-      .green{background-color:#78C043}
-      .white{background-color:white}
-      .uppercase{text-transform:uppercase}
-      .lowercase{text-transform:lowercase}
-      
-      section{padding-top:0px;padding-bottom:0px}
-      
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-      
-      .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
-      .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      
-      .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-      .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-      .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-      .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-      
-      h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
-      
-      /* speech bubbles */
-      .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-      .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-      .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-      .speech-bubble-right-div {margin-left:5%;width:90%;}
-      .speech-bubble-left-div {margin-left:5%;width:90%;}
-      
-    </style>
-    <!-- atlantis:webstash(type="css")-->
-    <style>
-      .left-side{position: relative;}
-      .right-side{position:relative;}
-      .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-      .heading{padding-top:30px;}
-      .starter-pack{padding-bottom: 35px;}
-      .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-      .logo-label{padding-top: 15px;}
+      mark { line-height: 1.1em; word-break: break-all; }
+      mark::after { height: 1.21em; }
+      h3 { text-transform: none; }
+      small { display: block; }
       
       #getItNow { padding-bottom: 0; padding-top: 0;}
       #getItNow .container { position: relative; }
-      #getItNow mark { line-height: 1.1em; }
-      #getItNow mark::after { height: 1.21em; }
       #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-      
-      #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-      #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+      .column {width: 24%; display: inline-block;vertical-align:top;}
+      .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
       #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
       #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
       #getItNow .bubble h3 { font-family: Walsheim-Black; }
       #getItNow .products { margin-top: 40px; }
       #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
       #getItNow .products img { max-height: 110px; }
-      
-      #getItNow .cta { margin-top: 20px;}
-      #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+      .cta { margin-top: 20px;}
+      .cta small { padding-top: 10px; padding-bottom:5px;}
       
       @media (min-width: 768px) {
         #getItNow .bubble {
@@ -1063,8 +1019,8 @@ function getParameterByName(name) {
           overflow: visible;
           padding-top: 40px;
           padding-bottom: 40px;
-          padding-left: 100px;
-          padding-right: 100px;
+          padding-left: 10%;
+          padding-right: 10%;
           margin-left: 20%;
         }
         #getItNow .bubble h2 { padding-top: 0; }
@@ -1075,6 +1031,7 @@ function getParameterByName(name) {
         #getItNow .hero-guy { left: -50px; }
       }
       
+<<<<<<< HEAD
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
@@ -1093,34 +1050,106 @@ function getParameterByName(name) {
       #product h2 { margin-top: 20px; margin-bottom: 20px; }
       #product h3 { text-transform: none; }
       #product .how-it-works { margin: 20px auto; }
+=======
+      .product-section { padding-bottom: 0; }
+      .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
+      .product-section .product-summary { margin: 20px auto; }
+      .product-section .hero-guy { 
+        max-width: 80%; 
+        position: absolute; 
+        height: auto; 
+        margin-top: 60px;
+      }
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
       
-      #product .bubble {
-        background-color: white;
+      @media (min-width: 768px) {
+        .product-section .hero-guy { 
+          margin-top: 20px;
+        }
+      }
+      
+      .bubble-row { overflow-y: hidden; margin-top: 30px; }
+      
+      .bubble-row .bubble {
         background-position: center center;
         background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: visible;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 100px;
-        padding-right: 100px;
-        margin-left: 20%;
+        padding-top: 30px; 
+        padding-bottom: 20px; 
+        padding-left: 100px; 
+        padding-right: 90px; 
+        margin-bottom: 10px;
       }
       
+      .bubble-row .bubble.left {
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+      }
+      
+      .bubble-row .bubble.white {
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+      }
+      
+      .hero-guy.left {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+        -ms-filter: "FlipH";
+        filter: FlipH;
+      }
+      
+<<<<<<< HEAD
+=======
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+      
+      .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      
+      .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+      .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+      .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+      .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+      
+      /* speech bubbles */
+      .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+      .speech-bubble-right-div {margin-left:5%;width:90%;}
+      .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+      .speech-bubble-left-div {margin-left:5%;width:90%;}
+      
+      .left-side{position: relative;}
+      .right-side{position:relative;}
+      .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      .heading{padding-top:30px;}
+      .starter-pack{padding-bottom: 35px;}
+      .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+      .logo-label{padding-top: 15px;}
+      
+      
     </style>
-    <!-- O365 section-->
-    <!-- atlantis:webstash(type="css")-->
-    <!-- style.-->
     <!-- atlantis:webstash(type="css")-->
     <style>
-      .why-us-title{margin-top:10px;}
-      .why-us-text{margin-top:10px;}
+      /* video button */
+      .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+      .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+      .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+      .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+      .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+      .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+      .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
       
-      .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-      .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-      .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+      /* Layout */
+      .view-all{margin:20px auto;}
       
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
@@ -1437,16 +1466,16 @@ function getParameterByName(name) {
       
       });
     </script>
-    <section id="product" class="white">
+    <section id="online-store" class="product-section">
       <div class="container">
         <div class="row">
-          <div style="margin-top:35px" class="features-online-store"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase">Online Store</h2>
+          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
+            <h2 class="text-center">Online Store</h2>
+            <h3 class="text-center">Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.</h3>
+            <!--img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png")-->
           </div>
         </div>
+<<<<<<< HEAD
         <div class="row">
           <div class="text-center">
             <h4 style="margin-top:10px" class="strong">
@@ -1469,27 +1498,34 @@ function getParameterByName(name) {
                 <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" data-ci="96300" class="lazyload img-play-green play-button"></div>
                 <h4 class="uppercase walsheim-bold">What is Online Store?</h4>
                 <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" data-ci="96300" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
+=======
+        <section data-youtube-id="rMF9d8-3WBA" class="video-marquee-wrapper">
+          <div class="container">
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+              <div class="video-info col-sm-4">
+                <div class="video-marquee-info text-center">
+                  <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
+                  <h4 class="uppercase walsheim-bold">What is Online Store?</h4>
+                  <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
+                </div>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <div class="container">
-        <div class="row">
-          <div>
-            <div class="col-sm-3">
-              <div style="margin-top:-65px" class="half-hero-right"></div>
-            </div>
-            <div style="margin-top:-10px" class="col-sm-5 speech-bubble-right-green">
-              <div class="speech-bubble-right-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">With built-in payment processing, you can accept all major credit cards and the funds are automatically transferred to you bank account.</h5>
-              </div>
-            </div>
+        </section>
+        <div class="row bubble-row">
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
+            <mark>Did you know...</mark>
+            <p>Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.</p>
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
     <section id="O365-email" class="gray">
       <div class="container">
         <div class="row">
@@ -1517,7 +1553,23 @@ function getParameterByName(name) {
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
             </div>
+=======
+    <section id="O365-email" class="product-section bg-medium">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
+            <h2 class="text-center">Office 365 Email</h2>
+            <h3 class="text-center">Branded email to talk to your customers</h3>
+            <div class="h2 text-center product-summary"><mark>yourname@<span class="selected-domain-name-display">billybikes.org</span></mark></div>
           </div>
+        </div>
+        <div class="row bubble-row">
+          <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
+            <mark>Did you know...</mark>
+            <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
+          </div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
@@ -1550,10 +1602,15 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <hr>
-    <section id="got">
-      <div class="container">
+    <section id="bottomGetItNow" class="bg-medium">
+      <div class="container text-center">
         <div class="row">
+          <h2>Ready to Get Online?</h2>
+          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
+        </div>
+        <div class="row">
+<<<<<<< HEAD
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to get online?</h2>
             <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
@@ -1585,7 +1642,24 @@ function getParameterByName(name) {
                 </div>
               </div>
             </div>
+=======
+          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+            <h3>Domain Name</h3>
           </div>
+          <div class="plus">+</div>
+          <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png" class="img-responsive center-block">
+            <h3>Online Store</h3>
+          </div>
+          <div class="plus">+</div>
+          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+            <h3>Office 365 Email</h3>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
+          </div>
+        </div>
+        <div class="row">
+          <h3>[@T[multipleproductprice:<current productidlist="101|47902|464069" period="monthly" promocode="75315678"></current>]@T]/month for the first year*</h3>
+          <button data-ci="96296" class="btn btn-primary btn-lg">Search Again</button>
+          <button data-ci="96298" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101|47902|464069" period="yearly" promocode="75315678"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|47902|464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1625,6 +1699,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -1859,68 +1934,24 @@ ul li.no-check {
         
       </style>
       <style>
-        .gray{background-color:#E8E8E8;}
-        .green{background-color:#78C043}
-        .white{background-color:white}
-        .uppercase{text-transform:uppercase}
-        .lowercase{text-transform:lowercase}
-        
-        section{padding-top:0px;padding-bottom:0px}
-        
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-        
-        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        
-        h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
-        
-        /* speech bubbles */
-        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-right-div {margin-left:5%;width:90%;}
-        .speech-bubble-left-div {margin-left:5%;width:90%;}
-        
-      </style>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .heading{padding-top:30px;}
-        .starter-pack{padding-bottom: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .logo-label{padding-top: 15px;}
+        mark { line-height: 1.1em; word-break: break-all; }
+        mark::after { height: 1.21em; }
+        h3 { text-transform: none; }
+        small { display: block; }
         
         #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
-        #getItNow mark { line-height: 1.1em; }
-        #getItNow mark::after { height: 1.21em; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        .column {width: 24%; display: inline-block;vertical-align:top;}
+        .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
         #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
         #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
         #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        .cta { margin-top: 20px;}
+        .cta small { padding-top: 10px; padding-bottom:5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -1932,8 +1963,8 @@ ul li.no-check {
             overflow: visible;
             padding-top: 40px;
             padding-bottom: 40px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 10%;
+            padding-right: 10%;
             margin-left: 20%;
           }
           #getItNow .bubble h2 { padding-top: 0; }
@@ -1944,6 +1975,7 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
+<<<<<<< HEAD
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -1962,34 +1994,106 @@ ul li.no-check {
         #product h2 { margin-top: 20px; margin-bottom: 20px; }
         #product h3 { text-transform: none; }
         #product .how-it-works { margin: 20px auto; }
+=======
+        .product-section { padding-bottom: 0; }
+        .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
+        .product-section .product-summary { margin: 20px auto; }
+        .product-section .hero-guy { 
+          max-width: 80%; 
+          position: absolute; 
+          height: auto; 
+          margin-top: 60px;
+        }
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
         
-        #product .bubble {
-          background-color: white;
+        @media (min-width: 768px) {
+          .product-section .hero-guy { 
+            margin-top: 20px;
+          }
+        }
+        
+        .bubble-row { overflow-y: hidden; margin-top: 30px; }
+        
+        .bubble-row .bubble {
           background-position: center center;
           background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
           background-repeat: no-repeat;
           background-size: 100% 100%;
           overflow: visible;
-          padding-top: 40px;
-          padding-bottom: 40px;
-          padding-left: 100px;
-          padding-right: 100px;
-          margin-left: 20%;
+          padding-top: 30px; 
+          padding-bottom: 20px; 
+          padding-left: 100px; 
+          padding-right: 90px; 
+          margin-bottom: 10px;
         }
         
+        .bubble-row .bubble.left {
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+        }
+        
+        .bubble-row .bubble.white {
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+        }
+        
+        .hero-guy.left {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+          -ms-filter: "FlipH";
+          filter: FlipH;
+        }
+        
+<<<<<<< HEAD
+=======
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+        
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        
+        /* speech bubbles */
+        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-right-div {margin-left:5%;width:90%;}
+        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-left-div {margin-left:5%;width:90%;}
+        
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .heading{padding-top:30px;}
+        .starter-pack{padding-bottom: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .logo-label{padding-top: 15px;}
+        
+        
       </style>
-      <!-- O365 section-->
-      <!-- atlantis:webstash(type="css")-->
-      <!-- style.-->
       <!-- atlantis:webstash(type="css")-->
       <style>
-        .why-us-title{margin-top:10px;}
-        .why-us-text{margin-top:10px;}
+        /* video button */
+        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
         
-        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+        /* Layout */
+        .view-all{margin:20px auto;}
         
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -2005,6 +2109,60 @@ ul li.no-check {
       endOfPageScripts();
       
     </script>
+<<<<<<< HEAD
+=======
+    <script>
+      $(document).ready(function(){
+        stripDomainName();
+      });
+      
+      function stripDomainName(){
+           var windowParams = window.location.search.replace("?","");
+           var params = windowParams.split("&");
+           for(var i = 0; i < params.length;i++){
+            var inputName = params[i].split("=")[0];
+            var inputValue = params[i].split("=")[1];
+            if(inputName == "domain"){
+              inputValue = decodeURIComponent(inputValue);
+              $(".business-idea").text(inputValue);
+            }
+             
+         }
+      };
+      
+      // Page Global script -- changes will effect all campaigns 
+      // get url parameter by parameter name
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+      
+      function updateSearchedDomain(e, domain) {
+        domainSearch.searchedForDomain = domain;
+        $('#domain-available-view').find('.search-form-input').val(domain);
+        $('#domain-not-available-view').find('.search-form-input').val(domain);
+      }
+      
+      function updateSelectedDomain(domain) {
+        domainSearch.selectedDomain = domain;
+        $(document).find('.selected-domain-name-display').text(domain);
+      }
+      
+    </script>
+    <script>
+      $(document).ready(function(){
+        var passedBusinessName = getParameterByName('domain');
+        if(passedBusinessName != '') {
+          $(document).find('.business-name-display').text(passedBusinessName);
+          updateSearchedDomain('', passedBusinessName);
+          domainSearchFormSubmit('', passedBusinessName);
+       }
+      });
+      
+    </script>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
     <!-- atlantis:webstash(type="js")-->
     <script>
       // https://developers.google.com/youtube/player_parameters#IFrame_Player_API

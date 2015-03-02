@@ -28,6 +28,13 @@ append pageStyles
     .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
     .products{margin-top: 5px!important;}
     .computer{margin-top: 25px;}
+    #pro-specific h2 { margin-bottom: 0; }
+    #pro-specific h3 { margin-bottom: 20px; }
+    .feature mark { margin-top: 20px; }
+    .feature h3 { margin-top: 0; }
+    @media (min-width: 768px) {
+      .feature { text-align: left; margin-top: 40px; }
+    }
 
 block bubbleContent
   h2.text-center Here you go...
@@ -55,37 +62,39 @@ block productContent
           p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
 
 block domainOrPro
-  section#pro-specific
+  section#pro-specific.bg-primary-o.product-section
     .container
-      .row.col-xs-12.text-center.titles
-        h3 We'll build a website that will help you build your business
-        h4 Just complete the online interview and our web pros will do the rest. Here’s how it works… 
-      .row(style={"margin-top": "35px"})
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step One</span>
-          h3 Share your vision
-          p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step Two</span>
-          h3 We go to work
-          p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step Three</span>
-          h3 Enhance & Expand
-          p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
       .row
-        div(style={'margin-top':'30px'})
-          .col-sm-9.speach-bubble-left-white
-            div.speach-bubble-left-div
-              h5.uppercase <span class="steps"><strong>did you know...</strong></span>
-              h5(style={'margin-top':'10px','text-transform':'none'}) We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
-          .col-sm-3
-            div.half-hero-left
-
-hr
+        .col-xs-12.col-sm-8.col-sm-offset-2.text-center
+          h2 We'll Build a Website That Will Help You Build Your Business
+      .row
+        .col-xs-12.text-center
+          h3 Just complete the online interview and our web pros will do the rest. Here’s how it works… 
+      .row
+        .col-sm-4
+          .feature.why-gd-world-leader
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png','Clipboard')
+            mark Step One
+            h3 Share Your Vision
+            p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
+        .col-sm-4
+          .feature.why-gd-support.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png','Design')          
+            mark Step Two
+            h3 We Go To Work
+            p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
+        .col-sm-4
+          .feature.why-gd-trust.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png','Tools')
+            mark Step Three
+            h3 Enhance and Expand
+            p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
+      .row.bubble-row
+        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+          mark Did you know...
+          p We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
+        .col-xs-2
+          img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
 
 block office365
   // hide this on pro landing pages

@@ -5146,6 +5146,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {

@@ -30,12 +30,35 @@ block targetedProduct
     h3.text-center #{productToDisplay.name}
     p #{productToDisplay.getItNowDescription}
 
-block productViewTemplates
+block productSection
+  section#online-store.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png")
+          h2.text-center Online Store
+          h3.text-center Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.
+          //img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png")
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+            div.video-info.col-sm-4
+              div.video-marquee-info.text-center
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
 
-block productInfo
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark Did you know...
+          p Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.
 
-block productTemplates
-
-block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png")
-  h3.text-center Online Store
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/OnlineStore.png")
+    h3 Online Store

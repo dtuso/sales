@@ -28,48 +28,24 @@ block targetedProduct
     h3.text-center Managed Wordpress
     p Start a blog with WordPress and let us manage the technical stuff.
 
-block productViewTemplates
-
-block productVideo
-
 block productSection
-  section#product
+  section#wordpress.product-section
     .container
       .row
-        .col-xs-12
+        .col-sm-10.col-sm-offset-1
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
           h2.text-center WordPress
           h3.text-center We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.
-          img.img-responsive.how-it-works(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
+          img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
           p.text-center WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.
-      .row
-        .col-xs-3
+      .row.bubble-row
+        .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
-        .col-xs-6.bubble
+        .col-xs-10.col-sm-8.col-lg-6.bubble
           mark Did you know...
           p As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?
 
-block productInfo
-  style.
-    .wordpress-laptop{height:195px;margin-top:38px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png) no-repeat center bottom;}
-    .wordpress-arrows{height:39px;margin-top:10px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-arrows.png) no-repeat center bottom;}
-    .wordpress-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
-    .product-info-text{margin-top:20px;margin-bottom:85px;}
-
-  section#productInfo
-    .container(style={'margin-top':'60px'})
-      .col-sm-4
-        .wordpress-laptop
-        h5.uppercase.text-center(style={'margin-top':'10px'}) enter your blog post
-      .col-sm-4
-        h5.uppercase.text-center(style={'margin-top':'100px'}) publish
-        .wordpress-arrows
-      .col-sm-4
-        .wordpress-browser
-        h5.uppercase.text-center(style={'margin-top':'10px'}) <mark>domainName.org</mark>
-    .container
-      .col-sm-12.product-info-text #{productToDisplay.productInfoText}
-
-block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png")
-  h3.text-center Managed Wordpress
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+    h3 Managed Wordpress

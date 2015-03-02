@@ -368,8 +368,6 @@ function validDomainSelected(e){
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
 
-  // $('#domainSearchWizard').hide();
-  // $('#domainSelected').show();
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);

@@ -745,8 +745,13 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <section id="pro-specific">
+    <section id="pro-specific" class="bg-primary-o product-section">
       <div class="container">
+<<<<<<< HEAD
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
+            <h2>We'll Build a Website That Will Help You Build Your Business</h2>
+=======
         <div class="row col-xs-12 text-center titles">
           <h3>We'll build a website that will help you build your business</h3>
           <h4>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h4>
@@ -779,82 +784,43 @@ function getParameterByName(name) {
             <div class="col-sm-3">
               <div class="half-hero-left"></div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="product" class="white">
-      <div class="container">
-        <div class="row">
-          <div style="margin-top:35px"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase"></h2>
+>>>>>>> kflandell/p4p
           </div>
         </div>
         <div class="row">
-          <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">
-              <div>
-                 
-                
-              </div>
-            </h4>
+          <div class="col-xs-12 text-center">
+            <h3>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h3>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="text-center">
-          <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
-        </div>
-      </div>
-      <section data-youtube-id="" class="video-marquee-wrapper">
-        <div class="container">
-          <div data-lazyload-source="" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
-          <div class="row">
-            <div class="col-sm-4"></div>
-            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
-            <div class="video-info col-sm-4">
-              <div class="video-marquee-info text-center">
-                <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
-                <h4 class="uppercase walsheim-bold"></h4>
-                <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
-              </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Clipboard" class="lazyload"/>
+              <mark>Step One</mark>
+              <h3>Share Your Vision</h3>
+              <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Design" class="lazyload"/>
+              <mark>Step Two</mark>
+              <h3>We Go To Work</h3>
+              <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Tools" class="lazyload"/>
+              <mark>Step Three</mark>
+              <h3>Enhance and Expand</h3>
+              <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
             </div>
           </div>
         </div>
-      </section>
-      <div class="container">
-        <div class="row">
-          <div>
-            <div class="col-sm-3">
-              <div style="margin-top:-65px" class="half-hero-right"></div>
-            </div>
-            <div style="margin-top:-10px" class="col-sm-8 speech-bubble-right-green">
-              <div class="speech-bubble-right-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none"></h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="O365-email">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
-            <h2 class="text-center">Office 365 Email</h2>
-            <h3 class="text-center">Branded email to talk to your customers</h3><span class="h2"><mark>yourname@<span class="business-idea">billybikes.org</span></mark></span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-3"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
-          <div class="col-xs-6 bubble">
+        <div class="row bubble-row">
+          <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
             <mark>Did you know...</mark>
-            <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
+            <p>We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</p>
           </div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
@@ -888,10 +854,23 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <hr>
-    <section id="got">
-      <div class="container">
+    <section id="bottomGetItNow">
+      <div class="container text-center">
         <div class="row">
+<<<<<<< HEAD
+          <h2>Ready to Get Online?</h2>
+          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
+          <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
+        </div>
+        <div class="row">
+          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+            <h3>Domain Name</h3>
+          </div>
+          <div class="plus">+</div>
+          <div class="plus">+</div>
+          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+            <h3>Office 365 Email</h3>
+=======
           <div style="margin-top:30px" class="text-center">
             <h2 class="uppercase">Ready to get online?</h2>
             <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="uppercase">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
@@ -918,7 +897,13 @@ function getParameterByName(name) {
                 </form>
               </div>
             </div>
+>>>>>>> kflandell/p4p
           </div>
+        </div>
+        <div class="row">
+          <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
+          <button class="btn btn-primary btn-lg">Search Again</button>
+          <button class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -958,6 +943,7 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
+  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -1192,68 +1178,24 @@ ul li.no-check {
         
       </style>
       <style>
-        .gray{background-color:#E8E8E8;}
-        .green{background-color:#78C043}
-        .white{background-color:white}
-        .uppercase{text-transform:uppercase}
-        .lowercase{text-transform:lowercase}
-        
-        section{padding-top:0px;padding-bottom:0px}
-        
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-        
-        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        
-        h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
-        
-        /* speech bubbles */
-        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-right-div {margin-left:5%;width:90%;}
-        .speech-bubble-left-div {margin-left:5%;width:90%;}
-        
-      </style>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .heading{padding-top:30px;}
-        .starter-pack{padding-bottom: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .logo-label{padding-top: 15px;}
+        mark { line-height: 1.1em; word-break: break-all; }
+        mark::after { height: 1.21em; }
+        h3 { text-transform: none; }
+        small { display: block; }
         
         #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
-        #getItNow mark { line-height: 1.1em; }
-        #getItNow mark::after { height: 1.21em; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
-        
-        #getItNow .column {width: 24%; display: inline-block;vertical-align:top;}
-        #getItNow .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
+        .column {width: 24%; display: inline-block;vertical-align:top;}
+        .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black;}
         #getItNow .bubble { background-color: #78C043; padding-bottom: 20px;}
         #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
         #getItNow .products img { max-height: 110px; }
-        
-        #getItNow .cta { margin-top: 20px;}
-        #getItNow .cta small { display: block; padding-top: 10px; padding-bottom:5px;}
+        .cta { margin-top: 20px;}
+        .cta small { padding-top: 10px; padding-bottom:5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -1265,8 +1207,8 @@ ul li.no-check {
             overflow: visible;
             padding-top: 40px;
             padding-bottom: 40px;
-            padding-left: 100px;
-            padding-right: 100px;
+            padding-left: 10%;
+            padding-right: 10%;
             margin-left: 20%;
           }
           #getItNow .bubble h2 { padding-top: 0; }
@@ -1277,22 +1219,53 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
-        #product h2 { margin-top: 20px; margin-bottom: 20px; }
-        #product h3 { text-transform: none; }
-        #product .how-it-works { margin: 20px auto; }
+        .product-section { padding-bottom: 0; }
+        .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
+        .product-section .product-summary { margin: 20px auto; }
+        .product-section .hero-guy { 
+          max-width: 80%; 
+          position: absolute; 
+          height: auto; 
+          margin-top: 60px;
+        }
         
-        #product .bubble {
-          background-color: white;
+        @media (min-width: 768px) {
+          .product-section .hero-guy { 
+            margin-top: 20px;
+          }
+        }
+        
+        .bubble-row { overflow-y: hidden; margin-top: 30px; }
+        
+        .bubble-row .bubble {
           background-position: center center;
           background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
           background-repeat: no-repeat;
           background-size: 100% 100%;
           overflow: visible;
-          padding-top: 40px;
-          padding-bottom: 40px;
-          padding-left: 100px;
-          padding-right: 100px;
-          margin-left: 20%;
+          padding-top: 30px; 
+          padding-bottom: 20px; 
+          padding-left: 100px; 
+          padding-right: 90px; 
+          margin-bottom: 10px;
+        }
+        
+        .bubble-row .bubble.left {
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+        }
+        
+        .bubble-row .bubble.white {
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+        }
+        
+        .hero-guy.left {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+          -ms-filter: "FlipH";
+          filter: FlipH;
         }
         
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
@@ -1309,10 +1282,6 @@ ul li.no-check {
         .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
         .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
         .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        
-        h2{margin-top:0px;margin-bottom:0px;}
-        h3{margin-top:0px;margin-bottom:0px;}
-        h5{margin-top:0px;margin-bottom:0px;}
         
         /* speech bubbles */
         .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
@@ -1346,19 +1315,6 @@ ul li.no-check {
         .view-all{margin:20px auto;}
         
       </style>
-      <!-- O365 section-->
-      <!-- atlantis:webstash(type="css")-->
-      <!-- style.-->
-      <!-- atlantis:webstash(type="css")-->
-      <style>
-        .why-us-title{margin-top:10px;}
-        .why-us-text{margin-top:10px;}
-        
-        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
-        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
-        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
-        
-      </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
         .product-name{font-weight:800;padding-top:10px;}
@@ -1369,35 +1325,16 @@ ul li.no-check {
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         
       </style>
-      <style>
-        .btn-lg{padding: 14px 15px 9px!important;}
-        .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-        .right-side{margin-top: 25px;}
-        .pro-wrapper{margin-top: 50px;}
-        .product-name{padding-bottom: 15px;}
-        .p1{margin-bottom: 25px;}
-        .p2{margin-top: 15px;}
-        .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .head-wrapper{padding-top:30px;!important}
-        #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
+      <script>
+        #pro-specific h2 { margin-bottom: 0; }
+        #pro-specific h3 { margin-bottom: 20px; }
+        .feature mark { margin-top: 20px; }
+        .feature h3 { margin-top: 0; }
+        @media (min-width: 768px) {
+          .feature { text-align: left; margin-top: 40px; }
+        }
         
-        #pro-specific{background-color:#77c043;}
-        .uppercase{text-transform:uppercase;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .text-center{text-align:center;}
-        .titles{margin-top:50px;}
-        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
-        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
-        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
-        .col-xs-4.first{padding-top: 30px;}
-        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        .products{margin-top: 5px!important;}
-        .computer{margin-top: 25px;}
-        
-      </style>
+      </script>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
@@ -1421,6 +1358,10 @@ ul li.no-check {
              
          }
       };
+<<<<<<< HEAD
+      
+=======
+>>>>>>> kflandell/p4p
       // Page Global script -- changes will effect all campaigns 
       // get url parameter by parameter name
       function getParameterByName(name) {

@@ -22,40 +22,30 @@ append vars
   - productToDisplay.bottomButtonCI = "96306";
   - productToDisplay.bottomSearchCI = "96310";
 
-
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png")
     h3.text-center Web Hosting
     p Give your site a home that’ll keep it secure and running like a sports car.
 
-block productViewTemplates
-
-block productVideo
-
-block productInfo
-  style.
-    .hosting-servers{height:117px;margin-top:38px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-    .hosting-arrows{height:39px;margin-top:10px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-arrows.png) no-repeat center bottom;}
-    .hosting-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
-    .product-info-text{margin-top:20px;margin-bottom:85px;}
-
-  section#productInfo
-    .container(style={'margin-top':'60px'})
-      .col-sm-4
-        .hosting-servers
-        h5.uppercase.text-center(style={'margin-top':'10px'}) enter your blog post
-      .col-sm-4
-        h5.uppercase.text-center(style={'margin-top':'100px'}) publish
-        .hosting-arrows
-      .col-sm-4
-        .hosting-browser
-        h5.uppercase.text-center(style={'margin-top':'10px'}) <mark>domainName.org</mark>
+block productSection
+  section#web-hosting.product-section
     .container
-      .col-sm-12.product-info-text #{productToDisplay.productInfoText}
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
+          h2.text-center Web Hosting
+          h3.text-center Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.
+          img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
+          p.text-center Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it. 
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark Did you know...
+          p Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?
 
-block productTemplates
-
-block gotProduct
-  img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png")
-  h3.text-center Web Hosting
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
+    h3 Web Hosting
