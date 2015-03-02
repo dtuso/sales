@@ -1,33 +1,14 @@
 extends _p4p.jade
 
 append pageStyles
-  style.
-    .btn-lg{padding: 14px 15px 9px!important;}
-    .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-    .right-side{margin-top: 25px;}
-    .pro-wrapper{margin-top: 50px;}
-    .product-name{padding-bottom: 15px;}
-    .p1{margin-bottom: 25px;}
-    .p2{margin-top: 15px;}
-    .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-    .head-wrapper{padding-top:30px;!important}
-    #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-
-    #pro-specific{background-color:#77c043;}
-    .uppercase{text-transform:uppercase;}
-    .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-    .speach-bubble-left-div {margin-left:5%;width:90%;}
-    .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-    .text-center{text-align:center;}
-    .titles{margin-top:50px;}
-    .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
-    .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
-    .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
-    .col-xs-4.first{padding-top: 30px;}
-    .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-    .products{margin-top: 5px!important;}
-    .computer{margin-top: 25px;}
+  script.  
+    #pro-specific h2 { margin-bottom: 0; }
+    #pro-specific h3 { margin-bottom: 20px; }
+    .feature mark { margin-top: 20px; }
+    .feature h3 { margin-top: 0; }
+    @media (min-width: 768px) {
+      .feature { text-align: left; margin-top: 40px; }
+    }
 
 block bubbleContent
   h2.text-center Here you go...
@@ -55,37 +36,39 @@ block productContent
           p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
 
 block domainOrPro
-  section#pro-specific
+  section#pro-specific.bg-primary-o.product-section
     .container
-      .row.col-xs-12.text-center.titles
-        h3 We'll build a website that will help you build your business
-        h4 Just complete the online interview and our web pros will do the rest. Here’s how it works… 
-      .row(style={"margin-top": "35px"})
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step One</span>
-          h3 Share your vision
-          p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step Two</span>
-          h3 We go to work
-          p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
-        .col-xs-4
-          img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" style={"height": "131px", "padding-bottom": "15px"})
-          h4.uppercase <span class="steps">Step Three</span>
-          h3 Enhance & Expand
-          p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
       .row
-        div(style={'margin-top':'30px'})
-          .col-sm-9.speach-bubble-left-white
-            div.speach-bubble-left-div
-              h5.uppercase <span class="steps"><strong>did you know...</strong></span>
-              h5(style={'margin-top':'10px','text-transform':'none'}) We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
-          .col-sm-3
-            div.half-hero-left
-
-hr
+        .col-xs-12.col-sm-8.col-sm-offset-2.text-center
+          h2 We'll Build a Website That Will Help You Build Your Business
+      .row
+        .col-xs-12.text-center
+          h3 Just complete the online interview and our web pros will do the rest. Here’s how it works… 
+      .row
+        .col-sm-4
+          .feature.why-gd-world-leader
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png','Clipboard')
+            mark Step One
+            h3 Share Your Vision
+            p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
+        .col-sm-4
+          .feature.why-gd-support.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png','Design')          
+            mark Step Two
+            h3 We Go To Work
+            p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
+        .col-sm-4
+          .feature.why-gd-trust.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png','Tools')
+            mark Step Three
+            h3 Enhance and Expand
+            p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
+      .row.bubble-row
+        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+          mark Did you know...
+          p We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
+        .col-xs-2
+          img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
 
 block office365
   // hide this on pro landing pages
