@@ -795,6 +795,7 @@ function getParameterByName(name) {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
             <h2 class="text-center">See what we can do</h2>
             <h3 class="text-center">Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…</h3>
+            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block">View Our Portfolio</button>
           </div>
         </div>
         <section data-youtube-id="" class="video-marquee-wrapper">

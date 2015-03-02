@@ -3625,6 +3625,34 @@ ul li.no-check {
           }).css({'cursor':'pointer'});
         });
       });
+      
+      function disclaimersModal() {
+        $('#disclaimersModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });
+      };
+        $(document).ready(function(){
+        showTldsInList('#disclaimers');
+        var recommendedThemes = [[@T[wsbthemes:]@T]];
+      
+        if(typeof recommendedThemes[0] != 'undefined' && recommendedThemes[0].length >= 1){
+          recommendedThemes = recommendedThemes[0].slice(0,9);
+          // populate images
+          var column = 0;
+          var $row;
+          var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+          $.each(recommendedThemes,function(index){
+            if(column == 0)
+              $row = $("<div>", {class: "row"});
+            column++;
+            var itemData = {url:recommendedThemes[index]['URL']};
+            var itemElement = recommendedImagesTemplates(itemData);
+            $row.append(itemElement)
+            if(column == 3 ){
+              $('.templates-image-container').append($row);
+              column = 0;
+            }
+          });
+        }
+      });
     </script>
   </body>
 </html>

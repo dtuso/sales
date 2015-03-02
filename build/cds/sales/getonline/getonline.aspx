@@ -302,7 +302,7 @@ ul li.no-check {
         var business_idea = $('#search-input').val().toLowerCase();
         var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
-        if (tldSpecified && validTlds.indexOf(tldSpecified)) {
+        if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
           $(".validation-message").show();
           e.preventDefault();
         }
