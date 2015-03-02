@@ -9,11 +9,11 @@
     .right-arrow .right{background-color:transparent; color:#000}
     .right-arrow .dash{letter-spacing:-.2rem}
     .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat}
-    .right-arrow .leftContent,.rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent,.right-arrow .rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
     .right-arrow .leftContent{width:80%; margin-left:10%;}
     .right-arrow .rightContent{width:70%}
     .right-arrow .rightContent .btn{margin:5% 0}
-    .Explorer .right-arrow .arrow{background-size: 100% 100%;}
+    .Explorer .right-arrow .arrow{background-size: 100% 100% !important;}
     
   </style>
   <style>.hero.right-arrow.abndcart .rightContent .line2 {
@@ -46,7 +46,7 @@
     }
     var ieVersion = IEVersion();
       if(ieVersion != undefined)
-        if(ieVersion == '10-11+'){
+        if(ieVersion == '10-current'){
           var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
           var base64 = window.btoa(utf8);
           $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
