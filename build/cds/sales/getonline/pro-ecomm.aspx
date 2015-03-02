@@ -745,40 +745,72 @@ function getParameterByName(name) {
         </div>
       </div>
     </section>
-    <section id="pro-specific">
+    <section id="pro-specific" class="bg-primary-o product-section">
       <div class="container">
-        <div class="row col-xs-12 text-center titles">
-          <h3>We'll build a website that will help you build your business</h3>
-          <h4>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h4>
-        </div>
-        <div style="margin-top:35px" class="row">
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step One</span></h4>
-            <h3>Share your vision</h3>
-            <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
-          </div>
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step Two</span></h4>
-            <h3>We go to work</h3>
-            <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
-          </div>
-          <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" style="height:131px;padding-bottom:15px" class="img-responsive">
-            <h4 class="uppercase"><span class="steps">Step Three</span></h4>
-            <h3>Enhance & Expand</h3>
-            <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
+            <h2>We'll Build a Website That Will Help You Build Your Business</h2>
           </div>
         </div>
         <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-sm-9 speach-bubble-left-white">
-              <div class="speach-bubble-left-div">
-                <h5 class="uppercase"><span class="steps"><strong>did you know...</strong></span></h5>
-                <h5 style="margin-top:10px;text-transform:none">We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</h5>
-              </div>
+          <div class="col-xs-12 text-center">
+            <h3>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Clipboard" class="lazyload"/>
+              <mark class="uppercase">Step One</mark>
+              <h3>Share Your Vision</h3>
+              <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
             </div>
-            <div class="col-sm-3">
-              <div class="half-hero-left"></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Design" class="lazyload"/>
+              <mark class="uppercase">Step Two</mark>
+              <h3>We Go To Work</h3>
+              <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
             </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Tools" class="lazyload"/>
+              <mark class="uppercase">Step Three</mark>
+              <h3>Enhance and Expand</h3>
+              <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row bubble-row">
+          <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
+            <mark>Did you know...</mark>
+            <p>We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</p>
+          </div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
+        </div>
+      </div>
+    </section>
+    <section id="eccom" class="product-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
+            <h2 class="text-center">See what we can do</h2>
+            <h3 class="text-center">Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…</h3>
+          </div>
+        </div>
+        <section data-youtube-id="" class="video-marquee-wrapper">
+          <div class="container">
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div class="row">
+              <div class="col-sm-4"></div>
+              <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+            </div>
+          </div>
+        </section>
+        <div class="row bubble-row">
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
+            <mark>Did you know...</mark>
+            <p>Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.</p>
           </div>
         </div>
       </div>
@@ -814,26 +846,30 @@ function getParameterByName(name) {
       </div>
     </section>
     <section id="bottomGetItNow" class="bg-medium">
-      <div class="container text-center">
-        <div class="row">
-          <h2>Ready to Get Online?</h2>
-          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
-          <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
-        </div>
-        <div class="row">
-          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
-            <h3>Domain Name</h3>
+      <div class="container">
+        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have an eccomerce design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
+        <div class="pro-wrapper">
+          <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
+          <div class="col-xs-6">
+            <h3 class="product-name">Ecommerce Design Services</h3>
+            <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+            <div class="col-xs-12 text-center">
+              <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
+                <input type="hidden" name="product" value="1023|1|1">
+                <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
+                <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
+                <input type="hidden" name="itc" value="slp_webdesign2">
+                <input type="hidden" name="nocos" value="False">
+                <input type="hidden" name="config" value="customsite">
+                <input type="hidden" name="sdc" value="True">
+                <input type="hidden" name="newxs" value="False">
+                <input type="hidden" name="cicode" value="96314">
+                <input type="hidden" name="prog_id" value="GoDaddy">
+                <button class="btn btn-purchase btn-lg">GET IT NOW</button>
+                <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+              </form>
+            </div>
           </div>
-          <div class="plus">+</div>
-          <div class="plus">+</div>
-          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
-            <h3>Office 365 Email</h3>
-          </div>
-        </div>
-        <div class="row">
-          <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
-          <button data-ci="" class="btn btn-primary btn-lg">Search Again</button>
-          <button data-ci="" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101||464069" period="yearly" promocode=""></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101||464069" period="yearly"></current>]@T]/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1256,32 +1292,16 @@ ul li.no-check {
         
       </style>
       <style>
-        .btn-lg{padding: 14px 15px 9px!important;}
-        .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-        .right-side{margin-top: 25px;}
-        .pro-wrapper{margin-top: 50px; margin-bottom: 50px;}
-        .product-name{padding-bottom: 15px;}
-        .p1{margin-bottom: 25px;}
-        .p2{margin-top: 15px;}
-        .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        
-        #pro-specific{background-color:#77c043;}
-        .uppercase{text-transform:uppercase;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .text-center{text-align:center;}
-        .titles{margin-top:50px;}
-        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProExpand.png) no-repeat left bottom;}
-        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProShare.png) no-repeat left bottom;}
-        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/ProWork.png) no-repeat left bottom;}
-        .col-xs-4.first{padding-top: 30px;}
-        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        .products{margin-top: 5px!important;}
-        .computer{margin-top: 25px;}
+        #pro-specific h2 { margin-bottom: 0; }
+        #pro-specific h3 { margin-bottom: 20px; }
+        .feature mark { margin-top: 20px; }
+        .feature h3 { margin-top: 0; }
+        @media (min-width: 768px) {
+          .feature { text-align: left; }
+        }
+        .product-section{border-bottom: lightgray 1px solid;}
+        .products{margin-top: 0px!important;}
+        .uppercase{text-transform: uppercase;}
         
       </style>
     </atlantis:webstash>
