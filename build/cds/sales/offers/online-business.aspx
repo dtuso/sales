@@ -98,7 +98,8 @@ var got1Page = {
     lastTldInList: 'org', 
     tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
     possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
-    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);},
+    addTldIf: function(tld, isDefault) {if(got1Page.tldInfo.isPossibleAdditionalTld(tld)) {got1Page.tldInfo.tlds.push(tld);if(isDefault) got1Page.tldInfo.defaultTld = tld;}}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
@@ -128,33 +129,51 @@ var got1Page = {
   got1Page.canOfferOls = false;
 ##endif
 
-##if(countrySiteAny(ca) || isManager())  
-  if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
-    got1Page.tldInfo.tlds.push('ca');
-    got1Page.tldInfo.defaultTld = 'ca';
-  }
+##if(countrySiteAny(ca) || isManager())
+  got1Page.tldInfo.addTldIf('ca', true);
 ##endif
 ##if(countrySiteAny(br) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
-    got1Page.tldInfo.tlds.push('br');
-    got1Page.tldInfo.defaultTld = 'br';
-  }
+  got1Page.tldInfo.addTldIf('br', true);
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
-    got1Page.tldInfo.tlds.push('in');
-    got1Page.tldInfo.defaultTld = 'in';
-  }
+  got1Page.tldInfo.addTldIf('in', true);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('co.uk')) {
-    got1Page.tldInfo.tlds.push('co.uk');
-    got1Page.tldInfo.defaultTld = 'co.uk';
-  }
-  if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
-    got1Page.tldInfo.tlds.push('uk');
-    got1Page.tldInfo.defaultTld = 'uk';
-  }
+  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('uk',    false);
+##endif
+##if(countrySiteAny(fr) || isManager())
+  got1Page.tldInfo.addTldIf('fr', true);
+##endif
+##if(countrySiteAny(it) || isManager())
+  got1Page.tldInfo.addTldIf('it', true);
+##endif
+##if(countrySiteAny(at) || isManager())
+  got1Page.tldInfo.addTldIf('at', true);
+##endif
+##if(countrySiteAny(es) || isManager())
+  got1Page.tldInfo.addTldIf('es', true);
+##endif
+##if(countrySiteAny(nl) || isManager())
+  got1Page.tldInfo.addTldIf('nl', true);
+##endif
+##if(countrySiteAny(de) || isManager())
+  got1Page.tldInfo.addTldIf('de', true);
+##endif
+##if(countrySiteAny(ch) || isManager())
+  got1Page.tldInfo.addTldIf('ch', true);
+##endif
+##if(countrySiteAny(be) || isManager())
+  got1Page.tldInfo.addTldIf('be', true);
+##endif
+##if(countrySiteAny(pl) || isManager())
+  got1Page.tldInfo.addTldIf('pl', true);
+##endif
+##if(countrySiteAny(ru) || isManager())
+  got1Page.tldInfo.addTldIf('ru', true);
+##endif
+##if(countrySiteAny(dk) || isManager())
+  got1Page.tldInfo.addTldIf('dk', true);
 ##endif
 
 //- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
@@ -5378,6 +5397,9 @@ h2.api-error-header {
 .btn, .word-break {
   word-wrap: break-word;
   word-break: break-all;
+}
+section {
+  padding: 0px!important;
 }
       </style>
       <style>.plan-tile { 
