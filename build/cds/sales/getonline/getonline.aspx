@@ -92,7 +92,7 @@
       <div class="container text-center">
         <h2>[@L[cds.sales/getonline:QuestionsLP-8-ThisDoesnTHaveToBeConfusing]@L]</h2>
         <div class="row">
-          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-Illustration-complete.png" class="img-responsive center-block"></div>
+          <div class="col-xs-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-Illustration-complete.png" class="img-responsive center-block"></div>
         </div>
       </div>
     </section>
