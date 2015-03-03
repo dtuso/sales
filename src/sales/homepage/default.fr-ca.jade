@@ -1,8 +1,3 @@
----
-location: sales/homepage/default.fr-ca
-id: false
-name: GCEMO-636
----
 extends ../../layouts/homepage/default_base
 block styles
   link(href!="[@T[link:<cssroot />]@T]fos/hp/rebrand/css/homepage20141208.css" rel="stylesheet" type="text/css")
@@ -31,5 +26,5 @@ block tiles
         |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
 
 block bugBar
-    +tldBugs(["ca","co","com","club","quebec"])
+    +tldBugs(["com","co","ca","quebec"])
 block cookieWarning
