@@ -19,12 +19,13 @@ block tileContent
     if (logoText)
       .promo-logo-text !{logoText}
   .promo-text.walsheim-black !{promoText}
-  .promo-cta
-    if (ctaTextContainsPercent)
-      | ##if(productHasSavingsMoreThan(!{merchTilePFID}, !{merchTilePFID}, 0))
-      | <a class="walsheim-black" href="!{ctaLink}">!{ctaText}</a>
-      | ##else
-      | <a class="walsheim-black" href="!{ctaLink}">!{ctaFallBackText}</a>
-      | ##endif
-    else
-      a.walsheim-black(href!=ctaLink) !{ctaText} 
+  block tileCta
+    .promo-cta
+      if (ctaTextContainsPercent)
+        | ##if(productHasSavingsMoreThan(!{merchTilePFID}, !{merchTilePFID}, 0))
+        | <a class="walsheim-black" href="!{ctaLink}">!{ctaText}</a>
+        | ##else
+        | <a class="walsheim-black" href="!{ctaLink}">!{ctaFallBackText}</a>
+        | ##endif
+      else
+        a.walsheim-black(href!=ctaLink) !{ctaText} 
