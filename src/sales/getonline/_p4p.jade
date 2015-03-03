@@ -18,12 +18,16 @@ append vars
   // P4P variables
   - productToDisplay = {};
   - productToDisplay.name = "";
+  - productToDisplay.landingPage = "";
+  - productToDisplay.packageId = "";
+  - productToDisplay.itcCode = "";
+  - productToDisplay.pricing = {};
   - productToDisplay.getItNowDescription = "";
-  - productToDisplay.imgClass = "";
-  - productToDisplay.productIconClass = "";
+  - productToDisplay.productImgUrl = "";
+  - productToDisplay.productIconUrl = "";
   - productToDisplay.price = "";
   - productToDisplay.productDescription = "";
-  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
@@ -34,8 +38,6 @@ append vars
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
 
-  - primary_pfid = "";
-  - primary_promo = "";
 
 append seo
   meta(name="twitter:card" content="summary")
@@ -46,6 +48,54 @@ append seo
 
 append headScripts
   atlantis:webstash(type="js")
+    script.
+      var offerInfo = {
+        dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/#{productToDisplay.landingPage}"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+        packageId: "#{productToDisplay.packageId}",
+        itcCode: "#{productToDisplay.itcCode}",
+        pricing: {
+          promo_monthly: "!{productToDisplay.pricing.promo_monthly}",
+          promo_annual: "!{productToDisplay.pricing.promo_annual}",
+          renewal_annual: "!{productToDisplay.pricing.renewal_annual}"
+        }
+      };
+      // Page Global script -- changes will effect all campaigns 
+      // get url parameter by parameter name
+      function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      function tokenizePrices() {
+
+        var tokenizePrice = function(selector, price0, price1, price2) {
+          $(selector).each(function(idx, element) {
+            var $element = $(element);
+            var htmlTokenized = $element.html();
+            htmlTokenized = htmlTokenized.replace(/\{price_monthly\}/gi, price0);
+            htmlTokenized = htmlTokenized.replace(/\{price_annual\}/gi, price1);
+            htmlTokenized = htmlTokenized.replace(/\{renewal_annual\}/gi, price2);
+            $element.html(htmlTokenized);
+          });
+        };
+
+        tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
+      }
+    script.  // Page
+      $(document).ready(function(){
+        tokenizePrices();
+        var passedBusinessName = getParameterByName('domain');
+        if(passedBusinessName != '') {
+          $(document).find('.business-name-display').text(passedBusinessName);
+
+          // Initially don't display the search form.
+          $("#domainAvailableViewSearchForm").hide();
+          updateSearchedDomain('', passedBusinessName);
+          domainSearchFormSubmit('', passedBusinessName);
+       }
+      });
     script
       include:js domain-selection.js
 
@@ -56,6 +106,40 @@ append pageStyles
     h3 { text-transform: none; }
     small { display: block; }
     
+    .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+    .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+    .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+    .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+    .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+    .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+
+    .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+    .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+    .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+
+    .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+    .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+    .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+    .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+
+    h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
+
+    /* speech bubbles */
+    .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+    .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+    .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+    .speech-bubble-right-div {margin-left:5%;width:90%;}
+    .speech-bubble-left-div {margin-left:5%;width:90%;}
+  // atlantis:webstash(type="css")
+  style.  // GetItNow section
+    .left-side{position: relative;}
+    .right-side{position:relative;}
+    .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+    .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+    .heading{padding-top:30px;}
+    .starter-pack{padding-bottom: 35px;}
+    .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+    .logo-label{padding-top: 15px;}
     #getItNow { padding-bottom: 0; padding-top: 0;}
     #getItNow .container { position: relative; }
     #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
@@ -74,7 +158,7 @@ append pageStyles
       #getItNow .bubble {
         background-color: white;
         background-position: center center;
-        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: visible;
@@ -91,6 +175,20 @@ append pageStyles
     @media (min-width: 992px) {
       #getItNow .hero-guy { left: -50px; }
     }
+
+  // atlantis:webstash(type="css")
+  style.  // Product section
+    /* video button */
+    .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+    .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+    .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+    .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+    .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+    .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+    .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+
+    /* Layout */
+    .view-all{margin:20px auto;}
     
     .product-section { padding-bottom: 0; }
     .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
@@ -141,56 +239,23 @@ append pageStyles
       filter: FlipH;
     }
 
-    .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-    .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-    .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-    .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-    .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-    .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-
-    .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-    .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-
-    .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-    .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-    .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-    .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-
-    /* speech bubbles */
-    .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-    .speech-bubble-right-div {margin-left:5%;width:90%;}
-    .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-    .speech-bubble-left-div {margin-left:5%;width:90%;}
-
-    .left-side{position: relative;}
-    .right-side{position:relative;}
-    .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-    .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-    .heading{padding-top:30px;}
-    .starter-pack{padding-bottom: 35px;}
-    .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-    .logo-label{padding-top: 15px;}
-
+  // atlantis:webstash(type="css")
+  style.
+    #domainSearchWizardSection { padding-bottom: 0; }
 
   // atlantis:webstash(type="css")
-  style.  // Product section
-    /* video button */
-    .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
-    .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
-    .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
-    .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
-    .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
-    .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
-    .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+  style.  // Why-us section
+    .why-us-title{margin-top:10px;}
+    .why-us-text{margin-top:10px;}
 
-    /* Layout */
-    .view-all{margin:20px auto;}
+    .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+    .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+    .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
 
   // atlantis:webstash(type="css")
   style.  // got section
     .product-name{font-weight:800;padding-top:10px;}
 
-    .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
     #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
@@ -199,17 +264,17 @@ block content
 
   section#getItNow
     .container
-      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
       .row
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
             h2.text-center Here you go...
-            h3.text-center A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]</mark>
+            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
             .column.domain
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
               h3.text-center Domain Name
               p Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
             .plus +
@@ -217,14 +282,14 @@ block content
               //- each derived page must insert its own content here
             .plus +
             .column.email
-              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+              img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
               h3.text-center Office 365 Email
               p Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. 
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta
-            p.text-center Get the bundle for [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+            p.text-center.price-token Get the bundle for {price_monthly}/month for the first year*
             button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
-            small.text-center *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+            small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
   block domainOrPro
     include templates/_domain-search-wizard
@@ -245,7 +310,7 @@ block content
             mark Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
-            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   section#why-us
     .container
@@ -254,18 +319,18 @@ block content
           h2.text-center Why get online with us?
       .row
         .col-sm-4
-          .feature.why-gd-world-leader.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png','Pin Point Globe')
+          .feature.why-gd-world-leader
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png','Pin Point Globe')
             h3 We're the world leader
             p It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
         .col-sm-4
-          .feature.why-gd-support.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png','TLD Boards')          
+          .feature.why-gd-support
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png','TLD Boards')          
             h3 Our 24/7 support is awesome
             p That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
         .col-sm-4
-          .feature.why-gd-trust.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png','Support Icon')
+          .feature.why-gd-trust
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','Support Icon')
             h3 12 million people trust us
             p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
 
@@ -278,70 +343,22 @@ block content
           h3#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
         .row
           .column.domain
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
             h3 Domain Name
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
             h3 Office 365 Email
         .row
           h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-          button(data-ci="#{productToDisplay.bottomSearchCI}").btn.btn-primary.btn-lg Search Again
+          button(data-ci="#{productToDisplay.bottomSearchCI}")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
-          small *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+          small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 prepend endOfPageScripts
-  script.
-    $(document).ready(function(){
-      stripDomainName();
-    });
-
-    function stripDomainName(){
-         var windowParams = window.location.search.replace("?","");
-         var params = windowParams.split("&");
-         for(var i = 0; i < params.length;i++){
-          var inputName = params[i].split("=")[0];
-          var inputValue = params[i].split("=")[1];
-          if(inputName == "domain"){
-            inputValue = decodeURIComponent(inputValue);
-            $(".business-idea").text(inputValue);
-          }
-           
-       }
-    };
-
-    // Page Global script -- changes will effect all campaigns 
-    // get url parameter by parameter name
-    function getParameterByName(name) {
-      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-          results = regex.exec(location.search);
-      return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-    }
-
-    function updateSearchedDomain(e, domain) {
-      domainSearch.searchedForDomain = domain;
-      $('#domain-available-view').find('.search-form-input').val(domain);
-      $('#domain-not-available-view').find('.search-form-input').val(domain);
-    }
-
-    function updateSelectedDomain(domain) {
-      domainSearch.selectedDomain = domain;
-      $(document).find('.selected-domain-name-display').text(domain);
-    }
-
-  script.  // Page
-    $(document).ready(function(){
-      var passedBusinessName = getParameterByName('domain');
-      if(passedBusinessName != '') {
-        $(document).find('.business-name-display').text(passedBusinessName);
-        updateSearchedDomain('', passedBusinessName);
-        domainSearchFormSubmit('', passedBusinessName);
-     }
-    });
 
   // atlantis:webstash(type="js")
   script.  // Product section

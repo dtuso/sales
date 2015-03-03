@@ -24,12 +24,6 @@ var domainSearch = {
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  offersCodes: {
-    packageId_wsb: 'gybo_1email_1yr',
-    packageId_ols: 'gybo_1email_1yr_ols',
-    itc_wsb: 'slp_GYBO1',
-    itc_ols: 'slp_GYBO2',
-  },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
     promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
@@ -94,12 +88,12 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
+  // showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals(); 
-  tokenizeTheDataTokenizeAttribute();
+  // tokenizeDisclaimerModals(); 
+  // tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
 
@@ -120,9 +114,10 @@ $(document).ready(function() {
   $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
   $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  // $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
-  $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
+  $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
+  $('#bottomSearchAgain').on('click', function() {$('#wizardSearchAgain').click(); goToDomainSearchWizard();});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
@@ -138,8 +133,13 @@ function updateSearchedDomain(e, domain) {
   $(document).find('.searched-domain-name-display').text(domain);
 }
 
+function updateRecommendedDomainName(domain) {
+  if(domainSearch.selectedDomainName == '')
+    $(document).find('.selected-domain-name-display').text(domain);
+}
+
 function updateSelectedDomain(domain) {
-  domainSearch.selectedDomainName = domain.Fqdn;
+  domainSearch.selectedDomainName = domain;
   $(document).find('.selected-domain-name-display').text(domain);
 }
 
@@ -238,14 +238,13 @@ function domainSearchFormSubmit(e, domain) {
     pageStartupSearch = false;
   }
 
-  var newItc = domainSearch.offersCodes.itc_wsb;
   ##if(isManager())
-    newItc = 'mgr_' + newItc;
+    offerInfo.itcCode = 'mgr_' + offerInfo.itcCode;
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -271,7 +270,7 @@ function domainSearchFormSubmit(e, domain) {
 
       if(isAvailable) {
 
-        updateSelectedDomain(exactMatchDomain.Fqdn);
+        updateRecommendedDomainName(exactMatchDomain.Fqdn);
 
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
@@ -375,20 +374,19 @@ function validDomainSelected(e){
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
 
-  // $('#domainSearchWizard').hide();
-  // $('#domainSelected').show();
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
 function navigateToSearchAgain(e) { 
+  $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }
 
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == undefined) {
+  if(domainSearch.selectedDomainName == '') {
     goToDomainSearchWizard();
   }
   else {
@@ -410,14 +408,13 @@ function goToShowProducts()
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
-    isOLS = $this.hasClass('product-ols'),
     apiEndpoint3;
   var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
-  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? domainSearch.offersCodes.packageId_ols : domainSearch.offersCodes.packageId_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? domainSearch.offersCodes.itc_ols : domainSearch.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + offerInfo.packageId);
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + offerInfo.itcCode);
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
@@ -525,36 +522,36 @@ function animateWizard($currentView, $animateToView) {
   if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-    $currentView.hide();
+    // $currentView.hide();
   }
 
-  $animateToView.show();
+  // $animateToView.show();
 
-  // var currentViewHeight;
-  // var windowWidth = $(window).width();
+  var currentViewHeight;
+  var windowWidth = $(window).width();
 
-  // if($currentView == undefined)
-  //   currentViewHeight = 0;
-  // else {
-  //   if($currentView[0].id === $animateToView[0].id) return; // we're there!
+  if($currentView == undefined)
+    currentViewHeight = 0;
+  else {
+    if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  //   animateObjectOffToTheLeft($currentView, windowWidth, 2);
-  //   currentViewHeight = $currentView.height();
-  // }
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    currentViewHeight = $currentView.height();
+  }
 
-  // var $wizard = $('#domainSearchWizard'),
-  // wizardHeight = $('#domainSearchWizard').height();
+  var $wizard = $('#domainSearchWizard'),
+  wizardHeight = $('#domainSearchWizard').height();
 
-  // // show view offscreen to get height
-  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // // can only get height when shown      
-  // var toViewHeight = $animateToView.height(),
-  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
-  //   minHeight = Math.min(currentViewHeight, toViewHeight);
+  // show view offscreen to get height
+  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // can only get height when shown      
+  var toViewHeight = $animateToView.height(),
+    maxHeight = Math.max(currentViewHeight, toViewHeight),
+    minHeight = Math.min(currentViewHeight, toViewHeight);
   
-  // //run the animations
-  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  //run the animations
+  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {

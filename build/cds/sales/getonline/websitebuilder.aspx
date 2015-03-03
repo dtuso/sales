@@ -80,6 +80,53 @@
       
     </script>
     <atlantis:webstash type="js">
+      <script>
+        var offerInfo = {
+          dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/websitebuilder.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+          packageId: "getonline_website_builder",
+          itcCode: "slp_getonline_wsb",
+          pricing: {
+            promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='75315678' />]@T]",
+            promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='75315678' />]@T]",
+            renewal_annual: "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]"
+          }
+        };
+        // Page Global script -- changes will effect all campaigns 
+        // get url parameter by parameter name
+        function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        
+        function tokenizePrices() {
+        
+          var tokenizePrice = function(selector, price0, price1, price2) {
+            $(selector).each(function(idx, element) {
+              var $element = $(element);
+              var htmlTokenized = $element.html();
+              htmlTokenized = htmlTokenized.replace(/\{price_monthly\}/gi, price0);
+              htmlTokenized = htmlTokenized.replace(/\{price_annual\}/gi, price1);
+              htmlTokenized = htmlTokenized.replace(/\{renewal_annual\}/gi, price2);
+              $element.html(htmlTokenized);
+            });
+          };
+        
+          tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
+        }
+      </script>
+      <script>
+        $(document).ready(function(){
+          tokenizePrices();
+          var passedBusinessName = getParameterByName('domain');
+          if(passedBusinessName != '') {
+            $(document).find('.business-name-display').text(passedBusinessName);
+            updateSearchedDomain('', passedBusinessName);
+            domainSearchFormSubmit('', passedBusinessName);
+         }
+        });
+      </script>
       <script>// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
@@ -106,12 +153,6 @@ var domainSearch = {
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  offersCodes: {
-    packageId_wsb: 'gybo_1email_1yr',
-    packageId_ols: 'gybo_1email_1yr_ols',
-    itc_wsb: 'slp_GYBO1',
-    itc_ols: 'slp_GYBO2',
-  },
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
     promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
@@ -180,8 +221,8 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals(); 
-  tokenizeTheDataTokenizeAttribute();
+  // tokenizeDisclaimerModals(); 
+  // tokenizeTheDataTokenizeAttribute();
 
   wireupModals();
 
@@ -221,7 +262,7 @@ function updateSearchedDomain(e, domain) {
 }
 
 function updateSelectedDomain(domain) {
-  domainSearch.selectedDomainName = domain.Fqdn;
+  domainSearch.selectedDomainName = domain;
   $(document).find('.selected-domain-name-display').text(domain);
 }
 
@@ -320,14 +361,13 @@ function domainSearchFormSubmit(e, domain) {
     pageStartupSearch = false;
   }
 
-  var newItc = domainSearch.offersCodes.itc_wsb;
   ##if(isManager())
-    newItc = 'mgr_' + newItc;
+    offerInfo.itcCode = 'mgr_' + offerInfo.itcCode;
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -492,14 +532,13 @@ function goToShowProducts()
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
-    isOLS = $this.hasClass('product-ols'),
     apiEndpoint3;
   var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
-  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? domainSearch.offersCodes.packageId_ols : domainSearch.offersCodes.packageId_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? domainSearch.offersCodes.itc_ols : domainSearch.offersCodes.itc_wsb));
+  apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + offerInfo.packageId);
+  apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + offerInfo.itcCode);
   apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
@@ -715,26 +754,26 @@ function getParameterByName(name) {
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy hidden-xs">
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[multipleproductprice:<current productidlist="101|7524|464069" period="monthly" promocode="24681357"></current>]@T]</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
-            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">Domain Name</h3>
               <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png" class="img-responsive center-block">
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
               <h3 class="text-center">Website Builder</h3>
               <p>Easily create a professional website with simple drag &amp; drop tools.</p>
             </div>
             <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
               <h3 class="text-center">Office 365 Email</h3>
               <p>Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. </p>
             </div>
@@ -742,8 +781,8 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center">Get the bundle for [@T[multipleproductprice:<current productidlist="101|7524|464069" period="monthly" promocode="24681357"></current>]@T]/month for the first year*</p>
-            <button data-ci="96283" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center">*Bundle cost is [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly" promocode="24681357"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|7524|464069" period="yearly"></current>]@T]/year after the first year</small>
+            <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
+            <button data-ci="96283" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
           </div>
         </div>
       </div>
@@ -974,7 +1013,7 @@ function getParameterByName(name) {
         #getItNow .bubble {
           background-color: white;
           background-position: center center;
-          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
           background-repeat: no-repeat;
           background-size: 100% 100%;
           overflow: visible;
@@ -1041,6 +1080,8 @@ function getParameterByName(name) {
         filter: FlipH;
       }
       
+<<<<<<< HEAD
+=======
       .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
       .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
       .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
@@ -1087,12 +1128,12 @@ function getParameterByName(name) {
       /* Layout */
       .view-all{margin:20px auto;}
       
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
       .product-name{font-weight:800;padding-top:10px;}
       
-      .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
       #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
       #got-domain-selected{display:none;}
       #got small { display: block; padding-top: 10px; padding-bottom:5px;}
@@ -1413,6 +1454,25 @@ function getParameterByName(name) {
             <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
           </div>
         </div>
+<<<<<<< HEAD
+      </div>
+      <div class="row">
+        <div class="text-center">
+          <button data-toggle="modal" data-target="#g-modal" data-ci="96287" class="btn btn-default-dark view-all btn-md">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
+        </div>
+      </div>
+      <section data-youtube-id="-HtVJyxSQmw" class="video-marquee-wrapper">
+        <div class="container">
+          <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+          <div class="row">
+            <div class="col-sm-4"></div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
+            <div class="video-info col-sm-4">
+              <div class="video-marquee-info text-center">
+                <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" data-ci="96288" class="lazyload img-play-green play-button"></div>
+                <h4 class="uppercase walsheim-bold">What is Website Builder?</h4>
+                <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" data-ci="96288" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
+=======
         <section data-youtube-id="-HtVJyxSQmw" class="video-marquee-wrapper">
           <div class="container">
             <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
@@ -1425,6 +1485,7 @@ function getParameterByName(name) {
                   <h4 class="uppercase walsheim-bold">What is Website Builder?</h4>
                   <button id="viewAllTemplates" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">Watch Now</button>
                 </div>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
               </div>
             </div>
           </div>
@@ -2997,6 +3058,36 @@ var PlanBox6UI = {
 </script>
 </atlantis:webstash>
 
+<<<<<<< HEAD
+    </section>
+    <section id="O365-email" class="gray">
+      <div class="container">
+        <div class="row">
+          <div style="margin-top:35px" class="email-icon"></div>
+        </div>
+        <div class="row">
+          <div style="margin-top:15px" class="text-center">
+            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
+            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"><mark>yourname@<span class="selected-domain-name-display"></span></mark></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top:30px">
+            <div class="col-sm-9 speech-bubble-left-green">
+              <div class="speech-bubble-left-div">
+                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
+                <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="half-hero-left"></div>
+            </div>
+=======
     <section id="O365-email" class="product-section bg-medium">
       <div class="container">
         <div class="row">
@@ -3010,6 +3101,7 @@ var PlanBox6UI = {
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
             <mark>Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
@@ -3024,19 +3116,19 @@ var PlanBox6UI = {
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
               <h3>We're the world leader</h3>
               <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
               <h3>Our 24/7 support is awesome</h3>
               <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
               <h3>12 million people trust us</h3>
               <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
             </div>
@@ -3047,6 +3139,39 @@ var PlanBox6UI = {
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
+<<<<<<< HEAD
+          <div style="margin-top:30px" class="text-center">
+            <h2 class="uppercase">Ready to get online?</h2>
+            <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
+            <h3 id="got-domain-selected" class="header-detail-text uppercase price-token">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
+          </div>
+          <div class="container bottom">
+            <div class="row">
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
+                <h3>Domain Name</h3>
+              </div>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
+                <h3 class="text-center">Website Builder</h3>
+              </div>
+              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
+                <h3>Office 365 Email</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="get-it-now">
+                <div class="container">
+                  <div class="row text-center">
+                    <p class="h3 price-token">{price_monthly}/month for the first year*</p>
+                  </div>
+                  <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
+                    <button data-ci="96286" class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</button>
+                    <button data-ci="96282" id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</button>
+                  </div>
+                  <div style="padding-top:10px" class="row text-center"><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small></div>
+                </div>
+              </div>
+            </div>
+=======
           <h2>Ready to Get Online?</h2>
           <h3 id="got-domain-not-selected">First select your perfect domain</h3>
           <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
@@ -3058,6 +3183,7 @@ var PlanBox6UI = {
           <div class="plus">+</div>
           <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png" class="img-responsive center-block">
             <h3>Website Builder</h3>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
           </div>
           <div class="plus">+</div>
           <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
@@ -3365,7 +3491,7 @@ ul li.no-check {
           #getItNow .bubble {
             background-color: white;
             background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-goodNews-shape.png);
+            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             overflow: visible;
@@ -3383,6 +3509,26 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
+<<<<<<< HEAD
+      </style>
+      <!-- atlantis:webstash(type="css")-->
+      <style>
+        /* video button */
+        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+        
+        /* Layout */
+        .view-all{margin:20px auto;}
+        
+        #product h2 { margin-top: 20px; margin-bottom: 20px; }
+        #product h3 { text-transform: none; }
+        #product .how-it-works { margin: 20px auto; }
+=======
         .product-section { padding-bottom: 0; }
         .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
         .product-section .product-summary { margin: 20px auto; }
@@ -3392,6 +3538,7 @@ ul li.no-check {
           height: auto; 
           margin-top: 60px;
         }
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
         
         @media (min-width: 768px) {
           .product-section .hero-guy { 
@@ -3432,6 +3579,8 @@ ul li.no-check {
           filter: FlipH;
         }
         
+<<<<<<< HEAD
+=======
         .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
         .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
         .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
@@ -3478,12 +3627,12 @@ ul li.no-check {
         /* Layout */
         .view-all{margin:20px auto;}
         
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
         .product-name{font-weight:800;padding-top:10px;}
         
-        .web-hosting-icon{height:111px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/WebHostingServers.png) no-repeat center bottom;}
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
@@ -3494,6 +3643,8 @@ ul li.no-check {
       endOfPageScripts();
       
     </script>
+<<<<<<< HEAD
+=======
     <script>
       $(document).ready(function(){
         stripDomainName();
@@ -3545,6 +3696,7 @@ ul li.no-check {
       });
       
     </script>
+>>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
     <!-- atlantis:webstash(type="js")-->
     <script>
       // https://developers.google.com/youtube/player_parameters#IFrame_Player_API

@@ -1,35 +1,50 @@
 extends _p4p.jade
 
 append vars
-  - primary_pfid = 7524;
-  - primary_promo = 24681357;
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "Website Builder";
+  - productToDisplay.landingPage = "websitebuilder.aspx"
+  - productToDisplay.packageId = "getonline_website_builder";
+  - productToDisplay.itcCode = "slp_getonline_wsb";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools.";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
+  - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
+  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
+  - productToDisplay.productVideoInfoText = "What is Website Builder?";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
   - productToDisplay.topButtonCI = "96283";
   - productToDisplay.bottomButtonCI = "96282";
   - productToDisplay.bottomSearchCI = "96286";
   - productToDisplay.viewTemplatesCI = "96287";
   - productToDisplay.playButtonCI = "96288";
-  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
   - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
   - productToDisplay.productVideoInfoText = "What is Website Builder?";
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
-    h3.text-center Website Builder
-    p Easily create a professional website with simple drag &amp; drop tools.
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.text-center #{productToDisplay.name}
+    p #{productToDisplay.getItNowDescription}
 
 block productSection
   section#wordpress.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
-          h2.text-center Website Builder
-          h3.text-center Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
           button.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
-          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
@@ -40,13 +55,13 @@ block productSection
                 button.cta.btn.btn-default-dark.btn-md.uppercase(id='viewAllTemplates',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
       .row.bubble-row
         .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark Did you know...
-          p Customers are more likely to contact you if you have a website for your local business.
+          p #{productToDisplay.productDidYouKnowText}
   include ../shared/wsb-templates.html
 
 block bottomTargetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-websiteBuilder.png")
-    h3 Website Builder
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3 #{productToDisplay.name}
