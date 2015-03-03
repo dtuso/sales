@@ -1,0 +1,17 @@
+---
+location: sales/color-your-website-with-success.rule
+id: 54ef5edaf778fc203043be09
+name: SEM-388
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]
