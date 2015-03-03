@@ -1163,6 +1163,7 @@ function getParameterByName(name) {
       #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
       #got-domain-selected{display:none;}
       #got small { display: block; padding-top: 10px; padding-bottom:5px;}
+      #bottomGetItNow img { max-height: 110px; }
       
     </style>
     <section id="domainSearchWizardSection" class="bg-primary-o">
@@ -2277,6 +2278,7 @@ ul li.no-check {
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
+        #bottomGetItNow img { max-height: 110px; }
         
       </style>
     </atlantis:webstash>
