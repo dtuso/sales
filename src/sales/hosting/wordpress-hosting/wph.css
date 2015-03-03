@@ -11,6 +11,8 @@ body {
 }
 
 
+*[data-tokenize] {visibility: hidden;}
+
 | 
 |##if(activeLanguageAny([en-pk],[en-in]))
 | 
