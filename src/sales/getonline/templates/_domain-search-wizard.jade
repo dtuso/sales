@@ -24,11 +24,11 @@ append pageStyles
       background-color: #77c043;
     }
     
-    #domain-search-view,
-    #domain-available-view,
-    #domain-not-available-view {
-      padding-top:15px;
-    }
+    //- #domain-search-view,
+    //- #domain-available-view,
+    //- #domain-not-available-view {
+    //-   padding-top:15px;
+    //- }
 
     #api-failure,
     #domain-search-view,
@@ -36,6 +36,8 @@ append pageStyles
     #domain-not-available-view,
     #domain-selected-view {display: none; }
 
+    #domain-search-header1,
+    #domain-search-header2 {display: none;}
 
     #domainSearchWizard .domain-name-displayed {
       font-size: 60px;
@@ -65,8 +67,8 @@ append pageStyles
       font-size:24px;
     }
 
-    .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
-    .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+    .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+    .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
     .domain-search-wizard .speach-bubble-left-div {margin-left:5%;width:90%;}
     .domain-search-wizard .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;
       padding: 10px 20px;text-transform: uppercase;line-height: 1;
@@ -166,7 +168,7 @@ append pageStyles
     #domain-available-view .select-and-continue{margin:10px 0;float:right;}
     #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
 
-    #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+    #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
     #domain-available-view h2.searched-domain-name-display {margin: 0;}
 
   // atlantis:webstash(type="css")
@@ -179,7 +181,7 @@ append pageStyles
     #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
     #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
 
-    #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+    #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
     #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
     
     //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
@@ -213,48 +215,68 @@ append pageStyles
     #domain-selected-view h2.searched-domain-name-display {margin: 0;}
     #domain-selected-view .reseach-container {padding-top: 10px;}
 
-section#domainSearchWizardSection.green
+section#domainSearchWizardSection.bg-primary-o
   #domain-search-view.js-domain-search-wizard-section
-    .container.bg-green-official
+    .container
       .row
-        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3
+          div.domain-search-wizard.domain-icon
       .row
-        div.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-md-12
-          .text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
-      form(id!="#{domainSearchWizard.formId}")
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+      form(id="domainSearchViewForm")
         .row
-          .col-md-12
+          .col-xs-12.col-sm-9.col-sm-offset-3
             if(domainSearchWizard.title)
               h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
         .row
-          .col-md-12.offer-search-box
+          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
               .input-group
                 input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                 if(domainSearchWizard.showSearchButton)
                   span.input-group-btn
-                    button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+                    button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
         .row.domain-search-messaging-row
-          .col-md-12
+          .col-xs-12.col-sm-9.col-sm-offset-3
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
 
   #domain-available-view.js-domain-search-wizard-section
-    .container.bg-green-official
+    .container
       .row
-        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3
+          div.domain-search-wizard.domain-icon
       .row
-        div.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-md-12
-          .text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark>
-      .row#available-domain
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business.
+      form(id="domainAvailableViewSearchForm")
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3
+            if(domainSearchWizard.title)
+              h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
+              .input-group
+                input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
+                if(domainSearchWizard.showSearchButton)
+                  span.input-group-btn
+                    button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+        .row.domain-search-messaging-row
+          .col-xs-12.col-sm-9.col-sm-offset-3
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
+      .row
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          h4.domain-starts.strong(style={'margin-top':'10px'}) Here's our favorite for <mark class="business-name-display">{0}</mark>
+      .row#available-domain.bg-light
         .col-md-9.white
           span.domain-name-display.lowercase.available-domain-name#available-domain-name
         .col-md-3.white
@@ -271,7 +293,7 @@ section#domainSearchWizardSection.green
             button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
       .spin-results(style={'margin-top':'10px'})
       .spin-template-wrap
-        .row.spin-template.spin-result.searched-domain-name-row
+        .row.spin-template.spin-result.searched-domain-name-row.bg-light
           .col-md-9.white
             span.domain-name-display.lowercase
           .col-md-3.white
@@ -279,24 +301,45 @@ section#domainSearchWizardSection.green
             .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
             .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
-      .show-more-section
-        h6.text-center(style={'margin-top':'10px'})
-          span.clickable-show-more(data-ci="95268") See more
-          span.show-more-arrow
+      .row.show-more-section
+        .col-md-12
+          h6.text-center(style={'margin-top':'10px'})
+            span.clickable-show-more(data-ci="95268") See more
+            span.show-more-arrow
+      .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
+        .col-md-12.text-center
+          btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
 
   #domain-not-available-view.js-domain-search-wizard-section
     .container
       .row
-        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3
+          div.domain-search-wizard.domain-icon
       .row
-        div.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-md-12
-          .text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+      form(id="domainNotAvailableViewSearchForm")
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3
+            if(domainSearchWizard.title)
+              h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+        .row
+          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
+              .input-group
+                input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
+                if(domainSearchWizard.showSearchButton)
+                  span.input-group-btn
+                    button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+        .row.domain-search-messaging-row
+          .col-xs-12.col-sm-9.col-sm-offset-3
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
+            span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
       .row.searched-domain-name-row
-        div.text-center
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
           h2.domain-name-displayed.word-break Sorry, <mark class="searched-domain-name-display"></mark> is taken.
 
     .container.other-domains.spin-container
@@ -308,7 +351,7 @@ section#domainSearchWizardSection.green
             button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
       .spin-results(style={'margin-top':'10px'})
       .spin-template-wrap
-        .row.spin-template.spin-result.searched-domain-name-row
+        .row.spin-template.spin-result.searched-domain-name-row.bg-light
           .col-md-9.white
             span.domain-name-display.lowercase
           .col-md-3.white
@@ -316,29 +359,35 @@ section#domainSearchWizardSection.green
             .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
             .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
-      .show-more-section
+      .row.show-more-section
         h6.text-center(style={'margin-top':'10px'})
           span.clickable-show-more(data-ci="95268") See more
           span.show-more-arrow
+      .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
+        .col-md-12.text-center
+          btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
 
   #domain-selected-view.js-domain-search-wizard-section
-    .container#selected-domain.bg-green-official
+    .container#selected-domain
       .row
-        div.domain-search-wizard.domain-icon(style={'margin-top':'35px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3
+          div.domain-search-wizard.domain-icon
       .row
-        div.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
-      .row(style={'margin-top':'10px'})
-        div.text-center
+      .row
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
           h4.strong Congratulations! You have selected the following domain name:
       .row.searched-domain-name-row
-        div.text-center
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
           h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
-      .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-        btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
-      .row.text-center(style={'padding-top':'30px','padding-bottom':'10px'})
-        btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
-        btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
+      .row(style={'padding-top':'30px','padding-bottom':'10px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
+      .row(style={'padding-top':'30px','padding-bottom':'10px'})
+        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+          btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
+          btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
 
   #api-failure.sf-dialog.api-B-failure
     h2.api-error-header
@@ -346,20 +395,18 @@ section#domainSearchWizardSection.green
       div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
     p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
 
-  .container#domainSearchWizardFooter.green
-    .row
-      div(style={'margin-top':'30px'})
-        .col-md-9.col-sm-9.speech-bubble-left-white
-          .speech-bubble-left-div
-            h5.uppercase <mark><strong>did you know...</strong></mark>
-            h5(style={'margin-top':'10px','text-transform':'none'}) Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.
-        .col-md-3.col-sm-3
-          div.domain-search-wizard.half-hero-left
+  .container#domainSearchWizardFooter
+    .row.bubble-row
+      .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+        mark Did you know...
+        p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+      .col-xs-2
+        img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
 append endOfPageScripts
   script.
-    var #{domainSearchWizard.formId} = {
-       executeFnByName: function(name, context) {
+    var domainSearchViewForm = {
+      executeFnByName: function(name, context) {
         
         var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
         for(var i=2; i < arguments.length; i++){
@@ -376,32 +423,32 @@ append endOfPageScripts
       validateSubmit: function(e){
 
         e.preventDefault();
-        var domainName = #{domainSearchWizard.formId}.trimmedDomainName(false);
+        var domainName = domainSearchViewForm.trimmedDomainName(false);
         var functionSaveName = '#{domainSearchWizard.saveEnteredDomainFn}';
         if(functionSaveName.length > 0) {
-          #{domainSearchWizard.formId}.executeFnByName(functionSaveName, window, e, domainName);
+          domainSearchViewForm.executeFnByName(functionSaveName, window, e, domainName);
         }
         if((domainName && domainName.length==0) || !domainName) return false;
 
         domainName = domainName.toLowerCase();
-        domainName = #{domainSearchWizard.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-        if(!#{domainSearchWizard.formId}.ensureValidTld(domainName)) {
+        domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        if(!domainSearchViewForm.ensureValidTld(domainName)) {
           return;
         }
         var functionName = '#{domainSearchWizard.searchNowCallbackFn}';
         if(functionName.length > 0)  {
-          #{domainSearchWizard.formId}.executeFnByName(functionName, window, e, domainName);
+          domainSearchViewForm.executeFnByName(functionName, window, e, domainName);
         }
 
       },
       trimmedDomainName: function(isKeyPress){
         
-        var $form = $("##{domainSearchWizard.formId}"),
+        var $form = $("#domainSearchViewForm"),
           $textInput = $form.find('input[name="domainToCheck"]'),
           domainName = $textInput.val();
         if((domainName && domainName.length==0) || !domainName) return null;
 
-        domainName = #{domainSearchWizard.formId}.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+        domainName = domainSearchViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
         return domainName;
 
       },
@@ -423,10 +470,212 @@ append endOfPageScripts
       },
       ensureValidTld: function() {
 
-        var $form = $("##{domainSearchWizard.formId}"),
+        var $form = $("#domainSearchViewForm"),
             $textInput = $form.find('input[name="domainToCheck"]'),
             domainName = $textInput.val(); 
-            validTld = #{domainSearchWizard.formId}.hasTldValid(domainName);
+            validTld = domainSearchViewForm.hasTldValid(domainName);
+        $form.find('.search-message').hide();
+        if(validTld) {
+          $form.find('.type-your-business-name').show();
+        } else {
+          $form.find('.invalid-TLD-entered').show();
+        }
+        return validTld;
+        
+      },
+      hasTldValid: function(domain) {
+
+        domain = $.trim(domain || "");
+        var idx = domain.indexOf('.'), isValid = false;
+        if(!domain || domain.length == 0 || idx == -1) return true;
+
+        var domainsTld = domain.substring(idx+1).toLowerCase();
+        $.each(#{domainSearchWizard.tlds}, function(idx, tld) {
+          if(tld.toLowerCase() === domainsTld) {
+            isValid = true;
+          }
+        });
+        return isValid;
+
+      },
+      formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+
+        if(domain.indexOf('.') > 0) return domain;
+        return domain + '.' + #{domainSearchWizard.defaultTld};
+
+      }
+    };
+
+    var domainAvailableViewSearchForm = {
+      executeFnByName: function(name, context) {
+        
+        var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+        for(var i=2; i < arguments.length; i++){
+          args.push(arguments[i]);
+        }
+        var namespaces = name.split(".");
+        var func = namespaces.pop();
+        for(var i = 0; i < namespaces.length; i++) {
+          context = context[namespaces[i]];
+        }
+        return context[func].apply(this, args);
+
+      },
+      validateSubmit: function(e){
+
+        e.preventDefault();
+        var domainName = domainAvailableViewSearchForm.trimmedDomainName(false);
+        var functionSaveName = '#{domainSearchWizard.saveEnteredDomainFn}';
+        if(functionSaveName.length > 0) {
+          domainAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+        }
+        if((domainName && domainName.length==0) || !domainName) return false;
+
+        domainName = domainName.toLowerCase();
+        domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        if(!domainAvailableViewSearchForm.ensureValidTld(domainName)) {
+          return;
+        }
+        var functionName = '#{domainSearchWizard.searchNowCallbackFn}';
+        if(functionName.length > 0)  {
+          domainAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+        }
+
+      },
+      trimmedDomainName: function(isKeyPress){
+        
+        var $form = $("#domainAvailableViewSearchForm"),
+          $textInput = $form.find('input[name="domainToCheck"]'),
+          domainName = $textInput.val();
+        if((domainName && domainName.length==0) || !domainName) return null;
+
+        domainName = domainAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+        return domainName;
+
+      },
+      reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+
+        var idx = domain.indexOf('.'),
+            hasTld = idx > -1,
+            sld = hasTld ? domain.substring(0, idx) : domain,
+            tld = hasTld ? domain.substring(idx+1) : '',
+            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+        sld = needsTrimmed ? sld.substring(0, #{domainSearchWizard.maxDomainLength}) : sld;
+        
+        var domainName = sld + ((tld!='') ? '.' + tld : '');
+        if(needsTrimmed) {
+          $textInput.val(domainName);
+        }
+        return domainName;
+
+      },
+      ensureValidTld: function() {
+
+        var $form = $("#domainAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val(); 
+            validTld = domainAvailableViewSearchForm.hasTldValid(domainName);
+        $form.find('.search-message').hide();
+        if(validTld) {
+          $form.find('.type-your-business-name').show();
+        } else {
+          $form.find('.invalid-TLD-entered').show();
+        }
+        return validTld;
+        
+      },
+      hasTldValid: function(domain) {
+
+        domain = $.trim(domain || "");
+        var idx = domain.indexOf('.'), isValid = false;
+        if(!domain || domain.length == 0 || idx == -1) return true;
+
+        var domainsTld = domain.substring(idx+1).toLowerCase();
+        $.each(#{domainSearchWizard.tlds}, function(idx, tld) {
+          if(tld.toLowerCase() === domainsTld) {
+            isValid = true;
+          }
+        });
+        return isValid;
+
+      },
+      formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+
+        if(domain.indexOf('.') > 0) return domain;
+        return domain + '.' + #{domainSearchWizard.defaultTld};
+
+      }
+    };
+
+    var domainNotAvailableViewSearchForm = {
+      executeFnByName: function(name, context) {
+        
+        var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+        for(var i=2; i < arguments.length; i++){
+          args.push(arguments[i]);
+        }
+        var namespaces = name.split(".");
+        var func = namespaces.pop();
+        for(var i = 0; i < namespaces.length; i++) {
+          context = context[namespaces[i]];
+        }
+        return context[func].apply(this, args);
+
+      },
+      validateSubmit: function(e){
+
+        e.preventDefault();
+        var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(false);
+        var functionSaveName = '#{domainSearchWizard.saveEnteredDomainFn}';
+        if(functionSaveName.length > 0) {
+          domainNotAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+        }
+        if((domainName && domainName.length==0) || !domainName) return false;
+
+        domainName = domainName.toLowerCase();
+        domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        if(!domainNotAvailableViewSearchForm.ensureValidTld(domainName)) {
+          return;
+        }
+        var functionName = '#{domainSearchWizard.searchNowCallbackFn}';
+        if(functionName.length > 0)  {
+          domainNotAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+        }
+
+      },
+      trimmedDomainName: function(isKeyPress){
+        
+        var $form = $("#domainNotAvailableViewSearchForm"),
+          $textInput = $form.find('input[name="domainToCheck"]'),
+          domainName = $textInput.val();
+        if((domainName && domainName.length==0) || !domainName) return null;
+
+        domainName = domainNotAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+        return domainName;
+
+      },
+      reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+
+        var idx = domain.indexOf('.'),
+            hasTld = idx > -1,
+            sld = hasTld ? domain.substring(0, idx) : domain,
+            tld = hasTld ? domain.substring(idx+1) : '',
+            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+        sld = needsTrimmed ? sld.substring(0, #{domainSearchWizard.maxDomainLength}) : sld;
+        
+        var domainName = sld + ((tld!='') ? '.' + tld : '');
+        if(needsTrimmed) {
+          $textInput.val(domainName);
+        }
+        return domainName;
+
+      },
+      ensureValidTld: function() {
+
+        var $form = $("#domainNotAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val(); 
+            validTld = domainNotAvailableViewSearchForm.hasTldValid(domainName);
         $form.find('.search-message').hide();
         if(validTld) {
           $form.find('.type-your-business-name').show();
@@ -461,17 +710,42 @@ append endOfPageScripts
 
     $(document).ready(function(){
 
-      $("##{domainSearchWizard.formId}").on('click', 'button.offer-search-btn', function(){
-        $("##{domainSearchWizard.formId}").submit();
+      $("#domainSearchViewForm").on('click', 'button.offer-search-btn', function(){
+        $("#domainSearchViewForm").submit();
       });
 
-      $("##{domainSearchWizard.formId}").on('submit', #{domainSearchWizard.formId}.validateSubmit);
-      $("##{domainSearchWizard.formId}").on('keyup', function(e){ 
+      $("#domainSearchViewForm").on('submit', #{domainSearchWizard.formId}.validateSubmit);
+      $("#domainSearchViewForm").on('keyup', function(e){ 
         if(e.which == 13) return;
-        var domainName = #{domainSearchWizard.formId}.trimmedDomainName(true);
+        var domainName = domainSearchViewForm.trimmedDomainName(true);
         if(!domainName || domainName.length == 0) return;
-        domainName = #{domainSearchWizard.formId}.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         #{domainSearchWizard.formId}.ensureValidTld(domainName);
       });
 
+      $("#domainAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+        $("#domainAvailableViewSearchForm").submit();
+      });
+
+      $("#domainAvailableViewSearchForm").on('submit', #{domainSearchWizard.formId}.validateSubmit);
+      $("#domainAvailableViewSearchForm").on('keyup', function(e){ 
+        if(e.which == 13) return;
+        var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
+        if(!domainName || domainName.length == 0) return;
+        domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        #{domainSearchWizard.formId}.ensureValidTld(domainName);
+      });
+
+      $("#domainNotAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+        $("#domainNotAvailableViewSearchForm").submit();
+      });
+
+      $("#domainNotAvailableViewSearchForm").on('submit', #{domainSearchWizard.formId}.validateSubmit);
+      $("#domainNotAvailableViewSearchForm").on('keyup', function(e){ 
+        if(e.which == 13) return;
+        var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
+        if(!domainName || domainName.length == 0) return;
+        domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+        #{domainSearchWizard.formId}.ensureValidTld(domainName);
+      });
     });

@@ -5,15 +5,15 @@ append vars
   - productToDisplay.name = "Web Hosting";
   - productToDisplay.landingPage = "web-hosting.aspx"
   - productToDisplay.packageId = "getonline_web_hosting";
-  - productToDisplay.itcCode = "slp_getonline_store";
+  - productToDisplay.itcCode = "slp_getonline_hosting";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='monthly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='yearly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32051' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car.";
-  - productToDisplay.imgClass = "features-hosting";
-  - productToDisplay.productIconClass = "features-hosting";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
   - productToDisplay.productDescription = "Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.";
-  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.";
@@ -24,28 +24,28 @@ append vars
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png")
-    h3.text-center Web Hosting
-    p Give your site a home that’ll keep it secure and running like a sports car.
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.text-center #{productToDisplay.name}
+    p #{productToDisplay.getItNowDescription}
 
 block productSection
   section#web-hosting.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
-          h2.text-center Web Hosting
-          h3.text-center Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.
-          img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
-          p.text-center Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it. 
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
+          img.img-responsive.product-summary(src!="#{productToDisplay.productInfoImageUrl}")
+          p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark Did you know...
-          p Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?
+          p #{productToDisplay.productDidYouKnowText}
 
 block bottomTargetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/WebHostingServers.png")
-    h3 Web Hosting
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3 #{productToDisplay.name}

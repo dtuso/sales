@@ -23,11 +23,11 @@ append vars
   - productToDisplay.itcCode = "";
   - productToDisplay.pricing = {};
   - productToDisplay.getItNowDescription = "";
-  - productToDisplay.imgClass = "";
-  - productToDisplay.productIconClass = "";
+  - productToDisplay.productImgUrl = "";
+  - productToDisplay.productIconUrl = "";
   - productToDisplay.price = "";
   - productToDisplay.productDescription = "";
-  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
@@ -89,6 +89,9 @@ append headScripts
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           $(document).find('.business-name-display').text(passedBusinessName);
+
+          // Initially don't display the search form.
+          $("#domainAvailableViewSearchForm").hide();
           updateSearchedDomain('', passedBusinessName);
           domainSearchFormSubmit('', passedBusinessName);
        }
@@ -236,9 +239,9 @@ append pageStyles
       filter: FlipH;
     }
 
-  // O365 section
   // atlantis:webstash(type="css")
-  // style.
+  style.
+    #domainSearchWizardSection { padding-bottom: 0; }
 
   // atlantis:webstash(type="css")
   style.  // Why-us section
@@ -307,7 +310,7 @@ block content
             mark Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
-            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   section#why-us
     .container
@@ -316,17 +319,17 @@ block content
           h2.text-center Why get online with us?
       .row
         .col-sm-4
-          .feature.why-gd-world-leader.text-center
+          .feature.why-gd-world-leader
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png','Pin Point Globe')
             h3 We're the world leader
             p It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
         .col-sm-4
-          .feature.why-gd-support.text-center
+          .feature.why-gd-support
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png','TLD Boards')          
             h3 Our 24/7 support is awesome
             p That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
         .col-sm-4
-          .feature.why-gd-trust.text-center
+          .feature.why-gd-trust
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','Support Icon')
             h3 12 million people trust us
             p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
@@ -340,20 +343,20 @@ block content
           h3#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
         .row
           .column.domain
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
             h3 Domain Name
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
             h3 Office 365 Email
         .row
           h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-          button(data-ci="#{productToDisplay.bottomSearchCI}").btn.btn-primary.btn-lg Search Again
+          button(data-ci="#{productToDisplay.bottomSearchCI}")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
-          small *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+          small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 prepend endOfPageScripts
 

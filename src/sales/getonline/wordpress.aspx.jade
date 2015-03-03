@@ -10,10 +10,10 @@ append vars
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "Start a blog with WordPress and let us manage the technical stuff.";
-  - productToDisplay.imgClass = "features-wordpress";
-  - productToDisplay.productIconClass = "features-wordpress";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png";
   - productToDisplay.productDescription = "We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.";
-  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.";
@@ -24,28 +24,28 @@ append vars
 
 block targetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png")
-    h3.text-center Managed Wordpress
-    p Start a blog with WordPress and let us manage the technical stuff.
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.text-center #{productToDisplay.name}
+    p #{productToDisplay.getItNowDescription}
 
 block productSection
   section#wordpress.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
-          h2.text-center WordPress
-          h3.text-center We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.
-          img.img-responsive.product-summary(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png")
-          p.text-center WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
+          img.img-responsive.product-summary(src!="#{productToDisplay.productInfoImageUrl}")
+          p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark Did you know...
-          p As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?
+          p #{productToDisplay.productDidYouKnowText}
 
 block bottomTargetedProduct
   .column.website
-    img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png")
-    h3 Managed Wordpress
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3 #{productToDisplay.name}
