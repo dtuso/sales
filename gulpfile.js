@@ -292,7 +292,7 @@ gulp.task('js-concat', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./src/sales/**/*.jade'], ['jade'])
+  gulp.watch(['./src/**/*.jade'], ['jade'])
   gulp.watch(paths.templates, ['html']);
   gulp.watch(paths.language,  ['language']);
   gulp.watch(paths.rule,      ['rule']);

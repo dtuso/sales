@@ -639,7 +639,9 @@
               <div id="{{pod.PodId}}" ng-repeat="pod in podsDataTop" class="col-sx-3">
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
                   <div class="pro-plan-wrap">
-                    <div class="tldlogo {{pod.logoclass}}"></div>
+                    <div class="tldlogo-wrap">
+                      <div class="tldlogo {{pod.logoclass}}"></div>
+                    </div>
                     <p ng-bind-html="pod.PodText" class="plan-text"> </p>
                     <div class="plan-price-wrap">
                       <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
@@ -1268,6 +1270,7 @@ top: -6px;
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
+          var defaultActive = "false";
           var scroll = $(this).scrollTop();
           var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -1280,6 +1283,9 @@ top: -6px;
               $(this).blur();
               $(this).toggleClass("active",InNavZone);
             });
+            if(defaultActive){
+              $('.mid-page-nav a:first').addClass("active");
+            }
           }
       
           if(InNavZone){
@@ -2865,11 +2871,6 @@ ul li.no-check {
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
-        $('[data-icann-fee]').each(function(){
-          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
-          $(this).html(tokenized);
-        });
-      
       });
       
     </script>

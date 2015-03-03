@@ -1,7 +1,7 @@
 ---
 url: http://www.dev-godaddy.com/business/office-365-config.aspx
 location: sales/business/office-365-config.aspx
-id: 54d93902f778fc1bb4408c03
+id: 54e791d0f778fc0fb81adfb3
 name: GCE-32258
 comments: Update verbage on page
 ---
@@ -44,7 +44,7 @@ comments: Update verbage on page
 
   <!-- build:css(app) /css/main.css -->
   <link rel="stylesheet" href="[@T[link:<cssroot />]@T]fos/office365/_bower_components/bootstrap3-godaddy/index.css" />
-  <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20141103.css' /> ]@T]" /> 
+  <link rel="stylesheet" href="[@T[link:<css path='fos/office365/css/main.20150219.css' /> ]@T]" /> 
   <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/business/office-365-config.aspx' parammode='explicit'/>]@T]"/> 
   <!--[if lt IE 8]>
         <link rel="stylesheet" href="/_bower_components/bootstrap-ie7fix/css/bootstrap-ie7fix.min.css" />
@@ -446,9 +446,6 @@ comments: Update verbage on page
                 </div>
               </div>
             </div>
-            <div class="subtotal-disclaimer">
-              <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
-            </div>
             <div data-ci="86697" class="scroll-down-wrapper" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
               <p class="green-text">[@L[cds.sales/business/office-365-config:cp-6-ScrollDownToContinueToCart]@L]</p>
               <span class="icon-down green-down-arrow-icon"></span>
@@ -565,9 +562,6 @@ comments: Update verbage on page
                   <span class="order-total"><span class="currency-amount" data-call-us="[@L[cds.sales/business/office-365-config:cp-2-CallUs]@L]">[@T[currencyprice:<price usdamount="0"  />]@T]</span></span>
                 </div>
               </div>
-            </div>
-            <div class="subtotal-disclaimer">
-              <p>[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</p>
             </div>
             <div data-ci="86697" class="scroll-down-wrapper" data-scroll-event='{"obj":".js-step2","yoffset":"-30"}'>
               <p class="green-text">[@L[cds.sales/business/office-365-config:cp-6-ScrollDownToContinueToCart]@L]</p>
@@ -908,15 +902,6 @@ comments: Update verbage on page
               $(".js-product-price-amount8").html(office365config.configData["Office"]["Office_C"][office365config.planDuration]["currentPrice"]);
             }
 
-            if(office365config.planDuration > 12)
-            {
-              $(".product-price-text.price-per-month-text").html("[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth-32258]@L]");
-            }
-            else
-            {
-              $(".product-price-text.price-per-month-text").html("[@L[cds.sales/business/office-365-config:cp-3-PerUserMonth]@L]");
-            }
-
           });
           
           $("div[data-product='" + productGroupName + "'] .product-quantity").bind("updateqty",function(){
@@ -979,14 +964,47 @@ comments: Update verbage on page
               var overOneYear = office365config.planDuration > 12;
               var firstYearPrice;
               var offSalePrice;
+              var totalProductPrice;  
+
+              if(overOneYear)
+              {
+                totalProductPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',office365config.planDuration]);
+                listprice = office365config.productOrder[k].firstYearProductListPrice;
+                firstYearPrice = currencyCalc.evaluate([office365config.productOrder[k].firstYearProductPrice,'*',qtyUsers,'*',12]);
+                offSalePrice = currencyCalc.evaluate([totalProductPrice,'-',firstYearPrice]);
+              }
+              else
+              {
+                firstYearPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',office365config.planDuration]);
+                totalProductPrice = firstYearPrice;
+                offSalePrice = 0;
+              }
 
               if(office365config.planDuration%12==0)
               {
                 durationDisplayLabel = office365config.planDuration/12;
 
-                if(office365config.productOrder[k].comparePrice > 0)
+                if(overOneYear && currencyCalc.stripFormat(office365config.productOrder[k].firstYearComparePrice) > 0)
                 {
-                  var percentOffString = stringData['percentOff'].replace('{0}', office365config.productOrder[k].comparePrice + '%');
+                  termString = stringData['year'];
+
+                  if(parseInt(currencyCalc.stripFormat(offSalePrice)) >= parseInt(currencyCalc.stripFormat(firstYearPrice)))
+                  {
+                    ##if(countrySiteAny(ru))
+                    var percentOffString = stringData['percentOff'].replace('{0}', currencyCalc.stripFormat(office365config.productOrder[k].firstYearComparePrice));
+                    ##else
+                    var percentOffString = stringData['percentOff'].replace('{0}', office365config.productOrder[k].firstYearComparePrice);
+                    ##endif
+                    termString += ' ' + percentOffString;
+                  }
+                }
+                else if(office365config.productOrder[k].comparePrice)
+                {
+                  ##if(countrySiteAny(ru))
+                  var percentOffString = stringData['percentOff'].replace('{0}', currencyCalc.stripFormat(office365config.productOrder[k].comparePrice));
+                  ##else
+                  var percentOffString = stringData['percentOff'].replace('{0}', office365config.productOrder[k].comparePrice);
+                  ##endif
                   termString = stringData['year'] + ' ' + percentOffString;
                 }
                 else
@@ -995,23 +1013,9 @@ comments: Update verbage on page
                 }
               } else {
                 termString = stringData['moTerm'];
-              }   
-
-              if(overOneYear)
-              {
-                productPrice = office365config.productOrder[k].firstYearProductPrice;
-                listprice = office365config.productOrder[k].firstYearProductListPrice;
-                firstYearPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',12]);
-                offSalePrice = currencyCalc.evaluate([listPrice,'*',qtyUsers,'*',office365config.planDuration-12]);
-              }
-              else
-              {
-                firstYearPrice = currencyCalc.evaluate([productPrice,'*',qtyUsers,'*',office365config.planDuration]);
-                offSalePrice = 0;
-              }
-
+              } 
               
-              var subTotal = currencyCalc.evaluate([firstYearPrice,'+',offSalePrice]);
+              var subTotal = totalProductPrice;
 
               //var subTotal = currencyCalc.evaluate([office365config.planDuration,'*',productPrice,'*',qtyUsers]);              
               //cartTotalPrice = (parseFloat(cartTotalPrice) + parseFloat(subTotal)).toFixed(2);
@@ -1134,6 +1138,15 @@ comments: Update verbage on page
           return listPrice;
         },
 
+        "getOneYearProductValueComparePrice":function(varProduct,varPlanName){
+          var listPrice = 0;
+          if(office365config.planDuration > 12)
+          {
+            listPrice = office365config.configData[varProduct][varPlanName][12]["comparePrice"];
+          }
+          return listPrice;
+        },
+
         "setDuration":function(){ 
           var $durationsSelectBox = $(".js-duration");
           $durationsSelectBox.val(office365config.planDuration);
@@ -1154,6 +1167,7 @@ comments: Update verbage on page
             var thisListPrice = office365config.getProductValue(thisProduct,thisPlan,"listPrice");
             var thisFirstYearSalePrice = office365config.getOneYearProductValueSale(thisProduct,thisPlan);
             var thisFirstYearListPrice = office365config.getOneYearProductValueList(thisProduct,thisPlan);
+            var thisFirstYearComparePrice = office365config.getOneYearProductValueComparePrice(thisProduct,thisPlan);
             var comparePrice = office365config.getProductValue(thisProduct,thisPlan,"comparePrice");
 
             office365config.productOrder[thisPlan]={
@@ -1165,7 +1179,8 @@ comments: Update verbage on page
               "productListPrice":thisListPrice,
               "firstYearProductPrice": thisFirstYearSalePrice,
               "firstYearProductListPrice":thisFirstYearListPrice,
-              "comparePrice":comparePrice
+              "comparePrice":comparePrice,
+              "firstYearComparePrice": thisFirstYearComparePrice
             };
           });
           office365config.refreshCart(); 

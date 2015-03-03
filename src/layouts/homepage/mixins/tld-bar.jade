@@ -20,7 +20,7 @@ mixin tldBugs(tlds)
     each tld in tlds
       a.tld-link(class=tldData[tld].cssClass href!="[@T[link:<relative path='" + tldData[tld].path + "'><param name='ci' value='" + tldData[tld].ci + "' /><param name='tld' value='" + tldData[tld].tld + "' /></relative>]@T]")
         img.tld-image(class=tldData[tld].cssClass src=tldData[tld].uri)
-        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]"
+        span.price!= "[@T[productprice:<current productid='" + tldData[tld].productId + "' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]"
         if tldData[tld].showIcannDisclaimer
           span.icann-disclaimer *
   atlantis:webstash(type="css")

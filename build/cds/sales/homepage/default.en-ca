@@ -136,7 +136,7 @@
     <section id="bugbar">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='94959' /><param name='tld' value='ca' /></relative>]@T]" class="tld-link ca"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAATCAMAAACwcE1OAAABiVBMVEVMaXHvLhbvLha7JiniKxzvLhblLBxMISHkKxvCJyfkKxy6JyrFKCfvLhbcKh7DJyfjKxvFJyfGJyfNKSTaKR/SKCLDJyfFJybFJyfDJyfrLBvWKSHtLBojHyAjHyDGKCYjHyAjHyAkHyC/Jym+JynQKSPvLhXvLhfuLhW7JirmLBvmLBvvLhXqLRjMKSXpLRjXKSDUKCLcKh7QKSPoLBjjLBy6JyrvLhflLBzDJye7JyrvLhe6Jiq7JinlLBztLhbFKCfkLBzmLRq7Jyq7JynGKCbgKxzqLRnpLRnfKxzMKCXiKxzkKxzHKCfCKCe+JykjHyDHKCYjHyEjHyDiKxz/LxbOKCS/JynXKSDNKCXQKSPCJyfUKCLLKCXTKiIjHyDsLBsjHyDbKh7XKSD/Lhr/Kx3XKSEjICAGHR8AGx4mICAjHyAHHR8cHyDHJybDJye+JynlLBzmLBriKxzMKCTcKh7QKSPCJyfpLRjqLRi/JynUKCLXKSDUKiLSKiHYKSDgKx7eKxznKx4fG/MbAAAAbnRSTlMApdnyIuzaAvK9nMi+8b37NXoezlJFA8YaKhkPB/P3UdmRYz/WXdXFQ22Xk8/69Nr09vLzTpHV4YvNdLzQks5ROeoIgCTSgOmrytTeHo/x2uW1baqmJn0vmkGU96f8Z6LwzMZynVtqe9SzqhlUWthmYNYAAAEZSURBVHgBvcbTdgNRAEbhv5kkE9tEbdu2bRNzxnH15J2Vs7r6BO13szf+x5CVYfpGZ6AJTI8wjLURv1gzzxcKPM8ngfC6Vu1rqvEjmCVk0OzMru0jdEwIsZmdhGTdoNwcNzsBhFbDQJDjNj2Ax8ZxHCqip/JSANShLHvpeeU2OklV3QOoI1X106tVu+nclctnAHVSLOrp+cuddG7fStcAdVB6d9HzlTqA58wLG/lSrgDKpygOeg6lC+nU/dMjbj4/dqIA5hZXsCxJvdBYJMmEeDydeWBjF6IwaRkYEwQhphdFwdjUbBRE0YTtVOLylcXufK4ivzCFntZ8ZdtzOWxtJM5ZAJEqnd3ePzwOjb5KZzC0uBrq6vGXvgFISEEvsjgCYQAAAABJRU5ErkJggg==" class="tld-image ca"/><span class="price">[@T[productprice:<current productid='9405' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAATCAMAAAAOJhUTAAAAPFBMVEVMaXEAYqkAXqYAXacAXaYAXqgtRF4AW6YAXqd0eogAZq8dNF0At/k0ndcHqekAw/+emZRyqdUAWaMAluR1esaJAAAAEnRSTlMAPKnB82MDiOIMKR39rvzXH4C5w3lZAAABDElEQVR4Xt2QwXLDIAxEJYGQBE6TOP//r10BzbiTew/dg7Qsfjse6P+psZmOHbCacoadOw0c1j3/+r7U86xugaCLV3jBx4Ko4ELC6lxvgv1cAjJ+vI8o59bOjCj6oxGN2WN5rySYZXqJ5bOiimA5Pe7H/dnIkDBwcbeosyozHxhlEGe0Erodx3HvWSsEtTFCkQd8OFps0bBKpBXEF3RwEkZbWTtNeRPtQjxfr9etk+1eNlOG5/R4r76IuBCkNwDzR4W7OlbDKNq1ZIt8EhQNo1k+oIPzTgpf058a5ZPYQtmU88ZT1sYmgCeBjN4KFfdiPX1jeBdumYpmhxmqGIsuCqhdfEx4ZQ3KicMf6BvVuxIPgsiNJwAAAABJRU5ErkJggg==" class="tld-image com"/><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='club' /></relative>]@T]" class="tld-link club"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAATCAMAAAAkluS8AAAAQlBMVEVMaXEuS2mbAABUgKgAUqEAVJ0nLDUAL5wDRoYAUJ8AV6PRKBEsg8MAWKM0NjvmFBg7OTsyNTvOOQDyEh7iAADwAABfcNDZAAAAFHRSTlMACfsirFwO/cuE6oQ6z0uuLmpP9P/5xV8AAACuSURBVHhe3ZDLEsMgCEWvFoRr0nfy/7/awJhJF9l3pmchIxwFxX+hYuazkixAIalosSoDxUAskAgNaFvoeNiBFwS0hEwPJSq4xOpDJIDMmNApZ56gx3ZDQwPQ/MxzmvV593LUU29v+5pu16/7wk+vDK8z2011ed/6MZ+QGr5mOeeLNGpd1+m6vzeh2iBPZG/ca12e3P8vIYYmsAFR7nUCVNx9pidEi4ZOwBNR/IoP694KKDTjkFEAAAAASUVORK5CYII=" class="tld-image club"/><span class="price">[@T[productprice:<current productid='172137' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' promocode='0'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
+          <div class="col-sm-12"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='94959' /><param name='tld' value='ca' /></relative>]@T]" class="tld-link ca"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAATCAMAAACwcE1OAAABiVBMVEVMaXHvLhbvLha7JiniKxzvLhblLBxMISHkKxvCJyfkKxy6JyrFKCfvLhbcKh7DJyfjKxvFJyfGJyfNKSTaKR/SKCLDJyfFJybFJyfDJyfrLBvWKSHtLBojHyAjHyDGKCYjHyAjHyAkHyC/Jym+JynQKSPvLhXvLhfuLhW7JirmLBvmLBvvLhXqLRjMKSXpLRjXKSDUKCLcKh7QKSPoLBjjLBy6JyrvLhflLBzDJye7JyrvLhe6Jiq7JinlLBztLhbFKCfkLBzmLRq7Jyq7JynGKCbgKxzqLRnpLRnfKxzMKCXiKxzkKxzHKCfCKCe+JykjHyDHKCYjHyEjHyDiKxz/LxbOKCS/JynXKSDNKCXQKSPCJyfUKCLLKCXTKiIjHyDsLBsjHyDbKh7XKSD/Lhr/Kx3XKSEjICAGHR8AGx4mICAjHyAHHR8cHyDHJybDJye+JynlLBzmLBriKxzMKCTcKh7QKSPCJyfpLRjqLRi/JynUKCLXKSDUKiLSKiHYKSDgKx7eKxznKx4fG/MbAAAAbnRSTlMApdnyIuzaAvK9nMi+8b37NXoezlJFA8YaKhkPB/P3UdmRYz/WXdXFQ22Xk8/69Nr09vLzTpHV4YvNdLzQks5ROeoIgCTSgOmrytTeHo/x2uW1baqmJn0vmkGU96f8Z6LwzMZynVtqe9SzqhlUWthmYNYAAAEZSURBVHgBvcbTdgNRAEbhv5kkE9tEbdu2bRNzxnH15J2Vs7r6BO13szf+x5CVYfpGZ6AJTI8wjLURv1gzzxcKPM8ngfC6Vu1rqvEjmCVk0OzMru0jdEwIsZmdhGTdoNwcNzsBhFbDQJDjNj2Ax8ZxHCqip/JSANShLHvpeeU2OklV3QOoI1X106tVu+nclctnAHVSLOrp+cuddG7fStcAdVB6d9HzlTqA58wLG/lSrgDKpygOeg6lC+nU/dMjbj4/dqIA5hZXsCxJvdBYJMmEeDydeWBjF6IwaRkYEwQhphdFwdjUbBRE0YTtVOLylcXufK4ivzCFntZ8ZdtzOWxtJM5ZAJEqnd3ePzwOjb5KZzC0uBrq6vGXvgFISEEvsjgCYQAAAABJRU5ErkJggg==" class="tld-image ca"/><span class="price">[@T[productprice:<current productid='9405' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true'/>]@T]</span></a><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAATCAMAAAAOJhUTAAAAPFBMVEVMaXEAYqkAXqYAXacAXaYAXqgtRF4AW6YAXqd0eogAZq8dNF0At/k0ndcHqekAw/+emZRyqdUAWaMAluR1esaJAAAAEnRSTlMAPKnB82MDiOIMKR39rvzXH4C5w3lZAAABDElEQVR4Xt2QwXLDIAxEJYGQBE6TOP//r10BzbiTew/dg7Qsfjse6P+psZmOHbCacoadOw0c1j3/+r7U86xugaCLV3jBx4Ko4ELC6lxvgv1cAjJ+vI8o59bOjCj6oxGN2WN5rySYZXqJ5bOiimA5Pe7H/dnIkDBwcbeosyozHxhlEGe0Erodx3HvWSsEtTFCkQd8OFps0bBKpBXEF3RwEkZbWTtNeRPtQjxfr9etk+1eNlOG5/R4r76IuBCkNwDzR4W7OlbDKNq1ZIt8EhQNo1k+oIPzTgpf058a5ZPYQtmU88ZT1sYmgCeBjN4KFfdiPX1jeBdumYpmhxmqGIsuCqhdfEx4ZQ3KicMf6BvVuxIPgsiNJwAAAABJRU5ErkJggg==" class="tld-image com"/><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true'/>]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='club' /></relative>]@T]" class="tld-link club"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAATCAMAAAAkluS8AAAAQlBMVEVMaXEuS2mbAABUgKgAUqEAVJ0nLDUAL5wDRoYAUJ8AV6PRKBEsg8MAWKM0NjvmFBg7OTsyNTvOOQDyEh7iAADwAABfcNDZAAAAFHRSTlMACfsirFwO/cuE6oQ6z0uuLmpP9P/5xV8AAACuSURBVHhe3ZDLEsMgCEWvFoRr0nfy/7/awJhJF9l3pmchIxwFxX+hYuazkixAIalosSoDxUAskAgNaFvoeNiBFwS0hEwPJSq4xOpDJIDMmNApZ56gx3ZDQwPQ/MxzmvV593LUU29v+5pu16/7wk+vDK8z2011ed/6MZ+QGr5mOeeLNGpd1+m6vzeh2iBPZG/ca12e3P8vIYYmsAFR7nUCVNx9pidEi4ZOwBNR/IoP694KKDTjkFEAAAAASUVORK5CYII=" class="tld-image club"/><span class="price">[@T[productprice:<current productid='172137' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true'/>]@T]</span><span class="icann-disclaimer">*</span></a></span>
             <atlantis:webstash type="css">
               <style>
                 .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
@@ -165,68 +165,22 @@
                 <div class="col-md-12 col-sm-6"> 
                   <div class="tile-wrapper">
                     <atlantis:webstash type="css">
-                      <style>.gtld-marquee-tile {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzc3YzA0MyIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
-}
-.gtld-marquee-tile .left-content-wrapper {
-  padding-left: 10%;
-}
-.gtld-marquee-tile .header-text {
-  font-size: 40px;
-  color: #333;
-  margin: 25px 0 0 10px;
-}
-.gtld-marquee-tile .gtld-links-wrapper {
-  padding-left: -15px;
-}
-.gtld-marquee-tile ul {
-  list-style-type: none;
-  padding: 20px 0 0 20px;
-}
-.gtld-marquee-tile li {
-  color: #F1812D;
-  font-size: 20px;
-  line-height: 25px;
-  margin: 0;
-}
-.gtld-marquee-tile li:hover {
-  color: #77c043;
-}
-.Explorer8 .gtld-marquee-tile,
-.Explorer7 .gtld-marquee-tile {
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
-}
-
+                      <style>
+                        .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
+                        .marquee-tile-tld .price-text {color:#fff;}
+                        .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
+                        .marquee-tile-tld .cta {display:none}
+                        .marquee-tile-tld .price {font-size:1.5em}
+                        .ca.marquee-tile-tld img{width:25%}
+                        
                       </style>
                     </atlantis:webstash>
-                    <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
-                      <div class="tile-content-wrapper">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="left-content-wrapper">
-                                <div class="header-wrapper">
-                                  <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="right-content-wrapper">
-                                <div class="gtld-links-wrapper">
-                                  <ul>
-                                    <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/company'><param name='ci' value='95714' /></relative>]@T]" data-ci='95714' class="walsheim-black tld-company">.company</li>
-                                    <li data-url="[@T[link:<relative path='/tlds/email'><param name='ci' value='95715' /></relative>]@T]" data-ci='95715' class="walsheim-black tld-email">.email</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                    <div data-url="[@T[link:<relative path='/tlds/ca.aspx'><param name='ci' value='96114'/></relative>]@T]" data-ci="96114" class="tile ca marquee-tile-tld">
+                      <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNzAgMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDcwIDMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik03MCwxNC45VjYuN2MtMy41LTIuNi01LjktNC4xLTUuOS00LjFjLTIuNS0xLjctNS40LTIuNi04LjQtMi42Yy04LjMsMC0xNSw2LjctMTUsMTQuOQ0KCWMwLDguMiw2LjcsMTQuOSwxNSwxNC45YzYuNSwwLDguMy00LjQsOC40LTQuNGMwLDAuNSwwLDMuOSwwLDMuOWg2VjE1LjFDNzAsMTUsNzAsMTQuOSw3MCwxNC45eiBNNjQuNSwxNC45YzAsNi0zLjksOS04LjgsOQ0KCWMtNC45LDAtOS4xLTQtOS4xLTljMC01LDQuMi05LDkuMS05QzYwLjYsNS45LDY0LjUsOC45LDY0LjUsMTQuOXoiLz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMy4xLDE1YzAsOC4zLDYuOCwxNSwxNS4xLDE1YzQuNiwwLDguOC0yLDExLjctNS41bC00LjctMy44Yy0xLjcsMi4xLTQuMywzLjMtNy4xLDMuM2MtNSwwLTkuMS00LTkuMS05DQoJCWMwLTUsNC4xLTksOS4xLTljMi4yLDAsNC40LDAuOCw2LDIuMmw0LTQuNUMzNS40LDEuMywzMS45LDAsMjguMiwwQzE5LjgsMCwxMy4xLDYuNywxMy4xLDE1eiIvPg0KPC9nPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwyMi45Yy0xLTAuOS0yLjMtMS41LTMuNy0xLjVjLTAuNywwLTEuNCwwLjEtMiwwLjRDMC4yLDIyLjYsMCwyMy41LDAsMjQuNWMwLDAuMSwwLDAuMywwLDAuNA0KCWMwLjYsMC4yLDEuMiwwLjMsMS45LDAuM0MzLjcsMjUuMiw1LjQsMjQuMyw2LjQsMjIuOXogTTcuNCwxOS43YzAtMC4xLDAtMC4zLDAtMC40Yy0wLjMtMC4xLTAuNy0wLjItMS0wLjJjMC40LDAuOCwwLjYsMS42LDAuNywyLjQNCglDNy4zLDIwLjksNy40LDIwLjMsNy40LDE5Ljd6IE0zLjcsMjkuN0M0LjMsMjkuOSw0LjksMzAsNS42LDMwYzAuNSwwLDEtMC4xLDEuNS0wLjJjMC42LTAuOSwxLTEuOSwxLTMuMWMwLTEuMS0wLjMtMi4xLTAuOS0zDQoJQzYuOSwyNi4yLDUuNiwyOC4zLDMuNywyOS43eiBNNi41LDI0LjFjLTEuMiwxLjItMi44LDItNC43LDJjLTAuNiwwLTEuMi0wLjEtMS43LTAuMmMwLjIsMSwwLjcsMS45LDEuNCwyLjZjMC41LDAuNCwxLDAuOCwxLjUsMS4xDQoJQzQuOSwyOC4yLDYuMiwyNi4zLDYuNSwyNC4xeiBNOS41LDIwLjZjLTAuNC0wLjQtMC43LTAuNy0xLjItMC45YzAsMC45LTAuMiwxLjgtMC42LDIuNmMxLDEuMiwxLjcsMi43LDEuNyw0LjMNCgljMCwwLjctMC4xLDEuNC0wLjQsMi4xYzAuMi0wLjEsMC4zLTAuMywwLjUtMC40YzEuMS0xLjEsMS42LTIuNCwxLjYtMy45QzExLjEsMjMsMTAuNiwyMS43LDkuNSwyMC42eiBNNi41LDIxLjMNCgljLTAuMS0wLjgtMC40LTEuNi0wLjgtMi4zYy0wLjEsMC0wLjEsMC0wLjIsMGMtMS4zLDAtMi40LDAuNC0zLjQsMS4yYzAuMiwwLDAuNCwwLDAuNiwwQzQuMSwyMC4xLDUuNSwyMC42LDYuNSwyMS4zeiIvPg0KPC9zdmc+DQo=" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAeCAMAAACmLZgsAAAAz1BMVEVMaXH////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////iCg/sAAAARHRSTlMAIpPWuUbr8WQJtjRN0wb0EGwsHROn+Pv+zclg6NlJs8PvjYgNluWqadAx35xdAoBCGnSvWThxUzp3WyfAP6AXvXq8oQ5yAfEAAAI3SURBVHgBpdTnkvJGEIXhAwiEyFHksOScwwY22D73f01GM1rFkctV3/OXqhd1qVuIcBhra11PterpIwIqfw16uq7PfsYH/Ldyno5GPQuPpEZXfoFor0v6xXewleb0a70iQpkhqRqEbJchIyi9MexswHKlyjKLsDQdRb1pVyAcG+5PsxRdJwTFnKFv19KkmtuYZBtSnpI++iztjNj7mb/mCGhRaKRhqw67BQg3SpsabNkEbfBLUnipwDWBUDApvMFVyFPQ4TekUEHYgsIYXjVTlTlS2EOhTUsPfntVJi1HgkKNQg5+301FJk7LBgrJiH9YKjIDWraI3KcBguqKjEZLMvpEpgiKR2b6f5o505KOHkr7X0ONaKlD4ZOWYgEBCTezMyC902IWEDZp0NJR3aDIXB9cTxfe5YhD4W9aZvCbOhmjX+71LpkynjJUvKur50n5Ba8P2pnSbd85orIiPwBcGe7M5TXuXsJfu2r3NzPnUwsVe7U0SnsD0nVI8h88bSllKrDdXyjpoCVh4IumAaDWpNSN51Yfr4sBhXYWwIO2eWf1HTuchqSTWZPLzmrUL5AxPPWp9AAwSdFhNumhI9k/JBez9hprTpw9C8lXxdtNMUSXmXqi3eD8TCy7kO4mgzQDQnXJgLK8cLGdvVuzaOTvsMUy9DFPcIzpk0ZRLLcY4tRlptaHK6fRkRpV4VHZFN1RcyhRAJC8a5xd4RdLfz0SiVZmnDMQULtMf3qz9SOeA2BcOttt5/IvTtLfLU6/htAAAAAASUVORK5CYII=" class="img-responsive"><![endif]-->
+                        <div class="headline">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:ca-headline]@L]</div>
+                        <div class="cta"> </div>
+                        <atlantis:webstash type="js">
+                        </atlantis:webstash>
                       </div>
                     </div>
                   </div>

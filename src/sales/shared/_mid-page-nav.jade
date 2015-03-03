@@ -25,6 +25,7 @@ mixin renderMidPageNavBottom()
 mixin renderMidPageNav(options)
   - options = options || {};
   - options.icode = options.icode || "";
+  - options.defaultActive = options.defaultActive || false;//-pass in true if you want the first tab to be 'active' by default
   style.
     .fix-body {
       margin-top: 130px;
@@ -219,6 +220,7 @@ mixin renderMidPageNav(options)
         sections.push($(this).attr('id'));
       });
       $(window).scroll(function () {
+        var defaultActive = "#{options.defaultActive}";
         var scroll = $(this).scrollTop();
         var footerBot = $('#renderMidPageNavBottom').offset().top-130;
         var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -231,6 +233,9 @@ mixin renderMidPageNav(options)
             $(this).blur();
             $(this).toggleClass("active",InNavZone);
           });
+          if(defaultActive){
+            $('.mid-page-nav a:first').addClass("active");
+          }
         }
 
         if(InNavZone){

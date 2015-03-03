@@ -1,0 +1,43 @@
+---
+location: sales/homepage/marquee/domain-wales/default_template
+id: false
+name: GCEMO-675
+ctaLink: "[@T[link:<relative path='/tlds/wales'><param name='ci' value='96847' /></relative>]@T]"
+elementId: domain-wales
+---
+extends ../../../layouts/homepage/marquee
+
+block append marqueeStyles
+  style
+    :less
+      #domain-wales.marquee{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/wales-hero-marquee-old-layout.jpg) no-repeat top center #333;
+        .content {width:38%;margin-left:30px;font-family: 'Walsheim-Black', 'Arial Black', sans-serif}
+        .new-flag{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAoCAYAAABHJVyTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAhRJREFUeNrsmdlKw1AQhk+rKIgoiigoggtFba14pXinlb6Cj+IDqChUFAS90FcQfAMXRHApXgiiFxb0ooKCG+5Lqf6HTuHkkDSJlJZmOvARmDQN/ZgzmdP40onopRCiQ/CMeTCpJvxgR/CNcT0hhWwyFjIIGssVYvz9o3oiCRKMpUR0ITK2ykKMQrYZC+kDrboQzn3EUCVZITfgnLGQMV0I92UTKQsxhpzUu3Qhso/8cp9aVSF34JT7svFrSc7LRjZWny6E84DWAkK6kF2Q5rxsdCGP4KQsxBic/w4YMRPCeYzf8KUTUT1ZBx5ABTMZnyBgViHP4JhhdayBpN/iJLfH7zuYNRvMuPaRFXCbS8ge+GEi4wXEzHa7aryBIyZClmgfl1MIl33NE1hUE9yFLNB07kjIPvjysIx7Wi7CqZAPcOBhITFqqI6FeHkekY/YZbMTdkK8Oo/M0TDmWsghiFtdXKJxDVatTlbaXCyb6hCJ6wT9IAgG6NgLqkpMyAxt5EzDbLfrJqTQAImShOjY7UB2MeIK9IDv/1aIXaRE5o2fZF3JV1MFBRVRIaoyXxGFTOeSkY8KcRu1IvNyOUyywiSqrQD3vqB7puxKvpDxSk06ruUblCpSZTXl8d5TdjKKUSFuo9mkP8ljvcvvOSPB6VIXYhXtWjVln341Fp+f0Hqc54RYzVTqaJDtT3J0GBYO31v/CTAAiJBp3+slAeAAAAAASUVORK5CYII=) no-repeat top center;width:68px;height:40px;
+          .new-flag-text{color:#333;font-size:24px;text-align:center}
+        }
+        .headline {font-size:24px; margin-top:60px}
+        .maintext{font-size:18px;font-family:'Walsheim-Medium', Arial, sans-serif;}
+        img {margin-left:10px}
+        .products div {display:inline-block; font-size:14px; margin-bottom:10px;}
+        .domain {margin-right:37px}
+        .website {margin-right:50px}
+        .price-text, .price {font-size:18px; color:#F2812E; line-height:.95}
+        .price {font-size:32px;padding-left:5px}
+        .btn {margin:40px 0 10px}
+        .cta {text-align:left;margin-top:20px;
+          img{margin:20px 0 0 25px}
+        }
+        .disclaimer {font-family:'Walsheim-Regular', Arial, sans-serif}
+      }
+     
+block marqueeContent
+  .content.walsheim-black
+    .new-flag
+      .new-flag-text.tungsten NEW
+    .headline BRING IN CUSTOMERS<br />FROM HOLYHEAD TO CARDIFF.
+    .maintext New .wales domains are available.
+    .cta
+      .price-text JUST
+        span.price [@T[productprice:<current productid="592699" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" checktmspromocode='true' />]@T]
+      .btn.btn-warning.btn-lg FIND YOURS
+      img(src="data:image/png;base64,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")

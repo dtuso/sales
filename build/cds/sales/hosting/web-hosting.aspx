@@ -1409,6 +1409,7 @@
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
+          var defaultActive = "false";
           var scroll = $(this).scrollTop();
           var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -1421,6 +1422,9 @@
               $(this).blur();
               $(this).toggleClass("active",InNavZone);
             });
+            if(defaultActive){
+              $('.mid-page-nav a:first').addClass("active");
+            }
           }
       
           if(InNavZone){
@@ -5649,11 +5653,6 @@ cursor: pointer;
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
-        $('[data-icann-fee]').each(function(){
-          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
-          $(this).html(tokenized);
-        });
-      
       });
       
     </script>
