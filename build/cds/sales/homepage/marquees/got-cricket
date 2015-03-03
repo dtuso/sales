@@ -1,0 +1,58 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    html[lang|="el"] .headline {font-family:Arial, Sans-serif;font-weight:700;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    html[lang|="el"] .headline .line:nth-child(even) {font-family:Arial, Sans-serif;font-weight:700;}
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    html[lang|="el"] .walsheim {font-family:Arial, Sans-serif;font-weight:700;}
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    #got-cricket.marquee {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/cricket-background.jpg) no-repeat top center #333;}
+    #got-cricket.marquee .content {width:30%; font-family: 'Walsheim-Black', 'Arial Black', sans-serif}
+    #got-cricket.marquee .headline {font-size:24px; margin-top:60px}
+    #got-cricket.marquee img {margin-left:10px}
+    #got-cricket.marquee .products div {display:inline-block; font-size:14px; margin-bottom:10px;}
+    #got-cricket.marquee .domain {margin-right:37px}
+    #got-cricket.marquee .website {margin-right:50px}
+    #got-cricket.marquee .price-text,#got-cricket.marquee .price {font-size:18px; color:#F2812E; line-height:.95}
+    #got-cricket.marquee .price {font-size: 32px}
+    #got-cricket.marquee .btn {margin:20px 0 10px}
+    #got-cricket.marquee .cta {text-align:left}
+    #got-cricket.marquee .disclaimer {font-family:'Walsheim-Regular', Arial, sans-serif}
+    
+    
+    
+  </style>
+</atlantis:webstash>
+<div id="got-cricket" data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='96324' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="content walsheim-black">
+      <div class="headline">A DEAL SO GOOD,<br/>IT'S AN ALL-ROUNDER.</div><img src="data:image/png;base64,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"/>
+      <div class="products">
+        <div class="domain">DOMAIN</div>
+        <div class="website">WEBSITE</div>
+        <div class="email">EMAIL</div>
+      </div>
+      <div class="cta">
+        <div class="price-text">ALL STARTING AT JUST</div>
+        <div class="price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]/MO</div>
+        <div class="btn btn-warning btn-lg">GET STARTED</div>
+      </div>
+      <div class="disclaimer">First year only. Annual purchase required.</div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->

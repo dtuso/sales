@@ -1,7 +1,8 @@
 extend ../../shared/_plan-tile
 
 block title
-  .tldlogo(class!="{{pod.logoclass}}")
+  .tldlogo-wrap
+    .tldlogo(class!="{{pod.logoclass}}")
 
 block description
   p.plan-text(ng-bind-html="pod.PodText") 

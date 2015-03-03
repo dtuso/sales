@@ -1,6 +1,6 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 54ef971df778fc203043be39
+id: 54efbd109faf7042504cacc0
 name: GCE-37164
 comments: Replace bio on About us page with new image and name
 ---
@@ -143,7 +143,11 @@ Mr. Park holds an A.B. degree in Economics, cum laude, from Princeton University
 <phrase key="37164-JohnPark" />
 John Park
 <phrase key="37164-JohnPark-big-bio-1" />
+<<<<<<< HEAD
 John Park joined KKR in 2013 and is a member of the Technology industry team. In addition to GoDaddy, he is currently a member of the board of directors of SunGard Data Systems, Mitchell International, and Internet Brands, and is also involved with KKR's investment in Ping Identity.Prior to joining KKR, Mr. Park was with Apax Partners, where he focused on investments in technology and participated in transactions involving Epicor Software Corporation, Activant Solutions, Paradigm Geophysical and Sophos. Previously, Mr. Park was a member of the mergers &amp; acquisitions practice at Morgan Stanley. Mr. Park holds an A.B., cum laude, in Economics from Princeton University and an M.B.A. from Harvard Business School.
+=======
+John Park joined KKR in 2013 and is a member of the Technology industry team. In addition to GoDaddy, he is currently a member of the board of directors of SunGard Data Systems, Mitchell International, and Internet Brands, and is also involved with KKR's investment in Ping Identity. Prior to joining KKR, Mr. Park was with Apax Partners, where he focused on investments in technology and participated in transactions involving Epicor Software Corporation, Activant Solutions, Paradigm Geophysical and Sophos. Previously, Mr. Park was a member of the mergers &amp; acquisitions practice at Morgan Stanley. Mr. Park holds an A.B., cum laude, in Economics from Princeton University and an M.B.A. from Harvard Business School.
+>>>>>>> GCE-37037-dash-fix
 <phrase key="NewsCenterAbout-7-FmrHeadOfGlobalTechnologyGroupKKR" />
 Senior Advisor and<br/>Fmr Head of Global Technology Group, KKR
 <phrase key="NewsCenterAbout-3-RichardHerrickKimball" />
