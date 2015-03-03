@@ -1,12 +1,13 @@
 ---
 location: sales/pro/managed-vps-config
-id: 
+id: 54f4e58af778fc0de4d09c5c
 name: GCE-35068
-comment: VPS SALE: Config Page Sale and Term Offering Updates
+comment: VPS SALE - Config Page Sale and Term Offering Updates
 configPage: true
 sitecore: true 
 cssVersionOverride: 2
 ---
+
 {% extends 'layouts/config-base.html' %}
 
 {% block steps %}
@@ -212,6 +213,7 @@ cssVersionOverride: 2
           // spoof url for config and packagegrouping removed when both are published
           var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]'.replace('{0}',plan);
           //url=url + "?configdocid=54120f73f778fc0f24cc8f04&groupdocid=54120fe4f778fc0f24cc8f06";
+          //url=url + "?configdocid=54ecf7da9faf7037c471faae";
 
           $.getJSON(url).success(function (data){
               processConfigData(data,defaultPackageId);
@@ -226,18 +228,58 @@ cssVersionOverride: 2
           return  decodeURIComponent(results[1].replace(/\+/g, " "));
         },
         refreshCart: function(){
+          var osAddonPrice = currencyCalc.stripFormat($('#osAddonPrice').val()); 
           var termOption =$('input:radio[name="termOption"]').filter(':checked');
           var managedOption =$('input:radio[name="managedOption"]').filter(':checked');
           var term = termOption.data('term');
+          var termPackage = termOption.val();
           var monthString = (term > 1) ? " [@L[fosconfigcommon:termmonths]@L]" : " [@L[fosconfigcommon:termmonth]@L]";         
           var managedPrice = managedOption.data('price');
           var managedName = managedOption.data('name');
+          var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
+          var factor = 1;
 
           Config.updateProductPrice(currencyCalc.stripFormat(managedPrice)); 
             
           var termPrice = termOption.attr('data-price');
-          planPrice= currencyCalc.evaluate([term,"*",termPrice]);
+          var termYearly = termOption.attr('data-total');
           
+          switch(term) {
+          case 24:
+              factor = 2;
+              break;
+          case 36:
+              factor = 3;
+              break;
+          case 48:
+              factor = 4;
+              break;
+          case 60:
+              factor = 5;
+              break              
+          default:
+              factor = 1;
+          }
+          
+          if (term >= 12) {
+            if(selectedAddonValue == 'pro_vps_managed_plus'){
+              managedPrice = "[@T[productprice:<current productid='483562' period='yearly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+            }
+            else if (selectedAddonValue == 'pro_vps_managed'){
+              managedPrice = "[@T[productprice:<current productid='483560' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+            }
+            if(termPackage.indexOf('windows') > 0){
+              osAddonPrice = "[@T[productprice:<current productid='483556' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]";
+            }
+            var managedTotal = currencyCalc.evaluate([factor,"*",managedPrice]);
+            var osAddonTotal = currencyCalc.evaluate([factor,"*",osAddonPrice]); 
+            var termTotal = currencyCalc.evaluate([termYearly,"*",factor]);
+            var totalAddonPrice = currencyCalc.evaluate([osAddonTotal,"+",managedTotal]);
+            planPrice = currencyCalc.evaluate([termTotal,"+",totalAddonPrice]);
+          }
+          else{
+            planPrice= currencyCalc.evaluate([term,"*",termPrice]); 
+          }
           
           $('#summaryAddon').html(managedName);
           $('#summaryTerm').html(term + monthString);
@@ -277,9 +319,9 @@ cssVersionOverride: 2
             var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
             if(selectedAddonValue == 'pro_vps_managed_plus'){
               if(termLength == 12){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+",'[@T[productprice:<current productid="483562" period="monthly" percentoff="25.00" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]']);
+                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
               }else if(termLength > 12 ){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+",'[@T[productprice:<current productid="483562" period="monthly" percentoff="25.00" dropdecimal="false"  htmlsymbol="false" negative="parentheses" />]@T]']);
+                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
               }
             }
             //var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
@@ -431,6 +473,7 @@ cssVersionOverride: 2
                 var monthString =  (period > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
                 var packageId= planItem[1];
                 var price =  planItem[3];
+                var total =  planItem[6];
                 var addonDiscount =planItem[2];
                 var checkedRadiobutton= (defaultPackageId ===  packageId) ?"checked='checked'" : '';
                 
@@ -438,7 +481,7 @@ cssVersionOverride: 2
             if ($.inArray(period, showTerms) !== -1)
             {
               var content='';
-              content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-addondiscount="'+ addonDiscount+'" data-term="' +  period + '" data-price="'+price+'"'+ checkedRadiobutton + '/><span><strong> '+period +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price + ' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
+              content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-addondiscount="'+ addonDiscount+'" data-term="' +  period + '" data-price="'+price+'"data-total="'+ total+'"'+ checkedRadiobutton + '/><span><strong> '+period +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price + ' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
               parentid.append(content);
             }
                            
