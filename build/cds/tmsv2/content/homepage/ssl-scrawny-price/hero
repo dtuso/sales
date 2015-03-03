@@ -52,7 +52,7 @@
       if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
         return '8-9';
       }
-      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+      else if(ua.indexOf('10-current')>0 || ua.indexOf('Trident')>0){
         return '10-current';
       }
     }
