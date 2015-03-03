@@ -98,7 +98,8 @@ var got1Page = {
     lastTldInList: 'org', 
     tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
     possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
-    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);},
+    addTldIf: function(tld, isDefault) {if(got1Page.tldInfo.isPossibleAdditionalTld(tld)) {got1Page.tldInfo.tlds.push(tld);if(isDefault) got1Page.tldInfo.defaultTld = tld;}}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
@@ -128,58 +129,51 @@ var got1Page = {
   got1Page.canOfferOls = false;
 ##endif
 
-function addTldIf(tld, isDefault) {
-  if(got1Page.tldInfo.isPossibleAdditionalTld(tld)) {
-    got1Page.tldInfo.tlds.push(tld);
-    if(isDefault) got1Page.tldInfo.defaultTld = tld;
-  }
-}
-
 ##if(countrySiteAny(ca) || isManager())
-  addTldIf('ca', true);
+  got1Page.tldInfo.addTldIf('ca', true);
 ##endif
 ##if(countrySiteAny(br) || isManager())
-  addTldIf('br', true);
+  got1Page.tldInfo.addTldIf('br', true);
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  addTldIf('in', true);
+  got1Page.tldInfo.addTldIf('in', true);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  addTldIf('co.uk', true);
-  addTldIf('uk', false);
+  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('uk',    false);
 ##endif
 ##if(countrySiteAny(fr) || isManager())
-  addTldIf('fr', true);
+  got1Page.tldInfo.addTldIf('fr', true);
 ##endif
 ##if(countrySiteAny(it) || isManager())
-  addTldIf('it', true);
+  got1Page.tldInfo.addTldIf('it', true);
 ##endif
 ##if(countrySiteAny(at) || isManager())
-  addTldIf('at', true);
+  got1Page.tldInfo.addTldIf('at', true);
 ##endif
 ##if(countrySiteAny(es) || isManager())
-  addTldIf('es', true);
+  got1Page.tldInfo.addTldIf('es', true);
 ##endif
 ##if(countrySiteAny(nl) || isManager())
-  addTldIf('nl', true);
+  got1Page.tldInfo.addTldIf('nl', true);
 ##endif
 ##if(countrySiteAny(de) || isManager())
-  addTldIf('de', true);
+  got1Page.tldInfo.addTldIf('de', true);
 ##endif
 ##if(countrySiteAny(ch) || isManager())
-  addTldIf('ch', true);
+  got1Page.tldInfo.addTldIf('ch', true);
 ##endif
 ##if(countrySiteAny(be) || isManager())
-  addTldIf('be', true);
+  got1Page.tldInfo.addTldIf('be', true);
 ##endif
 ##if(countrySiteAny(pl) || isManager())
-  addTldIf('pl', true);
+  got1Page.tldInfo.addTldIf('pl', true);
 ##endif
 ##if(countrySiteAny(ru) || isManager())
-  addTldIf('ru', true);
+  got1Page.tldInfo.addTldIf('ru', true);
 ##endif
 ##if(countrySiteAny(dk) || isManager())
-  addTldIf('dk', true);
+  got1Page.tldInfo.addTldIf('dk', true);
 ##endif
 
 //- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
