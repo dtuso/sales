@@ -940,6 +940,7 @@
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
+          var defaultActive = "false";
           var scroll = $(this).scrollTop();
           var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -952,6 +953,9 @@
               $(this).blur();
               $(this).toggleClass("active",InNavZone);
             });
+            if(defaultActive){
+              $('.mid-page-nav a:first').addClass("active");
+            }
           }
       
           if(InNavZone){
@@ -5012,7 +5016,10 @@ ul li.no-check {
     background-color: #d9d9d9;
 }
 .dash{
-  letter-spacing: -.5rem;
+  letter-spacing: -0.5rem;
+}
+#features .dash {
+  letter-spacing: -1.5rem;
 }
 .BVBrowserWebkit{
   margin-top:  50px;
