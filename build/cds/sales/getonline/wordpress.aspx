@@ -122,6 +122,9 @@
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             $(document).find('.business-name-display').text(passedBusinessName);
+        
+            // Initially don't display the search form.
+            $("#domainAvailableViewSearchForm").hide();
             updateSearchedDomain('', passedBusinessName);
             domainSearchFormSubmit('', passedBusinessName);
          }
@@ -217,7 +220,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#products .TLD-token");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
   showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
+  // showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -243,9 +246,10 @@ $(document).ready(function() {
   $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
   $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
+  // $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
-  $(document).find('.btn-search-again').on('click', function(e){navigateToSearchAgain(e)});
+  $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
+  $('#bottomSearchAgain').on('click', function() {$('#wizardSearchAgain').click(); goToDomainSearchWizard();});
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
@@ -259,6 +263,11 @@ $(document).ready(function() {
 
 function updateSearchedDomain(e, domain) {
   $(document).find('.searched-domain-name-display').text(domain);
+}
+
+function updateRecommendedDomainName(domain) {
+  if(domainSearch.selectedDomainName == '')
+    $(document).find('.selected-domain-name-display').text(domain);
 }
 
 function updateSelectedDomain(domain) {
@@ -393,7 +402,7 @@ function domainSearchFormSubmit(e, domain) {
 
       if(isAvailable) {
 
-        updateSelectedDomain(exactMatchDomain.Fqdn);
+        updateRecommendedDomainName(exactMatchDomain.Fqdn);
 
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
@@ -497,20 +506,19 @@ function validDomainSelected(e){
   $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
 
-  // $('#domainSearchWizard').hide();
-  // $('#domainSelected').show();
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 }
 
 function navigateToSearchAgain(e) { 
+  $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }
 
 function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == undefined) {
+  if(domainSearch.selectedDomainName == '') {
     goToDomainSearchWizard();
   }
   else {
@@ -646,36 +654,36 @@ function animateWizard($currentView, $animateToView) {
   if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-    $currentView.hide();
+    // $currentView.hide();
   }
 
-  $animateToView.show();
+  // $animateToView.show();
 
-  // var currentViewHeight;
-  // var windowWidth = $(window).width();
+  var currentViewHeight;
+  var windowWidth = $(window).width();
 
-  // if($currentView == undefined)
-  //   currentViewHeight = 0;
-  // else {
-  //   if($currentView[0].id === $animateToView[0].id) return; // we're there!
+  if($currentView == undefined)
+    currentViewHeight = 0;
+  else {
+    if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  //   animateObjectOffToTheLeft($currentView, windowWidth, 2);
-  //   currentViewHeight = $currentView.height();
-  // }
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    currentViewHeight = $currentView.height();
+  }
 
-  // var $wizard = $('#domainSearchWizard'),
-  // wizardHeight = $('#domainSearchWizard').height();
+  var $wizard = $('#domainSearchWizard'),
+  wizardHeight = $('#domainSearchWizard').height();
 
-  // // show view offscreen to get height
-  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // // can only get height when shown      
-  // var toViewHeight = $animateToView.height(),
-  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
-  //   minHeight = Math.min(currentViewHeight, toViewHeight);
+  // show view offscreen to get height
+  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // can only get height when shown      
+  var toViewHeight = $animateToView.height(),
+    maxHeight = Math.max(currentViewHeight, toViewHeight),
+    minHeight = Math.min(currentViewHeight, toViewHeight);
   
-  // //run the animations
-  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  //run the animations
+  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
@@ -768,7 +776,7 @@ function getParameterByName(name) {
               <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
             </div>
             <div class="plus">+</div>
-            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
               <h3 class="text-center">Managed Wordpress</h3>
               <p>Start a blog with WordPress and let us manage the technical stuff.</p>
             </div>
@@ -796,11 +804,11 @@ function getParameterByName(name) {
         background-color: #77c043;
       }
       
-      #domain-search-view,
-      #domain-available-view,
-      #domain-not-available-view {
-        padding-top:15px;
-      }
+      //- #domain-search-view,
+      //- #domain-available-view,
+      //- #domain-not-available-view {
+      //-   padding-top:15px;
+      //- }
       
       #api-failure,
       #domain-search-view,
@@ -808,6 +816,8 @@ function getParameterByName(name) {
       #domain-not-available-view,
       #domain-selected-view {display: none; }
       
+      #domain-search-header1,
+      #domain-search-header2 {display: none;}
       
       #domainSearchWizard .domain-name-displayed {
         font-size: 60px;
@@ -837,8 +847,8 @@ function getParameterByName(name) {
         font-size:24px;
       }
       
-      .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
-      .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+      .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+      .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
       .domain-search-wizard .speach-bubble-left-div {margin-left:5%;width:90%;}
       .domain-search-wizard .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;
         padding: 10px 20px;text-transform: uppercase;line-height: 1;
@@ -939,7 +949,7 @@ function getParameterByName(name) {
       #domain-available-view .select-and-continue{margin:10px 0;float:right;}
       #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
       
-      #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
       #domain-available-view h2.searched-domain-name-display {margin: 0;}
       
     </style>
@@ -953,7 +963,7 @@ function getParameterByName(name) {
       #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
       #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
       
-      #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+      #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
       #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
       
       //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
@@ -995,6 +1005,41 @@ function getParameterByName(name) {
       h3 { text-transform: none; }
       small { display: block; }
       
+      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+      .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+      .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+      
+      .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+      .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+      
+      .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+      .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+      .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+      .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+      
+      h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
+      
+      /* speech bubbles */
+      .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+      .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+      .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+      .speech-bubble-right-div {margin-left:5%;width:90%;}
+      .speech-bubble-left-div {margin-left:5%;width:90%;}
+    </style>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      .left-side{position: relative;}
+      .right-side{position:relative;}
+      .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+      .heading{padding-top:30px;}
+      .starter-pack{padding-bottom: 35px;}
+      .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+      .logo-label{padding-top: 15px;}
       #getItNow { padding-bottom: 0; padding-top: 0;}
       #getItNow .container { position: relative; }
       #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
@@ -1030,6 +1075,21 @@ function getParameterByName(name) {
       @media (min-width: 992px) {
         #getItNow .hero-guy { left: -50px; }
       }
+      
+    </style>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      /* video button */
+      .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
+      .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
+      .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
+      .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
+      .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
+      .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
+      .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+      
+      /* Layout */
+      .view-all{margin:20px auto;}
       
       .product-section { padding-bottom: 0; }
       .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
@@ -1080,51 +1140,20 @@ function getParameterByName(name) {
         filter: FlipH;
       }
       
-      .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-      .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-      .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-      .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-      .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-      .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-      
-      .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-      .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-      
-      .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-      .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-      .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-      .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-      
-      /* speech bubbles */
-      .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-      .speech-bubble-right-div {margin-left:5%;width:90%;}
-      .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-      .speech-bubble-left-div {margin-left:5%;width:90%;}
-      
-      .left-side{position: relative;}
-      .right-side{position:relative;}
-      .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-      .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-      .heading{padding-top:30px;}
-      .starter-pack{padding-bottom: 35px;}
-      .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-      .logo-label{padding-top: 15px;}
-      
+    </style>
+    <!-- atlantis:webstash(type="css")-->
+    <style>
+      #domainSearchWizardSection { padding-bottom: 0; }
       
     </style>
     <!-- atlantis:webstash(type="css")-->
     <style>
-      /* video button */
-      .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
-      .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
-      .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
-      .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
-      .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
-      .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
-      .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+      .why-us-title{margin-top:10px;}
+      .why-us-text{margin-top:10px;}
       
-      /* Layout */
-      .view-all{margin:20px auto;}
+      .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+      .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+      .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
       
     </style>
     <!-- atlantis:webstash(type="css")-->
@@ -1136,61 +1165,83 @@ function getParameterByName(name) {
       #got small { display: block; padding-top: 10px; padding-bottom:5px;}
       
     </style>
-    <section id="domainSearchWizardSection" class="green">
+    <section id="domainSearchWizardSection" class="bg-primary-o">
       <div id="domain-search-view" class="js-domain-search-wizard-section">
-        <div class="container bg-green-official">
+        <div class="container">
           <div class="row">
-            <div style="margin-top:35px" class="domain-search-wizard domain-icon"></div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              <div class="domain-search-wizard domain-icon"></div>
+            </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="text-center">
+            <div style="margin-top:15px" class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="text-center">
-                <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
-              </div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
             </div>
           </div>
           <form id="domainSearchViewForm">
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3">
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 offer-search-box">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3 offer-search-box">
                 <div class="input-group">
                   <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                    <button id="wizardSearchAgain" type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
                 </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
-              <div class="col-md-12"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
             </div>
           </form>
         </div>
       </div>
       <div id="domain-available-view" class="js-domain-search-wizard-section">
-        <div class="container bg-green-official">
+        <div class="container">
           <div class="row">
-            <div style="margin-top:35px" class="domain-search-wizard domain-icon"></div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              <div class="domain-search-wizard domain-icon"></div>
+            </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="text-center">
+            <div style="margin-top:15px" class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="text-center">
-                <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business. Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
-              </div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business.</h4>
             </div>
           </div>
-          <div id="available-domain" class="row">
+          <form id="domainAvailableViewSearchForm">
+            <div class="row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3 offer-search-box">
+                <div class="input-group">
+                  <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"><span class="input-group-btn">
+                    <button id="wizardSearchAgain" type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
+              </div>
+            </div>
+            <div class="row domain-search-messaging-row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <h4 style="margin-top:10px" class="domain-starts strong">Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
+            </div>
+          </div>
+          <div id="available-domain" class="row bg-light">
             <div class="col-md-9 white"><span id="available-domain-name" class="domain-name-display lowercase available-domain-name"></span></div>
             <div class="col-md-3 white">
               <button class="btn btn-primary select-and-continue available-domain-name uppercase">Select</button>
@@ -1210,7 +1261,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result searched-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1219,30 +1270,54 @@ function getParameterByName(name) {
               </div>
             </div>
           </div>
-          <div class="show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+          <div class="row show-more-section">
+            <div class="col-md-12">
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+            </div>
+          </div>
+          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
+            <div class="col-md-12 text-center">
+              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">Search Again</btn>
+            </div>
           </div>
         </div>
       </div>
       <div id="domain-not-available-view" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
-            <div style="margin-top:35px" class="domain-search-wizard domain-icon"></div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              <div class="domain-search-wizard domain-icon"></div>
+            </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="text-center">
+            <div style="margin-top:15px" class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
-              <div class="text-center">
-                <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
-              </div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
             </div>
           </div>
+          <form id="domainNotAvailableViewSearchForm">
+            <div class="row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3 offer-search-box">
+                <div class="input-group">
+                  <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"><span class="input-group-btn">
+                    <button id="wizardSearchAgain" type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                </div>
+              </div>
+            </div>
+            <div class="row domain-search-messaging-row">
+              <div class="col-xs-12 col-sm-9 col-sm-offset-3"><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</span><span class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</span></div>
+            </div>
+          </form>
           <div class="row searched-domain-name-row">
-            <div class="text-center">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 class="domain-name-displayed word-break">Sorry, <mark class="searched-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
@@ -1258,7 +1333,7 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result searched-domain-name-row">
+            <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
                 <button class="btn btn-primary select-and-continue uppercase">Select</button>
@@ -1267,37 +1342,48 @@ function getParameterByName(name) {
               </div>
             </div>
           </div>
-          <div class="show-more-section">
+          <div class="row show-more-section">
             <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+          </div>
+          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
+            <div class="col-md-12 text-center">
+              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">Search Again</btn>
+            </div>
           </div>
         </div>
       </div>
       <div id="domain-selected-view" class="js-domain-search-wizard-section">
-        <div id="selected-domain" class="container bg-green-official">
+        <div id="selected-domain" class="container">
           <div class="row">
-            <div style="margin-top:35px" class="domain-search-wizard domain-icon"></div>
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+              <div class="domain-search-wizard domain-icon"></div>
+            </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="text-center">
+            <div style="margin-top:15px" class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
             </div>
           </div>
-          <div style="margin-top:10px" class="row">
-            <div class="text-center">
+          <div class="row">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h4 class="strong">Congratulations! You have selected the following domain name:</h4>
             </div>
           </div>
           <div class="row searched-domain-name-row">
-            <div class="text-center">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
               <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-            <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+          <div style="padding-top:30px;padding-bottom:10px" class="row">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+            </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-            <btn class="btn btn-primary btn-see-bundle btn-lg uppercase">See Other Products Included</btn>
-            <btn class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+          <div style="padding-top:30px;padding-bottom:10px" class="row">
+            <div class="col-xs-12 col-sm-9 col-sm-offset-3 text-center">
+              <btn class="btn btn-primary btn-see-bundle btn-lg uppercase">See Other Products Included</btn>
+              <btn class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+            </div>
           </div>
         </div>
       </div>
@@ -1307,25 +1393,19 @@ function getParameterByName(name) {
         </h2>
         <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
       </div>
-      <div id="domainSearchWizardFooter" class="container green">
-        <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-md-9 col-sm-9 speech-bubble-left-white">
-              <div class="speech-bubble-left-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">Did you know more than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entie population of NYC...and Los Angeles.</h5>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-              <div class="domain-search-wizard half-hero-left"></div>
-            </div>
+      <div id="domainSearchWizardFooter" class="container">
+        <div class="row bubble-row">
+          <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
+            <mark>Did you know...</mark>
+            <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
           </div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
     <script>
       var domainSearchViewForm = {
-         executeFnByName: function(name, context) {
+        executeFnByName: function(name, context) {
           
           var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
           for(var i=2; i < arguments.length; i++){
@@ -1425,6 +1505,208 @@ function getParameterByName(name) {
         }
       };
       
+      var domainAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            domainAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(['com','co','org','net'], function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + 'com';
+      
+        }
+      };
+      
+      var domainNotAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainNotAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainNotAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            domainNotAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainNotAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainNotAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainNotAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainNotAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(['com','co','org','net'], function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + 'com';
+      
+        }
+      };
+      
       $(document).ready(function(){
       
         $("#domainSearchViewForm").on('click', 'button.offer-search-btn', function(){
@@ -1440,19 +1722,44 @@ function getParameterByName(name) {
           domainSearchViewForm.ensureValidTld(domainName);
         });
       
+        $("#domainAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainAvailableViewSearchForm").submit();
+        });
+      
+        $("#domainAvailableViewSearchForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainAvailableViewSearchForm").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
+        });
+      
+        $("#domainNotAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainNotAvailableViewSearchForm").submit();
+        });
+      
+        $("#domainNotAvailableViewSearchForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainNotAvailableViewSearchForm").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
+        });
       });
     </script>
     <section id="wordpress" class="product-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-wordPress.png" class="img-responsive center-block">
-            <h2 class="text-center">WordPress</h2>
-            <h3 class="text-center">We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.</h3><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png" class="img-responsive product-summary">
+            <h2 class="text-center">Managed Wordpress</h2>
+            <h4 class="text-center">We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.</h4><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png" class="img-responsive product-summary">
             <p class="text-center">WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.</p>
           </div>
         </div>
         <div class="row bubble-row">
-          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark>Did you know...</mark>
             <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
@@ -1463,95 +1770,6 @@ function getParameterByName(name) {
     <section id="O365-email" class="product-section bg-medium">
       <div class="container">
         <div class="row">
-<<<<<<< HEAD
-          <div style="margin-top:35px" class="features-wordpress"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase">Managed Wordpress</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">
-              <div>
-                 
-                We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.
-              </div>
-            </h4>
-          </div>
-        </div>
-      </div>
-      <style>
-        .wordpress-laptop{height:195px;margin-top:38px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png) no-repeat center bottom;}
-        .wordpress-arrows{height:39px;margin-top:10px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-arrows.png) no-repeat center bottom;}
-        .wordpress-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
-        .product-info-text{margin-top:20px;margin-bottom:85px;}
-        
-      </style>
-      <section id="productInfo">
-        <div style="margin-top:60px" class="container">
-          <div class="col-sm-4">
-            <div class="wordpress-laptop"></div>
-            <h5 style="margin-top:10px" class="uppercase text-center">enter your blog post</h5>
-          </div>
-          <div class="col-sm-4">
-            <h5 style="margin-top:100px" class="uppercase text-center">publish</h5>
-            <div class="wordpress-arrows"></div>
-          </div>
-          <div class="col-sm-4">
-            <div class="wordpress-browser"></div>
-            <h5 style="margin-top:10px" class="uppercase text-center"><mark>domainName.org</mark></h5>
-          </div>
-        </div>
-        <div class="container">
-          <div class="col-sm-12 product-info-text">WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.</div>
-        </div>
-      </section>
-      <div class="container">
-        <div class="row">
-          <div>
-            <div class="col-sm-3">
-              <div style="margin-top:-65px" class="half-hero-right"></div>
-            </div>
-            <div style="margin-top:-10px" class="col-sm-8 speech-bubble-right-green">
-              <div class="speech-bubble-right-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="O365-email" class="gray">
-      <div class="container">
-        <div class="row">
-          <div style="margin-top:35px" class="email-icon"></div>
-        </div>
-        <div class="row">
-          <div style="margin-top:15px" class="text-center">
-            <h2 style="margin-bottom:0px" class="uppercase">office 365 email</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="text-center">
-            <h4 style="margin-top:10px" class="strong">Branded email to talk to your customers</h4>
-            <h2 style="margin-bottom:0px" class="uppercase O365-domain-email"><mark>yourname@<span class="selected-domain-name-display"></span></mark></h2>
-          </div>
-        </div>
-        <div class="row">
-          <div style="margin-top:30px">
-            <div class="col-sm-9 speech-bubble-left-green">
-              <div class="speech-bubble-left-div">
-                <h5 class="uppercase"><mark><strong>did you know...</strong></mark></h5>
-                <h5 style="margin-top:10px;text-transform:none">Customers are 9 times more likely to choose a business with a professional email address?*</h5>
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="half-hero-left"></div>
-            </div>
-=======
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
             <h2 class="text-center">Office 365 Email</h2>
             <h3 class="text-center">Branded email to talk to your customers</h3>
@@ -1562,9 +1780,8 @@ function getParameterByName(name) {
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
             <mark>Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
->>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
           </div>
-          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png" class="hero-guy left"></div>
+          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
@@ -1577,19 +1794,19 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <div class="feature why-gd-world-leader text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
+            <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
               <h3>We're the world leader</h3>
               <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
+            <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
               <h3>Our 24/7 support is awesome</h3>
               <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
             </div>
           </div>
           <div class="col-sm-4">
-            <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
+            <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
               <h3>12 million people trust us</h3>
               <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
             </div>
@@ -1600,45 +1817,12 @@ function getParameterByName(name) {
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
-<<<<<<< HEAD
-          <div style="margin-top:30px" class="text-center">
-            <h2 class="uppercase">Ready to get online?</h2>
-            <h3 id="got-domain-not-selected" class="header-detail-text uppercase">First select your perfect domain</h3>
-            <h3 id="got-domain-selected" class="header-detail-text uppercase price-token">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
-          </div>
-          <div class="container bottom">
-            <div class="row">
-              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
-                <h3>Domain Name</h3>
-              </div>
-              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
-                <h3 class="text-center">Managed Wordpress</h3>
-              </div>
-              <div class="col-sm-4 text-center"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
-                <h3>Office 365 Email</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="get-it-now">
-                <div class="container">
-                  <div class="row text-center">
-                    <p class="h3 price-token">{price_monthly}/month for the first year*</p>
-                  </div>
-                  <div style="padding-top:30px;padding-bottom:10px" class="row text-center">
-                    <button data-ci="96301" class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</button>
-                    <button data-ci="96304" id="get-it-btn2" class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</button>
-                  </div>
-                  <div style="padding-top:10px" class="row text-center"><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small></div>
-                </div>
-              </div>
-            </div>
-=======
           <h2>Ready to Get Online?</h2>
           <h3 id="got-domain-not-selected">First select your perfect domain</h3>
           <h3 id="got-domain-selected" style="display: none; ">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price"></mark></h3>
         </div>
         <div class="row">
-          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png" class="img-responsive center-block">
+          <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
             <h3>Domain Name</h3>
           </div>
           <div class="plus">+</div>
@@ -1646,15 +1830,14 @@ function getParameterByName(name) {
             <h3>Managed Wordpress</h3>
           </div>
           <div class="plus">+</div>
-          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png" class="img-responsive center-block">
+          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
             <h3>Office 365 Email</h3>
->>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
           </div>
         </div>
         <div class="row">
-          <h3>[@T[multipleproductprice:<current productidlist="101|32759|464069" period="monthly" promocode="511092015"></current>]@T]/month for the first year*</h3>
-          <button data-ci="96301" class="btn btn-primary btn-lg">Search Again</button>
-          <button data-ci="96304" class="btn btn-purchase btn-lg">Get It Now</button><small>*Bundle cost is [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly" promocode="511092015"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|32759|464069" period="yearly"></current>]@T]/year after the first year</small>
+          <h3>[@T[multipleproductprice:<current productidlist="101||464069" period="monthly" promocode=""></current>]@T]/month for the first year*</h3>
+          <button data-ci="96301" id="bottomSearchAgain" class="btn btn-primary btn-search-again btn-lg">Search Again</button>
+          <button data-ci="96304" class="btn btn-purchase btn-lg">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
         </div>
       </div>
     </section>
@@ -1735,11 +1918,11 @@ ul li.no-check {
           background-color: #77c043;
         }
         
-        #domain-search-view,
-        #domain-available-view,
-        #domain-not-available-view {
-          padding-top:15px;
-        }
+        //- #domain-search-view,
+        //- #domain-available-view,
+        //- #domain-not-available-view {
+        //-   padding-top:15px;
+        //- }
         
         #api-failure,
         #domain-search-view,
@@ -1747,6 +1930,8 @@ ul li.no-check {
         #domain-not-available-view,
         #domain-selected-view {display: none; }
         
+        #domain-search-header1,
+        #domain-search-header2 {display: none;}
         
         #domainSearchWizard .domain-name-displayed {
           font-size: 60px;
@@ -1776,8 +1961,8 @@ ul li.no-check {
           font-size:24px;
         }
         
-        .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-domain-icon.png) no-repeat center bottom;}
-        .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .domain-search-wizard .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+        .domain-search-wizard .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
         .domain-search-wizard .speach-bubble-left-div {margin-left:5%;width:90%;}
         .domain-search-wizard .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;
           padding: 10px 20px;text-transform: uppercase;line-height: 1;
@@ -1878,7 +2063,7 @@ ul li.no-check {
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         
-        #domain-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
         #domain-available-view h2.searched-domain-name-display {margin: 0;}
         
       </style>
@@ -1892,7 +2077,7 @@ ul li.no-check {
         #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
         
-        #domain-not-available-view .searched-domain-name-row {margin: 5px 0 10px;}
+        #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
         #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
         
         //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
@@ -1934,6 +2119,41 @@ ul li.no-check {
         h3 { text-transform: none; }
         small { display: block; }
         
+        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
+        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
+        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
+        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
+        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
+        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
+        
+        .domain-icon{height:92px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-domain-icon.png) no-repeat center bottom;}
+        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
+        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
+        
+        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
+        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
+        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
+        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
+        
+        h2, h3, h4, h5, h6{margin-top:0px;margin-bottom:0px;}
+        
+        /* speech bubbles */
+        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
+        .speech-bubble-right-div {margin-left:5%;width:90%;}
+        .speech-bubble-left-div {margin-left:5%;width:90%;}
+      </style>
+      <!-- atlantis:webstash(type="css")-->
+      <style>
+        .left-side{position: relative;}
+        .right-side{position:relative;}
+        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
+        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
+        .heading{padding-top:30px;}
+        .starter-pack{padding-bottom: 35px;}
+        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
+        .logo-label{padding-top: 15px;}
         #getItNow { padding-bottom: 0; padding-top: 0;}
         #getItNow .container { position: relative; }
         #getItNow .hero-guy { position: absolute; bottom: 0; height: 80%; }
@@ -1970,7 +2190,6 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
-<<<<<<< HEAD
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -1986,10 +2205,6 @@ ul li.no-check {
         /* Layout */
         .view-all{margin:20px auto;}
         
-        #product h2 { margin-top: 20px; margin-bottom: 20px; }
-        #product h3 { text-transform: none; }
-        #product .how-it-works { margin: 20px auto; }
-=======
         .product-section { padding-bottom: 0; }
         .product-section h2 { margin-top: 20px; margin-bottom: 20px; }
         .product-section .product-summary { margin: 20px auto; }
@@ -1999,7 +2214,6 @@ ul li.no-check {
           height: auto; 
           margin-top: 60px;
         }
->>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
         
         @media (min-width: 768px) {
           .product-section .hero-guy { 
@@ -2040,55 +2254,21 @@ ul li.no-check {
           filter: FlipH;
         }
         
-<<<<<<< HEAD
-=======
-        .features-domain-name{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png) no-repeat center bottom;}
-        .features-email{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png) no-repeat center bottom;}
-        .features-wordpress{height:113px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png) no-repeat center bottom;}
-        .features-online-store{height:101px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png) no-repeat center bottom;}
-        .features-wsb{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png) no-repeat center bottom;}
-        .features-hosting{height:117px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png) no-repeat center bottom;}
-        
-        .email-icon{height:91px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png) no-repeat center bottom;}
-        .tooltip-icon{height:16px;width:15px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-tootip-icon.png) no-repeat;float:right;position:relative;margin-top:-43px}
-        
-        .hero-guy{height:776px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png) no-repeat center bottom; position: relative; background-size: 100%;}
-        .half-hero-right{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-right.png) no-repeat center bottom;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .img-plus{height:75px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-plus.png) no-repeat center bottom; position: relative; margin-top:15px;}
-        
-        /* speech bubbles */
-        .speech-bubble-right-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png) no-repeat center bottom;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-right-div {margin-left:5%;width:90%;}
-        .speech-bubble-left-green {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjNzhDMDQ0IiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .speech-bubble-left-div {margin-left:5%;width:90%;}
-        
-        .left-side{position: relative;}
-        .right-side{position:relative;}
-        .good-news-shape {color: #333; line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEyMHB4IiBoZWlnaHQ9IjMzMHB4IiB2aWV3Qm94PSIwIDAgMTEyMCAzMzAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMjAgMzMwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJTaGFwZV80Ij4NCgk8Zz4NCgkJPHBvbHlnb24gZmlsbD0iIzc4QzA0NCIgcG9pbnRzPSIxMDg1LDQxLjUgNjkyLC0wLjUgMjU5LDIwLjUgNDgsNDUuNSAyMiwyMDEuNSAwLDIyNC41IDMzLDIyNi41IDExMCwzMTAuNSA5NDUsMzMwLjUgMTEyMCwxOTQuNSANCgkJCQkJIi8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=) no-repeat center center;background-size: cover;overflow: visible;}
-        .head-wrapper{padding-top: 35px; padding-bottom: 25px;}
-        .heading{padding-top:30px;}
-        .starter-pack{padding-bottom: 35px;}
-        .bottom{position:relative; top: 5px; margin-bottom: 0px; padding-top: 40px;}
-        .logo-label{padding-top: 15px;}
-        
+      </style>
+      <!-- atlantis:webstash(type="css")-->
+      <style>
+        #domainSearchWizardSection { padding-bottom: 0; }
         
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        /* video button */
-        .monitor {height:440px; background-repeat: no-repeat; background-position: center bottom; margin-top:15px; background-size: initial;background-color:transparent;position:relative;}
-        .monitor-base {height:87px; background-repeat: no-repeat; background-position: center top; background-size: initial;background-color:transparent;}
-        .img-play-green{height:110px; width: 110px; background: no-repeat center bottom; margin:15px auto; cursor: pointer}
-        .monitor .video-info {position:absolute!important;bottom:0;top:0;left:0;right:0;}
-        .monitor .video-info > .row{position:absolute!important;bottom:-55px;right:0; width:400px;}
-        .monitor .video-info > .row h3.h1{font-size:24px; font-family: walsheim-bold;margin:15px 0;}
-        .video-marquee-info{position:absolute;top:-85px;right:0;width:400px;}
+        .why-us-title{margin-top:10px;}
+        .why-us-text{margin-top:10px;}
         
-        /* Layout */
-        .view-all{margin:20px auto;}
+        .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+        .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+        .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
         
->>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -2104,60 +2284,6 @@ ul li.no-check {
       endOfPageScripts();
       
     </script>
-<<<<<<< HEAD
-=======
-    <script>
-      $(document).ready(function(){
-        stripDomainName();
-      });
-      
-      function stripDomainName(){
-           var windowParams = window.location.search.replace("?","");
-           var params = windowParams.split("&");
-           for(var i = 0; i < params.length;i++){
-            var inputName = params[i].split("=")[0];
-            var inputValue = params[i].split("=")[1];
-            if(inputName == "domain"){
-              inputValue = decodeURIComponent(inputValue);
-              $(".business-idea").text(inputValue);
-            }
-             
-         }
-      };
-      
-      // Page Global script -- changes will effect all campaigns 
-      // get url parameter by parameter name
-      function getParameterByName(name) {
-        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-      }
-      
-      function updateSearchedDomain(e, domain) {
-        domainSearch.searchedForDomain = domain;
-        $('#domain-available-view').find('.search-form-input').val(domain);
-        $('#domain-not-available-view').find('.search-form-input').val(domain);
-      }
-      
-      function updateSelectedDomain(domain) {
-        domainSearch.selectedDomain = domain;
-        $(document).find('.selected-domain-name-display').text(domain);
-      }
-      
-    </script>
-    <script>
-      $(document).ready(function(){
-        var passedBusinessName = getParameterByName('domain');
-        if(passedBusinessName != '') {
-          $(document).find('.business-name-display').text(passedBusinessName);
-          updateSearchedDomain('', passedBusinessName);
-          domainSearchFormSubmit('', passedBusinessName);
-       }
-      });
-      
-    </script>
->>>>>>> eb903890a56c5a33c324c1b408789d1f79b05156
     <!-- atlantis:webstash(type="js")-->
     <script>
       // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
