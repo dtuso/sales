@@ -13,6 +13,7 @@
     .right-arrow .leftContent{width:80%; margin-left:10%;}
     .right-arrow .rightContent{width:70%}
     .right-arrow .rightContent .btn{margin:5% 0}
+    .Explorer .right-arrow .arrow{background-size: 100% 100%;}
     
   </style>
   <style>.hero.right-arrow.gdpro-beginner-price .rightContent .line1 {
@@ -41,7 +42,7 @@
       if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
         return '8-9';
       }
-      else if(ua.indexOf('MSIE ')>0 || ua.indexOf('Trident')>0){
+      else if(ua.indexOf('10-current')>0 || ua.indexOf('Trident')>0){
         return '10-current';
       }
     }
