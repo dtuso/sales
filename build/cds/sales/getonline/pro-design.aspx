@@ -2803,7 +2803,7 @@ ul li.no-check {
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
+        #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         
@@ -2916,6 +2916,7 @@ ul li.no-check {
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
+        #bottomGetItNow img { min-height: 115px; }
         
       </style>
       <style>
@@ -2929,6 +2930,7 @@ ul li.no-check {
         .product-section{border-bottom: lightgray 1px solid;}
         .products{margin-top: 0px!important;}
         .uppercase{text-transform: uppercase;}
+        .orange-text{color: #ef6c0f;}
         
       </style>
     </atlantis:webstash>
