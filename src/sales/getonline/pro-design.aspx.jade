@@ -49,7 +49,7 @@ block productSection
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png")
           h2.text-center See what we can do
           h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
-          button.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") View Our Portfolio
+          button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") View Our Portfolio
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
           div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
@@ -126,3 +126,15 @@ block bottomGetItNow
               input(type="hidden", name="prog_id", value="GoDaddy")
               button.btn.btn-purchase.btn-lg GET IT NOW
               p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+
+prepend endOfPageScripts
+  script.
+    $(document).ready(function(){
+         $('#external').click(function(){
+            openPopUpWithParams("http://www.ourdesignexamples.com", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+         });
+    });
+
+    function openPopUpWithParams (url, windowName, windowParams) {
+            window.open(url, windowName, windowParams);
+    }  

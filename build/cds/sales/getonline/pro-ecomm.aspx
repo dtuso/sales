@@ -842,7 +842,7 @@ function getParameterByName(name) {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
             <h2 class="text-center">See what we can do</h2>
             <h3 class="text-center">Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…</h3>
-            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block">View Our Portfolio</button>
+            <button id="external" class="btn btn-default-dark center-block">View Our Portfolio</button>
           </div>
         </div>
         <section data-youtube-id="" class="video-marquee-wrapper">
@@ -1377,6 +1377,17 @@ ul li.no-check {
       endOfPageScripts();
       
     </script>
+    <script>
+      $(document).ready(function(){
+           $('#external').click(function(){
+              openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+           });
+      });
+      
+      function openPopUpWithParams (url, windowName, windowParams) {
+              window.open(url, windowName, windowParams);
+      }  
+    </script>
     <!-- atlantis:webstash(type="js")-->
     <script>
       // https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -1455,6 +1466,352 @@ ul li.no-check {
                 'prepend'
             );
           }).css({'cursor':'pointer'});
+        });
+      });
+    </script>
+    <script>
+      var domainSearchViewForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainSearchViewForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainSearchViewForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainSearchViewForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            domainSearchViewForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainSearchViewForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainSearchViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainSearchViewForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainSearchViewForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(['com','co','org','net'], function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + 'com';
+      
+        }
+      };
+      
+      var domainAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            domainAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(['com','co','org','net'], function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + 'com';
+      
+        }
+      };
+      
+      var domainNotAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainNotAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainNotAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            domainNotAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainNotAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainNotAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainNotAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainNotAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            $form.find('.type-your-business-name').show();
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(['com','co','org','net'], function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + 'com';
+      
+        }
+      };
+      
+      $(document).ready(function(){
+      
+        $("#domainSearchViewForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainSearchViewForm").submit();
+        });
+      
+        $("#domainSearchViewForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainSearchViewForm").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainSearchViewForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
+        });
+      
+        $("#domainAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainAvailableViewSearchForm").submit();
+        });
+      
+        $("#domainAvailableViewSearchForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainAvailableViewSearchForm").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
+        });
+      
+        $("#domainNotAvailableViewSearchForm").on('click', 'button.offer-search-btn', function(){
+          $("#domainNotAvailableViewSearchForm").submit();
+        });
+      
+        $("#domainNotAvailableViewSearchForm").on('submit', domainSearchViewForm.validateSubmit);
+        $("#domainNotAvailableViewSearchForm").on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
         });
       });
     </script>
