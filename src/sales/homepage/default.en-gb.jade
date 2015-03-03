@@ -21,15 +21,7 @@ block domainSearch
   include ./sections/domain-search.jade
 
 block marquee
-  #marquee-container-orig
-    |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-    |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
-    |  ##else
-    |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-    |  ##endif
-
-  #marquee-container-isc(style="display:none")
-    |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
+  #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/domain-wales/default_template" /> ]@P]
 
 block bugBar
   +tldBugs(["co","org","net"])
