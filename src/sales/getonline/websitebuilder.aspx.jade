@@ -41,7 +41,7 @@ block productSection
           img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
           h2.text-center #{productToDisplay.name}
           h4.text-center #{productToDisplay.productDescription}
-          button.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.center-block.view-all(data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
           div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")

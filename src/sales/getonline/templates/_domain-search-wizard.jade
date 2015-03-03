@@ -219,28 +219,28 @@ section#domainSearchWizardSection.bg-primary-o
   #domain-search-view.js-domain-search-wizard-section
     .container
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
+        .col-xs-12.col-sm-12
           div.domain-search-wizard.domain-icon
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
       form(id="domainSearchViewForm")
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             if(domainSearchWizard.title)
               h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
+          .col-xs-12.col-sm-12.offer-search-box
               .input-group
                 input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                 if(domainSearchWizard.showSearchButton)
                   span.input-group-btn
                     button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
         .row.domain-search-messaging-row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
@@ -248,33 +248,33 @@ section#domainSearchWizardSection.bg-primary-o
   #domain-available-view.js-domain-search-wizard-section
     .container
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
+        .col-xs-12.col-sm-12
           div.domain-search-wizard.domain-icon
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business.
       form(id="domainAvailableViewSearchForm")
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             if(domainSearchWizard.title)
               h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
+          .col-xs-12.col-sm-12.offer-search-box
               .input-group
                 input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                 if(domainSearchWizard.showSearchButton)
                   span.input-group-btn
                     button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
         .row.domain-search-messaging-row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h4.domain-starts.strong(style={'margin-top':'10px'}) Here's our favorite for <mark class="business-name-display">{0}</mark>
       .row#available-domain.bg-light
         .col-md-9.white
@@ -313,33 +313,33 @@ section#domainSearchWizardSection.bg-primary-o
   #domain-not-available-view.js-domain-search-wizard-section
     .container
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
+        .col-xs-12.col-sm-12
           div.domain-search-wizard.domain-icon
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
       form(id="domainNotAvailableViewSearchForm")
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             if(domainSearchWizard.title)
               h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3.offer-search-box
+          .col-xs-12.col-sm-12.offer-search-box
               .input-group
                 input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                 if(domainSearchWizard.showSearchButton)
                   span.input-group-btn
                     button#wizardSearchAgain.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
         .row.domain-search-messaging-row
-          .col-xs-12.col-sm-9.col-sm-offset-3
+          .col-xs-12.col-sm-12
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail !{domainSearchWizard.infoErrorEligibility}
             span.search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered !{domainSearchWizard.infoInvalidTld}
       .row.searched-domain-name-row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h2.domain-name-displayed.word-break Sorry, <mark class="searched-domain-name-display"></mark> is taken.
 
     .container.other-domains.spin-container
@@ -370,22 +370,22 @@ section#domainSearchWizardSection.bg-primary-o
   #domain-selected-view.js-domain-search-wizard-section
     .container#selected-domain
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3
+        .col-xs-12.col-sm-12
           div.domain-search-wizard.domain-icon
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center(style={'margin-top':'15px'})
+        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
           h2.uppercase(style={'margin-bottom':'0px'}) domain name
       .row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h4.strong Congratulations! You have selected the following domain name:
       .row.searched-domain-name-row
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
       .row(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
       .row(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-xs-12.col-sm-9.col-sm-offset-3.text-center
+        .col-xs-12.col-sm-12.text-center
           btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
           btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
 
