@@ -1,0 +1,26 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .cheap-dotcomdotbr-marquee{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-BR-fall-campaign.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#333333;}
+    .cheap-dotcomdotbr-marquee-content{font-family:'Walsheim-Black';width:1000px;margin:0 auto;color:#7abf4b;}
+    .cheap-dotcomdotbr-headline{font-size:35px}
+    .cheap-dotcomdotbr-maintext{font-size:28.7px}
+    .cheap-dotcomdotbr-subtext{font-size:32.6px}
+    .cheap-dotcomdotbr-text{width:420px;padding-top:60px;}
+    .cheap-dotcomdotbr-pricing-text{width:250px;padding-top:50px}
+    .cheap-dotcomdotbr-text>span{display:block;line-height:1.1;}
+    .cheap-dotcomdotbr-pricing{color:#f2812e;font-size:21.3px;}
+    .cheap-dotcomdotbr-pricing-text>.btn-wrap{padding-top:15px;}
+    .cheap-dotcomdotbr-pricing-text>.btn-wrap>.btn-warning{font-size:24px;padding:10px 25px 8px;}
+    .cheap-dotcomdotbr-restrictions{font-size:14px;line-height:14px;padding-top:10px;}
+  </style>
+</atlantis:webstash>
+<div id="cheap-dotcomdotbr-pt" data-url="[@T[link:<relative path="/tlds/br-domain"><param name="ci" value="94118" /></relative>]@T]" class="cheap-dotcomdotbr-marquee js-gdhpclick">
+  <div class="cheap-dotcomdotbr-marquee-content">
+    <div class="cheap-dotcomdotbr-text"><span class="cheap-dotcomdotbr-headline">[@L[cds.sales/homepage/locales/en:br-rebrand-headline]@L]</span><span class="cheap-dotcomdotbr-maintext">[@L[cds.sales/homepage/locales/en:br-rebrand-maintext]@L]</span><span class="cheap-dotcomdotbr-subtext">[@L[cds.sales/homepage/locales/en:br-rebrand-get-brcom]@L]</span></div>
+    <div class="cheap-dotcomdotbr-pricing-text"><span class="cheap-dotcomdotbr-pricing">[@L[cds.sales/homepage/locales/en:br-rebrand-just]@L] [@T[productprice:
+        <current productid="57201" period="yearly"></current>]@T][@L[cds.sales/homepage/locales/en:nyc-pricing-yr]@L]</span>
+      <div class="btn-wrap"><span id="cheap-dotcomdotbr-btn" class="btn btn-warning walsheim-med">[@L[cds.sales/homepage/locales/en:br-rebrand-btn]@L]</span></div>
+    </div>
+  </div>
+</div>
