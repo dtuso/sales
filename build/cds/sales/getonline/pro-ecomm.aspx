@@ -241,9 +241,9 @@
             </div>
           </div>
         </section>
-        <div class="row bubble-row">
+        <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
-          <div style="margin-top:0px" class="col-xs-10 col-sm-8 col-lg-6 bubble">
+          <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark>Did you know...</mark>
             <p>Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.</p>
           </div>
