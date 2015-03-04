@@ -1,5 +1,8 @@
 
 <!-- Need to dynamically build tld list.-->
+<!-- - domainSearchWizard.tlds                     = "['com','co','org','net']";-->
+<!-- - domainSearchWizard.defaultTld               = "'com'";-->
+<!-- - domainSearchWizard.formId                   = "domainSearchViewForm";-->
 <!-- P4P variables--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -80,6 +83,9 @@
       
     </script>
     <atlantis:webstash type="js">
+      <script></script>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
       <script>
         var offerInfo = {
           dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
@@ -121,10 +127,9 @@
           tokenizePrices();
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
+            domainSearch.businessName = passedBusinessName;
             $(document).find('.business-name-display').text(passedBusinessName);
         
-            // Initially don't display the search form.
-            $("#domainAvailableViewSearchForm").hide();
             updateSearchedDomain('', passedBusinessName);
             domainSearchFormSubmit('', passedBusinessName);
          }
@@ -156,25 +161,26 @@ var domainSearch = {
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  pricing: {
-    promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
-    bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
-    bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  },
-  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-  canOfferOls: true,
+  // pricing: {
+  //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+  //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
+  //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+  //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
+  //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+  // },
+  // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
+  // canOfferOls: true,
   animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
   showChoicesWithAvailableDomain: true,
+  showTypeYourBusinessName: false,
   selectedDomainName: ''
 };
 
-##if(!productIsOffered(105))
-  domainSearch.canOfferOls = false;
-##endif
+// ##if(!productIsOffered(105))
+//   domainSearch.canOfferOls = false;
+// ##endif
 
 ##if(countrySiteAny(ca) || isManager())  
   if(domainSearch.tldInfo.isPossibleAdditionalTld('ca')) {
@@ -214,7 +220,7 @@ domainSearch.tldInfo.tlds.push(domainSearch.tldInfo.lastTldInList); //- add to t
 
 $(document).ready(function() {
 
-  showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
+  // showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
   showAndOrderDynamicTldsInList("#products .TLD-token");
@@ -227,12 +233,7 @@ $(document).ready(function() {
   // tokenizeDisclaimerModals(); 
   // tokenizeTheDataTokenizeAttribute();
 
-  wireupModals();
-
-  //- display error on return from DPP's TLD eligibility requirements failure
-  if(getParameterByName('tldRegErr').length > 0) {
-    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
-  }
+  // wireupModals();
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
@@ -326,48 +327,53 @@ function tokenizeDisclaimerModals() {
     });
   };
   
-  if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
-  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+  // if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
+  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
+  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
 }
 
-function wireupModals() {
+// function wireupModals() {
 
-  // wire up see details links  
+//   // wire up see details links  
 
-  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
-    $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-      .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
-  });
-}
+//   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
+//     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
+//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//   });
+// }
 
 
-function showTldImagesInDomainArea() {
-  //dynamically build the tld images in the #findYourPerfectDomain section
-  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
-  $.each(domainSearch.tldInfo.tlds, function(idx, tld){
-    var $img = $('<img>')
-      .addClass('tld-image lazyload')
-      .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
-    $imageDiv.append($img);
-    lazyload.add($img);
-  });
+// function showTldImagesInDomainArea() {
+//   //dynamically build the tld images in the #findYourPerfectDomain section
+//   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
+//   $.each(domainSearch.tldInfo.tlds, function(idx, tld){
+//     var $img = $('<img>')
+//       .addClass('tld-image lazyload')
+//       .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
+//     $imageDiv.append($img);
+//     lazyload.add($img);
+//   });
 
-  // rerun the height alignment
-  $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
-  $(window).trigger('resize');
-}
+//   // rerun the height alignment
+//   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
+//   $(window).trigger('resize');
+// }
 
 function domainSearchFormSubmit(e, domain) { 
 
   var $thisSection,
-      pageStartupSearch = true;
+      pageStartupSearch;
 
   if(e != '') {
     var $this = $(e.target);
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
+    $('#domainAvailableViewSearchForm').show();
     pageStartupSearch = false;
+  } else {
+    $thisSection = $('#domain-search-view');
+    $('#domainAvailableViewSearchForm').hide();
+    pageStartupSearch = true;
   }
 
   ##if(isManager())
@@ -610,35 +616,28 @@ function showApi3SearchError(e,domain){
   $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
 }
 
-function showDomainRegistrationFailure(tld) {
-  var 
-    $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
-    html = $failArea.html();
-  html = html.replace(/\{0\}/gi, tld)
-  $failArea.html(html);
-  $('#domainSearchWizard .search-message').hide();
-  $('#domainSearchWizard .domain-eligibility-fail').show();
+// function showTypeYourDomain() {  
+//   $('#domainSearchWizard .search-message').hide();
+//   $('#domainSearchWizard .type-your-business-name').show();
+// }
+
+function displayMoreResultsLinks(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".domain-available-view .view-all-button").show();
+  $thisSection.find(".show-more-section").show();
 }
 
-function showTypeYourDomain() {  
-  $('#domainSearchWizard .search-message').hide();
-  $('#domainSearchWizard .type-your-business-name').show();
+function hideMoreResultsLinks(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".view-all-button").hide();
+  $thisSection.find(".show-more-section").hide();
 }
 
-function displayMoreResultsLinks($view) {
-  $view.find(".domain-available-view .view-all-button").show();
-  $view.find(".show-more-section").show();
-}
-
-function hideMoreResultsLinks($view) {
-  $view.find(".view-all-button").hide();
-  $view.find(".show-more-section").hide();
-}
-
-function displayMoreResultsArea($view) {
-  $view.find(".spin-results .spin-result").slideDown(domainSearch.animationTime);
-  hideMoreResultsLinks($view);
-  updateDomainCountText($view, domainSearch.totalSpinResults);
+function displayMoreResultsArea(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".spin-results .spin-result").slideDown(domainSearch.animationTime);
+  hideMoreResultsLinks($thisSection);
+  updateDomainCountText($thisSection, domainSearch.totalSpinResults);
 }
 
 function updateDomainCountText($view, numberShowing) {
@@ -651,28 +650,18 @@ function updateDomainCountText($view, numberShowing) {
 
 function animateWizard($currentView, $animateToView) {  
 
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-
-    // $currentView.hide();
-  }
-
-  // $animateToView.show();
-
   var currentViewHeight;
   var windowWidth = $(window).width();
 
-  if($currentView == undefined)
-    currentViewHeight = 0;
-  else {
+  if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
-
-    animateObjectOffToTheLeft($currentView, windowWidth, 2);
     currentViewHeight = $currentView.height();
+  } else {
+    currentViewHeight = 0;
   }
 
-  var $wizard = $('#domainSearchWizard'),
-  wizardHeight = $('#domainSearchWizard').height();
+  var $wizard = $('#domainSearchWizardSection'),
+  wizardHeight = $wizard.height();
 
   // show view offscreen to get height
   $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
@@ -683,6 +672,7 @@ function animateWizard($currentView, $animateToView) {
   
   //run the animations
   animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  animateObjectOffToTheLeft($currentView, windowWidth, 2);
   animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
@@ -842,7 +832,7 @@ function getParameterByName(name) {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
             <h2 class="text-center">See what we can do</h2>
             <h3 class="text-center">Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…</h3>
-            <button data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block">View Our Portfolio</button>
+            <button id="external" class="btn btn-default-dark center-block">View Our Portfolio</button>
           </div>
         </div>
         <section data-youtube-id="" class="video-marquee-wrapper">
@@ -998,20 +988,10 @@ ul li.no-check {
           background-color: #77c043;
         }
         
-        //- #domain-search-view,
-        //- #domain-available-view,
-        //- #domain-not-available-view {
-        //-   padding-top:15px;
-        //- }
-        
         #api-failure,
-        #domain-search-view,
         #domain-available-view,
         #domain-not-available-view,
         #domain-selected-view {display: none; }
-        
-        #domain-search-header1,
-        #domain-search-header2 {display: none;}
         
         #domainSearchWizard .domain-name-displayed {
           font-size: 60px;
@@ -1035,7 +1015,7 @@ ul li.no-check {
         
         .offer-search-box { padding-bottom:20px;}
         .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-        .domain-search-messaging-row {padding-bottom: 40px; display: none;}
+        .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
           margin: 20px 0 5px;
           font-size:24px;
@@ -1050,7 +1030,6 @@ ul li.no-check {
           background-size: cover;overflow: visible;}
         
         /*  speech */
-        
         .speech-shape-upsidedown {
           line-height: 1.9em;
           font-size: 18px;
@@ -1094,6 +1073,9 @@ ul li.no-check {
         }
         .speech-shape-upsidedown.speech-shape-upsidedown-orange {
           background-color: #ef6c0f;
+        }
+        .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
+          color: #fff;
         }
         .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
           border-bottom-color: #ef6c0f;
@@ -1159,27 +1141,6 @@ ul li.no-check {
         
         #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
         #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
-        
-        //- #domain-not-available-view h4.other-domains-heading-text {padding-top 20px; font-size: 24px; color:#333; font-weight: bold; }
-        //- #domain-not-available-view h6.results-list-heading-text {padding-top 20px; font-size: 18px; color:#333; }
-        //- #domain-not-available-view .domain-spin-wrap {min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;} 
-        //- #domain-not-available-view .domain-name-display {text-transform: lowercase; margin-bottom: 0px; margin-top: 0px;}
-        //- #domain-not-available-view .domain-name-display-tld {text-transform: lowercase;margin-bottom: 0px; margin-top: 0px;}
-        //- #domain-not-available-view .clickable-show-more {cursor: pointer;}
-        //- #domain-not-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
-        
-        //- #available-domain .spin-results-message,
-        //- .spin-results .spin-results-message, 
-        //- .spin-results .spin-result, 
-        //- .spin-template-wrap .spin-template {display:none;}
-        //- .spin-results .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
-        //- .spin-results .spin-results-message {margin-top:15px;}
-        //- .spin-results .checking-availability, #spin-results .now-unavailable {padding-top:5px;}
-        //- .spin-results h4.domain-name-display {font-size: 30px; color: #333; font-weight: bold;}
-        //- .spin-results h2.domain-name-display-tld {font-size: 40px; color: #333;}
-        //- #domain-not-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
-        //- #spin-results .domain-tile {margin-top: 0px;}
-        
         #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
         
         // Turn off search input message display
@@ -1244,7 +1205,7 @@ ul li.no-check {
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
         #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-        #getItNow .products img { max-height: 110px; }
+        #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         
@@ -1357,6 +1318,7 @@ ul li.no-check {
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
+        #bottomGetItNow img { min-height: 115px; }
         
       </style>
       <style>
@@ -1370,12 +1332,24 @@ ul li.no-check {
         .product-section{border-bottom: lightgray 1px solid;}
         .products{margin-top: 0px!important;}
         .uppercase{text-transform: uppercase;}
+        .orange-text{color: #ef6c0f;}
         
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script>
+      $(document).ready(function(){
+           $('#external').click(function(){
+              openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+           });
+      });
+      
+      function openPopUpWithParams (url, windowName, windowParams) {
+              window.open(url, windowName, windowParams);
+      }  
     </script>
     <!-- atlantis:webstash(type="js")-->
     <script>
@@ -1456,6 +1430,431 @@ ul li.no-check {
             );
           }).css({'cursor':'pointer'});
         });
+      });
+    </script>
+    <script>
+      var domainSearchViewForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainSearchViewForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainSearchViewForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainSearchViewForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            $("#domainSearchViewForm").find('input[name="domainToCheck"]').val('');
+            domainSearchViewForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainSearchViewForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainSearchViewForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainSearchViewForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainSearchViewForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            domainSearchViewForm.showTypeYourBusinessName($form);
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(domainSearch.tldInfo.tlds, function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + domainSearch.tldInfo.defaultTld;
+      
+        },
+        showTypeYourBusinessName: function($form) {
+      
+          if(domainSearch.showTypeYourBusinessName)
+            $form.find('.type-your-business-name').show();
+          else
+            $form.find('.type-your-business-name').hide();
+        }
+      };
+      
+      var domainAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            $("#domainAvailableViewSearchForm").find('input[name="domainToCheck"]').val('');
+            domainAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            domainAvailableViewSearchForm.showTypeYourBusinessName($form);
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(domainSearch.tldInfo.tlds, function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + domainSearch.tldInfo.defaultTld;
+      
+        },
+        showTypeYourBusinessName: function($form) {
+      
+          if(domainSearch.showTypeYourBusinessName)
+            $form.find('.type-your-business-name').show();
+          else
+            $form.find('.type-your-business-name').hide();
+        }
+      };
+      
+      var domainNotAvailableViewSearchForm = {
+        executeFnByName: function(name, context) {
+          
+          var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+          for(var i=2; i < arguments.length; i++){
+            args.push(arguments[i]);
+          }
+          var namespaces = name.split(".");
+          var func = namespaces.pop();
+          for(var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+          }
+          return context[func].apply(this, args);
+      
+        },
+        validateSubmit: function(e){
+      
+          e.preventDefault();
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(false);
+          var functionSaveName = 'updateSearchedDomain';
+          if(functionSaveName.length > 0) {
+            domainNotAvailableViewSearchForm.executeFnByName(functionSaveName, window, e, domainName);
+          }
+          if((domainName && domainName.length==0) || !domainName) return false;
+      
+          domainName = domainName.toLowerCase();
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          if(!domainNotAvailableViewSearchForm.ensureValidTld(domainName)) {
+            return;
+          }
+          var functionName = 'domainSearchFormSubmit';
+          if(functionName.length > 0)  {
+            $("#domainNotAvailableViewSearchForm").find('input[name="domainToCheck"]').val('');
+            domainNotAvailableViewSearchForm.executeFnByName(functionName, window, e, domainName);
+          }
+      
+        },
+        trimmedDomainName: function(isKeyPress){
+          
+          var $form = $("#domainNotAvailableViewSearchForm"),
+            $textInput = $form.find('input[name="domainToCheck"]'),
+            domainName = $textInput.val();
+          if((domainName && domainName.length==0) || !domainName) return null;
+      
+          domainName = domainNotAvailableViewSearchForm.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+          return domainName;
+      
+        },
+        reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+      
+          var idx = domain.indexOf('.'),
+              hasTld = idx > -1,
+              sld = hasTld ? domain.substring(0, idx) : domain,
+              tld = hasTld ? domain.substring(idx+1) : '',
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+          sld = needsTrimmed ? sld.substring(0, 63) : sld;
+          
+          var domainName = sld + ((tld!='') ? '.' + tld : '');
+          if(needsTrimmed) {
+            $textInput.val(domainName);
+          }
+          return domainName;
+      
+        },
+        ensureValidTld: function() {
+      
+          var $form = $("#domainNotAvailableViewSearchForm"),
+              $textInput = $form.find('input[name="domainToCheck"]'),
+              domainName = $textInput.val(); 
+              validTld = domainNotAvailableViewSearchForm.hasTldValid(domainName);
+          $form.find('.search-message').hide();
+          if(validTld) {
+            domainNotAvailableViewSearchForm.showTypeYourBusinessName($form);
+          } else {
+            $form.find('.invalid-TLD-entered').show();
+          }
+          return validTld;
+          
+        },
+        hasTldValid: function(domain) {
+      
+          domain = $.trim(domain || "");
+          var idx = domain.indexOf('.'), isValid = false;
+          if(!domain || domain.length == 0 || idx == -1) return true;
+      
+          var domainsTld = domain.substring(idx+1).toLowerCase();
+          $.each(domainSearch.tldInfo.tlds, function(idx, tld) {
+            if(tld.toLowerCase() === domainsTld) {
+              isValid = true;
+            }
+          });
+          return isValid;
+      
+        },
+        formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+      
+          if(domain.indexOf('.') > 0) return domain;
+          return domain + '.' + domainSearch.tldInfo.defaultTld;
+      
+        },
+        showTypeYourBusinessName: function($form) {
+      
+          if(domainSearch.showTypeYourBusinessName)
+            $form.find('.type-your-business-name').show();
+          else
+            $form.find('.type-your-business-name').hide();
+        }
+      };
+      
+      $(document).ready(function(){
+      
+        var $form = $("#domainSearchViewForm");
+        $form.on('click', 'button.offer-search-btn', function(){
+          $form.submit();
+        });
+        $form.on('submit', domainSearchViewForm.validateSubmit);
+        $form.on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainSearchViewForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainSearchViewForm.ensureValidTld(domainName);
+        });
+        domainSearchViewForm.showTypeYourBusinessName($form);
+      
+        $form = $("#domainAvailableViewSearchForm");
+        $form .on('click', 'button.offer-search-btn', function(){
+          $form .submit();
+        });
+        $form .on('submit', domainAvailableViewSearchForm.validateSubmit);
+        $form .on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainAvailableViewSearchForm.ensureValidTld(domainName);
+        });
+        domainAvailableViewSearchForm.showTypeYourBusinessName($form);
+      
+        $form = $("#domainNotAvailableViewSearchForm");
+        $form.on('click', 'button.offer-search-btn', function(){
+          $form.submit();
+        });
+        $form.on('submit', domainNotAvailableViewSearchForm.validateSubmit);
+        $form.on('keyup', function(e){ 
+          if(e.which == 13) return;
+          var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
+          if(!domainName || domainName.length == 0) return;
+          domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+          domainNotAvailableViewSearchForm.ensureValidTld(domainName);
+        });
+        domainNotAvailableViewSearchForm.showTypeYourBusinessName($form);
+      
+      
+        // // From domain-selection.js
+        // // *******************************************************************************
+        //- //- display error on return from DPP's TLD eligibility requirements failure
+        //- if(getParameterByName('tldRegErr').length > 0) {
+        //-   showDomainRegistrationFailure(getParameterByName('tldRegErr'));
+        //- }
+      
+        // 
+        //- function showDomainRegistrationFailure(tld) {
+        //-   var 
+        //-     $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
+        //-     html = $failArea.html();
+        //-   html = html.replace(/\{0\}/gi, tld)
+        //-   $failArea.html(html);
+        //-   $('#domainSearchWizard .search-message').hide();
+        //-   $('#domainSearchWizard .domain-eligibility-fail').show();
+        //- }
+        // // *******************************************************************************
+      
+      
+        //- //- display error on return from DPP's TLD eligibility requirements failure
+        //- var tldErr = .getParameterByName('tldRegErr'),
+        //-     dppHasError = tldErr.length > 0,
+        //-     dupErr = .getParameterByName('dppError');
+      
+        //- if(dppHasError) {
+        //-   //- note by default tldRegErr will be on the url query string
+        //-   //- if it's a dup, dpp will add in an additional parameter to let us know
+        //-   switch(dupErr){
+            
+        //-     case("dup"):
+        //-       $('# .search-message').hide();
+        //-       $('# .dup-domain-fail').show();
+        //-       break;
+      
+        //-     default:
+        //-       var $failArea = $('# .domain-eligibility-fail'), 
+        //-           html = $failArea.html();
+        //-       html = html.replace(/\{0\}/gi, tldErr)
+        //-       $failArea.html(html);
+        //-       $('# .search-message').hide();
+        //-       $('# .domain-eligibility-fail').show();
+        //-       break;
+      
+        //-   }
+        //- } else {
+        //-   $('# .search-message').hide();
+        //-   $('# .type-your-business-name').show();
+        //- }
+      
       });
     </script>
   </body>
