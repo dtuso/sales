@@ -340,7 +340,7 @@ block content
         .row
           h2 Ready to Get Online?
           h3#got-domain-not-selected First select your perfect domain
-          h3#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+          h3#got-domain-selected.price-token(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
         .row
           .column.domain
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
