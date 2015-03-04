@@ -1,8 +1,3 @@
----
-location: sales/homepage/default.es-mx
-id: false
-name: GCEMO-636
----
 extends ../../layouts/homepage/default_base
 append styles
   style.
@@ -22,7 +17,7 @@ block secondaryTile
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   
 block bugBar
-  +tldBugs(["co","uno","org"])
+  +tldBugs(["com","co","club"])
 
 block cookieWarning
 
