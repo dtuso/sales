@@ -1,7 +1,11 @@
 ---
 location: localization/sales/gd/research/en
+<<<<<<< HEAD
 id: 54f6153be38ced2be838302a
 name: SEM-420
+=======
+id: 54ef9e13f778fc203043be41
+>>>>>>> upstream/dev
 ---
 {% include '../../modules/doc-block.html' %}
 <phrase key="page-title" />

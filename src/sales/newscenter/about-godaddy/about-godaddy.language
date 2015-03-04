@@ -1,8 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: 54efbd109faf7042504cacc0
-name: GCE-37164
-comments: Replace bio on About us page with new image and name
+id: 54f74165f778fc0104ece2ff
+name: GCEMO-690
+comments: update values with app settings
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -35,12 +35,12 @@ GoDaddy is&hellip;
 The <strong>world's largest</strong><br /> domain name registrar
 <phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement" />
 <strong>58 million domains</strong><br /> under management
-<phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement_35279" />
-<strong>59 million domains</strong><br /> under management
-<phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" />
-<strong>12 million<br />customers</strong>
-<phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" />
-<strong>14 facilities</strong>, including: Ariz., Calif., Iowa, Wash., Asia, Europe, India … & more
+<phrase key="NewsCenterAbout-7-MoreThan55MillionDomainsUnderManagement_35279" comment="app setting translates to a number" />
+<strong>[@T[appSetting:<setting name="GODADDY_DOMAINS" />]@T] million domains</strong><br /> under management
+<phrase key="NewsCenterAbout-4-MoreThan12Millioncustomers" comment="app setting translates to a number"/>
+<strong>[@T[appSetting:<setting name="GODADDY_CUSTOMERS" />]@T] million<br />customers</strong>
+<phrase key="NewsCenterAbout-13-9FacilitiesIncludingArizonaIowaCaliforniaColoradoWashingtonD" comment="app setting displays a number" />
+<strong>[@T[appSetting:<setting name="GODADDY_FACILITIES" />]@T] facilities</strong>, including: Ariz., Calif., Iowa, Wash., Asia, Europe, India … & more
 <phrase key="NewsCenterAbout-5-MoreThan4000Employees" />
 More than <strong>4,000 employees</strong>
 <phrase key="NewsCenterAbout-9-247365RoundTheClockCustomerCareOperations" />
@@ -543,13 +543,13 @@ Invalid Code Entered
 <phrase key="NewsCenterAbout-Domains" />
 58
 <phrase key="NewsCenterAbout-Domains_35279" />
-59
+[@T[appSetting:<setting name="GODADDY_DOMAINS" />]@T]
 <phrase key="NewsCenterAbout-Customers" />
-12
+[@T[appSetting:<setting name="GODADDY_CUSTOMERS" />]@T]
 <phrase key="NewsCenterAbout-Employees" />
 4,000
 <phrase key="NewsCenterAbout-Facilities" />
-14
+[@T[appSetting:<setting name="GODADDY_FACILITIES" />]@T]
 <phrase key="NewsCenterAbout-CustomerCare" />
 24/7/365
 <phrase key="NewsCenterCancelLink" />
