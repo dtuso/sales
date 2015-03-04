@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/hosting/website-builder-config/en
-id: 54dbd7adf778fc1120b67d5c
+id: 54f6192af778fc0104ece27b
 name: GCE-27630
 ---
 
@@ -119,5 +119,9 @@ Personal Website Builder
 Business Website Builder
 <phrase key="order_business_plus_wsb" />
 Business Plus Website Builder
+<phrase key="order_ssl" />
+Standard SSL Certificate
+<phrase key="order_gf" />
+Get Found Essential
 <phrase key="wsb" />
 Website Builder

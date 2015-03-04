@@ -77,252 +77,19 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
-      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/liveperson_20150122.min.js", 'livepersonLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
       
     </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
     ##if(IsManager())
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
   <body ng-controller="">
-    <style>
-      .svgfallback{display:none}
-      .svgfallback:not(old){display:block}
-      ul.green-check li, li.green-check, ul.no-check li, li.no-check { padding: 0.4em 0 0.4em 35px; list-style: none; background-repeat: no-repeat; }
-      ul.green-check li, li.green-check { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);  }
-      ul.green-check li:not(old), li.green-check:not(old) { background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+); }
-      ul li.no-check { background-image: none !important; }
-      
-    </style>
-    <style>
-      /* fix the greek font styling issue here */
-      ##if(countrySiteAny(gr))
-      * {
-        font-family: arial !important;
-      }
-      .close {
-        font-family: uxfont !important;
-      }
-      .uxicon {
-        font-family: uxfont !important;
-      }
-      ##endif
-      /* uxcore doesn't include col-xs-offset-x */
-      @media (max-width: 768px) {
-        .col-xs-pull-12 {
-          right: 100%;
-        }
-        .col-xs-pull-11 {
-          right: 91.66666667%;
-        }
-        .col-xs-pull-10 {
-          right: 83.33333333%;
-        }
-        .col-xs-pull-9 {
-          right: 75%;
-        }
-        .col-xs-pull-8 {
-          right: 66.66666667%;
-        }
-        .col-xs-pull-7 {
-          right: 58.33333333%;
-        }
-        .col-xs-pull-6 {
-          right: 50%;
-        }
-        .col-xs-pull-5 {
-          right: 41.66666667%;
-        }
-        .col-xs-pull-4 {
-          right: 33.33333333%;
-        }
-        .col-xs-pull-3 {
-          right: 25%;
-        }
-        .col-xs-pull-2 {
-          right: 16.66666667%;
-        }
-        .col-xs-pull-1 {
-          right: 8.33333333%;
-        }
-        .col-xs-pull-0 {
-          right: auto;
-        }
-        .col-xs-push-12 {
-          left: 100%;
-        }
-        .col-xs-push-11 {
-          left: 91.66666667%;
-        }
-        .col-xs-push-10 {
-          left: 83.33333333%;
-        }
-        .col-xs-push-9 {
-          left: 75%;
-        }
-        .col-xs-push-8 {
-          left: 66.66666667%;
-        }
-        .col-xs-push-7 {
-          left: 58.33333333%;
-        }
-        .col-xs-push-6 {
-          left: 50%;
-        }
-        .col-xs-push-5 {
-          left: 41.66666667%;
-        }
-        .col-xs-push-4 {
-          left: 33.33333333%;
-        }
-        .col-xs-push-3 {
-          left: 25%;
-        }
-        .col-xs-push-2 {
-          left: 16.66666667%;
-        }
-        .col-xs-push-1 {
-          left: 8.33333333%;
-        }
-        .col-xs-push-0 {
-          left: auto;
-        }
-        .col-xs-offset-12 {
-          margin-left: 100%;
-        }
-        .col-xs-offset-11 {
-          margin-left: 91.66666667%;
-        }
-        .col-xs-offset-10 {
-          margin-left: 83.33333333%;
-        }
-        .col-xs-offset-9 {
-          margin-left: 75%;
-        }
-        .col-xs-offset-8 {
-          margin-left: 66.66666667%;
-        }
-        .col-xs-offset-7 {
-          margin-left: 58.33333333%;
-        }
-        .col-xs-offset-6 {
-          margin-left: 50%;
-        }
-        .col-xs-offset-5 {
-          margin-left: 41.66666667%;
-        }
-        .col-xs-offset-4 {
-          margin-left: 33.33333333%;
-        }
-        .col-xs-offset-3 {
-          margin-left: 25%;
-        }
-        .col-xs-offset-2 {
-          margin-left: 16.66666667%;
-        }
-        .col-xs-offset-1 {
-          margin-left: 8.33333333%;
-        }
-        .col-xs-offset-0 {
-          margin-left: 0;
-        }
-      }
-      /* override UXCORE font settings for all LPs */
-      h2 {
-        margin-bottom: 40px;
-        margin-top: 0;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        font-weight: 300;
-        line-height: 1.1;
-        color: #333;
-      }
-      h3 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        font-family: 'Walsheim-Black';
-        margin-top: 20px;
-        margin-bottom: 10px;
-        font-weight: 300;
-        line-height: 1.1;
-      }
-      
-      .sf-tipper-target {
-        background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
-        width: 14px;
-        height: 14px;
-        display: inline-block;
-        vertical-align: baseline;
-        cursor: pointer;
-      }
-      
-    </style>
-    <style>
-.config-step .step-title {
-font-size: 36px;
-margin-top: 40px;
-margin-bottom: 15px;
-margin-left: 15px;
-font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-font-weight: 100;
-line-height: 1.1;
-color: #333;
-}
-.config-step .step-subtitle {
-margin-left: 15px;
-}
-.config-text-primary {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-size: 24px;
-  color: #333;
-}
-.config-text-lead {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-size: 16px;
-  color: #333;
-font-weight: 200;
-
-}
-.config-text-price {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-.config-text-secondary {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-.config-text-save {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-}
-.config-text-disclaimer {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-.green-check {
-  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
-  width: 34px;
-  height: 27px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 4px 10px 0;
-  position: relative;
-}
-.disclaimers-section{
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.product-options {
-list-style: none;
-}
-
-@media (max-width: 768px) {
-    .text-xs-right{
-      text-align: right;
-    }
-    </style>
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <div class="container">
+    <div class="container configuration">
       <div class="row">
         <div class="col-sm-12">
           <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
@@ -404,7 +171,7 @@ list-style: none;
             </style>
           </atlantis:webstash>
           <div class="row">
-            <div class="col-sm-10 config-step"><span class="flag blue"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_plan]@L]</span></span>
+            <div id="planStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:select_plan]@L]</span></span>
               <div class="row">
                 <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:plan_title]@L]</div>
               </div>
@@ -412,109 +179,46 @@ list-style: none;
                 <p class="text-secondary step-subtitle">[@L[cds.sales/gd/hosting/website-builder-config:plan_subtitle]@L]</p>
               </div>
               <div class="row options-wrapper">
-                <ul id="tiers" class="product-options">
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:personal]@L]</div>
-                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:personal_text]@L]</div>
-                      <div class="col-xs-4">
-                         
-                         
-                        ##if(true)
-                         
-                        <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
-                        ##endif
-                         
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:50_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:1GB_space]@L]</div>
-                      <div class="col-xs-4">
-                         
-                         
-                        ##if(true)
-                         
-                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
-                         
-                        ##endif
-                         
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
-                      </div>
-                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:business]@L]</div>
-                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]</div>
-                      <div class="col-xs-4">
-                         
-                         
-                        ##if(true)
-                         
-                        <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
-                        ##endif
-                         
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]</div>
-                      <div class="col-xs-4">
-                         
-                        ##if(true)
-                         
-                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7524" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
-                         
-                        ##endif
-                         
-                      </div>
-                    </div>
-                  </li>
-                  <li> 
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="planOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
-                      </div>
-                      <div class="col-xs-7 config-text-primary">[@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]</div>
-                      <div class="col-xs-4 config-text-lead">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]</div>
-                      <div class="col-xs-4">
-                         
-                         
-                        ##if(true)
-                         
-                        <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</strike> 
-                        ##endif
-                         
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]</div>
-                      <div class="col-xs-4">
-                         
-                         
-                        ##if(true)
-                         
-                        ON SALE (Save [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="1"><html><![CDATA[{0}]]></html></percent>]@T])
-                         
-                        ##endif
-                         
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <ul id="planTypes" class="product-options"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="termStep" class="col-sm-11 config-step"><span class="flag orange"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:select_term]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="termList" class="product-options"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="sslStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="sslList" class="product-options"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div id="getFoundStep" class="col-sm-11 config-step"><span class="flag red"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</span></span>
+              <div class="row">
+                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_gf_title]@L]</div>
+              </div>
+              <div class="row">
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_gf_subtitle]@L]</p>
+              </div>
+              <div class="row options-wrapper">
+                <ul id="getFoundList" class="product-options"></ul>
               </div>
             </div>
           </div>
@@ -540,143 +244,26 @@ list-style: none;
             </style>
           </atlantis:webstash>
           <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
-          <div class="row">
-            <div class="col-sm-10 config-step"><span class="flag orange"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:select_term]@L]</span></span>
-              <div class="row">
-                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]</div>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]</p>
-              </div>
-              <div class="row options-wrapper">
-                <ul id="terms" class="product-options">
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-sm-2 col-xs-6">1 month</div>
-                      <div class="col-sm-2 col-xs-5">$1.00</div>
-                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
-                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-sm-2 col-xs-6">1 month</div>
-                      <div class="col-sm-2 col-xs-5">$1.00</div>
-                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
-                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
-                    </div>
-                  </li>
-                  <li> 
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-sm-2 col-xs-6">1 month</div>
-                      <div class="col-sm-2 col-xs-5">$1.00</div>
-                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
-                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
-                    </div>
-                  </li>
-                  <li> 
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="termOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-sm-2 col-xs-6">1 month</div>
-                      <div class="col-sm-2 col-xs-5">$1.00</div>
-                      <div class="col-sm-2 col-xs-5 col-xs-offset-7">$5.99</div>
-                      <div class="col-sm-4 col-xs-11 text-xs-right">ON SALE (SAVE 40%)</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
-          <div class="row">
-            <div class="col-sm-10 config-step"><span class="flag blue"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]</span></span>
-              <div class="row">
-                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]</div>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]</p>
-              </div>
-              <div class="row options-wrapper">
-                <ul id="ssl" class="product-options">
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="sslOption" value="no" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-xs-8">No Thanks</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="sslOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
-                      </div>
-                      <div class="col-xs-11">Add Standard SSL Certificate $50.00</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
-          <div class="row">
-            <div class="col-sm-10 config-step"><span class="flag red"><span class="step-number-text">[@L[cds.sales/gd/hosting/website-builder-config:step]@L] | [@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</span></span>
-              <div class="row">
-                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_gf_title]@L]</div>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_gf_subtitle]@L]</p>
-              </div>
-              <div class="row options-wrapper">
-                <ul id="get-found" class="product-options">
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="sslOption" value="no" data-price="$10.00" data-name="Managed" checked="checked">
-                      </div>
-                      <div class="col-xs-8">No Thanks</div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-xs-1">
-                        <input type="radio" style="margin-right:4px;" name="sslOption" value="pro_vps_managed" data-price="$10.00" data-name="Managed">
-                      </div>
-                      <div class="col-xs-11">Add Get Found $50.00</div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="col-sm-3">
           <atlantis:webstash type="css">
             <style>
-              .order-summary-wrapper h3{
+              .order-summary-wrapper{
                 background-color: #EBEBEB;
                 padding: 10px;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                font-size: 14px;
+              }
+              .order-summary-text{
+                font-size: 16px;
                 font-weight: 600;
+              
               }
               .order-item-details-wrapper{
                 overflow: hidden;
                 font-size: 13px;
               }
-              .order-total{
+              .order-total-wrapper{
                 float: right;
                 font-size: 28px;
                 font-weight: 500;
@@ -684,18 +271,21 @@ list-style: none;
                 vertical-align: top;
               }
               .order-item-details-wrapper {
-                font-size: 14px;
-                font-weight: 600;
                 margin-bottom: 7px;
                 padding-bottom: 3px;
               }
-              .subtotal{
+              .subtotal-wrapper{
                 border-bottom: 1px solid #333;
               }
-              .subtotal-disclaimer p{
-                margin-top: 20px;
+              .subtotal-text{
+                text-transform: capitalize;
+                font-weight:600;
+                font-size:14px;
+              }
+              .savings-total-wrapper{
+                float: right;
                 font-size: 13px;
-                color: #777;
+                text-transform: uppercase;
               }
               .scroll-down-wrapper{
                 cursor: pointer;
@@ -713,61 +303,55 @@ list-style: none;
                 width: 20px;
                 height: 15px;
               }
-              
+              .subtotal-disclaimer{
+                float: right;
+                text-align:right;
+                margin-top: 20px;
+                font-size: 13px;
+                color: #777;
+              }
               .green-down-arrow-icon{
                 display: block;
                 background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -70px -2px transparent;
               }
-              
-              .product-added-to-cart {
-                padding: 0 10px;
-                float: left;
-                color: #679B08;
-                position: relative;
-              }
-              .product-added-to-cart-text {
-                position: relative;
-                left: 10px;
-                font-size: 25px;
-              }
               @media only screen and (max-width: 768px) {
-                .green-down-arrow-icon {
+                .green-down-arrow-icon, .green-text {
                   display:none;
+                }
+                .config-cart-wrapper{
+                  margin-top:20px;
                 }
               }
             </style>
           </atlantis:webstash>
           <div class="config-cart-wrapper col-sm-12">
             <div class="row order-summary-wrapper">
-              <h3>Order Summary</h3>
+              <div class="order-summary-text">[@L[cds.sales/_common:order-summary]@L]</div>
             </div>
-            <div class="row order-item-details-wrapper"></div>
-            <div class="row subtotal">Subtotal</div>
-            <div class="row subtotalPrice">$1.00</div>
-            <div class="row savings">Total Savings $2.00</div>
-            <div class="row subtoal-disclaimer">[@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]</div>
-            <div data-ci="" data-scroll="" class="row scroll-down-wrapper move">
-              <p class="green-text">{{ configSummarytotalDisc }}</p><span class="green-down-arrow-icon"></span>
+            <div class="row">
+              <div id="order-items" class="order-item-details-wrapper"></div>
             </div>
-            <!--
-            .order-summary-wrapper
-              h3 Order Summary
-              .order-total-wrapper
-                .order-item-details-wrapper
-            
-                .subtotal-disclaimer
-                  p {{ configSummarytotal }}
-            div
-              span.order-total
-                span#summaryPrice.currency-amount
-            .subtotal-disclaimer
-              p
-                | [@L[cds.sales/business/office-365-config:cp-6-SubtotalDoesNotIncludeApplicableTaxes]@L]
-            .scroll-down-wrapper.move(data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
-              p.green-text {{ configSummarytotalDisc }}
-              span.green-down-arrow-icon
-            
-            -->
+            <div class="row">
+              <div class="subtotal-wrapper">
+                <div class="subtotal-text">[@L[cds.sales/_common:subtotal]@L]</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="order-total-wrapper">
+                <div class="order-total"> </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]:<span class="savings-total"></span></div>
+            </div>
+            <div class="row">
+              <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
+            </div>
+            <div class="row">
+              <div data-ci="" data-scroll="" class="scroll-down-wrapper move">
+                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
+              </div>
+            </div>
           </div>
           <atlantis:webstash type="js">
             <script>
@@ -810,15 +394,14 @@ list-style: none;
                 updateOrderSummaryPosition();        
               
                 function updateOrderSummaryPosition() {
-                  if($(window).width() < 768){
-                    console.log('small');
+                  if($(window).width() < 768 || !$('.config-cart-wrapper').is(':visible')){
                     return;
                   }
                   var paddingTop = 20/* for prettiness when scrolling */,
                     $configCartWrapper = $('.config-cart-wrapper'),
                     scrollTop = $(window).scrollTop(),
                     scrollLeft = $(window).scrollLeft(),
-                    topStep1 = $("div.config-step:first").offset().top,
+                    topStep1 = $("div.config-step:visible:first").offset().top,
                     topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
                     $footer = $('.scroll-down-wrapper');
               
@@ -829,7 +412,7 @@ list-style: none;
                     //check for if summary can fit without going below the bottom of the last step      
                     var proposedNewTop = scrollTop - (topStep1 - paddingTop),
                       proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
-                      $lastStep = $("div.config-step:last"),
+                      $lastStep = $("div.config-step:visible:last"),
                       bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
                       canFit = (proposedNewBottom <= bottomOfLastStep);
               
@@ -884,30 +467,14 @@ list-style: none;
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-2"><a data-ci="" class="btn btn-purchase btn-plan btn-md btn-block">Continue</a></div>
+            <div class="col-sm-3 col-sm-push-2"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">Continue</a></div>
           </div>
         </section>
       </div>
-      <div style="display:none" class="container">
-        <atlantis:webstash type="css">
-          <style>#domain-name-input {
-  color: #008a32;
-}
-#domain-name-input::-webkit-input-placeholder {
-  color: #008a32;
-}
-#domain-name-input:-moz-placeholder {
-  color: #008a32;
-  opacity: 1;
-}
-#domain-name-input::-moz-placeholder {
-  color: #008a32;
-  opacity: 1;
-}
-#domain-name-input:-ms-input-placeholder {
-  color: #008a32;
-}
-.search-text {
+    </div>
+    <div style="display:none" class="container domain-search">
+      <atlantis:webstash type="css">
+        <style>.search-text {
   display: none;
 }
 .search-icon {
@@ -922,36 +489,958 @@ list-style: none;
   }
 }
 
-          </style>
-        </atlantis:webstash>
-        <form id="domain-search-form" method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single">
-          <input type="hidden" name="ci" value=""/>
-          <input type="hidden" name="checkAvail" value="1"/>
-          <div class="input-group">
-            <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
-            <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]" name="domainToCheck" maxlength="63" class="headline-primary searchInput form-control"/><span class="input-group-btn">
-              <button type="submit" data-ci="" class="btn btn-primary"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
-          </div>
-        </form>
-        <script>
-          $("#domain-search-form").on('submit', function(e) {
-            var input = $("#domain-search-form").find("input[name='domainToCheck']");
-            if (input && (input.val() == null || input.val() == "")) {
-              e.preventDefault();
-              window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-            }
-          });
-          
-        </script>
-      </div>
+        </style>
+      </atlantis:webstash>
+      <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+        <input type="hidden" name="ci" value=""/>
+        <input type="hidden" name="checkAvail" value="1"/>
+        <div class="input-group">
+          <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
+          <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
+            <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+        </div>
+      </form>
+      <script>
+        $(".domain-search-form").on('submit', function(e) {
+          var input = $(this).find("input[name='domainToCheck']");
+          if (input && (input.val() == null || input.val() == "")) {
+            e.preventDefault();
+            window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+          }
+        });
+        
+      </script>
     </div>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <style>
+        /* fix the greek font styling issue here */
+        ##if(countrySiteAny(gr))
+        * {
+          font-family: arial !important;
+        }
+        .close {
+          font-family: uxfont !important;
+        }
+        .uxicon {
+          font-family: uxfont !important;
+        }
+        ##endif
+        /* uxcore doesn't include col-xs-offset-x */
+        @media (max-width: 768px) {
+          .col-xs-pull-12 {
+            right: 100%;
+          }
+          .col-xs-pull-11 {
+            right: 91.66666667%;
+          }
+          .col-xs-pull-10 {
+            right: 83.33333333%;
+          }
+          .col-xs-pull-9 {
+            right: 75%;
+          }
+          .col-xs-pull-8 {
+            right: 66.66666667%;
+          }
+          .col-xs-pull-7 {
+            right: 58.33333333%;
+          }
+          .col-xs-pull-6 {
+            right: 50%;
+          }
+          .col-xs-pull-5 {
+            right: 41.66666667%;
+          }
+          .col-xs-pull-4 {
+            right: 33.33333333%;
+          }
+          .col-xs-pull-3 {
+            right: 25%;
+          }
+          .col-xs-pull-2 {
+            right: 16.66666667%;
+          }
+          .col-xs-pull-1 {
+            right: 8.33333333%;
+          }
+          .col-xs-pull-0 {
+            right: auto;
+          }
+          .col-xs-push-12 {
+            left: 100%;
+          }
+          .col-xs-push-11 {
+            left: 91.66666667%;
+          }
+          .col-xs-push-10 {
+            left: 83.33333333%;
+          }
+          .col-xs-push-9 {
+            left: 75%;
+          }
+          .col-xs-push-8 {
+            left: 66.66666667%;
+          }
+          .col-xs-push-7 {
+            left: 58.33333333%;
+          }
+          .col-xs-push-6 {
+            left: 50%;
+          }
+          .col-xs-push-5 {
+            left: 41.66666667%;
+          }
+          .col-xs-push-4 {
+            left: 33.33333333%;
+          }
+          .col-xs-push-3 {
+            left: 25%;
+          }
+          .col-xs-push-2 {
+            left: 16.66666667%;
+          }
+          .col-xs-push-1 {
+            left: 8.33333333%;
+          }
+          .col-xs-push-0 {
+            left: auto;
+          }
+          .col-xs-offset-12 {
+            margin-left: 100%;
+          }
+          .col-xs-offset-11 {
+            margin-left: 91.66666667%;
+          }
+          .col-xs-offset-10 {
+            margin-left: 83.33333333%;
+          }
+          .col-xs-offset-9 {
+            margin-left: 75%;
+          }
+          .col-xs-offset-8 {
+            margin-left: 66.66666667%;
+          }
+          .col-xs-offset-7 {
+            margin-left: 58.33333333%;
+          }
+          .col-xs-offset-6 {
+            margin-left: 50%;
+          }
+          .col-xs-offset-5 {
+            margin-left: 41.66666667%;
+          }
+          .col-xs-offset-4 {
+            margin-left: 33.33333333%;
+          }
+          .col-xs-offset-3 {
+            margin-left: 25%;
+          }
+          .col-xs-offset-2 {
+            margin-left: 16.66666667%;
+          }
+          .col-xs-offset-1 {
+            margin-left: 8.33333333%;
+          }
+          .col-xs-offset-0 {
+            margin-left: 0;
+          }
+        }
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
+        
+        .sf-tipper-target {
+          background-image: url([@T[link:<imageroot />]@T]fos/mike/img/hosting/img-tootip-.png);
+          width: 14px;
+          height: 14px;
+          display: inline-block;
+          vertical-align: baseline;
+          cursor: pointer;
+        }
+        
+      </style>
+      <style>
+.config-step {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.config-step .step-title {
+font-size: 36px;
+margin-top: 40px;
+margin-bottom: 15px;
+margin-left: 15px;
+font-weight: 100;
+line-height: 1.1;
+color: #333;
+}
+.config-step .step-subtitle {
+margin-left: 15px;
+}
+.config-text-primary {
+  font-size: 30px;
+  font-weight: 200;
+}
+.config-text-secondary {
+  font-size: 24px;
+}
+.config-text-lead {
+  font-size: 16px;
+}
+.bold{
+  font-weight: 600;
+}
+.config-text-lead-secondary {
+  font-size: 14px;
+
+}
+.product-options li {
+  border-bottom: 1px solid #C3C3C3;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.product-options li:last-child{
+  border-bottom:none;
+}
+.config-step{
+  display: none;
+}
+.green-check {
+  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
+  width: 34px;
+  height: 27px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 4px 10px 0;
+  position: relative;
+}
+.disclaimers-section{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.product-options {
+list-style: none;
+}
+.vertical-align {
+    display: flex;
+    align-items: center;
+}   
+@media (max-width: 768px) { 
+    .vertical-align {
+        display: block;
+        align-items: inherit;
+    }
+    .text-xs-right{
+      text-align: right;
+    }
+    .config-text-primary {
+      font-size: 20px;
+    }
+    .config-text-secondary {
+      font-size: 14px;
+    }
+    .config-text-lead {
+      font-size: 16px;
+    }
+    .config-text-save {
+      font-size: 14px;
+    }
+    .config-text-disclaimer {
+      font-size: 14px;
+    }
+}
+.product-added-to-cart-text{
+  position: relative;
+  left:10px;
+  font-size: 20px;
+}
+
+.product-added-to-cart{
+  padding:0 10px;
+  float:left;
+  color:#679B08;
+  position: relative;
+}
+.order-item-details-wrapper .row {
+  margin-top: 15px;
+}
+.item-title-wrapper{
+  border-bottom: 1px solid #333;
+}
+.item-title{
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.item-term,.item-x,.item-price,.item-total-price{
+  margin-top: 5px;
+}
+.item-total-price{
+  text-align: right;
+}
+.item-savings-wrapper{
+  text-transform: uppercase;
+}
+      </style>
+    </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
+    </script>
+    <script type="text/tempate" class="itemTemplate">
+      <div class="row">
+        <div class="col-xs-12 item-title-wrapper">
+          <div class="item-title"><%= itemName %></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="item-term"><%= itemTerm %></div>
+        </div>
+        <div class="col-xs-1">
+          <div class="item-x">x</div>
+        </div>
+        <div class="col-xs-3">
+          <div class="item-price"><%= itemPricePerTerm %></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="item-total-price text-secondary"><%= itemTotal %></div>
+        </div>
+        <div class="col-xs-12">
+          <% if ( onSale ){ %>
+            <div class="item-savings-wrapper text-secondary">
+              [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      
+    </script>
+    <script type="text/template" class="planTemplate">
+      <li>
+        <div class="row vertical-align">
+          <div class="col-xs-1">
+            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+          </div>
+          <div class="col-xs-7">
+            <div class="config-text-secondary"><%= title %></div>
+          </div>
+          <div class="col-xs-4">
+            <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+            <div class="config-text-lead bold"><%= subtitle %></div>
+          </div>
+          <div class="col-xs-4">
+            <% if ( onSale ){ %>
+                <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+              <% } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+            <div class="config-text-lead"><%= features %></div>
+          </div>
+          <div class="col-xs-4">
+            <div class="config-text-lead text-secondary-o">
+              <% if ( onSale ){ %>
+                [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+    </script>
+    <script type="text/template" class="termTemplate">
+      <li>
+        <div class="row vertical-align">
+          <div class="col-xs-2 col-sm-1">
+            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> >
+          </div>
+          <div class="col-xs-5 col-sm-3">
+            <div class="config-text-primary"><%= term %> <%= month %></div>
+          </div>
+          <div class="col-xs-5 col-sm-3">
+            <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
+          </div>
+          <div class="col-xs-12 col-sm-2">
+            <div class="config-text-lead text-xs-right">
+              <% if ( onSale ){ %>
+                <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+              <% } %>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-3 col-xs-11">
+            <div class="text-xs-right config-text-lead text-secondary-o"> 
+              <% if ( onSale ){ %>
+                [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+    </script>
+    <script type="text/template" class="addonTemplate">
+      <li>
+        <div class="row">
+          <div class="col-xs-1">
+            <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" checked="checked">
+          </div>
+          <div class="col-xs-11">
+            <div class ="config-text-primary">
+              [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-xs-1">
+            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+          </div>
+          <div class="col-xs-11">
+            <div class="config-text-primary">
+              <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
+            </div>
+          </div>
+        </div>
+      </li>
+      
+    </script>
+    <script>
+      var plan = getParameterByName('plan');
+      var origin = getParameterByName('src');
+      var reload = false;
+      // spoof url for config and packagegrouping removed when both are published
+      var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
+      url=url + "?configdocid=54ef736af778fc203043be19&groupdocid=54f4ab81f778fc0de4d09b93";
+      //url = url + "?configdocid=54ef736af778fc203043be19";
+      
+      var plans = [
+        {
+          name:"Personal",
+          text:{
+            title:"[@L[cds.sales/gd/hosting/website-builder-config:personal]@L]",
+            subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:personal_text]@L]",
+            features:"[@L[cds.sales/gd/hosting/website-builder-config:50_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:1GB_space]@L]",
+            product:"[@L[cds.sales/gd/hosting/website-builder-config:order_personal_wsb]@L]"
+          }
+        },
+          {
+          name:"Business",
+          text:{
+            title:"[@L[cds.sales/gd/hosting/website-builder-config:business]@L]",
+            subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]",
+            features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]",
+            product:"[@L[cds.sales/gd/hosting/website-builder-config:order_business_wsb]@L]"
+      
+          }
+        },
+        {
+          name:"Business Plus",
+          text:{
+            title:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]",
+            subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]",
+            features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
+            product:"[@L[cds.sales/gd/hosting/website-builder-config:order_business_plus_wsb]@L]"
+      
+          }
+        }
+      ];
+      
+      function getParameterByName(name){
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        if(!jQuery.isEmptyObject(results))
+          return  decodeURIComponent(results[1].replace(/\+/g, " "));
+        else
+          return '';
+      }
+      
+      var Config = {
+        init: function(){
+          Config.setupPage();
+          Config.loadData(plan);
+        },
+        setupPage: function(){
+      
+          var addToCart = 'ac';
+          var steps = ['planStep','termStep','sslStep','getFoundStep'];
+          
+          if (origin === addToCart){
+            steps = _.without(steps, 'planStep');
+          }
+          if(plan.indexOf('wsb_businessplus') >= 0)
+          {
+            steps = _.without(steps, 'sslStep');
+          }
+      
+          Config.showSteps(steps);
+          Config.addStepBreaks();
+          Config.stepNumbers();
+        },
+        loadData: function(package){
+      
+          var apiUrl = url.replace('{0}',package);
+      
+          $.getJSON(apiUrl).success(function (data){
+            Config.processData(data);
+          });
+        },
+        showSteps: function(ids){
+      
+          $.each(ids, function(key,id){
+            $('#'+id).show();
+      
+          });
+        },
+        addStepBreaks: function(){
+      
+          var $break = $('.config-step-break').detach();
+          var numberOfSteps = $('.config-step:visible').length - 1;
+      
+          $('.config-step:visible').each(function(index){
+            if(numberOfSteps != index )
+              $(this).parent().append($break.clone());
+          });
+        },
+        stepNumbers: function(){
+      
+          $('.config-step:visible').each(function(index){
+            var numberTokenized = $(this).find('.step-number').html();
+            numberTokenized = numberTokenized.replace(/\{0\}/gi, index+1);
+            $(this).find('.step-number').html(numberTokenized);
+          });
+        },
+        processData: function(data){
+      
+          Config.generateTerms(data.LongerTerms);
+          Config.generatePlans(data.PlanListPrices);
+          if(!reload){
+            Config.generateSSL(data.SSLPrice);
+            Config.generateGetFound(data.GetFoundPrice);
+            reload = true;
+          }
+          Config.updateOrderSummary();
+        },
+        generateTerms: function(terms){
+          var radioName= "termOption"
+          var parentID = $("#termList");
+          var termTemplate = _.template($( "script.termTemplate" ).html());
+          
+          parentID.empty();
+      
+          if(!jQuery.isEmptyObject(terms))
+          {
+            $.each(terms, function (){
+              var termItem = this.split('-');
+              var termLength = termItem[0];
+              var termPackage= termItem[1];
+              var termCurrentMonthlyPrice =  termItem[2];
+              var termPercentSavings = termItem[4];
+              var termListPrice = termItem[5];
+              var termCurrentYearlyPrice =  termItem[6];
+              var isSale = ( parseInt(termPercentSavings) > 0 ) ? true : false;
+              var monthString =  (termLength > 1) ? "[@L[cds.sales/_common:months]@L]" : "[@L[cds.sales/_common:month]@L]";
+              var checkedRadiobutton = ( plan ===  termPackage) ? true : false;
+              
+              var termData = {
+                radio: radioName,
+                monthly: termCurrentMonthlyPrice,
+                monthlyList: termListPrice,
+                yearly: termCurrentYearlyPrice,
+                package: termPackage,
+                checked: checkedRadiobutton,
+                term: termLength,
+                month: monthString,
+                currentPrice: termCurrentMonthlyPrice,
+                onSale: isSale,
+                listPrice: termListPrice,
+                percentSavings: termPercentSavings
+              };
+                
+              parentID.append(termTemplate(termData));
+      
+            }); 
+            $('input[name="'+radioName+'"]').click(function(){
+              plan = this.defaultValue;
+              Config.loadData(plan);
+            });
+          }
+        },
+        generatePlans: function(plans){
+      
+          var radioName = "planOption";
+      
+          var parentID = $("#planTypes");
+          var planTemplate = _.template($( "script.planTemplate" ).html());
+          
+          parentID.empty();
+      
+          if(!jQuery.isEmptyObject(plans))
+          {
+            $.each(plans, function(){
+              var planItem = this.split('-');
+              var planKey  = planItem[0];
+              var planPackage = planItem[1];
+              var planCurrentPrice = planItem[2];
+              var planListPrice = planItem[3];
+              var planPercentSavings = planItem[4];
+              var planText = Config.retrievePlanText(planKey);
+              var planTitle = planText.title;
+              var planProduct = planText.product;
+              var planSubtitle = planText.subtitle;
+              var planFeatures = planText.features;
+              var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
+              var isChecked = ( plan ===  planPackage) ? true : false;
+      
+              var planData = {
+                radio: radioName,
+                package: planPackage,
+                plan: planProduct,
+                checked: isChecked,
+                title: planTitle,
+                currentPrice: planCurrentPrice,
+                subtitle: planSubtitle,
+                onSale: isSale,
+                listPrice: planListPrice,
+                features: planFeatures,
+                percentSavings: planPercentSavings
+              };
+              parentID.append(planTemplate(planData));
+      
+            });
+            
+            $('input[name="'+radioName+'"]').click(function(){
+              plan = this.defaultValue;
+              Config.loadData(plan);
+            });
+          }
+        },
+        generateSSL: function(ssl){
+          var radioName = "sslOption";
+          var parentID = $("#sslList");
+          var addonTemplate = _.template($( "script.addonTemplate" ).html());
+      
+          parentID.empty();
+      
+          if(!jQuery.isEmptyObject(ssl))
+          {
+            var sslCurrentYearlyPrice = ssl;
+            var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
+            var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
+            var termType = "[@L[cds.sales/_common:yr]@L]";
+            var sslPackage = "ssl_std_1";
+      
+            var sslData = {
+              radio: radioName,
+              package: sslPackage,
+              addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
+              monthly: monthlyPrice,
+              yearly: sslCurrentYearlyPrice,
+              addonText: sslText,
+              currentPrice: sslCurrentYearlyPrice,
+              termType: termType
+            };
+            
+            parentID.append(addonTemplate(sslData));
+            
+            $('input[name="'+radioName+'"]').click(function(){
+              Config.updateOrderSummary();
+            });
+          }
+        },
+        generateGetFound: function(gf){
+          var radioName = "getFoundOption";
+          var parentID = $("#getFoundList");
+          var addonTemplate = _.template($( "script.addonTemplate" ).html());
+      
+          parentID.empty();
+      
+          if(!jQuery.isEmptyObject(gf))
+          {
+            var gfItem = gf.split('-');
+            var gfCurrentMonthlyPrice = gfItem[0];
+            var gfCurrentYearlyPrice = gfItem[1];
+            var monthlyPrice = gfItem[0];
+            var gfText = "[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]";
+            var termType = "[@L[cds.sales/_common:mo]@L]";
+            var gfPackage = "locu_Essential1Yr";
+      
+            var gfData = {
+              radio: radioName,
+              package: gfPackage,
+              addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_gf]@L]',
+              monthly: gfCurrentMonthlyPrice,
+              yearly: gfCurrentYearlyPrice,
+              addonText: gfText,
+              currentPrice: gfCurrentMonthlyPrice,
+              termType: termType
+            };
+            
+            parentID.append(addonTemplate(gfData));
+            
+            $('input[name="'+radioName+'"]').click(function(){
+              Config.updateOrderSummary();
+            });
+          }
+        },
+        updateOrderSummary: function(){
+          
+          $('#order-items').empty();
+      
+          Config.getSelectedPlan();
+          Config.getSelectedSSL();
+          Config.getSelectedGF();
+          Config.calculateSubTotal();
+        },
+        getSelectedPlan: function(){
+      
+          var parentID = $("#order-items");
+          var itemTemplate = _.template($( "script.itemTemplate" ).html());
+      
+          var selectedPlan = $('input:radio[name="planOption"]').filter(':checked').attr('data-plan');
+          var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+          var selectedPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthly');
+          var selectedListPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthlyList');
+          var selectedSale = $('input:radio[name="termOption"]').filter(':checked').attr('data-onsale');
+          var onSale = (selectedSale == 'true');
+          var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
+      
+          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+          var selectedListTotal = currencyCalc.evaluate([selectedTerm,"*",selectedListPricePerTerm]);
+          var selectedSavings = currencyCalc.evaluate([selectedListTotal,"-",selectedTotal]);
+      
+          var itemData = {
+                itemName: selectedPlan,
+                itemTerm: selectedTerm + monthString,
+                itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
+                itemTotal: selectedTotal,
+                onSale: onSale,
+                itemsSavings: selectedSavings
+              };
+      
+          parentID.append(itemTemplate(itemData));
+        },
+        getSelectedSSL: function(){
+      
+          var parentID = $("#order-items");
+          var itemTemplate = _.template($( "script.itemTemplate" ).html());
+      
+          var selectedValue = $('input:radio[name="sslOption"]').filter(':checked').val();
+      
+          if (selectedValue != 'no_thanks'){
+      
+            var selectedAddon = $('input:radio[name="sslOption"]').filter(':checked').attr('data-addon');
+            var selectedTerm = '1';
+            var selectedPricePerTerm = $('input:radio[name="sslOption"]').filter(':checked').attr('data-yearly');
+            var onSale = false;
+      
+      
+            var itemData = {
+                  itemName: selectedAddon,
+                  itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
+                  itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
+                  itemTotal: selectedPricePerTerm,
+                  onSale: onSale
+                };
+      
+            parentID.append(itemTemplate(itemData));
+          }
+        },
+        getSelectedGF: function(){
+      
+          var parentID = $("#order-items");
+          var itemTemplate = _.template($( "script.itemTemplate" ).html());
+      
+          var selectedValue = $('input:radio[name="getFoundOption"]').filter(':checked').val();
+      
+          if (selectedValue != 'no_thanks'){
+      
+            var selectedAddon = $('input:radio[name="getFoundOption"]').filter(':checked').attr('data-addon');
+            var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+            var selectedPricePerTerm = $('input:radio[name="getFoundOption"]').filter(':checked').attr('data-monthly');
+            var onSale = false;
+            var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
+      
+            var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+      
+      
+            var itemData = {
+                  itemName: selectedAddon,
+                  itemTerm: selectedTerm + monthString,
+                  itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
+                  itemTotal: selectedTotal,
+                  onSale: onSale
+                };
+            parentID.append(itemTemplate(itemData));
+          }
+        },
+        calculateSubTotal: function(){
+          var subTotal = '0';
+          var savingsTotal = '0';
+      
+          $('.item-total-price').each(function(){
+            subTotal = currencyCalc.evaluate([subTotal,"+",$(this).text()]);
+          });
+      
+          $('.order-total').html(subTotal);
+      
+          $('.item-savings').each(function(){
+            savingsTotal = currencyCalc.evaluate([savingsTotal,"+",$(this).text()]);
+          });
+          
+          if(savingsTotal == '0' ){
+            $('.savings-total-wrapper').hide();
+          }
+          else{
+            $('.savings-total-wrapper').show();
+            $('.savings-total').html(savingsTotal);
+          }
+        },
+        addPlanToCart:function(){
+          var itc;
+          ##if(isManager())
+            itc="mgr_slp_wst_3";
+          ##else
+            itc="slp_wst_3";
+          ##endif
+          
+          var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
+      
+          $.getJSON(cartAPIUrl, function (data) {
+            if (data.Success == true) {                                 
+      
+              if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+                Config.addAddonToCart('sslOption');
+              }
+              if($('input:radio[name="getFoundOption"]').filter(':checked').val() != 'no_thanks'){
+                Config.addAddonToCart('getFoundOption');
+              }
+            }
+            });
+        },
+        addAddonToCart: function(addonOption){
+          var itc;
+          ##if(isManager())
+            itc="mgr_slp_wst_3";
+          ##else
+            itc="slp_wst_3";
+          ##endif
+          var addon = $('input:radio[name="'+addonOption+'"]').filter(':checked').val();
+          var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
+      
+          $.getJSON(cartAPIUrl, function (data) {
+          });
+        },
+        getCartAPIUrl: function(action,itcCode,ciCode,quantity,planSelected) {
+          var cartUrl = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]';
+            cartUrl = cartUrl.replace('{0}',action).replace('{1}',itcCode).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',planSelected);
+            return cartUrl;
+        },
+        retrievePlanText: function(planKey){
+          var text =''; 
+          $.each(plans, function(){
+            if(this.name == planKey){
+              text = this.text;
+            }
+          });
+          return text;
+        }
+      };
+      
+      Config.init();
+      
+      
+      $(document).ready(function(){
+        $('.btn-continue').click(function(){
+              Config.addPlanToCart();
+              $('.configuration').hide();
+              $('.domain-search').show();
+            });
+      
+      
+      });
     </script>
     <script type="text/javascript">
       jQuery.query={get:function(c){var b=window.location.search.substring(1);var a=b.split("&");for(i=0;i<a.length;i++){ft=a[i].split("=");if(ft[0]==c){return ft[1]}}return""}};(function(a){a.fn.wresize=function(b){version="1.1";wresize={fired:false,width:0};function d(){if(a.browser.msie){if(!wresize.fired){wresize.fired=true}else{var e=parseInt(a.browser.version,10);wresize.fired=false;if(e<7){return false}else{if(e==7){var f=a(window).width();if(f!=wresize.width){wresize.width=f;return false}}}}}return true}function c(f){if(d()){return b.apply(this,[f])}}this.each(function(){if(this==window){a(this).resize(c)}else{a(this).resize(b)}});return this}})(jQuery);function getMaxZ(){var a=Math.max.apply(null,$.map($("body > *"),function(b,c){if($(b).css("position")=="absolute"){return parseInt($(b).css("z-index"),10)||1}else{return 1}}));return a}function getMaxZ(a){var c="body *:not(#"+a+")";var b=Math.max.apply(null,$.map($(c),function(d,f){if($(d).css("position")=="absolute"){return parseInt($(d).css("z-index"),10)||1}else{return 1}}));return b}jQuery.fn.currentMousePosition=function(b){var a=$("#[isjsonrendercontainer]");if(b!==null&&b!==undefined){$(a).data("currentMousePosition",b)}else{if($(a).data("currentMousePosition")==null||$(a).data("currentMousePosition")==undefined){$(a).data("currentMousePosition",{left:0,top:0})}return $(a).data("currentMousePosition")}};jQuery.fn.lockMousePosition=function(b){var a=$(this).getJsonContainerDiv();$(a).data("lockedMousePosition",$(a).currentMousePosition())};jQuery.fn.lockedMousePosition=function(){return $(this).getJsonContainerDiv().data("lockedMousePosition")};jQuery.fn.getJsonContainerDiv=function(){var a=$(this).parents().andSelf().filter("#[isjsonrendercontainer]:first");return a};var atl_HideInvoked=false;function atl_ToggleDisplay(b){var a=document.getElementById(b);if(a){a.style.display=(a.style.display=="block"?"none":"block")}return true}function atl_SwapDisplay(a,b){atl_ToggleDisplay(a);atl_ToggleDisplay(b);return true}function atl_Go(b,a){if((a==null)||(a=="")){a="_self"}window.open(b,a)}function atl_PopHelp(a){var b=window.open(a,"spop","left=20,top=20,resizable=yes,scrollbars=yes,width=610,height=620")}function atl_PopUp(c,b,a){var d=window.open(c,b,a)}var atl_quickhelp_source;function atl_OnQuickHelpError(a){}function atl_GetQuickHelpContent(b,d,c,e){if(typeof(atl_GetQuickHelpUrl)!="undefined"){var f=atl_GetQuickHelpUrl();var a=(f.indexOf("?")<0)?"?":"&";atl_quickhelp_source=e;$.ajax({type:"GET",url:f+a+"targetDivId=qh&name="+b,contentType:"application/json; charset=utf-8",dataType:"json",success:d,error:c})}}function atl_ShowDivContent(a){if(a!=null&&!atl_HideInvoked){a.style.display="block";a.style.visibility="visible"}}function atl_ShowHelp(a){var c=a.offsetTop;var b=a.offsetParent;while(b){c+=b.offsetTop;b=b.offsetParent}return c}function atl_getOffsetLeft(a){var b=a.offsetLeft;var c=a.offsetParent;while(c){b+=c.offsetLeft;c=c.offsetParent}return b}function atl_getScrollY(){var a=0;if(typeof(window.pageYOffset)=="number"){a=window.pageYOffset}else{if(document.body&&(document.body.scrollLeft||document.body.scrollTop)){a=document.body.scrollTop}else{if(document.documentElement&&(document.documentElement.scrollLeft||document.documentElement.scrollTop)){a=document.documentElement.scrollTop}}}return a}function atl_ShowHelpById(d,c){if(c){var b=340;var e=atl_getOffsetLeft(d);var h=(window.innerWidth)?window.innerWidth-25:document.body.clientWidth;if((e+b)>h){e=h-b}newX=e;var a=c.offsetHeight;var f=atl_ShowHelp(d)+d.offsetHeight;var g=(window.innerHeight)?window.innerHeight-25:document.body.clientHeight;if((f+a)>g+atl_getScrollY()){f=atl_ShowHelp(d)-a}newY=f;c.style.top=newY+"px";c.style.left=newX+"px";c.left=newX+"px";c.left=newY+"px"}}function atl_SetQuickHelpDiv(b,c){c=atl_quickhelp_source;var a=document.getElementById("atl_quickhelp");if(a!=null&&b!=null){a.innerHTML=b.Html;atl_ShowHelpById(c,a);atl_ShowDivContent(a);if(!$.jCache.hasItem(b.Data)){$.jCache.setItem(b.Data,b.Html)}}}function atl_ShowQuickHelp(a,c,e){atl_HideInvoked=false;var d=document.getElementById("atl_quickhelp");if(d==null){return}var f;if(a.target!=null){f=a.target}else{if(a.srcElement!=null){f=a.srcElement}else{return}}if(e){var b=getMaxZ(d.id);if(d.style.zIndex<=b){d.style.zIndex=b+1}}if(!$.jCache.hasItem(c)){atl_GetQuickHelpContent(c,atl_SetQuickHelpDiv,atl_OnQuickHelpError,f)}else{d.innerHTML=$.jCache.getItem(c);atl_ShowHelpById(f,d);atl_ShowDivContent(d)}}function atl_HideQuickHelp(){atl_HideInvoked=true;var a=document.getElementById("atl_quickhelp");if(a!=null){a.style.display="none";a.style.visibility="hidden"}}function atlCookieDomain(){var b=window.location.hostname;var c=b.lastIndexOf(".");if(c<0){return"."+b}else{var a="";if(b.lastIndexOf(".",c-1)>-1){a=b.substr(b.lastIndexOf(".",c-1))}else{a="."+b}return a}}function atlSetMemCookie(c,d,e){var b=new Date();var a=c+"="+d+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlSetCookie(d,e,f){var b=new Date();var c=new Date(Date.parse(b.getDay()+"/"+b.getMonth()+"/"+(b.getFullYear()+f)));var a=d+"="+e+"; expires="+c.toGMTString()+"; path=/; domain="+atlCookieDomain();document.cookie=a}function atlReadCookie(e){var b="";if(document.cookie.length>0){var d=e+"=";var a=document.cookie.indexOf(d);var c=0;if(a>-1){a+=d.length;c=document.cookie.indexOf(";",a);if(c<a){c=document.cookie.length}b=document.cookie.substring(a,c)}}return unescape(b)}function atl_isemailvalid(c){var a="@";var b=".";var d=c.indexOf(a);var f=c.length;var e=c.indexOf(b);if(c.indexOf(a)==-1){return false}if(c.indexOf(a)==-1||c.indexOf(a)==0||c.indexOf(a)==f){return false}if(c.indexOf(b)==-1||c.indexOf(b)==0||c.indexOf(b)==f){return false}if(c.indexOf(a,(d+1))!=-1){return false}if(c.substring(d-1,d)==b||c.substring(d+1,d+2)==b){return false}if(c.indexOf(b,(d+2))==-1){return false}if(c.indexOf(" ")!=-1){return false}return true}function atl_isnoscript(b){var a=/[<>]+/;if(a.test(b)){return false}return true}function atl_textarea_trim(a,b){if(a.value.length<=b){return}a.value=a.value.substr(0,b)}function atl_textarea_canaddchar(b,d){var c=null;if(typeof(b.onkeypress.arguments[0])!="undefined"){c=b.onkeypress.arguments[0].keyCode}else{if(document.selection.createRange().text.length!=0){return true}var c=event.keyCode}var a=[8,37,38,39,40,46];for(var e=0;e<a.length;e++){if(a[e]==c){return true}}if(b.value.length<d){return true}return false}(function(a){this.version="(beta)(0.0.1)";this.maxSize=10;this.keys=[];this.cache_length=0;this.items=[];this.setItem=function(b,c){if(typeof(c)!="undefined"){if(typeof(this.items[b])=="undefined"){this.cache_length++}this.keys.push(b);this.items[b]=c;if(this.cache_length>this.maxSize){this.removeOldestItem()}}return c};this.removeItem=function(b){var c;if(typeof(this.items[b])!="undefined"){this.cache_length--;var c=this.items[b];delete this.items[b]}return c};this.getItem=function(b){return this.items[b]};this.hasItem=function(b){return typeof(this.items[b])!="undefined"};this.removeOldestItem=function(){this.removeItem(this.keys.shift())};this.clear=function(){var b=this.cache_length;this.keys=[];this.cache_length=0;this.items=[];return b};a.jCache=this;return a})(jQuery);var stDivsLoadedList="";function piPositionDiv(c){var d=-1;var e=-1;if($(c).args().doCenterToScreen===true){$(c).centerToScreen()}else{var b=$(c).lockedMousePosition();if(b!==undefined&&b!==null){d=b.left-10;e=b.top-10}if($(c).args().overridePosition!==undefined&&$(c).args().overridePosition!==null){e=$(c).args().overridePosition.top;d=$(c).args().overridePosition.left}var a=document.body.clientWidth;if((d+$(c).width())>a){d=d-$(c).width()+20}if($(c).args().doOffsetFromBottom===true){e-=$(c).height()-20}if(d>0&&e>0){$(c).css({position:"absolute",top:e,left:d})}}}function stHideElement(a,b){for(i=0;i<document.getElementsByTagName(a).length;i++){obj=document.getElementsByTagName(a)[i];if(!obj||!obj.offsetParent){continue}objLeft=obj.offsetLeft-b.offsetParent.offsetLeft;objTop=obj.offsetTop;objParent=obj.offsetParent;while((objParent.tagName.toUpperCase()!="BODY")&&(objParent.tagName.toUpperCase()!="HTML")){objLeft+=objParent.offsetLeft;objTop+=objParent.offsetTop;objParent=objParent.offsetParent}objHeight=obj.offsetHeight;objWidth=obj.offsetWidth;if((b.offsetLeft+b.offsetWidth)<=objLeft){}else{if((b.offsetParent.offsetTop+b.offsetHeight+20)<=objTop){}else{if(b.offsetParent.offsetTop>=objTop+objHeight){}else{if(b.offsetLeft>=objLeft+objWidth){}else{obj.style.visibility="hidden"}}}}}}function getJsonCallback(a,c){var b=document.getElementById(a.TargetDivID);if(jQuery.trim(a.Html)==""){$(b).trigger("popInLoadCompleteWithNoData",a)}$(b).html(a.Html);if($(b).args()==undefined&&$(b).doCacheContent===false){return}if(stDivsLoadedList.indexOf(a.TargetDivID+";")<0){stDivsLoadedList+=a.TargetDivID+";"}$(b).trigger("jsonCallbackComplete",a)}function stShowTarget(a){if(a!=null){$(a).show()}}function stContentIsLoaded(a){if(a!=null){return stDivsLoadedList.indexOf(a.id+";")>=0}else{return true}}function stHideSiblings(a){if(a!=null){$(a).siblings().hide()}}function stShowInt(a){if(a!=null){stHideSiblings(a);stShowTarget(a)}}function stShow(a,c){var b=document.getElementById(c);stShowInt(b);if(a!=""&&!stContentIsLoaded(b)){$.ajax({url:a,dataType:"json",success:getJsonCallback,error:function(){var d=$("#"+c);$(d).html("<div style='width:100%; text-align:center; padding:14px;'>No Results Available.</div>");stShowTarget(d)}})}}function stTabActivate(b){var c=document.getElementById(b);var a=$(c).attr("src");var e=$(c).attr("targetdiv");$(c).parent().siblings(".simple_tab_active").addClass("simple_tab_inactive");$(c).parent().siblings(".simple_tab_active").removeClass("simple_tab_active");$(c).parent().addClass("simple_tab_active");$(c).parent().removeClass("simple_tab_inactive");var d=$("#"+e);stShow(a,e)}jQuery.fn.jsonGet=function(b){if(b==undefined||b==null){b=$(this).args()}var c=b.cache!==false;var d=b.url;if(d==undefined||d==null){d=$(this).attr("src")}if(d==undefined||d==null||d.length<=0){handleJsonError("failed","No URL Specified on jsonGet call")}d=appendQueryStringArguments(b,d);var a={url:d,dataType:"json",cache:b.doCacheContent==true,success:b.success,error:function(g,f,e){handleJsonError(f,b,e,g)}};$.ajax(a)};function appendQueryStringArguments(a,c){if(a.queryStringArguments!=undefined&&a.queryStringArguments!=null){c+=(c.indexOf("?")>=0)?"&":"?";var b;for(b in a.queryStringArguments){c+=b+"="+escape(a.queryStringArguments[b])+"&"}c=c.substring(0,c.length-1)}return c}function jsonPost(b){var c=appendQueryStringArguments(b,b.url);var a={url:c,type:"POST",dataType:"json",data:b.postData,success:b.success,error:function(f,e,d){handleJsonError(e,b)}};$.ajax(a)}jQuery.fn.jsonPost=function(){var a=$(this).args().url;if(a==undefined||a==null){$(this).args().url=$(this).attr("src")}jsonPost($(this).args())};function handleJsonError(c,a,b,d){if(c=="timeout"&&a.timeoutFunction!=undefined&&a.timeoutFunction!=null){a.timeoutFunction()}else{if(a.generalErrorFunction!=undefined&&a.generalErrorFunction!=null){a.generalErrorFunction(c,a)}else{}}}jQuery.fn.args=function(a,b){if(a!==null&&a!==undefined){if(typeof(a)=="object"){this.data("args",a);this.data("lockedMousePosition",null)}else{if(b!=undefined){arguments=this.data("args");arguments[a]=b}else{return this.data("args")[a]}}}else{a=this.data("args");if((a==null)||(a==undefined)){a={};this.data("args",a)}return a}};jQuery.fn.showAndSetVisible=function(){$(this).getJsonContainerDiv().show();this.css({visibility:"visible"});this.show()};jQuery.fn.piSetTimeout=function(){var a="piHidePopIn({targetDivId:'"+this[0].id+"', doNotCloseModal: true})";var b=setTimeout(a,2000);if($(this).args().timerIds==null&&$(this).args().timerIds==undefined){$(this).args().timerIds=[]}$(this).args().timerIds.push(b)};jQuery.fn.piClearMousedOverPopInTimeout=function(){if($(this).args().timerIds!=null){$.each($(this).args().timerIds,function(){clearTimeout(this)})}};function piJsonCallback(a,c){var b=$("#"+a.TargetDivID);getJsonCallback(a,c);if(jQuery.trim(a.Html)==""){return}else{$(b).piClearMousedOverPopInTimeout();$(b).trigger("popInLoadCompleteInternal");$(b).trigger("popInLoadComplete")}}function piRenderPopIn(d){var a=$(d).args();if(a.showBeforeContentLoaded===true){$(d).getJsonContainerDiv().showAndSetVisible();piPositionDiv(d)}if(a.sourceUrl!=null&&a.sourceUrl!=""){var c="?";if(a.sourceUrl.indexOf("?")>=0){c="&"}var b=a.sourceUrl+c+"TargetDivID="+a.targetDivId;a.url=b;a.success=piJsonCallback;if(a.postData!=null&&a.postData!=undefined&&a.postData.length>0){$(d).jsonPost()}else{$(d).jsonGet()}}}jQuery.fn.hideSelectsForIE6PopIn=function(){if($.browser.msie&&$.browser.version.substr(0,1)<7){$("select:visible").each(function(){$(this).attr("hideForIE6PopIn",1);$(this).hide()});$(this).bind("popInHideComplete",function(){$(this).showSelectsForIE6PopIn()});$(this).bind("dialogclose",function(){$(this).showSelectsForIE6PopIn()})}};jQuery.fn.showSelectsForIE6PopIn=function(){$("select[hideForIE6PopIn=1]").each(function(){$(this).attr("hideForIE6PopIn","");$(this).show()})};function piShowPopIn(b,a){var c=$("#"+a.targetDivId);if(a.sourceUrl){$(c).attr("isJsonTargetDiv",true)}$(c).piClearMousedOverPopInTimeout();$(c).hideSelectsForIE6PopIn();$(c).args(a);if(a.doMoveToMousePosition==true){b=b||window.event;$(c).currentMousePosition({left:b.clientX+$(document).scrollLeft(),top:b.clientY+$(document).scrollTop()});$(c).lockMousePosition();if(a.showBeforeContentLoaded===true){$(c).getJsonContainerDiv().showAndSetVisible();piPositionDiv(c)}}piRenderPopIn(c);if(a.doAutoHideOnMouseLeave){$(c).mouseover(function(){$(c).piClearMousedOverPopInTimeout()});$(c).mouseenter(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout()}});$(c).mouseleave(function(){if($(c).is(":visible")){$(c).piClearMousedOverPopInTimeout();$(c).piSetTimeout()}})}$(c).one("popInLoadCompleteInternal",function(d){if($(c).args().doCenterToScreen===true){$(c).centerToScreen();$(c).getJsonContainerDiv().showAndSetVisible()}else{piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}})}function piShowPopInWithStaticContent(b,a){var c=$("#"+a.targetDivId);piShowPopIn(b,a);piPositionDiv(c);$(c).getJsonContainerDiv().showAndSetVisible()}function piHidePopIn(a){var c=$("#"+a.targetDivId);a=$(c).mergeArgs(a);var b=$(c).data("forcePageRefreshOnClose");if(b!=undefined&&b!=null&&(b===true||b===false)){a.forcePageRefreshOnClose=b}$(c).piClearMousedOverPopInTimeout();if($(c).args().forcePageRefreshOnClose===true){reloadPage()}$(c).getJsonContainerDiv().fadeOut("fast");if(a.doNotCloseModal!==true){$(".ui-widget-overlay").fadeOut("fast",function(){if(typeof($(c).dialog)=="function"){$(c).dialog("close")}})}$(c).args({});$(c).trigger("popInHideComplete",a)}jQuery.fn.hideJsonPopIn=function(a){if(a==null||a==undefined){a={}}var b=$(this).parents("[isJsonTargetDiv]");if(a.targetDivId==undefined||a.targetDivId==null){a.targetDivId=$(b).attr("id")}piHidePopIn(a)};function piShowPopInModal(a){var c=a.targetDivId;var b=$("#"+c);if(a.sourceUrl){$(b).attr("isJsonTargetDiv",true)}$(b).args(a);$(b).hideSelectsForIE6PopIn();$(b).showAndSetVisible();$(b).css("z-index",getMaxZ()+100);$(b).dialog({draggable:false,resizable:false,modal:true,position:"center",width:$(b).width()+10,closeOnEscape:false});$(b).bind("popInLoadCompleteInternal",function(d){piBindContainerDivToAutoHideOnClick(a);if($(b).args().doCenterToScreen===true){$(b).dialog("option","position",$(b).dialog("option","position"))}});$(b).dialog("open");piRenderPopIn(b);if(a.autoHideOnClickOutBeforeLoadComplete!==false){piBindContainerDivToAutoHideOnClick(a)}$(b).click=function(d){$(d).stopPropagation()}}function piBindContainerDivToAutoHideOnClick(a){var b=$(".ui-widget-overlay");var c=$(b).data("events");var d=$("#"+a.targetDivId);if(c==null||c.click==null){$(b).bind("click",function(){if($(d).args().autoHideOnClickOut!==false){piHidePopIn(a)}})}}jQuery.fn.centerToScreen=function(){return this.each(function(){var k=$(this).width();var e=$(this).height();var d=$(window).width();var a=d/2;var b=$(window).height();var c=b/2;var g=$(document).scrollLeft();var h=$(document).scrollTop();var j=c+h-(e/2);var f=a+g-(k/2);$(this).css({top:j+"px"});$(this).css({left:f+"px"})})};jQuery.fn.setAutoEllipseDomain=function(a){$(this).each(function(){var c=$.trim($(this).html());$(this).html("");$(this).show();if(a==null||a==undefined){a=$(this).width()}var e=document.createElement("label");$(e).attr("title",c);var h=c.split(".",2)[1];if(h==undefined){h=""}$(e).html(c);$(this)[0].appendChild(e);var g=$(e).width();if(g>=a){var d=10;var f;$(e).html("");while(e.offsetWidth<a&&d<c.length){var b=c.substr(0,d)+"..."+h;$(e).html(b);d++;g=e.offsetWidth;if(g>a){break}f=b}$(e).html(f)}})};function reloadPage(){document.body.style.cursor="wait";var a=location.toString().replace(window.location.hash,"");document.location.replace(a)}jQuery.fn.mergeArgs=function(a){if(a&&a!=null){var b;for(b in a){$(this).args(b,a[b])}}return $(this).args()};jQuery.fn.rebind=function(b,a){$(this).unbind(b).bind(b,a);return this};function formatCurrency(f,b,h,d,m,j){if(b===undefined){b="$"}if(h===undefined){h=2}if(d===undefined){d="."}if(m===undefined){m=","}if(j===undefined){j=true}function g(n,p,o){var q=""+n;while(q.length<p){q=o+q}return q}f=f.toString().replace(/\$|\,/g,"");if(isNaN(f)){f="0"}var c=Math.pow(10,h);var l=(f==(f=Math.abs(f)));f=Math.floor(f*c+0.50000000001);var a=(f%c);f=Math.floor(f/c).toString();a=g(a,h,"0");for(var e=0;e<Math.floor((f.length-(1+e))/3);e++){f=f.substring(0,f.length-(4*e+3))+m+f.substring(f.length-(4*e+3))}var k=(((l)?"":"-")+f);if(h>0){k=k+d+a}if(j){k=b+k}else{k=k+b}return k}jQuery.fn.onenter=function(a){$(this).live("keypress",function(b){if((b.which&&b.which==13)||(b.keyCode&&b.keyCode==13)){a()}});return this};function LogFastballPageEvent(a,c,d){var b=new fbiEventObject(new Object(),"click",a,"");b.AddUserInput(c,d);fbiRecordFastballEvent(b)}jQuery.fn.validateDomainNames=function(b){var a=$(this).val();if(a.length==0){b("Enter a domain name to search.");return false}return true};function LogFastballEvent(a,b,c){LogFastballPageEvent(a,b,c)}function stripSpecialCharacters(b){var a=b.replace(/\s*/g,"").replace(/[^a-zA-Z0-9-\s.]+/g,"");return a}jQuery.fn.stripSpecialCharacters=function(){$(this).val(stripSpecialCharacters($(this).val()))};
@@ -962,7 +1451,12 @@ list-style: none;
       
     </script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
     <script type="text/javascript">
+      if(typeof currencyCalc != "undefined"){
+        currencyCalc.base = "[@T[currencyprice:<price usdamount="1000000000" dropdecimal="false" dropsymbol="false" htmlsymbol="false" negative="parenthesis" />]@T]";
+      }
+      
       $(document).ready(function() {
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
