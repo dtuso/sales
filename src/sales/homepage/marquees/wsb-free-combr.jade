@@ -1,0 +1,37 @@
+---
+location: sales/homepage/marquee/wsb-free-combr/default_template
+id: false
+name: gcemo-652
+---
+
+atlantis:webstash(type='css')
+  style.
+    .freedomwsb-marquee{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-BR-fall-campaign.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#333333;}
+    .freedomwsb-marquee-content{font-family:'Walsheim-Black';width:1000px;margin:0 auto;color:#ffffff;}
+    .freedomwsb-text{width:420px;padding:60px 0 0 0;}
+    .freedomwsb-pricing-text{width:450px;}
+    .freedomwsb-pricing-text>span{line-height:1.1;}
+    .freedomwsb-text>span{display:block;line-height:1.1;}
+    .freedomwsb-headline{color:#7abf4b;font-size:35px;}
+    .freedomwsb-maintext{color:#7abf4b;font-size:28.7px;}
+    .freedomwsb-subtext{padding-top:30px;font-size:26.1px;}
+    .freedomwsb-subtext-2{font-size:23.1px;}
+    .freedomwsb-pricing{padding-top:30px;color:#f2812e;font-size:22.1px}
+    .freedomwsb-pricing-text>.btn-wrap{padding:15px 0 10px;}
+    .freedomwsb-pricing-text>.btn-wrap>.btn-warning{font-size:24px;padding:10px 25px 8px;}
+    .freedomwsb-restrictions{padding-top:10px;}
+#freedomwsb-br.freedomwsb-marquee.js-gdhpclick(data-url!='[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="94117" /></relative>]@T]')
+  .freedomwsb-marquee-content
+    .freedomwsb-text
+      span.freedomwsb-headline [@L[cds.sales/homepage/locales/en:br-rebrand-headline]@L]
+      span.freedomwsb-maintext [@L[cds.sales/homepage/locales/en:br-rebrand-maintext]@L]
+      span.freedomwsb-subtext [@L[cds.sales/homepage/locales/en:br-rebrand-subtext]@L]
+      span.freedomwsb-subtext-2 [@L[cds.sales/homepage/locales/en:br-rebrand-subtext2]@L]
+    .freedomwsb-pricing-text
+      span.freedomwsb-pricing
+        | [@L[cds.sales/homepage/locales/en:br-rebrand-just]@L] [@T[productprice:
+        current(productid='7524', period='monthly')
+        | ]@T][@L[cds.sales/homepage/locales/en:host-tile-month]@L]
+      .btn-wrap
+        span#freedomwsb-br-btn.btn.btn-warning.walsheim-med [@L[cds.sales/homepage/locales/en:br-rebrand-btn]@L]
+      span.freedomwsb-restrictions.walsheim-reg * [@L[cds.sales/homepage/locales/en:br-rebrand-restrictions]@L]

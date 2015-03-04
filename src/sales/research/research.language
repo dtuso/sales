@@ -1,7 +1,6 @@
 ---
 location: localization/sales/gd/research/en
 id: 54ef9e13f778fc203043be41
-name: SEM-420
 ---
 {% include '../../modules/doc-block.html' %}
 <phrase key="page-title" />
