@@ -1,8 +1,8 @@
 ---
 location: sales/domains/domain-name-search.aspx
-id: 54ad8a25f778fc2e5c59197e
-name: GCEMO-456
-comments: GCEMO-456 - merchandising updates for 2/18
+id: 54f093cff778fc2134f3300e
+name: GCEMO-616
+comments: GCEMO-616 - merchandising updates for 3/4
 ---
 {% extends 'layouts/base.html' %}
 {% block metahead %}
@@ -102,9 +102,7 @@ comments: GCEMO-456 - merchandising updates for 2/18
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1UK]@L]</p>
                                   ##elseif(ActiveLanguageAny([de-DE], [de-AT], [de-CH]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]</p>
-                                  ##elseif(ActiveLanguageAny([pt-br]))
-                                  <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1BR]@L]</p>
-                                  ##elseif(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar]))
+                                  ##elseif(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar], [pt-br]))
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]</p>
                                   ##elseif(ActiveLanguageAny([en-in]))
                                   <p class="no-margin-bottom" style="text-align:left">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"</p><p style="margin:15px 0 0;text-align:left"><strong>- Pranav Chandra, The Great Indian Adventure</strong></p>
@@ -112,7 +110,7 @@ comments: GCEMO-456 - merchandising updates for 2/18
                                   <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1Default]@L]</p>  
                                   ##endif
                                 </div>
-                              </div>                           
+                              </div>
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-2">
                                  <div class="carousel-inner-text-container">
                                   ##if(ActiveLanguageAny([en-gb]))
@@ -125,8 +123,8 @@ comments: GCEMO-456 - merchandising updates for 2/18
                                 </div>
                               </div>
                               <div class="item carousel-inner-item carousel-inner-item-ds carousel-inner-item-ds-3">
-                                 <div class="carousel-inner-text-container">     
-                                  ##if(ActiveLanguageAny([en-us],[es-us]))                              
+                                 <div class="carousel-inner-text-container">
+                                  ##if(ActiveLanguageAny([en-us],[es-us]))
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3US]@L]</p>
                                   ##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
                                     <p class="no-margin-bottom">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L]</p> 
@@ -233,8 +231,8 @@ comments: GCEMO-456 - merchandising updates for 2/18
                       <div id="{{bpod.PodID}}" class="col-xs-4" style="height: 226px;" ng-repeat="bpod in podsDataBottom">
                         <div class="grid-column has-badge pod-border">
                           <span class="badge badge-important badge-upper-right">{{bpod.PodNewTag}}</span>
-                          <h2 id="tldData" ng-bind-html="bpod.PodTLD"><strong></strong></h2>                         
-                          <p ng-bind-html="bpod.PodText"></p>                        
+                          <h2 id="tldData" ng-bind-html="bpod.PodTLD"><strong></strong></h2>
+                          <p ng-bind-html="bpod.PodText"></p>
                           <p><a class="btn btn-bottom btn-primary btn-block btn-lg btn--push-down" href="{{bpod.ButtonURL}}">{{bpod.ButtonText}}</a></p>
                             </div>
                          <div class="pod-shadow"></div>
@@ -250,12 +248,12 @@ comments: GCEMO-456 - merchandising updates for 2/18
 
                     <div class="row tab-content tab-content-alternate equal-height">
                         <div class="col-xs-6" id="leftlist">
-                            <ul>                             
+                            <ul>
                                 <li class="list-item"><span class="font-18">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0]@L]</span></li>                                
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span> <a data-ci="93954" href="[@T[link:<relative path="/tlds/business"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span> <a data-ci="93954" href="[@T[link:<relative path="/tlds/business"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                  <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span> <a data-ci="95891" href="[@T[link:<relative path="/tlds/world"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                                 <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]</span> <a data-ci="90328" href="[@T[link:<relative path="/tlds/website"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
-                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotSpace]@L]</span> <a data-ci="96021" href="[@T[link:<relative path="/tlds/space"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
+                                <li class="list-item"><span class="list-item-text">[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]</span> <a data-ci="96021" href="[@T[link:<relative path="/tlds/space"></relative>]@T]" class="btn btn-primary list-item-button btn-new-width">[@L[cds.sales/gd/domains/domain-name-search:Register]@L]</a></li>
                              </ul>
                         </div>
                         <div class="col-xs-6" id="rightlist">

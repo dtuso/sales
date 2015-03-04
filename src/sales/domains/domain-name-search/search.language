@@ -15,11 +15,11 @@
       Adam Smith <absmith@godaddy.com>
 
     DRAFT DETAILS:
-      Modified Date:  2015-02-11
+      Modified Date:  2015-02-25
       Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCEMO-456
-      Comments:       Merchandising Updates for 02/11/2015
-      
+      JIRA Ticket:    GCEMO-616
+      Comments:       Merchandising Updates for 03/04/2015
+
 
 
 
@@ -484,6 +484,8 @@ Start something with <strong>.io</strong>
 Have it all? <strong>.world</strong> is for you.
 <phrase key="PodDotSpaceText" />
 Claim your <strong>.space</strong> on the web.
+<phrase key="PodDotWorkText" />
+<strong>.work</strong> has a job to do.
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotBoutique" />
@@ -617,7 +619,7 @@ Claim your <strong>.space</strong> on the web.
 <phrase key="TldDotInfo" />
 <strong>.info</strong>
 <phrase key="TldDotKiwi" />
-<string>.kiwi</strong>
+<strong>.kiwi</strong>
 <phrase key="TldDotShiksha" />
 <strong>.shiksha</strong>
 <phrase key="TldDotJuegos" />
@@ -642,16 +644,18 @@ Claim your <strong>.space</strong> on the web.
 <strong>.world</strong>
 <phrase key="TldDotSpace" />
 <strong>.space</strong>
+<phrase key="TldDotGreen" />
+<strong>.green</strong>
 <phrase key="CarouselSlide1Default" />
-Get a web address that tells the world what you do. New domains available now: <strong>.photography</strong>, <strong>.ninja</strong>, <strong>.guru</strong>, <strong>.club</strong> and <strong>.world</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
 New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.TODAY</strong> are now available. Plus, pre-register <strong>.CLUB</strong>, <strong>.REVIEWS</strong>, <strong>.NINJA</strong> and more. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Get yours now</a>
 <phrase key="CarouselSlide1DE" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.auction</strong>, <strong>.software</strong>, <strong>.world</strong>, <strong>.website</strong>, and <strong>.berlin</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.world</strong>, <strong>.work</strong>, <strong>.space</strong>, and <strong>.berlin</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1ES" />
-Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.digital</strong>, <strong>.tips</strong> and <strong>.guru</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.guru</strong>, <strong>.company</strong>, <strong>.solutions</strong> and <strong>.website</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
-Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.club</strong>, <strong>.business</strong>, <strong>.website</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do or where you are. New domains available now: <strong>.london</strong>, <strong>.wales</strong>, <strong>.cymru</strong>, <strong>.club</strong>, and <strong>.website</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1MY" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong> and <strong>.guide</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide1BR" />
@@ -661,7 +665,7 @@ The buying stage was good, setup was easy and post-launch was smooth. I've calle
 <phrase key="CarouselSlide1CA" />
 Get a web address that tells the world what you do or where you are. New domains available now: <strong>.club</strong>, <strong>.today</strong>, <strong>.email</strong>, <strong>.guide</strong> and <strong>.quebec</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a> 
 <phrase key="CarouselSlide2Default" />
-SAVE 30% on new domains: <strong>.global</strong>, <strong>.email</strong>, <strong>.club</strong>, <strong>.guru</strong>, <strong>.company</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
+SAVE 30% on new domains: <strong>.club</strong>, <strong>.guru</strong>, <strong>.company</strong>, <strong>.green</strong>, <strong>.website</strong> and more.<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Search for your perfect domain name now!</a>
 <phrase key="CarouselSlide2UK" />
 "Set your business on its path to glory with your own <strong>.company</strong>, <strong>.email</strong>, <strong>.guide</strong> or <strong>.london</strong>."<span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88004" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide2DE" />
@@ -776,7 +780,7 @@ Simple domain set up - no technical skills needed. Honest.
 <phrase key="WhatDoYouGetPointer2" />
 Quick, simple tools to forward your domains to any existing website.
 <phrase key="WhatDoYouGetPointer3" />
-Up to 100 subdomains (like pics@coolexample.com) to customize your site.
+Up to 100 subdomains (like pics.coolexample.com) to customize your site.
 <phrase key="WhatDoYouGetPointer4" />
 100 professional email aliases (like sales@coolexample.com).
 <phrase key="WhatDoYouGetPointer5" />
