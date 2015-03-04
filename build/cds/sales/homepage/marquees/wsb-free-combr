@@ -1,0 +1,28 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .freedomwsb-marquee{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/bg-BR-fall-campaign.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#333333;}
+    .freedomwsb-marquee-content{font-family:'Walsheim-Black';width:1000px;margin:0 auto;color:#ffffff;}
+    .freedomwsb-text{width:420px;padding:60px 0 0 0;}
+    .freedomwsb-pricing-text{width:450px;}
+    .freedomwsb-pricing-text>span{line-height:1.1;}
+    .freedomwsb-text>span{display:block;line-height:1.1;}
+    .freedomwsb-headline{color:#7abf4b;font-size:35px;}
+    .freedomwsb-maintext{color:#7abf4b;font-size:28.7px;}
+    .freedomwsb-subtext{padding-top:30px;font-size:26.1px;}
+    .freedomwsb-subtext-2{font-size:23.1px;}
+    .freedomwsb-pricing{padding-top:30px;color:#f2812e;font-size:22.1px}
+    .freedomwsb-pricing-text>.btn-wrap{padding:15px 0 10px;}
+    .freedomwsb-pricing-text>.btn-wrap>.btn-warning{font-size:24px;padding:10px 25px 8px;}
+    .freedomwsb-restrictions{padding-top:10px;}
+  </style>
+</atlantis:webstash>
+<div id="freedomwsb-br" data-url="[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="94117" /></relative>]@T]" class="freedomwsb-marquee js-gdhpclick">
+  <div class="freedomwsb-marquee-content">
+    <div class="freedomwsb-text"><span class="freedomwsb-headline">[@L[cds.sales/homepage/locales/en:br-rebrand-headline]@L]</span><span class="freedomwsb-maintext">[@L[cds.sales/homepage/locales/en:br-rebrand-maintext]@L]</span><span class="freedomwsb-subtext">[@L[cds.sales/homepage/locales/en:br-rebrand-subtext]@L]</span><span class="freedomwsb-subtext-2">[@L[cds.sales/homepage/locales/en:br-rebrand-subtext2]@L]</span></div>
+    <div class="freedomwsb-pricing-text"><span class="freedomwsb-pricing">[@L[cds.sales/homepage/locales/en:br-rebrand-just]@L] [@T[productprice:
+        <current productid="7524" period="monthly"></current>]@T][@L[cds.sales/homepage/locales/en:host-tile-month]@L]</span>
+      <div class="btn-wrap"><span id="freedomwsb-br-btn" class="btn btn-warning walsheim-med">[@L[cds.sales/homepage/locales/en:br-rebrand-btn]@L]</span></div><span class="freedomwsb-restrictions walsheim-reg">* [@L[cds.sales/homepage/locales/en:br-rebrand-restrictions]@L]</span>
+    </div>
+  </div>
+</div>
