@@ -21,6 +21,13 @@ append vars
   - productToDisplay.topButtonCI = "96307";
   - productToDisplay.bottomButtonCI = "96306";
   - productToDisplay.bottomSearchCI = "96310";
+  - productToDisplay.hostingFlow = {};
+  - productToDisplay.hostingFlow.arrowUR = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-up-right2.png";
+  - productToDisplay.hostingFlow.globe = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-globe2.png";
+  - productToDisplay.hostingFlow.arrowRD = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-right-down2.png";
+  - productToDisplay.hostingFlow.servers = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-server2.png";
+  - productToDisplay.hostingFlow.arrowL = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png";
+  - productToDisplay.hostingFlow.site = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png";
 
 block targetedProduct
   .column.website
@@ -36,7 +43,28 @@ block productSection
           img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
           h2.text-center #{productToDisplay.name}
           h4.text-center #{productToDisplay.productDescription}
-          img.img-responsive.product-summary(src!="#{productToDisplay.productInfoImageUrl}")
+          div.product-summary.text-center(style="width:auto;display:table;margin:40px auto;max-width:900px")
+            .row
+              .col-md-4.col-md-push-4(style="padding:0;margin-bottom:30px;")
+                div(style="display:table;margin:auto;")
+                  img.img-responsive(src!="#{productToDisplay.hostingFlow.globe}")
+                div.text-center(style="margin:auto;")
+                  | World Wide Web
+                  .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowL}", style="margin:40px 0 0 12px;")
+              .col-md-4.col-md-pull-4(style="padding:0;margin-bottom:30px;")
+                .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowUR}", style="margin-left:33%;")
+                .row  
+                  div.col-md-offset-2.col-md-11.col-sm-12(style="margin-top:-9%;padding:0;")
+                    img.img-responsive(src!="#{productToDisplay.hostingFlow.servers}", style="margin:auto;")
+                    div(style="margin:auto -10px;")
+                      | GoDaddy Hosting  
+              .col-md-4(style="padding:0;margin-bottom:30px;")
+                .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowRD}", style="margin-left:-33%;")
+                .row
+                  div.col-md-11.col-sm-12(style="padding:0;")
+                    img.img-responsive(src!="#{productToDisplay.hostingFlow.site}", style="margin:auto;")
+                    div.text-center
+                      | <mark class="business-name-display">Domain Name</mark>
           p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
