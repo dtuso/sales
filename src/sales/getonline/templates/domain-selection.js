@@ -86,10 +86,10 @@ $(document).ready(function() {
   // showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
-  showAndOrderDynamicTldsInList("#products .TLD-token");
-  showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
-  showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  // showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
+  // showAndOrderDynamicTldsInList("#products .TLD-token");
+  // showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
+  // showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -113,7 +113,7 @@ $(document).ready(function() {
   // $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
-  $('#bottomSearchAgain').on('click', function() {$('#wizardSearchAgain').click(); goToDomainSearchWizard();});
+  $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
@@ -372,8 +372,9 @@ function validDomainSelected(e){
   updateSelectedDomain(domain.Fqdn);
 
   $(document).find('.btn-purchase').data('domain', domain);
-  $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
+  $('#got-domain-selected').show();
+  $('#bottomSearchAgain').show();
 
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
@@ -381,7 +382,6 @@ function validDomainSelected(e){
 }
 
 function navigateToSearchAgain(e) { 
-  // $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }
@@ -397,13 +397,14 @@ function goToCheckOut(e) {
 
 function goToDomainSearchWizard()
 {
-  $('#domainSearchWizardSection').show();
+  var $thisSection = $('#domain-selected-view');
+  animateWizard($thisSection, $('#domain-search-view'));
   window.location.href = '#domainSearchWizardSection';
 }
 
 function goToShowProducts()
 {
-  window.location.href = '#got';
+  window.location.href = '#bottomGetItNow';
 }
 
 function goToDppCheckoutPage(e) {

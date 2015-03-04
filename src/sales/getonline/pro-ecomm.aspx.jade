@@ -1,6 +1,20 @@
 extends _p4p.jade
 
 append vars
+  - page.title = "Get Online Ecommerce Design";
+  - page.description = "Get Online Ecommerce Design Description";
+  - page.keywords = "Get Online Ecommerce Design Keywords"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "Get Online OG Ecommerce Design";
+  - page.openGraph.description = "Get Online OG Ecommerce Design Description";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
   - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
 
 block domainSearchScripts

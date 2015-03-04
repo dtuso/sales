@@ -18,7 +18,7 @@ append vars
   - domainSearchWizard.showSearchButton         = true;
   - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the domain name as a string input */
 
-block domainSearchStyles
+mixin domainSearchStyles()
   // atlantis:webstash(type="css")
   style.
     #domainSearchWizardSection { padding-bottom: 0; }
@@ -192,7 +192,7 @@ block domainSearchStyles
     #domain-selected-view h2.searched-domain-name-display {margin: 0;}
     #domain-selected-view .reseach-container {padding-top: 10px;}
 
-block domainSearchContent
+mixin domainSearchContent()
   section#domainSearchWizardSection.bg-primary-o
     #domain-search-view.js-domain-search-wizard-section
       .container
@@ -400,7 +400,7 @@ block domainSearchContent
         div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
       p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
 
-block domainSearchEndOfPageScripts
+mixin domainSearchEndOfPageScripts()
   script.
     var domainSearchViewForm = {
       executeFnByName: function(name, context) {

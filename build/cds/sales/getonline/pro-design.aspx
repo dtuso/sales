@@ -16,25 +16,25 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/offers/online-business:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/offers/online-business:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/offers/online-business:meta-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/offers/online-business:og-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/offers/online-business:og-description]@L]">
+    <title>Get Online Website Design</title>
+    <meta name="description" content="Get Online Website Design Description">
+    <meta name="keywords" content="Get Online Website Design Keywords">
+    <meta property="og:title" content="Get Online OG Website Design">
+    <meta property="og:description" content="Get Online OG Website Design Description">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
-    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
-    <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
-    <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta name="twitter:site" content="Get Online Twitter Site">
+    <meta name="twitter:title" content="Get Online Twitter Title">
+    <meta name="twitter:description" content="Get Online Twitter Description">
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -1841,12 +1841,12 @@ var PlanBox6UI = {
     </section>
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a website design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
+        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
         <div class="pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
             <h3 class="product-name">Website Design Services</h3>
-            <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+            <p class="p1">Our Professional Web Services team will work with you to create a site that’s perfect for your business.</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
                 <input type="hidden" name="product" value="6520|1|1">

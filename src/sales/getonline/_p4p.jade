@@ -1,17 +1,17 @@
 extends ../shared/_page
 
-include templates/_domain-search-wizard
+include templates/_domain-search-wizard.jade
 
 append vars
-  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
-  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/offers/online-business.aspx' />]@T]";
+  - page.title = "Get Online Title";
+  - page.description = "Get Online Description";
+  - page.keywords = "Get Online Keywords"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "Get Online OG Title";
+  - page.openGraph.description = "Get Online OG Description";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
   - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
@@ -27,7 +27,6 @@ append vars
   - productToDisplay.getItNowDescription = "";
   - productToDisplay.productImgUrl = "";
   - productToDisplay.productIconUrl = "";
-  - productToDisplay.price = "";
   - productToDisplay.productDescription = "";
   - productToDisplay.productInfoImageUrl = "";
   - productToDisplay.productYouTubeId = "";
@@ -42,10 +41,10 @@ append vars
 
 append seo
   meta(name="twitter:card" content="summary")
-  meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
-  meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
-  meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
-  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
+  meta(name="twitter:site" content="Get Online Twitter Site")
+  meta(name="twitter:title" content="Get Online Twitter Title")
+  meta(name="twitter:description" content="Get Online Twitter Description")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg")
 
 append headScripts
   atlantis:webstash(type="js")
@@ -266,6 +265,7 @@ append pageStyles
     #bottomGetItNow img { min-height: 115px; }
 
   block domainSearchStyles
+    +domainSearchStyles()
 
 block content
 
@@ -299,6 +299,7 @@ block content
             small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
   block domainSearchContent
+    +domainSearchContent()
 
   block proInterview
   
@@ -362,7 +363,7 @@ block content
             h3 Office 365 Email
         .row
           h3.price-token {price_monthly}/month for the first year*
-          button(data-ci="#{productToDisplay.bottomSearchCI}")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
+          button(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
           small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
@@ -450,3 +451,4 @@ prepend endOfPageScripts
     });
 
   block domainSearchEndOfPageScripts
+    + domainSearchEndOfPageScripts()

@@ -1,6 +1,20 @@
 extends _p4p.jade
 
 append vars
+  - page.title = "Get Online Managed Wordpress";
+  - page.description = "Get Online Managed Wordpress Description";
+  - page.keywords = "Get Online Managed Wordpress Keywords"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "Get Online OG Managed Wordpress";
+  - page.openGraph.description = "Get Online OG Managed Wordpress Description";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "Managed Wordpress";
   - productToDisplay.landingPage = "wordpress.aspx"
