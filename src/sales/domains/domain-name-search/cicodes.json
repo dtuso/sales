@@ -108,6 +108,42 @@
           { "Description" : "Slide .NINJA Link" }
         ]
       },
+      { "Slide .WORK Link" : [
+          { "ITC ID" : "96901" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .WORK Link" }
+        ]
+      },
+      { "Slide .SPACE Link" : [
+          { "ITC ID" : "96902" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .SPACE Link" }
+        ]
+      },
+      { "Slide .ROCKS Link" : [
+          { "ITC ID" : "96903" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .ROCKS Link" }
+        ]
+      },
+      { "Slide .COMPANY Link" : [
+          { "ITC ID" : "96904" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .COMPANY Link" }
+        ]
+      },
+      { "Slide .GREEN Link" : [
+          { "ITC ID" : "96905" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .GREEN Link" }
+        ]
+      },
+      { "Slide .WEBSITE Link" : [
+          { "ITC ID" : "96906" },
+          { "ITC Code" : "" },
+          { "Description" : "Slide .WEBSITE Link" }
+        ]
+      },
       { "Slide Expression of Interrest Link" : [
           { "ITC ID" : "88394" },
           { "ITC Code" : "" },
@@ -355,6 +391,12 @@
           { "ITC Code" : "TopPodSPACELink" },
           { "Description" : "Top Pod - .SPACE link" }
         ]
+      },
+      { "Top TLD Pods - .WORK link" : [
+          { "ITC ID" : "96335" },
+          { "ITC Code" : "TopPodWORKLink" },
+          { "Description" : "Top Pod - .WORK link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -572,6 +614,12 @@
           { "ITC ID" : "95890" },
           { "ITC Code" : "ButtomPodIo" },
           { "Description" : "Buttom TLD Pods - .IO" }
+        ]
+      },
+      { "Buttom TLD Pods - .SPACE" : [
+          { "ITC ID" : "96336" },
+          { "ITC Code" : "ButtomPodSpace" },
+          { "Description" : "Buttom TLD Pods - .SPACE" }
         ]
       }
     ],
