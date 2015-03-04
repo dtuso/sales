@@ -25,7 +25,7 @@ block productContent
   .row(style={"margin-top": "35px"})
     .col-xs-4.col-sm-3.col-sm-offset-3
       img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png")
-    .col-xs-8.col-sm-6.products.text-center
+    .col-xs-8.col-sm-6.products(style={"padding-left": "60px"})
       h3 Website Design Services
       p Our Professional Web Services team will work with you to create a site that’s perfect for your business.
       form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
@@ -106,12 +106,12 @@ block office365
 block bottomGetItNow
   section#bottomGetItNow.bg-medium
     .container
-      h3.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
+      h3.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a website design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
       .pro-wrapper
         .col-xs-6
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png")
         .col-xs-6
-          h3.product-name Professional Design Services
+          h3.product-name Website Design Services
           p.p1 Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business
           .col-xs-12.text-center
             form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")

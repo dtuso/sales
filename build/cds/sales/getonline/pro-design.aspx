@@ -761,7 +761,7 @@ function getParameterByName(name) {
         </div>
         <div style="margin-top:35px" class="row">
           <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block computer"></div>
-          <div class="col-xs-8 col-sm-6 products text-center">
+          <div style="padding-left:60px" class="col-xs-8 col-sm-6 products">
             <h3>Website Design Services</h3>
             <p>Our Professional Web Services team will work with you to create a site that’s perfect for your business.</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -2444,11 +2444,11 @@ var PlanBox6UI = {
     </section>
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
+        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a website design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
         <div class="pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
-            <h3 class="product-name">Professional Design Services</h3>
+            <h3 class="product-name">Website Design Services</h3>
             <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">

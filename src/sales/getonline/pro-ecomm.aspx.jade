@@ -19,13 +19,13 @@ append pageStyles
 
 block bubbleContent
   h2.text-center Here you go...
-  h3.text-center An ecommerce design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
+  h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
 
 block productContent
   .row(style={"margin-top": "35px"})
     .col-xs-4.col-sm-3.col-sm-offset-3
       img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png")
-    .col-xs-8.col-sm-6.products.text-center
+    .col-xs-8.col-sm-6.products(style={"padding-left": "60px"})
       h3 Ecommerce Design Services
       p Our Professional Web Services team will work with you to build a complete online store your customers will love.
       form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
