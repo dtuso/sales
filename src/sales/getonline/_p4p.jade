@@ -88,10 +88,9 @@ append headScripts
         tokenizePrices();
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
+          domainSearch.businessName = passedBusinessName;
           $(document).find('.business-name-display').text(passedBusinessName);
 
-          // Initially don't display the search form.
-          $("#domainAvailableViewSearchForm").hide();
           updateSearchedDomain('', passedBusinessName);
           domainSearchFormSubmit('', passedBusinessName);
        }
@@ -304,7 +303,7 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
             h2.text-center Office 365 Email
             h3.text-center Branded email to talk to your customers
-            .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display">billybikes.org</span></mark>
+            .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
             mark Did you know...
@@ -353,7 +352,7 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
             h3 Office 365 Email
         .row
-          h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
+          h3.price-token {price_monthly}/month for the first year*
           button(data-ci="#{productToDisplay.bottomSearchCI}")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
           small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year

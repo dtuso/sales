@@ -24,25 +24,26 @@ var domainSearch = {
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
   dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  pricing: {
-    promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-    promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
-    bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-    bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
-    bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  },
-  imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-  canOfferOls: true,
+  // pricing: {
+  //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+  //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
+  //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+  //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
+  //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+  // },
+  // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
+  // canOfferOls: true,
   animationTime: 800,
   animationEasingType: 'swing',
   isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
   showChoicesWithAvailableDomain: true,
+  showTypeYourBusinessName: false,
   selectedDomainName: ''
 };
 
-##if(!productIsOffered(105))
-  domainSearch.canOfferOls = false;
-##endif
+// ##if(!productIsOffered(105))
+//   domainSearch.canOfferOls = false;
+// ##endif
 
 ##if(countrySiteAny(ca) || isManager())  
   if(domainSearch.tldInfo.isPossibleAdditionalTld('ca')) {
@@ -82,7 +83,7 @@ domainSearch.tldInfo.tlds.push(domainSearch.tldInfo.lastTldInList); //- add to t
 
 $(document).ready(function() {
 
-  showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
+  // showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
   showAndOrderDynamicTldsInList("#products .TLD-token");
@@ -95,12 +96,7 @@ $(document).ready(function() {
   // tokenizeDisclaimerModals(); 
   // tokenizeTheDataTokenizeAttribute();
 
-  wireupModals();
-
-  //- display error on return from DPP's TLD eligibility requirements failure
-  if(getParameterByName('tldRegErr').length > 0) {
-    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
-  }
+  // wireupModals();
 
   // set up verify buttons on spin results to do validation before sending to DPP
   // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
@@ -194,48 +190,53 @@ function tokenizeDisclaimerModals() {
     });
   };
   
-  if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
-  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
-  tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+  // if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
+  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
+  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
 }
 
-function wireupModals() {
+// function wireupModals() {
 
-  // wire up see details links  
+//   // wire up see details links  
 
-  $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
-    $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-      .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
-  });
-}
+//   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
+//     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
+//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//   });
+// }
 
 
-function showTldImagesInDomainArea() {
-  //dynamically build the tld images in the #findYourPerfectDomain section
-  var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
-  $.each(domainSearch.tldInfo.tlds, function(idx, tld){
-    var $img = $('<img>')
-      .addClass('tld-image lazyload')
-      .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
-    $imageDiv.append($img);
-    lazyload.add($img);
-  });
+// function showTldImagesInDomainArea() {
+//   //dynamically build the tld images in the #findYourPerfectDomain section
+//   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
+//   $.each(domainSearch.tldInfo.tlds, function(idx, tld){
+//     var $img = $('<img>')
+//       .addClass('tld-image lazyload')
+//       .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
+//     $imageDiv.append($img);
+//     lazyload.add($img);
+//   });
 
-  // rerun the height alignment
-  $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
-  $(window).trigger('resize');
-}
+//   // rerun the height alignment
+//   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
+//   $(window).trigger('resize');
+// }
 
 function domainSearchFormSubmit(e, domain) { 
 
   var $thisSection,
-      pageStartupSearch = true;
+      pageStartupSearch;
 
   if(e != '') {
     var $this = $(e.target);
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
+    $('#domainAvailableViewSearchForm').show();
     pageStartupSearch = false;
+  } else {
+    $thisSection = $('#domain-search-view');
+    $('#domainAvailableViewSearchForm').hide();
+    pageStartupSearch = true;
   }
 
   ##if(isManager())
@@ -478,35 +479,28 @@ function showApi3SearchError(e,domain){
   $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
 }
 
-function showDomainRegistrationFailure(tld) {
-  var 
-    $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
-    html = $failArea.html();
-  html = html.replace(/\{0\}/gi, tld)
-  $failArea.html(html);
-  $('#domainSearchWizard .search-message').hide();
-  $('#domainSearchWizard .domain-eligibility-fail').show();
+// function showTypeYourDomain() {  
+//   $('#domainSearchWizard .search-message').hide();
+//   $('#domainSearchWizard .type-your-business-name').show();
+// }
+
+function displayMoreResultsLinks(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".domain-available-view .view-all-button").show();
+  $thisSection.find(".show-more-section").show();
 }
 
-function showTypeYourDomain() {  
-  $('#domainSearchWizard .search-message').hide();
-  $('#domainSearchWizard .type-your-business-name').show();
+function hideMoreResultsLinks(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".view-all-button").hide();
+  $thisSection.find(".show-more-section").hide();
 }
 
-function displayMoreResultsLinks($view) {
-  $view.find(".domain-available-view .view-all-button").show();
-  $view.find(".show-more-section").show();
-}
-
-function hideMoreResultsLinks($view) {
-  $view.find(".view-all-button").hide();
-  $view.find(".show-more-section").hide();
-}
-
-function displayMoreResultsArea($view) {
-  $view.find(".spin-results .spin-result").slideDown(domainSearch.animationTime);
-  hideMoreResultsLinks($view);
-  updateDomainCountText($view, domainSearch.totalSpinResults);
+function displayMoreResultsArea(e) {
+  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".spin-results .spin-result").slideDown(domainSearch.animationTime);
+  hideMoreResultsLinks($thisSection);
+  updateDomainCountText($thisSection, domainSearch.totalSpinResults);
 }
 
 function updateDomainCountText($view, numberShowing) {
@@ -519,28 +513,18 @@ function updateDomainCountText($view, numberShowing) {
 
 function animateWizard($currentView, $animateToView) {  
 
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-
-    // $currentView.hide();
-  }
-
-  // $animateToView.show();
-
   var currentViewHeight;
   var windowWidth = $(window).width();
 
-  if($currentView == undefined)
-    currentViewHeight = 0;
-  else {
+  if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
-
-    animateObjectOffToTheLeft($currentView, windowWidth, 2);
     currentViewHeight = $currentView.height();
+  } else {
+    currentViewHeight = 0;
   }
 
-  var $wizard = $('#domainSearchWizard'),
-  wizardHeight = $('#domainSearchWizard').height();
+  var $wizard = $('#domainSearchWizardSection'),
+  wizardHeight = $wizard.height();
 
   // show view offscreen to get height
   $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
@@ -551,6 +535,7 @@ function animateWizard($currentView, $animateToView) {
   
   //run the animations
   animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  animateObjectOffToTheLeft($currentView, windowWidth, 2);
   animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
