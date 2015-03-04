@@ -1846,7 +1846,7 @@ var PlanBox6UI = {
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
             <h3 class="product-name">Website Design Services</h3>
-            <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+            <p class="p1">Our Professional Web Services team will work with you to create a site that’s perfect for your business.</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
                 <input type="hidden" name="product" value="6520|1|1">
