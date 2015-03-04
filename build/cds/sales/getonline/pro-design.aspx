@@ -797,21 +797,21 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProShare.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Clipboard" class="lazyload"/>
-              <mark>Step One</mark>
+              <mark class="uppercase">Step One</mark>
               <h3>Share Your Vision</h3>
               <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProWork.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Design" class="lazyload"/>
-              <mark>Step Two</mark>
+              <mark class="uppercase">Step Two</mark>
               <h3>We Go To Work</h3>
               <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProExpand.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Tools" class="lazyload"/>
-              <mark>Step Three</mark>
+              <mark class="uppercase">Step Three</mark>
               <h3>Enhance and Expand</h3>
               <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
             </div>
@@ -837,7 +837,7 @@ function getParameterByName(name) {
         </div>
         <section data-youtube-id="" class="video-marquee-wrapper">
           <div class="container">
-            <div data-lazyload-source="undefined" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
               <div class="col-sm-4"></div>
               <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
@@ -2881,32 +2881,6 @@ ul li.no-check {
         
       </style>
       <style>
-        .btn-lg{padding: 14px 15px 9px!important;}
-        .hero-guy{height: 667px!important; top: 80px; z-index:-999;}
-        .right-side{margin-top: 25px;}
-        .pro-wrapper{margin-top: 50px;}
-        .product-name{padding-bottom: 15px;}
-        .p1{margin-bottom: 25px;}
-        .p2{margin-top: 15px;}
-        .get-running-btn{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .get-running-btn:hover{margin-top: 50px; background-color:#ff8a00; border-color:#ef6c0f; color:white; float:right;}
-        .head-wrapper{padding-top:30px;!important}
-        #business-idea, #business-idea2, #price-per-month{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        
-        #pro-specific{background-color:#77c043;}
-        .uppercase{text-transform:uppercase;}
-        .half-hero-left{height:214px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-halfGuy-left.png) no-repeat center bottom;}
-        .speach-bubble-left-div {margin-left:5%;width:90%;}
-        .speach-bubble-left-white {color: #000;font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-size: 28px;font-size: 2.8rem;padding: 10px 20px;text-transform: uppercase;line-height: 1;background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSI4MDIuMTMycHgiIGhlaWdodD0iMTUwLjc0MnB4IiB2aWV3Qm94PSIwIDAgODAyLjEzMiAxNTAuNzQyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4MDIuMTMyIDE1MC43NDIiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgaWQ9IkJhY2tncm91bmRfeEEwX0ltYWdlXzFfIj4NCjwvZz4NCjxnIGlkPSJTaGFwZV82XzFfIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3ICAgICI+DQoJPGcgaWQ9IlNoYXBlXzYiPg0KCQk8Zz4NCgkJCTxwb2x5Z29uIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9Ijc3Ni41NjQsNzMuMjU4IDc1Mi43NjMsMTguMzI4IDYzMC4zNTQsOC44MjEgDQoJCQkJNTcuMDcyLDAuMzcxIDAuMDY2LDg1LjkzNSA3OC43NzQsMTUwLjM3MiA3NDQuMjYyLDE0MS45MjEgNzY0LjY2NCw5NC4zODUgODAyLjA2Niw4NS45MzUgCQkJIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8L3N2Zz4NCg==) no-repeat center center;background-size: cover;overflow: visible;}
-        .text-center{text-align:center;}
-        .titles{margin-top:50px;}
-        .pro-expand{height:103px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProExpand.png) no-repeat left bottom;}
-        .pro-share{height:131px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProShare.png) no-repeat left bottom;}
-        .pro-work{height:145px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProWork.png) no-repeat left bottom;}
-        .col-xs-4.first{padding-top: 30px;}
-        .steps{background-color: #fedf54; padding-left: 2px; padding-right: 2px;}
-        .products{margin-top: 5px!important;}
-        .computer{margin-top: 25px;}
         #pro-specific h2 { margin-bottom: 0; }
         #pro-specific h3 { margin-bottom: 20px; }
         .feature mark { margin-top: 20px; }
