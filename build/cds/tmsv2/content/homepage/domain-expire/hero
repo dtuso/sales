@@ -16,15 +16,36 @@
     .Explorer .right-arrow .arrow{background-size: 100% 100%;}
     
   </style>
+  <style>.hero.right-arrow.domain-expire {
+  text-transform: uppercase;
+}
+.hero.right-arrow.domain-expire .leftContent .line1 {
+  font-size: 32px;
+}
+.hero.right-arrow.domain-expire .leftContent .line2 {
+  font-size: 17px;
+}
+.hero.right-arrow.domain-expire .leftContent .line4 .dash {
+  letter-spacing: -0.4rem;
+}
+.hero.right-arrow.domain-expire .rightContent .line1 {
+  font-size: 23px;
+}
+.hero.right-arrow.domain-expire .rightContent .line2 {
+  font-size: 18px;
+}
+.hero.right-arrow.domain-expire .rightContent .line3 {
+  font-size: 65%;
+}
+
+  </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='94091'/></relative>]@T]" class="hero right-arrow o365-boss-impressed">
+<div data-url="[@T[link:<external linktype='myaurl' path='myrenewals/myrenewals.aspx'><param name='ci' value='94859' /><param name='pg' value='smart' /></external>]@T]" class="hero right-arrow domain-expire">
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext">
-        <div class="line1 walsheim-black">OFFICE 365 FROM FROM GODADDY</div>
-        <div class="line2 tungsten">EMAIL SO PROFESSIONAL,</div>
-        <div class="line3 walsheim-black">EVEN YOUR OLD BOSS</div>
-        <div class="line4 tungsten"> <span class="dash">—————</span><span>WILL BE IMPRESSED</span></div>
+        <div class="line1 tungsten bigtext">[@L[cds.sales/homepage/heros/domain-expire:dontLetDomainBe]@L]</div>
+        <div class="line2 walsheim-black"> <span class="dash">——— &nbsp;&nbsp; [@L[cds.sales/homepage/heros/domain-expire:oneGotAway]@L]</span></div>
       </div>
     </div>
   </div>
@@ -55,9 +76,9 @@
   <div class="right col-xs-5">
     <div class="rightContent">
       <div class="bigtext">
-        <div class="line1 walsheim-bold">PLANS FROM ONLY</div>
-        <div class="line2 price walsheim-black">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO</div>
-      </div><a class="btn btn-lg btn-purchase">START NOW</a>
+        <div class="line1 walsheim-black">[@L[cds.sales/homepage/heros/domain-expire:renewItNow]@L]</div>
+        <div class="line2 walsheim-black">[@L[cds.sales/homepage/heros/domain-expire:beforeItExpires]@L]</div>
+      </div><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/domain-expire:goToMyRenewals]@L]</a>
     </div>
   </div>
 </div>
