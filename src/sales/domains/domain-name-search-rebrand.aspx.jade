@@ -1,0 +1,537 @@
+extends ../shared/_landing-page
+
+mixin tldMini(tldName, btnText, btnUrl)
+  span !{tldName}
+  a.btn.btn-primary(href!=btnUrl) !{btnText}
+
+append vars
+  - page.title = "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]"
+  - page.description = "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]";
+  - page.keywords = "[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]";
+  - page.canonical = "[@T[link:<external linktype='siteurl' path='/domains/domain-name-search.aspx' parammode='explicit'/>]@T]";
+  - page.openGraph.title = "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]";
+  - page.openGraph.type = "product";
+  - page.openGraph.siteName = "[@T[companyname:name]@T]";
+  - angularId = "ng-app";
+  - angularNgApp = "dnsApp";
+  - angularNgCntl = "dnsCtrl"
+
+append pageStyles
+  atlantis:webstash(type="css")
+    style.
+      .modal-open {overflow: hidden;}
+      body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+      .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+      .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+      .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+      .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+      .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+      .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+      .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+      .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+      .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+      .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+      .modal-header .close {margin-top: -2px;}
+      .modal-title {margin: 0;line-height: 1.428571429;}
+      .modal-body {overflow: auto;border: 0;padding:0 30px 20px 30px;}
+      .modal-body ul {-webkit-padding-start:0px;padding-left:0px;}
+      .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+      .modal-footer:after {clear: both;}
+      .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+      .modal-footer:after {clear: both;}
+      .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+      .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+      .modal-footer .btn-block + .btn-block {margin-left: 0;}
+      @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+      .search-template .search-template-box { margin-bottom: 10px;}
+      .bg-green-official { background-color: #77c043; }
+      #what-do-you-get {background-color: #e8e8e8;}
+      #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
+      #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
+
+append endOfPageScripts
+  script(type="text/javascript").
+    var url;
+    ##if(activeLanguageAny([en-in]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_in"/>]@T]';
+    ##elseif(activeLanguageAny([es-es]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_es"/>]@T]';
+    ##elseif(activeLanguageAny([pt-br]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_br"/>]@T]';
+    ##elseif(activeLanguageAny([en-au]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_au"/>]@T]';
+    ##elseif(activeLanguageAny([es-ve]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ve"/>]@T]';
+    ##elseif(activeLanguageAny([de-at]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_at"/>]@T]';
+    ##elseif(activeLanguageAny([fr-be]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_be"/>]@T]';
+    ##elseif(activeLanguageAny([da-dk]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_dk"/>]@T]';
+    ##elseif(activeLanguageAny([en-my]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_my"/>]@T]';
+    ##elseif(activeLanguageAny([nl-nl]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_nl"/>]@T]';
+    ##elseif(activeLanguageAny([pt-pt]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_pt"/>]@T]';
+    ##elseif(activeLanguageAny([pl-pl]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_pl"/>]@T]';
+    ##elseif(activeLanguageAny([sv-se]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_se"/>]@T]';
+    ##elseif(activeLanguageAny([de-de]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_de"/>]@T]';
+    ##elseif(activeLanguageAny([de-ch]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ch"/>]@T]';
+    ##elseif(activeLanguageAny([fi-fi]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_fi"/>]@T]';
+    ##elseif(activeLanguageAny([el-gr]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_gr"/>]@T]';
+    ##elseif(activeLanguageAny([it-it]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_it"/>]@T]';
+    ##elseif(activeLanguageAny([fr-fr]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_fr"/>]@T]';
+    ##elseif(activeLanguageAny([ru-ru]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ru"/>]@T]';
+    ##elseif(activeLanguageAny([uk-ua]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ua"/>]@T]';
+    ##elseif(activeLanguageAny([tr-tr]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_tr"/>]@T]';     
+    ##elseif(activeLanguageAny([es-cl]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_cl"/>]@T]';
+    ##elseif(activeLanguageAny([en-gb]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_uk"/>]@T]';
+    ##elseif(activeLanguageAny([en-sg]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_sg"/>]@T]';
+    ##elseif(activeLanguageAny([en-ie]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ie"/>]@T]';
+    ##elseif(activeLanguageAny([nb-no]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_nb_no"/>]@T]';
+    ##elseif(activeLanguageAny([es-ar]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ar"/>]@T]';
+    ##elseif(activeLanguageAny([es-co]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_co"/>]@T]';
+    ##elseif(activeLanguageAny([es-mx]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_mx"/>]@T]';
+    ##elseif(activeLanguageAny([es-pe]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_pe"/>]@T]';
+    ##elseif(activeLanguageAny([en-za]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_za"/>]@T]';
+    ##elseif(activeLanguageAny([en-ph]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ph"/>]@T]';
+    ##elseif(activeLanguageAny([en-nz]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_nz"/>]@T]';
+    ##elseif(activeLanguageAny([es-us]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_es-us"/>]@T]';
+    ##elseif(activeLanguageAny([en-ca]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_ca"/>]@T]';
+    ##elseif(activeLanguageAny([fr-ca]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_fr_ca"/>]@T]';
+    ##elseif(activeLanguageAny([en-pk]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_pk"/>]@T]';
+    ##elseif(activeLanguageAny([fr-ch]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_fr_ch"/>]@T]';
+    ##elseif(activeLanguageAny([nl-be]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_nl_be"/>]@T]';
+    ##elseif(activeLanguageAny([it-ch]))
+    url='[@T[link:<relative path="~/api/package/config/domainlp_it_ch"/>]@T]';
+    ##else      
+    url='[@T[link:<relative path="~/api/package/config/domainlp_us"/>]@T]';
+    ##endif
+    var api_url = '[@T[link:<relative path="/domainsapi/v1/tlds/pricing"/>]@T]';
+  script(src!="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript")
+  script(src!="[@T[link:<javascriptroot />]@T]fos/angular/domains/angular.1.2.9.min.js" type="text/javascript")
+  script(src!="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/angular-sanitize.min.js" type="text/javascript")
+  script(src!="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/domains/search/js/dns-20141028 -Rebrand.min.js" type="text/javascript")
+  script(type="text/javascript").
+    $("#bulkModal").on('show.bs.modal',function (e){
+          var $container = $('#chart-iframe-container');
+          if ($container.data('hasIframe')) {
+            $iframe = $('#bulkModal .iframe-modal');
+              $iframe.contents().find('a.secondary-action-fos-button').hide();
+              $iframe.contents().find('body').on('click', 'a', function(e){ $(this).attr('target', '_parent'); });
+          } else {
+              $container.html('<h4>Loading...</h4>');
+              var frameSrc = $container.data('src');
+              $iframe = $('<iframe></iframe>');
+              $iframe.addClass('iframe-modal');
+              $iframe.attr('src', frameSrc);
+              $container.html($iframe);
+              $container.data('hasIframe', true);
+          }
+      });
+
+block domainSearch
+  //- remove domain search from top of page
+
+block marquee
+  section#marquee
+    atlantis:webstash(type="css")
+      style.
+        #marquee {padding:30px 0 20px;}
+        #marquee ul {-webkit-padding-start: 0px;padding-left:0px;}
+        #marquee .green-check li {padding-bottom:10px;margin:0;}
+        #marquee .green-check li span{font-weight:bold;}
+        #marquee .marquee h2 {font-size:50px;margin-bottom:10px;}
+    .container.marquee
+      .row
+        .col-sm-12
+          h2 [@L[cds.sales/gd/domains/domain-name-search:PerfectDomain]@L]
+          ul.green-check
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText1]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText2]@L]
+            li [@L[cds.sales/gd/domains/domain-name-search:MainHeadingSubText3]@L]
+  section#domainSearch.bg-green-official
+    atlantis:webstash(type="css")
+      style.
+        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+        #domainSearch { padding: 0; }
+        #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+        #domainSearch #domain-name-input {font-size: 18px; font-family: Arial; color:#333333;}
+        #domainSearch #domain-name-input::-webkit-input-placeholder { color: #333333; font-family: Arial; }
+        #domainSearch #domain-name-input:-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+        #domainSearch #domain-name-input::-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+        #domainSearch #domain-name-input:-ms-input-placeholder { color: #333333; font-family: Arial; }
+        #domainSearch #domain-name-input.headline-primary {text-transform:none;}
+        #domainSearch .form-control {height:68px;}
+        #domainSearch .input-group-btn .btn {margin-left: 10px;}
+        #domainSearch .input-group-btn .search-text {font-size: 30px; font-family: 'Walsheim-Bold'; padding: 8px 15px 5px; }
+        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+        #domainSearch h1 {font-size:inherit;font-family:inherit;display:inline;color:inherit;}
+    .container
+      .row
+        .col-xs-12(style="padding-top:10px;")
+          #main-panel-title [@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeadingRebrand]@L]
+      .row
+        .col-xs-12
+          +domainSearchInput({"placeholderText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]", "buttonText":"[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]"})
+      .row.domain-links
+        .col-xs-12
+          a.btn-link(href="#" data-toggle="modal" data-target="#bulkModal") [@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink1]@L]
+          a.btn-link(href!="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]") [@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink2]@L]
+          a.btn-link(href!="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]") [@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink3]@L]
+
+block plans
+  section#top-pods
+    atlantis:webstash(type="css")
+      style.
+        #top-pods {background-color: #e8e8e8;}
+        #top-pods .plan-tile {margin-top: 5px; }
+        #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important;}
+        #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
+        #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
+        #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+        #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
+        #top-pods .tldlogo-wrap{min-height:50px;}
+        #top-pods .tldlogo {background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-sb152a5e523.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+        .tldlogo-dot-at{background-position:0 -517px;height:40px;width:42px}
+        .tldlogo-dot-be{background-position:-52px -1237px;height:40px;width:51px}
+        .tldlogo-dot-berlin{background-position:0 -1197px;height:30px;width:84px}
+        .tldlogo-dot-biz{background-position:0 -357px;height:40px;width:44px}
+        .tldlogo-dot-br{background-position:-141px -1317px;height:40px;width:24px}
+        .tldlogo-dot-build{background-position:0 -717px;height:40px;width:67px}
+        .tldlogo-dot-ca{background-position:0 -477px;height:40px;width:49px}
+        .tldlogo-dot-casa{background-position:0 -77px;height:40px;width:71px}
+        .tldlogo-dot-ch{background-position:0 -1277px;height:40px;width:52px}
+        .tldlogo-dot-city{background-position:0 -757px;height:40px;width:66px}
+        .tldlogo-dot-cl{background-position:-42px -517px;height:40px;width:38px}
+        .tldlogo-dot-club{background-position:0 -997px;height:40px;width:73px}
+        .tldlogo-dot-co-in{background-position:-74px -957px;height:40px;width:93px}
+        .tldlogo-dot-co-nz{background-position:-83px 0;height:40px;width:84px}
+        .tldlogo-dot-co-uk-old{background-position:0 -1077px;height:40px;width:76px}
+        .tldlogo-dot-co-uk{background-position:0 -1237px;height:40px;width:52px}
+        .tldlogo-dot-co-za{background-position:0 -277px;height:40px;width:34px}
+        .tldlogo-dot-co{background-position:-53px -1157px;height:40px;width:31px}
+        .tldlogo-dot-com-au{background-position:-49px -477px;height:40px;width:119px}
+        .tldlogo-dot-com-co{background-position:-132px -1117px;height:40px;width:36px}
+        .tldlogo-dot-com-mx{background-position:-46px -437px;height:40px;width:119px}
+        .tldlogo-dot-com-old{background-position:-76px -1037px;height:40px;width:88px}
+        .tldlogo-dot-com{background-position:-67px -717px;height:40px;width:101px}
+        .tldlogo-dot-company{background-position:0 -117px;height:40px;width:157px}
+        .tldlogo-dot-de{background-position:0 -1157px;height:40px;width:53px}
+        .tldlogo-dot-democrat{background-position:-71px -77px;height:40px;width:97px}
+        .tldlogo-dot-directory{background-position:0 -1397px;height:40px;width:137px}
+        .tldlogo-dot-dk{background-position:-84px -1157px;height:40px;width:53px}
+        .tldlogo-dot-email{background-position:-57px -877px;height:40px;width:94px}
+        .tldlogo-dot-es{background-position:-82px -1117px;height:40px;width:50px}
+        .tldlogo-dot-estate{background-position:-58px -557px;height:40px;width:107px}
+        .tldlogo-dot-eu{background-position:0 -40px;height:36px;width:52px}
+        .tldlogo-dot-expert{background-position:-57px -917px;height:40px;width:110px}
+        .tldlogo-dot-fr{background-position:-137px -1157px;height:40px;width:31px}
+        .tldlogo-dot-futbol{background-position:-44px -357px;height:40px;width:123px}
+        .tldlogo-dot-global-old{background-position:-80px -517px;height:40px;width:38px}
+        .tldlogo-dot-global{background-position:0 0;height:36px;width:83px}
+        .tldlogo-dot-guru{background-position:0 -1117px;height:40px;width:82px}
+        .tldlogo-dot-in{background-position:0 -877px;height:40px;width:57px}
+        .tldlogo-dot-info{background-position:0 -917px;height:40px;width:57px}
+        .tldlogo-dot-it{background-position:0 -317px;height:40px;width:35px}
+        .tldlogo-dot-kiwi{background-position:-76px -1077px;height:40px;width:86px}
+        .tldlogo-dot-lawyer{background-position:0 -1317px;height:36px;width:100px}
+        .tldlogo-dot-london{background-position:-31px -237px;height:40px;width:134px}
+        .tldlogo-dot-luxury{background-position:-35px -317px;height:40px;width:124px}
+        .tldlogo-dot-me{background-position:-66px -1357px;height:40px;width:28px}
+        .tldlogo-dot-menu{background-position:-60px -597px;height:40px;width:104px}
+        .tldlogo-dot-mx{background-position:0 -797px;height:40px;width:63px}
+        .tldlogo-dot-my{background-position:0 -637px;height:40px;width:63px}
+        .tldlogo-dot-net-old{background-position:0 -597px;height:40px;width:60px}
+        .tldlogo-dot-net{background-position:0 -957px;height:40px;width:73px}
+        .tldlogo-dot-ninja{background-position:-58px -837px;height:40px;width:98px}
+        .tldlogo-dot-nl{background-position:-100px -1317px;height:40px;width:41px}
+        .tldlogo-dot-nyc{background-position:0 -1357px;height:40px;width:37px}
+        .tldlogo-dot-org{background-position:0 -1037px;height:40px;width:76px}
+        .tldlogo-dot-pe{background-position:0 -397px;height:40px;width:43px}
+        .tldlogo-dot-ph{background-position:0 -437px;height:40px;width:46px}
+        .tldlogo-dot-photography{background-position:0 -157px;height:40px;width:155px}
+        .tldlogo-dot-photos{background-position:-43px -397px;height:40px;width:120px}
+        .tldlogo-dot-pl{background-position:0 -677px;height:40px;width:66px}
+        .tldlogo-dot-quebec{background-position:-63px -637px;height:40px;width:102px}
+        .tldlogo-dot-reviews{background-position:-84px -1197px;height:40px;width:83px}
+        .tldlogo-dot-rocks{background-position:-66px -757px;height:40px;width:100px}
+        .tldlogo-dot-ru{background-position:-118px -517px;height:40px;width:29px}
+        .tldlogo-dot-se{background-position:-103px -1237px;height:40px;width:51px}
+        .tldlogo-dot-services{background-position:0 -197px;height:40px;width:145px}
+        .tldlogo-dot-sg{background-position:-52px -1277px;height:40px;width:52px}
+        .tldlogo-dot-social{background-position:-66px -677px;height:40px;width:101px}
+        .tldlogo-dot-space{background-position:0 -1436px;height:45px;width:168px}
+        .tldlogo-dot-tax{background-position:0 -837px;height:40px;width:58px}
+        .tldlogo-dot-uk{background-position:0 -237px;height:40px;width:31px}
+        .tldlogo-dot-uno{background-position:-37px -1357px;height:40px;width:29px}
+        .tldlogo-dot-ve{background-position:-104px -1277px;height:40px;width:51px}
+        .tldlogo-dot-vegas{background-position:-63px -797px;height:40px;width:98px}
+        .tldlogo-dot-website{background-position:-34px -277px;height:40px;width:133px}
+        .tldlogo-dot-wiki{background-position:-73px -997px;height:40px;width:91px}
+        .tldlogo-dot-world{background-position:-53px -40px;height:37px;width:97px}
+        .tldlogo-dot-xyz{background-position:0 -557px;height:40px;width:58px}
+    +renderPlanTiles(4,{})
+      .ng-scope
+        .col-sx-3(id="{{pod.PodId}}" ng-repeat="pod in podsDataTop")
+          +planTile()
+            include ./domain-name-search/_top-pod.jade
+  
+  section#promo-carousel.features-carousel-pro-carousel
+    include ./domain-name-search/_promo-carousel.jade
+
+  section#what-do-you-get
+    atlantis:webstash(type="css")
+      style.
+        #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:15px;}
+        #what-do-you-get .container{padding-bottom: 70px;}
+    .container
+      .row
+        .col-sm-12
+          h3.text-center [@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]
+      .row
+        .col-md-4.col-sm-6
+          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]
+          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]
+        .col-md-4.col-sm-6
+          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]
+          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]
+        .col-md-4.col-sm-6
+          .include-check [@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]
+
+block sections
+  +renderMidPageNav({"defaultActive":"true"})
+
+  section#why-godaddy.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title!="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]")
+    atlantis:webstash(type="css")
+      style.
+        #why-godaddy .why-gd-container{padding:0 0 80px;}
+        #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
+        #why-godaddy .why-gd-container h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;margin-bottom:10px}
+        #why-godaddy .why-gd-container h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;margin-top:0px;line-height:30px;}
+        #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
+        #why-godaddy .key-benefits-text{padding-top:20px;}
+        #why-godaddy .key-benefits-img-wrap {height:154px;}
+        #why-godaddy .icon-domain {padding-top:33px;}
+        #why-godaddy .icon-headset {padding-top:34px;}
+    .container.why-gd-container
+      .row
+        .col-sm-10.why-gd-banner
+          h2 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]
+          h3 [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]
+      .row
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            //- +lazyImage("[@T[link:<imageroot />]@T]fos/mike/img/hosting/GD_WebHosting_Module_Feature_Group_ScalableResources.png")
+            img.key-benefits-img(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png")
+          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]
+          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            img.key-benefits-img.icon-domain(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png")
+          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]
+          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]
+        .col-sm-4.key-benefit
+          .key-benefits-img-wrap
+            img.key-benefits-img.icon-headset(src != "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png")
+          .key-benefits-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]
+          .key-benefits-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]
+
+    section#bottom-pods.bg-green-official
+      atlantis:webstash(type="css")
+        style.
+          #bottom-pods {padding-bottom:0px;}
+          #bottom-pods #plans {background-color: #77c043;height:250px;}
+          #bottom-pods .plan-tile{margin-top:60px;}
+          #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:15px;}
+          #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
+          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+          #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;font-size:30px;text-align:left;}
+          #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
+          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+      h2.bottom-headline [@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]
+      +renderPlanTiles(3,{})
+        .ng-scope
+          .col-sx-3(id!="{{pod.PodId}}" ng-repeat="pod in podsDataBottom")
+            +planTile()
+              include ./domain-name-search/_bottom-pod.jade
+
+    section#new-domains.bg-pro-gray
+      include ./domain-name-search/_new-domains.jade 
+    
+    section#find-your-domain
+      atlantis:webstash(type="css")
+        style.
+          #find-your-domain{background-color:#77c043;}
+          #find-your-domain .container{padding-left:10px;}
+          #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+          #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
+          #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:15px;font-family:'Walsheim-Black';margin-bottom:0px;}
+          #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:35px;display:block;}
+          #find-your-domain .find-cta-text:hover{text-decoration:underline;}
+          #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+      .container
+        h3 [@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]
+        a(href!="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]")
+          i.ico.ico-gt-circle-small
+          .find-cta-text [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]
+
+  section#options.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]")
+    atlantis:webstash(type="css")
+      style.
+        #options {padding-top:80px;}
+        #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
+        #options #carousel-domain-options .subtext {text-align:left;}
+        #options #carousel-domain-options ul {list-style-type:none;-webkit-padding-start:0px;padding-left:0px;}
+        #options #carousel-domain-options ul li {text-align:left;}
+        #options #carousel-domain-options ul li .check-text {margin:-40px 0 0 40px;display:inline-block;}
+        #options #carousel-domain-options .single-line li .check-text{margin-left:0px;}
+        #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
+        #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
+        #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
+        #options .carousel-container .carousel-panel {min-height:596px;}
+        #options .headline-primary {text-transform:none;}
+    - tabbedCarousel = tabbedCarousel || {};
+    - tabbedCarousel.title = "[@L[cds.sales/gd/domains/domain-name-search:MainBannerBadGuys]@L]";
+    - tabbedCarousel.subtitle = "[@L[cds.sales/gd/domains/domain-name-search:MainBannerBadGuysDescription]@L]";
+    - tabbedCarousel.numOfTabs= 3;
+    - tabbedCarousel.lazyLoad = true;
+    - tabbedCarousel.id = "carousel-domain-options";
+    - tabbedCarousel.textCenter = true;
+    - slideBegin = 0, slideEnd = 0;
+    - tabCount = 0;
+    +renderTabbedCarousel(tabbedCarousel)
+      +addTab({text:"[@L[cds.sales/gd/domains/domain-name-search:PrivateProtectionTab]@L]"})
+      +addTab({text:"[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTab]@L]"})
+      +addTab({text:"[@L[cds.sales/gd/domains/domain-name-search:CertifiedDomainsTab]@L]"})
+    +carousel(tabbedCarousel.id ,tabbedCarousel.numOfTabs,{css:true})
+      +carouselItem(tabbedCarousel)
+        +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Slices-HotelDoors.png")
+        h2 [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationTitleRebrand]@L]
+        .subtext [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationSubTitleRebrand]@L]
+        .relative [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationText1Rebrand]@L]
+        ul
+          li
+            span.include-check
+            span.check-text [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem1Rebrand]@L]
+          li
+            span.include-check
+            span.check-text [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem2Rebrand]@L]
+        .last-private-item [@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem3Rebrand]@L]
+      +carouselItem(tabbedCarousel)
+        +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/ProtectedRegistration.png")
+        h2 [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTitleRebrand]@L]
+        .relative [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitle1Rebrand]@L]
+        .sub-text [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitleTwo]@L]
+        ul.single-line
+          li
+            span.include-check
+            span.check-text [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText1Rebrand]@L]
+          li
+            span.include-check
+            span.check-text [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText2Rebrand]@L]
+          li
+            span.include-check
+            span.check-text [@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText3Rebrand]@L]
+      +carouselItem(tabbedCarousel)
+        +lazyImg("img-responsive img-center",'.carousel-container ', "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/CertifiedDomains.png")
+        h2 [@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationTitleRebrand]@L]
+        .relative [@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationText1Rebrand]@L]
+        .relative [@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationItem1Rebrand]@L]
+        .relative [@L[cds.sales/gd/domains/domain-name-search:CertifiedRegistrationText2]@L]
+
+  section#questions.bg-pro-gray(data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:FaqTabRebrand]@L]")
+    atlantis:webstash(type="css")
+      style.
+        #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
+        #questions #question-accordion {border:none;}
+        #questions .accordion-group li.accordion-dropdown {margin:0px;}
+        #questions .accordion-group li.accordion-dropdown span{font-size:24px;}
+        #questions .accordion-group li.accordion-dropdown .dropdown{padding:10px 0 30px;}
+        #questions .accordion-group li.accordion-dropdown .dropdown span{font-size:16px;text-transform:none;line-height:20px;}
+        #questions .accordion-group button {margin-bottom: 110px;}
+    span.question-headline [@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestionAns]@L]
+    +renderAccordion({"id":"question-accordion","buttonID":"question-btn","buttonText":"[@L[cds.sales/gd/domains/domain-name-search:SeeAllQuestions]@L]"})
+      +accordionTab("[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion1]@L]")
+        span [@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer1]@L]
+      +accordionTab("[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion2]@L]")
+        span [@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer2]@L]
+      +accordionTab("[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion3]@L]")
+        span [@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer3]@L]
+      +accordionTab("[@L[cds.sales/gd/domains/domain-name-search:MainBannerQuestion4]@L]")
+        span [@L[cds.sales/gd/domains/domain-name-search:MainBannerAnswer4]@L]
+  section.container.content-disclaimer
+    atlantis:webstash(type="css")
+      style.
+        .content-disclaimer{background-color:#e8e8e8;max-width:100%;text-align:left;width:100%;}
+        .content-disclaimer p{width:1140px;margin:0 auto;font-size:14px;padding:10px 0;}
+        .simple-link{color:inherit;text-decoration:underline;}
+        #disclaimer-modal .disclaimer-modal-list{list-style-type:none;}
+        #disclaimer-modal .disclaimer-modal-list li {font-size:14px;}
+        .content-disclaimer, #disclaimer-modal, #renderMidPageNavBottom, #hidden-modal {padding:0;}
+    p
+      small.small-print [@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentSymbols]@L]
+        a.simple-link(href="#" data-toggle="modal" data-target="#myModal") [@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentLinkText]@L]
+  section#disclaimer-modal
+    .modal.fade#myModal
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type="button" data-dismiss="modal" aria-hidden="true")
+            p.modal-title
+              strong [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalTitle]@L]
+          .modal-body
+            ul.disclaimer-modal-list
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem1]@L]
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem7]@L]                          
+              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem9]@L]
+  +renderMidPageNavBottom
+
+  section#hidden-modal
+    atlantis:webstash(type="css")
+      style.
+        .bulk-modal-dialog{width:895px !important;}
+        .modal-content{border-radius:6px !important;}
+        .iframe-modal{width:100%;height:600px;border:0 !important;}
+        button.close{padding:10px !important;}
+    .modal.fade#bulkModal
+      .modal-dialog.bulk-modal-dialog
+        .modal-content
+          .modal-body
+            button.close(type="button" data-dismiss="modal" aria-hidden="true")
+            #chart-iframe-container(data-src!="[@T[link:<relative path='domains/popups/chart.aspx'/>]@T]")

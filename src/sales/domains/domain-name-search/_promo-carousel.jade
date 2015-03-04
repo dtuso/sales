@@ -1,0 +1,21 @@
+atlantis:webstash(type="css")
+  style.
+    #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
+    #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+    #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
+    #promo-carousel .btn { margin-top: 40px; }
+    #promo-carousel .greenText { color: #77c043;}
++carousel("top-carousel", 3, {"css":"true"})
+  +carouselItem()
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]
+  +carouselItem()
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L]
+  +carouselItem()
+    | 
+    |##if(activeLanguageAny([en-us]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3USRebrand]@L]
+    | 
+    |##else
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]
+    | 
+    |##endif

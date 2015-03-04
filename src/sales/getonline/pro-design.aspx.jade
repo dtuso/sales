@@ -4,13 +4,13 @@ append vars
   - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
 
 append pageStyles
-  style.  
+  style.
     #pro-specific h2 { margin-bottom: 0; }
     #pro-specific h3 { margin-bottom: 20px; }
     .feature mark { margin-top: 20px; }
     .feature h3 { margin-top: 0; }
     @media (min-width: 768px) {
-      .feature { text-align: left; }
+      .feature { text-align: left; margin-top: 40px; }
     }
     .product-section{border-bottom: lightgray 1px solid;}
     .products{margin-top: 0px!important;}
@@ -22,7 +22,7 @@ block bubbleContent
   h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
 
 block productContent
-  .row(style={"margin-top": "35px", "margin-bottom": "35px" })
+  .row(style={"margin-top": "35px"})
     .col-xs-4.col-sm-3.col-sm-offset-3
       img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png")
     .col-xs-8.col-sm-6.products.text-center
@@ -41,29 +41,6 @@ block productContent
           input(type="hidden", name="prog_id", value="GoDaddy")
           button.btn.btn-purchase.btn-lg GET IT NOW
           p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
-
-block productSection
-  section#design.product-section
-    .container
-      .row
-        .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png")
-          h2.text-center See what we can do
-          h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
-          button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") View Our Portfolio
-      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
-        .container
-          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
-          .row
-            .col-sm-4
-            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
-      .row.bubble-row
-        .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
-        .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark Did you know...
-          p Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.
-  include ../shared/wsb-templates.html
 
 block domainOrPro
   section#pro-specific.bg-primary-o.product-section
@@ -99,6 +76,29 @@ block domainOrPro
           p We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
         .col-xs-2
           img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+
+block productSection
+  section#design.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png")
+          h2.text-center See what we can do
+          h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
+          button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") View Our Portfolio
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark Did you know...
+          p Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.
+  include ../shared/wsb-templates.html
 
 block office365
   // hide this on pro landing pages

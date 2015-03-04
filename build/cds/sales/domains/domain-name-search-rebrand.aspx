@@ -25,7 +25,6 @@
     <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
-    <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -90,6 +89,15 @@
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
+      <atlantis:webstash type="css">
+        <style>
+          #marquee {padding:30px 0 20px;}
+          #marquee ul {-webkit-padding-start: 0px;padding-left:0px;}
+          #marquee .green-check li {padding-bottom:10px;margin:0;}
+          #marquee .green-check li span{font-weight:bold;}
+          #marquee .marquee h2 {font-size:50px;margin-bottom:10px;}
+        </style>
+      </atlantis:webstash>
       <div class="container marquee">
         <div class="row">
           <div class="col-sm-12">
@@ -103,11 +111,35 @@
         </div>
       </div>
     </section>
-    <section id="domainSearch">
+    <section id="domainSearch" class="bg-green-official">
+      <atlantis:webstash type="css">
+        <style>
+          #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
+          #domainSearch { padding: 0; }
+          #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
+          #domainSearch #domain-name-input {font-size: 18px; font-family: Arial; color:#333333;}
+          #domainSearch #domain-name-input::-webkit-input-placeholder { color: #333333; font-family: Arial; }
+          #domainSearch #domain-name-input:-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+          #domainSearch #domain-name-input::-moz-placeholder { color: #333333; opacity: 1; font-family: Arial; }
+          #domainSearch #domain-name-input:-ms-input-placeholder { color: #333333; font-family: Arial; }
+          #domainSearch #domain-name-input.headline-primary {text-transform:none;}
+          #domainSearch .form-control {height:68px;}
+          #domainSearch .input-group-btn .btn {margin-left: 10px;}
+          #domainSearch .input-group-btn .search-text {font-size: 30px; font-family: 'Walsheim-Bold'; padding: 8px 15px 5px; }
+          #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
+          #domainSearch h1 {font-size:inherit;font-family:inherit;display:inline;color:inherit;}
+        </style>
+      </atlantis:webstash>
       <div class="container">
-        <h2>START YOUR DOMAIN SEARCH NOW.</h2>
-        <atlantis:webstash type="css">
-          <style>.search-text {
+        <div class="row">
+          <div style="padding-top:10px;" class="col-xs-12">
+            <div id="main-panel-title">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderMainHeadingRebrand]@L]</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <atlantis:webstash type="css">
+              <style>.search-text {
   display: none;
 }
 .search-icon {
@@ -122,27 +154,29 @@
   }
 }
 
-          </style>
-        </atlantis:webstash>
-        <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
-          <input type="hidden" name="ci" value=""/>
-          <input type="hidden" name="checkAvail" value="1"/>
-          <div class="input-group">
-            <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]</label>
-            <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
-              <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]</span></button></span>
+              </style>
+            </atlantis:webstash>
+            <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
+              <input type="hidden" name="ci" value=""/>
+              <input type="hidden" name="checkAvail" value="1"/>
+              <div class="input-group">
+                <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]</label>
+                <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderPlaceholderRebrand]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
+                  <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/gd/domains/domain-name-search:SalesHeaderBtnTextRebrand]@L]</span></button></span>
+              </div>
+            </form>
+            <script>
+              $(".domain-search-form").on('submit', function(e) {
+                var input = $(this).find("input[name='domainToCheck']");
+                if (input && (input.val() == null || input.val() == "")) {
+                  e.preventDefault();
+                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                }
+              });
+              
+            </script>
           </div>
-        </form>
-        <script>
-          $(".domain-search-form").on('submit', function(e) {
-            var input = $(this).find("input[name='domainToCheck']");
-            if (input && (input.val() == null || input.val() == "")) {
-              e.preventDefault();
-              window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-            }
-          });
-          
-        </script>
+        </div>
         <div class="row domain-links">
           <div class="col-xs-12"><a href="#" data-toggle="modal" data-target="#bulkModal" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink1]@L]</a><a href="[@T[link:<relative path='../bulk-domain-search.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink2]@L]</a><a href="[@T[link:<relative path='/domains/transfers.aspx'></relative>]@T]" class="btn-link">[@L[cds.sales/gd/domains/domain-name-search:CarouselSideLink3]@L]</a></div>
         </div>
@@ -152,89 +186,92 @@
       <atlantis:webstash type="css">
         <style>
           #top-pods {background-color: #e8e8e8;}
-          #top-pods .plan-tile {margin-top: 0; }
-          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important; }
+          #top-pods .plan-tile {margin-top: 5px; }
+          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important;}
           #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
           #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
-          #top-pods .tldlogo {background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-s1d41272b7e.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
-          .tldlogo-dot-at {background-position: -110px -1396px;height: 40px;width: 42px;}
-          .tldlogo-dot-be {background-position: 0 -1276px;height: 40px;width: 51px;}
-          .tldlogo-dot-berlin {background-position: 0 -1356px;height: 30px;width: 84px;}
-          .tldlogo-dot-biz {background-position: -100px -1316px;height: 40px;width: 44px;}
-          .tldlogo-dot-br {background-position: -133px -316px;height: 40px;width: 24px;}
-          .tldlogo-dot-build {background-position: 0 -1076px;height: 40px;width: 67px;}
-          .tldlogo-dot-ca {background-position: -51px -1316px;height: 40px;width: 49px;}
-          .tldlogo-dot-casa {background-position: 0 -1116px;height: 40px;width: 71px;}
-          .tldlogo-dot-ch {background-position: 0 -716px;height: 40px;width: 52px;}
-          .tldlogo-dot-city {background-position: 0 -1036px;height: 40px;width: 66px;}
-          .tldlogo-dot-cl {background-position: 0 -516px;height: 40px;width: 38px;}
-          .tldlogo-dot-club {background-position: 0 -1156px;height: 40px;width: 73px;}
-          .tldlogo-dot-co-in {background-position: -63px -956px;height: 40px;width: 93px;}
-          .tldlogo-dot-co-nz {background-position: -71px -1116px;height: 40px;width: 84px;}
-          .tldlogo-dot-co-uk-old {background-position: -63px -996px;height: 40px;width: 76px;}
-          .tldlogo-dot-co-uk {background-position: 0 -1236px;height: 40px;width: 52px;}
-          .tldlogo-dot-co-za {background-position: 0 -396px;height: 40px;width: 34px;}
-          .tldlogo-dot-co {background-position: -126px -596px;height: 40px;width: 31px;}
-          .tldlogo-dot-com-au {background-position: -37px -436px;height: 40px;width: 119px;}
-          .tldlogo-dot-com-co {background-position: 0 -1436px;height: 40px;width: 36px;}
-          .tldlogo-dot-com-mx {background-position: -38px -476px;height: 40px;width: 119px;}
-          .tldlogo-dot-com-old {background-position: -66px -1036px;height: 40px;width: 88px;}
-          .tldlogo-dot-com {background-position: -53px -676px;height: 40px;width: 101px;}
-          .tldlogo-dot-company {background-position: 0 -116px;height: 40px;width: 157px;}
-          .tldlogo-dot-de {background-position: 0 -676px;height: 40px;width: 53px;}
-          .tldlogo-dot-democrat {background-position: -58px -876px;height: 40px;width: 97px;}
-          .tldlogo-dot-directory {background-position: 0 -236px;height: 40px;width: 137px;}
-          .tldlogo-dot-dk {background-position: 0 -636px;height: 40px;width: 53px;}
-          .tldlogo-dot-email {background-position: -60px -916px;height: 40px;width: 94px;}
-          .tldlogo-dot-es {background-position: 0 -596px;height: 40px;width: 50px;}
-          .tldlogo-dot-estate {background-position: -46px -556px;height: 40px;width: 107px;}
-          .tldlogo-dot-eu {background-position: 0 0;height: 36px;width: 52px;}
-          .tldlogo-dot-expert {background-position: 0 -1396px;height: 40px;width: 110px;}
-          .tldlogo-dot-fr {background-position: 0 -356px;height: 40px;width: 31px;}
-          .tldlogo-dot-futbol {background-position: -31px -356px;height: 40px;width: 123px;}
-          .tldlogo-dot-global-old {background-position: 0 -476px;height: 40px;width: 38px;}
-          .tldlogo-dot-global {background-position: -57px -36px;height: 36px;width: 83px;}
-          .tldlogo-dot-guru {background-position: -73px -1156px;height: 40px;width: 82px;}
-          .tldlogo-dot-in {background-position: 0 -796px;height: 40px;width: 57px;}
-          .tldlogo-dot-info {background-position: 0 -36px;height: 40px;width: 57px;}
-          .tldlogo-dot-it {background-position: -36px -1436px;height: 40px;width: 35px;}
-          .tldlogo-dot-kiwi {background-position: -67px -1076px;height: 40px;width: 86px;}
-          .tldlogo-dot-lawyer {background-position: -52px 0;height: 36px;width: 100px;}
-          .tldlogo-dot-london {background-position: 0 -276px;height: 40px;width: 134px;}
-          .tldlogo-dot-luxury {background-position: 0 -1476px;height: 40px;width: 124px;}
-          .tldlogo-dot-me {background-position: -79px -516px;height: 40px;width: 28px;}
-          .tldlogo-dot-menu {background-position: -52px -1236px;height: 40px;width: 104px;}
-          .tldlogo-dot-mx {background-position: 0 -956px;height: 40px;width: 63px;}
-          .tldlogo-dot-my {background-position: 0 -996px;height: 40px;width: 63px;}
-          .tldlogo-dot-net-old {background-position: 0 -916px;height: 40px;width: 60px;}
-          .tldlogo-dot-net {background-position: 0 -76px;height: 40px;width: 74px;}
-          .tldlogo-dot-ninja {background-position: -57px -796px;height: 40px;width: 98px;}
-          .tldlogo-dot-nl {background-position: -38px -516px;height: 40px;width: 41px;}
-          .tldlogo-dot-nyc {background-position: 0 -436px;height: 40px;width: 37px;}
-          .tldlogo-dot-org {background-position: -50px -596px;height: 40px;width: 76px;}
-          .tldlogo-dot-pe {background-position: -80px -1276px;height: 40px;width: 43px;}
-          .tldlogo-dot-ph {background-position: 0 -556px;height: 40px;width: 46px;}
-          .tldlogo-dot-photography {background-position: 0 -156px;height: 40px;width: 155px;}
-          .tldlogo-dot-photos {background-position: -34px -396px;height: 40px;width: 120px;}
-          .tldlogo-dot-pl {background-position: 0 -1196px;height: 40px;width: 66px;}
-          .tldlogo-dot-quebec {background-position: -53px -636px;height: 40px;width: 102px;}
-          .tldlogo-dot-reviews {background-position: -74px -76px;height: 40px;width: 83px;}
-          .tldlogo-dot-rocks {background-position: -52px -756px;height: 40px;width: 100px;}
-          .tldlogo-dot-ru {background-position: -51px -1276px;height: 40px;width: 29px;}
-          .tldlogo-dot-se {background-position: 0 -1316px;height: 40px;width: 51px;}
-          .tldlogo-dot-services {background-position: 0 -196px;height: 40px;width: 145px;}
-          .tldlogo-dot-sg {background-position: 0 -756px;height: 40px;width: 52px;}
-          .tldlogo-dot-social {background-position: -52px -716px;height: 40px;width: 101px;}
-          .tldlogo-dot-tax {background-position: 0 -836px;height: 40px;width: 58px;}
-          .tldlogo-dot-uk {background-position: -123px -1276px;height: 40px;width: 31px;}
-          .tldlogo-dot-uno {background-position: -71px -1436px;height: 40px;width: 29px;}
-          .tldlogo-dot-ve {background-position: -84px -1356px;height: 40px;width: 51px;}
-          .tldlogo-dot-vegas {background-position: -58px -836px;height: 40px;width: 98px;}
-          .tldlogo-dot-website {background-position: 0 -316px;height: 40px;width: 133px;}
-          .tldlogo-dot-wiki {background-position: -66px -1196px;height: 40px;width: 91px;}
-          .tldlogo-dot-xyz {background-position: 0 -876px;height: 40px;width: 58px;}
+          #top-pods .tldlogo-wrap{min-height:50px;}
+          #top-pods .tldlogo {background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/tldlogos-sb152a5e523.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+          .tldlogo-dot-at{background-position:0 -517px;height:40px;width:42px}
+          .tldlogo-dot-be{background-position:-52px -1237px;height:40px;width:51px}
+          .tldlogo-dot-berlin{background-position:0 -1197px;height:30px;width:84px}
+          .tldlogo-dot-biz{background-position:0 -357px;height:40px;width:44px}
+          .tldlogo-dot-br{background-position:-141px -1317px;height:40px;width:24px}
+          .tldlogo-dot-build{background-position:0 -717px;height:40px;width:67px}
+          .tldlogo-dot-ca{background-position:0 -477px;height:40px;width:49px}
+          .tldlogo-dot-casa{background-position:0 -77px;height:40px;width:71px}
+          .tldlogo-dot-ch{background-position:0 -1277px;height:40px;width:52px}
+          .tldlogo-dot-city{background-position:0 -757px;height:40px;width:66px}
+          .tldlogo-dot-cl{background-position:-42px -517px;height:40px;width:38px}
+          .tldlogo-dot-club{background-position:0 -997px;height:40px;width:73px}
+          .tldlogo-dot-co-in{background-position:-74px -957px;height:40px;width:93px}
+          .tldlogo-dot-co-nz{background-position:-83px 0;height:40px;width:84px}
+          .tldlogo-dot-co-uk-old{background-position:0 -1077px;height:40px;width:76px}
+          .tldlogo-dot-co-uk{background-position:0 -1237px;height:40px;width:52px}
+          .tldlogo-dot-co-za{background-position:0 -277px;height:40px;width:34px}
+          .tldlogo-dot-co{background-position:-53px -1157px;height:40px;width:31px}
+          .tldlogo-dot-com-au{background-position:-49px -477px;height:40px;width:119px}
+          .tldlogo-dot-com-co{background-position:-132px -1117px;height:40px;width:36px}
+          .tldlogo-dot-com-mx{background-position:-46px -437px;height:40px;width:119px}
+          .tldlogo-dot-com-old{background-position:-76px -1037px;height:40px;width:88px}
+          .tldlogo-dot-com{background-position:-67px -717px;height:40px;width:101px}
+          .tldlogo-dot-company{background-position:0 -117px;height:40px;width:157px}
+          .tldlogo-dot-de{background-position:0 -1157px;height:40px;width:53px}
+          .tldlogo-dot-democrat{background-position:-71px -77px;height:40px;width:97px}
+          .tldlogo-dot-directory{background-position:0 -1397px;height:40px;width:137px}
+          .tldlogo-dot-dk{background-position:-84px -1157px;height:40px;width:53px}
+          .tldlogo-dot-email{background-position:-57px -877px;height:40px;width:94px}
+          .tldlogo-dot-es{background-position:-82px -1117px;height:40px;width:50px}
+          .tldlogo-dot-estate{background-position:-58px -557px;height:40px;width:107px}
+          .tldlogo-dot-eu{background-position:0 -40px;height:36px;width:52px}
+          .tldlogo-dot-expert{background-position:-57px -917px;height:40px;width:110px}
+          .tldlogo-dot-fr{background-position:-137px -1157px;height:40px;width:31px}
+          .tldlogo-dot-futbol{background-position:-44px -357px;height:40px;width:123px}
+          .tldlogo-dot-global-old{background-position:-80px -517px;height:40px;width:38px}
+          .tldlogo-dot-global{background-position:0 0;height:36px;width:83px}
+          .tldlogo-dot-guru{background-position:0 -1117px;height:40px;width:82px}
+          .tldlogo-dot-in{background-position:0 -877px;height:40px;width:57px}
+          .tldlogo-dot-info{background-position:0 -917px;height:40px;width:57px}
+          .tldlogo-dot-it{background-position:0 -317px;height:40px;width:35px}
+          .tldlogo-dot-kiwi{background-position:-76px -1077px;height:40px;width:86px}
+          .tldlogo-dot-lawyer{background-position:0 -1317px;height:36px;width:100px}
+          .tldlogo-dot-london{background-position:-31px -237px;height:40px;width:134px}
+          .tldlogo-dot-luxury{background-position:-35px -317px;height:40px;width:124px}
+          .tldlogo-dot-me{background-position:-66px -1357px;height:40px;width:28px}
+          .tldlogo-dot-menu{background-position:-60px -597px;height:40px;width:104px}
+          .tldlogo-dot-mx{background-position:0 -797px;height:40px;width:63px}
+          .tldlogo-dot-my{background-position:0 -637px;height:40px;width:63px}
+          .tldlogo-dot-net-old{background-position:0 -597px;height:40px;width:60px}
+          .tldlogo-dot-net{background-position:0 -957px;height:40px;width:73px}
+          .tldlogo-dot-ninja{background-position:-58px -837px;height:40px;width:98px}
+          .tldlogo-dot-nl{background-position:-100px -1317px;height:40px;width:41px}
+          .tldlogo-dot-nyc{background-position:0 -1357px;height:40px;width:37px}
+          .tldlogo-dot-org{background-position:0 -1037px;height:40px;width:76px}
+          .tldlogo-dot-pe{background-position:0 -397px;height:40px;width:43px}
+          .tldlogo-dot-ph{background-position:0 -437px;height:40px;width:46px}
+          .tldlogo-dot-photography{background-position:0 -157px;height:40px;width:155px}
+          .tldlogo-dot-photos{background-position:-43px -397px;height:40px;width:120px}
+          .tldlogo-dot-pl{background-position:0 -677px;height:40px;width:66px}
+          .tldlogo-dot-quebec{background-position:-63px -637px;height:40px;width:102px}
+          .tldlogo-dot-reviews{background-position:-84px -1197px;height:40px;width:83px}
+          .tldlogo-dot-rocks{background-position:-66px -757px;height:40px;width:100px}
+          .tldlogo-dot-ru{background-position:-118px -517px;height:40px;width:29px}
+          .tldlogo-dot-se{background-position:-103px -1237px;height:40px;width:51px}
+          .tldlogo-dot-services{background-position:0 -197px;height:40px;width:145px}
+          .tldlogo-dot-sg{background-position:-52px -1277px;height:40px;width:52px}
+          .tldlogo-dot-social{background-position:-66px -677px;height:40px;width:101px}
+          .tldlogo-dot-space{background-position:0 -1436px;height:45px;width:168px}
+          .tldlogo-dot-tax{background-position:0 -837px;height:40px;width:58px}
+          .tldlogo-dot-uk{background-position:0 -237px;height:40px;width:31px}
+          .tldlogo-dot-uno{background-position:-37px -1357px;height:40px;width:29px}
+          .tldlogo-dot-ve{background-position:-104px -1277px;height:40px;width:51px}
+          .tldlogo-dot-vegas{background-position:-63px -797px;height:40px;width:98px}
+          .tldlogo-dot-website{background-position:-34px -277px;height:40px;width:133px}
+          .tldlogo-dot-wiki{background-position:-73px -997px;height:40px;width:91px}
+          .tldlogo-dot-world{background-position:-53px -40px;height:37px;width:97px}
+          .tldlogo-dot-xyz{background-position:0 -557px;height:40px;width:58px}
         </style>
       </atlantis:webstash>
       <atlantis:webstash type="css">
@@ -659,8 +696,10 @@
       <atlantis:webstash type="css">
         <style>
           #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
-          #promo-carousel .plan-carousel-copy a {text-decoration:none; color:#77c043;}
-          #promo-carousel .plan-carousel-copy a:hover {text-decoration:underline;}
+          #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+          #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
+          #promo-carousel .btn { margin-top: 40px; }
+          #promo-carousel .greenText { color: #77c043;}
         </style>
       </atlantis:webstash>
       <style>.item-wrapper { padding: 35px 0 20px; }
@@ -1052,25 +1091,29 @@ top: -6px;
       </div>
     </section>
     <section id="what-do-you-get">
+      <atlantis:webstash type="css">
+        <style>
+          #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:15px;}
+          #what-do-you-get .container{padding-bottom: 70px;}
+        </style>
+      </atlantis:webstash>
       <div class="container">
-        <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]</h2>
         <div class="row">
-          <div class="col-sm-4">
-            <ul class="green-check">
-              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]</li>
-              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]</li>
-            </ul>
+          <div class="col-sm-12">
+            <h3 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:MainHeadingWhatDoYouGet]@L]</h3>
           </div>
-          <div class="col-sm-4">
-            <ul class="green-check">
-              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]</li>
-              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]</li>
-            </ul>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer1]@L]</div>
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer2]@L]</div>
           </div>
-          <div class="col-sm-4">
-            <ul class="green-check">
-              <li>[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]</li>
-            </ul>
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer3]@L]</div>
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer4]@L]</div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="include-check">[@L[cds.sales/gd/domains/domain-name-search:WhatDoYouGetPointer5]@L]</div>
           </div>
         </div>
       </div>
@@ -1270,7 +1313,7 @@ top: -6px;
           sections.push($(this).attr('id'));
         });
         $(window).scroll(function () {
-          var defaultActive = "false";
+          var defaultActive = "true";
           var scroll = $(this).scrollTop();
           var footerBot = $('#renderMidPageNavBottom').offset().top-130;
           var belowNavTop=(scroll+2 > navTop) ? true : false;
@@ -1349,48 +1392,63 @@ top: -6px;
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="why-godaddy">
-      <div class="container">
+    <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
+      <atlantis:webstash type="css">
+        <style>
+          #why-godaddy .why-gd-container{padding:0 0 80px;}
+          #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
+          #why-godaddy .why-gd-container h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;margin-bottom:10px}
+          #why-godaddy .why-gd-container h3{font-family:'Walsheim-Bold'; font-size:24px; text-align:center;text-transform:none;margin-top:0px;line-height:30px;}
+          #why-godaddy .key-benefits-title{font-family:'Walsheim-Black';font-size:30px;text-transform:uppercase;line-height:30px;padding-top:45px;}
+          #why-godaddy .key-benefits-text{padding-top:20px;}
+          #why-godaddy .key-benefits-img-wrap {height:154px;}
+          #why-godaddy .icon-domain {padding-top:33px;}
+          #why-godaddy .icon-headset {padding-top:34px;}
+        </style>
+      </atlantis:webstash>
+      <div class="container why-gd-container">
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1">
-            <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
-            <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]</p>
+          <div class="col-sm-10 why-gd-banner">
+            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTitle]@L]</h2>
+            <h3>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerTextRebrand]@L]</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4">
-            <div class="feature why-gd-registrar"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]</h3>
-              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]</p>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/Icon-Planet.png" class="key-benefits-img">
             </div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle0Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText0Rebrand]@L]</div>
           </div>
-          <div class="col-sm-4">
-            <div class="feature why-gd-prices"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]</h3>
-              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]  </p>
-            </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconDomain.png" class="key-benefits-img icon-domain"></div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle1Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText1Rebrand]@L]</div>
           </div>
-          <div class="col-sm-4">
-            <div class="feature why-gd-support"><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload svgfallback"/>
-              <h3 class="walsheim-black">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]</h3>
-              <p>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]  </p>
-            </div>
+          <div class="col-sm-4 key-benefit">
+            <div class="key-benefits-img-wrap"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/domains/search/img/IconHeadset.png" class="key-benefits-img icon-headset"></div>
+            <div class="key-benefits-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListTitle2Rebrand]@L]</div>
+            <div class="key-benefits-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyMiscBannerListText2Rebrand]@L]</div>
           </div>
         </div>
       </div>
-    </section>
-    <section id="bottom-pods">
-      <atlantis:webstash type="css">
-        <style>
-          #bottom-pods #plans {background-color: #77c043;}
-          #bottom-pods .plan-tile {margin-top:0;}
-          #bottom-pods .plan-title {text-transform:none;}
-          #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
-        </style>
-      </atlantis:webstash>
-      <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
-      <atlantis:webstash type="css">
-        <style>.plan-tile { 
+      <section id="bottom-pods" class="bg-green-official">
+        <atlantis:webstash type="css">
+          <style>
+            #bottom-pods {padding-bottom:0px;}
+            #bottom-pods #plans {background-color: #77c043;height:250px;}
+            #bottom-pods .plan-tile{margin-top:60px;}
+            #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:15px;}
+            #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
+            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+            #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;font-size:30px;text-align:left;}
+            #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
+            #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
+          </style>
+        </atlantis:webstash>
+        <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
+        <atlantis:webstash type="css">
+          <style>.plan-tile { 
   margin-top: -145px; 
   margin-bottom: 20px;
 }
@@ -1782,93 +1840,94 @@ top: -6px;
         display: inline;
     }
 }
-        </style>
-      </atlantis:webstash>
-      <div class="pro-plans-wrap ">
-        <div id="plans" data-icode="" class="container pro-plans">
-          <div class="row">
-            <div class="ng-scope">
-              <div id="{{pod.PodId}}" ng-repeat="pod in podsDataBottom" class="col-sx-3">
-                <div class="col-sm-4 plan-tile plan-pro">
-                  <div class="pro-plan-wrap">
-                    <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
-                    <h3 ng-bind-html="pod.PodTLD" class="plan-title"></h3>
-                    <p ng-bind-html="pod.PodText" class="plan-text"> </p>
-                    <div class="plan-price-wrap">
-                      <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
-                        <strike>{{pod.ListPrice}}</strike></span>
-                    </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
+          </style>
+        </atlantis:webstash>
+        <div class="pro-plans-wrap ">
+          <div id="plans" data-icode="" class="container pro-plans">
+            <div class="row">
+              <div class="ng-scope">
+                <div id="{{pod.PodId}}" ng-repeat="pod in podsDataBottom" class="col-sx-3">
+                  <div class="col-sm-4 plan-tile plan-pro">
+                    <div class="pro-plan-wrap">
+                      <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
+                      <h3 ng-bind-html="pod.PodTLD" class="plan-title"></h3>
+                      <p ng-bind-html="pod.PodText" class="plan-text"> </p>
+                      <div class="plan-price-wrap">
+                        <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                          <strike>{{pod.ListPrice}}</strike></span>
+                      </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="new-domains" class="bg-pro-gray">
-      <div class="container">
-        <atlantis:webstash type="css">
-          <style>
-            #new-domains { background-color: #e8e8e8; }
-            #new-domains h2 { font-size: 2rem; margin-bottom: 0; }
-            #new-domains ul{ list-style-type:none; padding-left:0; }
-            #new-domains ul li  { background-color:#ffffff; height:46px; }
-            #new-domains ul li span { font-family: "Walsheim-Black"; font-size: 3rem; padding-left:10px; }
-            #new-domains ul li a { float:right; }
-          </style>
-        </atlantis:webstash>
-        <div class="row">
-          <div class="col-md-6">
-            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></h2>
-            <ul>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotCompany]@L]</span><a href="[@T[link:<relative path='/tlds/company'><param name='ci' value='88012' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSolutions]@L]</span><a href="[@T[link:<relative path='/tlds/solutions'><param name='ci' value='95430' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='95429' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
-              </li>
-            </ul>
+      </section>
+      <section id="new-domains" class="bg-pro-gray">
+        <div class="container">
+          <atlantis:webstash type="css">
+            <style>
+              #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
+              #new-domains .container{margin:0 auto;padding-left:0px;}
+              #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+              #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+              #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+              #new-domains ul li a{float:right;}
+              #new-domains .col-tld-title {padding-left: 10px;}
+              #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
+            </style>
+          </atlantis:webstash>
+          <div class="row">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
           </div>
-          <div class="col-md-6">
-            <h2>[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] <span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></h2>
-            <ul>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-              </li>
-              <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
-              </li>
-            </ul>
+          <div class="row">
+            <div class="col-md-6">
+              <ul>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotBusiness]@L]</span><a href="[@T[link:<relative path='/tlds/business'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]</span><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='90328' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSpace]@L]</span><a href="[@T[link:<relative path='/tlds/space'><param name='ci' value='96021' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="find-your-domain">
-      <atlantis:webstash type="css">
-        <style>
-          #find-your-domain { background-color:#77c043; color: #fff; }
-          #find-your-domain h2 { margin-bottom: 0; }
-          #find-your-domain a { color:#ffffff; text-decoration:none; }
-          #find-your-domain .caret-right {
-            border-left: 0.5em solid;
-            border-top: 0.5em solid transparent;
-            border-bottom: 0.5em solid transparent;
-            margin-right: 0.7em;
-            display: inline-block;
-          }
-          #find-your-domain .find-cta-text:hover{text-decoration:underline;}
-          #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
-        </style>
-      </atlantis:webstash>
-      <div class="container">
-        <h2>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h2><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><span class="caret-right"></span>
-          <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
-      </div>
+      </section>
+      <section id="find-your-domain">
+        <atlantis:webstash type="css">
+          <style>
+            #find-your-domain{background-color:#77c043;}
+            #find-your-domain .container{padding-left:10px;}
+            #find-your-domain .ico{background-image: url([@T[link:<imageroot />]@T]fos/201401/global/css/3.6.0/img/ico-sb3ca6ca345.png);background-repeat: no-repeat;display: inline-block;vertical-align: middle;}
+            #find-your-domain .ico-gt-circle-small{background-position: -90px 0;height: 22px;width: 17px;margin-right:5px;}
+            #find-your-domain h3{color:#ffffff;font-size:45px;text-align:left;padding-top:15px;font-family:'Walsheim-Black';margin-bottom:0px;}
+            #find-your-domain a{color:#ffffff;width:100%;text-decoration:none;padding-bottom:35px;display:block;}
+            #find-your-domain .find-cta-text:hover{text-decoration:underline;}
+            #find-your-domain .find-cta-text {display:inline-block;font-size:18px;}
+          </style>
+        </atlantis:webstash>
+        <div class="container">
+          <h3>[@L[cds.sales/gd/domains/domain-name-search:FindTheDomain]@L]</h3><a href="[@T[link:<relative path='/tlds/gtld.aspx'></relative>]@T]"><i class="ico ico-gt-circle-small"></i>
+            <div class="find-cta-text">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyCTAText1]@L]</div></a>
+        </div>
+      </section>
     </section>
     <section id="options" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
@@ -1876,9 +1935,10 @@ top: -6px;
           #options {padding-top:80px;}
           #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
           #options #carousel-domain-options .subtext {text-align:left;}
-          #options #carousel-domain-options ul {list-style-type:none;-webkit-padding-start:0px;}
+          #options #carousel-domain-options ul {list-style-type:none;-webkit-padding-start:0px;padding-left:0px;}
           #options #carousel-domain-options ul li {text-align:left;}
           #options #carousel-domain-options ul li .check-text {margin:-40px 0 0 40px;display:inline-block;}
+          #options #carousel-domain-options .single-line li .check-text{margin-left:0px;}
           #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
           #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
           #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
@@ -2385,7 +2445,7 @@ top: -6px;
                     <h2>[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTitleRebrand]@L]</h2>
                     <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitle1Rebrand]@L]</div>
                     <div class="sub-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitleTwo]@L]</div>
-                    <ul>
+                    <ul class="single-line">
                       <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText1Rebrand]@L]</span></li>
                       <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText2Rebrand]@L]</span></li>
                       <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText3Rebrand]@L]</span></li>
@@ -2590,6 +2650,8 @@ top: -6px;
           .content-disclaimer p{width:1140px;margin:0 auto;font-size:14px;padding:10px 0;}
           .simple-link{color:inherit;text-decoration:underline;}
           #disclaimer-modal .disclaimer-modal-list{list-style-type:none;}
+          #disclaimer-modal .disclaimer-modal-list li {font-size:14px;}
+          .content-disclaimer, #disclaimer-modal, #renderMidPageNavBottom, #hidden-modal {padding:0;}
         </style>
       </atlantis:webstash>
       <p><small class="small-print">[@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentSymbols]@L]<a href="#" data-toggle="modal" data-target="#myModal" class="simple-link">[@L[cds.sales/gd/domains/domain-name-search:DisclaimerContentLinkText]@L]</a></small></p>
@@ -2622,7 +2684,7 @@ top: -6px;
     <section id="hidden-modal">
       <atlantis:webstash type="css">
         <style>
-          .bulk-modal-dialog{width:895px;}
+          .bulk-modal-dialog{width:895px !important;}
           .modal-content{border-radius:6px !important;}
           .iframe-modal{width:100%;height:600px;border:0 !important;}
           button.close{padding:10px !important;}
@@ -2790,45 +2852,41 @@ ul li.no-check {
         }
         
       </style>
-      <!-- domain-name-search page styling-->
-      <style>
-        .modal-open {overflow: hidden;}
-        body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
-        .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
-        .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
-        .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
-        .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
-        .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
-        .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
-        .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
-        .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
-        .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
-        .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
-        .modal-header .close {margin-top: -2px;}
-        .modal-title {margin: 0;line-height: 1.428571429;}
-        .modal-body {overflow: auto;border: 0;}
-        .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
-        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-        .modal-footer:after {clear: both;}
-        .modal-footer:before,.modal-footer:after {display: table;content: " ";}
-        .modal-footer:after {clear: both;}
-        .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
-        .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
-        .modal-footer .btn-block + .btn-block {margin-left: 0;}
-        @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
-        
-        #marquee { padding-bottom: 20px; }
-        
-        #domainSearch { padding-top: 20px; padding-bottom: 10px; background-color: #77c043; }
-        #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; display: inline-block; }
-        #domainSearch h2 { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
-        #domainSearch .domain-links {margin: 10px -10px 15px -10px; }
-        
-        #what-do-you-get {background-color: #e8e8e8;}
-        
-        #bottom-pods { background-color: #77c043; }
-        
-      </style>
+      <atlantis:webstash type="css">
+        <style>
+          .modal-open {overflow: hidden;}
+          body.modal-open,.modal-open .navbar-fixed-top,.modal-open .navbar-fixed-bottom {margin-right: 15px;}
+          .modal {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1040;display: none;overflow: auto;overflow-y: scroll;}
+          .modal.fade .modal-dialog {-webkit-transform: translate(0, -25%);-ms-transform: translate(0, -25%);transform: translate(0, -25%);-webkit-transition: -webkit-transform 0.3s ease-out;-moz-transition: -moz-transform 0.3s ease-out;-o-transition: -o-transform 0.3s ease-out;transition: transform 0.3s ease-out;}
+          .modal.in .modal-dialog {-webkit-transform: translate(0, 0);-ms-transform: translate(0, 0);transform: translate(0, 0);}
+          .modal-dialog {z-index: 1050;width: auto;padding: 10px;margin-right: auto;margin-left: auto;}
+          .modal-content {position: relative;background-color: #ffffff;border: 1px solid #b3b3b3;border-radius: 0;outline: none;-webkit-box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);background-clip: padding-box;}
+          .modal-backdrop {position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: 1030;background-color: #000000;}
+          .modal-backdrop.fade {opacity: 0;filter: alpha(opacity=0);}
+          .modal-backdrop.in {opacity: 0.5;filter: alpha(opacity=50);}
+          .modal-header {padding: 15px 20px 0;margin: 0;font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.1;color: #333333;}
+          .modal-header small {font-weight: normal;line-height: 1;color: #999999;}
+          .modal-header .close {margin-top: -2px;}
+          .modal-title {margin: 0;line-height: 1.428571429;}
+          .modal-body {overflow: auto;border: 0;padding:0 30px 20px 30px;}
+          .modal-body ul {-webkit-padding-start:0px;padding-left:0px;}
+          .modal-footer {position: relative;bottom: -15px;padding: 15px 20px;margin: 0 -20px;text-align: center;background-color: #eeeeee;}
+          .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+          .modal-footer:after {clear: both;}
+          .modal-footer:before,.modal-footer:after {display: table;content: " ";}
+          .modal-footer:after {clear: both;}
+          .modal-footer .btn + .btn {margin-bottom: 0;margin-left: 10px;}
+          .modal-footer .btn-group .btn + .btn {margin-left: -1px;}
+          .modal-footer .btn-block + .btn-block {margin-left: 0;}
+          @media screen and (min-width: 768px) {.modal-dialog {right: auto;left: 50%;width: 600px;padding-top: 30px;padding-bottom: 30px;}}
+          .search-template .search-template-box { margin-bottom: 10px;}
+          .bg-green-official { background-color: #77c043; }
+          #what-do-you-get {background-color: #e8e8e8;}
+          #what-do-you-get .include-check {position: relative; padding-left: 45px; margin-top: 20px;}
+          #what-do-you-get .include-check:before {content: ""; background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png); background-position: 0 -668px; background-size: 205px auto; width: 25px; height: 27px; padding-right: 5px; position: absolute; left: 0; top: 0px;}
+          
+        </style>
+      </atlantis:webstash>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
