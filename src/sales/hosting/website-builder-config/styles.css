@@ -1,10 +1,12 @@
 
+.config-step {
+  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+}
 .config-step .step-title {
 font-size: 36px;
 margin-top: 40px;
 margin-bottom: 15px;
 margin-left: 15px;
-font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
 font-weight: 100;
 line-height: 1.1;
 color: #333;
@@ -13,29 +15,32 @@ color: #333;
 margin-left: 15px;
 }
 .config-text-primary {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-size: 24px;
-  color: #333;
-}
-.config-text-lead {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-  font-size: 16px;
-  color: #333;
-font-weight: 200;
-
-}
-.config-text-price {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 30px;
+  font-weight: 200;
 }
 .config-text-secondary {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+  font-size: 24px;
 }
-.config-text-save {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+.config-text-lead {
+  font-size: 16px;
 }
+.bold{
+  font-weight: 600;
 }
-.config-text-disclaimer {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+.config-text-lead-secondary {
+  font-size: 14px;
+
+}
+.product-options li {
+  border-bottom: 1px solid #C3C3C3;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+.product-options li:last-child{
+  border-bottom:none;
+}
+.config-step{
+  display: none;
 }
 .green-check {
   background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
@@ -53,8 +58,63 @@ font-weight: 200;
 .product-options {
 list-style: none;
 }
-
-@media (max-width: 768px) {
+.vertical-align {
+    display: flex;
+    align-items: center;
+}   
+@media (max-width: 768px) { 
+    .vertical-align {
+        display: block;
+        align-items: inherit;
+    }
     .text-xs-right{
       text-align: right;
     }
+    .config-text-primary {
+      font-size: 20px;
+    }
+    .config-text-secondary {
+      font-size: 14px;
+    }
+    .config-text-lead {
+      font-size: 16px;
+    }
+    .config-text-save {
+      font-size: 14px;
+    }
+    .config-text-disclaimer {
+      font-size: 14px;
+    }
+}
+.product-added-to-cart-text{
+  position: relative;
+  left:10px;
+  font-size: 20px;
+}
+
+.product-added-to-cart{
+  padding:0 10px;
+  float:left;
+  color:#679B08;
+  position: relative;
+}
+.order-item-details-wrapper .row {
+  margin-top: 15px;
+}
+.item-title-wrapper{
+  border-bottom: 1px solid #333;
+}
+.item-title{
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.item-term,.item-x,.item-price,.item-total-price{
+  margin-top: 5px;
+}
+.item-total-price{
+  text-align: right;
+}
+.item-savings-wrapper{
+  text-transform: uppercase;
+}
