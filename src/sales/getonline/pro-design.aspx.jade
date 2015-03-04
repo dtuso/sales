@@ -44,7 +44,7 @@ block productContent
           input(type="hidden", name="cicode", value="96312")
           input(type="hidden", name="prog_id", value="GoDaddy")
           button.btn.btn-purchase.btn-lg GET IT NOW
-          p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+          p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
 
 block domainSearchContent
 
@@ -92,13 +92,13 @@ block productSection
           h2.text-center See what we can do
           h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
           button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="84003") View Our Portfolio
-      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
         .container
           div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
-      .row.bubble-row
+      .row.bubble-row(style={'margin-top': '0px'})
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
@@ -132,7 +132,7 @@ block bottomGetItNow
               input(type="hidden", name="cicode", value="96311")
               input(type="hidden", name="prog_id", value="GoDaddy")
               button.btn.btn-purchase.btn-lg GET IT NOW
-              p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+              p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
 
 prepend endOfPageScripts
   script.
