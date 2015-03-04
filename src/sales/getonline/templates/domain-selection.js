@@ -381,7 +381,7 @@ function validDomainSelected(e){
 }
 
 function navigateToSearchAgain(e) { 
-  $("#domainAvailableViewSearchForm").show();
+  // $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }

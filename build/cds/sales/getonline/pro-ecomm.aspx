@@ -1,9 +1,14 @@
 
+<!-- P4P variables-->
 <!-- Need to dynamically build tld list.-->
 <!-- - domainSearchWizard.tlds                     = "['com','co','org','net']";-->
 <!-- - domainSearchWizard.defaultTld               = "'com'";-->
+<<<<<<< HEAD
 <!-- - domainSearchWizard.formId                   = "domainSearchViewForm";-->
 <!-- P4P variables--><!DOCTYPE html>
+=======
+<!-- - domainSearchWizard.formId                   = "domainSearchViewForm";--><!DOCTYPE html>
+>>>>>>> ktudor/GCE-36138
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -88,6 +93,7 @@
     <atlantis:webstash type="js">
       <script>
         var offerInfo = {
+          businessName: "",
           dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
           packageId: "",
           itcCode: "",
@@ -127,6 +133,7 @@
           tokenizePrices();
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
+<<<<<<< HEAD
             domainSearch.businessName = passedBusinessName;
             $(document).find('.business-name-display').text(passedBusinessName);
         
@@ -733,6 +740,13 @@ function getParameterByName(name) {
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+=======
+            offerInfo.businessName = passedBusinessName;
+            $(document).find('.business-name-display').text(passedBusinessName);
+         }
+        });
+        
+>>>>>>> ktudor/GCE-36138
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
@@ -981,6 +995,7 @@ ul li.no-check {
 }
 
       </style>
+<<<<<<< HEAD
       <!-- atlantis:webstash(type="css")-->
       <style>
         #domainSearchWizard {
@@ -1154,6 +1169,8 @@ ul li.no-check {
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
+=======
+>>>>>>> ktudor/GCE-36138
       <style>
         mark { line-height: 1.1em; word-break: break-all; }
         mark::after { height: 1.21em; }
@@ -1298,11 +1315,6 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domainSearchWizardSection { padding-bottom: 0; }
-        
-      </style>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
         .why-us-title{margin-top:10px;}
         .why-us-text{margin-top:10px;}
         
@@ -1431,6 +1443,7 @@ ul li.no-check {
           }).css({'cursor':'pointer'});
         });
       });
+<<<<<<< HEAD
     </script>
     <script>
       var domainSearchViewForm = {
@@ -1856,6 +1869,9 @@ ul li.no-check {
         //- }
       
       });
+=======
+      
+>>>>>>> ktudor/GCE-36138
     </script>
   </body>
 </html>

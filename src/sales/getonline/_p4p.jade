@@ -1,5 +1,7 @@
 extends ../shared/_page
 
+include templates/_domain-search-wizard
+
 append vars
   - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
   - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
@@ -38,7 +40,6 @@ append vars
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
 
-
 append seo
   meta(name="twitter:card" content="summary")
   meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
@@ -50,6 +51,7 @@ append headScripts
   atlantis:webstash(type="js")
     script.
       var offerInfo = {
+        businessName: "",
         dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/#{productToDisplay.landingPage}"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
         packageId: "#{productToDisplay.packageId}",
         itcCode: "#{productToDisplay.itcCode}",
@@ -88,15 +90,22 @@ append headScripts
         tokenizePrices();
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
-          domainSearch.businessName = passedBusinessName;
+          offerInfo.businessName = passedBusinessName;
           $(document).find('.business-name-display').text(passedBusinessName);
-
-          updateSearchedDomain('', passedBusinessName);
-          domainSearchFormSubmit('', passedBusinessName);
        }
       });
-    script
-      include:js domain-selection.js
+
+    block domainSearchScripts
+      atlantis:webstash(type="js")
+        script.  // Page
+          $(document).ready(function(){
+            if(offerInfo.businessName != '') {
+              updateSearchedDomain('', offerInfo.businessName);
+              domainSearchFormSubmit('', offerInfo.businessName);
+           }
+          });
+        script(type="text/javascript")
+          include:js templates/domain-selection.js
 
 append pageStyles
   style. 
@@ -239,10 +248,6 @@ append pageStyles
     }
 
   // atlantis:webstash(type="css")
-  style.
-    #domainSearchWizardSection { padding-bottom: 0; }
-
-  // atlantis:webstash(type="css")
   style.  // Why-us section
     .why-us-title{margin-top:10px;}
     .why-us-text{margin-top:10px;}
@@ -259,6 +264,8 @@ append pageStyles
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
     #bottomGetItNow img { min-height: 115px; }
+
+  block domainSearchStyles
 
 block content
 
@@ -291,8 +298,9 @@ block content
             button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
             small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
-  block domainOrPro
-    include templates/_domain-search-wizard
+  block domainSearchContent
+
+  block proInterview
   
   block productSection
 
@@ -440,3 +448,5 @@ prepend endOfPageScripts
         }).css({'cursor':'pointer'});
       });
     });
+
+  block domainSearchEndOfPageScripts

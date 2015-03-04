@@ -1,9 +1,14 @@
 
+<!-- P4P variables-->
 <!-- Need to dynamically build tld list.-->
 <!-- - domainSearchWizard.tlds                     = "['com','co','org','net']";-->
 <!-- - domainSearchWizard.defaultTld               = "'com'";-->
+<<<<<<< HEAD
 <!-- - domainSearchWizard.formId                   = "domainSearchViewForm";-->
 <!-- P4P variables--><!DOCTYPE html>
+=======
+<!-- - domainSearchWizard.formId                   = "domainSearchViewForm";--><!DOCTYPE html>
+>>>>>>> ktudor/GCE-36138
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -796,6 +801,7 @@ function getParameterByName(name) {
     <atlantis:webstash type="js">
       <script>
         var offerInfo = {
+          businessName: "",
           dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/web-hosting.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
@@ -835,15 +841,30 @@ function getParameterByName(name) {
           tokenizePrices();
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
+<<<<<<< HEAD
             domainSearch.businessName = passedBusinessName;
             $(document).find('.business-name-display').text(passedBusinessName);
         
             updateSearchedDomain('', passedBusinessName);
             domainSearchFormSubmit('', passedBusinessName);
+=======
+            offerInfo.businessName = passedBusinessName;
+            $(document).find('.business-name-display').text(passedBusinessName);
+>>>>>>> ktudor/GCE-36138
          }
         });
+        
       </script>
-      <script>// Array indexOf shim for IE9 and below
+      <atlantis:webstash type="js">
+        <script>
+          $(document).ready(function(){
+            if(offerInfo.businessName != '') {
+              updateSearchedDomain('', offerInfo.businessName);
+              domainSearchFormSubmit('', offerInfo.businessName);
+           }
+          });
+        </script>
+        <script type="text/javascript">// Array indexOf shim for IE9 and below
 if (!Array.prototype.indexOf){
   Array.prototype.indexOf = function(elt /*, from*/) {
     var len = this.length >>> 0;
@@ -1226,7 +1247,7 @@ function validDomainSelected(e){
 }
 
 function navigateToSearchAgain(e) { 
-  $("#domainAvailableViewSearchForm").show();
+  // $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }
@@ -1441,6 +1462,7 @@ function getParameterByName(name) {
   return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+<<<<<<< HEAD
       </script>
     </atlantis:webstash>
     <!-- atlantis:webstash(type="css")-->
@@ -2480,12 +2502,93 @@ function getParameterByName(name) {
       
       });
     </script>
+=======
+        </script>
+      </atlantis:webstash>
+    </atlantis:webstash><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      
+    </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+    ##if(IsManager())
+    <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    ##endif
+  </head>
+  <body ng-controller="">
+    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADEREND-->
+    <section id="getItNow">
+      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
+            <h2 class="text-center">Here you go...</h2>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
+            <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
+              <h3 class="text-center">Domain Name</h3>
+              <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
+              <h3 class="text-center">Web Hosting</h3>
+              <p>Give your site a home that’ll keep it secure and running like sports car.</p>
+            </div>
+            <div class="plus">+</div>
+            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
+              <h3 class="text-center">Office 365 Email</h3>
+              <p>Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
+            <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
+            <button data-ci="96307" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+          </div>
+        </div>
+      </div>
+    </section>
+>>>>>>> ktudor/GCE-36138
     <section id="web-hosting" class="product-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
             <h2 class="text-center">Web Hosting</h2>
-            <h4 class="text-center">Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.</h4><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png" class="img-responsive product-summary">
+            <h4 class="text-center">Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.</h4>
+            <div style="width:auto;display:table;margin:40px auto;max-width:900px" class="product-summary text-center">
+              <div class="row">
+                <div style="padding:0;margin-bottom:30px;" class="col-md-4 col-md-push-4">
+                  <div style="display:table;margin:auto;"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-globe2.png" class="img-responsive"></div>
+                  <div style="margin:auto;" class="text-center">World Wide Web
+                    <div class="row"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png" style="margin:40px 0 0 12px;" class="hidden-sm hidden-xs img-responsive"></div>
+                  </div>
+                </div>
+                <div style="padding:0;margin-bottom:30px;" class="col-md-4 col-md-pull-4">
+                  <div class="row"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-up-right2.png" style="margin-left:33%;" class="hidden-sm hidden-xs img-responsive"></div>
+                  <div class="row"> 
+                    <div style="margin-top:-9%;padding:0;" class="col-md-offset-2 col-md-11 col-sm-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-server2.png" style="margin:auto;" class="img-responsive">
+                      <div style="margin:auto -10px;">GoDaddy Hosting  </div>
+                    </div>
+                  </div>
+                </div>
+                <div style="padding:0;margin-bottom:30px;" class="col-md-4">
+                  <div class="row"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-right-down2.png" style="margin-left:-33%;" class="hidden-sm hidden-xs img-responsive"></div>
+                  <div class="row">
+                    <div style="padding:0;" class="col-md-11 col-sm-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png" style="margin:auto;" class="img-responsive">
+                      <div class="text-center"><mark class="business-name-display">Domain Name</mark></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <p class="text-center">Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.</p>
           </div>
         </div>
@@ -2642,6 +2745,7 @@ ul li.no-check {
 }
 
       </style>
+<<<<<<< HEAD
       <!-- atlantis:webstash(type="css")-->
       <style>
         #domainSearchWizard {
@@ -2815,6 +2919,8 @@ ul li.no-check {
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
+=======
+>>>>>>> ktudor/GCE-36138
       <style>
         mark { line-height: 1.1em; word-break: break-all; }
         mark::after { height: 1.21em; }
@@ -2959,11 +3065,6 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        #domainSearchWizardSection { padding-bottom: 0; }
-        
-      </style>
-      <!-- atlantis:webstash(type="css")-->
-      <style>
         .why-us-title{margin-top:10px;}
         .why-us-text{margin-top:10px;}
         
@@ -3067,6 +3168,7 @@ ul li.no-check {
           }).css({'cursor':'pointer'});
         });
       });
+      
     </script>
   </body>
 </html>
