@@ -18,13 +18,13 @@ append vars
   - domainSearchWizard.showSearchButton         = true;
   - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the domain name as a string input */
 
-append headScripts
-  atlantis:webstash(type="js")
-    script.
-
-append pageStyles
+block domainSearchStyles
   // atlantis:webstash(type="css")
-  style.  //SearchEntry
+  style.
+    #domainSearchWizardSection { padding-bottom: 0; }
+
+  // atlantis:webstash(type="css")
+  style.  // domain-search-view
     #domainSearchWizard {
       margin:0 auto; 
       background-color: #77c043;
@@ -192,214 +192,215 @@ append pageStyles
     #domain-selected-view h2.searched-domain-name-display {margin: 0;}
     #domain-selected-view .reseach-container {padding-top: 10px;}
 
-section#domainSearchWizardSection.bg-primary-o
-  #domain-search-view.js-domain-search-wizard-section
-    .container
-      .row
-        .col-xs-12.col-sm-12
-          div.domain-search-wizard.domain-icon
-      .row
-        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-          h2.uppercase(style={'margin-bottom':'0px'}) domain name
-      .row
-        .col-xs-12.col-sm-12.text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
-      form(id="domainSearchViewForm")
+block domainSearchContent
+  section#domainSearchWizardSection.bg-primary-o
+    #domain-search-view.js-domain-search-wizard-section
+      .container
         .row
           .col-xs-12.col-sm-12
-            if(domainSearchWizard.title)
-              h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+            div.domain-search-wizard.domain-icon
         .row
-          .col-xs-12.col-sm-12.offer-search-box
-              .input-group
-                input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
-                if(domainSearchWizard.showSearchButton)
-                  span.input-group-btn
-                    button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
-        .row.domain-search-messaging-row
-          .col-xs-12.col-sm-12
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
-      .row.bubble-row.product-section
-        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-          mark Did you know...
-          p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
-        .col-xs-2
-          img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+          .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+        .row
+          .col-xs-12.col-sm-12.text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+        form(id="domainSearchViewForm")
+          .row
+            .col-xs-12.col-sm-12
+              if(domainSearchWizard.title)
+                h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+          .row
+            .col-xs-12.col-sm-12.offer-search-box
+                .input-group
+                  input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
+                  if(domainSearchWizard.showSearchButton)
+                    span.input-group-btn
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+          .row.domain-search-messaging-row
+            .col-xs-12.col-sm-12
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
+        .row.bubble-row.product-section
+          .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+            mark Did you know...
+            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+          .col-xs-2
+            img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-  #domain-available-view.js-domain-search-wizard-section
-    .container
-      .row
-        .col-xs-12.col-sm-12
-          div.domain-search-wizard.domain-icon
-      .row
-        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-          h2.uppercase(style={'margin-bottom':'0px'}) domain name
-      .row
-        .col-xs-12.col-sm-12.text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business.
-      form(id="domainAvailableViewSearchForm")
+    #domain-available-view.js-domain-search-wizard-section
+      .container
         .row
           .col-xs-12.col-sm-12
-            if(domainSearchWizard.title)
-              h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+            div.domain-search-wizard.domain-icon
         .row
-          .col-xs-12.col-sm-12.offer-search-box
-              .input-group
-                input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
-                if(domainSearchWizard.showSearchButton)
-                  span.input-group-btn
-                    button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
-        .row.domain-search-messaging-row
-          .col-xs-12.col-sm-12
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
-      .row
-        .col-xs-12.col-sm-12.text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'}) Here's our favorite for <mark class="business-name-display">{0}</mark>
-      .row#available-domain.bg-light
-        .col-md-9.white
-          span.domain-name-display.lowercase.available-domain-name#available-domain-name
-        .col-md-3.white
-          button.btn.btn-primary.select-and-continue.available-domain-name.uppercase Select
-          .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-          .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
-
-    .container.other-domains.spin-container
-      .row
-        .col-md-12
-          h5(style={'margin-top':'20px'}) <strong>That one not moving you? Here are some alternatives:</strong>
-          h6.results-list-heading-text 
-            span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
-            button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
-      .spin-results(style={'margin-top':'10px'})
-      .spin-template-wrap
-        .row.spin-template.spin-result.searched-domain-name-row.bg-light
+          .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+        .row
+          .col-xs-12.col-sm-12.text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business.
+        form(id="domainAvailableViewSearchForm")
+          .row
+            .col-xs-12.col-sm-12
+              if(domainSearchWizard.title)
+                h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+          .row
+            .col-xs-12.col-sm-12.offer-search-box
+                .input-group
+                  input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
+                  if(domainSearchWizard.showSearchButton)
+                    span.input-group-btn
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+          .row.domain-search-messaging-row
+            .col-xs-12.col-sm-12
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
+        .row
+          .col-xs-12.col-sm-12.text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) Here's our favorite for <mark class="business-name-display">{0}</mark>
+        .row#available-domain.bg-light
           .col-md-9.white
-            span.domain-name-display.lowercase
+            span.domain-name-display.lowercase.available-domain-name#available-domain-name
           .col-md-3.white
-            button.btn.btn-primary.select-and-continue.uppercase Select
+            button.btn.btn-primary.select-and-continue.available-domain-name.uppercase Select
             .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
             .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
-      .row.show-more-section
-        .col-md-12
+      .container.other-domains.spin-container
+        .row
+          .col-md-12
+            h5(style={'margin-top':'20px'}) <strong>That one not moving you? Here are some alternatives:</strong>
+            h6.results-list-heading-text 
+              span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
+              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+        .spin-results(style={'margin-top':'10px'})
+        .spin-template-wrap
+          .row.spin-template.spin-result.searched-domain-name-row.bg-light
+            .col-md-9.white
+              span.domain-name-display.lowercase
+            .col-md-3.white
+              button.btn.btn-primary.select-and-continue.uppercase Select
+              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+
+        .row.show-more-section
+          .col-md-12
+            h6.text-center(style={'margin-top':'10px'})
+              span.clickable-show-more(data-ci="95268") See more
+              span.show-more-arrow
+        .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
+          .col-md-12.text-center
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
+        .row.bubble-row.product-section
+          .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+            mark Did you know...
+            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+          .col-xs-2
+            img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+
+    #domain-not-available-view.js-domain-search-wizard-section
+      .container
+        .row
+          .col-xs-12.col-sm-12
+            div.domain-search-wizard.domain-icon
+        .row
+          .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+        .row
+          .col-xs-12.col-sm-12.text-center
+            h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+        form(id="domainNotAvailableViewSearchForm")
+          .row
+            .col-xs-12.col-sm-12
+              if(domainSearchWizard.title)
+                h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+          .row
+            .col-xs-12.col-sm-12.offer-search-box
+                .input-group
+                  input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
+                  if(domainSearchWizard.showSearchButton)
+                    span.input-group-btn
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+          .row.domain-search-messaging-row
+            .col-xs-12.col-sm-12
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
+        .row.searched-domain-name-row
+          .col-xs-12.col-sm-12.text-center
+            h2.domain-name-displayed.word-break Sorry, <mark class="searched-domain-name-display"></mark> is taken.
+
+      .container.other-domains.spin-container
+        .row
+          .col-md-12
+            h5(style={'margin-top':'20px'}) <strong>Here are some alternative options alternatives:</strong>
+            h6.results-list-heading-text 
+              span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
+              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+        .spin-results(style={'margin-top':'10px'})
+        .spin-template-wrap
+          .row.spin-template.spin-result.searched-domain-name-row.bg-light
+            .col-md-9.white
+              span.domain-name-display.lowercase
+            .col-md-3.white
+              button.btn.btn-primary.select-and-continue.uppercase Select
+              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+
+        .row.show-more-section
           h6.text-center(style={'margin-top':'10px'})
             span.clickable-show-more(data-ci="95268") See more
             span.show-more-arrow
-      .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-md-12.text-center
-          btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
-      .row.bubble-row.product-section
-        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-          mark Did you know...
-          p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
-        .col-xs-2
-          img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
+          .col-md-12.text-center
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
+        .row.bubble-row.product-section
+          .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+            mark Did you know...
+            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+          .col-xs-2
+            img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-  #domain-not-available-view.js-domain-search-wizard-section
-    .container
-      .row
-        .col-xs-12.col-sm-12
-          div.domain-search-wizard.domain-icon
-      .row
-        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-          h2.uppercase(style={'margin-bottom':'0px'}) domain name
-      .row
-        .col-xs-12.col-sm-12.text-center
-          h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
-      form(id="domainNotAvailableViewSearchForm")
+    #domain-selected-view.js-domain-search-wizard-section
+      .container#selected-domain
         .row
           .col-xs-12.col-sm-12
-            if(domainSearchWizard.title)
-              h2.headline-primary.get-a-domain-text !{domainSearchWizard.title}
+            div.domain-search-wizard.domain-icon
         .row
-          .col-xs-12.col-sm-12.offer-search-box
-              .input-group
-                input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
-                if(domainSearchWizard.showSearchButton)
-                  span.input-group-btn
-                    button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
-        .row.domain-search-messaging-row
-          .col-xs-12.col-sm-12
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-            .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
-      .row.searched-domain-name-row
-        .col-xs-12.col-sm-12.text-center
-          h2.domain-name-displayed.word-break Sorry, <mark class="searched-domain-name-display"></mark> is taken.
+          .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+        .row
+          .col-xs-12.col-sm-12.text-center
+            h4.strong Congratulations! You have selected the following domain name:
+        .row.searched-domain-name-row
+          .col-xs-12.col-sm-12.text-center
+            h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
+        .row(style={'padding-top':'30px','padding-bottom':'10px'})
+          .col-xs-12.col-sm-12.text-center
+            btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
+        .row(style={'padding-top':'30px','padding-bottom':'10px'})
+          .col-xs-12.col-sm-12.text-center
+            btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
+            btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
+        .row.bubble-row.product-section
+          .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+            mark Did you know...
+            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+          .col-xs-2
+            img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-    .container.other-domains.spin-container
-      .row
-        .col-md-12
-          h5(style={'margin-top':'20px'}) <strong>Here are some alternative options alternatives:</strong>
-          h6.results-list-heading-text 
-            span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
-            button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
-      .spin-results(style={'margin-top':'10px'})
-      .spin-template-wrap
-        .row.spin-template.spin-result.searched-domain-name-row.bg-light
-          .col-md-9.white
-            span.domain-name-display.lowercase
-          .col-md-3.white
-            button.btn.btn-primary.select-and-continue.uppercase Select
-            .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-            .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+    #api-failure.sf-dialog.api-B-failure
+      h2.api-error-header
+        img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
+        div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
+      p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
 
-      .row.show-more-section
-        h6.text-center(style={'margin-top':'10px'})
-          span.clickable-show-more(data-ci="95268") See more
-          span.show-more-arrow
-      .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-md-12.text-center
-          btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
-      .row.bubble-row.product-section
-        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-          mark Did you know...
-          p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
-        .col-xs-2
-          img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
-
-  #domain-selected-view.js-domain-search-wizard-section
-    .container#selected-domain
-      .row
-        .col-xs-12.col-sm-12
-          div.domain-search-wizard.domain-icon
-      .row
-        .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-          h2.uppercase(style={'margin-bottom':'0px'}) domain name
-      .row
-        .col-xs-12.col-sm-12.text-center
-          h4.strong Congratulations! You have selected the following domain name:
-      .row.searched-domain-name-row
-        .col-xs-12.col-sm-12.text-center
-          h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
-      .row(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-xs-12.col-sm-12.text-center
-          btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
-      .row(style={'padding-top':'30px','padding-bottom':'10px'})
-        .col-xs-12.col-sm-12.text-center
-          btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
-          btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
-      .row.bubble-row.product-section
-        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-          mark Did you know...
-          p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
-        .col-xs-2
-          img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
-
-  #api-failure.sf-dialog.api-B-failure
-    h2.api-error-header
-      img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
-      div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
-    p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
-
-append endOfPageScripts
+block domainSearchEndOfPageScripts
   script.
     var domainSearchViewForm = {
       executeFnByName: function(name, context) {

@@ -3,6 +3,8 @@ extends _p4p.jade
 append vars
   - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
 
+block domainSearchScripts
+
 append pageStyles
   style.  
     #pro-specific h2 { margin-bottom: 0; }
@@ -17,6 +19,7 @@ append pageStyles
     .uppercase{text-transform: uppercase;}
     .orange-text{color: #ef6c0f;}
 
+block domainSearchStyles
 block bubbleContent
   h2.text-center Here you go...
   h3.text-center An ecommerce design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
@@ -42,7 +45,8 @@ block productContent
           button.btn.btn-purchase.btn-lg GET IT NOW
           p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
 
-block domainOrPro
+block domainSearchContent
+block proInterview
   section#pro-specific.bg-primary-o.product-section
     .container
       .row
@@ -138,3 +142,4 @@ prepend endOfPageScripts
     function openPopUpWithParams (url, windowName, windowParams) {
             window.open(url, windowName, windowParams);
     }  
+block domainSearchEndOfPageScripts
