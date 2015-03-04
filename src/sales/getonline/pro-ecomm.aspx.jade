@@ -57,7 +57,7 @@ block productContent
           input(type="hidden", name="cicode", value="96315")
           input(type="hidden", name="prog_id", value="GoDaddy")
           button.btn.btn-purchase.btn-lg GET IT NOW
-          p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+          p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
 
 block domainSearchContent
 block proInterview
@@ -104,13 +104,13 @@ block productSection
           h2.text-center See what we can do
           h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
           button#external.btn.btn-default-dark.center-block View Our Portfolio
-      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
         .container
           div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
-      .row.bubble-row
+      .row.bubble-row(style={'margin-top': '0px'})
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
@@ -129,7 +129,7 @@ block bottomGetItNow
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png")
         .col-xs-6
           h3.product-name Ecommerce Design Services
-          p.p1 Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business
+          p.p1 Our Professional Web Services team will work with you to build a complete online store your customers will love.
           .col-xs-12.text-center
             form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
               input(type="hidden", name="product", value="1023|1|1")
@@ -143,7 +143,7 @@ block bottomGetItNow
               input(type="hidden", name="cicode", value="96314")
               input(type="hidden", name="prog_id", value="GoDaddy")
               button.btn.btn-purchase.btn-lg GET IT NOW
-              p.p2 or Give us a call <span class = "orange-text">(480) 366-3344</span>
+              p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
 
 prepend endOfPageScripts
   script.

@@ -173,7 +173,7 @@
               <input type="hidden" name="cicode" value="96315">
               <input type="hidden" name="prog_id" value="GoDaddy">
               <button class="btn btn-purchase btn-lg">GET IT NOW</button>
-              <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+              <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
             </form>
           </div>
         </div>
@@ -232,7 +232,7 @@
             <button id="external" class="btn btn-default-dark center-block">View Our Portfolio</button>
           </div>
         </div>
-        <section data-youtube-id="" class="video-marquee-wrapper">
+        <section data-youtube-id="" style="padding-bottom:0px" class="video-marquee-wrapper">
           <div class="container">
             <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
@@ -241,7 +241,7 @@
             </div>
           </div>
         </section>
-        <div class="row bubble-row">
+        <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark>Did you know...</mark>
@@ -287,7 +287,7 @@
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
             <h3 class="product-name">Ecommerce Design Services</h3>
-            <p class="p1">Our Proffesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business</p>
+            <p class="p1">Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
                 <input type="hidden" name="product" value="1023|1|1">
@@ -301,7 +301,7 @@
                 <input type="hidden" name="cicode" value="96314">
                 <input type="hidden" name="prog_id" value="GoDaddy">
                 <button class="btn btn-purchase btn-lg">GET IT NOW</button>
-                <p class="p2">or Give us a call <span class = "orange-text">(480) 366-3344</span></p>
+                <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
               </form>
             </div>
           </div>
