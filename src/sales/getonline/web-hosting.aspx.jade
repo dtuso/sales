@@ -21,9 +21,9 @@ append vars
   - productToDisplay.packageId = "getonline_web_hosting";
   - productToDisplay.itcCode = "slp_getonline_hosting";
   - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/web-hosting.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
-  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='monthly' promocode='75315678' />]@T]";
-  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='yearly' promocode='75315678' />]@T]";
-  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32051' period='yearly'></list>]@T]";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='101|32051' period='monthly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='101|32051' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='101|32051' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car.";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
   - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
@@ -44,11 +44,30 @@ append vars
   - productToDisplay.hostingFlow.arrowL = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png";
   - productToDisplay.hostingFlow.site = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png";
 
-block targetedProduct
-  .column.website
-    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
-    h3.text-center #{productToDisplay.name}
-    p #{productToDisplay.getItNowDescription}
+append pageStyles
+  style.
+    .column {width: 35%; display: inline-block;vertical-align:top;}
+    .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black; margin-top:25px;}
+    #bottomGetItNow.bg-medium.column {width: 30%;!important}
+
+block productContent
+  .row
+    .col-xs-12.col-sm-8.col-sm-offset-4.products
+      .column.domain
+        img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+        h3.text-center Domain Name
+        p Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
+      .plus +
+      block targetedProduct
+        .column.website
+          img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+          h3.text-center #{productToDisplay.name}
+          p #{productToDisplay.getItNowDescription}
+  .row
+    .col-xs-12.col-sm-9.col-sm-offset-3.cta
+      p.text-center.price-token Get the bundle for {price_monthly}/month for the first year*
+      button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
+      small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 block productSection
   section#web-hosting.product-section
@@ -88,7 +107,40 @@ block productSection
           mark Did you know...
           p #{productToDisplay.productDidYouKnowText}
 
-block bottomTargetedProduct
-  .column.website
-    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
-    h3 #{productToDisplay.name}
+block office365
+  section#O365-email.product-section.bg-medium
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
+          h2.text-center Memorable Email
+          h3.text-center Create up to 100 branded addresses that are built on your domain name.
+          .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
+      .row.bubble-row
+        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
+          mark Did you know...
+          p Customers are 9 times more likely to choose a business with a professional email address?*
+        .col-xs-2
+          img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+
+block bottomGetItNow
+  section#bottomGetItNow.bg-medium
+    .container.text-center
+      .row
+        h2 Ready to Get Online?
+        h3#got-domain-not-selected First select your perfect domain
+        h3#got-domain-selected.price-token(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
+      .row
+        .column.domain
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+          h3 Domain Name
+        .plus +
+        block bottomTargetedProduct
+          .column.website
+            img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+            h3 #{productToDisplay.name}
+      .row
+        h3.price-token {price_monthly}/month for the first year*
+        button(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
+        button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
+        small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year

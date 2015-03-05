@@ -89,9 +89,9 @@
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
           pricing: {
-            promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='monthly' promocode='75315678' />]@T]",
-            promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|32051' period='yearly' promocode='75315678' />]@T]",
-            renewal_annual: "[@T[multipleproductprice:<list productidlist='464069|101|32051' period='yearly'></list>]@T]"
+            promo_monthly: "[@T[multipleproductprice:<current productidlist='101|32051' period='monthly' promocode='75315678' />]@T]",
+            promo_annual: "[@T[multipleproductprice:<current productidlist='101|32051' period='yearly' promocode='75315678' />]@T]",
+            renewal_annual: "[@T[multipleproductprice:<list productidlist='101|32051' period='yearly'></list>]@T]"
           }
         };
         // Page Global script -- changes will effect all campaigns 
@@ -737,7 +737,7 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
+          <div class="col-xs-12 col-sm-8 col-sm-offset-4 products">
             <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">Domain Name</h3>
               <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
@@ -746,11 +746,6 @@ function getParameterByName(name) {
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
               <h3 class="text-center">Web Hosting</h3>
               <p>Give your site a home that’ll keep it secure and running like sports car.</p>
-            </div>
-            <div class="plus">+</div>
-            <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
-              <h3 class="text-center">Office 365 Email</h3>
-              <p>Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. </p>
             </div>
           </div>
         </div>
@@ -1082,8 +1077,8 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
-            <h2 class="text-center">Office 365 Email</h2>
-            <h3 class="text-center">Branded email to talk to your customers</h3>
+            <h2 class="text-center">Memorable Email</h2>
+            <h3 class="text-center">Create up to 100 branded addresses that are built on your domain name.</h3>
             <div class="h2 text-center product-summary"><mark>yourname@<span class="selected-domain-name-display"></span></mark></div>
           </div>
         </div>
@@ -1139,10 +1134,6 @@ function getParameterByName(name) {
           <div class="plus">+</div>
           <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
             <h3>Web Hosting</h3>
-          </div>
-          <div class="plus">+</div>
-          <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
-            <h3>Office 365 Email</h3>
           </div>
         </div>
         <div class="row">
@@ -1560,6 +1551,12 @@ ul li.no-check {
         #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
         #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
+        
+      </style>
+      <style>
+        .column {width: 35%; display: inline-block;vertical-align:top;}
+        .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black; margin-top:25px;}
+        #bottomGetItNow.bg-medium.column {width: 30%;!important}
         
       </style>
     </atlantis:webstash>
