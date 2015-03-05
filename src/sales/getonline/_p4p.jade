@@ -99,8 +99,13 @@ append headScripts
           $(document).ready(function(){
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
-              domainSearchFormSubmit('', offerInfo.businessName);
-           }
+
+              if(getParameterByName('tldRegErr').length > 0) {
+                showDomainRegistrationFailure();
+              } else {
+                domainSearchFormSubmit('', offerInfo.businessName);
+              }
+            }
           });
         script(type="text/javascript")
           include:js templates/domain-selection.js

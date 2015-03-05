@@ -100,7 +100,7 @@ function updateSearchedDomain(e, domain) {
   $(document).find('.searched-domain-name-display').text(domain);
 }
 
-function updateRecommendedDomainName(domain) {
+function updateRecommendedDomain(domain) {
   if(domainSearch.selectedDomainName == '')
     $(document).find('.selected-domain-name-display').text(domain);
 }
@@ -108,6 +108,10 @@ function updateRecommendedDomainName(domain) {
 function updateSelectedDomain(domain) {
   domainSearch.selectedDomainName = domain;
   $(document).find('.selected-domain-name-display').text(domain);
+}
+
+function updateNotAvailableDomain(e, domain) {
+  $(document).find('.not-available-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -242,7 +246,7 @@ function domainSearchFormSubmit(e, domain) {
 
       if(isAvailable) {
 
-        updateRecommendedDomainName(exactMatchDomain.Fqdn);
+        updateRecommendedDomain(exactMatchDomain.Fqdn);
 
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
@@ -263,8 +267,9 @@ function domainSearchFormSubmit(e, domain) {
       } else {
 
         // tokenize header on search available page
-        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
-        $('#domain-not-available-view').show();
+        // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        // $('#domain-not-available-view').show();
+        updateNotAvailableDomain('', exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
