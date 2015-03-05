@@ -13,7 +13,7 @@
     .right-arrow .leftContent{width:80%; margin-left:10%;}
     .right-arrow .rightContent{width:70%}
     .right-arrow .rightContent .btn{margin:5% 0}
-    .Explorer .right-arrow .arrow{background-size: 100% 100%;}
+    .Explorer .right-arrow .arrow{background-size: 100% 100% !important;}
     
   </style>
   <style>.hero.right-arrow.ssl-scrawny-price .rightContent {
