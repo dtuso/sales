@@ -17,9 +17,10 @@ append vars
 
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "Website Builder";
-  - productToDisplay.landingPage = "websitebuilder.aspx"
+  - productToDisplay.landingPage = "getonline/websitebuilder.aspx"
   - productToDisplay.packageId = "getonline_website_builder";
   - productToDisplay.itcCode = "slp_getonline_wsb";
+  - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/websitebuilder.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]";

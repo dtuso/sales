@@ -86,7 +86,6 @@
       <script>
         var offerInfo = {
           businessName: "",
-          dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
           packageId: "",
           itcCode: "",
           pricing: {
@@ -287,7 +286,7 @@
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
             <h3 class="product-name">Ecommerce Design Services</h3>
-            <p class="p1">Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+            <p class="p1">Our Profesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business.</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
                 <input type="hidden" name="product" value="1023|1|1">

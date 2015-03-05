@@ -86,7 +86,6 @@
       <script>
         var offerInfo = {
           businessName: "",
-          dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/web-hosting.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
           pricing: {
@@ -154,35 +153,6 @@ if (!Array.prototype.indexOf){
   };
 }
 
-var domainSearch = {
-  tldInfo: {
-    defaultTld: 'com', 
-    lastTldInList: 'org', 
-    tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
-    possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
-    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
-  },
-  sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
-  maxNumberOfSpinsToShowByDefault: 3,
-  totalSpinResults: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
-  // pricing: {
-  //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-  //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
-  //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-  //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
-  //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-  // },
-  // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-  // canOfferOls: true,
-  animationTime: 800,
-  animationEasingType: 'swing',
-  isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
-  showChoicesWithAvailableDomain: true,
-  showTypeYourBusinessName: false,
-  selectedDomainName: ''
-};
-
 // ##if(!productIsOffered(105))
 //   domainSearch.canOfferOls = false;
 // ##endif
@@ -228,10 +198,10 @@ $(document).ready(function() {
   // showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
   
   //- fix up list of valid tlds from lang files
-  showAndOrderDynamicTldsInList("#products .TLD-token");
-  showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
-  showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
-  // showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
+  // showAndOrderDynamicTldsInList("#products .TLD-token");
+  // showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
+  // showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
+  showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
@@ -255,7 +225,7 @@ $(document).ready(function() {
   // $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
-  $('#bottomSearchAgain').on('click', function() {$('#wizardSearchAgain').click(); goToDomainSearchWizard();});
+  $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
   $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
@@ -514,8 +484,9 @@ function validDomainSelected(e){
   updateSelectedDomain(domain.Fqdn);
 
   $(document).find('.btn-purchase').data('domain', domain);
-  $('#got-domain-selected').show();
   $('#got-domain-not-selected').hide();
+  $('#got-domain-selected').show();
+  $('#bottomSearchAgain').show();
 
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
@@ -523,7 +494,6 @@ function validDomainSelected(e){
 }
 
 function navigateToSearchAgain(e) { 
-  // $("#domainAvailableViewSearchForm").show();
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
 }
@@ -539,13 +509,14 @@ function goToCheckOut(e) {
 
 function goToDomainSearchWizard()
 {
-  $('#domainSearchWizardSection').show();
+  var $thisSection = $('#domain-selected-view');
+  animateWizard($thisSection, $('#domain-search-view'));
   window.location.href = '#domainSearchWizardSection';
 }
 
 function goToShowProducts()
 {
-  window.location.href = '#got';
+  window.location.href = '#bottomGetItNow';
 }
 
 function goToDppCheckoutPage(e) {
@@ -1176,7 +1147,7 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <h3 class="price-token">{price_monthly}/month for the first year*</h3>
-          <button data-ci="96310" id="bottomSearchAgain" class="btn btn-primary btn-search-again btn-lg">Search Again</button>
+          <button data-ci="96310" style="display: none;" id="bottomSearchAgain" class="btn btn-primary btn-search-again btn-lg">Search Again</button>
           <button data-ci="96306" class="btn btn-purchase btn-lg">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
         </div>
       </div>
@@ -1679,6 +1650,35 @@ ul li.no-check {
       
     </script>
     <script>
+      var domainSearch = {
+        tldInfo: {
+          defaultTld: 'com', 
+          lastTldInList: 'org', 
+          tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
+          possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
+          isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
+        },
+        sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
+        maxNumberOfSpinsToShowByDefault: 3,
+        totalSpinResults: 0,
+        dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/web-hosting.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
+        // pricing: {
+        //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
+        //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
+        //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
+        //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
+        //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
+        // },
+        // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
+        // canOfferOls: true,
+        animationTime: 800,
+        animationEasingType: 'swing',
+        isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
+        showChoicesWithAvailableDomain: true,
+        showTypeYourBusinessName: false,
+        selectedDomainName: ''
+      };
+      
       var domainSearchViewForm = {
         executeFnByName: function(name, context) {
           

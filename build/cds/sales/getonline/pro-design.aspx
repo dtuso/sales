@@ -86,7 +86,6 @@
       <script>
         var offerInfo = {
           businessName: "",
-          dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
           packageId: "",
           itcCode: "",
           pricing: {
