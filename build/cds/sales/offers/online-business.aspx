@@ -382,11 +382,14 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section');       
+        var $thisSection = $this.closest('.js-marquee-section'); 
 
-        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+        var $toView = $('#domain-available-marquee-view');
+        $toView.find('.purchase-btn').data('domain', exactMatchDomain);
+        $toView.find('.search-message').hide();
+        $toView.find('.search-message.type-your-business-name').show();
 
-        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        animateMarquee($thisSection, $toView /*toView*/);
 
       } else {
 
@@ -492,7 +495,7 @@ function goToDppCheckoutPage(e) {
     apiEndpoint3,
     returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain.Fqdn)));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
@@ -547,7 +550,10 @@ function showSearchSpins($this, domain, alternateDomains){
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
-  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  var $toView = $('#domain-not-available-marquee-view');
+  $toView.find('.search-message').hide();
+  $toView.find('.search-message.type-your-business-name').show();
+  animateMarquee($thisSection, $toView /*toView*/);
 
 }
 
@@ -717,88 +723,10 @@ $(window).load(function () {
           color: #333; 
         }
         
-        .offer-search-box { padding-bottom:20px;}
-        .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-        .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
           margin: 20px 0 5px;
           font-size:24px;
         }
-        
-        /*  speech */
-        
-        .speech-shape-upsidedown {
-          line-height: 1.9em;
-          font-size: 18px;
-          padding: 5px 17px;
-          color: #fff;
-          display: inline-block;
-          position: relative;
-          margin-bottom: 20px;
-          z-index: 2;
-        }
-        .speech-shape-upsidedown .shape-text {
-          position: relative;
-          z-index: 40;
-        }
-        .speech-shape-upsidedown:before {
-          content: '';
-          position: absolute;
-          top: -15px;
-          left: 0;
-          border-bottom: 15px solid;
-          border-right: 15px solid transparent;
-        }
-        .speech-shape-upsidedown:after {
-          content: '';
-          position: absolute;
-          height: 100%;
-          width:20px;
-          right: -6px;
-          top: 0;
-          transform: skew(12deg, 0);
-          z-index: 1;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-green {
-          background-color: #008a32;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-          border-bottom-color: #008a32;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-          background-color: #008a32;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-          background-color: #ef6c0f;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-          border-bottom-color: #ef6c0f;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-          background-color: #ef6c0f;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-white {
-          background-color: #fff;
-          color: #333;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-          border-bottom-color: #fff;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-          background-color: #fff;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-          background-color: #fedc45;
-          color: #333;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-          border-bottom-color: #fedc45;
-        }
-        .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-          background-color: #fedc45;
-        }
-        
-        /* (end) speech */
         
       </style>
     </atlantis:webstash>
