@@ -13,15 +13,17 @@ append vars
   - domainSearchWizard.infoTypeHere             = "[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]";
   - domainSearchWizard.infoErrorEligibility     = "[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]";
   - domainSearchWizard.infoInvalidTld           = "[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart      = "placeholderText";
-  - domainSearchWizard.dupDomainInCartCiCode    = "placeholder CI code";
+  - domainSearchWizard.infoDupDomainInCart      = "[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.dupDomainInCartCiCode    = "placeholderCIcode";
   - domainSearchWizard.showSearchButton         = true;
   - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the domain name as a string input */
+  - domainSearchWizard.initialViewId            = "domain-available-view";
 
 mixin domainSearchStyles()
   // atlantis:webstash(type="css")
   style.
     #domainSearchWizardSection { padding-bottom: 0; }
+    .results-list-heading-text {margin-top: 10px; margin-bottom: 10px;}
 
   // atlantis:webstash(type="css")
   style.  // domain-search-view
@@ -30,11 +32,6 @@ mixin domainSearchStyles()
       background-color: #77c043;
     }
     
-    #api-failure,
-    #domain-available-view,
-    #domain-not-available-view,
-    #domain-selected-view {display: none; }
-
     #domainSearchWizard .domain-name-displayed {
       font-size: 60px;
       text-transform: lowercase; 
@@ -164,7 +161,7 @@ mixin domainSearchStyles()
 
     #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
     #domain-available-view .select-and-continue{margin:10px 0;float:right;}
-    #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+    #domain-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
 
     #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
     #domain-available-view h2.searched-domain-name-display {margin: 0;}
@@ -177,11 +174,10 @@ mixin domainSearchStyles()
 
     #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
     #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
-    #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+    #domain-not-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
 
-    #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
-    #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
-    #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
+    #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
+    #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
 
     // Turn off search input message display
     .search-message {display: none; text-transform: none; }
@@ -194,7 +190,7 @@ mixin domainSearchStyles()
 
 mixin domainSearchContent()
   section#domainSearchWizardSection.bg-primary-o
-    #domain-search-view.js-domain-search-wizard-section
+    #domain-search-view.js-domain-search-wizard-section(style={'display':'none'})
       .container
         .row
           .col-xs-12.col-sm-12
@@ -230,7 +226,7 @@ mixin domainSearchContent()
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-    #domain-available-view.js-domain-search-wizard-section
+    #domain-available-view.js-domain-search-wizard-section(style={'display':'none'})
       .container
         .row
           .col-xs-12.col-sm-12
@@ -290,8 +286,9 @@ mixin domainSearchContent()
         .row.show-more-section
           .col-md-12
             h6.text-center(style={'margin-top':'10px'})
-              span.clickable-show-more(data-ci="95268") See more
-              span.show-more-arrow
+              span.clickable-show-more(data-ci="95268")
+                span See more
+                span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
             btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
@@ -302,7 +299,7 @@ mixin domainSearchContent()
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-    #domain-not-available-view.js-domain-search-wizard-section
+    #domain-not-available-view.js-domain-search-wizard-section(style={'display':'none'})
       .container
         .row
           .col-xs-12.col-sm-12
@@ -331,9 +328,9 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
-        .row.searched-domain-name-row
+        .row.not-available-domain-name-row
           .col-xs-12.col-sm-12.text-center
-            h2.domain-name-displayed.word-break Sorry, <mark class="searched-domain-name-display"></mark> is taken.
+            h2.not-available-domain-name-display.word-break Sorry, <mark class="not-available-domain-name-display"></mark> is taken.
 
       .container.other-domains.spin-container
         .row
@@ -354,8 +351,9 @@ mixin domainSearchContent()
 
         .row.show-more-section
           h6.text-center(style={'margin-top':'10px'})
-            span.clickable-show-more(data-ci="95268") See more
-            span.show-more-arrow
+              span.clickable-show-more(data-ci="95268")
+                span See more
+                span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
             btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
@@ -366,7 +364,7 @@ mixin domainSearchContent()
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-    #domain-selected-view.js-domain-search-wizard-section
+    #domain-selected-view.js-domain-search-wizard-section(style={'display':'none'})
       .container#selected-domain
         .row
           .col-xs-12.col-sm-12
@@ -394,7 +392,7 @@ mixin domainSearchContent()
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
-    #api-failure.sf-dialog.api-B-failure
+    #api-failure.sf-dialog.api-B-failure(style={'display':'none'})
       h2.api-error-header
         img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
         div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
@@ -428,7 +426,20 @@ mixin domainSearchEndOfPageScripts()
       isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
       showChoicesWithAvailableDomain: true,
       showTypeYourBusinessName: false,
-      selectedDomainName: ''
+      selectedDomainName: '',
+      initialViewId: '#{domainSearchWizard.initialViewId}'
+    };
+
+    var domainSearchWizard = {
+      visibleView: function() {
+        var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section'),
+            visibleSection;
+        $.each(sections, function(index, section) {
+          if(section.style['display'] != 'none') visibleSection = $(document).find('#' + section.id);
+        });
+
+        return visibleSection;
+      }
     };
 
     var domainSearchViewForm = {
@@ -758,99 +769,125 @@ mixin domainSearchEndOfPageScripts()
       }
     };
 
+    function showDomainRegistrationFailure() {
+
+
+      // display error on return from DPP's TLD eligibility requirements failure
+      var tldErr = getParameterByName('tldRegErr'),
+          dppHasError = tldErr.length > 0,
+          dupErr = getParameterByName('dppError');
+
+      if(dppHasError) {
+        // note by default tldRegErr will be on the url query string
+        // if it's a dup, dpp will add in an additional parameter to let us know
+        switch(dupErr){
+          
+          case("dup"):
+            $('#domainSearchViewForm .search-message').hide();
+            $('#domainSearchViewForm .dup-domain-fail').show();
+            break;
+
+          default:
+            var $failArea = $('#domainSearchViewForm .domain-eligibility-fail'), 
+                html = $failArea.html();
+            html = html.replace(/\{0\}/gi, tldErr)
+            $failArea.html(html);
+            $('#domainSearchViewForm .search-message').hide();
+            $('#domainSearchViewForm .domain-eligibility-fail').show();
+            break;
+
+        }
+
+        // Should already be in serarch view
+        // animateWizard($('#domainSearchViewForm'), $('#domain-not-available-view'));
+      }
+    };
+
     $(document).ready(function(){
 
-      var $form = $("#domainSearchViewForm");
-      $form.on('click', 'button.offer-search-btn', function(){
-        $form.submit();
+      $(document).find('#' + domainSearch.initialViewId).show();
+
+      var $domainSearchViewForm = $("#domainSearchViewForm");
+      $domainSearchViewForm.on('click', 'button.offer-search-btn', function(){
+        $domainSearchViewForm.submit();
       });
-      $form.on('submit', domainSearchViewForm.validateSubmit);
-      $form.on('keyup', function(e){ 
+      $domainSearchViewForm.on('submit', domainSearchViewForm.validateSubmit);
+      $domainSearchViewForm.on('keyup', function(e){ 
         if(e.which == 13) return;
         var domainName = domainSearchViewForm.trimmedDomainName(true);
         if(!domainName || domainName.length == 0) return;
         domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         domainSearchViewForm.ensureValidTld(domainName);
       });
-      domainSearchViewForm.showTypeYourBusinessName($form);
+      domainSearchViewForm.showTypeYourBusinessName($domainSearchViewForm);
 
-      $form = $("#domainAvailableViewSearchForm");
-      $form .on('click', 'button.offer-search-btn', function(){
-        $form .submit();
+      var $domainAvailableViewSearchForm = $("#domainAvailableViewSearchForm");
+      $domainAvailableViewSearchForm .on('click', 'button.offer-search-btn', function(){
+        $domainAvailableViewSearchForm .submit();
       });
-      $form .on('submit', domainAvailableViewSearchForm.validateSubmit);
-      $form .on('keyup', function(e){ 
+      $domainAvailableViewSearchForm .on('submit', domainAvailableViewSearchForm.validateSubmit);
+      $domainAvailableViewSearchForm .on('keyup', function(e){ 
         if(e.which == 13) return;
         var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
         if(!domainName || domainName.length == 0) return;
         domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         domainAvailableViewSearchForm.ensureValidTld(domainName);
       });
-      domainAvailableViewSearchForm.showTypeYourBusinessName($form);
+      domainAvailableViewSearchForm.showTypeYourBusinessName($domainAvailableViewSearchForm);
 
-      $form = $("#domainNotAvailableViewSearchForm");
-      $form.on('click', 'button.offer-search-btn', function(){
-        $form.submit();
+      var $domainNotAvailableViewSearchForm = $("#domainNotAvailableViewSearchForm");
+      $domainNotAvailableViewSearchForm.on('click', 'button.offer-search-btn', function(){
+        $domainNotAvailableViewSearchForm.submit();
       });
-      $form.on('submit', domainNotAvailableViewSearchForm.validateSubmit);
-      $form.on('keyup', function(e){ 
+      $domainNotAvailableViewSearchForm.on('submit', domainNotAvailableViewSearchForm.validateSubmit);
+      $domainNotAvailableViewSearchForm.on('keyup', function(e){ 
         if(e.which == 13) return;
         var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
         if(!domainName || domainName.length == 0) return;
         domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
         domainNotAvailableViewSearchForm.ensureValidTld(domainName);
       });
-      domainNotAvailableViewSearchForm.showTypeYourBusinessName($form);
+      domainNotAvailableViewSearchForm.showTypeYourBusinessName($domainNotAvailableViewSearchForm);
 
-
-      // // From domain-selection.js
-      // // *******************************************************************************
+      //- // *******************************************************************************
       //- //- display error on return from DPP's TLD eligibility requirements failure
       //- if(getParameterByName('tldRegErr').length > 0) {
       //-   showDomainRegistrationFailure(getParameterByName('tldRegErr'));
       //- }
 
       // 
-      //- function showDomainRegistrationFailure(tld) {
-      //-   var 
-      //-     $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
-      //-     html = $failArea.html();
-      //-   html = html.replace(/\{0\}/gi, tld)
-      //-   $failArea.html(html);
-      //-   $('#domainSearchWizard .search-message').hide();
-      //-   $('#domainSearchWizard .domain-eligibility-fail').show();
-      //- }
-      // // *******************************************************************************
+      // *******************************************************************************
 
 
-      //- //- display error on return from DPP's TLD eligibility requirements failure
-      //- var tldErr = #{domainSearchWizard.formId}.getParameterByName('tldRegErr'),
+      //- // display error on return from DPP's TLD eligibility requirements failure
+      //- var tldErr = getParameterByName('tldRegErr'),
       //-     dppHasError = tldErr.length > 0,
-      //-     dupErr = #{domainSearchWizard.formId}.getParameterByName('dppError');
+      //-     dupErr = getParameterByName('dppError');
 
       //- if(dppHasError) {
-      //-   //- note by default tldRegErr will be on the url query string
-      //-   //- if it's a dup, dpp will add in an additional parameter to let us know
+      //-   // note by default tldRegErr will be on the url query string
+      //-   // if it's a dup, dpp will add in an additional parameter to let us know
       //-   switch(dupErr){
           
       //-     case("dup"):
-      //-       $('##{domainSearchWizard.formId} .search-message').hide();
-      //-       $('##{domainSearchWizard.formId} .dup-domain-fail').show();
+      //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
+      //-       $('#domainNotAvailableViewSearchForm .dup-domain-fail').show();
       //-       break;
 
       //-     default:
-      //-       var $failArea = $('##{domainSearchWizard.formId} .domain-eligibility-fail'), 
+      //-       var $failArea = $('#domainNotAvailableViewSearchForm .domain-eligibility-fail'), 
       //-           html = $failArea.html();
       //-       html = html.replace(/\{0\}/gi, tldErr)
       //-       $failArea.html(html);
-      //-       $('##{domainSearchWizard.formId} .search-message').hide();
-      //-       $('##{domainSearchWizard.formId} .domain-eligibility-fail').show();
+      //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
+      //-       $('#domainNotAvailableViewSearchForm .domain-eligibility-fail').show();
       //-       break;
 
       //-   }
-      //- } else {
-      //-   $('##{domainSearchWizard.formId} .search-message').hide();
-      //-   $('##{domainSearchWizard.formId} .type-your-business-name').show();
       //- }
+      //- // else {
+      //- //   $('##{domainSearchWizard.formId} .search-message').hide();
+      //- //   $('##{domainSearchWizard.formId} .type-your-business-name').show();
+      //- // }
 
     });

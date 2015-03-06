@@ -1,8 +1,3 @@
----
-location: sales/homepage/default.en-gb
-id: false
-name: GCEMO-636
----
 extends ../../layouts/homepage/default_base
 
 block styles
@@ -22,9 +17,10 @@ block domainSearch
 
 block marquee
   #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/domain-wales/default_template" /> ]@P]
+  #marquee-container-isc(style="display:none") [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
 
 block bugBar
-  +tldBugs(["co","org","net"])
+  +tldBugs(["com","co","uk","wales"])
 
 
 block primaryTile

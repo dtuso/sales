@@ -118,10 +118,24 @@
         
           tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
         }
+        
+        function tokenizeTheDataTokenizeAttribute() {
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              html = $this.html(),
+              val = $this.data('tokenize'),
+                tokenizedHtml = html.replace(/\{0\}/gi, val);
+            $this
+              .html(tokenizedHtml)
+              .removeAttr('data-tokenize');
+          });
+        }
+        
       </script>
       <script>
         $(document).ready(function(){
           tokenizePrices();
+          tokenizeTheDataTokenizeAttribute();
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -135,8 +149,13 @@
           $(document).ready(function(){
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
-              domainSearchFormSubmit('', offerInfo.businessName);
-           }
+          
+              if(getParameterByName('tldRegErr').length > 0) {
+                showDomainRegistrationFailure();
+              } else {
+                domainSearchFormSubmit('', offerInfo.businessName);
+              }
+            }
           });
         </script>
         <script type="text/javascript">// Array indexOf shim for IE9 and below
@@ -241,7 +260,7 @@ function updateSearchedDomain(e, domain) {
   $(document).find('.searched-domain-name-display').text(domain);
 }
 
-function updateRecommendedDomainName(domain) {
+function updateRecommendedDomain(domain) {
   if(domainSearch.selectedDomainName == '')
     $(document).find('.selected-domain-name-display').text(domain);
 }
@@ -249,6 +268,10 @@ function updateRecommendedDomainName(domain) {
 function updateSelectedDomain(domain) {
   domainSearch.selectedDomainName = domain;
   $(document).find('.selected-domain-name-display').text(domain);
+}
+
+function updateNotAvailableDomain(e, domain) {
+  $(document).find('.not-available-domain-name-display').text(domain);
 }
 
 function showAndOrderDynamicTldsInList(selector) {
@@ -274,20 +297,9 @@ function showAndOrderDynamicTldsInList(selector) {
     $sortedArea.append(tldSpan);
   });
 
-  //- show sorted list
+  // show sorted list
+  // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
-}
-
-function tokenizeTheDataTokenizeAttribute() {
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
 }
 
 function tokenizeDisclaimerModals() {
@@ -346,7 +358,7 @@ function domainSearchFormSubmit(e, domain) {
     $('#domainAvailableViewSearchForm').show();
     pageStartupSearch = false;
   } else {
-    $thisSection = $('#domain-search-view');
+    $thisSection = $(document).find(domainSearch.initialViewId);
     $('#domainAvailableViewSearchForm').hide();
     pageStartupSearch = true;
   }
@@ -383,7 +395,7 @@ function domainSearchFormSubmit(e, domain) {
 
       if(isAvailable) {
 
-        updateRecommendedDomainName(exactMatchDomain.Fqdn);
+        updateRecommendedDomain(exactMatchDomain.Fqdn);
 
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
@@ -399,13 +411,16 @@ function domainSearchFormSubmit(e, domain) {
           showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
         }
 
-        animateWizard($thisSection, $('#domain-available-view'));
+        // should be in desired view
+        if(!pageStartupSearch)
+          animateWizard($thisSection, $('#domain-available-view'));
 
       } else {
 
         // tokenize header on search available page
-        $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
-        $('#domain-not-available-view').show();
+        // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
+        // $('#domain-not-available-view').show();
+        updateNotAvailableDomain('', exactMatchDomain.Fqdn);
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -491,16 +506,18 @@ function validDomainSelected(e){
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
 
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
+  window.location.href = '#domain-selected-view';
 }
 
 function navigateToSearchAgain(e) { 
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
+  window.location.href = '#domain-search-view';
 }
 
 function goToCheckOut(e) {
   if(domainSearch.selectedDomainName == '') {
-    goToDomainSearchWizard();
+    window.location.href = '#domainSearchWizardSection';
   }
   else {
     goToDppCheckoutPage(e);
@@ -509,8 +526,7 @@ function goToCheckOut(e) {
 
 function goToDomainSearchWizard()
 {
-  var $thisSection = $('#domain-selected-view');
-  animateWizard($thisSection, $('#domain-search-view'));
+  animateWizard($('#domain-selected-view'), $('#domain-search-view'));
   window.location.href = '#domainSearchWizardSection';
 }
 
@@ -597,14 +613,14 @@ function showApi3SearchError(e,domain){
 //   $('#domainSearchWizard .type-your-business-name').show();
 // }
 
-function displayMoreResultsLinks(e) {
-  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
-  $thisSection.find(".domain-available-view .view-all-button").show();
+function displayMoreResultsLinks($thisSection) {
+  // $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+  $thisSection.find(".view-all-button").show();
   $thisSection.find(".show-more-section").show();
 }
 
-function hideMoreResultsLinks(e) {
-  $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
+function hideMoreResultsLinks($thisSection) {
+  // $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   $thisSection.find(".view-all-button").hide();
   $thisSection.find(".show-more-section").hide();
 }
@@ -617,7 +633,7 @@ function displayMoreResultsArea(e) {
 }
 
 function updateDomainCountText($view, numberShowing) {
-  var $spinCounts = $view.find('.spin-counts');
+  var $spinCounts = domainSearchWizard.visibleView().find('.spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
@@ -763,7 +779,7 @@ function getParameterByName(name) {
       </div>
     </section>
     <section id="domainSearchWizardSection" class="bg-primary-o">
-      <div id="domain-search-view" class="js-domain-search-wizard-section">
+      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -798,7 +814,7 @@ function getParameterByName(name) {
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholder CI code" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
@@ -811,7 +827,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-available-view" class="js-domain-search-wizard-section">
+      <div id="domain-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -846,7 +862,7 @@ function getParameterByName(name) {
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholder CI code" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
@@ -886,7 +902,7 @@ function getParameterByName(name) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
@@ -903,7 +919,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-not-available-view" class="js-domain-search-wizard-section">
+      <div id="domain-not-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -938,13 +954,13 @@ function getParameterByName(name) {
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
                 <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholder CI code" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
-          <div class="row searched-domain-name-row">
+          <div class="row not-available-domain-name-row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h2 class="domain-name-displayed word-break">Sorry, <mark class="searched-domain-name-display"></mark> is taken.</h2>
+              <h2 class="not-available-domain-name-display word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
         </div>
@@ -969,7 +985,7 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more">See more</span><span class="show-more-arrow"></span></h6>
+            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
@@ -985,7 +1001,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-selected-view" class="js-domain-search-wizard-section">
+      <div id="domain-selected-view" style="display:none" class="js-domain-search-wizard-section">
         <div id="selected-domain" class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -1027,7 +1043,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="api-failure" class="sf-dialog api-B-failure">
+      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
         <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
           <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
         </h2>
@@ -1146,7 +1162,7 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <h3 class="price-token">{price_monthly}/month for the first year*</h3>
-          <button data-ci="96301" style="display: none;" id="bottomSearchAgain" class="btn btn-primary btn-search-again btn-lg">Search Again</button>
+          <button id="bottomSearchAgain" data-ci="96301" style="display: none;" class="btn btn-primary btn-lg">Search Again</button>
           <button data-ci="96304" class="btn btn-purchase btn-lg">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
         </div>
       </div>
@@ -1386,6 +1402,7 @@ ul li.no-check {
       <!-- atlantis:webstash(type="css")-->
       <style>
         #domainSearchWizardSection { padding-bottom: 0; }
+        .results-list-heading-text {margin-top: 10px; margin-bottom: 10px;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1394,11 +1411,6 @@ ul li.no-check {
           margin:0 auto; 
           background-color: #77c043;
         }
-        
-        #api-failure,
-        #domain-available-view,
-        #domain-not-available-view,
-        #domain-selected-view {display: none; }
         
         #domainSearchWizard .domain-name-displayed {
           font-size: 60px;
@@ -1530,7 +1542,7 @@ ul li.no-check {
         
         #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
-        #domain-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        #domain-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
         #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
         #domain-available-view h2.searched-domain-name-display {margin: 0;}
@@ -1544,11 +1556,10 @@ ul li.no-check {
         
         #domain-not-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
-        #domain-not-available-view .domain-name-display{margin:14px 0 15px;color:#333;font-size:40px;font-weight:400;display:block;line-height:1}
+        #domain-not-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
-        #domain-not-available-view .searched-domain-name-row {margin-bottom: 10px;}
-        #domain-not-available-view h2.searched-domain-name-display {margin: 0;}
-        #domain-not-available-view .not-searched-domain-name-row {margin: 35px 0 25px;}
+        #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
+        #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
         
         // Turn off search input message display
         .search-message {display: none; text-transform: none; }
@@ -1675,7 +1686,20 @@ ul li.no-check {
         isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
         showChoicesWithAvailableDomain: true,
         showTypeYourBusinessName: false,
-        selectedDomainName: ''
+        selectedDomainName: '',
+        initialViewId: 'domain-available-view'
+      };
+      
+      var domainSearchWizard = {
+        visibleView: function() {
+          var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section'),
+              visibleSection;
+          $.each(sections, function(index, section) {
+            if(section.style['display'] != 'none') visibleSection = $(document).find('#' + section.id);
+          });
+      
+          return visibleSection;
+        }
       };
       
       var domainSearchViewForm = {
@@ -2005,100 +2029,126 @@ ul li.no-check {
         }
       };
       
+      function showDomainRegistrationFailure() {
+      
+      
+        // display error on return from DPP's TLD eligibility requirements failure
+        var tldErr = getParameterByName('tldRegErr'),
+            dppHasError = tldErr.length > 0,
+            dupErr = getParameterByName('dppError');
+      
+        if(dppHasError) {
+          // note by default tldRegErr will be on the url query string
+          // if it's a dup, dpp will add in an additional parameter to let us know
+          switch(dupErr){
+            
+            case("dup"):
+              $('#domainSearchViewForm .search-message').hide();
+              $('#domainSearchViewForm .dup-domain-fail').show();
+              break;
+      
+            default:
+              var $failArea = $('#domainSearchViewForm .domain-eligibility-fail'), 
+                  html = $failArea.html();
+              html = html.replace(/\{0\}/gi, tldErr)
+              $failArea.html(html);
+              $('#domainSearchViewForm .search-message').hide();
+              $('#domainSearchViewForm .domain-eligibility-fail').show();
+              break;
+      
+          }
+      
+          // Should already be in serarch view
+          // animateWizard($('#domainSearchViewForm'), $('#domain-not-available-view'));
+        }
+      };
+      
       $(document).ready(function(){
       
-        var $form = $("#domainSearchViewForm");
-        $form.on('click', 'button.offer-search-btn', function(){
-          $form.submit();
+        $(document).find('#' + domainSearch.initialViewId).show();
+      
+        var $domainSearchViewForm = $("#domainSearchViewForm");
+        $domainSearchViewForm.on('click', 'button.offer-search-btn', function(){
+          $domainSearchViewForm.submit();
         });
-        $form.on('submit', domainSearchViewForm.validateSubmit);
-        $form.on('keyup', function(e){ 
+        $domainSearchViewForm.on('submit', domainSearchViewForm.validateSubmit);
+        $domainSearchViewForm.on('keyup', function(e){ 
           if(e.which == 13) return;
           var domainName = domainSearchViewForm.trimmedDomainName(true);
           if(!domainName || domainName.length == 0) return;
           domainName = domainSearchViewForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
           domainSearchViewForm.ensureValidTld(domainName);
         });
-        domainSearchViewForm.showTypeYourBusinessName($form);
+        domainSearchViewForm.showTypeYourBusinessName($domainSearchViewForm);
       
-        $form = $("#domainAvailableViewSearchForm");
-        $form .on('click', 'button.offer-search-btn', function(){
-          $form .submit();
+        var $domainAvailableViewSearchForm = $("#domainAvailableViewSearchForm");
+        $domainAvailableViewSearchForm .on('click', 'button.offer-search-btn', function(){
+          $domainAvailableViewSearchForm .submit();
         });
-        $form .on('submit', domainAvailableViewSearchForm.validateSubmit);
-        $form .on('keyup', function(e){ 
+        $domainAvailableViewSearchForm .on('submit', domainAvailableViewSearchForm.validateSubmit);
+        $domainAvailableViewSearchForm .on('keyup', function(e){ 
           if(e.which == 13) return;
           var domainName = domainAvailableViewSearchForm.trimmedDomainName(true);
           if(!domainName || domainName.length == 0) return;
           domainName = domainAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
           domainAvailableViewSearchForm.ensureValidTld(domainName);
         });
-        domainAvailableViewSearchForm.showTypeYourBusinessName($form);
+        domainAvailableViewSearchForm.showTypeYourBusinessName($domainAvailableViewSearchForm);
       
-        $form = $("#domainNotAvailableViewSearchForm");
-        $form.on('click', 'button.offer-search-btn', function(){
-          $form.submit();
+        var $domainNotAvailableViewSearchForm = $("#domainNotAvailableViewSearchForm");
+        $domainNotAvailableViewSearchForm.on('click', 'button.offer-search-btn', function(){
+          $domainNotAvailableViewSearchForm.submit();
         });
-        $form.on('submit', domainNotAvailableViewSearchForm.validateSubmit);
-        $form.on('keyup', function(e){ 
+        $domainNotAvailableViewSearchForm.on('submit', domainNotAvailableViewSearchForm.validateSubmit);
+        $domainNotAvailableViewSearchForm.on('keyup', function(e){ 
           if(e.which == 13) return;
           var domainName = domainNotAvailableViewSearchForm.trimmedDomainName(true);
           if(!domainName || domainName.length == 0) return;
           domainName = domainNotAvailableViewSearchForm.formatDomainWithDefaultTldIfNoneSpecified(domainName);
           domainNotAvailableViewSearchForm.ensureValidTld(domainName);
         });
-        domainNotAvailableViewSearchForm.showTypeYourBusinessName($form);
+        domainNotAvailableViewSearchForm.showTypeYourBusinessName($domainNotAvailableViewSearchForm);
       
-      
-        // // From domain-selection.js
-        // // *******************************************************************************
+        //- // *******************************************************************************
         //- //- display error on return from DPP's TLD eligibility requirements failure
         //- if(getParameterByName('tldRegErr').length > 0) {
         //-   showDomainRegistrationFailure(getParameterByName('tldRegErr'));
         //- }
       
         // 
-        //- function showDomainRegistrationFailure(tld) {
-        //-   var 
-        //-     $failArea = $('#domainSearchWizard .domain-eligibility-fail'), 
-        //-     html = $failArea.html();
-        //-   html = html.replace(/\{0\}/gi, tld)
-        //-   $failArea.html(html);
-        //-   $('#domainSearchWizard .search-message').hide();
-        //-   $('#domainSearchWizard .domain-eligibility-fail').show();
-        //- }
-        // // *******************************************************************************
+        // *******************************************************************************
       
       
-        //- //- display error on return from DPP's TLD eligibility requirements failure
-        //- var tldErr = .getParameterByName('tldRegErr'),
+        //- // display error on return from DPP's TLD eligibility requirements failure
+        //- var tldErr = getParameterByName('tldRegErr'),
         //-     dppHasError = tldErr.length > 0,
-        //-     dupErr = .getParameterByName('dppError');
+        //-     dupErr = getParameterByName('dppError');
       
         //- if(dppHasError) {
-        //-   //- note by default tldRegErr will be on the url query string
-        //-   //- if it's a dup, dpp will add in an additional parameter to let us know
+        //-   // note by default tldRegErr will be on the url query string
+        //-   // if it's a dup, dpp will add in an additional parameter to let us know
         //-   switch(dupErr){
             
         //-     case("dup"):
-        //-       $('# .search-message').hide();
-        //-       $('# .dup-domain-fail').show();
+        //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
+        //-       $('#domainNotAvailableViewSearchForm .dup-domain-fail').show();
         //-       break;
       
         //-     default:
-        //-       var $failArea = $('# .domain-eligibility-fail'), 
+        //-       var $failArea = $('#domainNotAvailableViewSearchForm .domain-eligibility-fail'), 
         //-           html = $failArea.html();
         //-       html = html.replace(/\{0\}/gi, tldErr)
         //-       $failArea.html(html);
-        //-       $('# .search-message').hide();
-        //-       $('# .domain-eligibility-fail').show();
+        //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
+        //-       $('#domainNotAvailableViewSearchForm .domain-eligibility-fail').show();
         //-       break;
       
         //-   }
-        //- } else {
-        //-   $('# .search-message').hide();
-        //-   $('# .type-your-business-name').show();
         //- }
+        //- // else {
+        //- //   $('# .search-message').hide();
+        //- //   $('# .type-your-business-name').show();
+        //- // }
       
       });
     </script>
