@@ -60,6 +60,8 @@ var wpHosting = {
 
 $(document).ready(function(){
 
+  $(document).sfTipper({ wireup: true });
+
   tokenizeTheDataTokenizeAttribute();
   
   tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);

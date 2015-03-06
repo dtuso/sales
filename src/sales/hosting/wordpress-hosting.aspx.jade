@@ -1,5 +1,22 @@
 extends ../shared/_landing-page
 
+mixin wordPressAdCredits(options)
+  - var aTag = '<a id="' + options.linkId + '" data-ci="' + options.detailsCi + '">' + options.detailsLinkText + '</a>';
+  - var dataContent = options.toolTipContent + " " + aTag;
+  p 
+    | !{options.adCreditText}&nbsp;
+    a.ad-credits-tip.sf-tip(href="#" data-style="qt" data-content="#{dataContent}") #{options.toolTipText}
+  atlantis:webstash(type="js")
+    script.
+      $(document).ready(function(){
+        $("##{options.linkId}").click(function(e){
+          e.preventDefault();
+          window.open('#{options.detailsUrl}','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
+          return false;
+        });
+      });
+
+
 append vars 
   - page.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]";
   - page.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]";
@@ -56,6 +73,9 @@ append vars
   - page.ci.alternativeWebHostingLearnMore = '96223';
   - page.ci.alternativeWebsiteBuilderLearnMore = '96224';
   - page.ci.footerDisclaimer = '96208';
+  - page.ci.adCreditGoogle = '96918';
+  - page.ci.adCreditBing = '96916';
+  - page.ci.adCreditFacebook = '96917';
 
 prepend endOfPageScripts
   atlantis:webstash(type="js")
@@ -95,25 +115,57 @@ block disclaimers
       .container
         .row
           .col-sm-12
-            .disclaimers-text [@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]
-            | 
-            | ##if(areAdCreditsEnabled(google))
-            | 
-            .disclaimers-text USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-GoogleAdWordsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='86790' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-            | 
-            | ##endif
-            | 
-            | 
-            | ##if(areAdCreditsEnabled(bing))
-            | 
-            .disclaimers-text USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>
-            | 
-            | ##endif
-            | 
-            | 
-            | ##if(areAdCreditsEnabled(facebook))
-            | 
-            .disclaimers-text USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>                    
-            | 
-            | ##endif                                  
-            | 
+            .disclaimers-text [@L[cds.sales/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
+              | 
+              | ##if(false)
+              | 
+                | 
+                | ##if(areAdCreditsEnabled(google))
+                | 
+                +wordPressAdCredits({
+                  'linkId': 'googleAdwordsLink',
+                  'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]',
+                  'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
+                  'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+                  'detailsUrl': '[@T[link:<relative path="/popups/google-adwords.aspx"><param name="ci" value="#{page.ci.adCreditGoogle}" /><param name="app_hdr" value="99" /></relative>]@T]',
+                  'detailsCi': page.ci.adCreditGoogle,
+                  'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+                  })
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(areAdCreditsEnabled(bing))
+                | 
+                +wordPressAdCredits({
+                  'linkId': 'bingLearnLink',
+                  'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:BingAdsCredit]@L]',
+                  'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
+                  'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+                  'detailsUrl': 'https://advertise.bingads.microsoft.com/en-us/godaddy/learn',
+                  'detailsCi': page.ci.adCreditBing,
+                  'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+                  })
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(areAdCreditsEnabled(facebook))
+                | 
+                +wordPressAdCredits({
+                  'linkId': 'facebookAdsLink',
+                  'adCreditText': '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:FacebookAdCredit]@L]',
+                  'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
+                  'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+                  'detailsUrl': '[@T[link:<relative path="/popups/facebook-ads.aspx"><param name="ci" value="#{page.ci.adCreditFacebook}" /><param name="app_hdr" value="99" /></relative>]@T]',
+                  'detailsCi': page.ci.adCreditFacebook,
+                  'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+                  })
+                | 
+                | ##endif
+                | 
+              | 
+              | ##endif
+              | 
+
+

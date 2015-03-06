@@ -1547,24 +1547,90 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div> 
-              ##if(areAdCreditsEnabled(google))
-               
-              <div class="disclaimers-text">USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-GoogleAdWordsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='86790' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li></div> 
-              ##endif
-               
-               
-              ##if(areAdCreditsEnabled(bing))
-               
-              <div class="disclaimers-text">USD $100 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-BingAdsCredit]@L] <span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))" data-ci="86788">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li></div> 
-              ##endif
-               
-               
-              ##if(areAdCreditsEnabled(facebook))
-               
-              <div class="disclaimers-text">USD $50 [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-FacebookAdCredit]@L]<span class="g-toolTip restrictions-link">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-2-RestrictionsApply]@L]<span>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew]@L] <a href="javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='86789' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))">[@L[cds.sales/hosting/web-hosting-new:view-details]@L]</a></span></span></li>                    </div> 
-              ##endif                                  
-               
+              <div class="disclaimers-text">[@L[cds.sales/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
+                <p>
+                   
+                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] un-huh&nbsp;<a href="#" data-style="qt" data-content="OnePromotionalCreditPerCustomerForANew &lt;a id=&quot;googleAdwordsLink&quot; data-ci=&quot;96918&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">RestrictionsApply</a>
+                </p>
+                <atlantis:webstash type="js">
+                  <script>
+                    $(document).ready(function(){
+                      $("#googleAdwordsLink").click(function(e){
+                        e.preventDefault();
+                        window.open('[@T[link:&lt;relative path=&quot;/popups/google-adwords.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditGoogle}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
+                        return false;
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash> 
+                ##if(areAdCreditsEnabled(google))
+                 
+                <p>
+                   
+                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;googleAdwordsLink&quot; data-ci=&quot;96918&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
+                </p>
+                <atlantis:webstash type="js">
+                  <script>
+                    $(document).ready(function(){
+                      $("#googleAdwordsLink").click(function(e){
+                        e.preventDefault();
+                        window.open('[@T[link:&lt;relative path=&quot;/popups/google-adwords.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditGoogle}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
+                        return false;
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash> 
+                ##endif
+                 
+                 
+                ##if(areAdCreditsEnabled(bing))
+                 
+                <p>
+                   
+                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:BingAdsCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;bingLearnLink&quot; data-ci=&quot;96916&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
+                </p>
+                <atlantis:webstash type="js">
+                  <script>
+                    $(document).ready(function(){
+                      $("#bingLearnLink").click(function(e){
+                        e.preventDefault();
+                        window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
+                        return false;
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash> 
+                ##endif
+                 
+                 
+                ##if(areAdCreditsEnabled(facebook))
+                 
+                <p>
+                   
+                  [@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:FacebookAdCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;facebookAdsLink&quot; data-ci=&quot;96917&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
+                </p>
+                <atlantis:webstash type="js">
+                  <script>
+                    $(document).ready(function(){
+                      $("#facebookAdsLink").click(function(e){
+                        e.preventDefault();
+                        window.open('[@T[link:&lt;relative path=&quot;/popups/facebook-ads.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditFacebook}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
+                        return false;
+                      });
+                    });
+                    
+                    
+                  </script>
+                </atlantis:webstash> 
+                ##endif
+                 
+              </div>
             </div>
           </div>
         </div>
@@ -2222,6 +2288,8 @@ body {
 
 
 $(document).ready(function(){
+
+  $(document).sfTipper({ wireup: true });
 
   tokenizeTheDataTokenizeAttribute();
   
