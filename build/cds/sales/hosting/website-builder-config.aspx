@@ -24,7 +24,8 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta property="fb:admins" content="633356800">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -461,55 +462,284 @@
         <section id="disclaimers" class="disclaimers-section row">
           <div class="col-sm-9">
             <div class="col-sm-5">
-              <p class="h5"><a onClick="disclaimersModal()" data-ci="87766">Legal Disclaimers</a></p>
+              <p class="h5"></p>
               <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
                 <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-2"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">Continue</a></div>
+            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">Continue</a></div>
           </div>
         </section>
       </div>
     </div>
     <div style="display:none" class="container domain-search">
-      <atlantis:webstash type="css">
-        <style>.search-text {
-  display: none;
-}
-.search-icon {
-  font-size: 22px;
-}
-@media (min-width: 768px) {
-  .search-text {
-    display: inline;
-  }
-  .search-icon {
-    display: none;
-  }
-}
-
-        </style>
-      </atlantis:webstash>
-      <form method="get" action="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single" class="domain-search-form">
-        <input type="hidden" name="ci" value=""/>
-        <input type="hidden" name="checkAvail" value="1"/>
-        <div class="input-group">
-          <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]</label>
-          <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]" name="domainToCheck" maxlength="63" class="searchInput form-control input-lg"/><span class="input-group-btn">
-            <button type="submit" data-ci="" class="btn btn-primary btn-lg"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]</span></button></span>
+      <form id="domainsearchoffersinput">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="headline-primary get-a-domain-text">title</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 offer-search-box">
+            <div class="input-group">
+              <input type="text" placeholder="placeholderText" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                <button type="button" name="searchButton" data-ci="" class="btn btn-primary btn-lg offer-search-btn">placeholderText</button></span>
+            </div>
+          </div>
+        </div>
+        <div class="row domain-search-messaging-row">
+          <div class="col-md-12">
+            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">placeholderText</div>
+            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">placeholderText</div>
+            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">placeholderText</div>
+            <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
+          </div>
         </div>
       </form>
-      <script>
-        $(".domain-search-form").on('submit', function(e) {
-          var input = $(this).find("input[name='domainToCheck']");
-          if (input && (input.val() == null || input.val() == "")) {
-            e.preventDefault();
-            window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+      <atlantis:webstash type="css">
+        <style>
+          .search-message { 
+            display: none; 
+            margin-top:20px; 
           }
-        });
-        
-      </script>
+          .domain-search-messaging-row {
+            padding-bottom: 40px;
+          }
+          /*  speech */
+          .speech-shape-upsidedown {
+            line-height: 1.9em;
+            font-size: 18px;
+            padding: 5px 17px;
+            color: #fff;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+            z-index: 2;
+          }
+          .speech-shape-upsidedown .shape-text {
+            position: relative;
+            z-index: 40;
+          }
+          .speech-shape-upsidedown:before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            border-bottom: 15px solid;
+            border-right: 15px solid transparent;
+          }
+          .speech-shape-upsidedown:after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width:20px;
+            right: -6px;
+            top: 0;
+            transform: skew(12deg, 0);
+            z-index: 1;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-green {
+            background-color: #008a32;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
+            border-bottom-color: #008a32;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
+            background-color: #008a32;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-orange {
+            background-color: #ef6c0f;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
+            color: #fff;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
+            border-bottom-color: #ef6c0f;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
+            background-color: #ef6c0f;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-white {
+            background-color: #fff;
+            color: #333;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
+            border-bottom-color: #fff;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
+            background-color: #fff;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
+            background-color: #fedc45;
+            color: #333;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
+            border-bottom-color: #fedc45;
+          }
+          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
+            background-color: #fedc45;
+          }
+          
+          /* (end) speech */
+        </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script>
+          var domainsearchoffersinput = {
+             executeFnByName: function(name, context) {
+              
+              var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
+              for(var i=2; i < arguments.length; i++){
+                args.push(arguments[i]);
+              }
+              var namespaces = name.split(".");
+              var func = namespaces.pop();
+              for(var i = 0; i < namespaces.length; i++) {
+                context = context[namespaces[i]];
+              }
+              return context[func].apply(this, args);
+          
+            },
+            validateSubmit: function(e){
+          
+              e.preventDefault();
+              var domainName = domainsearchoffersinput.trimmedDomainName(false);
+              if((domainName && domainName.length==0) || !domainName) return false;
+          
+              domainName = domainName.toLowerCase();
+              domainName = domainsearchoffersinput.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+              if(!domainsearchoffersinput.ensureValidTld(domainName)) {
+                return;
+              }
+              var functionName = 'domainSearchFormSubmit';
+              if(functionName.length > 0)  {
+                domainsearchoffersinput.executeFnByName(functionName, window, e, domainName);
+              }
+          
+            },
+            trimmedDomainName: function(isKeyPress){
+              
+              var $form = $("#domainsearchoffersinput"),
+                $textInput = $form.find('input[name="domainToCheck"]'),
+                domainName = $textInput.val();
+              if((domainName && domainName.length==0) || !domainName) return null;
+          
+              domainName = domainsearchoffersinput.reformatDomainToValidLength($textInput, domainName, isKeyPress);
+              return domainName;
+          
+            },
+            reformatDomainToValidLength: function($textInput, domain, isKeyPress){
+          
+              var idx = domain.indexOf('.'),
+                  hasTld = idx > -1,
+                  sld = hasTld ? domain.substring(0, idx) : domain,
+                  tld = hasTld ? domain.substring(idx+1) : '',
+                  needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+              sld = needsTrimmed ? sld.substring(0, 63) : sld;
+              
+              var domainName = sld + ((tld!='') ? '.' + tld : '');
+              if(needsTrimmed) {
+                $textInput.val(domainName);
+              }
+              return domainName;
+          
+            },
+            ensureValidTld: function() {
+          
+              var $form = $("#domainsearchoffersinput"),
+                  $textInput = $form.find('input[name="domainToCheck"]'),
+                  domainName = $textInput.val(); 
+                  validTld = domainsearchoffersinput.hasTldValid(domainName);
+              $form.find('.search-message').hide();
+              if(validTld) {
+                $form.find('.type-your-business-name').show();
+              } else {
+                $form.find('.invalid-TLD-entered').show();
+              }
+              return validTld;
+              
+            },
+            hasTldValid: function(domain) {
+          
+              domain = $.trim(domain || "");
+              var idx = domain.indexOf('.'), isValid = false;
+              if(!domain || domain.length == 0 || idx == -1) return true;
+          
+              var domainsTld = domain.substring(idx+1).toLowerCase();
+              $.each(com,co,org,net, function(idx, tld) {
+                if(tld.toLowerCase() === domainsTld) {
+                  isValid = true;
+                }
+              });
+              return isValid;
+          
+            },
+            formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
+          
+              if(domain.indexOf('.') > 0) return domain;
+              return domain + '.' + com;
+          
+            },
+            getParameterByName: function (name) {
+          
+              name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
+              return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+          
+            }
+          };
+          
+          $(document).ready(function(){
+          
+            $("#domainsearchoffersinput").on('click', 'button.offer-search-btn', function(){
+              $("#domainsearchoffersinput").submit();
+            });
+          
+            $("#domainsearchoffersinput").on('submit', domainsearchoffersinput.validateSubmit);
+            $("#domainsearchoffersinput").on('keyup', function(e){ 
+              if(e.which == 13) return;
+              var domainName = domainsearchoffersinput.trimmedDomainName(true);
+              if(!domainName || domainName.length == 0) return;
+              domainName = domainsearchoffersinput.formatDomainWithDefaultTldIfNoneSpecified(domainName);
+              domainsearchoffersinput.ensureValidTld(domainName);
+            });
+          
+          
+            //- display error on return from DPP's TLD eligibility requirements failure
+            var tldErr = domainsearchoffersinput.getParameterByName('tldRegErr'),
+                dppHasError = tldErr.length > 0,
+                dupErr = domainsearchoffersinput.getParameterByName('dppError');
+          
+            if(dppHasError) {
+              //- note by default tldRegErr will be on the url query string
+              //- if it's a dup, dpp will add in an additional parameter to let us know
+              switch(dupErr){
+                
+                case("dup"):
+                  $('#domainsearchoffersinput .search-message').hide();
+                  $('#domainsearchoffersinput .dup-domain-fail').show();
+                  break;
+          
+                default:
+                  var $failArea = $('#domainsearchoffersinput .domain-eligibility-fail'), 
+                      html = $failArea.html();
+                  html = html.replace(/\{0\}/gi, tldErr)
+                  $failArea.html(html);
+                  $('#domainsearchoffersinput .search-message').hide();
+                  $('#domainsearchoffersinput .domain-eligibility-fail').show();
+                  break;
+          
+              }
+            } else {
+              $('#domainsearchoffersinput .search-message').hide();
+              $('#domainsearchoffersinput .type-your-business-name').show();
+            }
+          
+          });
+        </script>
+      </atlantis:webstash>
+      <div>Continue To Cart</div>
     </div>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
@@ -829,7 +1059,7 @@ list-style: none;
 .product-added-to-cart-text{
   position: relative;
   left:10px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .product-added-to-cart{
@@ -837,6 +1067,7 @@ list-style: none;
   float:left;
   color:#679B08;
   position: relative;
+  margin-bottom: 15px;
 }
 .order-item-details-wrapper .row {
   margin-top: 15px;
@@ -864,7 +1095,11 @@ list-style: none;
       endOfPageScripts();
       
     </script>
-    <script type="text/tempate" class="itemTemplate">
+    <script type="text/template" class="breakTemplate">
+      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+      
+    </script>
+    <script type="text/template" class="itemTemplate">
       <div class="row">
         <div class="col-xs-12 item-title-wrapper">
           <div class="item-title"><%= itemName %></div>
@@ -988,6 +1223,7 @@ list-style: none;
     </script>
     <script>
       var plan = getParameterByName('plan');
+      // gs for get started button, ac for add to cart button
       var origin = getParameterByName('src');
       var reload = false;
       // spoof url for config and packagegrouping removed when both are published
@@ -1054,7 +1290,29 @@ list-style: none;
           {
             steps = _.without(steps, 'sslStep');
           }
+          if(!reload){
+            Config.setTitle();
+          }
+          Config.showSteps(steps);
+          Config.addStepBreaks();
+          Config.stepNumbers();
+        },
+        resetPage: function(){
+          var steps = ['planStep','termStep','sslStep','getFoundStep'];
+          var addToCart = 'ac';
+          
+          $('.config-step').hide();
+          $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
+          $('.config-step-break').remove();
       
+          if (origin === addToCart){
+            steps = _.without(steps, 'planStep');
+          }
+          if(plan.indexOf('wsb_businessplus') >= 0)
+          {
+            steps = _.without(steps, 'sslStep');
+            $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
+          }
           Config.showSteps(steps);
           Config.addStepBreaks();
           Config.stepNumbers();
@@ -1064,8 +1322,29 @@ list-style: none;
           var apiUrl = url.replace('{0}',package);
       
           $.getJSON(apiUrl).success(function (data){
+            if(reload){
+              Config.resetPage();
+            }
             Config.processData(data);
           });
+        },
+        setTitle: function(){
+          var getStarted = 'gs';
+          if (origin === getStarted){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+          }
+          else{
+           if(plan.indexOf('wsb_personal') >= 0){
+              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+            }
+            else if(plan.indexOf('wsb_businessplus') >= 0){
+              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+            }
+            else{
+              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+            }
+      
+          }
         },
         showSteps: function(ids){
       
@@ -1075,13 +1354,14 @@ list-style: none;
           });
         },
         addStepBreaks: function(){
+          var breakTemplate = _.template($( "script.breakTemplate" ).html());
       
-          var $break = $('.config-step-break').detach();
+          $('.config-step-break').remove();
           var numberOfSteps = $('.config-step:visible').length - 1;
       
           $('.config-step:visible').each(function(index){
             if(numberOfSteps != index )
-              $(this).parent().append($break.clone());
+              $(this).parent().append(breakTemplate());
           });
         },
         stepNumbers: function(){
@@ -1281,13 +1561,21 @@ list-style: none;
       
           var selectedPlan = $('input:radio[name="planOption"]').filter(':checked').attr('data-plan');
           var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+          var selectedFactor = Config.getFactor(parseInt(selectedTerm));
           var selectedPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthly');
+          var selectedPricePerYear = $('input:radio[name="termOption"]').filter(':checked').attr('data-yearly');
           var selectedListPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthlyList');
           var selectedSale = $('input:radio[name="termOption"]').filter(':checked').attr('data-onsale');
           var onSale = (selectedSale == 'true');
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
       
-          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+          if(parseInt(selectedTerm) > 1){
+            var selectedTotal = currencyCalc.evaluate([selectedFactor,"*",selectedPricePerYear]);
+          }
+          else{
+            var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+          }
+      
           var selectedListTotal = currencyCalc.evaluate([selectedTerm,"*",selectedListPricePerTerm]);
           var selectedSavings = currencyCalc.evaluate([selectedListTotal,"-",selectedTotal]);
       
@@ -1426,6 +1714,26 @@ list-style: none;
             }
           });
           return text;
+        },
+        getFactor: function(term){
+          var factor;
+          switch(term) {
+            case 24:
+                factor = 2;
+                break;
+            case 36:
+                factor = 3;
+                break;
+            case 48:
+                factor = 4;
+                break;
+            case 60:
+                factor = 5;
+                break              
+            default:
+                factor = 1;
+            }
+          return factor;
         }
       };
       
@@ -1434,12 +1742,11 @@ list-style: none;
       
       $(document).ready(function(){
         $('.btn-continue').click(function(){
-              Config.addPlanToCart();
-              $('.configuration').hide();
-              $('.domain-search').show();
-            });
-      
-      
+          Config.addPlanToCart();
+          $('.configuration').hide();
+          $('.domain-search').show();
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+        });
       });
     </script>
     <script type="text/javascript">
