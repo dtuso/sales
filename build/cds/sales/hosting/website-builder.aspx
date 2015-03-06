@@ -5016,7 +5016,11 @@ ul li.no-check {
     background-color: #d9d9d9;
 }
 .dash{
-  letter-spacing: -.5rem;
+  letter-spacing: -0.5rem;
+}
+#features .dash {
+  letter-spacing: -1.5rem;
+  margin-right: 15px;
 }
 .BVBrowserWebkit{
   margin-top:  50px;
@@ -5531,6 +5535,12 @@ width: 50%;
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
+      
+        $('[data-icann-fee]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
+        
       });
       
     </script>
