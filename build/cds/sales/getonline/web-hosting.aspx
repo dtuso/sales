@@ -89,9 +89,9 @@
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
           pricing: {
-            promo_monthly: "[@T[multipleproductprice:<current productidlist='101|32051' period='monthly' promocode='75315678' />]@T]",
-            promo_annual: "[@T[multipleproductprice:<current productidlist='101|32051' period='yearly' promocode='75315678' />]@T]",
-            renewal_annual: "[@T[multipleproductprice:<list productidlist='101|32051' period='yearly'></list>]@T]"
+            promo_monthly: "[@T[productprice:<current productid='32051' period='monthly' />]@T]",
+            promo_annual: "[@T[productprice:<current productid='32051' period='yearly' />]@T]",
+            renewal_annual: "[@T[productprice:<list productid='32051' period='yearly'></list>]@T]"
           }
         };
         // Page Global script -- changes will effect all campaigns 
@@ -2066,7 +2066,11 @@ ul li.no-check {
       
       $(document).ready(function(){
       
-        $(document).find('#' + domainSearch.initialViewId).show();
+        if(getParameterByName('tldRegErr').length > 0) {
+          $('#domain-search-view').show();
+        } else {
+          $(document).find('#' + domainSearch.initialViewId).show();
+        }
       
         var $domainSearchViewForm = $("#domainSearchViewForm");
         $domainSearchViewForm.on('click', 'button.offer-search-btn', function(){
