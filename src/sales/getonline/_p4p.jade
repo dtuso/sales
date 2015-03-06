@@ -83,9 +83,23 @@ append headScripts
 
         tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
       }
+
+      function tokenizeTheDataTokenizeAttribute() {
+        $('[data-tokenize]').each(function(){
+          var $this = $(this),
+            html = $this.html(),
+            val = $this.data('tokenize'),
+              tokenizedHtml = html.replace(/\{0\}/gi, val);
+          $this
+            .html(tokenizedHtml)
+            .removeAttr('data-tokenize');
+        });
+      }
+
     script.  // Page
       $(document).ready(function(){
         tokenizePrices();
+        tokenizeTheDataTokenizeAttribute();
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           offerInfo.businessName = passedBusinessName;
@@ -367,7 +381,7 @@ block content
             h3 Office 365 Email
         .row
           h3.price-token {price_monthly}/month for the first year*
-          button(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
+          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
           small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
