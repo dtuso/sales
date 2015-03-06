@@ -5020,6 +5020,7 @@ ul li.no-check {
 }
 #features .dash {
   letter-spacing: -1.5rem;
+  margin-right: 15px;
 }
 .BVBrowserWebkit{
   margin-top:  50px;
