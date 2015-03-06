@@ -488,24 +488,27 @@ function animateWizard($currentView, $animateToView) {
   if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
     currentViewHeight = $currentView.height();
+    $currentView.hide();
   } else {
     currentViewHeight = 0;
   }
 
-  var $wizard = $('#domainSearchWizardSection'),
-  wizardHeight = $wizard.height();
-
-  // show view offscreen to get height
-  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // can only get height when shown      
-  var toViewHeight = $animateToView.height(),
-    maxHeight = Math.max(currentViewHeight, toViewHeight),
-    minHeight = Math.min(currentViewHeight, toViewHeight);
+  $animateToView.show();
   
-  //run the animations
-  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  animateObjectOffToTheLeft($currentView, windowWidth, 2);
-  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  // var $wizard = $('#domainSearchWizardSection'),
+  // wizardHeight = $wizard.height();
+
+  // // show view offscreen to get height
+  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // // can only get height when shown      
+  // var toViewHeight = $animateToView.height(),
+  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
+  //   minHeight = Math.min(currentViewHeight, toViewHeight);
+  
+  // //run the animations
+  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  // animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {

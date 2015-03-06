@@ -118,10 +118,24 @@
         
           tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
         }
+        
+        function tokenizeTheDataTokenizeAttribute() {
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              html = $this.html(),
+              val = $this.data('tokenize'),
+                tokenizedHtml = html.replace(/\{0\}/gi, val);
+            $this
+              .html(tokenizedHtml)
+              .removeAttr('data-tokenize');
+          });
+        }
+        
       </script>
       <script>
         $(document).ready(function(){
           tokenizePrices();
+          tokenizeTheDataTokenizeAttribute();
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
