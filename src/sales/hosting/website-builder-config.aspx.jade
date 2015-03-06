@@ -64,16 +64,24 @@ block disclaimers
     .col-sm-9
       .col-sm-5
         p.h5
-          a(onClick="disclaimersModal()", data-ci="87766") Legal Disclaimers
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
           p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
-      .col-sm-3.col-sm-push-2
+      .col-sm-3.col-sm-push-3
         a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") Continue
 
-prepend endOfPageScripts
+block domainSearch
+  .container.domain-search(style="display:none")
+    +domainSearchOffersInput()
+    div Continue To Cart
 
-  script.itemTemplate(type='text/tempate').
+
+prepend endOfPageScripts
+  
+  script.breakTemplate(type='text/template').
+    <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+
+  script.itemTemplate(type='text/template').
     <div class="row">
       <div class="col-xs-12 item-title-wrapper">
         <div class="item-title"><%= itemName %></div>
@@ -193,6 +201,7 @@ prepend endOfPageScripts
 
   script.
     var plan = getParameterByName('plan');
+    // gs for get started button, ac for add to cart button
     var origin = getParameterByName('src');
     var reload = false;
     // spoof url for config and packagegrouping removed when both are published
@@ -259,7 +268,29 @@ prepend endOfPageScripts
         {
           steps = _.without(steps, 'sslStep');
         }
+        if(!reload){
+          Config.setTitle();
+        }
+        Config.showSteps(steps);
+        Config.addStepBreaks();
+        Config.stepNumbers();
+      },
+      resetPage: function(){
+        var steps = ['planStep','termStep','sslStep','getFoundStep'];
+        var addToCart = 'ac';
+        
+        $('.config-step').hide();
+        $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
+        $('.config-step-break').remove();
 
+        if (origin === addToCart){
+          steps = _.without(steps, 'planStep');
+        }
+        if(plan.indexOf('wsb_businessplus') >= 0)
+        {
+          steps = _.without(steps, 'sslStep');
+          $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
+        }
         Config.showSteps(steps);
         Config.addStepBreaks();
         Config.stepNumbers();
@@ -269,8 +300,29 @@ prepend endOfPageScripts
         var apiUrl = url.replace('{0}',package);
 
         $.getJSON(apiUrl).success(function (data){
+          if(reload){
+            Config.resetPage();
+          }
           Config.processData(data);
         });
+      },
+      setTitle: function(){
+        var getStarted = 'gs';
+        if (origin === getStarted){
+          $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+        }
+        else{
+         if(plan.indexOf('wsb_personal') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+          }
+          else if(plan.indexOf('wsb_businessplus') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+          }
+          else{
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+          }
+
+        }
       },
       showSteps: function(ids){
 
@@ -280,13 +332,14 @@ prepend endOfPageScripts
         });
       },
       addStepBreaks: function(){
+        var breakTemplate = _.template($( "script.breakTemplate" ).html());
 
-        var $break = $('.config-step-break').detach();
+        $('.config-step-break').remove();
         var numberOfSteps = $('.config-step:visible').length - 1;
 
         $('.config-step:visible').each(function(index){
           if(numberOfSteps != index )
-            $(this).parent().append($break.clone());
+            $(this).parent().append(breakTemplate());
         });
       },
       stepNumbers: function(){
@@ -486,13 +539,21 @@ prepend endOfPageScripts
 
         var selectedPlan = $('input:radio[name="planOption"]').filter(':checked').attr('data-plan');
         var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+        var selectedFactor = Config.getFactor(parseInt(selectedTerm));
         var selectedPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthly');
+        var selectedPricePerYear = $('input:radio[name="termOption"]').filter(':checked').attr('data-yearly');
         var selectedListPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthlyList');
         var selectedSale = $('input:radio[name="termOption"]').filter(':checked').attr('data-onsale');
         var onSale = (selectedSale == 'true');
         var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
 
-        var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+        if(parseInt(selectedTerm) > 1){
+          var selectedTotal = currencyCalc.evaluate([selectedFactor,"*",selectedPricePerYear]);
+        }
+        else{
+          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+        }
+
         var selectedListTotal = currencyCalc.evaluate([selectedTerm,"*",selectedListPricePerTerm]);
         var selectedSavings = currencyCalc.evaluate([selectedListTotal,"-",selectedTotal]);
 
@@ -631,6 +692,26 @@ prepend endOfPageScripts
           }
         });
         return text;
+      },
+      getFactor: function(term){
+        var factor;
+        switch(term) {
+          case 24:
+              factor = 2;
+              break;
+          case 36:
+              factor = 3;
+              break;
+          case 48:
+              factor = 4;
+              break;
+          case 60:
+              factor = 5;
+              break              
+          default:
+              factor = 1;
+          }
+        return factor;
       }
     };
     
@@ -639,10 +720,9 @@ prepend endOfPageScripts
 
     $(document).ready(function(){
       $('.btn-continue').click(function(){
-            Config.addPlanToCart();
-            $('.configuration').hide();
-            $('.domain-search').show();
-          });
-
-
+        Config.addPlanToCart();
+        $('.configuration').hide();
+        $('.domain-search').show();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
     });

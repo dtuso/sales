@@ -3,8 +3,9 @@ extends ./_page
 include ./_domain-search.jade
 include ./_config-helper.jade
 
-
-
+append seo
+  meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+  
 append head
   link(href!="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css")
 
@@ -223,6 +224,4 @@ block content
         
     //- domain search section
   block domainSearch
-    .container.domain-search(style="display:none")
-      +domainSearchInput()
 
