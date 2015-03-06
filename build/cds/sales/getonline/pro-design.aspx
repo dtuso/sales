@@ -152,7 +152,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark></h3>
+            <h3 class="text-center">A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
           </div>
         </div>
         <div style="margin-top:35px" class="row">
@@ -1840,7 +1840,7 @@ var PlanBox6UI = {
     </section>
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span></h3>
+        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
         <div class="pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">

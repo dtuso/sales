@@ -38,7 +38,7 @@ block domainSearchStyles
 
 block bubbleContent
   h2.text-center Here you go...
-  h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</mark>
+  h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark>
 
 block productContent
   .row(style={"margin-top": "35px"})
@@ -127,7 +127,7 @@ block office365
 block bottomGetItNow
   section#bottomGetItNow.bg-medium
     .container
-      h3.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at [@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]/mo*</span>
+      h3.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark>
       .pro-wrapper
         .col-xs-6
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png")
