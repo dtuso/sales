@@ -1,0 +1,244 @@
+
+<atlantis:webstash type="js">
+  <script>
+    $(document).ready(function(){
+      $("#txtsld").val('')
+      .bind('focus',function(){
+        if(this.value==''){
+          $('#txtsldlabel').css({'opacity':0});
+        }
+      }).bind('blur',function(){
+        if(this.value==''){
+          $('#txtsldlabel').css({'opacity':1});
+        }
+      });
+    });
+    
+    
+    
+    
+  </script>
+</atlantis:webstash>
+<atlantis:webstash type="css">
+  <style>
+    /* Base */
+    
+    /* Layout*/
+    .table-row{display:table;margin:auto;}
+    .table-row > *{display:table-cell;margin:auto;vertical-align:middle;}
+    
+    /* Marquee */
+    .why-us-subtitle{font-family:'Walsheim-Black';margin:40px 0 20px;font-size:30px;}
+    h4 {font-weight:bold;}
+    h3 {margin:80px auto 15px;font-weight:bold;}
+    .main-banner-title{margin:80px auto 15px;}
+    .main-banner-subtitle{margin:15px auto 60px;}
+    .search-domain{margin:60px auto 20px;}
+    ul.text-center{display:table;margin:auto;}
+    ul li{padding-bottom:5px;}
+    .search-domain{position:relative;display:table;margin}
+    .start-here{
+      background-color:#FECB45;padding:5px 20px;margin-right:20px;font-size:16px;
+    }
+    .table-spacer{width:20px;}
+    .table-spacer:before{content:'';border-top:solid 10px transparent;border-right:solid 10px transparent;border-bottom:solid 10px transparent;border-left:solid 10px #FECB45;position:relative;top:-8px;font-size:0;height:0;}
+    .search-form{}
+    .search-border-highlight{
+      border-top:solid 5px #FECB45;
+      border-right:solid 7px #FECB45;
+      border-bottom:solid 5px #FECB45;
+      border-left:solid 7px #FECB45;
+      min-width: 600px;
+    }
+    .search-border{
+      background-color: #fff;
+      border: 1px solid #a4a4a4;
+      height: 55px;
+      position:relative;
+    }
+    .search-input-label{
+      color: #679b08;
+      display: block;
+      font-size: 24px;
+      font-weight: 300;
+      outline: 0;
+      overflow: hidden;
+      padding: 17px 0 8px 30px;
+      white-space: nowrap;
+      font-family: Helvetica;
+    }
+    .search-input{
+      background-color: transparent;
+      border: 0;
+      color: #333;
+      font-family: "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.4;
+      height: 30px;
+      outline: 0;
+      padding: 0;
+      position:absolute;
+      top:10px;
+      left:30px;
+      right:30px;
+      width:90%;
+    }
+    .submit-btn-form{position:relative;overflow:hidden;height:100%;}
+    .submit-btn-form .flt-btn-grn{position:absolute;top:0;bottom:-20px;width:100%;font-size:0}
+    .submit-btn-form .btn-label{font-size:20px;padding:15px 20px;color:#fff;position:relative;display:inline-block;}
+    
+    
+    .marquee-featured-list{margin:20px auto 40px;}
+    /* Module */
+    .compare-chart-section{}
+    .compare-chart-table{margin:80px auto 15px;border-spacing:1px 0;border-collapse:separate;font-size:14px}
+    .compare-chart-table td{padding:10px;height:50px;border:solid 1px #E4E4E4;}
+    .compare-chart-section th{vertical-align:top;font-size:20px;}
+    .compare-chart-title{font-size:36px;}
+    .compare-chart-section tr:nth-child(2n) td{background-color:#FEFEFE;}
+    .compare-chart-section tr:nth-child(2n+1) td{background-color:#fff}
+    .compare-chart-section .compare-chart-col-1{width:300px;}
+    .compare-chart-section td.compare-chart-highlight{background-color:#FC8925!important;color:#fff;border:solid 1px #FC8925;}
+    
+    /* State */
+    
+    /*  Theme */
+    /* Marquee */
+    .main-banner-title{color:#333;font-size:3.68em;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:bold}
+    .main-banner-subtitle{color:#333;font-size:1.88em;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:normal;letter-spacing:0em;}
+    .bg-dark{background-color:#F2F2F2}
+    .check-marks{list-style-type:none;}
+    .check-marks li:before{content:'';background-image:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/offers-domain-sprite.png');display:inline-block;width:17px;height:12px;margin:0 7px 2px 0;}
+    .submit-btn-form .flt-btn-grn{border:solid 0;}
+    .submit-btn-form .flt-btn-grn:hover{border:solid 0;}
+    
+    .why-us-banner-title{font-size:50px;font-family:'Walsheim-Black'}
+    .why-us-banner-description{font-size:22px;font-weight:bold;line-height:1.4;margin-left:auto;margin-right:auto;width:900px;}
+    
+    .check-style-1{background:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/offers-domain-sprite.png') -50px 0 no-repeat transparent;display:inline-block;width:30px;height:30px;margin:0;}
+    .check-style-2{background:url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/offers-domain-sprite.png') -19px 0 no-repeat transparent;display:inline-block;width:30px;height:30px;margin:0;}
+    
+    .why-us-title{margin-top:10px;}
+    .why-us-text{margin-top:10px;}
+    
+    .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
+    .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
+    .why-trust{height:115px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png) no-repeat bottom;}
+    
+  </style>
+</atlantis:webstash>
+<!-- =========================-->
+<!-- Marquee and Domain Search-->
+<!-- =========================-->
+<section class="bg-dark">
+  <div class="l-main-container container main-banner-content">
+    <h1 class="text-center main-banner-title uppercase"><strong> <span class="price">$.99</span><span class="product-offer-name"> .COM</span></strong></h1>
+    <h2 class="text-center main-banner-subtitle uppercase">Limited Availability - Get yours Now</h2>
+    <div class="search-domain">
+      <form id="domainSearch" name="domaincheck" method="get" action="[@T[link:<relative path="~/api/dpp/search/single"></relative>]@T]" class="highlight search-form row table-row">
+        <div class="start-here text-center uppercase"><strong>Start<br/>Here</strong></div>
+        <div class="table-spacer"></div>
+        <div class="search-border-highlight">
+          <div class="search-border">
+            <input type="hidden" name="ci" value="x"/>
+            <input type="hidden" name="key" value="dlp_99cent"/>
+            <input type="hidden" name="tmskey" value=""/>
+            <input type="hidden" name="checkAvail" value="1"/>
+            <label id="txtsldlabel" for="txtsld" style="opacity: 1;" class="search-input-label">Enter a domain name</label>
+            <input id="txtsld" type="text" name="q" value="" class="search-input"/>
+          </div>
+        </div>
+        <div class="submit-btn-form">
+          <input id="domain-search-click" type="submit" data-ci="domainSearchClick" value="Search" class="flt-btn-grn"/><span style="cursore:pointer;" onclick="$('.flt-btn-grn').trigger('click')" class="btn-label">Search</span>
+        </div>
+      </form>
+    </div>
+    <div class="marquee-featured-list">
+      <ul class="check-marks text-center">
+        <li><span class="uppercase">More People Trust</span> GoDaddy with their domains than anyone else.</li>
+        <li><span class="uppercase">World Class 24/7</span> help building your online business.</li>
+        <li><span class="uppercase">Big Savings</span> over other registrars.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- =========================-->
+<!--     Compare Chart        -->
+<!-- =========================-->
+<section class="compare-chart-section">
+  <div class="l-main-container container main-banner-content">
+    <table class="compare-chart-table">
+      <thead>
+        <tr>
+          <th class="compare-chart-col-1">
+            <h4 class="compare-chart-title">Compare and save big!</h4>
+          </th>
+          <th rel="godaddy" class="text-center highlight-compare-column">GoDaddy</th>
+          <th rel="networksolutions" class="text-center">Network Solutions</th>
+          <th rel="register" class="text-center">Register.<span style="display:none;"> </span>com</th>
+          <th rel="Yahoodomains" class="text-center">Yahoo Domains</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1 Yr Domain Registration (.COM)</td>
+          <td class="text-center compare-chart-highlight">$0.99*<br/>SALE!</td>
+          <td class="text-center">$34.99</td>
+          <td class="text-center">$38.00</td>
+          <td class="text-center">$9.95</td>
+        </tr>
+        <tr>
+          <td>Domain Transfer</td>
+          <td class="text-center compare-chart-highlight">$0.99*<br/>SALE!</td>
+          <td class="text-center">$19.00</td>
+          <td class="text-center">$12.00</td>
+          <td class="text-center">$9.95</td>
+        </tr>
+        <tr>
+          <td>Status Alerts</td>
+          <td class="text-center compare-chart-highlight"><span class="check-style-1"></span></td>
+          <td class="text-center">-</td>
+          <td class="text-center">-</td>
+          <td class="text-center">-</td>
+        </tr>
+        <tr>
+          <td>Getting Started Guide</td>
+          <td class="text-center compare-chart-highlight"><span class="check-style-1"></span></td>
+          <td class="text-center"><span class="check-style-2"></span></td>
+          <td class="text-center">-</td>
+          <td class="text-center">-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- =========================-->
+<!--    Why Choose Section    -->
+<!-- =========================-->
+<section class="why-us">
+  <div class="l-main-container container main-banner-content">
+    <div>
+      <h3 class="uppercase text-center why-us-banner-title">Why Choose GoDaddy?</h3>
+      <p class="text-center text-center why-us-banner-description">With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure, comfy home online.</p></p>
+    </div>
+    <div class="row">
+      <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/location_icon.png" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/location_icon.png" alt="Pin Point Globe" class="lazyload"/>
+        <h4 class="why-us-subtitle uppercase">World's Largest Registrar</h4>
+        <p>
+          <More>people trust us than any other domain provider. Since the right domain name can set you up for future success, you don't want to mess around. Go with the world's largest registrar.</More>
+        </p>
+      </div>
+      <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/browser_icon.png" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/browser_icon.png" alt="Pin Point Globe" class="lazyload"/>
+        <h4 class="why-us-subtitle uppercase">Widest Selection on the Web</h4>
+        <p>
+          <Every>time you enter a name in our domain search box, our powerful engine searches the web’s largest pool of names. There's no better place to ﬁnd the right domain name for your business.</Every>
+        </p>
+      </div>
+      <div class="col-xs-4"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/support_icon.png" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/support_icon.png" alt="Pin Point Globe" class="lazyload"/>
+        <h4 class="why-us-subtitle uppercase">Award-Winning 24/7 Support</h4>
+        <p>Stumped by... anything? Our smart, friendly domain experts are here to help. Call them day or night at (480) 505-8877.</p>
+      </div>
+    </div>
+  </div>
+</section>
