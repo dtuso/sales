@@ -6,13 +6,13 @@ name: P4P
 
 {% include 'modules/doc-block.html' %}
 <phrase key="QuestionsLP-8-ThisDoesnTHaveToBeConfusing" />
-This doesn't have to be <span class="callout">confusing!</span>
+Forget <span class="callout">confusing</span>. We make it easy.
 <phrase key="QuestionsLP-7-WeCanGetYourBusinessOnline" />
-We can get your business online.
+Just tell us a little about yourself.
 <phrase key="QuestionsLP-17-TellUsALittleAboutYourselfWeWill" />
-Tell us a little about yourself.  We will step you from A to Z, no problem.
+...and we'll hook you up with the perfect package to get you online.
 <phrase key="QuestionsLP-18-WhatSYourBusinessNameDonTHave" />
-What's your business name? Don't have a name? An idea for your business is perfect!
+What's your business name? If you don't have a business name yet, just tell us your idea or product.
 <phrase key="QuestionsLP-6-WhatSYourBusinessName" />
 What's your business name?
 <phrase key="QuestionsLP-7-EnterYourBusinessNameOrIdea" />
@@ -20,27 +20,27 @@ Enter your business name or idea
 <phrase key="QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET" />
 Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG
 <phrase key="QuestionsLP-20-WeVeGivenYouSomeOptionsOfHow" />
-We've given you some options of how to set up your business online.  Just fill in the blanks!
+Choose from the options below to tell us what you want to do and how you want to do it.
 <phrase key="QuestionsLP-4-IMInterestedIn" />
-I'm interested in
+I want to
 <phrase key="QuestionsLP-5-GettingMyExistingBusinessOnline" />
-Getting my existing business online
+Get my existing business online
 <phrase key="QuestionsLP-5-StartingANewBusinessOnline" />
-Starting a new business online
+Start a new business online
 <phrase key="QuestionsLP-3-SellingProductsOnline" />
-Selling products online
+Sell products online
 <phrase key="QuestionsLP-4-StartingMyOwnBlog" />
-Starting my own blog
+Start my own blog
 <phrase key="QuestionsLP-7-IHaveTheResourcesAndTimeTo" />
-I have the resources and time to
+I'd like to
 <phrase key="QuestionsLP-8-BuildItMyselfIfItSEasy" />
-Build it myself (if it's easy)
+Build my own website (if it’s easy)
 <phrase key="QuestionsLP-13-IHaveAGuyWhoKnowsHowTo" />
-I have a guy who knows how to code (he has skills)
+Let my hipster friend build my website (he’s got skills)
 <phrase key="QuestionsLP-11-HireSomeoneToDoItAllForMe" />
-Hire someone to do it all for me (no time)
+Hire a web pro to build my site for me (I’m swamped)
 <phrase key="QuestionsLP-6-GetMeUpAndRunning" />
-Get me up and running!
+Show me what I need
 <phrase key="QuestionsLP-2-Step2" />
 Step 2
 <phrase key="QuestionsLP-2-Step1" />
