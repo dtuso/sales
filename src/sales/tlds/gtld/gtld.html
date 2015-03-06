@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 
-name: GCEMO-615
-comments: gTLD LP - merchandising updates for 3/4
+id: 54f9e659f778fc1a48eed470
+name: GCEMO-547
+comments: remove underlines from links
 ---
 {% extends 'layouts/base.html' %}
 
@@ -50,6 +50,10 @@ comments: gTLD LP - merchandising updates for 3/4
       ##else
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-global.jpg");
       ##endif
+    }
+
+    .discover-domains-details-table-row > td:first-child {
+      text-decoration:none;
     }
   </style>
 </atlantis:webstash>
