@@ -1,0 +1,33 @@
+extends ../../../../sales/homepage/tiles/_marquee-tld-sale-tile.jade
+
+prepend vars
+  - tld = "com";
+  - logo = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMTc0IDQxLjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE3My45NzggNDEuNTUzIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjYuOCAyNS41Yy0yLjEgOC44LTkuOSAxNi4xLTIwLjQgMTYuMSAtMTEuOCAwLTIwLjgtOS4zLTIwLjgtMjAuOEMyNS41IDkuMyAzNC40IDAgNDYuMSAwYzEwLjMgMCAxOC43IDYuOCAyMC42IDE2LjRINTQuOWMtMS4zLTIuNy0zLjYtNS41LTguNC01LjUgLTIuNy0wLjEtNS4xIDAuOS02LjcgMi43IC0xLjYgMS44LTIuNSA0LjQtMi41IDcuMiAwIDUuNyAzLjcgOS45IDkuMyA5LjkgNC44IDAgNy4yLTIuOCA4LjQtNS4ySDY2Ljh6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5LjEgMjAuN2MwLTkuNSA2LjgtMjAuNiAyMS0yMC42IDE0LjIgMCAyMSAxMS4yIDIxIDIwLjcgMCA5LjUtNi44IDIwLjctMjEgMjAuNyAtMTQuMiAwLTIxLTExLjItMjEtMjAuN1YyMC43ek04MC44IDIwLjhjMCA1LjYgNC4zIDkuOCA5LjMgOS44IDUuMSAwIDkuMy00LjEgOS4zLTkuOCAwLTUuNy00LjMtOS44LTkuMy05LjggLTUuMSAwLTkuMyA0LjEtOS4zIDkuOFYyMC44eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMTQuMiAxLjNoMTAuOXY0LjFjMCAwIDAuNy0xLjQgMi40LTIuN0MxMjkuMSAxLjMgMTMxLjkgMCAxMzUuOSAwYzIuNyAwIDYgMC43IDguOSAzLjcgMC44IDAuOCAxLjYgMS45IDIuMyAzLjIgMC44LTEuMiAxLjctMi40IDIuOC0zLjRDMTUyLjMgMS41IDE1NS41IDAgMTU5LjUgMGMyLjcgMCA3LjEgMC42IDEwLjIgMy45IDMuNiAzLjkgNC4yIDYuNSA0LjIgMTUuMXYyMS4zaC0xMS43VjE5LjZjMC0xLjYgMC0zLjctMC44LTUuNSAtMC43LTEuOC0yLjItMy4yLTUuMi0zLjIgLTMuMiAwLTQuOCAxLjUtNS42IDMuMiAtMC44IDEuOC0wLjggMy43LTAuOCA0Ljh2MjEuM2gtMTEuNlYxOS4xYzAtMS4xIDAtMy4xLTAuNy00LjggLTAuOC0xLjgtMi4yLTMuMy01LjEtMy4zIC0zLjMgMC00LjkgMS41LTUuOCAzLjQgLTAuOCAxLjktMC44IDQtMC44IDUuMnYyMC43aC0xMS43VjEuM3oiLz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjguOSIgeTE9IjEyLjEiIHgyPSI4LjkiIHkyPSIzMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjODJEMUY1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA5RERDIi8+PC9saW5lYXJHcmFkaWVudD48Y2lyY2xlIGZpbGw9InVybCgjU1ZHSURfMV8pIiBjeD0iOC45IiBjeT0iMjEiIHI9IjguOSIvPjwvc3ZnPg==";
+  - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/com-logo.png";
+  - pfid = "101";
+  - bodyText = "[@L[cds.sales/homepage/tile/marquee-com-tld-sale-tile:small-price]@L]";
+  - ctaLink = "[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727' /></relative>]@T]";
+  - dataCi = "95727";
+
+block append tileStyles
+  style
+    :less
+      #marquee .tld-sale-tile.com-sale img.com-sale-tile-logo{height:30px;width:115px;float:left;margin:12px 8px;}
+
+block prepend tileContent
+  |  
+  |  ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
+  atlantis:webstash(type="css")
+    style.
+      #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE4MyA1MyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgzIDUzIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkREQzQ2IiBkPSJNMCAwbDE5IDM1aDE0N2wxNyAxOFYzNS42IDBIMHoiLz48L3N2Zz4=");background-repeat: no-repeat;background-position: center right;float: right;background-size: cover;color: #333;font-size: 26px;padding-bottom: 20px;padding-left: 25px;padding-right: 20px;margin-right: -15px;margin-top: -10px;margin-bottom: -15px;text-transform: uppercase;}
+      .Explorer #marquee .tld-sale-tile.com-sale .sale-ends-text,.Mozilla #marquee .tld-sale-tile.com-sale .sale-ends-text{margin-right:-21px;}
+      .Explorer8 #marquee .tld-sale-tile.com-sale .sale-ends-text, .Explorer7 #marquee .tld-sale-tile.com-sale .sale-ends-text{background-image: url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/marquee-tile-flag.png");}
+
+  .sale-ends-wrap.clearfix 
+    .sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
+    script(type='text/javascript').
+      var d = new Date("2015","01","17");
+      saleEndDate = d.toLocaleDateString();   
+      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));    
+  |  
+  |  ##endif
