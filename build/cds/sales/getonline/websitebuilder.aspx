@@ -1056,7 +1056,7 @@ function getParameterByName(name) {
     <section id="wordpress" class="product-section">
       <div class="container">
         <div class="row">
-          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
+          <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
             <h2 class="text-center">Website Builder</h2>
             <h4 class="text-center">Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.</h4>
             <button id="viewTemplates" data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block view-all">[@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]</button>
