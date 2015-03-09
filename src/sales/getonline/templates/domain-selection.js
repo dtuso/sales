@@ -165,7 +165,7 @@ function tokenizeDisclaimerModals() {
 
 //   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
 //     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//       .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
 //   });
 // }
 
@@ -379,7 +379,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -440,12 +440,12 @@ function showSearchSpins($view, domain, alternateDomains){
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){  
   var $modal = $("#domain-selected-view .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 // function showTypeYourDomain() {  
@@ -494,7 +494,7 @@ function animateWizard($currentView, $animateToView) {
   }
 
   $animateToView.show();
-  
+
   // var $wizard = $('#domainSearchWizardSection'),
   // wizardHeight = $wizard.height();
 

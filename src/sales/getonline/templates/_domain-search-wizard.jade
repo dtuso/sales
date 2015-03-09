@@ -408,7 +408,6 @@ mixin domainSearchEndOfPageScripts()
         possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
         isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
       },
-      sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
       maxNumberOfSpinsToShowByDefault: 3,
       totalSpinResults: 0,
       dppErrorReturnUrl: "[@T[link:<relative path='~/!{productToDisplay.landingPage}' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",

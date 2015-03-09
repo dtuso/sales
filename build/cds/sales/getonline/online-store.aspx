@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "getonline_online_store",
           itcCode: "slp_getonline_store",
+          sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]",
             promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='yearly' promocode='75315678' />]@T]",
@@ -136,6 +137,12 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+        
+          $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
+            $("#default-details-modal")
+              .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
+          });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -147,6 +154,7 @@
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
+          
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
           
@@ -325,7 +333,7 @@ function tokenizeDisclaimerModals() {
 
 //   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
 //     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//       .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
 //   });
 // }
 
@@ -539,7 +547,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -600,12 +608,12 @@ function showSearchSpins($view, domain, alternateDomains){
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){  
   var $modal = $("#domain-selected-view .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 // function showTypeYourDomain() {  
@@ -654,7 +662,7 @@ function animateWizard($currentView, $animateToView) {
   }
 
   $animateToView.show();
-  
+
   // var $wizard = $('#domainSearchWizardSection'),
   // wizardHeight = $wizard.height();
 
@@ -774,10 +782,19 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
-            <button data-ci="96294" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta text-center">
+            <p class="price-token">Get the bundle for {price_monthly}/month for the first year*</p>
+            <button data-ci="96294" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+            <div class="header-text disclaimers"><small class="text-disclaimers">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button></small> 
+              ##if(countrySiteAny(uk)) 
+              <div class="text-vat-disclaimer">[@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]</div> 
+              ##endif 
+            </div>
           </div>
+        </div>
+        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
         </div>
       </div>
     </section>
@@ -1307,6 +1324,10 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
+        #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
+        #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+        
+        
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -1661,7 +1682,6 @@ ul li.no-check {
           possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
           isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
         },
-        sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
         maxNumberOfSpinsToShowByDefault: 3,
         totalSpinResults: 0,
         dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
