@@ -82,7 +82,7 @@
         </form>
       </div>
     </div>
-    <div id="marquee-container-orig">[@P[cdsDocument:<data app="sales" location="homepage/marquee/domain-wales/default_template" /> ]@P]</div>
+    <div id="marquee-container-orig">[@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]</div>
     <div id="marquee-container-isc" style="display:none">[@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]</div>
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
