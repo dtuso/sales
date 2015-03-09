@@ -239,7 +239,7 @@
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -267,7 +267,7 @@
         <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.</p>
           </div>
         </div>
@@ -2014,6 +2014,7 @@ ul li.no-check {
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
+        #product-price{margin-top: 5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -2124,6 +2125,7 @@ ul li.no-check {
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         #bottomGetItNow img { min-height: 115px; }
+        .uppercase {text-transform: uppercase;}
         
       </style>
       <style>
@@ -2138,6 +2140,7 @@ ul li.no-check {
         .products{margin-top: 0px!important;}
         .uppercase{text-transform: uppercase;}
         .orange-text{color: #ef6c0f;}
+        #getItNow .hero-guy{left: 0px;}
         
       </style>
     </atlantis:webstash>

@@ -1309,6 +1309,7 @@ ul li.no-check {
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
+        #product-price{margin-top: 5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
