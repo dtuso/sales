@@ -294,6 +294,7 @@ append pageStyles
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
     #bottomGetItNow img { min-height: 115px; }
+    .uppercase {text-transform: uppercase;}
 
   block domainSearchStyles
     +domainSearchStyles()
@@ -307,7 +308,7 @@ block content
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
             h2.text-center Here you go...
-            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
+            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark>
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
@@ -358,7 +359,7 @@ block content
             .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
-            mark Did you know...
+            mark.uppercase Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
             img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
