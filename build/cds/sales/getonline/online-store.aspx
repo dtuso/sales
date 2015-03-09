@@ -752,7 +752,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -823,7 +823,7 @@ function getParameterByName(name) {
           </form>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -915,7 +915,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -997,7 +997,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1039,7 +1039,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1080,7 +1080,7 @@ function getParameterByName(name) {
         <div class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.</p>
           </div>
         </div>
@@ -1097,7 +1097,7 @@ function getParameterByName(name) {
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -1390,6 +1390,7 @@ ul li.no-check {
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         #bottomGetItNow img { min-height: 115px; }
+        .uppercase {text-transform: uppercase;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
