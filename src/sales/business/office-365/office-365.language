@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
-id: 5490c030f778fc1cd843c71b
-name: GCE-32259
-comments: 2 SKU split test 1414
+id: 54ebc215f778fc0acccea4a9
+name: GCE-35999
+comments: Renewal message disclaimer
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -1113,3 +1113,15 @@ With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is includ
 With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning support. You’ll can feel confident knowing our all-star team is powering your email.
 <phrase key="31272-exclusive_discount" />
 Exclusive discount for [@T[companyname:name]@T] customers.
+<phrase key="35999-DisclaimersLinkText" />
+*, **, <sup>1</sup>, <sup>4</sup> Click here for product disclaimers and legal policies.
+<phrase key="35999-Disclaimers-one" comment="same as 29621-Disclaimers-one but with superscript 1" />
+<sup>1</sup> Includes Office 365 ProPlus for PC's (which includes desktop versions of Outlook, Word, Excel, PowerPoint, OneNote, Publisher and Lync) or Office 2011 for Mac (which includes desktop versions of Outlook, Word, Excel and PowerPoint). Publisher and One Note Desktop are Windows PC client programs and/or features only. Cannot be used across devices. Install on up to 5 PCs or Macs. Includes automatic updates and upgrades so you always have the newest versions of these tools.
+<phrase key="35999-Disclaimers-four" />
+<sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
+<phrase key="35999-superscript-4" />
+<sup>4</sup>
+<phrase key="35999-FeatureContent-1-description" />
+Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPoint, Outlook, OneNote and Publisher &ndash; with a subscription to Microsoft Office 2013 or Office for Mac 2011 for up to 5 devices per single user. <em>Business and Business Premium plans only.</em>
+<phrase key="35999-faq-55-ThisDependsOnWhetherYouAreUsingA" />
+This depends on which plan you choose and whether you’re using a PC or Mac. PC users who choose the Business plan can download the latest versions of Word, PowerPoint, Excel, Outlook, OneNote and Publisher. If you choose the Business Plus plan, you get all of those programs, plus Lync. And if you’re a Mac user, you’ll receive the latest desktop versions of Word, PowerPoint, Excel, OneNote and Outlook for either plan.<sup>1</sup>
