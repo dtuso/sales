@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "",
           itcCode: "",
+          sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "",
             promo_annual: "",
@@ -136,6 +137,12 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+        
+          $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
+            $("#default-details-modal")
+              .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
+          });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -189,6 +196,9 @@
               <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
             </form>
           </div>
+        </div>
+        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
         </div>
       </div>
     </section>
@@ -467,6 +477,10 @@ ul li.no-check {
         @media (min-width: 992px) {
           #getItNow .hero-guy { left: -50px; }
         }
+        
+        #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
+        #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+        
         
       </style>
       <!-- atlantis:webstash(type="css")-->

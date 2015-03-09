@@ -5639,6 +5639,12 @@ cursor: pointer;
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
+      
+        $('[data-icann-fee]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
+        
       });
       
     </script>
