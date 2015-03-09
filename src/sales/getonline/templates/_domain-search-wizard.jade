@@ -350,7 +350,8 @@ mixin domainSearchContent()
               .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
         .row.show-more-section
-          h6.text-center(style={'margin-top':'10px'})
+          .col-md-12
+            h6.text-center(style={'margin-top':'10px'})
               span.clickable-show-more(data-ci="95268")
                 span See more
                 span.show-more-arrow
@@ -438,6 +439,13 @@ mixin domainSearchEndOfPageScripts()
         });
 
         return visibleSection;
+      },
+      showView: function(view) {
+        var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+        $.each(sections, function(index, section) {
+          section.hide();
+        });
+        $(document).find(view).show();
       }
     };
 

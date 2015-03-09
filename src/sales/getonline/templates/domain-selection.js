@@ -237,10 +237,10 @@ function domainSearchFormSubmit(e, domain) {
 
         updateRecommendedDomain(exactMatchDomain.Fqdn);
 
+        domainSearchWizard.showView('#domain-available-view');
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
-
-        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -261,6 +261,8 @@ function domainSearchFormSubmit(e, domain) {
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
         updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+
+        domainSearchWizard.showView('#domain-not-available-view');
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
