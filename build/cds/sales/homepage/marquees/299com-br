@@ -1,0 +1,26 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .cheap-dotcom-marquee{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/GCE-27311-BR-fall-2014-com-marquee-background-001.jpg) no-repeat top center;width:100%;min-width:1000px;height:400px;cursor:pointer;background-color:#333333;}
+    .cheap-dotcom-marquee-content{font-family:'Walsheim-Black';width:1000px;margin:0 auto;color:#7abf4b;}
+    .cheap-dotcom-text{width:420px;padding-top:60px;text-transform:uppercase;}
+    .cheap-dotcom-pricing-text{width:450px;}
+    .cheap-dotcom-text>span{display:block;line-height:1.1;}
+    .cheap-dotcom-headline{font-size:35px}
+    .cheap-dotcom-maintext{font-size:28.7px}
+    .cheap-dotcom-subtext{font-size:41.5px}
+    .cheap-dotcom-pricing{font-size:30.7px}  
+    .cheap-dotcom-pricing{color:#f2812e;padding-top:50px;}
+    .cheap-dotcom-pricing-text>.btn-wrap{padding:15px 0 10px;}
+    .cheap-dotcom-pricing-text>.btn-wrap>.btn-warning{font-size:24px;padding:10px 25px 8px;text-transform:uppercase;}
+    .cheap-dotcom-restrictions{line-height:14px;padding-top:10px;color:#ffffff;}
+  </style>
+</atlantis:webstash>
+<div id="cheap-dotcom-pt" data-url="[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="94561" /></relative>]@T]" class="cheap-dotcom-marquee js-gdhpclick">
+  <div class="cheap-dotcom-marquee-content">
+    <div class="cheap-dotcom-text"><span class="cheap-dotcom-headline">[@L[cds.sales/homepage/marquee/299com-br:com299-headline]@L]</span><span class="cheap-dotcom-maintext">[@L[cds.sales/homepage/marquee/299com-br:com299-maintext]@L]</span><span class="cheap-dotcom-subtext">[@L[cds.sales/homepage/marquee/299com-br:com299-subtext]@L]</span><span class="cheap-dotcom-pricing">[@L[cds.sales/homepage/marquee/299com-br:com299-pricing-text]@L]</span></div>
+    <div class="cheap-dotcom-pricing-text">
+      <div class="btn-wrap"><span id="cheap-dotcom-btn" class="btn btn-warning walsheim-med">[@L[cds.sales/homepage/marquee/299com-br:com299-btn]@L]</span></div><span class="cheap-dotcom-restrictions walsheim-reg">[@L[cds.sales/homepage/marquee/299com-br:com299-restrictions]@L]</span>
+    </div>
+  </div>
+</div>

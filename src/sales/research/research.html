@@ -1,8 +1,8 @@
 ---
 location: sales/research
-id: 54e6741ff778fc0fb81adf97
-name: SEM-348
-comments: New Research Repository Page
+id: 54f615498dc1ce81f8c76f95
+name: SEM-420
+comments: Add Holi Infographic to Research Repo Page
 assetPath: false
 ---
 {% extends 'layouts/base-Q1-2015-lite.html' %} 
@@ -32,7 +32,13 @@ assetPath: false
   font-size: 1.3em;
 }
 #gd-research .infographic-container {
-  padding-bottom: 4em;
+  margin-bottom: 4em;
+}
+#gd-research .infographic-container .row {
+  margin-bottom: 3em;
+}
+#gd-research .ux-card {
+  padding: 4em 1em 0;
 }
 #gd-research .ux-card a {
   text-decoration: none;
@@ -40,6 +46,12 @@ assetPath: false
 #gd-research .extra-shadow {
   -webkit-box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.1);
+}
+#gd-research .ux-card .col-sm-6 {
+  margin-bottom: 3em;
+}
+#gd-research .ux-card .one-item-container {
+  max-width: 389px;
 }
 #gd-research .coming-soon {
   max-width: 389px;
@@ -63,7 +75,14 @@ assetPath: false
         <div class="col-sm-4 banner-text">
           <h1 class="h0 headline-primary">[@L[cds.sales/gd/research:page-title-h1]@L]</h1>
           <p>[@L[cds.sales/gd/research:intro-paragraph]@L]</p>
-          <button id="gd-research-view-featured" class="btn btn-lg btn-purchase" onclick="location.href='[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96171' /></relative>]@T]';" data-ci="96171">[@L[cds.sales/gd/research:view-featured-button-label]@L]</button>
+          <button id="gd-research-view-featured" class="btn btn-lg btn-purchase" 
+            ##if(activeLanguageAny([pt-br]))
+            onclick="location.href='[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96171' /></relative>]@T]';" 
+            ##else
+            onclick="location.href='[@T[link:<relative path='research/colour-your-website-with-success' secure='true'><param name='ci' value='96848' /></relative>]@T]';" 
+            ##endif
+            data-ci="96171"
+          >[@L[cds.sales/gd/research:view-featured-button-label]@L]</button>
         </div>
       </div>
     </div>
@@ -71,28 +90,47 @@ assetPath: false
   <div class="container infographic-container">
     <div class="ux-card">
       <div class="row">
-        <div class="col-sm-5">
-          <a href="[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96170' /></relative>]@T]" data-ci="96170">
-            <img id="gd-research-image-1"
-              ##if(activeLanguageAny([pt-br]))
-              src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-pt-br.png"
-              ##else
-              src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-uk.png"
-              ##endif
-              class="img-responsive center-block extra-shadow" 
-            />
-            <h3 id="gd-research-title-1" class="headline-primary">[@L[cds.sales/gd/research:infographics-1-title]@L]</h3>
-          </a>
-          <p>[@L[cds.sales/gd/research:infographics-1-intro]@L]</p>
-        </div>
-        <div class="col-sm-5 col-sm-push-2">
-          <div class="coming-soon extra-shadow text-center center-block clearfix">
-            <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/coming-soon-img.png" class="img-responsive center-block">
-            <div class="h2 headline-primary">[@L[cds.sales/gd/research:coming-soon-image-text]@L]</div>
+        ##if(activeLanguageAny([en]))
+        <div class="col-sm-6">
+          <div class="one-item-container center-block">
+            <a href="[@T[link:<relative path='research/colour-your-website-with-success' secure='true'><param name='ci' value='96849' /></relative>]@T]" data-ci="96849">
+              <img id="gd-research-image-2" src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-2-en.png" class="img-responsive center-block extra-shadow" />
+              <h3 id="gd-research-title-2" class="headline-primary">[@L[cds.sales/gd/research:infographics-2-title]@L]</h3>
+            </a>
+            <p>[@L[cds.sales/gd/research:infographics-2-intro]@L]</p>
           </div>
-          <h3 class="headline-primary">[@L[cds.sales/gd/research:coming-soon-title]@L]</h3>
-          <p>[@L[cds.sales/gd/research:coming-soon-paragraph]@L]</p>
         </div>
+        ##endif      
+        ##if(activeLanguageAny([en],[pt-br]))
+        <div class="col-sm-6">
+          <div class="one-item-container center-block">
+            <a href="[@T[link:<relative path='research/mobile-ready-carnival' secure='true'><param name='ci' value='96170' /></relative>]@T]" data-ci="96170">
+              <img id="gd-research-image-1"
+                ##if(activeLanguageAny([pt-br]))
+                src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-pt-br.png"
+                ##else
+                src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/infographic-img-1-uk.png"
+                ##endif
+                class="img-responsive center-block extra-shadow" 
+              />
+              <h3 id="gd-research-title-1" class="headline-primary">[@L[cds.sales/gd/research:infographics-1-title]@L]</h3>
+            </a>
+            <p>[@L[cds.sales/gd/research:infographics-1-intro]@L]</p>
+          </div>
+        </div>
+        ##endif
+        ##if(activeLanguageAny([en],[pt-br]))
+        <div class="col-sm-6">
+          <div class="one-item-container center-block">
+            <div class="coming-soon extra-shadow text-center center-block clearfix">
+              <img src="[@T[link:<imageroot/>]@T]fos/sales/themes/scotty/research/img/coming-soon-img.png" class="img-responsive center-block">
+              <div class="h2 headline-primary">[@L[cds.sales/gd/research:coming-soon-image-text]@L]</div>
+            </div>
+            <h3 class="headline-primary">[@L[cds.sales/gd/research:coming-soon-title]@L]</h3>
+            <p>[@L[cds.sales/gd/research:coming-soon-paragraph]@L]</p>
+          </div>
+        </div>
+        ##endif        
       </div>
     </div>
   </div>  

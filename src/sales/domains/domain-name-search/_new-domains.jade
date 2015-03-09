@@ -1,0 +1,39 @@
+.container
+  atlantis:webstash(type="css")
+    style.
+      #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
+      #new-domains .container{margin:0 auto;padding-left:0px;}
+      #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
+      #new-domains ul li {background-color:#ffffff; width: 100%; height:46px;}
+      #new-domains ul li span{font-family: "Walsheim-Black"; font-size: 30px; padding-left:10px;}
+      #new-domains ul li a{float:right;}
+      #new-domains .col-tld-title {padding-left: 10px;}
+      #new-domains .col-tld-title, #new-domains .bg-warning{font-family:'Walsheim-Black';font-size:18px;}
+  .row
+    .col-md-6
+      span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
+      span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]
+    .col-md-6
+      span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
+      span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]
+  .row
+    .col-md-6
+      ul
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/green'><param name='ci' value='93954' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/website'><param name='ci' value='90328' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/reviews'><param name='ci' value='96021' /></relative>]@T]")  
+    .col-md-6
+      ul
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]")
+        li
+          +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]")

@@ -1,14 +1,17 @@
 extends ../shared/_page
 
+include templates/_domain-search-wizard.jade
+
 append vars
-  - page.title = "[@L[cds.sales/offers/online-business:page-title]@L]";
-  - page.description = "[@L[cds.sales/offers/online-business:meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/offers/online-business:meta-keywords]@L]"; 
+  - page.title = "Get Online Title";
+  - page.description = "Get Online Description";
+  - page.keywords = "Get Online Keywords"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/offers/online-business:og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/offers/online-business:og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "Get Online OG Title";
+  - page.openGraph.description = "Get Online OG Description";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   // P4P variables
   - productToDisplay = {};
@@ -18,11 +21,10 @@ append vars
   - productToDisplay.itcCode = "";
   - productToDisplay.pricing = {};
   - productToDisplay.getItNowDescription = "";
-  - productToDisplay.imgClass = "";
-  - productToDisplay.productIconClass = "";
-  - productToDisplay.price = "";
+  - productToDisplay.productImgUrl = "";
+  - productToDisplay.productIconUrl = "";
   - productToDisplay.productDescription = "";
-  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
@@ -33,19 +35,18 @@ append vars
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
 
-
 append seo
   meta(name="twitter:card" content="summary")
-  meta(name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]")
-  meta(name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]")
-  meta(name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]")
-  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg")
+  meta(name="twitter:site" content="Get Online Twitter Site")
+  meta(name="twitter:title" content="Get Online Twitter Title")
+  meta(name="twitter:description" content="Get Online Twitter Description")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg")
 
 append headScripts
   atlantis:webstash(type="js")
     script.
       var offerInfo = {
-        dppErrorReturnUrl: '[@T[link:<relative path="~/getonline/#{productToDisplay.landingPage}"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+        businessName: "",
         packageId: "#{productToDisplay.packageId}",
         itcCode: "#{productToDisplay.itcCode}",
         pricing: {
@@ -78,18 +79,46 @@ append headScripts
 
         tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
       }
+
+      function tokenizeTheDataTokenizeAttribute() {
+        $('[data-tokenize]').each(function(){
+          var $this = $(this),
+            html = $this.html(),
+            val = $this.data('tokenize'),
+              tokenizedHtml = html.replace(/\{0\}/gi, val);
+          $this
+            .html(tokenizedHtml)
+            .removeAttr('data-tokenize');
+        });
+      }
+
     script.  // Page
       $(document).ready(function(){
         tokenizePrices();
+        tokenizeTheDataTokenizeAttribute();
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
+          offerInfo.businessName = passedBusinessName;
           $(document).find('.business-name-display').text(passedBusinessName);
-          updateSearchedDomain('', passedBusinessName);
-          domainSearchFormSubmit('', passedBusinessName);
        }
       });
-    script
-      include:js domain-selection.js
+
+    block domainSearchScripts
+      atlantis:webstash(type="js")
+        script.  // Page
+          $(document).ready(function(){
+            if(offerInfo.businessName != '') {
+              updateSearchedDomain('', offerInfo.businessName);
+
+              if(getParameterByName('tldRegErr').length > 0) {
+                showDomainRegistrationFailure();
+              } else {
+                domainSearchFormSubmit('', offerInfo.businessName);
+              }
+            }
+          });
+        script(type="text/javascript")
+          include:js templates/domain-selection.js
 
 append pageStyles
   style. 
@@ -142,7 +171,7 @@ append pageStyles
     #getItNow .bubble h3 { font-family: Walsheim-Black; }
     #getItNow .products { margin-top: 40px; }
     #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
-    #getItNow .products img { max-height: 110px; }
+    #getItNow .products img { min-height: 115px; }
     .cta { margin-top: 20px;}
     .cta small { padding-top: 10px; padding-bottom:5px;}
 
@@ -231,10 +260,6 @@ append pageStyles
       filter: FlipH;
     }
 
-  // O365 section
-  // atlantis:webstash(type="css")
-  // style.
-
   // atlantis:webstash(type="css")
   style.  // Why-us section
     .why-us-title{margin-top:10px;}
@@ -251,6 +276,10 @@ append pageStyles
     #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
+    #bottomGetItNow img { min-height: 115px; }
+
+  block domainSearchStyles
+    +domainSearchStyles()
 
 block content
 
@@ -283,8 +312,10 @@ block content
             button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
             small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
-  block domainOrPro
-    include templates/_domain-search-wizard
+  block domainSearchContent
+    +domainSearchContent()
+
+  block proInterview
   
   block productSection
 
@@ -296,13 +327,13 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
             h2.text-center Office 365 Email
             h3.text-center Branded email to talk to your customers
-            .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display">billybikes.org</span></mark>
+            .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
             mark Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
-            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/scotty/p4p/img/img-hero-guy.png")
+            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   section#why-us
     .container
@@ -311,18 +342,18 @@ block content
           h2.text-center Why get online with us?
       .row
         .col-sm-4
-          .feature.why-gd-world-leader.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png','Pin Point Globe')
+          .feature.why-gd-world-leader
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png','Pin Point Globe')
             h3 We're the world leader
             p It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
         .col-sm-4
-          .feature.why-gd-support.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png','TLD Boards')          
+          .feature.why-gd-support
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','TLD Boards')          
             h3 Our 24/7 support is awesome
             p That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
         .col-sm-4
-          .feature.why-gd-trust.text-center
-            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','Support Icon')
+          .feature.why-gd-trust
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png','Support Icon')
             h3 12 million people trust us
             p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
 
@@ -332,23 +363,23 @@ block content
         .row
           h2 Ready to Get Online?
           h3#got-domain-not-selected First select your perfect domain
-          h3#got-domain-selected(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">#{productToDisplay.price}</mark>
+          h3#got-domain-selected.price-token(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
         .row
           .column.domain
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-domainName.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
             h3 Domain Name
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
-            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/p4p/img/img-features-email.png")
+            img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
             h3 Office 365 Email
         .row
-          h3 [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="monthly" promocode="#{primary_promo}"></current>]@T]/month for the first year*
-          button(data-ci="#{productToDisplay.bottomSearchCI}").btn.btn-primary.btn-lg Search Again
+          h3.price-token {price_monthly}/month for the first year*
+          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg Search Again
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
-          small *Bundle cost is [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly" promocode="#{primary_promo}"></current>]@T]/year and [@T[multipleproductprice:<current productidlist="101|#{primary_pfid}|464069" period="yearly"></current>]@T]/year after the first year
+          small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 
 prepend endOfPageScripts
 
@@ -432,3 +463,6 @@ prepend endOfPageScripts
         }).css({'cursor':'pointer'});
       });
     });
+
+  block domainSearchEndOfPageScripts
+    + domainSearchEndOfPageScripts()

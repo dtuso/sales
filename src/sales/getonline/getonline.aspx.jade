@@ -67,7 +67,7 @@ append endOfPageScripts
       var business_idea = $('#search-input').val().toLowerCase();
       var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
 
-      if (tldSpecified && validTlds.indexOf(tldSpecified)) {
+      if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
         $(".validation-message").show();
         e.preventDefault();
       }
@@ -80,7 +80,11 @@ append endOfPageScripts
       // set highlighted marquee text if passed by referring page
       var p4p = window.location.search.split('p4p=');
       if (p4p.length > 1) {
-        $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
+        if(p4p[1].split("&")[0] === 'frustration'){
+          $("#marquee span").text("#&!$*%!");
+        }
+        else
+          $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
       }
     });
 
