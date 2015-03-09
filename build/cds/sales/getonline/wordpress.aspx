@@ -405,10 +405,10 @@ function domainSearchFormSubmit(e, domain) {
 
         updateRecommendedDomain(exactMatchDomain.Fqdn);
 
+        domainSearchWizard.showView('#domain-available-view');
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
-
-        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -429,6 +429,8 @@ function domainSearchFormSubmit(e, domain) {
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
         updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+
+        domainSearchWizard.showView('#domain-not-available-view');
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -547,7 +549,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -760,7 +762,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -840,7 +842,7 @@ function getParameterByName(name) {
           </form>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -932,7 +934,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1005,7 +1007,9 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            <div class="col-md-12">
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
@@ -1014,7 +1018,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1056,7 +1060,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1124,7 +1128,7 @@ function getParameterByName(name) {
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -1421,6 +1425,7 @@ ul li.no-check {
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         #bottomGetItNow img { min-height: 115px; }
+        .uppercase {text-transform: uppercase;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1722,6 +1727,13 @@ ul li.no-check {
           });
       
           return visibleSection;
+        },
+        showView: function(view) {
+          var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+          $.each(sections, function(index, section) {
+            section.hide();
+          });
+          $(document).find(view).show();
         }
       };
       
