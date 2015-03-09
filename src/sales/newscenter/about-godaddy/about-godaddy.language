@@ -1,6 +1,6 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: false
+id: 54fdd368f778fc0fc0cef39d
 name: GCEMO-701
 comments: Update title and bio for Phil Bienert and Barb Rechterman
 ---
@@ -642,3 +642,19 @@ Prior to joining GoDaddy, Buddy was one of six adorable Golden Retriever puppies
 After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the litter was easy, and at 9 weeks of age, Buddy was cast in his first Super Bowl commercial with GoDaddy and a short time later he was adopted into the GoDaddy family.
 <phrase key="NewsCenterAbout-BuddyBio6" />
 Equally at home in the customer care center, on the office putting green or visiting business owners and employees to help them chill, Buddy’s expertise in making “ruff” days a little better continues to garner accolades including, ‘Who’s a good boy?’
+<phrase key="NewsCenterAbout-PhilBienert-title" />
+Chief Marketing Officer & Executive Vice President, Digital Commerce
+<phrase key="NewsCenterAbout-PhilBienert-bio-1" />
+As Chief Marketing Officer, Phil oversees all facets of corporate marketing, including strategic planning and business development for Marketing, Global Branding and Product Management.
+<phrase key="NewsCenterAbout-PhilBienert-bio-2" />
+Prior to joining GoDaddy in 2013, he held senior positions at several big brands, successfully leading user-experience and customer engagement. Phil led the online marketplace at AT&T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.
+<phrase key="NewsCenterAbout-PhilBienert-bio-3" />
+Phil received his M.B.A. from the University of Texas at Austin and his B.A. from Georgetown University. He also spent a year teaching English at Changchun University in northeast China.
+<phrase key="NewsCenterAbout-BarbRechterman-title" />
+Chief Customer Officer
+<phrase key="NewsCenterAbout-BarbRechterman-bio-1" />
+Barb directs strategic end-to-end customer relationships, creating programs and promoting consumer-related functions with a unified vision to provide a consistent customer experience and value. 
+<phrase key="NewsCenterAbout-BarbRechterman-bio-2" />
+She has teamed with GoDaddy founder Bob Parsons for more than two decades, having previously served as Chief Marketing Officer at GoDaddy, Vice President of Application Development for Parsons Technology and as President during the company’s acquisition by Intuit, Inc.
+<phrase key="NewsCenterAbout-BarbRechterman-bio-3" />
+Barb earned a B.A. in Accounting from the University of Dubuque and is a Certified Public Accountant. When not working to help small business owners and others leverage the power of the Internet, Barb enjoys riding Harleys with her husband and training her four horses in dressage.
