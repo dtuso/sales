@@ -51,7 +51,7 @@
 .marquee-tile-p4p a.cta-link {
   display: block;
   font-size: 16px;
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   margin-top: 10px;
