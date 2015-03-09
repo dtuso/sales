@@ -89,8 +89,8 @@
           packageId: "getonline_website_builder",
           itcCode: "slp_getonline_wsb",
           pricing: {
-            promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='75315678' />]@T]",
-            promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='75315678' />]@T]",
+            promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='24681357' />]@T]",
+            promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='24681357' />]@T]",
             renewal_annual: "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]"
           }
         };
@@ -648,24 +648,27 @@ function animateWizard($currentView, $animateToView) {
   if($currentView != undefined) {
     if($currentView[0].id === $animateToView[0].id) return; // we're there!
     currentViewHeight = $currentView.height();
+    $currentView.hide();
   } else {
     currentViewHeight = 0;
   }
 
-  var $wizard = $('#domainSearchWizardSection'),
-  wizardHeight = $wizard.height();
-
-  // show view offscreen to get height
-  $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // can only get height when shown      
-  var toViewHeight = $animateToView.height(),
-    maxHeight = Math.max(currentViewHeight, toViewHeight),
-    minHeight = Math.min(currentViewHeight, toViewHeight);
+  $animateToView.show();
   
-  //run the animations
-  animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  animateObjectOffToTheLeft($currentView, windowWidth, 2);
-  animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  // var $wizard = $('#domainSearchWizardSection'),
+  // wizardHeight = $wizard.height();
+
+  // // show view offscreen to get height
+  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+  // // can only get height when shown      
+  // var toViewHeight = $animateToView.height(),
+  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
+  //   minHeight = Math.min(currentViewHeight, toViewHeight);
+  
+  // //run the animations
+  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+  // animateObjectOffToTheLeft($currentView, windowWidth, 2);
+  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
@@ -3615,7 +3618,11 @@ ul li.no-check {
       
       $(document).ready(function(){
       
-        $(document).find('#' + domainSearch.initialViewId).show();
+        if(getParameterByName('tldRegErr').length > 0) {
+          $('#domain-search-view').show();
+        } else {
+          $(document).find('#' + domainSearch.initialViewId).show();
+        }
       
         var $domainSearchViewForm = $("#domainSearchViewForm");
         $domainSearchViewForm.on('click', 'button.offer-search-btn', function(){

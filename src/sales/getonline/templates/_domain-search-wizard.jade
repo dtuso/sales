@@ -805,7 +805,11 @@ mixin domainSearchEndOfPageScripts()
 
     $(document).ready(function(){
 
-      $(document).find('#' + domainSearch.initialViewId).show();
+      if(getParameterByName('tldRegErr').length > 0) {
+        $('#domain-search-view').show();
+      } else {
+        $(document).find('#' + domainSearch.initialViewId).show();
+      }
 
       var $domainSearchViewForm = $("#domainSearchViewForm");
       $domainSearchViewForm.on('click', 'button.offer-search-btn', function(){
