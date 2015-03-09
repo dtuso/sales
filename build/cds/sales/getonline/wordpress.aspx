@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "getonline_wordpress",
           itcCode: "slp_getonline_wordpress",
+          sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='monthly' promocode='511092015' />]@T]",
             promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='511092015' />]@T]",
@@ -136,6 +137,12 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+        
+          $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
+            $("#default-details-modal")
+              .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
+          });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -147,6 +154,7 @@
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
+          
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
           
@@ -325,7 +333,7 @@ function tokenizeDisclaimerModals() {
 
 //   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
 //     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//       .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
 //   });
 // }
 
@@ -397,10 +405,10 @@ function domainSearchFormSubmit(e, domain) {
 
         updateRecommendedDomain(exactMatchDomain.Fqdn);
 
+        domainSearchWizard.showView('#domain-available-view');
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
-
-        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -421,6 +429,8 @@ function domainSearchFormSubmit(e, domain) {
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
         updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+
+        domainSearchWizard.showView('#domain-not-available-view');
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -539,7 +549,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -600,12 +610,12 @@ function showSearchSpins($view, domain, alternateDomains){
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){  
   var $modal = $("#domain-selected-view .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 // function showTypeYourDomain() {  
@@ -654,7 +664,7 @@ function animateWizard($currentView, $animateToView) {
   }
 
   $animateToView.show();
-  
+
   // var $wizard = $('#domainSearchWizardSection'),
   // wizardHeight = $wizard.height();
 
@@ -752,7 +762,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -774,10 +784,19 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
-            <button data-ci="96305" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+          <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta text-center">
+            <p class="price-token">Get the bundle for {price_monthly}/month for the first year*</p>
+            <button data-ci="96305" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+            <div class="header-text disclaimers"><small class="text-disclaimers">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button></small> 
+              ##if(countrySiteAny(uk)) 
+              <div class="text-vat-disclaimer">[@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]</div> 
+              ##endif 
+            </div>
           </div>
+        </div>
+        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
         </div>
       </div>
     </section>
@@ -823,7 +842,7 @@ function getParameterByName(name) {
           </form>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -915,7 +934,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -988,7 +1007,9 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            <div class="col-md-12">
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
@@ -997,7 +1018,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1039,7 +1060,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1107,7 +1128,7 @@ function getParameterByName(name) {
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -1317,6 +1338,10 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
+        #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
+        #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+        
+        
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -1400,6 +1425,7 @@ ul li.no-check {
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         #bottomGetItNow img { min-height: 115px; }
+        .uppercase {text-transform: uppercase;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1671,7 +1697,6 @@ ul li.no-check {
           possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
           isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
         },
-        sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
         maxNumberOfSpinsToShowByDefault: 3,
         totalSpinResults: 0,
         dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/wordpress.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
@@ -1702,6 +1727,13 @@ ul li.no-check {
           });
       
           return visibleSection;
+        },
+        showView: function(view) {
+          var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+          $.each(sections, function(index, section) {
+            section.hide();
+          });
+          $(document).find(view).show();
         }
       };
       

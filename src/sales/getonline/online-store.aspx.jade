@@ -20,6 +20,7 @@ append vars
   - productToDisplay.landingPage = "getonline/online-store.aspx"
   - productToDisplay.packageId = "getonline_online_store";
   - productToDisplay.itcCode = "slp_getonline_store";
+  - productToDisplay.appKey = "getonline_online_store";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='yearly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|40972' period='yearly'></list>]@T]";
@@ -68,7 +69,7 @@ block productSection
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark Did you know...
+          mark.uppercase Did you know...
           p #{productToDisplay.productDidYouKnowText}
 
 block bottomTargetedProduct

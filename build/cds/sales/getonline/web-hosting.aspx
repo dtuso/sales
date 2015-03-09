@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
+          sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[productprice:<current productid='32051' period='monthly' />]@T]",
             promo_annual: "[@T[productprice:<current productid='32051' period='yearly' />]@T]",
@@ -136,6 +137,12 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+        
+          $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
+            $("#default-details-modal")
+              .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
+          });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -147,6 +154,7 @@
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
+          
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
           
@@ -325,7 +333,7 @@ function tokenizeDisclaimerModals() {
 
 //   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
 //     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-//       .sfDialog({buttons: domainSearch.sfDialogErrorButtons});
+//       .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
 //   });
 // }
 
@@ -600,12 +608,12 @@ function showSearchSpins($view, domain, alternateDomains){
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 function showApi3SearchError(e,domain){  
   var $modal = $("#domain-selected-view .api-c-failure-modal");
-  $modal.sfDialog({titleHidden:true, buttons: domainSearch.sfDialogErrorButtons});
+  $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
 // function showTypeYourDomain() {  
@@ -654,7 +662,7 @@ function animateWizard($currentView, $animateToView) {
   }
 
   $animateToView.show();
-  
+
   // var $wizard = $('#domainSearchWizardSection'),
   // wizardHeight = $wizard.height();
 
@@ -752,7 +760,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark></h3>
+            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark></h3>
           </div>
         </div>
         <div class="row">
@@ -773,6 +781,9 @@ function getParameterByName(name) {
             <p class="text-center price-token">Get the bundle for {price_monthly}/month for the first year*</p>
             <button data-ci="96307" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="text-center price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
           </div>
+        </div>
+        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
         </div>
       </div>
     </section>
@@ -818,7 +829,7 @@ function getParameterByName(name) {
           </form>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -910,7 +921,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -992,7 +1003,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1034,7 +1045,7 @@ function getParameterByName(name) {
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark>Did you know...</mark>
+              <mark class="uppercase">Did you know...</mark>
               <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
@@ -1086,7 +1097,7 @@ function getParameterByName(name) {
         <div class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?</p>
           </div>
         </div>
@@ -1103,7 +1114,7 @@ function getParameterByName(name) {
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">Did you know...</mark>
             <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -1309,6 +1320,10 @@ ul li.no-check {
           #getItNow .hero-guy { left: -50px; }
         }
         
+        #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
+        #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+        
+        
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
@@ -1392,6 +1407,7 @@ ul li.no-check {
         #got-domain-selected{display:none;}
         #got small { display: block; padding-top: 10px; padding-bottom:5px;}
         #bottomGetItNow img { min-height: 115px; }
+        .uppercase {text-transform: uppercase;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1669,7 +1685,6 @@ ul li.no-check {
           possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
           isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
         },
-        sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
         maxNumberOfSpinsToShowByDefault: 3,
         totalSpinResults: 0,
         dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/web-hosting.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",

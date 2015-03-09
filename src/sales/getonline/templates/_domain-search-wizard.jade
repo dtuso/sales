@@ -24,6 +24,16 @@ mixin domainSearchStyles()
   style.
     #domainSearchWizardSection { padding-bottom: 0; }
     .results-list-heading-text {margin-top: 10px; margin-bottom: 10px;}
+    .spin-results-message,
+    .spin-results .spin-results-message, 
+    .spin-results .spin-result, 
+    .spin-template-wrap .spin-template {display:none;}
+    .spin-results-message,
+    .spin-results .spin-results-message {margin-top:15px;}
+    .spin-results .spin-result {margin-bottom: 10px;}
+
+    // Turn off search input message display
+    .search-message {display: none; text-transform: none; }
 
   // atlantis:webstash(type="css")
   style.  // domain-search-view
@@ -152,19 +162,18 @@ mixin domainSearchStyles()
     #domain-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
 
     #available-domain {margin-top: 15px;}
-    #available-domain .spin-results-message,
-    .spin-results .spin-results-message, 
-    .spin-results .spin-result, 
-    .spin-template-wrap .spin-template {display:none;}
-    #available-domain .spin-results-message,
-    .spin-results .spin-results-message {margin-top:15px;}
+    //- #available-domain .spin-results-message,
+    //- .spin-results .spin-results-message, 
+    //- .spin-results .spin-result, 
+    //- .spin-template-wrap .spin-template {display:none;}
+    //- #available-domain .spin-results-message,
+    //- .spin-results .spin-results-message {margin-top:15px;}
 
     #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
     #domain-available-view .select-and-continue{margin:10px 0;float:right;}
     #domain-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
 
-    #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
-    #domain-available-view h2.searched-domain-name-display {margin: 0;}
+    //- #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
 
   // atlantis:webstash(type="css")
   style.  // domain-not-available-view
@@ -179,13 +188,9 @@ mixin domainSearchStyles()
     #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
     #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
 
-    // Turn off search input message display
-    .search-message {display: none; text-transform: none; }
-
   // atlantis:webstash(type="css")
   style.  // domain-selected-view
     #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
-    #domain-selected-view h2.searched-domain-name-display {margin: 0;}
     #domain-selected-view .reseach-container {padding-top: 10px;}
 
 mixin domainSearchContent()
@@ -221,7 +226,7 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark Did you know...
+            mark.uppercase Did you know...
             p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -275,13 +280,14 @@ mixin domainSearchContent()
               button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
-          .row.spin-template.spin-result.searched-domain-name-row.bg-light
-            .col-md-9.white
-              span.domain-name-display.lowercase
-            .col-md-3.white
-              button.btn.btn-primary.select-and-continue.uppercase Select
-              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+          .row.spin-template.bg-light
+            .spin-result.searched-domain-name-row
+              .col-md-9.white
+                span.domain-name-display.lowercase
+              .col-md-3.white
+                button.btn.btn-primary.select-and-continue.uppercase Select
+                .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+                .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
         .row.show-more-section
           .col-md-12
@@ -294,7 +300,7 @@ mixin domainSearchContent()
             btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark Did you know...
+            mark.uppercase Did you know...
             p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -341,16 +347,18 @@ mixin domainSearchContent()
               button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
-          .row.spin-template.spin-result.searched-domain-name-row.bg-light
-            .col-md-9.white
-              span.domain-name-display.lowercase
-            .col-md-3.white
-              button.btn.btn-primary.select-and-continue.uppercase Select
-              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+          .row.spin-template.bg-light.searched-domain-name-row
+            .spin-result
+              .col-md-9.white
+                span.domain-name-display.lowercase
+              .col-md-3.white
+                button.btn.btn-primary.select-and-continue.uppercase Select
+                .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+                .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
         .row.show-more-section
-          h6.text-center(style={'margin-top':'10px'})
+          .col-md-12
+            h6.text-center(style={'margin-top':'10px'})
               span.clickable-show-more(data-ci="95268")
                 span See more
                 span.show-more-arrow
@@ -359,7 +367,7 @@ mixin domainSearchContent()
             btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark Did you know...
+            mark.uppercase Did you know...
             p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -387,7 +395,7 @@ mixin domainSearchContent()
             btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark Did you know...
+            mark.uppercase Did you know...
             p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -408,7 +416,6 @@ mixin domainSearchEndOfPageScripts()
         possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
         isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, domainSearch.tldInfo.possibleAdditionalTlds);}
       },
-      sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
       maxNumberOfSpinsToShowByDefault: 3,
       totalSpinResults: 0,
       dppErrorReturnUrl: "[@T[link:<relative path='~/!{productToDisplay.landingPage}' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
@@ -439,6 +446,13 @@ mixin domainSearchEndOfPageScripts()
         });
 
         return visibleSection;
+      },
+      showView: function(view) {
+        var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+        $.each(sections, function(index, section) {
+          $(document).find('#' + section.id).hide();
+        });
+        $(document).find(view).show();
       }
     };
 

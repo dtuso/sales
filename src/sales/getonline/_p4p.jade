@@ -34,6 +34,7 @@ append vars
   - productToDisplay.bottomSearchCI = "";
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
+  - productToDisplay.disclaimerCI = "";
 
 append seo
   meta(name="twitter:card" content="summary")
@@ -49,6 +50,7 @@ append headScripts
         businessName: "",
         packageId: "#{productToDisplay.packageId}",
         itcCode: "#{productToDisplay.itcCode}",
+        sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
         pricing: {
           promo_monthly: "!{productToDisplay.pricing.promo_monthly}",
           promo_annual: "!{productToDisplay.pricing.promo_annual}",
@@ -96,6 +98,12 @@ append headScripts
       $(document).ready(function(){
         tokenizePrices();
         tokenizeTheDataTokenizeAttribute();
+
+        $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
+          $("#default-details-modal")
+            .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
+        });
+
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           offerInfo.businessName = passedBusinessName;
@@ -107,6 +115,7 @@ append headScripts
       atlantis:webstash(type="js")
         script.  // Page
           $(document).ready(function(){
+
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
 
@@ -197,6 +206,10 @@ append pageStyles
       #getItNow .hero-guy { left: -50px; }
     }
 
+    #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
+    #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
+
+
   // atlantis:webstash(type="css")
   style.  // Product section
     /* video button */
@@ -277,6 +290,7 @@ append pageStyles
     #got-domain-selected{display:none;}
     #got small { display: block; padding-top: 10px; padding-bottom:5px;}
     #bottomGetItNow img { min-height: 115px; }
+    .uppercase {text-transform: uppercase;}
 
   block domainSearchStyles
     +domainSearchStyles()
@@ -290,7 +304,7 @@ block content
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
             h2.text-center Here you go...
-            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at <mark id="product-price">{price_monthly}</mark>
+            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark>
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
@@ -307,10 +321,21 @@ block content
               h3.text-center Office 365 Email
               p Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. 
         .row
-          .col-xs-12.col-sm-9.col-sm-offset-3.cta
-            p.text-center.price-token Get the bundle for {price_monthly}/month for the first year*
+          .col-xs-12.col-sm-9.col-sm-offset-3.cta.text-center
+            p.price-token Get the bundle for {price_monthly}/month for the first year*
             button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
-            small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+            small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+            .header-text.disclaimers
+              small.text-disclaimers [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
+                button.btn-link.see-details-disclaimer-link(data-ci="#{productToDisplay.disclaimerCI}") [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]
+              | 
+              | ##if(countrySiteAny(uk)) 
+              div.text-vat-disclaimer [@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]
+              | 
+              | ##endif 
+
+      #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
+        p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]
 
   block domainSearchContent
     +domainSearchContent()
@@ -330,7 +355,7 @@ block content
             .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
-            mark Did you know...
+            mark.uppercase Did you know...
             p Customers are 9 times more likely to choose a business with a professional email address?*
           .col-xs-2
             img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")

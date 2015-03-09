@@ -1,8 +1,3 @@
----
-location: localization/sales/homepage/marquee/got-godaddy-bowl/en-us
-id: false
-name: GCE-34083-GDBowl
----
 <phrase key="headline" />
 <div class="bigtext" style="width:100%"><div class="line walsheim">THREE OF OUR STAR PLAYERS</div><div class="line tungsten"><span class='inline-dash' style='max-width:215px;'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> READY TO JOIN YOUR TEAM.</div></div>
 <phrase key="righttext" />

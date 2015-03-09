@@ -20,6 +20,7 @@ append vars
   - productToDisplay.landingPage = "getonline/web-hosting.aspx"
   - productToDisplay.packageId = "getonline_web_hosting";
   - productToDisplay.itcCode = "slp_getonline_hosting";
+  - productToDisplay.appKey = "getonline_web_hosting";
   - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/web-hosting.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='32051' period='monthly' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='32051' period='yearly' />]@T]";
@@ -104,7 +105,7 @@ block productSection
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark Did you know...
+          mark.uppercase Did you know...
           p #{productToDisplay.productDidYouKnowText}
 
 block office365
@@ -118,7 +119,7 @@ block office365
           .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
       .row.bubble-row
         .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
-          mark Did you know...
+          mark.uppercase Did you know...
           p Customers are 9 times more likely to choose a business with a professional email address?*
         .col-xs-2
           img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
