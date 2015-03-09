@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "getonline_online_store",
           itcCode: "slp_getonline_store",
+          appKey: "getonline_online_store",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]",
@@ -354,7 +355,7 @@ function tokenizeDisclaimerModals() {
 //   $(window).trigger('resize');
 // }
 
-function domainSearchFormSubmit(e, domain) { 
+function domainSearchFormSubmit(e, domainSearched) { 
 
   var $thisSection,
       pageStartupSearch;
@@ -376,8 +377,8 @@ function domainSearchFormSubmit(e, domain) {
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domainSearched) );
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.appKey);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -389,7 +390,7 @@ function domainSearchFormSubmit(e, domain) {
 
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
-        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domainSearched,
         isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
         alternateDomains = data.RecommendedDomains || [];
 
@@ -428,7 +429,7 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
-        updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+        updateNotAvailableDomain('', domainSearched);
 
         domainSearchWizard.showView('#domain-not-available-view');
 
@@ -440,9 +441,9 @@ function domainSearchFormSubmit(e, domain) {
 
           $('#domainSearchWizard').find('.search-form-input').val(''); 
           
-        } else {
-          // NO SPINS
-          showApi1or2SearchError(e, domain);
+        // } else {
+        //   // NO SPINS
+        //   showApi1or2SearchError(e, domainSearched);
         }
 
         animateWizard($thisSection, $('#domain-not-available-view'));
@@ -450,7 +451,7 @@ function domainSearchFormSubmit(e, domain) {
 
     },
     error: function(){
-      showApi1or2SearchError(e, domain);
+      showApi1or2SearchError(e, domainSearched);
     }
   });
 
@@ -604,7 +605,8 @@ function showSearchSpins($view, domain, alternateDomains){
   } else {
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
-  
+ 
+  $view.find(".spin-results").show();
   $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 }
 
@@ -913,14 +915,12 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template bg-light">
-              <div class="spin-result searched-domain-name-row">
-                <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
-                <div class="col-md-3 white">
-                  <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                  <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                  <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
-                </div>
+            <div class="row spin-template spin-result searched-domain-name-row bg-light">
+              <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
+              <div class="col-md-3 white">
+                <button class="btn btn-primary select-and-continue uppercase">Select</button>
+                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
+                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
               </div>
             </div>
           </div>
@@ -984,7 +984,7 @@ function getParameterByName(name) {
           </form>
           <div class="row not-available-domain-name-row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h2 class="not-available-domain-name-display word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
+              <h2 class="word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
         </div>
@@ -999,14 +999,12 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template bg-light searched-domain-name-row">
-              <div class="spin-result">
-                <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
-                <div class="col-md-3 white">
-                  <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                  <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                  <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
-                </div>
+            <div class="row spin-template spin-result searched-domain-name-row bg-light">
+              <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
+              <div class="col-md-3 white">
+                <button class="btn btn-primary select-and-continue uppercase">Select</button>
+                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
+                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
               </div>
             </div>
           </div>
@@ -1465,7 +1463,7 @@ ul li.no-check {
           color: #333; 
         }
         
-        .offer-search-box { padding-bottom:20px;}
+        //- .offer-search-box { padding-bottom:20px;}
         .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
         .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
@@ -1590,7 +1588,7 @@ ul li.no-check {
         #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-not-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
-        #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
+        #domain-not-available-view h2 {margin: 0;}
         #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
         
       </style>
@@ -1730,7 +1728,13 @@ ul li.no-check {
         showView: function(view) {
           var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
           $.each(sections, function(index, section) {
-            $(document).find('#' + section.id).hide();
+            var $view = $(document).find('#' + section.id);
+            $view.hide();
+            hideMoreResultsLinks($view);
+            var spinResults = $view.find(".spin-results");
+            if(spinResults != undefined) {
+              spinResults.hide();
+            }
           });
           $(document).find(view).show();
         }

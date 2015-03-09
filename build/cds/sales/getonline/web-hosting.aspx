@@ -88,6 +88,7 @@
           businessName: "",
           packageId: "getonline_web_hosting",
           itcCode: "slp_getonline_hosting",
+          appKey: "getonline_web_hosting",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[productprice:<current productid='32051' period='monthly' />]@T]",
@@ -354,7 +355,7 @@ function tokenizeDisclaimerModals() {
 //   $(window).trigger('resize');
 // }
 
-function domainSearchFormSubmit(e, domain) { 
+function domainSearchFormSubmit(e, domainSearched) { 
 
   var $thisSection,
       pageStartupSearch;
@@ -376,7 +377,7 @@ function domainSearchFormSubmit(e, domain) {
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domainSearched) );
   apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
 
   $.ajaxSetup({cache:false});
@@ -389,7 +390,7 @@ function domainSearchFormSubmit(e, domain) {
 
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
-        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domainSearched,
         isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
         alternateDomains = data.RecommendedDomains || [];
 
@@ -405,10 +406,10 @@ function domainSearchFormSubmit(e, domain) {
 
         updateRecommendedDomain(exactMatchDomain.Fqdn);
 
+        domainSearchWizard.showView('#domain-available-view');
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
-
-        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -428,7 +429,9 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
-        updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+        updateNotAvailableDomain('', domainSearched);
+
+        domainSearchWizard.showView('#domain-not-available-view');
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -438,9 +441,9 @@ function domainSearchFormSubmit(e, domain) {
 
           $('#domainSearchWizard').find('.search-form-input').val(''); 
           
-        } else {
-          // NO SPINS
-          showApi1or2SearchError(e, domain);
+        // } else {
+        //   // NO SPINS
+        //   showApi1or2SearchError(e, domainSearched);
         }
 
         animateWizard($thisSection, $('#domain-not-available-view'));
@@ -448,7 +451,7 @@ function domainSearchFormSubmit(e, domain) {
 
     },
     error: function(){
-      showApi1or2SearchError(e, domain);
+      showApi1or2SearchError(e, domainSearched);
     }
   });
 
@@ -547,7 +550,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -969,7 +972,7 @@ function getParameterByName(name) {
           </form>
           <div class="row not-available-domain-name-row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h2 class="not-available-domain-name-display word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
+              <h2 class="word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
             </div>
           </div>
         </div>
@@ -994,7 +997,9 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            <div class="col-md-12">
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
@@ -1168,7 +1173,7 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <h3 class="price-token">{price_monthly}/month for the first year*</h3>
-          <button data-ci="96310" style="display: none;" id="bottomSearchAgain" class="btn btn-primary btn-search-again btn-lg">Search Again</button>
+          <button id="bottomSearchAgain" data-ci="96310" style="display: none;" class="btn btn-primary btn-lg">Search Again</button>
           <button data-ci="96306" class="btn btn-purchase btn-lg">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
         </div>
       </div>
@@ -1414,6 +1419,16 @@ ul li.no-check {
       <style>
         #domainSearchWizardSection { padding-bottom: 0; }
         .results-list-heading-text {margin-top: 10px; margin-bottom: 10px;}
+        .spin-results-message,
+        .spin-results .spin-results-message, 
+        .spin-results .spin-result, 
+        .spin-template-wrap .spin-template {display:none;}
+        .spin-results-message,
+        .spin-results .spin-results-message {margin-top:15px;}
+        .spin-results .spin-result {margin-bottom: 10px;}
+        
+        // Turn off search input message display
+        .search-message {display: none; text-transform: none; }
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1443,7 +1458,7 @@ ul li.no-check {
           color: #333; 
         }
         
-        .offer-search-box { padding-bottom:20px;}
+        //- .offer-search-box { padding-bottom:20px;}
         .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
         .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
@@ -1544,19 +1559,18 @@ ul li.no-check {
         #domain-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         
         #available-domain {margin-top: 15px;}
-        #available-domain .spin-results-message,
-        .spin-results .spin-results-message, 
-        .spin-results .spin-result, 
-        .spin-template-wrap .spin-template {display:none;}
-        #available-domain .spin-results-message,
-        .spin-results .spin-results-message {margin-top:15px;}
+        //- #available-domain .spin-results-message,
+        //- .spin-results .spin-results-message, 
+        //- .spin-results .spin-result, 
+        //- .spin-template-wrap .spin-template {display:none;}
+        //- #available-domain .spin-results-message,
+        //- .spin-results .spin-results-message {margin-top:15px;}
         
         #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
-        #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
-        #domain-available-view h2.searched-domain-name-display {margin: 0;}
+        //- #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1569,17 +1583,13 @@ ul li.no-check {
         #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-not-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
-        #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
+        #domain-not-available-view h2 {margin: 0;}
         #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
-        
-        // Turn off search input message display
-        .search-message {display: none; text-transform: none; }
         
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
         #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
-        #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
@@ -1715,6 +1725,17 @@ ul li.no-check {
           });
       
           return visibleSection;
+        },
+        showView: function(view) {
+          var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+          $.each(sections, function(index, section) {
+            var $view = $(document).find('#' + section.id);
+            $view.hide();
+            hideMoreResultsLinks($view);
+            //- var spinResults = $view.find(".spin-results");
+            //- if(spinResults != undefined) spinResults.hide();
+          });
+          $(document).find(view).show();
         }
       };
       

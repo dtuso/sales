@@ -142,6 +142,6 @@ block bottomGetItNow
             h3 #{productToDisplay.name}
       .row
         h3.price-token {price_monthly}/month for the first year*
-        button(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;")#bottomSearchAgain.btn.btn-primary.btn-search-again.btn-lg Search Again
+        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg Search Again
         button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
         small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year

@@ -62,7 +62,7 @@ mixin domainSearchStyles()
       color: #333; 
     }
 
-    .offer-search-box { padding-bottom:20px;}
+    //- .offer-search-box { padding-bottom:20px;}
     .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
     .domain-search-messaging-row {padding-bottom: 40px;}
     h2.get-a-domain-text {
@@ -185,7 +185,7 @@ mixin domainSearchStyles()
     #domain-not-available-view .select-and-continue{margin:10px 0;float:right;}
     #domain-not-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
 
-    #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
+    #domain-not-available-view h2 {margin: 0;}
     #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
 
   // atlantis:webstash(type="css")
@@ -280,14 +280,13 @@ mixin domainSearchContent()
               button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
-          .row.spin-template.bg-light
-            .spin-result.searched-domain-name-row
-              .col-md-9.white
-                span.domain-name-display.lowercase
-              .col-md-3.white
-                button.btn.btn-primary.select-and-continue.uppercase Select
-                .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-                .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+          .row.spin-template.spin-result.searched-domain-name-row.bg-light
+            .col-md-9.white
+              span.domain-name-display.lowercase
+            .col-md-3.white
+              button.btn.btn-primary.select-and-continue.uppercase Select
+              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
         .row.show-more-section
           .col-md-12
@@ -336,7 +335,7 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.not-available-domain-name-row
           .col-xs-12.col-sm-12.text-center
-            h2.not-available-domain-name-display.word-break Sorry, <mark class="not-available-domain-name-display"></mark> is taken.
+            h2.word-break Sorry, <mark class="not-available-domain-name-display"></mark> is taken.
 
       .container.other-domains.spin-container
         .row
@@ -347,14 +346,13 @@ mixin domainSearchContent()
               button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
-          .row.spin-template.bg-light.searched-domain-name-row
-            .spin-result
-              .col-md-9.white
-                span.domain-name-display.lowercase
-              .col-md-3.white
-                button.btn.btn-primary.select-and-continue.uppercase Select
-                .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-                .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+          .row.spin-template.spin-result.searched-domain-name-row.bg-light
+            .col-md-9.white
+              span.domain-name-display.lowercase
+            .col-md-3.white
+              button.btn.btn-primary.select-and-continue.uppercase Select
+              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
 
         .row.show-more-section
           .col-md-12
@@ -450,7 +448,13 @@ mixin domainSearchEndOfPageScripts()
       showView: function(view) {
         var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
         $.each(sections, function(index, section) {
-          $(document).find('#' + section.id).hide();
+          var $view = $(document).find('#' + section.id);
+          $view.hide();
+          hideMoreResultsLinks($view);
+          var spinResults = $view.find(".spin-results");
+          if(spinResults != undefined) {
+            spinResults.hide();
+          }
         });
         $(document).find(view).show();
       }

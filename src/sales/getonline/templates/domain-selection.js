@@ -186,7 +186,7 @@ function tokenizeDisclaimerModals() {
 //   $(window).trigger('resize');
 // }
 
-function domainSearchFormSubmit(e, domain) { 
+function domainSearchFormSubmit(e, domainSearched) { 
 
   var $thisSection,
       pageStartupSearch;
@@ -208,8 +208,8 @@ function domainSearchFormSubmit(e, domain) {
   ##endif
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
-  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
+  apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domainSearched) );
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.appKey);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -221,7 +221,7 @@ function domainSearchFormSubmit(e, domain) {
 
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
-        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domainSearched,
         isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
         alternateDomains = data.RecommendedDomains || [];
 
@@ -260,7 +260,7 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
-        updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+        updateNotAvailableDomain('', domainSearched);
 
         domainSearchWizard.showView('#domain-not-available-view');
 
@@ -272,9 +272,9 @@ function domainSearchFormSubmit(e, domain) {
 
           $('#domainSearchWizard').find('.search-form-input').val(''); 
           
-        } else {
-          // NO SPINS
-          showApi1or2SearchError(e, domain);
+        // } else {
+        //   // NO SPINS
+        //   showApi1or2SearchError(e, domainSearched);
         }
 
         animateWizard($thisSection, $('#domain-not-available-view'));
@@ -282,7 +282,7 @@ function domainSearchFormSubmit(e, domain) {
 
     },
     error: function(){
-      showApi1or2SearchError(e, domain);
+      showApi1or2SearchError(e, domainSearched);
     }
   });
 
@@ -436,7 +436,8 @@ function showSearchSpins($view, domain, alternateDomains){
   } else {
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
-  
+ 
+  $view.find(".spin-results").show();
   $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 }
 
