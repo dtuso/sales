@@ -129,10 +129,14 @@
                 </div>
                 <div class="form-group">
                   <label for="resources-select">[@L[cds.sales/getonline:QuestionsLP-7-IHaveTheResourcesAndTimeTo]@L]</label>
-                  <select id="resources-select" name="resource" class="form-control">
+                  <select id="resources-select" name="resource" class="form-control non-wordpress">
                     <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
                     <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>
                     <option value="hire_someone">[@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]</option>
+                  </select>
+                  <select id="resources-select" name="resource" class="form-control wordpress">
+                    <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
+                    <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>
                   </select>
                 </div>
                 <button type="submit" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]</button>
@@ -224,6 +228,7 @@ ul li.no-check {
         #questions .btn-purchase { float:right;}
         #questions .validation-message { display: none; }
         .callout{background-color: #fedc45; padding-left: 2px; padding-right: 2px;}
+        .wordpress{display: none;}
         
         @media (min-width: 768px) {
           .step-1{padding-right: 50px;}
@@ -247,13 +252,15 @@ ul li.no-check {
           // anytime the interest is in blogging, suggest the wordpress product
           $("#questions form input[name='ci']").val("96292");
           $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
-          $("select#resources-select option[value='hire_someone']").hide();
-          $("select#resources-select option[value='build_myself']").attr('selected','true');
+          $(".wordpress").show();
+          $(".non-wordpress").hide();
+          //$("select#resources-select option[value='build_myself']").attr('selected','true');
           if(resources === "know_someone")
             $("select#resources-select option[value='know_someone']").attr('selected','true');
         } else if (resources === "know_someone") {
           // anytime the user "knows someone", suggest web hosting
-          $("select#resources-select option[value='hire_someone']").show();
+          $(".wordpress").hide();
+          $(".non-wordpress").show();
           if(interest === "selling_products")
             $("#questions form input[name='ci']").val("96279");
           if(interest === "new_business")
@@ -265,31 +272,36 @@ ul li.no-check {
           // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
           if (interest === "selling_products") {
             $("#questions form input[name='ci']").val("96278");
-            $("select#resources-select option[value='hire_someone']").show();
+            $(".wordpress").hide();
+            $(".non-wordpress").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
           } else {
             if(interest === "existing_business")
               $("#questions form input[name='ci']").val("96275");
             if(interest === "new_business")
               $("#questions form input[name='ci']").val("96272");
-            $("select#resources-select option[value='hire_someone']").show();
+            $(".wordpress").hide();
+            $(".non-wordpress").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
           }
         } else if (resources === "hire_someone") {
           // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
           if (interest === "selling_products") {
             $("#questions form input[name='ci']").val("96280");
-            $("select#resources-select option[value='hire_someone']").show();
+            $(".wordpress").hide();
+            $(".non-wordpress").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
           } else {
             if(interest === "new_business")
               $("#questions form input[name='ci']").val("96274");
             if(interest === "existing_business")
               $("#questions form input[name='ci']").val("96277");
-            $("select#resources-select option[value='hire_someone']").show();
+            $(".wordpress").hide();
+            $(".non-wordpress").show();
             $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-design.aspx"></relative>]@T]");
           }
         }
+      
       });
       
       $('#questions form').submit(function(e) {
@@ -303,10 +315,13 @@ ul li.no-check {
         var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
         if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
+          $(".validation-message").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
           $(".validation-message").show();
           e.preventDefault();
         }
         else if(!business_idea){
+          $(".validation-message").text("Please enter a business name or idea.");
+          $(".validation-message").show();
           e.preventDefault();
         }
       });
@@ -321,6 +336,7 @@ ul li.no-check {
           else
             $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
         }
+      
       });
       
     </script>
