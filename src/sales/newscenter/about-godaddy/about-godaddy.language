@@ -1,6 +1,6 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-id: false
+id: 54fdd368f778fc0fc0cef39d
 name: GCEMO-701
 comments: Update title and bio for Phil Bienert and Barb Rechterman
 ---
@@ -643,7 +643,7 @@ After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the 
 <phrase key="NewsCenterAbout-BuddyBio6" />
 Equally at home in the customer care center, on the office putting green or visiting business owners and employees to help them chill, Buddy’s expertise in making “ruff” days a little better continues to garner accolades including, ‘Who’s a good boy?’
 <phrase key="NewsCenterAbout-PhilBienert-title" />
-Executive Vice President, Digital Commerce & Chief Marketing Officer
+Chief Marketing Officer & Executive Vice President, Digital Commerce
 <phrase key="NewsCenterAbout-PhilBienert-bio-1" />
 As Chief Marketing Officer, Phil oversees all facets of corporate marketing, including strategic planning and business development for Marketing, Global Branding and Product Management.
 <phrase key="NewsCenterAbout-PhilBienert-bio-2" />
