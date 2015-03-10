@@ -1,14 +1,14 @@
 extends _p4p.jade
 
 append vars
-  - page.title = "Get Online Website Builder";
-  - page.description = "Get Online Website Builder Description";
-  - page.keywords = "Get Online Website Builder Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:wsb-page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:wsb-meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:wsb-meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Website Builder";
-  - page.openGraph.description = "Get Online OG Website Builder Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:wsb-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:wsb-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
@@ -16,32 +16,29 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
   - productToDisplay = productToDisplay || {};
-  - productToDisplay.name = "Website Builder";
+  - productToDisplay.name = "[@L[cds.sales/getonline:wsb-product-name]@L]";
   - productToDisplay.landingPage = "getonline/websitebuilder.aspx"
   - productToDisplay.packageId = "getonline_website_builder";
-  - productToDisplay.itcCode = "slp_getonline_wsb";
+  - productToDisplay.itcCode = "p4p_getonline_wsb";
   - productToDisplay.appKey = "getonline_website_builder";
   - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/websitebuilder.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='24681357' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='24681357' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]";
-  - productToDisplay.getItNowDescription = "Easily create a professional website with simple drag-&-drop tools.";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:wsb-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png";
   - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png";
   - productToDisplay.productDescription = "Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.";
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
   - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
-  - productToDisplay.productVideoInfoText = "What is Website Builder?";
+  - productToDisplay.productVideoInfoText = "[@L[cds.sales/getonline:wsb-product-video-info-text]@L]";
   - productToDisplay.productInfoText = "";
-  - productToDisplay.productDidYouKnowText = "Customers are more likely to contact you if you have a website for your local business.";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:wsb-product-did-you-know-text]@L]";
   - productToDisplay.topButtonCI = "96283";
   - productToDisplay.bottomButtonCI = "96282";
   - productToDisplay.bottomSearchCI = "96286";
   - productToDisplay.viewTemplatesCI = "96287";
   - productToDisplay.playButtonCI = "96288";
-  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
-  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
-  - productToDisplay.productVideoInfoText = "What is Website Builder?";
 
 block targetedProduct
   .column.website
@@ -57,7 +54,7 @@ block productSection
           img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
           h2.text-center #{productToDisplay.name}
           h4.text-center #{productToDisplay.productDescription}
-          button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/gd/hosting/website-builder:sb_view_templates]@L]
+          button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/getonline:view-templates]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
           div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
@@ -68,12 +65,12 @@ block productSection
               div.video-marquee-info.text-center
                 div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
                 h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
-                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') [@L[cds.sales/getonline:watch-now]@L]
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark.uppercase Did you know...
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}
   include ../shared/wsb-templates.html
 

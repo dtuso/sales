@@ -4,19 +4,19 @@ append vars
   // - domainSearchWizard.defaultTld               = "'com'";
   // - domainSearchWizard.formId                   = "domainSearchViewForm";
   - domainSearchWizard                          = {};
-  - domainSearchWizard.searchNowCallbackFn      = "domainSearchFormSubmit"; /* you need to code a function taking the domain name as a string input */
+  - domainSearchWizard.searchNowCallbackFn      = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
   - domainSearchWizard.maxDomainLength          = 63;
   - domainSearchWizard.title                    = "";
   - domainSearchWizard.cicode                   = "XXXXX";
-  - domainSearchWizard.placeholderText          = "Enter your business name or idea.";
-  - domainSearchWizard.buttonText               = "[@L[cds.sales/offers/online-business:32573-search]@L]";
-  - domainSearchWizard.infoTypeHere             = "[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]";
-  - domainSearchWizard.infoErrorEligibility     = "[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld           = "[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart      = "[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.placeholderText          = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText               = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere             = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility     = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld           = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart      = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
   - domainSearchWizard.dupDomainInCartCiCode    = "placeholderCIcode";
   - domainSearchWizard.showSearchButton         = true;
-  - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the domain name as a string input */
+  - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
   - domainSearchWizard.initialViewId            = "domain-available-view";
 
 mixin domainSearchStyles()
@@ -202,10 +202,10 @@ mixin domainSearchContent()
             div.domain-search-wizard.domain-icon
         .row
           .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+            h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
         .row
           .col-xs-12.col-sm-12.text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+            h4.domain-starts.strong(style={'margin-top':'10px'}) [@L[cds.sales/getonline:domain-search-view-header]@L]
         form(id="domainSearchViewForm")
           .row
             .col-xs-12.col-sm-12
@@ -226,8 +226,8 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark.uppercase Did you know...
-            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+            mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+            p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -238,10 +238,10 @@ mixin domainSearchContent()
             div.domain-search-wizard.domain-icon
         .row
           .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+            h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
         .row
           .col-xs-12.col-sm-12.text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) It all starts with a domain name that's easy to remember and fits your business.
+            h4.domain-starts.strong(style={'margin-top':'10px'}) [@L[cds.sales/getonline:domain-available-view-header]@L]
         form(id="domainAvailableViewSearchForm")
           .row
             .col-xs-12.col-sm-12
@@ -262,45 +262,45 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row
           .col-xs-12.col-sm-12.text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) Here's our favorite for <mark class="business-name-display">{0}</mark>
+            h4.domain-starts.strong(style={'margin-top':'10px'}) [@L[cds.sales/getonline:recommended-domain]@L]
         .row#available-domain.bg-light
           .col-md-9.white
             span.domain-name-display.lowercase.available-domain-name#available-domain-name
           .col-md-3.white
-            button.btn.btn-primary.select-and-continue.available-domain-name.uppercase Select
-            .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-            .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+            button.btn.btn-primary.select-and-continue.available-domain-name.uppercase [@L[cds.sales/getonline:choose-select-button]@L]
+            .spin-results-message.checking-availability [@L[cds.sales/getonline:checking-availability]@L]
+            .spin-results-message.now-unavailable [@L[cds.sales/getonline:domain-no-longer-available]@L]
 
       .container.other-domains.spin-container
         .row
           .col-md-12
-            h5(style={'margin-top':'20px'}) <strong>That one not moving you? Here are some alternatives:</strong>
+            h5(style={'margin-top':'20px'}) <strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong>
             h6.results-list-heading-text 
-              span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
-              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+              span.spin-counts(data-result-count-template!="[@L[cds.sales/getonline:number-of-number-results]@L]")
+              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/getonline:view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
           .row.spin-template.spin-result.searched-domain-name-row.bg-light
             .col-md-9.white
               span.domain-name-display.lowercase
             .col-md-3.white
-              button.btn.btn-primary.select-and-continue.uppercase Select
-              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+              button.btn.btn-primary.select-and-continue.uppercase [@L[cds.sales/getonline:choose-select-button]@L]
+              .spin-results-message.checking-availability [@L[cds.sales/getonline:checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/getonline:domain-no-longer-available]@L]
 
         .row.show-more-section
           .col-md-12
             h6.text-center(style={'margin-top':'10px'})
               span.clickable-show-more(data-ci="95268")
-                span See more
+                span [@L[cds.sales/getonline:see-more-results]@L]
                 span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase [@L[cds.sales/getonline:search-again]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark.uppercase Did you know...
-            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+            mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+            p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -311,10 +311,10 @@ mixin domainSearchContent()
             div.domain-search-wizard.domain-icon
         .row
           .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+            h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
         .row
           .col-xs-12.col-sm-12.text-center
-            h4.domain-starts.strong(style={'margin-top':'10px'}) Let us help you find the best domain based on your business name or idea.
+            h4.domain-starts.strong(style={'margin-top':'10px'}) [@L[cds.sales/getonline:domain-search-view-header]@L]
         form(id="domainNotAvailableViewSearchForm")
           .row
             .col-xs-12.col-sm-12
@@ -335,38 +335,38 @@ mixin domainSearchContent()
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.not-available-domain-name-row
           .col-xs-12.col-sm-12.text-center
-            h2.word-break Sorry, <mark class="not-available-domain-name-display"></mark> is taken.
+            h2.word-break [@L[cds.sales/getonline:domain-taken-message]@L]
 
       .container.other-domains.spin-container
         .row
           .col-md-12
-            h5(style={'margin-top':'20px'}) <strong>Here are some alternative options alternatives:</strong>
+            h5(style={'margin-top':'20px'}) <strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong>
             h6.results-list-heading-text 
-              span.spin-counts(data-result-count-template!="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]")
-              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/offers/online-business:32573-view-all-results]@L]
+              span.spin-counts(data-result-count-template!="[@L[cds.sales/getonline:number-of-number-results]@L]")
+              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/getonline:view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
           .row.spin-template.spin-result.searched-domain-name-row.bg-light
             .col-md-9.white
               span.domain-name-display.lowercase
             .col-md-3.white
-              button.btn.btn-primary.select-and-continue.uppercase Select
-              .spin-results-message.checking-availability [@L[cds.sales/offers/online-business:32573-checking-availability]@L]
-              .spin-results-message.now-unavailable [@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]
+              button.btn.btn-primary.select-and-continue.uppercase [@L[cds.sales/getonline:choose-select-button]@L]
+              .spin-results-message.checking-availability [@L[cds.sales/getonline:checking-availability]@L]
+              .spin-results-message.now-unavailable [@L[cds.sales/getonline:domain-no-longer-available]@L]
 
         .row.show-more-section
           .col-md-12
             h6.text-center(style={'margin-top':'10px'})
               span.clickable-show-more(data-ci="95268")
-                span See more
+                span [@L[cds.sales/getonline:see-more-results]@L]
                 span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase Search Again
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase [@L[cds.sales/getonline:search-again]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark.uppercase Did you know...
-            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+            mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+            p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -377,32 +377,32 @@ mixin domainSearchContent()
             div.domain-search-wizard.domain-icon
         .row
           .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
-            h2.uppercase(style={'margin-bottom':'0px'}) domain name
+            h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
         .row
           .col-xs-12.col-sm-12.text-center
-            h4.strong Congratulations! You have selected the following domain name:
+            h4.strong [@L[cds.sales/getonline:congratulations-selected-domain]@L]
         .row.searched-domain-name-row
           .col-xs-12.col-sm-12.text-center
             h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
         .row(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-xs-12.col-sm-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.uppercase Search Again
+            btn.btn.btn-primary.btn-search-again.btn-lg.uppercase [@L[cds.sales/getonline:search-again]@L]
         .row(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-xs-12.col-sm-12.text-center
-            btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase See Other Products Included
-            btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p Get it now
+            btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase [@L[cds.sales/getonline:see-other-products]@L]
+            btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p [@L[cds.sales/getonline:get-it-now]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
-            mark.uppercase Did you know...
-            p More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+            mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+            p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
           .col-xs-2
             img.product-section.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
     #api-failure.sf-dialog.api-B-failure(style={'display':'none'})
       h2.api-error-header
         img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
-        div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
-      p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
+        div [@L[cds.sales/getonline:something-unexpected-happened]@L]
+      p [@L[cds.sales/getonline:generic-domain-search-error]@L]
 
 mixin domainSearchEndOfPageScripts()
   script.
@@ -417,15 +417,6 @@ mixin domainSearchEndOfPageScripts()
       maxNumberOfSpinsToShowByDefault: 3,
       totalSpinResults: 0,
       dppErrorReturnUrl: "[@T[link:<relative path='~/!{productToDisplay.landingPage}' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
-      // pricing: {
-      //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-      //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
-      //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-      //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
-      //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-      // },
-      // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-      // canOfferOls: true,
       animationTime: 800,
       animationEasingType: 'swing',
       isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
@@ -514,7 +505,7 @@ mixin domainSearchEndOfPageScripts()
             hasTld = idx > -1,
             sld = hasTld ? domain.substring(0, idx) : domain,
             tld = hasTld ? domain.substring(idx+1) : '',
-            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
         sld = needsTrimmed ? sld.substring(0, #{domainSearchWizard.maxDomainLength}) : sld;
         
         var domainName = sld + ((tld!='') ? '.' + tld : '');
@@ -623,7 +614,7 @@ mixin domainSearchEndOfPageScripts()
             hasTld = idx > -1,
             sld = hasTld ? domain.substring(0, idx) : domain,
             tld = hasTld ? domain.substring(idx+1) : '',
-            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
         sld = needsTrimmed ? sld.substring(0, #{domainSearchWizard.maxDomainLength}) : sld;
         
         var domainName = sld + ((tld!='') ? '.' + tld : '');
@@ -732,7 +723,7 @@ mixin domainSearchEndOfPageScripts()
             hasTld = idx > -1,
             sld = hasTld ? domain.substring(0, idx) : domain,
             tld = hasTld ? domain.substring(idx+1) : '',
-            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a domain name */        
+            needsTrimmed = ((idx == -1) ? domain.length > #{domainSearchWizard.maxDomainLength} : idx > #{domainSearchWizard.maxDomainLength}); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
         sld = needsTrimmed ? sld.substring(0, #{domainSearchWizard.maxDomainLength}) : sld;
         
         var domainName = sld + ((tld!='') ? '.' + tld : '');

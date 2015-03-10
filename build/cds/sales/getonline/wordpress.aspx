@@ -19,21 +19,21 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>Get Online Managed Wordpress</title>
-    <meta name="description" content="Get Online Managed Wordpress Description">
-    <meta name="keywords" content="Get Online Managed Wordpress Keywords">
-    <meta property="og:title" content="Get Online OG Managed Wordpress">
-    <meta property="og:description" content="Get Online OG Managed Wordpress Description">
+    <title>[@L[cds.sales/getonline:mwp-page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/getonline:mwp-meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/getonline:mwp-meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/getonline:mwp-og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/getonline:mwp-og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="Get Online Twitter Site">
-    <meta name="twitter:title" content="Get Online Twitter Title">
-    <meta name="twitter:description" content="Get Online Twitter Description">
+    <meta name="twitter:card" content="[@L[cds.sales/getonline:twitter-card]@L]">
+    <meta name="twitter:site" content="[@L[cds.sales/getonline:twitter-site]@L]">
+    <meta name="twitter:title" content="[@L[cds.sales/getonline:twitter-title]@L]">
+    <meta name="twitter:description" content="[@L[cds.sales/getonline:twitter-description]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
@@ -87,7 +87,7 @@
         var offerInfo = {
           businessName: "",
           packageId: "getonline_wordpress",
-          itcCode: "slp_getonline_wordpress",
+          itcCode: "p4p_getonline_wordpress",
           appKey: "getonline_wordpress",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
@@ -378,7 +378,7 @@ function domainSearchFormSubmit(e, domainSearched) {
 
   apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
   apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domainSearched) );
-  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.itcCode);
+  apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + offerInfo.appKey);
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -605,7 +605,8 @@ function showSearchSpins($view, domain, alternateDomains){
   } else {
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
-  
+ 
+  $view.find(".spin-results").show();
   $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 }
 
@@ -762,42 +763,42 @@ function getParameterByName(name) {
       <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
-            <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center price-token">A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark></h3>
+            <h2 class="text-center">[@L[cds.sales/getonline:get-it-now-bubble-content-header]@L]</h2>
+            <h3 class="text-center price-token">[@L[cds.sales/getonline:get-it-now-bubble-content-text]@L]</h3>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 products">
             <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
-              <h3 class="text-center">Domain Name</h3>
-              <p>Get a memorable online address, like <mark class="selected-domain-name-display"></mark></p>
+              <h3 class="text-center">[@L[cds.sales/getonline:domain-name-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:product-domain-text]@L]</p>
             </div>
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
-              <h3 class="text-center">Managed Wordpress</h3>
-              <p>Start a blog with WordPress and let us manage the technical stuff.</p>
+              <h3 class="text-center">[@L[cds.sales/getonline:mwp-product-name]@L]</h3>
+              <p>[@L[cds.sales/getonline:mwp-product-get-it-now-description]@L]</p>
             </div>
             <div class="plus">+</div>
             <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
-              <h3 class="text-center">Office 365 Email</h3>
-              <p>Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. </p>
+              <h3 class="text-center">[@L[cds.sales/getonline:O365-email-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:product-email-text]@L]</p>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta text-center">
-            <p class="price-token">Get the bundle for {price_monthly}/month for the first year*</p>
-            <button data-ci="96305" class="btn btn-purchase btn-lg center-block">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
-            <div class="header-text disclaimers"><small class="text-disclaimers">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
-                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]</button></small> 
+            <p class="price-token">[@L[cds.sales/getonline:product-bundle-price]@L]</p>
+            <button data-ci="96305" class="btn btn-purchase btn-lg center-block">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
+            <div class="header-text disclaimers"><small class="text-disclaimers">[@L[cds.sales/getonline:top-small-disclaimer-text]@L] 
+                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:top-small-disclaimer-details-link]@L]</button></small> 
               ##if(countrySiteAny(uk)) 
-              <div class="text-vat-disclaimer">[@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]</div> 
+              <div class="text-vat-disclaimer">[@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]</div> 
               ##endif 
             </div>
           </div>
         </div>
-        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
+        <div id="default-details-modal" data-title="[@L[cds.sales/getonline:disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p></p>
         </div>
       </div>
     </section>
@@ -811,12 +812,12 @@ function getParameterByName(name) {
           </div>
           <div class="row">
             <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainSearchViewForm">
@@ -827,24 +828,24 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-xs-12 col-sm-12 offer-search-box">
                 <div class="input-group">
-                  <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  <input type="text" placeholder="[@L[cds.sales/getonline:placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/getonline:search]@L]</button></span>
                 </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
-                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">Did you know...</mark>
-              <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
           </div>
@@ -859,12 +860,12 @@ function getParameterByName(name) {
           </div>
           <div class="row">
             <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">It all starts with a domain name that's easy to remember and fits your business.</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainAvailableViewSearchForm">
@@ -875,40 +876,40 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-xs-12 col-sm-12 offer-search-box">
                 <div class="input-group">
-                  <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  <input type="text" placeholder="[@L[cds.sales/getonline:placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/getonline:search]@L]</button></span>
                 </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
-                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">Here's our favorite for <mark class="business-name-display">{0}</mark></h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:recommended-domain]@L]</h4>
             </div>
           </div>
           <div id="available-domain" class="row bg-light">
             <div class="col-md-9 white"><span id="available-domain-name" class="domain-name-display lowercase available-domain-name"></span></div>
             <div class="col-md-3 white">
-              <button class="btn btn-primary select-and-continue available-domain-name uppercase">Select</button>
-              <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-              <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+              <button class="btn btn-primary select-and-continue available-domain-name uppercase">[@L[cds.sales/getonline:choose-select-button]@L]</button>
+              <div class="spin-results-message checking-availability">[@L[cds.sales/getonline:checking-availability]@L]</div>
+              <div class="spin-results-message now-unavailable">[@L[cds.sales/getonline:domain-no-longer-available]@L]</div>
             </div>
           </div>
         </div>
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>That one not moving you? Here are some alternatives:</strong></h5>
-              <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]" class="spin-counts"></span>
-                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
+              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
+              <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
+                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
@@ -917,26 +918,26 @@ function getParameterByName(name) {
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
-                <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+                <button class="btn btn-primary select-and-continue uppercase">[@L[cds.sales/getonline:choose-select-button]@L]</button>
+                <div class="spin-results-message checking-availability">[@L[cds.sales/getonline:checking-availability]@L]</div>
+                <div class="spin-results-message now-unavailable">[@L[cds.sales/getonline:domain-no-longer-available]@L]</div>
               </div>
             </div>
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
-              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">Search Again</btn>
+              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">Did you know...</mark>
-              <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
           </div>
@@ -951,12 +952,12 @@ function getParameterByName(name) {
           </div>
           <div class="row">
             <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">Let us help you find the best domain based on your business name or idea.</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainNotAvailableViewSearchForm">
@@ -967,32 +968,32 @@ function getParameterByName(name) {
             <div class="row">
               <div class="col-xs-12 col-sm-12 offer-search-box">
                 <div class="input-group">
-                  <input type="text" placeholder="Enter your business name or idea." name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/offers/online-business:32573-search]@L]</button></span>
+                  <input type="text" placeholder="[@L[cds.sales/getonline:placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                    <button type="button" name="searchButton" data-ci="XXXXX" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/getonline:search]@L]</button></span>
                 </div>
               </div>
             </div>
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
-                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/offers/online-business:32573-type-your-business-placeholder]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/offers/online-business:32573-eligibility-error]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/offers/online-business:32573-offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/offers/online-business:32573-domain-already-in-cart-checkout-or-search]@L]</div>
+                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
+                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="placeholderCIcode" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
           <div class="row not-available-domain-name-row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h2 class="word-break">Sorry, <mark class="not-available-domain-name-display"></mark> is taken.</h2>
+              <h2 class="word-break">[@L[cds.sales/getonline:domain-taken-message]@L]</h2>
             </div>
           </div>
         </div>
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>Here are some alternative options alternatives:</strong></h5>
-              <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/offers/online-business:32573-number-of-number-results]@L]" class="spin-counts"></span>
-                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/offers/online-business:32573-view-all-results]@L]</button>
+              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
+              <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
+                <button data-ci="95269" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
@@ -1001,26 +1002,26 @@ function getParameterByName(name) {
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
               <div class="col-md-3 white">
-                <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+                <button class="btn btn-primary select-and-continue uppercase">[@L[cds.sales/getonline:choose-select-button]@L]</button>
+                <div class="spin-results-message checking-availability">[@L[cds.sales/getonline:checking-availability]@L]</div>
+                <div class="spin-results-message now-unavailable">[@L[cds.sales/getonline:domain-no-longer-available]@L]</div>
               </div>
             </div>
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
-              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">Search Again</btn>
+              <btn class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">Did you know...</mark>
-              <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
           </div>
@@ -1035,12 +1036,12 @@ function getParameterByName(name) {
           </div>
           <div class="row">
             <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">domain name</h2>
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 class="strong">Congratulations! You have selected the following domain name:</h4>
+              <h4 class="strong">[@L[cds.sales/getonline:congratulations-selected-domain]@L]</h4>
             </div>
           </div>
           <div class="row searched-domain-name-row">
@@ -1050,19 +1051,19 @@ function getParameterByName(name) {
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <btn class="btn btn-primary btn-search-again btn-lg uppercase">Search Again</btn>
+              <btn class="btn btn-primary btn-search-again btn-lg uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <btn class="btn btn-primary btn-see-bundle btn-lg uppercase">See Other Products Included</btn>
-              <btn class="btn btn-purchase btn-plan btn-lg uppercase p4p">Get it now</btn>
+              <btn class="btn btn-primary btn-see-bundle btn-lg uppercase">[@L[cds.sales/getonline:see-other-products]@L]</btn>
+              <btn class="btn btn-purchase btn-plan btn-lg uppercase p4p">[@L[cds.sales/getonline:get-it-now]@L]</btn>
             </div>
           </div>
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">Did you know...</mark>
-              <p>More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
             </div>
             <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
           </div>
@@ -1070,9 +1071,9 @@ function getParameterByName(name) {
       </div>
       <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
         <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
-          <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
+          <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
         </h2>
-        <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
+        <p>[@L[cds.sales/getonline:generic-domain-search-error]@L]</p>
       </div>
     </section>
     <style>
@@ -1086,17 +1087,17 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
-            <h2 class="text-center">Managed Wordpress</h2>
-            <h4 class="text-center">We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.</h4>
+            <h2 class="text-center">[@L[cds.sales/getonline:mwp-product-name]@L]</h2>
+            <h4 class="text-center">[@L[cds.sales/getonline:mwp-product-description]@L]</h4>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="wordpress-laptop"></div>
-            <h5 style="margin-top:10px" class="uppercase text-center">enter your blog post</h5>
+            <h5 style="margin-top:10px" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-enter-blog]@L]</h5>
           </div>
           <div class="col-sm-4">
-            <h5 style="margin-top:100px" class="uppercase text-center">publish</h5>
+            <h5 style="margin-top:100px" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-publish]@L]</h5>
             <div class="wordpress-arrows"></div>
           </div>
           <div class="col-sm-4">
@@ -1106,14 +1107,14 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div style="margin-top:25px" class="col-sm-10 col-sm-offset-1">
-            <p class="text-center">WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.</p>
+            <p class="text-center">[@L[cds.sales/getonline:mwp-product-info-text]@L]</p>
           </div>
         </div>
         <div class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
-            <mark>Did you know...</mark>
-            <p>As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?</p>
+            <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+            <p>[@L[cds.sales/getonline:mwp-product-did-you-know-text]@L]</p>
           </div>
         </div>
       </div>
@@ -1122,15 +1123,15 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
-            <h2 class="text-center">Office 365 Email</h2>
-            <h3 class="text-center">Branded email to talk to your customers</h3>
+            <h2 class="text-center">[@L[cds.sales/getonline:O365-email-header]@L]</h2>
+            <h3 class="text-center">[@L[cds.sales/getonline:O365-email-text]@L]</h3>
             <div class="h2 text-center product-summary"><mark>yourname@<span class="selected-domain-name-display"></span></mark></div>
           </div>
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
-            <mark class="uppercase">Did you know...</mark>
-            <p>Customers are 9 times more likely to choose a business with a professional email address?*</p>
+            <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
+            <p>[@L[cds.sales/getonline:O365-emaildid-you-know-text]@L]</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
@@ -1140,26 +1141,26 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <h2 class="text-center">Why get online with us?</h2>
+            <h2 class="text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
-              <h3>We're the world leader</h3>
-              <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
+              <h3>[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-world-leader-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
-              <h3>Our 24/7 support is awesome</h3>
-              <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
+              <h3>[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-support-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
-              <h3>12 million people trust us</h3>
-              <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
+              <h3>[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-trust-text]@L]</p>
             </div>
           </div>
         </div>
@@ -1168,27 +1169,27 @@ function getParameterByName(name) {
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
-          <h2>Ready to Get Online?</h2>
-          <h3 id="got-domain-not-selected">First select your perfect domain</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="price-token">You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark></h3>
+          <h2>[@L[cds.sales/getonline:get-on-line-bottom-header]@L]</h2>
+          <h3 id="got-domain-not-selected">[@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]</h3>
+          <h3 id="got-domain-selected" style="display: none; " class="price-token">[@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]</h3>
         </div>
         <div class="row">
           <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
-            <h3>Domain Name</h3>
+            <h3>[@L[cds.sales/getonline:domain-name-header]@L]</h3>
           </div>
           <div class="plus">+</div>
           <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png" class="img-responsive center-block">
-            <h3>Managed Wordpress</h3>
+            <h3>[@L[cds.sales/getonline:mwp-product-name]@L]</h3>
           </div>
           <div class="plus">+</div>
           <div class="column email"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png" class="img-responsive center-block">
-            <h3>Office 365 Email</h3>
+            <h3>[@L[cds.sales/getonline:O365-email-header]@L]</h3>
           </div>
         </div>
         <div class="row">
-          <h3 class="price-token">{price_monthly}/month for the first year*</h3>
-          <button id="bottomSearchAgain" data-ci="96301" style="display: none;" class="btn btn-primary btn-lg">Search Again</button>
-          <button data-ci="96304" class="btn btn-purchase btn-lg">Get It Now</button><small class="price-token">*Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year</small>
+          <h3 class="price-token">[@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]</h3>
+          <button id="bottomSearchAgain" data-ci="96301" style="display: none;" class="btn btn-primary btn-lg">[@L[cds.sales/getonline:search-again]@L]</button>
+          <button data-ci="96304" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
         </div>
       </div>
     </section>
@@ -1316,6 +1317,7 @@ ul li.no-check {
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
+        #product-price{margin-top: 5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -1706,15 +1708,6 @@ ul li.no-check {
         maxNumberOfSpinsToShowByDefault: 3,
         totalSpinResults: 0,
         dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/wordpress.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
-        // pricing: {
-        //   promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
-        //   promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
-        //   bundleRenewal_wsb: '[@T[multipleproductprice:<list productidlist="464069|101|7524" period="monthly"></list>]@T]',
-        //   bundleRenewal_ols: '[@T[multipleproductprice:<list productidlist="464069|101|40972" period="monthly"></list>]@T]',
-        //   bingAdCredits: '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T]'
-        // },
-        // imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/',
-        // canOfferOls: true,
         animationTime: 800,
         animationEasingType: 'swing',
         isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
@@ -1740,8 +1733,10 @@ ul li.no-check {
             var $view = $(document).find('#' + section.id);
             $view.hide();
             hideMoreResultsLinks($view);
-            //- var spinResults = $view.find(".spin-results");
-            //- if(spinResults != undefined) spinResults.hide();
+            var spinResults = $view.find(".spin-results");
+            if(spinResults != undefined) {
+              spinResults.hide();
+            }
           });
           $(document).find(view).show();
         }
@@ -1801,7 +1796,7 @@ ul li.no-check {
               hasTld = idx > -1,
               sld = hasTld ? domain.substring(0, idx) : domain,
               tld = hasTld ? domain.substring(idx+1) : '',
-              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
           sld = needsTrimmed ? sld.substring(0, 63) : sld;
           
           var domainName = sld + ((tld!='') ? '.' + tld : '');
@@ -1910,7 +1905,7 @@ ul li.no-check {
               hasTld = idx > -1,
               sld = hasTld ? domain.substring(0, idx) : domain,
               tld = hasTld ? domain.substring(idx+1) : '',
-              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
           sld = needsTrimmed ? sld.substring(0, 63) : sld;
           
           var domainName = sld + ((tld!='') ? '.' + tld : '');
@@ -2019,7 +2014,7 @@ ul li.no-check {
               hasTld = idx > -1,
               sld = hasTld ? domain.substring(0, idx) : domain,
               tld = hasTld ? domain.substring(idx+1) : '',
-              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
+              needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a [@L[cds.sales/getonline:domain-name-header]@L] */        
           sld = needsTrimmed ? sld.substring(0, 63) : sld;
           
           var domainName = sld + ((tld!='') ? '.' + tld : '');

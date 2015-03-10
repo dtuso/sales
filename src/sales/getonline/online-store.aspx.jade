@@ -1,14 +1,14 @@
 extends _p4p.jade
 
 append vars
-  - page.title = "Get Online Online Store";
-  - page.description = "Get Online Online Store Description";
-  - page.keywords = "Get Online Online Store Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:ols-page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:ols-meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:ols-meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Online Store";
-  - page.openGraph.description = "Get Online OG Online Store Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:ols-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:ols-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
@@ -16,23 +16,23 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
   - productToDisplay = productToDisplay || {};
-  - productToDisplay.name = "Online Store";
+  - productToDisplay.name = "[@L[cds.sales/getonline:ols-product-name]@L]";
   - productToDisplay.landingPage = "getonline/online-store.aspx"
   - productToDisplay.packageId = "getonline_online_store";
-  - productToDisplay.itcCode = "slp_getonline_store";
+  - productToDisplay.itcCode = "p4p_getonline_store";
   - productToDisplay.appKey = "getonline_online_store";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='yearly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|40972' period='yearly'></list>]@T]";
-  - productToDisplay.getItNowDescription = "Easily create a site that let’s you sell your stuff, accept credit cards and more.";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:ols-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png";
   - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png";
-  - productToDisplay.productDescription = "Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:ols-product-description]@L]";
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
   - productToDisplay.productYouTubeId = "rMF9d8-3WBA";
-  - productToDisplay.productVideoInfoText = "What is Online Store?";
+  - productToDisplay.productVideoInfoText = "[@L[cds.sales/getonline:ols-product-video-info-text]@L]";
   - productToDisplay.productInfoText = "";
-  - productToDisplay.productDidYouKnowText = "Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:ols-product-did-you-know-text]@L]";
   - productToDisplay.topButtonCI = "96294";
   - productToDisplay.bottomButtonCI = "96298";
   - productToDisplay.bottomSearchCI = "96296";
@@ -63,13 +63,13 @@ block productSection
               div.video-marquee-info.text-center
                 div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
                 h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
-                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') Watch Now
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal') [@L[cds.sales/getonline:watch-now]@L]
 
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark.uppercase Did you know...
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}
 
 block bottomTargetedProduct

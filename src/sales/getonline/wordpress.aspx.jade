@@ -1,14 +1,14 @@
 extends _p4p.jade
 
 append vars
-  - page.title = "Get Online Managed Wordpress";
-  - page.description = "Get Online Managed Wordpress Description";
-  - page.keywords = "Get Online Managed Wordpress Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:mwp-page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:mwp-meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:mwp-meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Managed Wordpress";
-  - page.openGraph.description = "Get Online OG Managed Wordpress Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:mwp-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:mwp-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
@@ -16,24 +16,23 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
   - productToDisplay = productToDisplay || {};
-  - productToDisplay.name = "Managed Wordpress";
+  - productToDisplay.name = "[@L[cds.sales/getonline:mwp-product-name]@L]";
   - productToDisplay.landingPage = "getonline/wordpress.aspx"
   - productToDisplay.packageId = "getonline_wordpress";
-  - productToDisplay.itcCode = "slp_getonline_wordpress";
+  - productToDisplay.itcCode = "p4p_getonline_wordpress";
   - productToDisplay.appKey = "getonline_wordpress";
-  - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/wordpress.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='monthly' promocode='511092015' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='511092015' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='yearly'></list>]@T]";
-  - productToDisplay.getItNowDescription = "Start a blog with WordPress and let us manage the technical stuff.";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:mwp-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
   - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
-  - productToDisplay.productDescription = "We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:mwp-product-description]@L]";
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
-  - productToDisplay.productInfoText = "WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.";
-  - productToDisplay.productDidYouKnowText = "As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:mwp-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:mwp-product-did-you-know-text]@L]";
   - productToDisplay.topButtonCI = "96305";
   - productToDisplay.bottomButtonCI = "96304";
   - productToDisplay.bottomSearchCI = "96301";
@@ -61,22 +60,21 @@ block productSection
       .row
         .col-sm-4
           .wordpress-laptop
-          h5.uppercase.text-center(style={'margin-top':'10px'}) enter your blog post
+          h5.uppercase.text-center(style={'margin-top':'10px'}) [@L[cds.sales/getonline:mwp-product-info-enter-blog]@L]
         .col-sm-4
-          h5.uppercase.text-center(style={'margin-top':'100px'}) publish
+          h5.uppercase.text-center(style={'margin-top':'100px'}) [@L[cds.sales/getonline:mwp-product-info-publish]@L]
           .wordpress-arrows
         .col-sm-4
           .wordpress-browser
           h5.uppercase.text-center(style={'margin-top':'10px'}) <mark><span class="selected-domain-name-display"></span></mark>
       .row
         .col-sm-10.col-sm-offset-1(style={'margin-top':'25px'})
-          //- img.img-responsive.product-summary(src!="#{productToDisplay.productInfoImageUrl}")
           p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark Did you know...
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}
 
 block bottomTargetedProduct

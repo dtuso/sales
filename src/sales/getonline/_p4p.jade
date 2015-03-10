@@ -3,14 +3,14 @@ extends ../shared/_page
 include templates/_domain-search-wizard.jade
 
 append vars
-  - page.title = "Get Online Title";
-  - page.description = "Get Online Description";
-  - page.keywords = "Get Online Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Title";
-  - page.openGraph.description = "Get Online OG Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
@@ -39,12 +39,13 @@ append vars
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
   - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerText = "";
 
 append seo
-  meta(name="twitter:card" content="summary")
-  meta(name="twitter:site" content="Get Online Twitter Site")
-  meta(name="twitter:title" content="Get Online Twitter Title")
-  meta(name="twitter:description" content="Get Online Twitter Description")
+  meta(name="twitter:card" content="[@L[cds.sales/getonline:twitter-card]@L]")
+  meta(name="twitter:site" content="[@L[cds.sales/getonline:twitter-site]@L]")
+  meta(name="twitter:title" content="[@L[cds.sales/getonline:twitter-title]@L]")
+  meta(name="twitter:description" content="[@L[cds.sales/getonline:twitter-description]@L]")
   meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg")
 
 append headScripts
@@ -188,6 +189,7 @@ append pageStyles
     #getItNow .products img { min-height: 115px; }
     .cta { margin-top: 20px;}
     .cta small { padding-top: 10px; padding-bottom:5px;}
+    #product-price{margin-top: 5px;}
 
     @media (min-width: 768px) {
       #getItNow .bubble {
@@ -308,39 +310,39 @@ block content
       .row
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
-            h2.text-center Here you go...
-            h3.text-center.price-token A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark>
+            h2.text-center [@L[cds.sales/getonline:get-it-now-bubble-content-header]@L]
+            h3.text-center.price-token [@L[cds.sales/getonline:get-it-now-bubble-content-text]@L]
       block productContent
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.products
             .column.domain
               img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-              h3.text-center Domain Name
-              p Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
+              h3.text-center [@L[cds.sales/getonline:domain-name-header]@L]
+              p [@L[cds.sales/getonline:product-domain-text]@L]
             .plus +
             block targetedProduct
               //- each derived page must insert its own content here
             .plus +
             .column.email
               img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
-              h3.text-center Office 365 Email
-              p Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>. 
+              h3.text-center [@L[cds.sales/getonline:O365-email-header]@L]
+              p [@L[cds.sales/getonline:product-email-text]@L]
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta.text-center
-            p.price-token Get the bundle for {price_monthly}/month for the first year*
-            button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
-            small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+            p.price-token [@L[cds.sales/getonline:product-bundle-price]@L]
+            button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
+            small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
             .header-text.disclaimers
-              small.text-disclaimers [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-text]@L] 
-                button.btn-link.see-details-disclaimer-link(data-ci="#{productToDisplay.disclaimerCI}") [@L[cds.sales/offers/online-business:32573-top-small-disclaimer-details-link]@L]
+              small.text-disclaimers [@L[cds.sales/getonline:top-small-disclaimer-text]@L] 
+                button.btn-link.see-details-disclaimer-link(data-ci="#{productToDisplay.disclaimerCI}") [@L[cds.sales/getonline:top-small-disclaimer-details-link]@L]
               | 
               | ##if(countrySiteAny(uk)) 
-              div.text-vat-disclaimer [@L[cds.sales/offers/online-business:32573-price-does-not-include-taxes-vat]@L]
+              div.text-vat-disclaimer [@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]
               | 
               | ##endif 
 
-      #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]')
-        p [@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]
+      #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/getonline:disclaimer-modal-title]@L]')
+        p #{productToDisplay.disclaimerText}
 
   block domainSearchContent
     +domainSearchContent()
@@ -355,13 +357,13 @@ block content
         .row
           .col-sm-10.col-sm-offset-1
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
-            h2.text-center Office 365 Email
-            h3.text-center Branded email to talk to your customers
+            h2.text-center [@L[cds.sales/getonline:O365-email-header]@L]
+            h3.text-center [@L[cds.sales/getonline:O365-email-text]@L]
             .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
-            mark.uppercase Did you know...
-            p Customers are 9 times more likely to choose a business with a professional email address?*
+            mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+            p [@L[cds.sales/getonline:O365-emaildid-you-know-text]@L]
           .col-xs-2
             img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -369,47 +371,47 @@ block content
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          h2.text-center Why get online with us?
+          h2.text-center [@L[cds.sales/getonline:why-us-header]@L]
       .row
         .col-sm-4
           .feature.why-gd-world-leader
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png','Pin Point Globe')
-            h3 We're the world leader
-            p It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
+            h3 [@L[cds.sales/getonline:why-us-world-leader-header]@L]
+            p [@L[cds.sales/getonline:why-us-world-leader-text]@L]
         .col-sm-4
           .feature.why-gd-support
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','TLD Boards')          
-            h3 Our 24/7 support is awesome
-            p That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
+            h3 [@L[cds.sales/getonline:why-us-support-header]@L]
+            p [@L[cds.sales/getonline:why-us-support-text]@L]
         .col-sm-4
           .feature.why-gd-trust
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png','Support Icon')
-            h3 12 million people trust us
-            p We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
+            h3 [@L[cds.sales/getonline:why-us-trust-header]@L]
+            p [@L[cds.sales/getonline:why-us-trust-text]@L]
 
   block bottomGetItNow
     section#bottomGetItNow.bg-medium
       .container.text-center
         .row
-          h2 Ready to Get Online?
-          h3#got-domain-not-selected First select your perfect domain
-          h3#got-domain-selected.price-token(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
+          h2 [@L[cds.sales/getonline:get-on-line-bottom-header]@L]
+          h3#got-domain-not-selected [@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]
+          h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]
         .row
           .column.domain
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-            h3 Domain Name
+            h3 [@L[cds.sales/getonline:domain-name-header]@L]
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
-            h3 Office 365 Email
+            h3 [@L[cds.sales/getonline:O365-email-header]@L]
         .row
-          h3.price-token {price_monthly}/month for the first year*
-          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg Search Again
-          button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
-          small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+          h3.price-token [@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]
+          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
+          button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+          small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
 
 prepend endOfPageScripts
 

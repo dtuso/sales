@@ -1,14 +1,14 @@
 extends _p4p.jade
 
 append vars
-  - page.title = "Get Online Web Hosting";
-  - page.description = "Get Online Web Hosting Description";
-  - page.keywords = "Get Online Web Hosting Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:hosting-page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:hosting-meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:hosting-meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Web Hosting";
-  - page.openGraph.description = "Get Online OG Web Hosting Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:hosting-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:hosting-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
@@ -16,24 +16,23 @@ append vars
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
   - productToDisplay = productToDisplay || {};
-  - productToDisplay.name = "Web Hosting";
+  - productToDisplay.name = "[@L[cds.sales/getonline:hosting-product-name]@L]";
   - productToDisplay.landingPage = "getonline/web-hosting.aspx"
   - productToDisplay.packageId = "getonline_web_hosting";
-  - productToDisplay.itcCode = "slp_getonline_hosting";
+  - productToDisplay.itcCode = "p4p_getonline_hosting";
   - productToDisplay.appKey = "getonline_web_hosting";
-  - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/web-hosting.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='32051' period='monthly' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='32051' period='yearly' />]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[productprice:<list productid='32051' period='yearly'></list>]@T]";
-  - productToDisplay.getItNowDescription = "Give your site a home that’ll keep it secure and running like sports car.";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:hosting-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
   - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
-  - productToDisplay.productDescription = "Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:hosting-product-description]@L]";
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
   - productToDisplay.productYouTubeId = "";
   - productToDisplay.productVideoInfoText = "";
-  - productToDisplay.productInfoText = "Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.";
-  - productToDisplay.productDidYouKnowText = "Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:hosting-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:hosting-product-did-you-know-text]@L]";
   - productToDisplay.topButtonCI = "96307";
   - productToDisplay.bottomButtonCI = "96306";
   - productToDisplay.bottomSearchCI = "96310";
@@ -56,8 +55,8 @@ block productContent
     .col-xs-12.col-sm-8.col-sm-offset-4.products
       .column.domain
         img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-        h3.text-center Domain Name
-        p Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
+        h3.text-center [@L[cds.sales/getonline:domain-name-header]@L]
+        p [@L[cds.sales/getonline:get-it-now-bubble-content-text]@L]
       .plus +
       block targetedProduct
         .column.website
@@ -66,9 +65,9 @@ block productContent
           p #{productToDisplay.getItNowDescription}
   .row
     .col-xs-12.col-sm-9.col-sm-offset-3.cta
-      p.text-center.price-token Get the bundle for {price_monthly}/month for the first year*
-      button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block Get It Now
-      small.text-center.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+      p.text-center.price-token [@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]
+      button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
+      small.text-center.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
 
 block productSection
   section#web-hosting.product-section
@@ -84,7 +83,7 @@ block productSection
                 div(style="display:table;margin:auto;")
                   img.img-responsive(src!="#{productToDisplay.hostingFlow.globe}")
                 div.text-center(style="margin:auto;")
-                  | World Wide Web
+                  | [@L[cds.sales/getonline:hosting-product-info-www]@L]
                   .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowL}", style="margin:40px 0 0 12px;")
               .col-md-4.col-md-pull-4(style="padding:0;margin-bottom:30px;")
                 .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowUR}", style="margin-left:33%;")
@@ -92,20 +91,20 @@ block productSection
                   div.col-md-offset-2.col-md-11.col-sm-12(style="margin-top:-9%;padding:0;")
                     img.img-responsive(src!="#{productToDisplay.hostingFlow.servers}", style="margin:auto;")
                     div(style="margin:auto -10px;")
-                      | GoDaddy Hosting  
+                      | [@L[cds.sales/getonline:hosting-product-info-company-hosting]@L]
               .col-md-4(style="padding:0;margin-bottom:30px;")
                 .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowRD}", style="margin-left:-33%;")
                 .row
                   div.col-md-11.col-sm-12(style="padding:0;")
                     img.img-responsive(src!="#{productToDisplay.hostingFlow.site}", style="margin:auto;")
                     div.text-center
-                      | <mark class="business-name-display">Domain Name</mark>
+                      | <mark class="business-name-display"></mark>
           p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
-          mark.uppercase Did you know...
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}
 
 block office365
@@ -114,13 +113,13 @@ block office365
       .row
         .col-sm-10.col-sm-offset-1
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
-          h2.text-center Memorable Email
-          h3.text-center Create up to 100 branded addresses that are built on your domain name.
-          .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
+          h2.text-center [@L[cds.sales/getonline:O365-email-header]@L]
+          h3.text-center [@L[cds.sales/getonline:O365-email-text]@L]
+          .h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
       .row.bubble-row
         .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
-          mark.uppercase Did you know...
-          p Customers are 9 times more likely to choose a business with a professional email address?*
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p [@L[cds.sales/getonline:hosting-email-did-you-know-text]@L]
         .col-xs-2
           img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -128,20 +127,20 @@ block bottomGetItNow
   section#bottomGetItNow.bg-medium
     .container.text-center
       .row
-        h2 Ready to Get Online?
-        h3#got-domain-not-selected First select your perfect domain
-        h3#got-domain-selected.price-token(style="display: none; ") You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
+        h2 [@L[cds.sales/getonline:get-on-line-bottom-header]@L]
+        h3#got-domain-not-selected [@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]
+        h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]
       .row
         .column.domain
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-          h3 Domain Name
+          h3 [@L[cds.sales/getonline:domain-name-header]@L]
         .plus +
         block bottomTargetedProduct
           .column.website
             img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
             h3 #{productToDisplay.name}
       .row
-        h3.price-token {price_monthly}/month for the first year*
-        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg Search Again
-        button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg Get It Now
-        small.price-token *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
+        h3.price-token [@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]
+        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
+        button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+        small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]

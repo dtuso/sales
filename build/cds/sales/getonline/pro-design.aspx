@@ -19,21 +19,21 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>Get Online Website Design</title>
-    <meta name="description" content="Get Online Website Design Description">
-    <meta name="keywords" content="Get Online Website Design Keywords">
-    <meta property="og:title" content="Get Online OG Website Design">
-    <meta property="og:description" content="Get Online OG Website Design Description">
+    <title>[@L[cds.sales/getonline:pro-design-page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/getonline:pro-design-meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/getonline:pro-design-meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/getonline:pro-design-og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/getonline:pro-design-og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="Get Online Twitter Site">
-    <meta name="twitter:title" content="Get Online Twitter Title">
-    <meta name="twitter:description" content="Get Online Twitter Description">
+    <meta name="twitter:card" content="[@L[cds.sales/getonline:twitter-card]@L]">
+    <meta name="twitter:site" content="[@L[cds.sales/getonline:twitter-site]@L]">
+    <meta name="twitter:title" content="[@L[cds.sales/getonline:twitter-title]@L]">
+    <meta name="twitter:description" content="[@L[cds.sales/getonline:twitter-description]@L]">
     <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
@@ -186,20 +186,20 @@
               <input type="hidden" name="product" value="6520|1|1">
               <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
               <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
-              <input type="hidden" name="itc" value="slp_webdesign2">
+              <input type="hidden" name="itc" value="p4p_getonline_pro_design">
               <input type="hidden" name="nocos" value="False">
               <input type="hidden" name="config" value="customsite">
               <input type="hidden" name="sdc" value="True">
               <input type="hidden" name="newxs" value="False">
               <input type="hidden" name="cicode" value="96312">
               <input type="hidden" name="prog_id" value="GoDaddy">
-              <button class="btn btn-purchase btn-lg">GET IT NOW</button>
+              <button class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button>
               <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
             </form>
           </div>
         </div>
-        <div id="default-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
+        <div id="default-details-modal" data-title="[@L[cds.sales/getonline:disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
+          <p></p>
         </div>
       </div>
     </section>
@@ -240,7 +240,7 @@
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
             <p>We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
@@ -268,7 +268,7 @@
         <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
-            <mark>Did you know...</mark>
+            <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
             <p>Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.</p>
           </div>
         </div>
@@ -1838,26 +1838,26 @@ var PlanBox6UI = {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <h2 class="text-center">Why get online with us?</h2>
+            <h2 class="text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
-              <h3>We're the world leader</h3>
-              <p>It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.</p>
+              <h3>[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-world-leader-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
-              <h3>Our 24/7 support is awesome</h3>
-              <p>That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.</p>
+              <h3>[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-support-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
-              <h3>12 million people trust us</h3>
-              <p>We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.</p>
+              <h3>[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:why-us-trust-text]@L]</p>
             </div>
           </div>
         </div>
@@ -1876,14 +1876,14 @@ var PlanBox6UI = {
                 <input type="hidden" name="product" value="6520|1|1">
                 <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
                 <input type="hidden" name="formSubmitButton" id="formSubmitButton" value="Add-to-Cart">
-                <input type="hidden" name="itc" value="slp_webdesign2">
+                <input type="hidden" name="itc" value="p4p_getonline_pro_design">
                 <input type="hidden" name="nocos" value="False">
                 <input type="hidden" name="config" value="customsite">
                 <input type="hidden" name="sdc" value="True">
                 <input type="hidden" name="newxs" value="False">
                 <input type="hidden" name="cicode" value="96311">
                 <input type="hidden" name="prog_id" value="GoDaddy">
-                <button class="btn btn-purchase btn-lg">GET IT NOW</button>
+                <button class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button>
                 <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
               </form>
             </div>
@@ -2015,6 +2015,7 @@ ul li.no-check {
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
+        #product-price{margin-top: 5px;}
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -2140,6 +2141,7 @@ ul li.no-check {
         .products{margin-top: 0px!important;}
         .uppercase{text-transform: uppercase;}
         .orange-text{color: #ef6c0f;}
+        #getItNow .hero-guy{left: 0px;}
         
       </style>
     </atlantis:webstash>
