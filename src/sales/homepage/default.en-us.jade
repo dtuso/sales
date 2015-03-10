@@ -3,9 +3,9 @@ extends ./_home-page.jade
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+  include ../../tmsv2/content/homepage/p4p/marquee-tile.jade
 block marquee-tile2
-  include ../../tmsv2/content/homepage/tld-co/marquee-tile.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block merch-tile1
   include ./tiles/get-found.jade
 block merch-tile2
