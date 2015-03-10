@@ -7,7 +7,7 @@
     .co-tertiary-tile .promo-cta{position:absolute;bottom:5px}
     .co-tertiary-tile a{text-decoration:underline;color:#f2812e}
     .co-tertiary-tile img.svgfallback:not(old){display:inline-block;}
-    .co-tertiary-tile .promo-logo-text{display:inline-block;font-size:1.4em;color:#77C043;}
+    .co-tertiary-tile .promo-logo-text{display:inline-block;font-size:20px;color:#75c239;}
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="tile co-tertiary-tile">
