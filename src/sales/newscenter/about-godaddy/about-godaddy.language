@@ -1,14 +1,8 @@
 ---
 location: localization/sales/newscenter/about-godaddy/en
-<<<<<<< HEAD
-id: 54f74165f778fc0104ece2ff
-name: GCEMO-690
-comments: update values with app settings
-=======
 id: false
-name: GCEMO-701
-comments: Update title and bio for Phil Bienert and Barb Rechterman
->>>>>>> gcemo-701-update-about-us
+name: GCEMO-707
+comments: Update of phils title and removing buddy
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="NewsCenterAbout-AFinePortraitsVideo" />
@@ -34,7 +28,7 @@ Our Story
 <phrase key="NewsCenterAbout-2-OurTeam" />
 Our Team
 <phrase key="NewsCenterAbout-73-WhoWeAreAndWhatWeDoNearlyAsOld" />
-<span class="subtitle">Who we are and what we do</span>Nearly as old as the Internet itself, GoDaddy was born to give people an easy, affordable way to get their ideas online. Today, we have more than 12 million customers around the world, but our goal is much the same. We’re here to help people easily start, confidently grow and successfully run their own ventures. In short, to help them kick ass, online and off!
+<span class="subtitle">Who we are and what we do</span>Nearly as old as the Internet itself, GoDaddy was born to give people an easy, affordable way to get their ideas online. Today, we have more than [@T[appSetting:<setting name="GODADDY_CUSTOMERS" />]@T] million customers around the world, but our goal is much the same. We’re here to help people easily start, confidently grow and successfully run their own ventures. In short, to help them kick ass, online and off!
 <phrase key="NewsCenterAbout-3-GoDaddyIs" />
 GoDaddy is&hellip;
 <phrase key="NewsCenterAbout-11-TheWorldSLargestDomainNameRegistrarAndWeb" />
@@ -77,7 +71,7 @@ Chief Financial Officer &amp; Chief Operating Officer
 <phrase key="NewsCenterAbout-2-BarbRechterman" />
 Barb Rechterman
 <phrase key="NewsCenterAbout-2-ChiefMarketingOfficer" />
-Chief Marketing<br />Officer
+Chief Customer Officer
 <phrase key="NewsCenterAbout-2-ElissaMurphy" />
 Elissa Murphy
 <phrase key="NewsCenterAbout-5-ChiefTechnologyOfficerExecutiveVicePresident" />
@@ -109,7 +103,7 @@ SVP, Design &amp; User Experience
 <phrase key="NewsCenterAbout-2-PhilBienert" />
 Phil Bienert
 <phrase key="NewsCenterAbout-5-ExecutiveVicePresidentDigitalCommerce" />
-Executive Vice President, Digital Commerce
+Chief Marketing Officer & Executive Vice President, Digital Commerce
 <phrase key="NewsCenterAbout-2-DavidPopowitz" />
 David Popowitz
 <phrase key="NewsCenterAbout-4-SeniorVicePresidentCorporateDevelopment" />
@@ -191,13 +185,13 @@ Before joining GoDaddy, Scott spent 13 years with global investment firm KKR, wh
 <phrase key="NewsCenterAbout-40-ScottHoldsABAFromYaleUniversityAnd" />
 Scott holds a B.A. from Yale University and an M.B.A. from Harvard University.  Outside of work, Scott enjoys what he calls the "parental decathlete" of life with three children between the ages of four and seven.
 <phrase key="NewsCenterAbout-3-ChiefMarketingOfficer" />
-Chief Marketing Officer
+Chief Customer Officer
 <phrase key="NewsCenterAbout-21-BarbOverseesAllFacetsOfCorporateMarketingIncludingStrategic" />
-Barb oversees all facets of corporate marketing, including strategic planning and business development for Marketing, Global Branding and Product Management.
+Barb directs strategic end-to-end customer relationships, creating programs and promoting consumer-related functions with a unified vision to provide a consistent customer experience and value. 
 <phrase key="NewsCenterAbout-37-SheHasTeamedWithGoDaddyFounderBobParsonsFor" />
-She has teamed with GoDaddy founder Bob Parsons for more than two decades, having previously served as Vice President of Application Development for Parsons Technology and as President during the company’s acquisition by Intuit, Inc.
+She has teamed with GoDaddy founder Bob Parsons for more than two decades, having previously served as Chief Marketing Officer at GoDaddy, Vice President of Application Development for Parsons Technology and as President during the company’s acquisition by Intuit, Inc.
 <phrase key="NewsCenterAbout-42-BarbEarnedABAInAccountingFromThe" />
-Barb earned a B.A. in Accounting from the University of Dubuque and is a Certified Public Accountant.   When not making edgy and viral Super Bowl spots, she enjoys riding Harleys with her husband and training her four horses in dressage.
+Barb earned a B.A. in Accounting from the University of Dubuque and is a Certified Public Accountant. When not working to help small business owners and others leverage the power of the Internet, Barb enjoys riding Harleys with her husband and training her four horses in dressage.
 <phrase key="NewsCenterAbout-6-ChiefTechnologyOfficerExecutiveVicePresident" />
 Chief Technology Officer &amp; Executive Vice President, Cloud
 <phrase key="NewsCenterAbout-60-AsCTOElissaIsLeadingGoDaddySEvolutionToward" />
@@ -213,7 +207,7 @@ Arne joined GoDaddy in 2014 from ServiceNow where he served as Chief Technology 
 <phrase key="NewsCenterAbout-46-ArneAbout3" />
 Prior to his time at ServiceNow, Arne had a more than 25 year career at Microsoft in various leadership positions. His roles there included General Manager building and operating Microsoft’s global cloud infrastructure, and most recently General Manager in Windows Azure.
 <phrase key="NewsCenterAbout-46-ArneAbout4" />
-Arne kicked off his career as an engineer at Bofors Aerotronics and Intel before moving over to Microsoft. He has a passion for driving technological innovations to help GoDaddy’s more than 12 million small business customers. 
+Arne kicked off his career as an engineer at Bofors Aerotronics and Intel before moving over to Microsoft. He has a passion for driving technological innovations to help GoDaddy’s more than [@T[appSetting:<setting name="GODADDY_CUSTOMERS" />]@T] million small business customers. 
 <phrase key="NewsCenterAbout-60-AsHeadOfGoDaddySPeopleOperationsGroupAuguste" />
 As head of GoDaddy's People Operations group, Auguste leads the charge to hire and develop the greatest team of talented individuals on the planet. Having previously led technology teams as GoDaddy's CIO (including Product Development, IT Operations, Information Security and R&amp;D) Auguste brings a perspective and skillset to human resources that is unique in the industry.
 <phrase key="NewsCenterAbout-47-PriorTo2010AugusteServedAsTheCEOOf" />
@@ -245,9 +239,9 @@ As Senior VP for Design and User experience, Rick is responsible for all of GoDa
 <phrase key="NewsCenterAbout-33-RickIsPassionateAboutUXAndBelievesInThe" />
 Rick is passionate about UX and believes in the power of a good UX team working in concert with developers to create experiences that delight users. Rick attended San Jose State University.
 <phrase key="NewsCenterAbout-79-AsHeadOfDigitalCommercePhilBringsALaser" />
-As head of Digital Commerce, Phil brings a laser focus to all of GoDaddy's front-of-site experiences. Prior to joining GoDaddy in 2013, he worked at several big brands, successfully leading user experience and customer engagement. Phil led the online marketplace at AT&amp;T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.
-<phrase key="NewsCenterAbout-34-PhilReceivedHisMBAFromTheUniversity" />
-Phil received his M.B.A. from the University of Texas at Austin and his B.A. from Georgetown University. He also spent a year teaching English at Changchun University in northeast China.
+As Chief Marketing Officer, Phil oversees all facets of corporate marketing, including strategic planning and business development for Marketing, Global Branding and Product Management.
+<phrase key="NewsCenterAbout-34-PhilReceivedHisMBAFromTheUniversity" comment="this phrase has 2 paragraphs delimeted by br tags"/>
+Prior to joining GoDaddy in 2013, he held senior positions at several big brands, successfully leading user-experience and customer engagement. Phil led the online marketplace at AT&T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.<br/><br/>Phil received his M.B.A. from the University of Texas at Austin and his B.A. from Georgetown University. He also spent a year teaching English at Changchun University in northeast China.
 <phrase key="NewsCenterAbout-5-SeniorVicePresidentCorporateDevelopment" />
 Senior Vice President, Corporate Development
 <phrase key="NewsCenterAbout-22-DavidDirectsGoDaddySCorporateDevelopmentActivitiesIncludingAcquiring" />
@@ -259,7 +253,7 @@ David holds an M.B.A. from Harvard Business School and a B.A. from Brown Univers
 <phrase key="NewsCenterAbout-4-SeniorVicePresidentApplications" />
 Senior Vice President, Applications
 <phrase key="NewsCenterAbout-40-ItSStevenSJobToSetAndExecute" />
-It’s Steven's job to set and execute the company's vision of providing elegant, end-to-end technology solutions for GoDaddy's 10 million small business customers. He also heads up the Online Bookkeeping and WorkSpace teams.
+It’s Steven's job to set and execute the company's vision of providing elegant, end-to-end technology solutions for GoDaddy's [@T[appSetting:<setting name="GODADDY_CUSTOMERS" />]@T] million small business customers. He also heads up the Online Bookkeeping and WorkSpace teams.
 <phrase key="NewsCenterAbout-64-StevenBringsOverADecadeOfExperienceAtIntuit" />
 Steven brings over a decade of experience at Intuit, where he built solutions to help small businesses use the Web to grow and run their stores. He also has small business experience as the founder of a Web company that simplified shopping for insurance.
 Steven earned an M.B.A. from Stanford and a B.A. in physics from University of North Carolina.
@@ -648,19 +642,3 @@ Prior to joining GoDaddy, Buddy was one of six adorable Golden Retriever puppies
 After seeing Buddy’s smarts, ambition and Go-Getter attitude, the pick of the litter was easy, and at 9 weeks of age, Buddy was cast in his first Super Bowl commercial with GoDaddy and a short time later he was adopted into the GoDaddy family.
 <phrase key="NewsCenterAbout-BuddyBio6" />
 Equally at home in the customer care center, on the office putting green or visiting business owners and employees to help them chill, Buddy’s expertise in making “ruff” days a little better continues to garner accolades including, ‘Who’s a good boy?’
-<phrase key="NewsCenterAbout-PhilBienert-title" />
-Executive Vice President, Digital Commerce & Chief Marketing Officer
-<phrase key="NewsCenterAbout-PhilBienert-bio-1" />
-As Chief Marketing Officer, Phil oversees all facets of corporate marketing, including strategic planning and business development for Marketing, Global Branding and Product Management.
-<phrase key="NewsCenterAbout-PhilBienert-bio-2" />
-Prior to joining GoDaddy in 2013, he held senior positions at several big brands, successfully leading user-experience and customer engagement. Phil led the online marketplace at AT&T as Senior VP of Consumer Digital Experience and was head of Customer Experience at CitiGroup. He spent his early career at Volvo and Ford Motor Company driving brand and consumer product strategies.
-<phrase key="NewsCenterAbout-PhilBienert-bio-3" />
-Phil received his M.B.A. from the University of Texas at Austin and his B.A. from Georgetown University. He also spent a year teaching English at Changchun University in northeast China.
-<phrase key="NewsCenterAbout-BarbRechterman-title" />
-Chief Customer Officer
-<phrase key="NewsCenterAbout-BarbRechterman-bio-1" />
-Barb directs strategic end-to-end customer relationships, creating programs and promoting consumer-related functions with a unified vision to provide a consistent customer experience and value. 
-<phrase key="NewsCenterAbout-BarbRechterman-bio-2" />
-She has teamed with GoDaddy founder Bob Parsons for more than two decades, having previously served as Chief Marketing Officer at GoDaddy, Vice President of Application Development for Parsons Technology and as President during the company’s acquisition by Intuit, Inc.
-<phrase key="NewsCenterAbout-BarbRechterman-bio-3" />
-Barb earned a B.A. in Accounting from the University of Dubuque and is a Certified Public Accountant. When not working to help small business owners and others leverage the power of the Internet, Barb enjoys riding Harleys with her husband and training her four horses in dressage.

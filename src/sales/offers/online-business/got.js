@@ -302,11 +302,14 @@ function domainSearchFormSubmit(e, domain) {
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section');       
+        var $thisSection = $this.closest('.js-marquee-section'); 
 
-        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+        var $toView = $('#domain-available-marquee-view');
+        $toView.find('.purchase-btn').data('domain', exactMatchDomain);
+        $toView.find('.search-message').hide();
+        $toView.find('.search-message.type-your-business-name').show();
 
-        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        animateMarquee($thisSection, $toView /*toView*/);
 
       } else {
 
@@ -412,7 +415,7 @@ function goToDppCheckoutPage(e) {
     apiEndpoint3,
     returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain.Fqdn)));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
@@ -467,7 +470,10 @@ function showSearchSpins($this, domain, alternateDomains){
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
-  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  var $toView = $('#domain-not-available-marquee-view');
+  $toView.find('.search-message').hide();
+  $toView.find('.search-message.type-your-business-name').show();
+  animateMarquee($thisSection, $toView /*toView*/);
 
 }
 
