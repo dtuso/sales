@@ -24,7 +24,7 @@ atlantis:webstash(type="css")
 
 block tileContent
   .clearfix
-    .header-text.walsheim-black [@T[productprice:<current productid="#{tldSaleTileParam.pfid}" period="yearly" promocode="#{tldSaleTileParam.promo}" htmlsymbol="false" />]@T]
+    .header-text.walsheim-black [@T[productprice:<current productid="#{tldSaleTileParam.pfid}" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]*
     if(tldSaleTileParam.logo)
       <!--[if lt IE 9]>
       img(src!=tldSaleTileParam.logoImageFallback class=tldSaleTileParam.logoClass)
