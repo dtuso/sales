@@ -3,24 +3,3 @@ body {
   background-color: #d9d9d9; 
 }
 
-#marquee { 
-  background: no-repeat top center; 
-  padding-bottom: 120px;
-  margin-bottom: 0;
-  background-size: cover;
-}
-
-
-*[data-tokenize] {visibility: hidden;}
-
-| 
-|##if(activeLanguageAny([en-pk],[en-in]))
-| 
-#marquee { background-url: ([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);}
-| 
-|##else
-| 
-#marquee { background-url: ([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);}
-| 
-|##endif
-| 

@@ -4,8 +4,13 @@ atlantis:webstash(type="css")
       margin:0 auto; 
       background-color: #77c043;
     }
-
-section#marquee
+    .pro-plans .pro-plan-wrap.pro-plan-wrap-alternate {
+        border-top: 10px solid #FE8D01;
+    }
+    .plan-price-and-duration {
+      margin-top: -5px;
+    }
+section#plans
   +renderPlanTiles(4) 
     +planTile("planTileA")
       include ./_plan-A.jade

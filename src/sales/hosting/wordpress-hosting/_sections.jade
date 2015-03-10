@@ -4,7 +4,7 @@ atlantis:webstash(type="css")
 
     }
 +renderMidPageNav
-  +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#planTileOne", {"ci":"95886"})
+  +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
 section#features(data-mid-nav-title="Features",data-ciCode="xxxx")
   .container
@@ -215,3 +215,6 @@ section#training(data-mid-nav-title="Training &amp; Support",data-ciCode="xxxx")
     .row
       .col-sm-12
         a(href="", data-ci="", target="_blank") Powered by SIDEKICK
+
+//- be sure to end the fixed navigational area
++renderMidPageNavBottom

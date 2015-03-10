@@ -1,10 +1,12 @@
 extend ../../../sales/shared/_plan-tile
 
 block vars
-  - title = "[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-title]@L]";
-  - description = "[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-description]@L]";
+  - title = "Deluxe [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-title]@L]";
+  - description = "Blog tattooed put a bird on it Williamsburg, PBR artisan deep v irony pickled cliche fanny pack authentic mumblecore iPhone.  [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-description]@L]";
   - features = ["<strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-1]@L]</strong>",'<strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2-tooltip]@L]"></span>',"<strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-3]@L]</strong>","[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-4]@L]",'[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-5]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-5-tooltip]@L]"></span>',  "[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-6]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-6-tooltip]@L]'></span>",'[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-7]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-7-tooltip]@L]"></span>','[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-8]@L] ([@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-restrictions-apply]@L]) <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-restrictions-apply-tooltip]@L]"></span>'];
   - pfid = page.pfids.current.B;
+  - listPrice = page.pricing.list.B;
+  - currentPrice = page.pricing.current.B;
   - buttonid="product-B";
   - term ="/mo[@L[cds.sales/hosting/wordpress-hosting-rebrand:per-mo]@L]"
   - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
@@ -12,6 +14,8 @@ block vars
   - vat = true
   - ci = page.ci.plansAddToCartB;
   - flagText = ""
+  - additionalClasses = ""
+  - priceText = "As low as"
 
-append price
-  p.h6(data-tokenize!="#{page.pricing.list.B}") {0}[@L[cds.sales/gd/hosting/website-builder:plan-renews-at-text]@L]
+block price
+  include ./_plan-price-override.jade

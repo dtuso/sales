@@ -4,7 +4,8 @@
 - var hasIncludedPlanTilesMixinCss = false
 
 
-mixin planTile(planid)
+mixin planTile(planid, additionalClasses)
+  - additionalClasses = additionalClasses ? additionalClasses : '';
   case plansPanelTotalColumns
     when 1
       div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro(id=planid)

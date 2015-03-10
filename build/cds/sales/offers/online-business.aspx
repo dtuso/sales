@@ -1163,12 +1163,12 @@ $(window).load(function () {
       ##if(productIsOffered(105)) 
        
       <div id="default-marquee-details-modal" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-both-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-both-content]@L]</p>
       </div> 
       ##else
        
       <div id="default-marquee-details-modal-wsb-only" data-title="[@L[cds.sales/offers/online-business:32573-disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-        <p data-icann-fee="">[@L[cds.sales/offers/online-business:35463-disclaimer-modal-wsb-content]@L]</p>
+        <p>[@L[cds.sales/offers/online-business:32573-disclaimer-modal-wsb-content]@L]</p>
       </div> 
       ##endif
        

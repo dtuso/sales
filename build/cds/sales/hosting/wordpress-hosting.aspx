@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -90,35 +91,87 @@
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              html = $this.html(),
+              val = $this.data('tokenize'),
+              tokenizedHtml = html.replace(/\{0\}/gi, val);
+            $this
+              .html(tokenizedHtml)
+              .removeAttr('data-tokenize');
+          });
+        });
+        
+      </script>
+    </atlantis:webstash>
+    <atlantis:webstash type="css">
+      <style>
         #marquee {
-          margin:0 auto; 
+          margin: 0 auto; 
           background-color: #77c043;
+          background: no-repeat top center cover;
+          padding-bottom: 120px;
+          padding-bottom: 120px;
+          background-size: cover;
         }
+        ##if(activeLanguageAny([en-pk],[en-in]))
+          #marquee { 
+            background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+          }
+        ##else
+          #marquee { 
+            background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+          }
+        ##endif
+        
         #marquee .marquee {
           position: relative;
         }
-        #marquee .marquee .marquee-flag {
-          background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+        #marquee .marquee-flag:before, 
+        #marquee .marquee-flag:after {
+          content: "";
+        }    
+        #marquee .marquee-flag {
+          background: no-repeat scroll center center / cover rgba(0,0,0,0);
+          background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjNzcwMjg2IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+PC9zdmc+");      
           text-transform: uppercase;
           top: -20px;
           right: 30px;
           position: absolute;
+          display: inline-block;
+          line-height: 1.42857;
+          padding: 10px 5px;
         }
         #marquee .contact-support {
           font-weight: 800;
+        }
+        #marquee .marquee-content-wrapper {
+          background-color: rgba(50, 50, 50, 0.75);
+        }
+        #marquee .as-low-as-pricing {
+          margin-left: 20px;
         }
       </style>
     </atlantis:webstash>
     <section id="marquee">
       <div class="container marquee marquee-white">
-        <div class="marquee-flag">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-999UptimeGuarantee]@L]</div>
+        <div class="marquee-flag">Questions? call us! [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]</div>
         <div class="row">
           <div class="col-sm-7 marquee-content-wrapper">
             <h1 class="marquee-product-name">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]</h1>
             <h2 class="marquee-product-description">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]</h2>
-            <button class="btn btn-medium btn-purchase">Plan Pricing</button>
-            <div class="marquee-product-text"></div>
-            <div class="contact-support">[@L[cds.sales/gd/hosting/wordpress-hosting:professional-Hosting-Support]@L] [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]</div>
+            <button class="btn btn-medium btn-purchase pull-left">Get Started</button>
+            <div class="pull-left as-low-as-pricing">
+              <p class="price-text">As low as</p>
+              <div class="price">$6.99 <span>/mo</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,10 +182,15 @@
           margin:0 auto; 
           background-color: #77c043;
         }
-        
+        .pro-plans .pro-plan-wrap.pro-plan-wrap-alternate {
+            border-top: 10px solid #FE8D01;
+        }
+        .plan-price-and-duration {
+          margin-top: -5px;
+        }
       </style>
     </atlantis:webstash>
-    <section id="marquee">
+    <section id="plans">
       <atlantis:webstash type="css">
         <style>.plan-tile { 
   margin-top: -145px; 
@@ -533,23 +591,22 @@
           <div class="row"> 
             <div id="planTileA" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/mo[@L[cds.sales/hosting/wordpress-hosting-rebrand:per-mo]@L]</span></div> 
+                <h3 class="plan-title">Basic [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-title]@L]</h3>
+                <p class="plan-text">Hashtag freegan tilde pug artisan cliche meh tousled PBR High Life, Vice Pitchfork migas Helvetica. [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-description]@L]</p>
+                <div class="plan-price-wrap row">
+                  <div class="price-text"> <strong>As low as</strong></div>
+                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(580970, 580970, 0))
-                   <br><strong>[@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580970" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580970' secondaryproductid='580970' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                   ##endif
                    
-                   
+                  <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
                   ##if(countrySiteAny(uk))
                    
                   <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                   ##endif
                    
                 </div>
-                <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}[@L[cds.sales/gd/hosting/website-builder:plan-renews-at-text]@L]</p>
                 <button id="product-A" data-ci="96216" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-1]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-2-tooltip]@L]"></span></div>
@@ -563,23 +620,22 @@
             </div>
             <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/mo[@L[cds.sales/hosting/wordpress-hosting-rebrand:per-mo]@L]</span></div> 
+                <h3 class="plan-title">Deluxe [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-title]@L]</h3>
+                <p class="plan-text">Blog tattooed put a bird on it Williamsburg, PBR artisan deep v irony pickled cliche fanny pack authentic mumblecore iPhone.  [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-description]@L]</p>
+                <div class="plan-price-wrap row">
+                  <div class="price-text"> <strong>As low as</strong></div>
+                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(580978, 580978, 0))
-                   <br><strong>[@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="580978" secondaryproductid="580978" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580978' secondaryproductid='580978' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                   ##endif
                    
-                   
+                  <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
                   ##if(countrySiteAny(uk))
                    
                   <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                   ##endif
                    
                 </div>
-                <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}[@L[cds.sales/gd/hosting/website-builder:plan-renews-at-text]@L]</p>
                 <button id="product-B" data-ci="96217" data-plan="host_WordPressHostingPlan_B" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-1]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2-tooltip]@L]"></span></div>
@@ -593,23 +649,22 @@
             </div>
             <div id="planTileC" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/mo[@L[cds.sales/hosting/wordpress-hosting-rebrand:per-mo]@L]</span></div> 
+                <h3 class="plan-title">Ultimate [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-title]@L]</h3>
+                <p class="plan-text">Butcher biodiesel Intelligentsia Portland kogi, vinyl retro bicycle rights 3 wolf moon occupy ethical fap.  [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-description]@L]</p>
+                <div class="plan-price-wrap row">
+                  <div class="price-text"> <strong>As low as</strong></div>
+                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(581001, 581001, 0))
-                   <br><strong>[@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="581001" secondaryproductid="581001" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581001' secondaryproductid='581001' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                   ##endif
                    
-                   
+                  <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
                   ##if(countrySiteAny(uk))
                    
                   <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                   ##endif
                    
                 </div>
-                <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}[@L[cds.sales/gd/hosting/website-builder:plan-renews-at-text]@L]</p>
                 <button id="product-C" data-ci="96218" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-1]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-2-tooltip]@L]"></span></div>
@@ -622,25 +677,23 @@
               </div>
             </div>
             <div id="planTileD" class="col-md-3 col-sm-6 plan-tile plan-pro">
-              <div class="pro-plan-wrap">
-                <div class="plan-flag">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-flagtext]@L]</div>
-                <h3 class="plan-title">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning four-columns">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span>
-                  <div class="plan-duration-div-four"><span class="plan-duration text-warning">/mo[@L[cds.sales/hosting/wordpress-hosting-rebrand:per-mo]@L]</span></div> 
+              <div class="pro-plan-wrap pro-plan-wrap-alternate">
+                <h3 class="plan-title">Developer [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-title]@L]</h3>
+                <p class="plan-text">Four dollar toast hoodie YOLO High Life, ethical polaroid four loko post-ironic tote bag cronut meditation iPhone [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-description]@L]</p>
+                <div class="plan-price-wrap row">
+                  <div class="price-text"> <strong>As low as</strong></div>
+                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                   ##if(productHasSavingsMoreThan(581019, 581019, 0))
-                   <br><strong>[@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="581019" secondaryproductid="581019" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581019' secondaryproductid='581019' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                   ##endif
                    
-                   
+                  <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
                   ##if(countrySiteAny(uk))
                    
                   <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                   ##endif
                    
                 </div>
-                <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}[@L[cds.sales/gd/hosting/website-builder:plan-renews-at-text]@L]</p>
                 <button id="product-D" data-ci="96219" data-plan="host_WordPressHostingPlan_D" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-1]@L]</strong></div>
                 <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-2-tooltip]@L]"></span></div>
@@ -825,7 +878,7 @@
           <ul class="nav navbar-nav"></ul>
           <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.mid-page-nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="navbar-right">
             <div class="price-text">[@L[cds.sales/_common:plans-starting-at]@L]</div>
-            <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a data-ci="95886" href="#planTileOne" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
+            <div class="price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]<span>/[@L[cds.sales/_common:month]@L]</span></div><a data-ci="96214" href="#planTileA" class="btn-purchase btn btn-sm">[@L[cds.sales/_common:see-the-plans]@L]</a>
           </div>
         </div>
       </div>
@@ -1480,6 +1533,9 @@
         </div>
       </div>
     </section>
+    <section id="renderMidPageNavBottom">
+      <div></div>
+    </section>
     <atlantis:webstash type="css">
       <style>
         #alternate-products {
@@ -1547,90 +1603,6 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="disclaimers-text">[@L[cds.sales/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
-                <p>
-                   
-                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] un-huh&nbsp;<a href="#" data-style="qt" data-content="OnePromotionalCreditPerCustomerForANew &lt;a id=&quot;googleAdwordsLink&quot; data-ci=&quot;96918&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">RestrictionsApply</a>
-                </p>
-                <atlantis:webstash type="js">
-                  <script>
-                    $(document).ready(function(){
-                      $("#googleAdwordsLink").click(function(e){
-                        e.preventDefault();
-                        window.open('[@T[link:&lt;relative path=&quot;/popups/google-adwords.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditGoogle}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
-                        return false;
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash> 
-                ##if(areAdCreditsEnabled(google))
-                 
-                <p>
-                   
-                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;googleAdwordsLink&quot; data-ci=&quot;96918&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
-                </p>
-                <atlantis:webstash type="js">
-                  <script>
-                    $(document).ready(function(){
-                      $("#googleAdwordsLink").click(function(e){
-                        e.preventDefault();
-                        window.open('[@T[link:&lt;relative path=&quot;/popups/google-adwords.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditGoogle}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
-                        return false;
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash> 
-                ##endif
-                 
-                 
-                ##if(areAdCreditsEnabled(bing))
-                 
-                <p>
-                   
-                  [@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:BingAdsCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;bingLearnLink&quot; data-ci=&quot;96916&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
-                </p>
-                <atlantis:webstash type="js">
-                  <script>
-                    $(document).ready(function(){
-                      $("#bingLearnLink").click(function(e){
-                        e.preventDefault();
-                        window.open('https://advertise.bingads.microsoft.com/en-us/godaddy/learn','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
-                        return false;
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash> 
-                ##endif
-                 
-                 
-                ##if(areAdCreditsEnabled(facebook))
-                 
-                <p>
-                   
-                  [@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:FacebookAdCredit]@L]&nbsp;<a href="#" data-style="qt" data-content="[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L] &lt;a id=&quot;facebookAdsLink&quot; data-ci=&quot;96917&quot;&gt;[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]&lt;/a&gt;" class="ad-credits-tip sf-tip">[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]</a>
-                </p>
-                <atlantis:webstash type="js">
-                  <script>
-                    $(document).ready(function(){
-                      $("#facebookAdsLink").click(function(e){
-                        e.preventDefault();
-                        window.open('[@T[link:&lt;relative path=&quot;/popups/facebook-ads.aspx&quot;&gt;&lt;param name=&quot;ci&quot; value=&quot;#{page.ci.adCreditFacebook}&quot; /&gt;&lt;param name=&quot;app_hdr&quot; value=&quot;99&quot; /&gt;&lt;/relative&gt;]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
-                        return false;
-                      });
-                    });
-                    
-                    
-                  </script>
-                </atlantis:webstash> 
-                ##endif
-                 
-              </div>
             </div>
           </div>
         </div>
@@ -1806,27 +1778,7 @@ body {
   background-color: #d9d9d9; 
 }
 
-#marquee { 
-  background: no-repeat top center; 
-  padding-bottom: 120px;
-  margin-bottom: 0;
-  background-size: cover;
-}
 
-
-*[data-tokenize] {visibility: hidden;}
-
-| 
-|##if(activeLanguageAny([en-pk],[en-in]))
-| 
-#marquee { background-url: ([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);}
-| 
-|##else
-| 
-#marquee { background-url: ([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/bg-marquee-V10.jpg);}
-| 
-|##endif
-| 
       </style>
       <style>.plan-tile { 
   margin-top: -145px; 
@@ -2290,10 +2242,8 @@ body {
 $(document).ready(function(){
 
   $(document).sfTipper({ wireup: true });
-
-  tokenizeTheDataTokenizeAttribute();
   
-  tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     $("#default-marquee-details-modal-wsb-only").sfDialog({
@@ -2315,21 +2265,6 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
   });
 
 }
-
-function tokenizeTheDataTokenizeAttribute() {
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
-}
-
-
-
       </script>
     </atlantis:webstash>
     <script>

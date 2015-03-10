@@ -1,31 +1,59 @@
 atlantis:webstash(type="css")
   style.
     #marquee {
-      margin:0 auto; 
+      margin: 0 auto; 
       background-color: #77c043;
+      background: no-repeat top center cover;
+      padding-bottom: 120px;
+      padding-bottom: 120px;
+      background-size: cover;
     }
+    ##if(activeLanguageAny([en-pk],[en-in]))
+      #marquee { 
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+      }
+    ##else
+      #marquee { 
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+      }
+    ##endif
+
     #marquee .marquee {
       position: relative;
     }
-    #marquee .marquee .marquee-flag {
-      background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBvbHlnb24gZmlsbD0iI0ZFREM0NSIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDE2NC41LDY0LjIgMTgxLjgsNDMuOCAxODEsNC4zICIvPgo8L3N2Zz4=") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+    #marquee .marquee-flag:before, 
+    #marquee .marquee-flag:after {
+      content: "";
+    }    
+    #marquee .marquee-flag {
+      background: no-repeat scroll center center / cover rgba(0,0,0,0);
+      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjNzcwMjg2IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+PC9zdmc+");      
       text-transform: uppercase;
       top: -20px;
       right: 30px;
       position: absolute;
+      display: inline-block;
+      line-height: 1.42857;
+      padding: 10px 5px;
     }
     #marquee .contact-support {
       font-weight: 800;
     }
+    #marquee .marquee-content-wrapper {
+      background-color: rgba(50, 50, 50, 0.75);
+    }
+    #marquee .as-low-as-pricing {
+      margin-left: 20px;
+    }
 section#marquee
   .container.marquee.marquee-white
-    .marquee-flag [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-4-999UptimeGuarantee]@L]
-    .row
-      .col-sm-7.marquee-content-wrapper
-        h1.marquee-product-name [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]
-        h2.marquee-product-description [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]
-        button.btn.btn-medium.btn-purchase Plan Pricing
-        .marquee-product-text
-        .contact-support [@L[cds.sales/gd/hosting/wordpress-hosting:professional-Hosting-Support]@L] [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]
-
-        
+      .marquee-flag Questions? call us! [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]
+      .row
+        .col-sm-7.marquee-content-wrapper
+          h1.marquee-product-name [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]
+          h2.marquee-product-description [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]
+          button.btn.btn-medium.btn-purchase.pull-left Get Started
+          .pull-left.as-low-as-pricing
+            p.price-text As low as
+            .price $6.99 
+              span /mo

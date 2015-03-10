@@ -49,10 +49,11 @@ block vars
   - priceText = "";
   - term = "";
   - vat = "";
+  - additionalClasses = "";
 
 
 
-.pro-plan-wrap
+.pro-plan-wrap(class="#{additionalClasses}")
   block flag
     if (flagText)
       div.plan-flag !{flagText}

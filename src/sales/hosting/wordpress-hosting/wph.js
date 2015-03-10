@@ -61,10 +61,8 @@ var wpHosting = {
 $(document).ready(function(){
 
   $(document).sfTipper({ wireup: true });
-
-  tokenizeTheDataTokenizeAttribute();
   
-  tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal',got1Page.pricing.bundleRenewal_ols);
+  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 
   $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
     $("#default-marquee-details-modal-wsb-only").sfDialog({
@@ -86,17 +84,3 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
   });
 
 }
-
-function tokenizeTheDataTokenizeAttribute() {
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
-}
-
-
