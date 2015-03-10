@@ -6,8 +6,9 @@ prepend vars
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/com-logo.png";
   - pfid = "101";
   - bodyText = "[@L[cds.sales/homepage/tile/marquee-com-tld-sale-tile:small-price]@L]";
-  - ctaLink = "[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727' /></relative>]@T]";
-  - dataCi = "95727";
+  - dataCi = "96980";
+  - ctaLink = "[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='"+dataCi+"' /></relative>]@T]";
+
 
 block append tileStyles
   style
@@ -27,7 +28,7 @@ block prepend tileContent
     .sale-ends-text.tungsten [@L[cds.sales/homepage:saleEnds]@L]
     script(type='text/javascript').
       var d = new Date("2015","01","17");
-      saleEndDate = d.toLocaleDateString();   
-      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));    
+      saleEndDate = d.toLocaleDateString();
+      $(".sale-ends-text").text($(".sale-ends-text").text().replace("{0}",saleEndDate));
   |  
   |  ##endif
