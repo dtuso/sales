@@ -373,24 +373,81 @@ function goToDppCheckoutPage(e) {
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
-  $.ajax({
-    url: apiEndpoint3,
-    type: 'GET',
-    dataType: 'json',
-    cache: false,
-    success: function(data){
-      if(data && data.Success) {
-        window.location = data.NextStepUrl;
-        return;
-      } else {
-        showApi3SearchError(e, domain);
+  if(window.location.href.indexOf("web-hosting") > -1) {
+    alert('New call');
+    var pkg = {};
+    pkg.pkgid = 'host_GridHostEcoDiabloLin1Yr_us';
+    pkg.qty = 1;
+    pkg.itc = 'slp_hosting_4GH';
+    pkg.ci = 123456;
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+
+    var postdata = "requestData=" + JSON.stringify(pkg);
+    $.ajax({
+        type:"POST",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        complete: function (data) {
+                    if (data.statusText == "success") {
+                         addHostingDomain(domain);
       }
+          
+      }
+          
+    });
+    
+  }
+  else{
+    $.ajax({
+       url: apiEndpoint3,
+       type: 'GET',
+       dataType: 'json',
+       cache: false,
+       success: function(data){
+         if(data && data.Success) {
+           window.location = data.NextStepUrl;
+           return;
+         } else {
+           showApi3SearchError(e, domain);
+         }
     },
     error: function(){
       showApi3SearchError(e, domain);
     }
-  });
+   });
+  }
 
+}
+
+function addHostingDomain(domain){
+    var plan = 'host_GridHostEcoDiabloLin1Yr_us';
+    var domainToAdd = encodeURIComponent(domain.Fqdn);
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+    var pkg = {};
+    pkg.itc = 'slp_hosting_4GH';
+    pkg.quantity = 1;
+    pkg.ci = 83621;
+    pkg.pkgid = plan;
+    pkg.custom = { "domain": domainToAdd }
+    var postdata = "requestData=" + JSON.stringify(pkg);
+      $.ajax({
+         type:"POST",
+         url: sapiurl,
+         contentType: "application/json",
+         data: postdata,
+         dataType: "jsonp",
+         complete: function (data) {
+                        if (data.statusText == "success") {
+                              ##if(isManager())
+                                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                              ##else
+                                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                              ##endif
+                          }
+                    }
+        });      
 }
 
 function showSearchSpins($view, domain, alternateDomains){  
