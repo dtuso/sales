@@ -15,6 +15,11 @@ append vars
   - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
+append headScripts
+  atlantis:webstash(type="js")
+    script
+      include:js ../offers/online-business/got.js
+
 append pageStyles
   style
     include ./website-builder-config/styles.css 
@@ -67,7 +72,7 @@ block disclaimers
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
           p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
-      .col-sm-3.col-sm-push-3
+      .col-sm-3.col-sm-push-3.buttons
         a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") Continue
 
 block domainSearch
@@ -208,6 +213,7 @@ prepend endOfPageScripts
     var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
     url=url + "?configdocid=54ef736af778fc203043be19&groupdocid=54f4ab81f778fc0de4d09b93";
     //url = url + "?configdocid=54ef736af778fc203043be19";
+    var defaultTLD = 'com';
 
     var plans = [
       {
@@ -241,6 +247,77 @@ prepend endOfPageScripts
       }
     ];
     
+    function domainSearchFormSubmit(e, domain) { 
+
+      var $this = $(e.target);
+
+      var newItc = "slp_GYBO1";
+      ##if(isManager())
+        newItc = 'mgr_' + newItc;
+      ##endif
+
+      apiEndpoint1 = '[@T[link:<relative path="~/domainsapi/v1/search/free"><param name="domain" value="domain" /><param name="itc" value="itc" /></relative>]@T]';
+      apiEndpoint1 = apiEndpoint1.replace('domain=domain', 'q=' + encodeURIComponent(domain) );
+      apiEndpoint1 = apiEndpoint1.replace('itc=itc', 'key=' + newItc);
+
+      $.ajaxSetup({cache:false});
+      $.ajax({
+        url: apiEndpoint1,
+        type: 'GET',
+        dataType: 'json',
+        cache: false,
+        success: function(data){ 
+
+          var 
+            exactMatchDomain = data.ExactMatchDomain || {},
+            searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
+            isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+            alternateDomains = data.RecommendedDomains || [];
+
+          if(isAvailable) {
+            $('#marquee').find('.search-form-input').val(''); 
+
+            // Domain is available, so allow them to search again or to select this available domain        
+            //showTypeYourDomain();// setup search box
+
+            // tokenize header on search available page
+            $('#available-domain-name').text(exactMatchDomain.Fqdn);
+
+            var $thisSection = $this.closest('.js-marquee-section');       
+
+            $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+
+            //animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+
+          } else {
+
+            // tokenize header on search available page
+            $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
+
+            // Domain is taken, show spins if possible
+            if(alternateDomains.length > 0) {
+
+              // SHOW SPINS
+              //showSearchSpins($this, exactMatchDomain, alternateDomains);
+
+              $('#marquee').find('.search-form-input').val(''); 
+              
+            } else {
+              // NO SPINS
+              showApi1or2SearchError(e, domain);
+            }
+
+          }    
+
+        },
+        error: function(){
+          showApi1or2SearchError(e, domain);
+        }
+      });
+
+    }
+
+
     function getParameterByName(name){
       name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
       var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
