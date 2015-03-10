@@ -20,9 +20,10 @@ append vars
   - productToDisplay.landingPage = "getonline/online-store.aspx"
   - productToDisplay.packageId = "getonline_online_store";
   - productToDisplay.itcCode = "p4p_getonline_store";
-  - productToDisplay.appKey = "getonline_online_store";
+  - productToDisplay.appKey = "slp_GYBO";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='monthly' promocode='75315678' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|40972' period='yearly' promocode='75315678' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[multipleproductprice:<list productidlist='464069|101|40972' period='monthly'></list>]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|40972' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:ols-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png";
@@ -38,6 +39,8 @@ append vars
   - productToDisplay.bottomSearchCI = "96296";
   - productToDisplay.viewTemplatesCI = "96299";
   - productToDisplay.playButtonCI = "96300";
+  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
 
 block targetedProduct
   .column.website

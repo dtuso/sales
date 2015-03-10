@@ -19,11 +19,11 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>Get Online Ecommerce Design</title>
-    <meta name="description" content="Get Online Ecommerce Design Description">
-    <meta name="keywords" content="Get Online Ecommerce Design Keywords">
-    <meta property="og:title" content="Get Online OG Ecommerce Design">
-    <meta property="og:description" content="Get Online OG Ecommerce Design Description">
+    <title>[@L[cds.sales/getonline:pro-ecomm-page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/getonline:pro-ecomm-meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/getonline:pro-ecomm-meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/getonline:pro-ecomm-og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/getonline:pro-ecomm-og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg">
@@ -91,8 +91,9 @@
           appKey: "",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
-            promo_monthly: "",
+            promo_monthly: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
             promo_annual: "",
+            renewal_monthly: "",
             renewal_annual: ""
           }
         };
@@ -121,6 +122,22 @@
           tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
         }
         
+        function tokenizeDisclaimerModals() {
+        
+          var tokenizeDisclaimerModal = function(selector, price0, price1) {
+            $(selector).each(function(idx, modal) {
+              var $modal = $(modal);
+              var htmlTokenized = $modal.html();
+              htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+              htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+              $modal.html(htmlTokenized);
+            });
+          };
+          
+          tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
+          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+        }
+        
         function tokenizeTheDataTokenizeAttribute() {
           $('[data-tokenize]').each(function(){
             var $this = $(this),
@@ -138,6 +155,7 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+          tokenizeDisclaimerModals(); 
         
           $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
             $("#default-details-modal")
@@ -152,6 +170,15 @@
         });
         
       </script>
+      <atlantis type="js" class="webstash">
+        <script>
+          $(document).ready(function(){
+          
+            $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          });
+          
+        </script>
+      </atlantis>
     </atlantis:webstash><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -173,15 +200,15 @@
       <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
-            <h2 class="text-center">Here you go...</h2>
-            <h3 class="text-center">A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
+            <h2 class="text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]</h2>
+            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]</h3>
           </div>
         </div>
         <div style="margin-top:35px" class="row">
           <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block computer"></div>
           <div style="padding-left:60px" class="col-xs-8 col-sm-6 products">
-            <h3>Ecommerce Design Services</h3>
-            <p>Our Professional Web Services team will work with you to build a complete online store your customers will love.</p>
+            <h3>[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
+            <p>[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
               <input type="hidden" name="product" value="1023|1|1">
               <input type="hidden" name="selectedPlan" id="selectedPlan" value="frmWebDesign_0" class="selectedPlan">
@@ -194,7 +221,7 @@
               <input type="hidden" name="cicode" value="96315">
               <input type="hidden" name="prog_id" value="GoDaddy">
               <button class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button>
-              <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
+              <p class="p2">[@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]</p>
             </form>
           </div>
         </div>
@@ -207,41 +234,41 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-8 col-sm-offset-2 text-center">
-            <h2>We'll Build a Website That Will Help You Build Your Business</h2>
+            <h2>[@L[cds.sales/getonline:pro-ecomm-interview-header]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h3>Just complete the online interview and our web pros will do the rest. Here’s how it works… </h3>
+            <h3>[@L[cds.sales/getonline:pro-ecomm-interview-header-text]@L] </h3>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProShare.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Clipboard" class="lazyload"/>
-              <mark class="uppercase">Step One</mark>
-              <h3>Share Your Vision</h3>
-              <p>Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:pro-ecomm-interview-step-1]@L]</mark>
+              <h3>[@L[cds.sales/getonline:pro-ecomm-interview-step-1-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:pro-ecomm-interview-step-1-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProWork.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Design" class="lazyload"/>
-              <mark class="uppercase">Step Two</mark>
-              <h3>We Go To Work</h3>
-              <p>Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:pro-ecomm-interview-step-2]@L]</mark>
+              <h3>[@L[cds.sales/getonline:pro-ecomm-interview-step-2-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:pro-ecomm-interview-step-2-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProExpand.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Tools" class="lazyload"/>
-              <mark class="uppercase">Step Three</mark>
-              <h3>Enhance and Expand</h3>
-              <p>Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.</p>
+              <mark class="uppercase">[@L[cds.sales/getonline:pro-ecomm-interview-step-3]@L]</mark>
+              <h3>[@L[cds.sales/getonline:pro-ecomm-interview-step-3-header]@L]</h3>
+              <p>[@L[cds.sales/getonline:pro-ecomm-interview-step-3-text]@L]</p>
             </div>
           </div>
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-            <p>We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.</p>
+            <p>[@L[cds.sales/getonline:pro-ecomm-interview-did-you-know-text]@L]</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
@@ -251,9 +278,9 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
-            <h2 class="text-center">See what we can do</h2>
-            <h3 class="text-center">Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…</h3>
-            <button id="external" class="btn btn-default-dark center-block">View Our Portfolio</button>
+            <h2 class="text-center">[@L[cds.sales/getonline:pro-ecomm-product-info-header]@L]</h2>
+            <h3 class="text-center">[@L[cds.sales/getonline:pro-ecomm-product-info-text]@L]</h3>
+            <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="xxxxx" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
           </div>
         </div>
         <section data-youtube-id="" style="padding-bottom:0px" class="video-marquee-wrapper">
@@ -269,7 +296,7 @@
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-            <p>Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.</p>
+            <p>[@L[cds.sales/getonline:pro-ecomm-product-did-you-know-text]@L]</p>
           </div>
         </div>
       </div>
@@ -306,12 +333,12 @@
     </section>
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="text-center">We have a professional design service for <mark class="business-name-display"></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark></h3>
+        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
         <div class="pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
-            <h3 class="product-name">Ecommerce Design Services</h3>
-            <p class="p1">Our Profesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business.</p>
+            <h3 class="product-name">[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
+            <p class="p1">[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
                 <input type="hidden" name="product" value="1023|1|1">
@@ -325,7 +352,7 @@
                 <input type="hidden" name="cicode" value="96314">
                 <input type="hidden" name="prog_id" value="GoDaddy">
                 <button class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button>
-                <p class="p2">or give us a call at <span class = "orange-text">(480) 366-3344</span></p>
+                <p class="p2">[@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]</p>
               </form>
             </div>
           </div>
@@ -600,6 +627,7 @@ ul li.no-check {
       function openPopUpWithParams (url, windowName, windowParams) {
               window.open(url, windowName, windowParams);
       }  
+      
     </script>
     <!-- atlantis:webstash(type="js")-->
     <script>

@@ -88,11 +88,12 @@
           businessName: "",
           packageId: "getonline_website_builder",
           itcCode: "p4p_getonline_wsb",
-          appKey: "getonline_website_builder",
+          appKey: "slp_GYBO",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='24681357' />]@T]",
             promo_annual: "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='24681357' />]@T]",
+            renewal_monthly: "",
             renewal_annual: "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]"
           }
         };
@@ -121,6 +122,22 @@
           tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
         }
         
+        function tokenizeDisclaimerModals() {
+        
+          var tokenizeDisclaimerModal = function(selector, price0, price1) {
+            $(selector).each(function(idx, modal) {
+              var $modal = $(modal);
+              var htmlTokenized = $modal.html();
+              htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+              htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+              $modal.html(htmlTokenized);
+            });
+          };
+          
+          tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
+          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+        }
+        
         function tokenizeTheDataTokenizeAttribute() {
           $('[data-tokenize]').each(function(){
             var $this = $(this),
@@ -138,6 +155,7 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+          tokenizeDisclaimerModals(); 
         
           $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
             $("#default-details-modal")
@@ -152,6 +170,15 @@
         });
         
       </script>
+      <atlantis type="js" class="webstash">
+        <script>
+          $(document).ready(function(){
+          
+            $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          });
+          
+        </script>
+      </atlantis>
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
@@ -233,7 +260,6 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  // tokenizeDisclaimerModals(); 
   // tokenizeTheDataTokenizeAttribute();
 
   // wireupModals();
@@ -254,7 +280,7 @@ $(document).ready(function() {
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
   $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-  $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+  // $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
@@ -309,23 +335,6 @@ function showAndOrderDynamicTldsInList(selector) {
   // show sorted list
   // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
-}
-
-function tokenizeDisclaimerModals() {
-
-  var tokenizeDisclaimerModal = function(selector, price0, price1) {
-    $(selector).each(function(idx, modal) {
-      var $modal = $(modal);
-      var htmlTokenized = $modal.html();
-      htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
-      htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
-      $modal.html(htmlTokenized);
-    });
-  };
-  
-  // if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
 }
 
 // function wireupModals() {
@@ -798,7 +807,7 @@ function getParameterByName(name) {
           </div>
         </div>
         <div id="default-details-modal" data-title="[@L[cds.sales/getonline:disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p></p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-wsb-content]@L]</p>
         </div>
       </div>
     </section>
@@ -1081,7 +1090,7 @@ function getParameterByName(name) {
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
             <h2 class="text-center">[@L[cds.sales/getonline:wsb-product-name]@L]</h2>
-            <h4 class="text-center">Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, it’s that easy.</h4>
+            <h4 class="text-center">[@L[cds.sales/getonline:wsb-product-description]@L]</h4>
             <button id="viewTemplates" data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block view-all">[@L[cds.sales/getonline:view-templates]@L]</button>
           </div>
         </div>
@@ -2675,13 +2684,13 @@ var PlanBox6UI = {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
             <h2 class="text-center">[@L[cds.sales/getonline:O365-email-header]@L]</h2>
             <h3 class="text-center">[@L[cds.sales/getonline:O365-email-text]@L]</h3>
-            <div class="h2 text-center product-summary"><mark>yourname@<span class="selected-domain-name-display"></span></mark></div>
+            <div class="h2 text-center product-summary"><mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark></div>
           </div>
         </div>
         <div class="row bubble-row">
           <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble left">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-            <p>[@L[cds.sales/getonline:O365-emaildid-you-know-text]@L]</p>
+            <p>[@L[cds.sales/getonline:O365-email-did-you-know-text]@L]</p>
           </div>
           <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
@@ -2719,9 +2728,9 @@ var PlanBox6UI = {
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
-          <h2>[@L[cds.sales/getonline:get-on-line-bottom-header]@L]</h2>
-          <h3 id="got-domain-not-selected">[@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="price-token">[@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]</h3>
+          <h2>[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
+          <h3 id="got-domain-not-selected">[@L[cds.sales/getonline:get-online-bottom-no-domain]@L]</h3>
+          <h3 id="got-domain-selected" style="display: none; " class="price-token">[@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]</h3>
         </div>
         <div class="row">
           <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
@@ -2737,7 +2746,7 @@ var PlanBox6UI = {
           </div>
         </div>
         <div class="row">
-          <h3 class="price-token">[@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]</h3>
+          <h3 class="price-token">[@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]</h3>
           <button id="bottomSearchAgain" data-ci="96286" style="display: none;" class="btn btn-primary btn-lg">[@L[cds.sales/getonline:search-again]@L]</button>
           <button data-ci="96282" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
         </div>

@@ -60,6 +60,7 @@ append headScripts
         pricing: {
           promo_monthly: "!{productToDisplay.pricing.promo_monthly}",
           promo_annual: "!{productToDisplay.pricing.promo_annual}",
+          renewal_monthly: "!{productToDisplay.pricing.renewal_monthly}",
           renewal_annual: "!{productToDisplay.pricing.renewal_annual}"
         }
       };
@@ -88,6 +89,22 @@ append headScripts
         tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
       }
 
+      function tokenizeDisclaimerModals() {
+
+        var tokenizeDisclaimerModal = function(selector, price0, price1) {
+          $(selector).each(function(idx, modal) {
+            var $modal = $(modal);
+            var htmlTokenized = $modal.html();
+            htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+            htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+            $modal.html(htmlTokenized);
+          });
+        };
+        
+        tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
+        // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+      }
+
       function tokenizeTheDataTokenizeAttribute() {
         $('[data-tokenize]').each(function(){
           var $this = $(this),
@@ -104,6 +121,7 @@ append headScripts
       $(document).ready(function(){
         tokenizePrices();
         tokenizeTheDataTokenizeAttribute();
+        tokenizeDisclaimerModals(); 
 
         $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
           $("#default-details-modal")
@@ -116,6 +134,14 @@ append headScripts
           $(document).find('.business-name-display').text(passedBusinessName);
        }
       });
+
+    block bindAddToCartBtns
+      atlantis.webstash(type="js")
+        script.
+          $(document).ready(function(){
+
+            $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          });
 
     block domainSearchScripts
       atlantis:webstash(type="js")
@@ -359,11 +385,11 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
             h2.text-center [@L[cds.sales/getonline:O365-email-header]@L]
             h3.text-center [@L[cds.sales/getonline:O365-email-text]@L]
-            .h2.text-center.product-summary <mark>yourname@<span class="selected-domain-name-display"></span></mark>
+            .h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
-            p [@L[cds.sales/getonline:O365-emaildid-you-know-text]@L]
+            p [@L[cds.sales/getonline:O365-email-did-you-know-text]@L]
           .col-xs-2
             img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -393,9 +419,9 @@ block content
     section#bottomGetItNow.bg-medium
       .container.text-center
         .row
-          h2 [@L[cds.sales/getonline:get-on-line-bottom-header]@L]
-          h3#got-domain-not-selected [@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]
-          h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]
+          h2 [@L[cds.sales/getonline:get-online-bottom-header]@L]
+          h3#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
+          h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
         .row
           .column.domain
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
@@ -408,7 +434,7 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
             h3 [@L[cds.sales/getonline:O365-email-header]@L]
         .row
-          h3.price-token [@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]
+          h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
           button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
           button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
           small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]

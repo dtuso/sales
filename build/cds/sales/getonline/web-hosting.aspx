@@ -88,11 +88,12 @@
           businessName: "",
           packageId: "getonline_web_hosting",
           itcCode: "p4p_getonline_hosting",
-          appKey: "getonline_web_hosting",
+          appKey: "slp_GYBO",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
             promo_monthly: "[@T[productprice:<current productid='32051' period='monthly' />]@T]",
             promo_annual: "[@T[productprice:<current productid='32051' period='yearly' />]@T]",
+            renewal_monthly: "",
             renewal_annual: "[@T[productprice:<list productid='32051' period='yearly'></list>]@T]"
           }
         };
@@ -121,6 +122,22 @@
           tokenizePrice('.price-token',offerInfo.pricing.promo_monthly,offerInfo.pricing.promo_annual,offerInfo.pricing.renewal_annual);
         }
         
+        function tokenizeDisclaimerModals() {
+        
+          var tokenizeDisclaimerModal = function(selector, price0, price1) {
+            $(selector).each(function(idx, modal) {
+              var $modal = $(modal);
+              var htmlTokenized = $modal.html();
+              htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+              htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+              $modal.html(htmlTokenized);
+            });
+          };
+          
+          tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
+          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
+        }
+        
         function tokenizeTheDataTokenizeAttribute() {
           $('[data-tokenize]').each(function(){
             var $this = $(this),
@@ -138,6 +155,7 @@
         $(document).ready(function(){
           tokenizePrices();
           tokenizeTheDataTokenizeAttribute();
+          tokenizeDisclaimerModals(); 
         
           $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
             $("#default-details-modal")
@@ -152,6 +170,15 @@
         });
         
       </script>
+      <atlantis type="js" class="webstash">
+        <script>
+          $(document).ready(function(){
+          
+            $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          });
+          
+        </script>
+      </atlantis>
       <atlantis:webstash type="js">
         <script>
           $(document).ready(function(){
@@ -233,7 +260,6 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  // tokenizeDisclaimerModals(); 
   // tokenizeTheDataTokenizeAttribute();
 
   // wireupModals();
@@ -254,7 +280,7 @@ $(document).ready(function() {
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
   $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-  $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+  // $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
@@ -309,23 +335,6 @@ function showAndOrderDynamicTldsInList(selector) {
   // show sorted list
   // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
-}
-
-function tokenizeDisclaimerModals() {
-
-  var tokenizeDisclaimerModal = function(selector, price0, price1) {
-    $(selector).each(function(idx, modal) {
-      var $modal = $(modal);
-      var htmlTokenized = $modal.html();
-      htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
-      htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
-      $modal.html(htmlTokenized);
-    });
-  };
-  
-  // if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
 }
 
 // function wireupModals() {
@@ -771,7 +780,7 @@ function getParameterByName(name) {
           <div class="col-xs-12 col-sm-8 col-sm-offset-4 products">
             <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
               <h3 class="text-center">[@L[cds.sales/getonline:domain-name-header]@L]</h3>
-              <p>[@L[cds.sales/getonline:get-it-now-bubble-content-text]@L]</p>
+              <p>[@L[cds.sales/getonline:product-domain-text]@L]</p>
             </div>
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png" class="img-responsive center-block">
@@ -782,12 +791,12 @@ function getParameterByName(name) {
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 cta">
-            <p class="text-center price-token">[@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]</p>
+            <p class="text-center price-token">[@L[cds.sales/getonline:product-bundle-price]@L]</p>
             <button data-ci="96307" class="btn btn-purchase btn-lg center-block">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="text-center price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
           </div>
         </div>
         <div id="default-details-modal" data-title="[@L[cds.sales/getonline:disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p></p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-hosting-content]@L]</p>
         </div>
       </div>
     </section>
@@ -1091,7 +1100,7 @@ function getParameterByName(name) {
                   <div class="row"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-right-down2.png" style="margin-left:-33%;" class="hidden-sm hidden-xs img-responsive"></div>
                   <div class="row">
                     <div style="padding:0;" class="col-md-11 col-sm-12"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png" style="margin:auto;" class="img-responsive">
-                      <div class="text-center"><mark class="business-name-display"></mark></div>
+                      <div class="text-center"><mark class="selected-domain-name-display"></mark></div>
                     </div>
                   </div>
                 </div>
@@ -1113,8 +1122,8 @@ function getParameterByName(name) {
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png" class="img-responsive center-block">
-            <h2 class="text-center">[@L[cds.sales/getonline:O365-email-header]@L]</h2>
-            <h3 class="text-center">[@L[cds.sales/getonline:O365-email-text]@L]</h3>
+            <h2 class="text-center">[@L[cds.sales/getonline:hosting-email-header]@L]</h2>
+            <h3 class="text-center">[@L[cds.sales/getonline:hosting-email-text]@L]</h3>
             <div class="h2 text-center product-summary"><mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark></div>
           </div>
         </div>
@@ -1159,9 +1168,9 @@ function getParameterByName(name) {
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container text-center">
         <div class="row">
-          <h2>[@L[cds.sales/getonline:get-on-line-bottom-header]@L]</h2>
-          <h3 id="got-domain-not-selected">[@L[cds.sales/getonline:get-on-line-botom-no-domain]@L]</h3>
-          <h3 id="got-domain-selected" style="display: none; " class="price-token">[@L[cds.sales/getonline:get-on-line-botom-domain-selected]@L]</h3>
+          <h2>[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
+          <h3 id="got-domain-not-selected">[@L[cds.sales/getonline:get-online-bottom-no-domain]@L]</h3>
+          <h3 id="got-domain-selected" style="display: none; " class="price-token">[@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]</h3>
         </div>
         <div class="row">
           <div class="column domain"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png" class="img-responsive center-block">
@@ -1173,7 +1182,7 @@ function getParameterByName(name) {
           </div>
         </div>
         <div class="row">
-          <h3 class="price-token">[@L[cds.sales/getonline:get-on-line-bottom-bundle-price]@L]</h3>
+          <h3 class="price-token">[@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]</h3>
           <button id="bottomSearchAgain" data-ci="96310" style="display: none;" class="btn btn-primary btn-lg">[@L[cds.sales/getonline:search-again]@L]</button>
           <button data-ci="96306" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
         </div>

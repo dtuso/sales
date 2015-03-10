@@ -1,22 +1,36 @@
 extends _p4p.jade
 
 append vars
-  - page.title = "Get Online Ecommerce Design";
-  - page.description = "Get Online Ecommerce Design Description";
-  - page.keywords = "Get Online Ecommerce Design Keywords"; 
+  - page.title = "[@L[cds.sales/getonline:pro-ecomm-page-title]@L]";
+  - page.description = "[@L[cds.sales/getonline:pro-ecomm-meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:pro-ecomm-meta-keywords]@L]"; 
   - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "Get Online OG Ecommerce Design";
-  - page.openGraph.description = "Get Online OG Ecommerce Design Description";
+  - page.openGraph.title = "[@L[cds.sales/getonline:pro-ecomm-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:pro-ecomm-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
   - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "[@L[cds.sales/getonline:pro-ecomm-product-name]@L]";
   - productToDisplay.landingPage = "getonline/pro-ecomm.aspx"
-  - productToDisplay.productVideoImage = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
+  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
+  - productToDisplay.pricing.promo_annual = "";
+  - productToDisplay.pricing.renewal_annual = "";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png";
+  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:pro-ecomm-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:pro-ecomm-product-did-you-know-text]@L]";
+  - productToDisplay.viewTemplatesCI = "xxxxx";
+  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerText = "";
 
 block domainSearchScripts
 
@@ -36,17 +50,18 @@ append pageStyles
     #getItNow .hero-guy{left: 0px;}
 
 block domainSearchStyles
+
 block bubbleContent
-  h2.text-center Here you go...
-  h3.text-center A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark>
+  h2.text-center [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]
+  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]
 
 block productContent
   .row(style={"margin-top": "35px"})
     .col-xs-4.col-sm-3.col-sm-offset-3
-      img.img-responsive.center-block.computer(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png")
+      img.img-responsive.center-block.computer(src!="#{productToDisplay.productImgUrl}")
     .col-xs-8.col-sm-6.products(style={"padding-left": "60px"})
-      h3 Ecommerce Design Services
-      p Our Professional Web Services team will work with you to build a complete online store your customers will love.
+      h3 #{productToDisplay.name}
+      p #{productToDisplay.getItNowDescription}
       form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
           input(type="hidden", name="product", value="1023|1|1")
           input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
@@ -59,41 +74,42 @@ block productContent
           input(type="hidden", name="cicode", value="96315")
           input(type="hidden", name="prog_id", value="GoDaddy")
           button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
-          p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
+          p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
 
 block domainSearchContent
+
 block proInterview
   section#pro-specific.bg-primary-o.product-section
     .container
       .row
         .col-xs-12.col-sm-8.col-sm-offset-2.text-center
-          h2 We'll Build a Website That Will Help You Build Your Business
+          h2 [@L[cds.sales/getonline:pro-ecomm-interview-header]@L]
       .row
         .col-xs-12.text-center
-          h3 Just complete the online interview and our web pros will do the rest. Here’s how it works… 
+          h3 [@L[cds.sales/getonline:pro-ecomm-interview-header-text]@L] 
       .row
         .col-sm-4
           .feature.why-gd-world-leader
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProShare.png','Clipboard')
-            mark.uppercase Step One
-            h3 Share Your Vision
-            p Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-1]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-1-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-1-text]@L]
         .col-sm-4
           .feature.why-gd-support.text-center
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProWork.png','Design')          
-            mark.uppercase Step Two
-            h3 We Go To Work
-            p Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-2]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-2-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-2-text]@L]
         .col-sm-4
           .feature.why-gd-trust.text-center
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProExpand.png','Tools')
-            mark.uppercase Step Three
-            h3 Enhance and Expand
-            p Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-3]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-3-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-3-text]@L]
       .row.bubble-row
         .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
-          p We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
+          p [@L[cds.sales/getonline:pro-ecomm-interview-did-you-know-text]@L]
         .col-xs-2
           img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
@@ -102,13 +118,13 @@ block productSection
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png")
-          h2.text-center See what we can do
-          h3.text-center Here are just a few of the sites we’ve built. <mark class="business-name-display"></mark> could be next…
-          button#external.btn.btn-default-dark.center-block View Our Portfolio
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center [@L[cds.sales/getonline:pro-ecomm-product-info-header]@L]
+          h3.text-center !{productToDisplay.productInfoText}
+          button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-portfolio]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
         .container
-          div(data-lazyload-source!="#{productToDisplay.productVideoImage}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
@@ -117,7 +133,7 @@ block productSection
           img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
-          p Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.
+          p #{productToDisplay.productDidYouKnowText}
 
 block office365
   // hide this on pro landing pages
@@ -125,13 +141,13 @@ block office365
 block bottomGetItNow
   section#bottomGetItNow.bg-medium
     .container
-      h3.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) We have a professional design service for <mark class="business-name-display"></mark> starting at <mark><span id="product-price">[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]</span>/mo*</mark>
+      h3.price-token.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
       .pro-wrapper
         .col-xs-6
-          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png")
+          img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
         .col-xs-6
-          h3.product-name Ecommerce Design Services
-          p.p1 Our Profesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business.
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.getItNowDescription}
           .col-xs-12.text-center
             form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
               input(type="hidden", name="product", value="1023|1|1")
@@ -145,7 +161,7 @@ block bottomGetItNow
               input(type="hidden", name="cicode", value="96314")
               input(type="hidden", name="prog_id", value="GoDaddy")
               button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
-              p.p2 or give us a call at <span class = "orange-text">(480) 366-3344</span>
+              p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
 
 prepend endOfPageScripts
   script.
@@ -158,4 +174,5 @@ prepend endOfPageScripts
     function openPopUpWithParams (url, windowName, windowParams) {
             window.open(url, windowName, windowParams);
     }  
+
 block domainSearchEndOfPageScripts

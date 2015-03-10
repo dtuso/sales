@@ -64,7 +64,6 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  // tokenizeDisclaimerModals(); 
   // tokenizeTheDataTokenizeAttribute();
 
   // wireupModals();
@@ -85,7 +84,7 @@ $(document).ready(function() {
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
   $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-  $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+  // $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
   // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
@@ -140,23 +139,6 @@ function showAndOrderDynamicTldsInList(selector) {
   // show sorted list
   // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
-}
-
-function tokenizeDisclaimerModals() {
-
-  var tokenizeDisclaimerModal = function(selector, price0, price1) {
-    $(selector).each(function(idx, modal) {
-      var $modal = $(modal);
-      var htmlTokenized = $modal.html();
-      htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
-      htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
-      $modal.html(htmlTokenized);
-    });
-  };
-  
-  // if(domainSearch.canOfferOls) tokenizeDisclaimerModal('#domain-entry-details-modal.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb,domainSearch.pricing.bundleRenewal_ols);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);
-  // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
 }
 
 // function wireupModals() {

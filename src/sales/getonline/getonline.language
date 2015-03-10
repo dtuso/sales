@@ -3,11 +3,6 @@ location: localization/sales/getonline/en
 id: 
 name: P4P
 ---
-******************************************
-[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]
-******************************************
-
-
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Get Online Title
@@ -27,13 +22,10 @@ Get Online Twitter Site
 Get Online Twitter Title
 <phrase key="twitter-description" />
 Get Online Twitter Description
-
-
-
 <phrase key="get-it-now-bubble-content-header" />
 Here you go...
 <phrase key="get-it-now-bubble-content-text" />
-A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark>
+A great package deal for <mark class="business-name-display"></mark> â€“ Starting at just <mark id="product-price">{price_monthly}</mark>
 <phrase key="product-domain-text" />
 Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
 <phrase key="O365-email-header" />
@@ -45,7 +37,7 @@ yourname
 <phrase key="O365-email-did-you-know-text" />
 Customers are 9 times more likely to choose a business with a professional email address?*
 <phrase key="product-email-text" />
-Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>.
+Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>
 <phrase key="product-bundle-price" />
 Get the bundle for {price_monthly}/month for the first year*
 <phrase key="product-bundle-renewal-price" />
@@ -55,25 +47,23 @@ Why get online with us?
 <phrase key="why-us-world-leader-header" />
 We're the world leader
 <phrase key="why-us-world-leader-text" />
-It sounds like we’re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
+It sounds like weâ€™re bragging (and maybe we are just a little) but we manage over 58 million domains, more than anyone else in the world.
 <phrase key="why-us-support-header" />
 Our 24/7 support is awesome
 <phrase key="why-us-support-text" />
-That’s not just us bragging again – we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
+Thatâ€™s not just us bragging again â€“ we have a case full of trophies to prove it. Better still, our support is free and available anytime, day or night.
 <phrase key="why-us-trust-header" />
 12 million people trust us
 <phrase key="why-us-trust-text" />
 We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
-<phrase key="get-on-line-botom-header" />
+<phrase key="get-online-bottom-header" />
 Ready to Get Online?
-<phrase key="get-on-line-botom-bundle-price" />
+<phrase key="get-online-bottom-bundle-price" />
 {price_monthly}/month for the first year*
-<phrase key="get-on-line-botom-no-domain" />
+<phrase key="get-online-bottom-no-domain" />
 First select your perfect domain
-<phrase key="get-on-line-botom-domain-selected" />
+<phrase key="get-online-bottom-domain-selected" />
 You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
-
-
 <phrase key="QuestionsLP-8-ThisDoesnTHaveToBeConfusing" />
 This doesn't have to be <span class="callout">confusing!</span>
 <phrase key="QuestionsLP-7-WeCanGetYourBusinessOnline" />
@@ -114,11 +104,6 @@ Get me up and running!
 Step 2
 <phrase key="QuestionsLP-2-Step1" />
 Step 1
-
-
-
-
-
 <phrase key="top-small-disclaimer-text" />
 Annual purchase required. Price valid 1st year only.
 <phrase key="top-small-disclaimer-details-link" />
@@ -127,13 +112,10 @@ See details.
 Price does not include taxes, where applicable
 <phrase key="view-templates" />
 View Templates
+<phrase key="view-portfolio" />
+View Our Portfolio
 <phrase key="watch-now" />
 Watch Now
-
-
-************************************************
-domain search start
-************************************************
 <phrase key="domain-name-header" />
 domain name
 <phrase key="domain-search-view-header" />
@@ -142,12 +124,12 @@ Let us help you find the best domain based on your business name or idea.
 It all starts with a domain name that's easy to remember and fits your business.
 <phrase key="domain-not-available-view-header" />
 It all starts with a domain name that's easy to remember and fits your business.
-<phrase key="recommended-domain" />
+<phrase key="recommended-domain" comment="{0} is the user's business name"/>
 Here's our favorite for <mark class="business-name-display">{0}</mark>
 <phrase key="did-you-know" />
 Did you know...
 <phrase key="did-you-know-domain-customers" />
-More than 12 million customers count on GoDaddy to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
+More than 12 million customers count on [@T[companyname:name]@T] to help them find the right domain?  That's roughly the entire population of NYC...and Los Angeles.
 <phrase key="not-moving-some-alternatives" />
 That one not moving you? Here are some alternatives:
 <phrase key="some-alternatives" />
@@ -190,13 +172,6 @@ This domain is no longer available.
 View all
 <phrase key="see-more-results" />
 See more results
-************************************************
-domain search end
-************************************************
-
-************************************************
-online store start
-************************************************
 <phrase key="ols-page-title" />
 Get Online Online Store
 <phrase key="ols-meta-description" />
@@ -210,20 +185,13 @@ Get Online Online Store OG Description
 <phrase key="ols-product-name" />
 Online Store
 <phrase key="ols-product-get-it-now-description" />
-Easily create a site that let’s you sell your stuff, accept credit cards and more.
+Easily create a site that letâ€™s you sell your stuff, accept credit cards and more.
 <phrase key="ols-product-description" />
 Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.
 <phrase key="ols-product-video-info-text" />
 What is Online Store?
 <phrase key="ols-product-did-you-know-text" />
 Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.
-************************************************
-online store end
-************************************************
-
-************************************************
-wsb start
-************************************************
 <phrase key="wsb-page-title" />
 Get Online Website Builder
 <phrase key="wsb-meta-description" />
@@ -239,18 +207,11 @@ Website Builder
 <phrase key="wsb-product-get-it-now-description" />
 Easily create a professional website with simple drag-&-drop tools.
 <phrase key="wsb-product-description" />
-Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.
+Just choose one of our professional designs, customize it to fit your business and publish it to the web. Yep, itâ€™s that easy.
 <phrase key="wsb-product-video-info-text" />
 What is Website Builder?
 <phrase key="wsb-product-did-you-know-text" />
 Customers are more likely to contact you if you have a website for your local business.
-************************************************
-wsb end
-************************************************
-
-************************************************
-hosting start
-************************************************
 <phrase key="hosting-page-title" />
 Get Online Web Hosting
 <phrase key="hosting-meta-description" />
@@ -264,30 +225,23 @@ Get Online Web Hosting OG Description
 <phrase key="hosting-product-name" />
 Web Hosting
 <phrase key="hosting-product-get-it-now-description" />
-Give your site a home that’ll keep it secure and running like sports car.
+Give your site a home thatâ€™ll keep it secure and running like sports car.
 <phrase key="hosting-product-description" />
-Hosting is what makes it possible for others to view your website. Without it, your site’s just sitting on your computer, all sad and lonely.
+Hosting is what makes it possible for others to view your website. Without it, your siteâ€™s just sitting on your computer, all sad and lonely.
 <phrase key="hosting-product-info-text" />
-Our hosting plans feature industry-leading page load times, cPanel® or Parallels® Plesk control panels and 99.9% guaranteed uptime. If none of this means anything to you, it’s ok. Just share this with whoever built your site. They’ll love it.
+Our hosting plans feature industry-leading page load times, cPanelÂ® or ParallelsÂ® Plesk control panels and [@T[localization:<display type="percent" number="99.9" />]@T] guaranteed uptime. If none of this means anything to you, itâ€™s ok. Just share this with whoever built your site. Theyâ€™ll love it.
 <phrase key="hosting-product-did-you-know-text" />
-Google® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?
+GoogleÂ® uses site speed as a criteria for search ranking, so a fast website can actually get you listed higher and help drive more traffic?
 <phrase key="hosting-product-info-www" />
 World Wide Web
 <phrase key="hosting-product-info-company-hosting" />
-GoDaddy Hosting
+[@T[companyname:name]@T] Hosting
 <phrase key="hosting-email-header" />
 Memorable Email
 <phrase key="hosting-email-text" />
 Create up to 100 branded addresses that are built on your domain name.
 <phrase key="hosting-email-did-you-know-text" />
 Customers are 9 times more likely to choose a business with a professional email address?*
-************************************************
-hosting end
-************************************************
-
-************************************************
-Managed Wordpress start
-************************************************
 <phrase key="mwp-page-title" />
 Get Online Managed Wordpress
 <phrase key="mwp-meta-description" />
@@ -303,22 +257,15 @@ Managed Wordpress
 <phrase key="mwp-product-get-it-now-description" />
 Start a blog with WordPress and let us manage the technical stuff.
 <phrase key="mwp-product-description" />
-We’ll handle all the technical stuff like server setup, security and backups, while you build your blog with the world’s most popular website creation tool.
+Weâ€™ll handle all the technical stuff like server setup, security and backups, while you build your blog with the worldâ€™s most popular website creation tool.
 <phrase key="mwp-product-info-text" />
-WordPress makes it easy to create, manage and publish your website or blog – all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.
+WordPress makes it easy to create, manage and publish your website or blog â€“ all from your web browser. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins.
 <phrase key="mwp-product-did-you-know-text" />
 As open source software, WordPress allows developers to create their own plugins that you can install to add new features to your site?
 <phrase key="mwp-product-info-enter-blog" />
 enter your blog post
 <phrase key="mwp-product-info-publish" />
 publish
-************************************************
-Managed Wordpress end
-************************************************
-
-************************************************
-pro design start
-************************************************
 <phrase key="pro-design-page-title" />
 Get Online Website Design
 <phrase key="pro-design-meta-description" />
@@ -330,29 +277,106 @@ Get Online Website Design OG Title
 <phrase key="pro-design-og-description" />
 Get Online Website Design OG Description
 <phrase key="pro-design-product-name" />
-Website Design
+Website Design Services
 <phrase key="pro-design-product-get-it-now-description" />
-Easily create a site that let’s you sell your stuff, accept credit cards and more.
-<phrase key="pro-design-product-description" />
-Get everything you need to sell your stuff across town or around the world. Accept credit cards, offer flexible shipping options and more.
-<phrase key="pro-design-product-video-info-text" />
-What is Website Design?
+Our Professional Web Services team will work with you to create a site thatâ€™s perfect for your business.
+<phrase key="pro-design-product-call-us" />
+or give us a call at <span class = "orange-text">(480) 366-3344</span>
+<phrase key="pro-design-product-info-header" />
+See what we can do
+<phrase key="pro-design-product-info-text" />
+Here are just a few of the sites weâ€™ve built. <mark class="business-name-display"></mark> could be nextâ€¦
 <phrase key="pro-design-product-did-you-know-text" />
-Website Design includes professional themes, so you can sell your products online without having to know a thing about web design.
-************************************************
-pro design end
-************************************************
-
-
-
-
+Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site youâ€™ll love.
+<phrase key="pro-design-get-it-now-bubble-content-header" />
+Here you go...
+<phrase key="pro-design-get-it-now-bubble-content-text" />
+A professional design service for <mark class="business-name-display"></mark> â€“ Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-design-interview-header" />
+We'll Build a Website That Will Help You Build Your Business
+<phrase key="pro-design-interview-header-text" />
+Just complete the online interview and our web pros will do the rest. Hereâ€™s how it worksâ€¦
+<phrase key="pro-design-interview-step-1" />
+Step One
+<phrase key="pro-design-interview-step-1-header" />
+Share Your Vision
+<phrase key="pro-design-interview-step-1-text" />
+Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
+<phrase key="pro-design-interview-step-2" />
+Step Two
+<phrase key="pro-design-interview-step-2-header" />
+We Go To Work
+<phrase key="pro-design-interview-step-2-text" />
+Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
+<phrase key="pro-design-interview-step-3" />
+Step Three
+<phrase key="pro-design-interview-step-3-header" />
+Enhance and Expand
+<phrase key="pro-design-interview-step-3-text" />
+Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
+<phrase key="pro-design-interview-did-you-know-text" />
+We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
+<phrase key="pro-design-get-it-now-bottom-text" />
+We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-ecomm-page-title" />
+Get Online eCommerce Design
+<phrase key="pro-ecomm-meta-description" />
+Get Online eCommerce Design Description
+<phrase key="pro-ecomm-meta-keywords" />
+Get Online eCommerce Design Keywords
+<phrase key="pro-ecomm-og-title" />
+Get Online eCommerce Design OG Title
+<phrase key="pro-ecomm-og-description" />
+Get Online eCommerce Design OG Description
+<phrase key="pro-ecomm-product-name" />
+Ecommerce Design Services
+<phrase key="pro-ecomm-product-get-it-now-description" />
+Our Profesional Web Services Team knows what it takes to succeed on the Web and will create an online store that's perfect for your business.
+<phrase key="pro-ecomm-product-call-us" />
+or give us a call at <span class = "orange-text">(480) 366-3344</span>
+<phrase key="pro-ecomm-product-info-header" />
+See what we can do
+<phrase key="pro-ecomm-product-info-text" />
+Here are just a few of the sites weâ€™ve built. <mark class="business-name-display"></mark> could be nextâ€¦
+<phrase key="pro-ecomm-product-did-you-know-text" />
+Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site youâ€™ll love.
+<phrase key="pro-ecomm-get-it-now-bubble-content-header" />
+Here you go...
+<phrase key="pro-ecomm-get-it-now-bubble-content-text" />
+A professional design service for <mark class="business-name-display"></mark> â€“ Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-ecomm-interview-header" />
+We'll Build a Website That Will Help You Build Your Business
+<phrase key="pro-ecomm-interview-header-text" />
+Just complete the online interview and our web pros will do the rest. Hereâ€™s how it worksâ€¦
+<phrase key="pro-ecomm-interview-step-1" />
+Step One
+<phrase key="pro-ecomm-interview-step-1-header" />
+Share Your Vision
+<phrase key="pro-ecomm-interview-step-1-text" />
+Give us the basics on your business, brand and products and then choose a professionally designed, industry-specific template that fits your style.
+<phrase key="pro-ecomm-interview-step-2" />
+Step Two
+<phrase key="pro-ecomm-interview-step-2-header" />
+We Go To Work
+<phrase key="pro-ecomm-interview-step-2-text" />
+Based on the info you provided, our expert designers create your unique website, adding text, images and SEO (Search Engine Optimization) tags. The best part? Your site is up in days, not weeks or months.
+<phrase key="pro-ecomm-interview-step-3" />
+Step Three
+<phrase key="pro-ecomm-interview-step-3-header" />
+Enhance and Expand
+<phrase key="pro-ecomm-interview-step-3-text" />
+Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
+<phrase key="pro-ecomm-interview-did-you-know-text" />
+We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
+<phrase key="pro-ecomm-get-it-now-bottom-text" />
+We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="disclaimer-modal-title" />
 Disclaimers
 <phrase key="disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount" />
-Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
-<phrase key="disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount {icannfee} will get replaced with a currency amount" />
-Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of {icannfee}/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
+Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Website Builder Personal Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
 <phrase key="disclaimer-modal-ols-content" comment="{0} will get replaced with a currency amount" />
-Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Online Store Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[currencyprice:<price usdamount="0018" /> ]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
-<phrase key="disclaimer-modal-ols-content" comment="{0} will get replaced with a currency amount {icannfee} will get replaced with a currency amount" />
-Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Online Store Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of {icannfee}/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your GoDaddy account. Geographic restrictions apply.
+Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Online Store Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
+<phrase key="disclaimer-modal-mwp-content" comment="{0} will get replaced with a currency amount" />
+Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Managed Wordpress Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
+<phrase key="disclaimer-modal-hosting-content" comment="{0} will get replaced with a currency amount" />
+Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Economy Hosting Plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
