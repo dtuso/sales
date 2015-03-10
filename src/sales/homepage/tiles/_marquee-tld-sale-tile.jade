@@ -12,15 +12,15 @@ append vars
   - tldSaleTileParam.logoClass = tldSaleTileParam.tld+"-sale-tile-logo";
   - containerClass = tldSaleTileParam.tld+"-sale tld-sale-tile";
 
-atlantis:webstash(type="css")
-  block append tileStyles
-    style
-      :less
-        .tld-sale-tile{background-color:#333; color:#fff;}
-        .tld-sale-tile .tile-content-wrapper{padding:10px 15px;}
-        .tld-sale-tile .header-text{font-size:40px; color:#f2812e;float:left}
-        .tld-sale-tile .body{font-size:20px;line-height:1em;margin:8px 0 18px;}
-        .tld-sale-tile .restrictions-text{font-size:10px;}
+
+block append tileStyles
+  style
+    :less
+      .tld-sale-tile{background-color:#333; color:#fff;}
+      .tld-sale-tile .tile-content-wrapper{padding:10px 15px;}
+      .tld-sale-tile .header-text{font-size:40px; color:#f2812e;float:left}
+      .tld-sale-tile .body{font-size:20px;line-height:1em;margin:8px 0 18px;}
+      .tld-sale-tile .restrictions-text{font-size:10px;}
 
 block tileContent
   .clearfix
