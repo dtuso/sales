@@ -39,7 +39,7 @@ append vars
   - productToDisplay.bottomSearchCI = "96286";
   - productToDisplay.viewTemplatesCI = "96287";
   - productToDisplay.playButtonCI = "96288";
-  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerCI = "96984";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-wsb-content]@L]";
 
 block targetedProduct
@@ -59,7 +59,7 @@ block productSection
           button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/getonline:view-templates]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
-          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  

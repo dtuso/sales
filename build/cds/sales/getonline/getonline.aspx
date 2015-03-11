@@ -329,12 +329,21 @@ ul li.no-check {
       $(document).ready(function(){
         // set highlighted marquee text if passed by referring page
         var p4p = window.location.search.split('p4p=');
-        if (p4p.length > 1) {
-          if(p4p[1].split("&")[0] === 'frustration'){
-            $("#marquee span").text("#&!$*%!");
-          }
-          else
-            $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
+        var possibleHPOptions = {'option1': 'confusing', 'option2': 'intimidating', 'option3': 'annoying', 'option4': 'frustration'};
+        var option;
+        for (option in possibleHPOptions){
+            if(p4p[1].split("&")[0] === possibleHPOptions[option]){
+              if (p4p.length > 1) {
+                if(p4p[1].split("&")[0] === 'frustration'){
+                 $("#marquee span").text("#&!$*%!");
+                }
+                else
+                  $("#marquee span").text(decodeURIComponent(p4p[1].split("&")[0]));
+            }
+            else{
+                $("#marquee span").text('confusing');
+            }
+        }
         }
       
       });

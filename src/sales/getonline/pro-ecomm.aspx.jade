@@ -28,7 +28,7 @@ append vars
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
   - productToDisplay.productInfoText = "[@L[cds.sales/getonline:pro-ecomm-product-info-text]@L]";
   - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:pro-ecomm-product-did-you-know-text]@L]";
-  - productToDisplay.viewTemplatesCI = "xxxxx";
+  - productToDisplay.viewTemplatesCI = "96316";
   - productToDisplay.disclaimerCI = "";
   - productToDisplay.disclaimerText = "";
 
@@ -48,6 +48,7 @@ append pageStyles
     .uppercase{text-transform: uppercase;}
     .orange-text{color: #ef6c0f;}
     #getItNow .hero-guy{left: 0px;}
+    #getItNow mark{margin-top: 6px;}
 
 block domainSearchStyles
 
@@ -124,7 +125,7 @@ block productSection
           button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-portfolio]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
         .container
-          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  

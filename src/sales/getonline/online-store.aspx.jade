@@ -39,7 +39,7 @@ append vars
   - productToDisplay.bottomSearchCI = "96296";
   - productToDisplay.viewTemplatesCI = "96299";
   - productToDisplay.playButtonCI = "96300";
-  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerCI = "96983";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
 
 block targetedProduct
@@ -58,7 +58,7 @@ block productSection
           h4.text-center #{productToDisplay.productDescription}
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
-          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", data-ci="xxxxxx", class="lazyload video-marquee video-marquee-black full-video monitor")
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
             .col-sm-4
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
