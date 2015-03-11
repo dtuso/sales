@@ -1,7 +1,7 @@
 
 <atlantis:webstash type="css">
   <style>#marquee {
-  background-color: #f3f3f3;
+  background-color: #f3f3f4;
 }
 #marquee .hero.tld-com {
   position: absolute;
@@ -11,20 +11,23 @@
   transform: translateY(-50%);
 }
 #marquee .hero.tld-com .price {
-  font-size: 3.4em;
+  font-size: 4em;
+  line-height: 0.9;
 }
 #marquee .hero.tld-com .headline {
   font-size: 1.7em;
   color: #75c239;
+  margin: 3% 0;
+  line-height: 0.9;
 }
 #marquee .hero.tld-com button {
   margin: 2% 0;
 }
-@media only screen and (min-width: 991) and (max-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   #marquee .hero.tld-com {
-    -webkit-transform: translateY(-50%) translateX(25%);
-    -ms-transform: translateY(-50%) translateX(25%);
-    transform: translateY(-50%) translateX(25%);
+    -webkit-transform: translateY(-50%) translateX(10%);
+    -ms-transform: translateY(-50%) translateX(10%);
+    transform: translateY(-50%) translateX(10%);
   }
 }
 

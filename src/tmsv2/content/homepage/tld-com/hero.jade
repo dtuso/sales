@@ -4,15 +4,15 @@
 atlantis:webstash(type="css")
   style
     :less
-      #marquee { background-color: #f3f3f3;
+      #marquee { background-color: #f3f3f4;
         .hero.tld-com {position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
-          .price {font-size:3.4em}
-          .headline {font-size:1.7em; color:#75c239}
+          .price {font-size:4em; line-height:.9}
+          .headline {font-size:1.7em; color:#75c239; margin:3% 0;line-height:.9}
           button {margin:2% 0}
         }
       }
       @media only screen and (min-width:768px) and (max-width: 991px){
-        #marquee .hero.tld-com{-webkit-transform: translateY(-50%) translateX(25%);-ms-transform: translateY(-50%) translateX(25%);transform: translateY(-50%) translateX(25%);
+        #marquee .hero.tld-com{-webkit-transform: translateY(-50%) translateX(10%);-ms-transform: translateY(-50%) translateX(10%);transform: translateY(-50%) translateX(10%);
         }
       }
 .hero.tld-com(data-url!=ctaLink, data-ci=dataCi)
