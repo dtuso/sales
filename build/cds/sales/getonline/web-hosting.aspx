@@ -405,10 +405,10 @@ function domainSearchFormSubmit(e, domain) {
 
         updateRecommendedDomain(exactMatchDomain.Fqdn);
 
+        domainSearchWizard.showView('#domain-available-view');
+
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
-
-        $('#domain-available-view').show();
         $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
         $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
 
@@ -429,6 +429,8 @@ function domainSearchFormSubmit(e, domain) {
         // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
         // $('#domain-not-available-view').show();
         updateNotAvailableDomain('', exactMatchDomain.Fqdn);
+
+        domainSearchWizard.showView('#domain-not-available-view');
 
         // Domain is taken, show spins if possible
         if(alternateDomains.length > 0) {
@@ -547,7 +549,7 @@ function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     apiEndpoint3;
-  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+  var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
   apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
@@ -900,12 +902,14 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result searched-domain-name-row bg-light">
-              <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
-              <div class="col-md-3 white">
-                <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+            <div class="row spin-template bg-light">
+              <div class="spin-result searched-domain-name-row">
+                <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
+                <div class="col-md-3 white">
+                  <button class="btn btn-primary select-and-continue uppercase">Select</button>
+                  <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
+                  <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+                </div>
               </div>
             </div>
           </div>
@@ -984,17 +988,21 @@ function getParameterByName(name) {
           </div>
           <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
-            <div class="row spin-template spin-result searched-domain-name-row bg-light">
-              <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
-              <div class="col-md-3 white">
-                <button class="btn btn-primary select-and-continue uppercase">Select</button>
-                <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
-                <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+            <div class="row spin-template bg-light searched-domain-name-row">
+              <div class="spin-result">
+                <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
+                <div class="col-md-3 white">
+                  <button class="btn btn-primary select-and-continue uppercase">Select</button>
+                  <div class="spin-results-message checking-availability">[@L[cds.sales/offers/online-business:32573-checking-availability]@L]</div>
+                  <div class="spin-results-message now-unavailable">[@L[cds.sales/offers/online-business:32573-domain-no-longer-available]@L]</div>
+                </div>
               </div>
             </div>
           </div>
           <div class="row show-more-section">
-            <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            <div class="col-md-12">
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>See more</span><span class="show-more-arrow"></span></span></h6>
+            </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
@@ -1414,6 +1422,16 @@ ul li.no-check {
       <style>
         #domainSearchWizardSection { padding-bottom: 0; }
         .results-list-heading-text {margin-top: 10px; margin-bottom: 10px;}
+        .spin-results-message,
+        .spin-results .spin-results-message, 
+        .spin-results .spin-result, 
+        .spin-template-wrap .spin-template {display:none;}
+        .spin-results-message,
+        .spin-results .spin-results-message {margin-top:15px;}
+        .spin-results .spin-result {margin-bottom: 10px;}
+        
+        // Turn off search input message display
+        .search-message {display: none; text-transform: none; }
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1544,19 +1562,18 @@ ul li.no-check {
         #domain-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         
         #available-domain {margin-top: 15px;}
-        #available-domain .spin-results-message,
-        .spin-results .spin-results-message, 
-        .spin-results .spin-result, 
-        .spin-template-wrap .spin-template {display:none;}
-        #available-domain .spin-results-message,
-        .spin-results .spin-results-message {margin-top:15px;}
+        //- #available-domain .spin-results-message,
+        //- .spin-results .spin-results-message, 
+        //- .spin-results .spin-result, 
+        //- .spin-template-wrap .spin-template {display:none;}
+        //- #available-domain .spin-results-message,
+        //- .spin-results .spin-results-message {margin-top:15px;}
         
         #domain-available-view .select-and-continue {margin-bottom: 0px; font-size:20px;text-overflow: ellipsis;}
         #domain-available-view .select-and-continue{margin:10px 0;float:right;}
         #domain-available-view .domain-name-display {color:#333;font-weight:400;display:block;padding:20px 20px;height:59px;font-size:24px;line-height:1.33;border-radius:0;}
         
-        #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
-        #domain-available-view h2.searched-domain-name-display {margin: 0;}
+        //- #domain-available-view .searched-domain-name-row {margin-bottom: 10px;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1572,14 +1589,10 @@ ul li.no-check {
         #domain-not-available-view h2.not-available-domain-name-display {margin: 0;}
         #domain-not-available-view .not-available-domain-name-row {margin: 35px 0 25px 10px;}
         
-        // Turn off search input message display
-        .search-message {display: none; text-transform: none; }
-        
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
         #domain-selected-view .searched-domain-name-row {margin: 20px 0 20px;}
-        #domain-selected-view h2.searched-domain-name-display {margin: 0;}
         #domain-selected-view .reseach-container {padding-top: 10px;}
         
       </style>
@@ -1715,6 +1728,13 @@ ul li.no-check {
           });
       
           return visibleSection;
+        },
+        showView: function(view) {
+          var sections = $('#domainSearchWizardSection').find('.js-domain-search-wizard-section');
+          $.each(sections, function(index, section) {
+            $(document).find('#' + section.id).hide();
+          });
+          $(document).find(view).show();
         }
       };
       

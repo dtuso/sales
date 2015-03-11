@@ -773,7 +773,7 @@ function getParameterByName(name) {
             </div>
             <div class="plus">+</div>
             <div class="column website"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
-              <h3 class="text-center">Online Store</h3>
+              <h3 class="text-center">HELLO Online Store</h3>
               <p>Easily create a site that let’s you sell your stuff, accept credit cards and more.</p>
             </div>
             <div class="plus">+</div>
