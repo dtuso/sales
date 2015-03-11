@@ -55,6 +55,9 @@ var got1Page = {
 ##if(countrySiteAny(br) || isManager())
   got1Page.tldInfo.addTldIf('br', true);
 ##endif
+##if(countrySiteAny(in) || isManager())
+  got1Page.tldInfo.addTldIf('in', false);
+##endif
 ##if(countrySiteAny(uk) || isManager())
   got1Page.tldInfo.addTldIf('co.uk', true);
   got1Page.tldInfo.addTldIf('uk',    false);
