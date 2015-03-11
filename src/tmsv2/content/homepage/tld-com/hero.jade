@@ -1,0 +1,16 @@
+- dataCi = "96979";
+- ctaLink = "[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='"+dataCi+"' /></relative>]@T]";
+
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee .hero.tld-com {
+        .price {}
+        .headline {}
+        .tld {}
+      }
+.hero.tld-com
+  .price [@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]* .COM
+  .headline [@L[cds.tmsv2/content/homepage/marquee-tile-tld:com-headline]@L]
+  button.btn.btn-md FIND YOUR .COM
+  .tld
