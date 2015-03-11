@@ -3,13 +3,13 @@ extends ./_home-page.jade
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+  include ../../tmsv2/content/homepage/p4p/marquee-tile.jade
 block marquee-tile2
-  include ../../tmsv2/content/homepage/tld-co/marquee-tile.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block merch-tile1
-  include ./tiles/get-found.jade
-block merch-tile2
   include ./tiles/o365-tile.jade
+block merch-tile2
+  include ../../tmsv2/content/homepage/tld-co/merch-tile.jade
 block merch-tile3
   include ./tiles/merch-tile-web-hosting.jade
 block merch-tile4
@@ -35,4 +35,3 @@ block prepend sections
   include ./sections/_o365-promo.jade
   include ./sections/_support-promo.jade
   include ./sections/_nascar-contest.jade
-
