@@ -521,7 +521,6 @@ function goToDppCheckoutPage(e) {
       showApi3SearchError(e, domain);
     }
   });
-
 }
 
 function showSearchSpins($view, domain, alternateDomains){  

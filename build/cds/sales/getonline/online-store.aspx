@@ -176,15 +176,7 @@
       </atlantis>
       <atlantis:webstash type="js">
         <script>
-          function addToCartHandler(evnt, e) {
-            var $this = $(e.target),
-              domain = $this.data('domain'),
-              apiEndpoint3;
-          };
-          
           $(document).ready(function(){
-          
-            $(document).bind("addToCart", addToCartHandler);
           
             if(offerInfo.businessName != '') {
               updateSearchedDomain('', offerInfo.businessName);
@@ -483,7 +475,6 @@ function goToCheckOut(e) {
     window.location.href = '#domainSearchWizardSection';
   }
   else {
-    $(document).trigger('addToCart', e);
     goToDppCheckoutPage(e);
   }
 }
@@ -530,7 +521,6 @@ function goToDppCheckoutPage(e) {
       showApi3SearchError(e, domain);
     }
   });
-
 }
 
 function showSearchSpins($view, domain, alternateDomains){  
