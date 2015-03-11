@@ -1,9 +1,4 @@
-
-<!-- P4P variables-->
-<!-- Need to dynamically build tld list.-->
-<!-- - domainSearchWizard.tlds                     = "['com','co','org','net']";-->
-<!-- - domainSearchWizard.defaultTld               = "'com'";-->
-<!-- - domainSearchWizard.formId                   = "domainSearchViewForm";--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">

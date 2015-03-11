@@ -37,7 +37,7 @@ yourname
 <phrase key="O365-email-did-you-know-text" />
 Customers are 9 times more likely to choose a business with a professional email address?*
 <phrase key="product-email-text" />
-Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>
+Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>.
 <phrase key="product-bundle-price" />
 Get the bundle for {price_monthly}/month for the first year*
 <phrase key="product-bundle-renewal-price" />
@@ -65,13 +65,13 @@ First select your perfect domain
 <phrase key="get-online-bottom-domain-selected" />
 You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
 <phrase key="QuestionsLP-8-ThisDoesnTHaveToBeConfusing" />
-This doesn't have to be <span class="callout">confusing!</span>
+Forget <span class="callout">confusing</span>. We make it easy.
 <phrase key="QuestionsLP-7-WeCanGetYourBusinessOnline" />
-We can get your business online.
+Just tell us a little about yourself
 <phrase key="QuestionsLP-17-TellUsALittleAboutYourselfWeWill" />
-Tell us a little about yourself.  We will step you from A to Z, no problem.
+...and we'll hook you up with the perfect package to get you online.
 <phrase key="QuestionsLP-18-WhatSYourBusinessNameDonTHave" />
-What's your business name? Don't have a name? An idea for your business is perfect!
+What's your business name? If you don't have a business yet, just tell us your idea or product.
 <phrase key="QuestionsLP-6-WhatSYourBusinessName" />
 What's your business name?
 <phrase key="QuestionsLP-7-EnterYourBusinessNameOrIdea" />
@@ -79,27 +79,27 @@ Enter your business name or idea
 <phrase key="QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET" />
 Offer only valid with .COM, .CLUB, .CO, .NET, .ROCKS, .ORG
 <phrase key="QuestionsLP-20-WeVeGivenYouSomeOptionsOfHow" />
-We've given you some options of how to set up your business online.  Just fill in the blanks!
+Choose from the options below to tell us what you want to do and how you want to do it.
 <phrase key="QuestionsLP-4-IMInterestedIn" />
-I'm interested in
+I want to
 <phrase key="QuestionsLP-5-GettingMyExistingBusinessOnline" />
-Getting my existing business online
+Get my existing business online
 <phrase key="QuestionsLP-5-StartingANewBusinessOnline" />
-Starting a new business online
+Start a new business online
 <phrase key="QuestionsLP-3-SellingProductsOnline" />
-Selling products online
+Sell products online
 <phrase key="QuestionsLP-4-StartingMyOwnBlog" />
-Starting my own blog
+Start my own blog
 <phrase key="QuestionsLP-7-IHaveTheResourcesAndTimeTo" />
-I have the resources and time to
+I'd like to
 <phrase key="QuestionsLP-8-BuildItMyselfIfItSEasy" />
-Build it myself (if it's easy)
+Build my own website (if it’s easy)
 <phrase key="QuestionsLP-13-IHaveAGuyWhoKnowsHowTo" />
-I have a guy who knows how to code (he has skills)
+Let my hipster friend build my website (he’s got skills)
 <phrase key="QuestionsLP-11-HireSomeoneToDoItAllForMe" />
-Hire someone to do it all for me (no time)
+Hire a web pro to build my site for me (I’m swamped)
 <phrase key="QuestionsLP-6-GetMeUpAndRunning" />
-Get me up and running!
+Show me what I need
 <phrase key="QuestionsLP-2-Step2" />
 Step 2
 <phrase key="QuestionsLP-2-Step1" />
@@ -379,4 +379,4 @@ Annual purchase required. Pricing valid for first year only. Offer includes one 
 <phrase key="disclaimer-modal-mwp-content" comment="{0} will get replaced with a currency amount" />
 Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Managed Wordpress Plan and Email Starter Package. This offer only provides 1 mailbox at the introductory rate. Additional mailboxes for email can purchased at regular prevailing price per mailbox. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
 <phrase key="disclaimer-modal-hosting-content" comment="{0} will get replaced with a currency amount" />
-Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Economy Hosting Plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
+Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Economy Hosting Plan and Email Essentials Package. This offer provides up to 100 mailboxs at the introductory rate. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.

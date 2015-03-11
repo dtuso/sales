@@ -1,9 +1,4 @@
-
-<!-- P4P variables-->
-<!-- Need to dynamically build tld list.-->
-<!-- - domainSearchWizard.tlds                     = "['com','co','org','net']";-->
-<!-- - domainSearchWizard.defaultTld               = "'com'";-->
-<!-- - domainSearchWizard.formId                   = "domainSearchViewForm";--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -270,9 +265,10 @@ $(document).ready(function() {
   // wireupCheckoutBtns();
 
   // displayMoreResultsLinks();
-  
-  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
 
+  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  
   $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
   $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
@@ -661,7 +657,7 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
-    $newSpin.on('click', verifyDomainIsStillAvailable);
+    // $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
