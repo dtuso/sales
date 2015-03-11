@@ -12,10 +12,6 @@ if (!Array.prototype.indexOf){
   };
 }
 
-// ##if(!productIsOffered(105))
-//   domainSearch.canOfferOls = false;
-// ##endif
-
 ##if(countrySiteAny(ca) || isManager())  
   if(domainSearch.tldInfo.isPossibleAdditionalTld('ca')) {
     domainSearch.tldInfo.tlds.push('ca');
@@ -54,38 +50,20 @@ domainSearch.tldInfo.tlds.push(domainSearch.tldInfo.lastTldInList); //- add to t
 
 $(document).ready(function() {
 
-  // showTldImagesInDomainArea(); //- dynamically build the tld images in the #findYourPerfectDomain section
-  
-  //- fix up list of valid tlds from lang files
-  // showAndOrderDynamicTldsInList("#products .TLD-token");
-  // showAndOrderDynamicTldsInList("#domain-entry-details-modal-wsb-only p");
-  // showAndOrderDynamicTldsInList("#domain-entry-details-modal p");
+  // fix up list of valid tlds from lang files
+  showAndOrderDynamicTldsInList("#default-details-modal p");
   showAndOrderDynamicTldsInList("#domain-search-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-available-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-view .invalid-TLD-entered");
 
-  // tokenizeTheDataTokenizeAttribute();
-
-  // wireupModals();
-
-  // set up verify buttons on spin results to do validation before sending to DPP
-  // $('#domain-available-view').on('click', '.purchase-btn', validDomainSelected);
-
-  // wireupCheckoutBtns();
-
-  // displayMoreResultsLinks();
+  $('#domain-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
+  $('#domain-not-available-view').on('click', '.select-and-continue', verifyDomainIsStillAvailable);
   
-  $(document).find('.select-and-continue').on('click', verifyDomainIsStillAvailable);
-
   $(document).find('.clickable-show-more').on('click', displayMoreResultsArea);
   $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
-  // $('#domain-search-view').find('.see-details-disclaimer-link').attr('data-ci', domainSearch.canOfferOls ? "95734" : "95736");
-
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
   $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-  // $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-  // $(document).find('.btn-search-again').on('click', goToDomainSearchWizard);
   $(document).find('.btn-see-bundle').on('click', goToShowProducts);
 
   $("[data-ci-workaround]").click(function(a){
@@ -140,33 +118,6 @@ function showAndOrderDynamicTldsInList(selector) {
   // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
 }
-
-// function wireupModals() {
-
-//   // wire up see details links  
-
-//   $('#domain-search-view').on('click', '.see-details-disclaimer-link', function(){
-//     $(domainSearch.canOfferOls ? "#domain-entry-details-modal" : "#domain-entry-details-modal-wsb-only")
-//       .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
-//   });
-// }
-
-
-// function showTldImagesInDomainArea() {
-//   //dynamically build the tld images in the #findYourPerfectDomain section
-//   var $imageDiv = $('#findYourPerfectDomain').find(".features-img").parent().empty().addClass('tld-images');
-//   $.each(domainSearch.tldInfo.tlds, function(idx, tld){
-//     var $img = $('<img>')
-//       .addClass('tld-image lazyload')
-//       .attr('data-lazyload-source', domainSearch.imagePath + 'tld-' + tld + '.png');
-//     $imageDiv.append($img);
-//     lazyload.add($img);
-//   });
-
-//   // rerun the height alignment
-//   $('#findYourPerfectDomain [data-center-element]').css({marginTop:"0px"});
-//   $(window).trigger('resize');
-// }
 
 function domainSearchFormSubmit(e, domainSearched) { 
 
@@ -240,8 +191,6 @@ function domainSearchFormSubmit(e, domainSearched) {
       } else {
 
         // tokenize header on search available page
-        // $('#not-available-domain-name').text(exactMatchDomain.Fqdn);
-        // $('#domain-not-available-view').show();
         updateNotAvailableDomain('', domainSearched);
 
         domainSearchWizard.showView('#domain-not-available-view');
@@ -253,10 +202,6 @@ function domainSearchFormSubmit(e, domainSearched) {
           showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
           $('#domainSearchWizard').find('.search-form-input').val(''); 
-          
-        // } else {
-        //   // NO SPINS
-        //   showApi1or2SearchError(e, domainSearched);
         }
 
         animateWizard($thisSection, $('#domain-not-available-view'));
@@ -312,11 +257,6 @@ function verifyDomainIsStillAvailable(e) {
 
 function validDomainSelected(e){
 
-  // // bypass the choices if OLS is not available for their market
-  // if(!domainSearch.canOfferOls) {
-    // goToDppCheckoutPage(e);
-    // return;
-  // }
   var $this = $(e.target),
     domain = $this.data('domain');
 
@@ -373,81 +313,23 @@ function goToDppCheckoutPage(e) {
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
-  if(window.location.href.indexOf("web-hosting") > -1) {
-    alert('New call');
-    var pkg = {};
-    pkg.pkgid = 'host_GridHostEcoDiabloLin1Yr_us';
-    pkg.qty = 1;
-    pkg.itc = 'slp_hosting_4GH';
-    pkg.ci = 123456;
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
-
-    var postdata = "requestData=" + JSON.stringify(pkg);
-    $.ajax({
-        type:"POST",
-        url: sapiurl,
-        contentType: "application/json",
-        data: postdata,
-        dataType: "jsonp",
-        complete: function (data) {
-                    if (data.statusText == "success") {
-                         addHostingDomain(domain);
+  $.ajax({
+    url: apiEndpoint3,
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+    success: function(data){
+      if(data && data.Success) {
+        window.location = data.NextStepUrl;
+        return;
+      } else {
+        showApi3SearchError(e, domain);
       }
-          
-      }
-          
-    });
-    
-  }
-  else{
-    $.ajax({
-       url: apiEndpoint3,
-       type: 'GET',
-       dataType: 'json',
-       cache: false,
-       success: function(data){
-         if(data && data.Success) {
-           window.location = data.NextStepUrl;
-           return;
-         } else {
-           showApi3SearchError(e, domain);
-         }
     },
     error: function(){
       showApi3SearchError(e, domain);
     }
-   });
-  }
-
-}
-
-function addHostingDomain(domain){
-    var plan = 'host_GridHostEcoDiabloLin1Yr_us';
-    var domainToAdd = encodeURIComponent(domain.Fqdn);
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
-    var pkg = {};
-    pkg.itc = 'slp_hosting_4GH';
-    pkg.quantity = 1;
-    pkg.ci = 83621;
-    pkg.pkgid = plan;
-    pkg.custom = { "domain": domainToAdd }
-    var postdata = "requestData=" + JSON.stringify(pkg);
-      $.ajax({
-         type:"POST",
-         url: sapiurl,
-         contentType: "application/json",
-         data: postdata,
-         dataType: "jsonp",
-         complete: function (data) {
-                        if (data.statusText == "success") {
-                              ##if(isManager())
-                                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-                              ##else
-                                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-                              ##endif
-                          }
-                    }
-        });      
+  });
 }
 
 function showSearchSpins($view, domain, alternateDomains){  
@@ -465,7 +347,6 @@ function showSearchSpins($view, domain, alternateDomains){
     $newSpin.find('.domain-name-display').text(domain.Fqdn);
     // $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
     $newSpin.find('.select-and-continue').show().data('domain', domain);
-    $newSpin.on('click', verifyDomainIsStillAvailable);
     $spinResults.append($newSpin);
   });
   domainSearch.totalSpinResults = alternateDomains.length;
@@ -490,19 +371,12 @@ function showApi3SearchError(e,domain){
   $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
 }
 
-// function showTypeYourDomain() {  
-//   $('#domainSearchWizard .search-message').hide();
-//   $('#domainSearchWizard .type-your-business-name').show();
-// }
-
 function displayMoreResultsLinks($thisSection) {
-  // $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   $thisSection.find(".view-all-button").show();
   $thisSection.find(".show-more-section").show();
 }
 
 function hideMoreResultsLinks($thisSection) {
-  // $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   $thisSection.find(".view-all-button").hide();
   $thisSection.find(".show-more-section").hide();
 }
@@ -536,21 +410,6 @@ function animateWizard($currentView, $animateToView) {
   }
 
   $animateToView.show();
-
-  // var $wizard = $('#domainSearchWizardSection'),
-  // wizardHeight = $wizard.height();
-
-  // // show view offscreen to get height
-  // $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
-  // // can only get height when shown      
-  // var toViewHeight = $animateToView.height(),
-  //   maxHeight = Math.max(currentViewHeight, toViewHeight),
-  //   minHeight = Math.min(currentViewHeight, toViewHeight);
-  
-  // //run the animations
-  // animateHeight($wizard, wizardHeight, toViewHeight, 1);  
-  // animateObjectOffToTheLeft($currentView, windowWidth, 2);
-  // animateObjectInFromTheRight($animateToView, windowWidth, 3);
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
