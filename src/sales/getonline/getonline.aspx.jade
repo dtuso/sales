@@ -1,5 +1,8 @@
 extends ../shared/_page
 
+append seo
+  meta(name="robots" content="noindex, nofollow")
+
 append endOfPageScripts
   script.
     // update the form's submit URL based on the user's selections
