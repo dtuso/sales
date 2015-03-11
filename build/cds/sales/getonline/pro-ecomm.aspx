@@ -81,6 +81,7 @@
       <script>
         var offerInfo = {
           businessName: "",
+          landingPage: "getonline/pro-ecomm.aspx",
           packageId: "",
           itcCode: "",
           appKey: "",

@@ -81,6 +81,7 @@
       <script>
         var offerInfo = {
           businessName: "",
+          landingPage: "getonline/websitebuilder.aspx",
           packageId: "getonline_website_builder",
           itcCode: "p4p_getonline_wsb",
           appKey: "slp_GYBO",
@@ -504,23 +505,80 @@ function goToDppCheckoutPage(e) {
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
-  $.ajax({
-    url: apiEndpoint3,
-    type: 'GET',
-    dataType: 'json',
-    cache: false,
-    success: function(data){
-      if(data && data.Success) {
-        window.location = data.NextStepUrl;
-        return;
-      } else {
+  if(offerInfo.landingPage.indexOf("web-hosting") > -1) {
+    var pkg = {};
+    pkg.pkgid = offerInfo.packageId;
+    pkg.qty = 1;
+    pkg.itc = offerInfo.itcCode;
+    pkg.ci = 123456;
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+
+    var postdata = "requestData=" + JSON.stringify(pkg);
+    $.ajax({
+      type:"POST",
+      url: sapiurl,
+      contentType: "application/json",
+      data: postdata,
+      dataType: "jsonp",
+      complete: function (data) {
+        if (data.statusText == "success") {
+          addHostingDomain(domain);
+        }
+      },
+      error: function(){
         showApi3SearchError(e, domain);
       }
+    });
+    
+  } else{
+    $.ajax({
+       url: apiEndpoint3,
+       type: 'GET',
+       dataType: 'json',
+       cache: false,
+       success: function(data){
+         if(data && data.Success) {
+           window.location = data.NextStepUrl;
+           return;
+         } else {
+           showApi3SearchError(e, domain);
+         }
     },
     error: function(){
       showApi3SearchError(e, domain);
     }
-  });
+   });
+  }
+
+}
+
+function addHostingDomain(domain){
+    var plan = offerInfo.packageId;
+    var domainToAdd = encodeURIComponent(domain.Fqdn);
+    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+    var pkg = {};
+    pkg.pkgid = plan;
+    pkg.itc = offerInfo.itcCode;
+    pkg.quantity = 1;
+    pkg.ci = 83621;
+    pkg.custom = { "domain": domainToAdd }
+    var postdata = "requestData=" + JSON.stringify(pkg);
+      $.ajax({
+         type:"POST",
+         url: sapiurl,
+         contentType: "application/json",
+         data: postdata,
+         dataType: "jsonp",
+         complete: function (data) {
+                        if (data.statusText == "success") {
+                              ##if(isManager())
+                                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                              ##else
+                                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                              ##endif
+                          }
+                    }
+        });      
 }
 
 function showSearchSpins($view, domain, alternateDomains){  
@@ -710,7 +768,7 @@ function getParameterByName(name) {
             <p class="price-token">[@L[cds.sales/getonline:product-bundle-price]@L]</p>
             <button data-ci="96283" class="btn btn-purchase btn-lg center-block">[@L[cds.sales/getonline:get-it-now]@L]</button><small class="price-token">[@L[cds.sales/getonline:product-bundle-renewal-price]@L]</small>
             <div class="header-text disclaimers"><small class="text-disclaimers">[@L[cds.sales/getonline:top-small-disclaimer-text]@L] 
-                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:top-small-disclaimer-details-link]@L]</button></small> 
+                <button data-ci="96984" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:top-small-disclaimer-details-link]@L]</button></small> 
               ##if(countrySiteAny(uk)) 
               <div class="text-vat-disclaimer">[@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]</div> 
               ##endif 
@@ -1007,7 +1065,7 @@ function getParameterByName(name) {
         </div>
         <section data-youtube-id="-HtVJyxSQmw" class="video-marquee-wrapper">
           <div class="container">
-            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
               <div class="col-sm-4"></div>
               <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
