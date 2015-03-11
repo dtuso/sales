@@ -275,12 +275,12 @@
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
             <h2 class="text-center">[@L[cds.sales/getonline:pro-design-product-info-header]@L]</h2>
             <h3 class="text-center">[@L[cds.sales/getonline:pro-design-product-info-text]@L]</h3>
-            <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="xxxxx" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
+            <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="96313" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
           </div>
         </div>
         <section data-youtube-id="" style="padding-bottom:0px" class="video-marquee-wrapper">
           <div class="container">
-            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" data-ci="xxxxxx" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
+            <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
               <div class="col-sm-4"></div>
               <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
@@ -605,6 +605,7 @@ ul li.no-check {
         .uppercase{text-transform: uppercase;}
         .orange-text{color: #ef6c0f;}
         #getItNow .hero-guy{left: 0px;}
+        #getItNow mark{margin-top: 6px;}
         
       </style>
     </atlantis:webstash>
