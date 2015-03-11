@@ -111,7 +111,7 @@
                   <label for="search-input" class="sr-only">[@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]</label>
                   <input id="search-input" type="text" autocomplete="off" placeholder="[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
                 </div>
-                <p class="validation-message">[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
+                <p class="form-error">[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
               </fieldset>
             </div>
             <div class="col-sm-6">
@@ -224,9 +224,9 @@ ul li.no-check {
         #questions h2 { font-size: 3rem; margin-bottom: 5px; margin-top: 0;}
         #questions legend { font-size: 3rem; text-transform: uppercase; font-family: 'Walsheim-Bold'; border-bottom: none; }
         #questions p { font-family: Walsheim-Medium; }
-        #questions input, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
+        #questions .search-bar, #questions select { box-shadow: none; background-color: #fedf54; border: 1px solid #FFCC00; border-top: 4px solid #FFCC00; font-family: 'Walsheim-Medium'; }
         #questions .btn-purchase { float:right;}
-        #questions .validation-message { display: none; }
+        #questions .form-error { display: none; }
         .callout{background-color: #fedc45; padding-left: 2px; padding-right: 2px;}
         .wordpress{display: none;}
         
@@ -315,15 +315,25 @@ ul li.no-check {
         var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
       
         if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
-          $(".validation-message").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
-          $(".validation-message").show();
+          $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
+          $("fieldset.step-1 input").removeClass("search-bar");
+          $("fieldset.step-1 .form-group").addClass("has-error");
+          $(".form-error").show()
           e.preventDefault();
         }
         else if(!business_idea){
-          $(".validation-message").text("Please enter a business name or idea.");
-          $(".validation-message").show();
+          $(".form-error").text("Please enter a business name or idea.");
+          $("fieldset.step-1 input").removeClass("search-bar");
+          $("fieldset.step-1 .form-group").addClass("has-error");
+          $(".form-error").show()
           e.preventDefault();
         }
+      });
+      
+      $('#questions form').keypress(function(){
+         $(".form-error").hide();
+         $("fieldset.step-1 input").addClass("search-bar");
+         $("fieldset.step-1 .form-group").removeClass("has-error");
       });
       
       $(document).ready(function(){
