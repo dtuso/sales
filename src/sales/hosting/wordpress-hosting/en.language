@@ -1,4 +1,128 @@
-<phrase key="third-party-logos-trademarks-disclaimer" comment="" />
-<phrase key="GoogleAdWordsCredit" comment="" />
-<phrase key="BingAdsCredit" comment="" />
-<phrase key="FacebookAdCredit" comment="" />
+---
+id:  550080a9f778fc138cc3b16a
+name: GCE-35561
+comments: Managed WordPress Hosting rebrand
+location: localization/sales/gd/hosting/wordpress-hosting/en
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="35561-marquee-product-name" comment="" />
+Managed WordPress
+<phrase key="35561-marquee-product-description" comment="" />
+WordPress hosting for creators, not administrators
+<phrase key="35561-marquee-product-p" comment="" />
+We handle the hosting setup and management dirty work so you can focus on creating an amazing website.
+<phrase key="35561-marquee-flag" comment="{0} will be tokenized with a phone number" />
+Questions? Speak to a hosting expert, now:  {0}
+<phrase key="35561-as-low-as" comment="" />
+As low as
+<phrase key="35561-price-span-per-mo" comment="" />
+{0}<span>/mo</span>
+
+<phrase key="35561-basic" comment="" />
+Basic
+<phrase key="35561-basic-description" comment="" />
+Think basic sites and blogs and startups.
+<phrase key="35561-basic-btn-alt-text" comment="" />
+Add Basic Plan to Cart
+<phrase key="35561-basic-feature-1" comment="" />
+1 website
+<phrase key="35561-basic-feature-2" comment="" />
+<strong>10GB SSD</strong> storage
+<phrase key="35561-basic-feature-3" comment="" />
+<strong>[@T[localization:<display type="numeric" number="25000" />]@T]</strong> monthly visitors
+
+<phrase key="35561-deluxe" comment="" />
+Deluxe
+<phrase key="35561-deluxe-description" comment="" />
+For small business and bloggers on the way up.
+<phrase key="35561-deluxe-btn-alt-text" comment="" />
+Add Deluxe Plan to Cart
+<phrase key="35561-deluxe-feature-1" comment="" />
+1 website
+<phrase key="35561-deluxe-feature-2" comment="" />
+<strong>15GB SSD</strong> storage
+<phrase key="35561-deluxe-feature-3" comment="" />
+<strong>[@T[localization:<display type="numeric" number="100000" />]@T]</strong> monthly visitors
+<phrase key="35561-deluxe-feature-4" comment="" />
+One-click staging site
+<phrase key="35561-deluxe-feature-5" comment="" />
+SSH / SFTP access
+<phrase key="35561-deluxe-feature-6" comment="" />
+Search engine optimization plugin
+<phrase key="35561-ultimate" comment="" />
+Ultimate
+<phrase key="35561-ultimate-description" comment="Note the word plus is in all capitals letters for emphasis" />
+Everything in Deluxe plan, PLUS top-notch security
+<phrase key="35561-ultimate-btn-alt-text" comment="" />
+Add Ultimate Plan to Cart
+<phrase key="35561-ultimate-feature-1" comment="" />
+2 websites
+<phrase key="35561-ultimate-feature-2" comment="" />
+<strong>30GB SSD</strong> storage (shared)
+<phrase key="35561-ultimate-feature-3" comment="" />
+<strong>[@T[localization:<display type="numeric" number="400000" />]@T]</strong> monthly visitors (shared)
+<phrase key="35561-ultimate-feature-4" comment="" />
+One-click staging site
+<phrase key="35561-ultimate-feature-5" comment="" />
+SSH / SFTP access
+<phrase key="35561-ultimate-feature-6" comment="" />
+Search engine optimization plugin
+<phrase key="35561-ultimate-feature-7" comment="" />
+Malware scan &amp; removal
+<phrase key="35561-ultimate-feature-8" comment="" />
+SSL certificate – First year free ([@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T] renewal annually)
+
+<phrase key="35561-developer" comment="" />
+Developer
+<phrase key="35561-developer-description" comment="" />
+Created expressly for web developers and creative agencies.
+<phrase key="35561-developer-btn-alt-text" comment="" />
+Add Developer Plan to Cart
+<phrase key="35561-developer-feature-1" comment="" />
+5 websites
+<phrase key="35561-developer-feature-2" comment="" />
+<strong>50GB SSD</strong> storage
+<phrase key="35561-developer-feature-3" comment="" />
+<strong>[@T[localization:<display type="numeric" number="800000" />]@T]</strong> monthly visitors
+<phrase key="35561-developer-feature-4" comment="" />
+One-click staging site
+<phrase key="35561-developer-feature-5" comment="" />
+SSH / SFTP access
+<phrase key="35561-developer-feature-6" comment="" />
+SSL certificate – First year free ([@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T] renewal annually)
+<phrase key="35561-per-mo" comment="per month (for pricing)" />
+/mo
+<phrase key="35561-tooltip-ssd" comment="" />
+Our servers have high-performance SSD drives for both files &amp; databases so your sites load incredibly fast. Storage is shared across your plan’s sites.
+<phrase key="35561-tooltip-visitors" comment="" />
+Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every [@T[localization:<display type="numeric" number="10000" />]@T] visitors over your hosting plan, across all sites.
+<phrase key="35561-tooltip-free-domain" comment="" />
+Restrictions apply. Get one FREE .com, .ca, .co, .net or .org with purchase of a new 12, 24 or 36-month plan. (Plus ICANN fee of {icannfee} per domain name per year.) You must add the domain to your cart before purchase and select a term length equal to or less than the term of your hosting plan. If you purchase a domain name for a longer term than your hosting, you’ll be charged for the additional time at the then-current rate. This offer can’t be used in conjunction with any other offer, sale, discount or promotion. This offer applies only to the initial term of purchase. Following the initial purchase term, domains purchased through this offer renew at the then-current renewal price.
+<phrase key="35561-tooltip-office-365" comment="" />
+Option to include 1 Microsoft Outlook mailbox with 5GB storage for email, contacts and shared online calendar--free for the first year. After the first year, additional mailboxes can be purchased at the prevailing per mailbox price. Microsoft Office O365 email will automatically renew at the then-current price until canceled. You can cancel your automatic renewal mailbox at any time.
+<phrase key="35561-tooltip-ssl" comment="" />
+A [@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T] value, your SSL certificate keeps payments and customer data secure and helps increase your Google search ranking. The SSL certificate is free for one year with purchase. After the initial free year, the certificate will automatically renew at the then-current price until canceled. You can cancel your automatic renewal certificate at any time.
+<phrase key="35561-all-plans-title" comment="" />
+All plans include
+<phrase key="35561-all-plans-1" comment="the 'w/' means 'with'" />
+Free domain w/ annual plan
+<phrase key="35561-all-plans-2" comment="" />
+Microsoft Office 365 Email – First year free (optional)
+<phrase key="35561-all-plans-3" comment="" />
+Daily backups &amp; 1-click restore
+<phrase key="35561-all-plans-4" comment="" />
+120+ interactive WordPress walkthroughs 
+<phrase key="35561-all-plans-5" comment="" />
+99.9% uptime promise
+<phrase key="35561-all-plans-6" comment="" />
+Money-back guarantee
+<phrase key="35561-all-plans-7" comment="" />
+24/7, award-winning hosting support
+<phrase key="35561-all-plans-8" comment="" />
+WordPress website building tutorial videos 
+<phrase key="35561-all-plans-9" comment="" />
+Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google AdWords<sup>&trade;</sup> credit
+<phrase key="35561-all-plans-10" comment="" />
+Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing Search / Yahoo Search credit
+<phrase key="35561-all-plans-12" comment="" />
+Up to [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook ad credit

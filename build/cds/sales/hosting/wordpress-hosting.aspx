@@ -156,21 +156,40 @@
           background-color: rgba(50, 50, 50, 0.75);
         }
         #marquee .as-low-as-pricing {
+          font-size: 4.5rem;
           margin-left: 20px;
+        }
+        #marquee .price {
+          font-family: "Walsheim-Bold";
+          font-size: 4.5rem;
+          font-weight: 700;
+        }
+        #marquee .price span {
+          font-size: 2.4rem;
+        }
+        #marquee p.price-text {
+          margin: 0px;      
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 1.6rem;
+        }
+        #marquee .get-started-btn {
+          margin-top: 12px;
         }
       </style>
     </atlantis:webstash>
     <section id="marquee">
       <div class="container marquee marquee-white">
-        <div class="marquee-flag">Questions? call us! [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]</div>
+        <div data-tokenize="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]" class="marquee-flag">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]</div>
         <div class="row">
           <div class="col-sm-7 marquee-content-wrapper">
-            <h1 class="marquee-product-name">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]</h1>
-            <h2 class="marquee-product-description">[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]</h2>
-            <button class="btn btn-medium btn-purchase pull-left">Get Started</button>
+            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
+            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-description]@L]</h2>
+            <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
+            <button class="btn btn-default-light pull-left get-started-btn">[@L[cds.sales/_common:get-started]@L]</button>
             <div class="pull-left as-low-as-pricing">
-              <p class="price-text">As low as</p>
-              <div class="price">$6.99 <span>/mo</span></div>
+              <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
+              <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
             </div>
           </div>
         </div>
@@ -591,8 +610,8 @@
           <div class="row"> 
             <div id="planTileA" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">Basic [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-title]@L]</h3>
-                <p class="plan-text">Hashtag freegan tilde pug artisan cliche meh tousled PBR High Life, Vice Pitchfork migas Helvetica. [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-description]@L]</p>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-description]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -608,20 +627,15 @@
                    
                 </div>
                 <button id="product-A" data-ci="96216" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-1]@L]</strong></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-2-tooltip]@L]"></span></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-3]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-5]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-5-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-6]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-6-tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-7]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-7-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-8]@L] ([@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-restrictions-apply]@L]) <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-A-feature-restrictions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
               </div>
             </div>
             <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">Deluxe [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-title]@L]</h3>
-                <p class="plan-text">Blog tattooed put a bird on it Williamsburg, PBR artisan deep v irony pickled cliche fanny pack authentic mumblecore iPhone.  [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-description]@L]</p>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-description]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -637,20 +651,18 @@
                    
                 </div>
                 <button id="product-B" data-ci="96217" data-plan="host_WordPressHostingPlan_B" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-1]@L]</strong></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-2-tooltip]@L]"></span></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-3]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-5]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-5-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-6]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-6-tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-7]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-7-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-8]@L] ([@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-restrictions-apply]@L]) <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-B-feature-restrictions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</strong></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L]</div>
               </div>
             </div>
             <div id="planTileC" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">Ultimate [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-title]@L]</h3>
-                <p class="plan-text">Butcher biodiesel Intelligentsia Portland kogi, vinyl retro bicycle rights 3 wolf moon occupy ethical fap.  [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-description]@L]</p>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-description]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -666,20 +678,20 @@
                    
                 </div>
                 <button id="product-C" data-ci="96218" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-1]@L]</strong></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-2-tooltip]@L]"></span></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-3]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-5]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-5-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-6]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-6-tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-7]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-7-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-8]@L] ([@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-restrictions-apply]@L]) <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-C-feature-restrictions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]"></span></div>
               </div>
             </div>
             <div id="planTileD" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap pro-plan-wrap-alternate">
-                <h3 class="plan-title">Developer [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-title]@L]</h3>
-                <p class="plan-text">Four dollar toast hoodie YOLO High Life, ethical polaroid four loko post-ironic tote bag cronut meditation iPhone [@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-description]@L]</p>
+                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-description]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -695,14 +707,12 @@
                    
                 </div>
                 <button id="product-D" data-ci="96219" data-plan="host_WordPressHostingPlan_D" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-1]@L]</strong></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-2]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-2-tooltip]@L]"></span></div>
-                <div class="plan-item"><strong>[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-3]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-5]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-5-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-6]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='400' data-content='[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-6-tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-7]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-7-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-8]@L] ([@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-restrictions-apply]@L]) <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting-rebrand:plan-D-feature-restrictions-apply-tooltip]@L]"></span></div>
+                <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]</div>
               </div>
             </div>
           </div>
@@ -1094,8 +1104,8 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
               </div>
             </div>
           </div>
@@ -1167,8 +1177,8 @@
             </div>
             <div class="col-sm-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
               </div>
             </div>
           </div>
@@ -1240,8 +1250,8 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
               </div>
             </div>
           </div>
@@ -1313,8 +1323,8 @@
             </div>
             <div class="col-sm-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
               </div>
             </div>
           </div>
@@ -1386,8 +1396,8 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
               </div>
             </div>
           </div>
@@ -1507,7 +1517,7 @@
         </div>
       </div>
     </section>
-    <section id="training" data-mid-nav-title="Training &amp;amp; Support" data-ciCode="xxxx">
+    <section id="training" data-mid-nav-title="Training" data-ciCode="xxxx">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">

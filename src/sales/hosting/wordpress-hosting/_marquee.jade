@@ -43,17 +43,35 @@ atlantis:webstash(type="css")
       background-color: rgba(50, 50, 50, 0.75);
     }
     #marquee .as-low-as-pricing {
+      font-size: 4.5rem;
       margin-left: 20px;
+    }
+    #marquee .price {
+      font-family: "Walsheim-Bold";
+      font-size: 4.5rem;
+      font-weight: 700;
+    }
+    #marquee .price span {
+      font-size: 2.4rem;
+    }
+    #marquee p.price-text {
+      margin: 0px;      
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.6rem;
+    }
+    #marquee .get-started-btn {
+      margin-top: 12px;
     }
 section#marquee
   .container.marquee.marquee-white
-      .marquee-flag Questions? call us! [@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]
+      .marquee-flag(data-tokenize!="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]
       .row
         .col-sm-7.marquee-content-wrapper
-          h1.marquee-product-name [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-3-MANAGEDWORDPRESS]@L]
-          h2.marquee-product-description [@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-11-YouHaveBetterThingsToDoThanManage]@L]
-          button.btn.btn-medium.btn-purchase.pull-left Get Started
+          h1.marquee-product-name [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]
+          h2.marquee-product-description [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-description]@L]
+          p.marquee-product-p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]
+          button.btn.btn-default-light.pull-left.get-started-btn [@L[cds.sales/_common:get-started]@L]
           .pull-left.as-low-as-pricing
-            p.price-text As low as
-            .price $6.99 
-              span /mo
+            p.price-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]
+            .price(data-tokenize!="#{page.pricing.current.A}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]

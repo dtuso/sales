@@ -1,0 +1,9 @@
+---
+id:  55009342f778fc138cc3b16e
+name: GCE-35561
+comments: Managed WordPress Hosting rebrand
+location: localization/sales/gd/hosting/wordpress-hosting/en-us
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="35561-marquee-product-description" comment="" />
+WordPress hosting for creators, not <br/> <span class="dash">----</span> administrators
