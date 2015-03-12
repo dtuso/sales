@@ -1,0 +1,25 @@
+//- =========================================================================
+//- Tokenize the placeholder {0} with a data value in the data attribute
+//- =========================================================================
+//-
+//- EXAMPLE:
+//-   div(data-tokenize="$ 10.00") The total cost is {0}. Please continue
+
+
+atlantis:webstash(type="css")
+  style.
+    *[data-tokenize] {visibility: hidden;}
+
+atlantis:webstash(type="js")
+  script.
+    $(document).ready(function(){
+      $('[data-tokenize]').each(function(){
+        var $this = $(this),
+          html = $this.html(),
+          val = $this.data('tokenize'),
+          tokenizedHtml = html.replace(/\{0\}/gi, val);
+        $this
+          .html(tokenizedHtml)
+          .removeAttr('data-tokenize');
+      });
+    });

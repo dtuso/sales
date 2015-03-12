@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -15,17 +14,39 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/hosting/wordpress-hosting:Meta0Keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]">
+    <title>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-desc]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-meta-Keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              html = $this.html(),
+              val = $this.data('tokenize'),
+              tokenizedHtml = html.replace(/\{0\}/gi, val);
+            $this
+              .html(tokenizedHtml)
+              .removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -91,28 +112,6 @@
     <!-- HEADEREND-->
     <atlantis:webstash type="css">
       <style>
-        *[data-tokenize] {visibility: hidden;}
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="js">
-      <script>
-        $(document).ready(function(){
-          $('[data-tokenize]').each(function(){
-            var $this = $(this),
-              html = $this.html(),
-              val = $this.data('tokenize'),
-              tokenizedHtml = html.replace(/\{0\}/gi, val);
-            $this
-              .html(tokenizedHtml)
-              .removeAttr('data-tokenize');
-          });
-        });
-        
-      </script>
-    </atlantis:webstash>
-    <atlantis:webstash type="css">
-      <style>
         #marquee {
           margin: 0 auto; 
           background-color: #77c043;
@@ -141,8 +140,7 @@
         #marquee .marquee-flag {
           background: no-repeat scroll center center / cover rgba(0,0,0,0);
           background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjNzcwMjg2IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+PC9zdmc+");      
-          text-transform: uppercase;
-          top: -20px;
+          top: -45px;
           right: 30px;
           position: absolute;
           display: inline-block;
@@ -184,7 +182,7 @@
         <div class="row">
           <div class="col-sm-7 marquee-content-wrapper">
             <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
-            <h2 class="marquee-product-description">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-description]@L]</h2>
+            <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
             <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
             <button class="btn btn-default-light pull-left get-started-btn">[@L[cds.sales/_common:get-started]@L]</button>
             <div class="pull-left as-low-as-pricing">
@@ -640,7 +638,7 @@
             <div id="planTileA" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-description]@L]</p>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-desc]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -664,7 +662,7 @@
             <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-description]@L]</p>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-desc]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -691,7 +689,7 @@
             <div id="planTileC" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
                 <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-description]@L]</p>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-desc]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -720,7 +718,7 @@
             <div id="planTileD" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap pro-plan-wrap-alternate">
                 <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-description]@L]</p>
+                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-desc]@L]</p>
                 <div class="plan-price-wrap row">
                   <div class="price-text"> <strong>As low as</strong></div>
                   <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
@@ -749,33 +747,31 @@
       </div>
       <div class="container">
         <div class="row">
-          <h2 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]</h2>
+          <h3 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]</h3>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="row">
-              <div class="col-sm-6 col-sm-push-3">
+              <div class="col-sm-9 col-sm-push-3">
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</div>
-                <div class="include-check-green">
-                   
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</div>
                 <div class="include-check-green">
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-domain]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="row">
-              <div class="col-sm-6 col-sm-push-3">
+              <div class="col-sm-9 col-sm-push-3">
                 <div class="include-check-green">
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</div>
                 <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-9]@L]</div>
@@ -792,6 +788,14 @@
         #features {
         
         }
+        #neverLoose,
+        #training {
+          background-color: #84D54A;
+        }
+        #security {
+          background-color: white;
+        }
+        #renderMidPageNavBottom {margin:0;padding:0;}
       </style>
     </atlantis:webstash>
     <style>
@@ -1072,37 +1076,63 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="features" data-mid-nav-title="Features" data-ciCode="xxxx">
+    <section id="features" data-mid-nav-title="Features" data-ciCode="96211">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h2>Key Features</h2>
+            <h2 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-title]@L]</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        </p>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]</h3>
+            <p class="list-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-title]@L]</p>
+            <ul class="feature-list">
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-2]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-3]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-4]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-5]@L]</li>
+            </ul>
+            <p class="list-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-title]@L]</p>
+            <ul class="feature-list">
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-item-1]@L]</li>
+            </ul>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        </p>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-desc]@L]</p>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        </p>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-desc]@L]</p>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        </p>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]</p>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        </p>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <h2 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]</h2>
           </div>
-          <div class="col-md-4 col-sm-6 col-xs-12"><img>
-            <h3>Title</h3>
-            <p>No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]</p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]</p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]</p>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]</p>
           </div>
         </div>
       </div>
@@ -1163,80 +1193,7 @@
           
         </style>
       </atlantis:webstash>
-      <div id="easySeo" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
-              </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <atlantis:webstash type="css">
-        <style>
-          .features {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-          }
-          @media only screen and (max-width: 768px) {
-            .features {
-              background-image: none !important;
-            }
-            .features .features-img {
-              width: 50%;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-            .features .features-img.features-img-right-slim {
-              margin: 40px 0 0;
-            }
-            .features .features-img.features-img-left,
-            .features .features-img.features-img-right {
-              margin: 0 0 40px;
-            }
-            .features.features-wrap {
-              min-height: 0;
-              margin: 40px 0;
-            }
-          }
-          .features.features-wrap {
-            min-height: 560px;
-          }
-          .features.features-wrap h2,
-          .features.features-slim h2 {
-            margin: 0 0 20px;
-            color: #333;
-            font-size: 40px;
-          }
-          .features.text-white * {
-            color: #fff !important;
-          }
-          .features .features-subtitle {
-            text-transform: none; /* override headline-primary */
-            margin-top: 20px;
-          }
-          .features .features-text {
-            margin-bottom: 20px;
-          }
-          .features.features-slim {
-            min-height: 300px;
-          }
-          
-          
-        </style>
-      </atlantis:webstash>
-      <div id="oneclickmigration" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
+      <div id="neverLoose" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -1245,347 +1202,69 @@
             </div>
             <div class="col-sm-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <atlantis:webstash type="css">
-        <style>
-          .features {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-          }
-          @media only screen and (max-width: 768px) {
-            .features {
-              background-image: none !important;
-            }
-            .features .features-img {
-              width: 50%;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-            .features .features-img.features-img-right-slim {
-              margin: 40px 0 0;
-            }
-            .features .features-img.features-img-left,
-            .features .features-img.features-img-right {
-              margin: 0 0 40px;
-            }
-            .features.features-wrap {
-              min-height: 0;
-              margin: 40px 0;
-            }
-          }
-          .features.features-wrap {
-            min-height: 560px;
-          }
-          .features.features-wrap h2,
-          .features.features-slim h2 {
-            margin: 0 0 20px;
-            color: #333;
-            font-size: 40px;
-          }
-          .features.text-white * {
-            color: #fff !important;
-          }
-          .features .features-subtitle {
-            text-transform: none; /* override headline-primary */
-            margin-top: 20px;
-          }
-          .features .features-text {
-            margin-bottom: 20px;
-          }
-          .features.features-slim {
-            min-height: 300px;
-          }
-          
-          
-        </style>
-      </atlantis:webstash>
-      <div id="temporarydomain" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
-              </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <atlantis:webstash type="css">
-        <style>
-          .features {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-          }
-          @media only screen and (max-width: 768px) {
-            .features {
-              background-image: none !important;
-            }
-            .features .features-img {
-              width: 50%;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-            .features .features-img.features-img-right-slim {
-              margin: 40px 0 0;
-            }
-            .features .features-img.features-img-left,
-            .features .features-img.features-img-right {
-              margin: 0 0 40px;
-            }
-            .features.features-wrap {
-              min-height: 0;
-              margin: 40px 0;
-            }
-          }
-          .features.features-wrap {
-            min-height: 560px;
-          }
-          .features.features-wrap h2,
-          .features.features-slim h2 {
-            margin: 0 0 20px;
-            color: #333;
-            font-size: 40px;
-          }
-          .features.text-white * {
-            color: #fff !important;
-          }
-          .features .features-subtitle {
-            text-transform: none; /* override headline-primary */
-            margin-top: 20px;
-          }
-          .features .features-text {
-            margin-bottom: 20px;
-          }
-          .features.features-slim {
-            min-height: 300px;
-          }
-          
-          
-        </style>
-      </atlantis:webstash>
-      <div id="trafficoverageprotection" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right"/>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <atlantis:webstash type="css">
-        <style>
-          .features {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-          }
-          @media only screen and (max-width: 768px) {
-            .features {
-              background-image: none !important;
-            }
-            .features .features-img {
-              width: 50%;
-            }
-          }
-          @media only screen and (max-width: 992px) {
-            .features .features-img {
-              width: 85%;
-            }
-            .features .features-img.features-img-right-slim {
-              margin: 40px 0 0;
-            }
-            .features .features-img.features-img-left,
-            .features .features-img.features-img-right {
-              margin: 0 0 40px;
-            }
-            .features.features-wrap {
-              min-height: 0;
-              margin: 40px 0;
-            }
-          }
-          .features.features-wrap {
-            min-height: 560px;
-          }
-          .features.features-wrap h2,
-          .features.features-slim h2 {
-            margin: 0 0 20px;
-            color: #333;
-            font-size: 40px;
-          }
-          .features.text-white * {
-            color: #fff !important;
-          }
-          .features .features-subtitle {
-            text-transform: none; /* override headline-primary */
-            margin-top: 20px;
-          }
-          .features .features-text {
-            margin-bottom: 20px;
-          }
-          .features.features-slim {
-            min-height: 300px;
-          }
-          
-          
-        </style>
-      </atlantis:webstash>
-      <div id="dialybackups" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-sm-push-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
-              </div>
-            </div>
-            <div class="col-sm-6 col-sm-pull-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0"><mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]</h2>
-                <h4 class="headline-primary features-subtitle">[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="advancedfeaturesforpros" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg" data-lazyload-callback="triggerResize" class="features tile-section features-slim lazyload">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0">Advanced features for pros</h2>
-                <ul>
-                  <li>Staging: Bacon ipsum dolor amet beef ground round picanha porchetta t-bone pork belly est exercitation sausage. Shankle pork loin velit ex</li>
-                  <li>Temp domain: Capicola bacon dolore, pastrami magna ipsum veniam. Est incididunt adipisicing, pig aute frankfurter dolore jerky andouille</li>
-                  <li>Backups: Reprehenderit ut turducken ribeye beef ribs veniam nostrud ball tip culpa aliquip</li>
-                </ul>
-                <button href="TODO" class="btn btn-default">Advanced Feature Details</button>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <h2 class="h0">Got clients you want to manage?</h2>
-                <h4 class="headline-primary features-subtitle">Managed WordPress Hosting for PRO's let you manage your clients on the fly!</h4>
+                <h2 class="h0">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-title]@L]</h2>
+                <div class="features-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-desc]@L]</div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="performance" data-mid-nav-title="Performance" data-ciCode="xxxx">
-      <div class="container maxium-performance">
+    <section id="performance" data-mid-nav-title="Performance" data-ciCode="96212">
+      <div class="container maximum-performance">
         <div class="row">
-          <div class="col-sm-6 col-xs-12">
-            <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.maxium-performance&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-              <h2>Build from the ground up for maxium wordpress performance          </h2>
-            </div>
-          </div>
-          <div class="col-sm-6 col-xs-12">
-            <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.maxium-performance&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-                  </div>
-                  <div class="col-sm-10">
-                    <p>Eiusmod brisket pork chop tenderloin laboris, pork short loin id aliqua labore landjaeger cupidatat strip steak. Doner proident est occaecat shank, tempor consectetur frankfurter dolore lorem. Magna fatback laboris kielbasa duis pastrami minim lorem excepteur. </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-                  </div>
-                  <div class="col-sm-10">
-                    <p>Et laboris pork chop, short loin reprehenderit turkey adipisicing pariatur qui occaecat filet mignon eiusmod nisi in. Cupidatat alcatra irure, lorem dolore elit adipisicing eiusmod shank exercitation pork belly cillum swine. Reprehenderit occaecat voluptate biltong nostrud aute. Pariatur salami strip steak et duis spare ribs short loin anim shank sint tenderloin sirloin commodo kevin biltong.</p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-                  </div>
-                  <div class="col-sm-10">
-                    <p>Kielbasa enim cupim boudin frankfurter eiusmod corned beef culpa chuck adipisicing sirloin. Sausage est quis elit, bresaola shoulder in prosciutto ipsum.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="col-xs-12 col-sm-6 col-sm-push-3">
+            <h2>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-title]@L]</h2>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-desc]@L]</p>
           </div>
         </div>
-      </div>
-      <div class="container numbers-dont-lie">
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h2>Numbers don't lie. </h2>
-            <h2>We're blink-and-you-missed-it fast.</h2>
+        <div class="row performance-list">
+          <div class="col-xs-12 col-sm-4 col-sm-push-4">
+            <ul>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-1]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-2]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-3]@L]</li>
+            </ul>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+        <div class="row performance-chart">
+          <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 text-center">
-            <h4>July 2014</h4>
-            <p>In short ribs cow, chuck landjaeger ut bresaola consequat tongue. Beef ribs rump proident, ham kielbasa do doner capicola. Id deserunt ut, shoulder prosciutto pariatur beef aute aliqua turkey dolore. Tempor voluptate capicola in labore. Nostrud aliqua ground round est.</p>
-            <button class="btn btn-default">See up-to-date results</button>
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <h4 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-1]@L]</h4>
+            <p class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-2]@L]</p>
+            <p class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-3]@L]</p>
+            <p class="text-center"> <a id="see-latest-results-btn" class="btn btn-default btn-default-dark">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-btn-txt]@L]</a></p>
           </div>
         </div>
       </div>
     </section>
-    <section id="security" data-mid-nav-title="Security" data-ciCode="xxxx">
+    <section id="security" data-mid-nav-title="Security" data-ciCode="96213">
       <div class="container">
-        <div class="row">
+        <div class="row text-center">
           <div class="col-sm-12">
-            <h2>Hackers hate us; we secure the perimeter</h2>
+            <h2>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]</h2>
+            <h4>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]</h4>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p>Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.</p>
-          </div>
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p>Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.</p>
-          </div>
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p>Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-4 col-sm-push-2 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p>Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.</p>
-          </div>
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p>Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.</p>
+        <div class="row text-center">
+          <div class="col-sm-12">
+            <h1>CAROUSEL HERE (TODO)</h1>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-desc]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-desc]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-desc]@L]</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="training" data-mid-nav-title="Training" data-ciCode="xxxx">
+    <section id="training" data-mid-nav-title="Training" data-ciCode="96215">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -1593,21 +1272,15 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p> Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.</p>
+          <div class="col-sm-6 col-xs-12">       <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-desc]@L]</p>
+            <p class="powered-by">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-note]@L]</p>
           </div>
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p> Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.</p>
+          <div class="col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-desc]@L]</p>
           </div>
-          <div class="col-sm-4 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
-            <h3>Title here</h3>
-            <p> Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12"><a href="" data-ci="" target="_blank">Powered by SIDEKICK</a></div>
         </div>
       </div>
     </section>
@@ -1648,7 +1321,7 @@
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
                       </ul>
-                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</button>
+                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>
                   </div>
                 </div>
@@ -1666,21 +1339,11 @@
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
                         <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
                       </ul>
-                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/hosting/web-hosting-rebrand:learnMore]@L]</button>
+                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="disclaimers" class="content-disclaimer disclaimers-section"> 
-      <div class="disclaimers-row">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
             </div>
           </div>
         </div>
@@ -2264,45 +1927,6 @@ body {
     itc: 'slp_GYBO1'
   },
   supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
-  ci: {
-    marqueeGetStarted: '96210',
-    marqueeDisclaimer: '96209',
-    plansAddToCartA: '96216',
-    plansAddToCartB: '96217',
-    plansAddToCartC: '96218',
-    plansAddToCartD: '96219',
-    plansLearnMore: '96220',
-    midPageNavFeature: '96211',
-    midPageNavPerformance: '96212',
-    midPageNavSecuriy: '96213',
-    midPageNavTraining: '96215',
-    midPageNavSeeThePlans: '96214',
-    advancedFeatureDetails: '96203',
-    cloudSpeculator: '96207',
-    seeUpToDateResults: '96221',
-    poweredBySidekick: '96225',
-    trainingCarouselSlideLeft: '96204',
-    trainingCarouselSlideRight: '96205',
-    trainingCarouselSlideSel: '96206',
-    trainingGetStartedNow: '96222',
-    alternativeWebHostingLearnMore: '96223',
-    alternativeWebsiteBuilderLearnMore: '96224',
-    footerDisclaimer: '96208'
-  },
-  pricing: {
-    current: {
-      A: '',
-      B: '',
-      C: '',
-      D: ''
-    },
-    renewal: {
-      A: '',
-      B: '',
-      C: '',
-      D: ''
-    }
-  },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
   canOfferOls: true,
   animationTime: 800,
@@ -2316,10 +1940,19 @@ body {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
-
 $(document).ready(function(){
 
-  $(document).sfTipper({ wireup: true });
+  activateHref("cloudspecator-link", "#{page.ci.cloudSpeculator}" , "", "_blank");
+  activateHref("see-latest-results-btn", "#{page.ci.seeUpToDateResults}", "", "_blank");
+  activateHref("sidekick-link", "#{page.ci.poweredBySidekick}", "", "_blank");
+  activateHref("visitor-overprotection-link", "#{page.ci.visitorOverprotection}", "", "_blank");
+  activateHref("wordpress-plugins-link", "#{page.ci.wordpressPlugins}", "", "_self");
+  function activateHref(id, ciCode, url, target){
+    $('#' + id)
+      .attr('data-ci', ciCode)
+      .attr('href', url)
+      .attr('target', target);
+  }
   
   //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 
@@ -2368,6 +2001,13 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
             if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
           });
         }
+      
+      
+        $('[data-icann-fee]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
+        
       });
       
     </script>

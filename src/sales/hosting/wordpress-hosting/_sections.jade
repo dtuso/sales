@@ -3,194 +3,126 @@ atlantis:webstash(type="css")
     #features {
 
     }
+    #neverLoose,
+    #training {
+      background-color: #84D54A;
+    }
+    #security {
+      background-color: white;
+    }
+    #renderMidPageNavBottom {margin:0;padding:0;}
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
-section#features(data-mid-nav-title="Features",data-ciCode="xxxx")
+section#features(data-mid-nav-title="Features",data-ciCode="#{page.ci.midPageNavFeature}")
   .container
     .row
       .col-sm-12
-        h2 Key Features
+        h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-title]@L]
     .row
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.        
-      .col-md-4.col-sm-6.col-xs-12
-        img
-        h3 Title
-        p No setup. Wordpress is automatically installed and so you're ready to start building in minutes. Get WorPress core auto updates, daily backups and simeple 1-click site restore.
-  
-  +featuresTemplates({
-    presentationTemplate: "featuresLeftText", 
-    featuresId: "easySeo", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    featuresImgAltText: null, 
-    title: "<mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]", 
-    subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]", 
-    text: domainSectionOneText, 
-    buttonText: null, buttonUrl: null, buttonColor: null})
-
-  +featuresTemplates({
-    presentationTemplate: "featuresRightText", 
-    featuresId: "oneclickmigration", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    featuresImgAltText: null, 
-    title: "<mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]", 
-    subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]", 
-    text: domainSectionOneText, 
-    buttonText: null, buttonUrl: null, buttonColor: null})
-
-  +featuresTemplates({
-    presentationTemplate: "featuresLeftText", 
-    featuresId: "temporarydomain", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    featuresImgAltText: null, 
-    title: "<mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]", 
-    subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]", 
-    text: domainSectionOneText, 
-    buttonText: null, buttonUrl: null, buttonColor: null})
-
-  +featuresTemplates({
-    presentationTemplate: "featuresRightText", 
-    featuresId: "trafficoverageprotection", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    featuresImgAltText: null, 
-    title: "<mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]", 
-    subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]", 
-    text: domainSectionOneText, 
-    buttonText: null, buttonUrl: null, buttonColor: null})
-
-  +featuresTemplates({
-    presentationTemplate: "featuresLeftText", 
-    featuresId: "dialybackups", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
-    featuresImgAltText: null, 
-    title: "<mark>[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-text]@L]", 
-    subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:32573-whats-a-domain-subtext]@L]", 
-    text: domainSectionOneText, 
-    buttonText: null, buttonUrl: null, buttonColor: null})
-
-  div(id="advancedfeaturesforpros", 
-    class="features tile-section features-slim lazyload", 
-    data-lazyload-source!='[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg', 
-    data-lazyload-callback!='triggerResize')
-    .container
-      .row
-        .col-sm-6
-          div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-            h2.h0 Advanced features for pros
-            ul
-              li Staging: Bacon ipsum dolor amet beef ground round picanha porchetta t-bone pork belly est exercitation sausage. Shankle pork loin velit ex
-              li Temp domain: Capicola bacon dolore, pastrami magna ipsum veniam. Est incididunt adipisicing, pig aute frankfurter dolore jerky andouille
-              li Backups: Reprehenderit ut turducken ribeye beef ribs veniam nostrud ball tip culpa aliquip
-            button(href!="TODO", class="btn btn-default" ) Advanced Feature Details
-
-        .col-sm-6
-          div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".features"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-            h2.h0 Got clients you want to manage?
-            h4.headline-primary.features-subtitle Managed WordPress Hosting for PRO's let you manage your clients on the fly!
-
-section#performance(data-mid-nav-title="Performance",data-ciCode="xxxx")
-  .container.maxium-performance
-    .row
-      .col-sm-6.col-xs-12
-        div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".maxium-performance"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-          h2 Build from the ground up for maxium wordpress performance          
-      .col-sm-6.col-xs-12
-        div(data-center-element='{"vertical":{"target":{"method":"parents","selector":".maxium-performance"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
-          .container
-            .row
-              .col-sm-2
-                +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-              .col-sm-10
-                p Eiusmod brisket pork chop tenderloin laboris, pork short loin id aliqua labore landjaeger cupidatat strip steak. Doner proident est occaecat shank, tempor consectetur frankfurter dolore lorem. Magna fatback laboris kielbasa duis pastrami minim lorem excepteur. 
-            .row
-              .col-sm-2
-                +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-              .col-sm-10
-                p Et laboris pork chop, short loin reprehenderit turkey adipisicing pariatur qui occaecat filet mignon eiusmod nisi in. Cupidatat alcatra irure, lorem dolore elit adipisicing eiusmod shank exercitation pork belly cillum swine. Reprehenderit occaecat voluptate biltong nostrud aute. Pariatur salami strip steak et duis spare ribs short loin anim shank sint tenderloin sirloin commodo kevin biltong.
-            .row
-              .col-sm-2
-                +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-              .col-sm-10
-                p Kielbasa enim cupim boudin frankfurter eiusmod corned beef culpa chuck adipisicing sirloin. Sausage est quis elit, bresaola shoulder in prosciutto ipsum.
-
-  .container.numbers-dont-lie
-    .row
-      .col-sm-12.text-center
-        h2 Numbers don't lie. 
-        h2 We're blink-and-you-missed-it fast.
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]
+        p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-title]@L]
+        ul.feature-list
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-2]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-3]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-4]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-5]@L]
+        p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-title]@L]
+        ul.feature-list
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-item-1]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-desc]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-desc]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]
     .row
       .col-sm-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]
     .row
-      .col-sm-12.text-center
-        h4 July 2014
-        p In short ribs cow, chuck landjaeger ut bresaola consequat tongue. Beef ribs rump proident, ham kielbasa do doner capicola. Id deserunt ut, shoulder prosciutto pariatur beef aute aliqua turkey dolore. Tempor voluptate capicola in labore. Nostrud aliqua ground round est.
-        button.btn.btn-default See up-to-date results
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]
+      .col-md-3.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]
 
-section#security(data-mid-nav-title="Security",data-ciCode="xxxx")
+  +featuresTemplates({
+    presentationTemplate: "featuresRightText", 
+    featuresId: "neverLoose", 
+    additionalWrapClasses: null, 
+    lazyLoad: true, 
+    backgroundImage: "", 
+    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", 
+    featuresImgAltText: null, 
+    title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-title]@L]", 
+    subtitle: "", 
+    text: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-desc]@L]", 
+    buttonText: null, buttonUrl: null, buttonColor: null})
+
+section#performance(data-mid-nav-title="Performance",data-ciCode="#{page.ci.midPageNavPerformance}")
+  .container.maximum-performance
+    .row
+      .col-xs-12.col-sm-6.col-sm-push-3
+        h2 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-desc]@L]
+    .row.performance-list
+      .col-xs-12.col-sm-4.col-sm-push-4
+        ul
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-1]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-2]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-list-item-3]@L]
+    .row.performance-chart
+      .col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+      .col-xs-12.col-sm-8.col-sm-push-2
+        h4.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-1]@L]
+        p.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-2]@L]
+        p.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-text-3]@L]
+        p.text-center 
+          a.btn.btn-default.btn-default-dark(id="see-latest-results-btn") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-btn-txt]@L]
+
+section#security(data-mid-nav-title="Security",data-ciCode="#{page.ci.midPageNavSecuriy}")
 
   .container
-    .row
+    .row.text-center
       .col-sm-12
-        h2 Hackers hate us; we secure the perimeter
-    .row
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.
-    .row
-      .col-sm-4.col-sm-push-2.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p Laborum lorem short loin chuck kevin esse. Corned beef bresaola beef sed, duis picanha sint capicola excepteur pork belly est brisket nisi ad swine.
+        h2 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]
+        h4 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]
+    .row.text-center
+      .col-sm-12
+        h1 CAROUSEL HERE (TODO)
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-desc]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-desc]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-desc]@L]
 
-section#training(data-mid-nav-title="Training",data-ciCode="xxxx")
+section#training(data-mid-nav-title="Training",data-ciCode="#{page.ci.midPageNavTraining}")
 
   .container
 
@@ -199,22 +131,17 @@ section#training(data-mid-nav-title="Training",data-ciCode="xxxx")
         h2 Tons of wordpress training and support
 
     .row
-      .col-sm-4.col-xs-12
+      .col-sm-6.col-xs-12        
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p  Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p  Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.
-      .col-sm-4.col-xs-12
-        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
-        h3 Title here
-        p  Tongue shoulder porchetta, deserunt cow ut kevin pork in sunt. Est picanha cupim meatball filet mignon, sunt dolore ea voluptate kevin consequat. Ut ad chicken, pork chop bacon drumstick short loin commodo. Hamburger kielbasa cupidatat magna flank. Kevin ea boudin do, bresaola cow tri-tip aliquip landjaeger est laborum nisi fatback.
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-desc]@L]
+        p.powered-by [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-note]@L]
 
-    .row
-      .col-sm-12
-        a(href="", data-ci="", target="_blank") Powered by SIDEKICK
+      .col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-desc]@L]
+    
 
 //- be sure to end the fixed navigational area
 +renderMidPageNavBottom

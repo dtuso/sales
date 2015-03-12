@@ -5,45 +5,6 @@ var wpHosting = {
     itc: 'slp_GYBO1'
   },
   supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
-  ci: {
-    marqueeGetStarted: '96210',
-    marqueeDisclaimer: '96209',
-    plansAddToCartA: '96216',
-    plansAddToCartB: '96217',
-    plansAddToCartC: '96218',
-    plansAddToCartD: '96219',
-    plansLearnMore: '96220',
-    midPageNavFeature: '96211',
-    midPageNavPerformance: '96212',
-    midPageNavSecuriy: '96213',
-    midPageNavTraining: '96215',
-    midPageNavSeeThePlans: '96214',
-    advancedFeatureDetails: '96203',
-    cloudSpeculator: '96207',
-    seeUpToDateResults: '96221',
-    poweredBySidekick: '96225',
-    trainingCarouselSlideLeft: '96204',
-    trainingCarouselSlideRight: '96205',
-    trainingCarouselSlideSel: '96206',
-    trainingGetStartedNow: '96222',
-    alternativeWebHostingLearnMore: '96223',
-    alternativeWebsiteBuilderLearnMore: '96224',
-    footerDisclaimer: '96208'
-  },
-  pricing: {
-    current: {
-      A: '',
-      B: '',
-      C: '',
-      D: ''
-    },
-    renewal: {
-      A: '',
-      B: '',
-      C: '',
-      D: ''
-    }
-  },
   imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
   canOfferOls: true,
   animationTime: 800,
@@ -57,10 +18,19 @@ var wpHosting = {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
-
 $(document).ready(function(){
 
-  $(document).sfTipper({ wireup: true });
+  activateHref("cloudspecator-link", "#{page.ci.cloudSpeculator}" , "", "_blank");
+  activateHref("see-latest-results-btn", "#{page.ci.seeUpToDateResults}", "", "_blank");
+  activateHref("sidekick-link", "#{page.ci.poweredBySidekick}", "", "_blank");
+  activateHref("visitor-overprotection-link", "#{page.ci.visitorOverprotection}", "", "_blank");
+  activateHref("wordpress-plugins-link", "#{page.ci.wordpressPlugins}", "", "_self");
+  function activateHref(id, ciCode, url, target){
+    $('#' + id)
+      .attr('data-ci', ciCode)
+      .attr('href', url)
+      .attr('target', target);
+  }
   
   //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 

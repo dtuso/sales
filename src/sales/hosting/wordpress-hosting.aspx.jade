@@ -15,18 +15,18 @@ extends ../shared/_landing-page
 //-           return false;
 //-         });
 //-       });
-mixin toolTip(tipText)  
+mixin toolTip(tipText, width)
   span &nbsp;
-  span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="#{tipText}")
-append vars 
-  - page.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]";
-  - page.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]";
-  - page.keywords = "[@L[cds.sales/gd/hosting/wordpress-hosting:Meta0Keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]";
+  span.tool-tip-black.sf-tip.sf-tipper-target(data-content!="#{tipText}" data-style="qt" data-width="#{width ? width : '400'}" )
 
+append vars 
+  - page.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-title]@L]";
+  - page.description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-desc]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-meta-Keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]";
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]";
+  - page.openGraph.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg";
   - page.pfids = {};
   - page.pfids.current = {};
@@ -67,6 +67,8 @@ append vars
   - page.ci.cloudSpeculator = '96207';
   - page.ci.seeUpToDateResults = '96221';
   - page.ci.poweredBySidekick = '96225';
+  - page.ci.visitorOverprotection = 'TODO';
+  - page.ci.wordpressPlugins = 'TODO';
   - page.ci.trainingCarouselSlideLeft ='96204';
   - page.ci.trainingCarouselSlideRight = '96205';
   - page.ci.trainingCarouselSlideSel = '96206';
@@ -96,7 +98,6 @@ block domainSearch
 
 //- top marquee 
 block marquee 
-  +simpleTokenizer() 
   include ./wordpress-hosting/_marquee.jade
 
 //- side by side plan comparisons go here
@@ -113,12 +114,12 @@ block alternatives
 
 //- there's always a catch... show it here.
 block disclaimers
-  section#disclaimers.content-disclaimer.disclaimers-section 
-    .disclaimers-row
-      .container
-        .row
-          .col-sm-12
-            //- .disclaimers-text [@L[cds.sales/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
+  //- section#disclaimers.content-disclaimer.disclaimers-section 
+  //-   .disclaimers-row
+  //-     .container
+  //-       .row
+  //-         .col-sm-12
+            //- .disclaimers-text [@L[cds.sales/gd/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
             //-   | 
             //-   | ##if(false)
             //-   | 
@@ -127,12 +128,12 @@ block disclaimers
             //-     | 
             //-     +wordPressAdCredits({
             //-       'linkId': 'googleAdwordsLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]',
+            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
+            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
             //-       'detailsUrl': '[@T[link:<relative path="/popups/google-adwords.aspx"><param name="ci" value="#{page.ci.adCreditGoogle}" /><param name="app_hdr" value="99" /></relative>]@T]',
             //-       'detailsCi': page.ci.adCreditGoogle,
-            //-       'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
             //-       })
             //-     | 
             //-     | ##endif
@@ -142,12 +143,12 @@ block disclaimers
             //-     | 
             //-     +wordPressAdCredits({
             //-       'linkId': 'bingLearnLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:BingAdsCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:BingAdsCredit]@L]',
+            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
+            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
             //-       'detailsUrl': 'https://advertise.bingads.microsoft.com/en-us/godaddy/learn',
             //-       'detailsCi': page.ci.adCreditBing,
-            //-       'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
             //-       })
             //-     | 
             //-     | ##endif
@@ -157,12 +158,12 @@ block disclaimers
             //-     | 
             //-     +wordPressAdCredits({
             //-       'linkId': 'facebookAdsLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/hosting/wordpress-hosting:FacebookAdCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
+            //-       'adCreditText': '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:FacebookAdCredit]@L]',
+            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
+            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
             //-       'detailsUrl': '[@T[link:<relative path="/popups/facebook-ads.aspx"><param name="ci" value="#{page.ci.adCreditFacebook}" /><param name="app_hdr" value="99" /></relative>]@T]',
             //-       'detailsCi': page.ci.adCreditFacebook,
-            //-       'detailsLinkText': '[@L[cds.sales/hosting/wordpress-hosting:view-details]@L]'
+            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
             //-       })
             //-     | 
             //-     | ##endif

@@ -5,5 +5,11 @@ comments: Managed WordPress Hosting rebrand
 location: localization/sales/gd/hosting/wordpress-hosting/en-us
 ---
 {% include 'modules/doc-block.html' %}
-<phrase key="35561-marquee-product-description" comment="" />
+<phrase key="35561-marquee-product-desc" comment="" />
 WordPress hosting for creators, not <br/> <span class="dash">----</span> administrators
+<phrase key="35561-never-loose-title" comment="" />
+We've got your back(up)
+<phrase key="35561-alt-1-title" comment="" />
+No skills?<br/>No time?<br/>No problem.
+<phrase key="35561-alt-2-title" comment="" />
+Fast, secure, reliable hosting that groooows with your business
