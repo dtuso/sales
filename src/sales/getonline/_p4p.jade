@@ -120,8 +120,6 @@ append headScripts
         tokenizeTheDataTokenizeAttribute();
         tokenizeDisclaimerModals(); 
 
-        $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-
         $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
           $("#default-details-modal")
             .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
@@ -141,6 +139,8 @@ append headScripts
     block domainSearchScripts
       script.  // Page
         $(document).ready(function(){
+
+          $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
 
           if(offerInfo.businessName != '') {
             updateSearchedDomain('', offerInfo.businessName);
@@ -215,7 +215,7 @@ append pageStyles
       #getItNow .bubble {
         background-color: white;
         background-position: center center;
-        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
+        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: visible;
@@ -271,7 +271,7 @@ append pageStyles
 
     .bubble-row .bubble {
       background-position: center center;
-      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       overflow: visible;
@@ -283,11 +283,11 @@ append pageStyles
     }
 
     .bubble-row .bubble.left {
-      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
     }
 
     .bubble-row .bubble.white {
-      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
     }
 
     .hero-guy.left {
@@ -326,7 +326,7 @@ block content
 
   section#getItNow
     .container
-      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+      img.hero-guy.hidden-xs(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
       .row
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
@@ -385,7 +385,7 @@ block content
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
             p [@L[cds.sales/getonline:O365-email-did-you-know-text]@L]
           .col-xs-2
-            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+            img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   section#why-us
     .container

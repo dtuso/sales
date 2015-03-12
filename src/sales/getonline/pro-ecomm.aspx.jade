@@ -113,7 +113,7 @@ block proInterview
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p [@L[cds.sales/getonline:pro-ecomm-interview-did-you-know-text]@L]
         .col-xs-2
-          img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+          img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
 block productSection
   section#eccom.product-section
@@ -132,7 +132,7 @@ block productSection
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
       .row.bubble-row(style={'margin-top': '0px'})
         .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}

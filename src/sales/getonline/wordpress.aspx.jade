@@ -102,7 +102,7 @@ block productSection
           p.text-center #{productToDisplay.productInfoText}
       .row.bubble-row
         .col-xs-2
-          img.hero-guy(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
         .col-xs-10.col-sm-8.col-lg-6.bubble
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
           p #{productToDisplay.productDidYouKnowText}

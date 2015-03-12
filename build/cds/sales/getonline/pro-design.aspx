@@ -139,8 +139,6 @@
           tokenizeTheDataTokenizeAttribute();
           tokenizeDisclaimerModals(); 
         
-          $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
-        
           $('#getItNow').on('click', '.see-details-disclaimer-link', function(){
             $("#default-details-modal")
               .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
@@ -176,7 +174,7 @@
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="getItNow">
-      <div class="container"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
+      <div class="container"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy hidden-xs">
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-header]@L]</h2>
@@ -249,7 +247,7 @@
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
             <p>[@L[cds.sales/getonline:pro-design-interview-did-you-know-text]@L]</p>
           </div>
-          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
+          <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy left"></div>
         </div>
       </div>
     </section>
@@ -272,7 +270,7 @@
           </div>
         </section>
         <div style="margin-top:0px" class="row bubble-row">
-          <div class="col-xs-2"><img src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
+          <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
             <p>[@L[cds.sales/getonline:pro-design-product-did-you-know-text]@L]</p>
@@ -468,7 +466,7 @@ ul li.no-check {
           #getItNow .bubble {
             background-color: white;
             background-position: center center;
-            background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
+            background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
             overflow: visible;
@@ -525,7 +523,7 @@ ul li.no-check {
         
         .bubble-row .bubble {
           background-position: center center;
-          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
           background-repeat: no-repeat;
           background-size: 100% 100%;
           overflow: visible;
@@ -537,11 +535,11 @@ ul li.no-check {
         }
         
         .bubble-row .bubble.left {
-          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
         }
         
         .bubble-row .bubble.white {
-          background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
         }
         
         .hero-guy.left {
