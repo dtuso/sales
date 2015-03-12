@@ -56,7 +56,6 @@ append vars
   - domainSearchWizard.showSearchButton            = true;
   - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
   - domainSearchWizard.initialViewId               = "domain-search-view";
-  
   - domainSearchWizard.searchViewSearchBtnCI       = "97033";
   - domainSearchWizard.dupDomainInCartCI           = "97034";
   - domainSearchWizard.availViewSearchBtnCI        = "97035";
@@ -84,7 +83,7 @@ block productSection
           img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
           h2.text-center #{productToDisplay.name}
           h4.text-center #{productToDisplay.productDescription}
-          button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="84003") [@L[cds.sales/getonline:view-templates]@L]
+          button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-templates]@L]
       section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
           div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")

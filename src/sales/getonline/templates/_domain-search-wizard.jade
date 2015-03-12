@@ -19,7 +19,6 @@ append vars
   - domainSearchWizard.availViewViewAllBtnCI       = domainSearchWizard.availViewViewAllBtnCI || "";
   - domainSearchWizard.availViewSearchAgnBtnCI     = domainSearchWizard.availViewSearchAgnBtnCI || "";
   - domainSearchWizard.notAvailViewSearchBtnCI     = domainSearchWizard.notAvailViewSearchBtnCI || "";
-  - domainSearchWizard.notAvailViewRecomSelBtnCI   = domainSearchWizard.notAvailViewRecomSelBtnCI || "";
   - domainSearchWizard.notAvailViewViewAllBtnCI    = domainSearchWizard.notAvailViewViewAllBtnCI || "";
   - domainSearchWizard.notAvailViewSearchAgnBtnCI  = domainSearchWizard.notAvailViewSearchAgnBtnCI || "";
   - domainSearchWizard.selectedViewSearchAgnBtnCI  = domainSearchWizard.selectedViewSearchAgnBtnCI || "";
@@ -360,7 +359,7 @@ mixin domainSearchContent()
         .row.show-more-section
           .col-md-12
             h6.text-center(style={'margin-top':'10px'})
-              span.clickable-show-more(data-ci="95268")
+              span.clickable-show-more(data-ci="#{domainSearchWizard.notAvailViewViewAllBtnCI}")
                 span [@L[cds.sales/getonline:see-more-results]@L]
                 span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})

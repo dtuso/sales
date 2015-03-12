@@ -509,7 +509,7 @@ function goToDppCheckoutPage(e) {
       dataType: "jsonp",
       complete: function (data) {
         if (data.statusText == "success") {
-          addHostingDomain(domain);
+          addHostingDomain(domain, ciCode);
         }
       },
       error: function(){
@@ -539,7 +539,7 @@ function goToDppCheckoutPage(e) {
 
 }
 
-function addHostingDomain(domain){
+function addHostingDomain(domain, ciCode){
     var plan = offerInfo.packageId;
     var domainToAdd = encodeURIComponent(domain.Fqdn);
     var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
@@ -547,7 +547,7 @@ function addHostingDomain(domain){
     pkg.pkgid = plan;
     pkg.itc = offerInfo.itcCode;
     pkg.quantity = 1;
-    pkg.ci = 83621;
+    pkg.ci = ciCode;
     pkg.custom = { "domain": domainToAdd }
     var postdata = "requestData=" + JSON.stringify(pkg);
       $.ajax({
@@ -970,7 +970,7 @@ function getParameterByName(name) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="95268" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="97041" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
@@ -1042,7 +1042,7 @@ function getParameterByName(name) {
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png" class="img-responsive center-block">
             <h2 class="text-center">[@L[cds.sales/getonline:wsb-product-name]@L]</h2>
             <h4 class="text-center">[@L[cds.sales/getonline:wsb-product-description]@L]</h4>
-            <button id="viewTemplates" data-toggle="modal" data-target="#g-modal" data-ci="84003" class="btn btn-default-dark center-block view-all">[@L[cds.sales/getonline:view-templates]@L]</button>
+            <button id="viewTemplates" data-toggle="modal" data-target="#g-modal" data-ci="96287" class="btn btn-default-dark center-block view-all">[@L[cds.sales/getonline:view-templates]@L]</button>
           </div>
         </div>
         <section data-youtube-id="-HtVJyxSQmw" class="video-marquee-wrapper">
