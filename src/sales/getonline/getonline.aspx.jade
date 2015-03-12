@@ -1,6 +1,6 @@
 extends ../shared/_page
 
-append seo
+prepend seo
   meta(name="robots" content="noindex, nofollow")
 
 append endOfPageScripts
@@ -12,17 +12,14 @@ append endOfPageScripts
         '96272':{'interest':'new_business', 'resource': 'build_myself', 'product':'wsb'},
         '96273':{'interest':'new_business', 'resource': 'know_someone', 'product':'host'},
         '96274':{'interest':'new_business', 'resource': 'hire_someone', 'product':'pwd'},
-
         '96275':{'interest':'existing_business', 'resource': 'build_myself', 'product':'wsb'},
         '96276':{'interest':'existing_business', 'resource': 'know_someone', 'product':'host'},
         '96277':{'interest':'existing_business', 'resource': 'hire_someone', 'product':'pwd'},
-
         '96278':{'interest':'selling_products', 'resource': 'build_myself', 'product':'ols'},
         '96279':{'interest':'selling_products', 'resource': 'know_someone', 'product':'host'},
         '96280':{'interest':'selling_products', 'resource': 'hire_someone', 'product':'pwd_store'},
-
         '97011':{'interest':'blog', 'resource': 'build_myself', 'product':'wp'},
-        '96292':{'interest':'blog', 'resource': 'know_someone', 'product':'host'}
+        '96292':{'interest':'blog', 'resource': 'know_someone', 'product':'wp'}
       },
       'page_url':{
         'wsb':       '[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]',
@@ -34,152 +31,95 @@ append endOfPageScripts
       }
     }
 
-    $('#questions select#interest-select').change(function(e) {
-      var thisValue = $(this).val();
-      if(thisValue === "blog"){
-        $(".wordpress").show().addClass('active-resource-options').removeClass('inactive-resource-options');
-        $(".non-wordpress").hide().removeClass('active-resource-options').addClass('inactive-resource-options');
-      }else{
-        $(".wordpress").hide().removeClass('active-resource-options').addClass('inactive-resource-options');
-        $(".non-wordpress").show().addClass('active-resource-options').removeClass('inactive-resource-options');
-      }
-    });
-      // update the form's submit URL based on the user's selections
-     /* $('#questions select').change(function(e) {
-        var interest = $('#interest-select').val();
-        var resources = $('#resources-select').val();
-      
-        // routing logic embedded here
-        if (interest === "blog") {
-          // anytime the interest is in blogging, suggest the wordpress product
-          $("#questions form input[name='ci']").val("96292");
-          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/wordpress.aspx"></relative>]@T]");
-          $(".wordpress").show();
-          $(".non-wordpress").hide();
-          //$("select#resources-select option[value='build_myself']").attr('selected','true');
-          if(resources === "know_someone")
-            $("select#resources-select option[value='know_someone']").attr('selected','true');
-        } else if (resources === "know_someone") {
-          // anytime the user "knows someone", suggest web hosting
-          $(".wordpress").hide();
-          $(".non-wordpress").show();
-          if(interest === "selling_products")
-            $("#questions form input[name='ci']").val("96279");
-          if(interest === "new_business")
-            $("#questions form input[name='ci']").val("96273");
-          if(interest === "exisitng_business")
-            $("#questions form input[name='ci']").val("96276");
-          $('#questions form').attr("action","[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]");
-        } else if (resources === "build_myself") {
-          // if the user wants to build it themself, conditionally suggest WSB or OLS based on their business
-          if (interest === "selling_products") {
-            $("#questions form input[name='ci']").val("96278");
-            $(".wordpress").hide();
-            $(".non-wordpress").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/online-store.aspx"></relative>]@T]");
-          } else {
-            if(interest === "existing_business")
-              $("#questions form input[name='ci']").val("96275");
-            if(interest === "new_business")
-              $("#questions form input[name='ci']").val("96272");
-            $(".wordpress").hide();
-            $(".non-wordpress").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/websitebuilder.aspx"></relative>]@T]");
-          }
-        } else if (resources === "hire_someone") {
-          // if the user is going to hire someone, conditionally suggest pro-ecomm or pro-basic based on their business
-          if (interest === "selling_products") {
-            $("#questions form input[name='ci']").val("96280");
-            $(".wordpress").hide();
-            $(".non-wordpress").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]");
-          } else {
-            if(interest === "new_business")
-              $("#questions form input[name='ci']").val("96274");
-            if(interest === "existing_business")
-              $("#questions form input[name='ci']").val("96277");
-            $(".wordpress").hide();
-            $(".non-wordpress").show();
-            $('#questions form').attr("action","[@T[link:<relative path="~/getonline/pro-design.aspx"></relative>]@T]");
-          }
+      $('#questions select#interest-select').change(function(e) {
+        var thisValue = $(this).val();
+        if(thisValue === "blog"){
+          $(".wordpress").show().appendTo(".resources-group");
+          $(".non-wordpress").hide().appendTo(".resources-group-inactive"); 
+        }else{
+          $(".wordpress").hide().appendTo(".resources-group-inactive");
+          $(".non-wordpress").show().appendTo(".resources-group");
         }
+      });
       
-      });*/
-      
-      $('#questions form').submit(function(e) {
-        if($(this).attr("action").length > 0){
-          // form will not submit without an action
+        $('#questions form').submit(function(e) {
+        
+        if(typeof window.getonlineReady != "undefined" && window.getonlineReady === true){
+          // set variable back to false incase browser save the state of the page
+          window.getonlineReady = false;
           return;
         }
-        // retrieve valid TLDs from our app setting
-        // TODO: do these need to be market specific?
-        // TODO: is it worth trying to use the UXCorevalidation library?
-        var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
-      
-        // if user specified a TLD, make sure it's valid for this promotion
-        var business_idea = $('#search-input').val().toLowerCase();
-        var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
+          e.preventDefault();    
+          // retrieve valid TLDs from our app setting
+          // TODO: do these need to be market specific?
+          // TODO: is it worth trying to use the UXCorevalidation library?
+          var validTlds = [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T];
         
-        if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
-          $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
-          $("fieldset.step-1 input").removeClass("search-bar");
-          $("fieldset.step-1 .form-group").addClass("has-error");
-          $(".form-error").show()
-          e.preventDefault();
-        }
-        else if(!business_idea){
-          $(".form-error").text("Please enter a business name or idea.");
-          $("fieldset.step-1 input").removeClass("search-bar");
-          $("fieldset.step-1 .form-group").addClass("has-error");
-          $(".form-error").show()
-          e.preventDefault();
-        } else {
-          // form ok to submit
-            var interest = $('#interest-select').val();
-            var resource = $("#questions form .active-resource-options[name='resource']").val();
+          // if user specified a TLD, make sure it's valid for this promotion
+          var business_idea = $('#search-input').val().toLowerCase();
+          var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
           
-            var ciCode = (function(){
-                for(ci in formOptions.next_page_mapping){
-                  var thisObj = formOptions.next_page_mapping[ci];
-                  if(thisObj.interest == interest && thisObj.resource == resource){
-                    return ci;
-                  }
-                }
-              })();
+          if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
+            $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
+            $("fieldset.step-1 input").removeClass("search-bar");
+            $("fieldset.step-1 .form-group").addClass("has-error");
+            $(".form-error").show()
+            //e.preventDefault();
+          }
+          else if(!business_idea){
+            $(".form-error").text("Please enter a business name or idea.");
+            $("fieldset.step-1 input").removeClass("search-bar");
+            $("fieldset.step-1 .form-group").addClass("has-error");
+            $(".form-error").show()
+            //e.preventDefault();
+          } else {
+            // form ok to submit
+              var interest = $('#interest-select').val();
+              var resource = $("#questions form [name='resource']").val();
             
-            $("#questions form input[name='ci']").val(ciCode);
-            $("#questions form .inactive-resource-options").remove();
-
-            // set action and resubmit form
-            $('#questions form').attr("action", formOptions.page_url[formOptions.next_page_mapping[ci].product]);
-
-            e.preventDefault();
-            $(this).submit()
-        }
-      });
+              var ciCode = (function(){
+                  for(ci in formOptions.next_page_mapping){
+                    var thisObj = formOptions.next_page_mapping[ci];
+                    if(thisObj.interest == interest && thisObj.resource == resource){
+                      return ci;
+                    }
+                  }
+                })();
+              
+              $("#questions form input[name='ci']").val(ciCode);
+              
       
-      $('#questions form').keypress(function(){
-         $(".form-error").hide();
-         $("fieldset.step-1 input").addClass("search-bar");
-         $("fieldset.step-1 .form-group").removeClass("has-error");
-      });
-     })();
+              // set action and resubmit form
+              $('#questions form').attr("action", formOptions.page_url[formOptions.next_page_mapping[ci].product]);
+              window.getonlineReady = true;
+              setTimeout(function(){$('#questions form').submit()},300)
+          
+          }
+        });
+        
+        $('#questions form').keypress(function(){
+           $(".form-error").hide();
+           $("fieldset.step-1 input").addClass("search-bar");
+           $("fieldset.step-1 .form-group").removeClass("has-error");
+        });
+       })();
+        
+        $(document).ready(function(){
+          $('#questions form').attr("action","")
+          $('#questions select#interest-select').change();
+          function getUrlParameter(name){
+            var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
+            if(result == 'null'){ result = undefined };
+            return result;
+          }
       
-      $(document).ready(function(){
-
-        function getUrlParameter(name){
-          var result = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]);
-          if(result == 'null'){ result = undefined };
-          return result;
-        }
-
-        // set highlighted marquee text if passed by referring page
-        var possibleHPOptions = {'confusing':'confusing', 'intimidating':'intimidating', 'annoying':'annoying', 'frustration':'#&!$*%!'};
-        var p4p = getUrlParameter('p4p');
-        var displayOptionalText = possibleHPOptions[p4p] || 'confusing';
-        $("#marquee span").text(displayOptionalText);
-      
-      });
+          // set highlighted marquee text if passed by referring page
+          var possibleHPOptions = {'confusing':'confusing', 'intimidating':'intimidating', 'annoying':'annoying', 'frustration':'#&!$*%!'};
+          var p4p = getUrlParameter('p4p');
+          var displayOptionalText = possibleHPOptions[p4p] || 'confusing';
+          $("#marquee span").text(displayOptionalText);
+        
+        });
       
 
 
@@ -239,13 +179,14 @@ block content
                   option(value="new_business") [@L[cds.sales/getonline:QuestionsLP-5-StartingANewBusinessOnline]@L]
                   option(value="selling_products") [@L[cds.sales/getonline:QuestionsLP-3-SellingProductsOnline]@L]
                   option(value="blog") [@L[cds.sales/getonline:QuestionsLP-4-StartingMyOwnBlog]@L]
-              .form-group
+              .form-group.resources-group
                 label(for="resources-select") [@L[cds.sales/getonline:QuestionsLP-7-IHaveTheResourcesAndTimeTo]@L]
-                select#resources-select.form-control.non-wordpress.active-resource-options(name="resource")
+                select#resources-select.form-control.non-wordpress(name="resource")
                   option(value="build_myself") [@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]
                   option(value="know_someone") [@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]
                   option(value="hire_someone") [@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]
-                select#resources-select.form-control.wordpress.inactive-resource-options(name="resource")
-                  option(value="build_myself") [@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]
-                  option(value="know_someone") [@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]
               button.btn.btn-purchase.btn-lg(type="submit") [@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]
+      .resources-group-inactive(style={"display":"none"})
+        select#resources-select.form-control.wordpress(name="resource")
+          option(value="build_myself") [@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]
+          option(value="know_someone") [@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]
