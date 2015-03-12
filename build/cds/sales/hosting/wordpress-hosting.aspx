@@ -1290,17 +1290,333 @@
     <atlantis:webstash type="css">
       <style>
         #alternate-products {
+          background-color: #fff;
+          padding-bottom: 0px !important;
         }
-        
+        .white-text { color: #fff;}
+        ul.alternate-products {
+          padding-left: 15px;
+        }
+        #alternate-products .two-up-text-wrap {
+          padding:30px;
+        }
       </style>
     </atlantis:webstash>
     <section id="alternate-products">
+      <style>
+.two-up-title-wrap.bg-white {
+  background-color: #fff;
+}
+.two-up-title-wrap.bg-yellow {
+  background-color: #ffde2d;
+}
+.two-up-title-wrap.bg-gray-lighter,
+.two-up-title-wrap.bg-pro-gray {
+  background-color: #e8e8e8;
+}
+.two-up-title-wrap.bg-gray-light {
+  background-color: #d9d9d9;
+}
+.two-up-title-wrap.bg-green-official {
+  background-color: #77c043;
+}
+.two-up-title-wrap.bg-green-new {
+  background-color: #5caf2b;
+}
+.two-up-title-wrap.bg-green-official-light {
+  background-color: #84D54A;
+}
+.two-up-title-wrap.bg-gray-darkest {
+  background-color: #333333;
+}
+
+.two-up-wrap-compare {
+  min-height: 980px;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: center top;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: transparent;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare {
+    background-image: none !important;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-white {
+    background-color: #fff;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-yellow {
+    background-color: #ffde2d;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-lighter,
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-pro-gray {
+    background-color: #e8e8e8;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-light {
+    background-color: #d9d9d9;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official {
+    background-color: #77c043;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-new {
+    background-color: #5caf2b;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-green-official-light {
+    background-color: #84D54A;
+  }
+  .two-up-wrap-compare .col-md-5.col-sm-6.bg-gray-darkest {
+    background-color: #333333;
+  }
+}
+.two-up-wrap-compare:after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+@media only (max-width: 767px) {
+  .two-up-wrap-compare:after {
+    display: none;
+  }
+}
+.two-up-wrap-compare .two-up-text-wrap {
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .two-up-wrap-compare .two-up-text-wrap {
+    padding: 60px 0;
+  }
+}
+.two-up-wrap-compare h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #232323;
+}
+.two-up-wrap-compare h3.headline-primary {
+  font-size: 3rem;
+  text-transform: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #232323;
+}
+.two-up-wrap-compare .white-text {
+  color: #fff;
+}
+.two-up-wrap-compare .white-text h2{
+  color: #fff;
+}
+.two-up-wrap-compare .two-up-text-wrap h3.subtitle {
+  text-transform: none;
+}
+.two-up-wrap-compare .check-bullets li {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.two-up-wrap-compare .check-bullets li:before {
+  content: '';
+  background-size: 205px auto;
+  background-position: 0 -700px;
+  width: 25px;
+  height: 27px;
+  position: absolute;
+  left: 0;
+}
+.two-up-wrap-compare .check-bullets li h5 {
+  margin-bottom: 5px;
+}
+.or-container-none:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: none;
+  margin-left: -50px;
+  z-index: 1;
+}
+
+##if(activeLanguageAny([en-US]))
+.or-container:after {
+  content: '';
+  background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_or-shape_white_en.png);
+  width: 94px;
+  height: 98px;
+  background-position: 0 0;
+  background-size: auto auto;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    left: 50%
+  }
+}
+##else
+.or-container:after {
+  content: '';
+  width: 94px;
+  height: 94px;
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+  background-size: 205px auto;
+  background-position: 0 -896px;
+  position: absolute;
+  bottom: -50px;
+  margin: 0 auto;
+  display: block;
+  margin-left: -50px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .or-container:after {
+    display: block;
+    -webkit-transform: 90deg;
+    -moz-transform: 90deg;
+    transform: rotate(90deg);
+    left: 50%
+  }
+}
+##endif
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .or-container:after {
+    left: 101%;
+    bottom: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .or-container:after {
+    left: 121%;
+    bottom: 50%;
+  }
+}
+
+.two-up-title.h0 {
+  margin: 40px 0;
+  line-height: 1;
+  font-size: 4rem;
+  font-weight: 300;
+  color: #232323;
+}
+.two-up-speech-shape {
+  font-family: 'Walsheim-Bold';
+  font-size: 18px;
+  font-size: 1.8rem;
+  padding: 5px 10px 5px 17px;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+.two-up-speech-shape .shape-text {
+  position: relative;
+  z-index: 40;
+}
+.two-up-speech-shape:before {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  border-top: 15px solid;
+  border-right: 15px solid transparent;
+}
+.two-up-speech-shape:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 99%;
+  top: 0;
+  transform: skew(-12deg, 0);
+  z-index: 1;
+}
+.two-up-speech-shape.two-up-speech-shape-green {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:before {
+  border-top-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-green:after {
+  background-color: #008a32;
+}
+.two-up-speech-shape.two-up-speech-shape-orange {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:before {
+  border-top-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-orange:after {
+  background-color: #ef6c0f;
+}
+.two-up-speech-shape.two-up-speech-shape-white {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:before {
+  border-top-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-white:after {
+  background-color: #fff;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow {
+  background-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:before {
+  border-top-color: #ffde2d;
+}
+.two-up-speech-shape.two-up-speech-shape-yellow:after {
+  background-color: #ffde2d;
+}
+
+      </style>
       <div id="alternate-products-compare" class="two-up-title-wrap bg-white">
         <div>
           <div class="container">
             <div class="row">
               <div class="col-sm-12">
-                <h2 class="h0 text-center two-up-title">[@L[cds.sales/hosting/web-hosting-rebrand:didNotFindRebrand]@L]</h2>
+                <h2 class="h0 text-center two-up-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-title]@L]</h2>
               </div>
             </div>
           </div>
@@ -1311,33 +1627,34 @@
               <div class="col-md-5 or-container-none col-sm-6  bg-green-official-light">
                 <div style="" class="two-up-text-wrap ">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
-                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]</div>
+                    <div class="shape-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-product-name]@L]</div>
                   </div>
-                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:wsbDoIt]@L] [@L[cds.sales/hosting/web-hosting-rebrand:wsbHosting]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-title]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
-                      <ul>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList1]@L]</li>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList2]@L]</li>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:wsbList3]@L]</li>
+                      <ul class="alternate-products">
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-1]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-2]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-3]@L]</li>
                       </ul>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-parenthesis]@L]</p>
                       <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-5 col-md-offset-2 col-sm-6  bg-gray-darkest">
+              <div class="col-md-5 col-md-offset-1 col-sm-6  bg-gray-darkest">
                 <div style="" class="two-up-text-wrap white-text">
                   <div class="two-up-speech-shape two-up-speech-shape-orange">
-                    <div class="shape-text">[@L[cds.sales/hosting/web-hosting-rebrand:vps]@L]</div>
+                    <div class="shape-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-product-name]@L]</div>
                   </div>
-                  <h2 class="h0">[@L[cds.sales/hosting/web-hosting-rebrand:vpsGrow]@L]</h2>
+                  <h2 class="h0">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-title]@L]</h2>
                   <div class="row">
                     <div class="col-sm-12">
                       <ul>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList1]@L]</li>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList2]@L]</li>
-                        <li>[@L[cds.sales/hosting/web-hosting-rebrand:vpsList3]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-1]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]</li>
                       </ul>
                       <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>

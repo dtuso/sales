@@ -1,38 +1,47 @@
 atlantis:webstash(type="css")
   style.
     #alternate-products {
+      background-color: #fff;
+      padding-bottom: 0px !important;
     }
-
+    .white-text { color: #fff;}
+    ul.alternate-products {
+      padding-left: 15px;
+    }
+    #alternate-products .two-up-text-wrap {
+      padding:30px;
+    }
 section#alternate-products
 
-  +renderTwoUpCompare({ title: "[@L[cds.sales/gd/hosting/wordpress-hosting:]@L]", 
+  +renderTwoUpCompare({ title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-title]@L]", 
                       twoUpCompareId: "alternate-products-compare", 
                       titleBackgroundColor: "bg-white", 
                       backgroundColor: "bg-green-official", 
                       backgroundImage: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/web-hosting/compare-bg.png", 
-                      style: "min-height: 580px;", 
-                      includeStyles: false})
+                      style: "min-height: 580px;"})
 
     
-    +twoUpCompareColumn({ title: "[@L[cds.sales/gd/hosting/wordpress-hosting:]@L]", 
+    +twoUpCompareColumn({ shapeText: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-product-name]@L]", 
+                          title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-title]@L]", 
                           backgroundColor: "bg-green-official-light", 
-                          shapeText: "[@L[cds.sales/hosting/web-hosting-rebrand:wsb]@L]", 
                           shapeColor: "orange"})
-      ul
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
+      ul.alternate-products
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-1]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-2]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-3]@L]
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-parenthesis]@L]
       button.btn.btn-default-dark(data-ci="xxxx", href!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]") [@L[cds.sales/_common:learn-more]@L]
     
 
 
-    +twoUpCompareColumn({ title: "[@L[cds.sales/gd/hosting/wordpress-hosting:]@L]", 
-                          backgroundColor: "bg-gray-darkest", 
-                          shapeText: "[@L[cds.sales/gd/hosting/wordpress-hosting:]@L]", 
+    +twoUpCompareColumn({ shapeText: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-product-name]@L]", 
+                          title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-title]@L]", 
+                          backgroundColor: "bg-gray-darkest",                           
                           shapeColor: "orange", 
-                          whiteText: "white-text"})
+                          whiteText: "white-text",
+                          offsetDefaultForSecondColumn: "col-md-offset-1"})
       ul
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-1]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]
       button.btn.btn-default-light(data-ci="xxxx", href!="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]") [@L[cds.sales/_common:learn-more]@L]
