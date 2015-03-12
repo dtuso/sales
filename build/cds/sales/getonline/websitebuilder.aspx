@@ -1055,7 +1055,7 @@ function getParameterByName(name) {
                 <div class="video-marquee-info text-center">
                   <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
                   <h4 class="uppercase walsheim-bold">[@L[cds.sales/getonline:wsb-product-video-info-text]@L]</h4>
-                  <button id="watchVideo" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" class="cta btn btn-default-dark btn-md uppercase">[@L[cds.sales/getonline:watch-now]@L]</button>
+                  <button id="watchVideo" style="margin:20px auto" class="cta btn btn-default-dark btn-md uppercase">[@L[cds.sales/getonline:watch-now]@L]</button>
                 </div>
               </div>
             </div>
