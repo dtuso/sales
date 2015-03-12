@@ -1,6 +1,5 @@
 
 <atlantis:webstash type="css">
-  <link href="[@T[link:&lt;css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit'/&gt;]@T]" rel="stylesheet" media="screen"/>
   <style>#p4p-list {
   border-top-width: 3px;
   border-bottom-width: 1px;
@@ -83,7 +82,6 @@
         </div>
         <div class="col-sm-3"></div>
         <atlantis:webstash type="js">
-          <script src="[@T[link:&lt;js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit'/&gt;]@T]"></script>
           <script>$(document).ready(function(){$('#p4p-list').dropdown();});</script>
         </atlantis:webstash>
       </div>
