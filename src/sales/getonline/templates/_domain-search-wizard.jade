@@ -260,7 +260,7 @@ mixin domainSearchContent()
                   input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                   if(domainSearchWizard.showSearchButton)
                     span.input-group-btn
-                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.availViewSearchBtnCI}") !{domainSearchWizard.buttonText}
           .row.domain-search-messaging-row
             .col-xs-12.col-sm-12
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
@@ -272,7 +272,7 @@ mixin domainSearchContent()
           .col-md-9.white
             span.domain-name-display.lowercase.available-domain-name#available-domain-name
           .col-md-3.white
-            button.btn.btn-primary.select-and-continue.available-domain-name.uppercase [@L[cds.sales/getonline:choose-select-button]@L]
+            button.btn.btn-primary.select-and-continue.available-domain-name.uppercase(data-ci="#{domainSearchWizard.availViewRecomSelBtnCI}") [@L[cds.sales/getonline:choose-select-button]@L]
             .spin-results-message.checking-availability [@L[cds.sales/getonline:checking-availability]@L]
             .spin-results-message.now-unavailable [@L[cds.sales/getonline:domain-no-longer-available]@L]
 
@@ -282,7 +282,7 @@ mixin domainSearchContent()
             h5(style={'margin-top':'20px'}) <strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong>
             h6.results-list-heading-text 
               span.spin-counts(data-result-count-template!="[@L[cds.sales/getonline:number-of-number-results]@L]")
-              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/getonline:view-all-results]@L]
+              button.btn.btn-link.view-all-button(data-ci="#{domainSearchWizard.availViewViewAllBtnCI}") [@L[cds.sales/getonline:view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
           .row.spin-template.spin-result.searched-domain-name-row.bg-light
@@ -296,12 +296,12 @@ mixin domainSearchContent()
         .row.show-more-section
           .col-md-12
             h6.text-center(style={'margin-top':'10px'})
-              span.clickable-show-more(data-ci="95268")
+              span.clickable-show-more(data-ci="#{domainSearchWizard.availViewViewAllBtnCI}")
                 span [@L[cds.sales/getonline:see-more-results]@L]
                 span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase [@L[cds.sales/getonline:search-again]@L]
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase(data-ci="#{domainSearchWizard.availViewSearchAgnBtnCI}") [@L[cds.sales/getonline:search-again]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
@@ -331,7 +331,7 @@ mixin domainSearchContent()
                   input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                   if(domainSearchWizard.showSearchButton)
                     span.input-group-btn
-                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.notAvailViewSearchBtnCI}") !{domainSearchWizard.buttonText}
           .row.domain-search-messaging-row
             .col-xs-12.col-sm-12
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
@@ -346,7 +346,7 @@ mixin domainSearchContent()
             h5(style={'margin-top':'20px'}) <strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong>
             h6.results-list-heading-text 
               span.spin-counts(data-result-count-template!="[@L[cds.sales/getonline:number-of-number-results]@L]")
-              button.btn.btn-link.view-all-button(data-ci="95269") [@L[cds.sales/getonline:view-all-results]@L]
+              button.btn.btn-link.view-all-button(data-ci="#{domainSearchWizard.notAvailViewViewAllBtnCI}") [@L[cds.sales/getonline:view-all-results]@L]
         .spin-results(style={'margin-top':'10px'})
         .spin-template-wrap
           .row.spin-template.spin-result.searched-domain-name-row.bg-light
@@ -365,7 +365,7 @@ mixin domainSearchContent()
                 span.show-more-arrow
         .row.search-again-section(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-md-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase [@L[cds.sales/getonline:search-again]@L]
+            btn.btn.btn-primary.btn-search-again.btn-lg.text-center.uppercase(data-ci="#{domainSearchWizard.notAvailViewSearchAgnBtnCI}") [@L[cds.sales/getonline:search-again]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
@@ -389,11 +389,11 @@ mixin domainSearchContent()
             h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
         .row(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-xs-12.col-sm-12.text-center
-            btn.btn.btn-primary.btn-search-again.btn-lg.uppercase [@L[cds.sales/getonline:search-again]@L]
+            btn.btn.btn-primary.btn-search-again.btn-lg.uppercase(data-ci="#{domainSearchWizard.selectedViewSearchAgnBtnCI}") [@L[cds.sales/getonline:search-again]@L]
         .row(style={'padding-top':'30px','padding-bottom':'10px'})
           .col-xs-12.col-sm-12.text-center
-            btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase [@L[cds.sales/getonline:see-other-products]@L]
-            btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p [@L[cds.sales/getonline:checkout-now]@L]
+            btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase(data-ci="#{domainSearchWizard.selectedViewSeeProdBtnCI}") [@L[cds.sales/getonline:see-other-products]@L]
+            btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p(data-ci="#{domainSearchWizard.selectedViewGoToCartBtnCI}") [@L[cds.sales/getonline:checkout-now]@L]
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]

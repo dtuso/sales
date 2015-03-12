@@ -306,6 +306,7 @@ function goToShowProducts()
 function goToDppCheckoutPage(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
+    ciCode = $this.data('ci'),
     apiEndpoint3;
   var sourceurl = encodeURIComponent(domainSearch.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=' + domain.Fqdn));
 
@@ -322,7 +323,7 @@ function goToDppCheckoutPage(e) {
     pkg.pkgid = offerInfo.packageId;
     pkg.qty = 1;
     pkg.itc = offerInfo.itcCode;
-    pkg.ci = 123456;
+    pkg.ci = ciCode;
     var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
 
     var postdata = "requestData=" + JSON.stringify(pkg);
@@ -334,7 +335,7 @@ function goToDppCheckoutPage(e) {
       dataType: "jsonp",
       complete: function (data) {
         if (data.statusText == "success") {
-          addHostingDomain(domain);
+          addHostingDomain(domain, ciCode);
         }
       },
       error: function(){
@@ -364,7 +365,7 @@ function goToDppCheckoutPage(e) {
 
 }
 
-function addHostingDomain(domain){
+function addHostingDomain(domain, ciCode){
     var plan = offerInfo.packageId;
     var domainToAdd = encodeURIComponent(domain.Fqdn);
     var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
@@ -372,7 +373,7 @@ function addHostingDomain(domain){
     pkg.pkgid = plan;
     pkg.itc = offerInfo.itcCode;
     pkg.quantity = 1;
-    pkg.ci = 83621;
+    pkg.ci = ciCode;
     pkg.custom = { "domain": domainToAdd }
     var postdata = "requestData=" + JSON.stringify(pkg);
       $.ajax({
