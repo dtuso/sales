@@ -9,7 +9,7 @@ Get Online Title
 <phrase key="get-it-now-bubble-content-header" />
 Here you go...
 <phrase key="get-it-now-bubble-content-text" />
-A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}</mark>
+A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}/mo</mark>
 <phrase key="product-domain-text" />
 Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
 <phrase key="O365-email-header" />
