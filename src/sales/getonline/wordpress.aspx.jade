@@ -2,18 +2,18 @@ extends _p4p.jade
 
 append vars
   - page.title = "[@L[cds.sales/getonline:mwp-page-title]@L]";
-  - page.description = "[@L[cds.sales/getonline:mwp-meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/getonline:mwp-meta-keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/getonline:mwp-og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/getonline:mwp-og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
 
   - page.links = page.links || {};
-  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.links.canonical = "";
+  - page.links.favicon = "";
 
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:mwp-product-name]@L]";
@@ -23,6 +23,7 @@ append vars
   - productToDisplay.appKey = "slp_GYBO";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='monthly' promocode='511092015' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='511092015' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='monthly'></list>]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:mwp-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
@@ -33,11 +34,38 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "[@L[cds.sales/getonline:mwp-product-info-text]@L]";
   - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:mwp-product-did-you-know-text]@L]";
-  - productToDisplay.topButtonCI = "96305";
-  - productToDisplay.bottomButtonCI = "96304";
-  - productToDisplay.bottomSearchCI = "96301";
+  - productToDisplay.topGetItNowBtnCI = "96305";
+  - productToDisplay.bottomGetItNowBtnCI = "96304";
+  - productToDisplay.bottomSearchAgainCI = "96301";
   - productToDisplay.disclaimerCI = "96981";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-mwp-content]@L]";
+
+  - domainSearchWizard                             = {};
+  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = 63;
+  - domainSearchWizard.title                       = "";
+  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton            = true;
+  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = "";
+  - domainSearchWizard.dupDomainInCartCI           = "";
+  - domainSearchWizard.availViewSearchBtnCI        = "";
+  - domainSearchWizard.availViewRecomSelBtnCI      = "";
+  - domainSearchWizard.availViewViewAllBtnCI       = "";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = "";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = "";
+  - domainSearchWizard.notAvailViewRecomSelBtnCI   = "";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = "";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = "";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = "";
 
 block targetedProduct
   .column.website

@@ -6,22 +6,6 @@ name: P4P
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Get Online Title
-<phrase key="meta-description" />
-Get Online Description
-<phrase key="meta-keywords" />
-Get Online Keywords
-<phrase key="og-title" />
-Get Online OG Title
-<phrase key="og-description" />
-Get Online OG Description
-<phrase key="twitter-card" />
-Get Online Twitter summary
-<phrase key="twitter-site" />
-Get Online Twitter Site
-<phrase key="twitter-title" />
-Get Online Twitter Title
-<phrase key="twitter-description" />
-Get Online Twitter Description
 <phrase key="get-it-now-bubble-content-header" />
 Here you go...
 <phrase key="get-it-now-bubble-content-text" />
@@ -174,14 +158,6 @@ View all
 See more results
 <phrase key="ols-page-title" />
 Get Online Online Store
-<phrase key="ols-meta-description" />
-Get Online Online Store Description
-<phrase key="ols-meta-keywords" />
-Get Online Online Store Keywords
-<phrase key="ols-og-title" />
-Get Online Online Store OG Title
-<phrase key="ols-og-description" />
-Get Online Online Store OG Description
 <phrase key="ols-product-name" />
 Online Store
 <phrase key="ols-product-get-it-now-description" />
@@ -194,14 +170,6 @@ What is Online Store?
 Online Store includes professional themes, so you can sell your products online without having to know a thing about web design.
 <phrase key="wsb-page-title" />
 Get Online Website Builder
-<phrase key="wsb-meta-description" />
-Get Online Website Builder Description
-<phrase key="wsb-meta-keywords" />
-Get Online Website Builder Keywords
-<phrase key="wsb-og-title" />
-Get Online Website Builder OG Title
-<phrase key="wsb-og-description" />
-Get Online Website Builder OG Description
 <phrase key="wsb-product-name" />
 Website Builder
 <phrase key="wsb-product-get-it-now-description" />
@@ -214,14 +182,6 @@ What is Website Builder?
 Customers are more likely to contact you if you have a website for your local business.
 <phrase key="hosting-page-title" />
 Get Online Web Hosting
-<phrase key="hosting-meta-description" />
-Get Online Web Hosting Description
-<phrase key="hosting-meta-keywords" />
-Get Online Web Hosting Keywords
-<phrase key="hosting-og-title" />
-Get Online Web Hosting OG Title
-<phrase key="hosting-og-description" />
-Get Online Web Hosting OG Description
 <phrase key="hosting-product-name" />
 Web Hosting
 <phrase key="hosting-product-get-it-now-description" />
@@ -244,14 +204,6 @@ Create up to 100 branded addresses that are built on your domain name.
 Customers are 9 times more likely to choose a business with a professional email address?*
 <phrase key="mwp-page-title" />
 Get Online Managed Wordpress
-<phrase key="mwp-meta-description" />
-Get Online Managed Wordpress Description
-<phrase key="mwp-meta-keywords" />
-Get Online Managed Wordpress Keywords
-<phrase key="mwp-og-title" />
-Get Online Managed Wordpress OG Title
-<phrase key="mwp-og-description" />
-Get Online Managed Wordpress OG Description
 <phrase key="mwp-product-name" />
 Managed Wordpress
 <phrase key="mwp-product-get-it-now-description" />
@@ -268,14 +220,6 @@ enter your blog post
 publish
 <phrase key="pro-design-page-title" />
 Get Online Website Design
-<phrase key="pro-design-meta-description" />
-Get Online Website Design Description
-<phrase key="pro-design-meta-keywords" />
-Get Online Website Design Keywords
-<phrase key="pro-design-og-title" />
-Get Online Website Design OG Title
-<phrase key="pro-design-og-description" />
-Get Online Website Design OG Description
 <phrase key="pro-design-product-name" />
 Website Design Services
 <phrase key="pro-design-product-get-it-now-description" />
@@ -320,14 +264,6 @@ We have more than 60 people in our Professional Web Services department, all wor
 We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="pro-ecomm-page-title" />
 Get Online eCommerce Design
-<phrase key="pro-ecomm-meta-description" />
-Get Online eCommerce Design Description
-<phrase key="pro-ecomm-meta-keywords" />
-Get Online eCommerce Design Keywords
-<phrase key="pro-ecomm-og-title" />
-Get Online eCommerce Design OG Title
-<phrase key="pro-ecomm-og-description" />
-Get Online eCommerce Design OG Description
 <phrase key="pro-ecomm-product-name" />
 Ecommerce Design Services
 <phrase key="pro-ecomm-product-get-it-now-description" />

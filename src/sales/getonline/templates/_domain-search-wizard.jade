@@ -1,19 +1,30 @@
 append vars
   - domainSearchWizard                          = {};
-  - domainSearchWizard.searchNowCallbackFn      = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.maxDomainLength          = 63;
-  - domainSearchWizard.title                    = "";
-  - domainSearchWizard.cicode                   = "XXXXX";
-  - domainSearchWizard.placeholderText          = "[@L[cds.sales/getonline:placeholder]@L]";
-  - domainSearchWizard.buttonText               = "[@L[cds.sales/getonline:search]@L]";
-  - domainSearchWizard.infoTypeHere             = "[@L[cds.sales/getonline:placeholder-message]@L]";
-  - domainSearchWizard.infoErrorEligibility     = "[@L[cds.sales/getonline:eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld           = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart      = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.dupDomainInCartCiCode    = "placeholderCIcode";
-  - domainSearchWizard.showSearchButton         = true;
-  - domainSearchWizard.saveEnteredDomainFn      = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.initialViewId            = "domain-available-view";
+  - domainSearchWizard.searchNowCallbackFn         = domainSearchWizard.searchNowCallbackFn || "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = domainSearchWizard.maxDomainLength || 63;
+  - domainSearchWizard.title                       = domainSearchWizard.title || "";
+  - domainSearchWizard.placeholderText             = domainSearchWizard.placeholderText || "";
+  - domainSearchWizard.buttonText                  = domainSearchWizard.buttonText || "";
+  - domainSearchWizard.infoTypeHere                = domainSearchWizard.infoTypeHere || "";
+  - domainSearchWizard.infoErrorEligibility        = domainSearchWizard.infoErrorEligibility || "";
+  - domainSearchWizard.infoInvalidTld              = domainSearchWizard.infoInvalidTld || "";
+  - domainSearchWizard.infoDupDomainInCart         = domainSearchWizard.infoDupDomainInCart || "";
+  - domainSearchWizard.showSearchButton            = domainSearchWizard.showSearchButton || true;
+  - domainSearchWizard.saveEnteredDomainFn         = domainSearchWizard.saveEnteredDomainFn || "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = domainSearchWizard.initialViewId || "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = domainSearchWizard.searchViewSearchBtnCI || "";
+  - domainSearchWizard.dupDomainInCartCI           = domainSearchWizard.dupDomainInCartCI || "";
+  - domainSearchWizard.availViewSearchBtnCI        = domainSearchWizard.availViewSearchBtnCI || "";
+  - domainSearchWizard.availViewRecomSelBtnCI      = domainSearchWizard.availViewRecomSelBtnCI || "";
+  - domainSearchWizard.availViewViewAllBtnCI       = domainSearchWizard.availViewViewAllBtnCI || "";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = domainSearchWizard.availViewSearchAgnBtnCI || "";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = domainSearchWizard.notAvailViewSearchBtnCI || "";
+  - domainSearchWizard.notAvailViewRecomSelBtnCI   = domainSearchWizard.notAvailViewRecomSelBtnCI || "";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = domainSearchWizard.notAvailViewViewAllBtnCI || "";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = domainSearchWizard.notAvailViewSearchAgnBtnCI || "";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = domainSearchWizard.selectedViewSearchAgnBtnCI || "";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = domainSearchWizard.selectedViewSeeProdBtnCI || "";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = domainSearchWizard.selectedViewGoToCartBtnCI || "";
 
 mixin domainSearchStyles()
   // atlantis:webstash(type="css")
@@ -213,13 +224,13 @@ mixin domainSearchContent()
                   input.form-control.input-lg.search-form-input.searchInput.helveticafont(type="text" placeholder!="#{domainSearchWizard.placeholderText}" name="domainToCheck" autocomplete="off")
                   if(domainSearchWizard.showSearchButton)
                     span.input-group-btn
-                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.cicode}") !{domainSearchWizard.buttonText}
+                      button.btn.btn-primary.btn-lg.offer-search-btn(type="button" name="searchButton" data-ci="#{domainSearchWizard.searchViewSearchBtnCI}") !{domainSearchWizard.buttonText}
           .row.domain-search-messaging-row
             .col-xs-12.col-sm-12
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
+              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCI}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.bubble-row.product-section
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
@@ -253,9 +264,7 @@ mixin domainSearchContent()
           .row.domain-search-messaging-row
             .col-xs-12.col-sm-12
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
-              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row
           .col-xs-12.col-sm-12.text-center
             h4.domain-starts.strong(style={'margin-top':'10px'}) [@L[cds.sales/getonline:recommended-domain]@L]
@@ -326,9 +335,7 @@ mixin domainSearchContent()
           .row.domain-search-messaging-row
             .col-xs-12.col-sm-12
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-yellow.type-your-business-name !{domainSearchWizard.infoTypeHere}
-              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.domain-eligibility-fail(style={'display':'none'}) !{domainSearchWizard.infoErrorEligibility}
               .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.invalid-TLD-entered(style={'display':'none'}) !{domainSearchWizard.infoInvalidTld}
-              .search-message.headline-primary.speech-shape-upsidedown.speech-shape-upsidedown-orange.dup-domain-fail(style={'display':'none'}, data-tokenize!='[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="#{domainSearchWizard.dupDomainInCartCiCode}" /></external>]@T]') !{domainSearchWizard.infoDupDomainInCart}
         .row.not-available-domain-name-row
           .col-xs-12.col-sm-12.text-center
             h2.word-break [@L[cds.sales/getonline:domain-taken-message]@L]
@@ -802,9 +809,6 @@ mixin domainSearchEndOfPageScripts()
             break;
 
         }
-
-        // Should already be in serarch view
-        // animateWizard($('#domainSearchViewForm'), $('#domain-not-available-view'));
       }
     };
 

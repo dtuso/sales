@@ -2,18 +2,18 @@ extends _p4p.jade
 
 append vars
   - page.title = "[@L[cds.sales/getonline:hosting-page-title]@L]";
-  - page.description = "[@L[cds.sales/getonline:hosting-meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/getonline:hosting-meta-keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/getonline:hosting-og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/getonline:hosting-og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
 
   - page.links = page.links || {};
-  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.links.canonical = "";
+  - page.links.favicon = "";
 
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:hosting-product-name]@L]";
@@ -23,6 +23,7 @@ append vars
   - productToDisplay.appKey = "slp_GYBO";
   - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='32051' period='monthly' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='32051' period='yearly' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[productprice:<list productid='32051' period='monthly'></list>]@T]";
   - productToDisplay.pricing.renewal_annual = "[@T[productprice:<list productid='32051' period='yearly'></list>]@T]";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:hosting-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
@@ -33,9 +34,9 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "[@L[cds.sales/getonline:hosting-product-info-text]@L]";
   - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:hosting-product-did-you-know-text]@L]";
-  - productToDisplay.topButtonCI = "96307";
-  - productToDisplay.bottomButtonCI = "96306";
-  - productToDisplay.bottomSearchCI = "96310";
+  - productToDisplay.topGetItNowBtnCI = "96307";
+  - productToDisplay.bottomGetItNowBtnCI = "96306";
+  - productToDisplay.bottomSearchAgainCI = "96310";
   - productToDisplay.disclaimerCI = "96982";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-hosting-content]@L]";
   - productToDisplay.hostingFlow = {};
@@ -45,6 +46,33 @@ append vars
   - productToDisplay.hostingFlow.servers = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-server2.png";
   - productToDisplay.hostingFlow.arrowL = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png";
   - productToDisplay.hostingFlow.site = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png";
+
+  - domainSearchWizard                             = {};
+  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = 63;
+  - domainSearchWizard.title                       = "";
+  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton            = true;
+  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = "";
+  - domainSearchWizard.dupDomainInCartCI           = "";
+  - domainSearchWizard.availViewSearchBtnCI        = "";
+  - domainSearchWizard.availViewRecomSelBtnCI      = "";
+  - domainSearchWizard.availViewViewAllBtnCI       = "";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = "";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = "";
+  - domainSearchWizard.notAvailViewRecomSelBtnCI   = "";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = "";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = "";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = "";
 
 append pageStyles
   style.
@@ -68,7 +96,7 @@ block productContent
   .row
     .col-xs-12.col-sm-9.col-sm-offset-3.cta
       p.text-center.price-token [@L[cds.sales/getonline:product-bundle-price]@L]
-      button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
+      button(data-ci="#{productToDisplay.topGetItNowBtnCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
       small.text-center.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
 
 block productSection
@@ -143,6 +171,6 @@ block bottomGetItNow
             h3 #{productToDisplay.name}
       .row
         h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
-        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
-        button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchAgainCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
+        button(data-ci="#{productToDisplay.bottomGetItNowBtnCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
         small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]

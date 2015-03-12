@@ -2,24 +2,25 @@ extends _p4p.jade
 
 append vars
   - page.title = "[@L[cds.sales/getonline:pro-design-page-title]@L]";
-  - page.description = "[@L[cds.sales/getonline:pro-design-meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/getonline:pro-design-meta-keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/getonline:pro-design-og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/getonline:pro-design-og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
 
   - page.links = page.links || {};
-  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.links.canonical = "";
+  - page.links.favicon = "";
 
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:pro-design-product-name]@L]";
   - productToDisplay.landingPage = "getonline/pro-design.aspx"
   - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
   - productToDisplay.pricing.promo_annual = "";
+  - productToDisplay.pricing.renewal_monthly = "";
   - productToDisplay.pricing.renewal_annual = "";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:pro-design-product-get-it-now-description]@L]";
   - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png";

@@ -2,18 +2,18 @@ extends _p4p.jade
 
 append vars
   - page.title = "[@L[cds.sales/getonline:ols-page-title]@L]";
-  - page.description = "[@L[cds.sales/getonline:ols-meta-description]@L]";
-  - page.keywords = "[@L[cds.sales/getonline:ols-meta-keywords]@L]"; 
-  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "[@L[cds.sales/getonline:ols-og-title]@L]";
-  - page.openGraph.description = "[@L[cds.sales/getonline:ols-og-description]@L]";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
 
   - page.links = page.links || {};
-  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.links.canonical = "";
+  - page.links.favicon = "";
 
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:ols-product-name]@L]";
@@ -34,13 +34,40 @@ append vars
   - productToDisplay.productVideoInfoText = "[@L[cds.sales/getonline:ols-product-video-info-text]@L]";
   - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:ols-product-did-you-know-text]@L]";
-  - productToDisplay.topButtonCI = "96294";
-  - productToDisplay.bottomButtonCI = "96298";
-  - productToDisplay.bottomSearchCI = "96296";
+  - productToDisplay.topGetItNowBtnCI = "96294";
+  - productToDisplay.bottomGetItNowBtnCI = "96298";
+  - productToDisplay.bottomSearchAgainCI = "96296";
   - productToDisplay.viewTemplatesCI = "96299";
   - productToDisplay.playButtonCI = "96300";
   - productToDisplay.disclaimerCI = "96983";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
+
+  - domainSearchWizard                             = {};
+  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = 63;
+  - domainSearchWizard.title                       = "";
+  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton            = true;
+  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = "96295";
+  - domainSearchWizard.dupDomainInCartCI           = "";
+  - domainSearchWizard.availViewSearchBtnCI        = "96293";
+  - domainSearchWizard.availViewRecomSelBtnCI      = "97013";
+  - domainSearchWizard.availViewViewAllBtnCI       = "96985";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = "";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = "";
+  - domainSearchWizard.notAvailViewRecomSelBtnCI   = "";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = "";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = "96989";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97014";
 
 block targetedProduct
   .column.website

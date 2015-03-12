@@ -152,61 +152,65 @@ function domainSearchFormSubmit(e, domainSearched) {
     cache: false,
     success: function(data){ 
 
-      var 
-        exactMatchDomain = data.ExactMatchDomain || {},
-        searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domainSearched,
-        isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
-        alternateDomains = data.RecommendedDomains || [];
-
-      if(!isAvailable && pageStartupSearch) {
-        if(alternateDomains.length > 0) {
-          exactMatchDomain = alternateDomains[0];
-          alternateDomains.shift();
-          isAvailable = true;
-        }
-      }
-
-      if(isAvailable) {
-
-        updateRecommendedDomain(exactMatchDomain.Fqdn);
-
-        domainSearchWizard.showView('#domain-available-view');
-
-        // tokenize header on search available page
-        $('#available-domain-name').text(exactMatchDomain.Fqdn);
-        $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
-        $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
-
-        // Domain is taken, show spins if possible
-        if(alternateDomains.length > 0) {
-
-          // SHOW SPINS
-          showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
-        }
-
-        // should be in desired view
-        if(!pageStartupSearch)
-          animateWizard($thisSection, $('#domain-available-view'));
-
+      if(data == null) {
+        showApi1or2SearchError(e, domainSearched);
       } else {
+        var 
+          exactMatchDomain = data.ExactMatchDomain || {},
+          searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domainSearched,
+          isAvailable = exactMatchDomain.IsPurchasable && exactMatchDomain.IsPurchasable === true, /* data.ExactMatchDomain.AvailabilityStatus 1001=unavailable 1000=available*/
+          alternateDomains = data.RecommendedDomains || [];
 
-        // tokenize header on search available page
-        updateNotAvailableDomain('', domainSearched);
-
-        domainSearchWizard.showView('#domain-not-available-view');
-
-        // Domain is taken, show spins if possible
-        if(alternateDomains.length > 0) {
-
-          // SHOW SPINS
-          showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
-
-          $('#domainSearchWizard').find('.search-form-input').val(''); 
+        if(!isAvailable && pageStartupSearch) {
+          if(alternateDomains.length > 0) {
+            exactMatchDomain = alternateDomains[0];
+            alternateDomains.shift();
+            isAvailable = true;
+          }
         }
 
-        animateWizard($thisSection, $('#domain-not-available-view'));
-      }    
+        if(isAvailable) {
 
+          updateRecommendedDomain(exactMatchDomain.Fqdn);
+
+          domainSearchWizard.showView('#domain-available-view');
+
+          // tokenize header on search available page
+          $('#available-domain-name').text(exactMatchDomain.Fqdn);
+          $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
+          $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
+
+          // Domain is taken, show spins if possible
+          if(alternateDomains.length > 0) {
+
+            // SHOW SPINS
+            showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
+          }
+
+          // should be in desired view
+          if(!pageStartupSearch)
+            animateWizard($thisSection, $('#domain-available-view'));
+
+        } else {
+
+          // tokenize header on search available page
+          updateNotAvailableDomain('', domainSearched);
+
+          domainSearchWizard.showView('#domain-not-available-view');
+
+          // Domain is taken, show spins if possible
+          if(alternateDomains.length > 0) {
+
+            // SHOW SPINS
+            showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
+
+            $('#domainSearchWizard').find('.search-form-input').val(''); 
+          }
+
+          animateWizard($thisSection, $('#domain-not-available-view'));
+        }    
+
+      }
     },
     error: function(){
       showApi1or2SearchError(e, domainSearched);
