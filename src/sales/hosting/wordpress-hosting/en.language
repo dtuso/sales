@@ -107,7 +107,7 @@ All plans include
 <phrase key="35561-all-plans-1" comment="the 'w/' means 'with'" />
 Free domain w/ annual plan
 <phrase key="35561-all-plans-2" comment="" />
-Microsoft Office 365 Email – First year free (optional)
+<strong>Microsoft Office 365 Email</strong> – First year free (optional)
 <phrase key="35561-all-plans-3" comment="" />
 Daily backups &amp; 1-click restore
 <phrase key="35561-all-plans-4" comment="" />
@@ -124,5 +124,9 @@ WordPress website building tutorial videos
 Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google AdWords<sup>&trade;</sup> credit
 <phrase key="35561-all-plans-10" comment="" />
 Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing Search / Yahoo Search credit
-<phrase key="35561-all-plans-12" comment="" />
+<phrase key="35561-all-plans-11" comment="" />
 Up to [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook ad credit
+
+<phrase key="35561-tooltip-guarantee" comment="" />
+You can request a full refund for annual plans within 45 days of purchase and within 48 hours of purchase for monthly plans (each “Refund Period”).  For refunds requested after the Refund Period, an in-store credit will be issued for any unused time remaining on your plan. Unused time will be calculated as the number of months remaining on the purchase term excluding the month in which the refund is requested.
+

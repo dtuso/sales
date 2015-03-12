@@ -199,13 +199,42 @@
       <style>
         #plans {
           margin:0 auto; 
-          background-color: #77c043;
         }
         .pro-plans .pro-plan-wrap.pro-plan-wrap-alternate {
             border-top: 10px solid #FE8D01;
         }
         .plan-price-and-duration {
           margin-top: -5px;
+        }
+        
+        .include-check-black, .include-check-green, .include-check-none {
+          padding-left: 33px;
+          position: relative;
+          margin-top: 20px;
+        }
+        .include-check-black:before {
+          content: "";
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-position: 0 -700px;
+          background-size: 205px auto;
+          width: 25px;
+          height: 27px;
+          padding-right: 5px;
+          position: absolute;
+          left: 0;
+          top: -6px;
+        }
+        .include-check-green:before {
+          content: "";
+          background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+          background-position: 0 -668px;
+          background-size: 205px auto;
+          width: 25px;
+          height: 27px;
+          padding-right: 5px;
+          position: absolute;
+          left: 0;
+          top: -6px;
         }
       </style>
     </atlantis:webstash>
@@ -708,11 +737,50 @@
                 </div>
                 <button id="product-D" data-ci="96219" data-plan="host_WordPressHostingPlan_D" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]</div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 col-sm-push-3">
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</div>
+                <div class="include-check-green">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</div>
+                <div class="include-check-green">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-domain]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 col-sm-push-3">
+                <div class="include-check-green">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-9]@L]</div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-10]@L]</div>
+                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-11]@L]</div>
               </div>
             </div>
           </div>

@@ -3,15 +3,6 @@ extend ../../../sales/shared/_plan-tile
 block vars
   - title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]";
   - description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-description]@L]";
-  - features = [];
-  - features.push('<strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong>');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]');
-
-
   - pfid = page.pfids.current.D;
   - listPrice = page.pricing.list.D;
   - currentPrice = page.pricing.current.D;
@@ -24,6 +15,17 @@ block vars
   - flagText = ""; // "[@L[cds.sales/gd/hosting/wordpress-hosting:plan-D-flagtext]@L]"
   - additionalClasses = "pro-plan-wrap-alternate"
   - priceText = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]"
+
+  - tooltip2 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]');
+  - tooltip3 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]');
+  - tooltip6 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]');
+  - features = [];
+  - features.push('<strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong>');
+  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]' + tooltip2);
+  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]' + tooltip3);
+  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]');
+  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]');
+  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]' + tooltip6);
 
 
 block price

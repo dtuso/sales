@@ -15,7 +15,9 @@ extends ../shared/_landing-page
 //-           return false;
 //-         });
 //-       });
-
+mixin toolTip(tipText)  
+  span &nbsp;
+  span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="#{tipText}")
 append vars 
   - page.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]";
   - page.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]";
