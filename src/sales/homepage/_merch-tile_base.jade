@@ -12,12 +12,15 @@ block append vars
 
 block tileContent
   .promo-logo-wrapper
-    <!--[if lt IE 9]>
-    img.promo-logo(src!=logoImageFallback)
-    <![endif]-->
-    img.promo-logo.svgfallback(src!=logoImage)
+    if (logoImageFallback)
+      <!--[if lt IE 9]>
+      img.promo-logo(src!=logoImageFallback)
+      <![endif]-->
+      img.promo-logo.svgfallback(src!=logoImage)
+    else
+      img.promo-logo(src!=logoImage)
     if (logoText)
-      .promo-logo-text !{logoText}
+      .promo-logo-text.walsheim-black !{logoText}
   .promo-text.walsheim-black !{promoText}
   .promo-cta
     if (ctaTextContainsPercent)
