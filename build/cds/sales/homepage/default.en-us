@@ -245,7 +245,6 @@
                             </div>
                             <div class="col-sm-3"></div>
                             <atlantis:webstash type="js">
-                              <script src="[@T[link:&lt;js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit'/&gt;]@T]"></script>
                               <script>$(document).ready(function(){$('#p4p-list').dropdown();});</script>
                             </atlantis:webstash>
                           </div>
