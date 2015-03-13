@@ -40,12 +40,13 @@
 }
 #com-anniversary .com-anniversary-price {
   font-size: 48px;
-  color: #f2812e;
+  color: #ef6c0f;
 }
 #com-anniversary a.btn {
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   font-size: 26px;
   font-family: 'Walsheim-Medium', Arial, sans-serif;
+  background-color: #ef6c0f;
 }
 
   </style>
