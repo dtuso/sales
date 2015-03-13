@@ -80,7 +80,7 @@
   <div class="heroContent">
     <div class="headline walsheim-black">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-headline]@L]</div>
     <div class="sub-headline walsheim-black">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-offer]@L]</div>
-    <div class="price walsheim-black">[@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]</div>
+    <div class="price walsheim-black">[@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]*</div>
     <button class="btn btn-lg btn-purchase">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-cta]@L]</button>
   </div>
 </div>
