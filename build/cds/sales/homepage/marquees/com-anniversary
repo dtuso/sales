@@ -31,8 +31,12 @@
   color: #333;
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
 }
+#com-anniversary .left-column {
+  padding-top: 80px;
+  width: 380px;
+}
 #com-anniversary .com-anniversary-text {
-  margin-left: 50px;
+  margin-left: 70px;
 }
 #com-anniversary .com-anniversary-headline {
   line-height: 1em;
@@ -41,24 +45,53 @@
 #com-anniversary .com-anniversary-price {
   font-size: 48px;
   color: #ef6c0f;
+  line-height: .8em;
+  margin-bottom: 30px;
 }
 #com-anniversary a.btn {
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   font-size: 26px;
   font-family: 'Walsheim-Medium', Arial, sans-serif;
   background-color: #ef6c0f;
+  border-color: #c2580c;
+}
+#com-anniversary a.btn:hover {
+  border-color: #d05e0d;
+  background-color: #f1751d;
+}
+html[lang|="uk"] #com-anniversary a.btn {
+  font-size: 13px;
+}
+html[lang|="de"] #com-anniversary a.btn,
+html[lang|="it"] #com-anniversary a.btn {
+  font-size: 14px;
+}
+html[lang|="fr"] #com-anniversary a.btn,
+html[lang|="ru"] #com-anniversary a.btn {
+  font-size: 15px;
+}
+html[lang|="pl"] #com-anniversary a.btn,
+html[lang|="tr"] #com-anniversary a.btn {
+  font-size: 18px;
+}
+html[lang|="es"] #com-anniversary a.btn,
+html[lang|="pt"] #com-anniversary a.btn,
+html[lang|="sv"] #com-anniversary a.btn,
+html[lang|="el"] #com-anniversary a.btn,
+html[lang|="sv"] #com-anniversary a.btn {
+  font-size: 20px;
 }
 
   </style>
 </atlantis:webstash>
-<div id="com-anniversary" data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95321' /></relative>]@T]" class="marquee js-gdhpclick">
+<div id="com-anniversary" data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='97078' /></relative>]@T]" class="marquee js-gdhpclick">
   <div class="container l-main-container">
     <div class="marquee-left-headline">
       <div class="left-column">
         <div class="com-anniversary-text">
           <div class="com-anniversary-headline">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-headline]@L]</div>
           <div class="com-anniversary-offer">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-offer]@L]</div>
-          <div class="com-anniversary-price">[@T[productprice:<current productid="101" period="yearly" promocode="444888" htmlsymbol="false" />]@T]</div><a class="com-anniversary-cta btn btn-warning">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-cta]@L]</a>
+          <div class="com-anniversary-price">[@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]</div><a class="com-anniversary-cta btn btn-warning">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-cta]@L]</a>
         </div>
       </div>
       <div class="right-column">
