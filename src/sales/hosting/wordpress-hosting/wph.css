@@ -3,3 +3,7 @@ body {
   background-color: #d9d9d9; 
 }
 
+.img-center {
+  margin-left: auto;
+  margin-right: auto;
+}
