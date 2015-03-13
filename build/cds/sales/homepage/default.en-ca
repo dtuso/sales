@@ -905,47 +905,6 @@
         </div>
       </div>
     </section>
-    <atlantis:webstash type="css">
-      <style>#nascar-contest {
-  background: #fff center center;
-  background-size: cover;
-}
-#nascar-contest h2 {
-  margin: 80px 0 0;
-}
-#nascar-contest h3 {
-  margin-top: 0;
-  font-size: 1.6rem;
-}
-@media only screen and (max-width: 680px) {
-  #nascar-contest h3 {
-    width: 180px;
-  }
-}
-#nascar-contest a {
-  margin-bottom: 30px;
-}
-@media only screen and (min-width: 1400px) {
-  #nascar-contest a {
-    margin-bottom: 100px;
-  }
-}
-#nascar-contest .nascar-contest-btn {
-  font-size: 1.4rem;
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="nascar-contest" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-contest-background.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6 col-offset-sm-6">
-            <h2>[@L[cds.sales/homepage/sections/_nascar-contest:header-text]@L]</h2>
-            <p>[@L[cds.sales/homepage/sections/_nascar-contest:body-text]@L]</p><a href="[@T[link:<relative path='/contest/gotyourback'><param name='ci' value='95788' /><param name='gdpath' value='enter' /></relative>]@T]" target="_blank" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_nascar-contest:cta-text]@L] </a>
-          </div>
-        </div>
-      </div>
-    </section>
     <section id="limitations-social">
       <div class="container">
         <div class="row">
