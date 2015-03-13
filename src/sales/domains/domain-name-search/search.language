@@ -428,6 +428,8 @@ Tell the world what moves you with <strong>.rocks</strong>
 Say hello with <strong>.social</strong>
 <phrase key="PodDotGlobalText" />
 <strong>.global</strong> says you're everywhere.
+<phrase key="PodDotGreenText" />
+Show your true colors with <strong>.green</strong>
 <phrase key="PodDotAttorneyText" />
 Make your case with <strong>.attorney</strong>
 <phrase key="PodDotChurchText" />
