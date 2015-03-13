@@ -1,7 +1,7 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 54b04ecaf778fc234c60ae34
-name: GCE-33979
+id: 55035f4ef778fc12bce6e6d5
+name: GCEMO-662
 comments: Additional CSS UxCore fixes wrapped in AppSetting Conditional
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
 assetPath: false
@@ -755,19 +755,6 @@ assetPath: false
       {% endless %}
       </style>
       <!-- end-css-elevate -->
-      <section class="main-customer-testamonial">
-        <div class="container l-main-container">
-          <div class="row">
-            <div class="col-xs-3 right-text">
-              <div class="customer-image solazy" data-sl-method="background" data-sl-src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/products/business-marketing/img/GetFound_LP_Sprite_20140903.png"></div>          
-            </div>
-            <div class="col-xs-9 customer-testimonial">
-              <div class="customer-quote">"[@L[cds.sales/gd/products/business-marketing:testimonial-1]@L]"</div>
-              <div class="customer-byline">&ndash; [@L[cds.sales/gd/products/business-marketing:testimonial-1-byline]@L]</div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!------------------------------------>
       <!--         PRODUCT STEPS          -->
       <!------------------------------------>
@@ -1016,139 +1003,7 @@ assetPath: false
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
 
-  $(document).ready(function(){
-
-    ##if(appSettingEnabled(UXCORE_ENABLED))
-      $('body').css('font-size', '10px');
-      $('.main-banner-title').css('color', '#ffffff');
-      $('.cta-small').css('line-height', '2.35714em');
-      $('.badge').css('background-color', '#f3514c');
-      $('.badge').css('font-size', '1em');
-      $('.badge').css('line-height', '2.5em');
-      $('.badge').css('padding', '0 1em');
-      $('.badge').css('border-radius', '0');
-      $('.badge').css('font-weight', 'normal');
-      $('.background-container').css('min-width', '100%');
-    ##endif 
-
-    // WIRE UP CI CODE TRACKING
-    setupCiCodeTracking();
-
-    // PRICING
-    setPricing('.main-banner-business-marketing'); // CTA bar
-    setPricing('#plans'); // plan tiers
-
-    // ADD TO CART
-    activateGetStartedBtn('#get-started-btn-1');
-    activateGetStartedBtn('#get-started-btn-2');
-
-    // SETUP FLIPPING CARDS
-    activateCardFlippers('.plan-item','a.ghost-button','.plan-item-side-B i.uxicon-x');
-
-    // SLIDER AREA
-    activateSlides('#customer-slider');
-  });
-
-  function setPricing(selector) {
-
-    var currentPrice = '[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',
-      renewalPrice = '[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',
-      savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
-
-    var $pricing = $(selector + ' p.pricing');
-    tokenizeThis($pricing, [currentPrice, renewalPrice, savePercentage]);
-    $pricing.show();
-    
-    var onSale = currentPrice !== renewalPrice;
-    if(onSale) {
-      $(selector + ' p.pricing span.renewal-price').show();
-    }
-
-  }
-
-  var setupCiCodeTracking = function(){
-    $('[data-ci]').on('click',function(e){
-      var ci = $(this).attr('data-ci');
-      FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
-      fbiLibCheckQueue();
-    });
-  }
-
-  var activateGetStartedBtn = function(selector){
-    $(selector).on('click', function(e){
-      e.preventDefault();
-      addLocuToCart(e, selector);
-      return false;
-    });
-  };
-
-  var activateCardFlippers = function(selector, openSelector, closeSelector) {
-
-    var transformsAvailable = !($.browser.msie && parseFloat($.browser.version) < 10); /* older IE (less than 10) cannot do transforms */
-    if(transformsAvailable) {
-      $(selector).on('click',openSelector + ',' + closeSelector, function(){
-        $(this).closest('.plan-item-container').toggleClass('flipped');
-      });
-    } else {
-      $(selector).on('click',openSelector, function(){
-        $(this).closest('.plan-item').find('.plan-item-side-A').hide();
-        $(this).closest('.plan-item').find('.plan-item-side-B').show();
-      });
-      $(selector).on('click',closeSelector, function(){
-        $(this).closest('.plan-item').find('.plan-item-side-B').hide();
-        $(this).closest('.plan-item').find('.plan-item-side-A').show();
-      });
-    }
-    console.log("transformsAvailable",transformsAvailable)
-
-  };
-
-  var tokenizeThis = function($obj, strArr) {
-    var tokenized = $obj.html();
-    for(var idx = 0; idx< strArr.length; idx++) {
-      tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
-    }
-    $obj.html(tokenized);
-  }
-
-
-  function activateSlides(selector) { 
-    $(selector + ' .gd-swipe')
-      .attr('data-gd-swipe','{"auto":0}')
-      .gdSwipe();
-  }
-
-  function addLocuToCart(e, b) {
-    var ciCode = $(b).attr('data-ci'); //grab ci code from the button clicked
-    var action   = 'add';
-    var itc      = 'slp_get_found_lp';
-    var quantity = '1';
-    var plan     = 'locu_Essential1Yr';
-    var url      = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',action).replace('{1}',itc).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',plan);
-    
-    ##if(!appSettingEnabled(UXCORE_ENABLED))
-    var newCartCt = pcCartCt + 1;
-    ##endif
-
-    $.getJSON(url, function (data) {
-      // 1. check for failures
-      if (data == 'fail') {
-        alert('Add to cart failure.');
-        return;        
-      }
-      if(!data.Success) {
-        alert('Add to cart failure.');
-        return;
-      }
-      // 2. update the new cart count on the page.
-      ##if(!appSettingEnabled(UXCORE_ENABLED))
-      pcUpdateCart(newCartCt);
-      ##endif
-
-      // 3. redirect user to the cart where their product should be waiting for them.
-      window.location = locuPage.redirectUrl;
-    });          
-  }
+  function setPricing(t){var e='[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',i='[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',a='[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]',n=$(t+" p.pricing");tokenizeThis(n,[e,i,a]),n.show();var r=e!==i;r&&$(t+" p.pricing span.renewal-price").show()}function activateSlides(t){$(t+" .gd-swipe").attr("data-gd-swipe",'{"auto":0}').gdSwipe()}function addLocuToCart(t,e){var i=$(e).attr("data-ci"),a="add",n="slp_get_found_lp",r="1",c="locu_Essential1Yr",o='[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace("{0}",a).replace("{1}",n).replace("{2}",i).replace("{3}",r).replace("{4}",c),l=pcCartCt+1;$.getJSON(o,function(t){return"fail"==t?void alert("Add to cart failure."):t.Success?(pcUpdateCart(l),void(window.location=locuPage.redirectUrl)):void alert("Add to cart failure.")})}$(document).ready(function(){setupCiCodeTracking(),setPricing(".main-banner-business-marketing"),setPricing("#plans"),activateGetStartedBtn("#get-started-btn-1"),activateGetStartedBtn("#get-started-btn-2"),activateCardFlippers(".plan-item","a.ghost-button",".plan-item-side-B i.uxicon-x"),activateSlides("#customer-slider")});var setupCiCodeTracking=function(){$("[data-ci]").on("click",function(t){var e=$(this).attr("data-ci");FastballEvent_MouseClick(t,e,$(this)[0],"a"),fbiLibCheckQueue()})},activateGetStartedBtn=function(t){$(t).on("click",function(e){return e.preventDefault(),addLocuToCart(e,t),!1})},activateCardFlippers=function(t,e,i){var a=!($.browser.msie&&parseFloat($.browser.version)<10);a?$(t).on("click",e+","+i,function(){$(this).closest(".plan-item-container").toggleClass("flipped")}):($(t).on("click",e,function(){$(this).closest(".plan-item").find(".plan-item-side-A").hide(),$(this).closest(".plan-item").find(".plan-item-side-B").show()}),$(t).on("click",i,function(){$(this).closest(".plan-item").find(".plan-item-side-B").hide(),$(this).closest(".plan-item").find(".plan-item-side-A").show()})),console.log("transformsAvailable",a)},tokenizeThis=function(t,e){for(var i=t.html(),a=0;a<e.length;a++)i=i.replace("{"+a+"}",e[a]);t.html(i)};
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
