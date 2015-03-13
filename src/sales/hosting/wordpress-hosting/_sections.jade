@@ -27,6 +27,20 @@ atlantis:webstash(type="css")
       margin-bottom: 0px;
       margin-top: 0px;
     }
+
+    h4.review-comments {
+      font-family: "Walsheim-Bold";
+      font-size: 24px;
+    }
+    h5.review-byline {
+      font-family: "Walsheim-Bold";
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    h5.review-byline span {
+      color: #999;
+    }
+
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
@@ -89,10 +103,16 @@ section#features-more
         +lazyImg("img-responsive img-center", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]
+      | 
+      | ##if(productIsOffered(107))
+      | 
       .col-md-4.col-sm-6.col-xs-12
         +lazyImg("img-responsive img-center", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]
+      | 
+      | ##endif
+      | 
 
 section#features-lose
   +featuresTemplates({
@@ -252,16 +272,12 @@ section#reviews-carousel
       .container-fluid.ols-carousel-item
         .row
           .col-xs-12.text-center
-            +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-stars]@L].jpg", "altText", "triggerResize")
-            h3.review-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-title]@L]
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-byline]@L]
     +carouselItem(reviewsCarouselItem)
       .container-fluid.ols-carousel-item
         .row
           .col-xs-12.text-center
-            +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-stars]@L].jpg", "altText", "triggerResize")
-            h3.review-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-title]@L]
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-byline]@L]
 
@@ -269,8 +285,6 @@ section#reviews-carousel
       .container-fluid.ols-carousel-item
         .row
           .col-xs-12.text-center
-            +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-stars]@L].jpg", "altText", "triggerResize")
-            h3.review-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-title]@L]
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-byline]@L]
 
@@ -278,8 +292,6 @@ section#reviews-carousel
       .container-fluid.ols-carousel-item
         .row
           .col-xs-12.text-center
-            +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-stars]@L].jpg", "altText", "triggerResize")
-            h3.review-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-title]@L]
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-byline]@L]
 
@@ -287,8 +299,6 @@ section#reviews-carousel
       .container-fluid.ols-carousel-item
         .row
           .col-xs-12.text-center
-            +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-stars]@L].jpg", "altText", "triggerResize")
-            h3.review-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-title]@L]
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-byline]@L]
 

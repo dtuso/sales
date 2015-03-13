@@ -72,7 +72,7 @@ section#plans
           .col-sm-9.col-sm-push-3
             ul.green-check
               | 
-              | ##if(!productIsOffered(99))
+              | ##if(productIsOffered(99))
               | 
               li              
                 | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]
@@ -87,7 +87,7 @@ section#plans
               | ##if(areAdCreditsEnabled(google))
               | 
               li 
-                | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-9]@L]
+                span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]
                 +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]")
             
               | 
@@ -98,17 +98,17 @@ section#plans
               | ##if(areAdCreditsEnabled(bing))
               | 
               li 
-                | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-10]@L]
+                span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]
                 +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]")
               | 
               | ##endif
               | 
               
               | 
-              | ##if(areAdCreditsEnabled(google))
+              | ##if(areAdCreditsEnabled(facebook))
               | 
               li
-                | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-11]@L]
+                span(data-tokenize!="#{page.pricing.fifty}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-facebook]@L]
                 +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]")
               | 
               | ##endif

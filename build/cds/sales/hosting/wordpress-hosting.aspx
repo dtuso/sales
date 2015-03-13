@@ -237,6 +237,52 @@
       </style>
     </atlantis:webstash>
     <section id="plans">
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var planTileMixin = {
+                    // autoheight the small inside parts of the plan tiles
+            runBefore: function() {
+              //override in your code;
+            },
+            findMaxHeight: function($items) {
+              var maxHeight = 0;
+              $items.each(function(index, item) {
+                maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+              });
+              return maxHeight;
+            },
+            autoHeightIt: function($obj, selector) {
+              var $objs = $obj.find(selector);
+              var maxHeight = planTileMixin.findMaxHeight($objs);
+              if( maxHeight > 0 ) $objs.css("height", maxHeight);
+            },
+            autoHeighPlanBoxInsides: function() {
+              $tiles = $('#plans').find('.plan-tile');
+              planTileMixin.autoHeightIt($tiles, '.title-wrap');
+              planTileMixin.autoHeightIt($tiles, '.price-wrap');
+              planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+            },
+            autoHeightPlanBoxes: function() {
+              // auto height the plan boxes
+              $(".pro-plans").each(function(index, outerPlan) {
+                if($(outerPlan).hasClass('ignore-same-height')) 
+                  return;
+                planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+              });
+            }
+          };
+          
+          $(document).ready(function(){
+            if ($(window).width() < 768) 
+              return; /* bail out because too narrow to list more than one wide */
+            if($.isFunction(planTileMixin.runBefore)) 
+              planTileMixin.runBefore()
+            planTileMixin.autoHeighPlanBoxInsides();
+            planTileMixin.autoHeightPlanBoxes();
+          });
+          
+        </script>
+      </atlantis:webstash>
       <atlantis:webstash type="css">
         <style>.plan-tile { 
   margin-top: -145px; 
@@ -637,109 +683,157 @@
           <div class="row"> 
             <div id="planTileA" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-desc]@L]</p>
-                <div class="plan-price-wrap row">
-                  <div class="price-text"> <strong>As low as</strong></div>
-                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
-                  ##if(productHasSavingsMoreThan(580970, 580970, 0))
-                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580970' secondaryproductid='580970' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
-                  ##endif
-                   
-                  <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-desc]@L]</p>
                 </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row">
+                    <div class="price-text"> <strong>As low as</strong></div>
+                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(580970, 580970, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580970' secondaryproductid='580970' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="96216" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
               </div>
             </div>
             <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-desc]@L]</p>
-                <div class="plan-price-wrap row">
-                  <div class="price-text"> <strong>As low as</strong></div>
-                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
-                  ##if(productHasSavingsMoreThan(580978, 580978, 0))
-                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580978' secondaryproductid='580978' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
-                  ##endif
-                   
-                  <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-desc]@L]</p>
                 </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row">
+                    <div class="price-text"> <strong>As low as</strong></div>
+                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(580978, 580978, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580978' secondaryproductid='580978' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="96217" data-plan="host_WordPressHostingPlan_B" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L]</div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"> </span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L]</div>
               </div>
             </div>
             <div id="planTileC" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-desc]@L]</p>
-                <div class="plan-price-wrap row">
-                  <div class="price-text"> <strong>As low as</strong></div>
-                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
-                  ##if(productHasSavingsMoreThan(581001, 581001, 0))
-                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581001' secondaryproductid='581001' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
-                  ##endif
-                   
-                  <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-desc]@L]</p>
                 </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row">
+                    <div class="price-text"> <strong>As low as</strong></div>
+                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(581001, 581001, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581001' secondaryproductid='581001' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="96218" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]"></span></div>
+                <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L] </div> 
+                ##if(productIsOffered(107))
+                 
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]  </div> 
+                ##endif
+                 
+                 
+                ##if(productIsOffered(22))
+                 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##endif
+                 
               </div>
             </div>
             <div id="planTileD" class="col-md-3 col-sm-6 plan-tile plan-pro">
               <div class="pro-plan-wrap pro-plan-wrap-alternate">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-desc]@L]</p>
-                <div class="plan-price-wrap row">
-                  <div class="price-text"> <strong>As low as</strong></div>
-                  <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
-                  ##if(productHasSavingsMoreThan(581019, 581019, 0))
-                   <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581019' secondaryproductid='581019' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
-                  ##endif
-                   
-                  <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-desc]@L]</p>
                 </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row">
+                    <div class="price-text"> <strong>As low as</strong></div>
+                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(581019, 581019, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581019' secondaryproductid='581019' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
                 <button id="product-D" data-ci="96219" data-plan="host_WordPressHostingPlan_D" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]"></span></div>
+                <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='800000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div> 
+                ##if(productIsOffered(22))
+                 
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div> 
+                ##endif
+                 
               </div>
             </div>
           </div>
@@ -753,53 +847,54 @@
           <div class="col-md-6 col-sm-12">
             <div class="row">
               <div class="col-sm-9 col-sm-push-3">
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</div>
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div>
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</div>
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</div>
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</div>
-                <div class="include-check-green">
-                   
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div>
+                <ul class="green-check">
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="row">
               <div class="col-sm-9 col-sm-push-3">
-                <div class="include-check-green">
+                <ul class="green-check">
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div>
-                <div class="include-check-green">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</div> 
-                ##if(areAdCreditsEnabled(google))
-                 
-                <div class="include-check-green">
+                  ##if(productIsOffered(99))
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-9]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div> 
-                ##endif
-                 
-                 
-                ##if(areAdCreditsEnabled(bing))
-                 
-                <div class="include-check-green">
+                  <li>
+                                 
+                    [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li> 
+                  ##endif
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-10]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div> 
-                ##endif
-                 
-                 
-                ##if(areAdCreditsEnabled(google))
-                 
-                <div class="include-check-green">
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</li> 
+                  ##if(areAdCreditsEnabled(google))
                    
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-11]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div> 
-                ##endif
-                 
+                  <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(areAdCreditsEnabled(bing))
+                   
+                  <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(areAdCreditsEnabled(facebook))
+                   
+                  <li><span data-tokenize="[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-facebook]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                  </li> 
+                  ##endif
+                   
+                </ul>
               </div>
             </div>
           </div>
@@ -835,6 +930,20 @@
           margin-bottom: 0px;
           margin-top: 0px;
         }
+        
+        h4.review-comments {
+          font-family: "Walsheim-Bold";
+          font-size: 24px;
+        }
+        h5.review-byline {
+          font-family: "Walsheim-Bold";
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+        h5.review-byline span {
+          color: #999;
+        }
+        
       </style>
     </atlantis:webstash>
     <style>
@@ -1182,11 +1291,15 @@
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]</p>
-          </div>
+          </div> 
+          ##if(productIsOffered(107))
+           
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]</p>
-          </div>
+          </div> 
+          ##endif
+           
         </div>
       </div>
     </section>
@@ -1797,8 +1910,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-stars]@L].jpg" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
-                          <h3 class="review-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-title]@L]</h3>
+                        <div class="col-xs-12 text-center">
                           <h4 class="review-comments">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-comments]@L]</h4>
                           <h5 class="review-byline">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-1-byline]@L]</h5>
                         </div>
@@ -1812,8 +1924,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-stars]@L].jpg" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
-                          <h3 class="review-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-title]@L]</h3>
+                        <div class="col-xs-12 text-center">
                           <h4 class="review-comments">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-comments]@L]</h4>
                           <h5 class="review-byline">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-2-byline]@L]</h5>
                         </div>
@@ -1827,8 +1938,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-stars]@L].jpg" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
-                          <h3 class="review-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-title]@L]</h3>
+                        <div class="col-xs-12 text-center">
                           <h4 class="review-comments">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-comments]@L]</h4>
                           <h5 class="review-byline">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-3-byline]@L]</h5>
                         </div>
@@ -1842,8 +1952,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-stars]@L].jpg" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
-                          <h3 class="review-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-title]@L]</h3>
+                        <div class="col-xs-12 text-center">
                           <h4 class="review-comments">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-comments]@L]</h4>
                           <h5 class="review-byline">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-4-byline]@L]</h5>
                         </div>
@@ -1857,8 +1966,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/review-stars-[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-stars]@L].jpg" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive img-center"/>
-                          <h3 class="review-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-title]@L]</h3>
+                        <div class="col-xs-12 text-center">
                           <h4 class="review-comments">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-comments]@L]</h4>
                           <h5 class="review-byline">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-byline]@L]</h5>
                         </div>
@@ -2418,7 +2526,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-        
       </style>
       <style>
 body { 
@@ -2900,17 +3007,6 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
-        }
       
       
         $('[data-icann-fee]').each(function(){

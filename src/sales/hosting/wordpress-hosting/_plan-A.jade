@@ -18,10 +18,15 @@ block vars
   - buttonUrl = ""
   - tooltip2 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]');
   - tooltip3 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]');
-  - features = [];
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]');
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]' + tooltip2);
-  - features.push('[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]' + tooltip3);
 
 block price
   include ./_plan-price-override.jade
+
+block features
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]
+  .plan-item 
+    | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;
+    span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]")
+  .plan-item
+    span(data-tokenize!="[@T[localization:<display type='numeric' number='25000' />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;
+    span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize!="[@T[localization:<display type='numeric' number='10000' />]@T]")

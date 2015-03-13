@@ -37,8 +37,8 @@ Add Basic Plan to Cart
 1 website
 <phrase key="35561-basic-feature-2" comment="" />
 <strong>10GB SSD</strong> storage
-<phrase key="35561-basic-feature-3" comment="" />
-<strong>[@T[localization:<display type="numeric" number="25000" />]@T]</strong> monthly visitors
+<phrase key="35561-basic-feature-3" comment="{0} will be the number of monthly users" />
+<strong>{0}</strong> monthly visitors
 <phrase key="35561-deluxe" comment="" />
 Deluxe
 <phrase key="35561-deluxe-desc" comment="" />
@@ -49,8 +49,8 @@ Add Deluxe Plan to Cart
 1 website
 <phrase key="35561-deluxe-feature-2" comment="" />
 <strong>15GB SSD</strong> storage
-<phrase key="35561-deluxe-feature-3" comment="" />
-<strong>[@T[localization:<display type="numeric" number="100000" />]@T]</strong> monthly visitors
+<phrase key="35561-deluxe-feature-3" comment="{0} will be the number of monthly users" />
+<strong>{0}</strong> monthly visitors
 <phrase key="35561-deluxe-feature-4" comment="" />
 One-click staging site
 <phrase key="35561-deluxe-feature-5" comment="" />
@@ -67,8 +67,8 @@ Add Ultimate Plan to Cart
 2 websites
 <phrase key="35561-ultimate-feature-2" comment="" />
 <strong>30GB SSD</strong> storage
-<phrase key="35561-ultimate-feature-3" comment="" />
-<strong>[@T[localization:<display type="numeric" number="400000" />]@T]</strong> monthly visitors (shared)
+<phrase key="35561-ultimate-feature-3" comment="{0} will be the number of monthly users" />
+<strong>{0}</strong> monthly visitors (shared)
 <phrase key="35561-ultimate-feature-4" comment="" />
 One-click staging site
 <phrase key="35561-ultimate-feature-5" comment="" />
@@ -78,7 +78,7 @@ Search engine optimization plugin
 <phrase key="35561-ultimate-feature-7" comment="" />
 Malware scan &amp; removal
 <phrase key="35561-ultimate-feature-8" comment="" />
-SSL certificate – First year free ([@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T] renewal annually)
+SSL certificate – First year free ({0} renewal annually)
 <phrase key="35561-developer" comment="" />
 Developer
 <phrase key="35561-developer-desc" comment="" />
@@ -89,20 +89,20 @@ Add Developer Plan to Cart
 5 websites
 <phrase key="35561-developer-feature-2" comment="" />
 <strong>50GB SSD</strong> storage
-<phrase key="35561-developer-feature-3" comment="" />
-<strong>[@T[localization:<display type="numeric" number="800000" />]@T]</strong> monthly visitors
+<phrase key="35561-developer-feature-3" comment="{0} will be the number of monthly users" />
+<strong>{0}</strong> monthly visitors
 <phrase key="35561-developer-feature-4" comment="" />
 One-click staging site
 <phrase key="35561-developer-feature-5" comment="" />
 SSH / SFTP access
 <phrase key="35561-developer-feature-6" comment="" />
-SSL certificate – First year free ([@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T] renewal annually)
+SSL certificate – First year free ({0} renewal annually)
 <phrase key="35561-per-mo" comment="per month (for pricing)" />
 /mo
 <phrase key="35561-tooltip-ssd" comment="" />
 Our servers have high-performance SSD drives for both files &amp; databases so your sites load incredibly fast. Storage is shared across your plan’s sites.
 <phrase key="35561-tooltip-visitors" comment="" />
-Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every [@T[localization:<display type="numeric" number="10000" />]@T] visitors over your hosting plan, across all sites.
+Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every {0} visitors over your hosting plan, across all sites.
 <phrase key="35561-tooltip-free-domain" comment="" />
 Restrictions apply. Get one FREE .com, .ca, .co, .net or .org with purchase of a new 12, 24 or 36-month plan. (Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year.) You must add the domain to your cart before purchase and select a term length equal to or less than the term of your hosting plan. If you purchase a domain name for a longer term than your hosting, you’ll be charged for the additional time at the then-current rate. This offer can’t be used in conjunction with any other offer, sale, discount or promotion. This offer applies only to the initial term of purchase. Following the initial purchase term, domains purchased through this offer renew at the then-current renewal price.
 <phrase key="35561-tooltip-office-365" comment="" />
@@ -133,12 +133,12 @@ Money-back guarantee
 24/7, award-winning hosting support
 <phrase key="35561-all-plans-8" comment="" />
 WordPress website building tutorial videos 
-<phrase key="35561-all-plans-9" comment="" />
-Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google AdWords<sup>&trade;</sup> credit
-<phrase key="35561-all-plans-10" comment="" />
-Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing Search / Yahoo Search credit
-<phrase key="35561-all-plans-11" comment="" />
-Up to [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook ad credit
+<phrase key="35561-all-plans-google" comment="" />
+Up to {0} Google AdWords<sup>&trade;</sup> credit
+<phrase key="35561-all-plans-bing" comment="" />
+Up to {0} Bing Search / Yahoo Search credit
+<phrase key="35561-all-plans-facebook" comment="" />
+Up to {0} Facebook ad credit
 <phrase key="35561-tooltip-guarantee" comment="" />
 You can request a full refund for annual plans within 45 days of purchase and within 48 hours of purchase for monthly plans (each “Refund Period”).  For refunds requested after the Refund Period, an in-store credit will be issued for any unused time remaining on your plan. Unused time will be calculated as the number of months remaining on the purchase term excluding the month in which the refund is requested.
 <phrase key="35561-key-title" comment="" />

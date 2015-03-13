@@ -44,6 +44,50 @@ mixin renderPlanTiles(columns, options)
   else
     - containerClass = "container"
 
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      var planTileMixin = {
+                // autoheight the small inside parts of the plan tiles
+        runBefore: function() {
+          //override in your code;
+        },
+        findMaxHeight: function($items) {
+          var maxHeight = 0;
+          $items.each(function(index, item) {
+            maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+          });
+          return maxHeight;
+        },
+        autoHeightIt: function($obj, selector) {
+          var $objs = $obj.find(selector);
+          var maxHeight = planTileMixin.findMaxHeight($objs);
+          if( maxHeight > 0 ) $objs.css("height", maxHeight);
+        },
+        autoHeighPlanBoxInsides: function() {
+          $tiles = $('#plans').find('.plan-tile');
+          planTileMixin.autoHeightIt($tiles, '.title-wrap');
+          planTileMixin.autoHeightIt($tiles, '.price-wrap');
+          planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+        },
+        autoHeightPlanBoxes: function() {
+          // auto height the plan boxes
+          $(".pro-plans").each(function(index, outerPlan) {
+            if($(outerPlan).hasClass('ignore-same-height')) 
+              return;
+            planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+          });
+        }
+      };
+
+      $(document).ready(function(){
+        if ($(window).width() < 768) 
+          return; /* bail out because too narrow to list more than one wide */
+        if($.isFunction(planTileMixin.runBefore)) 
+          planTileMixin.runBefore()
+        planTileMixin.autoHeighPlanBoxInsides();
+        planTileMixin.autoHeightPlanBoxes();
+      });
+
   atlantis:webstash(type="css")
     style
       include:css ./_plan-tiles/plan-tiles.css
