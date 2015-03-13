@@ -786,16 +786,25 @@
     <atlantis:webstash type="css">
       <style>
         #features {
-        
+          background-color: #d9d9d9;
         }
-        #neverLoose,
+        #features-more {
+          background-color: #fff;
+        }
+        #features-lose{
+          background-color: #84D54A;
+          margin:0px;
+        }
         #training {
           background-color: #84D54A;
         }
         #security {
           background-color: white;
         }
-        #renderMidPageNavBottom {margin:0;padding:0;}
+        #renderMidPageNavBottom {
+          margin:0;
+          padding:0;
+        }
       </style>
     </atlantis:webstash>
     <style>
@@ -1112,30 +1121,46 @@
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]</p>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="features-more">
+      <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <h2 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]</p>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]</p>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]</p>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]</p>
           </div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]</p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="altText" class="lazyload img-responsive"/>
+            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]</h3>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]</p>
+          </div>
         </div>
       </div>
+    </section>
+    <section id="features-lose">
       <atlantis:webstash type="css">
         <style>
           .features {
@@ -1193,7 +1218,7 @@
           
         </style>
       </atlantis:webstash>
-      <div id="neverLoose" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
+      <div id="neverLose" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
@@ -1291,7 +1316,7 @@
       <style>
         #alternate-products {
           background-color: #fff;
-          padding-bottom: 0px !important;
+          padding: 0px !important;
         }
         .white-text { color: #fff;}
         ul.alternate-products {

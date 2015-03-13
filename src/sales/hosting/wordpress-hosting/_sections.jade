@@ -1,16 +1,25 @@
 atlantis:webstash(type="css")
   style.
     #features {
-
+      background-color: #d9d9d9;
     }
-    #neverLoose,
+    #features-more {
+      background-color: #fff;
+    }
+    #features-lose{
+      background-color: #84D54A;
+      margin:0px;
+    }
     #training {
       background-color: #84D54A;
     }
     #security {
       background-color: white;
     }
-    #renderMidPageNavBottom {margin:0;padding:0;}
+    #renderMidPageNavBottom {
+      margin:0;
+      padding:0;
+    }
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
@@ -45,30 +54,42 @@ section#features(data-mid-nav-title="Features",data-ciCode="#{page.ci.midPageNav
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]
+section#features-more
+  .container
     .row
       .col-sm-12
         h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]
     .row
-      .col-md-3.col-sm-6.col-xs-12
+      .col-md-4.col-sm-6.col-xs-12
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]
-      .col-md-3.col-sm-6.col-xs-12
+      .col-md-4.col-sm-6.col-xs-12
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]
-      .col-md-3.col-sm-6.col-xs-12
+      .col-md-4.col-sm-6.col-xs-12
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]
-      .col-md-3.col-sm-6.col-xs-12
+    .row
+      .col-md-4.col-sm-6.col-xs-12
         +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]
+      .col-md-4.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]
+      .col-md-4.col-sm-6.col-xs-12
+        +lazyImg("img-responsive", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
+        h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]
 
+section#features-lose
   +featuresTemplates({
     presentationTemplate: "featuresRightText", 
-    featuresId: "neverLoose", 
+    featuresId: "neverLose", 
     additionalWrapClasses: null, 
     lazyLoad: true, 
     backgroundImage: "", 
