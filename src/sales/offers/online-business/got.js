@@ -18,12 +18,13 @@ var got1Page = {
     lastTldInList: 'org', 
     tlds: [@T[appSetting:<setting name="SALES_GOT_TLD_EVERYONE_LIST" />]@T],   
     possibleAdditionalTlds: [@T[appSetting:<setting name="SALES_GOT_TLD_RESTRICTED_LIST" />]@T],  
-    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);}
+    isPossibleAdditionalTld: function(tld) {return -1 !== $.inArray(tld, got1Page.tldInfo.possibleAdditionalTlds);},
+    addTldIf: function(tld, isDefault) {if(got1Page.tldInfo.isPossibleAdditionalTld(tld)) {got1Page.tldInfo.tlds.push(tld);if(isDefault) got1Page.tldInfo.defaultTld = tld;}}
   },
   sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
   maxNumberOfSpinsToShowByDefault: 3,
   totalSpinResults: 0,
-  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /></relative>]@T]',
+  dppErrorReturnUrl: '[@T[link:<relative path="~/offers/online-business.aspx"><param name="tldRegErr" value="tldRegErr" /><param name="dppDom" value="dppDom" /></relative>]@T]',   
   offersCodes: {
     packageId_wsb: 'gybo_1email_1yr',
     packageId_ols: 'gybo_1email_1yr_ols',
@@ -48,33 +49,51 @@ var got1Page = {
   got1Page.canOfferOls = false;
 ##endif
 
-##if(countrySiteAny(ca) || isManager())  
-  if(got1Page.tldInfo.isPossibleAdditionalTld('ca')) {
-    got1Page.tldInfo.tlds.push('ca');
-    got1Page.tldInfo.defaultTld = 'ca';
-  }
+##if(countrySiteAny(ca) || isManager())
+  got1Page.tldInfo.addTldIf('ca', true);
 ##endif
 ##if(countrySiteAny(br) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('br')) {
-    got1Page.tldInfo.tlds.push('br');
-    got1Page.tldInfo.defaultTld = 'br';
-  }
+  got1Page.tldInfo.addTldIf('br', true);
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('in')) {
-    got1Page.tldInfo.tlds.push('in');
-    got1Page.tldInfo.defaultTld = 'in';
-  }
+  got1Page.tldInfo.addTldIf('in', false);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
-  if(got1Page.tldInfo.isPossibleAdditionalTld('co.uk')) {
-    got1Page.tldInfo.tlds.push('co.uk');
-    got1Page.tldInfo.defaultTld = 'co.uk';
-  }
-  if(got1Page.tldInfo.isPossibleAdditionalTld('uk')) {
-    got1Page.tldInfo.tlds.push('uk');
-    got1Page.tldInfo.defaultTld = 'uk';
-  }
+  got1Page.tldInfo.addTldIf('co.uk', true);
+  got1Page.tldInfo.addTldIf('uk',    false);
+##endif
+##if(countrySiteAny(fr) || isManager())
+  got1Page.tldInfo.addTldIf('fr', true);
+##endif
+##if(countrySiteAny(it) || isManager())
+  got1Page.tldInfo.addTldIf('it', true);
+##endif
+##if(countrySiteAny(at) || isManager())
+  got1Page.tldInfo.addTldIf('at', true);
+##endif
+##if(countrySiteAny(es) || isManager())
+  got1Page.tldInfo.addTldIf('es', true);
+##endif
+##if(countrySiteAny(nl) || isManager())
+  got1Page.tldInfo.addTldIf('nl', true);
+##endif
+##if(countrySiteAny(de) || isManager())
+  got1Page.tldInfo.addTldIf('de', true);
+##endif
+##if(countrySiteAny(ch) || isManager())
+  got1Page.tldInfo.addTldIf('ch', true);
+##endif
+##if(countrySiteAny(be) || isManager())
+  got1Page.tldInfo.addTldIf('be', true);
+##endif
+##if(countrySiteAny(pl) || isManager())
+  got1Page.tldInfo.addTldIf('pl', true);
+##endif
+##if(countrySiteAny(ru) || isManager())
+  got1Page.tldInfo.addTldIf('ru', true);
+##endif
+##if(countrySiteAny(dk) || isManager())
+  got1Page.tldInfo.addTldIf('dk', true);
 ##endif
 
 //- sort the list of TLDs, keeping default at the head of the list and lastTldInList at the end of the list
@@ -110,13 +129,6 @@ $(document).ready(function() {
   // when on the English page (US only) show the words OR rather than the universal OR graphic
   if(got1Page.isEnUs) {
     $("#site-choice-compare, #step2-choose-product").find('.or-container').addClass('or-container-en-us');
-  }
-
-  //- display error on return from DPP's TLD eligibility requirements failure
-  if(getParameterByName('tldRegErr').length > 0) {
-    showDomainRegistrationFailure(getParameterByName('tldRegErr'));
-  } else {
-    showTypeYourDomain();
   }
 
   // set up verify buttons on spin results to do validation before sending to DPP
@@ -287,17 +299,17 @@ function domainSearchFormSubmit(e, domain) {
       if(isAvailable) {
         $('#marquee').find('.search-form-input').val(''); 
 
-        // Domain is available, so allow them to search again or to select this available domain        
-        showTypeYourDomain();// setup search box
-
         // tokenize header on search available page
         $('#available-domain-name').text(exactMatchDomain.Fqdn);
 
-        var $thisSection = $this.closest('.js-marquee-section');       
+        var $thisSection = $this.closest('.js-marquee-section'); 
 
-        $('#domain-available-marquee-view').find('.purchase-btn').data('domain', exactMatchDomain);
+        var $toView = $('#domain-available-marquee-view');
+        $toView.find('.purchase-btn').data('domain', exactMatchDomain);
+        $toView.find('.search-message').hide();
+        $toView.find('.search-message.type-your-business-name').show();
 
-        animateMarquee($thisSection, $('#domain-available-marquee-view') /*toView*/);
+        animateMarquee($thisSection, $toView /*toView*/);
 
       } else {
 
@@ -401,14 +413,13 @@ function goToDppCheckoutPage(e) {
     domain = $this.data('domain'),
     isOLS = $this.hasClass('product-ols'),
     apiEndpoint3,
-    sourceurl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension));
+    returnUrl = encodeURIComponent(got1Page.dppErrorReturnUrl.replace('tldRegErr=tldRegErr', 'tldRegErr=.' + domain.Extension).replace('dppDom=dppDom', 'dppDom=' + encodeURIComponent(domain.Fqdn)));
 
-  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="sourceurl" value="sourceurl" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
+  apiEndpoint3 = '[@T[link:<relative path="~/api/dpp/searchresultscart/11/"><param name="domain" value="domain" /><param name="packageid" value="packageid" /><param name="itc" value="itc" /><param name="returnUrl" value="returnUrl" /></relative>]@T]';
   apiEndpoint3 = apiEndpoint3.replace('domain=domain', 'domain=' + encodeURIComponent(domain.Fqdn));
   apiEndpoint3 = apiEndpoint3.replace('packageid=packageid', 'packageid=' + (isOLS ? got1Page.offersCodes.packageId_ols : got1Page.offersCodes.packageId_wsb));
   apiEndpoint3 = apiEndpoint3.replace('itc=itc', 'itc=' + (isOLS ? got1Page.offersCodes.itc_ols : got1Page.offersCodes.itc_wsb));
-  apiEndpoint3 = apiEndpoint3.replace('sourceurl=sourceurl', 'sourceurl=' +  sourceurl );
-  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
+  apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  returnUrl );
 
   $.ajaxSetup({cache:false});
   $.ajax({
@@ -432,9 +443,6 @@ function goToDppCheckoutPage(e) {
 }
 
 function showSearchSpins($this, domain, alternateDomains){  
-
-  // setup search box  
-  showTypeYourDomain();
 
   displayMoreResultsLinks(alternateDomains.length);
 
@@ -462,7 +470,10 @@ function showSearchSpins($this, domain, alternateDomains){
   $("#spin-results .spin-result:lt(" + got1Page.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
 
   var $thisSection = $this.closest('.js-marquee-section');
-  animateMarquee($thisSection, $('#domain-not-available-marquee-view') /*toView*/);
+  var $toView = $('#domain-not-available-marquee-view');
+  $toView.find('.search-message').hide();
+  $toView.find('.search-message.type-your-business-name').show();
+  animateMarquee($thisSection, $toView /*toView*/);
 
 }
 
@@ -474,21 +485,6 @@ function showApi1or2SearchError(e,domain){
 function showApi3SearchError(e,domain){  
   var $modal = $("#step2-choose-product .api-c-failure-modal");
   $modal.sfDialog({titleHidden:true, buttons: got1Page.sfDialogErrorButtons});
-}
-
-function showDomainRegistrationFailure(tld) {
-  var 
-    $failArea = $('#marquee .domain-eligibility-fail'), 
-    html = $failArea.html();
-  html = html.replace(/\{0\}/gi, tld)
-  $failArea.html(html);
-  $('#marquee .search-message').hide();
-  $('#marquee .domain-eligibility-fail').show();
-}
-
-function showTypeYourDomain() {  
-  $('#marquee .search-message').hide();
-  $('#marquee .type-your-business-name').show();
 }
 
 function displayMoreResultsLinks() {
@@ -584,18 +580,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
   $(document).trigger('resize');
 }
 
-
-// Page Global script -- changes will effect all campaigns 
-// get url parameter by parameter name
-function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-
 $(window).load(function () {
   $('.bigtext').bigtext({maxfontsize: 160});
   setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
 });
-

@@ -51,7 +51,7 @@ mixin domainSearchInput(domainSearchParams)
 mixin domainSearchOffersInput(prms)
   
   - prms                          = prms || {};
-  - prms.tlds                     = prms.tlds || ['com','co','org','net'];
+  - prms.tlds                     = prms.tlds || "['com','co','org','net']"; /* or can be a name of your variable that holds them ... like "myObj.tldArrary" */
   - prms.defaultTld               = prms.defaultTld || 'com';
   - prms.searchNowCallbackFn      = prms.searchNowCallbackFn || "domainSearchFormSubmit"; /* you need to code a function taking the domain name as a string input */
   - prms.maxDomainLength          = prms.maxDomainLength || 63;

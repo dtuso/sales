@@ -1,26 +1,23 @@
-extends ./_home-page.jade
+extends ../../layouts/homepage/default_base
 
-block hero
-  include ../../tmsv2/content/homepage/gtld/hero.jade
-block marquee-tile1
-  include ../../tmsv2/content/homepage/got/marquee-tile.jade
-block marquee-tile2
-  include ../../tmsv2/content/homepage/web-hosting-savings/marquee-tile.jade
-block merch-tile1
-  include ./tiles/gdpro-tile.jade
-block merch-tile2
-  include ./tiles/o365-tile.jade
-block merch-tile3
-  include ../../tmsv2/content/homepage/customer-care/merch-tile.jade
-block merch-tile4
-  include ./tiles/online-store-tile.jade
-block prepend sections
-  include ./sections/_domain-promo.jade
-  include ./sections/_why-godaddy.jade
-  include ./sections/_website-promo.jade
-  include ./sections/_o365-promo.jade
-  include ./sections/_support-promo.jade
-  include ./sections/_nascar-contest.jade
+block styles
+  style.
+    .top-banner-lower-content{height:45px;background-color:#fff;width:100%}
+    .top-lower-content{margin:0 auto;position:relative;width:1000px;padding-top:13px}
+    .gdhp-share{position:relative;float:right;}
+    #pcf .pc-support-wrapper{margin-top:0px !important;}
+    body {font-family:'Walsheim-Regular'; background-color:#ededed;}
+    body .gdhp-tile-wrap{background-color:#ededed;}
+    .atn-btn-wrap{padding-top:20px;width:450px;height:54px;}
+    .atn-btn-wrap>span {visibility: visible;margin-right: 20px;float: left;}
+    .b {font-family: 'Walsheim-Bold'}
+    
+block domainSearch
+  include ./sections/domain-search.jade
+
+block marquee
+  #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  #marquee-container-isc(style="display:none") [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
 
 block bugBar
-    +tldBugs(["com","uk","org","club"])
+    +tldBugs(["com","co","uk","wales"])

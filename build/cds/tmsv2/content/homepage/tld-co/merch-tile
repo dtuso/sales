@@ -1,0 +1,19 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .co-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
+    .co-tertiary-tile .promo-logo{width:70%}
+    .co-tertiary-tile .promo-text{padding-top:10px;}
+    .co-tertiary-tile .promo-cta{position:absolute;bottom:5px}
+    .co-tertiary-tile a{text-decoration:underline;color:#f2812e}
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' data-message-name="" class="tile co-tertiary-tile">
+  <div class="tile-content-wrapper">
+    <div class="promo-logo-wrapper"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png" class="promo-logo"/>
+    </div>
+    <div class="promo-text walsheim-black">PERFECT FOR YOUR COMPANY, CORPORATION OR COMMUNITY.</div>
+    <div class="promo-cta"><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" class="walsheim-black">Starting at [@T[productprice:<current productid='56401' period='yearly' checktmspromocode='true' />]@T]/yr </a>
+    </div>
+  </div>
+</div>

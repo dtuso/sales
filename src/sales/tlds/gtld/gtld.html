@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 54edfb2df778fc204cd0dcb8
-name: GCEMO-615
-comments: gTLD LP - merchandising updates for 3/4
+id: 54f9e659f778fc1a48eed470
+name: GCEMO-547
+comments: remove underlines from links
 ---
 {% extends 'layouts/base.html' %}
 
@@ -50,6 +50,10 @@ comments: gTLD LP - merchandising updates for 3/4
       ##else
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-global.jpg");
       ##endif
+    }
+
+    .discover-domains-details-table-row > td:first-child {
+      text-decoration:none;
     }
   </style>
 </atlantis:webstash>
@@ -135,6 +139,7 @@ comments: gTLD LP - merchandising updates for 3/4
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##else
+                        <p class="domain no-margin-bottom"><strong>.global</strong></p>
                         <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:global]@L]</strong></p>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextGlobal]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="94396" href="[@T[link:<relative path="~/tlds/global"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
@@ -339,7 +344,7 @@ comments: gTLD LP - merchandising updates for 3/4
                        <hr/>
 
                         <h2 class="h2-alternate">[@L[cds.sales/gd/tlds/gtld:FaqList16Title]@L]</h2>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList16Item1]@L]</p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:FaqList16Item1Modified]@L]</p>
                       
                        <hr/>
 

@@ -1,8 +1,3 @@
----
-location: sales/homepage/default.en-au
-id: false
-name: GCEMO-636
----
 extends ../../layouts/homepage/default_base
 append styles
   style.
@@ -28,7 +23,7 @@ block secondaryTile
   |  ##endif
   
 block bugBar
-  +tldBugs(["co","club","org"])
+  +tldBugs(["com","co","com-au","club"])
 
 block cookieWarning
   script(type="text/javascript").
