@@ -1,0 +1,70 @@
+
+<!-- start marquee section-->
+<atlantis:webstash type="css">
+  <style>
+    .marquee {width:100%;min-width:1000px;height:400px;cursor:pointer;color: #fff;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/color-block-background.png) no-repeat top center;}
+    .headline { line-height: 0.9; font-family: 'Walsheim-Black'; font-size: 48px;margin:10px 0;}
+    html[lang|="el"] .headline {font-family:Arial, Sans-serif;font-weight:700;}
+    .headline .line:nth-child(odd) { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial; text-transform: uppercase;}
+    .headline .line:nth-child(even) { font-family: 'Walsheim-Black'; }
+    html[lang|="el"] .headline .line:nth-child(even) {font-family:Arial, Sans-serif;font-weight:700;}
+    .tungsten { font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial !important; text-transform: uppercase !important; }
+    .walsheim { font-family: 'Walsheim-Black' !important; }
+    html[lang|="el"] .walsheim {font-family:Arial, Sans-serif;font-weight:700;}
+    .btn-cta { width: 100%; box-sizing: border-box; margin: 10px 0;}
+    .bigtext { visibility:hidden;}
+    .additional-info { font-size: 14px;margin: 10px 0;text-align: left; margin: 10px 0;}
+    .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
+    .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
+  </style>
+  <style>
+    .left-column { float:left;width:500px; padding-top:80px;}
+    .right-column { float:left;width:325px;padding-top:80px;text-align:center;margin-left:90px;color:#000;}
+  </style>
+  <style>#com-anniversary {
+  width: 100%;
+  min-width: 1000px;
+  height: 400px;
+  cursor: pointer;
+  background: #f3f3f4 url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/30_th_COM-002-old-layout-background.png) no-repeat top center;
+  font-size: 26px;
+  color: #333;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+#com-anniversary .com-anniversary-text {
+  margin-left: 50px;
+}
+#com-anniversary .com-anniversary-headline {
+  line-height: 1em;
+  margin-bottom: 20px;
+}
+#com-anniversary .com-anniversary-price {
+  font-size: 48px;
+  color: #f2812e;
+}
+#com-anniversary a.btn {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  font-size: 26px;
+  font-family: 'Walsheim-Medium', Arial, sans-serif;
+}
+
+  </style>
+</atlantis:webstash>
+<div id="com-anniversary" data-url="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95321' /></relative>]@T]" class="marquee js-gdhpclick">
+  <div class="container l-main-container">
+    <div class="marquee-left-headline">
+      <div class="left-column">
+        <div class="com-anniversary-text">
+          <div class="com-anniversary-headline">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-headline]@L]</div>
+          <div class="com-anniversary-offer">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-offer]@L]</div>
+          <div class="com-anniversary-price">[@T[productprice:<current productid="101" period="yearly" promocode="444888" htmlsymbol="false" />]@T]</div><a class="com-anniversary-cta btn btn-warning">[@L[cds.sales/homepage/marquee/com-anniversary:com-anniversary-cta]@L]</a>
+        </div>
+      </div>
+      <div class="right-column">
+      </div>
+    </div>
+  </div>
+</div>
+<atlantis:webstash type="js">
+</atlantis:webstash>
+<!-- end marquee section-->
