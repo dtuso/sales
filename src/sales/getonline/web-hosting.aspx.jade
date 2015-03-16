@@ -1,0 +1,175 @@
+extends _p4p.jade
+
+append vars
+  - page.title = "[@L[cds.sales/getonline:hosting-page-title]@L]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "";
+  - page.links.favicon = "";
+
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "[@L[cds.sales/getonline:hosting-product-name]@L]";
+  - productToDisplay.landingPage = "getonline/web-hosting.aspx"
+  - productToDisplay.packageId = "getonline_web_hosting";
+  - productToDisplay.itcCode = "p4p_getonline_hosting";
+  - productToDisplay.appKey = "slp_GYBO";
+  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='32051' period='monthly' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='32051' period='yearly' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[productprice:<list productid='32051' period='monthly'></list>]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[productprice:<list productid='32051' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:hosting-product-get-it-now-description]@L]";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-hosting.png";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:hosting-product-description]@L]";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
+  - productToDisplay.productYouTubeId = "";
+  - productToDisplay.productVideoInfoText = "";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:hosting-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:hosting-product-did-you-know-text]@L]";
+  - productToDisplay.topGetItNowBtnCI = "96307";
+  - productToDisplay.bottomGetItNowBtnCI = "96306";
+  - productToDisplay.bottomSearchAgainCI = "96310";
+  - productToDisplay.disclaimerCI = "96982";
+  - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-hosting-content]@L]";
+  - productToDisplay.hostingFlow = {};
+  - productToDisplay.hostingFlow.arrowUR = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-up-right2.png";
+  - productToDisplay.hostingFlow.globe = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-globe2.png";
+  - productToDisplay.hostingFlow.arrowRD = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-right-down2.png";
+  - productToDisplay.hostingFlow.servers = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-server2.png";
+  - productToDisplay.hostingFlow.arrowL = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png";
+  - productToDisplay.hostingFlow.site = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png";
+
+  - domainSearchWizard                             = {};
+  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = 63;
+  - domainSearchWizard.title                       = "";
+  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton            = true;
+  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = "97047";
+  - domainSearchWizard.dupDomainInCartCI           = "97048";
+  - domainSearchWizard.availViewSearchBtnCI        = "97049";
+  - domainSearchWizard.availViewRecomSelBtnCI      = "97050";
+  - domainSearchWizard.availViewViewAllBtnCI       = "97051";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = "97052";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = "97053";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97055";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97056";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97045";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97057";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97058";
+
+append pageStyles
+  style.
+    .column {width: 35%; display: inline-block;vertical-align:top;}
+    .plus {width: 10%;display: inline-block;text-align: center;font-size: 6rem;font-weight: 700;position: relative;font-family: Walsheim-Black; margin-top:25px;}
+    #bottomGetItNow.bg-medium.column {width: 30%;!important}
+
+block productContent
+  .row
+    .col-xs-12.col-sm-8.col-sm-offset-4.products
+      .column.domain
+        img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+        h3.text-center [@L[cds.sales/getonline:domain-name-header]@L]
+        p [@L[cds.sales/getonline:product-domain-text]@L]
+      .plus +
+      block targetedProduct
+        .column.website
+          img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+          h3.text-center #{productToDisplay.name}
+          p #{productToDisplay.getItNowDescription}
+  .row
+    .col-xs-12.col-sm-9.col-sm-offset-3.cta
+      p.text-center.price-token [@L[cds.sales/getonline:product-bundle-price]@L]
+      button(data-ci="#{productToDisplay.topGetItNowBtnCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
+      small.text-center.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
+
+block productSection
+  section#web-hosting.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
+          div.product-summary.text-center(style="width:auto;display:table;margin:40px auto;max-width:900px")
+            .row
+              .col-md-4.col-md-push-4(style="padding:0;margin-bottom:30px;")
+                div(style="display:table;margin:auto;")
+                  img.img-responsive(src!="#{productToDisplay.hostingFlow.globe}")
+                div.text-center(style="margin:auto;")
+                  | [@L[cds.sales/getonline:hosting-product-info-www]@L]
+                  .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowL}", style="margin:40px 0 0 12px;")
+              .col-md-4.col-md-pull-4(style="padding:0;margin-bottom:30px;")
+                .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowUR}", style="margin-left:33%;")
+                .row  
+                  div.col-md-offset-2.col-md-11.col-sm-12(style="margin-top:-9%;padding:0;")
+                    img.img-responsive(src!="#{productToDisplay.hostingFlow.servers}", style="margin:auto;")
+                    div(style="margin:auto -10px;")
+                      | [@L[cds.sales/getonline:hosting-product-info-company-hosting]@L]
+              .col-md-4(style="padding:0;margin-bottom:30px;")
+                .row: img.hidden-sm.hidden-xs.img-responsive(src!="#{productToDisplay.hostingFlow.arrowRD}", style="margin-left:-33%;")
+                .row
+                  div.col-md-11.col-sm-12(style="padding:0;")
+                    img.img-responsive(src!="#{productToDisplay.hostingFlow.site}", style="margin:auto;")
+                    div.text-center
+                      | <mark class="selected-domain-name-display"></mark>
+          p.text-center #{productToDisplay.productInfoText}
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p #{productToDisplay.productDidYouKnowText}
+
+block office365
+  section#O365-email.product-section.bg-medium
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
+          h2.text-center [@L[cds.sales/getonline:hosting-email-header]@L]
+          h3.text-center [@L[cds.sales/getonline:hosting-email-text]@L]
+          .h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
+      .row.bubble-row
+        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p [@L[cds.sales/getonline:hosting-email-did-you-know-text]@L]
+        .col-xs-2
+          img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+
+block bottomGetItNow
+  section#bottomGetItNow.bg-medium
+    .container.text-center
+      .row
+        h2 [@L[cds.sales/getonline:get-online-bottom-header]@L]
+        h3#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
+        h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
+      .row
+        .column.domain
+          img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
+          h3 [@L[cds.sales/getonline:domain-name-header]@L]
+        .plus +
+        block bottomTargetedProduct
+          .column.website
+            img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+            h3 #{productToDisplay.name}
+      .row
+        h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
+        button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchAgainCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
+        button(data-ci="#{productToDisplay.bottomGetItNowBtnCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+        small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]

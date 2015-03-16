@@ -1,0 +1,180 @@
+extends _p4p.jade
+
+append vars
+  - page.title = "[@L[cds.sales/getonline:pro-ecomm-page-title]@L]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "";
+  - page.links.favicon = "";
+
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "[@L[cds.sales/getonline:pro-ecomm-product-name]@L]";
+  - productToDisplay.landingPage = "getonline/pro-ecomm.aspx"
+  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
+  - productToDisplay.pricing.promo_annual = "";
+  - productToDisplay.pricing.renewal_monthly = "";
+  - productToDisplay.pricing.renewal_annual = "";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png";
+  - productToDisplay.productVideoImage = "";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:pro-ecomm-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:pro-ecomm-product-did-you-know-text]@L]";
+  - productToDisplay.viewTemplatesCI = "96316";
+  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerText = "";
+
+block domainSearchScripts
+
+append pageStyles
+  style.  
+    #pro-specific h2 { margin-bottom: 0; }
+    #pro-specific h3 { margin-bottom: 20px; }
+    .feature mark { margin-top: 20px; }
+    .feature h3 { margin-top: 0; }
+    @media (min-width: 768px) {
+      .feature { text-align: left; }
+    }
+    .product-section{border-bottom: lightgray 1px solid;}
+    .products{margin-top: 0px!important;}
+    .uppercase{text-transform: uppercase;}
+    .orange-text{color: #ef6c0f;}
+    #getItNow .hero-guy{left: 0px;}
+    #getItNow mark{margin-top: 6px;}
+
+block domainSearchStyles
+
+block bubbleContent
+  h2.text-center [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]
+  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]
+
+block productContent
+  .row(style={"margin-top": "35px"})
+    .col-xs-4.col-sm-3.col-sm-offset-3
+      img.img-responsive.center-block.computer(src!="#{productToDisplay.productImgUrl}")
+    .col-xs-8.col-sm-6.products(style={"padding-left": "60px"})
+      h3 #{productToDisplay.name}
+      p #{productToDisplay.getItNowDescription}
+      form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
+          input(type="hidden", name="product", value="1023|1|1")
+          input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
+          input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
+          input(type="hidden", name="itc", value="p4p_getonline_pro_ecomm")
+          input(type="hidden", name="nocos", value="False")
+          input(type="hidden", name="config", value="customsite")
+          input(type="hidden", name="sdc", value="True")
+          input(type="hidden", name="newxs", value="False")
+          input(type="hidden", name="cicode", value="96315")
+          input(type="hidden", name="prog_id", value="GoDaddy")
+          button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+          p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
+
+block domainSearchContent
+
+block proInterview
+  section#pro-specific.bg-primary-o.product-section
+    .container
+      .row
+        .col-xs-12.col-sm-8.col-sm-offset-2.text-center
+          h2 [@L[cds.sales/getonline:pro-ecomm-interview-header]@L]
+      .row
+        .col-xs-12.text-center
+          h3 [@L[cds.sales/getonline:pro-ecomm-interview-header-text]@L] 
+      .row
+        .col-sm-4
+          .feature.why-gd-world-leader
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProShare.png','Clipboard')
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-1]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-1-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-1-text]@L]
+        .col-sm-4
+          .feature.why-gd-support.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProWork.png','Design')          
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-2]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-2-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-2-text]@L]
+        .col-sm-4
+          .feature.why-gd-trust.text-center
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/ProExpand.png','Tools')
+            mark.uppercase [@L[cds.sales/getonline:pro-ecomm-interview-step-3]@L]
+            h3 [@L[cds.sales/getonline:pro-ecomm-interview-step-3-header]@L]
+            p [@L[cds.sales/getonline:pro-ecomm-interview-step-3-text]@L]
+      .row.bubble-row
+        .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p [@L[cds.sales/getonline:pro-ecomm-interview-did-you-know-text]@L]
+        .col-xs-2
+          img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+
+block productSection
+  section#eccom.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center [@L[cds.sales/getonline:pro-ecomm-product-info-header]@L]
+          h3.text-center !{productToDisplay.productInfoText}
+          button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-portfolio]@L]
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+      .row.bubble-row(style={'margin-top': '0px'})
+        .col-xs-2
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p #{productToDisplay.productDidYouKnowText}
+
+block office365
+  // hide this on pro landing pages
+
+block bottomGetItNow
+  section#bottomGetItNow.bg-medium
+    .container
+      h3.price-token.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
+      .pro-wrapper
+        .col-xs-6
+          img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+        .col-xs-6
+          h3.product-name #{productToDisplay.name}
+          p.p1 #{productToDisplay.getItNowDescription}
+          .col-xs-12.text-center
+            form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
+              input(type="hidden", name="product", value="1023|1|1")
+              input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
+              input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
+              input(type="hidden", name="itc", value="p4p_getonline_pro_ecomm")
+              input(type="hidden", name="nocos", value="False")
+              input(type="hidden", name="config", value="customsite")
+              input(type="hidden", name="sdc", value="True")
+              input(type="hidden", name="newxs", value="False")
+              input(type="hidden", name="cicode", value="96314")
+              input(type="hidden", name="prog_id", value="GoDaddy")
+              button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+              p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
+
+prepend endOfPageScripts
+  script.
+    $(document).ready(function(){
+         $('#external').click(function(){
+            openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+         });
+    });
+
+    function openPopUpWithParams (url, windowName, windowParams) {
+            window.open(url, windowName, windowParams);
+    }  
+
+block domainSearchEndOfPageScripts

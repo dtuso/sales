@@ -1,0 +1,109 @@
+extends _p4p.jade
+
+append vars
+  - page.title = "[@L[cds.sales/getonline:wsb-page-title]@L]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "";
+  - page.links.favicon = "";
+
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "[@L[cds.sales/getonline:wsb-product-name]@L]";
+  - productToDisplay.landingPage = "getonline/websitebuilder.aspx"
+  - productToDisplay.packageId = "getonline_website_builder";
+  - productToDisplay.itcCode = "p4p_getonline_wsb";
+  - productToDisplay.appKey = "slp_GYBO";
+  - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/websitebuilder.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='24681357' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='24681357' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='monthly'></list>]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:wsb-product-get-it-now-description]@L]";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-websiteBuilder.png";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:wsb-product-description]@L]";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png";
+  - productToDisplay.productYouTubeId = "-HtVJyxSQmw";
+  - productToDisplay.productVideoInfoText = "[@L[cds.sales/getonline:wsb-product-video-info-text]@L]";
+  - productToDisplay.productInfoText = "";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:wsb-product-did-you-know-text]@L]";
+  - productToDisplay.topGetItNowBtnCI = "96283";
+  - productToDisplay.bottomGetItNowBtnCI = "96282";
+  - productToDisplay.bottomSearchAgainCI = "96286";
+  - productToDisplay.viewTemplatesCI = "96287";
+  - productToDisplay.playButtonCI = "96288";
+  - productToDisplay.disclaimerCI = "96984";
+  - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-wsb-content]@L]";
+
+  - domainSearchWizard                             = {};
+  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength             = 63;
+  - domainSearchWizard.title                       = "";
+  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton            = true;
+  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.initialViewId               = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI       = "97033";
+  - domainSearchWizard.dupDomainInCartCI           = "97034";
+  - domainSearchWizard.availViewSearchBtnCI        = "97035";
+  - domainSearchWizard.availViewRecomSelBtnCI      = "97036";
+  - domainSearchWizard.availViewViewAllBtnCI       = "97037";
+  - domainSearchWizard.availViewSearchAgnBtnCI     = "97038";
+  - domainSearchWizard.notAvailViewSearchBtnCI     = "97039";
+  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97041";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97042";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97046";
+  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97043";
+  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97044";
+
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.text-center #{productToDisplay.name}
+    p #{productToDisplay.getItNowDescription}
+
+block productSection
+  section#wordpress.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
+          button.btn.btn-default-dark.center-block.view-all(id='viewTemplates', data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-templates]@L]
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
+        .container
+          div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
+          .row
+            .col-sm-4
+            div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
+            div.video-info.col-sm-4
+              div.video-marquee-info.text-center
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}) [@L[cds.sales/getonline:watch-now]@L]
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p #{productToDisplay.productDidYouKnowText}
+  include ../shared/wsb-templates.html
+
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3 #{productToDisplay.name}
