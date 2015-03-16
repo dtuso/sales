@@ -1,41 +1,12 @@
 ---
 location: sales/design/web-design.aspx
-id: 54fdd17bf778fc0fc0cef39c
+id: 5506de78f778fc23380ed68c
 name: GCEMO-554
 ---
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
   {% parent %}
-
-##if(appSettingEnabled(UXCORE_ENABLED))
-<style>
-  body {
-      font-size: 10px;
-      background-color: #d4d4d4;
-  }
-  .badge-important {
-      background-color: #F3514C;
-  }
-  .modal-dialog {
-      left: 0%;
-  }
-  a, a:hover {
-    color: #7db701;
-  }
-  .col-xs-12 {
-    padding-right: 0px;
-  }
-  .col-xs-4 {
-      padding-left: 20px;
-      padding-right: 0;
-      width: 34%;
-  }
-  #footer-legal {
-    background-color: #fff;
-  }
-</style>
-##endif
 
 {% endblock metahead %}
 
@@ -351,6 +322,7 @@ $(function () {
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154093Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154094Text]@L]</li>
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154095Text]@L]</li>
+                                          <li>[@L[cds.sales/gd/design/web-design:List0Items154096Text]@L]</li>
                                       </ul>
                                       <ul class="plan-summary-tab-pane-list relative">
                                           <li>[@L[cds.sales/gd/design/web-design:List0Items154097Text]@L]</li>
@@ -530,11 +502,7 @@ $(function () {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              ##if(appSettingEnabled(UXCORE_ENABLED))
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-              ##else
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              ##endif
               <h4 class="modal-title"><strong>[@L[cds.sales/gd/design/web-design:DisclaimerModalHeader]@L]</strong></h4>
             </div>
             <div class="modal-body">
