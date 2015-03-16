@@ -4,18 +4,18 @@ include templates/_domain-search-wizard.jade
 
 append vars
   - page.title = "[@L[cds.sales/getonline:page-title]@L]";
-  - page.description = "";
-  - page.keywords = ""; 
-  - page.canonical = "";
+  - page.description = "[@L[cds.sales/getonline:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/getonline:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/getonline/getonline.aspx' />]@T]";
 
   - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = "";
-  - page.openGraph.description = "";
-  - page.openGraph.image = "";
+  - page.openGraph.title = "[@L[cds.sales/getonline:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/getonline:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg";
 
   - page.links = page.links || {};
-  - page.links.canonical = "";
-  - page.links.favicon = "";
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
   - productToDisplay = {};
   - productToDisplay.name = "";
@@ -32,24 +32,26 @@ append vars
   - productToDisplay.productVideoInfoText = "";
   - productToDisplay.productInfoText = "";
   - productToDisplay.productDidYouKnowText = "";
-  - productToDisplay.topGetItNowBtnCI = "";
-  - productToDisplay.bottomGetItNowBtnCI = "";
-  - productToDisplay.bottomSearchAgainCI = "";
+  - productToDisplay.topButtonCI = "";
+  - productToDisplay.bottomButtonCI = "";
+  - productToDisplay.bottomSearchCI = "";
   - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "";
   - productToDisplay.disclaimerCI = "";
   - productToDisplay.disclaimerText = "";
 
-block seo
-  title #{page.title}
-  meta(name="robots" content="noindex, nofollow")
+append seo
+  meta(name="twitter:card" content="[@L[cds.sales/getonline:twitter-card]@L]")
+  meta(name="twitter:site" content="[@L[cds.sales/getonline:twitter-site]@L]")
+  meta(name="twitter:title" content="[@L[cds.sales/getonline:twitter-title]@L]")
+  meta(name="twitter:description" content="[@L[cds.sales/getonline:twitter-description]@L]")
+  meta(name="twitter:image:src" content!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/og_got_1200x630.jpg")
 
 append headScripts
   atlantis:webstash(type="js")
     script.
       var offerInfo = {
         businessName: "",
-        landingPage: "#{productToDisplay.landingPage}",
         packageId: "#{productToDisplay.packageId}",
         itcCode: "#{productToDisplay.itcCode}",
         appKey: "#{productToDisplay.appKey}",
@@ -125,10 +127,6 @@ append headScripts
             .sfDialog({buttons: offerInfo.sfDialogErrorButtons});
         });
 
-        $("[data-ci]").click(function(a) {
-          $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
-        });
-
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           offerInfo.businessName = passedBusinessName;
@@ -136,24 +134,31 @@ append headScripts
        }
       });
 
+    block bindAddToCartBtns
+      atlantis.webstash(type="js")
+        script.
+          $(document).ready(function(){
+
+            $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          });
+
     block domainSearchScripts
-      script.  // Page
-        $(document).ready(function(){
+      atlantis:webstash(type="js")
+        script.  // Page
+          $(document).ready(function(){
 
-          $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+            if(offerInfo.businessName != '') {
+              updateSearchedDomain('', offerInfo.businessName);
 
-          if(offerInfo.businessName != '') {
-            updateSearchedDomain('', offerInfo.businessName);
-
-            if(getParameterByName('tldRegErr').length > 0) {
-              showDomainRegistrationFailure();
-            } else {
-              domainSearchFormSubmit('', offerInfo.businessName);
+              if(getParameterByName('tldRegErr').length > 0) {
+                showDomainRegistrationFailure();
+              } else {
+                domainSearchFormSubmit('', offerInfo.businessName);
+              }
             }
-          }
-        });
-      script(type="text/javascript")
-        include:js templates/domain-selection.js
+          });
+        script(type="text/javascript")
+          include:js templates/domain-selection.js
 
 append pageStyles
   style. 
@@ -210,12 +215,14 @@ append pageStyles
     .cta { margin-top: 20px;}
     .cta small { padding-top: 10px; padding-bottom:5px;}
     #product-price{margin-top: 5px;}
+    #getItNow mark{margin-top: 6px;}
+    
 
     @media (min-width: 768px) {
       #getItNow .bubble {
         background-color: white;
         background-position: center center;
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
+        background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-goodNews-shape.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
         overflow: visible;
@@ -271,7 +278,7 @@ append pageStyles
 
     .bubble-row .bubble {
       background-position: center center;
-      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-right-green.png);
       background-repeat: no-repeat;
       background-size: 100% 100%;
       overflow: visible;
@@ -283,11 +290,11 @@ append pageStyles
     }
 
     .bubble-row .bubble.left {
-      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-green.png);
     }
 
     .bubble-row .bubble.white {
-      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
+      background-image: url(https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/speech-bubble-left-white.png);
     }
 
     .hero-guy.left {
@@ -326,7 +333,7 @@ block content
 
   section#getItNow
     .container
-      img.hero-guy.hidden-xs(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+      img.hero-guy.hidden-xs(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
       .row
         .col-xs-12.col-sm-9.col-sm-offset-3.bubble
           block bubbleContent
@@ -350,7 +357,7 @@ block content
         .row
           .col-xs-12.col-sm-9.col-sm-offset-3.cta.text-center
             p.price-token [@L[cds.sales/getonline:product-bundle-price]@L]
-            button(data-ci="#{productToDisplay.topGetItNowBtnCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
+            button(data-ci="#{productToDisplay.topButtonCI}").btn.btn-purchase.btn-lg.center-block [@L[cds.sales/getonline:get-it-now]@L]
             small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
             .header-text.disclaimers
               small.text-disclaimers [@L[cds.sales/getonline:top-small-disclaimer-text]@L] 
@@ -385,7 +392,7 @@ block content
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
             p [@L[cds.sales/getonline:O365-email-did-you-know-text]@L]
           .col-xs-2
-            img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+            img.hero-guy.left(src="https://img1.wsimg-com.ide/fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   section#why-us
     .container
@@ -429,8 +436,8 @@ block content
             h3 [@L[cds.sales/getonline:O365-email-header]@L]
         .row
           h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
-          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchAgainCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
-          button(data-ci="#{productToDisplay.bottomGetItNowBtnCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
+          button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
+          button(data-ci="#{productToDisplay.bottomButtonCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
           small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
 
 prepend endOfPageScripts
