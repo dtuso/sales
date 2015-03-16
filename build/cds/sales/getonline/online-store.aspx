@@ -147,7 +147,6 @@
           $("[data-ci]").click(function(a) {
             $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
           });
-        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -1268,6 +1267,8 @@ ul li.no-check {
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         #product-price{margin-top: 5px;}
+        #getItNow mark{margin-top: 6px;}
+        
         
         @media (min-width: 768px) {
           #getItNow .bubble {

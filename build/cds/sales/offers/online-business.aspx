@@ -5007,7 +5007,7 @@ var PlanBox6UI = {
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div>
+              <div data-icann-fee="" class="disclaimers-text">[@L[cds.sales/offers/online-business:35463-third-party-logos-trademarks-disclaimer]@L]</div>
             </div>
           </div>
         </div>
@@ -5023,10 +5023,7 @@ var PlanBox6UI = {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2,
-section .h2 {
-  margin-bottom: 40px;
-  margin-top: 0;
+section h2 {
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -5034,10 +5031,7 @@ section .h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3,
-section .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+section h3 {
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -5049,7 +5043,6 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
-  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -5097,6 +5090,27 @@ ul li.no-check {
           font-family: uxfont !important;
         }
         ##endif
+        
+        /* override UXCORE font settings for all LPs */
+        h2 {
+          margin-bottom: 40px;
+          margin-top: 0;
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          font-weight: 300;
+          line-height: 1.1;
+          color: #333;
+        }
+        h3 {
+          font-size: 3rem;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 20px;
+          margin-bottom: 10px;
+          font-weight: 300;
+          line-height: 1.1;
+        }
         
         /* default LP marquee styling */
         .dash { 
