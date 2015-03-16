@@ -80,9 +80,7 @@
           <div class="clearfix"></div>
         </form>
       </div>
-    </div>
-    <div id="marquee-container-orig">[@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]</div>
-    <div id="marquee-container-isc" style="display:none">[@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]</div>
+    </div>[@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
     <!-- Bugbar (and social links) Sections-->
     <div class="top-banner-lower-content">
       <div class="top-lower-content"><span class="tld-links"> <a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAATCAMAAAAOJhUTAAAAPFBMVEVMaXEAYqkAXqYAXacAXaYAXqgtRF4AW6YAXqd0eogAZq8dNF0At/k0ndcHqekAw/+emZRyqdUAWaMAluR1esaJAAAAEnRSTlMAPKnB82MDiOIMKR39rvzXH4C5w3lZAAABDElEQVR4Xt2QwXLDIAxEJYGQBE6TOP//r10BzbiTew/dg7Qsfjse6P+psZmOHbCacoadOw0c1j3/+r7U86xugaCLV3jBx4Ko4ELC6lxvgv1cAjJ+vI8o59bOjCj6oxGN2WN5rySYZXqJ5bOiimA5Pe7H/dnIkDBwcbeosyozHxhlEGe0Erodx3HvWSsEtTFCkQd8OFps0bBKpBXEF3RwEkZbWTtNeRPtQjxfr9etk+1eNlOG5/R4r76IuBCkNwDzR4W7OlbDKNq1ZIt8EhQNo1k+oIPzTgpf058a5ZPYQtmU88ZT1sYmgCeBjN4KFfdiPX1jeBdumYpmhxmqGIsuCqhdfEx4ZQ3KicMf6BvVuxIPgsiNJwAAAABJRU5ErkJggg==" class="tld-image com"/><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/uk'><param name='ci' value='95298' /><param name='tld' value='uk' /></relative>]@T]" class="tld-link uk"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAB8lBMVEVMaXE8q9hAudk8n9a41eQ/tNc1pNM0mNFCnstioMRBvto9ndc2ls86sNw+sto5o89awtosn9NBu9kvp+g7uNpIod45q9tAvto7stw+mtVAuNhFeqs9tts/tthNg7Eyl9pZjms0qt0/uttAs9g/j844s98/uNg5r947sNU2o9c6j8M5kM41jsY8q9hAs9c2pdVAxeI4rd07stw6rNs9vuVdxdwzdp06sNk3sOCn1OUyos5Qsdk9q8g6uus+rNcqsNs5utk5qdNAu9kxmsZBvtpAu9oogsU2tORAwN4+vNtBu9lIlr1Bu9syms08suRioX4/ttQ+ndQrmt2OyN673OM4stwpnOU4s+M7rttLpsU+tNoytd46stZxnlxNq7VAvdtbvN9FkcNinoVXn6M9vuNCqdZmjYlQm6w3ptUzutw/t9Y7pNhAt9gzkdEzntY+pdY8vN0/nNQoZpwvZYw8p9tBudg5qNMqjctQi5Y7ud46q9k9ut4/qto/s9V4lzY+sNQ1lctNfaw+tdo+odRBu9lEtdc9tto8sdU/wtxAmNI+ltI+rNhArNY7sdw7t9k9o9ZAtdgrhck+vd49pddAud1CrM06ocI/ntk9uNw3vds8qNZKia4+stdAn9RHoLo4i6w8t+BCu9lPqrV0wdI0wd0/v9s8maRaAAAApHRSTlMATdUyD8cOBwsC8DsiEr8/zJTmid+qO+2ZbdoR3s8ZVCEo0Ck6l8xUzFlLA2CI3pX+Ic9Hv9Ysv1kst3XWLHW/87f0ddTgJoTz3c9yzmXcE+9XYVpFszO8cK7Z2dkWKfiVSGFy3B0UdUTn71vYZIuz4k8VCL+o51Au6Kq3XdUkyEAUJJ0zzdzPOKhmypWPqH/8FuY2q8u3hImqhTPKi5qC7fl3pgaMxQMAAAEnSURBVHgBRcwDcgMBAEDRH+2mTW3baZvUtm2ltm3btol7dnYmmb4DPCSCta2DXZ6dg621gJFFVqGNo32BvaNNZrIFEjHGKjVHiUSZEpegAIiKjo3HJCnDyguwTEwD8On3AfAtalJj4r3ojaSxXQZarym43AzbW0HMd0fw8wT/3Xd4uA3fD2WgpQQCzeHg5xsef59CNraWB2sgVA47+je4v4h42TafFcxgdATt9eeZqL75CF9fmhsTgWE5EeevVzqd/ut5dT6go64T6Qs6EU8jDXdrCzNh1DZ3ow3xQ3GkMNNopukLcEdZ30r1kAzx8NiXf209KgHt5MR4Lyb+DR4agGBDaRlI1Om5HsEgcVJVBrm4Vrm6FGernDCq6Cp3dpO7OXvKLAH+AH7EOvRbtTkkAAAAAElFTkSuQmCC" class="tld-image uk"/><span class="price">[@T[productprice:<current productid='410930' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/wales'><param name='ci' value='96870' /><param name='tld' value='wales' /></relative>]@T]" class="tld-link wales"><img src="data:image/png;base64,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" class="tld-image wales"/><span class="price">[@T[productprice:<current productid='592699' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a></span>
@@ -113,20 +111,24 @@
       </style>
     </atlantis:webstash>
     <div class="gdhp-tile-wrap">
-      <div class="gdhp-tile-area"> 
-        [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
-        <div id="tile-container-30-percent-gtld"> 
+      <div class="gdhp-tile-area">
+        <div id="tile-container-got">
+           
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+        </div>
+        <div id="tile-container-30-percent-gtld" style="display:none">
+           
           [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
         </div>
-        <div id="tile-container-why-wsb" style="display:none;"> 
-          [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
-        </div>
         <script type="text/javascript">
-          if ($('#gtld').length) {
-            $('#tile-container-30-percent-gtld').hide();
-            $('#tile-container-why-wsb').show();
+          if ($('#gybo').length) {
+            $('#tile-container-got').hide();
+            $('#tile-container-30-percent-gtld').show();
           }
+          
         </script>
+         
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/co-uk-brilliant/default_template" /> ]@P]
       </div>
     </div>
     <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
@@ -141,95 +143,95 @@
         </div>
       </div>
     </div>
-    <!-- Lower Marquee Section-->
-    <div class="gdhp-bottom-banner">
-      <div class="bottom-banner-content"><span class="bottom-banner-headline-2">[@L[cds.sales/homepage/segments/default:bottom-banner-headline-INTL]@L]</span><span class="bottom-banner-subtext-2 b">[@L[cds.sales/homepage/segments/default:bottom-banner-subtext-INTL]@L]</span></div>
-      <div class="bottom-banner-search">
-        <form method="post" data-url="[@T[link:<relative path='~/api/dpp/search/single'/>]@T]" action="[@T[link:<relative path='/domains/searchresults-new.aspx'/>]@T]" class="search-form search-form-certified">
-          <div class="gdhp-search-box2">
-            <input id="searchDomainName2" type="text" name="domainToCheck" autocomplete="off" maxlength="63" title="[@L[cds.sales/homepage:sb-search-title]@L]" class="search-form-input searchInput helveticafont">
-            <button type="submit" name="searchButton" data-ci="87137" class="btn btn-primary btn-lg hp-search">[@L[cds.sales/homepage/segments/default:domain-banner-search-btn]@L]</button>
-          </div>
-          <div class="clearfix"></div>
-        </form>
-      </div>
-    </div>
-    <!-- Why Us Section-->
+    <atlantis:webstash type="css">
+      <style>
+        .why-us-wrap{width:100%;height:520px;background:radial-gradient(#615e5f 1px, transparent 1px),#d4d4d4;background-size: 5px 5px;}
+        .why-us-content{width:1000px;margin:0 auto;border-top:15px solid green;background-color:#fff;height:485px;background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/WWD-background.png) scroll no-repeat;}
+        .why-us-text{width:52%;padding:5px 0 0 20px;font-size:13px;float:left;box-sizing:border-box;position:relative;}
+        .why-us-text h1 {font-size:14px;line-height:12px;display:inline;color:#333;}
+        .why-us-headline{font-size:56px;font-family:'Walsheim-Black'}
+        .why-us-maintext>div{margin-bottom:.8em}
+        .why-us-logos{width:48%;height:100%;float:left;}
+        .why-us-logos>ul{list-style:none;margin:30px 0 0 100px}
+        .why-us-logos>ul>li{line-height:0px;height:80px;}
+        .why-us-btn{cursor:pointer;}
+        .why-us-btn:hover span{text-decoration:underline;}
+        .gdhp-domains-logo,.gdhp-wsb-logo,.gdhp-store-logo,.gdhp-getfound-logo,.gdhp-support-logo,.gdhp-hosting-logo,.gdhp-o365-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_20141029.png) scroll no-repeat;display:inline-block;}
+        .gdhp-domains-logo{background-position:-410px -170px;width:50px;height:56px;margin:12px 50px 0 0}
+        .gdhp-wsb-logo{background-position:-410px -236px;width:45px;height:47px;margin:16.5px 55px 0 0}
+        .gdhp-store-logo{background-position:-410px -293px;width:47px;height:52px;margin:14px 53px 0 0}
+        .gdhp-getfound-logo{background-position:-410px -355px;width:68px;height:51px;margin:15px 42px 0 -10px}
+        .gdhp-support-logo{background-position:-410px -416px;width:52px;height:58px;margin:11px 48px 0 0}
+        .gdhp-hosting-logo{background-position: -476px -170px;width: 50px;height: 50px;margin: 10px 50px 0 0;}
+        .gdhp-o365-logo{background-position: -476px -235px;width: 52px;height: 45px;margin: 10px 0 0 0;position: absolute;}
+        .gdhp-domains-text,.gdhp-wsb-text,.gdhp-store-text,.gdhp-getfound-text,.gdhp-support-text,.gdhp-hosting-text,.gdhp-o365-text{font-size:24px;}
+        .gdhp-domains-text{vertical-align:21px;}
+        .gdhp-wsb-text{vertical-align:18px;}
+        .gdhp-store-text{vertical-align:20px;}
+        .gdhp-getfound-text{vertical-align:24px;}
+        .gdhp-support-text{vertical-align:24px;}
+        .gdhp-hosting-text{vertical-align:18px;}
+        .gdhp-o365-text{display: inline-block;line-height: 30px;margin-left: 100px;}
+        .why-us-wrap #disclaimers a{font-size: 12px;line-height: 14px;text-decoration: none;color: #333;}
+        .why-us-wrap #gdhp-support-scope-link:hover,.why-us-wrap #gdhp-disclaimer-lnk:hover{color: #7db701;text-decoration: underline;}
+        .why-us-wrap .content-disclaimer {padding-left:0px; line-height:14px}
+        
+      </style>
+    </atlantis:webstash>
     <div class="why-us-wrap">
       <div class="why-us-content">
-        <div class="why-us-headline-wrap"><span class="why-us-headline b condensed">[@L[cds.sales/homepage/segments/default:whyus-text-area]@L]</span></div>
-        <div class="why-us-circles">
-          <ul>
-            <li>
-              <div class="circle1"></div>
-              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-1]@L]</div>
-            </li>
-            <li>
-              <div class="circle2"></div>
-              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-2]@L]</div>
-            </li>
-            <li>
-              <div class="circle3"></div>
-              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-3]@L]</div>
-            </li>
-            <li>
-              <div class="circle4"></div>
-              <div class="circle-text">[@L[cds.sales/homepage:whyus-img-text-4]@L]</div>
-            </li>
-          </ul>
+        <div class="why-us-text"><span class="why-us-headline">[@L[cds.sales/homepage/locales/en:why-us-headline]@L]</span>
+          <div class="why-us-maintext">
+            ##if(countrySiteAny(in))
+            [@L[cds.sales/homepage/locales/en:why-us-maintext-india]@L]
+            ##else
+            [@L[cds.sales/homepage/locales/en:why-us-maintext]@L]
+            ##endif
+          </div>
+          <div id="disclaimers">
+            <section class="container l-main-container content-disclaimer">
+              <p class="no-margin-bottom"><a id="gdhp-disclaimer-lnk" href="#" data-toggle="modal" data-target="#myModal" data-ci="93289" class="simple-link">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p> 
+              ##if(countrySiteAny(in))
+              <p class="no-margin-bottom"><a id="gdhp-support-scope-link" href="[@T[link:<external parammode="explicit" path="/help/article/9522/godaddy-statement-of-support" linktype="COMMUNITYURL"><param name="countrysite" value="in" /><param name="ci" value="94858" /></external>]@T]" target="_blank">[@L[cds.sales/homepage/locales/en:scopesupport]@L]</a></p> 
+              ##endif
+            </section>
+            <div id="myModal" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
+                    <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
+                  </div>
+                  <div class="modal-body">
+                    <div class="g-modal-content">
+                      <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]</p>
+                      <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
+                      <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p> 
+                      ##if(countrySiteAny(au))
+                      <p>[@L[cds.sales/homepage:disclaimer-modal-second-content]@L]</p> 
+                      ##endif
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <!-- FAQ Section-->
-    <div id="faqSlider">
-      <div class="gd-nav-container">
-        <div data-gd-swipe="{'auto':0}" class="gd-swipe">
-          <div class="gd-swipe-wrap">
-            <div class="gd-swipe-item">
-              <div class="gd-swipe-head">
-                <h2>[@L[cds.sales/homepage:faq-slide-1-title]@L]</h2>
-              </div>
-              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-1-content]@L]</div>
-            </div>
-            <div class="gd-swipe-item">
-              <div class="gd-swipe-head"></div>
-              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-2-content]@L]</div>
-            </div>
-            <div class="gd-swipe-item">
-              <div class="gd-swipe-head">
-                <h2>[@L[cds.sales/homepage:faq-slide-3-title]@L]</h2>
-              </div>
-              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-3-content]@L]</div>
-            </div>
-            <div class="gd-swipe-item">
-              <div class="gd-swipe-head"></div>
-              <div class="gd-swipe-body">[@L[cds.sales/homepage:faq-slide-4-content]@L]</div>
-            </div>
-          </div>
-        </div><a href="#" data-slide="prev" data-ci="84408" class="arrow-left"><i class="ico ico-carousel-arrow-left"></i></a><a href="#" data-slide="next" data-ci="84409" class="arrow-right"><i class="ico ico-carousel-arrow-right"></i></a>
-        <div class="gd-swipe-bottom-nav"></div>
-      </div>
-    </div>
-    <!-- Disclaimers Section-->
-    <div id="disclaimers">
-      <section class="container l-main-container content-disclaimer">
-        <p class="no-margin-bottom"><a href="#" data-toggle="modal" data-target="#myModal" data-ci="86765" class="simple-link">[@L[cds.sales/homepage:disclaimer-text]@L]</a></p>
-      </section>
-      <div id="myModal" class="modal fade">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" data-dismiss="modal" aria-hidden="true" class="close">&times;</button>
-              <p class="modal-title"><strong>[@L[cds.sales/homepage:disclaimer-modal-title]@L]</strong></p>
-            </div>
-            <div class="modal-body">
-              <div class="g-modal-content">
-                <p>[@L[cds.sales/homepage:disclaimer-modal-first-content]@L]</p>
-                <p>[@L[cds.sales/homepage:disclaimer-modal-third-content]@L]</p>
-                <p>[@L[cds.sales/homepage:disclaimer-modal-fourth-content]@L]</p>
-              </div>
-            </div>
-          </div>
+        <div class="why-us-logos">
+          <ul>
+            <li data-url="[@T[link:<relative path="/domains/domain-name-search.aspx"><param name="ci" value="93299" /></relative>]@T]" data-ci="93299" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-domains" class="gdhp-domains-logo"></span><span class="gdhp-domains-text">[@L[cds.sales/homepage/locales/en:whyus-logo-domains]@L]</span></li>
+            <li data-url="[@T[link:<relative path="/hosting/website-builder.aspx"><param name="ci" value="93300" /></relative>]@T]" data-ci="93300" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-wsb" class="gdhp-wsb-logo"></span><span class="gdhp-wsb-text">[@L[cds.sales/homepage/locales/en:whyus-logo-wsb]@L]</span></li> 
+            ##if(countrySiteAny(www,uk))
+            <li data-url="[@T[link:<relative path="/ecommerce/shopping-cart.aspx"><param name="ci" value="93301" /></relative>]@T]" data-ci="93301" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-store" class="gdhp-store-logo"></span><span class="gdhp-store-text">[@L[cds.sales/homepage/locales/en:whyus-logo-onlinestore]@L]</span></li> 
+            ##elseif(countrySiteAny(in))
+            <li data-url="[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="94309" /></relative>]@T]" data-ci="94309" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-hosting" class="gdhp-hosting-logo"></span><span class="gdhp-hosting-text">[@L[cds.sales/homepage/locales/en:whyus-logo-hosting]@L]</span></li>
+            <li data-url="[@T[link:<relative path="/business/office-365.aspx"><param name="ci" value="94310" /></relative>]@T]" data-ci="94310" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-o365" class="gdhp-o365-logo"></span><span class="gdhp-o365-text">[@L[cds.sales/homepage/locales/en:whyus-logo-o365]@L]</span></li> 
+            ##endif
+            ##if(countrySiteAny(www))
+            <li data-url="[@T[link:<relative path="/products/business-marketing.aspx"><param name="ci" value="93302" /></relative>]@T]" data-ci="93302" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-getfound" class="gdhp-getfound-logo"></span><span class="gdhp-getfound-text">[@L[cds.sales/homepage/locales/en:whyus-logo-getfound]@L]</span></li> 
+            ##endif
+            <li data-url="[@T[link:<external parammode="explicit" linktype="COMMUNITYURL"><param name="ci" value="93303" /></external>]@T]" data-ci="93303" class="why-us-btn js-gdhpclick"><span id="gdhp-why-us-support" class="gdhp-support-logo"></span><span class="gdhp-support-text">[@L[cds.sales/homepage/locales/en:whyus-logo-support]@L]</span></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -246,12 +248,17 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/homepage_script_20140410.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]shared/js/jquery.plugins.min.20111019.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.2.min.js" type="text/javascript"></script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
     <script type="text/javascript">
+      if (/isc=ENGONGROW/i.test(self.location.href)) {
+        $('#marquee-container-orig').hide();
+        $('#marquee-container-isc').show();
+        $('.gtld-tiles').hide();
+        $('.gdhp-tile-wrap').hide();
+      }
+      var ignoreLivePerson = true;
       $(document).ready(function() {
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
       qs = [],
@@ -373,6 +380,29 @@
         $('.bigtext').bigtext().css('visibility', 'visible');
         setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
+      var $resizeElements = $('.js-gdhpPriceResize');
+      if($resizeElements){
+      $resizeElements.each(function(){
+        var currentFontSize = parseInt($(this).css("font-size"));
+        var currentWidth = parseInt($(this).css("width"));
+        var maxCharOvrd = $(this).attr('data-maxchar');
+        var numOfChar = $(this).text().length;
+        var containsSymbol =  $(this).text().match(/[₪|₨|￦|﷼]/i);
+        var maxChar = Math.ceil((currentWidth/currentFontSize) * 2);
+        if(maxCharOvrd){maxChar = parseInt(maxCharOvrd);}
+        if(containsSymbol && numOfChar <= maxChar){maxChar -= 1;}
+        if(numOfChar > maxChar){
+          var newFontSize =  currentFontSize - (Math.ceil(((numOfChar - maxChar)/numOfChar) * 100));
+          if($(this).hasClass("tungsten")){
+            newFontSize *= .82;
+          }
+          else if(!containsSymbol){
+            newFontSize += 10;
+          }
+            $(this).css("font-size",newFontSize +"px").css("line-height",newFontSize +"px");
+          }
+        });
+      }
     </script>
   </body>
 </html>
