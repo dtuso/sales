@@ -35,7 +35,6 @@
       .tungsten{font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;font-weight:700}
       .walsheim-black{font-family:'Walsheim-Black';}
       .hp-sprite { background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gdhp_sprite_legacy-20141120.png) scroll no-repeat; vertical-align: top; }
-      
     </style> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
     <style>
@@ -117,6 +116,17 @@
            
           [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
         </div>
+        <div id="tile-container-30-percent-gtld" style="display:none">
+           
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+        </div>
+        <script type="text/javascript">
+          if ($('#gybo').length) {
+            $('#tile-container-got').hide();
+            $('#tile-container-30-percent-gtld').show();
+          }
+          
+        </script>
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/co-uk-brilliant/default_template" /> ]@P]
       </div>
