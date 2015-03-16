@@ -104,7 +104,7 @@ Our servers have high-performance SSD drives for both files &amp; databases so y
 <phrase key="35561-tooltip-visitors" comment="" />
 Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every {0} visitors over your hosting plan, across all sites.
 <phrase key="35561-tooltip-free-domain" comment="" />
-Restrictions apply. Get one FREE .com, .ca, .co, .net or .org with purchase of a new 12, 24 or 36-month plan. (Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year.) You must add the domain to your cart before purchase and select a term length equal to or less than the term of your hosting plan. If you purchase a domain name for a longer term than your hosting, you’ll be charged for the additional time at the then-current rate. This offer can’t be used in conjunction with any other offer, sale, discount or promotion. This offer applies only to the initial term of purchase. Following the initial purchase term, domains purchased through this offer renew at the then-current renewal price.
+Restrictions apply. Get one FREE .com, .ca, .co, .net or .org with purchase of a new 12, 24 or 36-month plan. (Plus ICANN fee of {icannfee} per domain name per year.) You must add the domain to your cart before purchase and select a term length equal to or less than the term of your hosting plan. If you purchase a domain name for a longer term than your hosting, you’ll be charged for the additional time at the then-current rate. This offer can’t be used in conjunction with any other offer, sale, discount or promotion. This offer applies only to the initial term of purchase. Following the initial purchase term, domains purchased through this offer renew at the then-current renewal price.
 <phrase key="35561-tooltip-office-365" comment="" />
 Option to include 1 Microsoft Outlook mailbox with 5GB storage for email, contacts and shared online calendar--free for the first year. After the first year, additional mailboxes can be purchased at the prevailing per mailbox price. Microsoft Office O365 email will automatically renew at the then-current price until canceled. You can cancel your automatic renewal mailbox at any time.
 <phrase key="35561-tooltip-ssl" comment="" />
@@ -190,7 +190,7 @@ Don’t let your lack of a domain stop you from creating your website. Just star
 <phrase key="35561-more-4-title" comment="" />
 We have your resources right here
 <phrase key="35561-more-4-desc" comment="" />
-When your site attracts visitors by the ton, you shouldn’t have to stress over your plan’s visitor limits. Get <a id="visitor-overprotection-link">visitor overage protection</a>, ignore your limits, and pay a minimal fee for every additional 10K visitors over plan.
+When your site attracts visitors by the ton, you shouldn’t have to stress over your plan’s visitor limits. Get <a id="visitor-overprotection-link" data-ci="">visitor overage protection</a>, ignore your limits, and pay a minimal fee for every additional 10K visitors over plan.
 <phrase key="35561-more-5-title" comment="" />
 Stage before you show
 <phrase key="35561-more-5-desc" comment="" />
@@ -216,7 +216,7 @@ SSD drives to grab your site content wicked quick
 <phrase key="35561-performance-chart-text-1" comment="" />
 February 2015
 <phrase key="35561-performance-chart-text-2" comment="" />
-Here’s the nitty gritty. We had <a id="cloudspecator-link">Cloud Spectator</a>, an independent IT and cloud computing testing firm, test and monitor the top Managed WordPress hosting providers to determine the best web hosts.
+Here’s the nitty gritty. We had <a id="cloudspecator-link" data-ci="">Cloud Spectator</a>, an independent IT and cloud computing testing firm, test and monitor the top Managed WordPress hosting providers to determine the best web hosts.
 <phrase key="35561-performance-chart-text-3" comment="" />
 Here’s what they found:
 <phrase key="35561-performance-chart-btn-txt" comment="" />
@@ -244,7 +244,7 @@ Having the latest version of WordPress’s core software keeps your site happy a
 <phrase key="35561-security-slide-5-title" comment="" />
 Pre-screened plugins
 <phrase key="35561-security-slide-5-desc" comment="" />
-We screen thousands upon thousands of <a id="wordpress-plugins-link">WordPress plugins</a>. Why? So you never have to worry whether you’re installing a well-behaved plugin or one that eats the last slice of pizza and leaves the box.
+We screen thousands upon thousands of <a id="wordpress-plugins-link" data-ci="">WordPress plugins</a>. Why? So you never have to worry whether you’re installing a well-behaved plugin or one that eats the last slice of pizza and leaves the box.
 <phrase key="35561-training-title" comment="" />
 Top-notch training to master WordPress basics
 <phrase key="35561-training-item-1-title" comment="" />
@@ -252,7 +252,7 @@ Step me through
 <phrase key="35561-training-item-1-desc" comment="" />
 Use these 120 voice-guided, interactive walkthroughs to learn the basics of building WordPress sites. No videos, no documentation. Just click, follow and absorb.
 <phrase key="35561-training-item-1-note" comment="" />
-Powered by <a id="sidekick-link">SIDEKICK</a>
+Powered by <a id="sidekick-link" data-ci="">SIDEKICK</a>
 <phrase key="35561-training-item-2-title" comment="" />
 Class is in session
 <phrase key="35561-training-item-2-desc" comment="" />
@@ -335,266 +335,337 @@ GoDaddy Support is the Best
 I recently moved my email and websites to GoDaddy. I have contacted support on several occasions due to my lack of knowledge of Outlook 365 and Managed WordPress. Both chat and phone support were able to resolve my issues quickly.
 <phrase key="35561-slide-5-byline" comment="" /> 
 Young.bz L.L.C.
-
-<phrase key="subheadertext.Part1" comment="company name between part 1 and 2"/>
-While WordPress makes it easy to create an amazing blog or website, our world-class Web hosting makes it just as easy to get the most out of your site. WordPress Hosting from
-<phrase key="subheadertext.Part2" />
-keeps your site running smoothly, even when your latest post goes viral, by automatically spreading traffic spikes across multiple servers. Plus, our advanced performance and security means your site is lightning-fast and your visitors are safe.
-<phrase key="FAQ.SubSection1.ListItem1" />
-WordPress is a blog- and Web-publishing platform that's fast and easy to use. It lets you manage everything from a personal blog to a small hobby website to a large commercial site with hundreds of pages. WordPress offers an open-source, state-of-the-art publishing platform that focuses on aesthetics, Web standards and usability. It is used on hundreds of thousands of sites and seen by tens of millions of people every day.
-<phrase key="VATDisclaimer" />
-
-<phrase key="wordpress-hosting-title" />
-WordPress Hosting | Hosting with Unlimited Bandwidth – GoDaddy
-<phrase key="wordpress-hosting-description" />
-GoDaddy offers managed WordPress hosting at an affordable price, as well as easy installation of your WordPress domain.
-<phrase key="wordpress-hosting-og-title" />
-Managed WordPress hosting is better with GoDaddy
-<phrase key="wordpress-hosting-og-description" />
-Save time, stress and, yes, even cash with GoDaddy Managed WordPress. Our in-house experts take care of all the technical stuff, from setting up your server to optimizing your site’s speed and security. Just log in and make your site amazing, we’ll take care of the rest.
-<phrase key="wordpress-hosting-3-MoneyBackGuarantee" />
-Money-Back <span class="ribbon-text-emphasis">Guarantee</span>
-<phrase key="wordpress-hosting-3-MANAGEDWORDPRESS" />
-MANAGED WORDPRESS
-<phrase key="wordpress-hosting-8-BlazingFast" />
-Blazing fast. Incredibly secure. Totally hassle-free.
-<phrase key="wordpress-hosting-22-YouCreateYourOwnWordPressSiteAndWe" />
-You create your own WordPress site. We do the work with fully-managed hosting, setup and security.
-<phrase key="wordpress-hosting-off" />
-OFF
-<phrase key="wordpress-hosting-save" />
-SAVE
-<phrase key="wordpress-hosting-AsLowAs" />
-As low as
-<phrase key="wordpress-hosting-bestvalue" />
-Best Value
-<phrase key="wordpress-hosting-mo" />
-mo
-<phrase key="wordpress-hosting-month" />
-month
-<phrase key="wordpress-hosting-months" />
-months
-<phrase key="wordpress-hosting-2-PlansPricing" />
-Plans & Pricing
-<phrase key="wordpress-hosting-1-Features" />
-Features
-<phrase key="wordpress-hosting-1-FAQ" />
+<phrase key="35561-faq" />
 FAQ
-<phrase key="wordpress-hosting-1-WordPress" />
-WordPress
-<phrase key="wordpress-hosting-11-YouHaveBetterThingsToDoThanManage" />
-You have better things to do than manage your hosting.
-<phrase key="wordpress-hosting-50-MaintainingAWebsiteShouldnTMeanSpendingHours" />
-Maintaining a website shouldn’t mean spending hours optimizing your server and battling security threats. With our Managed WordPress, we handle the technical stuff for you – server setup, security, backups, even performance optimization – so you can spend your time designing, managing content and doing what’s important to you.
-<phrase key="wordpress-hosting-1-Starter" />
-Starter
-<phrase key="wordpress-hosting-8-PerfectForBasicSitesBlogsAndStartUps" />
-Perfect for basic sites, blogs and start-ups
-<phrase key="wordpress-hosting-onsale" />
-ON SALE
-<phrase key="wordpress-hosting-7-25000MonthlyVisitorsOn1Website" />
-<strong>25,000</strong> monthly visitors on <strong>1</strong> website
-<phrase key="wordpress-hosting-12-100GBStorageStoreApproximately22000Images" />
-<strong>100 GB</strong> storage. Store approximately 22,000 images or 500 standard videos
-<phrase key="wordpress-hosting-5-AllCoreFeaturesListedBelow" />
-<strong>All Core Features</strong> listed below
-<phrase key="wordpress-hosting-9-IdealForSmallBusinessesFreelanceDesignersAndActive" />
-Ideal for small businesses, freelance designers and active bloggers
-<phrase key="wordpress-hosting-1-Business" />
-Business
-<phrase key="wordpress-hosting-2-StartingAt" />
-Starting at
-<phrase key="wordpress-hosting-9-25000MonthlyVisitorsOnUpTo5" />
-<strong>250,000</strong> monthly visitors on up to <strong>5</strong> websites
-<phrase key="wordpress-hosting-13-500GBStorageStoreApproximately110000Images" />
-<strong>500 GB</strong> storage. Store approximately 110,000 images or 2,500 standard videos
-<phrase key="wordpress-hosting-5-AllCoreFeaturesListedBelow-2" />
-<strong>All Core Features</strong> listed below
-<phrase key="wordpress-hosting-1-Pro" />
-Pro
-<phrase key="wordpress-hosting-7-RecommendedForWebDevelopersAndCreativeAgencies" />
-Recommended for web developers and creative agencies
-<phrase key="wordpress-hosting-9-MillionsOfMonthlyVisitorsOnUpTo25" />
-<strong>Millions</strong> of monthly visitors on up to <strong>25</strong> websites
-<phrase key="wordpress-hosting-7-UnlimitedStorageStoreUnlimitedImagesAndVideos" />
-<strong>Unlimited</strong> Storage. Store unlimited images and videos
-<phrase key="wordpress-hosting-5-AllCoreFeaturesListedBelow-3" />
-<strong>All Core Features</strong> listed below
-<phrase key="wordpress-hosting-3-AllPlansInclude" />
-All Plans Include
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREE" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEIN" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .IN, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEUK" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CO, .NET, .UK, .CO.UK or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREECA" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .CA, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEBR" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.BR, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEMX" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.MX, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEAU" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.AU, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-145-FreeDomainWithAnnualPlanRestrictionsApplyOneFREEMANAGER" />
-Free domain with annual plan - <span class="g-toolTip restrictions-link">Restrictions apply<span class="gtip-wide">One FREE .COM, .COM.MX, .COM.BR, .CA, .UK., .CO.UK, .CO, .NET, or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of $0.18 per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.</span></span>
-<phrase key="wordpress-hosting-5-1000sOfThemesAndPlugins" />
-1000s of themes and plugins
-<phrase key="wordpress-hosting-4-OneClickMigrationTool" />
-One-click migration tool
-<phrase key="wordpress-hosting-23-SFTPAccessProtectFilesAsTheirTransferredToOr" />
-<span class="g-toolTip">sFTP access<span>Protect files as they are transferred to or from your site by encrypting them through a Secure FTP (sFTP) connection </span></span> to WordPress files
-<phrase key="wordpress-hosting-2-NightlyBackups" />
-Nightly backups
-<phrase key="wordpress-hosting-7-RedundantFirewallsMalwareScanningAndDDoSProtection" />
-Redundant firewalls, malware scanning and DDoS protection
-<phrase key="wordpress-hosting-4-AutomaticWordPressCoreUpdates" />
-Automatic WordPress core updates
-<phrase key="wordpress-hosting-3-TemporaryWebsiteAddress" />
-Temporary website address
-<phrase key="wordpress-hosting-7-MultiLanguageDashboardEnglishSpanishOrPortuguese" />
-Multi-language dashboard: English, Spanish or Portuguese
-<phrase key="wordpress-hosting-18-PremiumWordPressHostingPlatformBuiltSpecificallyForWordPressTo" />
-<span class="g-toolTip">Premium WordPress Hosting Platform<span>Built specifically for WordPress to optimize the speed, reliability and security of your site.</span></span>
-<phrase key="wordpress-hosting-5-AwardWinning247Support" />
-Award-winning 24/7 support
-<phrase key="wordpress-hosting-4-999UptimeGuarantee" />
-99.9% uptime guarantee
-<phrase key="wordpress-hosting-3-MoneyBackGuarantee-2" />
-Money-back guarantee
-<phrase key="wordpress-hosting-4-BingAdsCredit" />
-Bing Ad Credits -
-<phrase key="wordpress-hosting-2-RestrictionsApply" />
-Restrictions apply
-<phrase key="wordpress-hosting-36-OnePromotionalCreditPerCustomerForANew" />
-One promotional credit per customer for a new Microsoft<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.
-<phrase key="wordpress-hosting-4-FacebookAdCredit" />
-Facebook Ad Credit -
-<phrase key="wordpress-hosting-44-OnePromotionalCreditPerCustomerForANew" />
-One promotional credit per customer for a new Facebook<sup class="supsymbol">&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply.
-<phrase key="wordpress-hosting-4-GoogleAdWordsCredit" />
-Google AdWords Credit -
-<phrase key="wordpress-hosting-48-OnePromotionalCreditPerCustomerForANew" />
-One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend USD $25. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply.
-<phrase key="wordpress-hosting-4-WeMadeItSimple" />
-We made it simple
-<phrase key="wordpress-hosting-93-FromTheMomentYouLogInYouLl" />
-From the moment you log in, you’ll see how our Managed WordPress is different. You’re instantly connected to WordPress, where you can spin up a new site in less than 30 seconds. Build your site on the free domain included with our annual plan or start with a temporary domain and decide on the perfect URL later. And once your site is up, our automatic updates make sure you’re always running the latest version of WordPress, so your site is secure, up to date and running like a dream.
-<phrase key="wordpress-hosting-5-BuiltForSpeedAndReliability" />
-Built for Speed and Reliability
-<phrase key="wordpress-hosting-85-OurManagedWordPressWasBuiltFromTheGround" />
-Our Managed WordPress was built from the ground up for maximum performance with dedicated, load-balanced servers, advanced tools and personal tweaks from our WordPress experts that you won’t find anywhere else. It all adds up to blistering speed and guaranteed <a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /></relative>]@T]" target="_blank">99.9% uptime</a>, so when your latest blog post goes viral, your site stays up and running at top speed. And with Google&reg; using site speed as a criteria for search ranking, it can help drive even more traffic to your site.
-<phrase key="wordpress-hosting-7-AwardWinningSecurityKeepsYourSiteSafe" />
-Award-winning security keeps your site safe
-<phrase key="wordpress-hosting-62-KeepingAWebsiteSecureIsAFullTime" />
-Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
-<phrase key="wordpress-hosting-9-NotFindingWhatYouNeedYouMightWant" />
-<span class="condensed">Not Finding what you need?</span> You might want...
-<phrase key="wordpress-hosting-2-WebHosting" />
-Web Hosting
-<phrase key="wordpress-hosting-13-GetFullControlOfYourHostingWithAn" />
-Get full control of your hosting with an industry-standard control panel.
-<phrase key="wordpress-hosting-9-FeaturesCPanelLinuxOrParallelsPleskPanelWindows" />
-Features cPanel&reg; (Linux) or Parallels&reg; Plesk Panel (Windows)
-<phrase key="wordpress-hosting-11-OneClickInstall100sOfTopAppsLike" />
-One-click install 100s of top apps like Joomla and Drupal
-<phrase key="wordpress-hosting-10-Includes999UptimeLightningFastLoadTimes" />
-Includes <a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /></relative>]@T]" target="_blank">99.9% uptime</a>, lightning-fast load times and more
-<phrase key="wordpress-hosting-learnmore" />
-Learn More
-<phrase key="wordpress-hosting-2-WebsiteBuilder" />
-Website Builder
-<phrase key="wordpress-hosting-16-UseOurDoItYourselfSiteDesignerTo" />
-Use our do-it-yourself site designer to create a beautiful site in no time.
-<phrase key="wordpress-hosting-8-GetOnlineFastWith100sOfCustomizableDesigns" />
-Get online fast with 100s of customizable designs
-<phrase key="wordpress-hosting-8-NoTechnicalSkillsRequiredJustDragAndDrop" />
-No technical skills required - just drag and drop
-<phrase key="wordpress-hosting-7-IncludesAFreeDomainHostingAndMore" />
-Includes a free domain, hosting and more
-<phrase key="wordpress-hosting-7-BuiltToBeSeamlessAndSimple" />
-We made it simple.
-<phrase key="wordpress-hosting-100-FromTheMomentYouLogInYouLl" />
-From the moment you log in, you’ll see how our Managed WordPress is different. You’re instantly connected to WordPress, where you can spin up a new site in less than 30 seconds. Build your site on the free domain included with our annual plan or start with a temporary domain and decide on the perfect URL later. And once your site is up, our automatic updates make sure you’re always running the latest version of WordPress, so your site is secure, up to date and running like a dream.
-<phrase key="wordpress-hosting-5-BuiltForSpeedAndReliability-2" />
-Built for Speed and Reliability
-<phrase key="wordpress-hosting-85-OurManagedWordPressWasBuiltFromTheGround-2" />
-Our Managed WordPress was built from the ground up for maximum performance with dedicated, load-balanced servers, advanced tools and personal tweaks from our WordPress experts that you won’t find anywhere else. It all adds up to blistering speed and guaranteed <a href="[@T[link:<relative path='/agreements/showdoc.aspx'><param name='pageid' value='hosting_sa' /></relative>]@T]" target="_blank">99.9% uptime</a>, so when your latest blog post goes viral, your site stays up and running at top speed. And with Google® using site speed as a criteria for search ranking, it can help drive even more traffic to your site.
-<phrase key="wordpress-hosting-7-AwardWinningSecurityKeepsYourSiteSafe-2" />
-Award-winning security keeps your site safe
-<phrase key="wordpress-hosting-65-KeepingAWebsiteSecureIsAFullTime" />
-Keeping a website secure is a full time job. That’s why our security team is on the job 24/7, monitoring your site for suspicious activity and protecting it against brute force and DDoS attacks.
-<phrase key="wordpress-hosting-4-ThePowerOfWordPress" />
-The power of WordPress
-<phrase key="wordpress-hosting-92-AsTheWorldSMostPopularWebsiteCreation" />
-As the world’s most popular website creation tool and content management system (CMS), WordPress makes it easy to create, manage and publish content for your website or blog – all from your Web browser. Assign authors and give them permissions to manage their own content or create their own blog posts. Make changes across your entire site at once, instead of a page at a time. Even add advanced features by simply installing one of 1000s of free plugins. With WordPress, you make the changes you want, when you want them.
-<phrase key="wordpress-hosting-5-HostingThatGrowsWithYou" />
-Hosting that grows with you
-<phrase key="wordpress-hosting-65-WeKnowYouVeGotBigPlansFor" />
-We know you’ve got big plans for your site, so we’ve designed our hosting plans to scale easily. Just a few clicks and you can upgrade your hosting plan to something that fits your needs. No technical hoops to jump through or overage charges penalizing you for your success – just flexible hosting that makes sure your plan is always the right size.
-<phrase key="wordpress-hosting-4-WhatIsWordPress" />
+<phrase key="35561-SeeAllQuestions" />
+See all questions
+<phrase key="35561-rb_your_question" />
+Your questions, our answers
+<phrase key="35561-faq-1-question" />
 What is WordPress?
-<phrase key="wordpress-hosting-81-WordPressIsABlogAndWebPublishingPlatform" />
-WordPress is a blog- and Web-publishing platform that's not only easy to use, but recognized the world over as a standard in website creation. With its focus on aesthetics, Web standards and usability, WordPress is an open-source platform that lets you manage everything from a small personal blog to a large commercial site with hundreds of pages. Hundreds of thousands of sites trust their online presence to WordPress – and with Managed WordPress Hosting from GoDaddy, you can too
-<phrase key="wordpress-hosting-6-WhatIsManagedWordPressHosting" />
+<phrase key="35561-faq-1-answer-1" />
+WordPress<sup>&reg;</sup> is a blog- and Web-publishing platform that's not only easy to use, but recognized the world over as a standard in website creation. With its focus on aesthetics, Web standards and usability, WordPress is an open-source platform that lets you manage everything from a small personal blog to a large commercial site with hundreds of pages. Hundreds of thousands of sites trust their online presence to WordPress – and with Managed WordPress Hosting from [@T[companyname:name]@T], you can too.
+<phrase key="35561-faq-2-question" />
 What is Managed WordPress Hosting?
-<phrase key="wordpress-hosting-38-BuiltOnOurStateOfTheArtWeb" />
-Built on our state-of-the-art Web hosting, Managed WordPress Hosting from GoDaddy is the perfect solution for anyone who wants the power and simplicity of WordPress without the hassle of constant updates and technical adjustments.
-<phrase key="wordpress-hosting-57-MoreThanJustASimpleInstallWordPressIs" />
-More than just a simple install, WordPress is seamlessly integrated to your hosting so the moment you log in, you’re able to build, edit and manage your site. We’ve also modified our server specifically for WordPress, giving you a level of speed and security you can’t get from a standard Web hosting plan.
-<phrase key="wordpress-hosting-29-BestOfAllWeManageYourCoreWordPress" />
-Best of all, we manage your core WordPress updates automatically, so you can give your full attention to your website instead of time-consuming administration and security tasks.
-<phrase key="wordpress-hosting-38-AndOfCourseOurAwardWinningSupportIs" />
+<phrase key="35561-faq-2-answer-1" />
+Built on our state-of-the-art Web hosting, Managed WordPress Hosting from [@T[companyname:name]@T] is the perfect solution for anyone who wants the power and simplicity of WordPress without the hassle of constant updates and technical adjustments.
+<phrase key="35561-faq-2-answer-2" />
+More than just a simple install, WordPress is seamlessly integrated to your hosting so the moment you log in, you’re able to build, edit and manage your site. We’ve also modified our servers specifically for WordPress, giving you a level of speed and security you can’t get from a standard Web hosting plan.
+<phrase key="35561-faq-2-answer-3" />
 And of course, our award-winning support is available 24x7 to help with any questions you may have. In short, there’s no easier way to build and manage a fast, secure, reliable WordPress website or blog.
-<phrase key="wordpress-hosting-11-HowDoesYourVersionOfWordPressDifferFrom" />
+<phrase key="35561-faq-3-question" />
 How does your version of WordPress differ from other installations?
-<phrase key="wordpress-hosting-55-ItDoesnTWeStartYouOutWith" />
+<phrase key="35561-faq-3-answer-1" />
 It doesn't. We start you out with the latest version of WordPress, the same one you’d download from WordPress.org. And anytime there’s an update, we install it for you automatically. You never have to hassle with installing another update or worry about running an outdated or compromised version of WordPress.
-<phrase key="wordpress-hosting-28-InFactWeDoTheSameWithYour" />
-In fact, we do the same with your themes and plugins. Just another way we ensure that your site is secure, reliable and running at top speed.
-<phrase key="wordpress-hosting-9-DoINeedToSetUpMyDatabase" />
+<phrase key="35561-faq-4-question" />
 Do I need to set up my database?
-<phrase key="wordpress-hosting-36-NoWithManagedWordPressHostingWeTakeCare" />
+<phrase key="35561-faq-4-answer-1" />
 No. With Managed WordPress Hosting, we take care of everything so the process is as easy as possible for you. Once you’ve purchased your plan, you can immediately create your website or start blogging.
-<phrase key="wordpress-hosting-17-IfIHaveAWordPressSiteHostedSomewhere" />
-If I have a WordPress site hosted somewhere else, can I move it to Go Daddy?
-<phrase key="wordpress-hosting-42-YesYouCanMigrateYourSiteOverThe" />
-Yes. You can migrate your site over the GoDaddy Managed WordPress in just one click. Either move it to your domain name or put it on a temporary domain, then just do a quick review and you’re ready to publish.
-<phrase key="wordpress-hosting-12-AfterIPurchaseWordPressManagedHostingHowDo" />
-After I purchase WordPress Managed Hosting, how do I get started?
-<phrase key="wordpress-hosting-19-NotSureHowToCreateABlogOr" />
+<phrase key="35561-faq-5-question" />
+If I have a WordPress site hosted somewhere else, can I move it to [@T[companyname:name]@T]?
+<phrase key="35561-faq-5-answer-1" />
+Yes. You can migrate your site over to [@T[companyname:name]@T] Managed WordPress in just one click. Either move it to your domain name or put it on a temporary domain, then just do a quick review and you’re ready to publish.
+<phrase key="35561-faq-6-question" />
+After I purchase Managed WordPress Hosting, how do I get started?
+<phrase key="35561-faq-6-answer-1" />
 Not sure how to create a blog or get started building your site using WordPress? Don’t worry!
-<phrase key="wordpress-hosting-17-IfIHaveAWordPressSiteHostedSomewhere-2" />
-If I have a WordPress site hosted somewhere else, can I move it to Go Daddy?
-<phrase key="wordpress-hosting-42-YesYouCanMigrateYourSiteOverThe-2" />
-Yes. You can migrate your site over the GoDaddy Managed WordPress in just one click. Either move it to your domain name or put it on a temporary domain, then just do a quick review and you’re ready to publish.
-<phrase key="wordpress-hosting-50-YourHostingPlanIsSeamlesslyConnectedToThe" />
+<phrase key="35561-faq-6-answer-2" />
 Your hosting plan is seamlessly connected to the latest version of WordPress, so all you need to do is log in and you can start building a site directly from your control panel. Not sure how to log in? Check “How can I access my WordPress control panel?” below.
-<phrase key="wordpress-hosting-36-AndIfYouEverHaveQuestionsDonT" />
+<phrase key="35561-faq-6-answer-3" />
 And if you ever have questions, don't hesitate to contact our award-winning 24x7 support team. Our in-house WordPress experts can guide you through creating, updating or even promoting your website or blog.
-<phrase key="wordpress-hosting-9-HowCanIAccessMyWordPressControlPanel" />
-How can I access my WordPress control panel?
-<phrase key="wordpress-hosting-14-ThereAreSeveralWayToLogInTo" />
-There are several way to log in to your WordPress website or blog.
-<phrase key="wordpress-hosting-20-GoToGoDaddyComLogInToMy" />
-Go to GoDaddy.com, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
-<phrase key="wordpress-hosting-16-GoToYourBlogOrWebsiteAndClick" />
-Go to your blog or website and click “Site Admin” to access your login screen.
-<phrase key="wordpress-hosting-25-TypeHttpCoolexampleComWpAdminWhereCoolexample" />
+<phrase key="35561-faq-7-question" />
+How can I access my WordPress installation?
+<phrase key="35561-faq-7-answer-1" />
+There are several ways to log in to your WordPress website or blog.
+<phrase key="35561-faq-7-answer-2" />
+Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="false"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
+<phrase key="35561-faq-7-answer-3" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
-<phrase key="wordpress-hosting-1-Disclaimers" />
-Disclaimers
-<phrase key="wordpress-hosting-11-FreeThemesAndPluginsCanBeFoundAt" />
-Free themes and plugins can be found at wordpress.org.
-<phrase key="wordpress-hosting-8-AnnualDiscountsAvailableOnNEWPurchasesOnly" />
-Annual discounts available on NEW purchases only.
-<phrase key="wordpress-hosting-20-ProductsWillAutomaticallyRenewUntilCancelledYouMay" />
-Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
-<phrase key="DisclaimerContentDisclaimer" />
-Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
-<phrase key="DisclaimerContentLinkText" />
+<phrase key="Meta0Description" />
+[@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain.
+<phrase key="Meta0Keywords" />
+wordpress, word press, wordpress hosting, wordpress blog, how to start a blog, wordpress login, blogging, create a blog, how to create a blog, how to blog
+<phrase key="Meta0Title" />
+WordPress Hosting | Hosting with Unlimited Bandwidth - [@T[companyname:name]@T]
+<phrase key="SalesHeader21ButtonList140LargeText" />
+Quick Tour
+<phrase key="SalesHeader21ButtonList150SmallText" />
+Product Overview
+<phrase key="SalesHeader21CurrentBottomRightText90Text" />
+Improve your site's load time<br />with our <a style="color:#FFCC00;text-decoration:none;" href="http://wordpress.org/extend/plugins/p3-profiler/">top-rated plugin</a>.
+<phrase key="SalesHeader21MainHeading" />
+WordPress<span class="supSymbol">&reg;</span> Hosting
+<phrase key="SalesHeader21SocialData1Description" />
+The most popular blogging software on the web deserves its own unique hosting plan. Count on [@T[companyname:dotcom]@T] to keep your blog running fast, smooth and safe.
+<phrase key="SalesHeader21SocialData5TweetText" />
+Count on @[@T[companyname:name]@T] to keep your blog running fast, smooth and safe with WordPress&reg; Hosting!
+<phrase key="SalesHeader21SubHeadings90Text" />
+Power your WordPress site with our world-class hosting.
+<phrase key="TabContent20Tab0Text" />
+Plans &amp; Pricing
+<phrase key="TabContent20TabHeaderText" />
+The simplicity of WordPress meets the power of [@T[companyname:name]@T].
+<phrase key="TabContent20TabSubHeaderText" />
+While WordPress makes it easy to create an amazing blog or website, our world-class Web hosting makes it just as easy to get the most out of your site. WordPress Hosting from [@T[companyname:name]@T] keeps your site running smoothly, even when your latest post goes viral, by automatically spreading traffic spikes across multiple servers. Plus, our advanced performance and security means your site is lightning-fast and your visitors are safe.
+<phrase key="PlanBox20PlanAddOns30InputLabel" />
+<strong>Secure your data with an SSL:</strong><br /><span data-qh="1" class="pointer qh-dash">Standard SSL</span>, [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"  />]@T]/yr
+<phrase key="PlanBox20PlanDetails90Text" />
+<strong>100GB</strong> space
+<phrase key="PlanBox20PlanDetails91Text" />
+<strong>Unlimited</strong> bandwidth<span style="visibility:hidden;" class="supSymbol">1</span>
+<phrase key="PlanBox20PlanDetails92Text" />
+<strong>100 Email</strong> accounts<span class="supSymbol">1</span>
+<phrase key="PlanBox20PlanDetails93Text" />
+<strong>10</strong> MySQL databases (1GB ea.)<span style="visibility:hidden;" class="supSymbol">1</span><br /><br /><br /><br />
+<phrase key="PlanBox20PlanFeatures90Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Google<span class="supSymbol">&reg;</span> AdWords<span class="supSymbol">&reg;</span> Credits<span class="supSymbol">3</span>
+<phrase key="PlanBox20PlanFeatures91Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Bing Ads Credit<span class="supSymbol">4</span>
+<phrase key="PlanBox20PlanFeatures92Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<span class="supSymbol">&reg;</span> Ad Credits<span class="supSymbol">5</span>
+<phrase key="PlanBox20PlanFeatures93Text" />
+<span class="free">FREE</span> 10 Fotolia<span class="supSymbol">&reg;</span> Photo Credits<span class="supSymbol">6</span>
+<phrase key="PlanBox20Title" />
+Economy
+<phrase key="PlanBox21PlanAddOns30InputLabel" />
+<strong>Secure your data with an SSL:</strong><br /><span data-qh="1" class="pointer qh-dash">Standard SSL</span>, [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"  />]@T]/yr
+<phrase key="PlanBox21PlanDetails90Text" />
+<strong>Unlimited</strong> space<span class="sup">+</span>
+<phrase key="PlanBox21PlanDetails91Text" />
+<strong>Unlimited websites</strong>&deg;&deg; &amp; bandwidth<span style="visibility:hidden;" class="supSymbol">1</span>
+<phrase key="PlanBox21PlanDetails92Text" />
+<strong>500 Email</strong> accounts<span class="supSymbol">1</span>
+<phrase key="PlanBox21PlanDetails93Text" />
+<strong>25</strong> MySQL databases (1GB ea.)<span style="visibility:hidden;" class="supSymbol">1</span><br /><br /><br /><br />
+<phrase key="PlanBox21PlanFeatures90Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Google<span class="supSymbol">&reg;</span> AdWords<span class="supSymbol">&reg;</span> Credits<span class="supSymbol">3</span>
+<phrase key="PlanBox21PlanFeatures91Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Bing Ads Credit<span class="supSymbol">4</span>
+<phrase key="PlanBox21PlanFeatures92Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<span class="supSymbol">&reg;</span> Ad Credits<span class="supSymbol">5</span>
+<phrase key="PlanBox21PlanFeatures93Text" />
+<span class="free">FREE</span> 10 Fotolia<span class="supSymbol">&reg;</span> Photo Credits<span class="supSymbol">6</span>
+<phrase key="PlanBox21Title" />
+Deluxe
+<phrase key="PlanBox22PlanAddOns30InputLabel" />
+<strong>Secure your data with an SSL:</strong><br /><span data-qh="1" class="pointer qh-dash">Standard SSL</span>, [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly"  />]@T]/yr
+<phrase key="PlanBox22PlanDetails90Text" />
+<strong>Unlimited websites</strong>&deg;&deg;, space<span class="supSymbol">+</span><br />&amp;  bandwidth
+<phrase key="PlanBox22PlanDetails91Text" />
+<strong>Unlimited</strong> Email accounts<span class="supSymbol">1</span>
+<phrase key="PlanBox22PlanDetails92Text" />
+<strong>Unlimited</strong> MySQL databases (1GB ea.)
+<phrase key="PlanBox22PlanDetails93Text" />
+<strong><span data-qh="6" class="pointer qh-dash">Website Accelerator</span> </strong>
+<phrase key="PlanBox22PlanDetails94Text" />
+<strong><span style="color:#F60;">FREE</span><span class="supSymbol">++</span>    <span data-qh="2" class="pointer qh-dash">SSL Certificate</span> with Fixed IP address</strong>
+<phrase key="PlanBox22PlanFeatures90Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Google<span class="supSymbol">&reg;</span> AdWords<span class="supSymbol">&reg;</span> Credits<span class="supSymbol">3</span>
+<phrase key="PlanBox22PlanFeatures91Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="10000" dropdecimal="true"  />]@T] Bing Ads Credit<span class="supSymbol">4</span>
+<phrase key="PlanBox22PlanFeatures92Text" />
+<span class="free">FREE</span> [@T[currencyprice:<price usdamount="5000" dropdecimal="true"  />]@T] Facebook<span class="supSymbol">&reg;</span> Ad Credits<span class="supSymbol">5</span>
+<phrase key="PlanBox22PlanFeatures93Text" />
+<span class="free">FREE</span> 10 Fotolia<span class="supSymbol">&reg;</span> Photo Credits<span class="supSymbol">6</span>
+<phrase key="PlanBox22Title" />
+Ultimate
+<phrase key="TabContent1Tab0Text" />
+How It Works
+<phrase key="TabContent1TabHeaderText" />
+Looking great online has never been so easy.
+<phrase key="TabContent1TabSubHeaderText" />
+Creating a website doesn't have to be difficult or intimidating. With our WordPress Hosting, you can easily create, update, and manage your own professional-looking blog, website or online store.
+<phrase key="HowItWorks0HowItWorksListItems9090Text" />
+Install WordPress to your hosting account with just one click and it’s ready to go in less than 30 minutes.
+<phrase key="HowItWorks0HowItWorksListItems9091Text" />
+Write, publish, and manage your blog or website without knowing HTML &mdash; no coding involved. WordPress is as easy and straightforward as a text editor.
+<phrase key="HowItWorks0HowItWorksListItems9092Text" />
+Choose from countless templates, themes, and plug-ins, all ready-made for WordPress and easy to install.
+<phrase key="HowItWorks0HowItWorksItems110Title" />
+Get online in no time
+<phrase key="HowItWorks0HowItWorksListItems9190Text" />
+Get your visitors involved with ratings, polls, contact forms, or hundreds of other cool features.
+<phrase key="HowItWorks0HowItWorksListItems9191Text" />
+Post links to your blog using Facebook<span class="supSymbol">&reg;</span>, Twitter<span class="supSymbol">&reg;</span>, LinkedIn<span class="supSymbol">&reg;</span>, and other social networking sites, without logging onto each service every time.
+<phrase key="HowItWorks0HowItWorksItems111Title" />
+Keep it fresh
+<phrase key="HowItWorks0HowItWorksListItems9290Text" />
+Update your site from any Internet-connected desktop, laptop, or tablet computer. You can even make changes from your smartphone with the WordPress app.
+<phrase key="HowItWorks0HowItWorksListItems9291Text" />
+Give guest authors or editors permission to add to your blog, without compromising your login information.
+<phrase key="HowItWorks0HowItWorksListItems9292Text" />
+Decide who can comment on your website and what they can &mdash; or can't &mdash; comment on.
+<phrase key="HowItWorks0HowItWorksItems112Title" />
+You're in control
+<phrase key="HowItWorks0HowItWorksListItems9390Text" />
+Rest easy knowing that we provide 24/7 security monitoring and handle critical updates immediately and automatically.
+<phrase key="HowItWorks0HowItWorksListItems9391Text" />
+Keep your site online with [@T[localization:<display type="percent" number="99.9" />]@T] uptime and dynamic traffic management to handle even the biggest traffic spikes.
+<phrase key="HowItWorks0HowItWorksListItems9392Text" />
+Got a question or need some help? Our expert support staff is available 24/7 via email, telephone, and the Web.
+<phrase key="HowItWorks0HowItWorksListItems9393Text" />
+Put your credit card away. You won't find any hidden charges or setup fees here.
+<phrase key="HowItWorks0HowItWorksItems113Title" />
+We've got your back
+<phrase key="MiniPlanBox1HeaderText" />
+Choose your plan
+<phrase key="MiniPlanBox1Plans70PlanName" />
+Economy
+<phrase key="MiniPlanBox1Plans0ListItems0" />
+100GB space
+<phrase key="MiniPlanBox1Plans0ListItems1" />
+Unlimited bandwidth
+<phrase key="MiniPlanBox1Plans0ListItems2" />
+100 Email accounts<span class="supSymbol">1</span>
+<phrase key="MiniPlanBox1Plans0ListItems3" />
+10 MySQL databases (1GB ea.)
+<phrase key="MiniPlanBox1Plans71PlanName" />
+Deluxe
+<phrase key="MiniPlanBox1Plans1ListItems0" />
+Unlimited space<span class="supSymbol">+</span>
+<phrase key="MiniPlanBox1Plans1ListItems1" />
+Unlimited websites&deg;&deg; &amp; bandwidth
+<phrase key="MiniPlanBox1Plans1ListItems2" />
+500 Email accounts<span class="supSymbol">1</span>
+<phrase key="MiniPlanBox1Plans1ListItems3" />
+25 MySQL databases (1GB ea.)
+<phrase key="MiniPlanBox1Plans72PlanName" />
+Ultimate
+<phrase key="MiniPlanBox1Plans2ListItems0" />
+Unlimited websites&deg;&deg;, space<span class="supSymbol">&dagger;</span> &amp; bandwidth
+<phrase key="MiniPlanBox1Plans2ListItems1" />
+Unlimited Email accounts<span class="supSymbol">1</span>
+<phrase key="MiniPlanBox1Plans2ListItems2" />
+Unlimited MySQL databases (1GB ea.)
+<phrase key="MiniPlanBox1Plans2ListItems3" />
+<span data-qh="6" class="pointer qh-dash">Website Accelerator</span>
+<phrase key="MiniPlanBox1Plans2ListItems4" />
+FREE<span class="supSymbol">++</span> <span data-qh="2" class="pointer qh-dash">SSL Certificate</span> with Fixed IP address
+<phrase key="TabContent2Tab0Text" />
+FAQ
+<phrase key="FAQ0FAQListItems6091Text" />
+For more information, see these <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/6139" secure="false"><param name="ci" value="76492" /><param name="var2" value="true" /></external>]@T]" target="_help">Helpful WordPress Articles</a>.
+<phrase key="FAQ0FAQItems110Title" />
+What is WordPress?
+<phrase key="FAQ0FAQListItems6190Text" />
+Go Daddy's world-class website hosting offers auto-install of <strong>WordPress</strong>, plus services that include email, databases, free applications, FREE access to the exclusive Hosting Community, and much more.
+<phrase key="FAQ0FAQListItems6191Text" />
+To make our hosting the best experience available to our customers, it uses our innovative hosting platform. This hosts your website or blog on multiple servers to provide reliability and maximize performance.
+<phrase key="FAQ0FAQListItems6192Text" />
+Get started today! Even if you don't know <strong>how to blog</strong>, WordPress makes it easy to get your website online.
+<phrase key="FAQ0FAQListItems6193Text" />
+With Go Daddy you'll have a completely customizable tool that can be used for almost anything, from a family home page to a business website. You can even include the WordPress Photo Gallery to share photos with family, friends and business associates.
+<phrase key="FAQ0FAQListItems6194Text" />
+<strong>WordPress Hosting</strong> is the perfect solution from novice users to expert designers. Even if you’re not sure <strong>how to start a blog</strong>, or build a website, Word Press is a great platform to get you started.
+<phrase key="FAQ0FAQListItems6195Text" />
+For more information, visit our <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/topic/732" secure="false"><param name="ci" value="76493" /><param name="var2" value="true" /></external>]@T]" target="_help">WordPress Hosting product support page</a>.
+<phrase key="FAQ0FAQItems111Title" />
+What is WordPress Hosting?
+<phrase key="FAQ0FAQListItems6290Text" />
+It doesn't. We use the standard version of WordPress, the same version you can download from WordPress.org. We install the latest available version of WordPress, usually within a day of its public release.
+<phrase key="FAQ0FAQItems112Title" />
+How does your version of WordPress differ from other installations?
+<phrase key="FAQ0FAQListItems6390Text" />
+No. When you set up your hosting account, we take care of everything. We do our best to make the process as easy as possible for you. After your account is set up, you can immediately create your website or start <strong>blogging</strong>.
+<phrase key="FAQ0FAQListItems6391Text" />
+For more information, see <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/6897" secure="false"><param name="ci" value="76494" /><param name="var2" value="true" /></external>]@T]" target="_help">Setting up Your WordPress Hosting Account</a>.
+<phrase key="FAQ0FAQItems113Title" />
+Do I need to set up my database?
+<phrase key="FAQ0FAQListItems6490Text" />
+Absolutely. There are several ways to transfer a <strong>WordPress blog</strong> from one host to another. The really great news is our 24x7 tech support is here to help you do it every step of the way.
+<phrase key="FAQ0FAQListItems6491Text" />
+You can call or email our tech support any hour of the day. We’ll be sure to identify the right hosting solution for you, and then determine the best method for moving your site over to our servers.
+<phrase key="FAQ0FAQListItems6492Text" />
+We value your time, and we pride ourselves in getting the job done right the first time.
+<phrase key="FAQ0FAQListItems6493Text" />
+For more information, see <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/6117" secure="false"><param name="ci" value="76495" /><param name="var2" value="true" /></external>]@T]" target="_help">Moving WordPress Blogs from Another Host</a>.
+<phrase key="FAQ0FAQItems114Title" />
+What if I have a WordPress site hosted somewhere else? Can I move it to Go Daddy?
+<phrase key="FAQ0FAQListItems6590Text" />
+Not sure <strong>how to create a blog</strong> or get started building your site using WordPress? Don’t worry!
+<phrase key="FAQ0FAQListItems6591Text" />
+We've made setting up WordPress easy. Simply log in to your Account Manager, and then click on Web Hosting. Click the Launch button next to the account you want to set up. Answer a few questions about your new site and you’re all set to <strong>create a blog,</strong> or start up your new website.
+<phrase key="FAQ0FAQListItems6592Text" />
+And don't forget about our award-winning 24x7 technical support team. We’re here to help you along the way. Our expert staff can assist you with choosing the right website hosting plan, setting up your new account, all the way to helping with online marketing for your new WordPress blog.
+<phrase key="FAQ0FAQListItems6593Text" />
+For more information, see <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/6897" secure="false"><param name="ci" value="76496" /><param name="var2" value="true" /></external>]@T]" target="_help">Setting up Your Account</a>.
+<phrase key="FAQ0FAQItems115Title" />
+After I purchase WordPress Hosting, how do I get started?
+<phrase key="FAQ0FAQListItems6690Text" />
+You can access it the same way that you would if you had installed <strong>WordPress</strong> yourself, <i>http://coolexample.com/wp-admin</i>, where <i>coolexample.com</i> is your domain name.
+<phrase key="FAQ0FAQListItems6691Text" />
+You can also visit your blog's home page by typing your domain name in the browser address bar, and then click Site Admin to access your <strong>WordPress login</strong> screen. Just log in using the user name and password you selected during the hosting setup process.
+<phrase key="FAQ0FAQListItems6692Text" />
+For more information, see <a href="[@T[link:<external linktype="COMMUNITYURL" path="/help/6734" secure="false"><param name="ci" value="76497" /><param name="var2" value="true" /></external>]@T]" target="_help">Logging in to WordPress</a>.
+<phrase key="FAQ0FAQItems116Title" />
+How can I access my WordPress installation?
+<phrase key="FAQ0RightImageTitle" />
+Wordpress Hosting
+<phrase key="List0Items90Text" />
+Fast, expert setup with exclusive <span data-qh="3" class="pointer qh-dash">Hosting Concierge</span><span class="supSymbol">2</span>
+<phrase key="List0Items91Text" />
+Latest blogging technology
+<phrase key="List0Items92Text" />
+Thousands of free plugins<span class="supSymbol">**</span>
+<phrase key="List0Items93Text" />
+Hundreds of free themes<span class="supSymbol">**</span>
+<phrase key="List0Items94Text" />
+FREE email addresses
+<phrase key="List0Items95Text" />
+Exclusive savings at <span data-qh="4" class="pointer qh-dash">Template Monster</span>
+<phrase key="List0Items96Text" />
+No licensing fees
+<phrase key="List0Items97Text" />
+Google&reg; Webmaster Tools
+<phrase key="List0Items98Text" />
+Website statistics
+<phrase key="List0Items99Text" />
+24/7 phone and email support
+<phrase key="List0Items910Text" />
+<span data-qh="5" style="border-bottom:none;" onclick="landingPagePopUp.createContentDiv();landingPagePopUp.openModalPopUp('targetDiv','[@T[link:<relative path="/hosting/jsoncontent/world-class-data-center.aspx"><param name="includecss" value="1" /><param name="ci" value="76500" /><param name="app_hdr" value="0" /></relative>]@T]');" class="u ltBg pointer">World-class data centers</span>
+<phrase key="List0Items911Text" />
+<span style="border-bottom:none;" onclick="landingPagePopUp.createContentDiv();landingPagePopUp.openVideoPlayer('targetDiv','[@T[link:<relative path="/shared/video/videos.aspx"><param name="ci" value="76501" /><param name="pagetype" value="gridhosting" /><param name="show_vid" value="hostingsecurity" /></relative>]@T]', true);" id="vidlink" class="u ltBg pointer">State-of-the-art security</span>
+<phrase key="List0Items912Text" />
+Daily backup
+<phrase key="List0Items913Text" />
+Best-of-breed routers, firewalls and servers
+<phrase key="List0Items914Text" />
+FTP access
+<phrase key="List0TabText" />
+All Plans Include
+<phrase key="List0Title" />
+All Plans Include
+<phrase key="Support1CommunityGroup" />
+WordPress Hosting Group
+<phrase key="Support1TabText" />
+Support
+<phrase key="Support1Title" />
+Support
+<phrase key="QuickHelp6QuickHelpItems90Text" />
+A [@T[companyname:name]@T] SSL Certificate:<br/><br/><ul><li>Encrypts the data transferred to and from your site</li><li>Protects against session hijacking attacks including Firesheep</li><li>Secures credit card numbers and other sensitive information</li><li>Assures your customers can safely order from your site</li><li>Supports industry-standard 128-bit and high-grade 256-bit encryption</li></ul>
+<phrase key="QuickHelp6QuickHelpItems91Text" />
+<b>Show customers they can do business with you safely.</b><br />A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" />]@T]/yr value, your [@T[companyname:dotcom]@T] SSL certificate keeps transactions with your Website secure. Take advantage of up to 256-bit encryption and [@T[localization:<display type="percent" number="99" />]@T] browser recognition - it's all free++ for the initial term of your hosting plan! Not available with Website Accelerator.
+<phrase key="QuickHelp6QuickHelpItems92Text" />
+[@T[companyname:name]@T] Hosting Concierge is a service that assists in getting your site online fast.  A dedicated team will help you complete the setup of your hosting plan.  A phone number will be sent to you via email. FREE for 30 days after purchase.<span class="supSymbol">2</span>
+<phrase key="QuickHelp6QuickHelpItems93Text" />
+Jumpstart your WordPress blog with a great deal <u>on premium WordPress templates</u> from Template Monster. Just choose your template, upload it into WordPress, replace the images and text and you're ready to go &mdash; it's that easy!
+<phrase key="QuickHelp6QuickHelpItems94Text" />
+We're proud to offer state-of-the-art data centers in the United States, Europe and Asia Pacific. Our facilities feature best-in-class hardware, full network redundancy, integrated monitoring systems, 24/7 security staff and much more. And unlike many of our competitors, we actually own, operate and support our data centers. You don't ever have to deal with a third party or an outsourced support staff. For specific technical details, click now.
+<phrase key="QuickHelp6QuickHelpItems95Text" />
+Go Daddy Website Accelerator can automatically increase your website's speed and faster websites help you keep more customers. Visit www.godaddy.com/hosting/fast-web-hosting.aspx for details. Applicable to non-SSL Linux U.S. accounts.
+<phrase key="Disclaimer7CurrentModal2Text" />
 Click here for product disclaimers and legal policies.
-<phrase key="vat-price" />
-Price does not include taxes, where applicable
+<phrase key="Disclaimer7Disclaimers0" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="FAQ.SubSection1.ListItem1" />
+WordPress&reg; is a blog- and Web-publishing platform that's fast and easy to use. It lets you manage everything from a personal blog to a small hobby website to a large commercial site with hundreds of pages. WordPress offers an open-source, state-of-the-art publishing platform that focuses on aesthetics, Web standards and usability. It is used on hundreds of thousands of sites and seen by tens of millions of people every day.
+<phrase key="WordpressHostingFrom" />
+WordPress&reg; Hosting from
+<phrase key="PlanPricePrefix" />
+From
+<phrase key="ProductPricePrefix" />
+From
+<phrase key="BestValue" />
+BEST VALUE!
 <phrase key="professional-Hosting-Support" />
 Need help? Call our dedicated Hosting Professionals at

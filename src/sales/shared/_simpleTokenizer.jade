@@ -15,11 +15,18 @@ atlantis:webstash(type="js")
     $(document).ready(function(){
       $('[data-tokenize]').each(function(){
         var $this = $(this),
-          html = $this.html(),
           val = $this.data('tokenize'),
-          tokenizedHtml = html.replace(/\{0\}/gi, val);
-        $this
-          .html(tokenizedHtml)
-          .removeAttr('data-tokenize');
+          attrName = $this.data('tokenize-attr'),
+          jsVar = $this.data('tokenize-jsvar'),
+          text = attrName ? $this.attr(attrName) : $this.html(),
+          tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+
+        if(attrName) {
+          $this.attr(attrName, tokenized);
+        } else {
+          $this.html(tokenized);
+        }
+
+        $this.removeAttr('data-tokenize');
       });
     });

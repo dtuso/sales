@@ -5,7 +5,8 @@ atlantis:webstash(type="css")
     }
     #features-more,
     #reviews-carousel,    
-    #security {
+    #security,
+    #faq {
       background-color: #fff;
     }
     #features-lose{
@@ -15,7 +16,8 @@ atlantis:webstash(type="css")
     #training {
       background-color: #84D54A;
     } 
-    #renderMidPageNavBottom {
+    #renderMidPageNavBottom,
+    #faq {
       margin:0;
       padding:0;
     }
@@ -44,7 +46,7 @@ atlantis:webstash(type="css")
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
-section#features(data-mid-nav-title="Features",data-ciCode="#{page.ci.midPageNavFeature}")
+section#features(data-mid-nav-title="Features",data-cicode="#{page.ci.midPageNavFeature}")
   .container
     .row
       .col-sm-12
@@ -128,7 +130,7 @@ section#features-lose
     text: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-desc]@L]", 
     buttonText: null, buttonUrl: null, buttonColor: null})
 
-section#performance(data-mid-nav-title="Performance",data-ciCode="#{page.ci.midPageNavPerformance}")
+section#performance(data-mid-nav-title="Performance",data-cicode="#{page.ci.midPageNavPerformance}")
   .container.maximum-performance
     .row
       .col-xs-12.col-sm-6.col-sm-push-3
@@ -150,40 +152,39 @@ section#performance(data-mid-nav-title="Performance",data-ciCode="#{page.ci.midP
         p.text-center 
           a.btn.btn-default.btn-default-dark(id="see-latest-results-btn") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-performance-chart-btn-txt]@L]
 
-section#security(data-mid-nav-title="Security",data-ciCode="#{page.ci.midPageNavSecuriy}")
+section#security(data-mid-nav-title="Security",data-cicode="#{page.ci.midPageNavSecuriy}")
 
   - securityCarousel = securityCarousel || {};
   - securityCarousel.lazyLoad = true;
   - securityCarousel.css = true;
   - securityCarousel.backgroundColor ='';
-
+  - securityCarousel.ci = {};
+  - securityCarousel.ci.prev = page.ci.securityCarouselSlideLeft;
+  - securityCarousel.ci.next = page.ci.securityCarouselSlideRight;
+  - securityCarousel.ci.carouselIndicator = page.ci.securityCarouselSlideSel;
   - securityCarouselItem = securityCarouselItem || {};
   - securityCarouselItem.textCenter = true;
-  - securityCarouselItem.ci = {carouselIndicator:page.ci.securityCarouselSlideSel,prev:page.ci.securityCarouselSlideLeft, next:page.ci.securityCarouselSlideRight};
-
+  - securityCarouselItem.ci = {};
+  - securityCarouselItem.ci.panelContainer = '';
   .container
     .row
       .col-sm-10.col-sm-push-1.center-block
         h2.h0.main-heading.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]
         h3.subheading.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]
-  //- +renderTabbedCarousel({
-  //-     backgroundColor: "",
-  //-     icode: "",
-  //-     featuresCarouselId: "carousel-security-tabs", /* the ID of the tabs area */
-  //-     title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]",
-  //-     subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]",
-  //-     numOfTabs: 4,
-  //-     id: "carousel-security", /* the ID of the actual carouse */
-  //-     backgroundColor: "",
-  //-     backgroundColor: "",
-  //-     backgroundColor: "",
-
-  //-   })
-  //-   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]",ci:page.ci.securityCarouselSlideTab1})
-  //-   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]",ci:page.ci.securityCarouselSlideTab2})
-  //-   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]",ci:page.ci.securityCarouselSlideTab3})
-  //-   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]",ci:page.ci.securityCarouselSlideTab4})
-    //- +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]",ci:page.ci.securityCarouselSlideTab5})
+  +renderTabbedCarousel({
+      backgroundColor: "",
+      icode: "",
+      featuresCarouselId: "carousel-security-tabs", /* the ID of the tabs area */
+      title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]",
+      subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]",
+      numOfTabs: 5,
+      id: "carousel-security" /* the ID of the actual carousel */
+    })
+    +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]",ci:page.ci.securityCarouselSlideTab1})
+    +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]",ci:page.ci.securityCarouselSlideTab2})
+    +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]",ci:page.ci.securityCarouselSlideTab3})
+    +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]",ci:page.ci.securityCarouselSlideTab4})
+    +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]",ci:page.ci.securityCarouselSlideTab5})
 
   +carousel("carousel-security", 5, securityCarousel)
     +carouselItem(securityCarouselItem)
@@ -232,7 +233,7 @@ section#security(data-mid-nav-title="Security",data-ciCode="#{page.ci.midPageNav
             h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L] 
             p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-desc]@L] 
 
-section#training(data-mid-nav-title="Training",data-ciCode="#{page.ci.midPageNavTraining}")
+section#training(data-mid-nav-title="Training",data-cicode="#{page.ci.midPageNavTraining}")
 
   .container
 
@@ -251,20 +252,13 @@ section#training(data-mid-nav-title="Training",data-ciCode="#{page.ci.midPageNav
         +lazyImg("img-responsive img-center", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png", "altText", "triggerResize")
         h3 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-title]@L]
         p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-2-desc]@L]
-    
-
-//- be sure to end the fixed navigational area
-+renderMidPageNavBottom
 
 - reviewsCarousel = reviewsCarousel || {};
 - reviewsCarousel.css = false; /* already loaded by the security carousel */
 - reviewsCarousel.backgroundColor ='';
-
 - reviewsCarouselItem = reviewsCarouselItem || {};
 - reviewsCarouselItem.textCenter = true;
 - reviewsCarouselItem.ci = {carouselIndicator:page.ci.reviewsCarouselSlideSel,prev:page.ci.reviewsCarouselSlideLeft, next:page.ci.reviewsCarouselSlideRight};
-
-
 section#reviews-carousel
 
   +carousel("carousel-reviews", 5, reviewsCarouselItem)
@@ -302,3 +296,30 @@ section#reviews-carousel
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-byline]@L]
 
+section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq]@L]" data-cicode="#{page.ci.midPageNavFAQ}")
+  +renderAccordion({ci: "#{page.ci.faqSeeAll}", id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-SeeAllQuestions]@L]"})
+    h2.h1 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-rb_your_question]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-question]@L]")
+      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-answer-1]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]")
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-1]@L]
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-2]@L]
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-3]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]")
+      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-answer-1]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-question]@L]")
+      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-answer-1]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-question]@L]")
+      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-answer-1]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-question]@L]")
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-1]@L]
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-2]@L]
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-3]@L]
+    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-question]@L]")
+      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-1]@L]
+      ul 
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-2]@L]
+        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-3]@L]
+
+//- be sure to end the fixed navigational area
++renderMidPageNavBottom

@@ -126,11 +126,13 @@ block endOfPageScripts
         maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
       }).css({height: maxIconHeight, marginBottom: 10});
 
-
-
-      $('[data-icann-fee]').each(function(){
+      $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
         var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
         $(this).html(tokenized);
+      });
+      $('[data-content*="{icannfee}"]').each(function(){
+        var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+        $(this).attr('data-content',tokenized);
       });
       
     });

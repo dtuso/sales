@@ -18,31 +18,6 @@ var wpHosting = {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
-$(document).ready(function(){
-
-  activateHref("cloudspecator-link", "#{page.ci.cloudSpeculator}" , "", "_blank");
-  activateHref("see-latest-results-btn", "#{page.ci.seeUpToDateResults}", "", "_blank");
-  activateHref("sidekick-link", "#{page.ci.poweredBySidekick}", "", "_blank");
-  activateHref("visitor-overprotection-link", "#{page.ci.visitorOverprotection}", "", "_blank");
-  activateHref("wordpress-plugins-link", "#{page.ci.wordpressPlugins}", "", "_self");
-  function activateHref(id, ciCode, url, target){
-    $('#' + id)
-      .attr('data-ci', ciCode)
-      .attr('href', url)
-      .attr('target', target);
-  }
-  
-  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
-
-  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-    $("#default-marquee-details-modal-wsb-only").sfDialog({
-      buttons: [got1Page.sfDialogOkButton]
-    });
-  });
-
-});
-
-
 function tokenizeDisclaimerModal(selector, price0, price1) {
 
   $(selector).each(function(idx, modal) {
@@ -54,3 +29,39 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
   });
 
 }
+
+function activateHref(id, ciCode, url, target){
+  $(id).attr('data-ci', ciCode);
+  switch (target) {
+    case "_blank":
+      $(id).attr('href','javascript:void(0);');
+      $(id).on('click', function(){
+        window.open(url);
+      });
+      break;
+    case "_self":
+    default:
+      $(id).attr('href',url);
+      break;
+  }
+}
+
+$(document).ready(function(){
+
+  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
+
+  // $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
+  //   $("#default-marquee-details-modal-wsb-only").sfDialog({
+  //     buttons: [got1Page.sfDialogOkButton]
+  //   });
+  // });
+
+  activateHref("#cloudspecator-link",          "96207", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+  activateHref("#see-latest-results-btn",      "96221", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+  activateHref("#sidekick-link",               "96225", "https://wordpress.org/plugins/sidekick/", "_blank");
+  activateHref("#visitor-overprotection-link", "97105", "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='97105' /></external>]@T]", "_self"); 
+  activateHref("#wordpress-plugins-link",      "97106", "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='97106' /></external>]@T]", "_self");
+  activateHref("#uptime-promise-link",         "97456", "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='97456' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
+  
+
+});

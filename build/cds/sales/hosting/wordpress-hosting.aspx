@@ -37,12 +37,19 @@
         $(document).ready(function(){
           $('[data-tokenize]').each(function(){
             var $this = $(this),
-              html = $this.html(),
               val = $this.data('tokenize'),
-              tokenizedHtml = html.replace(/\{0\}/gi, val);
-            $this
-              .html(tokenizedHtml)
-              .removeAttr('data-tokenize');
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
           });
         });
       </script>
@@ -710,7 +717,7 @@
                    
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
-                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
               </div>
             </div>
             <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
@@ -742,7 +749,7 @@
                    
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"> </span>
                 </div>
-                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L]</div>
@@ -777,7 +784,7 @@
                    
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
-                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L] </div> 
@@ -823,15 +830,12 @@
                    
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
-                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='800000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='800000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div> 
                 ##if(productIsOffered(22))
                  
-                <div class="plan-item">
-                   
-                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span>
-                </div> 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##endif
                  
               </div>
@@ -848,7 +852,7 @@
             <div class="row">
               <div class="col-sm-9 col-sm-push-3">
                 <ul class="green-check">
-                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</li>
+                  <li> <a id="uptime-promise-link">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</a></li>
                   <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
                   </li>
                   <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</li>
@@ -908,7 +912,8 @@
         }
         #features-more,
         #reviews-carousel,    
-        #security {
+        #security,
+        #faq {
           background-color: #fff;
         }
         #features-lose{
@@ -918,7 +923,8 @@
         #training {
           background-color: #84D54A;
         } 
-        #renderMidPageNavBottom {
+        #renderMidPageNavBottom,
+        #faq {
           margin:0;
           padding:0;
         }
@@ -1191,7 +1197,7 @@
         {
           $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
-        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        while($('.navbar-nav').width() + 10 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
           $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
         }
@@ -1224,7 +1230,7 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="features" data-mid-nav-title="Features" data-ciCode="96211">
+    <section id="features" data-mid-nav-title="Features" data-cicode="96211">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -1378,7 +1384,7 @@
         </div>
       </div>
     </section>
-    <section id="performance" data-mid-nav-title="Performance" data-ciCode="96212">
+    <section id="performance" data-mid-nav-title="Performance" data-cicode="96212">
       <div class="container maximum-performance">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-push-3">
@@ -1407,7 +1413,7 @@
         </div>
       </div>
     </section>
-    <section id="security" data-mid-nav-title="Security" data-ciCode="96213">
+    <section id="security" data-mid-nav-title="Security" data-cicode="96213">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-push-1 center-block">
@@ -1416,6 +1422,142 @@
           </div>
         </div>
       </div>
+      <style>
+        .features-tabbed-carousel-top {
+          text-align: center;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon {
+          text-align: center;
+          cursor: pointer;
+          position: relative;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+        max-width: 70%;
+        vertical-align: middle;
+        display: inline-block;
+        }
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon img {
+        margin-bottom: 10px;
+        }
+        .img-center {
+        margin: 0 auto;
+        }
+        
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+        color: #008a32;
+        font-family: 'Walsheim-Black';
+        }
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon .feature-text {
+        font-family: 'Walsheim-Bold';
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 1.1;
+        text-transform: uppercase;
+        }
+        .feature-carousel-icon {font-size: 36px;margin-bottom: 10px;}
+        
+        @media only screen and (min-width: 992px){
+          .features-tabbed-carousel-top .features-tabbed-carousel-icon:not(:first-child) {
+          border-left: 1px solid #808080;
+          }
+        }
+        @media only screen and (min-width: 992px){
+          .features-tabbed-carousel-top .features-tabbed-carousel-icon.active:after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 15px solid #008a32;
+          border-right: 15px solid transparent;
+          border-left: 15px solid transparent;
+          position: absolute;
+          bottom: -15px;
+          margin-left: -20px;
+          left: 50%;
+          }
+        }
+        
+      </style>
+      <div data-icode="" id="carousel-security-tabs" class="features-tabbed-carousel-top ">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+              <h2 class="h1">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]</h2>
+              <h4 class="headline-primary">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 col-md-offset-1">
+              <div data-ci="97100" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
+              <div data-ci="97101" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
+              <div data-ci="97102" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
+              <div data-ci="97103" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
+              <div data-ci="97104" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(window).load(function() {
+            setTimeout(function() {
+              $(".features-tabbed-carousel-icon:first").click();
+            }, 500);
+          
+            var maxTabHeight = 0;
+            $(".features-tabbed-carousel-icon").each(function(index, tab) {
+              maxTabHeight = $(tab).outerHeight() > maxTabHeight ? $(tab).outerHeight() : maxTabHeight;
+            }).css("height", maxTabHeight);
+          
+            var maxFeatureTextHeight = 0;
+            $(".feature-text").each(function(index, featureText) {
+              maxFeatureTextHeight = $(featureText).height() > maxFeatureTextHeight ? $(featureText).height() : maxFeatureTextHeight;
+            }).css({height: maxFeatureTextHeight});
+          
+          });
+          
+          $(".features-tabbed-carousel-icon").click(function() {
+            var slideNum = $(this).data("begin");
+            $(".features-tabbed-carousel-icon").removeClass("active");
+            $(this).addClass("active");
+            $('#carousel-security').carousel(slideNum);
+          });
+          
+          $('#carousel-security').on('slid.bs.carousel', function () {
+            var carouselData = $(this).data('bs.carousel');
+            var currentIndex = carouselData.getActiveIndex();
+            $(".features-tabbed-carousel-icon").each(function() {
+              if (currentIndex >= parseInt($(this).data("begin")) && currentIndex <= parseInt($(this).data("end"))) {
+                $(".features-tabbed-carousel-icon").removeClass("active");
+                $(this).addClass("active");
+              }
+            });
+          });
+          
+          
+        </script>
+      </atlantis:webstash>
       <style>.item-wrapper { padding: 35px 0 20px; }
 .carousel-wrap { padding-bottom: 70px; }
 
@@ -1764,11 +1906,11 @@ top: -6px;
         <div class="carousel-container container">
           <div id="carousel-security" data-ride="carousel" data-interval="false" class="carousel slide">
             <ol class="carousel-indicators">
-              <li data-target="#carousel-security" data-slide-to="0" data-ci=""></li>
-              <li data-target="#carousel-security" data-slide-to="1" data-ci=""></li>
-              <li data-target="#carousel-security" data-slide-to="2" data-ci=""></li>
-              <li data-target="#carousel-security" data-slide-to="3" data-ci=""></li>
-              <li data-target="#carousel-security" data-slide-to="4" data-ci=""></li>
+              <li data-target="#carousel-security" data-slide-to="0" data-ci="96206"></li>
+              <li data-target="#carousel-security" data-slide-to="1" data-ci="96206"></li>
+              <li data-target="#carousel-security" data-slide-to="2" data-ci="96206"></li>
+              <li data-target="#carousel-security" data-slide-to="3" data-ci="96206"></li>
+              <li data-target="#carousel-security" data-slide-to="4" data-ci="96206"></li>
             </ol>
             <div class="carousel-inner">
               <div class="item">
@@ -1861,7 +2003,7 @@ top: -6px;
                   </div>
                 </div>
               </div>
-            </div><a href="#carousel-security" data-slide="prev" data-ci="" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-security" data-slide="next" class="right carousel-control"><span data-ci="" class="carousel-icon arrow-right-icon"></span></a>
+            </div><a href="#carousel-security" data-slide="prev" data-ci="96204" class="left carousel-control"><span class="carousel-icon arrow-left-icon"></span></a><a href="#carousel-security" data-slide="next" class="right carousel-control"><span data-ci="96205" class="carousel-icon arrow-right-icon"></span></a>
           </div>
           <script>
             $('.carousel .carousel-indicators li:first-child').addClass("active");
@@ -1870,7 +2012,7 @@ top: -6px;
         </div>
       </div>
     </section>
-    <section id="training" data-mid-nav-title="Training" data-ciCode="96215">
+    <section id="training" data-mid-nav-title="Training" data-cicode="96215">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -1889,9 +2031,6 @@ top: -6px;
           </div>
         </div>
       </div>
-    </section>
-    <section id="renderMidPageNavBottom">
-      <div></div>
     </section>
     <section id="reviews-carousel">
       <div class="carousel-wrap">
@@ -1983,6 +2122,205 @@ top: -6px;
           </script>
         </div>
       </div>
+    </section>
+    <section id="faq" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq]@L]" data-cicode="97455">
+      <atlantis:webstash type="css">
+        <style>.accordion-group {
+  border-top: 2px solid #e8e8e8;
+  border-bottom: 2px solid #e8e8e8;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Walsheim-Bold';
+}
+
+.accordion-group h2 {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.accordion-group button {
+  margin-bottom: 40px;
+}
+
+.accordion-group li.accordion-dropdown {
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+.accordion-group li.accordion-dropdown span {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.accordion-group li.accordion-dropdown .carett {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-down {
+  border-top: 8px solid;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+
+.accordion-group li.accordion-dropdown .carett.caret-right {
+  border-left: 8px solid;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  margin-top: 1px;
+  margin-right: 18px;
+}
+
+.accordion-group li.accordion-dropdown.active > span:first-child {
+  color: #008a32;
+}
+
+.accordion-group li.accordion-dropdown {
+  margin: 10px 0 0 0;
+  padding: 20px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.accordion-group li.accordion-dropdown .dropdown {
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1;
+  list-style: none;
+}
+
+.accordion-group li.accordion-dropdown ul.dropdown > li div {  
+  padding-left: 30px;
+  transition: all 300ms;
+}
+
+.dropdown li {
+  font-family: Arial;
+}
+        </style>
+      </atlantis:webstash>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ul id="faq-accordion" class="accordion-group ">
+              <h2 class="h1">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-rb_your_question]@L]</h2>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-answer-1]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-1]@L]</p>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-2]@L]</p>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-3]@L]</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-answer-1]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-answer-1]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-answer-1]@L]
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-1]@L]</p>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-2]@L]</p>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-3]@L]</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-question]@L]</span>
+                <ul class="dropdown">
+                  <li>
+                    <div>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-1]@L]</p>
+                      <ul> 
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-2]@L]</li>
+                        <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-3]@L]</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <div class="text-center">
+                <button data-ci="#{page.ci.faqSeeAll}" id="faq-button" class="btn btn-default-dark">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-SeeAllQuestions]@L]</button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          $(".accordion-dropdown").click(function() {
+            var dropdownGroup = $(this).parent(".accordion-group");
+            var dropdownOptions = $(this).find(".dropdown");
+            var dropdownCaret = $(this).find(".carett");
+            var dropdowns = $(dropdownGroup).find(".accordion-dropdown");
+          
+            $(dropdowns).removeClass("active");
+            $(dropdownGroup).find(".dropdown").slideUp();
+            $(dropdownGroup).find(".carett")
+                            .removeClass("caret-down")
+                            .addClass("caret-right");
+          
+            if (!$(dropdownOptions).is(":visible")) {
+              $(this).addClass("active");
+              $(dropdownOptions).slideDown();
+              $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
+              event.stopPropagation();
+            }
+          });
+          $(window).load(function() {
+            $("#faq-accordion .accordion-dropdown:first").click();
+          });
+          $("#faq-button").click(function() {
+            $('#faq-accordion').find('.dropdown').slideDown();
+            $('#faq-accordion').find('.accordion-dropdown').find('.carett')
+                            .removeClass("caret-right")
+                            .addClass("caret-down");
+            $('#faq-accordion').find('.accordion-dropdown').addClass("active");
+           });
+        </script>
+      </atlantis:webstash>
+    </section>
+    <section id="renderMidPageNavBottom">
+      <div></div>
     </section>
     <atlantis:webstash type="css">
       <style>
@@ -2335,7 +2673,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-3]@L]</li>
                       </ul>
                       <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-parenthesis]@L]</p>
-                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</button>
+                      <button data-ci="96224" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>
                   </div>
                 </div>
@@ -2353,7 +2691,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]</li>
                       </ul>
-                      <button data-ci="xxxx" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</button>
+                      <button data-ci="96223" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</button>
                     </div>
                   </div>
                 </div>
@@ -2957,31 +3295,6 @@ body {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
-$(document).ready(function(){
-
-  activateHref("cloudspecator-link", "#{page.ci.cloudSpeculator}" , "", "_blank");
-  activateHref("see-latest-results-btn", "#{page.ci.seeUpToDateResults}", "", "_blank");
-  activateHref("sidekick-link", "#{page.ci.poweredBySidekick}", "", "_blank");
-  activateHref("visitor-overprotection-link", "#{page.ci.visitorOverprotection}", "", "_blank");
-  activateHref("wordpress-plugins-link", "#{page.ci.wordpressPlugins}", "", "_self");
-  function activateHref(id, ciCode, url, target){
-    $('#' + id)
-      .attr('data-ci', ciCode)
-      .attr('href', url)
-      .attr('target', target);
-  }
-  
-  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
-
-  $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-    $("#default-marquee-details-modal-wsb-only").sfDialog({
-      buttons: [got1Page.sfDialogOkButton]
-    });
-  });
-
-});
-
-
 function tokenizeDisclaimerModal(selector, price0, price1) {
 
   $(selector).each(function(idx, modal) {
@@ -2993,6 +3306,42 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
   });
 
 }
+
+function activateHref(id, ciCode, url, target){
+  $(id).attr('data-ci', ciCode);
+  switch (target) {
+    case "_blank":
+      $(id).attr('href','javascript:void(0);');
+      $(id).on('click', function(){
+        window.open(url);
+      });
+      break;
+    case "_self":
+    default:
+      $(id).attr('href',url);
+      break;
+  }
+}
+
+$(document).ready(function(){
+
+  //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
+
+  // $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
+  //   $("#default-marquee-details-modal-wsb-only").sfDialog({
+  //     buttons: [got1Page.sfDialogOkButton]
+  //   });
+  // });
+
+  activateHref("#cloudspecator-link",          "96207", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+  activateHref("#see-latest-results-btn",      "96221", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+  activateHref("#sidekick-link",               "96225", "https://wordpress.org/plugins/sidekick/", "_blank");
+  activateHref("#visitor-overprotection-link", "97105", "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='97105' /></external>]@T]", "_self"); 
+  activateHref("#wordpress-plugins-link",      "97106", "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='97106' /></external>]@T]", "_self");
+  activateHref("#uptime-promise-link",         "97456", "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='97456' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
+  
+
+});
       </script>
     </atlantis:webstash>
     <script>
@@ -3007,11 +3356,13 @@ function tokenizeDisclaimerModal(selector, price0, price1) {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-      
-      
-        $('[data-icann-fee]').each(function(){
+        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
+        });
+        $('[data-content*="{icannfee}"]').each(function(){
+          var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).attr('data-content',tokenized);
         });
         
       });
