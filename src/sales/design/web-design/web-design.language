@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/design/web-design/en
-id: 54f8747bf778fc1920988d04
+id: 5506de73f778fc23380ed68b
 name: GCEMO-554
 ---
 {% include 'modules/doc-block.html' %}
