@@ -6,19 +6,7 @@ append styles
     .gybo-btn-wrapper>.btn-wrap>.btn{font-family:'Walsheim-Medium';font-size:17px;}
 
 block marquee
-  | ##if(!targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |   ##if(splitTestingSideIsActive(1404, B))
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/299com-br/default_template" /> ]@P]
-  |   ##else
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/wsb-free-combr/default_template" /> ]@P]
-  |   ##endif
-  | ##else
-  |   ##if(splitTestingSideIsActive(1405, B))
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/wsb-free-combr/default_template" /> ]@P]
-  |   ##else
-  |     [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-  |   ##endif
-  | ##endif
+  | [@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
 
 block bugBar
   +tldBugs(["com","co","br","club"])
@@ -34,14 +22,5 @@ block secondaryTile
     //- include ../../sales/homepage/tiles/got.jade
     | 
     | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
-  #tile-container-gtld(style="display:none;")
-    //- include ../../sales/homepage/tiles/hosting.jade
-    | 
-    | [@P[cdsDocument:<data app="sales" location="homepage/tile/gtld/default_template" /> ]@P]
-  script(type="text/javascript").
-    if ($('#gybo').length) {
-      $('#tile-container-got').hide();
-      $('#tile-container-gtld').show();
-    }
 
 block cookieWarning

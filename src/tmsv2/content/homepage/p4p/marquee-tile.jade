@@ -6,7 +6,6 @@ block append vars
   - containerClass = "marquee-tile-p4p";
 
 block append tileStyles
-  link(href="[@T[link:<css path='ux/test-brand/css/uxcontrols.min.css' namemode='explicit'/>]@T]" rel="stylesheet" media="screen")
   style
     :less
       #p4p-list{border-top-width:3px;border-bottom-width:1px;width:80%;text-align:left;text-transform:none;font-size:18px;padding-top:0;padding-bottom:0;color:#333;background-color:#fdda54;border-color:#fcc335}
@@ -41,6 +40,5 @@ block tileContent
           a.cta-link.walsheim-black(href!=ctaLink) [@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-cta-text]@L]
       .col-sm-3
       atlantis:webstash(type="js")
-        script(src="[@T[link:<js path='ux/test-brand/js/uxcontrols.min.js' namemode='explicit'/>]@T]")
         script.
           $(document).ready(function(){$('#p4p-list').dropdown();});
