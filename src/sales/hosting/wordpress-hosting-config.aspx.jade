@@ -1,0 +1,760 @@
+extends ../shared/_config-page
+
+append vars
+  - page.title = "WordPress";
+  - page.description = "[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/gd/hosting/website-builder:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/hosting/website-builder:og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
+append pageStyles
+  style
+    include ./wordpress-hosting-config/styles.css 
+
+block header
+  p.product-added-to-cart
+    span.green-check
+    span.product-added-to-cart-text Microsoft Office 365 is in your cart!
+
+block addons
+  +configStep({"id":"planStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:select_plan]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:plan_title]@L]
+    .row
+      p.text-secondary.step-subtitle [@L[cds.sales/gd/hosting/website-builder-config:plan_subtitle]@L]
+    .row.options-wrapper
+      ul#planTypes.product-options
+
+  +configStep({"id":"termStep","flagColor":"orange","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:select_term]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]
+    .row
+      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]
+    .row.options-wrapper
+      ul#termList.product-options
+
+  +configStep({"id":"o365Step","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Glorious O365 Email"})
+    .row
+      .step-title O365 Email
+    .row
+      p.text-secondary.step-subtitle  Some Email into your life
+    .row.options-wrapper
+      ul#o365List.product-options
+
+  +configStep({"id":"sslStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]"})
+    .row
+      .step-title [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]
+    .row
+      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]
+    .row.options-wrapper
+      ul#sslList.product-options
+
+  +configStep({"id":"siteLockStep","flagColor":"red","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Get you some SiteLock"})
+    .row
+      .step-title SiteLock
+    .row
+      p.text-secondary.step-subtitle SiteLock is cool
+    .row.options-wrapper
+      ul#siteLockList.product-options
+  +configStepBreak
+block orderSummary
+  +configSummary
+
+block disclaimers
+  section#disclaimers.disclaimers-section.row
+    .col-sm-9
+      .col-sm-5
+        p.h5
+        #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
+          p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
+          p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
+      .col-sm-3.col-sm-push-3
+        a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") Continue
+
+block domainSearch
+  .container.domain-search(style="display:none")
+    +domainSearchOffersInput()
+    div Continue To Cart
+
+
+prepend endOfPageScripts
+  
+  script.breakTemplate(type='text/template').
+    <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+
+  script.itemTemplate(type='text/template').
+    <div class="row">
+      <div class="col-xs-12 item-title-wrapper">
+        <div class="item-title"><%= itemName %></div>
+      </div>
+      <div class="col-xs-4">
+        <div class="item-term"><%= itemTerm %></div>
+      </div>
+      <div class="col-xs-1">
+        <div class="item-x">x</div>
+      </div>
+      <div class="col-xs-3">
+        <div class="item-price"><%= itemPricePerTerm %></div>
+      </div>
+      <div class="col-xs-4">
+        <div class="item-total-price text-secondary"><%= itemTotal %></div>
+      </div>
+      <div class="col-xs-12">
+        <% if ( onSale ){ %>
+          <div class="item-savings-wrapper text-secondary">
+            [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+  script.planTemplate(type='text/template').
+    <li>
+      <div class="row vertical-align">
+        <div class="col-xs-1">
+          <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+        </div>
+        <div class="col-xs-7">
+          <div class="config-text-secondary"><%= title %></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+          <div class="config-text-lead bold"><%= subtitle %></div>
+        </div>
+        <div class="col-xs-4">
+          <% if ( onSale ){ %>
+              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+            <% } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+          <div class="config-text-lead"><%= features %></div>
+        </div>
+        <div class="col-xs-4">
+          <div class="config-text-lead text-secondary-o">
+            <% if ( onSale ){ %>
+              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  script.termTemplate(type='text/template').
+    <li>
+      <div class="row vertical-align">
+        <div class="col-xs-2 col-sm-1">
+          <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> >
+        </div>
+        <div class="col-xs-5 col-sm-3">
+          <div class="config-text-primary"><%= term %> <%= month %></div>
+        </div>
+        <div class="col-xs-5 col-sm-3">
+          <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
+        </div>
+        <div class="col-xs-12 col-sm-2">
+          <div class="config-text-lead text-xs-right">
+            <% if ( onSale ){ %>
+              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+            <% } %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-xs-11">
+          <div class="text-xs-right config-text-lead text-secondary-o"> 
+            <% if ( onSale ){ %>
+              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  script.addonTemplate(type='text/template').
+    <li>
+      <div class="row">
+        <div class="col-xs-1">
+          <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" checked="checked">
+        </div>
+        <div class="col-xs-11">
+          <div class ="config-text-primary">
+            [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
+          </div>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="row">
+        <div class="col-xs-1">
+          <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+        </div>
+        <div class="col-xs-11">
+          <div class="config-text-primary">
+            <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  script.
+    var plan = getParameterByName('plan');
+    // gs for get started button, ac for add to cart button
+    var origin = getParameterByName('src');
+    var reload = false;
+    var noSiteLock = false;
+
+    ##if(!productIsOffered(107))
+      noSiteLock = true;
+    ##endif
+
+    // spoof url for config and packagegrouping removed when both are published
+    var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
+    url=url + "?configdocid=5503355af778fc1700c298ea";
+    //url = url + "?configdocid=54ef736af778fc203043be19";
+
+    var plans = [
+      {
+        name:"Basic",
+        text:{
+          title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasic]@L]",
+          subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicPlanText]@L]",
+          features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicPlanDetails]@L]",
+          product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasic]@L]"
+        }
+      },
+        {
+        name:"Deluxe",
+        text:{
+          title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]",
+          subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]",
+          features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanDetails]@L]",
+          product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]"
+        }
+      },
+      {
+        name:"Ultimate",
+        text:{
+          title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigUltimate]@L]",
+          subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigUltimatePlanText]@L]",
+          features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigUltimatePlanDetails]@L]",
+          product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigUltimate]@L]"
+        }
+      },
+      {
+        name:"Developer",
+        text:{
+          title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]",
+          subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanText]@L]",
+          features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanDetails]@L]",
+          product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]"
+        }
+      }
+    ];
+    
+    function getParameterByName(name){
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      if(!jQuery.isEmptyObject(results))
+        return  decodeURIComponent(results[1].replace(/\+/g, " "));
+      else
+        return '';
+    }
+
+    var Config = {
+      init: function(){
+        Config.setupPage();
+        Config.loadData(plan);
+      },
+      setupPage: function(){
+
+        var addToCart = 'ac';
+        var steps = ['planStep','termStep','o365Step','sslStep', 'siteLockStep'];
+        
+        if (origin === addToCart){
+          steps = _.without(steps, 'planStep');
+        }
+        if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+        {
+          steps = _.without(steps, 'sslStep');
+          steps = _.without(steps, 'siteLockStep');
+        }
+        else if(noSiteLock)
+        {
+          steps = _.without(steps, 'siteLockStep');
+        }
+        if(!reload){
+          Config.setTitle();
+        }
+        Config.showSteps(steps);
+        Config.addStepBreaks();
+        Config.stepNumbers();
+      },
+      resetPage: function(){
+        var steps = ['planStep','termStep','o365Step','sslStep', 'siteLockStep'];
+        var addToCart = 'ac';
+        
+        $('.config-step').hide();
+        $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
+        $('.config-step-break').remove();
+
+        if (origin === addToCart){
+          steps = _.without(steps, 'planStep');
+        }
+        if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+        {
+          steps = _.without(steps, 'sslStep');
+          $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
+          steps = _.without(steps, 'siteLockStep');
+          $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+        }
+        else if(noSiteLock)
+        {
+          steps = _.without(steps, 'siteLockStep');
+          $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+        }
+        Config.showSteps(steps);
+        Config.addStepBreaks();
+        Config.stepNumbers();
+      },
+      loadData: function(package){
+
+        var apiUrl = url.replace('{0}',package);
+
+        $.getJSON(apiUrl).success(function (data){
+          if(reload){
+            Config.resetPage();
+          }
+          Config.processData(data);
+        });
+      },
+      setTitle: function(){
+        var getStarted = 'gs';
+        if (origin === getStarted){
+          $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+        }
+        else{
+         if(plan.indexOf('wsb_personal') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+          }
+          else if(plan.indexOf('wsb_businessplus') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+          }
+          else{
+            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+          }
+
+        }
+      },
+      showSteps: function(ids){
+
+        $.each(ids, function(key,id){
+          $('#'+id).show();
+
+        });
+      },
+      addStepBreaks: function(){
+        var breakTemplate = _.template($( "script.breakTemplate" ).html());
+
+        $('.config-step-break').remove();
+        var numberOfSteps = $('.config-step:visible').length - 1;
+
+        $('.config-step:visible').each(function(index){
+          if(numberOfSteps != index )
+            $(this).parent().append(breakTemplate());
+        });
+      },
+      stepNumbers: function(){
+
+        $('.config-step:visible').each(function(index){
+          var numberTokenized = $(this).find('.step-number').html();
+          numberTokenized = numberTokenized.replace(/\{0\}/gi, index+1);
+          $(this).find('.step-number').html(numberTokenized);
+        });
+      },
+      processData: function(data){
+
+        Config.generateTerms(data.LongerTerms);
+        Config.generatePlans(data.PlanListPrices);
+        if(!reload){
+          Config.generateSSL(data.SSLPrice);
+          Config.generateSiteLock(data.SiteLockPrice);
+          reload = true;
+        }
+        Config.updateOrderSummary();
+      },
+      generateTerms: function(terms){
+        var radioName= "termOption"
+        var parentID = $("#termList");
+        var termTemplate = _.template($( "script.termTemplate" ).html());
+        
+        parentID.empty();
+
+        if(!jQuery.isEmptyObject(terms))
+        {
+          $.each(terms, function (){
+            var termItem = this.split('-');
+            var termLength = termItem[0];
+            var termPackage= termItem[1];
+            var termCurrentMonthlyPrice =  termItem[2];
+            var termPercentSavings = termItem[4];
+            var termListPrice = termItem[5];
+            var termCurrentYearlyPrice =  termItem[6];
+            var isSale = ( parseInt(termPercentSavings) > 0 ) ? true : false;
+            var monthString =  (termLength > 1) ? "[@L[cds.sales/_common:months]@L]" : "[@L[cds.sales/_common:month]@L]";
+            var checkedRadiobutton = ( plan ===  termPackage) ? true : false;
+            
+            var termData = {
+              radio: radioName,
+              monthly: termCurrentMonthlyPrice,
+              monthlyList: termListPrice,
+              yearly: termCurrentYearlyPrice,
+              package: termPackage,
+              checked: checkedRadiobutton,
+              term: termLength,
+              month: monthString,
+              currentPrice: termCurrentMonthlyPrice,
+              onSale: isSale,
+              listPrice: termListPrice,
+              percentSavings: termPercentSavings
+            };
+              
+            parentID.append(termTemplate(termData));
+
+          }); 
+          $('input[name="'+radioName+'"]').click(function(){
+            plan = this.defaultValue;
+            Config.loadData(plan);
+          });
+        }
+      },
+      generatePlans: function(plans){
+
+        var radioName = "planOption";
+
+        var parentID = $("#planTypes");
+        var planTemplate = _.template($( "script.planTemplate" ).html());
+        
+        parentID.empty();
+
+        if(!jQuery.isEmptyObject(plans))
+        {
+          $.each(plans, function(){
+            var planItem = this.split('-');
+            var planKey  = planItem[0];
+            var planPackage = planItem[1];
+            var planCurrentPrice = planItem[2];
+            var planListPrice = planItem[3];
+            var planPercentSavings = planItem[4];
+            var planText = Config.retrievePlanText(planKey);
+            var planTitle = planText.title;
+            var planProduct = planText.product;
+            var planSubtitle = planText.subtitle;
+            var planFeatures = planText.features;
+            var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
+            var isChecked = ( plan ===  planPackage) ? true : false;
+
+            var planData = {
+              radio: radioName,
+              package: planPackage,
+              plan: planProduct,
+              checked: isChecked,
+              title: planTitle,
+              currentPrice: planCurrentPrice,
+              subtitle: planSubtitle,
+              onSale: isSale,
+              listPrice: planListPrice,
+              features: planFeatures,
+              percentSavings: planPercentSavings
+            };
+            parentID.append(planTemplate(planData));
+
+          });
+          
+          $('input[name="'+radioName+'"]').click(function(){
+            plan = this.defaultValue;
+            Config.loadData(plan);
+          });
+        }
+      },
+      generateSSL: function(ssl){
+        var radioName = "sslOption";
+        var parentID = $("#sslList");
+        var addonTemplate = _.template($( "script.addonTemplate" ).html());
+
+        parentID.empty();
+
+        if(!jQuery.isEmptyObject(ssl))
+        {
+          var sslCurrentYearlyPrice = ssl;
+          var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
+          var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
+          var termType = "[@L[cds.sales/_common:yr]@L]";
+          var sslPackage = "ssl_std_1";
+
+          var sslData = {
+            radio: radioName,
+            package: sslPackage,
+            addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
+            monthly: monthlyPrice,
+            yearly: sslCurrentYearlyPrice,
+            addonText: sslText,
+            currentPrice: sslCurrentYearlyPrice,
+            termType: termType
+          };
+          
+          parentID.append(addonTemplate(sslData));
+          
+          $('input[name="'+radioName+'"]').click(function(){
+            Config.updateOrderSummary();
+          });
+        }
+      },
+      generateSiteLock: function(sl){
+        var radioName = "siteLockOption";
+        var parentID = $("#siteLockList");
+        var addonTemplate = _.template($( "script.addonTemplate" ).html());
+
+        parentID.empty();
+
+        if(!jQuery.isEmptyObject(sl))
+        {
+          var slItem = sl.split('-');
+          var slCurrentMonthlyPrice = slItem[0];
+          var slCurrentYearlyPrice = slItem[1];
+          var monthlyPrice = slItem[0];
+          var slText = "Add SiteLock";
+          var termType = "[@L[cds.sales/_common:mo]@L]";
+          var slPackage = "locu_Essential1Yr";
+
+          var slData = {
+            radio: radioName,
+            package: slPackage,
+            addon:'SiteLock',
+            monthly: slCurrentMonthlyPrice,
+            yearly: slCurrentYearlyPrice,
+            addonText: slText,
+            currentPrice: slCurrentMonthlyPrice,
+            termType: termType
+          };
+          
+          parentID.append(addonTemplate(slData));
+          
+          $('input[name="'+radioName+'"]').click(function(){
+            Config.updateOrderSummary();
+          });
+        }
+      },
+      updateOrderSummary: function(){
+        
+        $('#order-items').empty();
+
+        Config.getSelectedPlan();
+        Config.getSelectedSSL();
+        Config.getSelectedSiteLock();
+        Config.calculateSubTotal();
+      },
+      getSelectedPlan: function(){
+
+        var parentID = $("#order-items");
+        var itemTemplate = _.template($( "script.itemTemplate" ).html());
+
+        var selectedPlan = $('input:radio[name="planOption"]').filter(':checked').attr('data-plan');
+        var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+        var selectedFactor = Config.getFactor(parseInt(selectedTerm));
+        var selectedPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthly');
+        var selectedPricePerYear = $('input:radio[name="termOption"]').filter(':checked').attr('data-yearly');
+        var selectedListPricePerTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-monthlyList');
+        var selectedSale = $('input:radio[name="termOption"]').filter(':checked').attr('data-onsale');
+        var onSale = (selectedSale == 'true');
+        var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
+
+        if(parseInt(selectedTerm) > 1){
+          var selectedTotal = currencyCalc.evaluate([selectedFactor,"*",selectedPricePerYear]);
+        }
+        else{
+          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+        }
+
+        var selectedListTotal = currencyCalc.evaluate([selectedTerm,"*",selectedListPricePerTerm]);
+        var selectedSavings = currencyCalc.evaluate([selectedListTotal,"-",selectedTotal]);
+
+        var itemData = {
+              itemName: selectedPlan,
+              itemTerm: selectedTerm + monthString,
+              itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
+              itemTotal: selectedTotal,
+              onSale: onSale,
+              itemsSavings: selectedSavings
+            };
+
+        parentID.append(itemTemplate(itemData));
+      },
+      getSelectedSSL: function(){
+
+        var parentID = $("#order-items");
+        var itemTemplate = _.template($( "script.itemTemplate" ).html());
+
+        var selectedValue = $('input:radio[name="sslOption"]').filter(':checked').val();
+
+        if (selectedValue != 'no_thanks'){
+
+          var selectedAddon = $('input:radio[name="sslOption"]').filter(':checked').attr('data-addon');
+          var selectedTerm = '1';
+          var selectedPricePerTerm = $('input:radio[name="sslOption"]').filter(':checked').attr('data-yearly');
+          var onSale = false;
+
+
+          var itemData = {
+                itemName: selectedAddon,
+                itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
+                itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
+                itemTotal: selectedPricePerTerm,
+                onSale: onSale
+              };
+
+          parentID.append(itemTemplate(itemData));
+        }
+      },
+      getSelectedSiteLock: function(){
+
+        var parentID = $("#order-items");
+        var itemTemplate = _.template($( "script.itemTemplate" ).html());
+
+        var selectedValue = $('input:radio[name="siteLockOption"]').filter(':checked').val();
+
+        if (selectedValue != 'no_thanks'){
+
+          var selectedAddon = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-addon');
+          var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+          var selectedPricePerTerm = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-monthly');
+          var onSale = false;
+          var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
+
+          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+
+
+          var itemData = {
+                itemName: selectedAddon,
+                itemTerm: selectedTerm + monthString,
+                itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
+                itemTotal: selectedTotal,
+                onSale: onSale
+              };
+          parentID.append(itemTemplate(itemData));
+        }
+      },
+      calculateSubTotal: function(){
+        var subTotal = '0';
+        var savingsTotal = '0';
+
+        $('.item-total-price').each(function(){
+          subTotal = currencyCalc.evaluate([subTotal,"+",$(this).text()]);
+        });
+
+        $('.order-total').html(subTotal);
+
+        $('.item-savings').each(function(){
+          savingsTotal = currencyCalc.evaluate([savingsTotal,"+",$(this).text()]);
+        });
+        
+        if(savingsTotal == '0' ){
+          $('.savings-total-wrapper').hide();
+        }
+        else{
+          $('.savings-total-wrapper').show();
+          $('.savings-total').html(savingsTotal);
+        }
+      },
+      addPlanToCart:function(){
+        var itc;
+        ##if(isManager())
+          itc="mgr_slp_wst_3";
+        ##else
+          itc="slp_wst_3";
+        ##endif
+        
+        var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
+
+        $.getJSON(cartAPIUrl, function (data) {
+          if (data.Success == true) {                                 
+
+            if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+              Config.addAddonToCart('sslOption');
+            }
+          }
+          });
+        
+      },
+      addAddonToCart: function(addonOption){
+        var itc;
+        ##if(isManager())
+          itc="mgr_slp_wst_3";
+        ##else
+          itc="slp_wst_3";
+        ##endif
+        var addon = $('input:radio[name="'+addonOption+'"]').filter(':checked').val();
+        var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
+
+        $.getJSON(cartAPIUrl, function (data) {
+        });
+      },
+      getCartAPIUrl: function(action,itcCode,ciCode,quantity,planSelected) {
+        var cartUrl = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]';
+          cartUrl = cartUrl.replace('{0}',action).replace('{1}',itcCode).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',planSelected);
+          return cartUrl;
+      },
+      retrievePlanText: function(planKey){
+        var text =''; 
+        $.each(plans, function(){
+          if(this.name == planKey){
+            text = this.text;
+          }
+        });
+        return text;
+      },
+      getFactor: function(term){
+        var factor;
+        switch(term) {
+          case 24:
+              factor = 2;
+              break;
+          case 36:
+              factor = 3;
+              break;
+          case 48:
+              factor = 4;
+              break;
+          case 60:
+              factor = 5;
+              break              
+          default:
+              factor = 1;
+          }
+        return factor;
+      }
+    };
+    
+    Config.init();
+
+
+    $(document).ready(function(){
+      $('.btn-continue').click(function(){
+        Config.addPlanToCart();
+        //$('.configuration').hide();
+        //$('.domain-search').show();
+        //$("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+    });
