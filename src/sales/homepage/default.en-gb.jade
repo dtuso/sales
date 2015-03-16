@@ -16,7 +16,8 @@ block domainSearch
   include ./sections/domain-search.jade
 
 block marquee
-  | [@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
+  #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  #marquee-container-isc(style="display:none") [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
 
 block bugBar
   +tldBugs(["com","co","uk","wales"])
@@ -26,6 +27,16 @@ block primaryTile
   #tile-container-got
     | 
     | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+
+  #tile-container-30-percent-gtld(style="display:none")
+    | 
+    | [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+
+  script(type="text/javascript").
+    if ($('#gybo').length) {
+      $('#tile-container-got').hide();
+      $('#tile-container-30-percent-gtld').show();
+    }
 
 block secondaryTile
   | 
