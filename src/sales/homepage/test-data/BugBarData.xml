@@ -1,5 +1,211 @@
 <?xml version="1.0" encoding="utf-8" ?>
-this is dev
+<Text>
+  <ByLocale>
+    <enus>
+      <li tld="co"></li>
+      <li tld="org"></li>
+      <li tld="net"></li>
+      <li tld="biz"></li>
+    </enus>
+    <esus>
+      <li tld="uno"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </esus>
+    <enca>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="ca"></li>
+    </enca>
+    <frca>
+      <li tld="club"></li>
+      <li tld="quebec"></li>
+      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="ca"></li>
+    </frca>
+    <esmx>
+      <li tld="uno"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </esmx>
+    <esar>
+      <li tld="uno"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </esar>
+    <escl>
+      <li tld="uno"></li>
+      <li tld="xyz"></li>
+      <li tld="co"></li>
+    </escl>
+    <esco>
+      <li tld="uno"></li>
+      <li tld="xyz"></li>
+      <li tld="co"></li>
+    </esco>
+    <espe>
+      <li tld="uno"></li>
+      <li tld="xyz"></li>
+      <li tld="pe"></li>
+      <li tld="co"></li>
+    </espe>
+    <esve>
+      <li tld="uno"></li>
+      <li tld="xyz"></li>
+      <li tld="co"></li>
+    </esve>
+    <ptbr>
+      <li tld="br"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </ptbr>
+    <enau>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="org"></li>
+    </enau>
+    <enin>
+      <li tld="com"></li>
+      <li tld="in"></li>
+      <li tld="co-in"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </enin>
+    <enmy>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="org"></li>
+    </enmy>
+    <enpk>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="org"></li>
+    </enpk>
+    <enph>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="org"></li>
+    </enph>
+    <ensg>
+      <li tld="club"></li>
+      <li tld="co"></li>
+      <li tld="org"></li>
+    </ensg>
+    <nlbe>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </nlbe>
+    <frbe>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </frbe>
+    <dadk>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </dadk>
+    <dede>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </dede>
+    <eses>
+      <li tld="uno"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </eses>
+    <frfr>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </frfr>
+    <enie>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </enie>
+    <itit>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </itit>
+    <nlnl>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </nlnl>
+    <nbno>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </nbno>
+    <deat>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </deat>
+    <plpl>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </plpl>
+    <ptpt>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </ptpt>
+    <dech>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </dech>
+    <frch>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </frch>
+    <fifi>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </fifi>
+    <svse>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </svse>
+    <itch>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </itch>
+    <trtr>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </trtr>
+    <engb>
+      <li tld="org"></li>
+      <li tld="net"></li>
+      <li tld="co"></li>
+    </engb>
+    <elgr>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </elgr>
+    <ruru>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </ruru>
+    <ukua>
+      <li tld="org"></li>
+      <li tld="co"></li>
+    </ukua>
+  </ByLocale>
+  
+  <BugCatalog bugCssSelector=".tld-link" bugPriceCssSelector=".price" id="#bugbar ">
+    <co    cicode="93296" lpurl="co-domain"       pfid=""></co>
+    <org   cicode="93297" lpurl="tlds/org"        pfid=""></org>
+    <net   cicode="93298" lpurl="/tlds/net"       pfid=""></net>
+    <biz   cicode="94195" lpurl="/tlds/biz"       pfid=""></biz>
+    <in    cicode="94304" lpurl="tlds/in"         pfid=""></in>
+    <co-in cicode="94302" lpurl="tlds/in"         pfid=""></co-in>
+    <uno   cicode="88299" lpurl="tlds/uno"        pfid=""></uno>
+    <br    cicode="88377" lpurl="tlds/br-domain"  pfid=""></br>
+    <club  cicode="89153" lpurl="tlds/club"       pfid=""></club>
+    <ca    cicode="94959" lpurl="/tlds/ca"        pfid=""></ca>
+    <pe    cicode="91790" lpurl="/tlds/pe-domain" pfid=""></pe>
+    <com   cicode="94303" lpurl="/tlds/com"       pfid=""></com>
+    <quebec cicode="94960" lpurl="/tlds/quebec"   pfid=""></quebec>
+    <xyz   cicode="94936" lpurl="/tlds/xyz"       pfid=""></xyz>
+    <uk    cicode="" lpurl=""        pfid=""></uk>
 
 
   </BugCatalog>
