@@ -1,11 +1,11 @@
 ---
 location: localization/sales/gd/design/web-design/en
-id: 54f4d41ff778fc0de4d09c23
+id: 5506de71f778fc23380ed68a
 name: GCEMO-554
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
-Web Design | Professionally Designed Websites - [@T[companyname:name]@T]
+Web Design | Professionally Designed Websites - [@T[companyname:nameseotitle]@T]
 <phrase key="MetaDescription" />
 Leave your next Web Design project to [@T[companyname:name]@T]'s team of professional developers! We will create a website that drives traffic & improves your brand.
 <phrase key="MetaKeywords" />
@@ -24,8 +24,6 @@ FAQ
 Get more than a website. Includes hosting, marketing tools &amp; more!
 <phrase key="TabContentPlanPricingTabSubHeaderText" />
 Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team<sup>&reg;</sup> knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
-<phrase key="TabContentPlanPricingTabSubHeaderWithoutTextTradeMark" />
-Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
 <phrase key="TabContentPlanPricingTabSubHeaderText2" />
 Selling products? We also build  <a data-ci='87597' href="[@T[link:<relative path="/design/web-store-design.aspx"></relative>]@T]" target="_blank">eCommerce websites</a>!
 <phrase key="LinkViewOurDesignsText" />
@@ -87,15 +85,13 @@ Fast turnaround
 <phrase key="List0Items154097Text" />
 <strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip"  title="Increase traffic and sales to your website by improving your rank in the world's top search engines. Search Engine Visibility lets you easily analyze, optimize and submit your site to Google, Yahoo!, Bing and more - no technical expertise necessary.">Search Engine Visibility</a><sup>&#94;</sup>
 <phrase key="List0Items154098Text" />
-<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" title="Protect your data and transactions and increase customer confidence with a GoDaddy SSL - free for 1 year. Features up to 256-bit encryption, 99.9% browser recognition and 24/7 phone support.">1 year SSL Certificate</a>
+<strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" title="Protect your data and transactions and increase customer confidence with a GoDaddy SSL - free for 1 year. Features up to 256-bit encryption, [@T[localization:<display type='percent' number='99.9' />]@T] browser recognition and 24/7 phone support.">1 year SSL Certificate</a>
 <phrase key="List0Items154099Text" />
 <a class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages.">On-page SEO service</a>
 <phrase key="List0Items154100Text" />
 <strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit<sup>**</sup>
 <phrase key="List0Items154101Text" />
 <strong class="secondary-color">FREE</strong> USD $50 Facebook<sup>&reg;</sup> Credit<sup>***</sup>
-<phrase key="List0Items154102Text" />
-<strong class="secondary-color">FREE</strong> 10 Fotolia<sup>&reg;</sup> Credits<sup>****</sup>
 <phrase key="TabContent22892TabHeaderText" />
 Our design team is invested in your success.
 <phrase key="TabContent22893TabSubHeaderText" />
@@ -209,9 +205,9 @@ Participate in polls and much more
 <phrase key="SupportSubTitle2" />
 <strong>Receive support and exchange ideas. Join the Design Services Group on [@T[companyname:name]@T] Support to:</strong>
 <phrase key="SupportSubText7" />
-Technical support and sales: [@T[supportphone:<designteam/>]@T] FASTEST! Expected Wait Time: 7 minutes
+Technical support and sales: [@T[supportphone:<designteam/>]@T] FASTEST!
 <phrase key="SupportSubText8" />
-Email support: <a data-ci='87606' href="[@T[link:<external linktype="communityurl" path="support" secure="false"/>]@T]">Access Email Support System</a> Expected Wait Time: 5 hours
+Email support: <a data-ci='87606' href="[@T[link:<external linktype="communityurl" path="support" secure="false"/>]@T]">Access Email Support System</a>
 <phrase key="month" />
 /month
 <phrase key="12-months" />
@@ -239,7 +235,7 @@ Call to Learn More!
 <phrase key="FeaturesListItem5" />
 <strong>No setup fees.</strong> Your Website Design Service subscription covers everything you need to keep your site online and thriving.
 <phrase key="ContentDisclaimerSymbols" />
-<sup>++</sup>, <sup>&deg;&deg;</sup>, &#134;, +, ++, &#8225;, <sup>**</sup>, <sup>***</sup>, <sup>****</sup>, <sup>&#94;</sup>
+<sup>++</sup>, <sup>&deg;&deg;</sup>, &#134;, +, ++, &#8225;, <sup>**</sup>, <sup>***</sup>, <sup>&#94;</sup>
 <phrase key="ContentDisclaimerLink" />
 Click here for product disclaimers and legal policies.
 <phrase key="ContentDicalimerText" />
@@ -247,7 +243,7 @@ Third-party logos and marks are registered trademarks of their respective owners
 <phrase key="DisclaimerModalHeader" />
 Disclaimers
 <phrase key="DisclaimerModalItem01" />
-&#134; [@T[currencyprice:<price usdamount="29100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, Fotolia® Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/12 and are subject to change.
+&#134; [@T[currencyprice:<price usdamount="29100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/12 and are subject to change.
 <phrase key="DisclaimerModalItem02" />
 + An early termination fee of [@T[currencyprice:<price usdamount="15000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Standard plans cancelled within six months of signup.
 <phrase key="DisclaimerModalItem03" />
@@ -258,8 +254,6 @@ Disclaimers
 <sup>**</sup> One promotional credit per customer for a new Microsoft® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[appSetting:<setting name="BING_AD_CREDIT_LINK" />]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=600')">View Details</a>.
 <phrase key="DisclaimerModalItem06" />
 <sup>***</sup> One promotional credit per customer for a new Facebook® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[link:<relative path="/popups/facebook-ads.aspx"><param name="ci" value="46433" /><param name="app_hdr" value="99" /></relative>]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=620,height=560')">View Details</a>.
-<phrase key="DisclaimerModalItem07" />
-<sup>****</sup> One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="javascript: void(0)" onclick="window.open('[@T[link:<relative path="/popups/fotolia.aspx"><param name="ci" value="21221" /><param name="app_hdr" value="99" /></relative>]@T]', 'display', 'left=20,top=20,scrollbars=yes,resizable=yes,width=640,height=550')">View Details</a>.
 <phrase key="DisclaimerModalItem08" />
 <sup>&#94;</sup> Initial setup of Free Search Engine Visibility and website analytics accounts count towards your allotted 30 minutes of monthly site updates.
 <phrase key="DisclaimerModalItem09" />
