@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/design/web-design/en
-id: 5506de73f778fc23380ed68b
+id: 5506de71f778fc23380ed68a
 name: GCEMO-554
 ---
 {% include 'modules/doc-block.html' %}
@@ -24,8 +24,6 @@ FAQ
 Get more than a website. Includes hosting, marketing tools &amp; more!
 <phrase key="TabContentPlanPricingTabSubHeaderText" />
 Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team<sup>&reg;</sup> knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
-<phrase key="TabContentPlanPricingTabSubHeaderWithoutTextTradeMark" />
-Want a website that not only looks terrific but works? Leave it to the web experts at [@T[companyname:name]@T]. Our Professional Web Services Team knows just what it takes to build an eye-catching, effective website. Includes free tools to get your site noticed.
 <phrase key="TabContentPlanPricingTabSubHeaderText2" />
 Selling products? We also build  <a data-ci='87597' href="[@T[link:<relative path="/design/web-store-design.aspx"></relative>]@T]" target="_blank">eCommerce websites</a>!
 <phrase key="LinkViewOurDesignsText" />
