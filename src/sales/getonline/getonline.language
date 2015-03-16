@@ -9,7 +9,7 @@ Get Online Title
 <phrase key="get-it-now-bubble-content-header" />
 Here you go...
 <phrase key="get-it-now-bubble-content-text" />
-A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark id="product-price">{price_monthly}/mo</mark>
+A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="product-domain-text" />
 Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
 <phrase key="O365-email-header" />
@@ -81,7 +81,7 @@ Build my own website (if it’s easy)
 <phrase key="QuestionsLP-13-IHaveAGuyWhoKnowsHowTo" />
 Let my hipster friend build my website (she’s got skills)
 <phrase key="QuestionsLP-11-HireSomeoneToDoItAllForMe" />
-Hire a web pro to build my site for me (I’m swamped)
+Hire an expert to build my site for me (I’m swamped)
 <phrase key="QuestionsLP-6-GetMeUpAndRunning" />
 Show me what I need
 <phrase key="QuestionsLP-2-Step2" />
