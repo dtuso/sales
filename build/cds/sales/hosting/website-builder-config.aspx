@@ -1272,7 +1272,7 @@ $(window).load(function () {
               if(!domain || domain.length == 0 || idx == -1) return true;
           
               var domainsTld = domain.substring(idx+1).toLowerCase();
-              $.each(['com','co','org','net'], function(idx, tld) {
+              $.each(com,co,org,net, function(idx, tld) {
                 if(tld.toLowerCase() === domainsTld) {
                   isValid = true;
                 }
@@ -1340,6 +1340,7 @@ $(window).load(function () {
               $('#domainsearchoffersinput .search-message').hide();
               $('#domainsearchoffersinput .type-your-business-name').show();
             }
+          
           });
         </script>
       </atlantis:webstash>
@@ -1814,7 +1815,7 @@ list-style: none;
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+            <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
