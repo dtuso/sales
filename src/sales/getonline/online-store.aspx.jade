@@ -42,31 +42,33 @@ append vars
   - productToDisplay.disclaimerCI = "96983";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
 
-  - domainSearchWizard                             = {};
-  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.maxDomainLength             = 63;
-  - domainSearchWizard.title                       = "";
-  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
-  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
-  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
-  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.showSearchButton            = true;
-  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.initialViewId               = "domain-search-view";
-  - domainSearchWizard.searchViewSearchBtnCI       = "97021";
-  - domainSearchWizard.dupDomainInCartCI           = "97025";
-  - domainSearchWizard.availViewSearchBtnCI        = "97022";
-  - domainSearchWizard.availViewRecomSelBtnCI      = "97013";
-  - domainSearchWizard.availViewViewAllBtnCI       = "97024";
-  - domainSearchWizard.availViewSearchAgnBtnCI     = "97023";
-  - domainSearchWizard.notAvailViewSearchBtnCI     = "97027";
-  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97029";
-  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97028";
-  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97032";
-  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97031";
-  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97030";
+  - domainSearchWizard                                = {};
+  - domainSearchWizard.searchNowCallbackFn            = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
+  - domainSearchWizard.maxDomainLength                = 63;
+  - domainSearchWizard.title                          = "";
+  - domainSearchWizard.placeholderText                = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                     = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                   = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.showInfoTypeHere               = false;
+  - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  // - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.infoDupDomainInCart            = "<mark class='selected-domain-name-display'></mark> is already in your cart. To use it with this offer, please go to your <a href='{0}'>cart</a>, delete your domain and search again.";
+  - domainSearchWizard.showSearchButton               = true;
+  - domainSearchWizard.showChoicesWithAvailableDomain = true;
+  - domainSearchWizard.initialViewId                  = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI          = "97021";
+  - domainSearchWizard.dupDomainInCartCI              = "97025";
+  - domainSearchWizard.availViewSearchBtnCI           = "97022";
+  - domainSearchWizard.availViewRecomSelBtnCI         = "97013";
+  - domainSearchWizard.availViewViewAllBtnCI          = "97024";
+  - domainSearchWizard.availViewSearchAgnBtnCI        = "97023";
+  - domainSearchWizard.notAvailViewSearchBtnCI        = "97027";
+  - domainSearchWizard.notAvailViewViewAllBtnCI       = "97029";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97028";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97032";
+  - domainSearchWizard.selectedViewSeeProdBtnCI       = "97031";
+  - domainSearchWizard.selectedViewGoToCartBtnCI      = "97030";
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
@@ -74,7 +76,7 @@ block targetedProduct
     p #{productToDisplay.getItNowDescription}
 
 block productSection
-  section#online-store.product-section
+  section#productSection.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1

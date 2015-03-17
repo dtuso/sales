@@ -128,6 +128,7 @@ append headScripts
         $("[data-ci]").click(function(a) {
           $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
         });
+
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           offerInfo.businessName = passedBusinessName;
@@ -137,22 +138,79 @@ append headScripts
 
     block domainSearchScripts
       script.  // Page
+        function updateSearchedDomain(domain) {
+          $(document).find('.searched-domain-name-display').text(domain);
+        }
+
+        function updateRecommendedDomain(domain) {
+          if(domainSearch.selectedDomainName == '')
+            $(document).find('.selected-domain-name-display').text(domain);
+        }
+
+        function updateSelectedDomain(domain) {
+          $(document).find('.selected-domain-name-display').text(domain);
+        }
+
+        function goToDomainSearchWizard()
+        {
+          animateWizard($('#domain-selected-view'), $('#domain-search-view'));
+          window.location.href = '#domainSearchWizardSection';
+        }
+
+        function goToProductSection()
+        {
+          window.location.href = '#productSection';
+        }
+
+        function validDomainSelectedHandler(e, domain){
+
+          updateSelectedDomain(domain.Fqdn);
+
+          $(document).find('.btn-purchase').data('domain', domain);
+          $('#got-domain-not-selected').hide();
+          $('#got-domain-selected').show();
+          $('#bottomSearchAgain').show();
+
+          window.location.href = '#domain-selected-view';
+        }
+
+        function domainSearchHandler(e, domainName) {
+          updateSearchedDomain(domainName);
+        }
+
+        function domainAvailableHandler(e, domainName) {
+          updateRecommendedDomain(domainName);
+        }
+
+        function tldRegistrationErrorHandler(e, tldRegErr) {
+          updateSelectedDomain(tldRegErr);
+          window.location.href = '#domainSearchWizardSection';
+        }
+
+        $(document).bind('domainSearch', domainSearchHandler);
+        $(document).bind('domainAvailable', domainAvailableHandler);
+        $(document).bind('validDomainSelected', validDomainSelectedHandler);
+        $(document).bind('tldRegErr', tldRegistrationErrorHandler);
+
+        $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
+        $(document).find('.btn-see-bundle').on('click', goToProductSection);
+
         $(document).ready(function(){
 
-          $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          $(document).find('.btn-purchase').on('click', verifyCanCheckOut);
 
-          if(offerInfo.businessName != '') {
-            updateSearchedDomain('', offerInfo.businessName);
-
-            if(getParameterByName('tldRegErr').length > 0) {
-              showDomainRegistrationFailure();
-            } else {
-              domainSearchFormSubmit('', offerInfo.businessName);
-            }
+          if(offerInfo.businessName != '' && getParameterByName('tldRegErr') == '') {
+            //- updateSearchedDomain(offerInfo.businessName);
+            domainSearchFormSubmit('', offerInfo.businessName);
           }
         });
+
       script(type="text/javascript")
         include:js templates/domain-selection.js
+
+    block goToCheckout
+      script. // Add to Cart
+        $(document).bind('goToCheckout', goToCheckoutHandler);
 
 append pageStyles
   style. 
@@ -210,7 +268,6 @@ append pageStyles
     .cta small { padding-top: 10px; padding-bottom:5px;}
     #product-price{margin-top: 5px;}
     #getItNow mark{margin-top: 6px;}
-    
 
     @media (min-width: 768px) {
       #getItNow .bubble {
@@ -493,7 +550,7 @@ prepend endOfPageScripts
       $containers.each(function(){
         var $this = $(this);
         var videoId = $this.data('youtube-id');
-        $this.find('.play-button, .cta').bind('click.youtube',function(event){
+        $this.find('.play-button, .cta').on('click.youtube',function(event){
           // remove this event
           $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
 
