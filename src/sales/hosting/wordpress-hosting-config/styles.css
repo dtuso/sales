@@ -119,3 +119,6 @@ list-style: none;
 .item-savings-wrapper{
   text-transform: uppercase;
 }
+#officeOption{
+  text-decoration: line-through;
+}

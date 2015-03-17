@@ -198,15 +198,15 @@
             </div>
           </div>
           <div class="row">
-            <div id="o365Step" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Glorious O365 Email</span></span>
+            <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Glorious office Email</span></span>
               <div class="row">
-                <div class="step-title">O365 Email</div>
+                <div class="step-title">office Email</div>
               </div>
               <div class="row">
                 <p class="text-secondary step-subtitle"> Some Email into your life</p>
               </div>
               <div class="row options-wrapper">
-                <ul id="o365List" class="product-options"></ul>
+                <ul id="officeList" class="product-options"></ul>
               </div>
             </div>
           </div>
@@ -1101,6 +1101,9 @@ list-style: none;
 .item-savings-wrapper{
   text-transform: uppercase;
 }
+#officeOption{
+  text-decoration: line-through;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1123,7 +1126,7 @@ list-style: none;
           <div class="item-x">x</div>
         </div>
         <div class="col-xs-3">
-          <div class="item-price"><%= itemPricePerTerm %></div>
+          <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div>
         </div>
         <div class="col-xs-4">
           <div class="item-total-price text-secondary"><%= itemTotal %></div>
@@ -1246,7 +1249,7 @@ list-style: none;
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      url=url + "?configdocid=5503355af778fc1700c298ea";
+      url=url + "?configdocid=55076131f778fc17c039f8cb";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
       var plans = [
@@ -1306,7 +1309,7 @@ list-style: none;
         setupPage: function(){
       
           var addToCart = 'ac';
-          var steps = ['planStep','termStep','o365Step','sslStep', 'siteLockStep'];
+          var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
           
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
@@ -1328,7 +1331,7 @@ list-style: none;
           Config.stepNumbers();
         },
         resetPage: function(){
-          var steps = ['planStep','termStep','o365Step','sslStep', 'siteLockStep'];
+          var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
           var addToCart = 'ac';
           
           $('.config-step').hide();
@@ -1414,6 +1417,7 @@ list-style: none;
           Config.generateTerms(data.LongerTerms);
           Config.generatePlans(data.PlanListPrices);
           if(!reload){
+            Config.generateOffice(data.OfficeEmailPrice)
             Config.generateSSL(data.SSLPrice);
             Config.generateSiteLock(data.SiteLockPrice);
             reload = true;
@@ -1514,6 +1518,39 @@ list-style: none;
             });
           }
         },
+        generateOffice: function(office){
+          var radioName = "officeOption";
+          var parentID = $("#officeList");
+          var addonTemplate = _.template($( "script.addonTemplate" ).html());
+      
+          parentID.empty();
+      
+          if(!jQuery.isEmptyObject(office))
+          {
+            var officeCurrentYearlyPrice = office;
+            var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
+            var officeText = "office";
+            var termType = "[@L[cds.sales/_common:yr]@L]";
+            var officePackage = "ssl_std_1";
+      
+            var officeData = {
+              radio: radioName,
+              package: officePackage,
+              addon:'add office',
+              monthly: monthlyPrice,
+              yearly: officeCurrentYearlyPrice,
+              addonText: officeText,
+              currentPrice: officeCurrentYearlyPrice,
+              termType: termType
+            };
+            
+            parentID.append(addonTemplate(officeData));
+            
+            $('input[name="'+radioName+'"]').click(function(){
+              Config.updateOrderSummary();
+            });
+          }
+        },
         generateSSL: function(ssl){
           var radioName = "sslOption";
           var parentID = $("#sslList");
@@ -1562,7 +1599,7 @@ list-style: none;
             var monthlyPrice = slItem[0];
             var slText = "Add SiteLock";
             var termType = "[@L[cds.sales/_common:mo]@L]";
-            var slPackage = "locu_Essential1Yr";
+            var slPackage = "sitelock_Basic1Yr";
       
             var slData = {
               radio: radioName,
@@ -1587,6 +1624,7 @@ list-style: none;
           $('#order-items').empty();
       
           Config.getSelectedPlan();
+          Config.getSelectedOffice();
           Config.getSelectedSSL();
           Config.getSelectedSiteLock();
           Config.calculateSubTotal();
@@ -1622,7 +1660,8 @@ list-style: none;
                 itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
                 itemTotal: selectedTotal,
                 onSale: onSale,
-                itemsSavings: selectedSavings
+                itemsSavings: selectedSavings,
+                itemID: 'selectedPlan'
               };
       
           parentID.append(itemTemplate(itemData));
@@ -1647,7 +1686,36 @@ list-style: none;
                   itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
                   itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
                   itemTotal: selectedPricePerTerm,
-                  onSale: onSale
+                  onSale: onSale,
+                  itemID: 'sslOption'
+                };
+      
+            parentID.append(itemTemplate(itemData));
+          }
+        },
+        getSelectedOffice: function(){
+      
+          var parentID = $("#order-items");
+          var itemTemplate = _.template($( "script.itemTemplate" ).html());
+      
+          var selectedValue = $('input:radio[name="officeOption"]').filter(':checked').val();
+      
+          if (selectedValue != 'no_thanks'){
+      
+            var selectedAddon = $('input:radio[name="officeOption"]').filter(':checked').attr('data-addon');
+            var selectedTerm = '1';
+            var selectedPricePerTerm = $('input:radio[name="officeOption"]').filter(':checked').attr('data-yearly');
+            var onSale = true;
+      
+      
+            var itemData = {
+                  itemName: selectedAddon,
+                  itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
+                  itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
+                  itemTotal: '$0.00',
+                  onSale: onSale,
+                  itemsSavings: selectedPricePerTerm,
+                  itemID: 'officeOption'
                 };
       
             parentID.append(itemTemplate(itemData));
@@ -1676,7 +1744,8 @@ list-style: none;
                   itemTerm: selectedTerm + monthString,
                   itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
                   itemTotal: selectedTotal,
-                  onSale: onSale
+                  onSale: onSale,
+                  itemID: 'siteLockOption'
                 };
             parentID.append(itemTemplate(itemData));
           }
@@ -1712,16 +1781,19 @@ list-style: none;
           ##endif
           
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
-      
+          console.log(cartAPIUrl);
           $.getJSON(cartAPIUrl, function (data) {
             if (data.Success == true) {                                 
       
               if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
                 Config.addAddonToCart('sslOption');
               }
+              if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+                Config.addAddonToCart('siteLockOption');
+              }
             }
             });
-          
+          window.location.href = cartAPIUrl;
         },
         addAddonToCart: function(addonOption){
           var itc;
@@ -1776,8 +1848,10 @@ list-style: none;
       
       
       $(document).ready(function(){
-        $('.btn-continue').click(function(){
+        $('#planConfigContinue').click(function(){
+          console.log("continue button");
           Config.addPlanToCart();
+          console.log("continue button2");
           //$('.configuration').hide();
           //$('.domain-search').show();
           //$("html, body").animate({ scrollTop: 0 }, "slow");
