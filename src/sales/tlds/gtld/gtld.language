@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 
-name: GCEMO-559
-comments: fix typo
+id: 55037814f778fc12bce6e7c8
+name: GCEMO-712
+comments: merch updates 3/13/2015
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -407,6 +407,8 @@ For multiple applications submitted during Priority Pre-Registration, the compan
 Is there any reason to register more than one domain name?
 <phrase key="FaqList16Item1" />
 Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCake.COM you might also want to register CatesCake.MENU and CatesCake.NYC. You can forward the new domain names to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
+<phrase key="FaqList16Item1Modified" />
+Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCakes.COM you might also want to register CatesCakes.MENU and CatesCakes.NYC. You can forward the new domain names to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
 <phrase key="FaqList17Title" />
 How do I register a domain with my trademark in it?
 <phrase key="FaqList17Item1" />
@@ -445,8 +447,12 @@ Enter a <b>Domain Name</b>
 .rocks
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your <strong>.ninja</strong> skills
+<phrase key="MainBannerCarouselSlide2Site" />
+<strong>.site</strong> can be anything you want it to be.
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 <strong>.email</strong> delivers
+<phrase key="MainBannerCarouselSlide2World" />
+Have it all? <strong>.world</strong> is for you.
 <phrase key="PreRegisterNow" />
 Pre-register now
 <phrase key="RegisterNow" />

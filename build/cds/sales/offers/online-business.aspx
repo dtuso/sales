@@ -5007,7 +5007,7 @@ var PlanBox6UI = {
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div>
+              <div data-icann-fee="" class="disclaimers-text">[@L[cds.sales/offers/online-business:35463-third-party-logos-trademarks-disclaimer]@L]</div>
             </div>
           </div>
         </div>

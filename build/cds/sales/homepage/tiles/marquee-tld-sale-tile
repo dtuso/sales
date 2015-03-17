@@ -23,7 +23,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="" data-ci="" class="tile -sale tld-sale-tile">
+<div data-ci="" data-message-name="" class="tile -sale tld-sale-tile">
   <div class="tile-content-wrapper">
     <div class="clearfix">
       <div class="header-text walsheim-black">[@T[productprice:<current productid="" period="yearly" promocode="" htmlsymbol="false" />]@T]</div>
