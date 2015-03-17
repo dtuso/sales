@@ -15,11 +15,6 @@ append vars
   - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
   - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
 
-append headScripts
-  atlantis:webstash(type="js")
-    script
-      include:js ../offers/online-business/got.js
-
 append pageStyles
   style
     include ./website-builder-config/styles.css 
