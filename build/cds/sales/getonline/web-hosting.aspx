@@ -147,7 +147,6 @@
           $("[data-ci]").click(function(a) {
             $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
           });
-        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -756,7 +755,7 @@ function getParameterByName(name) {
       </div>
     </section>
     <section id="domainSearchWizardSection" class="bg-primary-o">
-      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-search-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -764,13 +763,13 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
+              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainSearchViewForm">
@@ -789,9 +788,9 @@ function getParameterByName(name) {
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
-                <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97048" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
+                <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
+                <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="[object Object]" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97048" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
               </div>
             </div>
           </form>
@@ -804,7 +803,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-available-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-available-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -812,13 +811,13 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
+              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainAvailableViewSearchForm">
@@ -837,13 +836,13 @@ function getParameterByName(name) {
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
               </div>
             </div>
           </form>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:recommended-domain]@L]</h4>
+              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:recommended-domain]@L]</h4>
             </div>
           </div>
           <div id="available-domain" class="row bg-light">
@@ -858,13 +857,13 @@ function getParameterByName(name) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
+              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97051" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="margin-top:10px" class="spin-results"></div>
+          <div style="[object Object]" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -877,10 +876,10 @@ function getParameterByName(name) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="97051" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="[object Object]" class="text-center"><span data-ci="97051" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
+          <div style="[object Object]" class="row search-again-section">
             <div class="col-md-12 text-center">
               <btn data-ci="97052" class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
@@ -894,7 +893,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-not-available-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-not-available-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -902,13 +901,13 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
+              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
           <form id="domainNotAvailableViewSearchForm">
@@ -927,7 +926,7 @@ function getParameterByName(name) {
             <div class="row domain-search-messaging-row">
               <div class="col-xs-12 col-sm-12">
                 <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
               </div>
             </div>
           </form>
@@ -940,13 +939,13 @@ function getParameterByName(name) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
+              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97055" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="margin-top:10px" class="spin-results"></div>
+          <div style="[object Object]" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -959,10 +958,10 @@ function getParameterByName(name) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="97055" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="[object Object]" class="text-center"><span data-ci="97055" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
+          <div style="[object Object]" class="row search-again-section">
             <div class="col-md-12 text-center">
               <btn data-ci="97056" class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
@@ -976,7 +975,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="domain-selected-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-selected-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div id="selected-domain" class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -984,8 +983,8 @@ function getParameterByName(name) {
             </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
@@ -998,12 +997,12 @@ function getParameterByName(name) {
               <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div style="[object Object]" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97045" class="btn btn-primary btn-search-again btn-lg uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div style="[object Object]" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97057" class="btn btn-primary btn-see-bundle btn-lg uppercase">[@L[cds.sales/getonline:see-other-products]@L]</btn>
               <btn data-ci="97058" class="btn btn-purchase btn-plan btn-lg uppercase p4p">[@L[cds.sales/getonline:checkout-now]@L]</btn>
@@ -1018,7 +1017,7 @@ function getParameterByName(name) {
           </div>
         </div>
       </div>
-      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
+      <div id="api-failure" style="[object Object]" class="sf-dialog api-B-failure">
         <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
           <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
         </h2>
@@ -1149,10 +1148,7 @@ function getParameterByName(name) {
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2,
-section .h2 {
-  margin-bottom: 40px;
-  margin-top: 0;
+section h2 {
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -1160,10 +1156,7 @@ section .h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3,
-section .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+section h3 {
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -1175,7 +1168,6 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
-  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -1264,6 +1256,8 @@ ul li.no-check {
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         #product-price{margin-top: 5px;}
+        #getItNow mark{margin-top: 6px;}
+        
         
         @media (min-width: 768px) {
           #getItNow .bubble {

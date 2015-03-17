@@ -147,7 +147,6 @@
           $("[data-ci]").click(function(a) {
             $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
           });
-        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
@@ -181,9 +180,9 @@
             <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text]@L]</h3>
           </div>
         </div>
-        <div style="margin-top:35px" class="row">
+        <div style="[object Object]" class="row">
           <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block computer"></div>
-          <div style="padding-left:60px" class="col-xs-8 col-sm-6 products">
+          <div style="[object Object]" class="col-xs-8 col-sm-6 products">
             <h3>[@L[cds.sales/getonline:pro-design-product-name]@L]</h3>
             <p>[@L[cds.sales/getonline:pro-design-product-get-it-now-description]@L]</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -260,7 +259,7 @@
             <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="96313" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
           </div>
         </div>
-        <section data-youtube-id="" style="padding-bottom:0px" class="video-marquee-wrapper">
+        <section data-youtube-id="" style="[object Object]" class="video-marquee-wrapper">
           <div class="container">
             <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-websiteBuilder-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
@@ -269,7 +268,7 @@
             </div>
           </div>
         </section>
-        <div style="margin-top:0px" class="row bubble-row">
+        <div style="[object Object]" class="row bubble-row">
           <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
@@ -310,7 +309,7 @@
     </section>
     <section id="bottomGetItNow" class="bg-medium">
       <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bottom-text]@L]</h3>
+        <h3 style="[object Object]" class="price-token text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bottom-text]@L]</h3>
         <div class="pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
@@ -346,10 +345,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2,
-section .h2 {
-  margin-bottom: 40px;
-  margin-top: 0;
+section h2 {
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -357,10 +353,7 @@ section .h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3,
-section .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+section h3 {
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -372,7 +365,6 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
-  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
@@ -461,6 +453,8 @@ ul li.no-check {
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         #product-price{margin-top: 5px;}
+        #getItNow mark{margin-top: 6px;}
+        
         
         @media (min-width: 768px) {
           #getItNow .bubble {
