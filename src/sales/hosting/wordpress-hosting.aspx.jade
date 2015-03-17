@@ -129,60 +129,13 @@ block alternatives
 
 //- there's always a catch... show it here.
 block disclaimers
-  //- section#disclaimers.content-disclaimer.disclaimers-section 
-  //-   .disclaimers-row
-  //-     .container
-  //-       .row
-  //-         .col-sm-12
-            //- .disclaimers-text [@L[cds.sales/gd/hosting/wordpress-hosting:third-party-logos-trademarks-disclaimer]@L]
-            //-   | 
-            //-   | ##if(false)
-            //-   | 
-            //-     | 
-            //-     | ##if(areAdCreditsEnabled(google))
-            //-     | 
-            //-     +wordPressAdCredits({
-            //-       'linkId': 'googleAdwordsLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:GoogleAdWordsCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
-            //-       'detailsUrl': '[@T[link:<relative path="/popups/google-adwords.aspx"><param name="ci" value="#{page.ci.adCreditGoogle}" /><param name="app_hdr" value="99" /></relative>]@T]',
-            //-       'detailsCi': page.ci.adCreditGoogle,
-            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
-            //-       })
-            //-     | 
-            //-     | ##endif
-            //-     | 
-            //-     | 
-            //-     | ##if(areAdCreditsEnabled(bing))
-            //-     | 
-            //-     +wordPressAdCredits({
-            //-       'linkId': 'bingLearnLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:BingAdsCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
-            //-       'detailsUrl': 'https://advertise.bingads.microsoft.com/en-us/godaddy/learn',
-            //-       'detailsCi': page.ci.adCreditBing,
-            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
-            //-       })
-            //-     | 
-            //-     | ##endif
-            //-     | 
-            //-     | 
-            //-     | ##if(areAdCreditsEnabled(facebook))
-            //-     | 
-            //-     +wordPressAdCredits({
-            //-       'linkId': 'facebookAdsLink',
-            //-       'adCreditText': '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" htmlsymbol="false" />]@T] [@L[cds.sales/gd/hosting/wordpress-hosting:FacebookAdCredit]@L]',
-            //-       'toolTipText': '[@L[cds.sales/gd/hosting/wordpress-hosting:RestrictionsApply]@L]',
-            //-       'toolTipContent': '[@L[cds.sales/gd/hosting/wordpress-hosting:OnePromotionalCreditPerCustomerForANew]@L]',
-            //-       'detailsUrl': '[@T[link:<relative path="/popups/facebook-ads.aspx"><param name="ci" value="#{page.ci.adCreditFacebook}" /><param name="app_hdr" value="99" /></relative>]@T]',
-            //-       'detailsCi': page.ci.adCreditFacebook,
-            //-       'detailsLinkText': '[@L[cds.sales/gd/hosting/wordpress-hosting:view-details]@L]'
-            //-       })
-            //-     | 
-            //-     | ##endif
-            //-     | 
-            //-   | 
-            //-   | ##endif
-            //-   | 
+  section#disclaimers.content-disclaimer.disclaimers-section 
+    .disclaimers-row
+      .container
+        .row
+          .col-sm-12
+            p
+              a.disclaimers-text.see-product-disclaimer-link(id="product-disclaimers", onClick="disclaimersModal()", data-ci="97461") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-policies]@L]
+            p.disclaimers-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-trademarks]@L]
+  #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-header]@L]",style="display:none")
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]

@@ -18,6 +18,9 @@ var wpHosting = {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
+function disclaimersModal() {
+  $('#disclaimersModal').sfDialog({ buttons: [wpHosting.sfDialogOkButton] });
+}
 function tokenizeDisclaimerModal(selector, price0, price1) {
 
   $(selector).each(function(idx, modal) {
@@ -50,11 +53,11 @@ $(document).ready(function(){
 
   //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 
-  // $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-  //   $("#default-marquee-details-modal-wsb-only").sfDialog({
-  //     buttons: [got1Page.sfDialogOkButton]
-  //   });
-  // });
+  $('#disclaimers').on('click', '.see-product-disclaimer-link', function(){
+    $("#disclaimers-modal").sfDialog({
+      buttons: [wpHosting.sfDialogOkButton]
+    });
+  });
 
   activateHref("#cloudspecator-link",          "96207", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
   activateHref("#see-latest-results-btn",      "96221", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");

@@ -42,7 +42,16 @@ atlantis:webstash(type="css")
     h5.review-byline span {
       color: #999;
     }
-
+    #features ul.feature-list {
+      padding-left: 15px;
+      margin-bottom: 18px;
+    }
+    #features ul.feature-list li {
+      margin: 1px 0;
+    }
+    #features p.list-title {
+      margin-bottom: 0px;
+    }
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
@@ -166,11 +175,6 @@ section#security(data-mid-nav-title="Security",data-cicode="#{page.ci.midPageNav
   - securityCarouselItem.textCenter = true;
   - securityCarouselItem.ci = {};
   - securityCarouselItem.ci.panelContainer = '';
-  .container
-    .row
-      .col-sm-10.col-sm-push-1.center-block
-        h2.h0.main-heading.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]
-        h3.subheading.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]
   +renderTabbedCarousel({
       backgroundColor: "",
       icode: "",

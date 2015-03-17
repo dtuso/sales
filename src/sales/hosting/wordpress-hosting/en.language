@@ -381,6 +381,14 @@ There are several ways to log in to your WordPress website or blog.
 Go to <span id="pretty-link">[@T[link:<external linktype="SITEURL" secure="false"></external>]@T]</span>, log in to “My Account” and choose Managed WordPress Hosting from your list of products.
 <phrase key="35561-faq-7-answer-3" />
 Type http://coolexample.com/wp-admin, where coolexample.com is your domain name, and that will take you directly to the Admin login screen.
+<phrase key="35561-disclaimers-policies" />
+Click here for product disclaimers and legal policies.
+<phrase key="35561-disclaimers-trademarks" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="35561-disclaimer-modal-header" />
+Disclaimers
+<phrase key="35561-disclaimer-modal-text-1" />
+TODO!  Waiting for copy
 <phrase key="Meta0Description" />
 [@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain.
 <phrase key="Meta0Keywords" />

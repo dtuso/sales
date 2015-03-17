@@ -949,7 +949,16 @@
         h5.review-byline span {
           color: #999;
         }
-        
+        #features ul.feature-list {
+          padding-left: 15px;
+          margin-bottom: 18px;
+        }
+        #features ul.feature-list li {
+          margin: 1px 0;
+        }
+        #features p.list-title {
+          margin-bottom: 0px;
+        }
       </style>
     </atlantis:webstash>
     <style>
@@ -1197,7 +1206,7 @@
         {
           $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
-        while($('.navbar-nav').width() + 10 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        while($('.navbar-nav').width() + 150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
           $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
         }
@@ -1414,14 +1423,6 @@
       </div>
     </section>
     <section id="security" data-mid-nav-title="Security" data-cicode="96213">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-10 col-sm-push-1 center-block">
-            <h2 class="h0 main-heading text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]</h2>
-            <h3 class="subheading text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]</h3>
-          </div>
-        </div>
-      </div>
       <style>
         .features-tabbed-carousel-top {
           text-align: center;
@@ -2701,6 +2702,21 @@ top: -6px;
         </div>
       </div>
     </section>
+    <section id="disclaimers" class="content-disclaimer disclaimers-section"> 
+      <div class="disclaimers-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <p><a id="product-disclaimers" onClick="disclaimersModal()" data-ci="97461" class="disclaimers-text see-product-disclaimer-link">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-policies]@L]</a></p>
+              <p class="disclaimers-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-trademarks]@L]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-header]@L]" style="display:none">
+      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]</p>
+    </div>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
@@ -2874,7 +2890,12 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
+#product-disclaimers {
+  cursor: pointer;
+}
+#disclaimers {
+  background-color: #fff;
+}
       </style>
       <style>.plan-tile { 
   margin-top: -145px; 
@@ -3295,6 +3316,9 @@ body {
   wpHosting.showDeveloperPlan = false;
 ##endif
 
+function disclaimersModal() {
+  $('#disclaimersModal').sfDialog({ buttons: [wpHosting.sfDialogOkButton] });
+}
 function tokenizeDisclaimerModal(selector, price0, price1) {
 
   $(selector).each(function(idx, modal) {
@@ -3327,11 +3351,11 @@ $(document).ready(function(){
 
   //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
 
-  // $('#default-marquee-view').on('click', '.see-details-disclaimer-link', function(){
-  //   $("#default-marquee-details-modal-wsb-only").sfDialog({
-  //     buttons: [got1Page.sfDialogOkButton]
-  //   });
-  // });
+  $('#disclaimers').on('click', '.see-product-disclaimer-link', function(){
+    $("#disclaimers-modal").sfDialog({
+      buttons: [wpHosting.sfDialogOkButton]
+    });
+  });
 
   activateHref("#cloudspecator-link",          "96207", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
   activateHref("#see-latest-results-btn",      "96221", "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");

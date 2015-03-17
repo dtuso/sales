@@ -7,3 +7,9 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+#product-disclaimers {
+  cursor: pointer;
+}
+#disclaimers {
+  background-color: #fff;
+}
