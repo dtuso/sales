@@ -28,6 +28,14 @@ append vars
   - page.openGraph.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-title]@L]";
   - page.openGraph.description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-description]@L]";
   - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg";
+  - page.src = {};
+  - page.src.getStarted = 'gs';
+  - page.src.addToCart = 'ac';
+  - page.plan = {};
+  - page.plan.A = 'mwp_basic_12month';
+  - page.plan.B = 'mwp_deluxe_12month';
+  - page.plan.C = 'mwp_ultimate_12month';
+  - page.plan.D = 'mwp_developer_12month';
   - page.pfids = {};
   - page.pfids.current = {};
   - page.pfids.current.A = "580970";
@@ -42,7 +50,6 @@ append vars
   - page.pricing = {};
   - page.pricing.fifty = '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T]';
   - page.pricing.hundred = '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]';
-
   - page.pricing.current = {};
   - page.pricing.current.A = "[@T[productprice:<current productid='" + page.pfids.current.A + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
   - page.pricing.current.B = "[@T[productprice:<current productid='" + page.pfids.current.B + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
@@ -98,8 +105,90 @@ append vars
         
 prepend endOfPageScripts
   atlantis:webstash(type="js")
-    script
-      include:js wordpress-hosting/wph.js
+    script.
+      var wpHosting = {
+        sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
+        offersCodes: {
+          packageId: 'gybo_1email_1yr',
+          itc: 'slp_GYBO1'
+        },
+        supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
+        imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
+        canOfferOls: true,
+        animationTime: 800,
+        animationEasingType: 'swing',
+        showDeveloperPlan: true,
+        isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
+      };
+
+      // TODO: create split test in all three environments
+      ##if(splitTestingSideIsActive(99999, B))
+        wpHosting.showDeveloperPlan = false;
+      ##endif
+
+      function disclaimersModal() {
+        $('#disclaimersModal').sfDialog({ buttons: [wpHosting.sfDialogOkButton] });
+      }
+      function tokenizeDisclaimerModal(selector, price0, price1) {
+
+        $(selector).each(function(idx, modal) {
+          var $modal = $(modal);
+          var htmlTokenized = $modal.html();
+          htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+          htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+          $modal.html(htmlTokenized);
+        });
+
+      }
+
+      function activateHref(id, ciCode, url, target){
+        $(id).attr('data-ci', ciCode);
+        switch (target) {
+          case "_blank":
+            $(id).attr('href','javascript:void(0);');
+            $(id).on('click', function(){
+              window.open(url);
+            });
+            break;
+          case "_self":
+          default:
+            $(id).attr('href',url);
+            break;
+        }
+      }
+
+      function activateBtn(id, ciCode, url){
+        $(id).attr('data-ci', ciCode);
+        $(id).on('click', function(){
+          location.href = url;
+        });
+      }
+
+      $(document).ready(function(){
+
+        //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
+
+        $('#disclaimers').on('click', '.see-product-disclaimer-link', function(){
+          $("#disclaimers-modal").sfDialog({
+            buttons: [wpHosting.sfDialogOkButton]
+          });
+        });
+
+        activateHref("#cloudspecator-link",           "#{page.ci.cloudSpeculator}",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+        activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+        activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
+        activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
+        activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
+        activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
+        
+        activateBtn("#get-started-btn",  "#{page.ci.marqueeGetStarted}",  "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.marqueeGetStarted}' /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.getStarted}' /></relative>]@T]");
+        activateBtn("#product-A",        "#{page.ci.plansAddToCartA}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartA}' /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-B",        "#{page.ci.plansAddToCartB}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartB}' /><param name='plan' value='#{page.plan.B}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-C",        "#{page.ci.plansAddToCartC}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartC}' /><param name='plan' value='#{page.plan.C}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-D",        "#{page.ci.plansAddToCartD}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartD}' /><param name='plan' value='#{page.plan.D}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+
+      });
+
 
 append pageStyles
   style
@@ -139,3 +228,5 @@ block disclaimers
             p.disclaimers-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-trademarks]@L]
   #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-header]@L]",style="display:none")
     p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-2]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-3]@L]

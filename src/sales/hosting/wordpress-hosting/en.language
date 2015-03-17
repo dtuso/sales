@@ -1,5 +1,5 @@
 ---
-id:  550080a9f778fc138cc3b16a
+id:  550891def778fc1bd0ea4dcb
 name: GCE-35561
 comments: Managed WordPress Hosting rebrand
 location: localization/sales/gd/hosting/wordpress-hosting/en
@@ -68,7 +68,7 @@ Add Ultimate Plan to Cart
 <phrase key="35561-ultimate-feature-2" comment="" />
 <strong>30GB SSD</strong> storage
 <phrase key="35561-ultimate-feature-3" comment="{0} will be the number of monthly users" />
-<strong>{0}</strong> monthly visitors (shared)
+<strong>{0}</strong> monthly visitors
 <phrase key="35561-ultimate-feature-4" comment="" />
 One-click staging site
 <phrase key="35561-ultimate-feature-5" comment="" />
@@ -338,7 +338,7 @@ Young.bz L.L.C.
 <phrase key="35561-faq" />
 FAQ
 <phrase key="35561-SeeAllQuestions" />
-See all questions
+See all
 <phrase key="35561-rb_your_question" />
 Your questions, our answers
 <phrase key="35561-faq-1-question" />
@@ -388,7 +388,11 @@ Third-party logos and marks are registered trademarks of their respective owners
 <phrase key="35561-disclaimer-modal-header" />
 Disclaimers
 <phrase key="35561-disclaimer-modal-text-1" />
-TODO!  Waiting for copy
+Free themes and plugins can be found at wordpress.org.
+<phrase key="35561-disclaimer-modal-text-2" />
+Annual discounts available on NEW purchases only.
+<phrase key="35561-disclaimer-modal-text-3" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
 <phrase key="Meta0Description" />
 [@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain.
 <phrase key="Meta0Keywords" />

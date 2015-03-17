@@ -37,7 +37,11 @@ block features
   | 
   | ##if(productIsOffered(107))
   | 
-  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]  
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]   
+  | 
+  | ##else
+  | 
+  .plan-item &nbsp; 
   | 
   | ##endif
   | 
@@ -48,6 +52,10 @@ block features
   .plan-item 
     span(data-tokenize!="#{page.pricing.ssl}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;
     span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize!="#{page.pricing.ssl}")
+  | 
+  | ##else
+  | 
+  .plan-item &nbsp; 
   | 
   | ##endif
   | 

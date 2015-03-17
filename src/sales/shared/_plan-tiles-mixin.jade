@@ -47,10 +47,7 @@ mixin renderPlanTiles(columns, options)
   atlantis:webstash(type="js")
     script(type="text/javascript").
       var planTileMixin = {
-                // autoheight the small inside parts of the plan tiles
-        runBefore: function() {
-          //override in your code;
-        },
+
         findMaxHeight: function($items) {
           var maxHeight = 0;
           $items.each(function(index, item) {
@@ -68,6 +65,25 @@ mixin renderPlanTiles(columns, options)
           planTileMixin.autoHeightIt($tiles, '.title-wrap');
           planTileMixin.autoHeightIt($tiles, '.price-wrap');
           planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+
+          // align each plan-item with eachother in the same line
+          // however, only do this if each plan-tile has the same 
+          // number of plan-item's in it.
+          var numItems = 0, bail= false;
+          $tiles.each(function(){
+            var $tile = $(this);
+            var numPlanItems = $tile.find('.plan-item').length;
+            if(numItems==0) {
+              numItems = numPlanItems;
+            }
+            if(numItems != numPlanItems) bail = true;
+          });
+          if(bail || numItems == 0) return;
+          // loop thru each plan item and adjust independantly
+          for(var i=0; i<numItems; i++) {            
+            planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+          }
+
         },
         autoHeightPlanBoxes: function() {
           // auto height the plan boxes
@@ -82,8 +98,6 @@ mixin renderPlanTiles(columns, options)
       $(document).ready(function(){
         if ($(window).width() < 768) 
           return; /* bail out because too narrow to list more than one wide */
-        if($.isFunction(planTileMixin.runBefore)) 
-          planTileMixin.runBefore()
         planTileMixin.autoHeighPlanBoxInsides();
         planTileMixin.autoHeightPlanBoxes();
       });
