@@ -141,7 +141,7 @@
             </div>
           </div>
         </form>
-        <div style="display:none" class="resources-group-inactive">
+        <div style="[object Object]" class="resources-group-inactive">
           <select id="resources-select" name="resource" class="form-control wordpress">
             <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
             <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>
@@ -159,10 +159,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-section h2,
-section .h2 {
-  margin-bottom: 40px;
-  margin-top: 0;
+section h2 {
   font-size: 4rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Black';
@@ -170,10 +167,7 @@ section .h2 {
   line-height: 1.1;
   color: inherit;
 }
-section h3,
-section .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+section h3 {
   font-size: 3rem;
   text-transform: uppercase;
   font-family: 'Walsheim-Bold';
@@ -185,7 +179,6 @@ section .h3 {
   height: 100px;
   max-width: 100%;
   margin: 0 auto;
-  display: block;
 }
 @media screen and (min-width: 768px) {
   .feature img {
