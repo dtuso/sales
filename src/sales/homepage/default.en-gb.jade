@@ -16,7 +16,8 @@ block domainSearch
   include ./sections/domain-search.jade
 
 block marquee
-  | [@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
+  #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  #marquee-container-isc(style="display:none") [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
 
 block bugBar
   +tldBugs(["com","co","uk","wales"])
