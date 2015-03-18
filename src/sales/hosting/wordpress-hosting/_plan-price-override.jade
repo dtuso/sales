@@ -1,0 +1,24 @@
+
+.plan-price-wrap
+  .price-text 
+    strong As low as
+  .plan-price-and-duration
+    span.plan-price !{currentPrice}
+    span.plan-duration /[@L[cds.sales/_common:mo]@L]
+  | 
+  |##if(productHasSavingsMoreThan(#{pfid}, #{pfid}, 0))
+  | 
+  strong
+    | [@L[cds.sales/_common:onsale-all-cap]@L] -
+    span.text-primary(data-tokenize!="[@T[productcompare:<percent primaryproductid='#{pfid}' secondaryproductid='#{pfid}' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]") <mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark>
+  | 
+  |##endif
+  | 
+  p.h6(data-tokenize!="#{listPrice}") {0}/month when you renew<sup>4</sup>
+  | 
+  |##if(countrySiteAny(uk))
+  | 
+  p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+  | 
+  |##endif
+  | 
