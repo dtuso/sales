@@ -1,8 +1,3 @@
----
-location: sales/homepage/default.nl-be
-id: false
-name: GCEMO-636
----
 extends ../../layouts/homepage/default_base
 
 block marquee
@@ -11,6 +6,9 @@ block marquee
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
+
+block bugBar
+  +tldBugs(["net","co","nl","biz"])
 
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade

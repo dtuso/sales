@@ -1,5 +1,7 @@
 extends ./_home-page.jade
 
+block bugBar
+  +tldBugs(["net","co","ca","biz"])
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
@@ -20,5 +22,3 @@ block prepend sections
   include ./sections/_website-promo.jade
   include ./sections/_o365-promo.jade
   include ./sections/_support-promo.jade
-block bugBar
-    +tldBugs(["com","co","ca","club"])
