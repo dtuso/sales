@@ -67,7 +67,7 @@ block disclaimers
         #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]",style="display:none")
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
           p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
-      .col-sm-3.col-sm-push-3
+      .col-sm-3.col-sm-push-3.buttons
         a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") Continue
 
 block domainSearch
@@ -189,7 +189,7 @@ prepend endOfPageScripts
     <li>
       <div class="row">
         <div class="col-xs-1">
-          <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+          <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
         </div>
         <div class="col-xs-11">
           <div class="config-text-primary">
@@ -240,7 +240,7 @@ prepend endOfPageScripts
         }
       }
     ];
-    
+
     function getParameterByName(name){
       name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
       var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
