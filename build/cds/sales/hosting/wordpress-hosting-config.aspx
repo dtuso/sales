@@ -224,12 +224,12 @@
             </div>
           </div>
           <div class="row">
-            <div id="siteLockStep" class="col-sm-11 config-step"><span class="flag red"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Get you some SiteLock</span></span>
+            <div id="siteLockStep" class="col-sm-11 config-step"><span class="flag red"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Add SiteLock</span></span>
               <div class="row">
-                <div class="step-title">SiteLock</div>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLock]@L]</div><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]</span>
               </div>
               <div class="row">
-                <p class="text-secondary step-subtitle">SiteLock is cool</p>
+                <p class="text-secondary step-subtitle">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]</p>
               </div>
               <div class="row options-wrapper">
                 <ul id="siteLockList" class="product-options"></ul>
@@ -750,8 +750,7 @@
             }
           });
         </script>
-      </atlantis:webstash>
-      <div>Continue To Cart</div>
+      </atlantis:webstash><a id="noFreeDomain" class="btn btn-purchase btn-plan btn-md btn-block">I don't want my free domain</a>
     </div>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
@@ -1314,6 +1313,9 @@ list-style: none;
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
+          else {
+            plan='mwp_basic_12month';
+          }
           if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
           {
             steps = _.without(steps, 'sslStep');
@@ -1371,17 +1373,20 @@ list-style: none;
         setTitle: function(){
           var getStarted = 'gs';
           if (origin === getStarted){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]");
           }
           else{
-           if(plan.indexOf('wsb_personal') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+           if(plan.indexOf('mwp_basic') >= 0){
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
             }
-            else if(plan.indexOf('wsb_businessplus') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+            else if(plan.indexOf('mwp_deluxe') >= 0){
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
+            }
+            else if(plan.indexOf('mwp_ultimate') >= 0){
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
             }
             else{
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeveloper]@L]");
             }
       
           }
@@ -1609,7 +1614,7 @@ list-style: none;
               yearly: slCurrentYearlyPrice,
               addonText: slText,
               currentPrice: slCurrentMonthlyPrice,
-              termType: termType
+              termType: termType + '<span> things</span>'
             };
             
             parentID.append(addonTemplate(slData));
@@ -1781,19 +1786,28 @@ list-style: none;
           ##endif
           
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
-          console.log(cartAPIUrl);
           $.getJSON(cartAPIUrl, function (data) {
             if (data.Success == true) {                                 
       
-              if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
-                Config.addAddonToCart('sslOption');
-              }
-              if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
-                Config.addAddonToCart('siteLockOption');
-              }
+              //- if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+              //-   Config.addAddonToCart('sslOption');
+              //- }
+              //- if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+              //-   Config.addAddonToCart('siteLockOption');
+              //- }
+              //- ##if(isManager())
+              //- window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+              //- ##else
+              //- window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+              //- ##endif
             }
             });
-          window.location.href = cartAPIUrl;
+          if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+            Config.addAddonToCart('sslOption');
+          }
+          if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+            Config.addAddonToCart('siteLockOption');
+          }
         },
         addAddonToCart: function(addonOption){
           var itc;
@@ -1846,16 +1860,22 @@ list-style: none;
       
       Config.init();
       
-      
       $(document).ready(function(){
         $('#planConfigContinue').click(function(){
-          console.log("continue button");
           Config.addPlanToCart();
-          console.log("continue button2");
-          //$('.configuration').hide();
-          //$('.domain-search').show();
-          //$("html, body").animate({ scrollTop: 0 }, "slow");
+          $('.configuration').hide();
+          $('.domain-search').show();
+          $("html, body").animate({ scrollTop: 0 }, "slow");
+      
         });
+      });
+      $('#noFreeDomain').click(function(){
+          ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+          ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+          ##endif
+      
       });
     </script>
     <script type="text/javascript">

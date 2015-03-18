@@ -57,11 +57,12 @@ block addons
     .row.options-wrapper
       ul#sslList.product-options
 
-  +configStep({"id":"siteLockStep","flagColor":"red","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Get you some SiteLock"})
+  +configStep({"id":"siteLockStep","flagColor":"red","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Add SiteLock"})
     .row
-      .step-title SiteLock
+      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLock]@L]
+      span(data-tokenize!="[@T[localization:<display type='numeric' number='25000' />]@T]") [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]
     .row
-      p.text-secondary.step-subtitle SiteLock is cool
+      p.text-secondary.step-subtitle [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]
     .row.options-wrapper
       ul#siteLockList.product-options
   +configStepBreak
@@ -82,7 +83,7 @@ block disclaimers
 block domainSearch
   .container.domain-search(style="display:none")
     +domainSearchOffersInput()
-    div Continue To Cart
+    a.btn.btn-purchase.btn-plan.btn-md.btn-block(id="noFreeDomain") I don't want my free domain
 
 
 prepend endOfPageScripts
@@ -286,6 +287,9 @@ prepend endOfPageScripts
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
+        else {
+          plan='mwp_basic_12month';
+        }
         if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
         {
           steps = _.without(steps, 'sslStep');
@@ -343,17 +347,20 @@ prepend endOfPageScripts
       setTitle: function(){
         var getStarted = 'gs';
         if (origin === getStarted){
-          $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+          $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]");
         }
         else{
-         if(plan.indexOf('wsb_personal') >= 0){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+         if(plan.indexOf('mwp_basic') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
           }
-          else if(plan.indexOf('wsb_businessplus') >= 0){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+          else if(plan.indexOf('mwp_deluxe') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
+          }
+          else if(plan.indexOf('mwp_ultimate') >= 0){
+            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
           }
           else{
-            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeveloper]@L]");
           }
 
         }
@@ -581,7 +588,7 @@ prepend endOfPageScripts
             yearly: slCurrentYearlyPrice,
             addonText: slText,
             currentPrice: slCurrentMonthlyPrice,
-            termType: termType
+            termType: termType + '<span> things</span>'
           };
           
           parentID.append(addonTemplate(slData));
@@ -753,19 +760,28 @@ prepend endOfPageScripts
         ##endif
         
         var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
-        console.log(cartAPIUrl);
         $.getJSON(cartAPIUrl, function (data) {
           if (data.Success == true) {                                 
 
-            if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
-              Config.addAddonToCart('sslOption');
-            }
-            if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
-              Config.addAddonToCart('siteLockOption');
-            }
+            //- if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+            //-   Config.addAddonToCart('sslOption');
+            //- }
+            //- if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+            //-   Config.addAddonToCart('siteLockOption');
+            //- }
+            //- ##if(isManager())
+            //- window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+            //- ##else
+            //- window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+            //- ##endif
           }
           });
-        window.location.href = cartAPIUrl;
+        if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+          Config.addAddonToCart('sslOption');
+        }
+        if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+          Config.addAddonToCart('siteLockOption');
+        }
       },
       addAddonToCart: function(addonOption){
         var itc;
@@ -818,14 +834,20 @@ prepend endOfPageScripts
     
     Config.init();
 
-
     $(document).ready(function(){
       $('#planConfigContinue').click(function(){
-        console.log("continue button");
         Config.addPlanToCart();
-        console.log("continue button2");
-        //$('.configuration').hide();
-        //$('.domain-search').show();
-        //$("html, body").animate({ scrollTop: 0 }, "slow");
+        $('.configuration').hide();
+        $('.domain-search').show();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
       });
+    });
+    $('#noFreeDomain').click(function(){
+        ##if(isManager())
+        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+        ##else
+        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+        ##endif
+
     });
