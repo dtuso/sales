@@ -144,7 +144,7 @@ Give your Facebook and Twitter profile the same look as your website with just o
 <phrase key="rb_ssl" />
 <strong>1 year SSL Certificate</strong>
 <phrase key="rb_ssl_tooltip" />
-A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and [@T[localization:<display type="percent" number="99.9" />]@T] browser recognition. SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
 <phrase key="popular-tag" />
 Most Popular
 <phrase key="wsb-plus-seo" />
