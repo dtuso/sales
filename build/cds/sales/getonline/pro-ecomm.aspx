@@ -117,7 +117,6 @@
           };
           
           tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
-          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
         }
         
         function tokenizeTheDataTokenizeAttribute() {
@@ -147,12 +146,72 @@
           $("[data-ci]").click(function(a) {
             $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
           });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
             $(document).find('.business-name-display').text(passedBusinessName);
          }
         });
+        
+      </script>
+      <script>
+        $(document).bind('goToCheckout', goToCheckoutHostingHandler);
+        
+        function goToCheckoutHostingHandler(e) {
+          var pkg = {};
+          pkg.pkgid = offerInfo.packageId;
+          pkg.qty = 1;
+          pkg.itc = offerInfo.itcCode;
+          pkg.ci = ciCode;
+          var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+        
+          var postdata = "requestData=" + JSON.stringify(pkg);
+          $.ajax({
+            type:"POST",
+            url: sapiurl,
+            contentType: "application/json",
+            data: postdata,
+            dataType: "jsonp",
+            complete: function (data) {
+              if (data.statusText == "success") {
+                addHostingDomain(domain, ciCode);
+              }
+            },
+            error: function(){
+              showApi3SearchError(e, domain);
+            }
+          });
+        }
+        
+        function addHostingDomain(domain, ciCode){
+            var plan = offerInfo.packageId;
+            var domainToAdd = encodeURIComponent(domain.Fqdn);
+            var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+            var pkg = {};
+            pkg.pkgid = plan;
+            pkg.itc = offerInfo.itcCode;
+            pkg.quantity = 1;
+            pkg.ci = ciCode;
+            pkg.custom = { "domain": domainToAdd }
+            var postdata = "requestData=" + JSON.stringify(pkg);
+              $.ajax({
+                 type:"POST",
+                 url: sapiurl,
+                 contentType: "application/json",
+                 data: postdata,
+                 dataType: "jsonp",
+                 complete: function (data) {
+                                if (data.statusText == "success") {
+                                      ##if(isManager())
+                                        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                                      ##else
+                                        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                                      ##endif
+                                  }
+                            }
+                });      
+        }
         
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
@@ -180,9 +239,9 @@
             <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]</h3>
           </div>
         </div>
-        <div style="[object Object]" class="row">
+        <div style="margin-top:35px" class="row">
           <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block computer"></div>
-          <div style="[object Object]" class="col-xs-8 col-sm-6 products">
+          <div style="padding-left:60px" class="col-xs-8 col-sm-6 products">
             <h3>[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
             <p>[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -250,7 +309,7 @@
         </div>
       </div>
     </section>
-    <section id="eccom" class="product-section">
+    <section id="productSection" class="product-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
@@ -259,7 +318,7 @@
             <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="96316" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
           </div>
         </div>
-        <section data-youtube-id="" style="[object Object]" class="video-marquee-wrapper">
+        <section data-youtube-id="" class="video-marquee-wrapper">
           <div class="container">
             <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
@@ -268,7 +327,7 @@
             </div>
           </div>
         </section>
-        <div style="[object Object]" class="row bubble-row">
+        <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
@@ -282,25 +341,25 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <h2 class="text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
+            <h2 class="why-us-header text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-world-leader-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-support-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-trust-text]@L]</p>
             </div>
           </div>
@@ -308,12 +367,15 @@
       </div>
     </section>
     <section id="bottomGetItNow" class="bg-medium">
-      <div class="container">
-        <h3 style="[object Object]" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
-        <div class="pro-wrapper">
+      <div class="container text-center">
+        <div class="row">
+          <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
+        </div>
+        <div class="row pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
-            <h3 class="product-name">[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
+            <h3 class="product-name got-subheader">[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
             <p class="p1">[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -448,13 +510,12 @@ ul li.no-check {
         #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; margin-top: 20px; margin-bottom: 10px}
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         #product-price{margin-top: 5px;}
         #getItNow mark{margin-top: 6px;}
-        
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -549,8 +610,9 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        .why-us-title{margin-top:10px;}
+        .why-us-header{margin-top:10px; margin-bottom: 40px;}
         .why-us-text{margin-top:10px;}
+        .why-us-subheader {margin-top: 20px; margin-bottom: 10px;}
         
         .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
         .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
@@ -559,7 +621,8 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        .product-name{font-weight:800;padding-top:10px;}
+        .got-header {margin-top:10px; margin-bottom: 40px;}
+        .got-subheader {margin-top:20px; margin-bottom: 10px;}
         
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
@@ -569,19 +632,14 @@ ul li.no-check {
         
       </style>
       <style>
-        #pro-specific h2 { margin-bottom: 0; }
-        #pro-specific h3 { margin-bottom: 20px; }
         .feature mark { margin-top: 20px; }
-        .feature h3 { margin-top: 0; }
         @media (min-width: 768px) {
-          .feature { text-align: left; }
+          .feature { text-align: left; margin-top: 40px; }
         }
         .product-section{border-bottom: lightgray 1px solid;}
         .products{margin-top: 0px!important;}
-        .uppercase{text-transform: uppercase;}
         .orange-text{color: #ef6c0f;}
         #getItNow .hero-guy{left: 0px;}
-        #getItNow mark{margin-top: 6px;}
         
       </style>
     </atlantis:webstash>
@@ -658,7 +716,7 @@ ul li.no-check {
         $containers.each(function(){
           var $this = $(this);
           var videoId = $this.data('youtube-id');
-          $this.find('.play-button, .cta').bind('click.youtube',function(event){
+          $this.find('.play-button, .cta').on('click.youtube',function(event){
             // remove this event
             $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
       

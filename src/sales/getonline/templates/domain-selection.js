@@ -152,7 +152,7 @@ function domainSearchFormSubmit(e, domainSearched) {
 
         if(isAvailable) {
 
-          domainSearchWizard.showView('#domain-available-view');
+          // domainSearchWizard.showView('#domain-available-view');
 
           if(domainSearch.showRecommendedDomain) {
             $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
@@ -176,7 +176,7 @@ function domainSearchFormSubmit(e, domainSearched) {
           // tokenize header on search available page
           updateNotAvailableDomain('', domainSearched);
 
-          domainSearchWizard.showView('#domain-not-available-view');
+          // domainSearchWizard.showView('#domain-not-available-view');
 
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
@@ -323,8 +323,8 @@ function showSearchSpins($view, domain, alternateDomains){
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
  
-  $view.find(".spin-results").show();
-  $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
+  $view.find(".spin-container").show();
+  $view.find(".spin-results .spin-result:gt(" + (domainSearch.maxNumberOfSpinsToShowByDefault-1) + ")").hide();
 }
 
 function showApi1or2SearchError(e,domain){
@@ -355,7 +355,7 @@ function displayMoreResultsArea(e) {
 }
 
 function updateDomainCountText($view, numberShowing) {
-  var $spinCounts = domainSearchWizard.visibleView().find('.spin-counts');
+  var $spinCounts = $view.find('.spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);

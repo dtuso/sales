@@ -43,7 +43,6 @@ append vars
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
 
   - domainSearchWizard                                = {};
-  - domainSearchWizard.searchNowCallbackFn            = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
   - domainSearchWizard.maxDomainLength                = 63;
   - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
   // - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/" + !{productToDisplay.landingPage} + "' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
@@ -74,6 +73,7 @@ append vars
   - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97032";
   - domainSearchWizard.selectedViewSeeProdBtnCI       = "97031";
   - domainSearchWizard.selectedViewGoToCartBtnCI      = "97030";
+
 block targetedProduct
   .column.website
     img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")

@@ -21,7 +21,6 @@ append vars
   - productToDisplay.packageId = "getonline_website_builder";
   - productToDisplay.itcCode = "p4p_getonline_wsb";
   - productToDisplay.appKey = "slp_GYBO";
-  - productToDisplay.dppErrorReturnUrl = "[@T[link:<relative path='~/getonline/websitebuilder.aspx'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]";
   - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='monthly' promocode='24681357' />]@T]";
   - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|7524' period='yearly' promocode='24681357' />]@T]";
   - productToDisplay.pricing.renewal_monthly = "[@T[multipleproductprice:<list productidlist='464069|101|7524' period='monthly'></list>]@T]";
@@ -43,31 +42,37 @@ append vars
   - productToDisplay.disclaimerCI = "96984";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-wsb-content]@L]";
 
-  - domainSearchWizard                             = {};
-  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.maxDomainLength             = 63;
-  - domainSearchWizard.title                       = "";
-  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
-  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
-  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
-  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.showSearchButton            = true;
-  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.initialViewId               = "domain-search-view";
-  - domainSearchWizard.searchViewSearchBtnCI       = "97033";
-  - domainSearchWizard.dupDomainInCartCI           = "97034";
-  - domainSearchWizard.availViewSearchBtnCI        = "97035";
-  - domainSearchWizard.availViewRecomSelBtnCI      = "97036";
-  - domainSearchWizard.availViewViewAllBtnCI       = "97037";
-  - domainSearchWizard.availViewSearchAgnBtnCI     = "97038";
-  - domainSearchWizard.notAvailViewSearchBtnCI     = "97039";
-  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97041";
-  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97042";
-  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97046";
-  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97043";
-  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97044";
+  - domainSearchWizard                                = {};
+  - domainSearchWizard.maxDomainLength                = 63;
+  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  // - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/" + !{productToDisplay.landingPage} + "' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  - domainSearchWizard.requireDomainToGoToCart        = true;
+  - domainSearchWizard.animateWizard                  = false;
+  - domainSearchWizard.title                          = "";
+  - domainSearchWizard.placeholderText                = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                     = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                   = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.showInfoTypeHere               = false;
+  - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  // - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.infoDupDomainInCart            = "<mark class='selected-domain-name-display'></mark> is already in your cart. To use it with this offer, please go to your <a href='{0}'>cart</a>, delete your domain and search again.";
+  - domainSearchWizard.showSearchButton               = true;
+  - domainSearchWizard.showChoicesWithAvailableDomain = true;
+  - domainSearchWizard.showRecommendedDomain          = true;
+  - domainSearchWizard.initialViewId                  = "domain-available-view";
+  - domainSearchWizard.searchViewSearchBtnCI          = "97033";
+  - domainSearchWizard.dupDomainInCartCI              = "97034";
+  - domainSearchWizard.availViewSearchBtnCI           = "97035";
+  - domainSearchWizard.availViewRecomSelBtnCI         = "97036";
+  - domainSearchWizard.availViewViewAllBtnCI          = "97037";
+  - domainSearchWizard.availViewSearchAgnBtnCI        = "97038";
+  - domainSearchWizard.notAvailViewSearchBtnCI        = "97039";
+  - domainSearchWizard.notAvailViewViewAllBtnCI       = "97041";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97042";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97046";
+  - domainSearchWizard.selectedViewSeeProdBtnCI       = "97043";
+  - domainSearchWizard.selectedViewGoToCartBtnCI      = "97044";
 
 block targetedProduct
   .column.website
@@ -76,7 +81,7 @@ block targetedProduct
     p #{productToDisplay.getItNowDescription}
 
 block productSection
-  section#wordpress.product-section
+  section#productSection.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
@@ -94,7 +99,8 @@ block productSection
               div.video-marquee-info.text-center
                 div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
                 h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
-                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}) [@L[cds.sales/getonline:watch-now]@L]
+                button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal',data-ci='#{productToDisplay.playButtonCI}') [@L[cds.sales/getonline:watch-now]@L]
+
       .row.bubble-row
         .col-xs-2
           img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
@@ -106,4 +112,4 @@ block productSection
 block bottomTargetedProduct
   .column.website
     img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
-    h3 #{productToDisplay.name}
+    h3.got-subheader #{productToDisplay.name}

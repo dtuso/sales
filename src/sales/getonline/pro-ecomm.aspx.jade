@@ -35,21 +35,75 @@ append vars
 
 block domainSearchScripts
 
+block goToCheckout
+  script. // Add to Cart
+    $(document).bind('goToCheckout', goToCheckoutHostingHandler);
+
+    function goToCheckoutHostingHandler(e) {
+      var pkg = {};
+      pkg.pkgid = offerInfo.packageId;
+      pkg.qty = 1;
+      pkg.itc = offerInfo.itcCode;
+      pkg.ci = ciCode;
+      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+
+      var postdata = "requestData=" + JSON.stringify(pkg);
+      $.ajax({
+        type:"POST",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        complete: function (data) {
+          if (data.statusText == "success") {
+            addHostingDomain(domain, ciCode);
+          }
+        },
+        error: function(){
+          showApi3SearchError(e, domain);
+        }
+      });
+    }
+
+    function addHostingDomain(domain, ciCode){
+        var plan = offerInfo.packageId;
+        var domainToAdd = encodeURIComponent(domain.Fqdn);
+        var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+        var pkg = {};
+        pkg.pkgid = plan;
+        pkg.itc = offerInfo.itcCode;
+        pkg.quantity = 1;
+        pkg.ci = ciCode;
+        pkg.custom = { "domain": domainToAdd }
+        var postdata = "requestData=" + JSON.stringify(pkg);
+          $.ajax({
+             type:"POST",
+             url: sapiurl,
+             contentType: "application/json",
+             data: postdata,
+             dataType: "jsonp",
+             complete: function (data) {
+                            if (data.statusText == "success") {
+                                  ##if(isManager())
+                                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                                  ##else
+                                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                                  ##endif
+                              }
+                        }
+            });      
+    }
+
 append pageStyles
-  style.  
-    #pro-specific h2 { margin-bottom: 0; }
-    #pro-specific h3 { margin-bottom: 20px; }
+  style.
     .feature mark { margin-top: 20px; }
-    .feature h3 { margin-top: 0; }
     @media (min-width: 768px) {
-      .feature { text-align: left; }
+      .feature { text-align: left; margin-top: 40px; }
     }
     .product-section{border-bottom: lightgray 1px solid;}
     .products{margin-top: 0px!important;}
-    .uppercase{text-transform: uppercase;}
     .orange-text{color: #ef6c0f;}
     #getItNow .hero-guy{left: 0px;}
-    #getItNow mark{margin-top: 6px;}
 
 block domainSearchStyles
 
@@ -116,7 +170,7 @@ block proInterview
           img.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
 block productSection
-  section#eccom.product-section
+  section#productSection.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
@@ -124,7 +178,7 @@ block productSection
           h2.text-center [@L[cds.sales/getonline:pro-ecomm-product-info-header]@L]
           h3.text-center !{productToDisplay.productInfoText}
           button#external.btn.btn-default-dark.center-block(data-toggle='modal', data-target='#g-modal',data-ci="#{productToDisplay.viewTemplatesCI}") [@L[cds.sales/getonline:view-portfolio]@L]
-      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}", style={'padding-bottom': '0px'})
+      section.video-marquee-wrapper(data-youtube-id="#{productToDisplay.productYouTubeId}")
         .container
           div(data-lazyload-source!="#{productToDisplay.productInfoImageUrl}", class="lazyload video-marquee video-marquee-black full-video monitor")
           .row
@@ -142,13 +196,15 @@ block office365
 
 block bottomGetItNow
   section#bottomGetItNow.bg-medium
-    .container
-      h3.price-token.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
-      .pro-wrapper
+    .container.text-center
+      .row
+        h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
+        h3.price-token.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
+      .row.pro-wrapper
         .col-xs-6
           img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
         .col-xs-6
-          h3.product-name #{productToDisplay.name}
+          h3.product-name.got-subheader #{productToDisplay.name}
           p.p1 #{productToDisplay.getItNowDescription}
           .col-xs-12.text-center
             form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
