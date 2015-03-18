@@ -178,8 +178,8 @@ append headScripts
           updateSearchedDomain(domainName);
         }
 
-        function domainAvailableHandler(e, domainName) {
-          updateRecommendedDomain(domainName);
+        function domainAvailableHandler(e, domain) {
+          updateRecommendedDomain(domain.Fqdn);
         }
 
         function tldRegistrationErrorHandler(e, tldRegErr) {
@@ -187,16 +187,16 @@ append headScripts
           window.location.href = '#domainSearchWizardSection';
         }
 
+        // These need to be outside of doc.ready() in order to get registered before search wizard doc.ready()
         $(document).bind('domainSearch', domainSearchHandler);
         $(document).bind('domainAvailable', domainAvailableHandler);
         $(document).bind('validDomainSelected', validDomainSelectedHandler);
         $(document).bind('tldRegErr', tldRegistrationErrorHandler);
 
-        $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-        $(document).find('.btn-see-bundle').on('click', goToProductSection);
-
         $(document).ready(function(){
 
+          $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
+          $(document).find('.btn-see-bundle').on('click', goToProductSection);
           $(document).find('.btn-purchase').on('click', verifyCanCheckOut);
 
           if(offerInfo.businessName != '' && getParameterByName('tldRegErr') == '') {

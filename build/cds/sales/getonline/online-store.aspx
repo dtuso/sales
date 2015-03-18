@@ -1,4 +1,5 @@
 
+<!-- - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/" + !{productToDisplay.landingPage} + "' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"-->
 <!-- - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";--><!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
@@ -198,8 +199,8 @@
           updateSearchedDomain(domainName);
         }
         
-        function domainAvailableHandler(e, domainName) {
-          updateRecommendedDomain(domainName);
+        function domainAvailableHandler(e, domain) {
+          updateRecommendedDomain(domain.Fqdn);
         }
         
         function tldRegistrationErrorHandler(e, tldRegErr) {
@@ -207,16 +208,16 @@
           window.location.href = '#domainSearchWizardSection';
         }
         
+        // These need to be outside of doc.ready() in order to get registered before search wizard doc.ready()
         $(document).bind('domainSearch', domainSearchHandler);
         $(document).bind('domainAvailable', domainAvailableHandler);
         $(document).bind('validDomainSelected', validDomainSelectedHandler);
         $(document).bind('tldRegErr', tldRegistrationErrorHandler);
         
-        $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-        $(document).find('.btn-see-bundle').on('click', goToProductSection);
-        
         $(document).ready(function(){
         
+          $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
+          $(document).find('.btn-see-bundle').on('click', goToProductSection);
           $(document).find('.btn-purchase').on('click', verifyCanCheckOut);
         
           if(offerInfo.businessName != '' && getParameterByName('tldRegErr') == '') {
@@ -335,9 +336,10 @@ function domainSearchFormSubmit(e, domainSearched) {
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
     $('#domainAvailableViewSearchForm').show();
+    $('#domain-available-view').find('.search-again-section').hide();
     pageStartupSearch = false;
   } else {
-    $thisSection = $(document).find(domainSearch.initialViewId);
+    $thisSection = $('#'+domainSearch.initialViewId);
     $('#domainAvailableViewSearchForm').hide();
     pageStartupSearch = true;
   }
@@ -375,29 +377,28 @@ function domainSearchFormSubmit(e, domainSearched) {
             alternateDomains.shift();
             isAvailable = true;
           }
-        }
+        } 
 
         if(isAvailable) {
 
-          $(document).trigger('domainAvailable', exactMatchDomain.Fqdn);
-
           domainSearchWizard.showView('#domain-available-view');
 
-          // tokenize header on search available page
-          $('#available-domain-name').text(exactMatchDomain.Fqdn);
-          $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
-          $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
+          if(domainSearch.showRecommendedDomain) {
+            $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
+            $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
+            $('#recommended-domain').show();
+          }
 
-          // Domain is taken, show spins if possible
+          // If desired and spins are available, show them
           if(domainSearch.showChoicesWithAvailableDomain && alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          // should be in desired view
-          if(!pageStartupSearch)
-            animateWizard($thisSection, $('#domain-available-view'));
+          $(document).trigger('domainAvailable', exactMatchDomain);
+
+          // // should be in desired view
+          // if(!pageStartupSearch)
+          animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
 
@@ -408,8 +409,6 @@ function domainSearchFormSubmit(e, domainSearched) {
 
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
             $('#domainSearchWizard').find('.search-form-input').val(''); 
@@ -486,11 +485,11 @@ function navigateToSearchAgain(e) {
 }
 
 function verifyCanCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.requireDomainToGoToCart && domainSearch.selectedDomainName == '') {
     window.location.href = '#domainSearchWizardSection';
   }
   else {
-    $(document).trigger('goToCheckout');
+    $(e.target).trigger('goToCheckout');
   }
 }
 
@@ -593,19 +592,29 @@ function updateDomainCountText($view, numberShowing) {
 }
 
 function animateWizard($currentView, $animateToView) {  
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  var currentViewHeight;
-  var windowWidth = $(window).width();
-
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-    currentViewHeight = $currentView.height();
+  if(!domainSearch.animateWizard) {
     $currentView.hide();
+    $animateToView.show();
   } else {
-    currentViewHeight = 0;
-  }
+    var currentViewHeight = $currentView.height(),
+      windowWidth = $(window).width(),
+      $wizard = $('#domainSearchWizardSection'),
+      wizardHeight = $('#domainSearchWizardSection').height();
 
-  $animateToView.show();
+    // show view offscreen to get height
+    $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+    // can only get height when shown      
+    var toViewHeight = $animateToView.height(),
+      maxHeight = Math.max(currentViewHeight, toViewHeight),
+      minHeight = Math.min(currentViewHeight, toViewHeight);
+    
+    //run the animations
+    animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  }
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
@@ -721,7 +730,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
       </div>
     </section>
     <section id="domainSearchWizardSection" class="bg-primary-o">
-      <div id="domain-search-view" style="[object Object]" class="js-domain-search-wizard-section">
+      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -729,13 +738,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
           <div class="row">
-            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
           <div class="row">
@@ -771,7 +780,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
         </div>
       </div>
-      <div id="domain-available-view" style="[object Object]" class="js-domain-search-wizard-section">
+      <div id="domain-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -779,13 +788,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
           <div class="row">
-            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
             </div>
           </div>
           <div class="row">
@@ -812,11 +821,11 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:recommended-domain]@L]</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:recommended-domain]@L]</h4>
             </div>
           </div>
-          <div id="available-domain" class="row bg-light">
-            <div class="col-md-9 white"><span id="available-domain-name" class="domain-name-display lowercase available-domain-name"></span></div>
+          <div id="recommended-domain" style="display:none" class="row bg-light">
+            <div class="col-md-9 white"><span id="recommended-domain-name" class="domain-name-display lowercase available-domain-name"></span></div>
             <div class="col-md-3 white">
               <button data-ci="97013" class="btn btn-primary select-and-continue available-domain-name uppercase">[@L[cds.sales/getonline:choose-select-button]@L]</button>
               <div class="spin-results-message checking-availability">[@L[cds.sales/getonline:checking-availability]@L]</div>
@@ -827,13 +836,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
+              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97024" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="[object Object]" class="spin-results"></div>
+          <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -846,10 +855,10 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="[object Object]" class="text-center"><span data-ci="97024" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="97024" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-          <div style="[object Object]" class="row search-again-section">
+          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
             <div class="col-md-12 text-center">
               <btn data-ci="97023" class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
@@ -863,7 +872,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
         </div>
       </div>
-      <div id="domain-not-available-view" style="[object Object]" class="js-domain-search-wizard-section">
+      <div id="domain-not-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -871,35 +880,37 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
           <div class="row">
-            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <h4 style="[object Object]" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
+              <h4 style="margin-top:10px" class="domain-starts strong">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
             </div>
           </div>
-          <form id="domainNotAvailableViewSearchForm">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 offer-search-box">
-                <div class="input-group">
-                  <input type="text" placeholder="[@L[cds.sales/getonline:placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                    <button type="button" name="searchButton" data-ci="97027" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/getonline:search]@L]</button></span>
+          <div class="row">
+            <form id="domainNotAvailableViewSearchForm">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12">
                 </div>
               </div>
-            </div>
-            <div class="row domain-search-messaging-row">
-              <div class="col-xs-12 col-sm-12">
-                <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 offer-search-box">
+                  <div class="input-group">
+                    <input type="text" placeholder="[@L[cds.sales/getonline:placeholder]@L]" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
+                      <button type="button" name="searchButton" data-ci="97027" class="btn btn-primary btn-lg offer-search-btn">[@L[cds.sales/getonline:search]@L]</button></span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </form>
+              <div class="row domain-search-messaging-row">
+                <div class="col-xs-12 col-sm-12">
+                  <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                </div>
+              </div>
+            </form>
+          </div>
           <div class="row not-available-domain-name-row">
             <div class="col-xs-12 col-sm-12 text-center">
               <h2 class="word-break">[@L[cds.sales/getonline:domain-taken-message]@L]</h2>
@@ -909,13 +920,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
+              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97029" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="[object Object]" class="spin-results"></div>
+          <div style="margin-top:10px" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -928,12 +939,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="[object Object]" class="text-center"><span data-ci="97029" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
-            </div>
-          </div>
-          <div style="[object Object]" class="row search-again-section">
-            <div class="col-md-12 text-center">
-              <btn data-ci="97028" class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
+              <h6 style="margin-top:10px" class="text-center"><span data-ci="97029" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
           <div class="row bubble-row product-section">
@@ -945,7 +951,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
         </div>
       </div>
-      <div id="domain-selected-view" style="[object Object]" class="js-domain-search-wizard-section">
+      <div id="domain-selected-view" style="display:none" class="js-domain-search-wizard-section">
         <div id="selected-domain" class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -953,8 +959,8 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
           <div class="row">
-            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
           <div class="row">
@@ -967,12 +973,12 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
-          <div style="[object Object]" class="row">
+          <div style="padding-top:30px;padding-bottom:10px" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97032" class="btn btn-primary btn-search-again btn-lg uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
-          <div style="[object Object]" class="row">
+          <div style="padding-top:30px;padding-bottom:10px" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97031" class="btn btn-primary btn-see-bundle btn-lg uppercase">[@L[cds.sales/getonline:see-other-products]@L]</btn>
               <btn data-ci="97030" class="btn btn-purchase btn-plan btn-lg uppercase p4p">[@L[cds.sales/getonline:checkout-now]@L]</btn>
@@ -987,7 +993,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
         </div>
       </div>
-      <div id="api-failure" style="[object Object]" class="sf-dialog api-B-failure">
+      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
         <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
           <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
         </h2>
@@ -1012,7 +1018,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
                 <div class="video-marquee-info text-center">
                   <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
                   <h4 class="uppercase walsheim-bold">[@L[cds.sales/getonline:ols-product-video-info-text]@L]</h4>
-                  <button id="watchVideo" style="[object Object]" data-toggle="modal" data-target="#g-modal" data-ci="96300" class="cta btn btn-default-dark btn-md uppercase">[@L[cds.sales/getonline:watch-now]@L]</button>
+                  <button id="watchVideo" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" data-ci="96300" class="cta btn btn-default-dark btn-md uppercase">[@L[cds.sales/getonline:watch-now]@L]</button>
                 </div>
               </div>
             </div>
@@ -1378,7 +1384,6 @@ ul li.no-check {
         
         //- .offer-search-box { padding-bottom:20px;}
         .search-message { display: none; margin-left:20px; margin-top:30px;width:65%;}
-        .domain-search-messaging-row {padding-bottom: 40px;}
         h2.get-a-domain-text {
           margin: 20px 0 5px;
           font-size:24px;
@@ -1477,7 +1482,7 @@ ul li.no-check {
         #domain-available-view .show-more-arrow { position: relative; top: 12px; margin-left: 5px; width: 0; height: 0; border: 11px solid transparent; border-top-color: #000; content: ''; }
         #domain-available-view button.view-all-button {font-size: 18px; color: #6586C4; font-family: Arial;}
         
-        #available-domain {margin-top: 15px;}
+        #recommended-domain {margin-top: 15px;}
         //- #available-domain .spin-results-message,
         //- .spin-results .spin-results-message, 
         //- .spin-results .spin-result, 
@@ -1610,14 +1615,18 @@ ul li.no-check {
         },
         maxNumberOfSpinsToShowByDefault: 3,
         totalSpinResults: 0,
-        dppErrorReturnUrl: "[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]",
+        dppErrorReturnUrl: '[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]',
+        animateWizard: false,
         animationTime: 800,
         animationEasingType: 'swing',
         isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us',
         showChoicesWithAvailableDomain: true,
         showTypeYourBusinessName: false,
+        showRecommendedDomain: true,
+        requireDomainToGoToCart: true,
         selectedDomainName: '',
-        initialViewId: 'domain-search-view'
+        initialViewId: 'domain-available-view',
+        requireDomainToGoToCart: true
       };
       
       var domainSearchWizard = {
@@ -2045,48 +2054,6 @@ ul li.no-check {
           domainNotAvailableViewSearchForm.ensureValidTld(domainName);
         });
         domainNotAvailableViewSearchForm.showTypeYourBusinessName($domainNotAvailableViewSearchForm);
-      
-        //- // *******************************************************************************
-        //- //- display error on return from DPP's TLD eligibility requirements failure
-        //- if(getParameterByName('tldRegErr').length > 0) {
-        //-   showDomainRegistrationFailure(getParameterByName('tldRegErr'));
-        //- }
-      
-        // 
-        // *******************************************************************************
-      
-      
-        //- // display error on return from DPP's TLD eligibility requirements failure
-        //- var tldErr = getParameterByName('tldRegErr'),
-        //-     dppHasError = tldErr.length > 0,
-        //-     dupErr = getParameterByName('dppError');
-      
-        //- if(dppHasError) {
-        //-   // note by default tldRegErr will be on the url query string
-        //-   // if it's a dup, dpp will add in an additional parameter to let us know
-        //-   switch(dupErr){
-            
-        //-     case("dup"):
-        //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
-        //-       $('#domainNotAvailableViewSearchForm .dup-domain-fail').show();
-        //-       break;
-      
-        //-     default:
-        //-       var $failArea = $('#domainNotAvailableViewSearchForm .domain-eligibility-fail'), 
-        //-           html = $failArea.html();
-        //-       html = html.replace(/\{0\}/gi, tldErr)
-        //-       $failArea.html(html);
-        //-       $('#domainNotAvailableViewSearchForm .search-message').hide();
-        //-       $('#domainNotAvailableViewSearchForm .domain-eligibility-fail').show();
-        //-       break;
-      
-        //-   }
-        //- }
-        //- // else {
-        //- //   $('# .search-message').hide();
-        //- //   $('# .type-your-business-name').show();
-        //- // }
-      
       });
     </script>
   </body>

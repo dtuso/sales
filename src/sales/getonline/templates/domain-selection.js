@@ -107,9 +107,10 @@ function domainSearchFormSubmit(e, domainSearched) {
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
     $('#domainAvailableViewSearchForm').show();
+    $('#domain-available-view').find('.search-again-section').hide();
     pageStartupSearch = false;
   } else {
-    $thisSection = $(document).find(domainSearch.initialViewId);
+    $thisSection = $('#'+domainSearch.initialViewId);
     $('#domainAvailableViewSearchForm').hide();
     pageStartupSearch = true;
   }
@@ -147,29 +148,28 @@ function domainSearchFormSubmit(e, domainSearched) {
             alternateDomains.shift();
             isAvailable = true;
           }
-        }
+        } 
 
         if(isAvailable) {
 
-          $(document).trigger('domainAvailable', exactMatchDomain.Fqdn);
-
           domainSearchWizard.showView('#domain-available-view');
 
-          // tokenize header on search available page
-          $('#available-domain-name').text(exactMatchDomain.Fqdn);
-          $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
-          $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
+          if(domainSearch.showRecommendedDomain) {
+            $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
+            $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
+            $('#recommended-domain').show();
+          }
 
-          // Domain is taken, show spins if possible
+          // If desired and spins are available, show them
           if(domainSearch.showChoicesWithAvailableDomain && alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          // should be in desired view
-          if(!pageStartupSearch)
-            animateWizard($thisSection, $('#domain-available-view'));
+          $(document).trigger('domainAvailable', exactMatchDomain);
+
+          // // should be in desired view
+          // if(!pageStartupSearch)
+          animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
 
@@ -180,8 +180,6 @@ function domainSearchFormSubmit(e, domainSearched) {
 
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
             $('#domainSearchWizard').find('.search-form-input').val(''); 
@@ -258,11 +256,11 @@ function navigateToSearchAgain(e) {
 }
 
 function verifyCanCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.requireDomainToGoToCart && domainSearch.selectedDomainName == '') {
     window.location.href = '#domainSearchWizardSection';
   }
   else {
-    $(document).trigger('goToCheckout');
+    $(e.target).trigger('goToCheckout');
   }
 }
 
@@ -365,19 +363,29 @@ function updateDomainCountText($view, numberShowing) {
 }
 
 function animateWizard($currentView, $animateToView) {  
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  var currentViewHeight;
-  var windowWidth = $(window).width();
-
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-    currentViewHeight = $currentView.height();
+  if(!domainSearch.animateWizard) {
     $currentView.hide();
+    $animateToView.show();
   } else {
-    currentViewHeight = 0;
-  }
+    var currentViewHeight = $currentView.height(),
+      windowWidth = $(window).width(),
+      $wizard = $('#domainSearchWizardSection'),
+      wizardHeight = $('#domainSearchWizardSection').height();
 
-  $animateToView.show();
+    // show view offscreen to get height
+    $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+    // can only get height when shown      
+    var toViewHeight = $animateToView.height(),
+      maxHeight = Math.max(currentViewHeight, toViewHeight),
+      minHeight = Math.min(currentViewHeight, toViewHeight);
+    
+    //run the animations
+    animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  }
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
