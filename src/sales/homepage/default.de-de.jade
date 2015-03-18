@@ -7,6 +7,9 @@ block marquee
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
 
+block bugBar
+  +tldBugs(["net","co","de","berlin"])
+
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade
   | 
@@ -18,6 +21,3 @@ block secondaryTile
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   |  ##endif
-
-block bugBar
-  +tldBugs(["com","co","de","berlin"])
