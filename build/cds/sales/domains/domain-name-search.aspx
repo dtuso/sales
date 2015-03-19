@@ -25,6 +25,35 @@
     <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
@@ -236,6 +265,66 @@
           .tldlogo-dot-wiki {background-position: -66px -1196px;height: 40px;width: 91px;}
           .tldlogo-dot-xyz {background-position: 0 -876px;height: 40px;width: 58px;}
         </style>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var planTileMixin = {
+          
+            findMaxHeight: function($items) {
+              var maxHeight = 0;
+              $items.each(function(index, item) {
+                maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+              });
+              return maxHeight;
+            },
+            autoHeightIt: function($obj, selector) {
+              var $objs = $obj.find(selector);
+              var maxHeight = planTileMixin.findMaxHeight($objs);
+              if( maxHeight > 0 ) $objs.css("height", maxHeight);
+            },
+            autoHeighPlanBoxInsides: function() {
+              $tiles = $('#plans').find('.plan-tile');
+              planTileMixin.autoHeightIt($tiles, '.title-wrap');
+              planTileMixin.autoHeightIt($tiles, '.price-wrap');
+              planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+          
+              // align each plan-item with eachother in the same line
+              // however, only do this if each plan-tile has the same 
+              // number of plan-item's in it.
+              var numItems = 0, bail= false;
+              $tiles.each(function(){
+                var $tile = $(this);
+                var numPlanItems = $tile.find('.plan-item').length;
+                if(numItems==0) {
+                  numItems = numPlanItems;
+                }
+                if(numItems != numPlanItems) bail = true;
+              });
+              if(bail || numItems == 0) return;
+              // loop thru each plan item and adjust independantly
+              for(var i=0; i<numItems; i++) {            
+                planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+              }
+          
+            },
+            autoHeightPlanBoxes: function() {
+              // auto height the plan boxes
+              $(".pro-plans").each(function(index, outerPlan) {
+                if($(outerPlan).hasClass('ignore-same-height')) 
+                  return;
+                planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+              });
+            }
+          };
+          
+          $(document).ready(function(){
+            if ($(window).width() < 768) 
+              return; /* bail out because too narrow to list more than one wide */
+            planTileMixin.autoHeighPlanBoxInsides();
+            planTileMixin.autoHeightPlanBoxes();
+          });
+          
+        </script>
       </atlantis:webstash>
       <atlantis:webstash type="css">
         <style>.plan-tile { 
@@ -639,13 +728,17 @@
               <div id="{{pod.PodId}}" ng-repeat="pod in podsDataTop" class="col-sx-3">
                 <div class="col-md-3 col-sm-6 plan-tile plan-pro">
                   <div class="pro-plan-wrap">
-                    <div class="tldlogo-wrap">
-                      <div class="tldlogo {{pod.logoclass}}"></div>
+                    <div class="title-wrap">
+                      <div class="tldlogo-wrap">
+                        <div class="tldlogo {{pod.logoclass}}"></div>
+                      </div>
+                      <p ng-bind-html="pod.PodText" class="plan-text"> </p>
                     </div>
-                    <p ng-bind-html="pod.PodText" class="plan-text"> </p>
-                    <div class="plan-price-wrap">
-                      <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
-                        <strike>{{pod.ListPrice}}</strike></span>
+                    <div class="price-wrap">
+                      <div class="plan-price-wrap">
+                        <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                          <strike>{{pod.ListPrice}}</strike></span>
+                      </div>
                     </div><a href="{{pod.ButtonURL}}" data-index="1" ng-hide="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:PreRegisterRebrand]@L]</a><a href="{{pod.ButtonURL}}" data-index="1" ng-show="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                   </div>
                 </div>
@@ -1308,7 +1401,7 @@ top: -6px;
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width()+ 150;
+        var linkArea = $('.navbar-nav').width()+ 190;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";
@@ -1316,7 +1409,7 @@ top: -6px;
         {
           $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
-        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        while($('.navbar-nav').width() + 190 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
           $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
         }
@@ -1389,6 +1482,66 @@ top: -6px;
         </style>
       </atlantis:webstash>
       <h2 class="text-center">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var planTileMixin = {
+          
+            findMaxHeight: function($items) {
+              var maxHeight = 0;
+              $items.each(function(index, item) {
+                maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+              });
+              return maxHeight;
+            },
+            autoHeightIt: function($obj, selector) {
+              var $objs = $obj.find(selector);
+              var maxHeight = planTileMixin.findMaxHeight($objs);
+              if( maxHeight > 0 ) $objs.css("height", maxHeight);
+            },
+            autoHeighPlanBoxInsides: function() {
+              $tiles = $('#plans').find('.plan-tile');
+              planTileMixin.autoHeightIt($tiles, '.title-wrap');
+              planTileMixin.autoHeightIt($tiles, '.price-wrap');
+              planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+          
+              // align each plan-item with eachother in the same line
+              // however, only do this if each plan-tile has the same 
+              // number of plan-item's in it.
+              var numItems = 0, bail= false;
+              $tiles.each(function(){
+                var $tile = $(this);
+                var numPlanItems = $tile.find('.plan-item').length;
+                if(numItems==0) {
+                  numItems = numPlanItems;
+                }
+                if(numItems != numPlanItems) bail = true;
+              });
+              if(bail || numItems == 0) return;
+              // loop thru each plan item and adjust independantly
+              for(var i=0; i<numItems; i++) {            
+                planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+              }
+          
+            },
+            autoHeightPlanBoxes: function() {
+              // auto height the plan boxes
+              $(".pro-plans").each(function(index, outerPlan) {
+                if($(outerPlan).hasClass('ignore-same-height')) 
+                  return;
+                planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+              });
+            }
+          };
+          
+          $(document).ready(function(){
+            if ($(window).width() < 768) 
+              return; /* bail out because too narrow to list more than one wide */
+            planTileMixin.autoHeighPlanBoxInsides();
+            planTileMixin.autoHeightPlanBoxes();
+          });
+          
+        </script>
+      </atlantis:webstash>
       <atlantis:webstash type="css">
         <style>.plan-tile { 
   margin-top: -145px; 
@@ -1792,11 +1945,15 @@ top: -6px;
                 <div class="col-sm-4 plan-tile plan-pro">
                   <div class="pro-plan-wrap">
                     <div class="plan-flag">[@L[cds.sales/gd/domains/domain-name-search:NowAvailable]@L]</div>
-                    <h3 ng-bind-html="pod.PodTLD" class="plan-title"></h3>
-                    <p ng-bind-html="pod.PodText" class="plan-text"> </p>
-                    <div class="plan-price-wrap">
-                      <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
-                        <strike>{{pod.ListPrice}}</strike></span>
+                    <div class="title-wrap">
+                      <h3 ng-bind-html="pod.PodTLD" class="plan-title"></h3>
+                      <p ng-bind-html="pod.PodText" class="plan-text"> </p>
+                    </div>
+                    <div class="price-wrap">
+                      <div class="plan-price-wrap">
+                        <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
+                          <strike>{{pod.ListPrice}}</strike></span>
+                      </div>
                     </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
                   </div>
                 </div>
@@ -1954,17 +2111,17 @@ top: -6px;
             </div>
           </div>
           <div class="row">
-            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+            <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4 0 ">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateProtectionTab]@L]</div>
               </div>
             </div>
-            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4 1 ">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTab]@L]</div>
               </div>
             </div>
-            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4 2 ">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/domains/domain-name-search:CertifiedDomainsTab]@L]</div>
               </div>
@@ -2802,7 +2959,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-        
       </style>
       <!-- domain-name-search page styling-->
       <style>
@@ -2860,17 +3016,15 @@ ul li.no-check {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
-        }
+        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
+          var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).html(tokenized);
+        });
+        $('[data-content*="{icannfee}"]').each(function(){
+          var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).attr('data-content',tokenized);
+        });
+        
       });
       
     </script>
