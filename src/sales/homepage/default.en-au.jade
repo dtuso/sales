@@ -10,6 +10,9 @@ block marquee
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/wsb-free-domain-typo/default_template" /> ]@P]
   |  ##endif
 
+block bugBar
+  +tldBugs(["net","co","com-au","biz"])
+
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting.jade
   | 
@@ -21,9 +24,6 @@ block secondaryTile
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   |  ##endif
-  
-block bugBar
-  +tldBugs(["com","co","com-au","club"])
 
 block cookieWarning
   script(type="text/javascript").
