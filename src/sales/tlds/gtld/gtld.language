@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 
-name: GCEMO-559
-comments: fix typo
+id: 55037814f778fc12bce6e7c8
+name: GCEMO-712
+comments: merch updates 3/13/2015
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -445,8 +445,12 @@ Enter a <b>Domain Name</b>
 .rocks
 <phrase key="MainBannerCarouselSlide2TextNinja" />
 Show off your <strong>.ninja</strong> skills
+<phrase key="MainBannerCarouselSlide2Site" />
+<strong>.site</strong> can be anything you want it to be.
 <phrase key="MainBannerCarouselSlide3TextEmail" />
 <strong>.email</strong> delivers
+<phrase key="MainBannerCarouselSlide2World" />
+Have it all? <strong>.world</strong> is for you.
 <phrase key="PreRegisterNow" />
 Pre-register now
 <phrase key="RegisterNow" />

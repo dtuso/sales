@@ -1,12 +1,11 @@
----
-location: sales/homepage/default.fi-fi
-id: false
-name: GCEMO-700
----
 extends ../../layouts/homepage/default_base
 
 block marquee
-  | [@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |  ##endif
 
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade
@@ -14,4 +13,8 @@ block primaryTile
   | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
 
 block secondaryTile
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  |  ##endif

@@ -1,12 +1,13 @@
----
-location: sales/homepage/default.de-ch
-id: false
-name: GCEMO-700
----
 extends ../../layouts/homepage/default_base
-
 block marquee
-  | [@P[cdsDocument:<data app="sales" location="homepage/marquee/com-anniversary/default_template" /> ]@P]
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |  ##endif
+
+block bugBar
+  +tldBugs(["net","co","ch","biz"])
 
 block primaryTile
   | 
@@ -14,4 +15,4 @@ block primaryTile
 
 block secondaryTile
   | 
-  | [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  | [@P[cdsDocument:<data app="sales" location="homepage/tile/ch-free-transfer/default_template" /> ]@P]
