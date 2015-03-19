@@ -1603,8 +1603,7 @@ ul li.no-check {
         showRecommendedDomain: true,
         requireDomainToGoToCart: true,
         selectedDomainName: '',
-        initialViewId: 'domain-available-view',
-        requireDomainToGoToCart: true
+        initialViewId: 'domain-available-view'
       };
       
       var domainSearchViewForm = {

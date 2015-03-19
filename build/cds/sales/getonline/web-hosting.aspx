@@ -1666,8 +1666,7 @@ ul li.no-check {
         showRecommendedDomain: true,
         requireDomainToGoToCart: true,
         selectedDomainName: '',
-        initialViewId: 'domain-search-view',
-        requireDomainToGoToCart: true
+        initialViewId: 'domain-search-view'
       };
       
       var domainSearchViewForm = {
