@@ -63,38 +63,9 @@ $(document).ready(function() {
   $(document).find('.view-all-button').on('click', displayMoreResultsArea);
 
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
-  $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
-  $(document).find('.btn-see-bundle').on('click', goToShowProducts);
-
-  $("[data-ci-workaround]").click(function(a){
-    var $this=$(this);
-    FastballEvent_MouseClick(a,$this.attr("data-ci-workaround"),$(this)[0],"a");
-    fbiLibCheckQueue();
-  });
 });
 
-function updateSearchedDomain(e, domain) {
-  $(document).find('.searched-domain-name-display').text(domain);
-}
-
-function updateRecommendedDomain(domain) {
-  if(domainSearch.selectedDomainName == '')
-    $(document).find('.selected-domain-name-display').text(domain);
-}
-
-function updateSelectedDomain(domain) {
-  domainSearch.selectedDomainName = domain;
-  $(document).find('.selected-domain-name-display').text(domain);
-}
-
-function updateNotAvailableDomain(e, domain) {
-  $(document).find('.not-available-domain-name-display').text(domain);
-}
-
 function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
 
   var $this = $(selector),
     formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
@@ -115,7 +86,6 @@ function showAndOrderDynamicTldsInList(selector) {
   });
 
   // show sorted list
-  // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
 }
 
@@ -129,9 +99,10 @@ function domainSearchFormSubmit(e, domainSearched) {
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
     $('#domainAvailableViewSearchForm').show();
+    $('#domain-available-view').find('.search-again-section').hide();
     pageStartupSearch = false;
   } else {
-    $thisSection = $(document).find(domainSearch.initialViewId);
+    $thisSection = $('#'+domainSearch.initialViewId);
     $('#domainAvailableViewSearchForm').hide();
     pageStartupSearch = true;
   }
@@ -152,6 +123,8 @@ function domainSearchFormSubmit(e, domainSearched) {
     cache: false,
     success: function(data){ 
 
+      $(document).trigger('onDomainSearch', domainSearched);
+      
       if(data == null) {
         showApi1or2SearchError(e, domainSearched);
       } else {
@@ -167,49 +140,38 @@ function domainSearchFormSubmit(e, domainSearched) {
             alternateDomains.shift();
             isAvailable = true;
           }
-        }
+        } 
 
         if(isAvailable) {
 
-          updateRecommendedDomain(exactMatchDomain.Fqdn);
+          if(domainSearch.showRecommendedDomain) {
+            $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
+            $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
+            $('#recommended-domain').show();
+          }
 
-          domainSearchWizard.showView('#domain-available-view');
-
-          // tokenize header on search available page
-          $('#available-domain-name').text(exactMatchDomain.Fqdn);
-          $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
-          $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
-
-          // Domain is taken, show spins if possible
-          if(alternateDomains.length > 0) {
-
-            // SHOW SPINS
+          // If desired and spins are available, show them
+          if(domainSearch.showChoicesWithAvailableDomain && alternateDomains.length > 0) {
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          // should be in desired view
-          if(!pageStartupSearch)
-            animateWizard($thisSection, $('#domain-available-view'));
+          $(document).trigger('onDomainAvailable', exactMatchDomain);
+
+          animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
 
-          // tokenize header on search available page
-          updateNotAvailableDomain('', domainSearched);
-
-          domainSearchWizard.showView('#domain-not-available-view');
-
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
             $('#domainSearchWizard').find('.search-form-input').val(''); 
           }
 
+          $(document).trigger('onDomainNotAvailable', exactMatchDomain);
+
           animateWizard($thisSection, $('#domain-not-available-view'));
         }    
-
       }
     },
     error: function(){
@@ -263,47 +225,30 @@ function validDomainSelected(e){
 
   var $this = $(e.target),
     domain = $this.data('domain');
-
-  updateSelectedDomain(domain.Fqdn);
-
-  $(document).find('.btn-purchase').data('domain', domain);
-  $('#got-domain-not-selected').hide();
-  $('#got-domain-selected').show();
-  $('#bottomSearchAgain').show();
+  domainSearch.selectedDomainName = domain;
 
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
-
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
-  window.location.href = '#domain-selected-view';
+
+  $(document).trigger('onValidDomainSelected', domain);
 }
 
 function navigateToSearchAgain(e) { 
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
-  window.location.href = '#domain-search-view';
-}
-
-function goToCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
-    window.location.href = '#domainSearchWizardSection';
-  }
-  else {
-    goToDppCheckoutPage(e);
-  }
-}
-
-function goToDomainSearchWizard()
-{
-  animateWizard($('#domain-selected-view'), $('#domain-search-view'));
   window.location.href = '#domainSearchWizardSection';
 }
 
-function goToShowProducts()
-{
-  window.location.href = '#bottomGetItNow';
+function verifyCanCheckOut(e) {
+  if(domainSearch.requireDomainToGoToCart && domainSearch.selectedDomainName == '') {
+    window.location.href = '#domainSearchWizardSection';
+  }
+  else {
+    $(e.target).trigger('goToCheckout');
+  }
 }
 
-function goToDppCheckoutPage(e) {
+function goToCheckoutHandler(e) {
   var $this = $(e.target),
     domain = $this.data('domain'),
     ciCode = $this.data('ci'),
@@ -318,80 +263,23 @@ function goToDppCheckoutPage(e) {
   apiEndpoint3 = apiEndpoint3.replace('returnUrl=returnUrl', 'returnUrl=' +  sourceurl );
 
   $.ajaxSetup({cache:false});
-  if(offerInfo.landingPage.indexOf("web-hosting") > -1) {
-    var pkg = {};
-    pkg.pkgid = offerInfo.packageId;
-    pkg.qty = 1;
-    pkg.itc = offerInfo.itcCode;
-    pkg.ci = ciCode;
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
-
-    var postdata = "requestData=" + JSON.stringify(pkg);
-    $.ajax({
-      type:"POST",
-      url: sapiurl,
-      contentType: "application/json",
-      data: postdata,
-      dataType: "jsonp",
-      complete: function (data) {
-        if (data.statusText == "success") {
-          addHostingDomain(domain, ciCode);
-        }
-      },
-      error: function(){
-        showApi3SearchError(e, domain);
-      }
-    });
-    
-  } else{
-    $.ajax({
-       url: apiEndpoint3,
-       type: 'GET',
-       dataType: 'json',
-       cache: false,
-       success: function(data){
-         if(data && data.Success) {
-           window.location = data.NextStepUrl;
-           return;
-         } else {
-           showApi3SearchError(e, domain);
-         }
-    },
-    error: function(){
-      showApi3SearchError(e, domain);
-    }
-   });
+  $.ajax({
+     url: apiEndpoint3,
+     type: 'GET',
+     dataType: 'json',
+     cache: false,
+     success: function(data){
+       if(data && data.Success) {
+         window.location = data.NextStepUrl;
+         return;
+       } else {
+         showApi3SearchError(e, domain);
+       }
+  },
+  error: function(){
+    showApi3SearchError(e, domain);
   }
-
-}
-
-function addHostingDomain(domain, ciCode){
-    var plan = offerInfo.packageId;
-    var domainToAdd = encodeURIComponent(domain.Fqdn);
-    var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
-    var pkg = {};
-    pkg.pkgid = plan;
-    pkg.itc = offerInfo.itcCode;
-    pkg.quantity = 1;
-    pkg.ci = ciCode;
-    pkg.custom = { "domain": domainToAdd }
-    var postdata = "requestData=" + JSON.stringify(pkg);
-      $.ajax({
-         type:"POST",
-         url: sapiurl,
-         contentType: "application/json",
-         data: postdata,
-         dataType: "jsonp",
-         complete: function (data) {
-                        if (data.statusText == "success") {
-                              ##if(isManager())
-                                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-                              ##else
-                                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-                              ##endif
-                          }
-                    }
-        });      
+ });
 }
 
 function showSearchSpins($view, domain, alternateDomains){  
@@ -419,13 +307,14 @@ function showSearchSpins($view, domain, alternateDomains){
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
  
-  $view.find(".spin-results").show();
-  $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
+  $view.find(".spin-container").show();
+  $view.find(".spin-results .spin-result:gt(" + (domainSearch.maxNumberOfSpinsToShowByDefault-1) + ")").hide();
 }
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
   $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
+  animateWizard($('#'+domainSearch.initialViewId), $('#domain-search-view'));
 }
 
 function showApi3SearchError(e,domain){  
@@ -451,7 +340,7 @@ function displayMoreResultsArea(e) {
 }
 
 function updateDomainCountText($view, numberShowing) {
-  var $spinCounts = domainSearchWizard.visibleView().find('.spin-counts');
+  var $spinCounts = $view.find('.spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
@@ -459,19 +348,29 @@ function updateDomainCountText($view, numberShowing) {
 }
 
 function animateWizard($currentView, $animateToView) {  
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  var currentViewHeight;
-  var windowWidth = $(window).width();
-
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-    currentViewHeight = $currentView.height();
+  if(!domainSearch.animateWizard) {
     $currentView.hide();
+    $animateToView.show();
   } else {
-    currentViewHeight = 0;
-  }
+    var currentViewHeight = $currentView.height(),
+      windowWidth = $(window).width(),
+      $wizard = $('#domainSearchWizardSection'),
+      wizardHeight = $('#domainSearchWizardSection').height();
 
-  $animateToView.show();
+    // show view offscreen to get height
+    $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+    // can only get height when shown      
+    var toViewHeight = $animateToView.height(),
+      maxHeight = Math.max(currentViewHeight, toViewHeight),
+      minHeight = Math.min(currentViewHeight, toViewHeight);
+    
+    //run the animations
+    animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  }
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
@@ -519,14 +418,4 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
       }
     });
   $(document).trigger('resize');
-}
-
-
-// Page Global script -- changes will effect all campaigns 
-// get url parameter by parameter name
-function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-      results = regex.exec(location.search);
-  return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
