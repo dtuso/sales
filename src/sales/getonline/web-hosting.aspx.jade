@@ -47,31 +47,35 @@ append vars
   - productToDisplay.hostingFlow.arrowL = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-arrow-bottom.png";
   - productToDisplay.hostingFlow.site = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/hosting-flow/img-site2.png";
 
-  - domainSearchWizard                             = {};
-  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.maxDomainLength             = 63;
-  - domainSearchWizard.title                       = "";
-  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
-  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
-  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
-  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.showSearchButton            = true;
-  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.initialViewId               = "domain-search-view";
-  - domainSearchWizard.searchViewSearchBtnCI       = "97047";
-  - domainSearchWizard.dupDomainInCartCI           = "97048";
-  - domainSearchWizard.availViewSearchBtnCI        = "97049";
-  - domainSearchWizard.availViewRecomSelBtnCI      = "97050";
-  - domainSearchWizard.availViewViewAllBtnCI       = "97051";
-  - domainSearchWizard.availViewSearchAgnBtnCI     = "97052";
-  - domainSearchWizard.notAvailViewSearchBtnCI     = "97053";
-  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97055";
-  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97056";
-  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97045";
-  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97057";
-  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97058";
+  - domainSearchWizard                                = {};
+  - domainSearchWizard.maxDomainLength                = 63;
+  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/web-hosting.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  - domainSearchWizard.requireDomainToGoToCart        = true;
+  - domainSearchWizard.animateWizard                  = false;
+  - domainSearchWizard.title                          = "";
+  - domainSearchWizard.placeholderText                = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                     = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                   = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.showInfoTypeHere               = false;
+  - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton               = true;
+  - domainSearchWizard.showChoicesWithAvailableDomain = true;
+  - domainSearchWizard.showRecommendedDomain          = true;
+  - domainSearchWizard.initialViewId                  = "domain-search-view";
+  - domainSearchWizard.searchViewSearchBtnCI          = "97047";
+  - domainSearchWizard.dupDomainInCartCI              = "97048";
+  - domainSearchWizard.availViewSearchBtnCI           = "97049";
+  - domainSearchWizard.availViewRecomSelBtnCI         = "97050";
+  - domainSearchWizard.availViewViewAllBtnCI          = "97051";
+  - domainSearchWizard.availViewSearchAgnBtnCI        = "97052";
+  - domainSearchWizard.notAvailViewSearchBtnCI        = "97053";
+  - domainSearchWizard.notAvailViewViewAllBtnCI       = "97055";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97056";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97045";
+  - domainSearchWizard.selectedViewSeeProdBtnCI       = "97057";
+  - domainSearchWizard.selectedViewGoToCartBtnCI      = "97058";
 
 append pageStyles
   style.
@@ -99,7 +103,7 @@ block productContent
       small.text-center.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
 
 block productSection
-  section#web-hosting.product-section
+  section#productSection.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
@@ -144,7 +148,7 @@ block office365
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
           h2.text-center [@L[cds.sales/getonline:hosting-email-header]@L]
           h3.text-center [@L[cds.sales/getonline:hosting-email-text]@L]
-          .h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
+          h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
       .row.bubble-row
         .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
           mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
@@ -156,20 +160,86 @@ block bottomGetItNow
   section#bottomGetItNow.bg-medium
     .container.text-center
       .row
-        h2 [@L[cds.sales/getonline:get-online-bottom-header]@L]
-        h3#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
-        h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
+        h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
+        h3.got-subheader#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
+        h3.got-subheader#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
       .row
         .column.domain
           img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-          h3 [@L[cds.sales/getonline:domain-name-header]@L]
+          h3.got-subheader [@L[cds.sales/getonline:domain-name-header]@L]
         .plus +
         block bottomTargetedProduct
           .column.website
             img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
-            h3 #{productToDisplay.name}
+            h3.got-subheader #{productToDisplay.name}
       .row
-        h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
+        h3.got-subheader.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
         button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchAgainCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
         button(data-ci="#{productToDisplay.bottomGetItNowBtnCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
         small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
+
+block goToCheckout
+  script. // Add to Cart
+    $(document).off('goToCheckout');
+    $(document).on('goToCheckout', goToCheckoutHostingHandler);
+
+    function goToCheckoutHostingHandler(e) {
+      var $this = $(e.target),
+        domain = $this.data('domain'),
+        ciCode = $this.data('ci'),
+        apiEndpoint3;
+
+      $.ajaxSetup({cache:false});
+      var pkg = {};
+      pkg.pkgid = offerInfo.packageId;
+      pkg.qty = 1;
+      pkg.itc = offerInfo.itcCode;
+      pkg.ci = ciCode;
+      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+
+      var postdata = "requestData=" + JSON.stringify(pkg);
+      $.ajax({
+        type:"POST",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        complete: function (data) {
+          if (data.statusText == "success") {
+            addHostingDomain(domain, ciCode);
+          }
+        },
+        error: function(){
+          showApi3SearchError(e, domain);
+        }
+      });
+    }
+
+    function addHostingDomain(domain, ciCode){
+      var plan = offerInfo.packageId;
+      var domainToAdd = encodeURIComponent(domain.Fqdn);
+      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+      var pkg = {};
+      pkg.pkgid = plan;
+      pkg.itc = offerInfo.itcCode;
+      pkg.quantity = 1;
+      pkg.ci = ciCode;
+      pkg.custom = { "domain": domainToAdd }
+      var postdata = "requestData=" + JSON.stringify(pkg);
+      $.ajax({
+        type:"POST",
+        url: sapiurl,
+        contentType: "application/json",
+        data: postdata,
+        dataType: "jsonp",
+        complete: function (data) {
+          if (data.statusText == "success") {
+            ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+            ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+            ##endif
+          }
+        }
+      });      
+    }

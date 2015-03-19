@@ -311,7 +311,20 @@ block sections
         .row
           .col-sm-12
             h2.text-center.h1(style="padding-top:30px;") [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
-    +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]', 'btn-default-dark')
+    +featuresTemplates({
+      presentationTemplate: "featuresRightText", 
+      featuresId: "wordpress", 
+      additionalWrapClasses: null, 
+      lazyLoad: true, 
+      backgroundImage: null, 
+      featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", 
+      featuresImgAltText: null, 
+      title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", 
+      subtitle: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", 
+      text: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", 
+      buttonText: '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', 
+      buttonUrl: '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]', 
+      buttonColor: 'btn-default-dark'})
   | 
   |##else
   | 

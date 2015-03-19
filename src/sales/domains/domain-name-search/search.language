@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: false
+id: 550af0fcf778fc1240b8469b
 name: GCEMO-711
 comments: Merchandising Updates for 03/11/2015
 ---
@@ -219,7 +219,7 @@ Inspire trust with a Certified Domain validation seal.
 <phrase key="CertifiedRegistrationText1" />
 Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is something you can do to reassure them you&#39;re one of the good guys: Put a Certified Domain validation seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">View Sample Certification</a>.
 <phrase key="CertifiedRegistrationText1Rebrand" />
-Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is a way to tell them you're legit &mdash; by displaying a Certified Domain seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">See sample</a>.
+Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is a way to tell them you can be trusted &mdash; by displaying a Certified Domain seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">See sample</a>.
 <phrase key="CertifiedRegistrationItem1" />
 To acquire Certified Domain accreditation, you must undergo a credentials check that confirms the contact information provided with your domain registration.
 <phrase key="CertifiedRegistrationItem1Rebrand" />
@@ -689,7 +689,7 @@ QUESTIONS?
 <phrase key="WhyGoDaddyMiscBannerTitleRebrand" />
 WHY CHOOSE [@T[companyname:name]@T]?
 <phrase key="WhyGoDaddyMiscBannerTextRebrand" />
-With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure, comfy home online.
+With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure home online.
 <phrase key="WhyGoDaddyMiscBannerListTitle0Rebrand" />
 WORLD'S LARGEST REGISTRAR
 <phrase key="WhyGoDaddyMiscBannerListTitle1Rebrand" />
@@ -776,7 +776,7 @@ Save upto on popular domains
 <phrase key="MainHeadingWhatDoYouGet" />
 SO WHAT ALL DO YOU GET?
 <phrase key="WhatDoYouGetPointer1" />
-Simple domain set up - no technical skills needed. Honest.
+Simple domain set up - no technical skills needed.
 <phrase key="WhatDoYouGetPointer2" />
 Quick, simple tools to forward your domains to any existing website.
 <phrase key="WhatDoYouGetPointer3" />
@@ -814,7 +814,7 @@ After seeing how easy it is to use our domain names search, you'll want a paymen
 <phrase key="MainBannerQuestion4" />
 WHAT IF I NEED HELP?
 <phrase key="MainBannerAnswer4" />
-Our award-winning customer care consultants are available via phone, email and the web 24/7/365. They're trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you're just getting started or already a pro, we've got answers.    
+Our award-winning customer care consultants are available via phone, email and the web 24/7/365. They're trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you're just getting started or are already a pro, we've got answers.    
 <phrase key="MainBannerQuestion5" /> 
 WHY SHOULD I CHOOSE GODADDY?
 <phrase key="MainBannerAnswer5" />

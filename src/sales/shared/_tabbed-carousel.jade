@@ -1,8 +1,8 @@
-- slideBegin = 0, slideEnd = 0;
-- tabCount = 0;
+
 
 
 mixin renderTabbedCarousel(tabbedCarousel)
+  - slideBegin = 0,slideEnd = 0, tabCount = 0;
   style.
     .features-tabbed-carousel-top {
       text-align: center;
@@ -72,6 +72,10 @@ mixin renderTabbedCarousel(tabbedCarousel)
       .row
         if (tabbedCarousel.numOfTabs != 5)
           - colClass = "col-md-" + (12/tabbedCarousel.numOfTabs)
+          - offsetClass = ""
+        else
+          - colClass = "col-md-2"
+          - offsetClass = "col-md-offset-1"
         block
   atlantis:webstash(type="js")
     script(type="text/javascript").
@@ -113,7 +117,7 @@ mixin renderTabbedCarousel(tabbedCarousel)
 
 mixin addTab(item)
   -slideEnd = tabCount
-  .features-tabbed-carousel-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class=colClass)
+  .features-tabbed-carousel-icon(data-begin="#{slideBegin}", data-end="#{slideEnd}", class="#{colClass} #{tabCount} #{tabCount == 0 ? offsetClass : ''}")
     div(data-ci = item.ci != 'undefined' ? item.ci : '', data-center-element='{"vertical":{"target":{"method":"parents","selector":".features-tabbed-carousel-icon"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}')
       if (item.icon)
         .feature-carousel-icon

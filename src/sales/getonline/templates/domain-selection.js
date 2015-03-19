@@ -65,14 +65,7 @@ $(document).ready(function() {
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
 });
 
-function updateNotAvailableDomain(e, domain) {
-  $(document).find('.not-available-domain-name-display').text(domain);
-}
-
 function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
 
   var $this = $(selector),
     formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
@@ -93,7 +86,6 @@ function showAndOrderDynamicTldsInList(selector) {
   });
 
   // show sorted list
-  // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
 }
 
@@ -107,9 +99,10 @@ function domainSearchFormSubmit(e, domainSearched) {
 
     $thisSection = $this.closest('.js-domain-search-wizard-section');
     $('#domainAvailableViewSearchForm').show();
+    $('#domain-available-view').find('.search-again-section').hide();
     pageStartupSearch = false;
   } else {
-    $thisSection = $(document).find(domainSearch.initialViewId);
+    $thisSection = $('#'+domainSearch.initialViewId);
     $('#domainAvailableViewSearchForm').hide();
     pageStartupSearch = true;
   }
@@ -130,7 +123,7 @@ function domainSearchFormSubmit(e, domainSearched) {
     cache: false,
     success: function(data){ 
 
-      $(document).trigger('domainSearch', domainSearched);
+      $(document).trigger('onDomainSearch', domainSearched);
       
       if(data == null) {
         showApi1or2SearchError(e, domainSearched);
@@ -147,49 +140,38 @@ function domainSearchFormSubmit(e, domainSearched) {
             alternateDomains.shift();
             isAvailable = true;
           }
-        }
+        } 
 
         if(isAvailable) {
 
-          $(document).trigger('domainAvailable', exactMatchDomain.Fqdn);
+          if(domainSearch.showRecommendedDomain) {
+            $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
+            $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
+            $('#recommended-domain').show();
+          }
 
-          domainSearchWizard.showView('#domain-available-view');
-
-          // tokenize header on search available page
-          $('#available-domain-name').text(exactMatchDomain.Fqdn);
-          $('#domain-available-view').find('.purchase-btn').data('domain', exactMatchDomain);
-          $('#domain-available-view').find('.select-and-continue.available-domain-name').data('domain', exactMatchDomain);
-
-          // Domain is taken, show spins if possible
+          // If desired and spins are available, show them
           if(domainSearch.showChoicesWithAvailableDomain && alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          // should be in desired view
-          if(!pageStartupSearch)
-            animateWizard($thisSection, $('#domain-available-view'));
+          $(document).trigger('onDomainAvailable', exactMatchDomain);
+
+          animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
 
-          // tokenize header on search available page
-          updateNotAvailableDomain('', domainSearched);
-
-          domainSearchWizard.showView('#domain-not-available-view');
-
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
-
-            // SHOW SPINS
             showSearchSpins($('#domain-not-available-view'), exactMatchDomain, alternateDomains);
 
             $('#domainSearchWizard').find('.search-form-input').val(''); 
           }
 
+          $(document).trigger('onDomainNotAvailable', exactMatchDomain);
+
           animateWizard($thisSection, $('#domain-not-available-view'));
         }    
-
       }
     },
     error: function(){
@@ -248,21 +230,21 @@ function validDomainSelected(e){
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 
-  $(document).trigger('validDomainSelected', domain);
+  $(document).trigger('onValidDomainSelected', domain);
 }
 
 function navigateToSearchAgain(e) { 
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
-  window.location.href = '#domain-search-view';
+  window.location.href = '#domainSearchWizardSection';
 }
 
 function verifyCanCheckOut(e) {
-  if(domainSearch.selectedDomainName == '') {
+  if(domainSearch.requireDomainToGoToCart && domainSearch.selectedDomainName == '') {
     window.location.href = '#domainSearchWizardSection';
   }
   else {
-    $(document).trigger('goToCheckout');
+    $(e.target).trigger('goToCheckout');
   }
 }
 
@@ -325,13 +307,14 @@ function showSearchSpins($view, domain, alternateDomains){
     updateDomainCountText($view, domainSearch.maxNumberOfSpinsToShowByDefault);
   }
  
-  $view.find(".spin-results").show();
-  $view.find(".spin-results .spin-result:lt(" + domainSearch.maxNumberOfSpinsToShowByDefault + ")").show(); // show first 3 results
+  $view.find(".spin-container").show();
+  $view.find(".spin-results .spin-result:gt(" + (domainSearch.maxNumberOfSpinsToShowByDefault-1) + ")").hide();
 }
 
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
   $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
+  animateWizard($('#'+domainSearch.initialViewId), $('#domain-search-view'));
 }
 
 function showApi3SearchError(e,domain){  
@@ -357,7 +340,7 @@ function displayMoreResultsArea(e) {
 }
 
 function updateDomainCountText($view, numberShowing) {
-  var $spinCounts = domainSearchWizard.visibleView().find('.spin-counts');
+  var $spinCounts = $view.find('.spin-counts');
   var templateHtml = $spinCounts.data("result-count-template");
   templateHtml = templateHtml.replace(/\{0\}/gi, numberShowing); 
   templateHtml = templateHtml.replace(/\{1\}/gi, domainSearch.totalSpinResults);
@@ -365,19 +348,29 @@ function updateDomainCountText($view, numberShowing) {
 }
 
 function animateWizard($currentView, $animateToView) {  
+  if($currentView[0].id === $animateToView[0].id) return; // we're there!
 
-  var currentViewHeight;
-  var windowWidth = $(window).width();
-
-  if($currentView != undefined) {
-    if($currentView[0].id === $animateToView[0].id) return; // we're there!
-    currentViewHeight = $currentView.height();
+  if(!domainSearch.animateWizard) {
     $currentView.hide();
+    $animateToView.show();
   } else {
-    currentViewHeight = 0;
-  }
+    var currentViewHeight = $currentView.height(),
+      windowWidth = $(window).width(),
+      $wizard = $('#domainSearchWizardSection'),
+      wizardHeight = $('#domainSearchWizardSection').height();
 
-  $animateToView.show();
+    // show view offscreen to get height
+    $animateToView.css({"position":"absolute", "left": windowWidth + "px", "width": windowWidth + "px"}).show();
+    // can only get height when shown      
+    var toViewHeight = $animateToView.height(),
+      maxHeight = Math.max(currentViewHeight, toViewHeight),
+      minHeight = Math.min(currentViewHeight, toViewHeight);
+    
+    //run the animations
+    animateHeight($wizard, wizardHeight, toViewHeight, 1);  
+    animateObjectOffToTheLeft($currentView, windowWidth, 2);
+    animateObjectInFromTheRight($animateToView, windowWidth, 3);
+  }
 }
 
 function animateHeight($obj, startHeight, finishHeight, zIndex) {
