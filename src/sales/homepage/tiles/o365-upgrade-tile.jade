@@ -7,8 +7,13 @@ atlantis:webstash(type="css")
     .o365-upgrade-tile>.atn-btn-wrap{position:relative;left:30px;}
     .o365-upgrade-tile>.atn-btn-wrap>.btn-top-img{text-transform:uppercase;font-size:24px;color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
     .o365-upgrade-tile>.atn-btn-wrap>.btn-top-img:hover{background-color:#ff9b39;border-color:#cc7832}
-.gdhp-tile.o365-upgrade-tile.js-gdhpclick#gdhp-o365upgradetile(data-url!='[@T[link:<relative path="/tlds/co-uk.aspx"><param name="ci" value="97602" /></relative>]@T]' data-ci="97602")
+.gdhp-tile.o365-upgrade-tile.js-gdhpclick#gdhp-o365upgradetile(data-url!='[@T[link:<relative path="/business/office-365.aspx"><param name="ci" value="97602" /></relative>]@T]' data-ci="97602")
   .o365-upgrade-tile-logo     
-  .o365-upgrade-tile-text.walsheim-black [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-text]@L]
+  .o365-upgrade-tile-text.walsheim-black 
+    | ##if(productHasSavingsMoreThan(31841, 31841, 0))
+    | [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-text]@L]
+    | ##else
+    | [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-text-no-savings]@L]
+    | ##endif
   .atn-btn-wrap
     a#gdhp-o365upgradetile-btn.btn.btn-top-img.walsheim-reg(href="javascript:void(0)" data-ci="97602") [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-cta]@L]
