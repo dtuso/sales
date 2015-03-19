@@ -995,7 +995,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png" class="lazyload monitor-base col-sm-4"> </div>
               <div class="video-info col-sm-4">
                 <div class="video-marquee-info text-center">
-                  <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" class="lazyload img-play-green play-button"></div>
+                  <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png" data-ci="96300" class="lazyload img-play-green play-button"></div>
                   <h4 class="uppercase walsheim-bold">[@L[cds.sales/getonline:ols-product-video-info-text]@L]</h4>
                   <button id="watchVideo" style="margin:20px auto" data-toggle="modal" data-target="#g-modal" data-ci="96300" class="cta btn btn-default-dark btn-md uppercase">[@L[cds.sales/getonline:watch-now]@L]</button>
                 </div>

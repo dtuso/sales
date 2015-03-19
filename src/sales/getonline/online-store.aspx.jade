@@ -37,7 +37,7 @@ append vars
   - productToDisplay.topGetItNowBtnCI = "96294";
   - productToDisplay.bottomGetItNowBtnCI = "96298";
   - productToDisplay.bottomSearchAgainCI = "96296";
-  - productToDisplay.viewTemplatesCI = "96299";
+  - productToDisplay.viewTemplatesCI = "";
   - productToDisplay.playButtonCI = "96300";
   - productToDisplay.disclaimerCI = "96983";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-ols-content]@L]";
@@ -67,7 +67,6 @@ append vars
   - domainSearchWizard.availViewSearchAgnBtnCI        = "97023";
   - domainSearchWizard.notAvailViewSearchBtnCI        = "97027";
   - domainSearchWizard.notAvailViewViewAllBtnCI       = "97029";
-  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97028";
   - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97032";
   - domainSearchWizard.selectedViewSeeProdBtnCI       = "97031";
   - domainSearchWizard.selectedViewGoToCartBtnCI      = "97030";
@@ -94,7 +93,7 @@ block productSection
             div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-monitor-base.png", class="lazyload monitor-base col-sm-4")  
             div.video-info.col-sm-4
               div.video-marquee-info.text-center
-                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button")
+                div(data-lazyload-source!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-play-green.png", class="lazyload img-play-green play-button",data-ci='#{productToDisplay.playButtonCI}')
                 h4.uppercase.walsheim-bold !{productToDisplay.productVideoInfoText}
                 button.cta.btn.btn-default-dark.btn-md.uppercase(id='watchVideo',style={'margin':'20px auto'}, data-toggle='modal',data-target='#g-modal',data-ci='#{productToDisplay.playButtonCI}') [@L[cds.sales/getonline:watch-now]@L]
 
