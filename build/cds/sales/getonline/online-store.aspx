@@ -1,6 +1,4 @@
-
-<!-- - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/" + !{productToDisplay.landingPage} + "' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"-->
-<!-- - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";--><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -18,6 +16,35 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/getonline:ols-page-title]@L]</title>
     <meta name="robots" content="noindex, nofollow">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -119,7 +146,6 @@
           };
           
           tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
-          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
         }
         
         function tokenizeTheDataTokenizeAttribute() {
@@ -159,17 +185,21 @@
         
       </script>
       <script>
-        function updateSearchedDomain(domain) {
-          $(document).find('.searched-domain-name-display').text(domain);
+        function updateSearchedDomain(domainName) {
+          $(document).find('.searched-domain-name-display').text(domainName);
         }
         
-        function updateRecommendedDomain(domain) {
+        function updateRecommendedDomain(domainName) {
           if(domainSearch.selectedDomainName == '')
-            $(document).find('.selected-domain-name-display').text(domain);
+            $(document).find('.selected-domain-name-display').text(domainName);
         }
         
-        function updateSelectedDomain(domain) {
-          $(document).find('.selected-domain-name-display').text(domain);
+        function updateNotAvailableDomain(domainName) {
+          $(document).find('.not-available-domain-name-display').text(domainName);
+        }
+        
+        function updateSelectedDomain(domainName) {
+          $(document).find('.selected-domain-name-display').text(domainName);
         }
         
         function goToDomainSearchWizard()
@@ -192,7 +222,7 @@
           $('#got-domain-selected').show();
           $('#bottomSearchAgain').show();
         
-          window.location.href = '#domain-selected-view';
+          window.location.href = '#domainSearchWizardSection';
         }
         
         function domainSearchHandler(e, domainName) {
@@ -203,16 +233,21 @@
           updateRecommendedDomain(domain.Fqdn);
         }
         
+        function domainNotAvailableHandler(e, domain) {
+          updateNotAvailableDomain(domain.Fqdn);
+        }
+        
         function tldRegistrationErrorHandler(e, tldRegErr) {
           updateSelectedDomain(tldRegErr);
           window.location.href = '#domainSearchWizardSection';
         }
         
         // These need to be outside of doc.ready() in order to get registered before search wizard doc.ready()
-        $(document).bind('domainSearch', domainSearchHandler);
-        $(document).bind('domainAvailable', domainAvailableHandler);
-        $(document).bind('validDomainSelected', validDomainSelectedHandler);
-        $(document).bind('tldRegErr', tldRegistrationErrorHandler);
+        $(document).bind('onDomainSearch', domainSearchHandler);
+        $(document).bind('onDomainAvailable', domainAvailableHandler);
+        $(document).bind('onDomainNotAvailable', domainNotAvailableHandler);
+        $(document).bind('onValidDomainSelected', validDomainSelectedHandler);
+        $(document).bind('onTldRegErr', tldRegistrationErrorHandler);
         
         $(document).ready(function(){
         
@@ -294,14 +329,7 @@ $(document).ready(function() {
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
 });
 
-function updateNotAvailableDomain(e, domain) {
-  $(document).find('.not-available-domain-name-display').text(domain);
-}
-
 function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
 
   var $this = $(selector),
     formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
@@ -322,7 +350,6 @@ function showAndOrderDynamicTldsInList(selector) {
   });
 
   // show sorted list
-  // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
 }
 
@@ -360,7 +387,7 @@ function domainSearchFormSubmit(e, domainSearched) {
     cache: false,
     success: function(data){ 
 
-      $(document).trigger('domainSearch', domainSearched);
+      $(document).trigger('onDomainSearch', domainSearched);
       
       if(data == null) {
         showApi1or2SearchError(e, domainSearched);
@@ -381,8 +408,6 @@ function domainSearchFormSubmit(e, domainSearched) {
 
         if(isAvailable) {
 
-          // domainSearchWizard.showView('#domain-available-view');
-
           if(domainSearch.showRecommendedDomain) {
             $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
             $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
@@ -394,18 +419,11 @@ function domainSearchFormSubmit(e, domainSearched) {
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          $(document).trigger('domainAvailable', exactMatchDomain);
+          $(document).trigger('onDomainAvailable', exactMatchDomain);
 
-          // // should be in desired view
-          // if(!pageStartupSearch)
           animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
-
-          // tokenize header on search available page
-          updateNotAvailableDomain('', domainSearched);
-
-          // domainSearchWizard.showView('#domain-not-available-view');
 
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
@@ -414,9 +432,10 @@ function domainSearchFormSubmit(e, domainSearched) {
             $('#domainSearchWizard').find('.search-form-input').val(''); 
           }
 
+          $(document).trigger('onDomainNotAvailable', exactMatchDomain);
+
           animateWizard($thisSection, $('#domain-not-available-view'));
         }    
-
       }
     },
     error: function(){
@@ -475,13 +494,13 @@ function validDomainSelected(e){
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 
-  $(document).trigger('validDomainSelected', domain);
+  $(document).trigger('onValidDomainSelected', domain);
 }
 
 function navigateToSearchAgain(e) { 
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
-  window.location.href = '#domain-search-view';
+  window.location.href = '#domainSearchWizardSection';
 }
 
 function verifyCanCheckOut(e) {
@@ -559,6 +578,7 @@ function showSearchSpins($view, domain, alternateDomains){
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
   $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
+  animateWizard($('#'+domainSearch.initialViewId), $('#domain-search-view'));
 }
 
 function showApi3SearchError(e,domain){  
@@ -730,7 +750,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
       </div>
     </section>
     <section id="domainSearchWizardSection" class="bg-primary-o">
-      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-search-header">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -742,6 +762,10 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
+        <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <h4 class="domain-search-text">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
@@ -766,34 +790,15 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
                   <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
                   <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
-                  <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97025" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail"><mark class='selected-domain-name-display'></mark> is already in your cart. To use it with this offer, please go to your <a href='{0}'>cart</a>, delete your domain and search again.</div>
+                  <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97025" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
                 </div>
               </div>
             </form>
           </div>
         </div>
-        <div class="container">
-          <div class="row bubble-row product-section">
-            <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
-            </div>
-            <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
-          </div>
-        </div>
       </div>
       <div id="domain-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-              <div class="domain-search-wizard domain-icon"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
-            </div>
-          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <h4 class="domain-search-text">[@L[cds.sales/getonline:domain-available-view-header]@L]</h4>
@@ -868,28 +873,9 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row bubble-row product-section">
-            <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
-            </div>
-            <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
-          </div>
-        </div>
       </div>
       <div id="domain-not-available-view" style="display:none" class="js-domain-search-wizard-section">
         <div class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-              <div class="domain-search-wizard domain-icon"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
-            </div>
-          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <h4 class="domain-search-text">[@L[cds.sales/getonline:domain-search-view-header]@L]</h4>
@@ -949,28 +935,15 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
         </div>
-        <div class="container">
-          <div class="row bubble-row product-section">
-            <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
-              <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
-              <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
-            </div>
-            <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
-          </div>
-        </div>
+      </div>
+      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
+        <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
+          <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
+        </h2>
+        <p>[@L[cds.sales/getonline:generic-domain-search-error]@L]</p>
       </div>
       <div id="domain-selected-view" style="display:none" class="js-domain-search-wizard-section">
         <div id="selected-domain" class="container">
-          <div class="row">
-            <div class="col-xs-12 col-sm-12">
-              <div class="domain-search-wizard domain-icon"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
-            </div>
-          </div>
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <h4 class="strong">[@L[cds.sales/getonline:congratulations-selected-domain]@L]</h4>
@@ -983,7 +956,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
-              <btn data-ci="97032" class="btn btn-primary btn-search-again btn-lg uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
+              <btn data-ci="97032" class="btn-search-again"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-search-glass.png"><span>[@L[cds.sales/getonline:search-again]@L]</span></btn>
             </div>
           </div>
           <div style="padding-top:30px;padding-bottom:10px" class="row">
@@ -992,20 +965,18 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <btn data-ci="97030" class="btn btn-purchase btn-plan btn-lg uppercase p4p">[@L[cds.sales/getonline:checkout-now]@L]</btn>
             </div>
           </div>
+        </div>
+      </div>
+      <div id="domain-search-footer">
+        <div class="container">
           <div class="row bubble-row product-section">
             <div class="col-xs-10 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-4 bubble white">
               <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
               <p>[@L[cds.sales/getonline:did-you-know-domain-customers]@L]</p>
             </div>
-            <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"/></div>
+            <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="product-section hero-guy left"></div>
           </div>
         </div>
-      </div>
-      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
-        <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
-          <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
-        </h2>
-        <p>[@L[cds.sales/getonline:generic-domain-search-error]@L]</p>
       </div>
     </section>
     <section id="productSection" class="product-section">
@@ -1260,6 +1231,9 @@ ul li.no-check {
         #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
         #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
         
+      </style>
+      <style>
+        #selected-domain btn.btn-search-again {font-weight: 800; text-decoration: none; cursor: pointer;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -1972,7 +1946,7 @@ ul li.no-check {
         if(tldRegErr.length > 0) {
           showDomainRegistrationFailure(tldRegErr);
           $('#domain-search-view').show();
-          $(document).trigger('tldRegErr', tldRegErr);
+          $(document).trigger('onTldRegErr', tldRegErr);
         } else {
           $(document).find('#' + domainSearch.initialViewId).show();
         }

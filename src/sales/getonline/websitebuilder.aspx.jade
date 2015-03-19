@@ -44,8 +44,7 @@ append vars
 
   - domainSearchWizard                                = {};
   - domainSearchWizard.maxDomainLength                = 63;
-  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/online-store.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
-  // - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/" + !{productToDisplay.landingPage} + "' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/websitebuilder.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
   - domainSearchWizard.requireDomainToGoToCart        = true;
   - domainSearchWizard.animateWizard                  = false;
   - domainSearchWizard.title                          = "";
@@ -55,8 +54,7 @@ append vars
   - domainSearchWizard.showInfoTypeHere               = false;
   - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
   - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  // - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.infoDupDomainInCart            = "<mark class='selected-domain-name-display'></mark> is already in your cart. To use it with this offer, please go to your <a href='{0}'>cart</a>, delete your domain and search again.";
+  - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
   - domainSearchWizard.showSearchButton               = true;
   - domainSearchWizard.showChoicesWithAvailableDomain = true;
   - domainSearchWizard.showRecommendedDomain          = true;

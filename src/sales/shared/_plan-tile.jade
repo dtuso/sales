@@ -49,82 +49,86 @@ block vars
   - priceText = "";
   - term = "";
   - vat = "";
+  - additionalClasses = "";
 
 
 
-.pro-plan-wrap
+.pro-plan-wrap(class="#{additionalClasses}")
   block flag
     if (flagText)
       div.plan-flag !{flagText}
 
-  block title
-    if (title)
-      h3.plan-title !{title}
+  .title-wrap
+    block title
+      if (title)
+        h3.plan-title !{title}
 
-  block subTitle
-    if (subTitle)
-      p.plan-subtitle !{subTitle}
+    block subTitle
+      if (subTitle)
+        p.plan-subtitle !{subTitle}
 
-  block description
-    if (description)
-      p.plan-text !{description}
+    block description
+      if (description)
+        p.plan-text !{description}
 
-  block price
-    if (pfid)
-      .plan-price-wrap.row
-        if(priceText) 
-          strong !{priceText}
-          br
-        if(plansPanelTotalColumns==4)
-          span.plan-price.text-warning.four-columns [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-          .plan-duration-div-four
+  .price-wrap
+    block price
+      if (pfid)
+        .plan-price-wrap.row
+          if(priceText) 
+            strong !{priceText}
+            br
+          if(plansPanelTotalColumns==4)
+            span.plan-price.text-warning.four-columns [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+            .plan-duration-div-four
+              span.plan-duration.text-warning !{term}
+          else
+            span.plan-price.text-warning [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
             span.plan-duration.text-warning !{term}
-        else
-          span.plan-price.text-warning [@T[productprice:<current productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-          span.plan-duration.text-warning !{term}
-        | 
-        |##if(productHasSavingsMoreThan(!{pfid}, !{pfid}, 0))
-        | 
-        br
-        strong
-          | [@L[cds.sales/_common:was]@L] 
-          strike [@T[productprice:<list productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-          |  
-          span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
-        | 
-        |##endif
-        | 
-        if(disclaimer)
-          p.h6 !{disclaimer}
-        if(vat)
           | 
-          |##if(countrySiteAny(uk))
+          |##if(productHasSavingsMoreThan(!{pfid}, !{pfid}, 0))
           | 
-          p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+          br
+          strong
+            | [@L[cds.sales/_common:was]@L] 
+            strike [@T[productprice:<list productid="!{pfid}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+            |  
+            span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="!{pfid}" secondaryproductid="!{pfid}" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
           | 
           |##endif
           | 
+          if(disclaimer)
+            p.h6 !{disclaimer}
+          if(vat)
+            | 
+            |##if(countrySiteAny(uk))
+            | 
+            p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+            | 
+            |##endif
+            | 
 
-    if (packageids)
-      .plan-price-wrap
-        span.plan-price.text-warning [@T[multipleproductprice:<current productidlist="!{packageids}" period="monthly" promocode="!{promocode}" />]@T]
-        span.plan-duration.text-warning !{term}
-        if(disclaimer)
-          p.h6 !{disclaimer}
-        if(vat)
-          | 
-          |##if(countrySiteAny(uk))
-          | 
-          p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
-          | 
-          |##endif
-          | 
-  if(showDropDownList)
-    +planSelectList(listID)
-      block planOptions
+      if (packageids)
+        .plan-price-wrap
+          span.plan-price.text-warning [@T[multipleproductprice:<current productidlist="!{packageids}" period="monthly" promocode="!{promocode}" />]@T]
+          span.plan-duration.text-warning !{term}
+          if(disclaimer)
+            p.h6 !{disclaimer}
+          if(vat)
+            | 
+            |##if(countrySiteAny(uk))
+            | 
+            p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+            | 
+            |##endif
+            | 
+    if(showDropDownList)
+      +planSelectList(listID)
+        block planOptions
 
 
   block button
+    .action-button-wrap.row
     if (buttonText && buttonUrl)
       a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-ci!=ci data-index="1") !{buttonText}
     else if(buttonText && showDropDownList )
@@ -137,12 +141,14 @@ block vars
   block features
     //- Feature list
     if(features)
-      each feature, index in features
-        //- Text at the bottom that can have multiple "rows"
-        .plan-item !{feature}
+      .features-wrap
+        each feature, index in features
+          //- Text at the bottom that can have multiple "rows"
+          .plan-item !{feature}
 
   block checkFeatures
     if(checkFeatures)
-      each feature, index in checkFeatures
-          //- Text at the bottom that can have multiple "rows"
-          .include-check.check-item !{feature}
+      .check-features-wrap
+        each feature, index in checkFeatures
+            //- Text at the bottom that can have multiple "rows"
+            .include-check.check-item !{feature}

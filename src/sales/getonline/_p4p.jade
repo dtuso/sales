@@ -137,17 +137,21 @@ append headScripts
 
     block domainSearchScripts
       script.  // Page
-        function updateSearchedDomain(domain) {
-          $(document).find('.searched-domain-name-display').text(domain);
+        function updateSearchedDomain(domainName) {
+          $(document).find('.searched-domain-name-display').text(domainName);
         }
 
-        function updateRecommendedDomain(domain) {
+        function updateRecommendedDomain(domainName) {
           if(domainSearch.selectedDomainName == '')
-            $(document).find('.selected-domain-name-display').text(domain);
+            $(document).find('.selected-domain-name-display').text(domainName);
         }
 
-        function updateSelectedDomain(domain) {
-          $(document).find('.selected-domain-name-display').text(domain);
+        function updateNotAvailableDomain(domainName) {
+          $(document).find('.not-available-domain-name-display').text(domainName);
+        }
+
+        function updateSelectedDomain(domainName) {
+          $(document).find('.selected-domain-name-display').text(domainName);
         }
 
         function goToDomainSearchWizard()
@@ -170,7 +174,7 @@ append headScripts
           $('#got-domain-selected').show();
           $('#bottomSearchAgain').show();
 
-          window.location.href = '#domain-selected-view';
+          window.location.href = '#domainSearchWizardSection';
         }
 
         function domainSearchHandler(e, domainName) {
@@ -181,16 +185,21 @@ append headScripts
           updateRecommendedDomain(domain.Fqdn);
         }
 
+        function domainNotAvailableHandler(e, domain) {
+          updateNotAvailableDomain(domain.Fqdn);
+        }
+
         function tldRegistrationErrorHandler(e, tldRegErr) {
           updateSelectedDomain(tldRegErr);
           window.location.href = '#domainSearchWizardSection';
         }
 
         // These need to be outside of doc.ready() in order to get registered before search wizard doc.ready()
-        $(document).bind('domainSearch', domainSearchHandler);
-        $(document).bind('domainAvailable', domainAvailableHandler);
-        $(document).bind('validDomainSelected', validDomainSelectedHandler);
-        $(document).bind('tldRegErr', tldRegistrationErrorHandler);
+        $(document).bind('onDomainSearch', domainSearchHandler);
+        $(document).bind('onDomainAvailable', domainAvailableHandler);
+        $(document).bind('onDomainNotAvailable', domainNotAvailableHandler);
+        $(document).bind('onValidDomainSelected', validDomainSelectedHandler);
+        $(document).bind('onTldRegErr', tldRegistrationErrorHandler);
 
         $(document).ready(function(){
 
@@ -293,6 +302,8 @@ append pageStyles
     #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
     #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
 
+  style.  // Domain search section
+    #selected-domain btn.btn-search-again {font-weight: 800; text-decoration: none; cursor: pointer;}
 
   // atlantis:webstash(type="css")
   style.  // Product section
@@ -424,7 +435,44 @@ block content
         p #{productToDisplay.disclaimerText}
 
   block domainSearchContent
-    +domainSearchContent()
+    section#domainSearchWizardSection.bg-primary-o
+      #domain-search-header
+        .container
+          .row
+            .col-xs-12.col-sm-12
+              div.domain-search-wizard.domain-icon
+          .row
+            .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+              h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
+
+      +domainSearchContent()
+
+      #domain-selected-view.js-domain-search-wizard-section(style={'display':'none'})
+        .container#selected-domain
+          .row
+            .col-xs-12.col-sm-12.text-center
+              h4.strong [@L[cds.sales/getonline:congratulations-selected-domain]@L]
+          .row.searched-domain-name-row
+            .col-xs-12.col-sm-12.text-center
+              h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
+          .row(style={'padding-top':'30px','padding-bottom':'10px'})
+            .col-xs-12.col-sm-12.text-center
+              btn.btn-search-again(data-ci="#{domainSearchWizard.selectedViewSearchAgnBtnCI}")
+                img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-search-glass.png")
+                span [@L[cds.sales/getonline:search-again]@L]
+          .row(style={'padding-top':'30px','padding-bottom':'10px'})
+            .col-xs-12.col-sm-12.text-center
+              btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase(data-ci="#{domainSearchWizard.selectedViewSeeProdBtnCI}") [@L[cds.sales/getonline:see-other-products]@L]
+              btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p(data-ci="#{domainSearchWizard.selectedViewGoToCartBtnCI}") [@L[cds.sales/getonline:checkout-now]@L]
+
+      #domain-search-footer
+        .container
+          .row.bubble-row.product-section
+            .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+              mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+              p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
+            .col-xs-2
+              img.product-section.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   block proInterview
   

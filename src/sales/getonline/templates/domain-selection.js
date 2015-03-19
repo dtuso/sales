@@ -65,14 +65,7 @@ $(document).ready(function() {
   $(document).find('.btn-search-again').on('click', navigateToSearchAgain);
 });
 
-function updateNotAvailableDomain(e, domain) {
-  $(document).find('.not-available-domain-name-display').text(domain);
-}
-
 function showAndOrderDynamicTldsInList(selector) {
-
-  //- <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span>
-  //- <span class="tld-list tld-club">.CLUB, </span></span>or .ORG
 
   var $this = $(selector),
     formatTldSelector = function(tld) { return '.tld-' + tld.replace('.','-')},
@@ -93,7 +86,6 @@ function showAndOrderDynamicTldsInList(selector) {
   });
 
   // show sorted list
-  // commented out because it navigates to search wizard upon page load.
   $this.find('.tld-list').show();
 }
 
@@ -131,7 +123,7 @@ function domainSearchFormSubmit(e, domainSearched) {
     cache: false,
     success: function(data){ 
 
-      $(document).trigger('domainSearch', domainSearched);
+      $(document).trigger('onDomainSearch', domainSearched);
       
       if(data == null) {
         showApi1or2SearchError(e, domainSearched);
@@ -152,8 +144,6 @@ function domainSearchFormSubmit(e, domainSearched) {
 
         if(isAvailable) {
 
-          // domainSearchWizard.showView('#domain-available-view');
-
           if(domainSearch.showRecommendedDomain) {
             $('#recommended-domain-name').text(exactMatchDomain.Fqdn);
             $('#recommended-domain').find('.select-and-continue').data('domain', exactMatchDomain);
@@ -165,18 +155,11 @@ function domainSearchFormSubmit(e, domainSearched) {
             showSearchSpins($('#domain-available-view'), exactMatchDomain, alternateDomains);
           }
 
-          $(document).trigger('domainAvailable', exactMatchDomain);
+          $(document).trigger('onDomainAvailable', exactMatchDomain);
 
-          // // should be in desired view
-          // if(!pageStartupSearch)
           animateWizard($thisSection, $('#domain-available-view'));
 
         } else {
-
-          // tokenize header on search available page
-          updateNotAvailableDomain('', domainSearched);
-
-          // domainSearchWizard.showView('#domain-not-available-view');
 
           // Domain is taken, show spins if possible
           if(alternateDomains.length > 0) {
@@ -185,9 +168,10 @@ function domainSearchFormSubmit(e, domainSearched) {
             $('#domainSearchWizard').find('.search-form-input').val(''); 
           }
 
+          $(document).trigger('onDomainNotAvailable', exactMatchDomain);
+
           animateWizard($thisSection, $('#domain-not-available-view'));
         }    
-
       }
     },
     error: function(){
@@ -246,13 +230,13 @@ function validDomainSelected(e){
   var $thisSection = $this.closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-selected-view') /*toView*/);
 
-  $(document).trigger('validDomainSelected', domain);
+  $(document).trigger('onValidDomainSelected', domain);
 }
 
 function navigateToSearchAgain(e) { 
   var $thisSection = $(e.target).closest('.js-domain-search-wizard-section');
   animateWizard($thisSection, $('#domain-search-view'));
-  window.location.href = '#domain-search-view';
+  window.location.href = '#domainSearchWizardSection';
 }
 
 function verifyCanCheckOut(e) {
@@ -330,6 +314,7 @@ function showSearchSpins($view, domain, alternateDomains){
 function showApi1or2SearchError(e,domain){
   var $modal = $("#api-failure");
   $modal.sfDialog({titleHidden:true, buttons: offerInfo.sfDialogErrorButtons});
+  animateWizard($('#'+domainSearch.initialViewId), $('#domain-search-view'));
 }
 
 function showApi3SearchError(e,domain){  
