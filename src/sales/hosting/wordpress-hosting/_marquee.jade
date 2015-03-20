@@ -8,15 +8,71 @@ atlantis:webstash(type="css")
       padding-bottom: 120px;
       background-size: cover;
     }
-    ##if(activeLanguageAny([en-pk],[en-in]))
-      #marquee { 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
-      }
-    ##else
-      #marquee { 
-        background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
-      }
-    ##endif
+    
+    /* latam */
+    html[lang="es-ar"] #marquee,
+    html[lang="pt-br"] #marquee,
+    html[lang="es-cl"] #marquee,
+    html[lang="es-co"] #marquee,
+    html[lang="es-mx"] #marquee,
+    html[lang="es-pe"] #marquee,
+    html[lang="es-ve"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_latam_marquee_02_v01.jpg);
+    }
+
+    /* general */
+    html[lang="en-us"] #marquee,
+    html[lang="es-us"] #marquee,
+    html[lang="en-au"] #marquee,
+    html[lang="en-ca"] #marquee,
+    html[lang="en-nz"] #marquee,
+    html[lang="fr-be"] #marquee,
+    html[lang="fr-ca"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_usa_marquee_02_v01.jpg);
+    }
+
+    /* asia */
+    html[lang="en-my"] #marquee,
+    html[lang="en-ph"] #marquee,
+    html[lang="en-sg"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_asia_marquee_02_v01.jpg);
+    }
+
+    /* in-pk */
+    html[lang="en-in"] #marquee,
+    html[lang="en-pk"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_india_marquee_02_v01.jpg);
+    }
+
+    /* emea */
+    html[lang="nl-be"] #marquee,
+    html[lang="da-dk"] #marquee,
+    html[lang="de-de"] #marquee,
+    html[lang="es-es"] #marquee,
+    html[lang="fr-fr"] #marquee,
+    html[lang="en-ie"] #marquee,
+    html[lang="it-it"] #marquee,
+    html[lang="nb-no"] #marquee,
+    html[lang="nl-nl"] #marquee,
+    html[lang="de-at"] #marquee,
+    html[lang="pl-pl"] #marquee,
+    html[lang="pt-pt"] #marquee,
+    html[lang="fr-ch"] #marquee,
+    html[lang="it-ch"] #marquee,
+    html[lang="de-ch"] #marquee,
+    html[lang="en-za"] #marquee,
+    html[lang="fi-fi"] #marquee,
+    html[lang="sv-se"] #marquee,
+    html[lang="tr-tr"] #marquee,
+    html[lang="en-gb"] #marquee,
+    html[lang="el-gr"] #marquee,
+    html[lang="ru-ru"] #marquee,
+    html[lang="uk-ua"] #marquee {
+      background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_emea_marquee_02_v01.jpg);
+    }
+
+
+
 
     #marquee .marquee {
       position: relative;
