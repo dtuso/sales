@@ -99,7 +99,6 @@ append headScripts
         };
         
         tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
-        // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
       }
 
       function tokenizeTheDataTokenizeAttribute() {
@@ -128,6 +127,7 @@ append headScripts
         $("[data-ci]").click(function(a) {
           $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
         });
+
         var passedBusinessName = getParameterByName('domain');
         if(passedBusinessName != '') {
           offerInfo.businessName = passedBusinessName;
@@ -137,22 +137,88 @@ append headScripts
 
     block domainSearchScripts
       script.  // Page
+        function updateSearchedDomain(domainName) {
+          $(document).find('.searched-domain-name-display').text(domainName);
+        }
+
+        function updateRecommendedDomain(domainName) {
+          if(domainSearch.selectedDomainName == '')
+            $(document).find('.selected-domain-name-display').text(domainName);
+        }
+
+        function updateNotAvailableDomain(domainName) {
+          $(document).find('.not-available-domain-name-display').text(domainName);
+        }
+
+        function updateSelectedDomain(domainName) {
+          $(document).find('.selected-domain-name-display').text(domainName);
+        }
+
+        function goToDomainSearchWizard()
+        {
+          animateWizard($('#domain-selected-view'), $('#domain-search-view'));
+          window.location.href = '#domainSearchWizardSection';
+        }
+
+        function goToProductSection()
+        {
+          window.location.href = '#productSection';
+        }
+
+        function validDomainSelectedHandler(e, domain){
+
+          updateSelectedDomain(domain.Fqdn);
+
+          $(document).find('.btn-purchase').data('domain', domain);
+          $('#got-domain-not-selected').hide();
+          $('#got-domain-selected').show();
+          $('#bottomSearchAgain').show();
+
+          window.location.href = '#domainSearchWizardSection';
+        }
+
+        function domainSearchHandler(e, domainName) {
+          updateSearchedDomain(domainName);
+        }
+
+        function domainAvailableHandler(e, domain) {
+          updateRecommendedDomain(domain.Fqdn);
+        }
+
+        function domainNotAvailableHandler(e, domain) {
+          updateNotAvailableDomain(domain.Fqdn);
+        }
+
+        function tldRegistrationErrorHandler(e, tldRegErr) {
+          updateSelectedDomain(tldRegErr);
+          window.location.href = '#domainSearchWizardSection';
+        }
+
+        // These need to be outside of doc.ready() in order to get registered before search wizard doc.ready()
+        $(document).bind('onDomainSearch', domainSearchHandler);
+        $(document).bind('onDomainAvailable', domainAvailableHandler);
+        $(document).bind('onDomainNotAvailable', domainNotAvailableHandler);
+        $(document).bind('onValidDomainSelected', validDomainSelectedHandler);
+        $(document).bind('onTldRegErr', tldRegistrationErrorHandler);
+
         $(document).ready(function(){
 
-          $(document).find('.btn-purchase').on('click', function(e){goToCheckOut(e)});
+          $('#bottomSearchAgain').on('click', goToDomainSearchWizard);
+          $(document).find('.btn-see-bundle').on('click', goToProductSection);
+          $(document).find('.btn-purchase').on('click', verifyCanCheckOut);
 
-          if(offerInfo.businessName != '') {
-            updateSearchedDomain('', offerInfo.businessName);
-
-            if(getParameterByName('tldRegErr').length > 0) {
-              showDomainRegistrationFailure();
-            } else {
-              domainSearchFormSubmit('', offerInfo.businessName);
-            }
+          if(offerInfo.businessName != '' && getParameterByName('tldRegErr') == '') {
+            //- updateSearchedDomain(offerInfo.businessName);
+            domainSearchFormSubmit('', offerInfo.businessName);
           }
         });
+
       script(type="text/javascript")
         include:js templates/domain-selection.js
+
+    block goToCheckout
+      script. // Add to Cart
+        $(document).bind('goToCheckout', goToCheckoutHandler);
 
 append pageStyles
   style. 
@@ -204,13 +270,12 @@ append pageStyles
     #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
     #getItNow .bubble h3 { font-family: Walsheim-Black; }
     #getItNow .products { margin-top: 40px; }
-    #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+    #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; margin-top: 20px; margin-bottom: 10px}
     #getItNow .products img { min-height: 115px; }
     .cta { margin-top: 20px;}
     .cta small { padding-top: 10px; padding-bottom:5px;}
     #product-price{margin-top: 5px;}
     #getItNow mark{margin-top: 6px;}
-    
 
     @media (min-width: 768px) {
       #getItNow .bubble {
@@ -237,6 +302,8 @@ append pageStyles
     #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
     #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
 
+  style.  // Domain search section
+    #selected-domain btn.btn-search-again {font-weight: 800; text-decoration: none; cursor: pointer;}
 
   // atlantis:webstash(type="css")
   style.  // Product section
@@ -303,8 +370,9 @@ append pageStyles
 
   // atlantis:webstash(type="css")
   style.  // Why-us section
-    .why-us-title{margin-top:10px;}
+    .why-us-header{margin-top:10px; margin-bottom: 40px;}
     .why-us-text{margin-top:10px;}
+    .why-us-subheader {margin-top: 20px; margin-bottom: 10px;}
 
     .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
     .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
@@ -312,7 +380,8 @@ append pageStyles
 
   // atlantis:webstash(type="css")
   style.  // got section
-    .product-name{font-weight:800;padding-top:10px;}
+    .got-header {margin-top:10px; margin-bottom: 40px;}
+    .got-subheader {margin-top:20px; margin-bottom: 10px;}
 
     #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
     #got-domain-selected{display:none;}
@@ -366,7 +435,44 @@ block content
         p #{productToDisplay.disclaimerText}
 
   block domainSearchContent
-    +domainSearchContent()
+    section#domainSearchWizardSection.bg-primary-o
+      #domain-search-header
+        .container
+          .row
+            .col-xs-12.col-sm-12
+              div.domain-search-wizard.domain-icon
+          .row
+            .col-xs-12.col-sm-12.text-center(style={'margin-top':'15px'})
+              h2.uppercase(style={'margin-bottom':'0px'}) [@L[cds.sales/getonline:domain-name-header]@L]
+
+      +domainSearchContent()
+
+      #domain-selected-view.js-domain-search-wizard-section(style={'display':'none'})
+        .container#selected-domain
+          .row
+            .col-xs-12.col-sm-12.text-center
+              h4.strong [@L[cds.sales/getonline:congratulations-selected-domain]@L]
+          .row.searched-domain-name-row
+            .col-xs-12.col-sm-12.text-center
+              h2.domain-name-displayed.word-break <mark class="selected-domain-name-display"></mark>
+          .row(style={'padding-top':'30px','padding-bottom':'10px'})
+            .col-xs-12.col-sm-12.text-center
+              btn.btn-search-again(data-ci="#{domainSearchWizard.selectedViewSearchAgnBtnCI}")
+                img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-search-glass.png")
+                span [@L[cds.sales/getonline:search-again]@L]
+          .row(style={'padding-top':'30px','padding-bottom':'10px'})
+            .col-xs-12.col-sm-12.text-center
+              btn.btn.btn-primary.btn-see-bundle.btn-lg.uppercase(data-ci="#{domainSearchWizard.selectedViewSeeProdBtnCI}") [@L[cds.sales/getonline:see-other-products]@L]
+              btn.btn.btn-purchase.btn-plan.btn-lg.uppercase.p4p(data-ci="#{domainSearchWizard.selectedViewGoToCartBtnCI}") [@L[cds.sales/getonline:checkout-now]@L]
+
+      #domain-search-footer
+        .container
+          .row.bubble-row.product-section
+            .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.white
+              mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+              p [@L[cds.sales/getonline:did-you-know-domain-customers]@L]
+            .col-xs-2
+              img.product-section.hero-guy.left(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
 
   block proInterview
   
@@ -380,7 +486,7 @@ block content
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-365email-icon.png")
             h2.text-center [@L[cds.sales/getonline:O365-email-header]@L]
             h3.text-center [@L[cds.sales/getonline:O365-email-text]@L]
-            .h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
+            h2.text-center.product-summary <mark>[@L[cds.sales/getonline:email-username]@L]@<span class="selected-domain-name-display"></span></mark>
         .row.bubble-row
           .col-xs-10.col-sm-8.col-sm-offset-2.col-lg-6.col-lg-offset-4.bubble.left
             mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
@@ -392,44 +498,44 @@ block content
     .container
       .row
         .col-sm-10.col-sm-offset-1
-          h2.text-center [@L[cds.sales/getonline:why-us-header]@L]
+          h2.why-us-header.text-center [@L[cds.sales/getonline:why-us-header]@L]
       .row
         .col-sm-4
           .feature.why-gd-world-leader
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png','Pin Point Globe')
-            h3 [@L[cds.sales/getonline:why-us-world-leader-header]@L]
+            h3.why-us-subheader [@L[cds.sales/getonline:why-us-world-leader-header]@L]
             p [@L[cds.sales/getonline:why-us-world-leader-text]@L]
         .col-sm-4
           .feature.why-gd-support
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png','TLD Boards')          
-            h3 [@L[cds.sales/getonline:why-us-support-header]@L]
+            h3.why-us-subheader [@L[cds.sales/getonline:why-us-support-header]@L]
             p [@L[cds.sales/getonline:why-us-support-text]@L]
         .col-sm-4
           .feature.why-gd-trust
             +lazyImg('','','[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png','Support Icon')
-            h3 [@L[cds.sales/getonline:why-us-trust-header]@L]
+            h3.why-us-subheader [@L[cds.sales/getonline:why-us-trust-header]@L]
             p [@L[cds.sales/getonline:why-us-trust-text]@L]
 
   block bottomGetItNow
     section#bottomGetItNow.bg-medium
       .container.text-center
         .row
-          h2 [@L[cds.sales/getonline:get-online-bottom-header]@L]
-          h3#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
-          h3#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
+          h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
+          h3.got-subheader#got-domain-not-selected [@L[cds.sales/getonline:get-online-bottom-no-domain]@L]
+          h3.got-subheader#got-domain-selected.price-token(style="display: none; ") [@L[cds.sales/getonline:get-online-bottom-domain-selected]@L]
         .row
           .column.domain
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-domainName.png")
-            h3 [@L[cds.sales/getonline:domain-name-header]@L]
+            h3.got-subheader [@L[cds.sales/getonline:domain-name-header]@L]
           .plus +
           block bottomTargetedProduct
             //- each derived page must insert its own content here
           .plus +
           .column.email
             img.img-responsive.center-block(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-email.png")
-            h3 [@L[cds.sales/getonline:O365-email-header]@L]
+            h3.got-subheader [@L[cds.sales/getonline:O365-email-header]@L]
         .row
-          h3.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
+          h3.got-subheader.price-token [@L[cds.sales/getonline:get-online-bottom-bundle-price]@L]
           button#bottomSearchAgain(data-ci="#{productToDisplay.bottomSearchAgainCI}", style="display: none;").btn.btn-primary.btn-lg [@L[cds.sales/getonline:search-again]@L]
           button(data-ci="#{productToDisplay.bottomGetItNowBtnCI}").btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
           small.price-token [@L[cds.sales/getonline:product-bundle-renewal-price]@L]
@@ -493,7 +599,7 @@ prepend endOfPageScripts
       $containers.each(function(){
         var $this = $(this);
         var videoId = $this.data('youtube-id');
-        $this.find('.play-button, .cta').bind('click.youtube',function(event){
+        $this.find('.play-button, .cta').on('click.youtube',function(event){
           // remove this event
           $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
 

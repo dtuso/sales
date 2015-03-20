@@ -1,5 +1,5 @@
 ---
-id:  550891def778fc1bd0ea4dcb
+id:  550b1319f778fc1240b846cf
 name: GCE-35561
 comments: Managed WordPress Hosting rebrand
 location: localization/sales/gd/hosting/wordpress-hosting/en
@@ -26,7 +26,6 @@ Questions? Speak to a hosting expert, now:  {0}
 As low as
 <phrase key="35561-price-span-per-mo" comment="" />
 {0}<span>/mo</span>
-
 <phrase key="35561-basic" comment="" />
 Basic
 <phrase key="35561-basic-desc" comment="" />
@@ -198,7 +197,7 @@ Create a full-blown staging environment to test your changes every which way bef
 <phrase key="35561-more-6-title" comment="" />
 Malware scan &amp; removal
 <phrase key="35561-more-6-desc" comment="" />
-Hackers can inject malicious code—malware--into your site to steal info or deface your site. With SiteLock Professional 
+Hackers can inject malicious code—malware--into your site to steal info or deface your site. With SiteLock Professional Malware scan (included with Ultimate plan), malware’s found and destroyed before it harms you or your customers.
 <phrase key="35561-never-loose-title" comment="" />
 We've got your backup
 <phrase key="35561-never-loose-desc" comment="" />
@@ -245,6 +244,10 @@ Having the latest version of WordPress’s core software keeps your site happy a
 Pre-screened plugins
 <phrase key="35561-security-slide-5-desc" comment="" />
 We screen thousands upon thousands of <a id="wordpress-plugins-link" data-ci="">WordPress plugins</a>. Why? So you never have to worry whether you’re installing a well-behaved plugin or one that eats the last slice of pizza and leaves the box.
+<phrase key="35561-security-slide-6-title" comment="" />
+Malware scan &amp; removal
+<phrase key="35561-security-slide-6-desc" comment="" />
+Hackers can inject malicious code—malware--into your site to steal info or deface your site. With SiteLock Professional Malware scan (included with Ultimate plan), malware’s found and destroyed before it harms you or your customers.
 <phrase key="35561-training-title" comment="" />
 Top-notch training to master WordPress basics
 <phrase key="35561-training-item-1-title" comment="" />

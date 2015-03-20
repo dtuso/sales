@@ -40,31 +40,35 @@ append vars
   - productToDisplay.disclaimerCI = "96981";
   - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-mwp-content]@L]";
 
-  - domainSearchWizard                             = {};
-  - domainSearchWizard.searchNowCallbackFn         = "domainSearchFormSubmit"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.maxDomainLength             = 63;
-  - domainSearchWizard.title                       = "";
-  - domainSearchWizard.placeholderText             = "[@L[cds.sales/getonline:placeholder]@L]";
-  - domainSearchWizard.buttonText                  = "[@L[cds.sales/getonline:search]@L]";
-  - domainSearchWizard.infoTypeHere                = "[@L[cds.sales/getonline:placeholder-message]@L]";
-  - domainSearchWizard.infoErrorEligibility        = "[@L[cds.sales/getonline:eligibility-error]@L]";
-  - domainSearchWizard.infoInvalidTld              = "[@L[cds.sales/getonline:offer-only-valid]@L]";
-  - domainSearchWizard.infoDupDomainInCart         = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
-  - domainSearchWizard.showSearchButton            = true;
-  - domainSearchWizard.saveEnteredDomainFn         = "updateSearchedDomain"; /* you need to code a function taking the [@L[cds.sales/getonline:domain-name-header]@L] as a string input */
-  - domainSearchWizard.initialViewId               = "domain-search-view";
-  - domainSearchWizard.searchViewSearchBtnCI       = "97072";
-  - domainSearchWizard.dupDomainInCartCI           = "97060";
-  - domainSearchWizard.availViewSearchBtnCI        = "97061";
-  - domainSearchWizard.availViewRecomSelBtnCI      = "97062";
-  - domainSearchWizard.availViewViewAllBtnCI       = "97063";
-  - domainSearchWizard.availViewSearchAgnBtnCI     = "97064";
-  - domainSearchWizard.notAvailViewSearchBtnCI     = "97065";
-  - domainSearchWizard.notAvailViewViewAllBtnCI    = "97067";
-  - domainSearchWizard.notAvailViewSearchAgnBtnCI  = "97068";
-  - domainSearchWizard.selectedViewSearchAgnBtnCI  = "97069";
-  - domainSearchWizard.selectedViewSeeProdBtnCI    = "97070";
-  - domainSearchWizard.selectedViewGoToCartBtnCI   = "97071";
+  - domainSearchWizard                                = {};
+  - domainSearchWizard.maxDomainLength                = 63;
+  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/wordpress.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  - domainSearchWizard.requireDomainToGoToCart        = true;
+  - domainSearchWizard.animateWizard                  = false;
+  - domainSearchWizard.title                          = "";
+  - domainSearchWizard.placeholderText                = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                     = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                   = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.showInfoTypeHere               = false;
+  - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton               = true;
+  - domainSearchWizard.showChoicesWithAvailableDomain = true;
+  - domainSearchWizard.showRecommendedDomain          = true;
+  - domainSearchWizard.initialViewId                  = "domain-available-view";
+  - domainSearchWizard.searchViewSearchBtnCI          = "97072";
+  - domainSearchWizard.dupDomainInCartCI              = "97060";
+  - domainSearchWizard.availViewSearchBtnCI           = "97061";
+  - domainSearchWizard.availViewRecomSelBtnCI         = "97062";
+  - domainSearchWizard.availViewViewAllBtnCI          = "97063";
+  - domainSearchWizard.availViewSearchAgnBtnCI        = "97064";
+  - domainSearchWizard.notAvailViewSearchBtnCI        = "97065";
+  - domainSearchWizard.notAvailViewViewAllBtnCI       = "97067";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97068";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97069";
+  - domainSearchWizard.selectedViewSeeProdBtnCI       = "97070";
+  - domainSearchWizard.selectedViewGoToCartBtnCI      = "97071";
 
 block targetedProduct
   .column.website
@@ -79,7 +83,7 @@ block productSection
     .wordpress-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
     .product-info-text{margin-top:20px;margin-bottom:85px;}
 
-  section#wordpress.product-section
+  section#productSection.product-section
     .container
       .row
         .col-sm-10.col-sm-offset-1
@@ -109,4 +113,4 @@ block productSection
 block bottomTargetedProduct
   .column.website
     img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
-    h3 #{productToDisplay.name}
+    h3.got-subheader #{productToDisplay.name}

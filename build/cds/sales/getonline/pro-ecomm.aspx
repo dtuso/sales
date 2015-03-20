@@ -16,6 +16,35 @@
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/getonline:pro-ecomm-page-title]@L]</title>
     <meta name="robots" content="noindex, nofollow">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -117,7 +146,6 @@
           };
           
           tokenizeDisclaimerModal('#default-details-modal.tokenizable-disclaimer-modal',offerInfo.pricing.renewal_monthly);
-          // tokenizeDisclaimerModal('#domain-entry-details-modal-wsb-only-choice.tokenizable-disclaimer-modal',domainSearch.pricing.bundleRenewal_wsb);  
         }
         
         function tokenizeTheDataTokenizeAttribute() {
@@ -147,12 +175,72 @@
           $("[data-ci]").click(function(a) {
             $this = $(this), FastballEvent_MouseClick(a, $this.attr("data-ci"), $(this)[0], "a"), fbiLibCheckQueue()
           });
+        
           var passedBusinessName = getParameterByName('domain');
           if(passedBusinessName != '') {
             offerInfo.businessName = passedBusinessName;
             $(document).find('.business-name-display').text(passedBusinessName);
          }
         });
+        
+      </script>
+      <script>
+        $(document).bind('goToCheckout', goToCheckoutHostingHandler);
+        
+        function goToCheckoutHostingHandler(e) {
+          var pkg = {};
+          pkg.pkgid = offerInfo.packageId;
+          pkg.qty = 1;
+          pkg.itc = offerInfo.itcCode;
+          pkg.ci = ciCode;
+          var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+        
+          var postdata = "requestData=" + JSON.stringify(pkg);
+          $.ajax({
+            type:"POST",
+            url: sapiurl,
+            contentType: "application/json",
+            data: postdata,
+            dataType: "jsonp",
+            complete: function (data) {
+              if (data.statusText == "success") {
+                addHostingDomain(domain, ciCode);
+              }
+            },
+            error: function(){
+              showApi3SearchError(e, domain);
+            }
+          });
+        }
+        
+        function addHostingDomain(domain, ciCode){
+          var plan = offerInfo.packageId;
+          var domainToAdd = encodeURIComponent(domain.Fqdn);
+          var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
+          var pkg = {};
+          pkg.pkgid = plan;
+          pkg.itc = offerInfo.itcCode;
+          pkg.quantity = 1;
+          pkg.ci = ciCode;
+          pkg.custom = { "domain": domainToAdd }
+          var postdata = "requestData=" + JSON.stringify(pkg);
+          $.ajax({
+            type:"POST",
+            url: sapiurl,
+            contentType: "application/json",
+            data: postdata,
+            dataType: "jsonp",
+            complete: function (data) {
+              if (data.statusText == "success") {
+                ##if(isManager())
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                ##else
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                ##endif
+              }
+            }
+          });      
+        }
         
       </script>
     </atlantis:webstash><!--[if lt IE 9]>
@@ -250,7 +338,7 @@
         </div>
       </div>
     </section>
-    <section id="eccom" class="product-section">
+    <section id="productSection" class="product-section">
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-onlineStore.png" class="img-responsive center-block">
@@ -259,7 +347,7 @@
             <button id="external" data-toggle="modal" data-target="#g-modal" data-ci="96316" class="btn btn-default-dark center-block">[@L[cds.sales/getonline:view-portfolio]@L]</button>
           </div>
         </div>
-        <section data-youtube-id="" style="padding-bottom:0px" class="video-marquee-wrapper">
+        <section data-youtube-id="" class="video-marquee-wrapper">
           <div class="container">
             <div data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png" class="lazyload video-marquee video-marquee-black full-video monitor"></div>
             <div class="row">
@@ -282,25 +370,25 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
-            <h2 class="text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
+            <h2 class="why-us-header text-center">[@L[cds.sales/getonline:why-us-header]@L]</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="feature why-gd-world-leader"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldLeader2.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Pin Point Globe" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-world-leader-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-world-leader-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-support"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-speed.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="TLD Boards" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-support-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-support-text]@L]</p>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="feature why-gd-trust"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/IconWorldMillion3.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Support Icon" class="lazyload"/>
-              <h3>[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
+              <h3 class="why-us-subheader">[@L[cds.sales/getonline:why-us-trust-header]@L]</h3>
               <p>[@L[cds.sales/getonline:why-us-trust-text]@L]</p>
             </div>
           </div>
@@ -308,12 +396,15 @@
       </div>
     </section>
     <section id="bottomGetItNow" class="bg-medium">
-      <div class="container">
-        <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
-        <div class="pro-wrapper">
+      <div class="container text-center">
+        <div class="row">
+          <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
+        </div>
+        <div class="row pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
           <div class="col-xs-6">
-            <h3 class="product-name">[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
+            <h3 class="product-name got-subheader">[@L[cds.sales/getonline:pro-ecomm-product-name]@L]</h3>
             <p class="p1">[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]</p>
             <div class="col-xs-12 text-center">
               <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -448,13 +539,12 @@ ul li.no-check {
         #getItNow .bubble h2 { margin-bottom: 0; padding-top: 40px; }
         #getItNow .bubble h3 { font-family: Walsheim-Black; }
         #getItNow .products { margin-top: 40px; }
-        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; }
+        #getItNow .products h3 { font-family: Walsheim-Black; font-size: 2.25rem; margin-top: 20px; margin-bottom: 10px}
         #getItNow .products img { min-height: 115px; }
         .cta { margin-top: 20px;}
         .cta small { padding-top: 10px; padding-bottom:5px;}
         #product-price{margin-top: 5px;}
         #getItNow mark{margin-top: 6px;}
-        
         
         @media (min-width: 768px) {
           #getItNow .bubble {
@@ -481,6 +571,9 @@ ul li.no-check {
         #getItNow .header-text.disclaimers { margin-top: -14px; text-transform: none; }
         #getItNow .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
         
+      </style>
+      <style>
+        #selected-domain btn.btn-search-again {font-weight: 800; text-decoration: none; cursor: pointer;}
         
       </style>
       <!-- atlantis:webstash(type="css")-->
@@ -549,8 +642,9 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        .why-us-title{margin-top:10px;}
+        .why-us-header{margin-top:10px; margin-bottom: 40px;}
         .why-us-text{margin-top:10px;}
+        .why-us-subheader {margin-top: 20px; margin-bottom: 10px;}
         
         .why-world-leader{height:117px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-security.png) no-repeat bottom;}
         .why-support{height:100px; background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-support.png) no-repeat bottom;}
@@ -559,7 +653,8 @@ ul li.no-check {
       </style>
       <!-- atlantis:webstash(type="css")-->
       <style>
-        .product-name{font-weight:800;padding-top:10px;}
+        .got-header {margin-top:10px; margin-bottom: 40px;}
+        .got-subheader {margin-top:20px; margin-bottom: 10px;}
         
         #got .header-detail-text{margin-top:10px;margin-left:5%;margin-right:5%;}
         #got-domain-selected{display:none;}
@@ -569,19 +664,14 @@ ul li.no-check {
         
       </style>
       <style>
-        #pro-specific h2 { margin-bottom: 0; }
-        #pro-specific h3 { margin-bottom: 20px; }
         .feature mark { margin-top: 20px; }
-        .feature h3 { margin-top: 0; }
         @media (min-width: 768px) {
-          .feature { text-align: left; }
+          .feature { text-align: left; margin-top: 40px; }
         }
         .product-section{border-bottom: lightgray 1px solid;}
         .products{margin-top: 0px!important;}
-        .uppercase{text-transform: uppercase;}
         .orange-text{color: #ef6c0f;}
         #getItNow .hero-guy{left: 0px;}
-        #getItNow mark{margin-top: 6px;}
         
       </style>
     </atlantis:webstash>
@@ -658,7 +748,7 @@ ul li.no-check {
         $containers.each(function(){
           var $this = $(this);
           var videoId = $this.data('youtube-id');
-          $this.find('.play-button, .cta').bind('click.youtube',function(event){
+          $this.find('.play-button, .cta').on('click.youtube',function(event){
             // remove this event
             $(event.target).unbind(event.type+'.'+event.handleObj.namespace);
       

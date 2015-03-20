@@ -1,7 +1,7 @@
 ---
 location: localization/sales/getonline/en
 id: 
-name: P4P
+name: GCE-37624
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -141,7 +141,7 @@ You do not meet the eligibility requirements for {0} domains, please select a di
 <phrase key="offer-only-valid" />
 Offer only valid with <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG
 <phrase key="domain-already-in-cart-checkout-or-search" />
-This domain is already in your cart. To use it with this offer, please go to your <a href="{0}">cart</a>, delete your domain and search again.
+<mark class='selected-domain-name-display'></mark> is already in your cart. To use it with this offer, please go to your <a href='{0}'>cart</a>, delete your domain and search again.
 <phrase key="something-unexpected-happened" />
 Something unexpected happened
 <phrase key="generic-domain-search-error" />
