@@ -1,0 +1,739 @@
+##if(false)
+<!-- DOC BLOCK (DO NOT REMOVE)
+
+
+    IMPORTANT:
+      If version control is enabled for this page all changes to this page must also go through version control.
+
+    VERSION CONTROL:
+      none
+
+    WEB PAGE CHAMPION:
+      
+
+    DRAFT DETAILS:
+      Draft Name:   2015-01-12 - tdemichele - GCE-28157
+      Created By:     tdemichele <blunt@godaddy.com>
+      JIRA Ticket:    GCE-31997
+      Comments:       Translate WSB product name
+
+    PREVIEW URL:
+      http://www.godaddy.com/hosting/website-builder-config.aspx?version=sales/hosting/website-builder-config.aspx%7C54b55ce5bb84bc0eb0d3df88
+
+
+
+END DOC BLOCK -->
+##endif
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="[@T[localization:<language full="true" />]@T]"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="[@T[localization:<language full="true" />]@T]">
+<!--<![endif]-->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+  <meta http-equiv="content-language" content="[@T[localization:<language full="true" />]@T]" />
+  ##if(activeLanguageAny(es))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-es]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-es]@L]" />
+  ##elseif(countrySiteAny(au))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-au]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-au]@L]" />
+  ##elseif(countrySiteAny(ca))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-ca]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-ca]@L]" />
+  ##elseif(countrySiteAny(in))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-in]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-in]@L]" />
+  ##elseif(countrySiteAny(uk))
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title-uk]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description-uk]@L]" />
+  ##else
+  <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
+  <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]" />
+  ##endif
+  <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/hosting/website-builder-config.aspx' parammode='explicit'/>]@T]"/>
+  <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"/>
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.HeadTags" />]@P]
+  <link rel="Stylesheet" type="text/css" href="[@T[link:<cssroot />]@T]fos/css/1/lp/lp_config_https_20140703.min.css" />
+  <script src="[@T[link:<javascriptroot />]@T]shared/js/1.8.0/global.20120918.min.js" type="text/javascript" ></script>
+  <style>
+    #sslAddonWrapper {z-index:99!important;}
+    #add-domain-btn, #no-domain-btn {margin-top:10px!important;margin-bottom:4px!important;}
+    #no-domain-loading, #add-domain-loading {margin-top:14px!important; }
+    #freeDomain .column-left, #freeDomain .column-right{height:auto!important;}
+    .domain-check-buttons {clear:both; text-align:right;}    
+    .floatleft {float:right;}
+    #freeDomain .column-right .domain-search>div.tld-input {float:right;}
+  </style>
+  </head>
+<body>
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+<div id="hostingConfig">
+    <h2>[@L[foswebsitebuilderconfig:title-GCE-31997]@L]</h2>
+    <div id="hostingConfigOverlay"></div>
+    <div class="column-left">
+        <div class="plan-type column-1"><span class="section-header">[@L[cds.sales/hosting/fosconfigcommon:pickplantype]@L]</span><br />
+            <div id="planTypes" class="plan-droplist-select" data-ci="83979">
+              <div class="plan-droplist-selected">
+              </div>
+              <div class="plan-droplist-selectbtn">
+              <span></span>
+              </div>
+              <ul><li data-main=""></li></ul>
+            </div>
+        </div>
+        <div class="plan-type column-2"><span class="section-header">[@L[cds.sales/hosting/fosconfigcommon:selectterm]@L]</span><br />
+            <span class="subtitle">[@L[cds.sales/hosting/fosconfigcommon:lockitin]@L]</span><br />
+            <div id="termList" class="plan-droplist-select" data-ci="83977">
+              <div class="plan-droplist-selected">
+              </div>
+              <div class="plan-droplist-selectbtn">
+              <span></span>
+              </div>
+              <ul><li data-main=""></li></ul>
+            </div> 
+        </div>
+        <div id="sslAddonWrapper" class="plan-type">
+          <span class="section-header">[@L[cds.sales/hosting/fosconfigcommon:sslheader]@L]</span>
+                <span class="g-toolTip lg-tooltip">
+                  <span>
+                     [@L[cds.sales/hosting/fosconfigcommon:ssltooltipheader]@L]
+                        <ul>
+                          [@L[cds.sales/hosting/fosconfigcommon:ssltooltipbody]@L]
+                        </ul> 
+                  </span>
+              </span>
+          <div class="ssl-cert">
+            <div><span class="ssl-checkbox" id="sslCheckbox"></span>[@L[cds.sales/hosting/fosconfigcommon:addsslcert]@L]<span id="sslPrice"></span>/[@L[cds.sales/hosting/fosconfigcommon:termyearshort]@L]</div>
+          </div>
+        </div>
+        <div class="buttons">
+            <a id="planConfigContinue" class="flt-btn-orng" data-ci="85539" href="">[@L[cds.sales/hosting/fosconfigcommon:continuebtn]@L] ></a>
+            <div id="planConfigLoading" class="loading" style="display: none"></div>
+            <input type="hidden" name="planSelected" id="planSelected" value=""/>
+            <input type="hidden" name="planQualified" id="planQualified" value="0" />
+        </div>
+    </div>
+</div>
+<div id="freeDomain" style="display:none;">
+  <h2>[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]</h2>
+    <div class="columns">
+  <div class="column-left">
+      <p>
+          <span class="icon-exclamation">[@L[cds.sales/hosting/fosconfigcommon:addfreedomain]@L]</span>
+          <span class="g-toolTip lg-tooltip">
+          <span>
+          ##if(countrySiteAny(in))
+            [@L[cds.sales/hosting/fosconfigcommon:domainindiahover]@L]
+          ##elseif(countrySiteAny(uk))
+            [@L[cds.sales/hosting/fosconfigcommon:domainukhover]@L]
+          ##elseif(countrySiteAny(br))
+            [@L[cds.sales/hosting/fosconfigcommon:domainbrhover]@L]
+          ##elseif(countrySiteAny(mx))
+            [@L[cds.sales/hosting/fosconfigcommon:domainmxhover]@L]
+          ##elseif(countrySiteAny(au))
+            [@L[cds.sales/hosting/fosconfigcommon:domainauhover]@L]
+          ##elseif(countrySiteAny(ca))
+            [@L[cds.sales/hosting/fosconfigcommon:domaincahover]@L]
+          ##elseif(isManager())
+            [@L[cds.sales/hosting/fosconfigcommon:domainmanagerhover]@L]
+          ##else
+            [@L[cds.sales/hosting/fosconfigcommon:domainhover]@L]
+           ##endif  
+          </span></span></p></div>
+  <div class="column-right">
+    <form name="domaincheck" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'><param name='promoCode' value='wsb-promo' /></relative>]@T]" id="domainSearch">
+      <input type="hidden" name="targetdivid" value="x" />
+      <input type="hidden" name="source" value="domaincheck" />
+      <input type="hidden" name="token" id="token"/>
+      <input type="hidden" name="domaintoadd" id="domaintoadd"/>
+      <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
+      <div class="domain-search">
+    <div class="search-input-wrapper">
+        <label for="txtsld" class="search-input-label">[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]</label>
+        <input id="txtsld" type="text" class="search-input" name="sld" value="" onfocus="this.style.backgroundColor='#fff'" onblur="if(this.value==''){this.style.backgroundColor='transparent'}" >
+    </div>        
+        <div class="tld-input">
+          <div class="tld-input-selected">
+            <span>.com</span>
+          </div>
+          <input type="hidden" name="tld" id="txtTld" value="com" />
+          <input type="hidden" name="addIfAvailable" value="true" />
+          <a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
+          <ul>
+            <li data-main=".com" data-view="com" class="availabletld selected">
+              <div data-main="true">
+              <span>.com</span>
+              </div>
+            </li>
+             ##if(countrySiteAny(br) || isManager())
+             <li data-main=".com.br" data-view="com.br" class="availabletld">
+              <div data-main="true">
+              <span>.com.br</span>
+              </div>
+            </li>
+             ##endif
+              ##if(countrySiteAny(mx) || isManager())
+            <li data-main=".com.mx" data-view="com.mx" class="availabletld">
+              <div data-main="true">
+              <span>.com.mx</span>
+              </div>
+            </li>
+            ##endif
+             ##if(countrySiteAny(au) || isManager())
+            <li data-main=".com.au" data-view="com.au" class="availabletld">
+              <div data-main="true">
+              <span>.com.au</span>
+              </div>
+            </li>
+            ##endif
+            <li data-main=".co" data-view="co" class="availabletld">
+              <div data-main="true">
+              <span>.co</span>
+              </div>
+            </li>
+             ##if(countrySiteAny(ca) || isManager())
+            <li data-main=".ca" data-view="ca" class="availabletld">
+              <div data-main="true">
+              <span>.ca</span>
+              </div>
+            </li>
+            ##endif
+             ##if(countrySiteAny(in) || isManager())
+            <li data-main=".in" data-view="in" class="availabletld">
+              <div data-main="true">
+              <span>.in</span>
+              </div>
+            </li>
+            ##endif
+            <li data-main=".net" data-view="net" class="availabletld">
+              <div data-main="true">
+              <span>.net</span>
+              </div>
+            </li>
+            <li data-main=".org" data-view="org" class="availabletld">
+              <div data-main="true">
+              <span>.org</span>
+              </div>
+            </li>
+             ##if(countrySiteAny(uk) || isManager())
+            <li data-main="co.uk" data-view="co.uk" class="availabletld">
+              <div data-main="true">
+              <span>.co.uk</span>
+              </div>
+            </li>
+            <li data-main=".uk" data-view="uk" class="availabletld">
+              <div data-main="true">
+              <span>.uk</span>
+              </div>
+            </li>
+            ##endif
+          </ul>
+        </div>
+      </div>
+      <div id="domain-search-click" class="flt-btn-grn" data-ci="85541">[@L[cds.sales/hosting/fosconfigcommon:gobtn]@L]</div>
+      <div id="search-btn-loading" class="loading" style="display: none"></div>
+    </form>
+    <div id="domain-avail-check" class="domain-check">
+      <div id="domain-searched" class="domain-check-hidden"></div>
+    </div>
+    <div class="domain-check-buttons">
+      <div id="no-domain-btn" class="flt-btn-gray spc10 floatleft" data-ci="85548">[@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L]</div>
+      <div id="no-domain-loading" class="loading floatleft" style="display: none"></div>
+      <div id="add-domain-btn" class="flt-btn-orng hide-flt-btn floatleft" data-ci="85547">[@L[cds.sales/hosting/fosconfigcommon:addandcontinue]@L]</div>
+      <div id="add-domain-loading" class="loading floatleft" style="display: none"></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+    $.ajaxSetup({cache:false});
+    var nextStepUrl;
+    var wsbPlanNames ={
+    "Personal": "[@L[foswebsitebuilderconfig:personalplan]@L]",
+    "Economy": "[@L[foswebsitebuilderconfig:economyplan]@L]",
+    "Business": "[@L[foswebsitebuilderconfig:businessplan]@L]",
+    "Business Plus":"[@L[foswebsitebuilderconfig:businessplusplan]@L]"
+    };
+    var wsbPlanStrings = {
+      "Personal": "[@L[foswebsitebuilderconfig:personaltext]@L]",
+      "Economy": "[@L[foswebsitebuilderconfig:economytext]@L]",
+      "Business": "[@L[foswebsitebuilderconfig:businesstext]@L]",
+      "Business Plus": "[@L[foswebsitebuilderconfig:businessplustext]@L]"
+    };
+    var PlanBox6UI = {
+        showTerm: function (li) {
+            if (li) {
+                var viewData = li.attr('data-view').split("|");
+                var container = li.parents('.plan-container');
+                if (container) {
+                    container.children(".plan-price").children("span:first").html(viewData[0]);
+                    container.children(".plan-savings").css("visibility", 0 < parseInt(viewData[2]) ? "visible" : "hidden").children("span:last").html("[@L[fosconfigcommon:save]@L]&nbsp; " + viewData[2] + "%");
+                }
+            }
+        }, changeSelected: function (li, parent) {
+            var content = li.find('div[data-main=true]').html();
+            parent.find('div:first').html(content);
+            if (li.hasClass('availabletld')) {
+                $('#txtTld').val(li.attr('data-view'));
+            }
+        },
+        addDomaintoCart: function () {
+            ##if(isManager())
+                var url = '[@T[link:<relative path="/cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="mgr_slp_wst_3" /></relative>]@T]';
+            ##else
+                var url = '[@T[link:<relative path="cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="slp_wst_3" /></relative>]@T]';
+            ##endif
+
+          var domaintoadd = $('#domaintoadd').val();
+
+          url += (url.indexOf('?') >= 0) ? "&" : "?";
+          url += '&domaintoadd=' + domaintoadd;
+
+          $.getJSON(url, function (data) {
+            if (data == 'success') {
+              window.location =
+                +nextStepUrl;
+                }
+            });
+        },
+        removeDoamin: function () {
+           ##if(isManager())
+                var url = '[@T[link:<relative path="/cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="mgr_slp_wst_3" /></relative>]@T]';
+            ##else
+                var url = '[@T[link:<relative path="cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="slp_wst_3" /></relative>]@T]';
+            ##endif
+            var domaintoadd = $('#domaintoadd').val();
+
+            url += (url.indexOf('?') >= 0) ? "&" : "?";
+            url += '&domaintoremove=' + domaintoadd;
+
+            $.getJSON(url, function (data) {
+                if (data == 'removed') {
+                  ##if(isManager())
+                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                  ##else
+                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                  ##endif
+                }
+            });
+        },
+        recordClick: function (c, a, b) {
+            if (typeof (FastballEvent_MouseClick) !== "undefined") {
+                FastballEvent_MouseClick(c, a, b, "a");
+            }
+        }
+    };
+
+    var PlanConfig = {
+        planChanged: function () {
+            var overlayHeight = $('.column-left').height();
+            $('#hostingConfigOverlay').height(overlayHeight).fadeIn(200); 
+            var isc = getParameterByName("isc");
+            var plan = getParameterByName("plan");
+            
+            if($('#planSelected').val().toUpperCase().indexOf('_BUSINESS_') >= 0 && (plan.toLowerCase().indexOf('lenovo') >= 0 || plan.toLowerCase().indexOf('cce') >= 0))
+            {
+                var hasLenovoOrCCE = PlanConfig.checkCCEOrLenovo();
+                if(!hasLenovoOrCCE)
+                  $('#planSelected').val(getParameterByName("plan"));
+            }        
+            var planselected =  $('#planSelected').val(); 
+            var url = '[@T[link:<relative path="api/package/config/{0}" />]@T]';
+            url = url.replace('{0}', planselected);
+
+            $.getJSON(url, function (data) {
+                if (data != null) {
+                    processPlanData(data);
+                }
+            });
+        }, addPlantoCart: function () {
+            $('#planConfigContinue').fadeOut(100, function () {
+                $('#planConfigLoading').fadeIn(100);
+            });
+
+           
+            var planselected = $('#planSelected').val();
+            var itc;
+            ##if(isManager())
+              itc="mgr_slp_wst_3";
+            ##else
+              itc="slp_wst_3";
+            ##endif  
+             
+            var url = PlanConfig.getCartAPIUrl('update',itc,'83980','1',planselected);
+            $.getJSON(url, function (data) {
+                if (data.Success == true) {                                 
+                      var newCartCt = pcCartCt + 1;
+
+                      if ($('#sslAddonWrapper').is(':visible') && $('#sslCheckbox').hasClass('active')) {
+                           newCartCt++;
+                           PlanConfig.addSSLToCart();
+                       }
+                        pcUpdateCart(newCartCt);
+                        if ($('#planQualified').val() == "1") {
+                            $('#hostingConfig').fadeOut(200, function () {
+                                $('#freeDomain').fadeIn(200);
+                            });
+                        } else {
+                            ##if(isManager())
+                            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                          ##else
+                            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true"/>]@T]';
+                          ##endif
+                        }
+                }
+              });
+           
+        }, addSSLToCart: function () {
+            var itc;
+            ##if(isManager())
+              itc="mgr_slp_wst_3";
+            ##else
+              itc="slp_wst_3";
+            ##endif 
+            var url = PlanConfig.getCartAPIUrl('add',itc,'83981',1,'ssl_std_1');
+            $.getJSON(url, function (data) {
+            });
+          }, getCartAPIUrl:function(action,itcCode,ciCode,quantity,planSelected) {
+            var url = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]';
+              url = url.replace('{0}',action).replace('{1}',itcCode).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',planSelected);
+              return url;
+          }, checkCCEOrLenovo:function(){
+          
+                if($('#planSelected').val().toUpperCase().indexOf("_CCE") > 1) 
+                   return true;
+                else if($('#planSelected').val().toUpperCase().indexOf("_LENOVO") > 1) 
+                   return true;
+          }
+    };
+
+    $(document).ready(function () {
+        $('[data-ci]').click(function (E) {
+            $this = $(this);
+            FastballEvent_MouseClick(e, $this.attr('data-ci'), $(this)[0], 'a');
+            fbiLibCheckQueue();
+        });
+        
+        var $buttonsDiv = $('.domain-check-buttons');
+        $buttonsDiv.appendTo('#freeDomain'); 
+        $('#add-domain-btn').prependTo($buttonsDiv); 
+
+       
+        var productQuery = getParameterByName('plan');
+        if(productQuery == "") productQuery ="wsb_personal_12month";
+        $('#planSelected').val(productQuery)
+        PlanConfig.planChanged();
+
+        $('li[data-main]').live('click', function (e) {
+            var planString = $(this).attr('data-main');
+            if (typeof $(this).parents('[data-ci]').attr('data-ci') != 'undefined') {
+                PlanBox6UI.recordClick(e, $(this).parents('[data-ci]').attr('data-ci'), $(this));
+            }
+            if (planString != '') {
+                $('#planSelected').val(planString);
+            }
+            PlanConfig.planChanged();
+
+            return true;
+        });
+
+        $('.ssl-cert').click(function (e) {
+            PlanBox6UI.recordClick(e, '83978', $(this)[0]);
+            $(this).find('.ssl-checkbox').toggleClass('active');
+        });
+
+        $('.plan-droplist-select').click(function () { //Open & close dropdown
+            var wrap = $(this);
+            if (wrap.hasClass('droplist-open')) {
+                wrap.removeClass('droplist-open');
+            } else {
+                wrap.addClass('droplist-open');
+            }
+        });
+
+        $('.plan-droplist-select').mouseleave(function () { //Close dropdown is mouse leaves
+            $(this).removeClass('droplist-open');
+        });
+
+        $('.plan-droplist-select > ul > li').live('click', function () {
+            var li = $(this);
+            var parent = li.parent().parent();
+            li.siblings('li').removeClass('selected'); //Remove current selected
+            li.addClass('selected'); //Mark new selected
+
+            if (typeof li.attr('data-view') != 'undefined') {
+                PlanBox6UI.showTerm(li); //Show term content
+            }
+            PlanBox6UI.changeSelected(li, parent); //Change selectbox content
+        });
+
+        $('#planConfigContinue').click(function (e) {
+            e.preventDefault();
+            PlanConfig.addPlantoCart();
+            ##if(countrySiteAny(au) || isManager())
+                var term = $('#planSelected').val();
+                if (!(term === 'wsb_businessplus_24month' || term === 'wsb_business_24month' || term === 'wsb_business_24month_lenovo'|| term === 'wsb_business_24month_cce'|| term === 'wsb_personal_24month')) {
+                    console.log(term);
+                    $('li[data-main=".com.au"]').remove();
+                }
+            ##endif
+            $('html, body').animate({
+                scrollTop: $("#freeDomain").offset().top
+            }, 0);
+        });
+
+        $('.tld-input').click(function () {
+            var wrap = $(this);
+            if (wrap.hasClass('droplist-open')) {
+                wrap.removeClass('droplist-open');
+            } else {
+                wrap.addClass('droplist-open');
+            }
+        });
+
+        $('.tld-input').mouseleave(function () {
+            $(this).removeClass('droplist-open');
+        });
+
+        $('.tld-input > ul > li').click(function () {
+            var li = $(this);
+            var parent = li.parents('.tld-input');
+            li.siblings('li').removeClass('selected');
+            li.addClass('selected');
+            PlanBox6UI.showTerm(li);
+            PlanBox6UI.changeSelected(li, parent);
+        });
+
+        $('#no-domain-btn').bind('click', function (e) {
+            $('#no-domain-btn').hide();
+            $('#no-domain-loading').fadeIn();
+
+            PlanBox6UI.recordClick(e, '83539', $(this)[0]);
+
+            var domaintoadd = $('#domaintoadd').val();
+
+            if (domaintoadd == '') {
+                 ##if(isManager())
+                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                  ##else
+                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                  ##endif
+        } else {
+            PlanBox6UI.removeDoamin();
+        }
+        });
+
+        $('#add-domain-btn').bind('click', function () {
+            $('#add-domain-btn').hide();
+            $('#add-domain-loading').fadeIn();
+            window.location = nextStepUrl;       
+        });
+    });
+
+    $('#domain-search-click').bind('click', function () {
+        $('#domain-search-click').hide();
+        $('#domain-search-loading').fadeIn();
+        $('#domainSearch').submit();
+    });
+    
+    
+      
+     // get url parameter by parameter name
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function processPlanData(data) {
+        var planSelected = $('#planSelected').val();
+        var isYearly = (data.CurrentPlanDuration == 1) ? false : true;
+        
+        var otherPlansDropdown = $('#planTypes ul');
+        otherPlansDropdown.empty();
+        $.each(data.PlanListPrices, function () {
+            if (this != '') {
+                var planItem = this.split('-');
+                var planName= planItem[0];
+                var isEconomyPlan =false;
+                ##if(countrySiteAny(uk))
+                    isEconomyPlan=true;
+                ##endif
+
+                if(planName == "Personal" && isEconomyPlan)
+                  {
+                      planName="Economy";
+                  }
+                var newItem = '';
+                newItem += '<li data-main="' + planItem[1] + '">';
+                newItem += '<div data-main="true"><span>' + wsbPlanNames[planName] + ' - ' + wsbPlanStrings[planName] + '</span></div>';
+                newItem += '</li>';
+
+                otherPlansDropdown.append(newItem);
+            }
+        });
+
+        var otherTermsDropdown = $('#termList ul');
+        otherTermsDropdown.empty();
+        $.each(data.LongerTerms, function () {
+            if (this != '') {
+                var planItem = this.split('-');
+                var monthString = (planItem[0] > 1) ? "[@L[fosconfigcommon:termmonths]@L]" : "[@L[fosconfigcommon:termmonth]@L]";
+                var saleString = (planItem[3] == 1) ? "[@L[fosconfigcommon:onsalelower]@L]" : '';
+                var savingsString = (planItem[4] > 0) ? "[@L[fosconfigcommon:save]@L]&nbsp;" + planItem[4] + '%' : '';
+                var dataView = planItem[2] + '|' + planItem[5] + '|' + planItem[4];
+
+                var newItem = '';
+                newItem += '<li data-main="' + planItem[1] + '" data-view="' + dataView + '">';
+                if (planItem[3] == 1) {
+                  newItem += "<div data-main=\"true\"><span>" + planItem[0] + " " + monthString + "</span><span class=\"sale\">" + planItem[2] + "[@L[fosconfigcommon:permonth]@L]</span><span class=\"sale lastChild\">" + saleString + "</span></div>";
+                  newItem += "<div data-main=\"true\"><span>&nbsp;</span><span><strike>" + planItem[5] + "</strike>[@L[fosconfigcommon:permonth]@L]</span><span class=\"sale lastChild\">" + savingsString + "</span></div>";
+                } else {
+                  newItem += "<div data-main=\"true\"><span>" + planItem[0] + " " + monthString + "</span><span>" + planItem[2] + "[@L[fosconfigcommon:permonth]@L]</span>";
+                }
+                newItem += '</li>';
+
+                otherTermsDropdown.append(newItem);
+            }
+        });
+
+        $('#hostingConfigOverlay').fadeOut(200);
+
+        if (data.CurrentPlanName == "Business Plus" || !isYearly) {
+            $('#sslAddonWrapper').slideUp();
+        } else {
+            $('#sslPrice').html(data.SSLPrice);
+            $('#sslAddonWrapper').slideDown();
+        }
+
+        $("option[data-main='" + planSelected + "']").attr('selected', true);
+        $("li[data-main='" + planSelected + "']").addClass('selected');
+        var planContent = $("#planTypes li[data-main='" + planSelected + "']").find('div[data-main=true]').html();
+        $('#planTypes .plan-droplist-selected').html(planContent);
+        var termContent = $("#termList li[data-main='" + planSelected + "']").find('div[data-main=true]').html();
+        $('#termList .plan-droplist-selected').html(termContent);
+
+
+
+        if (isYearly) {
+            $('#planQualified').val('1');
+        } else {
+            $('#planQualified').val('0');
+        }
+    }
+
+    $(function () {
+        $('form[name=domaincheck]').submit(function (e) {
+          PlanBox6UI.recordClick(e, '83536', $(this)[0]);
+          var domaintoremove = $('#domaintoadd').val();
+          var domaintoadd = $('#domaintoadd').val();
+
+            var tld = $('#txtTld');
+            var domain = $('#txtsld').val();
+            var domainSplit = domain.split('.');
+            var newtld = '';
+            if (domainSplit.length > 1) {
+              for (var i = 1; i < domainSplit.length; i++) {
+                newtld += domainSplit[i];
+                if (i !== domainSplit.length - 1)
+                  newtld += '.';
+              }
+            }
+            else {
+              newtld = tld.val();
+            }
+            var valid = false;
+
+            if (domain.length > 0 && (domain != "[@L[fosconfigcommon:domainsearchtext]@L]")) {
+
+                if (tld.val() == '') {
+                    tld.val('com');
+                } else if (newtld != undefined) {
+                    tld.val(newtld);
+                    $('#txtsld').val(domain.split('.')[0]);
+                }
+
+                
+                $('.availabletld').each(function () {
+                    if ($(this).attr('data-view') == tld.val()) {
+                        valid = true;
+                    }
+                });
+
+                if (!valid) {
+                    var url = '[@T[link:<relative path="domains/search.aspx"><param name="ci" value="83537" /></relative>]@T]';
+                    url += (url.indexOf('?') >= 0) ? "&" : "?";
+                    url += 'domaintocheck=' + domain;
+                    url += '&tld=' + tld.val();
+
+                    $('#domain-avail-check').addClass('unavailable');
+                    $('#domain-avail-check').removeClass('available');
+                    $('#domain-searched').removeClass('domain-check-hidden');
+                    $('#add-domain-btn').addClass('hide-flt-btn');
+                    $('#domain-searched').html("<span>" + domain.toLowerCase() + "&nbsp;[@L[fosconfigcommon:doesnotqualify]@L]</span><br />[@L[fosconfigcommon:stillinterested]@L]&nbsp;<a class=\"g-a\" href=\"" + url + "\">[@L[fosconfigcommon:searchnowlink]@L]</ a>");
+                    tld.val('com');
+                } else {
+                    $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
+                        $('#no-domain-btn').removeClass('hide-flt-btn');
+                        $('#add-domain-btn').removeClass('hide-flt-btn');
+
+                        if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } else if (jsonData.Properties.domainInfo[0].isPremium) {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + domain + "&nbsp;[@L[fosconfigcommon:doesnotqualify]@L]</span><br />[@L[fosconfigcommon:stillinterested]@L]&nbsp;<a class=\"g-a\" href=\"" + url + "\">[@L[fosconfigcommon:searchnowlink]@L]</ a>");
+
+                        } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[cds.sales/hosting/fosconfigcommon:domNameInvalid]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } 
+                        else if (jsonData.Properties.domainInfo[0].error != '') {
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } else {
+                            $('#domain-avail-check').removeClass('unavailable');
+                            $('#domain-avail-check').addClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "</span><br />[@L[fosconfigcommon:isavailable]@L]");
+                            $('#token').val(jsonData.Properties.domainInfo[0].name + '|available');
+                            $('#domaintoadd').val(jsonData.Properties.domainInfo[0].name);
+                        }
+                        nextStepUrl = jsonData.Properties.nextStepUrl;
+                    }, 'json');
+                    $('#domain-search-click').fadeIn();
+                    $('#domain-search-loading').hide();
+                    return false;
+                }
+            }
+            $('#domain-search-click').fadeIn();
+            $('#domain-search-loading').hide();
+            return false;
+        });
+    });
+</script>
+  <script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer" />]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Script" />]@P]    
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Bottom" />]@P]
+</body>
+</html>

@@ -323,3 +323,371 @@ mixin domainSearchOffersInput(prms)
           $('##{prms.formId} .type-your-business-name').show();
         }
       });
+
+- configDomainSearchCssRendered = false;
+
+mixin configDomainSearchInput(configDomainSearchParams)
+  - configDomainSearchParams                          = configDomainSearchParams || {};
+  - configDomainSearchParams.formId                   = (configDomainSearchParams.formId || "domain-search-offers-input").replace(/-/gi,'');
+  - configDomainSearchParams.title                    = configDomainSearchParams.title || "title";
+  - configDomainSearchParams.placeholderText          = configDomainSearchParams.placeholderText || "placeholderText";
+  - configDomainSearchParams.buttonText               = configDomainSearchParams.buttonText || "placeholderText";
+  - configDomainSearchParams.promoCode                = configDomainSearchParams.promoCode || "";
+
+  unless(configDomainSearchCssRendered )
+    - configDomainSearchCssRendered = true;
+    atlantis:webstash(type="css")
+      style.
+        .search-icon {
+            font-size: 22px;
+        }
+        .search-text {
+          display: none;
+        }
+        .search-disclaimers{
+          margin-top: 10px;
+        }
+        .searchable-tlds{
+          font-weight:600;
+        }
+        .continue-icon {
+          background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png)') no-repeat -57px -200px;
+          width: 7px;
+          height: 11px;
+        }
+        @media (min-width: 768px){
+          .search-icon {
+            display: none;
+          }
+          .search-text {
+            display: inline;
+          }
+          .continue-text{
+            text-align: right;
+          }
+        }
+        @media (max-width: 767px){
+          .form-control{
+            font-size:10px;
+          }
+        }
+        .hide-flt-btn {
+          display: none;
+        }
+        .domain-search{background-color:#fff;border:1px solid #a4a4a4;height:34px;position:relative;margin-right:10px;min-width:375px;display:table;*display:block;float:left}
+        .domain-search>div{display:inline-block;*display:block;vertical-align:top}
+        .tld-input{border:0 none;float:none;font-size:18px;height:34px;outline:medium none;position:relative;min-width:114px;z-index:2;  border: 1px solid #bebebe; -webkit-box-shadow: inset 0 2px 0 0 #bebebe;box-shadow: inset 0 2px 0 0 #bebebe;}
+        .search-input-wrapper{*float:left;*width:277px;overflow:hidden;padding:6px 9px 0 9px;position:relative}
+        .search-input{background-color:transparent;border:0 none;color:#333;font-family:"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:18px;font-weight:300;height:24px;left:9px;outline:medium none;padding:0;position:absolute;right:9px;top:5px;width:96%}
+        .search-input.allow-placeholder{background-color:transparent}
+        .search-input-label{color:#333;display:block;font-size:18px;font-weight:300;outline:medium none;overflow:hidden;padding:3px 0;white-space:nowrap}
+        .domain-check-hidden{display:none}
+        .domain-check span{font-weight:bold}
+        .domain-check .available{color:#70a100}
+        .tld-input-selected{float:left;padding:8px 0 4px 14px;width:75px}
+        .tld-input.droplist-open{overflow:visible}
+        .tld-input>ul{padding:0;margin:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;*top:35px;top:-9999em;*left:-9999em;width:112px;z-index:3}
+        .tld-input.droplist-open>ul{*left:0;width:114px;top:35px;z-index:1000}
+        .tld-input.droplist-open>ul>li{padding:5px 10px}
+        .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
+        .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
+        .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
+        .domain-search .g-btn-sec{border-radius:0}
+        .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
+        .domains .g-btn-prg{font-weight:normal;margin:2px 0 10px 5px;min-width:20px}
+        .domains .g-btn-prg:after,.loading:after{clear:both;content:" ";display:table}
+        .domain-check-hidden{display:none}
+        .domain-check{margin-top:25px;margin-bottom:25px;font-size:20px;line-height:24px;}
+        .domain-check span{font-weight:bold}
+        .domain-check.available{color:#70a100}
+        #add-domain-btn { margin-left:10px;}
+  .row
+    .col-xs-12
+      form.domain-search-form(id!="#{configDomainSearchParams.formId}",method="get" action!="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'><param name='promoCode' value='#{configDomainSearchParams.promoCode}' /></relative>]@T]")
+        input(type='hidden', name='targetdivid', value='x')
+        input(type='hidden', name='source', value='domaincheck')
+        input#token(type='hidden', name='token')
+        input#domaintoadd(type='hidden', name='domaintoadd')
+        input(type='hidden', name='formSubmitButton', value='Add-to-Cart')
+
+        .input-group
+          label.searchInput.sr-only(for='domain-name-input') !{configDomainSearchParams.placeholderText}
+          input#domain-name-input.searchInput.form-control(class=inputClass type='text' placeholder!='#{configDomainSearchParams.placeholderText}' name='sld' maxlength='63')
+          span.tld-input.input-group-btn
+            .tld-input-selected
+              span .com
+            input#txtTld(type='hidden', name='tld', value='com')
+            input(type='hidden', name='addIfAvailable', value='true')
+            a.domain-arrow.g-btn-sm.g-btn-sec(href='javascript:void(0)')
+              span
+            ul
+              li.availabletld.selected(data-main='.com', data-view='com')
+                div(data-main='true')
+                  span .com
+              | 
+              | ##if(countrySiteAny(br) || isManager())
+              | 
+              li.availabletld(data-main='.com.br', data-view='com.br')
+                div(data-main='true')
+                  span .com.br
+              | 
+              | ##endif
+              | 
+              | 
+              | ##if(countrySiteAny(mx) || isManager())
+              | 
+              li.availabletld(data-main='.com.mx', data-view='com.mx')
+                div(data-main='true')
+                  span .com.mx
+              | 
+              | ##endif
+              | 
+              | 
+              | ##if(countrySiteAny(au) || isManager())
+              | 
+              li.availabletld(data-main='.com.au', data-view='com.au')
+                div(data-main='true')
+                  span .com.au
+              | 
+              | ##endif
+              | 
+              li.availabletld(data-main='.co', data-view='co')
+                div(data-main='true')
+                  span .co
+              | 
+              | ##if(countrySiteAny(ca) || isManager())
+              | 
+              li.availabletld(data-main='.ca', data-view='ca')
+                div(data-main='true')
+                  span .ca
+              | 
+              | ##endif
+              | 
+              | 
+              | ##if(countrySiteAny(in) || isManager())
+              | 
+              li.availabletld(data-main='.in', data-view='in')
+                div(data-main='true')
+                  span .in
+              | 
+              | ##endif
+              | 
+              li.availabletld(data-main='.net', data-view='net')
+                div(data-main='true')
+                  span .net
+              li.availabletld(data-main='.org', data-view='org')
+                div(data-main='true')
+                  span .org
+              | 
+              | ##if(countrySiteAny(uk) || isManager())
+              | 
+              li.availabletld(data-main='co.uk', data-view='co.uk')
+                div(data-main='true')
+                  span .co.uk
+              li.availabletld(data-main='.uk', data-view='uk')
+                div(data-main='true')
+                  span .uk
+              | 
+              | ##endif
+              | 
+          span.input-group-btn
+            button.btn.btn-primary.offer-search-btn(class=buttonClass type='submit' data-ci='#{configDomainSearchParams.cicode}') 
+              span.search-icon.uxicon.uxicon-magnifying-glass
+              span.search-text !{configDomainSearchParams.buttonText}
+        #search-btn-loading.loading(style='display: none')
+  .row
+    .col-xs-12
+      #domain-avail-check.domain-check.text-center
+        #domain-searched.domain-check-hidden
+  .row
+    .col-xs-12
+      #add-domain-btn.btn.btn-purchase.hide-flt-btn.pull-right(data-ci='85547') [@L[cds.sales/hosting/fosconfigcommon:addandcontinue]@L]
+      #no-domain-btn.btn.btn-default-dark.pull-right(data-ci='85548') [@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L]
+      #no-domain-loading.loading.floatleft(style='display: none')
+      #add-domain-loading.loading.floatleft(style='display: none')
+
+  atlantis:webstash(type="js")
+  script.
+    var nextStepUrl;
+    var ConfigSearch = {
+      showTerm: function (li) {
+          if (li) {
+              var viewData = li.attr('data-view').split("|");
+          }
+      }, 
+      changeSelected: function (li, parent) {
+          var content = li.find('div[data-main=true]').html();
+          parent.find('div:first').html(content);
+          if (li.hasClass('availabletld')) {
+              $('#txtTld').val(li.attr('data-view'));
+          }
+      },
+      removeDoamin: function () {
+        ##if(isManager())
+          var url = '[@T[link:<relative path="/cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="mgr_slp_wst_3" /></relative>]@T]';
+        ##else
+          var url = '[@T[link:<relative path="cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="ci" value="83538" /><param name="itc" value="slp_wst_3" /></relative>]@T]';
+        ##endif
+        var domaintoadd = $('#domaintoadd').val();
+
+        url += (url.indexOf('?') >= 0) ? "&" : "?";
+        url += '&domaintoremove=' + domaintoadd;
+
+        $.getJSON(url, function (data) {
+            if (data == 'removed') {
+              ##if(isManager())
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+              ##else
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+              ##endif
+            }
+        });
+      }
+    };
+    
+    $(document).ready(function () {
+      $('.tld-input').click(function () {
+        var wrap = $(this);
+        if (wrap.hasClass('droplist-open')) {
+        wrap.removeClass('droplist-open');
+        } else {
+        wrap.addClass('droplist-open');
+        }
+      });
+
+      $('.tld-input').mouseleave(function () {
+        $(this).removeClass('droplist-open');
+      });
+
+      $('.tld-input > ul > li').click(function () {
+        var li = $(this);
+        var parent = li.parents('.tld-input');
+        li.siblings('li').removeClass('selected');
+        li.addClass('selected');
+        ConfigSearch.showTerm(li);
+        ConfigSearch.changeSelected(li, parent);
+      });
+
+      $('#no-domain-btn').bind('click', function (e) {
+            $('#no-domain-btn').hide();
+            $('#no-domain-loading').fadeIn();
+            var domaintoadd = $('#domaintoadd').val();
+
+            if (domaintoadd == '') {
+                 ##if(isManager())
+                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                  ##else
+                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                  ##endif
+        } else {
+            ConfigSearch.removeDoamin();
+        }
+        });
+
+        $('#add-domain-btn').bind('click', function () {
+            $('#add-domain-btn').hide();
+            $('#add-domain-loading').fadeIn();
+            window.location = nextStepUrl;       
+        });
+    });
+
+    $(function () {
+        $('form[id=#{configDomainSearchParams.formId}]').submit(function (e) {
+          var domaintoremove = $('#domaintoadd').val();
+          var domaintoadd = $('#domaintoadd').val();
+
+            var tld = $('#txtTld');
+            var domain = $('#domain-name-input').val();
+            var domainSplit = domain.split('.');
+            var newtld = '';
+            if (domainSplit.length > 1) {
+              for (var i = 1; i < domainSplit.length; i++) {
+                newtld += domainSplit[i];
+                if (i !== domainSplit.length - 1)
+                  newtld += '.';
+              }
+            }
+            else {
+              newtld = tld.val();
+            }
+            var valid = false;
+
+            if (domain.length > 0 && (domain != "[@L[fosconfigcommon:domainsearchtext]@L]")) {
+
+                if (tld.val() == '') {
+                    tld.val('com');
+                } else if (newtld != undefined) {
+                    tld.val(newtld);
+                    $('#txtsld').val(domain.split('.')[0]);
+                }
+
+                
+                $('.availabletld').each(function () {
+                    if ($(this).attr('data-view') == tld.val()) {
+                        valid = true;
+                    }
+                });
+
+                if (!valid) {
+                    var url = '[@T[link:<relative path="domains/search.aspx"><param name="ci" value="83537" /></relative>]@T]';
+                    url += (url.indexOf('?') >= 0) ? "&" : "?";
+                    url += 'domaintocheck=' + domain;
+                    url += '&tld=' + tld.val();
+
+                    $('#domain-avail-check').addClass('unavailable');
+                    $('#domain-avail-check').removeClass('available');
+                    $('#domain-searched').removeClass('domain-check-hidden');
+                    $('#add-domain-btn').addClass('hide-flt-btn');
+                    $('#domain-searched').html("<span>" + domain.toLowerCase() + "&nbsp;[@L[fosconfigcommon:doesnotqualify]@L]</span><br />[@L[fosconfigcommon:stillinterested]@L]&nbsp;<a class=\"g-a\" href=\"" + url + "\">[@L[fosconfigcommon:searchnowlink]@L]</ a>");
+                    tld.val('com');
+                } else {
+                    $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
+                        $('#no-domain-btn').removeClass('hide-flt-btn');
+                        $('#add-domain-btn').removeClass('hide-flt-btn');
+
+                        if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } else if (jsonData.Properties.domainInfo[0].isPremium) {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + domain + "&nbsp;[@L[fosconfigcommon:doesnotqualify]@L]</span><br />[@L[fosconfigcommon:stillinterested]@L]&nbsp;<a class=\"g-a\" href=\"" + url + "\">[@L[fosconfigcommon:searchnowlink]@L]</ a>");
+
+                        } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[cds.sales/hosting/fosconfigcommon:domNameInvalid]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } 
+                        else if (jsonData.Properties.domainInfo[0].error != '') {
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#domain-avail-check').addClass('unavailable');
+                            $('#domain-avail-check').removeClass('available');
+                            $('#add-domain-btn').addClass('hide-flt-btn');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "&nbsp;[@L[fosconfigcommon:notavailable]@L]</span><br />[@L[fosconfigcommon:tryagain]@L]");
+                        } else {
+                            $('#domain-avail-check').removeClass('unavailable');
+                            $('#domain-avail-check').addClass('available');
+                            $('#domain-searched').removeClass('domain-check-hidden');
+                            $('#domain-searched').html("<span>" + jsonData.Properties.domainInfo[0].shortName.toLowerCase() + "</span><br />[@L[fosconfigcommon:isavailable]@L]");
+                            $('#token').val(jsonData.Properties.domainInfo[0].name + '|available');
+                            $('#domaintoadd').val(jsonData.Properties.domainInfo[0].name);
+                        }
+                        nextStepUrl = jsonData.Properties.nextStepUrl;
+                    }, 'json');
+                    $('#domain-search-click').fadeIn();
+                    $('#domain-search-loading').hide();
+                    return false;
+                }
+            }
+            $('#domain-search-click').fadeIn();
+            $('#domain-search-loading').hide();
+            return false;
+        });
+    });

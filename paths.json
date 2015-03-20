@@ -65,6 +65,7 @@
   "wordpress-pl":            "./hosting/private-label/wordpress/",
   "wp":                      "./hosting/wordpress-hosting/",
   "wsb":                     "./hosting/website-builder/",
+  "wsbc":                    "./hosting/website-builder-config/",
   "hostingclp":              "./hosting/category-landing-page/",
   "ssl-lp":                  "./ssl/ssl-lp/",
   "shared":                  "./shared/",
