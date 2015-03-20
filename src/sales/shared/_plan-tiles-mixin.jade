@@ -122,6 +122,7 @@ mixin renderCartLogic(url, itc, options)
     script(type="text/javascript").
       var itemTrackingCode = "!{itemTrackingCode}";
       var ci = "0"
+      var src = "ac"
 
       $(".btn-plan").click(function() {
 
@@ -134,6 +135,8 @@ mixin renderCartLogic(url, itc, options)
           var productPackage = $(this).data("plan");
           if($(this).data("ci")!== undefined)
             ci = $(this).data("ci");
+          if($(this).data("src")!== undefined)
+            src = $(this).data("src");
         }
 
         var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -152,6 +155,7 @@ mixin renderCartLogic(url, itc, options)
         .done(function(data) {
           var redirectUrl = "!{addToCartRedirectUrl}";
           redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+          redirectUrl = redirectUrl.replace('%7b1%7d',src);
           if (redirectUrl.indexOf("?") === -1) {
             redirectUrl += "?plan=";
           } else {

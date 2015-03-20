@@ -1,0 +1,127 @@
+---
+location: localization/sales/gd/hosting/website-builder-config/en
+id: 54f6192af778fc0104ece27b
+name: GCE-27630
+---
+
+{% include 'modules/doc-block.html' %}
+<phrase key="page-title" />
+Website Builder | Create Your Own Website in Minutes  - [@T[companyname:name]@T]
+<phrase key="page-title-es" />
+Website Builder | Spanish Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-au" />
+Website Builder | Australia's Website Creation Software - [@T[companyname:name]@T]
+<phrase key="page-title-ca" />
+Website Builder | Canadian Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-in" />
+Website Builder | India's Leading Web Design Software - [@T[companyname:name]@T]
+<phrase key="page-title-uk" />
+Website Builder | Create Your Own Website in Minutes - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Learn How to Make a Website Quickly and Easily with our Highly Acclaimed Website Builder. Our easy to use Web Design software will let you Create a Website in no time at all!
+<phrase key="meta-description-es" />
+Learn how to make a website in minutes with [@T[companyname:name]@T]'s Website Builder program. With [@T[companyname:name]@T]'s award winning 24/7 Spanish tech support you'll always have someone that can answer any of your questions.
+<phrase key="meta-description-au" />
+Building a website in Australia doesn't have to be difficult. Learn How to Make a Website Quickly and Easily with [@T[companyname:name]@T]'s Highly Acclaimed Web Design Software.
+<phrase key="meta-description-ca" />
+Build the perfect Canadian Website with Website Builder. Learn how to make a website in minutes with [@T[companyname:name]@T]'s World class Website Builder program.
+<phrase key="meta-description-in" />
+Learn How to Make a Website in minutes with [@T[companyname:name]@T]'s Website Builder. [@T[companyname:name]@T] has local India based tech support to answer all of your questions. Get online today!
+<phrase key="meta-description-uk" />
+Build a great feature loaded UK website with [@T[companyname:name]@T]'s Website Builder Program. You can't beat our world class Hosting & competitive prices.
+<phrase key="meta-keywords" />
+website builder, website creator, website templates, website template, how to make a website, make your own website, create a website, creating a website, do it yourself website builder, diy website, pre-built websites
+<phrase key="og-title" />
+Get online and grow your business with [@T[companyname:name]@T] Website Builder&trade;
+<phrase key="og-description" />
+Create your own beautiful website and never miss another customer! With hundreds of ready-made templates and easy, drag-&amp;-drop functionality, [@T[companyname:name]@T] Website Builder makes it easy for anyone to build their own website in minutes - no technical skills or coding required.
+<phrase key="twitter-text" />
+Never miss another customer! Just drag &amp; drop to create the perfect website in minutes with [@T[companyname:name]@T] Website Builder
+<phrase key="step_1" />
+step 1
+<phrase key="step_2" />
+step 2
+<phrase key="step_3" />
+step 3
+<phrase key="step_4" />
+step 4
+<phrase key="step" comment="{0} number of step" />
+step {0}
+<phrase key="personal_cart" />
+Personal Website Builder is in your cart
+<phrase key="business_cart" />
+Business Website Builder is in your cart
+<phrase key="business_plus_cart" />
+Business Plus Website Builder is in your cart
+<phrase key="added_personal_cart" />
+You've added Personal Website Builder
+<phrase key="added_business_cart" />
+You've added Business Website Builder
+<phrase key="added_business_plus_cart" />
+You've added Business Plus Website Builder
+<phrase key="select_plan" />
+Select Plan
+<phrase key="plan_title" />
+Looking for more?
+<phrase key="plan_subtitle" />
+Different sites have different needs. Choose the plan that’s right for you.
+<phrase key="personal" />
+Personal
+<phrase key="personal_text" />
+Perfect for personal websites
+<phrase key="50_themes" />
+50 themes 
+<phrase key="1GB_space" />
+1 GB space
+<phrase key="business" />
+Business
+<phrase key="business_text" />
+Ideal for small businesses   
+<phrase key="300_themes" />
+300 themes 
+<phrase key="mobile_site" />
+Mobile site 
+<phrase key="2_email" />
+2 email addresses
+<phrase key="business_plus" />
+Business Plus
+<phrase key="business_plus_text" />
+For growing businesses
+<phrase key="5_email" />
+5 email addresses
+<phrase key="seo" />
+SEO 
+<phrase key="social_manager" />
+Social Media Manager
+<phrase key="select_term" />
+Select Term Length
+<phrase key="select_term_title" />
+Extend and save
+<phrase key="select_term_subtitle" />
+Lock in your savings and avoid annual renewals with a multi-year tem.
+<phrase key="add_ssl" />
+Add Standard SSL Certificate
+<phrase key="add_ssl_title" />
+Protect your customers
+<phrase key="add_ssl_subtitle" />
+Keep hackers from intercepting credit card numbers, passwords and more by encrypting data that’s transferred to and from your site.
+<phrase key="no_thanks" />
+No thanks
+<phrase key="add_gf" />
+Add Get Found
+<phrase key="add_gf_title" />
+Get your business listed everywhere
+<phrase key="add_gf_subtitle" />
+View, add and update your business info on all the top sites – Google<sup>®</sup>, Facebook<sup>®</sup>, Yelp<sup>®</sup> and more – all from one place.
+<phrase key="order_personal_wsb" />
+Personal Website Builder
+<phrase key="order_business_wsb" />
+Business Website Builder
+<phrase key="order_business_plus_wsb" />
+Business Plus Website Builder
+<phrase key="order_ssl" />
+Standard SSL Certificate
+<phrase key="order_gf" />
+Get Found Essential
+<phrase key="wsb" />
+Website Builder
