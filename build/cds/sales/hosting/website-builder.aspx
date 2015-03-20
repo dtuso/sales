@@ -20,7 +20,7 @@
     <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/hosting/website-builder:og-description]@L]">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:url" content="[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
