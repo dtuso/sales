@@ -15,6 +15,7 @@ block vars
   - page.openGraph.type = page.openGraph.type || "website";
   - page.openGraph.image = page.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
   - page.openGraph.siteName = page.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.openGraph.url = page.openGraph.url || "[@T[link:<relative parammode='explicit' />]@T]";
   
   - page.config = page.config || {};
   - page.config.version = page.config.version || "0.7.0";
@@ -53,7 +54,7 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       meta(property="og:title" content!="#{page.openGraph.title}")
       meta(property="og:description" content!="#{page.openGraph.description}")
       meta(property="og:type" content!="#{page.openGraph.type}")
-      meta(property="og:url" content!="[@T[link:<relative parammode='explicit' />]@T]")
+      meta(property="og:url" content!="#{page.openGraph.url}")
       meta(property="og:image" content!="#{page.openGraph.image}")
       meta(property="og:site_name" content!="#{page.openGraph.siteName}")
       meta(property="fb:app_id" content="115696031791232")
