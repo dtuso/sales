@@ -172,6 +172,9 @@ append pageStyles
       vertical-align: baseline;
       cursor: pointer;
     }
+    .domain-search-container{
+      margin-bottom:100px;
+    }
 
 block endOfPageScripts
 
@@ -208,7 +211,7 @@ block endOfPageScripts
   block pageScripts
 
 block content
-  .container.configuration
+  .container.configuration-container
     .row
       .col-sm-12
         block header
@@ -223,5 +226,7 @@ block content
       block disclaimers
         
     //- domain search section
-  block domainSearch
+  block searchContent
+    .container.domain-search-container(style="display:none")
+      block domainSearch
 
