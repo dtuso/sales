@@ -26,6 +26,35 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -198,12 +227,9 @@
             </div>
           </div>
           <div class="row">
-            <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Glorious office Email</span></span>
+            <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]</span></span>
               <div class="row">
-                <div class="step-title">office Email</div>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle"> Some Email into your life</p>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L]</div>
               </div>
               <div class="row options-wrapper">
                 <ul id="officeList" class="product-options"></ul>
@@ -211,28 +237,12 @@
             </div>
           </div>
           <div class="row">
-            <div id="sslStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]</span></span>
+            <div id="securityStep" class="col-sm-11 config-step"><span class="flag red"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddProtection]@L]</span></span>
               <div class="row">
-                <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]</div>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]</p>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSecuring]@L]</div>
               </div>
               <div class="row options-wrapper">
-                <ul id="sslList" class="product-options"></ul>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div id="siteLockStep" class="col-sm-11 config-step"><span class="flag red"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Add SiteLock</span></span>
-              <div class="row">
-                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLock]@L]</div><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]</span>
-              </div>
-              <div class="row">
-                <p class="text-secondary step-subtitle">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]</p>
-              </div>
-              <div class="row options-wrapper">
-                <ul id="siteLockList" class="product-options"></ul>
+                <ul id="securityList" class="product-options"></ul>
               </div>
             </div>
           </div>
@@ -1103,6 +1113,16 @@ list-style: none;
 #officeOption{
   text-decoration: line-through;
 }
+.config-step .sitelock-title{
+  margin-bottom: 0;
+}
+.security-small{
+  margin: 0;
+  font-size: 14px;
+}
+.security-desc{
+  margin-top: 20px;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1212,24 +1232,48 @@ list-style: none;
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" checked="checked">
-          </div>
-          <div class="col-xs-11">
-            <div class ="config-text-primary">
-              [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
-            </div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="row">
-          <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+            <input id = "add<%= radio %>"type="checkbox" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
-              <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
+              <%= addonText %> <span class="text-secondary-o renews"><%= renewsText %></span>
             </div>
+            <p>[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigPutCompany]@L]
+            </p>
+          </div>
+        </div>
+      </li>
+      
+    </script>
+    <script type="text/template" class="securityTemplate">
+      <li id="slElement">
+        <div class="row">
+          <div class="col-xs-1">
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-right:4px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+          </div>
+          <div class="col-xs-11">
+            <div class ="config-text-primary">
+              <%= addonTextOne %> <span class="text-secondary-o"><%= currentPriceOne %>/<%= termTypeOne %></span>
+            </div>
+            <p id= "sitelock-subtitle" class = "security-small"> <%= renewsTextOne %>
+            </p>
+            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]
+            </p>
+          </div>
+        </div>
+      </li>
+      <li id="sslElement">
+        <div class="row">
+          <div class="col-xs-1">
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-right:4px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+          </div>
+          <div class="col-xs-11">
+            <div class="config-text-primary">
+              <%= addonTextTwo %> <span class="text-secondary-o"><%= currentPriceTwo %>/<%= termTypeTwo %></span>
+            </div>
+            <p class = "security-small"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDiscountsAvailable]@L]
+            </p>
+            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L]
           </div>
         </div>
       </li>
@@ -1308,7 +1352,7 @@ list-style: none;
         setupPage: function(){
       
           var addToCart = 'ac';
-          var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
+          var steps = ['planStep','termStep','officeStep','securityStep'];
           
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
@@ -1319,6 +1363,10 @@ list-style: none;
           if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
           {
             steps = _.without(steps, 'sslStep');
+            steps = _.without(steps, 'siteLockStep');
+          }
+          else if( (plan.indexOf('1month') >= 0))
+          {
             steps = _.without(steps, 'siteLockStep');
           }
           else if(noSiteLock)
@@ -1333,27 +1381,43 @@ list-style: none;
           Config.stepNumbers();
         },
         resetPage: function(){
-          var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
+          var steps = ['planStep','termStep','officeStep', 'securityStep'];
           var addToCart = 'ac';
           
           $('.config-step').hide();
           $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
           $('.config-step-break').remove();
       
+          document.getElementById('slElement').style.display = "list-item";
+          document.getElementById('sslElement').style.display = "list-item";
+      
+          $('#slElement').css("border-bottom", "1px solid #C3C3C3");
+      
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
-          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+          if( plan.indexOf('mwp_ultimate') >= 0)
           {
-            steps = _.without(steps, 'sslStep');
-            $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
-            steps = _.without(steps, 'siteLockStep');
-            $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+            steps = _.without(steps, 'securityStep');
+            document.getElementById('addsslOption').checked = false;
+            document.getElementById('addsiteLockOption').checked = false;
+          }
+          else if( plan.indexOf('mwp_developer') >= 0)
+          {
+            document.getElementById('sslElement').style.display = "none";
+            document.getElementById('addsslOption').checked = false;
+      
+            $('#slElement').css("border-bottom", "none");
+          }
+          else if( (plan.indexOf('1month') >= 0))
+          {
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
           }
           else if(noSiteLock)
           {
-            steps = _.without(steps, 'siteLockStep');
-            $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
           }
           Config.showSteps(steps);
           Config.addStepBreaks();
@@ -1423,8 +1487,7 @@ list-style: none;
           Config.generatePlans(data.PlanListPrices);
           if(!reload){
             Config.generateOffice(data.OfficeEmailPrice)
-            Config.generateSSL(data.SSLPrice);
-            Config.generateSiteLock(data.SiteLockPrice);
+            Config.generateSecurity(data.SiteLockPrice,data.SSLPrice);
             reload = true;
           }
           Config.updateOrderSummary();
@@ -1533,18 +1596,21 @@ list-style: none;
           if(!jQuery.isEmptyObject(office))
           {
             var officeCurrentYearlyPrice = office;
+            var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigRenews2]@L]"
+            officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
             var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
-            var officeText = "office";
+            var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
             var termType = "[@L[cds.sales/_common:yr]@L]";
             var officePackage = "ssl_std_1";
       
             var officeData = {
               radio: radioName,
               package: officePackage,
-              addon:'add office',
+              addon:'Office 365 Email',
               monthly: monthlyPrice,
               yearly: officeCurrentYearlyPrice,
               addonText: officeText,
+              renewsText: officeRenews,
               currentPrice: officeCurrentYearlyPrice,
               termType: termType
             };
@@ -1556,70 +1622,59 @@ list-style: none;
             });
           }
         },
-        generateSSL: function(ssl){
-          var radioName = "sslOption";
-          var parentID = $("#sslList");
-          var addonTemplate = _.template($( "script.addonTemplate" ).html());
+        generateSecurity: function(sl, ssl){
+          var checkNameOne = "siteLockOption";
+          var checkNameTwo = "sslOption"
+          var parentID = $("#securityList");
+          var addonTemplate = _.template($( "script.securityTemplate" ).html());
       
           parentID.empty();
       
-          if(!jQuery.isEmptyObject(ssl))
-          {
-            var sslCurrentYearlyPrice = ssl;
-            var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
-            var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
-            var termType = "[@L[cds.sales/_common:yr]@L]";
-            var sslPackage = "ssl_std_1";
-      
-            var sslData = {
-              radio: radioName,
-              package: sslPackage,
-              addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
-              monthly: monthlyPrice,
-              yearly: sslCurrentYearlyPrice,
-              addonText: sslText,
-              currentPrice: sslCurrentYearlyPrice,
-              termType: termType
-            };
-            
-            parentID.append(addonTemplate(sslData));
-            
-            $('input[name="'+radioName+'"]').click(function(){
-              Config.updateOrderSummary();
-            });
-          }
-        },
-        generateSiteLock: function(sl){
-          var radioName = "siteLockOption";
-          var parentID = $("#siteLockList");
-          var addonTemplate = _.template($( "script.addonTemplate" ).html());
-      
-          parentID.empty();
-      
-          if(!jQuery.isEmptyObject(sl))
+          if( (!jQuery.isEmptyObject(sl)) && (!jQuery.isEmptyObject(ssl)) )
           {
             var slItem = sl.split('-');
             var slCurrentMonthlyPrice = slItem[0];
+            var sslCurrentMonthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var slCurrentYearlyPrice = slItem[1];
-            var monthlyPrice = slItem[0];
+            var sslCurrentYearlyPrice = ssl;
             var slText = "Add SiteLock";
-            var termType = "[@L[cds.sales/_common:mo]@L]";
+            var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
+            var slTermType = "[@L[cds.sales/_common:mo]@L]";
+            var sslTermType = "[@L[cds.sales/_common:yr]@L]";
             var slPackage = "sitelock_Basic1Yr";
+            var sslPackage = "ssl_std_1";
       
-            var slData = {
-              radio: radioName,
-              package: slPackage,
-              addon:'SiteLock',
-              monthly: slCurrentMonthlyPrice,
-              yearly: slCurrentYearlyPrice,
-              addonText: slText,
-              currentPrice: slCurrentMonthlyPrice,
-              termType: termType + '<span> things</span>'
+            var slBilledAt = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]";
+            slBilledAt = slBilledAt.replace('{0}', slCurrentYearlyPrice)
+      
+            var securityData = {
+              checkOne: checkNameOne,
+              checkTwo: checkNameTwo,
+              packageOne: slPackage,
+              packageTwo: sslPackage,
+              addonOne:'SiteLock',
+              addonTwo:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
+              monthlyOne: slCurrentMonthlyPrice,
+              monthlyTwo: sslCurrentMonthlyPrice,
+              yearlyOne: slCurrentYearlyPrice,
+              yearlyTwo: sslCurrentYearlyPrice,
+              addonTextOne: slText,
+              addonTextTwo: sslText,
+              currentPriceOne: slCurrentMonthlyPrice,
+              currentPriceTwo: sslCurrentYearlyPrice,
+              termTypeOne: slTermType,
+              termTypeTwo: sslTermType,
+              renewsTextOne: slBilledAt
             };
+      
+      
             
-            parentID.append(addonTemplate(slData));
+            parentID.append(addonTemplate(securityData));
             
-            $('input[name="'+radioName+'"]').click(function(){
+            $('input[name="'+checkNameOne+'"]').click(function(){
+              Config.updateOrderSummary();
+            });
+            $('input[name="'+checkNameTwo+'"]').click(function(){
               Config.updateOrderSummary();
             });
           }
@@ -1630,8 +1685,9 @@ list-style: none;
       
           Config.getSelectedPlan();
           Config.getSelectedOffice();
-          Config.getSelectedSSL();
           Config.getSelectedSiteLock();
+          Config.getSelectedSSL();
+      
           Config.calculateSubTotal();
         },
         getSelectedPlan: function(){
@@ -1671,18 +1727,46 @@ list-style: none;
       
           parentID.append(itemTemplate(itemData));
         },
+        getSelectedOffice: function(){
+      
+          var parentID = $("#order-items");
+          var itemTemplate = _.template($( "script.itemTemplate" ).html());
+      
+          var selectedValue = document.getElementById('addofficeOption').checked;
+      
+          if (selectedValue){
+      
+            var selectedAddon = document.getElementById('addofficeOption').getAttribute('data-addon');
+            var selectedTerm = '1';
+            var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
+            var onSale = true;
+      
+      
+            var itemData = {
+                  itemName: selectedAddon,
+                  itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
+                  itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
+                  itemTotal: '[@T[currencyprice:<price usdamount='0' /> ]@T]',
+                  onSale: onSale,
+                  itemsSavings: selectedPricePerTerm,
+                  itemID: 'officeOption'
+                };
+      
+            parentID.append(itemTemplate(itemData));
+          }
+        },
         getSelectedSSL: function(){
       
           var parentID = $("#order-items");
           var itemTemplate = _.template($( "script.itemTemplate" ).html());
       
-          var selectedValue = $('input:radio[name="sslOption"]').filter(':checked').val();
+          var selectedValue = document.getElementById('addsslOption').checked;
       
-          if (selectedValue != 'no_thanks'){
+          if (selectedValue){
       
-            var selectedAddon = $('input:radio[name="sslOption"]').filter(':checked').attr('data-addon');
+            var selectedAddon = document.getElementById('addsslOption').getAttribute('data-addon');
             var selectedTerm = '1';
-            var selectedPricePerTerm = $('input:radio[name="sslOption"]').filter(':checked').attr('data-yearly');
+            var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
             var onSale = false;
       
       
@@ -1698,46 +1782,18 @@ list-style: none;
             parentID.append(itemTemplate(itemData));
           }
         },
-        getSelectedOffice: function(){
-      
-          var parentID = $("#order-items");
-          var itemTemplate = _.template($( "script.itemTemplate" ).html());
-      
-          var selectedValue = $('input:radio[name="officeOption"]').filter(':checked').val();
-      
-          if (selectedValue != 'no_thanks'){
-      
-            var selectedAddon = $('input:radio[name="officeOption"]').filter(':checked').attr('data-addon');
-            var selectedTerm = '1';
-            var selectedPricePerTerm = $('input:radio[name="officeOption"]').filter(':checked').attr('data-yearly');
-            var onSale = true;
-      
-      
-            var itemData = {
-                  itemName: selectedAddon,
-                  itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
-                  itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
-                  itemTotal: '$0.00',
-                  onSale: onSale,
-                  itemsSavings: selectedPricePerTerm,
-                  itemID: 'officeOption'
-                };
-      
-            parentID.append(itemTemplate(itemData));
-          }
-        },
         getSelectedSiteLock: function(){
       
           var parentID = $("#order-items");
           var itemTemplate = _.template($( "script.itemTemplate" ).html());
       
-          var selectedValue = $('input:radio[name="siteLockOption"]').filter(':checked').val();
+          var selectedValue = document.getElementById('addsiteLockOption').checked;
       
-          if (selectedValue != 'no_thanks'){
+          if (selectedValue){
       
-            var selectedAddon = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-addon');
-            var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
-            var selectedPricePerTerm = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-monthly');
+            var selectedAddon = document.getElementById('addsiteLockOption').getAttribute('data-addon');
+            var selectedTerm = 12;
+            var selectedPricePerTerm = document.getElementById('addsiteLockOption').getAttribute('data-monthly');
             var onSale = false;
             var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
       
@@ -1787,25 +1843,11 @@ list-style: none;
           
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
-            if (data.Success == true) {                                 
-      
-              //- if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
-              //-   Config.addAddonToCart('sslOption');
-              //- }
-              //- if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
-              //-   Config.addAddonToCart('siteLockOption');
-              //- }
-              //- ##if(isManager())
-              //- window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-              //- ##else
-              //- window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-              //- ##endif
-            }
-            });
-          if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+            if (data.Success == true) {}});
+          if(document.getElementById('addsslOption').checked){
             Config.addAddonToCart('sslOption');
           }
-          if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+          if(document.getElementById('addsiteLockOption').checked){
             Config.addAddonToCart('siteLockOption');
           }
         },
@@ -1816,7 +1858,9 @@ list-style: none;
           ##else
             itc="slp_wst_3";
           ##endif
-          var addon = $('input:radio[name="'+addonOption+'"]').filter(':checked').val();
+      
+          var addOnId = "add" + addonOption;
+          var addon = document.getElementById(addOnId).getAttribute('value');
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
       
           $.getJSON(cartAPIUrl, function (data) {

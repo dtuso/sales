@@ -122,3 +122,13 @@ list-style: none;
 #officeOption{
   text-decoration: line-through;
 }
+.config-step .sitelock-title{
+  margin-bottom: 0;
+}
+.security-small{
+  margin: 0;
+  font-size: 14px;
+}
+.security-desc{
+  margin-top: 20px;
+}

@@ -41,30 +41,17 @@ block addons
     .row.options-wrapper
       ul#termList.product-options
 
-  +configStep({"id":"officeStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Glorious office Email"})
+  +configStep({"id":"officeStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]"})
     .row
-      .step-title office Email
-    .row
-      p.text-secondary.step-subtitle  Some Email into your life
+      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L]
     .row.options-wrapper
       ul#officeList.product-options
 
-  +configStep({"id":"sslStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]"})
+  +configStep({"id":"securityStep","flagColor":"red","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddProtection]@L]"})
     .row
-      .step-title [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_title]@L]
-    .row
-      p.text-secondary.step-subtitle  [@L[cds.sales/gd/hosting/website-builder-config:add_ssl_subtitle]@L]
+      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSecuring]@L]
     .row.options-wrapper
-      ul#sslList.product-options
-
-  +configStep({"id":"siteLockStep","flagColor":"red","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | Add SiteLock"})
-    .row
-      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLock]@L]
-      span(data-tokenize!="[@T[localization:<display type='numeric' number='25000' />]@T]") [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]
-    .row
-      p.text-secondary.step-subtitle [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]
-    .row.options-wrapper
-      ul#siteLockList.product-options
+      ul#securityList.product-options
   +configStepBreak
 block orderSummary
   +configSummary
@@ -187,24 +174,47 @@ prepend endOfPageScripts
     <li>
       <div class="row">
         <div class="col-xs-1">
-          <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" checked="checked">
-        </div>
-        <div class="col-xs-11">
-          <div class ="config-text-primary">
-            [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
-          </div>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row">
-        <div class="col-xs-1">
-          <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+          <input id = "add<%= radio %>"type="checkbox" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
         </div>
         <div class="col-xs-11">
           <div class="config-text-primary">
-            <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
+            <%= addonText %> <span class="text-secondary-o renews"><%= renewsText %></span>
           </div>
+          <p>[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigPutCompany]@L]
+          </p>
+        </div>
+      </div>
+    </li>
+
+  script.securityTemplate(type='text/template').
+    <li id="slElement">
+      <div class="row">
+        <div class="col-xs-1">
+          <input id ="add<%= checkOne %>" type="checkbox" style="margin-right:4px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+        </div>
+        <div class="col-xs-11">
+          <div class ="config-text-primary">
+            <%= addonTextOne %> <span class="text-secondary-o"><%= currentPriceOne %>/<%= termTypeOne %></span>
+          </div>
+          <p id= "sitelock-subtitle" class = "security-small"> <%= renewsTextOne %>
+          </p>
+          <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDefend]@L]
+          </p>
+        </div>
+      </div>
+    </li>
+    <li id="sslElement">
+      <div class="row">
+        <div class="col-xs-1">
+          <input id = "add<%= checkTwo %>"type="checkbox" style="margin-right:4px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+        </div>
+        <div class="col-xs-11">
+          <div class="config-text-primary">
+            <%= addonTextTwo %> <span class="text-secondary-o"><%= currentPriceTwo %>/<%= termTypeTwo %></span>
+          </div>
+          <p class = "security-small"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDiscountsAvailable]@L]
+          </p>
+          <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L]
         </div>
       </div>
     </li>
@@ -282,7 +292,7 @@ prepend endOfPageScripts
       setupPage: function(){
 
         var addToCart = 'ac';
-        var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
+        var steps = ['planStep','termStep','officeStep','securityStep'];
         
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
@@ -293,6 +303,10 @@ prepend endOfPageScripts
         if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
         {
           steps = _.without(steps, 'sslStep');
+          steps = _.without(steps, 'siteLockStep');
+        }
+        else if( (plan.indexOf('1month') >= 0))
+        {
           steps = _.without(steps, 'siteLockStep');
         }
         else if(noSiteLock)
@@ -307,27 +321,43 @@ prepend endOfPageScripts
         Config.stepNumbers();
       },
       resetPage: function(){
-        var steps = ['planStep','termStep','officeStep','sslStep', 'siteLockStep'];
+        var steps = ['planStep','termStep','officeStep', 'securityStep'];
         var addToCart = 'ac';
         
         $('.config-step').hide();
         $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
         $('.config-step-break').remove();
 
+        document.getElementById('slElement').style.display = "list-item";
+        document.getElementById('sslElement').style.display = "list-item";
+
+        $('#slElement').css("border-bottom", "1px solid #C3C3C3");
+
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
-        if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+        if( plan.indexOf('mwp_ultimate') >= 0)
         {
-          steps = _.without(steps, 'sslStep');
-          $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
-          steps = _.without(steps, 'siteLockStep');
-          $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+          steps = _.without(steps, 'securityStep');
+          document.getElementById('addsslOption').checked = false;
+          document.getElementById('addsiteLockOption').checked = false;
+        }
+        else if( plan.indexOf('mwp_developer') >= 0)
+        {
+          document.getElementById('sslElement').style.display = "none";
+          document.getElementById('addsslOption').checked = false;
+
+          $('#slElement').css("border-bottom", "none");
+        }
+        else if( (plan.indexOf('1month') >= 0))
+        {
+          document.getElementById('slElement').style.display = "none";
+          document.getElementById('addsiteLockOption').checked = false;
         }
         else if(noSiteLock)
         {
-          steps = _.without(steps, 'siteLockStep');
-          $('input:radio[name="siteLockOption"][value="no_thanks"]').attr('checked',true);
+          document.getElementById('slElement').style.display = "none";
+          document.getElementById('addsiteLockOption').checked = false;
         }
         Config.showSteps(steps);
         Config.addStepBreaks();
@@ -397,8 +427,7 @@ prepend endOfPageScripts
         Config.generatePlans(data.PlanListPrices);
         if(!reload){
           Config.generateOffice(data.OfficeEmailPrice)
-          Config.generateSSL(data.SSLPrice);
-          Config.generateSiteLock(data.SiteLockPrice);
+          Config.generateSecurity(data.SiteLockPrice,data.SSLPrice);
           reload = true;
         }
         Config.updateOrderSummary();
@@ -507,18 +536,21 @@ prepend endOfPageScripts
         if(!jQuery.isEmptyObject(office))
         {
           var officeCurrentYearlyPrice = office;
+          var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigRenews2]@L]"
+          officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
           var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
-          var officeText = "office";
+          var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
           var termType = "[@L[cds.sales/_common:yr]@L]";
           var officePackage = "ssl_std_1";
 
           var officeData = {
             radio: radioName,
             package: officePackage,
-            addon:'add office',
+            addon:'Office 365 Email',
             monthly: monthlyPrice,
             yearly: officeCurrentYearlyPrice,
             addonText: officeText,
+            renewsText: officeRenews,
             currentPrice: officeCurrentYearlyPrice,
             termType: termType
           };
@@ -530,70 +562,59 @@ prepend endOfPageScripts
           });
         }
       },
-      generateSSL: function(ssl){
-        var radioName = "sslOption";
-        var parentID = $("#sslList");
-        var addonTemplate = _.template($( "script.addonTemplate" ).html());
+      generateSecurity: function(sl, ssl){
+        var checkNameOne = "siteLockOption";
+        var checkNameTwo = "sslOption"
+        var parentID = $("#securityList");
+        var addonTemplate = _.template($( "script.securityTemplate" ).html());
 
         parentID.empty();
 
-        if(!jQuery.isEmptyObject(ssl))
-        {
-          var sslCurrentYearlyPrice = ssl;
-          var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
-          var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
-          var termType = "[@L[cds.sales/_common:yr]@L]";
-          var sslPackage = "ssl_std_1";
-
-          var sslData = {
-            radio: radioName,
-            package: sslPackage,
-            addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
-            monthly: monthlyPrice,
-            yearly: sslCurrentYearlyPrice,
-            addonText: sslText,
-            currentPrice: sslCurrentYearlyPrice,
-            termType: termType
-          };
-          
-          parentID.append(addonTemplate(sslData));
-          
-          $('input[name="'+radioName+'"]').click(function(){
-            Config.updateOrderSummary();
-          });
-        }
-      },
-      generateSiteLock: function(sl){
-        var radioName = "siteLockOption";
-        var parentID = $("#siteLockList");
-        var addonTemplate = _.template($( "script.addonTemplate" ).html());
-
-        parentID.empty();
-
-        if(!jQuery.isEmptyObject(sl))
+        if( (!jQuery.isEmptyObject(sl)) && (!jQuery.isEmptyObject(ssl)) )
         {
           var slItem = sl.split('-');
           var slCurrentMonthlyPrice = slItem[0];
+          var sslCurrentMonthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
           var slCurrentYearlyPrice = slItem[1];
-          var monthlyPrice = slItem[0];
+          var sslCurrentYearlyPrice = ssl;
           var slText = "Add SiteLock";
-          var termType = "[@L[cds.sales/_common:mo]@L]";
+          var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
+          var slTermType = "[@L[cds.sales/_common:mo]@L]";
+          var sslTermType = "[@L[cds.sales/_common:yr]@L]";
           var slPackage = "sitelock_Basic1Yr";
+          var sslPackage = "ssl_std_1";
 
-          var slData = {
-            radio: radioName,
-            package: slPackage,
-            addon:'SiteLock',
-            monthly: slCurrentMonthlyPrice,
-            yearly: slCurrentYearlyPrice,
-            addonText: slText,
-            currentPrice: slCurrentMonthlyPrice,
-            termType: termType + '<span> things</span>'
+          var slBilledAt = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSiteLockMin2]@L]";
+          slBilledAt = slBilledAt.replace('{0}', slCurrentYearlyPrice)
+
+          var securityData = {
+            checkOne: checkNameOne,
+            checkTwo: checkNameTwo,
+            packageOne: slPackage,
+            packageTwo: sslPackage,
+            addonOne:'SiteLock',
+            addonTwo:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
+            monthlyOne: slCurrentMonthlyPrice,
+            monthlyTwo: sslCurrentMonthlyPrice,
+            yearlyOne: slCurrentYearlyPrice,
+            yearlyTwo: sslCurrentYearlyPrice,
+            addonTextOne: slText,
+            addonTextTwo: sslText,
+            currentPriceOne: slCurrentMonthlyPrice,
+            currentPriceTwo: sslCurrentYearlyPrice,
+            termTypeOne: slTermType,
+            termTypeTwo: sslTermType,
+            renewsTextOne: slBilledAt
           };
+
+
           
-          parentID.append(addonTemplate(slData));
+          parentID.append(addonTemplate(securityData));
           
-          $('input[name="'+radioName+'"]').click(function(){
+          $('input[name="'+checkNameOne+'"]').click(function(){
+            Config.updateOrderSummary();
+          });
+          $('input[name="'+checkNameTwo+'"]').click(function(){
             Config.updateOrderSummary();
           });
         }
@@ -604,8 +625,9 @@ prepend endOfPageScripts
 
         Config.getSelectedPlan();
         Config.getSelectedOffice();
-        Config.getSelectedSSL();
         Config.getSelectedSiteLock();
+        Config.getSelectedSSL();
+
         Config.calculateSubTotal();
       },
       getSelectedPlan: function(){
@@ -645,18 +667,46 @@ prepend endOfPageScripts
 
         parentID.append(itemTemplate(itemData));
       },
+      getSelectedOffice: function(){
+
+        var parentID = $("#order-items");
+        var itemTemplate = _.template($( "script.itemTemplate" ).html());
+
+        var selectedValue = document.getElementById('addofficeOption').checked;
+
+        if (selectedValue){
+
+          var selectedAddon = document.getElementById('addofficeOption').getAttribute('data-addon');
+          var selectedTerm = '1';
+          var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
+          var onSale = true;
+
+
+          var itemData = {
+                itemName: selectedAddon,
+                itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
+                itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
+                itemTotal: '[@T[currencyprice:<price usdamount='0' /> ]@T]',
+                onSale: onSale,
+                itemsSavings: selectedPricePerTerm,
+                itemID: 'officeOption'
+              };
+
+          parentID.append(itemTemplate(itemData));
+        }
+      },
       getSelectedSSL: function(){
 
         var parentID = $("#order-items");
         var itemTemplate = _.template($( "script.itemTemplate" ).html());
 
-        var selectedValue = $('input:radio[name="sslOption"]').filter(':checked').val();
+        var selectedValue = document.getElementById('addsslOption').checked;
 
-        if (selectedValue != 'no_thanks'){
+        if (selectedValue){
 
-          var selectedAddon = $('input:radio[name="sslOption"]').filter(':checked').attr('data-addon');
+          var selectedAddon = document.getElementById('addsslOption').getAttribute('data-addon');
           var selectedTerm = '1';
-          var selectedPricePerTerm = $('input:radio[name="sslOption"]').filter(':checked').attr('data-yearly');
+          var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
           var onSale = false;
 
 
@@ -672,46 +722,18 @@ prepend endOfPageScripts
           parentID.append(itemTemplate(itemData));
         }
       },
-      getSelectedOffice: function(){
-
-        var parentID = $("#order-items");
-        var itemTemplate = _.template($( "script.itemTemplate" ).html());
-
-        var selectedValue = $('input:radio[name="officeOption"]').filter(':checked').val();
-
-        if (selectedValue != 'no_thanks'){
-
-          var selectedAddon = $('input:radio[name="officeOption"]').filter(':checked').attr('data-addon');
-          var selectedTerm = '1';
-          var selectedPricePerTerm = $('input:radio[name="officeOption"]').filter(':checked').attr('data-yearly');
-          var onSale = true;
-
-
-          var itemData = {
-                itemName: selectedAddon,
-                itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
-                itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
-                itemTotal: '$0.00',
-                onSale: onSale,
-                itemsSavings: selectedPricePerTerm,
-                itemID: 'officeOption'
-              };
-
-          parentID.append(itemTemplate(itemData));
-        }
-      },
       getSelectedSiteLock: function(){
 
         var parentID = $("#order-items");
         var itemTemplate = _.template($( "script.itemTemplate" ).html());
 
-        var selectedValue = $('input:radio[name="siteLockOption"]').filter(':checked').val();
+        var selectedValue = document.getElementById('addsiteLockOption').checked;
 
-        if (selectedValue != 'no_thanks'){
+        if (selectedValue){
 
-          var selectedAddon = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-addon');
-          var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
-          var selectedPricePerTerm = $('input:radio[name="siteLockOption"]').filter(':checked').attr('data-monthly');
+          var selectedAddon = document.getElementById('addsiteLockOption').getAttribute('data-addon');
+          var selectedTerm = 12;
+          var selectedPricePerTerm = document.getElementById('addsiteLockOption').getAttribute('data-monthly');
           var onSale = false;
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
 
@@ -761,25 +783,11 @@ prepend endOfPageScripts
         
         var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
         $.getJSON(cartAPIUrl, function (data) {
-          if (data.Success == true) {                                 
-
-            //- if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
-            //-   Config.addAddonToCart('sslOption');
-            //- }
-            //- if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
-            //-   Config.addAddonToCart('siteLockOption');
-            //- }
-            //- ##if(isManager())
-            //- window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-            //- ##else
-            //- window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-            //- ##endif
-          }
-          });
-        if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+          if (data.Success == true) {}});
+        if(document.getElementById('addsslOption').checked){
           Config.addAddonToCart('sslOption');
         }
-        if($('input:radio[name="siteLockOption"]').filter(':checked').val() != 'no_thanks'){
+        if(document.getElementById('addsiteLockOption').checked){
           Config.addAddonToCart('siteLockOption');
         }
       },
@@ -790,7 +798,9 @@ prepend endOfPageScripts
         ##else
           itc="slp_wst_3";
         ##endif
-        var addon = $('input:radio[name="'+addonOption+'"]').filter(':checked').val();
+
+        var addOnId = "add" + addonOption;
+        var addon = document.getElementById(addOnId).getAttribute('value');
         var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
 
         $.getJSON(cartAPIUrl, function (data) {
