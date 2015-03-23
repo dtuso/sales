@@ -71,31 +71,35 @@ atlantis:webstash(type="css")
       background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_emea_marquee_02_v01.jpg);
     }
 
-
-
-
     #marquee .marquee {
       position: relative;
     }
-    #marquee .marquee-flag:before, 
-    #marquee .marquee-flag:after {
-      content: "";
-    }    
-    #marquee .marquee-flag {
-      background: no-repeat scroll center center / cover rgba(0,0,0,0);
-      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAxODEuOCA2NC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxODEuOCA2NC4yIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjNzcwMjg2IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+PC9zdmc+");      
-      top: -51px;
+    #marquee .marquee-flag-position {
+      top: -50px;
       right: 0px;
       position: absolute;
       display: inline-block;
+    }
+    #marquee .marquee-flag-background:before, 
+    #marquee .marquee-flag-background:after {
+      content: "";
+    }    
+    .Explorer8 #marquee .marquee-flag-background {background-color:#770286 !important;}
+    #marquee .marquee-flag-background {
+      background: no-repeat scroll center center / cover rgba(0,0,0,0);
+      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDMgNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gZmlsbD0iIzc3MDI4NiIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDM4Nyw2NC4yIDQwMyw0My44IDQwMyw0LjMgIi8+PC9zdmc+");
       line-height: 1.42857;
-      padding: 14px 20px;
+      padding: 9px 13px;
       font-size: 2.4rem;
       text-transform: none;
     }
+
     #marquee .contact-support {
       font-weight: 800;
     }
+
+
+    .Explorer8 #marquee .marquee-content-wrapper {background-color:#1A1A1A !important;}
     #marquee .marquee-content-wrapper {
       background: no-repeat scroll center center / cover rgba(0,0,0,0);
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI4MjlweCIgaGVpZ2h0PSI0MzFweCIgdmlld0JveD0iMCAwIDgyOSA0MzEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDgyOSA0MzEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIG9wYWNpdHk9IjAuODUiIGZpbGw9IiMxQTFBMUEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXciIHBvaW50cz0iMSwwIDg2LjI5Niw0MDMuMjk3IDcxNS41MjEsNDI5LjUzIDgyOSwxNDAuODcxIDc1MC4zODMsMCAiLz48L3N2Zz4=");
@@ -123,9 +127,11 @@ atlantis:webstash(type="css")
     #get-started-btn {
       margin-top: 12px;
     }
+
 section#marquee
-  .container.marquee.marquee-white
-      .marquee-flag.headline-secondary(data-tokenize!="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]
+  .container.marquee.marquee-white      
+      .marquee-flag-position
+        .marquee-flag-background.headline-secondary(data-tokenize!="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]
       .row
         .col-sm-7.marquee-content-wrapper
           h1.marquee-product-name [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]
