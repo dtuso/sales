@@ -811,8 +811,8 @@ $(window).load(function () {
                 <div class="column support"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_email.png" class="icon"><![endif]-->
                   <div class="icon"></div>
                   <div> 
-                    <div>HUMAN</div>
-                    <div>(SUPPORT)</div>
+                    <div>[@L[cds.sales/offers/online-business:human]@L]</div>
+                    <div>[@L[cds.sales/offers/online-business:support]@L]</div>
                   </div>
                 </div> 
                 ##endif
@@ -1922,11 +1922,11 @@ $(window).load(function () {
             </div>
           </div>
           <div class="col-sm-3 key-benefit">
-            <h3 class="headline-primary word-break key-benefits-title">FREE HUMAN SUPPORT</h3>
-            <div class="key-benefits-text">If you have questions, our humans have the answers.</div>
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:human-support-heading]@L]</h3>
+            <div class="key-benefits-text">[@L[cds.sales/offers/online-business:human-support-text]@L]</div>
             <div class="features-text">
-              <div class="include-check-green"><strong>Available 24/7/365</strong> so you always have help when you need it</div>
-              <div class="include-check-green"><strong>Award-winning help</strong> from very smary people right here in the U.S.A</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:human-support-bullet-1]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:human-support-bullet-2]@L]</div>
             </div>
           </div>
         </div> 
