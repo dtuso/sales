@@ -1890,7 +1890,7 @@ $(window).load(function () {
         </div>
         <div class="row">
            
-          ##if(##if(!activeLanguageAny([en-us])))
+          ##if(!activeLanguageAny([en-us]))
           <div class="col-sm-4 key-benefit">
             <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
