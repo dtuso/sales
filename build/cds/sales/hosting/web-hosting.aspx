@@ -1645,7 +1645,7 @@
         $('#midPageNav .dropdown-toggle').dropdown();
       });
       function organizeNavBar(){
-        var linkArea = $('.navbar-nav').width()+ 190;
+        var linkArea = $('.navbar-nav').width()+ 150;
         var navBarArea = $('.navbar-collapse').width()-$('.navbar-right').width();
         dropdownItem = "";
         $dropdownMenu = "";
@@ -1653,7 +1653,7 @@
         {
           $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
-        while($('.navbar-nav').width() + 190 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        while($('.navbar-nav').width() + 150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
           $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
         }
@@ -1673,7 +1673,9 @@
           // Older browser without pushState might flicker here, as they momentarily
           // jump to the wrong position (IE < 10)
           if($target.length) {
-            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000, null, function(){
+              scroll_if_anchor(href);
+            });
             if(history && "pushState" in history) {
               history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
