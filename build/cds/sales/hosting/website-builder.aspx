@@ -1127,7 +1127,9 @@
           // Older browser without pushState might flicker here, as they momentarily
           // jump to the wrong position (IE < 10)
           if($target.length) {
-            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+            $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000, null, function(){
+              scroll_if_anchor(href);
+            });
             if(history && "pushState" in history) {
               history.pushState({}, document.title, window.location.pathname + window.location.search + href);
               return false;
