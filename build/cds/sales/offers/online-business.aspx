@@ -808,7 +808,7 @@ $(window).load(function () {
                 </div> 
                 ##if(activeLanguageAny([en-us]))
                 <div class="plus">+</div>
-                <div class="column support"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_email.png" class="icon"><![endif]-->
+                <div class="column support"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/human.png" class="icon"><![endif]-->
                   <div class="icon"></div>
                   <div> 
                     <div>[@L[cds.sales/offers/online-business:human]@L]</div>
