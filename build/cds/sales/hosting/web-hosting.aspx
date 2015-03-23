@@ -1316,6 +1316,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_hosting_4GH";
           var ci = "0"
+          var src = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -1328,6 +1329,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
+              if($(this).data("src")!== undefined)
+                src = $(this).data("src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -1346,6 +1349,7 @@
             .done(function(data) {
               var redirectUrl = "[@T[link:<relative path="~/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]";
               redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+              redirectUrl = redirectUrl.replace('%7b1%7d',src);
               if (redirectUrl.indexOf("?") === -1) {
                 redirectUrl += "?plan=";
               } else {
