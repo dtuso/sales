@@ -970,29 +970,29 @@
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li> <a id="uptime-promise-link">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</a></li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <ul class="green-check">
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</li> 
+              </li> 
               ##if(productIsOffered(99))
                
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
               ##endif
                
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</li> 
+              <li> <a id="uptime-promise-link">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</a></li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              </li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <ul class="green-check">
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</li> 
               ##if(areAdCreditsEnabled(google))
                
               <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
@@ -4141,7 +4141,12 @@ ul.left-aligned-round-list.small-spacing li {
         
           activateHref("#cloudspecator-link",           "96207",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
           activateHref("#see-latest-results-btn",       "96221",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
-          activateHref("#sidekick-link",                "96225",      "https://wordpress.org/plugins/sidekick/", "_blank");
+          
+          // remove link from content (see GCE-37920)
+          //activateHref("#sidekick-link",                "96225",      "https://wordpress.org/plugins/sidekick/", "_blank");
+          var $sk = $('#sidekick-link'), skHtml = $sk.html();
+          $sk.replaceWith(skHtml);
+        
           activateHref("#visitor-overprotection-link",  "97105",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='97105' /></external>]@T]", "_self"); 
           activateHref("#wordpress-plugins-link",       "97106",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='97106' /></external>]@T]", "_self");
           activateHref("#uptime-promise-link",          "",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
