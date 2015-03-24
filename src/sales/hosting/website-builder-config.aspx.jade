@@ -58,7 +58,6 @@ block addons
   +configStepBreak
 block orderSummary
   +configSummary({
-    'scroll':'.lastStep'
     })
 
 block disclaimers
@@ -75,12 +74,19 @@ block disclaimers
 block domainSearch
   .row
     .col-sm-12 
-        h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]
+        h2.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]
   +configDomainSearchInput({
     'title': 'We owe you a free domain. Search for it now.',
     'placeholderText': '[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]',
     'buttonText': '[@L[cds.sales/_common:search]@L]',
+    'linkText': '[@L[cds.sales/_common:dont-want-free-domain]@L]',
+    'continueText':'[@L[cds.sales/_common:select-continue]@L]',
     'promoCode': 'wsb-promo',
+    'itcCode': 'slp_wst_3',
+    'managerItcCode': 'mgr_slp_wst_3',
+    'searchCicode': '1',
+    'noDomainCicode': '2',
+    'domainCicode': '3'
     })
 
 
