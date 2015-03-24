@@ -5224,7 +5224,7 @@ padding-bottom: 50px;
 .templates-image{
   margin: 25px auto 10px;
   box-shadow: 0 3px 7px -3px #282828;
-  height: 145px;
+  height: 132px;
   width: 200px;
   overflow: hidden;
 }
