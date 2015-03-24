@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -14,11 +14,11 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/homepage:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
+    <title>[@L[cds.sales/page:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="undefined">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
@@ -114,7 +114,7 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body>
+  <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="domain-search">
