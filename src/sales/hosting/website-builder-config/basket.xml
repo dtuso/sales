@@ -1,0 +1,221 @@
+<Packages>
+  <Package id="wsb_personal_1month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7521</ProductId>    
+  </Package>
+  <Package id="wsb_personal_12month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7524</ProductId>    
+  </Package>
+  <Package id="wsb_personal_24month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7525</ProductId>    
+  </Package>
+  <Package id="wsb_personal_36month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7526</ProductId>    
+  </Package>
+  <Package id="wsb_personal_48month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7527</ProductId>    
+  </Package>
+  <Package id="wsb_business_1month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7502</ProductId>    
+  </Package>
+  <Package id="wsb_business_12month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7509</ProductId>      
+  </Package>
+  <Package id="wsb_business_24month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7510</ProductId>    
+  </Package>
+  <Package id="wsb_business_36month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7511</ProductId>    
+  </Package>
+  <Package id="wsb_business_48month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7512</ProductId>    
+  </Package>
+  <Package id="wsb_businessplus_1month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7503</ProductId>  
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_12month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7514</ProductId> 
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_24month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7515</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+  <Package id="wsb_businessplus_36month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7516</ProductId>   
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+   <Package id="wsb_businessplus_48month" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7517</ProductId> 
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+   <Package id="wsb_6to7_redesign" QtyIsDuration="true">
+    <ProductId>294075</ProductId>   
+  </Package>
+  <Package id="wsb_6to10_redesign" QtyIsDuration="true">
+    <ProductId>294073</ProductId>   
+  </Package>
+  <Package id="wsb_11to30_redesign" QtyIsDuration="true">
+    <ProductId>294074</ProductId>   
+  </Package>
+  <Package id="wsb_personal_1month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7521</ProductId>    
+  </Package>
+  <Package id="wsb_personal_12month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7524</ProductId>    
+  </Package>
+  <Package id="wsb_personal_24month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7525</ProductId>    
+  </Package>
+  <Package id="wsb_personal_36month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7526</ProductId>    
+  </Package>
+  <Package id="wsb_personal_48month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7527</ProductId>    
+  </Package>
+  <Package id="wsb_business_1month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7502</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="LENOVOWSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_business_12month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7509</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="LENOVOWSB" />
+    </Rules> 
+  </Package>  
+  <Package id="wsb_business_24month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7510</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="LENOVOWSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_business_36month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7511</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="LENOVOWSB" />
+    </Rules> 
+  </Package>
+   <Package id="wsb_business_48month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7512</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="LENOVOWSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_businessplus_1month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7503</ProductId>  
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_12month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7514</ProductId> 
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_24month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7515</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+  <Package id="wsb_businessplus_36month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7516</ProductId>   
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+   <Package id="wsb_businessplus_48month_lenovo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7517</ProductId> 
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+  <Package id="wsb_personal_1month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7521</ProductId>    
+  </Package>
+  <Package id="wsb_personal_12month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7524</ProductId>    
+  </Package>
+  <Package id="wsb_personal_24month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7525</ProductId>    
+  </Package>
+  <Package id="wsb_personal_36month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7526</ProductId>    
+  </Package>
+  <Package id="wsb_personal_48month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7527</ProductId>    
+  </Package>
+  <Package id="wsb_business_1month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7502</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="CCE50WSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_business_12month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7509</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="CCE50WSB" />
+    </Rules> 
+  </Package>  
+  <Package id="wsb_business_24month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7510</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="CCE50WSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_business_36month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7511</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="CCE50WSB" />
+    </Rules> 
+  </Package>
+   <Package id="wsb_business_48month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7512</ProductId>  
+    <Rules>
+      <Rule Name="applydiscountcode" code="CCE50WSB" />
+    </Rules> 
+  </Package>
+  <Package id="wsb_businessplus_1month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7503</ProductId>  
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_12month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7514</ProductId> 
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_businessplus_24month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7515</ProductId>
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+  <Package id="wsb_businessplus_36month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7516</ProductId>   
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+   <Package id="wsb_businessplus_48month_cce" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7517</ProductId> 
+      <Rules>
+        <Rule Name="FreeSSL" SSLId="3604" />
+      </Rules>
+  </Package>
+</Packages>

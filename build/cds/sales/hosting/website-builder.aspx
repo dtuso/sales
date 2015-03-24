@@ -136,7 +136,7 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button id="get-started-btn" data-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
@@ -809,6 +809,7 @@
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
+                var src = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -821,6 +822,8 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
+                    if($(this).data("src")!== undefined)
+                      src = $(this).data("src");
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -837,8 +840,9 @@
                     dataType: "jsonp"
                   })
                   .done(function(data) {
-                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
+                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
@@ -5218,11 +5222,18 @@ padding-top: 40px;
 padding-bottom: 50px;
 }
 .templates-image{
-  margin: 25px auto;
+  margin: 25px auto 10px;
   box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
+  height: 145px;
   width: 200px;
   overflow: hidden;
+}
+.templates-image-name {
+  color: #333;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;
@@ -5538,12 +5549,12 @@ width: 50%;
            // populate images
            var column = 0;
            var $row;
-           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
                $row = $("<div>", {class: "row"});
              column++;
-             var itemData = {url:recommendedThemes[index]['URL']};
+             var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);
              $row.append(itemElement)
              if(column == 3 ){

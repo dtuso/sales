@@ -33,6 +33,26 @@
   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]",ci:page.ci.securityCarouselSlideTab6})
 
 +carousel("carousel-security", 6, securityCarousel)
+  +carouselItem(securityCarouselItem)  
+    .container-fluid.ols-carousel-item
+      .row
+        .col-xs-12
+          +lazyImg("img-responsive img-center security-carousel-img", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png", "", "triggerResize")
+      .row
+        .col-xs-12
+          //- Malware scan
+          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L] 
+          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-desc]@L] 
+  +carouselItem(securityCarouselItem)
+    .container-fluid.ols-carousel-item
+      .row
+        .col-xs-12
+          +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png", "", "triggerResize")
+      .row
+        .col-xs-12
+          //- Automatic updates
+          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] 
+          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] 
   +carouselItem(securityCarouselItem)
     .container-fluid.ols-carousel-item
       .row
@@ -40,6 +60,7 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Standing Guard
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-desc]@L] 
   +carouselItem(securityCarouselItem)
@@ -49,6 +70,7 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_bots_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Walking Bots
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-desc]@L] 
   +carouselItem(securityCarouselItem)
@@ -58,17 +80,9 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_spammers_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Spammers Beware
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] 
-  +carouselItem(securityCarouselItem)
-    .container-fluid.ols-carousel-item
-      .row
-        .col-xs-12
-          +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png", "", "triggerResize")
-      .row
-        .col-xs-12
-          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] 
-          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] 
   +carouselItem(securityCarouselItem)
     .container-fluid.ols-carousel-item
       .row
@@ -76,17 +90,9 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_prescreened-plugins_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Plugins
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-desc]@L] 
-  +carouselItem(securityCarouselItem)
-    .container-fluid.ols-carousel-item
-      .row
-        .col-xs-12
-          +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png", "", "triggerResize")
-      .row
-        .col-xs-12
-          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L] 
-          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-desc]@L] 
 
 | 
 | ##else
@@ -110,10 +116,21 @@
   +carouselItem(securityCarouselItem)
     .container-fluid.ols-carousel-item
       .row
+        .col-xs-12
+          +lazyImg("img-responsive img-center carousel-img", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png", "", "triggerResize")
+      .row
+        .col-xs-12
+          //- Automatic updates
+          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] 
+          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] 
+  +carouselItem(securityCarouselItem)
+    .container-fluid.ols-carousel-item
+      .row
         .col-xs-12.text-center
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Standing Guard
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-desc]@L] 
   +carouselItem(securityCarouselItem)
@@ -123,6 +140,7 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_bots_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Walking Bots
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-desc]@L] 
   +carouselItem(securityCarouselItem)
@@ -132,17 +150,9 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_spammers_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Spammers Beware
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] 
-  +carouselItem(securityCarouselItem)
-    .container-fluid.ols-carousel-item
-      .row
-        .col-xs-12
-          +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png", "", "triggerResize")
-      .row
-        .col-xs-12
-          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] 
-          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] 
   +carouselItem(securityCarouselItem)
     .container-fluid.ols-carousel-item
       .row
@@ -150,6 +160,7 @@
           +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_prescreened-plugins_02_v01.png", "", "triggerResize")
       .row
         .col-xs-12
+          //- Plugins
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L] 
           p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-desc]@L] 
 | 
