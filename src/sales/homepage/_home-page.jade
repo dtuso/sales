@@ -9,20 +9,18 @@ extends ../shared/_page
 
 block append vars
   - page = page || {};
-  - page.title = page.title || "[@L[cds.sales/homepage:page-title]@L]";
-  - page.description = page.description || "[@L[cds.sales/homepage:meta-description]@L]";
-  - page.keywords = page.keywords || "[@L[cds.sales/homepage:meta-keywords]@L]";
-  - page.canonical = page.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.favicon = page.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
-  - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = page.openGraph.title || "[@L[cds.sales/homepage:og-title]@L]";
-  - page.openGraph.description = page.openGraph.description || "[@L[cds.sales/homepage:og-content]@L]";
-  - page.openGraph.type = page.openGraph.type || "website";
-  - page.openGraph.image = page.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
-  - page.openGraph.siteName = page.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.config = page.config || {};
-  - page.config.version = page.config.version || "0.7.0";
-  - page.config.uxcoreVersion = page.config.uxcoreVersion || "dev-brand";
+  - page.title = "[@L[cds.sales/homepage:page-title]@L]";
+  - page.description = "[@L[cds.sales/homepage:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/homepage:meta-keywords]@L]";
+  - page.canonical =  "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.openGraph.title = "[@L[cds.sales/homepage:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/homepage:og-content]@L]";
+  - page.openGraph.type = "website";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
+  - page.openGraph.siteName = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.config.version = "0.7.0";
+  - page.config.uxcoreVersion = "dev-brand";
 
 block append pageStyles
   // home page styling
