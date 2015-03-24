@@ -7,7 +7,7 @@ include ../shared/_helpers.jade
 extends ../shared/_page
 
 
-block vars
+block append vars
   - page = page || {};
   - page.title = page.title || "[@L[cds.sales/homepage:page-title]@L]";
   - page.description = page.description || "[@L[cds.sales/homepage:meta-description]@L]";
