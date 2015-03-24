@@ -681,7 +681,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12"><a id="no-domain-link" data-ci="" class="pull-right">linkText </a><span class="continue-icon pull-right"></span>
+        <div class="col-xs-12"><a id="no-domain-link" data-ci="" class="pull-right">[@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L] </a><span class="continue-icon pull-right"></span>
           <div id="no-domain-loading" style="display: none" class="loading floatleft"></div>
           <div id="add-domain-loading" style="display: none" class="loading floatleft"></div>
         </div>
@@ -701,7 +701,7 @@
                   <h2 class="word-break domain-name-display domain-name-display-tld"> </h2>
                 </div>
                 <div class="col-md-4 col-sm-12 text-right">
-                  <button data-ci="" class="btn btn-primary select-and-continue">continueText  </button>
+                  <button data-ci="" class="btn btn-primary select-and-continue">[@L[cds.sales/hosting/fosconfigcommon:gobtn]@L]  </button>
                 </div>
               </div>
             </div>
@@ -1441,7 +1441,7 @@ list-style: none;
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      url=url + "?configdocid=5511d228f778fc167889db36";
+      //url=url + "?configdocid=5511d228f778fc167889db36";
       //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
@@ -1513,14 +1513,6 @@ list-style: none;
           if( plan.indexOf('mwp_ultimate') >= 0)
           {
             steps = _.without(steps, 'securityStep');
-            document.getElementById('addsslOption').checked = false;
-            document.getElementById('addsiteLockOption').checked = false;
-          }
-          else if( plan.indexOf('mwp_developer') >= 0)
-          {
-            document.getElementById('sslElement').style.display = "none";
-            document.getElementById('addsslOption').checked = false;
-            $('#slElement').css("border-bottom", "none");
           }
           else if( (plan.indexOf('1month') >= 0))
           {
@@ -1853,6 +1845,12 @@ list-style: none;
           {
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
+          }
+          if( plan.indexOf('mwp_developer') >= 0)
+          {
+            document.getElementById('sslElement').style.display = "none";
+            document.getElementById('addsslOption').checked = false;
+            $('#slElement').css("border-bottom", "none");
           }
         },
         updateOrderSummary: function(){

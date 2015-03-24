@@ -72,10 +72,12 @@ block domainSearch
     .col-sm-12 
         h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]
   +configDomainSearchInput({
-    'title': 'We owe you a free domain. Search for it now.',
+    'title': '[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDFreeDomain]@L]',
     'placeholderText': '[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]',
     'buttonText': '[@L[cds.sales/_common:search]@L]',
     'promoCode': 'wordpress-promo',
+    'linkText' : '[@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L]',
+    'continueText' : '[@L[cds.sales/hosting/fosconfigcommon:gobtn]@L]'
     })
 
 prepend endOfPageScripts
@@ -243,7 +245,7 @@ prepend endOfPageScripts
 
     // spoof url for config and packagegrouping removed when both are published
     var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-    url=url + "?configdocid=5511d228f778fc167889db36";
+    //url=url + "?configdocid=5511d228f778fc167889db36";
     //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
     //url = url + "?configdocid=54ef736af778fc203043be19";
 
@@ -315,14 +317,6 @@ prepend endOfPageScripts
         if( plan.indexOf('mwp_ultimate') >= 0)
         {
           steps = _.without(steps, 'securityStep');
-          document.getElementById('addsslOption').checked = false;
-          document.getElementById('addsiteLockOption').checked = false;
-        }
-        else if( plan.indexOf('mwp_developer') >= 0)
-        {
-          document.getElementById('sslElement').style.display = "none";
-          document.getElementById('addsslOption').checked = false;
-          $('#slElement').css("border-bottom", "none");
         }
         else if( (plan.indexOf('1month') >= 0))
         {
@@ -655,6 +649,12 @@ prepend endOfPageScripts
         {
           document.getElementById('slElement').style.display = "none";
           document.getElementById('addsiteLockOption').checked = false;
+        }
+        if( plan.indexOf('mwp_developer') >= 0)
+        {
+          document.getElementById('sslElement').style.display = "none";
+          document.getElementById('addsslOption').checked = false;
+          $('#slElement').css("border-bottom", "none");
         }
       },
       updateOrderSummary: function(){
