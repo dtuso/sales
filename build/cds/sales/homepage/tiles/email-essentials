@@ -1,0 +1,27 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .email-essentials{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/ob-hosting-sever-sprite.jpg)}
+    .email-essentials-text{width:255px; padding:60px 0 0 30px}
+    .email-essentials-headline{font-size: 18px; line-height: 18px;font-weight: 700;font-family: HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif}
+    .email-essentials-subtext{font-size: 29px;line-height: 36px}
+    .email-essentials-limitation{font-size: 12px;margin-top: 20px; display: inline}
+    .email-essentials-limitation>span{display: inline}
+    .email-essentials-limitation>.g-toolTip{border-bottom: none}
+    .atn-btn-wrap>a{padding-bottom:15px}
+    .atn-btn-wrap>div{color: #ff8a00;font-size: 16px;line-height:20px;margin-bottom:15px}
+    .atn-btn-wrap>div>.b{font-size: 24px}
+    .hosting-orange{color:#ff8a00}
+    html[lang|="es"] .email-essentials-text .atn-btn-wrap { margin-left: 0; }
+    
+  </style>
+</atlantis:webstash>
+<div onclick="location.href='[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='87853' /></relative>]@T]';" data-ci="87853" class="gdhp-tile email-essentials">
+  <div class="email-essentials-text"><span class="email-essentials-headline">[@L[cds.sales/homepage/locales/en:block2-pod1-hosting-headline-INTL]@L]</span><span class="email-essentials-subtext">[@L[cds.sales/homepage/locales/fr:largepod-hosting-subtext]@L]</span><span class="email-essentials-limitation">[@L[cds.sales/homepage/locales/fr:largepod-hosting-limitation]@L]</span>
+    <div class="atn-btn-wrap">
+      <div>[@L[cds.sales/homepage/locales/en:price-starting-text]@L] <br/>
+        <div class="b">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-month]@L]</div>
+      </div><a href="javascript:void(0)" data-ci="87717" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/locales/en:slider-action-btn]@L]</a>
+    </div>
+  </div>
+</div>
