@@ -1206,7 +1206,7 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .row {
+.order-item-details-wrapper .toprow {
   margin-top: 15px;
 }
 .item-title-wrapper{
@@ -1238,10 +1238,12 @@ list-style: none;
         
       </script>
       <script type="text/template" class="itemTemplate">
-        <div class="row">
+        <div class="row toprow">
           <div class="col-xs-12 item-title-wrapper">
             <div class="item-title"><%= itemName %></div>
           </div>
+        </div>
+        <div class="row">
           <div class="col-xs-4">
             <div class="item-term"><%= itemTerm %></div>
           </div>
@@ -1254,6 +1256,8 @@ list-style: none;
           <div class="col-xs-4">
             <div class="item-total-price text-secondary"><%= itemTotal %></div>
           </div>
+        </div>
+        <div class="row">
           <div class="col-xs-12">
             <% if ( onSale ){ %>
               <div class="item-savings-wrapper text-secondary">
@@ -1336,7 +1340,7 @@ list-style: none;
         <li>
           <div class="row">
             <div class="col-xs-1">
-              <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" checked="checked">
+              <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %>>
             </div>
             <div class="col-xs-11">
               <div class ="config-text-primary">
@@ -1348,7 +1352,7 @@ list-style: none;
         <li>
           <div class="row">
             <div class="col-xs-1">
-              <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+              <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %>>
             </div>
             <div class="col-xs-11">
               <div class="config-text-primary">
@@ -1364,9 +1368,11 @@ list-style: none;
         // gs for get started button, ac for add to cart button
         var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
         var reload = false;
+        var gfSelected = false;
+        
         // spoof url for config and packagegrouping removed when both are published
         var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-        url=url + "?configdocid=54ef736af778fc203043be19&groupdocid=54f4ab81f778fc0de4d09b93";
+        //url=url + "?configdocid=54ef736af778fc203043be19&groupdocid=54f4ab81f778fc0de4d09b93";
         //url = url + "?configdocid=54ef736af778fc203043be19";
         
         var plans = [
@@ -1517,9 +1523,9 @@ list-style: none;
         
             Config.generateTerms(data.LongerTerms);
             Config.generatePlans(data.PlanListPrices);
+            Config.generateGetFound(data.GetFoundPrice);
             if(!reload){
               Config.generateSSL(data.SSLPrice);
-              Config.generateGetFound(data.GetFoundPrice);
               reload = true;
             }
         
@@ -1636,6 +1642,7 @@ list-style: none;
         
               var sslData = {
                 radio: radioName,
+                checked:false,
                 package: sslPackage,
                 addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
                 monthly: monthlyPrice,
@@ -1661,29 +1668,48 @@ list-style: none;
         
             if(!jQuery.isEmptyObject(gf))
             {
-              var gfItem = gf.split('-');
-              var gfCurrentMonthlyPrice = gfItem[0];
-              var gfCurrentYearlyPrice = gfItem[1];
-              var monthlyPrice = gfItem[0];
-              var gfText = "[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]";
-              var termType = "[@L[cds.sales/_common:mo]@L]";
-              var gfPackage = "locu_Essential1Yr";
+              $.each(gf, function (){
+                var gfItem = this.split('-');
+                var gftermLength = gfItem[0];
+                var gfPackage= gfItem[1];
+                var gfCurrentMonthlyPrice =  gfItem[2];
+                var gfPercentSavings = gfItem[3];
+                var gfListPrice = gfItem[4];
+                var gfCurrentYearlyPrice =  gfItem[5];
+                var gfText = "[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]";
+                var isSale = ( parseInt(gfPercentSavings) > 0 ) ? true : false;
+                var termLength = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+                var termType = "[@L[cds.sales/_common:mo]@L]";
+                var selectedGfTerm = ( termLength ===  gftermLength) ? true : false;
+                var checkedRadiobutton = (gfSelected) ? true : false;
         
-              var gfData = {
-                radio: radioName,
-                package: gfPackage,
-                addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_gf]@L]',
-                monthly: gfCurrentMonthlyPrice,
-                yearly: gfCurrentYearlyPrice,
-                addonText: gfText,
-                currentPrice: gfCurrentMonthlyPrice,
-                termType: termType
-              };
-              
-              parentID.append(addonTemplate(gfData));
+                if(selectedGfTerm){
+                  var gfData = {
+                    radio: radioName,
+                    checked: checkedRadiobutton,
+                    package: gfPackage,
+                    addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_gf]@L]',
+                    monthly: gfCurrentMonthlyPrice,
+                    yearly: gfCurrentYearlyPrice,
+                    addonText: gfText,
+                    currentPrice: gfCurrentMonthlyPrice,
+                    termType: termType
+                  };
+                  parentID.append(addonTemplate(gfData));
+                }
+              });
+                  
               
               $('input[name="'+radioName+'"]').click(function(){
                 Config.updateOrderSummary();
+              });
+              $('input:radio[name="getFoundOption"]').click(function(){
+                if($('input:radio[name="getFoundOption"]').filter(':checked').val() != 'no_thanks'){
+                  gfSelected = true;
+                }
+                else{
+                  gfSelected = false;
+                }
               });
             }
           },
@@ -1769,11 +1795,18 @@ list-style: none;
         
               var selectedAddon = $('input:radio[name="getFoundOption"]').filter(':checked').attr('data-addon');
               var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+              var selectedFactor = Config.getFactor(parseInt(selectedTerm));
               var selectedPricePerTerm = $('input:radio[name="getFoundOption"]').filter(':checked').attr('data-monthly');
+              var selectedPricePerYear = $('input:radio[name="getFoundOption"]').filter(':checked').attr('data-yearly');
               var onSale = false;
               var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
         
-              var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+              if(parseInt(selectedTerm) > 1){
+                var selectedTotal = currencyCalc.evaluate([selectedFactor,"*",selectedPricePerYear]);
+              }
+              else{
+                var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+              }
         
         
               var itemData = {
@@ -1819,8 +1852,7 @@ list-style: none;
             var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
         
             $.getJSON(cartAPIUrl, function (data) {
-              if (data.Success == true) {                                 
-        
+              if (data.Success == true) { 
                 if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
                   Config.addAddonToCart('sslOption');
                 }
@@ -1888,6 +1920,7 @@ list-style: none;
             $('.domain-search-container').show();
             $("html, body").animate({ scrollTop: 0 }, 0);
           });
+        
         
         });
       </script>
