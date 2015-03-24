@@ -1631,33 +1631,33 @@
           </div>
           <div class="row">
             <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 ">
+              <div data-ci="97651" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
               <div data-ci="97100" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]</div>
               </div>
             </div>
-            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
               <div data-ci="97101" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]</div>
               </div>
             </div>
-            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
               <div data-ci="97102" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]</div>
               </div>
             </div>
-            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
+            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
               <div data-ci="97103" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]</div>
               </div>
             </div>
-            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
+            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
               <div data-ci="97104" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]</div>
-              </div>
-            </div>
-            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
-              <div data-ci="97651" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]</div>
               </div>
             </div>
           </div>
@@ -2082,24 +2082,6 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="container-fluid ols-carousel-item">
-                      <div class="row">
                         <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                         </div>
                       </div>
@@ -2143,6 +2125,24 @@ top: -6px;
                         <div class="col-xs-12">
                           <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] </h2>
                           <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                    <div class="container-fluid ols-carousel-item">
+                      <div class="row">
+                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
+                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
                         </div>
                       </div>
                     </div>
@@ -2673,24 +2673,6 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center carousel-img"/>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="container-fluid ols-carousel-item">
-                      <div class="row">
                         <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                         </div>
                       </div>
@@ -2734,6 +2716,24 @@ top: -6px;
                         <div class="col-xs-12">
                           <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] </h2>
                           <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                    <div class="container-fluid ols-carousel-item">
+                      <div class="row">
+                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center carousel-img"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
+                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
                         </div>
                       </div>
                     </div>
