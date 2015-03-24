@@ -11,14 +11,14 @@
     <link href="https://plus.google.com/108306343581548568740" rel="publisher">
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
-    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting-config.aspx' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>WordPress</title>
-    <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/gd/hosting/website-builder:og-description]@L]">
+    <title>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]">
+    <meta name="keywords" content=" ">
+    <meta property="og:title" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
@@ -119,7 +119,7 @@
   <body ng-controller="">
     <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
-    <div class="container configuration">
+    <div class="container configuration-container">
       <div class="row">
         <div class="col-sm-12">
           <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
@@ -381,7 +381,8 @@
             <script>
               (function($){
                 /**
-                 * Scroll to a section of the page
+                  * Scroll to a section of the page
+                  * Call With $('.move').scrollToSection();
                  */
                 $.fn.extend({ 
                   scrollToSection : function(options) {
@@ -496,271 +497,405 @@
         </section>
       </div>
     </div>
-    <div style="display:none" class="container domain-search">
-      <form id="domainsearchoffersinput">
+    <div style="display:none" class="container domain-search-container">
+      <div class="row">
+        <div class="col-sm-12"> 
+          <h4 class="get-a-domain-text">[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]</h4>
+        </div>
+      </div>
+      <atlantis:webstash type="css">
+        <style>
+          .search-icon {
+              font-size: 22px;
+          }
+          .search-text {
+            display: none;
+          }
+          .search-disclaimers{
+            margin-top: 10px;
+          }
+          .searchable-tlds{
+            font-weight:600;
+          }
+          .continue-icon {
+            background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png') no-repeat -57px -200px;
+            width: 7px;
+            height: 11px;
+            display: inline-block;
+            margin-top: 14px;
+            margin-right: 10px;
+          }
+          .unavailable-icon {
+            background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/dpp_sprite_rebrand.png') no-repeat -50px -62px;
+            width: 29px;
+            height: 27px;
+            display: inline-block;
+            margin: 5px 10px 0 0;
+          }
+          @media (min-width: 768px){
+            .search-icon {
+              display: none;
+            }
+            .search-text {
+              display: inline;
+            }
+            .continue-text{
+              text-align: right;
+            }
+          }
+          @media (max-width: 767px){
+            .form-control{
+              font-size:10px;
+            }
+          }
+          .hide-flt-btn {
+            display: none;
+          }
+          .unavailableCopy {
+            color: #333;
+            font-size: 30px;
+            padding-top: 25px;
+            font-family: walsheim-Regular;
+            line-height: 100%;
+            margin: 0 auto 30px;
+            width: 1140px;
+          }
+          .unavailableCopy .domainName {
+            color: #ff7802;
+            font-size: 34px;
+            font-family: walsheim-Bold;
+          }
+          .domain-search{background-color:#fff;border:1px solid #a4a4a4;height:34px;position:relative;margin-right:10px;min-width:375px;display:table;*display:block;float:left}
+          .domain-search>div{display:inline-block;*display:block;vertical-align:top}
+          .tld-input{border:0 none;float:none;font-size:18px;height:34px;outline:medium none;position:relative;min-width:114px;z-index:2;  border: 1px solid #bebebe; -webkit-box-shadow: inset 0 2px 0 0 #bebebe;box-shadow: inset 0 2px 0 0 #bebebe;}
+          .search-input-wrapper{*float:left;*width:277px;overflow:hidden;padding:6px 9px 0 9px;position:relative}
+          .search-input{background-color:transparent;border:0 none;color:#333;font-family:"Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;font-size:18px;font-weight:300;height:24px;left:9px;outline:medium none;padding:0;position:absolute;right:9px;top:5px;width:96%}
+          .search-input.allow-placeholder{background-color:transparent}
+          .search-input-label{color:#333;display:block;font-size:18px;font-weight:300;outline:medium none;overflow:hidden;padding:3px 0;white-space:nowrap}
+          .domain-check-hidden{display:none}
+          .domain-check span{font-weight:bold}
+          .domain-check .available{color:#70a100}
+          .tld-input-selected{float:left;padding:8px 0 4px 14px;width:75px}
+          .tld-input.droplist-open{overflow:visible}
+          .tld-input>ul{padding:0;margin:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;*top:35px;top:-9999em;*left:-9999em;width:112px;z-index:3}
+          .tld-input.droplist-open>ul{*left:0;width:114px;top:35px;z-index:1000}
+          .tld-input.droplist-open>ul>li{padding:5px 10px}
+          .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
+          .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
+          .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
+          .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
+          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 20px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
+          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px;}
+          .word-break {word-wrap: break-word;word-break: break-all;}
+          .available-result .domain-name-display-tld{font-size:40px;}
+          .available-result .select-and-continue{margin-top:15px;}
+          #add-domain-btn { margin-left:10px;}
+          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:10px;}
+          .available-result , .unavailable-result {display:none};
+        </style>
+      </atlantis:webstash>
+      <div class="row">
+        <div class="col-xs-12">
+          <form id="domainsearchoffersinput" method="get" action="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'><param name='promoCode' value='wordpress-promo' /></relative>]@T]" class="domain-search-form">
+            <input type="hidden" name="targetdivid" value="x"/>
+            <input type="hidden" name="source" value="domaincheck"/>
+            <input id="token" type="hidden" name="token"/>
+            <input id="domaintoadd" type="hidden" name="domaintoadd"/>
+            <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
+            <div class="input-group">
+              <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]</label>
+              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput form-control"/><span class="tld-input input-group-btn">
+                <div class="tld-input-selected"><span>.com</span></div>
+                <input id="txtTld" type="hidden" name="tld" value="com"/>
+                <input type="hidden" name="addIfAvailable" value="true"/><a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
+                <ul>
+                  <li data-main=".com" data-view="com" class="availabletld selected">
+                    <div data-main="true"><span>.com</span></div>
+                  </li> 
+                  ##if(countrySiteAny(br) || isManager())
+                   
+                  <li data-main=".com.br" data-view="com.br" class="availabletld">
+                    <div data-main="true"><span>.com.br</span></div>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(mx) || isManager())
+                   
+                  <li data-main=".com.mx" data-view="com.mx" class="availabletld">
+                    <div data-main="true"><span>.com.mx</span></div>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(au) || isManager())
+                   
+                  <li data-main=".com.au" data-view="com.au" class="availabletld">
+                    <div data-main="true"><span>.com.au</span></div>
+                  </li> 
+                  ##endif
+                   
+                  <li data-main=".co" data-view="co" class="availabletld">
+                    <div data-main="true"><span>.co</span></div>
+                  </li> 
+                  ##if(countrySiteAny(ca) || isManager())
+                   
+                  <li data-main=".ca" data-view="ca" class="availabletld">
+                    <div data-main="true"><span>.ca</span></div>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(countrySiteAny(in) || isManager())
+                   
+                  <li data-main=".in" data-view="in" class="availabletld">
+                    <div data-main="true"><span>.in</span></div>
+                  </li> 
+                  ##endif
+                   
+                  <li data-main=".net" data-view="net" class="availabletld">
+                    <div data-main="true"><span>.net</span></div>
+                  </li>
+                  <li data-main=".org" data-view="org" class="availabletld">
+                    <div data-main="true"><span>.org</span></div>
+                  </li> 
+                  ##if(countrySiteAny(uk) || isManager())
+                   
+                  <li data-main="co.uk" data-view="co.uk" class="availabletld">
+                    <div data-main="true"><span>.co.uk</span></div>
+                  </li>
+                  <li data-main=".uk" data-view="uk" class="availabletld">
+                    <div data-main="true"><span>.uk</span></div>
+                  </li> 
+                  ##endif
+                   
+                </ul></span><span class="input-group-btn">
+                <button type="submit" data-ci="" class="btn btn-primary offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
+            </div>
+            <div id="search-btn-loading" style="display: none" class="loading"></div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12"><a id="no-domain-link" data-ci="" class="pull-right">linkText </a><span class="continue-icon pull-right"></span>
+          <div id="no-domain-loading" style="display: none" class="loading floatleft"></div>
+          <div id="add-domain-loading" style="display: none" class="loading floatleft"></div>
+        </div>
+      </div>
+      <div class="available-result">
         <div class="row">
-          <div class="col-md-12">
-            <h2 class="headline-primary get-a-domain-text">title</h2>
+          <div class="col-sm-12">
+            <h3>[@L[cds.sales/_common:domain-available]@L]</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 offer-search-box">
-            <div class="input-group">
-              <input type="text" placeholder="placeholderText" name="domainToCheck" autocomplete="off" class="form-control input-lg search-form-input searchInput helveticafont"/><span class="input-group-btn">
-                <button type="button" name="searchButton" data-ci="" class="btn btn-primary btn-lg offer-search-btn">placeholderText</button></span>
+          <div class="col-sm-12">
+            <div class="available-tld-wrap">
+              <div class="row">
+                <div class="col-md-8 col-sm-12">
+                  <h4 class="word-break domain-name-display domain-name-display-domain"> </h4>
+                  <h2 class="word-break domain-name-display domain-name-display-tld"> </h2>
+                </div>
+                <div class="col-md-4 col-sm-12 text-right">
+                  <button data-ci="" class="btn btn-primary select-and-continue">continueText  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="row domain-search-messaging-row">
-          <div class="col-md-12">
-            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">placeholderText</div>
-            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">placeholderText</div>
-            <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">placeholderText</div>
-            <div data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">placeholderText</div>
+      </div>
+      <div class="unavailable-result">
+        <div class="row">
+          <div class="col-sm-12">
+            <p class="unavailableCopy"><span class="unavailable-icon"></span><span id="domain-searched"></span></p>
           </div>
         </div>
-      </form>
-      <atlantis:webstash type="css">
-        <style>
-          .search-message { 
-            display: none; 
-            margin-top:20px; 
-          }
-          .domain-search-messaging-row {
-            padding-bottom: 40px;
-          }
-          /*  speech */
-          .speech-shape-upsidedown {
-            line-height: 1.9em;
-            font-size: 18px;
-            padding: 5px 17px;
-            color: #fff;
-            display: inline-block;
-            position: relative;
-            margin-bottom: 20px;
-            z-index: 2;
-          }
-          .speech-shape-upsidedown .shape-text {
-            position: relative;
-            z-index: 40;
-          }
-          .speech-shape-upsidedown:before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: 0;
-            border-bottom: 15px solid;
-            border-right: 15px solid transparent;
-          }
-          .speech-shape-upsidedown:after {
-            content: '';
-            position: absolute;
-            height: 100%;
-            width:20px;
-            right: -6px;
-            top: 0;
-            transform: skew(12deg, 0);
-            z-index: 1;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:before {
-            border-bottom-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-green:after {
-            background-color: #008a32;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange a {
-            color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:before {
-            border-bottom-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-orange:after {
-            background-color: #ef6c0f;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white {
-            background-color: #fff;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:before {
-            border-bottom-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-white:after {
-            background-color: #fff;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow {
-            background-color: #fedc45;
-            color: #333;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:before {
-            border-bottom-color: #fedc45;
-          }
-          .speech-shape-upsidedown.speech-shape-upsidedown-yellow:after {
-            background-color: #fedc45;
-          }
-          
-          /* (end) speech */
-        </style>
-      </atlantis:webstash>
-      <atlantis:webstash type="js">
-        <script>
-          var domainsearchoffersinput = {
-             executeFnByName: function(name, context) {
-              
-              var args = [] // - original code doesn't work in IE8 [].slice.call(arguments).splice(2);
-              for(var i=2; i < arguments.length; i++){
-                args.push(arguments[i]);
+      </div>
+      <atlantis:webstash type="js"></atlantis:webstash>
+      <script>
+        var nextStepUrl;
+        var ConfigSearch = {
+          showTerm: function (li) {
+              if (li) {
+                  var viewData = li.attr('data-view').split("|");
               }
-              var namespaces = name.split(".");
-              var func = namespaces.pop();
-              for(var i = 0; i < namespaces.length; i++) {
-                context = context[namespaces[i]];
+          }, 
+          changeSelected: function (li, parent) {
+              var content = li.find('div[data-main=true]').html();
+              parent.find('div:first').html(content);
+              if (li.hasClass('availabletld')) {
+                  $('#txtTld').val(li.attr('data-view'));
               }
-              return context[func].apply(this, args);
-          
-            },
-            validateSubmit: function(e){
-          
-              e.preventDefault();
-              var domainName = domainsearchoffersinput.trimmedDomainName(false);
-              if((domainName && domainName.length==0) || !domainName) return false;
-          
-              domainName = domainName.toLowerCase();
-              domainName = domainsearchoffersinput.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-              if(!domainsearchoffersinput.ensureValidTld(domainName)) {
-                return;
-              }
-              var functionName = 'domainSearchFormSubmit';
-              if(functionName.length > 0)  {
-                domainsearchoffersinput.executeFnByName(functionName, window, e, domainName);
-              }
-          
-            },
-            trimmedDomainName: function(isKeyPress){
-              
-              var $form = $("#domainsearchoffersinput"),
-                $textInput = $form.find('input[name="domainToCheck"]'),
-                domainName = $textInput.val();
-              if((domainName && domainName.length==0) || !domainName) return null;
-          
-              domainName = domainsearchoffersinput.reformatDomainToValidLength($textInput, domainName, isKeyPress);
-              return domainName;
-          
-            },
-            reformatDomainToValidLength: function($textInput, domain, isKeyPress){
-          
-              var idx = domain.indexOf('.'),
-                  hasTld = idx > -1,
-                  sld = hasTld ? domain.substring(0, idx) : domain,
-                  tld = hasTld ? domain.substring(idx+1) : '',
-                  needsTrimmed = ((idx == -1) ? domain.length > 63 : idx > 63); /* 63 is the magic number for max length of a domain name */        
-              sld = needsTrimmed ? sld.substring(0, 63) : sld;
-              
-              var domainName = sld + ((tld!='') ? '.' + tld : '');
-              if(needsTrimmed) {
-                $textInput.val(domainName);
-              }
-              return domainName;
-          
-            },
-            ensureValidTld: function() {
-          
-              var $form = $("#domainsearchoffersinput"),
-                  $textInput = $form.find('input[name="domainToCheck"]'),
-                  domainName = $textInput.val(); 
-                  validTld = domainsearchoffersinput.hasTldValid(domainName);
-              $form.find('.search-message').hide();
-              if(validTld) {
-                $form.find('.type-your-business-name').show();
-              } else {
-                $form.find('.invalid-TLD-entered').show();
-              }
-              return validTld;
-              
-            },
-            hasTldValid: function(domain) {
-          
-              domain = $.trim(domain || "");
-              var idx = domain.indexOf('.'), isValid = false;
-              if(!domain || domain.length == 0 || idx == -1) return true;
-          
-              var domainsTld = domain.substring(idx+1).toLowerCase();
-              $.each(['com','co','org','net'], function(idx, tld) {
-                if(tld.toLowerCase() === domainsTld) {
-                  isValid = true;
+          },
+          removeDoamin: function () {
+            ##if(isManager())
+              var url = '[@T[link:<relative path="/cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="itc" value="" /></relative>]@T]';
+            ##else
+              var url = '[@T[link:<relative path="cds/widgets/widgetsposthandlers/domainposthandler.ashx"><param name="itc" value="" /></relative>]@T]';
+            ##endif
+            var domaintoadd = $('#domaintoadd').val();
+        
+            url += (url.indexOf('?') >= 0) ? "&" : "?";
+            url += '&domaintoremove=' + domaintoadd;
+        
+            $.getJSON(url, function (data) {
+                if (data == 'removed') {
+                  ##if(isManager())
+                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                  ##else
+                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                  ##endif
                 }
-              });
-              return isValid;
-          
-            },
-            formatDomainWithDefaultTldIfNoneSpecified: function(domain) {
-          
-              if(domain.indexOf('.') > 0) return domain;
-              return domain + '.' + com;
-          
-            },
-            getParameterByName: function (name) {
-          
-              name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-              var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"), results = regex.exec(location.search);
-              return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-          
-            }
-          };
-          
-          $(document).ready(function(){
-          
-            $("#domainsearchoffersinput").on('click', 'button.offer-search-btn', function(){
-              $("#domainsearchoffersinput").submit();
             });
-          
-            $("#domainsearchoffersinput").on('submit', domainsearchoffersinput.validateSubmit);
-            $("#domainsearchoffersinput").on('keyup', function(e){ 
-              if(e.which == 13) return;
-              var domainName = domainsearchoffersinput.trimmedDomainName(true);
-              if(!domainName || domainName.length == 0) return;
-              domainName = domainsearchoffersinput.formatDomainWithDefaultTldIfNoneSpecified(domainName);
-              domainsearchoffersinput.ensureValidTld(domainName);
-            });
-          
-          
-            //- display error on return from DPP's TLD eligibility requirements failure
-            var tldErr = domainsearchoffersinput.getParameterByName('tldRegErr'),
-                dppHasError = tldErr.length > 0,
-                dupErr = domainsearchoffersinput.getParameterByName('dppError');
-          
-            if(dppHasError) {
-              //- note by default tldRegErr will be on the url query string
-              //- if it's a dup, dpp will add in an additional parameter to let us know
-              switch(dupErr){
-                
-                case("dup"):
-                  $('#domainsearchoffersinput .search-message').hide();
-                  $('#domainsearchoffersinput .dup-domain-fail').show();
-                  break;
-          
-                default:
-                  var $failArea = $('#domainsearchoffersinput .domain-eligibility-fail'), 
-                      html = $failArea.html();
-                  html = html.replace(/\{0\}/gi, tldErr)
-                  $failArea.html(html);
-                  $('#domainsearchoffersinput .search-message').hide();
-                  $('#domainsearchoffersinput .domain-eligibility-fail').show();
-                  break;
-          
-              }
+          }
+        };
+        
+        $(document).ready(function () {
+          $('.tld-input').click(function () {
+            var wrap = $(this);
+            if (wrap.hasClass('droplist-open')) {
+            wrap.removeClass('droplist-open');
             } else {
-              $('#domainsearchoffersinput .search-message').hide();
-              $('#domainsearchoffersinput .type-your-business-name').show();
+            wrap.addClass('droplist-open');
             }
           });
-        </script>
-      </atlantis:webstash><a id="noFreeDomain" class="btn btn-purchase btn-plan btn-md btn-block">I don't want my free domain</a>
+        
+          $('.tld-input').mouseleave(function () {
+            $(this).removeClass('droplist-open');
+          });
+        
+          $('.tld-input > ul > li').click(function () {
+            var li = $(this);
+            var parent = li.parents('.tld-input');
+            li.siblings('li').removeClass('selected');
+            li.addClass('selected');
+            ConfigSearch.showTerm(li);
+            ConfigSearch.changeSelected(li, parent);
+          });
+        
+          $('#no-domain-link').bind('click', function (e) {
+                $('#no-domain-link').hide();
+                $('#no-domain-loading').fadeIn();
+                var domaintoadd = $('#domaintoadd').val();
+        
+                if (domaintoadd == '') {
+                     ##if(isManager())
+                        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                      ##else
+                        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                      ##endif
+            } else {
+                ConfigSearch.removeDoamin();
+            }
+            });
+        
+            $('.select-and-continue').bind('click', function () {
+                $('.select-and-continue').hide();
+                window.location = nextStepUrl;       
+            });
+        });
+        
+        $(function () {
+            $('form[id=domainsearchoffersinput]').submit(function (e) {
+              var domaintoremove = $('#domaintoadd').val();
+              var domaintoadd = $('#domaintoadd').val();
+        
+                var tld = $('#txtTld');
+                var domain = $('#domain-name-input').val();
+                var domainSplit = domain.split('.');
+                var newtld = '';
+                if (domainSplit.length > 1) {
+                  for (var i = 1; i < domainSplit.length; i++) {
+                    newtld += domainSplit[i];
+                    if (i !== domainSplit.length - 1)
+                      newtld += '.';
+                  }
+                }
+                else {
+                  newtld = tld.val();
+                }
+                var valid = false;
+        
+                if (domain.length > 0 && (domain != "[@L[fosconfigcommon:domainsearchtext]@L]")) {
+        
+                    if (tld.val() == '') {
+                        tld.val('com');
+                    } else if (newtld != undefined) {
+                        tld.val(newtld);
+                        $('#txtsld').val(domain.split('.')[0]);
+                    }
+        
+                    
+                    $('.availabletld').each(function () {
+                        if ($(this).attr('data-view') == tld.val()) {
+                            valid = true;
+                        }
+                    });
+        
+                    if (!valid) {
+                        var url = '[@T[link:<relative path="domains/search.aspx"></relative>]@T]';
+                        url += (url.indexOf('?') >= 0) ? "&" : "?";
+                        url += 'domaintocheck=' + domain;
+                        url += '&tld=' + tld.val();
+        
+                        var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
+                        var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                        $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
+                        $('.unavailable-result').show();
+        
+                        tld.val('com');
+                    } else {
+                        $.get($(this).attr('action')+'&domaintoremove='+domaintoremove, $(this).serialize(), function (jsonData) {
+                            $('.available-result').hide();
+                            $('.unavailable-result').hide();
+        
+                            if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
+                                $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
+                                var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
+                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
+                                $('.unavailable-result').show();
+                            } else if (jsonData.Properties.domainInfo[0].isPremium) {
+                                var url = '[@T[link:<relative path="domains/search.aspx"></relative>]@T]';
+                                url += (url.indexOf('?') >= 0) ? "&" : "?";
+                                url += 'domaintocheck=' + domain;
+                                url += '&tld=' + tld.val();
+                                $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
+                                var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
+                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
+                                $('.unavailable-result').show();
+        
+                            } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                                $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
+                                var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
+                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
+                                $('.unavailable-result').show();
+                            } 
+                            else if (jsonData.Properties.domainInfo[0].error != '') {
+                                $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
+                                var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
+                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
+                                $('.unavailable-result').show();
+                            } else {
+                                $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
+                                var availableDomain = jsonData.Properties.domainInfo[0].shortName.split('.')[0];
+                                var availableTld = '.'+jsonData.Properties.domainInfo[0].shortName.split('.')[1];
+                                $('.domain-name-display-domain').html(availableDomain);
+                                $('.domain-name-display-tld').html(availableTld);
+                                $('.available-result').show();
+                            }
+                            nextStepUrl = jsonData.Properties.nextStepUrl;
+                        }, 'json');
+                        return false;
+                    }
+                }
+                return false;
+            });
+        });
+      </script>
     </div>
     <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
@@ -987,6 +1122,9 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
+        .domain-search-container{
+          margin-bottom:100px;
+        }
         
       </style>
       <style>
@@ -1186,6 +1324,9 @@ list-style: none;
         <div class="row">
           <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
             <div class="config-text-lead"><%= features %></div>
+            <% if ( isToolTip ){ %>
+            <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
+            <% } %>
           </div>
           <div class="col-xs-4">
             <div class="config-text-lead text-secondary-o">
@@ -1293,6 +1434,7 @@ list-style: none;
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
       url=url + "?configdocid=55076131f778fc17c039f8cb";
+      //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
       var plans = [
@@ -1379,6 +1521,9 @@ list-style: none;
           Config.showSteps(steps);
           Config.addStepBreaks();
           Config.stepNumbers();
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
         },
         resetPage: function(){
           var steps = ['planStep','termStep','officeStep', 'securityStep'];
@@ -1563,6 +1708,14 @@ list-style: none;
               var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
               var isChecked = ( plan ===  planPackage) ? true : false;
       
+              var sslToolTipString = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]";
+              sslToolTipString = sslToolTipString.replace('{0}', '[@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]');
+              var isToolTip = false;
+              if( (planPackage.indexOf('mwp_ultimate') >= 0) || (planPackage.indexOf('mwp_developer') >= 0))
+              {
+                isToolTip = true;
+              }
+      
               var planData = {
                 radio: radioName,
                 package: planPackage,
@@ -1574,7 +1727,9 @@ list-style: none;
                 onSale: isSale,
                 listPrice: planListPrice,
                 features: planFeatures,
-                percentSavings: planPercentSavings
+                percentSavings: planPercentSavings,
+                isToolTip: isToolTip,
+                toolTipContent: sslToolTipString
               };
               parentID.append(planTemplate(planData));
       
@@ -1584,6 +1739,9 @@ list-style: none;
               plan = this.defaultValue;
               Config.loadData(plan);
             });
+          }
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
           }
         },
         generateOffice: function(office){
@@ -1841,6 +1999,10 @@ list-style: none;
             itc="slp_wst_3";
           ##endif
           
+          if(document.getElementById('addofficeOption').checked){
+            plan = plan + "_withEmail";
+          }
+      
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
             if (data.Success == true) {}});
@@ -1907,9 +2069,9 @@ list-style: none;
       $(document).ready(function(){
         $('#planConfigContinue').click(function(){
           Config.addPlanToCart();
-          $('.configuration').hide();
-          $('.domain-search').show();
-          $("html, body").animate({ scrollTop: 0 }, "slow");
+          $('.configuration-container').hide();
+          $('.domain-search-container').show();
+          $("html, body").animate({ scrollTop: 0 }, 0);
       
         });
       });
