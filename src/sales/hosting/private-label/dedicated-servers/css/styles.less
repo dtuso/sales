@@ -3,63 +3,6 @@
     min-height: 268px;
     text-align: left;
 }
-
-.brpl-plan {
-    border: 0.0714286em solid #adadad;
-    border-radius: 15px;
-    padding-left: 0;
-    padding-right: 0;
-}
-.brpl-ul {
-    color: #333;
-    list-style: disc inside none;
-    margin-bottom: 14px;
-    margin-left: 0;
-    margin-top: 0;
-    padding-left: 16px;
-    text-align: left;
-}
-.brpl-ul li {
-    border-top: 0 none;
-    font-weight: inherit;
-    line-height: 117%;
-    margin-top: 0;
-    min-height: 0;
-    padding-top: 0.571429em;
-}
-.brpl-price {
-    color: rgba(189, 74, 79, 1);
-    font-size: 30px;
-}
-.slash-month {
-    color: #707070;
-    font-size: 14px;
-}
-.brpl-plan h2 {
-    text-align: center;
-}
-.brpl-plan .brpl-price-mo {
-    margin-bottom: 0;
-    text-align: center;
-}
-.top-plan-info {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-.active-column {
-    background: linear-gradient(to bottom, #d6e5f2 0px, #f3f9ff 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-div.top-plan-info > h2 {
-    margin-bottom: 0;
-    padding-top: 20px;
-}
-.bottom-plan-info {
-    border-top: 0.0714286em solid #adadad;
-    min-height: 320px;
-    padding-top: 10px;
-}
 .font-16-brpl {
     color: #333;
     font-size: 1em !important;
@@ -68,7 +11,6 @@ div.top-plan-info > h2 {
     padding: 0;
     text-align:center;
     height:40px;
-
 }
 .btn-vps {
     border: 1px solid #bd4a4f;
@@ -411,7 +353,7 @@ body {
 .headerTable {
   position: absolute;
   top: 0;
-  width: 570px;
+  width: 560px;
 }
 .headerRow {
     display: table-cell;
@@ -556,6 +498,7 @@ body {
 .hdrHeadline {
   color: white;
   display: table-cell;
+    font-family: Trebuchet MS;
   font-size: 40px;
   height: 113px;
   padding: 0 0 0 100px;
@@ -564,7 +507,8 @@ body {
 .hdrSubLine {
   color: white;
   display: table-cell;
-  font-size: 20px;
+  font-family: Trebuchet MS;
+  font-size: 18px;
   font-weight: bold;
   height: 90px;
   padding: 5px 0 0 20px;
@@ -588,11 +532,10 @@ body {
 }
 .hdrUptimeText {
     color: #fff;
-    font-family: Trebuchet MS;
-    font-size: 12px;
     font-weight: bold;
-    line-height: 14px;
-    width: 100%;
+    font-size: 7px;
+    line-height: 10px;
+    width: 111%;
 }
 .hdrBottomBtns {
     height: 30px;
@@ -908,11 +851,6 @@ margin-bottom: 0;
 border-top-left-radius: 15px;
 border-top-right-radius: 15px;
 }
-.bottom-plan-info {
-padding-top: 10px;
-min-height: 250px;
-border-top: .071428571em solid #adadad;
-}
 .inner-grid-container {
     margin-top:-17px;
 }
@@ -958,15 +896,7 @@ border-top: .071428571em solid #adadad;
 .compare-chart-pro .compare-chart-header {
     text-align: center;
 }
- .compare-chart-pro .compare-chart-header .sf-tipper-target {
-    background-image: url("../img/pro-sprite-20140903.png");
-    background-position: 0 -1069px;
-    background-size: 205px auto;
-    display: inline-block;
-    height: 14px;
-    vertical-align: baseline;
-    width: 14px;
-}
+
  .compare-chart-pro .compare-chart-footer {
     color: #888;
     float: right;
@@ -1039,47 +969,63 @@ line-height: 30px;
 .footer-header-container {
     margin-bottom: 10px;
 }
-.img1{
+.cpanel-benefit .img1{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -2647px;
   width: 147px;
   height: 38px;
-
+  margin:36px auto;
  }
+.plesk-benefit .img1{
+  background: url('') no-repeat 0 -2647px;
+  width: 147px;
+  height: 38px;
+  margin:36px auto;
+ }
+.plesk-benefit .text1 {
+  color: #cf0000;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 21px auto;
+}
 .img2{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -2695px;
   width: 92px;
   height: 88px;
-
+  margin: 6px auto;
 }
 .img3{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -2793px;
   width: 85px;
   height: 90px;
-
+  margin: 4px auto;
 }
 .img4{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -2893px;
   width: 115px;
   height: 80px;
-
+  margin:16px auto;
  }
 .img5{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -2983px;
   width: 135px;
   height: 94px;
-
+  margin: 2px auto;
 }
 .img6{
   background: url('../img/pro-sprite-20140903.png') no-repeat 0 -3087px;
   width: 94px;
   height: 90px;
+  margin: 5px auto;
  }
-.key-benefit{
-  height:300px;
- }
-.key-benefits-img-wrap{
-    height: 100px;
+.key-benefit h3.key-benefits-title {
+  margin-bottom:5px;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 1;
 }
+.key-benefit{
+  height:320px;
+ }
 .key-benefits-img{
   margin-left: auto;
   margin-right: auto;
@@ -1103,4 +1049,160 @@ line-height: 30px;
   font-size:16px;
   margin:20px 0px 15px 10px;
   width:100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.g-toolTip {
+  cursor: pointer;
+  position: relative;
+  z-index: 180;
+}
+
+.g-toolTip span {
+  background: #262626;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  top: 5px;
+  position: absolute;
+  text-align: left;
+  width: 205px;
+  z-index: 190;
+  padding: 8px;
+}
+
+.g-toolTip span.g-toolTip-right-tip {
+  left: 28px;
+}
+
+.g-toolTip span.g-toolTip-left-tip {
+  right: 35px;
+}
+
+.g-toolTip span:after {
+  border-top: 0 solid transparent;
+  border-bottom: 7px solid transparent;
+  content: "";
+  top: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 190;
+}
+.g-toolTip span.g-toolTip-right-tip:after {
+  border-right: 12px solid #262626;
+  left: -10px;
+}
+.g-toolTip span.g-toolTip-left-tip:after {
+  border-left: 12px solid #262626;
+  right: -10px;
+}
+
+.g-toolTip span {
+  display: none;
+}
+
+.g-toolTip:hover span {
+  display: block;
+}
+
+.g-toolTip.sf-tipper-target {
+  background-image: url("../img/pro-sprite-20140903.png");
+  background-position: 0 -1069px;
+  background-size: 205px auto;
+  display: inline-block;
+  height: 14px;
+  vertical-align: baseline;
+  width: 14px;
+}
+
+#storage-template,
+#bandwidth-template {
+  display: none;
+}
+
+
+.plan-tiles .plan {
+  float: left;
+  width: 200px;
+  margin-top:30px;
+  padding: 0 20px;
+  border-right: 2px solid #eee;
+  min-height: 200px;
+}
+.plan-tiles {
+  margin-top:30px;
+}
+.plan-tiles .plan:last-child {
+  border-right: 0 none;
+}
+.plan-tiles .plan h2{
+  text-align: center;
+  font-size: 26px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.plan-tiles .bottom-plan-info {
+  padding-top: 10px;
+}
+
+.plan-tiles .top-plan-info {
+  font-weight: 700;
+}
+.plan-tiles .brpl-price-mo {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.plan-tiles .brpl-price-mo .brpl-price {
+  font-size: 30px;
+  color: #a92728;
+}
+
+.plan-tiles .brpl-price-mo .slash-month {
+  color: #a92728;
+  font-size: 14px;
+}
+
+.plan-tiles .plan-tiles  {
+  color: #333;
+  list-style: disc inside none;
+  margin-bottom: 14px;
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 16px;
+  text-align: left;
+}
+.plan-tiles p.list-item {
+  text-align: center;
+  margin:0 0 5px;
+  padding:0px;
+  font-size: 12px;
+}
+
+
+.plan-tiles .plan-box-button {
+  background-color: #a92728;
+  color: #FFFFFF;
+  width: 125px;
+  margin: 0px auto;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.plan-tiles .plan-box-button:hover, 
+.plan-tiles .plan-box-button:active {
+  background-color: #900E0F;
+}
+.plan-tiles .bottom-plan-info p {
+  text-align: center;
+}
+.compare-chart-pro {
+  background-color: #f0f1ec;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
 }
