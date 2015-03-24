@@ -68,10 +68,15 @@ block disclaimers
         a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") Continue
 
 block domainSearch
-  .container.domain-search(style="display:none")
-    +domainSearchOffersInput()
-    a.btn.btn-purchase.btn-plan.btn-md.btn-block(id="noFreeDomain") I don't want my free domain
-
+  .row
+    .col-sm-12 
+        h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]
+  +configDomainSearchInput({
+    'title': 'We owe you a free domain. Search for it now.',
+    'placeholderText': '[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]',
+    'buttonText': '[@L[cds.sales/_common:search]@L]',
+    'promoCode': 'wordpress-promo',
+    })
 
 prepend endOfPageScripts
   
@@ -130,6 +135,9 @@ prepend endOfPageScripts
       <div class="row">
         <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
           <div class="config-text-lead"><%= features %></div>
+          <% if ( isToolTip ){ %>
+          <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
+          <% } %>
         </div>
         <div class="col-xs-4">
           <div class="config-text-lead text-secondary-o">
@@ -233,6 +241,7 @@ prepend endOfPageScripts
     // spoof url for config and packagegrouping removed when both are published
     var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
     url=url + "?configdocid=55076131f778fc17c039f8cb";
+    //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
     //url = url + "?configdocid=54ef736af778fc203043be19";
 
     var plans = [
@@ -319,6 +328,9 @@ prepend endOfPageScripts
         Config.showSteps(steps);
         Config.addStepBreaks();
         Config.stepNumbers();
+        if($(document).sfTipper){
+          $(document).sfTipper({ wireup: true });
+        }
       },
       resetPage: function(){
         var steps = ['planStep','termStep','officeStep', 'securityStep'];
@@ -503,6 +515,14 @@ prepend endOfPageScripts
             var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
             var isChecked = ( plan ===  planPackage) ? true : false;
 
+            var sslToolTipString = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]";
+            sslToolTipString = sslToolTipString.replace('{0}', '[@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]');
+            var isToolTip = false;
+            if( (planPackage.indexOf('mwp_ultimate') >= 0) || (planPackage.indexOf('mwp_developer') >= 0))
+            {
+              isToolTip = true;
+            }
+
             var planData = {
               radio: radioName,
               package: planPackage,
@@ -514,7 +534,9 @@ prepend endOfPageScripts
               onSale: isSale,
               listPrice: planListPrice,
               features: planFeatures,
-              percentSavings: planPercentSavings
+              percentSavings: planPercentSavings,
+              isToolTip: isToolTip,
+              toolTipContent: sslToolTipString
             };
             parentID.append(planTemplate(planData));
 
@@ -524,6 +546,9 @@ prepend endOfPageScripts
             plan = this.defaultValue;
             Config.loadData(plan);
           });
+        }
+        if($(document).sfTipper){
+          $(document).sfTipper({ wireup: true });
         }
       },
       generateOffice: function(office){
@@ -781,6 +806,10 @@ prepend endOfPageScripts
           itc="slp_wst_3";
         ##endif
         
+        if(document.getElementById('addofficeOption').checked){
+          plan = plan + "_withEmail";
+        }
+
         var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
         $.getJSON(cartAPIUrl, function (data) {
           if (data.Success == true) {}});
@@ -847,9 +876,9 @@ prepend endOfPageScripts
     $(document).ready(function(){
       $('#planConfigContinue').click(function(){
         Config.addPlanToCart();
-        $('.configuration').hide();
-        $('.domain-search').show();
-        $("html, body").animate({ scrollTop: 0 }, "slow");
+        $('.configuration-container').hide();
+        $('.domain-search-container').show();
+        $("html, body").animate({ scrollTop: 0 }, 0);
 
       });
     });

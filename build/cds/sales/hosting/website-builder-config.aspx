@@ -389,7 +389,6 @@
                 /**
                   * Scroll to a section of the page
                   * Call With $('.move').scrollToSection();
-              
                  */
                 $.fn.extend({ 
                   scrollToSection : function(options) {
