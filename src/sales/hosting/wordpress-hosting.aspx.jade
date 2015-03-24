@@ -162,7 +162,12 @@ prepend endOfPageScripts
 
         activateHref("#cloudspecator-link",           "#{page.ci.cloudSpeculator}",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
         activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
-        activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
+        
+        // remove link from content (see GCE-37920)
+        //activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
+        var $sk = $('#sidekick-link'), skHtml = $sk.html();
+        $sk.replaceWith(skHtml);
+
         activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
         activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
         activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
