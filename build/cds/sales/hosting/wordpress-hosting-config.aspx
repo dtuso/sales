@@ -1328,10 +1328,9 @@ list-style: none;
         </div>
         <div class="row">
           <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
-            <div class="config-text-lead"><%= features %></div>
-            <% if ( isToolTip ){ %>
+            <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
-            <% } %>
+            <% } %></div>
           </div>
           <div class="col-xs-4">
             <div class="config-text-lead text-secondary-o">
@@ -1431,14 +1430,18 @@ list-style: none;
       var origin = getParameterByName('src');
       var reload = false;
       var noSiteLock = false;
+      var noEmail = false;
       
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
+      ##if(!productIsOffered(99))
+        noEmail = true;
+      ##endif
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      url=url + "?configdocid=55076131f778fc17c039f8cb";
+      url=url + "?configdocid=5511d228f778fc167889db36";
       //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
@@ -1507,18 +1510,26 @@ list-style: none;
           else {
             plan='mwp_basic_12month';
           }
-          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+          if( plan.indexOf('mwp_ultimate') >= 0)
           {
-            steps = _.without(steps, 'sslStep');
-            steps = _.without(steps, 'siteLockStep');
+            steps = _.without(steps, 'securityStep');
+            document.getElementById('addsslOption').checked = false;
+            document.getElementById('addsiteLockOption').checked = false;
+          }
+          else if( plan.indexOf('mwp_developer') >= 0)
+          {
+            document.getElementById('sslElement').style.display = "none";
+            document.getElementById('addsslOption').checked = false;
+            $('#slElement').css("border-bottom", "none");
           }
           else if( (plan.indexOf('1month') >= 0))
           {
-            steps = _.without(steps, 'siteLockStep');
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
           }
-          else if(noSiteLock)
+          if(noEmail)
           {
-            steps = _.without(steps, 'siteLockStep');
+            steps = _.without(steps, 'officeStep');
           }
           if(!reload){
             Config.setTitle();
@@ -1556,7 +1567,6 @@ list-style: none;
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
-      
             $('#slElement').css("border-bottom", "none");
           }
           else if( (plan.indexOf('1month') >= 0))
@@ -1564,10 +1574,9 @@ list-style: none;
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
           }
-          else if(noSiteLock)
+          if(noEmail)
           {
-            document.getElementById('slElement').style.display = "none";
-            document.getElementById('addsiteLockOption').checked = false;
+            steps = _.without(steps, 'officeStep');
           }
           Config.showSteps(steps);
           Config.addStepBreaks();
@@ -1829,8 +1838,6 @@ list-style: none;
               termTypeTwo: sslTermType,
               renewsTextOne: slBilledAt
             };
-      
-      
             
             parentID.append(addonTemplate(securityData));
             
@@ -1840,6 +1847,12 @@ list-style: none;
             $('input[name="'+checkNameTwo+'"]').click(function(){
               Config.updateOrderSummary();
             });
+          }
+      
+          if(noSiteLock)
+          {
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
           }
         },
         updateOrderSummary: function(){
