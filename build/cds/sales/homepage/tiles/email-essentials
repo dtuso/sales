@@ -17,9 +17,9 @@
   </style>
 </atlantis:webstash>
 <div onclick="location.href='[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='87853' /></relative>]@T]';" data-ci="87853" class="gdhp-tile email-essentials">
-  <div class="email-essentials-text"><span class="email-essentials-headline">[@L[cds.sales/homepage/locales/en:block2-pod1-hosting-headline-INTL]@L]</span><span class="email-essentials-subtext">[@L[cds.sales/homepage/locales/fr:largepod-hosting-subtext]@L]</span><span class="email-essentials-limitation">[@L[cds.sales/homepage/locales/fr:largepod-hosting-limitation]@L]</span>
+  <div class="email-essentials-text"><span class="email-essentials-headline">EMAIL ESSENTIALS</span><span class="email-essentials-subtext">EMAIL PROFISSIONAL</span><span class="email-essentials-limitation">SEUNOME@SUAEMPRESA.COM</span>
     <div class="atn-btn-wrap">
-      <div>[@L[cds.sales/homepage/locales/en:price-starting-text]@L] <br/>
+      <div>5G DE ESPACO<br/>
         <div class="b">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-month]@L]</div>
       </div><a href="javascript:void(0)" data-ci="87717" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/locales/en:slider-action-btn]@L]</a>
     </div>
