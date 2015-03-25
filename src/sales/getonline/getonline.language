@@ -1,14 +1,14 @@
 ---
 location: localization/sales/getonline/en
 id: 
-name: GCE-37624
+name: GCE-37476
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
 Get Online Title
 <phrase key="get-it-now-bubble-content-header" />
 Here you go...
-<phrase key="get-it-now-bubble-content-text" />
+<phrase key="get-it-now-bubble-content-text" comment="{price_monthly} will be replaced with price" />
 A great package deal for <mark class="business-name-display"></mark> – Starting at just <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="product-domain-text" />
 Get a memorable online address, like <mark class="selected-domain-name-display"></mark>
@@ -22,9 +22,9 @@ yourname
 Customers are 9 times more likely to choose a business with a professional email address?*
 <phrase key="product-email-text" />
 Get a professional email address, like <mark>yourname@<span class="selected-domain-name-display"></span></mark>.
-<phrase key="product-bundle-price" />
+<phrase key="product-bundle-price" comment="{price_monthly} will be replaced with price" />
 Get the bundle for {price_monthly}/month for the first year*
-<phrase key="product-bundle-renewal-price" />
+<phrase key="product-bundle-renewal-price" comment="{price_annual} and {renewal_annual} will be replaced with price" />
 *Bundle cost is {price_annual}/year and {renewal_annual}/year after the first year
 <phrase key="why-us-header" />
 Why get online with us?
@@ -42,11 +42,11 @@ That’s not just us bragging again – we have a case full of trophies to prove
 We can talk all day about our products, prices, support, yadda, yadda. The fact the millions of people across the world rely on us says more than we ever could.
 <phrase key="get-online-bottom-header" />
 Ready to Get Online?
-<phrase key="get-online-bottom-bundle-price" />
+<phrase key="get-online-bottom-bundle-price" comment="{price_monthly} will be replaced with price" />
 {price_monthly}/month for the first year*
 <phrase key="get-online-bottom-no-domain" />
 First select your perfect domain
-<phrase key="get-online-bottom-domain-selected" />
+<phrase key="get-online-bottom-domain-selected" comment="{price_monthly} will be replaced with price" />
 You've found the perfect domain, <mark class="selected-domain-name-display"></mark>, and we have an excellent starter pack starting at <mark id="product-price">{price_monthly}</mark>
 <phrase key="QuestionsLP-8-ThisDoesnTHaveToBeConfusing" />
 Forget <span class="callout">confusing</span>. We make it easy.
@@ -234,7 +234,7 @@ Here are just a few of the sites we’ve built. <mark class="business-name-displ
 Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.
 <phrase key="pro-design-get-it-now-bubble-content-header" />
 Here you go...
-<phrase key="pro-design-get-it-now-bubble-content-text" />
+<phrase key="pro-design-get-it-now-bubble-content-text" comment="{price_monthly} will be replaced with price" />
 A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="pro-design-interview-header" />
 We'll Build a Website That Will Help You Build Your Business
@@ -260,7 +260,7 @@ Enhance and Expand
 Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
 <phrase key="pro-design-interview-did-you-know-text" />
 We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
-<phrase key="pro-design-get-it-now-bottom-text" />
+<phrase key="pro-design-get-it-now-bottom-text" comment="{price_monthly} will be replaced with price" />
 We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="pro-ecomm-page-title" />
 Get Online eCommerce Design
@@ -278,7 +278,7 @@ Here are just a few of the sites we’ve built. <mark class="business-name-displ
 Over the years, our Professional Design Services department has built over 23,000 websites for customers just like you. We know how to create a site you’ll love.
 <phrase key="pro-ecomm-get-it-now-bubble-content-header" />
 Here you go...
-<phrase key="pro-ecomm-get-it-now-bubble-content-text" />
+<phrase key="pro-ecomm-get-it-now-bubble-content-text" comment="{price_monthly} will be replaced with price" />
 A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="pro-ecomm-interview-header" />
 We'll Build a Website That Will Help You Build Your Business
@@ -304,7 +304,7 @@ Enhance and Expand
 Whenever you need to update the text or change an image on your site, just contact us. Each plan includes six hours of updates per year to keep your site fresh and current.
 <phrase key="pro-ecomm-interview-did-you-know-text" />
 We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
-<phrase key="pro-ecomm-get-it-now-bottom-text" />
+<phrase key="pro-ecomm-get-it-now-bottom-text" comment="{price_monthly} will be replaced with price" />
 We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
 <phrase key="disclaimer-modal-title" />
 Disclaimers
@@ -318,3 +318,5 @@ Annual purchase required. Pricing valid for first year only. Offer includes one 
 Annual purchase required. Pricing valid for first year only. Offer includes one <span class="sorted-tld-list"><span class="tld-list tld-ca">.CA, </span><span class="tld-list tld-club">.CLUB, </span><span class="tld-list tld-com">.COM, </span><span class="tld-list tld-br">.BR, </span><span class="tld-list tld-com-br">.COM.BR, </span><span class="tld-list tld-co">.CO, </span><span class="tld-list tld-in">.IN, </span><span class="tld-list tld-rocks">.ROCKS, </span><span class="tld-list tld-uk">.UK, </span><span class="tld-list tld-co-uk">.CO.UK, </span><span class="tld-list tld-net">.NET, </span></span>or .ORG domain, plus Economy Hosting Plan and Email Essentials Package. This offer provides up to 100 mailboxs at the introductory rate. Plus ICANN fee of [@T[domains:<icannfee/>]@T]/year where applicable. Cannot be used in conjunction with any other offer, sale, discount or promotion. After initial one year purchase term, products purchased through this offer will automatically renew individually at the then-current rate. Current bundle renewal price with .COM after first year is <span class="original-price">{0}</span>/mo. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account. Geographic restrictions apply.
 <phrase key="checkout-now" />
 Checkout now
+<phrase key="add-to-cart-failure" />
+Failed to add to the cart. Please try again later.
