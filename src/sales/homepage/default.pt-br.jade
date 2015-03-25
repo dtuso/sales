@@ -27,7 +27,12 @@ block primaryTile
   #tile-container-hosting
     //- include ../../sales/homepage/tiles/hosting-old-brand.jade
     | 
+    | ##if(splitTestingSideIsActive(1447, B))
+    | [@P[cdsDocument:<data app="sales" location="homepage/tile/email-essentials/default_template" /> ]@P]
+    | ##else
     | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+    | ##endif
+
 
 block secondaryTile
   #tile-container-got
