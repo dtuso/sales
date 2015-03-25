@@ -202,8 +202,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -804,8 +808,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -5839,7 +5847,7 @@ cursor: pointer;
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       
