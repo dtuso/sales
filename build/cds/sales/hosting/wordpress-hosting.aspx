@@ -262,7 +262,7 @@
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
               <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="pull-left as-low-as-pricing">
                 <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
                 <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
@@ -871,7 +871,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/_common:add-to-cart-cap]@L] [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -912,7 +912,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/_common:add-to-cart-cap]@L] [@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -953,7 +953,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/_common:add-to-cart-cap]@L] [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1002,7 +1002,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/_common:add-to-cart-cap]@L] [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
