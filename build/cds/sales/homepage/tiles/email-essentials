@@ -17,11 +17,10 @@
   </style>
 </atlantis:webstash>
 <div onclick="location.href='[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='87853' /></relative>]@T]';" data-ci="87853" class="gdhp-tile email-essentials">
-  <div class="email-essentials-text"><span class="email-essentials-headline">EMAIL ESSENTIALS</span><span class="email-essentials-subtext">EMAIL PROFISSIONAL</span><span class="email-essentials-limitation">SEUNOME@SUAEMPRESA.COM</span>
+  <div class="email-essentials-text"><span class="email-essentials-headline">EMAIL ESSENTIALS</span><span class="email-essentials-subtext">EMAIL PROFISSIONAL</span><span class="email-essentials-subtext">CON SEU DOM&Iacute;NIO:</span><span class="email-essentials-limitation">SEUNOME@SUAEMPRESA.COM</span>
     <div class="atn-btn-wrap">
-      <div>5G DE ESPACO<br/>
-        <div class="b">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-month]@L]</div>
-      </div><a href="javascript:void(0)" data-ci="87717" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/locales/en:slider-action-btn]@L]</a>
+      <div>5G DE ESPACO</div><span class="email-essentials-subtext">DE [@T[productprice:<list productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<br/>
+        <div class="b">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/homepage:term-length-month]@L]</div></span><a href="javascript:void(0)" data-ci="87717" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/locales/en:slider-action-btn]@L]</a>
     </div>
   </div>
 </div>
