@@ -18,6 +18,8 @@ append vars
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:pro-ecomm-product-name]@L]";
   - productToDisplay.landingPage = "getonline/pro-ecomm.aspx"
+  - productToDisplay.packageId = "ecommdesign_webstore";
+  - productToDisplay.itcCode = "p4p_getonline_pro_ecomm";
   - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
   - productToDisplay.pricing.promo_annual = "";
   - productToDisplay.pricing.renewal_monthly = "";
@@ -29,6 +31,8 @@ append vars
   - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-onlinestore-monitor.png";
   - productToDisplay.productInfoText = "[@L[cds.sales/getonline:pro-ecomm-product-info-text]@L]";
   - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:pro-ecomm-product-did-you-know-text]@L]";
+  - productToDisplay.topGetItNowBtnCI = "96315";
+  - productToDisplay.bottomGetItNowBtnCI = "96314";
   - productToDisplay.viewTemplatesCI = "96316";
   - productToDisplay.disclaimerCI = "";
   - productToDisplay.disclaimerText = "";
@@ -37,15 +41,21 @@ block domainSearchScripts
 
 block goToCheckout
   script. // Add to Cart
-    $(document).bind('goToCheckout', goToCheckoutHostingHandler);
+    $(document).find('.btn-purchase').on('click', verifyCanCheckOut);
+    $(document).bind('goToCheckout', goToCheckoutHandler);
 
-    function goToCheckoutHostingHandler(e) {
+    function verifyCanCheckOut(e) {
+      $(e.target).trigger('goToCheckout');
+    }
+
+    function goToCheckoutHandler(e) {
+      // pulled from _plan-tiles-mixin.jade
       var pkg = {};
       pkg.pkgid = offerInfo.packageId;
       pkg.qty = 1;
       pkg.itc = offerInfo.itcCode;
-      pkg.ci = ciCode;
-      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';              
+      pkg.ci = $(e.target).data('ci');
+      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]';
 
       var postdata = "requestData=" + JSON.stringify(pkg);
       $.ajax({
@@ -53,45 +63,20 @@ block goToCheckout
         url: sapiurl,
         contentType: "application/json",
         data: postdata,
-        dataType: "jsonp",
-        complete: function (data) {
-          if (data.statusText == "success") {
-            addHostingDomain(domain, ciCode);
-          }
-        },
-        error: function(){
-          showApi3SearchError(e, domain);
-        }
+        dataType: "jsonp"
+      })
+      .done(function(data) {
+        var redirectUrl;
+        ##if(isManager())
+          redirectUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+        ##else
+          redirectUrl = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+        ##endif
+        window.location.href = redirectUrl;
+      })
+      .fail(function(xhr, status, error) {
+        alert('[@L[cds.sales/getonline:add-to-cart-failure]@L]')
       });
-    }
-
-    function addHostingDomain(domain, ciCode){
-      var plan = offerInfo.packageId;
-      var domainToAdd = encodeURIComponent(domain.Fqdn);
-      var sapiurl = '[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages/'+plan+'" />]@T]';
-      var pkg = {};
-      pkg.pkgid = plan;
-      pkg.itc = offerInfo.itcCode;
-      pkg.quantity = 1;
-      pkg.ci = ciCode;
-      pkg.custom = { "domain": domainToAdd }
-      var postdata = "requestData=" + JSON.stringify(pkg);
-      $.ajax({
-        type:"POST",
-        url: sapiurl,
-        contentType: "application/json",
-        data: postdata,
-        dataType: "jsonp",
-        complete: function (data) {
-          if (data.statusText == "success") {
-            ##if(isManager())
-              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-            ##else
-              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-            ##endif
-          }
-        }
-      });      
     }
 
 append pageStyles
@@ -118,19 +103,8 @@ block productContent
     .col-xs-8.col-sm-6.products(style={"padding-left": "60px"})
       h3 #{productToDisplay.name}
       p #{productToDisplay.getItNowDescription}
-      form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
-          input(type="hidden", name="product", value="1023|1|1")
-          input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
-          input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
-          input(type="hidden", name="itc", value="p4p_getonline_pro_ecomm")
-          input(type="hidden", name="nocos", value="False")
-          input(type="hidden", name="config", value="customsite")
-          input(type="hidden", name="sdc", value="True")
-          input(type="hidden", name="newxs", value="False")
-          input(type="hidden", name="cicode", value="96315")
-          input(type="hidden", name="prog_id", value="GoDaddy")
-          button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
-          p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
+      button#getItNowTop.btn.btn-lg.btn-purchase(type="submit", data-ci="#{productToDisplay.topGetItNowBtnCI}") [@L[cds.sales/getonline:get-it-now]@L]
+      p.p2 [@L[cds.sales/getonline:pro-design-product-call-us]@L]
 
 block domainSearchContent
 
@@ -196,30 +170,18 @@ block office365
 
 block bottomGetItNow
   section#bottomGetItNow.bg-medium
-    .container.text-center
-      .row
+    .container
+      .row.text-center
         h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
-        h3.price-token.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
-      .row.pro-wrapper
+        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
+      .row
         .col-xs-6
           img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
         .col-xs-6
           h3.product-name.got-subheader #{productToDisplay.name}
           p.p1 #{productToDisplay.getItNowDescription}
-          .col-xs-12.text-center
-            form(action!="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebStoreDesignPostHandler.ashx' />]@T]", name="frmWebDesign", id="addtocart-form", method="post")
-              input(type="hidden", name="product", value="1023|1|1")
-              input(type="hidden", name="selectedPlan", id="selectedPlan", class="selectedPlan", value="frmWebDesign_0")
-              input(type="hidden", name="formSubmitButton", id="formSubmitButton", value="Add-to-Cart")
-              input(type="hidden", name="itc", value="p4p_getonline_pro_ecomm")
-              input(type="hidden", name="nocos", value="False")
-              input(type="hidden", name="config", value="customsite")
-              input(type="hidden", name="sdc", value="True")
-              input(type="hidden", name="newxs", value="False")
-              input(type="hidden", name="cicode", value="96314")
-              input(type="hidden", name="prog_id", value="GoDaddy")
-              button.btn.btn-purchase.btn-lg [@L[cds.sales/getonline:get-it-now]@L]
-              p.p2 [@L[cds.sales/getonline:pro-ecomm-product-call-us]@L]
+          button#getItNowBottom.btn.btn-lg.btn-purchase(type="submit", data-ci="#{productToDisplay.bottomGetItNowBtnCI}") [@L[cds.sales/getonline:get-it-now]@L]
+          p.p2 [@L[cds.sales/getonline:pro-design-product-call-us]@L]
 
 prepend endOfPageScripts
   script.
