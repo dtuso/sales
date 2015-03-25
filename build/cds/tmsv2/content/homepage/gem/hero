@@ -20,13 +20,13 @@
   text-transform: uppercase;
 }
 #marquee .hero.gem .price span {
-  font-size: 30px;
+  font-size: 44px;
   line-height: .9;
   color: #EF6C0F;
   text-transform: uppercase;
 }
 #marquee .hero.gem .headline {
-  font-size: 30px;
+  font-size: 44px;
   color: #77c043;
   margin: 3% 0;
   line-height: .9;
@@ -54,7 +54,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703" class="hero gem col-md-8 col-sm-12">
+<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703" class="hero gem">
   <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
   <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
   <div class="main walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:mainText]@L]</div>
