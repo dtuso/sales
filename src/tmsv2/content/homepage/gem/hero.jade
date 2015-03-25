@@ -1,0 +1,28 @@
+- dataCi = "97703";
+- ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCi+"' /></relative>]@T]";
+
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee { background-color: #f3f3f4;
+        .hero.gem {position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
+          mark {text-transform:uppercase}
+          .price {font-size:18px; line-height:.9;color:#333;text-transform:uppercase}
+          .price span {font-size:30px; line-height:.9;color:#EF6C0F;text-transform:uppercase}
+          .headline {font-size:30px; color:#77c043; margin:3% 0;line-height:.9;text-transform:uppercase}
+          .main {font-size:18px;color:#333;text-transform:uppercase;padding-bottom:10px;}
+          img {display:block}
+          button {margin:2% 0}
+        }
+      }
+      @media only screen and (min-width:768px) and (max-width: 991px){
+        #marquee .hero.gem{-webkit-transform: translateY(-50%) translateX(10%);-ms-transform: translateY(-50%) translateX(10%);transform: translateY(-50%) translateX(10%);
+        }
+      }
+.hero.gem.col-md-8.col-sm-12(data-url!=ctaLink, data-ci=dataCi)
+  mark.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
+  .headline.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]
+  .main.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:mainText]@L]
+  .price.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]
+  button.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
+

@@ -1,0 +1,63 @@
+
+<atlantis:webstash type="css">
+  <style>#marquee {
+  background-color: #f3f3f4;
+}
+#marquee .hero.gem {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#marquee .hero.gem mark {
+  text-transform: uppercase;
+}
+#marquee .hero.gem .price {
+  font-size: 18px;
+  line-height: .9;
+  color: #333;
+  text-transform: uppercase;
+}
+#marquee .hero.gem .price span {
+  font-size: 30px;
+  line-height: .9;
+  color: #EF6C0F;
+  text-transform: uppercase;
+}
+#marquee .hero.gem .headline {
+  font-size: 30px;
+  color: #77c043;
+  margin: 3% 0;
+  line-height: .9;
+  text-transform: uppercase;
+}
+#marquee .hero.gem .main {
+  font-size: 18px;
+  color: #333;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+#marquee .hero.gem img {
+  display: block;
+}
+#marquee .hero.gem button {
+  margin: 2% 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #marquee .hero.gem {
+    -webkit-transform: translateY(-50%) translateX(10%);
+    -ms-transform: translateY(-50%) translateX(10%);
+    transform: translateY(-50%) translateX(10%);
+  }
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703" class="hero gem col-md-8 col-sm-12">
+  <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+  <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
+  <div class="main walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:mainText]@L]</div>
+  <div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
+  <button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
+</div>
