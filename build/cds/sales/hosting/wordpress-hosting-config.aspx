@@ -233,7 +233,7 @@
           <div class="row">
             <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]</span></span>
               <div class="row">
-                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L]</div>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" ></span></div>
               </div>
               <div class="row options-wrapper">
                 <ul id="officeList" class="product-options"></ul>
@@ -1266,6 +1266,9 @@ list-style: none;
 .security-desc{
   margin-top: 20px;
 }
+#officeStep .sf-tipper-target {
+  margin-bottom: 6px;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1459,7 +1462,7 @@ list-style: none;
           name:"Deluxe",
           text:{
             title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]",
-            subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]",
+            subtitle:'[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]',
             features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanDetails]@L]",
             product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]"
           }
@@ -1478,7 +1481,7 @@ list-style: none;
           text:{
             title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]",
             subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanText]@L]",
-            features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanDetails]@L]",
+            features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanDetails2]@L]",
             product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]"
           }
         }
@@ -1588,14 +1591,14 @@ list-style: none;
         setTitle: function(){
           var getStarted = 'gs';
           if (origin === getStarted){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]");
+            $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
           }
           else{
            if(plan.indexOf('mwp_basic') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
+              $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
             }
             else if(plan.indexOf('mwp_deluxe') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
+              $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
             }
             else if(plan.indexOf('mwp_ultimate') >= 0){
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
@@ -1801,7 +1804,7 @@ list-style: none;
             var sslCurrentMonthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var slCurrentYearlyPrice = slItem[1];
             var sslCurrentYearlyPrice = ssl;
-            var slText = "Add SiteLock";
+            var slText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddSiteLock]@L]";
             var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
             var slTermType = "[@L[cds.sales/_common:mo]@L]";
             var sslTermType = "[@L[cds.sales/_common:yr]@L]";
