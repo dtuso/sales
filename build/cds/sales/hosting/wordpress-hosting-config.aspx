@@ -1462,7 +1462,11 @@ list-style: none;
           name:"Deluxe",
           text:{
             title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]",
+            ##if(countrysiteany(ua) || countrysiteany(pt))
             subtitle:'[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]',
+            ##else
+            subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]",
+            ##endif
             features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanDetails]@L]",
             product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]"
           }
@@ -1595,10 +1599,18 @@ list-style: none;
           }
           else{
            if(plan.indexOf('mwp_basic') >= 0){
+              ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
+              ##else
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
+              ##endif
             }
             else if(plan.indexOf('mwp_deluxe') >= 0){
+              ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
+              ##else
+              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
+              ##endif
             }
             else if(plan.indexOf('mwp_ultimate') >= 0){
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
