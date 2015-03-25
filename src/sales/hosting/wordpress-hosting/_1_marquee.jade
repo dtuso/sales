@@ -7,6 +7,7 @@ atlantis:webstash(type="css")
       padding-bottom: 120px;
       padding-bottom: 120px;
       background-size: cover;
+      padding: 0 0 150px 0;
     }
     
     /* latam */
@@ -75,7 +76,7 @@ atlantis:webstash(type="css")
       position: relative;
     }
     #marquee .marquee-flag-position {
-      top: -50px;
+      top: 0px;
       right: 0px;
       position: absolute;
       display: inline-block;
@@ -97,13 +98,13 @@ atlantis:webstash(type="css")
     #marquee .contact-support {
       font-weight: 800;
     }
-
-
-    .Explorer8 #marquee .marquee-content-wrapper {background-color:#1A1A1A !important;}
+    .Explorer8 #marquee .marquee-content-wrapper {
+      background-color:#1A1A1A !important;
+    }
     #marquee .marquee-content-wrapper {
       background: no-repeat scroll center center / cover rgba(0,0,0,0);
       background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI4MjlweCIgaGVpZ2h0PSI0MzFweCIgdmlld0JveD0iMCAwIDgyOSA0MzEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDgyOSA0MzEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIG9wYWNpdHk9IjAuODUiIGZpbGw9IiMxQTFBMUEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXciIHBvaW50cz0iMSwwIDg2LjI5Niw0MDMuMjk3IDcxNS41MjEsNDI5LjUzIDgyOSwxNDAuODcxIDc1MC4zODMsMCAiLz48L3N2Zz4=");
-      margin: -50px 0 0 -50px;
+      margin: 0 0 0 -50px;
       padding: 16px 87px;
     }
     #marquee .as-low-as-pricing {
@@ -130,14 +131,17 @@ atlantis:webstash(type="css")
 
 section#marquee
   .container.marquee.marquee-white      
-      .marquee-flag-position
-        .marquee-flag-background.headline-secondary(data-tokenize!="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]
       .row
-        .col-sm-7.marquee-content-wrapper
-          h1.marquee-product-name [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]
-          h2.marquee-product-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]
-          p.marquee-product-p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]
-          button#get-started-btn.btn.btn-default-light.pull-left [@L[cds.sales/_common:get-started]@L]
-          .pull-left.as-low-as-pricing
-            p.price-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]
-            .price(data-tokenize!="#{page.pricing.current.A}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]
+        .col-sm-7
+          .marquee-content-wrapper.clearfix
+            h1.marquee-product-name [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]
+            h2.marquee-product-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]
+            p.marquee-product-p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]
+            button#get-started-btn.btn.btn-default-light.btn-plan.pull-left(data-ci="#{page.ci.marqueeGetStarted}", data-plan="#{page.plan.A}") [@L[cds.sales/_common:get-started]@L]
+            .pull-left.as-low-as-pricing
+              p.price-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]
+              .price(data-tokenize!="#{page.pricing.current.A}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]
+
+        .col-sm-5
+          .marquee-flag-position
+            .marquee-flag-background.headline-secondary.text-center(data-tokenize!="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]

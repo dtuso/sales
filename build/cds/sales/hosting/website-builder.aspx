@@ -196,8 +196,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -641,7 +645,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
@@ -690,7 +694,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
@@ -740,7 +744,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
@@ -790,7 +794,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
@@ -3133,7 +3137,7 @@ var PlanBox6UI = {
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -3724,7 +3728,7 @@ top: -6px;
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -5627,7 +5631,7 @@ width: 50%;
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       

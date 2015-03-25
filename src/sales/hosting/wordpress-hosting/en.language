@@ -1,5 +1,5 @@
 ---
-id:  550b1319f778fc1240b846cf
+id:  55130213f778fc10943afe86
 name: GCE-35561
 comments: Managed WordPress Hosting rebrand
 location: localization/sales/gd/hosting/wordpress-hosting/en
@@ -10,6 +10,7 @@ WordPress Hosting | Hosting with Unlimited Bandwidth – [@T[companyname:name]@T
 <phrase key="35561-page-desc" comment="" />
 [@T[companyname:name]@T] offers managed WordPress hosting at an affordable price, as well as easy installation of your WordPress domain.
 <phrase key="35561-meta-Keywords" comment="" />
+wordpress, word press, wordpress hosting, wordpress blog, how to start a blog, wordpress login, blogging, create a blog, how to create a blog, how to blog
 <phrase key="35561-og-title" comment="" />
 Managed WordPress hosting is better with [@T[companyname:name]@T]
 <phrase key="35561-og-description" comment="" />
@@ -255,7 +256,7 @@ Step me through
 <phrase key="35561-training-item-1-desc" comment="" />
 Use these 120 voice-guided, interactive walkthroughs to learn the basics of building WordPress sites. No videos, no documentation. Just click, follow and absorb.
 <phrase key="35561-training-item-1-note" comment="" />
-Powered by <a id="sidekick-link" data-ci="">SIDEKICK</a>
+Powered by SIDEKICK
 <phrase key="35561-training-item-2-title" comment="" />
 Class is in session
 <phrase key="35561-training-item-2-desc" comment="" />
@@ -303,7 +304,7 @@ Award-winning security that doesn’t sleep
 <phrase key="35561-slide-1-title" comment="" />
 For sure, I would recommend GoDaddy!
 <phrase key="35561-slide-1-comments" comment="" />
-We recently moved to Managed Wordpress and we are impressed with the speed and integration. 
+We recently moved to Managed WordPress and we are impressed with the speed and integration. 
 <phrase key="35561-slide-1-byline" comment="" />
 <span>Tony</span> - IT Manager - Raw Material Suppliers
 <phrase key="35561-slide-2-stars" comment="" />
@@ -311,7 +312,7 @@ We recently moved to Managed Wordpress and we are impressed with the speed and i
 <phrase key="35561-slide-2-title" comment="" />
 Excellent service
 <phrase key="35561-slide-2-comments" comment="" />
-Having my GoDaddy Managed Wordpress website has helped my business grown substantially in the past year. Each time I've called GoDaddy with a question about my site, I've reached a caring, attentive rep who answers each of my questions without rushing me, and they always offer to follow up with me if needed. I am incredibly impressed with their service quality.
+Having my GoDaddy Managed WordPress website has helped my business grown substantially in the past year. Each time I've called GoDaddy with a question about my site, I've reached a caring, attentive rep who answers each of my questions without rushing me, and they always offer to follow up with me if needed. I am incredibly impressed with their service quality.
 <phrase key="35561-slide-2-byline" comment="" />
 <span>Elyse</span>, Owner of Elyse Rowland Photography
 <phrase key="35561-slide-3-stars" comment="" />
@@ -325,9 +326,9 @@ GoDaddy has always been extremely helpful in helping me get my websites up and r
 <phrase key="35561-slide-4-stars" comment="" />
 4
 <phrase key="35561-slide-4-title" comment="" />
-Go Daddy Managed Wordpress: Pretty Cool!
+Go Daddy Managed WordPress: Pretty Cool!
 <phrase key="35561-slide-4-comments" comment="" />
-I usually bring my clients to WP Engine for hosting, but now that I have used GoDaddy's Managed Wordpress hosting with its great UI and one-click migration, I'll be bringing my clients to GoDaddy for a fraction of the annual fee.
+I usually bring my clients to WP Engine for hosting, but now that I have used GoDaddy's Managed WordPress hosting with its great UI and one-click migration, I'll be bringing my clients to GoDaddy for a fraction of the annual fee.
 <phrase key="35561-slide-4-byline" comment="" />
 <span>William</span>
 <phrase key="35561-slide-5-stars" comment="" />
@@ -396,6 +397,18 @@ Free themes and plugins can be found at wordpress.org.
 Annual discounts available on NEW purchases only.
 <phrase key="35561-disclaimer-modal-text-3" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your GoDaddy account.
+<phrase key="35561-disclaimer-modal-text-4" />
+<sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
+<phrase key="37951-Features" />
+Features
+<phrase key="37951-Performance" />
+Performance
+<phrase key="37951-Security" />
+Security
+<phrase key="37951-Training" />
+Training
+<phrase key="37952-when-you-renew" />
+{0}/month when you renew<sup>4</sup>
 <phrase key="Meta0Description" />
 [@T[companyname:name]@T] is your simple, affordable solution for all your WordPress needs including installation and hosting of your WordPress domain.
 <phrase key="Meta0Keywords" />
