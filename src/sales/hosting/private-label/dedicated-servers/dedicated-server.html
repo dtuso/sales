@@ -170,71 +170,80 @@ assetPath: true
 
   <div class="container" style="width:1000px;text-align:center;">
     <div class="row">
-      <div class="col-sm-12 text-center featuresHeader"><h2>All these features, all to yourself.</h2></div>
+      <div class="col-sm-12 text-center featuresHeader">
+        <h2>All these features, all to yourself.</h2>
+      </div>
     </div>
     <div class="row">
       <div class="col-sm-4 text-center key-benefit cpanel-benefit">
         <div class="img1 key-benefits-img "></div>
-        <h3 class="key-benefits-title">Feel at home with cPanel<sup>®</sup>.</h3>
+        <h3 class="key-benefits-title">Feel at home with<br/>cPanel<sup>®</sup>.</h3>
         <div class="key-benefits-text">
-          Hit the ground running with the
-          industry-standard control panel
-          you already know and love.
+          Hit the ground running with the industry-<br/>
+          standard control panel you already know and<br/>
+          love.
         </div>
       </div>
       <div class="col-sm-4 text-center key-benefit plesk-benefit">
         <div class="text1">Plesk<sup>&reg;</sup></div>
         <h3 class="key-benefits-title">Make it easy with<br/>Parallels Plesk.</h3>
         <div class="key-benefits-text">
-          Manage your dedicated Windows servers with Parallels Plesk and discover admin skills you never knew you had.
+          Manage your dedicated Windows servers with<br/>
+          Parallels Plesk and discover admin skills you<br/>
+          never knew you had.
         </div>
       </div>
 
       <div class="col-sm-4 text-center key-benefit">
         <div class="img2 key-benefits-img"></div>
-        <h3 class="key-benefits-title">Build to grow with your clients.</h3>
+        <h3 class="key-benefits-title">Build to grow with you<br/>and your clients.</h3>
         <div class="key-benefits-text">
-          We take care of patching, security
-          monitoring, backups and more so
-          you can focus on your business.
+          New clients beating down your door? Upgrade<br/>
+          plans anytime without having to re-provision.
         </div>
       </div>
       <div class="col-sm-4 text-center key-benefit">
         <div class="img3 key-benefits-img"></div>
         <h3 class="key-benefits-title">Think fast.</h3>
         <div class="key-benefits-text">
-          Some places take hours to get your
-          server online. We’ll have you up and
-          running in minutes.
+          Crunch numbers at ridiculous speeds with the<br/>
+          latest generation Intel<sup>&reg;</sup> Xeon<sup>&reg;</sup> processors.
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-4 text-center key-benefit">
         <div class="img4 key-benefits-img"></div>
-        <h3 class="key-benefits-title">Provisioning that's ready to go now.</h3>
+        <h3 class="key-benefits-title">Provisioning that's<br/>ready to go now.</h3>
         <div class="key-benefits-text">
-          You’re in charge with root (administrative)
-          access to install PHP, modules, server
-          level proxy, and much more.
+          You and your clients don't have time to wait.<br/>
+          We'll provision your server in minutes, not<br/>
+          hours.
         </div>
       </div>
-      <div class="col-sm-4 text-center key-benefit">
+      <div class="col-sm-4 text-center key-benefit cpanel-benefit">
         <div class="img5 key-benefits-img"></div>
-        <h3 class="key-benefits-title">Access that makes you feel like a VIP.</h3>
+        <h3 class="key-benefits-title">Access that makes<br/>you feel like a VIP.</h3>
         <div class="key-benefits-text">
-          Our servers are amped up and ready to
-          go with the latest-gen Intel<sup>®</sup>
-          processors.
+          Edit your server files, install Magento or PHP.<br/>
+          Do it all with root (administrative) access.
+        </div>
+      </div>
+      <div class="col-sm-4 text-center key-benefit plesk-benefit">
+        <div class="img5 key-benefits-img"></div>
+        <h3 class="key-benefits-title">Manage your data with<br/>MS SQL.</h3>
+        <div class="key-benefits-text">
+          From data warehousing to business<br/>
+          intelligence, nothing matches Microsoft SQL<br/>
+          Server's capabilities.
         </div>
       </div>
       <div class="col-sm-4 text-center key-benefit">
         <div class="img6 key-benefits-img"></div>
-        <h3 class="key-benefits-title">Keep your data looking good with disc mirroring</h3>
+        <h3 class="key-benefits-title">Keep your data<br/>looking good with disk<br/>mirroring</h3>
         <div class="key-benefits-text">
-          We won’t put your success on
-          hold. Upgrade your plan anytime
-          without having to re-provision.
+          Maximize performance and protect your data<br/>
+          with complete RAID 1 disk mirroring.
         </div>
       </div>
     </div>
@@ -290,12 +299,6 @@ assetPath: true
             <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
           </tr>
           <tr class="compare-chart-row" style="">
-            <td class="compare-chart-header"><div>1-Click Application Installs</div></td>
-            <td class="compare-chart-entry"><div>&mdash;</div></td>
-            <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
-            <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
-          </tr>
-          <tr class="compare-chart-row" style="">
             <td class="compare-chart-header">
               <div>
                 Root Access
@@ -306,6 +309,12 @@ assetPath: true
               </div>
             </td>
             <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
+            <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
+            <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
+          </tr>
+          <tr class="compare-chart-row" style="">
+            <td class="compare-chart-header"><div>1-Click Application Installs</div></td>
+            <td class="compare-chart-entry"><div>&mdash;</div></td>
             <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
             <td class="compare-chart-entry"><span class="pro-icon green-check-icon"></span></td>
           </tr>
@@ -452,13 +461,13 @@ assetPath: true
   $(document).ready(function() {
     getData(function(){
       hideCPanelWindows();
-      getFirstPodPrice();
+      //getFirstPodPrice();
     });
 
     $('input:radio[name=os]').click(function() {
       getData(function(){
         hideCPanelWindows();
-        getFirstPodPrice();
+        //getFirstPodPrice();
       });
     });
 
@@ -546,10 +555,10 @@ assetPath: true
     return addonURL;
   }
 
-  function getFirstPodPrice() {
-    var firstPodPrice = $('.brpl-price').html();
-    $('.first-pod-price').html(firstPodPrice);
-  }
+  // function getFirstPodPrice() {
+  //   var firstPodPrice = $('.brpl-price').html();
+  //   $('.first-pod-price').html(firstPodPrice);
+  // }
 
   function hideCPanelWindows() {
     if ($('#osaddon').val() == "pro_ds_os_windows") {
