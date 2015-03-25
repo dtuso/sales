@@ -114,6 +114,9 @@
     <section id="domainSearch" class="bg-green-official">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #domainSearch #main-panel-title, #domainSearch .input-group-btn .search-text {font-weight:700;}
+          ##endif
           #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
           #domainSearch { padding: 0; }
           #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
@@ -188,8 +191,8 @@
         <style>
           #top-pods {background-color: #e8e8e8;}
           #top-pods .plan-tile {margin-top: 5px; }
-          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important;}
-          #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
+          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 20px !important;}
+          #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:100px;}
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
           #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
@@ -617,8 +620,15 @@
     <section id="promo-carousel" class="features-carousel-pro-carousel">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #promo-carousel .plan-carousel-copy {font-weight:700;}
+          ##endif
+          ##if(activeLanguageAny([en-in]))
+          #promo-carousel .plan-carousel-copy strong{display:block;}
+          ##endif
           #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
           #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+          #promo-carousel .plan-carousel-copy .br {display:block;}
           #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
           #promo-carousel .btn { margin-top: 40px; }
           #promo-carousel .greenText { color: #77c043;}
@@ -980,14 +990,18 @@ top: -6px;
               <div class="item">
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]</div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L]</div>
+                     
+                    ##if(ActiveLanguageAny([en-gb]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1UK]@L]</div> 
+                    ##elseif(ActiveLanguageAny([de-DE], [de-AT], [de-CH]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]</div> 
+                    ##elseif(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar], [pt-br]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]</div> 
+                    ##elseif(ActiveLanguageAny([en-in]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"<strong>- Pranav Chandra, The Great Indian Adventure</strong></div> 
+                    ##else
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L] </div> 
+                    ##endif
                   </div>
                 </div>
               </div>
@@ -995,8 +1009,26 @@ top: -6px;
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
                      
-                    ##if(activeLanguageAny([en-us]))
+                    ##if(ActiveLanguageAny([en-gb]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2UK]@L] </div> 
+                    ##elseif(ActiveLanguageAny([en-IN]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2IN]@L]"<strong>- Sanjay Tilala, Jay Khoodiya Machine Tools</strong></div> 
+                    ##else
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L] </div> 
+                    ##endif
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                     
+                    ##if(activeLanguageAny([en-us],[es-us]))
                     <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3USRebrand]@L]</div> 
+                    ##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L] </div> 
+                    ##elseif(ActiveLanguageAny([en-in]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"<strong>- Parminder Singh Saini, AgriWire</strong></div> 
                     ##else
                     <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]</div> 
                     ##endif
@@ -1015,6 +1047,9 @@ top: -6px;
     <section id="what-do-you-get">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #what-do-you-get h3{font-weight:700;}
+          ##endif
           #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:15px;}
           #what-do-you-get .container{padding-bottom: 70px;}
         </style>
@@ -1317,6 +1352,9 @@ top: -6px;
     <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #why-godaddy .why-gd-container h2, #why-godaddy .why-gd-container h3, #why-godaddy .key-benefits-title{font-weight:700;}
+          ##endif
           #why-godaddy .why-gd-container{padding:0 0 80px;}
           #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
           #why-godaddy .why-gd-container h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;margin-bottom:10px}
@@ -1357,12 +1395,15 @@ top: -6px;
       <section id="bottom-pods" class="bg-green-official">
         <atlantis:webstash type="css">
           <style>
+            ##if(activeLanguageAny([el-gr]))
+            #bottom-pods h2.bottom-headline{font-weight:700;}
+            ##endif
             #bottom-pods {padding-bottom:0px;}
-            #bottom-pods #plans {background-color: #77c043;height:250px;}
+            #bottom-pods #plans {background-color: #77c043;margin-bottom:-200px;}
             #bottom-pods .plan-tile{margin-top:60px;}
             #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:15px;}
             #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 35px 5px;}
             #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;font-size:30px;text-align:left;}
             #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
             #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
@@ -1790,6 +1831,9 @@ top: -6px;
         <div class="container">
           <atlantis:webstash type="css">
             <style>
+              ##if(activeLanguageAny([el-gr]))
+              #new-domains ul li span, #new-domains .col-tld-title, #new-domains .bg-warning{font-weight:700;}
+              ##endif
               #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
               #new-domains .container{margin:0 auto;padding-left:0px;}
               #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
@@ -1801,23 +1845,19 @@ top: -6px;
             </style>
           </atlantis:webstash>
           <div class="row">
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span>
               <ul>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span><a href="[@T[link:<relative path='/tlds/green'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLegal]@L]</span><a href="[@T[link:<relative path='/tlds/legal'><param name='ci' value='97077' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]</span><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='90328' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]</span><a href="[@T[link:<relative path='/tlds/reviews'><param name='ci' value='96021' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span>
               <ul>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
@@ -1854,6 +1894,9 @@ top: -6px;
     <section id="options" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #options #carousel-domain-options h2, #options .features-tabbed-carousel-top .headline-primary, #options .features-tabbed-carousel-top h2, #options .features-tabbed-carousel-top .feature-text {font-weight:700;}
+          ##endif
           #options {padding-top:80px;}
           #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
           #options #carousel-domain-options .subtext {text-align:left;}
@@ -1864,7 +1907,7 @@ top: -6px;
           #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
           #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
           #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
-          #options .carousel-container .carousel-panel {min-height:596px;}
+          #options .carousel-container .carousel-panel {min-height:695px;}
           #options .headline-primary {text-transform:none;}
         </style>
       </atlantis:webstash>
@@ -2397,6 +2440,9 @@ top: -6px;
     <section id="questions" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:FaqTabRebrand]@L]" class="bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #questions .question-headline {font-weight:700;}
+          ##endif
           #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
           #questions #question-accordion {border:none;}
           #questions .accordion-group li.accordion-dropdown {margin:0px;}
@@ -2588,7 +2634,7 @@ top: -6px;
             </div>
             <div class="modal-body">
               <ul class="disclaimer-modal-list">
-                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem1]@L]</li>
+                <li>[@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        </li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]</li>
