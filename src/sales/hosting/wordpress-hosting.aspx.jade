@@ -1,20 +1,5 @@
 extends ../shared/_landing-page
 
-//- mixin wordPressAdCredits(options)
-//-   - var aTag = '<a id="' + options.linkId + '" data-ci="' + options.detailsCi + '">' + options.detailsLinkText + '</a>';
-//-   - var dataContent = options.toolTipContent + " " + aTag;
-//-   p 
-//-     | !{options.adCreditText}&nbsp;
-//-     a.ad-credits-tip.sf-tip(href="#" data-style="qt" data-content="#{dataContent}") #{options.toolTipText}
-//-   atlantis:webstash(type="js")
-//-     script.
-//-       $(document).ready(function(){
-//-         $("##{options.linkId}").click(function(e){
-//-           e.preventDefault();
-//-           window.open('#{options.detailsUrl}','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675');
-//-           return false;
-//-         });
-//-       });
 mixin toolTip(tipText, width)
   span &nbsp;
   span.tool-tip-black.sf-tip.sf-tipper-target(data-content!="#{tipText}" data-style="qt" data-width="#{width ? width : '400'}" )
@@ -177,16 +162,21 @@ prepend endOfPageScripts
 
         activateHref("#cloudspecator-link",           "#{page.ci.cloudSpeculator}",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
         activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
-        activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
+        
+        // remove link from content (see GCE-37920)
+        //activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
+        var $sk = $('#sidekick-link'), skHtml = $sk.html();
+        $sk.replaceWith(skHtml);
+
         activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
         activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
         activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
         
-        activateBtn("#get-started-btn",  "#{page.ci.marqueeGetStarted}",  "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.marqueeGetStarted}' /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.getStarted}' /></relative>]@T]");
-        activateBtn("#product-A",        "#{page.ci.plansAddToCartA}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartA}' /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-B",        "#{page.ci.plansAddToCartB}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartB}' /><param name='plan' value='#{page.plan.B}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-C",        "#{page.ci.plansAddToCartC}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartC}' /><param name='plan' value='#{page.plan.C}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-D",        "#{page.ci.plansAddToCartD}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartD}' /><param name='plan' value='#{page.plan.D}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#get-started-btn",  "#{page.ci.marqueeGetStarted}",  "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.marqueeGetStarted}'/><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.getStarted}'/></relative>]@T]");
+        activateBtn("#product-A",        "#{page.ci.plansAddToCartA}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartA}'  /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-B",        "#{page.ci.plansAddToCartB}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartB}'  /><param name='plan' value='#{page.plan.B}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-C",        "#{page.ci.plansAddToCartC}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartC}'  /><param name='plan' value='#{page.plan.C}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+        activateBtn("#product-D",        "#{page.ci.plansAddToCartD}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartD}'  /><param name='plan' value='#{page.plan.D}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
 
       });
 
@@ -203,19 +193,19 @@ block domainSearch
 
 //- top marquee 
 block marquee 
-  include ./wordpress-hosting/_marquee.jade
+  include ./wordpress-hosting/_1_marquee.jade
 
 //- side by side plan comparisons go here
 block plans
-  include ./wordpress-hosting/_plans.jade
+  include ./wordpress-hosting/_2_plans.jade
 
 //- horizontal nav with jumps to anchor tags (that affixes to top)
 block sections
-  include ./wordpress-hosting/_sections.jade
+  include ./wordpress-hosting/_3_sections.jade
 
 //- suggested alternative products
 block alternatives
-  include ./wordpress-hosting/_alternatives.jade
+  include ./wordpress-hosting/_4_alternatives.jade
 
 //- there's always a catch... show it here.
 block disclaimers

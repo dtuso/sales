@@ -99,7 +99,7 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .toprow {
+.order-item-details-wrapper .row {
   margin-top: 15px;
 }
 .item-title-wrapper{
@@ -118,4 +118,17 @@ list-style: none;
 }
 .item-savings-wrapper{
   text-transform: uppercase;
+}
+#officeOption{
+  text-decoration: line-through;
+}
+.config-step .sitelock-title{
+  margin-bottom: 0;
+}
+.security-small{
+  margin: 0;
+  font-size: 14px;
+}
+.security-desc{
+  margin-top: 20px;
 }

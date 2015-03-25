@@ -52,33 +52,22 @@ atlantis:webstash(type="css")
 section#plans
   +renderPlanTiles(4) 
     +planTile("planTileA")
-      include ./_plan-A.jade
+      include ./_2_plan-A.jade
     +planTile("planTileB")
-      include ./_plan-B.jade
+      include ./_2_plan-B.jade
     +planTile("planTileC")
-      include ./_plan-C.jade
+      include ./_2_plan-C.jade
     +planTile("planTileD")
-      include ./_plan-D.jade
+      include ./_2_plan-D.jade
   .container.all-plans-include
     .row
       h3.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]
     .row
       .col-md-4.col-sm-12
         ul.green-check
-          li 
-            a(id="uptime-promise-link") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]
-          li
-            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] 
-            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]")
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]
-
-      .col-md-4.col-sm-12
-        ul.green-check
           li
             | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] 
             +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]")
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]
           | 
           | ##if(productIsOffered(99))
           | 
@@ -88,10 +77,22 @@ section#plans
           | 
           | ##endif
           | 
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]
+          
+      .col-md-4.col-sm-12
+        ul.green-check
+          li 
+            a(id="uptime-promise-link") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]
+          li
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] 
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]")
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]
+
 
       .col-md-4.col-sm-12
         ul.green-check
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]
         
           | 
           | ##if(areAdCreditsEnabled(google))
