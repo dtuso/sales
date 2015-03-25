@@ -106,7 +106,11 @@
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area">
         <div id="tile-container-hosting"> 
+          ##if(splitTestingSideIsActive(1447, B))
+          [@P[cdsDocument:<data app="sales" location="homepage/tile/email-essentials/default_template" /> ]@P]
+          ##else
           [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+          ##endif
         </div>
         <div id="tile-container-got"> 
           [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
