@@ -233,7 +233,7 @@
           <div class="row">
             <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]</span></span>
               <div class="row">
-                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L]</div>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" ></span></div>
               </div>
               <div class="row options-wrapper">
                 <ul id="officeList" class="product-options"></ul>
@@ -681,7 +681,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12"><a id="no-domain-link" data-ci="" class="pull-right">linkText </a><span class="continue-icon pull-right"></span>
+        <div class="col-xs-12"><a id="no-domain-link" data-ci="" class="pull-right">[@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L] </a><span class="continue-icon pull-right"></span>
           <div id="no-domain-loading" style="display: none" class="loading floatleft"></div>
           <div id="add-domain-loading" style="display: none" class="loading floatleft"></div>
         </div>
@@ -701,7 +701,7 @@
                   <h2 class="word-break domain-name-display domain-name-display-tld"> </h2>
                 </div>
                 <div class="col-md-4 col-sm-12 text-right">
-                  <button data-ci="" class="btn btn-primary select-and-continue">continueText  </button>
+                  <button data-ci="" class="btn btn-primary select-and-continue">[@L[cds.sales/hosting/fosconfigcommon:gobtn]@L]  </button>
                 </div>
               </div>
             </div>
@@ -1266,6 +1266,9 @@ list-style: none;
 .security-desc{
   margin-top: 20px;
 }
+#officeStep .sf-tipper-target {
+  margin-bottom: 6px;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1328,10 +1331,9 @@ list-style: none;
         </div>
         <div class="row">
           <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
-            <div class="config-text-lead"><%= features %></div>
-            <% if ( isToolTip ){ %>
+            <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
-            <% } %>
+            <% } %></div>
           </div>
           <div class="col-xs-4">
             <div class="config-text-lead text-secondary-o">
@@ -1431,14 +1433,18 @@ list-style: none;
       var origin = getParameterByName('src');
       var reload = false;
       var noSiteLock = false;
+      var noEmail = false;
       
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
+      ##if(!productIsOffered(99))
+        noEmail = true;
+      ##endif
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      url=url + "?configdocid=55076131f778fc17c039f8cb";
+      //url=url + "?configdocid=5511d228f778fc167889db36";
       //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
@@ -1456,7 +1462,7 @@ list-style: none;
           name:"Deluxe",
           text:{
             title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]",
-            subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]",
+            subtitle:'[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanText]@L]',
             features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxePlanDetails]@L]",
             product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeluxe]@L]"
           }
@@ -1475,7 +1481,7 @@ list-style: none;
           text:{
             title:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]",
             subtitle:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanText]@L]",
-            features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanDetails]@L]",
+            features:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloperPlanDetails2]@L]",
             product:"[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDeveloper]@L]"
           }
         }
@@ -1507,18 +1513,18 @@ list-style: none;
           else {
             plan='mwp_basic_12month';
           }
-          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('mwp_ultimate') >= 0))
+          if( plan.indexOf('mwp_ultimate') >= 0)
           {
-            steps = _.without(steps, 'sslStep');
-            steps = _.without(steps, 'siteLockStep');
+            steps = _.without(steps, 'securityStep');
           }
           else if( (plan.indexOf('1month') >= 0))
           {
-            steps = _.without(steps, 'siteLockStep');
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
           }
-          else if(noSiteLock)
+          if(noEmail)
           {
-            steps = _.without(steps, 'siteLockStep');
+            steps = _.without(steps, 'officeStep');
           }
           if(!reload){
             Config.setTitle();
@@ -1556,7 +1562,6 @@ list-style: none;
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
-      
             $('#slElement').css("border-bottom", "none");
           }
           else if( (plan.indexOf('1month') >= 0))
@@ -1564,10 +1569,9 @@ list-style: none;
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
           }
-          else if(noSiteLock)
+          if(noEmail)
           {
-            document.getElementById('slElement').style.display = "none";
-            document.getElementById('addsiteLockOption').checked = false;
+            steps = _.without(steps, 'officeStep');
           }
           Config.showSteps(steps);
           Config.addStepBreaks();
@@ -1587,14 +1591,14 @@ list-style: none;
         setTitle: function(){
           var getStarted = 'gs';
           if (origin === getStarted){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]");
+            $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
           }
           else{
            if(plan.indexOf('mwp_basic') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
+              $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
             }
             else if(plan.indexOf('mwp_deluxe') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
+              $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
             }
             else if(plan.indexOf('mwp_ultimate') >= 0){
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
@@ -1800,7 +1804,7 @@ list-style: none;
             var sslCurrentMonthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var slCurrentYearlyPrice = slItem[1];
             var sslCurrentYearlyPrice = ssl;
-            var slText = "Add SiteLock";
+            var slText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddSiteLock]@L]";
             var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
             var slTermType = "[@L[cds.sales/_common:mo]@L]";
             var sslTermType = "[@L[cds.sales/_common:yr]@L]";
@@ -1829,8 +1833,6 @@ list-style: none;
               termTypeTwo: sslTermType,
               renewsTextOne: slBilledAt
             };
-      
-      
             
             parentID.append(addonTemplate(securityData));
             
@@ -1840,6 +1842,18 @@ list-style: none;
             $('input[name="'+checkNameTwo+'"]').click(function(){
               Config.updateOrderSummary();
             });
+          }
+      
+          if(noSiteLock)
+          {
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
+          }
+          if( plan.indexOf('mwp_developer') >= 0)
+          {
+            document.getElementById('sslElement').style.display = "none";
+            document.getElementById('addsslOption').checked = false;
+            $('#slElement').css("border-bottom", "none");
           }
         },
         updateOrderSummary: function(){
