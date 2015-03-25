@@ -5,7 +5,7 @@ mixin tldMini(tldName, btnText, btnUrl)
   a.btn.btn-primary(href!=btnUrl) !{btnText}
 
 append vars
-  - page.title = "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]"
+  - page.title = "[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]";
   - page.description = "[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]";
   - page.keywords = "[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]";
   - page.canonical = "[@T[link:<external linktype='siteurl' path='/domains/domain-name-search.aspx' parammode='explicit'/>]@T]";
@@ -15,7 +15,7 @@ append vars
   - page.openGraph.siteName = "[@T[companyname:name]@T]";
   - angularId = "ng-app";
   - angularNgApp = "dnsApp";
-  - angularNgCntl = "dnsCtrl"
+  - angularNgCntl = "dnsCtrl";
 
 append pageStyles
   atlantis:webstash(type="css")
@@ -185,6 +185,9 @@ block marquee
   section#domainSearch.bg-green-official
     atlantis:webstash(type="css")
       style.
+        ##if(activeLanguageAny([el-gr]))
+        #domainSearch #main-panel-title, #domainSearch .input-group-btn .search-text {font-weight:700;}
+        ##endif
         #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
         #domainSearch { padding: 0; }
         #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
@@ -219,8 +222,8 @@ block plans
       style.
         #top-pods {background-color: #e8e8e8;}
         #top-pods .plan-tile {margin-top: 5px; }
-        #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important;}
-        #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
+        #top-pods .pro-plans .pro-plan-wrap { padding: 40px 20px !important;}
+        #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:100px;}
         #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
         #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
         #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
@@ -237,6 +240,9 @@ block plans
   section#what-do-you-get
     atlantis:webstash(type="css")
       style.
+        ##if(activeLanguageAny([el-gr]))
+        #what-do-you-get h3{font-weight:700;}
+        ##endif
         #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:15px;}
         #what-do-you-get .container{padding-bottom: 70px;}
     .container
@@ -259,6 +265,9 @@ block sections
   section#why-godaddy.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title!="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]")
     atlantis:webstash(type="css")
       style.
+        ##if(activeLanguageAny([el-gr]))
+        #why-godaddy .why-gd-container h2, #why-godaddy .why-gd-container h3, #why-godaddy .key-benefits-title{font-weight:700;}
+        ##endif
         #why-godaddy .why-gd-container{padding:0 0 80px;}
         #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
         #why-godaddy .why-gd-container h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;margin-bottom:10px}
@@ -294,12 +303,15 @@ block sections
     section#bottom-pods.bg-green-official
       atlantis:webstash(type="css")
         style.
+          ##if(activeLanguageAny([el-gr]))
+          #bottom-pods h2.bottom-headline{font-weight:700;}
+          ##endif
           #bottom-pods {padding-bottom:0px;}
-          #bottom-pods #plans {background-color: #77c043;height:250px;}
+          #bottom-pods #plans {background-color: #77c043;margin-bottom:-200px;}
           #bottom-pods .plan-tile{margin-top:60px;}
           #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:15px;}
           #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+          #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 35px 5px;}
           #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;font-size:30px;text-align:left;}
           #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
           #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
@@ -333,6 +345,9 @@ block sections
   section#options.key-benefits-wrap.tile-section.bg-pro-gray(data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]")
     atlantis:webstash(type="css")
       style.
+        ##if(activeLanguageAny([el-gr]))
+        #options #carousel-domain-options h2, #options .features-tabbed-carousel-top .headline-primary, #options .features-tabbed-carousel-top h2, #options .features-tabbed-carousel-top .feature-text {font-weight:700;}
+        ##endif
         #options {padding-top:80px;}
         #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
         #options #carousel-domain-options .subtext {text-align:left;}
@@ -343,7 +358,7 @@ block sections
         #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
         #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
         #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
-        #options .carousel-container .carousel-panel {min-height:596px;}
+        #options .carousel-container .carousel-panel {min-height:695px;}
         #options .headline-primary {text-transform:none;}
     - tabbedCarousel = tabbedCarousel || {};
     - tabbedCarousel.title = "[@L[cds.sales/gd/domains/domain-name-search:MainBannerBadGuys]@L]";
@@ -397,6 +412,9 @@ block sections
   section#questions.bg-pro-gray(data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:FaqTabRebrand]@L]")
     atlantis:webstash(type="css")
       style.
+        ##if(activeLanguageAny([el-gr]))
+        #questions .question-headline {font-weight:700;}
+        ##endif
         #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
         #questions #question-accordion {border:none;}
         #questions .accordion-group li.accordion-dropdown {margin:0px;}
@@ -436,7 +454,7 @@ block sections
               strong [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalTitle]@L]
           .modal-body
             ul.disclaimer-modal-list
-              li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem1]@L]
+              li [@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]
               li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        
               li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]
               li [@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]
