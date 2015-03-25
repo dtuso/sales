@@ -20,7 +20,7 @@
     <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:url" content="undefined">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
@@ -1537,7 +1537,6 @@ section {
           $('#shareme').fosShare({});
         }, 2000);
       });
-      $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
       
     </script>
   </body>
