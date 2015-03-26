@@ -18,10 +18,10 @@ append vars
   - productToDisplay = productToDisplay || {};
   - productToDisplay.name = "[@L[cds.sales/getonline:pro-ecomm-product-name]@L]";
   - productToDisplay.landingPage = "getonline/pro-ecomm.aspx"
-  - productToDisplay.packageId = "ecommdesign_webstore";
+  - productToDisplay.packageId = "ecommdesign_webstore_1_year";
   - productToDisplay.itcCode = "p4p_getonline_pro_ecomm";
-  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
-  - productToDisplay.pricing.promo_annual = "";
+  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='618040' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='618052' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]";
   - productToDisplay.pricing.renewal_monthly = "";
   - productToDisplay.pricing.renewal_annual = "";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:pro-ecomm-product-get-it-now-description]@L]";
@@ -94,7 +94,7 @@ block domainSearchStyles
 
 block bubbleContent
   h2.text-center [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]
-  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]
+  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text-37476]@L]
 
 block productContent
   .row(style={"margin-top": "35px"})
@@ -173,7 +173,7 @@ block bottomGetItNow
     .container
       .row.text-center
         h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
-        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
+        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text-37476]@L]
       .row
         .col-xs-6
           img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
@@ -186,13 +186,13 @@ block bottomGetItNow
 prepend endOfPageScripts
   script.
     $(document).ready(function(){
-         $('#external').click(function(){
-            openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
-         });
+      $('#external').click(function(){
+        openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+      });
     });
 
     function openPopUpWithParams (url, windowName, windowParams) {
-            window.open(url, windowName, windowParams);
+      window.open(url, windowName, windowParams);
     }  
 
 block domainSearchEndOfPageScripts

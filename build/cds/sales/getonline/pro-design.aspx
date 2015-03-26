@@ -105,8 +105,8 @@
           appKey: "",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
-            promo_monthly: "[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
-            promo_annual: "",
+            promo_monthly: "[@T[productprice:<current productid='618021' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
+            promo_annual: "[@T[productprice:<current productid='618050' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]",
             renewal_monthly: "",
             renewal_annual: ""
           }
@@ -250,7 +250,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-header]@L]</h2>
-            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text]@L]</h3>
+            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text-37476]@L]</h3>
           </div>
         </div>
         <div style="margin-top:35px" class="row">
@@ -372,7 +372,7 @@
       <div class="container">
         <div class="row text-center">
           <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
-          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bottom-text-37476]@L]</h3>
         </div>
         <div class="row">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
