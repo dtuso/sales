@@ -470,6 +470,10 @@ Have it all? <strong>.world</strong> is for you.
 Claim your <strong>.space</strong> on the web.
 <phrase key="PodDotWorkText" />
 <strong>.work</strong> has a job to do.
+<phrase key="PodDotSaleText" />
+Make the <strong>.sale</strong>.
+<phrase key="PodDotSiteText" />
+<strong>.site</strong> can be anything you want it to be.
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotLegal" />
@@ -634,6 +638,12 @@ Claim your <strong>.space</strong> on the web.
 <strong>.green</strong>
 <phrase key="TldDotWork" />
 <strong>.work</strong>
+<phrase key="TldDotStore" />
+<strong>.store</strong>
+<phrase key="TldDotNews" />
+<strong>.news</strong>
+<phrase key="TldDotLive" />
+<strong>.live</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
