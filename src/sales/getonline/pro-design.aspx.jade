@@ -20,8 +20,8 @@ append vars
   - productToDisplay.landingPage = "getonline/pro-design.aspx"
   - productToDisplay.packageId = "webdesign_simple_site_1_year";
   - productToDisplay.itcCode = "p4p_getonline_pro_design";
-  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='6520' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
-  - productToDisplay.pricing.promo_annual = "";
+  - productToDisplay.pricing.promo_monthly = "[@T[productprice:<current productid='618021' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[productprice:<current productid='618050' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]";
   - productToDisplay.pricing.renewal_monthly = "";
   - productToDisplay.pricing.renewal_annual = "";
   - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:pro-design-product-get-it-now-description]@L]";
@@ -94,7 +94,7 @@ block domainSearchStyles
 
 block bubbleContent
   h2.text-center [@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-header]@L]
-  h3.text-center.price-token [@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text]@L]
+  h3.text-center.price-token [@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text-37476]@L]
 
 block productContent
   .row(style={"margin-top": "35px"})
@@ -173,7 +173,7 @@ block bottomGetItNow
     .container
       .row.text-center
         h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
-        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]
+        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-design-get-it-now-bottom-text-37476]@L]
       .row
         .col-xs-6
           img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")

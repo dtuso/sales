@@ -68,13 +68,13 @@
         var offerInfo = {
           businessName: "",
           landingPage: "getonline/pro-ecomm.aspx",
-          packageId: "ecommdesign_webstore",
+          packageId: "ecommdesign_webstore_1_year",
           itcCode: "p4p_getonline_pro_ecomm",
           appKey: "",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
-            promo_monthly: "[@T[productprice:<current productid='1023' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
-            promo_annual: "",
+            promo_monthly: "[@T[productprice:<current productid='618040' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
+            promo_annual: "[@T[productprice:<current productid='618052' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]",
             renewal_monthly: "",
             renewal_annual: ""
           }
@@ -217,7 +217,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]</h2>
-            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text]@L]</h3>
+            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text-37476]@L]</h3>
           </div>
         </div>
         <div style="margin-top:35px" class="row">
@@ -339,7 +339,7 @@
       <div class="container">
         <div class="row text-center">
           <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
-          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text-37476]@L]</h3>
         </div>
         <div class="row">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-ecomm.png" class="img-responsive center-block"></div>
@@ -607,13 +607,13 @@ ul li.no-check {
     </script>
     <script>
       $(document).ready(function(){
-           $('#external').click(function(){
-              openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
-           });
+        $('#external').click(function(){
+          openPopUpWithParams("http://www.ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+        });
       });
       
       function openPopUpWithParams (url, windowName, windowParams) {
-              window.open(url, windowName, windowParams);
+        window.open(url, windowName, windowParams);
       }  
       
     </script>
