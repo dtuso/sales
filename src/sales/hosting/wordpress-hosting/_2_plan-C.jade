@@ -1,0 +1,59 @@
+extend ../../../sales/shared/_plan-tile
+
+block vars
+  - title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]";
+  - description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-desc]@L]";
+  - pfid = page.pfids.current.C;
+  - listPrice = page.pricing.list.C;
+  - currentPrice = page.pricing.current.C;
+  - buttonid="product-C";
+  - term ="/mo[@L[cds.sales/gd/hosting/wordpress-hosting:per-mo]@L]"
+  - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
+  - buttonTitleText = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]";
+  - defaultPlan = page.plan.C;
+  - showDropDownList = false;
+  - vat = true
+  - ci = page.ci.plansAddToCartC;
+  - flagText = ""
+  - additionalClasses = ""
+  - priceText = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]"
+  - tooltip2 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]');
+  - tooltip3 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]');
+  - tooltip8 = page.tooltipTemplate.replace('{0}','[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]');
+
+block price
+  include ./_2_plan-price-override.jade
+
+block features
+  .plan-item 
+    strong [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]
+  .plan-item 
+    | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;
+    span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]")
+  .plan-item
+    span(data-tokenize!="[@T[localization:<display type='numeric' number='400000' />]@T]") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;
+    span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize!="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content")
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] 
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] 
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L] 
+  | 
+  | ##if(productIsOffered(107))
+  | 
+  .plan-item [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]  
+  | 
+  | ##endif
+  | 
+
+  | 
+  | ##if(productIsOffered(22))
+  | 
+  .plan-item 
+    span(data-tokenize!="#{page.pricing.ssl}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;
+    span.tool-tip-black.sf-tip.sf-tipper-target(data-style="qt" data-width="400" data-content!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize!="#{page.pricing.ssl}")
+  | 
+  | ##else
+  | 
+  .plan-item &nbsp; 
+  | 
+  | ##endif
+  | 

@@ -60,8 +60,13 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       meta(property="fb:app_id" content="115696031791232")
       meta(property="fb:admins" content="633356800")
 
+    | 
+    |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
 
-    |[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+
+    include ./_simpleTokenizer.jade
 
     //- inherited page classes can prepend/override/append headScripts when 
     //- that page needs a script loaded early on in DOM processing
@@ -156,13 +161,15 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
             $(document).ready(function() { Fastball.Common.initialize('#{requestContext.domainName}'); });
 
     // HEADERBEGIN
-    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     // HEADEREND
 
     block content
 
     // FOOTERBEGIN
-    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    | 
+    | [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     // FOOTEREND-     
 
     <!-- liveperson includes -->

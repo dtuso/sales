@@ -7,22 +7,20 @@ include ../shared/_helpers.jade
 extends ../shared/_page
 
 
-block vars
+block append vars
   - page = page || {};
-  - page.title = page.title || "[@L[cds.sales/homepage:page-title]@L]";
-  - page.description = page.description || "[@L[cds.sales/homepage:meta-description]@L]";
-  - page.keywords = page.keywords || "[@L[cds.sales/homepage:meta-keywords]@L]";
-  - page.canonical = page.canonical || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.favicon = page.favicon || "[@T[link:<imageroot />]@T]assets/godaddy.ico";
-  - page.openGraph = page.openGraph || {};
-  - page.openGraph.title = page.openGraph.title || "[@L[cds.sales/homepage:og-title]@L]";
-  - page.openGraph.description = page.openGraph.description || "[@L[cds.sales/homepage:og-content]@L]";
-  - page.openGraph.type = page.openGraph.type || "website";
-  - page.openGraph.image = page.openGraph.image || "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
-  - page.openGraph.siteName = page.openGraph.siteName || "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.config = page.config || {};
-  - page.config.version = page.config.version || "0.7.0";
-  - page.config.uxcoreVersion = page.config.uxcoreVersion || "dev-brand";
+  - page.title = "[@L[cds.sales/homepage:page-title]@L]";
+  - page.description = "[@L[cds.sales/homepage:meta-description]@L]";
+  - page.keywords = "[@L[cds.sales/homepage:meta-keywords]@L]";
+  - page.canonical =  "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+  - page.openGraph.title = "[@L[cds.sales/homepage:og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/homepage:og-content]@L]";
+  - page.openGraph.type = "website";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
+  - page.openGraph.siteName = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.config.version = "0.7.0";
+  - page.config.uxcoreVersion = "dev-brand";
 
 block append pageStyles
   // home page styling
@@ -91,10 +89,21 @@ block endOfPageScripts
 
         var maxHeroHeight = 0;
         $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 19.5);
+        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
     }
-    $(window).load(reSizeTiles);
+    function tokenizeTheDataTokenizeAttribute() {
+      $('[data-tokenize]').each(function(){
+        var $this = $(this),
+          html = $this.html(),
+          val = $this.data('tokenize'),
+            tokenizedHtml = html.replace(/\{0\}/gi, val);
+        $this
+          .html(tokenizedHtml)
+          .removeAttr('data-tokenize');
+      });
+    }
     $(window).load(function () {
+      reSizeTiles();
       $('.bigtext').bigtext().css('visibility', 'visible');
         setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
     });
@@ -104,6 +113,7 @@ block endOfPageScripts
   script(type="text/javascript").
     var ignoreLivePerson = true;
     $(document).ready(function() {
+      tokenizeTheDataTokenizeAttribute();
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
                    date = new Date();
@@ -117,7 +127,6 @@ block endOfPageScripts
         $('#shareme').fosShare({});
       }, 2000);
     });
-    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);ux.util.cookie.set("fb_tmsclick",null,-1,"/;domain="+url);$("div[data-tms-trackingid]").on("click",function(e){try{ux.util.cookie.set("fb_tmsclick",$(this).data("tms-trackingid"),false,"/;domain="+url)}catch(t){}return true})});
 
 block content
   

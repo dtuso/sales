@@ -135,7 +135,7 @@ block marqueeContent
     | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]
-  button.btn.btn-default-light.btn-plan(data-plan="wsb_personal_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
+  button.btn.btn-default-light.btn-plan(id="get-started-btn",data-src="gs",data-plan="wsb_personal_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
 
 block plans
   section#plans
@@ -158,7 +158,7 @@ block plans
       +planTile
         include ./website-builder/plans/_plan-website-builder-unlimited.jade
         
-      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]", "slp_wst_3" )
+      +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]", "slp_wst_3" )
   
 block sections  
   +renderMidPageNav
@@ -312,7 +312,20 @@ block sections
         .row
           .col-sm-12
             h2.text-center.h1(style="padding-top:30px;") [@L[cds.sales/gd/hosting/website-builder:sb_xsell_title]@L]
-    +featuresTemplates("featuresRightText", "wordpress", null, true, null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", null, "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]', 'btn-default-dark')
+    +featuresTemplates({
+      presentationTemplate: "featuresRightText", 
+      featuresId: "wordpress", 
+      additionalWrapClasses: null, 
+      lazyLoad: true, 
+      backgroundImage: null, 
+      featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wordpress-icon.png", 
+      featuresImgAltText: null, 
+      title: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp]@L]", 
+      subtitle: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_1]@L]", 
+      text: "[@L[cds.sales/gd/hosting/website-builder:sb_xsell_wp_2]@L]", 
+      buttonText: '[@L[cds.sales/gd/hosting/website-builder:learn-more]@L]', 
+      buttonUrl: '[@T[link:<relative path="~/hosting/wordpress-hosting.aspx"><param name="ci" value="88753" /></relative>]@T]', 
+      buttonColor: 'btn-default-dark'})
   | 
   |##else
   | 
@@ -422,12 +435,12 @@ prepend endOfPageScripts
         // populate images
         var column = 0;
         var $row;
-        var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+        var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
         $.each(recommendedThemes,function(index){
           if(column == 0)
             $row = $("<div>", {class: "row"});
           column++;
-          var itemData = {url:recommendedThemes[index]['URL']};
+          var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
           var itemElement = recommendedImagesTemplates(itemData);
           $row.append(itemElement)
           if(column == 3 ){

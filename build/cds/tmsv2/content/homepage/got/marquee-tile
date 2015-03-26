@@ -32,11 +32,11 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile gtld-marquee-got">
+<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' data-message-name="" class="tile gtld-marquee-got">
   <div class="tile-content-wrapper">
     <h2 class="header-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]</h2>
     <div class="price-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]</div>
     <div class="price">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]</div>
-    <div class="restrictions-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text]@L]</div>
+    <div class="restrictions-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text-new]@L]</div>
   </div>
 </div>

@@ -4,7 +4,8 @@
 - var hasIncludedPlanTilesMixinCss = false
 
 
-mixin planTile(planid)
+mixin planTile(planid, additionalClasses)
+  - additionalClasses = additionalClasses ? additionalClasses : '';
   case plansPanelTotalColumns
     when 1
       div.col-sm-offset-4.col-sm-4.plan-tile.plan-pro(id=planid)
@@ -43,6 +44,68 @@ mixin renderPlanTiles(columns, options)
   else
     - containerClass = "container"
 
+  atlantis:webstash(type="js")
+    script(type="text/javascript").
+      var planTileMixin = {
+
+        findMaxHeight: function($items) {
+          var maxHeight = 0;
+          $items.each(function(index, item) {
+            maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+          });
+          return maxHeight;
+        },
+        autoHeightIt: function($obj, selector) {
+          var $objs = $obj.find(selector);
+          var maxHeight = planTileMixin.findMaxHeight($objs);
+          if( maxHeight > 0 ) $objs.css("height", maxHeight);
+        },
+        autoHeighPlanBoxInsides: function() {
+          $tiles = $('#plans').find('.plan-tile');
+          planTileMixin.autoHeightIt($tiles, '.title-wrap');
+          planTileMixin.autoHeightIt($tiles, '.price-wrap');
+          planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+
+          // align each plan-item with eachother in the same line
+          // however, only do this if each plan-tile has the same 
+          // number of plan-item's in it.
+          var numItems = 0, bail= false;
+          $tiles.each(function(){
+            var $tile = $(this);
+            var numPlanItems = $tile.find('.plan-item').length;
+            if(numItems==0) {
+              numItems = numPlanItems;
+            }
+            if(numItems != numPlanItems) bail = true;
+          });
+          if(bail || numItems == 0) return;
+          // loop thru each plan item and adjust independantly
+          for(var i=0; i<numItems; i++) {            
+            planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+          }
+
+        },
+        autoHeightPlanBoxes: function() {
+          // auto height the plan boxes
+          $(".pro-plans").each(function(index, outerPlan) {
+            if($(outerPlan).hasClass('ignore-same-height')) 
+              return;
+            planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+          });
+        }
+      };
+
+      $(document).ready(function(){
+        if ($(window).width() < 768) 
+          return; /* bail out because too narrow to list more than one wide */
+        // allow some time for tokenization to happen 
+        // before auto-heighting the boxes per GCE-37970 
+        window.setTimeout(function(){
+          planTileMixin.autoHeighPlanBoxInsides();
+          planTileMixin.autoHeightPlanBoxes();
+        }, 400);
+      });
+
   atlantis:webstash(type="css")
     style
       include:css ./_plan-tiles/plan-tiles.css
@@ -63,6 +126,7 @@ mixin renderCartLogic(url, itc, options)
     script(type="text/javascript").
       var itemTrackingCode = "!{itemTrackingCode}";
       var ci = "0"
+      var src = "ac"
 
       $(".btn-plan").click(function() {
 
@@ -75,6 +139,8 @@ mixin renderCartLogic(url, itc, options)
           var productPackage = $(this).data("plan");
           if($(this).data("ci")!== undefined)
             ci = $(this).data("ci");
+          if($(this).data("src")!== undefined)
+            src = $(this).data("src");
         }
 
         var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -93,6 +159,7 @@ mixin renderCartLogic(url, itc, options)
         .done(function(data) {
           var redirectUrl = "!{addToCartRedirectUrl}";
           redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+          redirectUrl = redirectUrl.replace('%7b1%7d',src);
           if (redirectUrl.indexOf("?") === -1) {
             redirectUrl += "?plan=";
           } else {

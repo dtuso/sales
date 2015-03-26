@@ -29,7 +29,39 @@
     <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
     <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -681,7 +713,8 @@ $(window).load(function () {
     ##endif
   </head>
   <body ng-controller="">
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     
     <atlantis:webstash type="css">
@@ -1081,6 +1114,7 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
               });
+              
             </script>
           </atlantis:webstash>
         </div>
@@ -1314,6 +1348,7 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1536,6 +1571,7 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -5071,13 +5107,14 @@ var PlanBox6UI = {
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <div class="disclaimers-text">[@L[cds.sales/offers/online-business:32573-third-party-logos-trademarks-disclaimer]@L]</div>
+              <div data-icann-fee="" class="disclaimers-text">[@L[cds.sales/offers/online-business:35463-third-party-logos-trademarks-disclaimer]@L]</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -5240,7 +5277,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-        
       </style>
       <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -5754,7 +5790,7 @@ section {
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       
@@ -5763,21 +5799,13 @@ section {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
-        }
-      
-        $('[data-icann-fee]').each(function(){
+        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
+        });
+        $('[data-content*="{icannfee}"]').each(function(){
+          var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).attr('data-content',tokenized);
         });
         
       });

@@ -31,7 +31,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727' /></relative>]@T]" data-ci="95727" class="tile com-sale tld-sale-tile">
+<div data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727' /></relative>]@T]" data-ci="95727" data-message-name="" class="tile com-sale tld-sale-tile">
   <div class="tile-content-wrapper">
      
      ##if(appSettingEnabled(GDHP_DISPLAY_COM_SALE_BURST))
