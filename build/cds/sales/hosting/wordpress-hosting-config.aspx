@@ -126,7 +126,7 @@
     <div class="container configuration-container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
+          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]</span></p>
         </div>
       </div>
       <div class="row">
@@ -496,7 +496,7 @@
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">Continue</a></div>
+            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigContinueToDomain]@L]</a></div>
           </div>
         </section>
       </div>
@@ -1434,6 +1434,7 @@ list-style: none;
       var reload = false;
       var noSiteLock = false;
       var noEmail = false;
+      var itc = "slp_wordpress";
       
       ##if(!productIsOffered(107))
         noSiteLock = true;
@@ -1543,6 +1544,7 @@ list-style: none;
         resetPage: function(){
           var steps = ['planStep','termStep','officeStep', 'securityStep'];
           var addToCart = 'ac';
+          itc = "slp_wordpress_config";
           
           $('.config-step').hide();
           $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -1785,7 +1787,7 @@ list-style: none;
             var officeData = {
               radio: radioName,
               package: officePackage,
-              addon:'Office 365 Email',
+              addon:'[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSideBarEmail]@L]',
               monthly: monthlyPrice,
               yearly: officeCurrentYearlyPrice,
               addonText: officeText,
@@ -1929,7 +1931,7 @@ list-style: none;
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
             var onSale = true;
-      
+            itc = "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -1957,7 +1959,7 @@ list-style: none;
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
             var onSale = false;
-      
+            itc = "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -1985,9 +1987,8 @@ list-style: none;
             var selectedPricePerTerm = document.getElementById('addsiteLockOption').getAttribute('data-monthly');
             var onSale = false;
             var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
-      
             var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
-      
+            itc = "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2023,11 +2024,8 @@ list-style: none;
           }
         },
         addPlanToCart:function(){
-          var itc;
           ##if(isManager())
-            itc="mgr_slp_wst_3";
-          ##else
-            itc="slp_wst_3";
+            itc="mgr_" + itc;
           ##endif
           
           if(document.getElementById('addofficeOption').checked){
@@ -2045,11 +2043,8 @@ list-style: none;
           }
         },
         addAddonToCart: function(addonOption){
-          var itc;
           ##if(isManager())
-            itc="mgr_slp_wst_3";
-          ##else
-            itc="slp_wst_3";
+            itc="mgr_" + itc;
           ##endif
       
           var addOnId = "add" + addonOption;
