@@ -1,19 +1,61 @@
 atlantis:webstash(type="css")
   style.
+    ##if(activeLanguageAny([el-gr]))
+    #promo-carousel .plan-carousel-copy {font-weight:700;}
+    ##endif
+    ##if(activeLanguageAny([en-in]))
+    #promo-carousel .plan-carousel-copy strong{display:block;}
+    ##endif
     #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
     #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+    #promo-carousel .plan-carousel-copy .br {display:block;}
     #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
     #promo-carousel .btn { margin-top: 40px; }
     #promo-carousel .greenText { color: #77c043;}
 +carousel("top-carousel", 3, {"css":"true"})
   +carouselItem()
-    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]
-  +carouselItem()
-    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L]
+    | 
+    |##if(ActiveLanguageAny([en-gb]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1UK]@L]
+    | 
+    |##elseif(ActiveLanguageAny([de-DE], [de-AT], [de-CH]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]
+    | 
+    |##elseif(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar], [pt-br]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]
+    | 
+    |##elseif(ActiveLanguageAny([en-in]))
+    .plan-carousel-copy "[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"
+      strong - Pranav Chandra, The Great Indian Adventure
+    | 
+    |##else
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L] 
+    | 
+    |##endif
   +carouselItem()
     | 
-    |##if(activeLanguageAny([en-us]))
+    |##if(ActiveLanguageAny([en-gb]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2UK]@L] 
+    | 
+    |##elseif(ActiveLanguageAny([en-IN]))
+    .plan-carousel-copy "[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2IN]@L]"
+      strong - Sanjay Tilala, Jay Khoodiya Machine Tools
+    | 
+    |##else
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L] 
+    | 
+    |##endif
+  +carouselItem()
+    | 
+    |##if(activeLanguageAny([en-us],[es-us]))
     .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3USRebrand]@L]
+    | 
+    |##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
+    .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L] 
+    | 
+    |##elseif(ActiveLanguageAny([en-in]))
+    .plan-carousel-copy "[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"
+      strong - Parminder Singh Saini, AgriWire
     | 
     |##else
     .plan-carousel-copy [@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]
