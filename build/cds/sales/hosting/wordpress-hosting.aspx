@@ -130,6 +130,7 @@
           padding-bottom: 120px;
           padding-bottom: 120px;
           background-size: cover;
+          padding: 0 0 150px 0;
         }
         
         /* latam */
@@ -198,7 +199,7 @@
           position: relative;
         }
         #marquee .marquee-flag-position {
-          top: -50px;
+          top: 0px;
           right: 0px;
           position: absolute;
           display: inline-block;
@@ -220,13 +221,13 @@
         #marquee .contact-support {
           font-weight: 800;
         }
-        
-        
-        .Explorer8 #marquee .marquee-content-wrapper {background-color:#1A1A1A !important;}
+        .Explorer8 #marquee .marquee-content-wrapper {
+          background-color:#1A1A1A !important;
+        }
         #marquee .marquee-content-wrapper {
           background: no-repeat scroll center center / cover rgba(0,0,0,0);
           background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI4MjlweCIgaGVpZ2h0PSI0MzFweCIgdmlld0JveD0iMCAwIDgyOSA0MzEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDgyOSA0MzEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIG9wYWNpdHk9IjAuODUiIGZpbGw9IiMxQTFBMUEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXciIHBvaW50cz0iMSwwIDg2LjI5Niw0MDMuMjk3IDcxNS41MjEsNDI5LjUzIDgyOSwxNDAuODcxIDc1MC4zODMsMCAiLz48L3N2Zz4=");
-          margin: -50px 0 0 -50px;
+          margin: 0 0 0 -50px;
           padding: 16px 87px;
         }
         #marquee .as-low-as-pricing {
@@ -255,18 +256,22 @@
     </atlantis:webstash>
     <section id="marquee">
       <div class="container marquee marquee-white">     
-        <div class="marquee-flag-position">
-          <div data-tokenize="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]" class="marquee-flag-background headline-secondary">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]</div>
-        </div>
         <div class="row">
-          <div class="col-sm-7 marquee-content-wrapper">
-            <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
-            <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
-            <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-            <button id="get-started-btn" class="btn btn-default-light pull-left">[@L[cds.sales/_common:get-started]@L]</button>
-            <div class="pull-left as-low-as-pricing">
-              <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
-              <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
+          <div class="col-sm-7">
+            <div class="marquee-content-wrapper clearfix">
+              <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
+              <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
+              <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
+              <div class="pull-left as-low-as-pricing">
+                <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
+                <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="marquee-flag-position">
+              <div data-tokenize="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]" class="marquee-flag-background headline-secondary text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]</div>
             </div>
           </div>
         </div>
@@ -289,7 +294,9 @@
         #plans .pro-plans .pro-plan-wrap .plan-price-wrap {
           margin: 30px 0;
         }
-        
+        #plans .plan-price-and-duration {
+          
+        }
         .include-check-black, .include-check-green, .include-check-none {
           padding-left: 33px;
           position: relative;
@@ -326,6 +333,59 @@
       </style>
     </atlantis:webstash>
     <section id="plans">
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var itemTrackingCode = "slp_wordpress";
+          var ci = "0"
+          var src = "ac"
+          
+          $(".btn-plan").click(function() {
+          
+            if ("false" != "false"){
+              var productTile = $(this).data("ul");
+          
+              var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+            }
+            else{
+              var productPackage = $(this).data("plan");
+              if($(this).data("ci")!== undefined)
+                ci = $(this).data("ci");
+              if($(this).data("src")!== undefined)
+                src = $(this).data("src");
+            }
+          
+            var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
+          
+            $.ajax({
+              type: "POST",
+              url: url,
+              contentType: "application/json",
+              data: "requestData=" + JSON.stringify({
+                pkgid: productPackage,
+                qty: 1,
+                itc: itemTrackingCode
+              }),
+              dataType: "jsonp"
+            })
+            .done(function(data) {
+              var redirectUrl = "[@T[link:<relative path="~/hosting/wordpress-hosting-config.aspx" parammode="common" />]@T]";
+              redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+              redirectUrl = redirectUrl.replace('%7b1%7d',src);
+              if (redirectUrl.indexOf("?") === -1) {
+                redirectUrl += "?plan=";
+              } else {
+                redirectUrl += "&plan=";
+              }
+              redirectUrl += productPackage;
+          
+              window.location.href = redirectUrl;
+            })
+            .fail(function(xhr, status, error) {
+              alert('Failed to add to the cart. Please try again later.')
+            });
+          });
+        </script>
+      </atlantis:webstash>
       <atlantis:webstash type="js">
         <script type="text/javascript">
           var planTileMixin = {
@@ -380,8 +440,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -792,13 +856,13 @@
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
-                    <div class="price-text"> <strong>As low as</strong></div>
-                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div class="plan-price-and-duration word-break"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                     ##if(productHasSavingsMoreThan(580970, 580970, 0))
                      <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580970' secondaryproductid='580970' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                     ##endif
                      
-                    <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -807,7 +871,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="96216" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -833,13 +897,13 @@
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
-                    <div class="price-text"> <strong>As low as</strong></div>
-                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div class="plan-price-and-duration word-break"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                     ##if(productHasSavingsMoreThan(580978, 580978, 0))
                      <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580978' secondaryproductid='580978' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                     ##endif
                      
-                    <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -848,7 +912,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="96217" data-plan="host_WordPressHostingPlan_B" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -874,13 +938,13 @@
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
-                    <div class="price-text"> <strong>As low as</strong></div>
-                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div class="plan-price-and-duration word-break"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                     ##if(productHasSavingsMoreThan(581001, 581001, 0))
                      <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581001' secondaryproductid='581001' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                     ##endif
                      
-                    <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -889,7 +953,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="96218" data-plan="host_WordPressHostingPlan_C" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -923,13 +987,13 @@
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
-                    <div class="price-text"> <strong>As low as</strong></div>
-                    <div class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div class="plan-price-and-duration word-break"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
                     ##if(productHasSavingsMoreThan(581019, 581019, 0))
                      <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581019' secondaryproductid='581019' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
                     ##endif
                      
-                    <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">{0}/month when you renew<sup>4</sup></p> 
+                    <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -938,7 +1002,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-D" data-ci="96219" data-plan="host_WordPressHostingPlan_D" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1024,11 +1088,17 @@
     </section>
     <atlantis:webstash type="css">
       <style>
-        #features {
+        #features,
+        #reviews-carousel {
           background-color: #d9d9d9;
         }
-        #features-more,
-        #reviews-carousel,    
+        #reviews-carousel .carousel-container .carousel .carousel-indicators li {
+          background-color: #999;
+        }
+        #reviews-carousel .carousel-container .carousel .carousel-indicators li.active {
+          background-color: #77c043
+        }
+        #features-more,    
         #security,
         #faq {
           background-color: #fff;
@@ -1372,7 +1442,7 @@
       
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
-    <section id="features" data-mid-nav-title="Features" data-cicode="96211">
+    <section id="features" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Features]@L]" data-cicode="96211">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -1381,7 +1451,7 @@
         </div>
         <div class="row">
           <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]</h3>
             <p class="list-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-title]@L]</p>
             <ul class="left-aligned-round-list short-spacing">
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]</li>
@@ -1396,15 +1466,15 @@
             </ul>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-desc]@L]</p>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_award-winning_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-desc]@L]</p>
           </div>
           <div class="col-md-3 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_protected-website_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]</p>
           </div>
         </div>
@@ -1419,32 +1489,32 @@
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_search-engine-visibility_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]</p>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_site-migration_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]</p>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_temporary-domain_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]</p>
           </div>
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_traffic-overage-protection_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]</p>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_test-changes_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]</p>
           </div>
           <div class="col-md-4 col-sm-6 col-xs-12">
              
             ##if(productIsOffered(107))
              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive features-more-img"/>
-            <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]</h3>
+            <h3 class="word-break">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]</h3>
             <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]</p> 
             ##else
              
@@ -1530,7 +1600,7 @@
         </div>
       </div>
     </section>
-    <section id="performance" data-mid-nav-title="Performance" data-cicode="96212">
+    <section id="performance" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Performance]@L]" data-cicode="96212">
       <div class="container maximum-performance">
         <div class="row text-center">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -1563,7 +1633,7 @@
         </div>
       </div>
     </section>
-    <section id="security" data-mid-nav-title="Security" data-cicode="96213"> 
+    <section id="security" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Security]@L]" data-cicode="96213"> 
       ##if(productIsOffered(107))
        
       <style>
@@ -1635,33 +1705,33 @@
           </div>
           <div class="row">
             <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 ">
+              <div data-ci="97651" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]</div>
+              </div>
+            </div>
+            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
               <div data-ci="97100" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]</div>
               </div>
             </div>
-            <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
+            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
               <div data-ci="97101" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]</div>
               </div>
             </div>
-            <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
+            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
               <div data-ci="97102" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L]</div>
               </div>
             </div>
-            <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
+            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
               <div data-ci="97103" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L]</div>
               </div>
             </div>
-            <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
+            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
               <div data-ci="97104" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                 <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-5-title]@L]</div>
-              </div>
-            </div>
-            <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
-              <div data-ci="97651" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                <div class="feature-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]</div>
               </div>
             </div>
           </div>
@@ -1669,7 +1739,7 @@
       </div>
       <atlantis:webstash type="js">
         <script type="text/javascript">
-          $(window).load(function() {
+          $(document).ready(function() {
             setTimeout(function() {
               $(".features-tabbed-carousel-icon:first").click();
             }, 500);
@@ -2086,24 +2156,6 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="container-fluid ols-carousel-item">
-                      <div class="row">
                         <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                         </div>
                       </div>
@@ -2147,6 +2199,24 @@ top: -6px;
                         <div class="col-xs-12">
                           <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] </h2>
                           <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                    <div class="container-fluid ols-carousel-item">
+                      <div class="row">
+                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
+                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
                         </div>
                       </div>
                     </div>
@@ -2279,7 +2349,7 @@ top: -6px;
       </div>
       <atlantis:webstash type="js">
         <script type="text/javascript">
-          $(window).load(function() {
+          $(document).ready(function() {
             setTimeout(function() {
               $(".features-tabbed-carousel-icon:first").click();
             }, 500);
@@ -2677,24 +2747,6 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center carousel-img"/>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="container-fluid ols-carousel-item">
-                      <div class="row">
                         <div class="col-xs-12 text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_standing_guard_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                         </div>
                       </div>
@@ -2749,6 +2801,24 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container">
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
+                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center carousel-img"/>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
+                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper text-center">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                    <div class="container-fluid ols-carousel-item">
+                      <div class="row">
                         <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_prescreened-plugins_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
                         </div>
                       </div>
@@ -2772,8 +2842,10 @@ top: -6px;
       </div> 
       ##endif
        
-    </section>
-    <section id="training" data-mid-nav-title="Training" data-cicode="96215">
+    </section> 
+    ##if(activeLanguageAny(en))
+     
+    <section id="training" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Training]@L]" data-cicode="96215">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
@@ -2792,7 +2864,9 @@ top: -6px;
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##endif
+     
     <section id="reviews-carousel">
       <div class="carousel-wrap">
         <div class="carousel-container container">
@@ -2991,7 +3065,7 @@ top: -6px;
                   </li>
                 </ul>
               </li>
-              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]</span>
+              <li class="accordion-dropdown"><span class="carett caret-right"></span><span>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-question]@L]</span>
                 <ul class="dropdown">
                   <li>
                     <div>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-answer-1]@L]
@@ -3436,8 +3510,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-2]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-list-item-3]@L]</li>
                       </ul>
-                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-parenthesis]@L]</p>
-                      <button data-ci="96224" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</button>
+                      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-1-parenthesis]@L]</p><a data-ci="96224" href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='96224' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/_common:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -3454,8 +3527,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-1]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]</li>
-                      </ul>
-                      <button data-ci="96223" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='xxxx' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</button>
+                      </ul><a data-ci="96223" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='96223' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -3481,6 +3553,7 @@ top: -6px;
       <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]</p>
       <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-2]@L]</p>
       <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-3]@L]</p>
+      <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-4]@L]</p>
     </div>
     <!-- FOOTERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
@@ -3646,35 +3719,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-      </style>
-      <style>
-body { 
-  background-color: #d9d9d9; 
-}
-
-.img-center {
-  margin-left: auto;
-  margin-right: auto;
-}
-#product-disclaimers {
-  cursor: pointer;
-}
-#disclaimers {
-  background-color: #fff;
-}
-
-ul.left-aligned-round-list {
-  padding-left: 15px;
-  margin-bottom: 18px;
-}
-ul.left-aligned-round-list.small-spacing li {
-  margin: 1px 0;
-}
-
-#pretty-link {
-  text-transform: lowercase!important;
-}
-
       </style>
       <style>.plan-tile { 
   margin-top: -145px; 
@@ -4069,19 +4113,50 @@ ul.left-aligned-round-list.small-spacing li {
     }
 }
       </style>
+      <style>
+        body { 
+          background-color: #d9d9d9; 
+        }
+        .img-center {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #product-disclaimers {
+          cursor: pointer;
+        }
+        #disclaimers {
+          background-color: #fff;
+        }
+        ul.left-aligned-round-list {
+          padding-left: 15px;
+          margin-bottom: 18px;
+        }
+        ul.left-aligned-round-list.small-spacing li {
+          margin: 1px 0;
+        }
+        #pretty-link {
+          text-transform: lowercase!important;
+        }
+        
+        .btn, 
+        .word-break,
+        .features-tabbed-carousel-icon .features-text {
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+        
+      </style>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
     </script>
     <atlantis:webstash type="js">
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
       <script>
         var wpHosting = {
           sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
-          offersCodes: {
-            packageId: 'gybo_1email_1yr',
-            itc: 'slp_GYBO1'
-          },
+          itc: 'slp_wordpress',
           supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
           imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
           canOfferOls: true,
@@ -4127,13 +4202,6 @@ ul.left-aligned-round-list.small-spacing li {
           }
         }
         
-        function activateBtn(id, ciCode, url){
-          $(id).attr('data-ci', ciCode);
-          $(id).on('click', function(){
-            location.href = url;
-          });
-        }
-        
         $(document).ready(function(){
         
           //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
@@ -4146,21 +4214,17 @@ ul.left-aligned-round-list.small-spacing li {
         
           activateHref("#cloudspecator-link",           "96207",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
           activateHref("#see-latest-results-btn",       "96221",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
-          
-          // remove link from content (see GCE-37920)
-          //activateHref("#sidekick-link",                "96225",      "https://wordpress.org/plugins/sidekick/", "_blank");
-          var $sk = $('#sidekick-link'), skHtml = $sk.html();
-          $sk.replaceWith(skHtml);
-        
           activateHref("#visitor-overprotection-link",  "97105",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='97105' /></external>]@T]", "_self"); 
           activateHref("#wordpress-plugins-link",       "97106",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='97106' /></external>]@T]", "_self");
           activateHref("#uptime-promise-link",          "",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
-          
-          activateBtn("#get-started-btn",  "96210",  "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='96210'/><param name='plan' value='mwp_basic_12month' /><param name='src' value='gs'/></relative>]@T]");
-          activateBtn("#product-A",        "96216",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='96216'  /><param name='plan' value='mwp_basic_12month' /><param name='src' value='ac' /></relative>]@T]");
-          activateBtn("#product-B",        "96217",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='96217'  /><param name='plan' value='mwp_deluxe_12month' /><param name='src' value='ac' /></relative>]@T]");
-          activateBtn("#product-C",        "96218",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='96218'  /><param name='plan' value='mwp_ultimate_12month' /><param name='src' value='ac' /></relative>]@T]");
-          activateBtn("#product-D",        "96219",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='96219'  /><param name='plan' value='mwp_developer_12month' /><param name='src' value='ac' /></relative>]@T]");
+        
+          // remove link from content (see GCE-37920)        
+          try {
+            var $sk = $('#sidekick-link'), skHtml = $sk.html();
+            $sk.replaceWith(skHtml);
+          }
+          catch(e) {        
+          }
         
         });
         
@@ -4170,7 +4234,7 @@ ul.left-aligned-round-list.small-spacing li {
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       
