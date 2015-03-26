@@ -98,8 +98,12 @@ mixin renderPlanTiles(columns, options)
       $(document).ready(function(){
         if ($(window).width() < 768) 
           return; /* bail out because too narrow to list more than one wide */
-        planTileMixin.autoHeighPlanBoxInsides();
-        planTileMixin.autoHeightPlanBoxes();
+        // allow some time for tokenization to happen 
+        // before auto-heighting the boxes per GCE-37970 
+        window.setTimeout(function(){
+          planTileMixin.autoHeighPlanBoxInsides();
+          planTileMixin.autoHeightPlanBoxes();
+        }, 400);
       });
 
   atlantis:webstash(type="css")
