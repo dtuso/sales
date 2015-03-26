@@ -132,3 +132,6 @@ list-style: none;
 .security-desc{
   margin-top: 20px;
 }
+#officeStep .sf-tipper-target {
+  margin-bottom: 6px;
+}

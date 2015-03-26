@@ -2,7 +2,7 @@ extends ../shared/_landing-page
 
 mixin toolTip(tipText, width)
   span &nbsp;
-  span.tool-tip-black.sf-tip.sf-tipper-target(data-content!="#{tipText}" data-style="qt" data-width="#{width ? width : '400'}" )
+  span.tool-tip-black.sf-tip.sf-tipper-target(data-content!='#{tipText}' data-style="qt" data-width="#{width ? width : '400'}" )
 
 append vars 
   - page.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-title]@L]";
@@ -87,17 +87,17 @@ append vars
   - page.ci.midPageNavFAQ = '97455';
   - page.ci.faqSeeAll = '97454';
   - page.tooltipTemplate = '&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="{0}"></span>';
+  - page.itc = "slp_wordpress";
+  - page.config.url = "[@T[link:<relative path=\"~/hosting/wordpress-hosting-config.aspx\" parammode=\"common\" />]@T]";
 
         
 prepend endOfPageScripts
   atlantis:webstash(type="js")
+    script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
     script.
       var wpHosting = {
         sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
-        offersCodes: {
-          packageId: 'gybo_1email_1yr',
-          itc: 'slp_GYBO1'
-        },
+        itc: 'slp_wordpress',
         supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
         imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
         canOfferOls: true,
@@ -143,13 +143,6 @@ prepend endOfPageScripts
         }
       }
 
-      function activateBtn(id, ciCode, url){
-        $(id).attr('data-ci', ciCode);
-        $(id).on('click', function(){
-          location.href = url;
-        });
-      }
-
       $(document).ready(function(){
 
         //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
@@ -162,30 +155,55 @@ prepend endOfPageScripts
 
         activateHref("#cloudspecator-link",           "#{page.ci.cloudSpeculator}",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
         activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
-        
-        // remove link from content (see GCE-37920)
-        //activateHref("#sidekick-link",                "#{page.ci.poweredBySidekick}",      "https://wordpress.org/plugins/sidekick/", "_blank");
-        var $sk = $('#sidekick-link'), skHtml = $sk.html();
-        $sk.replaceWith(skHtml);
-
         activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
         activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
         activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
-        
-        activateBtn("#get-started-btn",  "#{page.ci.marqueeGetStarted}",  "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.marqueeGetStarted}'/><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.getStarted}'/></relative>]@T]");
-        activateBtn("#product-A",        "#{page.ci.plansAddToCartA}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartA}'  /><param name='plan' value='#{page.plan.A}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-B",        "#{page.ci.plansAddToCartB}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartB}'  /><param name='plan' value='#{page.plan.B}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-C",        "#{page.ci.plansAddToCartC}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartC}'  /><param name='plan' value='#{page.plan.C}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
-        activateBtn("#product-D",        "#{page.ci.plansAddToCartD}",    "[@T[link:<relative path='hosting/wordpress-hosting-config.aspx' secure='false'><param name='ci' value='#{page.ci.plansAddToCartD}'  /><param name='plan' value='#{page.plan.D}' /><param name='src' value='#{page.src.addToCart}' /></relative>]@T]");
+
+        // remove link from content (see GCE-37920)        
+        try {
+          var $sk = $('#sidekick-link'), skHtml = $sk.html();
+          $sk.replaceWith(skHtml);
+        }
+        catch(e) {        
+        }
 
       });
 
 
 append pageStyles
   style
-    include:css ./wordpress-hosting/wph.css
-  style
     include:css ../shared/_plan-tiles/plan-tiles.css
+  style.
+    body { 
+      background-color: #d9d9d9; 
+    }
+    .img-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #product-disclaimers {
+      cursor: pointer;
+    }
+    #disclaimers {
+      background-color: #fff;
+    }
+    ul.left-aligned-round-list {
+      padding-left: 15px;
+      margin-bottom: 18px;
+    }
+    ul.left-aligned-round-list.small-spacing li {
+      margin: 1px 0;
+    }
+    #pretty-link {
+      text-transform: lowercase!important;
+    }
+
+    .btn, 
+    .word-break,
+    .features-tabbed-carousel-icon .features-text {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
 
 block domainSearch
   //- nothing to see here
@@ -221,3 +239,4 @@ block disclaimers
     p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]
     p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-2]@L]
     p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-3]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-4]@L]
