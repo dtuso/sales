@@ -52,7 +52,7 @@ atlantis:webstash(type="css")
     }
 
 section#plans
-  +renderCartLogic(page.config.url, page.itc)
+  +renderCartLogic(page.config.url, page.itc, {srcParam:"true"})
   +renderPlanTiles(4) 
     +planTile("planTileA")
       include ./_2_plan-A.jade
