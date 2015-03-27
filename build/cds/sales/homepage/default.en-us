@@ -14,11 +14,11 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/page:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
+    <title>[@L[cds.sales/homepage:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
