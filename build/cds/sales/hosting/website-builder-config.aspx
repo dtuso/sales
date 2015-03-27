@@ -801,7 +801,7 @@
                         tld.val('com');
                     } else if (newtld != undefined) {
                         tld.val(newtld);
-                        $('#txtsld').val(domain.split('.')[0]);
+                        $('#domain-name-input').val(domain.split('.')[0]);
                     }
         
                     
@@ -817,8 +817,8 @@
                         url += 'domaintocheck=' + domain;
                         url += '&tld=' + tld.val();
         
-                        var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                        var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                        var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                        var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                         $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                         $('.unavailable-result').show();
         
@@ -831,7 +831,7 @@
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -841,21 +841,21 @@
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                                 var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
                             } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
@@ -1170,12 +1170,18 @@ list-style: none;
     display: flex;
     align-items: center;
 }   
-@media (max-width: 768px) { 
+.product-radio {
+  margin-top :10px; 
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
+  width: 33px;
+  height: 34px;
+}
+@media (max-width: 1024px) { 
     .vertical-align {
         display: block;
         align-items: inherit;
     }
-    .text-xs-right{
+    .text-md-right{
       text-align: right;
     }
     .config-text-primary {
@@ -1192,6 +1198,23 @@ list-style: none;
     }
     .config-text-disclaimer {
       font-size: 14px;
+    }
+    .product-radio {
+      margin-top :0;
+    } 
+    .item-price{
+      border-bottom: 1px solid #EBEBEB;
+    }
+}
+@media (max-width: 428px) { 
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-md-right{
+      text-align: inherit;
+    }
+    .item-price{
+      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -1231,12 +1254,6 @@ list-style: none;
     position: absolute;
     left: -9999px;
 }
-.product-radio {
-  margin-top :10px; 
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 33px;
-  height: 33px;
-}
 .selected{
   background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
   width: 35px;
@@ -1260,16 +1277,16 @@ list-style: none;
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
             <div class="item-term"><%= itemTerm %></div>
           </div>
-          <div class="col-xs-1">
+          <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
             <div class="item-x">x</div>
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
             <div class="item-price"><%= itemPricePerTerm %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
             <div class="item-total-price text-secondary"><%= itemTotal %></div>
           </div>
         </div>
@@ -1288,7 +1305,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
             <div class="col-xs-7">
               <div class="config-text-secondary"><%= title %></div>
@@ -1326,7 +1343,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-2 col-sm-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
             </div>
             <div class="col-xs-5 col-sm-3">
               <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -1355,10 +1372,10 @@ list-style: none;
       <script type="text/template" class="addonTemplate">
         <li>
           <div class="row">
-            <div class="col-xs-1">
-              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
+            <div class="col-xs-2 col-md-1">
+              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
-            <div class="col-xs-11">
+            <div class="col-xs-10 col-md-11">
               <div class ="config-text-primary">
                 [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
               </div>
@@ -1367,10 +1384,10 @@ list-style: none;
         </li>
         <li>
           <div class="row">
-            <div class="col-xs-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+            <div class="col-xs-2 col-md-1">
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
-            <div class="col-xs-11">
+            <div class="col-xs-10 col-md-11">
               <div class="config-text-primary">
                 <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
               </div>

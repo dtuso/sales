@@ -102,16 +102,16 @@ prepend endOfPageScripts
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4">
+        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
           <div class="item-term"><%= itemTerm %></div>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
           <div class="item-x">x</div>
         </div>
-        <div class="col-xs-3">
+        <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
           <div class="item-price"><%= itemPricePerTerm %></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
           <div class="item-total-price text-secondary"><%= itemTotal %></div>
         </div>
       </div>
@@ -129,7 +129,7 @@ prepend endOfPageScripts
       <li>
         <div class="row vertical-align">
           <div class="col-xs-1">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
           </div>
           <div class="col-xs-7">
             <div class="config-text-secondary"><%= title %></div>
@@ -166,7 +166,7 @@ prepend endOfPageScripts
       <li>
         <div class="row vertical-align">
           <div class="col-xs-2 col-sm-1">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
           </div>
           <div class="col-xs-5 col-sm-3">
             <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -194,10 +194,10 @@ prepend endOfPageScripts
     script.addonTemplate(type='text/template').
       <li>
         <div class="row">
-          <div class="col-xs-1">
-            <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
+          <div class="col-xs-2 col-md-1">
+            <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
           </div>
-          <div class="col-xs-11">
+          <div class="col-xs-10 col-md-11">
             <div class ="config-text-primary">
               [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
             </div>
@@ -206,10 +206,10 @@ prepend endOfPageScripts
       </li>
       <li>
         <div class="row">
-          <div class="col-xs-1">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+          <div class="col-xs-2 col-md-1">
+            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
           </div>
-          <div class="col-xs-11">
+          <div class="col-xs-10 col-md-11">
             <div class="config-text-primary">
               <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
             </div>

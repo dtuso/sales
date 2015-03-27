@@ -664,7 +664,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                     tld.val('com');
                 } else if (newtld != undefined) {
                     tld.val(newtld);
-                    $('#txtsld').val(domain.split('.')[0]);
+                    $('#domain-name-input').val(domain.split('.')[0]);
                 }
 
                 
@@ -680,8 +680,8 @@ mixin configDomainSearchInput(configDomainSearchParams)
                     url += 'domaintocheck=' + domain;
                     url += '&tld=' + tld.val();
 
-                    var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                    var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                    var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                    var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                     $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                     $('.unavailable-result').show();
 
@@ -694,7 +694,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                         if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                             var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -704,21 +704,21 @@ mixin configDomainSearchInput(configDomainSearchParams)
                             url += '&tld=' + tld.val();
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                             var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                             $('.unavailable-result').show();
 
                         } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = '<span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } 
                         else if (jsonData.Properties.domainInfo[0].error != '') {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = '<span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else {
