@@ -5429,7 +5429,7 @@ width: 50%;
            var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
-               $row = $("<div>", {class: "row"});
+               $row = $("<div>", {'class': 'row'});
              column++;
              var itemData = {url:recommendedThemes[index]['URL']};
              var itemElement = recommendedImagesTemplates(itemData);
