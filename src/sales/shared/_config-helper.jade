@@ -189,7 +189,7 @@ mixin configSummary(configSummaryParams)
     .row
       .subtotal-disclaimer.text-muted.col-sm-9 [@L[cds.sales/_common:subtotal-disclaimer]@L]
     .row
-      .scroll-down-wrapper.move(data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
+      .scroll-down-wrapper.move(id="scrollDownToContinueButton", data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
         p.green-text [@L[cds.sales/_common:scroll-continue]@L]
         span.green-down-arrow-icon
   if(!configSummaryJS)
@@ -309,7 +309,6 @@ mixin configStepBreak(configStepBreakParams)
           margin-bottom: 15px;
         }
         .config-step-break .icon-down {
-          cursor: pointer;
           position: relative;
           z-index: 1;
         }

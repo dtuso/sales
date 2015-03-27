@@ -135,3 +135,11 @@ list-style: none;
 #officeStep .sf-tipper-target {
   margin-bottom: 6px;
 }
+input[type=checkbox]
+{
+height: 28px;
+width: 28px;
+}
+.domain-search-container {
+  margin-bottom: 150px;
+}
