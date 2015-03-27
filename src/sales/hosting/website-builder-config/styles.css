@@ -65,8 +65,8 @@ list-style: none;
 .product-radio {
   margin-top :10px; 
   background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 33px;
-  height: 34px;
+  width: 35px;
+  height: 35px;
 }
 @media (max-width: 1024px) { 
     .vertical-align {
@@ -148,6 +148,6 @@ list-style: none;
 }
 .selected{
   background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
 }
