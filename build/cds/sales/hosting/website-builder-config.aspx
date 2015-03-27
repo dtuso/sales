@@ -25,7 +25,15 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW"> 
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -263,7 +271,6 @@
                 margin-bottom: 15px;
               }
               .config-step-break .icon-down {
-                cursor: pointer;
                 position: relative;
                 z-index: 1;
               }
@@ -382,7 +389,7 @@
               <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
             </div>
             <div class="row">
-              <div data-ci="" data-scroll="" class="scroll-down-wrapper move">
+              <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
                 <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
               </div>
             </div>
