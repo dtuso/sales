@@ -146,7 +146,7 @@ list-style: none;
     position: absolute;
     left: -9999px;
 }
-.selected{
+.selected-radio{
   background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
   width: 36px;
   height: 36px;

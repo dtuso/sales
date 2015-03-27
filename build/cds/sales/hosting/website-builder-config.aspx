@@ -606,7 +606,7 @@
           .tld-input-selected{float:left;padding:8px 0 4px 14px;width:75px}
           .tld-input.droplist-open{overflow:visible}
           .tld-input>ul{padding:0;margin:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;*top:35px;top:-9999em;*left:-9999em;width:112px;z-index:3}
-          .tld-input.droplist-open>ul{*left:0;width:114px;top:35px;z-index:1000}
+          .tld-input.droplist-open>ul{*left:0;width:114px;top:58px;z-index:1000}
           .tld-input.droplist-open>ul>li{padding:5px 10px}
           .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
           .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
@@ -1302,7 +1302,7 @@ list-style: none;
     position: absolute;
     left: -9999px;
 }
-.selected{
+.selected-radio{
   background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
   width: 36px;
   height: 36px;
@@ -1353,7 +1353,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
             <div class="col-xs-7">
               <div class="config-text-secondary"><%= title %></div>
@@ -1391,7 +1391,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-2 col-sm-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
             </div>
             <div class="col-xs-5 col-sm-3">
               <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -1421,7 +1421,7 @@ list-style: none;
         <li>
           <div class="row">
             <div class="col-xs-2 col-md-1">
-              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected-radio<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
             <div class="col-xs-10 col-md-11">
               <div class ="config-text-primary">
@@ -1433,7 +1433,7 @@ list-style: none;
         <li>
           <div class="row">
             <div class="col-xs-2 col-md-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
             <div class="col-xs-10 col-md-11">
               <div class="config-text-primary">
@@ -1768,8 +1768,8 @@ list-style: none;
               parentID.append(addonTemplate(sslData));
         
               $('.radio-'+radioName).click(function(){
-                $(this).parent().parent().parent().parent().find('label').removeClass('selected');
-                $(this).addClass('selected');
+                $(this).parent().parent().parent().parent().find('label').removeClass('selected-radio');
+                $(this).addClass('selected-radio');
                 $(this).parent().find('input').attr('checked',true).trigger('click');
         
               });
@@ -1829,8 +1829,8 @@ list-style: none;
               });
               
               $('.radio-'+radioName).click(function(){
-                $(this).parent().parent().parent().parent().find('label').removeClass('selected');
-                $(this).addClass('selected');
+                $(this).parent().parent().parent().parent().find('label').removeClass('selected-radio');
+                $(this).addClass('selected-radio');
                 $(this).parent().find('input').attr('checked',true).trigger('click');
         
               });

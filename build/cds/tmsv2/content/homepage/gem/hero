@@ -1,0 +1,125 @@
+
+<atlantis:webstash type="css">
+  <style>
+    #marquee .hero-wrapper>div, .hero, .heroContent {min-height:inherit}
+    #marquee #marqueeImage {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover; height:175px}
+    @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover;}}
+    #marquee .heroContent { padding-top:3%;}
+    #marquee .heroContent>* {margin-left: 17%;}
+    .hero {background-color:#DEDEDE; margin-left:-10%;}
+    .Explorer8 #marquee .hero.polygon{background:url() no-repeat;}
+    .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat;}
+  </style>
+  <style>@media only screen and (min-width: 768px) {
+  .hero.polygon {
+    background-color: transparent;
+    background: url();
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .hero.polygon .heroContent {
+    width: 60%;
+  }
+}
+
+  </style>
+  <style>#marquee {
+  background-color: #F3F3F4;
+  background-size: initial;
+}
+#marquee .gem #marqueeImage {
+  background-size: initial;
+  background-position-x: 23%;
+}
+#marquee .gem mark {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin: 0 0 5px 0;
+}
+#marquee .gem .price {
+  font-size: 18px;
+  line-height: .9;
+  color: #333;
+  text-transform: uppercase;
+}
+#marquee .gem .price span {
+  font-size: 24px;
+  line-height: .9;
+  color: #EF6C0F;
+  text-transform: uppercase;
+}
+#marquee .gem .headline {
+  font-size: 36px;
+  color: #333;
+  margin: 3% 0;
+  line-height: .9;
+  text-transform: uppercase;
+}
+#marquee .gem .product-name {
+  font-size: 24px;
+  color: #77c043;
+  text-transform: uppercase;
+  margin: 0 0 5px 0;
+}
+#marquee .gem button {
+  margin: 2% 0;
+}
+#marquee .gem .heroContent > * {
+  margin-left: 0;
+}
+#marquee .gem.hero {
+  margin-left: 0;
+}
+#marquee .gem.hero.polygon .heroContent {
+  padding-top: 5%;
+}
+#marquee .gem.hero.polygon #marqueeImage {
+  display: none !important;
+}
+.Explorer8 #marquee {
+  background-position-x: 50%;
+}
+@media only screen and (min-width: 768px) {
+  .gem.hero.polygon .heroContent {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #marquee {
+    background-size: initial;
+    background-position-x: 28%;
+  }
+  .gem.hero.polygon .heroContent {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #marquee {
+    background-size: cover;
+    background-position-x: 44%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #marquee {
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1750px) {
+  #marquee {
+    background-size: cover;
+    background-position-x: 30%;
+  }
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='undefined' /></relative>]@T]" data-ci='97703' class="gem hero polygon">
+  <div id="marqueeImage" class="col-xs-12 visible-xs"></div>
+  <div class="heroContent">
+    <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
+    <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+    <div class="product-name walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]</div>
+    <div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
+    <button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
+  </div>
+</div>
