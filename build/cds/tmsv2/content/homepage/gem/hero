@@ -2,13 +2,13 @@
 <atlantis:webstash type="css">
   <style>
     #marquee .hero-wrapper>div, .hero, .heroContent {min-height:inherit}
-    #marquee #marqueeImage {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width.jpg) no-repeat top center;background-size:cover; height:175px}
-    @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width.jpg) no-repeat top center;background-size:cover;}}
+    #marquee #marqueeImage {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover; height:175px}
+    @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover;}}
     #marquee .heroContent { padding-top:3%;}
     #marquee .heroContent>* {margin-left: 17%;}
     .hero {background-color:#DEDEDE; margin-left:-10%;}
     .Explorer8 #marquee .hero.polygon{background:url() no-repeat;}
-    .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width.jpg) no-repeat;}
+    .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat;}
   </style>
   <style>@media only screen and (min-width: 768px) {
   .hero.polygon {
@@ -107,6 +107,7 @@
 @media only screen and (min-width: 1750px) {
   #marquee {
     background-size: cover;
+    background-position-x: 30%;
   }
 }
 
