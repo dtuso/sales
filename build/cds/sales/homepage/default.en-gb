@@ -14,17 +14,25 @@
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
     <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
-    <title>[@L[cds.sales/homepage:page-title]@L]</title>
-    <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
-    <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
-    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
+    <title>[@L[cds.sales/page:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
+    <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
     <meta property="og:type" content="website">
     <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
