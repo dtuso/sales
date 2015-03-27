@@ -521,6 +521,7 @@
           }
           .search-text {
             display: none;
+            font-weight: bold;
           }
           .search-disclaimers{
             margin-top: 10px;
@@ -533,8 +534,11 @@
             width: 7px;
             height: 11px;
             display: inline-block;
-            margin-top: 14px;
+            margin-top: 20px;
             margin-right: 10px;
+          }
+          .select-and-continue{
+            font-weight:bold;
           }
           .unavailable-icon {
             background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/dpp_sprite_rebrand.png') no-repeat -50px -62px;
@@ -595,14 +599,15 @@
           .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
           .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
           .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
-          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 20px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
-          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px;}
+          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 30px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
+          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px; font-family: 'Walsheim-Bold';}
           .word-break {word-wrap: break-word;word-break: break-all;}
           .available-result .domain-name-display-tld{font-size:40px;}
           .available-result .select-and-continue{margin-top:15px;}
           #add-domain-btn { margin-left:10px;}
-          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:10px;}
-          .available-result , .unavailable-result {display:none};
+          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:15px;}
+          .available-result , .unavailable-result {display:none;}
+          .input-group-btn > .btn { position:static; margin-left:15px;}
         </style>
       </atlantis:webstash>
       <div class="row">
@@ -615,7 +620,7 @@
             <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
             <div class="input-group">
               <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]</label>
-              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput form-control"/><span class="tld-input input-group-btn">
+              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput input-lg form-control"/><span class="tld-input input-group-btn">
                 <div class="tld-input-selected"><span>.com</span></div>
                 <input id="txtTld" type="hidden" name="tld" value="com"/>
                 <input type="hidden" name="addIfAvailable" value="true"/><a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
@@ -681,7 +686,7 @@
                   ##endif
                    
                 </ul></span><span class="input-group-btn">
-                <button type="submit" data-ci="" class="btn btn-primary offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
+                <button type="submit" data-ci="" class="btn btn-primary btn-lg offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
             </div>
             <div id="search-btn-loading" style="display: none" class="loading"></div>
           </form>
@@ -785,8 +790,6 @@
           });
         
           $('#no-domain-link').bind('click', function (e) {
-                $('#no-domain-link').hide();
-                $('#no-domain-loading').fadeIn();
                 var domaintoadd = $('#domaintoadd').val();
         
                 if (domaintoadd == '') {
@@ -801,7 +804,6 @@
             });
         
             $('.select-and-continue').bind('click', function () {
-                $('.select-and-continue').hide();
                 window.location = nextStepUrl;       
             });
         });
@@ -833,7 +835,7 @@
                         tld.val('com');
                     } else if (newtld != undefined) {
                         tld.val(newtld);
-                        $('#txtsld').val(domain.split('.')[0]);
+                        $('#domain-name-input').val(domain.split('.')[0]);
                     }
         
                     
@@ -849,8 +851,8 @@
                         url += 'domaintocheck=' + domain;
                         url += '&tld=' + tld.val();
         
-                        var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                        var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                        var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                        var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                         $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                         $('.unavailable-result').show();
         
@@ -863,7 +865,7 @@
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -873,21 +875,21 @@
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                                 var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
                             } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
@@ -1135,7 +1137,7 @@ ul li.no-check {
           cursor: pointer;
         }
         .domain-search-container{
-          margin-bottom:100px;
+          margin-bottom:200px;
         }
         
       </style>
