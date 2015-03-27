@@ -1461,7 +1461,7 @@ width: 28px;
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
-      ##if(!productIsOffered(99) || countrysiteany(mx) || countrysiteany(zz))
+      ##if(!productIsOffered(99) || countrysiteany(mx))
         noEmail = true;
       ##endif
       
