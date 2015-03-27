@@ -842,6 +842,10 @@
                       src = $(this).data("src");
                   }
                 
+                  if($(this).attr("id")==="get-started-btn"){
+                    src = "gs";
+                  }
+                
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
                 
                   $.ajax({
@@ -865,6 +869,10 @@
                       redirectUrl += "&plan=";
                     }
                     redirectUrl += productPackage;
+                
+                    if("false" != "false"){
+                      redirectUrl += "&src=" + src
+                    }
                 
                     window.location.href = redirectUrl;
                   })

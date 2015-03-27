@@ -378,10 +378,17 @@
             </div>
             <div class="row">
               <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]:<span class="savings-total"></span></div>
-            </div>
+            </div> 
+            ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
+             
+            <div class="row"></div> 
+            ##else
+             
             <div class="row">
               <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
-            </div>
+            </div> 
+            ##endif
+             
             <div class="row">
               <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
                 <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
@@ -511,7 +518,7 @@
     <div style="display:none" class="container domain-search-container">
       <div class="row">
         <div class="col-sm-12"> 
-          <h4 class="get-a-domain-text">[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]</h4>
+          <h4 class="get-a-domain-text">[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/fosconfigcommon:domainhover]@L]" ></span></h4>
         </div>
       </div>
       <atlantis:webstash type="css">
@@ -521,6 +528,7 @@
           }
           .search-text {
             display: none;
+            font-weight: bold;
           }
           .search-disclaimers{
             margin-top: 10px;
@@ -533,8 +541,11 @@
             width: 7px;
             height: 11px;
             display: inline-block;
-            margin-top: 14px;
+            margin-top: 20px;
             margin-right: 10px;
+          }
+          .select-and-continue{
+            font-weight:bold;
           }
           .unavailable-icon {
             background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/dpp_sprite_rebrand.png') no-repeat -50px -62px;
@@ -595,14 +606,15 @@
           .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
           .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
           .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
-          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 20px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
-          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px;}
+          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 30px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
+          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px; font-family: 'Walsheim-Bold';}
           .word-break {word-wrap: break-word;word-break: break-all;}
           .available-result .domain-name-display-tld{font-size:40px;}
           .available-result .select-and-continue{margin-top:15px;}
           #add-domain-btn { margin-left:10px;}
-          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:10px;}
-          .available-result , .unavailable-result {display:none};
+          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:15px;}
+          .available-result , .unavailable-result {display:none;}
+          .input-group-btn > .btn { position:static; margin-left:15px;}
         </style>
       </atlantis:webstash>
       <div class="row">
@@ -615,7 +627,7 @@
             <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
             <div class="input-group">
               <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]</label>
-              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput form-control"/><span class="tld-input input-group-btn">
+              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput input-lg form-control"/><span class="tld-input input-group-btn">
                 <div class="tld-input-selected"><span>.com</span></div>
                 <input id="txtTld" type="hidden" name="tld" value="com"/>
                 <input type="hidden" name="addIfAvailable" value="true"/><a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
@@ -681,7 +693,7 @@
                   ##endif
                    
                 </ul></span><span class="input-group-btn">
-                <button type="submit" data-ci="" class="btn btn-primary offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
+                <button type="submit" data-ci="" class="btn btn-primary btn-lg offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
             </div>
             <div id="search-btn-loading" style="display: none" class="loading"></div>
           </form>
@@ -785,8 +797,6 @@
           });
         
           $('#no-domain-link').bind('click', function (e) {
-                $('#no-domain-link').hide();
-                $('#no-domain-loading').fadeIn();
                 var domaintoadd = $('#domaintoadd').val();
         
                 if (domaintoadd == '') {
@@ -801,7 +811,6 @@
             });
         
             $('.select-and-continue').bind('click', function () {
-                $('.select-and-continue').hide();
                 window.location = nextStepUrl;       
             });
         });
@@ -833,7 +842,7 @@
                         tld.val('com');
                     } else if (newtld != undefined) {
                         tld.val(newtld);
-                        $('#txtsld').val(domain.split('.')[0]);
+                        $('#domain-name-input').val(domain.split('.')[0]);
                     }
         
                     
@@ -849,8 +858,8 @@
                         url += 'domaintocheck=' + domain;
                         url += '&tld=' + tld.val();
         
-                        var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                        var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                        var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                        var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                         $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                         $('.unavailable-result').show();
         
@@ -863,7 +872,7 @@
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -873,21 +882,21 @@
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                                 var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
                             } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
@@ -1135,7 +1144,7 @@ ul li.no-check {
           cursor: pointer;
         }
         .domain-search-container{
-          margin-bottom:100px;
+          margin-bottom:200px;
         }
         
       </style>
@@ -1323,19 +1332,19 @@ width: 28px;
     </script>
     <script type="text/template" class="planTemplate">
       <li>
-        <div class="row vertical-align">
-          <div class="col-xs-1">
-            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
-          </div>
-          <div class="col-xs-7">
+        <div class="row">
+          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
             <div class="config-text-secondary"><%= title %></div>
           </div>
           <div class="col-xs-4">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+        <div class="row vertical-align">
+          <div class="col-xs-1">
+            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+          </div>
+          <div class="col-xs-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1395,7 +1404,7 @@ width: 28px;
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="checkbox" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1412,7 +1421,7 @@ width: 28px;
       <li id="slElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id ="add<%= checkOne %>" type="checkbox" style="margin-right:4px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
           </div>
           <div class="col-xs-11">
             <div class ="config-text-primary">
@@ -1428,15 +1437,13 @@ width: 28px;
       <li id="sslElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-right:4px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
               <%= addonTextTwo %> <span class="text-secondary-o"><%= currentPriceTwo %>/<%= termTypeTwo %></span>
             </div>
-            <p class = "security-small"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDiscountsAvailable]@L]
-            </p>
-            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L]
+            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L] </p>
           </div>
         </div>
       </li>
@@ -1454,7 +1461,7 @@ width: 28px;
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
-      ##if(!productIsOffered(99) || countrysiteany(mx))
+      ##if(!productIsOffered(99) || countrysiteany(mx) || countrysiteany(zz))
         noEmail = true;
       ##endif
       

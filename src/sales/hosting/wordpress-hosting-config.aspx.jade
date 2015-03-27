@@ -70,7 +70,7 @@ block disclaimers
 block domainSearch
   .row
     .col-sm-12 
-        h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]
+        h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/fosconfigcommon:domainhover]@L]" ></span>
   +configDomainSearchInput({
     'title': '[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDFreeDomain]@L]',
     'placeholderText': '[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]',
@@ -113,19 +113,19 @@ prepend endOfPageScripts
 
   script.planTemplate(type='text/template').
     <li>
-      <div class="row vertical-align">
-        <div class="col-xs-1">
-          <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
-        </div>
-        <div class="col-xs-7">
+      <div class="row">
+        <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
           <div class="config-text-secondary"><%= title %></div>
         </div>
         <div class="col-xs-4">
           <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+      <div class="row vertical-align">
+        <div class="col-xs-1">
+          <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+        </div>
+        <div class="col-xs-7">
           <div class="config-text-lead bold"><%= subtitle %></div>
         </div>
         <div class="col-xs-4">
@@ -183,7 +183,7 @@ prepend endOfPageScripts
     <li>
       <div class="row">
         <div class="col-xs-1">
-          <input id = "add<%= radio %>"type="checkbox" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+          <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
         </div>
         <div class="col-xs-11">
           <div class="config-text-primary">
@@ -199,7 +199,7 @@ prepend endOfPageScripts
     <li id="slElement">
       <div class="row">
         <div class="col-xs-1">
-          <input id ="add<%= checkOne %>" type="checkbox" style="margin-right:4px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+          <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
         </div>
         <div class="col-xs-11">
           <div class ="config-text-primary">
@@ -215,15 +215,13 @@ prepend endOfPageScripts
     <li id="sslElement">
       <div class="row">
         <div class="col-xs-1">
-          <input id = "add<%= checkTwo %>"type="checkbox" style="margin-right:4px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+          <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
         </div>
         <div class="col-xs-11">
           <div class="config-text-primary">
             <%= addonTextTwo %> <span class="text-secondary-o"><%= currentPriceTwo %>/<%= termTypeTwo %></span>
           </div>
-          <p class = "security-small"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDiscountsAvailable]@L]
-          </p>
-          <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L]
+          <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L] </p>
         </div>
       </div>
     </li>
