@@ -378,10 +378,17 @@
             </div>
             <div class="row">
               <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]:<span class="savings-total"></span></div>
-            </div>
+            </div> 
+            ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
+             
+            <div class="row"></div> 
+            ##else
+             
             <div class="row">
               <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
-            </div>
+            </div> 
+            ##endif
+             
             <div class="row">
               <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
                 <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
@@ -511,7 +518,7 @@
     <div style="display:none" class="container domain-search-container">
       <div class="row">
         <div class="col-sm-12"> 
-          <h4 class="get-a-domain-text">[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L]</h4>
+          <h4 class="get-a-domain-text">[@L[cds.sales/hosting/fosconfigcommon:domainheader]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/fosconfigcommon:domainhover]@L]" ></span></h4>
         </div>
       </div>
       <atlantis:webstash type="css">
@@ -1323,19 +1330,19 @@ width: 28px;
     </script>
     <script type="text/template" class="planTemplate">
       <li>
-        <div class="row vertical-align">
-          <div class="col-xs-1">
-            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
-          </div>
-          <div class="col-xs-7">
+        <div class="row">
+          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
             <div class="config-text-secondary"><%= title %></div>
           </div>
           <div class="col-xs-4">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+        <div class="row vertical-align">
+          <div class="col-xs-1">
+            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+          </div>
+          <div class="col-xs-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1395,7 +1402,7 @@ width: 28px;
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="checkbox" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1412,7 +1419,7 @@ width: 28px;
       <li id="slElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id ="add<%= checkOne %>" type="checkbox" style="margin-right:4px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
           </div>
           <div class="col-xs-11">
             <div class ="config-text-primary">
@@ -1428,15 +1435,13 @@ width: 28px;
       <li id="sslElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-right:4px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
               <%= addonTextTwo %> <span class="text-secondary-o"><%= currentPriceTwo %>/<%= termTypeTwo %></span>
             </div>
-            <p class = "security-small"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDiscountsAvailable]@L]
-            </p>
-            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L]
+            <p class = "text-secondary security-desc"> [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigProtectData]@L] </p>
           </div>
         </div>
       </li>
@@ -1454,7 +1459,7 @@ width: 28px;
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
-      ##if(!productIsOffered(99) || countrysiteany(mx))
+      ##if(!productIsOffered(99) || countrysiteany(mx) || countrysiteany(zz))
         noEmail = true;
       ##endif
       
