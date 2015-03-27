@@ -257,7 +257,6 @@
                 margin-bottom: 15px;
               }
               .config-step-break .icon-down {
-                cursor: pointer;
                 position: relative;
                 z-index: 1;
               }
@@ -376,7 +375,7 @@
               <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
             </div>
             <div class="row">
-              <div data-ci="" data-scroll="" class="scroll-down-wrapper move">
+              <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
                 <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
               </div>
             </div>
@@ -1269,6 +1268,14 @@ list-style: none;
 #officeStep .sf-tipper-target {
   margin-bottom: 6px;
 }
+input[type=checkbox]
+{
+height: 28px;
+width: 28px;
+}
+.domain-search-container {
+  margin-bottom: 150px;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1439,13 +1446,13 @@ list-style: none;
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
-      ##if(!productIsOffered(99))
+      ##if(!productIsOffered(99) || countrysiteany(mx))
         noEmail = true;
       ##endif
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      //url=url + "?configdocid=5511d228f778fc167889db36";
+      //url=url + "?configdocid=55149c4ff778fc258409b399";
       //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
@@ -1776,9 +1783,12 @@ list-style: none;
       
           if(!jQuery.isEmptyObject(office))
           {
-            var officeCurrentYearlyPrice = office;
-            var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigRenews2]@L]"
-            officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
+            var officeItem = office.split('-');
+            var officeCurrentYearlyPrice = officeItem[0];
+            var officeCurrentMonthlyPrice = officeItem[1];
+            var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMonthlyRenewEmail]@L]";
+            //officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
+            officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice)
             var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
             var termType = "[@L[cds.sales/_common:yr]@L]";
@@ -2029,7 +2039,11 @@ list-style: none;
           ##endif
           
           if(document.getElementById('addofficeOption').checked){
+            ##if(countrysiteany(mx))
+      
+            ##else
             plan = plan + "_withEmail";
+            ##endif
           }
       
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
@@ -2095,10 +2109,20 @@ list-style: none;
       $(document).ready(function(){
         $('#planConfigContinue').click(function(){
           Config.addPlanToCart();
-          $('.configuration-container').hide();
-          $('.domain-search-container').show();
-          $("html, body").animate({ scrollTop: 0 }, 0);
-      
+          if(plan.indexOf('1month') >= 0){
+            setTimeout(function(){
+              ##if(isManager())
+              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+              ##else
+              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+              ##endif
+              }, 2000);
+          }
+          else {
+            $('.configuration-container').hide();
+            $('.domain-search-container').show();
+            $("html, body").animate({ scrollTop: 0 }, 0);
+          }
         });
       });
       $('#noFreeDomain').click(function(){
@@ -2108,6 +2132,10 @@ list-style: none;
           window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
           ##endif
       
+      });
+      $('#scrollDownToContinueButton').click(function(){
+        var continueButton = document.getElementById("planConfigContinue");
+        continueButton.scrollIntoView(false);
       });
     </script>
     <script type="text/javascript">
