@@ -20,11 +20,43 @@
     <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/hosting/website-builder:og-description]@L]">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:url" content="[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]">
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta property="fb:admins" content="633356800"> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -86,7 +118,8 @@
     ##endif
   </head>
   <body ng-controller="">
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
       <div class="container marquee marquee-white">
@@ -107,12 +140,76 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button id="get-started-btn" data-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
     </section>
     <section id="plans">
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var planTileMixin = {
+          
+            findMaxHeight: function($items) {
+              var maxHeight = 0;
+              $items.each(function(index, item) {
+                maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+              });
+              return maxHeight;
+            },
+            autoHeightIt: function($obj, selector) {
+              var $objs = $obj.find(selector);
+              var maxHeight = planTileMixin.findMaxHeight($objs);
+              if( maxHeight > 0 ) $objs.css("height", maxHeight);
+            },
+            autoHeighPlanBoxInsides: function() {
+              $tiles = $('#plans').find('.plan-tile');
+              planTileMixin.autoHeightIt($tiles, '.title-wrap');
+              planTileMixin.autoHeightIt($tiles, '.price-wrap');
+              planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+          
+              // align each plan-item with eachother in the same line
+              // however, only do this if each plan-tile has the same 
+              // number of plan-item's in it.
+              var numItems = 0, bail= false;
+              $tiles.each(function(){
+                var $tile = $(this);
+                var numPlanItems = $tile.find('.plan-item').length;
+                if(numItems==0) {
+                  numItems = numPlanItems;
+                }
+                if(numItems != numPlanItems) bail = true;
+              });
+              if(bail || numItems == 0) return;
+              // loop thru each plan item and adjust independantly
+              for(var i=0; i<numItems; i++) {            
+                planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+              }
+          
+            },
+            autoHeightPlanBoxes: function() {
+              // auto height the plan boxes
+              $(".pro-plans").each(function(index, outerPlan) {
+                if($(outerPlan).hasClass('ignore-same-height')) 
+                  return;
+                planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+              });
+            }
+          };
+          
+          $(document).ready(function(){
+            if ($(window).width() < 768) 
+              return; /* bail out because too narrow to list more than one wide */
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
+          });
+          
+        </script>
+      </atlantis:webstash>
       <atlantis:webstash type="css">
         <style>.plan-tile { 
   margin-top: -145px; 
@@ -516,182 +613,211 @@
             ##if(countrySiteAny(uk))
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
-              <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                   <br><strong>
-                     
-                    ##if(splitTestingSideIsActive(1349, A))
-                     
-                    [@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##else
-                     
-                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##endif
-                     </strong> 
-                  ##endif
-                   
-                   
-                  ##if(splitTestingSideIsActive(1349, B))
-                   
-                  <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                  ##endif
-                   
-                   
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+              <div class="pro-plan-wrap undefined">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
                 </div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                     <br><strong>
+                       
+                      ##if(splitTestingSideIsActive(1349, A))
+                       
+                      [@L[cds.sales/_common:was]@L] 
+                      <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##else
+                       
+                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##endif
+                       </strong> 
+                    ##endif
+                     
+                     
+                    ##if(splitTestingSideIsActive(1349, B))
+                     
+                    <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                </div>
               </div>
             </div> 
             ##else
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
-              <div class="pro-plan-wrap">
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                  ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                   <br><strong>
-                     
-                    ##if(splitTestingSideIsActive(1349, A))
-                     
-                    [@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##else
-                     
-                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##endif
-                     </strong> 
-                  ##endif
-                   
-                   
-                  ##if(splitTestingSideIsActive(1349, B))
-                   
-                  <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                  ##endif
-                   
-                   
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+              <div class="pro-plan-wrap undefined">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
                 </div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                     <br><strong>
+                       
+                      ##if(splitTestingSideIsActive(1349, A))
+                       
+                      [@L[cds.sales/_common:was]@L] 
+                      <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##else
+                       
+                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##endif
+                       </strong> 
+                    ##endif
+                     
+                     
+                    ##if(splitTestingSideIsActive(1349, B))
+                     
+                    <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                </div>
               </div>
             </div> 
             ##endif
              
             <div class="col-sm-4 plan-tile plan-pro">
-              <div class="pro-plan-wrap">
+              <div class="pro-plan-wrap undefined">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                  ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                   <br><strong>
-                     
-                    ##if(splitTestingSideIsActive(1349, A))
-                     
-                    [@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##else
-                     
-                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##endif
-                     </strong> 
-                  ##endif
-                   
-                   
-                  ##if(splitTestingSideIsActive(1349, B))
-                   
-                  <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                  ##endif
-                   
-                   
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
                 </div>
-                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(7509, 7509, 0))
+                     <br><strong>
+                       
+                      ##if(splitTestingSideIsActive(1349, A))
+                       
+                      [@L[cds.sales/_common:was]@L] 
+                      <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##else
+                       
+                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##endif
+                       </strong> 
+                    ##endif
+                     
+                     
+                    ##if(splitTestingSideIsActive(1349, B))
+                     
+                    <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                </div>
               </div>
             </div>
             <div class="col-sm-4 plan-tile plan-pro">
-              <div class="pro-plan-wrap">
+              <div class="pro-plan-wrap undefined">
                 <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
-                <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h3>
-                <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
-                <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
-                  ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                   <br><strong>
-                     
-                    ##if(splitTestingSideIsActive(1349, A))
-                     
-                    [@L[cds.sales/_common:was]@L] 
-                    <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##else
-                     
-                    [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                    ##endif
-                     </strong> 
-                  ##endif
-                   
-                   
-                  ##if(splitTestingSideIsActive(1349, B))
-                   
-                  <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                  ##endif
-                   
-                   
-                  ##if(countrySiteAny(uk))
-                   
-                  <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
-                  ##endif
-                   
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
                 </div>
-                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(7514, 7514, 0))
+                     <br><strong>
+                       
+                      ##if(splitTestingSideIsActive(1349, A))
+                       
+                      [@L[cds.sales/_common:was]@L] 
+                      <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##else
+                       
+                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
+                      ##endif
+                       </strong> 
+                    ##endif
+                     
+                     
+                    ##if(splitTestingSideIsActive(1349, B))
+                     
+                    <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_10_business_emails]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_5_business_emails_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
+                </div>
               </div>
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
+                var src = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -704,6 +830,8 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
+                    if($(this).data("src")!== undefined)
+                      src = $(this).data("src");
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -720,8 +848,9 @@
                     dataType: "jsonp"
                   })
                   .done(function(data) {
-                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
+                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
@@ -986,7 +1115,7 @@
         {
           $dropdownMenu= $('<li class="dropdown"><a href="javascript:void(0)" role="button" data-toggle="dropdown" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.nav&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="dropdown-toggle"  style="margin-top: 0px;"><span>[@L[cds.sales/_common:more]@L]<br><em>...</em></span></a><ul class="dropdown-menu">');
         }
-        while($('.navbar-nav').width()+150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
+        while($('.navbar-nav').width() + 150 > $('.navbar-collapse').width()-$('.navbar-right').width()){
           dropdownItem =$('.navbar-nav li').last().detach();
           $dropdownMenu.find('.dropdown-menu').append(dropdownItem);
         }
@@ -2975,37 +3104,37 @@ var PlanBox6UI = {
                   </div>
                 </div>
                 <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 ">
                           <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-2 1 ">
                           <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-2 2 ">
                           <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="3" data-end="3" class="features-tabbed-carousel-icon col-md-2 3 ">
                           <div data-ci="87770" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-yelp"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-yelp-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="4" data-end="4" class="features-tabbed-carousel-icon col-md-2 4 ">
                           <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2">
+                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
                           <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
@@ -3016,7 +3145,7 @@ var PlanBox6UI = {
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -3584,19 +3713,19 @@ top: -6px;
                   </div>
                 </div>
                 <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-4 0 ">
                           <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4">
+                        <div data-begin="1" data-end="1" class="features-tabbed-carousel-icon col-md-4 1 ">
                           <div data-ci="87768" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-twitter"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-twitter-title]@L]</div>
                           </div>
                         </div>
-                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4">
+                        <div data-begin="2" data-end="2" class="features-tabbed-carousel-icon col-md-4 2 ">
                           <div data-ci="87769" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-youtube-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-youtube-title]@L]</div>
@@ -3607,7 +3736,7 @@ top: -6px;
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -4843,7 +4972,8 @@ top: -6px;
     <section id="renderMidPageNavBottom">
       <div></div>
     </section>
-    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -5006,7 +5136,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-        
       </style>
       <style>
 .bg-black {
@@ -5102,11 +5231,18 @@ padding-top: 40px;
 padding-bottom: 50px;
 }
 .templates-image{
-  margin: 25px auto;
+  margin: 25px auto 10px;
   box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
+  height: 132px;
   width: 200px;
   overflow: hidden;
+}
+.templates-image-name {
+  color: #333;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;
@@ -5422,12 +5558,12 @@ width: 50%;
            // populate images
            var column = 0;
            var $row;
-           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
                $row = $("<div>", {class: "row"});
              column++;
-             var itemData = {url:recommendedThemes[index]['URL']};
+             var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);
              $row.append(itemElement)
              if(column == 3 ){
@@ -5515,7 +5651,7 @@ width: 50%;
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       
@@ -5524,21 +5660,13 @@ width: 50%;
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
-        }
-      
-        $('[data-icann-fee]').each(function(){
+        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
+        });
+        $('[data-content*="{icannfee}"]').each(function(){
+          var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).attr('data-content',tokenized);
         });
         
       });

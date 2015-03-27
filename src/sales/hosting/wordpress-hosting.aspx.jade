@@ -1,0 +1,242 @@
+extends ../shared/_landing-page
+
+mixin toolTip(tipText, width)
+  span &nbsp;
+  span.tool-tip-black.sf-tip.sf-tipper-target(data-content!='#{tipText}' data-style="qt" data-width="#{width ? width : '400'}" )
+
+append vars 
+  - page.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-title]@L]";
+  - page.description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-desc]@L]";
+  - page.keywords = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-meta-Keywords]@L]"; 
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]";
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg";
+  - page.src = {};
+  - page.src.getStarted = 'gs';
+  - page.src.addToCart = 'ac';
+  - page.plan = {};
+  - page.plan.A = 'mwp_basic_12month';
+  - page.plan.B = 'mwp_deluxe_12month';
+  - page.plan.C = 'mwp_ultimate_12month';
+  - page.plan.D = 'mwp_developer_12month';
+  - page.pfids = {};
+  - page.pfids.current = {};
+  - page.pfids.current.A = "580970";
+  - page.pfids.current.B = "580978";
+  - page.pfids.current.C = "581001";
+  - page.pfids.current.D = "581019";
+  - page.pfids.list = {};
+  - page.pfids.list.A =  "580971";
+  - page.pfids.list.B =  "580996";
+  - page.pfids.list.C =  "581014";
+  - page.pfids.list.D =  "581031";
+  - page.pricing = {};
+  - page.pricing.fifty = '[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T]';
+  - page.pricing.hundred = '[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]';
+  - page.pricing.current = {};
+  - page.pricing.current.A = "[@T[productprice:<current productid='" + page.pfids.current.A + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.current.B = "[@T[productprice:<current productid='" + page.pfids.current.B + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.current.C = "[@T[productprice:<current productid='" + page.pfids.current.C + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.current.D = "[@T[productprice:<current productid='" + page.pfids.current.D + "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.list = {};
+  - page.pricing.list.A =    "[@T[productprice:<list productid='"    + page.pfids.list.A +    "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.list.B =    "[@T[productprice:<list productid='"    + page.pfids.list.B +    "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.list.C =    "[@T[productprice:<list productid='"    + page.pfids.list.C +    "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.list.D =    "[@T[productprice:<list productid='"    + page.pfids.list.D +    "' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.pricing.ssl = "[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]";
+  - page.ci = {};
+  - page.ci.marqueeGetStarted = '96210';
+  - page.ci.marqueeDisclaimer = '96209';
+  - page.ci.plansAddToCartA = '96216';
+  - page.ci.plansAddToCartB = '96217';
+  - page.ci.plansAddToCartC = '96218';
+  - page.ci.plansAddToCartD = '96219';
+  - page.ci.plansLearnMore = '96220';
+  - page.ci.midPageNavFeature = '96211';
+  - page.ci.midPageNavPerformance = '96212';
+  - page.ci.midPageNavSecuriy = '96213';
+  - page.ci.midPageNavTraining = '96215';
+  - page.ci.midPageNavSeeThePlans = '96214';
+  - page.ci.advancedFeatureDetails = '96203';
+  - page.ci.cloudSpeculator = '96207';
+  - page.ci.seeUpToDateResults = '96221';
+  - page.ci.poweredBySidekick = '96225';
+  - page.ci.visitorOverprotection = '97105';
+  - page.ci.wordpressPlugins = '97106';
+  - page.ci.securityCarouselSlideLeft ='96204';
+  - page.ci.securityCarouselSlideRight = '96205';
+  - page.ci.securityCarouselSlideSel = '96206';
+  - page.ci.securityCarouselSlideTab1 = '97100';
+  - page.ci.securityCarouselSlideTab2 = '97101';
+  - page.ci.securityCarouselSlideTab3 = '97102';
+  - page.ci.securityCarouselSlideTab4 = '97103';
+  - page.ci.securityCarouselSlideTab5 = '97104';
+  - page.ci.securityCarouselSlideTab6 = '97651';
+  - page.ci.reviewsCarouselSlideLeft ='97097';
+  - page.ci.reviewsCarouselSlideRight = '97098';
+  - page.ci.reviewsCarouselSlideSel = '97099';
+  - page.ci.trainingGetStartedNow = '96222';
+  - page.ci.alternativeWebHostingLearnMore = '96223';
+  - page.ci.alternativeWebsiteBuilderLearnMore = '96224';
+  - page.ci.footerDisclaimer = '96208';
+  - page.ci.adCreditGoogle = '96918';
+  - page.ci.adCreditBing = '96916';
+  - page.ci.adCreditFacebook = '96917';
+  - page.ci.midPageNavFAQ = '97455';
+  - page.ci.faqSeeAll = '97454';
+  - page.tooltipTemplate = '&nbsp;<span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="{0}"></span>';
+  - page.itc = "slp_wordpress";
+  - page.config.url = "[@T[link:<relative path=\"~/hosting/wordpress-hosting-config.aspx\" parammode=\"common\" />]@T]";
+
+        
+prepend endOfPageScripts
+  atlantis:webstash(type="js")
+    script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
+    script.
+      var wpHosting = {
+        sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
+        itc: 'slp_wordpress',
+        supportPhone: '[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]',
+        imagePath: '[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/',
+        canOfferOls: true,
+        animationTime: 800,
+        animationEasingType: 'swing',
+        showDeveloperPlan: true,
+        isEnUs: '[@T[localization:<language full='true' />]@T]'.toLowerCase() === 'en-us'
+      };
+
+      // TODO: create split test in all three environments
+      ##if(splitTestingSideIsActive(99999, B))
+        wpHosting.showDeveloperPlan = false;
+      ##endif
+
+      function disclaimersModal() {
+        $('#disclaimersModal').sfDialog({ buttons: [wpHosting.sfDialogOkButton] });
+      }
+      function tokenizeDisclaimerModal(selector, price0, price1) {
+
+        $(selector).each(function(idx, modal) {
+          var $modal = $(modal);
+          var htmlTokenized = $modal.html();
+          htmlTokenized = htmlTokenized.replace(/\{0\}/gi, price0);
+          htmlTokenized = htmlTokenized.replace(/\{1\}/gi, price1);
+          $modal.html(htmlTokenized);
+        });
+
+      }
+
+      function activateHref(id, ciCode, url, target){
+        $(id).attr('data-ci', ciCode);
+        switch (target) {
+          case "_blank":
+            $(id).attr('href','javascript:void(0);');
+            $(id).on('click', function(){
+              window.open(url);
+            });
+            break;
+          case "_self":
+          default:
+            $(id).attr('href',url);
+            break;
+        }
+      }
+
+      $(document).ready(function(){
+
+        //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
+
+        $('#disclaimers').on('click', '.see-product-disclaimer-link', function(){
+          $("#disclaimers-modal").sfDialog({
+            buttons: [wpHosting.sfDialogOkButton]
+          });
+        });
+
+        activateHref("#cloudspecator-link",           "#{page.ci.cloudSpeculator}",        "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+        activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
+        activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
+        activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
+        activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
+
+        // remove link from content (see GCE-37920)        
+        try {
+          var $sk = $('#sidekick-link'), skHtml = $sk.html();
+          $sk.replaceWith(skHtml);
+        }
+        catch(e) {        
+        }
+
+      });
+
+
+append pageStyles
+  style
+    include:css ../shared/_plan-tiles/plan-tiles.css
+  style.
+    body { 
+      background-color: #d9d9d9; 
+    }
+    .img-center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #product-disclaimers {
+      cursor: pointer;
+    }
+    #disclaimers {
+      background-color: #fff;
+    }
+    ul.left-aligned-round-list {
+      padding-left: 15px;
+      margin-bottom: 18px;
+    }
+    ul.left-aligned-round-list.small-spacing li {
+      margin: 1px 0;
+    }
+    #pretty-link {
+      text-transform: lowercase!important;
+    }
+
+    .btn, 
+    .word-break,
+    .features-tabbed-carousel-icon .features-text {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+
+block domainSearch
+  //- nothing to see here
+  //- override the landing-page.jade with a blank section
+
+//- top marquee 
+block marquee 
+  include ./wordpress-hosting/_1_marquee.jade
+
+//- side by side plan comparisons go here
+block plans
+  include ./wordpress-hosting/_2_plans.jade
+
+//- horizontal nav with jumps to anchor tags (that affixes to top)
+block sections
+  include ./wordpress-hosting/_3_sections.jade
+
+//- suggested alternative products
+block alternatives
+  include ./wordpress-hosting/_4_alternatives.jade
+
+//- there's always a catch... show it here.
+block disclaimers
+  section#disclaimers.content-disclaimer.disclaimers-section 
+    .disclaimers-row
+      .container
+        .row
+          .col-sm-12
+            p
+              a.disclaimers-text.see-product-disclaimer-link(id="product-disclaimers", onClick="disclaimersModal()", data-ci="97461") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-policies]@L]
+            p.disclaimers-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimers-trademarks]@L]
+  #disclaimersModal(data-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-header]@L]",style="display:none")
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-1]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-2]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-3]@L]
+    p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-disclaimer-modal-text-4]@L]

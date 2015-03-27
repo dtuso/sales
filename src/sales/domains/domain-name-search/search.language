@@ -1,29 +1,11 @@
-<!-- DOC BLOCK (DO NOT REMOVE)
+---
+location: localization/sales/gd/domains/domain-name-search/en
+id: 550af0fcf778fc1240b8469b
+name: GCEMO-711
+comments: Merchandising Updates for 03/11/2015
+---
 
-
-
-
-
-
-    IMPORTANT:
-      If version control is enabled for this page all changes to this page must also go through version control.
-
-    VERSION CONTROL:
-      https://github.secureserver.net/FOS-CDS-Pages/Sales
-
-    WEB PAGE CHAMPION:
-      Adam Smith <absmith@godaddy.com>
-
-    DRAFT DETAILS:
-      Modified Date:  2015-02-25
-      Created By:     Mike Cowan <mcowan@godaddy.com>
-      JIRA Ticket:    GCEMO-616
-      Comments:       Merchandising Updates for 03/04/2015
-
-
-
-
-END DOC BLOCK -->
+{% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
 Domain Search | Advanced Domain Name Search Tool - [@T[companyname:nameseotitle]@T]
 <phrase key="MetaDescription" />
@@ -237,7 +219,7 @@ Inspire trust with a Certified Domain validation seal.
 <phrase key="CertifiedRegistrationText1" />
 Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is something you can do to reassure them you&#39;re one of the good guys: Put a Certified Domain validation seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">View Sample Certification</a>.
 <phrase key="CertifiedRegistrationText1Rebrand" />
-Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is a way to tell them you're legit &mdash; by displaying a Certified Domain seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">See sample</a>.
+Thanks to phishing, pharming, and a long list of other scams, Web visitors grow more wary by the day. But there is a way to tell them you can be trusted &mdash; by displaying a Certified Domain seal on your website. <a class="popup-url" href="[@T[link:<external linktype="STARFIELDSEALURL" path="siteseal/verify" secure="false"><param name="ci" value="80777" /><param name="sealId" value="cb55dcfeb7e9372266d4979a298dc088fc092c034e6a8ca8ccce8457af486453" /></external>]@T]">See sample</a>.
 <phrase key="CertifiedRegistrationItem1" />
 To acquire Certified Domain accreditation, you must undergo a credentials check that confirms the contact information provided with your domain registration.
 <phrase key="CertifiedRegistrationItem1Rebrand" />
@@ -283,7 +265,7 @@ Click here for product disclaimers and legal policies
 <phrase key="DisclaimerModalTitle" />
 Disclaimer
 <phrase key="DisclaimerModalListItem1" />
-<sup>*</sup> Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T]/yr. Sale pricing for new domain registrations only, not for renewals or transfers.
+<sup>*</sup> Plus ICANN fee of {icannfee}/yr. Sale pricing for new domain registrations only, not for renewals or transfers.
 <phrase key="DisclaimerModalListItem2" />
 <sup>***</sup> Domains with bulk pricing do not qualify for additional promotional discounts.
 <phrase key="DisclaimerModalListItem3" />
@@ -297,7 +279,7 @@ Disclaimer
 <phrase key="DisclaimerModalListItem7" />
 <sup>^^</sup> Discount based on current retail value.
 <phrase key="DisclaimerModalListItem8" />
-<sup>^^^</sup> Buy a new .COM or .CO, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of [@T[currencyprice:<price usdamount="18" dropdecimal="false" />]@T] per domain per year.
+<sup>^^^</sup> Buy a new .COM or .CO, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of {icannfee} per domain per year.
 <phrase key="DisclaimerModalListItem9" />
 <sup>&#177;</sup> com.au, net.au, and org.au domain names can only be registered for 2 years.
 <phrase key="GetYoursToday" />
@@ -446,6 +428,8 @@ Tell the world what moves you with <strong>.rocks</strong>
 Say hello with <strong>.social</strong>
 <phrase key="PodDotGlobalText" />
 <strong>.global</strong> says you're everywhere.
+<phrase key="PodDotGreenText" />
+Show your true colors with <strong>.green</strong>
 <phrase key="PodDotAttorneyText" />
 Make your case with <strong>.attorney</strong>
 <phrase key="PodDotChurchText" />
@@ -488,6 +472,8 @@ Claim your <strong>.space</strong> on the web.
 <strong>.work</strong> has a job to do.
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
+<phrase key="TldDotLegal" />
+<strong>.legal</strong>
 <phrase key="TldDotBoutique" />
 <strong>.boutique</strong>
 <phrase key="TldDotBusiness" />
@@ -646,6 +632,8 @@ Claim your <strong>.space</strong> on the web.
 <strong>.space</strong>
 <phrase key="TldDotGreen" />
 <strong>.green</strong>
+<phrase key="TldDotWork" />
+<strong>.work</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
@@ -701,7 +689,7 @@ QUESTIONS?
 <phrase key="WhyGoDaddyMiscBannerTitleRebrand" />
 WHY CHOOSE [@T[companyname:name]@T]?
 <phrase key="WhyGoDaddyMiscBannerTextRebrand" />
-With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure, comfy home online.
+With more than 59 million domains under management, we have more experience than anyone. We'll make sure you find the right domain and that it's got a secure home online.
 <phrase key="WhyGoDaddyMiscBannerListTitle0Rebrand" />
 WORLD'S LARGEST REGISTRAR
 <phrase key="WhyGoDaddyMiscBannerListTitle1Rebrand" />
@@ -756,9 +744,21 @@ Publishes an online business card so customers and partners can find you.
 <phrase key="CertifiedRegistrationTitleRebrand" />
 HELP VISITORS GET COMFORTABLE WITH A CERTIFIED DOMAIN SEAL.
 <phrase key="CarouselSlide1DefaultRebrand" />
-Finally! A web address that tells people exactly what you do. <br> <a data-ci="96166" href="[@T[link:<relative path="/tlds/photography"></relative>]@T]"><span class="greenText">.photography</span></a>, <a data-ci="96165" href="[@T[link:<relative path="/tlds/ninja"></relative>]@T]"><span class="greenText">.ninja</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, <a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, and <a data-ci="96167" href="[@T[link:<relative path="/tlds/world"></relative>]@T]"><span class="greenText">.world</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
+Finally! A web address that tells people exactly what you do. <br> <a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="96901" href="[@T[link:<relative path="/tlds/work"></relative>]@T]"><span class="greenText">.work</span></a>, <a data-ci="96167" href="[@T[link:<relative path="/tlds/world"></relative>]@T]"><span class="greenText">.world</span></a>, <a data-ci="96902" href="[@T[link:<relative path="/tlds/space"></relative>]@T]"><span class="greenText">.space</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, and <a data-ci="96903" href="[@T[link:<relative path="/tlds/rocks"></relative>]@T]"><span class="greenText">.rocks</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
+<phrase key="CarouselSlide1DefaultRebrand2" />
+Finally! A web address that tells people exactly what you do.
+<phrase key="CarouselSlideDefaultAnd" />
+and
+<phrase key="CarouselSlideDefaultNowAvailable" />
+are now available. 
+<phrase key="CarouselSlideDefaultSearch" />
+Search domains now.
 <phrase key="CarouselSlide2DefaultRebrand" />
-30% OFF <br /><a data-ci="95443" href="[@T[link:<relative path="/tlds/global"></relative>]@T]"><span class="greenText"><strong>.global</strong></span></a>, <a data-ci="95442" href="[@T[link:<relative path="/tlds/email"></relative>]@T]"><span class="greenText"><strong>.email</strong></span></a>, <a data-ci="95440" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText"><strong>.club</strong></span></a>, <a data-ci="95444" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText"><strong>.guru</strong></span></a> and <a data-ci="95441" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText"><strong>.company</strong></span></a> now.
+30% OFF <br /><a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText"><strong>.club</strong></span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText"><strong>.guru</strong></span></a>, <a data-ci="96904" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText"><strong>.company</strong></span></a>, <a data-ci="96905" href="[@T[link:<relative path="/tlds/green"></relative>]@T]"><span class="greenText"><strong>.green</strong></span></a> and <a data-ci="96906" href="[@T[link:<relative path="/tlds/website"></relative>]@T]"><span class="greenText"><strong>.website</strong></span></a> now.
+<phrase key="CarouselSlide2DefaultRebrand2" />
+30% OFF 
+<phrase key="CarouselSlide2DefaultNow" />
+now.
 <phrase key="CarouselSlide3USRebrand" />
 SAVE up to 50% when you get online with <a data-ci="95435" href="[@T[link:<relative path="/tlds/com"></relative>]@T]"><span class="greenText"><strong>.com</strong></span></a>, <a data-ci="95437" href="[@T[link:<relative path="/tlds/net"></relative>]@T]"><span class="greenText"><strong>.net</strong></span></a>, <a data-ci="95434" href="[@T[link:<relative path="/tlds/co-domain"></relative>]@T]"><span class="greenText"><strong>.co</strong></span></a>, <a data-ci="95438" href="[@T[link:<relative path="/tlds/org.aspx"></relative>]@T]"><span class="greenText"><strong>.org</strong></span></a>, <a data-ci="94372" href="[@T[link:<relative path="/tlds/info"></relative>]@T]"><span class="greenText"><strong>.info</strong></span></a>, <a data-ci="95433" href="[@T[link:<relative path="/tlds/biz.aspx"></relative>]@T]"><span class="greenText"><strong>.biz</strong></span></a> or <a data-ci="95439" href="[@T[link:<relative path="/tlds/us.aspx"></relative>]@T]"><span class="greenText"><strong>.us</strong></span></a>
 <phrase key="MainHeadingText" />
@@ -776,7 +776,7 @@ Save upto on popular domains
 <phrase key="MainHeadingWhatDoYouGet" />
 SO WHAT ALL DO YOU GET?
 <phrase key="WhatDoYouGetPointer1" />
-Simple domain set up - no technical skills needed. Honest.
+Simple domain set up - no technical skills needed.
 <phrase key="WhatDoYouGetPointer2" />
 Quick, simple tools to forward your domains to any existing website.
 <phrase key="WhatDoYouGetPointer3" />
@@ -814,7 +814,7 @@ After seeing how easy it is to use our domain names search, you'll want a paymen
 <phrase key="MainBannerQuestion4" />
 WHAT IF I NEED HELP?
 <phrase key="MainBannerAnswer4" />
-Our award-winning customer care consultants are available via phone, email and the web 24/7/365. They're trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you're just getting started or already a pro, we've got answers.    
+Our award-winning customer care consultants are available via phone, email and the web 24/7/365. They're trained to help with whatever you need, from choosing the right domain name to any technical issues you may have. Whether you're just getting started or are already a pro, we've got answers.    
 <phrase key="MainBannerQuestion5" /> 
 WHY SHOULD I CHOOSE GODADDY?
 <phrase key="MainBannerAnswer5" />

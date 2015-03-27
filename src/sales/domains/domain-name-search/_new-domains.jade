@@ -1,6 +1,9 @@
 .container
   atlantis:webstash(type="css")
     style.
+      ##if(activeLanguageAny([el-gr]))
+      #new-domains ul li span, #new-domains .col-tld-title, #new-domains .bg-warning{font-weight:700;}
+      ##endif
       #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
       #new-domains .container{margin:0 auto;padding-left:0px;}
       #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
@@ -13,11 +16,6 @@
     .col-md-6
       span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
       span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]
-    .col-md-6
-      span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
-      span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]
-  .row
-    .col-md-6
       ul
         li
           +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/green'><param name='ci' value='93954' /></relative>]@T]")
@@ -28,6 +26,8 @@
         li
           +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]","[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]","[@T[link:<relative path='/tlds/reviews'><param name='ci' value='96021' /></relative>]@T]")  
     .col-md-6
+      span.col-tld-title [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] 
+      span.bg-warning [@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]
       ul
         li
           +tldMini("[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]","[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]","[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]")

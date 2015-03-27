@@ -1,3 +1,8 @@
+---
+location: localization/sales/gd/hosting/website-builder/en
+id: 550c4a2af778fc15dc28baec
+name: GCEMO-719
+---
 <!-- DOC BLOCK (DO NOT REMOVE)
 
 
@@ -54,9 +59,9 @@ Build a great feature loaded UK website with [@T[companyname:name]@T]'s Website 
 <phrase key="meta-keywords" />
 website builder, website creator, website templates, website template, how to make a website, make your own website, create a website, creating a website, do it yourself website builder, diy website, pre-built websites
 <phrase key="og-title" />
-Get online and grow your business with [@T[companyname:name]@T] Website Builder&trade;
+Easily create a professional website tailored for your unique business.
 <phrase key="og-description" />
-Create your own beautiful website and never miss another customer! With hundreds of ready-made templates and easy, drag-&amp;-drop functionality, [@T[companyname:name]@T] Website Builder makes it easy for anyone to build their own website in minutes - no technical skills or coding required.
+Get your business online  – just like that. We include a free domain name, free hosting and hundreds of customizable designs to make sure your website is the least of your business worries.
 <phrase key="twitter-text" />
 Never miss another customer! Just drag &amp; drop to create the perfect website in minutes with [@T[companyname:name]@T] Website Builder
 <phrase key="masthead-title" />
@@ -144,7 +149,7 @@ Give your Facebook and Twitter profile the same look as your website with just o
 <phrase key="rb_ssl" />
 <strong>1 year SSL Certificate</strong>
 <phrase key="rb_ssl_tooltip" />
-A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and 99.9% browser recognition. SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr value, your [@T[companyname:name]@T] SSL certificate keeps transactions with your website secure. Take advantage of 256-bit encryption and [@T[localization:<display type="percent" number="99.9" />]@T] browser recognition. SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
 <phrase key="popular-tag" />
 Most Popular
 <phrase key="wsb-plus-seo" />

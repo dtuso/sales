@@ -1,0 +1,129 @@
+atlantis:webstash(type="css")
+  style.
+    #plans {
+      margin:0 auto; 
+    }
+    #plans .pro-plans .pro-plan-wrap {
+      padding: 35px 25px;
+    }
+    #plans .pro-plans .pro-plan-wrap.pro-plan-wrap-alternate {
+        border-top: 10px solid #FE8D01;
+    }
+    #plans .plan-price-and-duration {
+      margin-top: -5px;
+    }
+    #plans .pro-plans .pro-plan-wrap .plan-price-wrap {
+      margin: 30px 0;
+    }
+    #plans .plan-price-and-duration {
+      
+    }
+    .include-check-black, .include-check-green, .include-check-none {
+      padding-left: 33px;
+      position: relative;
+      margin-top: 20px;
+    }
+    .include-check-black:before {
+      content: "";
+      background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-position: 0 -700px;
+      background-size: 205px auto;
+      width: 25px;
+      height: 27px;
+      padding-right: 5px;
+      position: absolute;
+      left: 0;
+      top: -6px;
+    }
+    .include-check-green:before {
+      content: "";
+      background-image: url([@T[link:<imageroot />]@T]fos/hp/sahara-rebrand-sprite-20141114.png);
+      background-position: 0 -668px;
+      background-size: 205px auto;
+      width: 25px;
+      height: 27px;
+      padding-right: 5px;
+      position: absolute;
+      left: 0;
+      top: -6px;
+    }
+    #plans .all-plans-include h3 {
+      margin: 50px 0 30px;
+    }
+
+section#plans
+  +renderCartLogic(page.config.url, page.itc, {srcParam:"true"})
+  +renderPlanTiles(4) 
+    +planTile("planTileA")
+      include ./_2_plan-A.jade
+    +planTile("planTileB")
+      include ./_2_plan-B.jade
+    +planTile("planTileC")
+      include ./_2_plan-C.jade
+    +planTile("planTileD")
+      include ./_2_plan-D.jade
+  .container.all-plans-include
+    .row
+      h3.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]
+    .row
+      .col-md-4.col-sm-12
+        ul.green-check
+          li
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] 
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]")
+          | 
+          | ##if(productIsOffered(99))
+          | 
+          li
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]")  
+          | 
+          | ##endif
+          | 
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]
+          
+      .col-md-4.col-sm-12
+        ul.green-check
+          li 
+            a(id="uptime-promise-link") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]
+          li
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] 
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]")
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]
+
+
+      .col-md-4.col-sm-12
+        ul.green-check
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]
+        
+          | 
+          | ##if(areAdCreditsEnabled(google))
+          | 
+          li 
+            span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]")
+        
+          | 
+          | ##endif
+          | 
+
+          | 
+          | ##if(areAdCreditsEnabled(bing))
+          | 
+          li 
+            span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]")
+          | 
+          | ##endif
+          | 
+          
+          | 
+          | ##if(areAdCreditsEnabled(facebook))
+          | 
+          li
+            span(data-tokenize!="#{page.pricing.fifty}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-facebook]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]")
+          | 
+          | ##endif
+          | 

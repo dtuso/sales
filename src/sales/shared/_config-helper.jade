@@ -1,0 +1,325 @@
+- var configStepCss = false;
+- var configSummaryCss = false;
+- var configSummaryJS = false;
+- var configStepBreakCss = false;
+
+
+mixin configStep(configStepParams)
+  - configStepParams                       = configStepParams || {};
+  - configStepParams.id                = configStepParams.id || "";
+  - configStepParams.flagColor                = configStepParams.flagColor || "";
+  - configStepParams.flagText                 = configStepParams.flagText || "";
+  
+  if(!configStepCss)
+    - configStepCss = true;
+    atlantis:webstash(type="css")
+      style.
+        .config-step {
+        background-color: #F5F5F5;
+        border: 1px solid #C3C3C3;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: #eae9e9;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+        background: -webkit-gradient(linear,left top,right top,color-stop(0%,#eae9e9),color-stop(50%,#fcfcfc),color-stop(100%,#eae9e9));
+        background: -webkit-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+        background: -o-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+        background: -ms-linear-gradient(left,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+        background: linear-gradient(to right,#eae9e9 0%,#fcfcfc 50%,#eae9e9 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae9e9',endColorstr='#eae9e9',GradientType=1);
+        }
+        .config-step .flag {
+          color: white;
+          font-size: 19px;
+          height: 34px;
+          line-height: 30px;
+          left: 0;
+          padding: 2px 16px 4px;
+          position: absolute;
+          top: 10px;
+        }
+        .config-step .blue {
+          background: #0da8e5;
+        }
+        .config-step .blue::after {
+          border-color: #0da8e5 transparent #0da8e5 #0da8e5;
+        }
+        .config-step .red {
+          background: #f26c4f;
+        }
+        .config-step .red::after {
+          border-color: #f26c4f transparent #f26c4f #f26c4f;
+        }
+        .config-step .orange {
+          background: #fea700;
+        }
+        .config-step .orange::after {
+          border-color: #fea700 transparent #fea700 #fea700;
+        }
+        .config-step .flag::after {
+          border-style: solid;
+          border-width: 17px;
+          content: "";
+          left: 100%;
+          position: absolute;
+          top: 0;
+        }
+        .step-number-text {
+          font-size: 19px;
+          line-height: 28px;
+          text-transform: capitalize;
+        }
+        @media only screen and (min-width: 1200px) {
+          .config-step::after {
+            background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/config-step-box-shadow-v2.png) no-repeat 0 0 transparent;
+            background-size: cover;
+            bottom: -10px;
+            content: "";
+            height: 10px;
+            left: 0;
+            position: absolute;
+            width: 700px;
+          }
+        }
+  .row
+    .col-sm-11.config-step(id='#{configStepParams.id}')
+      if(configStepParams.flagColor)
+        span.flag(class="#{configStepParams.flagColor}")
+          span.step-number-text !{configStepParams.flagText}
+      block
+
+mixin configSummary(configSummaryParams)
+  - configSummaryParams = configSummaryParams || {};
+  - configSummaryParams.scroll = configSummaryParams.scroll || "";
+  - configSummaryParams.ci = configSummaryParams.ci || "";
+  if(!configSummaryCss)
+    - configSummaryCss = true;
+    atlantis:webstash(type="css")
+      style.
+        .order-summary-wrapper{
+          background-color: #EBEBEB;
+          padding: 10px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .order-summary-text{
+          font-size: 16px;
+          font-weight: 600;
+
+        }
+        .order-item-details-wrapper{
+          overflow: hidden;
+          font-size: 13px;
+        }
+        .order-total-wrapper{
+          float: right;
+          font-size: 28px;
+          font-weight: 500;
+          color: #579006;
+          vertical-align: top;
+        }
+        .order-item-details-wrapper {
+          margin-bottom: 7px;
+          padding-bottom: 3px;
+        }
+        .subtotal-wrapper{
+          border-bottom: 1px solid #333;
+        }
+        .subtotal-text{
+          text-transform: capitalize;
+          font-weight:600;
+          font-size:14px;
+        }
+        .savings-total-wrapper{
+          float: right;
+          font-size: 13px;
+          text-transform: uppercase;
+        }
+        .scroll-down-wrapper{
+          cursor: pointer;
+          margin-top: 15px;
+        }
+        .scroll-down-wrapper p{
+          font-size: 12px;
+          text-align: center;
+          margin-bottom: 0px;
+          color: #579006;
+        }
+        .scroll-down-wrapper span{
+          margin-left: auto;
+          margin-right: auto;
+          width: 20px;
+          height: 15px;
+        }
+        .subtotal-disclaimer{
+          float: right;
+          text-align:right;
+          margin-top: 20px;
+          font-size: 13px;
+          color: #777;
+        }
+        .green-down-arrow-icon{
+          display: block;
+          background:url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -70px -2px transparent;
+        }
+        @media only screen and (max-width: 768px) {
+          .green-down-arrow-icon, .green-text {
+            display:none;
+          }
+          .config-cart-wrapper{
+            margin-top:20px;
+          }
+        }
+  .config-cart-wrapper.col-sm-12
+    .row.order-summary-wrapper
+      .order-summary-text [@L[cds.sales/_common:order-summary]@L]
+    .row
+      #order-items.order-item-details-wrapper
+    .row
+      .subtotal-wrapper
+        .subtotal-text [@L[cds.sales/_common:subtotal]@L]
+    .row
+      .order-total-wrapper
+        .order-total 
+    .row
+      .savings-total-wrapper.text-secondary [@L[cds.sales/_common:total-savings]@L]:
+        span.savings-total
+    .row
+      .subtotal-disclaimer.text-muted.col-sm-9 [@L[cds.sales/_common:subtotal-disclaimer]@L]
+    .row
+      .scroll-down-wrapper.move(data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
+        p.green-text [@L[cds.sales/_common:scroll-continue]@L]
+        span.green-down-arrow-icon
+  if(!configSummaryJS)
+    - configSummaryJS = true;
+    atlantis:webstash(type="js")
+      script.
+        (function($){
+          /**
+            * Scroll to a section of the page
+            * Call With $('.move').scrollToSection();
+           */
+          $.fn.extend({ 
+            scrollToSection : function(options) {
+                
+              var defaults = {},
+                  options = $.extend(defaults, options);
+
+              function scrollBody() {
+                if(options.$el.attr('data-scroll')!=''){
+                  var el = $(options.$el.attr('data-scroll')),
+                      px = el.offset().top;
+                  options.$el.on('click', function(e){
+                   e.preventDefault();
+                   $('html,body').animate({scrollTop:px}, '1000', 'swing');
+                  });
+                }
+              }
+
+              return this.each(function() {
+                options.$el = $(this);
+                scrollBody();
+              });
+            }
+          });
+        })(jQuery);
+        $(document).ready(function() {
+          $('.move').scrollToSection();
+          $(window).scroll(function() {
+            updateOrderSummaryPosition();
+          });
+          $(window).resize(function() {
+            updateOrderSummaryPosition();
+          });
+          updateOrderSummaryPosition();        
+
+          function updateOrderSummaryPosition() {
+            if($(window).width() < 768 || !$('.config-cart-wrapper').is(':visible')){
+              return;
+            }
+            var paddingTop = 20/* for prettiness when scrolling */,
+              $configCartWrapper = $('.config-cart-wrapper'),
+              scrollTop = $(window).scrollTop(),
+              scrollLeft = $(window).scrollLeft(),
+              topStep1 = $("div.config-step:visible:first").offset().top,
+              topOfWindowAboveTopOfStep1 = (scrollTop <= (topStep1 - paddingTop)),
+              $footer = $('.scroll-down-wrapper');
+
+            $footer.css('visibility','visible');
+            $configCartWrapper.css({'top':'0px','position':'static'});
+
+            if(!topOfWindowAboveTopOfStep1) {
+              //check for if summary can fit without going below the bottom of the last step      
+              var proposedNewTop = scrollTop - (topStep1 - paddingTop),
+                proposedNewBottom = proposedNewTop + $configCartWrapper.height(),
+                $lastStep = $("div.config-step:visible:last"),
+                bottomOfLastStep = $lastStep.offset().top + $lastStep.height() - topStep1,
+                canFit = (proposedNewBottom <= bottomOfLastStep);
+
+              if(scrollTop>=(topStep1-paddingTop) && ((scrollTop+$configCartWrapper.height())<=$lastStep.offset().top + $lastStep.height() + paddingTop) ){
+                try{
+                  var configCartWrapperLeft = $configCartWrapper.offset().left;
+                  $configCartWrapper.css({'top':'20px','position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+                }catch(err){
+                  //if errors don't float the $confiCartWrapper
+                  $configCartWrapper.css({'top':'0px','position':'static'});
+                }
+                if((scrollTop+paddingTop)>=$lastStep.offset().top){
+                  $footer.css('visibility','hidden');
+                }else{
+                  $footer.css('visibility','visible');
+                }
+              } else {
+                try{
+                  var configCartWrapperLeft = $configCartWrapper.offset().left;
+                  $configCartWrapper.css({'position':'fixed','width':$configCartWrapper.innerWidth(),'left':(configCartWrapperLeft - scrollLeft) +'px'});
+                }catch(err){
+                  //if errors don't float the $confiCartWrapper
+                  $configCartWrapper.css({'top':'0px','position':'static'});
+
+                }
+                // affix the summary so the bottom lines up with the bottom of the last step
+                $footer.css('visibility','hidden');
+                var topForBottomAligned = ($lastStep.offset().top + $lastStep.height() +$footer.height()) - (scrollTop + $configCartWrapper.height() );
+                //topForBottomAligned = bottomOfLastStep - $configCartWrapper.height() + paddingTop;
+                $configCartWrapper
+                  .css({'top': topForBottomAligned + 'px'});
+              }
+            }    
+          }
+
+          window.setTimeout(function() {
+            $('#shareme').fosShare({});
+          }, 2000);
+        });
+      
+mixin configStepBreak(configStepBreakParams)
+  - configStepBreakParams = configStepBreakParams || {};
+  - configStepBreakParams.scroll = configStepBreakParams.scroll || "";
+  - configStepBreakParams.ci = configStepBreakParams.ci || "";
+
+  if(!configStepBreakCss)
+    - configStepBreakCss = true;
+    atlantis:webstash(type="css")
+      style.
+        .config-step-break {
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+        .config-step-break .icon-down {
+          cursor: pointer;
+          position: relative;
+          z-index: 1;
+        }
+        .icon-down {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 20px;
+          height: 15px;
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) -49px -2px no-repeat;
+        }
+  .config-step-break.col-sm-10.move.backup(data-ci= configStepBreakParams.ci, data-scroll = configStepBreakParams.scroll)
+      span.icon-down

@@ -29,7 +29,39 @@
     <meta name="twitter:site" content="[@L[cds.sales/offers/online-business:twitter-site]@L]">
     <meta name="twitter:title" content="[@L[cds.sales/offers/online-business:twitter-title]@L]">
     <meta name="twitter:description" content="[@L[cds.sales/offers/online-business:twitter-description]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/online-business/img/og_got_1200x630.jpg"> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -136,7 +168,7 @@ var got1Page = {
   got1Page.tldInfo.addTldIf('br', true);
 ##endif
 ##if(countrySiteAny(in) || isManager())
-  got1Page.tldInfo.addTldIf('in', true);
+  got1Page.tldInfo.addTldIf('in', false);
 ##endif
 ##if(countrySiteAny(uk) || isManager())
   got1Page.tldInfo.addTldIf('co.uk', true);
@@ -681,7 +713,8 @@ $(window).load(function () {
     ##endif
   </head>
   <body ng-controller="">
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     
     <atlantis:webstash type="css">
@@ -744,13 +777,17 @@ $(window).load(function () {
           #marquee .main-marquee .header-text.disclaimers { color: #00701D; font-size: 1em; line-height: 1.6em; margin-top: -14px; text-transform: none; }
           .main-marquee .header-text.disclaimers .btn-link { color: #00701D; cursor: pointer; }
           .main-marquee .logo-wrapper { margin-top: 20px; }
-          .main-marquee .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: Tungsten,'Tungsten A','Tungsten B',Impact,sans-serif; font-size: 2em; }
-          .main-marquee .logo-wrapper .icon { min-height: 50px; background-position: center bottom; background-repeat: no-repeat; }
+          .main-marquee .logo-wrapper .column { width: 25%; position: relative; float: left; text-align: center; padding-left: 20px; padding-right: 20px; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; font-size: 1.2em; line-height:1}
+          .main-marquee .logo-wrapper .column>div {margin-top:10px}
+          html[lang*="en-us"] .main-marquee .logo-wrapper .column {width:19%; padding-left:10px; padding-right:10px}
+          .main-marquee .logo-wrapper .icon { min-height: 85px; background-position: center bottom; background-repeat: no-repeat; }
           .main-marquee .logo-wrapper .domain .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzOCA0MyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAyTDIyIDAgMTkgMSAxOSAxMyAyNCAxMyAyMyAyTTI5IDdMMjcgNCAyNSA1IDI1IDEzIDI5IDEzIDI5IDdNMTEgN0w5IDggOCAxMCA3IDEzIDEyIDEzIDExIDdNMTcgM0wxNiAzIDE0IDQgMTMgMTMgMTggMTMgMTcgM00xMyAxNUwxNCAyNSAxOCAyNSAxOSAyMCAyMCAyNSAyNCAyNSAyNSAxNSAyNiAyMCAyNyAxNiAyOSAxNyAyOSAxNCAyMiAxNCAyMiAyMCAyMSAxNCAxNyAxNCAxNyAyMSAxNiAxNCA5IDE0IDkgMjAgOCAxNCA1IDE0IDQgMjEgMyAxNCAwIDE0IDIgMjUgNiAyNSA2IDIwIDcgMjUgMTEgMjUgMTMgMTVNMzUgMTRMMzQgMjAgMzMgMTQgMzAgMTQgMzAgMTcgMzIgMTggMzIgMjUgMzIgMjUgMzYgMjUgMzggMTQgMzUgMTRNMjggMThMMjUgMjUgMjAgMjcgMTggMzIgMTcgMjYgNyAyNiA3IDMyIDEwIDM5IDE5IDQyIDI3IDQxIDMyIDMxIDMxIDE5IDI4IDE4Ii8+PC9zdmc+); }
           .main-marquee .logo-wrapper .website .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNyI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yMyAxNkwzMiAxNyAxNCAwIDggMCAyMyAxNk0xNiAyMkwyMyAyMiAyMyAxNyA3IDAgMSA1IDE2IDIyTTE1IDI5TDE1IDIzIDAgNiAxIDE1IDE1IDI5TTMwIDI5TDMzIDI4IDMzIDE4IDI1IDE3IDI0IDI0IDE2IDI0IDE2IDMwIDI3IDMzIDMwIDI5TTMxIDMxTDI5IDM0IDM0IDM1IDMzIDMwIDMxIDMxIi8+PC9zdmc+); }
           .main-marquee .logo-wrapper .email .icon { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MiAzNSI+PHBhdGggc3R5bGU9ImZpbGw6IzMzMzsiIGQ9Ik0yNCAyNkwwIDQgMSAzNSA0MCAzMiA0MiAxMSAyNCAyNk00MSA4TDEgMCAyNCAyNCA0MSA4Ii8+PC9zdmc+ICA=); }
-          .main-marquee .logo-wrapper .plus { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-align: center; width: 12.5%; font-size: 3em; position: relative; float: left; font-weight: bold; }
-          .main-marquee .logo-wrapper .office-365 { line-height: 1; font-size: 0.5em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
+          .main-marquee .logo-wrapper .support .icon{min-width:85px;background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjkwcHgiIGhlaWdodD0iODVweCIgdmlld0JveD0iMCAwIDkwIDg1IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkdPVF9EUlRWLUZMQUciIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTkzLjAwMDAwMCwgLTI0Ni4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTkxLjAwMDAwMCwgMjQyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IkdpcmwiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuMDAwMDAwLCA0LjAwMDAwMCkiIGZpbGw9IiMzMzMzMzMiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNC4xMzg0NDAxLDUuNDc3MTM3MjUgTDM3LjI4OTY5NDMsMC4wMDM5MDYyNSBMNDcuODQ5MTYwMiwwLjAwMzkwNjI1IEw2Mi40OTk3MjgsOS4yOTE4MTM0IEw2Ni4zMTQ0MDQyLDI1LjI2OTIyNTEgTDYyLjA1NzQ0NjcsMzYuNDM2ODI3NyBMNjMuMjczNzIwMyw0NS43ODAwMiBMNjYuOTIyNTQxLDQ5LjgxNTgzNjggTDY2LjkyMjU0MSw1My45NjIyMjQgTDYzLjgyNjU3MTksNTYuMTczNjMwNCBMNTIuNzY5NTM5Niw1OC4zMjk3NTE3IEw0NC4wMzQ0ODQxLDY0LjAyNDEyMzQgTDI1LjczNTA5NTYsNTcuMDU4MTkzIEwyNS4xMjY5NTg4LDUxLjkxNjY3MyBMMzAuNzY2MDQ1Myw0Ny4wNTE1Nzg4IEwyNi44OTYwODQsNDIuMjQxNzY5NyBMMjEuODY1MTM0MywyMi43MjYxMDc3IEwyNS41MTM5NTQ5LDEzLjcxNDYyNjMgTDI5LjQzOTIwMTQsNi4wMjk5ODg4NiBMMzQuMTM4NDQwMSw1LjQ3NzEzNzI1IFogTTQ2LjUyMjMxNjMsNTAuNzAwMzk5NCBMNDYuNTIyMzE2Myw0MS41NzgzNDc4IEw1MS44Mjk2OTE4LDM5LjQyMjIyNjUgTDU4LjA3NjkxNTEsMjUuMjEzOTM5OSBMNTYuMDMxMzY0MSwxMy43MTQ2MjYzIEw1My42NTQxMDIyLDE0LjY1NDQ3NDEgTDUxLjM4NzQxMDYsMTQuNzA5NzU5MiBMNDIuOTg0MDY2LDEzLjI3MjM0NSBMMzYuMjM5Mjc2Myw5LjI5MTgxMzQgTDMwLjcxMDc2MDEsMjEuMjMzNDA4MyBMMzUuNDA5OTk4OSwzOC4xNTA2Njc3IEw0MC45OTM4MDAyLDQxLjU3ODM0NzggTDM5LjI3OTk2MDIsNTEuMTQyNjgwNyBDMzUuOTA3NTY1Myw1MS44MDYxMDI2IDI5Ljk5MjA1Myw1Mi45NjcwOTEgMjcuNzI1MzYxNCw1My40MDkzNzIzIEw0Mi4yNjUzNTg5LDYxLjcwMjE0NjYgTDU3Ljk2NjM0NDgsNTQuMTI4MDc5NCBMNDYuNzQzNDU3LDUwLjcwMDM5OTQgTDQ2LjUyMjMxNjMsNTAuNzAwMzk5NCBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjUuMTI2OTU4OCw1MS45MTY2NzMgTDQyLjI2NTM1ODksNjEuNzAyMTQ2NiBMNTkuNDU5MDQ0MSw1My40NjQ2NTc1IEw2My4yNzM3MjAzLDU0LjM0OTIyMDEgTDg5LjQzOTQ1MzMsNzcuNDAzMTMwOCBMOTIuNTMzMjAzMyw4Ny4xMDM1MTY4IEw4Ni43MzI0MjIxLDg3LjEwMzUxNjggTDgyLjc4NTE1NjQsNzkuOTk5OTk5MyBMNjMuMjczNzIsNjkuNTUyNjQwMiBMNTkuNDU5MDQ0Miw5My4zMjUyNTk4IEwyNS41NjkyNDA2LDkzLjMyNTI1OTggTDI1LjU2OTI0MDEsNjkuNTUyNjM5NSBMNy43ODkwMTM5NCw4My4zNjkxNzkzIEw0LjEwMDQ1NzA2LDk1Ljk1MDg3MDYgTDAuNjc5Njg3NjkxLDkzLjMyNTI1OTggTDQuMTAwNDU3MDYsNzcuNDAzMTMxNiBMMjUuMTI2OTU4OCw1MS45MTY2NzMgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQm94IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMS4wMDAwMDAsIDUyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0wLjM1MDE1NTY4NSw0LjQ2Nzc5NjkzIEwwLjM1MDE1NTY4NSw0NS4zOTYwOTMxIEw2My4wMTQ1OTA2LDQ1LjM5NjA5MzEgTDY2Ljk5NDY5MDMsMC45MjgyNTA4NCBMMC4zNTAxNTU2ODUsNC40Njc3OTY5MyBaIiBpZD0iUGF0aC0yNSIgZmlsbD0iIzMzMzMzMyI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0yMS4wNjk4NDcxLDE5Ljg0MjQ3MjEgTDIxLjA2OTg0NzEsMTcuNDI1NzIwOCBMMTMuNDgxOTU4NywxNy40MjU3MjA4IEwxMy40ODE5NTg3LDI5Ljg2NDg4MjEgTDE2LjM2MDczNjEsMjkuODY0ODgyMSBMMTYuMzYwNzM2MSwyNS41NjQ0ODYzIEwyMS4wNjk4NDcxLDI1LjU2NDQ4NjMgTDIxLjA2OTg0NzEsMjMuMjAxMDQ1NyBMMTYuMzYwNzM2MSwyMy4yMDEwNDU3IEwxNi4zNjA3MzYxLDE5Ljg0MjQ3MjEgTDIxLjA2OTg0NzEsMTkuODQyNDcyMSBaIE0yMy4yNTU1ODU1LDI5Ljg2NDg4MjEgTDI2LjEzNDM2MjgsMjkuODY0ODgyMSBMMjYuMTM0MzYyOCwyNi40MTc0NTc0IEwyNy40ODQ5MDA0LDI2LjQxNzQ1NzQgTDI5LjY4ODQwODksMjkuODY0ODgyMSBMMzMuMDI5MjEyMywyOS44NjQ4ODIxIEwzMC41NDEzOCwyNS45Mzc2NjEyIEMzMi4wODczOTAxLDI1LjIwOTA4MTcgMzMuMDExNDQyLDIzLjY2MzA3MTcgMzMuMDExNDQyLDIxLjkyMTU4OTEgQzMzLjAxMTQ0MiwxOS41MDQ4Mzc3IDMxLjIzNDQxOSwxNy40MjU3MjA4IDI4LjQ4MDAzMzMsMTcuNDI1NzIwOCBMMjMuMjU1NTg1NSwxNy40MjU3MjA4IEwyMy4yNTU1ODU1LDI5Ljg2NDg4MjEgWiBNMjguMTA2ODU4NCwyNC4wNzE3ODcgTDI2LjEzNDM2MjgsMjQuMDcxNzg3IEwyNi4xMzQzNjI4LDE5Ljc3MTM5MTIgTDI4LjEwNjg1ODQsMTkuNzcxMzkxMiBDMjkuMzE1MjM0MSwxOS43NzEzOTEyIDMwLjA5NzEyNDIsMjAuNzY2NTI0MSAzMC4wOTcxMjQyLDIxLjkyMTU4OTEgQzMwLjA5NzEyNDIsMjMuMDc2NjU0MSAyOS4zMTUyMzQxLDI0LjA3MTc4NyAyOC4xMDY4NTg0LDI0LjA3MTc4NyBMMjguMTA2ODU4NCwyNC4wNzE3ODcgWiBNNDIuNDY1MjA0NywxOS43MzU4NTA3IEw0Mi40NjUyMDQ3LDE3LjQyNTcyMDggTDM0Ljg3NzMxNjIsMTcuNDI1NzIwOCBMMzQuODc3MzE2MiwyOS44NjQ4ODIxIEw0Mi40NjUyMDQ3LDI5Ljg2NDg4MjEgTDQyLjQ2NTIwNDcsMjcuNTU0NzUyMiBMMzcuNzU2MDkzNiwyNy41NTQ3NTIyIEwzNy43NTYwOTM2LDI0LjgxODEzNjcgTDQyLjQ2NTIwNDcsMjQuODE4MTM2NyBMNDIuNDY1MjA0NywyMi41NjEzMTc0IEwzNy43NTYwOTM2LDIyLjU2MTMxNzQgTDM3Ljc1NjA5MzYsMTkuNzM1ODUwNyBMNDIuNDY1MjA0NywxOS43MzU4NTA3IFogTTUyLjMyNzY4MjYsMTkuNzM1ODUwNyBMNTIuMzI3NjgyNiwxNy40MjU3MjA4IEw0NC43Mzk3OTQyLDE3LjQyNTcyMDggTDQ0LjczOTc5NDIsMjkuODY0ODgyMSBMNTIuMzI3NjgyNiwyOS44NjQ4ODIxIEw1Mi4zMjc2ODI2LDI3LjU1NDc1MjIgTDQ3LjYxODU3MTUsMjcuNTU0NzUyMiBMNDcuNjE4NTcxNSwyNC44MTgxMzY3IEw1Mi4zMjc2ODI2LDI0LjgxODEzNjcgTDUyLjMyNzY4MjYsMjIuNTYxMzE3NCBMNDcuNjE4NTcxNSwyMi41NjEzMTc0IEw0Ny42MTg1NzE1LDE5LjczNTg1MDcgTDUyLjMyNzY4MjYsMTkuNzM1ODUwNyBaIiBpZD0iRlJFRSIgZmlsbD0iIzc1QzIzOSI+PC9wYXRoPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=)}
+          .main-marquee .logo-wrapper .plus { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-align: center; width: 12.5%; font-size: 6em; position: relative; float: left; font-weight: bold; }
+          html[lang*="en-us"] .main-marquee .logo-wrapper .plus {width:7.5%}
+          .main-marquee .logo-wrapper .office-365 { line-height: 1; font-size: 0.9em; text-transform: none; display: block; font-family: 'Walsheim-Regular', Arial, sans-serif; }
           @media (min-width: 992px) { 
             .main-marquee .header-text .get-online { font-size: 5em; }
             .main-marquee .logo-wrapper  { margin-top: 42px; }
@@ -786,16 +823,32 @@ $(window).load(function () {
             <div class="col-md-6 col-xs-12">
               <div class="logo-wrapper">
                 <div class="column domain"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_domain.png" class="icon"><![endif]-->
-                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</span>
+                  <div class="icon"></div>
+                  <div>[@L[cds.sales/offers/online-business:32573-top-banner-image-domain]@L]</div>
                 </div>
                 <div class="plus">+</div>
                 <div class="column website"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_website.png" class="icon"><![endif]-->
-                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-website]@L]</span>
+                  <div class="icon"></div>
+                  <div>[@L[cds.sales/offers/online-business:32573-top-banner-image-website]@L]</div>
                 </div>
                 <div class="plus">+</div>
                 <div class="column email"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img_got_email.png" class="icon"><![endif]-->
-                  <div class="icon"></div><span>[@L[cds.sales/offers/online-business:32573-top-banner-image-email]@L]</span><span class="office-365">[@L[cds.sales/offers/online-business:32573-powered-by-mso365]@L]</span>
-                </div>
+                  <div class="icon"></div>
+                  <div>
+                    <div>[@L[cds.sales/offers/online-business:32573-top-banner-image-email]@L]</div>
+                    <div class="office-365">[@L[cds.sales/offers/online-business:32573-powered-by-mso365]@L]</div>
+                  </div>
+                </div> 
+                ##if(activeLanguageAny([en-us]))
+                <div class="plus">+</div>
+                <div class="column support"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/human.png" class="icon"><![endif]-->
+                  <div class="icon"></div>
+                  <div> 
+                    <div>[@L[cds.sales/offers/online-business:human]@L]</div>
+                    <div>[@L[cds.sales/offers/online-business:support]@L]</div>
+                  </div>
+                </div> 
+                ##endif
               </div>
             </div>
           </div>
@@ -1061,6 +1114,7 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
               });
+              
             </script>
           </atlantis:webstash>
         </div>
@@ -1294,6 +1348,7 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1516,6 +1571,7 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1740,6 +1796,7 @@ $(window).load(function () {
           font-size: 30px;
           margin-top: 35px;
         }
+        #products.key-benefits-wrap h3.key-benefits-title{font-size:24px;}
         
         /* KEY BENEFITS */
         .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -1815,12 +1872,14 @@ $(window).load(function () {
           font-size: 16pt;
           color: #333;
         }
+        html[lang*="en-us"] .key-benefits-wrap .key-benefit .key-benefits-text {font-size:18px}
         .key-benefits-wrap .key-benefit h3.key-benefits-title {
           white-space: -moz-pre-wrap;
           margin-top: 0px;
           font-size: 30px;
           font-weight: bold;
           color: #333;
+          word-break: break-word;
         }
         .key-benefits-wrap .key-benefits-subtext {
           margin-top: 40px;
@@ -1837,6 +1896,8 @@ $(window).load(function () {
           </div>
         </div>
         <div class="row">
+           
+          ##if(!activeLanguageAny([en-us]))
           <div class="col-sm-4 key-benefit">
             <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
             <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
@@ -1865,8 +1926,47 @@ $(window).load(function () {
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
               <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-2]@L]</div>
             </div>
+          </div> 
+          ##else
+          <div class="col-sm-3 key-benefit">
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]</h3>
+            <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-domain-text]@L]</div>
+            <div class="features-text">
+              <div class="include-check-green TLD-token">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]</div>
+            </div>
           </div>
-        </div>
+          <div class="col-sm-3 key-benefit">
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-a-website-heading]@L]</h3>
+            <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-a-website-text]@L]</div>
+            <div class="features-text">
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]</div> 
+              ##if(productIsOffered(105))
+               
+              <div class="include-check-none"><strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong></div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]</div> 
+              ##endif
+               
+            </div>
+          </div>
+          <div class="col-sm-3 key-benefit">
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]</h3>
+            <div class="key-benefits-text">[@L[cds.sales/offers/online-business:32573-pro-email-text]@L]</div>
+            <div class="features-text">
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-pro-email-bullet-2]@L]</div>
+            </div>
+          </div>
+          <div class="col-sm-3 key-benefit">
+            <h3 class="headline-primary word-break key-benefits-title">[@L[cds.sales/offers/online-business:human-support-heading]@L]</h3>
+            <div class="key-benefits-text">[@L[cds.sales/offers/online-business:human-support-text]@L]</div>
+            <div class="features-text">
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:human-support-bullet-1]@L]</div>
+              <div class="include-check-green">[@L[cds.sales/offers/online-business:human-support-bullet-2]@L]</div>
+            </div>
+          </div>
+        </div> 
+        ##endif
       </div>
     </section>
     <atlantis:webstash type="css">
@@ -5013,7 +5113,8 @@ var PlanBox6UI = {
         </div>
       </div>
     </section>
-    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
@@ -5176,7 +5277,6 @@ ul li.no-check {
           vertical-align: baseline;
           cursor: pointer;
         }
-        
       </style>
       <style>.bg-gray-light {
   background-color: #d9d9d9;
@@ -5690,7 +5790,7 @@ section {
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       
@@ -5699,21 +5799,13 @@ section {
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        // auto height the plan boxes
-        if ($(window).width() >= 768){
-          $(".pro-plans").each(function(index, outerPlan) {
-            if($(outerPlan).hasClass('ignore-same-height')) return; 
-            var maxHeight = 0;
-            $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-              maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-            });
-            if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-          });
-        }
-      
-        $('[data-icann-fee]').each(function(){
+        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
+        });
+        $('[data-content*="{icannfee}"]').each(function(){
+          var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+          $(this).attr('data-content',tokenized);
         });
         
       });
