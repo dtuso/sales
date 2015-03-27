@@ -349,6 +349,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
         }
         .search-text {
           display: none;
+          font-weight: bold;
         }
         .search-disclaimers{
           margin-top: 10px;
@@ -361,8 +362,11 @@ mixin configDomainSearchInput(configDomainSearchParams)
           width: 7px;
           height: 11px;
           display: inline-block;
-          margin-top: 14px;
+          margin-top: 20px;
           margin-right: 10px;
+        }
+        .select-and-continue{
+          font-weight:bold;
         }
         .unavailable-icon {
           background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/dpp_sprite_rebrand.png') no-repeat -50px -62px;
@@ -423,14 +427,15 @@ mixin configDomainSearchInput(configDomainSearchParams)
         .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
         .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
         .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
-        .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 20px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
-        .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px;}
+        .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 30px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
+        .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px; font-family: 'Walsheim-Bold';}
         .word-break {word-wrap: break-word;word-break: break-all;}
         .available-result .domain-name-display-tld{font-size:40px;}
         .available-result .select-and-continue{margin-top:15px;}
         #add-domain-btn { margin-left:10px;}
-        #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:10px;}
-        .available-result , .unavailable-result {display:none};
+        #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:15px;}
+        .available-result , .unavailable-result {display:none;}
+        .input-group-btn > .btn { position:static; margin-left:15px;}
   .row
     .col-xs-12
       form.domain-search-form(id!="#{configDomainSearchParams.formId}",method="get" action!="[@T[link:<relative path='domains/actions/json/domainavailabilitycheck.aspx'><param name='promoCode' value='#{configDomainSearchParams.promoCode}' /></relative>]@T]")
@@ -442,7 +447,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
 
         .input-group
           label.searchInput.sr-only(for='domain-name-input') !{configDomainSearchParams.placeholderText}
-          input#domain-name-input.searchInput.form-control(class=inputClass type='text' placeholder!='#{configDomainSearchParams.placeholderText}' name='sld' maxlength='63')
+          input#domain-name-input.searchInput.input-lg.form-control(class=inputClass type='text' placeholder!='#{configDomainSearchParams.placeholderText}' name='sld' maxlength='63')
           span.tld-input.input-group-btn
             .tld-input-selected
               span .com
@@ -521,7 +526,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
               | ##endif
               | 
           span.input-group-btn
-            button.btn.btn-primary.offer-search-btn(class=buttonClass type='submit' data-ci='#{configDomainSearchParams.searchCicode}') 
+            button.btn.btn-primary.btn-lg.offer-search-btn(class=buttonClass type='submit' data-ci='#{configDomainSearchParams.searchCicode}') 
               span.search-icon.uxicon.uxicon-magnifying-glass
               span.search-text !{configDomainSearchParams.buttonText}
         #search-btn-loading.loading(style='display: none')
@@ -614,8 +619,6 @@ mixin configDomainSearchInput(configDomainSearchParams)
       });
 
       $('#no-domain-link').bind('click', function (e) {
-            $('#no-domain-link').hide();
-            $('#no-domain-loading').fadeIn();
             var domaintoadd = $('#domaintoadd').val();
 
             if (domaintoadd == '') {
@@ -630,7 +633,6 @@ mixin configDomainSearchInput(configDomainSearchParams)
         });
 
         $('.select-and-continue').bind('click', function () {
-            $('.select-and-continue').hide();
             window.location = nextStepUrl;       
         });
     });
@@ -662,7 +664,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                     tld.val('com');
                 } else if (newtld != undefined) {
                     tld.val(newtld);
-                    $('#txtsld').val(domain.split('.')[0]);
+                    $('#domain-name-input').val(domain.split('.')[0]);
                 }
 
                 
@@ -678,8 +680,8 @@ mixin configDomainSearchInput(configDomainSearchParams)
                     url += 'domaintocheck=' + domain;
                     url += '&tld=' + tld.val();
 
-                    var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                    var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                    var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                    var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                     $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                     $('.unavailable-result').show();
 
@@ -692,7 +694,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                         if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                             var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -702,21 +704,21 @@ mixin configDomainSearchInput(configDomainSearchParams)
                             url += '&tld=' + tld.val();
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                             var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                             $('.unavailable-result').show();
 
                         } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } 
                         else if (jsonData.Properties.domainInfo[0].error != '') {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else {

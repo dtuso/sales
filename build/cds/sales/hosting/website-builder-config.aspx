@@ -134,7 +134,7 @@
     <div class="container configuration-container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">Microsoft Office 365 is in your cart!</span></p>
+          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text"> </span></p>
         </div>
       </div>
       <div class="row">
@@ -389,7 +389,7 @@
               <div class="subtotal-disclaimer text-muted col-sm-9">[@L[cds.sales/_common:subtotal-disclaimer]@L]</div>
             </div>
             <div class="row">
-              <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
+              <div id="scrollDownToContinueButton" data-ci="" data-scroll=".lastStep" class="scroll-down-wrapper move">
                 <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
               </div>
             </div>
@@ -509,7 +509,7 @@
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-3 buttons"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">Continue</a></div>
+            <div class="col-sm-3 col-sm-push-3 buttons"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/_common:continue]@L]</a></div>
           </div>
         </section>
       </div>
@@ -527,6 +527,7 @@
           }
           .search-text {
             display: none;
+            font-weight: bold;
           }
           .search-disclaimers{
             margin-top: 10px;
@@ -539,8 +540,11 @@
             width: 7px;
             height: 11px;
             display: inline-block;
-            margin-top: 14px;
+            margin-top: 20px;
             margin-right: 10px;
+          }
+          .select-and-continue{
+            font-weight:bold;
           }
           .unavailable-icon {
             background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/dpp_sprite_rebrand.png') no-repeat -50px -62px;
@@ -601,14 +605,15 @@
           .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
           .domain-arrow{cursor:pointer;float:left;font-size:1px;height:30px;margin:2px 2px 2px 0;min-width:23px;padding:0;position:relative}
           .domain-arrow span{border-color:#6B6B6B transparent transparent;border-style:solid;border-width:5px 5px 0;display:block;height:0;width:0;position:absolute;top:13px;left:7px}
-          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 20px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
-          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px;}
+          .available-tld-wrap {  min-height: 120px;border: solid 1px #cccccc;margin-bottom: 15px;margin-top:10px; border-top: 10px solid #008a32;padding: 30px;  background-color: #fff;-webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);-moz-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);}
+          .available-result .domain-name-display {font-size: 30px;color: #333;font-weight: bold;text-transform: lowercase;margin-bottom: 0px;margin-top: 0px; font-family: 'Walsheim-Bold';}
           .word-break {word-wrap: break-word;word-break: break-all;}
           .available-result .domain-name-display-tld{font-size:40px;}
           .available-result .select-and-continue{margin-top:15px;}
           #add-domain-btn { margin-left:10px;}
-          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:10px;}
-          .available-result , .unavailable-result {display:none};
+          #no-domain-link{text-decoration: none;color: #000;cursor: pointer;margin-top:15px;}
+          .available-result , .unavailable-result {display:none;}
+          .input-group-btn > .btn { position:static; margin-left:15px;}
         </style>
       </atlantis:webstash>
       <div class="row">
@@ -620,8 +625,8 @@
             <input id="domaintoadd" type="hidden" name="domaintoadd"/>
             <input type="hidden" name="formSubmitButton" value="Add-to-Cart"/>
             <div class="input-group">
-              <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]</label>
-              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]" name="sld" maxlength="63" class="searchInput form-control"/><span class="tld-input input-group-btn">
+              <label for="domain-name-input" class="searchInput sr-only">[@L[cds.sales/_common:search-placeholder]@L]</label>
+              <input id="domain-name-input" type="text" placeholder="[@L[cds.sales/_common:search-placeholder]@L]" name="sld" maxlength="63" class="searchInput input-lg form-control"/><span class="tld-input input-group-btn">
                 <div class="tld-input-selected"><span>.com</span></div>
                 <input id="txtTld" type="hidden" name="tld" value="com"/>
                 <input type="hidden" name="addIfAvailable" value="true"/><a href="javascript:void(0)" class="domain-arrow g-btn-sm g-btn-sec"><span></span></a>
@@ -687,7 +692,7 @@
                   ##endif
                    
                 </ul></span><span class="input-group-btn">
-                <button type="submit" data-ci="1" class="btn btn-primary offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
+                <button type="submit" data-ci="1" class="btn btn-primary btn-lg offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
             </div>
             <div id="search-btn-loading" style="display: none" class="loading"></div>
           </form>
@@ -791,8 +796,6 @@
           });
         
           $('#no-domain-link').bind('click', function (e) {
-                $('#no-domain-link').hide();
-                $('#no-domain-loading').fadeIn();
                 var domaintoadd = $('#domaintoadd').val();
         
                 if (domaintoadd == '') {
@@ -807,7 +810,6 @@
             });
         
             $('.select-and-continue').bind('click', function () {
-                $('.select-and-continue').hide();
                 window.location = nextStepUrl;       
             });
         });
@@ -839,7 +841,7 @@
                         tld.val('com');
                     } else if (newtld != undefined) {
                         tld.val(newtld);
-                        $('#txtsld').val(domain.split('.')[0]);
+                        $('#domain-name-input').val(domain.split('.')[0]);
                     }
         
                     
@@ -855,8 +857,8 @@
                         url += 'domaintocheck=' + domain;
                         url += '&tld=' + tld.val();
         
-                        var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                        var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                        var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                        var domainText = ' <span class="domainName"> '+domain.toLowerCase()+'</span>';
                         $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                         $('.unavailable-result').show();
         
@@ -869,7 +871,7 @@
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -879,21 +881,21 @@
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
                                 var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
                             } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = '<span class="domainName">'+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
@@ -1141,7 +1143,7 @@ ul li.no-check {
           cursor: pointer;
         }
         .domain-search-container{
-          margin-bottom:100px;
+          margin-bottom:200px;
         }
         
       </style>
@@ -1209,12 +1211,18 @@ list-style: none;
     display: flex;
     align-items: center;
 }   
-@media (max-width: 768px) { 
+.product-radio {
+  margin-top :10px; 
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
+  width: 33px;
+  height: 34px;
+}
+@media (max-width: 1024px) { 
     .vertical-align {
         display: block;
         align-items: inherit;
     }
-    .text-xs-right{
+    .text-md-right{
       text-align: right;
     }
     .config-text-primary {
@@ -1231,6 +1239,23 @@ list-style: none;
     }
     .config-text-disclaimer {
       font-size: 14px;
+    }
+    .product-radio {
+      margin-top :0;
+    } 
+    .item-price{
+      border-bottom: 1px solid #EBEBEB;
+    }
+}
+@media (max-width: 428px) { 
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-md-right{
+      text-align: inherit;
+    }
+    .item-price{
+      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -1266,6 +1291,15 @@ list-style: none;
 .item-savings-wrapper{
   text-transform: uppercase;
 }
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+.selected{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
+  width: 35px;
+  height: 35px;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1284,16 +1318,16 @@ list-style: none;
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
             <div class="item-term"><%= itemTerm %></div>
           </div>
-          <div class="col-xs-1">
+          <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
             <div class="item-x">x</div>
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
             <div class="item-price"><%= itemPricePerTerm %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
             <div class="item-total-price text-secondary"><%= itemTotal %></div>
           </div>
         </div>
@@ -1312,7 +1346,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-1">
-              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
             <div class="col-xs-7">
               <div class="config-text-secondary"><%= title %></div>
@@ -1350,7 +1384,7 @@ list-style: none;
         <li>
           <div class="row vertical-align">
             <div class="col-xs-2 col-sm-1">
-              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> >
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
             </div>
             <div class="col-xs-5 col-sm-3">
               <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -1379,10 +1413,10 @@ list-style: none;
       <script type="text/template" class="addonTemplate">
         <li>
           <div class="row">
-            <div class="col-xs-1">
-              <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %>>
+            <div class="col-xs-2 col-md-1">
+              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
-            <div class="col-xs-11">
+            <div class="col-xs-10 col-md-11">
               <div class ="config-text-primary">
                 [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
               </div>
@@ -1391,10 +1425,10 @@ list-style: none;
         </li>
         <li>
           <div class="row">
-            <div class="col-xs-1">
-              <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %>>
+            <div class="col-xs-2 col-md-1">
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
-            <div class="col-xs-11">
+            <div class="col-xs-10 col-md-11">
               <div class="config-text-primary">
                 <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
               </div>
@@ -1404,11 +1438,20 @@ list-style: none;
         
       </script>
       <script>
+        $.ajaxSetup({cache:false,async:false});
+        
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_12month";
         // gs for get started button, ac for add to cart button
         var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
         var reload = false;
         var gfSelected = false;
+        var sslSelected = false;
+        
+        ##if(productIsOffered(104))
+        var gfAvailable = true;
+        ##else
+        var gfAvailable = false;
+        ##endif
         
         // spoof url for config and packagegrouping removed when both are published
         var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
@@ -1474,17 +1517,20 @@ list-style: none;
             {
               steps = _.without(steps, 'sslStep');
             }
-            if(!reload){
-              Config.setTitle();
+            if(!gfAvailable || plan.indexOf('1month') >= 0){
+              steps = _.without(steps, 'getFoundStep');
+        
             }
+            Config.setTitle();
             Config.showSteps(steps);
             Config.addStepBreaks();
             Config.stepNumbers();
             $('.config-step:visible:last').addClass('lastStep')
           },
           resetPage: function(){
-            var steps = ['planStep','termStep','sslStep','getFoundStep'];
+        
             var addToCart = 'ac';
+            var steps = ['planStep','termStep','sslStep','getFoundStep'];
             
             $('.config-step').hide();
             $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -1498,6 +1544,10 @@ list-style: none;
               steps = _.without(steps, 'sslStep');
               $('input:radio[name="sslOption"][value="no_thanks"]').attr('checked',true);
             }
+            if(!gfAvailable || plan.indexOf('1month') >= 0){
+              steps = _.without(steps, 'getFoundStep');
+            }
+            Config.setTitle();
             Config.showSteps(steps);
             Config.addStepBreaks();
             Config.stepNumbers();
@@ -1517,7 +1567,7 @@ list-style: none;
           },
           setTitle: function(){
             var getStarted = 'gs';
-            if (origin === getStarted){
+            if (origin === getStarted && !reload){
               $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
             }
             else{
@@ -1564,8 +1614,9 @@ list-style: none;
             Config.generateTerms(data.LongerTerms);
             Config.generatePlans(data.PlanListPrices);
             Config.generateGetFound(data.GetFoundPrice);
+            Config.generateSSL(data.SSLPrice);
+        
             if(!reload){
-              Config.generateSSL(data.SSLPrice);
               reload = true;
             }
         
@@ -1591,25 +1642,35 @@ list-style: none;
                 var isSale = ( parseInt(termPercentSavings) > 0 ) ? true : false;
                 var monthString =  (termLength > 1) ? "[@L[cds.sales/_common:months]@L]" : "[@L[cds.sales/_common:month]@L]";
                 var checkedRadiobutton = ( plan ===  termPackage) ? true : false;
-                
-                var termData = {
-                  radio: radioName,
-                  monthly: termCurrentMonthlyPrice,
-                  monthlyList: termListPrice,
-                  yearly: termCurrentYearlyPrice,
-                  package: termPackage,
-                  checked: checkedRadiobutton,
-                  term: termLength,
-                  month: monthString,
-                  currentPrice: termCurrentMonthlyPrice,
-                  onSale: isSale,
-                  listPrice: termListPrice,
-                  percentSavings: termPercentSavings
-                };
-                  
-                parentID.append(termTemplate(termData));
+                var isManager = false ; 
         
+                ##if(isManager())
+                isManager = true ;
+                ##endif
+        
+                if(termLength != '48'|| isManager){
+                  var termData = {
+                    radio: radioName,
+                    monthly: termCurrentMonthlyPrice,
+                    monthlyList: termListPrice,
+                    yearly: termCurrentYearlyPrice,
+                    package: termPackage,
+                    checked: checkedRadiobutton,
+                    term: termLength,
+                    month: monthString,
+                    currentPrice: termCurrentMonthlyPrice,
+                    onSale: isSale,
+                    listPrice: termListPrice,
+                    percentSavings: termPercentSavings
+                  };
+                  parentID.append(termTemplate(termData));
+                }
               }); 
+        
+              $('.radio-'+radioName).click(function(){
+                $(this).parent().find('input').trigger('click');
+              });
+        
               $('input[name="'+radioName+'"]').click(function(){
                 plan = this.defaultValue;
                 Config.loadData(plan);
@@ -1658,7 +1719,11 @@ list-style: none;
                 parentID.append(planTemplate(planData));
         
               });
-              
+        
+              $('.radio-'+radioName).click(function(){
+                $(this).parent().find('input').trigger('click');
+              });
+        
               $('input[name="'+radioName+'"]').click(function(){
                 plan = this.defaultValue;
                 Config.loadData(plan);
@@ -1679,10 +1744,11 @@ list-style: none;
               var sslText = "[@L[cds.sales/gd/hosting/website-builder-config:add_ssl]@L]";
               var termType = "[@L[cds.sales/_common:yr]@L]";
               var sslPackage = "ssl_std_1";
+              var checkedRadiobutton = (sslSelected && !(plan.indexOf('wsb_businessplus') >= 0)) ? true : false;
         
               var sslData = {
                 radio: radioName,
-                checked:false,
+                checked:checkedRadiobutton,
                 package: sslPackage,
                 addon:'[@L[cds.sales/gd/hosting/website-builder-config:order_ssl]@L]',
                 monthly: monthlyPrice,
@@ -1693,9 +1759,25 @@ list-style: none;
               };
               
               parentID.append(addonTemplate(sslData));
-              
+        
+              $('.radio-'+radioName).click(function(){
+                $(this).parent().parent().parent().parent().find('label').removeClass('selected');
+                $(this).addClass('selected');
+                $(this).parent().find('input').attr('checked',true).trigger('click');
+        
+              });
+        
               $('input[name="'+radioName+'"]').click(function(){
                 Config.updateOrderSummary();
+              });
+        
+              $('input:radio[name="sslOption"]').click(function(){
+                if($('input:radio[name="sslOption"]').filter(':checked').val() != 'no_thanks'){
+                  sslSelected = true;
+                }
+                else{
+                  sslSelected = false;
+                }
               });
             }
           },
@@ -1721,7 +1803,7 @@ list-style: none;
                 var termLength = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
                 var termType = "[@L[cds.sales/_common:mo]@L]";
                 var selectedGfTerm = ( termLength ===  gftermLength) ? true : false;
-                var checkedRadiobutton = (gfSelected) ? true : false;
+                var checkedRadiobutton = (gfSelected && !(plan.indexOf('1month') >= 0)) ? true : false;
         
                 if(selectedGfTerm){
                   var gfData = {
@@ -1738,7 +1820,13 @@ list-style: none;
                   parentID.append(addonTemplate(gfData));
                 }
               });
-                  
+              
+              $('.radio-'+radioName).click(function(){
+                $(this).parent().parent().parent().parent().find('label').removeClass('selected');
+                $(this).addClass('selected');
+                $(this).parent().find('input').attr('checked',true).trigger('click');
+        
+              });
               
               $('input[name="'+radioName+'"]').click(function(){
                 Config.updateOrderSummary();
@@ -1899,6 +1987,14 @@ list-style: none;
                 if($('input:radio[name="getFoundOption"]').filter(':checked').val() != 'no_thanks'){
                   Config.addAddonToCart('getFoundOption');
                 }
+                var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+                if(parseInt(selectedTerm) == 1){
+                  ##if(isManager())
+                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                  ##else
+                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                  ##endif
+                }
               }
               });
           },
@@ -1956,9 +2052,12 @@ list-style: none;
         $(document).ready(function(){
           $('.btn-continue').click(function(){
             Config.addPlanToCart();
-            $('.configuration-container').hide();
-            $('.domain-search-container').show();
-            $("html, body").animate({ scrollTop: 0 }, 0);
+            var selectedTerm = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
+            if(parseInt(selectedTerm) > 1){
+              $('.configuration-container').hide();
+              $('.domain-search-container').show();
+              $("html, body").animate({ scrollTop: 0 }, 0);
+            }
           });
         
         
