@@ -182,7 +182,7 @@
             </div>
           </div>
         </form>
-        <div style="[object Object]" class="resources-group-inactive">
+        <div style="display:none" class="resources-group-inactive">
           <select id="resources-select" name="resource" class="form-control wordpress">
             <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
             <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>

@@ -600,7 +600,7 @@
           .tld-input-selected{float:left;padding:8px 0 4px 14px;width:75px}
           .tld-input.droplist-open{overflow:visible}
           .tld-input>ul{padding:0;margin:0;list-style:none;cursor:pointer;margin:-1px;border:1px solid #bcbcbc;background-color:#fff;font-size:14px;position:absolute;overflow:hidden;*top:35px;top:-9999em;*left:-9999em;width:112px;z-index:3}
-          .tld-input.droplist-open>ul{*left:0;width:114px;top:35px;z-index:1000}
+          .tld-input.droplist-open>ul{*left:0;width:114px;top:58px;z-index:1000}
           .tld-input.droplist-open>ul>li{padding:5px 10px}
           .tld-input.droplist-open>ul>li:hover{background:#f5f5f5}
           .tld-input.droplist-open>ul>li.selected:hover,.tld-input.droplist-open>ul>li.selected{background:#e4efc7}
@@ -1461,7 +1461,7 @@ width: 28px;
       ##if(!productIsOffered(107))
         noSiteLock = true;
       ##endif
-      ##if(!productIsOffered(99) || countrysiteany(mx) || countrysiteany(zz))
+      ##if(!productIsOffered(99) || countrysiteany(mx))
         noEmail = true;
       ##endif
       
