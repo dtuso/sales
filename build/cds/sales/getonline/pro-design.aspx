@@ -280,9 +280,9 @@
             <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text]@L]</h3>
           </div>
         </div>
-        <div style="[object Object]" class="row">
+        <div style="margin-top:35px" class="row">
           <div class="col-xs-4 col-sm-3 col-sm-offset-3"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block computer"></div>
-          <div style="[object Object]" class="col-xs-8 col-sm-6 products">
+          <div style="padding-left:60px" class="col-xs-8 col-sm-6 products">
             <h3>[@L[cds.sales/getonline:pro-design-product-name]@L]</h3>
             <p>[@L[cds.sales/getonline:pro-design-product-get-it-now-description]@L]</p>
             <form action="[@T[link:<relative path='~/CDS/Widgets/WidgetsPostHandlers/WebDesignPostHandler.ashx' />]@T]" name="frmWebDesign" id="addtocart-form" method="post">
@@ -368,7 +368,7 @@
             </div>
           </div>
         </section>
-        <div style="[object Object]" class="row bubble-row">
+        <div style="margin-top:0px" class="row bubble-row">
           <div class="col-xs-2"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png" class="hero-guy"></div>
           <div class="col-xs-10 col-sm-8 col-lg-6 bubble">
             <mark class="uppercase">[@L[cds.sales/getonline:did-you-know]@L]</mark>
@@ -411,7 +411,7 @@
       <div class="container text-center">
         <div class="row">
           <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
-          <h3 style="[object Object]" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token text-center">[@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text]@L]</h3>
         </div>
         <div class="row pro-wrapper">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>

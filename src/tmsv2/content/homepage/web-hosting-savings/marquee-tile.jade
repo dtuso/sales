@@ -15,4 +15,8 @@ atlantis:webstash(type="css")
       img.img-responsive(src!=tldFallbackPNG)
       <![endif]-->
       .headline [@L[cds.tmsv2/content/homepage/web-hosting-savings/marquee-tile:headline]@L]
-      .cta(data-tokenize!="[@T[productcompare:<percent primaryproductid='32082' secondaryproductid='32082' showsymbol='true'/>]@T]") [@L[cds.tmsv2/content/homepage/web-hosting-savings/marquee-tile:saveupto]@L]
+      .cta(data-tokenize!="[@T[productcompare:<percent primaryproductid='32082' secondaryproductid='32082' showsymbol='true'/>]@T]")
+        | ##if(productHasSavingsMoreThan(32082, 32082, 0))
+        |  [@L[cds.tmsv2/content/homepage/web-hosting-savings/marquee-tile:saveupto]@L]
+        | ##endif      
+      
