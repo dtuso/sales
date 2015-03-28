@@ -86,12 +86,15 @@
 }
 @media only screen and (min-width: 768px) {
   #marquee {
-    background-size: initial;
+    background-size: inherit;
     background-position: 28% 0;
   }
   .gem.hero.polygon .heroContent {
     width: 50%;
   }
+}
+and (min-width : 768px)and (max-width : 992px) .Safari #marquee {
+  background-position: 28% -5%;
 }
 @media only screen and (min-width: 992px) {
   #marquee {
@@ -113,7 +116,7 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='undefined' /></relative>]@T]" data-ci='97703' class="gem hero polygon">
+<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="gem hero polygon">
   <div id="marqueeImage" class="col-xs-12 visible-xs"></div>
   <div class="heroContent">
     <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>

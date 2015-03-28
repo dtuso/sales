@@ -2,7 +2,7 @@ extends ../../../../sales/homepage/_hero-polygon.jade
 prepend vars
   - var classes = "gem"
   - var dataCI = 97703;
-  - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCi+"' /></relative>]@T]";
+  - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCI+"' /></relative>]@T]";
   - var marqueeBackground = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
   - var marqueeFallback = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
   - var polygon = "grey-bottom";
@@ -33,8 +33,11 @@ append heroStyles
         .gem.hero.polygon .heroContent{width:100%}
       }
       @media only screen and (min-width: 768px) {
-        #marquee {background-size:initial;background-position:28% 0;}
+        #marquee {background-size:inherit;background-position:28% 0;}
         .gem.hero.polygon .heroContent{width:50%}
+      }
+      @media only screen and (min-width : 768px) and (max-width : 992px){
+        .Safari #marquee {background-position:28% -5%;}
       }
       @media only screen and (min-width: 992px) {
         #marquee {background-size:cover;background-position:44% 0;}
