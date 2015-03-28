@@ -770,13 +770,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
             </div>
           </div>
           <div class="row">
-            <div style="margin-top:15px" class="col-xs-12 col-sm-12 text-center">
-              <h2 style="margin-bottom:0px" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
+            <div style="[object Object]" class="col-xs-12 col-sm-12 text-center">
+              <h2 style="[object Object]" class="uppercase">[@L[cds.sales/getonline:domain-name-header]@L]</h2>
             </div>
           </div>
         </div>
       </div>
-      <div id="domain-search-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-search-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
@@ -800,16 +800,16 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
-                  <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97060" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
+                  <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
+                  <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="[object Object]" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97060" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
                 </div>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div id="domain-available-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-available-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
@@ -833,7 +833,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>
@@ -857,13 +857,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
+              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:not-moving-some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97063" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="margin-top:10px" class="spin-results"></div>
+          <div style="[object Object]" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -876,17 +876,17 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="97063" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="[object Object]" class="text-center"><span data-ci="97063" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row search-again-section">
+          <div style="[object Object]" class="row search-again-section">
             <div class="col-md-12 text-center">
               <btn data-ci="97064" class="btn btn-primary btn-search-again btn-lg text-center uppercase">[@L[cds.sales/getonline:search-again]@L]</btn>
             </div>
           </div>
         </div>
       </div>
-      <div id="domain-not-available-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-not-available-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
@@ -910,7 +910,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="[object Object]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>
@@ -924,13 +924,13 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
         <div class="container other-domains spin-container">
           <div class="row">
             <div class="col-md-12">
-              <h5 style="margin-top:20px"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
+              <h5 style="[object Object]"><strong>[@L[cds.sales/getonline:some-alternatives]@L]</strong></h5>
               <h6 class="results-list-heading-text"> <span data-result-count-template="[@L[cds.sales/getonline:number-of-number-results]@L]" class="spin-counts"></span>
                 <button data-ci="97067" class="btn btn-link view-all-button">[@L[cds.sales/getonline:view-all-results]@L]</button>
               </h6>
             </div>
           </div>
-          <div style="margin-top:10px" class="spin-results"></div>
+          <div style="[object Object]" class="spin-results"></div>
           <div class="spin-template-wrap">
             <div class="row spin-template spin-result searched-domain-name-row bg-light">
               <div class="col-md-9 white"><span class="domain-name-display lowercase"></span></div>
@@ -943,18 +943,18 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
           </div>
           <div class="row show-more-section">
             <div class="col-md-12">
-              <h6 style="margin-top:10px" class="text-center"><span data-ci="97067" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
+              <h6 style="[object Object]" class="text-center"><span data-ci="97067" class="clickable-show-more"><span>[@L[cds.sales/getonline:see-more-results]@L]</span><span class="show-more-arrow"></span></span></h6>
             </div>
           </div>
         </div>
       </div>
-      <div id="api-failure" style="display:none" class="sf-dialog api-B-failure">
+      <div id="api-failure" style="[object Object]" class="sf-dialog api-B-failure">
         <h2 class="api-error-header"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png"/>
           <div>[@L[cds.sales/getonline:something-unexpected-happened]@L]</div>
         </h2>
         <p>[@L[cds.sales/getonline:generic-domain-search-error]@L]</p>
       </div>
-      <div id="domain-selected-view" style="display:none" class="js-domain-search-wizard-section">
+      <div id="domain-selected-view" style="[object Object]" class="js-domain-search-wizard-section">
         <div id="selected-domain" class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-12 text-center">
@@ -966,12 +966,12 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <h2 class="domain-name-displayed word-break"><mark class="selected-domain-name-display"></mark></h2>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div style="[object Object]" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97069" class="btn-search-again"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-search-glass.png"><span>[@L[cds.sales/getonline:search-again]@L]</span></btn>
             </div>
           </div>
-          <div style="padding-top:30px;padding-bottom:10px" class="row">
+          <div style="[object Object]" class="row">
             <div class="col-xs-12 col-sm-12 text-center">
               <btn data-ci="97070" class="btn btn-primary btn-see-bundle btn-lg uppercase">[@L[cds.sales/getonline:see-other-products]@L]</btn>
               <btn data-ci="97071" class="btn btn-purchase btn-plan btn-lg uppercase p4p">[@L[cds.sales/getonline:checkout-now]@L]</btn>
@@ -1009,19 +1009,19 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
         <div class="row">
           <div class="col-sm-4">
             <div class="wordpress-laptop"></div>
-            <h5 style="margin-top:10px" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-enter-blog]@L]</h5>
+            <h5 style="[object Object]" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-enter-blog]@L]</h5>
           </div>
           <div class="col-sm-4">
-            <h5 style="margin-top:100px" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-publish]@L]</h5>
+            <h5 style="[object Object]" class="uppercase text-center">[@L[cds.sales/getonline:mwp-product-info-publish]@L]</h5>
             <div class="wordpress-arrows"></div>
           </div>
           <div class="col-sm-4">
             <div class="wordpress-browser"></div>
-            <h5 style="margin-top:10px" class="uppercase text-center"><mark><span class="selected-domain-name-display"></span></mark></h5>
+            <h5 style="[object Object]" class="uppercase text-center"><mark><span class="selected-domain-name-display"></span></mark></h5>
           </div>
         </div>
         <div class="row">
-          <div style="margin-top:25px" class="col-sm-10 col-sm-offset-1">
+          <div style="[object Object]" class="col-sm-10 col-sm-offset-1">
             <p class="text-center">[@L[cds.sales/getonline:mwp-product-info-text]@L]</p>
           </div>
         </div>
