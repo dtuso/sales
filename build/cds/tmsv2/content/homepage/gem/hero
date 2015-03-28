@@ -87,7 +87,7 @@
 @media only screen and (min-width: 768px) {
   #marquee {
     background-size: initial;
-    background-position-x: 28%;
+    background-position: 28% 0;
   }
   .gem.hero.polygon .heroContent {
     width: 50%;
@@ -96,7 +96,7 @@
 @media only screen and (min-width: 992px) {
   #marquee {
     background-size: cover;
-    background-position-x: 44%;
+    background-position: 44% 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -107,7 +107,7 @@
 @media only screen and (min-width: 1750px) {
   #marquee {
     background-size: cover;
-    background-position-x: 30%;
+    background-position: 30% 0;
   }
 }
 
