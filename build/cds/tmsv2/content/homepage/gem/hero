@@ -1,5 +1,6 @@
 
-<style>#marquee {
+<atlantis:webstash type="css">
+  <style>#marquee {
   background-color: #F3F3F4;
 }
 #marquee .gem {
@@ -61,7 +62,8 @@
   }
 }
 
-</style>
+  </style>
+</atlantis:webstash>
 <div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703" class="gem">
   <div class="gem-text">
     <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
