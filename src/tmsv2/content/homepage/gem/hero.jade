@@ -1,25 +1,26 @@
-style
-  :less
-    #marquee{background-color:#F3F3F4;
-      .gem{min-height:306px;
-        mark{text-transform:uppercase;font-size:1.5em;margin:0 0 5px 0;}
-        .price {font-size:1.25em;text-transform:uppercase}
-        .price span {font-size:1.5em;color:#EF6C0F;text-transform:uppercase}
-        .headline {font-size:2em;text-transform:uppercase;padding-top:5%;}
-        .product-name{font-size:1.5em;color:#77c043;text-transform:uppercase;margin:0 0 5px 0}
-        button {margin:.5em 0;font-size:1em}
-        .gem-text{width:50%}
-        img{position:absolute;top:0;right:0;max-height:100%}
+atlantis:webstash(type="css")
+  style
+    :less
+      #marquee{background-color:#F3F3F4;
+        .gem{min-height:306px;
+          mark{text-transform:uppercase;font-size:1.5em;margin:0 0 5px 0;}
+          .price {font-size:1.25em;text-transform:uppercase}
+          .price span {font-size:1.5em;color:#EF6C0F;text-transform:uppercase}
+          .headline {font-size:2em;text-transform:uppercase;padding-top:5%;}
+          .product-name{font-size:1.5em;color:#77c043;text-transform:uppercase;margin:0 0 5px 0}
+          button {margin:.5em 0;font-size:1em}
+          .gem-text{width:50%}
+          img{position:absolute;top:0;right:0;max-height:100%}
+        }
       }
-    }
-    @media only screen and (max-width : 1200px) {
-      #marquee .gem .gem-text{font-size:12px;width:40%}
-    }
-    @media only screen and (max-width : 767px) {
-      #marquee .gem{min-height:100%}
-      #marquee .gem img{display:none;}
-      #marquee .gem .gem-text{width:100%}
-    }
+      @media only screen and (max-width : 1200px) {
+        #marquee .gem .gem-text{font-size:12px;width:40%}
+      }
+      @media only screen and (max-width : 767px) {
+        #marquee .gem{min-height:100%}
+        #marquee .gem img{display:none;}
+        #marquee .gem .gem-text{width:100%}
+      }
 block heroContent
 .gem(data-url!="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703")
   .gem-text
