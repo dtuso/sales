@@ -1290,6 +1290,25 @@ input[type=checkbox]
 height: 28px;
 width: 28px;
 }
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=checkbox] + label{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -612px -9px;
+  width: 33px;
+  height: 33px;
+  margin-top: 50px;
+}
+
+input[type=checkbox]:checked + label{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -647px -9px;
+  width: 41px;
+  height: 33px;
+}
+
 .domain-search-container {
   margin-bottom: 150px;
 }
@@ -1404,7 +1423,7 @@ width: 28px;
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>">
+            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>" data-yearly="<%= yearly %>"/><label id="<%= package %>"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1421,7 +1440,7 @@ width: 28px;
       <li id="slElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>">
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>"/><label id="<%= packageOne %>"></label>
           </div>
           <div class="col-xs-11">
             <div class ="config-text-primary">
@@ -1437,7 +1456,7 @@ width: 28px;
       <li id="sslElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>">
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>"/><label id="<%= packageTwo %>"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1600,6 +1619,18 @@ width: 28px;
           if(noEmail)
           {
             steps = _.without(steps, 'officeStep');
+          }
+          if(noSiteLock)
+          {
+            if( plan.indexOf('mwp_developer') >= 0)
+            {
+              steps = _.without(steps, 'securityStep');
+            }
+            else
+            {
+              document.getElementById('slElement').style.display = "none";
+              document.getElementById('addsiteLockOption').checked = false;
+            }
           }
           Config.showSteps(steps);
           Config.addStepBreaks();
@@ -1807,7 +1838,7 @@ width: 28px;
             var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
             var termType = "[@L[cds.sales/_common:yr]@L]";
-            var officePackage = "ssl_std_1";
+            var officePackage = "officeEmail";
       
             var officeData = {
               radio: radioName,
@@ -1822,8 +1853,9 @@ width: 28px;
             };
             
             parentID.append(addonTemplate(officeData));
-            
-            $('input[name="'+radioName+'"]').click(function(){
+      
+            $('#officeEmail').click(function(){
+              $('input[name="'+radioName+'"]').click();
               Config.updateOrderSummary();
             });
           }
@@ -1874,11 +1906,13 @@ width: 28px;
             };
             
             parentID.append(addonTemplate(securityData));
-            
-            $('input[name="'+checkNameOne+'"]').click(function(){
+      
+            $('#sitelock_Basic1Yr').click(function(){
+              $('input[name="'+checkNameOne+'"]').click();
               Config.updateOrderSummary();
             });
-            $('input[name="'+checkNameTwo+'"]').click(function(){
+            $('#ssl_std_1').click(function(){
+              $('input[name="'+checkNameTwo+'"]').click();
               Config.updateOrderSummary();
             });
           }
@@ -2064,11 +2098,16 @@ width: 28px;
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
             if (data.Success == true) {}});
+      
           if(document.getElementById('addsslOption').checked){
-            Config.addAddonToCart('sslOption');
+            setTimeout(function(){
+             Config.addAddonToCart('sslOption');
+            }, 1000);
           }
           if(document.getElementById('addsiteLockOption').checked){
-            Config.addAddonToCart('siteLockOption');
+            setTimeout(function(){
+             Config.addAddonToCart('siteLockOption');
+            }, 1000);
           }
         },
         addAddonToCart: function(addonOption){
