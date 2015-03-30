@@ -16,7 +16,38 @@ block merch-tile4
   include ./tiles/online-store-tile.jade
 block prepend sections
   include ./sections/_domain-promo.jade
-  include ./sections/_why-godaddy.jade
+  atlantis:webstash(type="css")
+    style
+      :less
+        #why-godaddy{background-color:#ccc;}
+  section#why-godaddy
+    .container
+      h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]
+      .row
+        .col-sm-4
+          .feature.why-gd-registrar
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
+        .col-sm-4
+          .feature.why-gd-prices
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
+        .col-sm-4
+          .feature.why-gd-support
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
   include ./sections/_website-promo.jade
   include ./sections/_o365-promo.jade
   include ./sections/_support-promo.jade
