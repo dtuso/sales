@@ -1337,13 +1337,13 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
-              if($(this).data("src")!== undefined)
-                src = $(this).data("src");
+              if($(this).data("btn-src")!== undefined)
+                src = $(this).data("btn-src");
             }
           
-            if($(this).attr("id")==="get-started-btn"){
-              src = "gs";
-            }
+            //- if($(this).attr("id")==="get-started-btn"){
+            //-   src = "gs";
+            //- }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
           
@@ -1368,10 +1368,7 @@
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
-          
-              if("false" != "false"){
-                redirectUrl += "&src=" + src
-              }
+              redirectUrl += "&src=" + src;
           
               window.location.href = redirectUrl;
             })
