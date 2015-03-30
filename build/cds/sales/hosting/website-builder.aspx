@@ -813,6 +813,7 @@
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
+                var src = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -825,6 +826,12 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
+                    if($(this).data("src")!== undefined)
+                      src = $(this).data("src");
+                  }
+                
+                  if($(this).attr("id")==="get-started-btn"){
+                    src = "gs";
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -843,12 +850,17 @@
                   .done(function(data) {
                     var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
                       redirectUrl += "&plan=";
                     }
                     redirectUrl += productPackage;
+                
+                    if("false" != "false"){
+                      redirectUrl += "&src=" + src
+                    }
                 
                     window.location.href = redirectUrl;
                   })
