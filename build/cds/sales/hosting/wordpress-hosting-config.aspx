@@ -2061,26 +2061,17 @@ width: 28px;
             ##endif
           }
       
-          
-          var siteLockCheckOption = function(){
-            if(document.getElementById('addsiteLockOption').checked){
-              Config.addAddonToCart('siteLockOption');
-            }
-          };
-      
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
-            if (data.Success == true) {            
-              if(document.getElementById('addsslOption').checked){
-                Config.addAddonToCart('sslOption', siteLockCheckOption);
-              } else {
-                siteLockCheckOption();
-              }
-            }
-          });
-      
+            if (data.Success == true) {}});
+          if(document.getElementById('addsslOption').checked){
+            Config.addAddonToCart('sslOption');
+          }
+          if(document.getElementById('addsiteLockOption').checked){
+            Config.addAddonToCart('siteLockOption');
+          }
         },
-        addAddonToCart: function(addonOption, callback){
+        addAddonToCart: function(addonOption){
           ##if(isManager())
             itc="mgr_" + itc;
           ##endif
@@ -2090,9 +2081,6 @@ width: 28px;
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
       
           $.getJSON(cartAPIUrl, function (data) {
-            if(data.Success === true && $.isFunction(callback)) {
-              callback();
-            }
           });
         },
         getCartAPIUrl: function(action,itcCode,ciCode,quantity,planSelected) {
