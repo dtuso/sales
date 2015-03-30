@@ -140,6 +140,25 @@ input[type=checkbox]
 height: 28px;
 width: 28px;
 }
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=checkbox] + label{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -612px -9px;
+  width: 33px;
+  height: 33px;
+  margin-top: 50px;
+}
+
+input[type=checkbox]:checked + label{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -647px -9px;
+  width: 41px;
+  height: 33px;
+}
+
 .domain-search-container {
   margin-bottom: 150px;
 }
