@@ -350,10 +350,6 @@
                 src = $(this).data("btn-src");
             }
           
-            //- if($(this).attr("id")==="get-started-btn"){
-            //-   src = "gs";
-            //- }
-          
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
           
             $.ajax({
