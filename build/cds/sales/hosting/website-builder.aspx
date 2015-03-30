@@ -5115,11 +5115,18 @@ padding-top: 40px;
 padding-bottom: 50px;
 }
 .templates-image{
-  margin: 25px auto;
+  margin: 25px auto 10px;
   box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
+  height: 132px;
   width: 200px;
   overflow: hidden;
+}
+.templates-image-name {
+  color: #333;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;
@@ -5435,12 +5442,12 @@ width: 50%;
            // populate images
            var column = 0;
            var $row;
-           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload templates-image"/></div>');
+           var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
                $row = $("<div>", {class: "row"});
              column++;
-             var itemData = {url:recommendedThemes[index]['URL']};
+             var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);
              $row.append(itemElement)
              if(column == 3 ){
