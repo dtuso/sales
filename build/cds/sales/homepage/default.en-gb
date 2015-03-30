@@ -212,7 +212,7 @@
                         
                       </style>
                       <style>
-                        .co-uk.marquee-tile-tld{background-color:#fff}
+                        .co-uk.marquee-tile-tld{background-color:#dedede}
                         .co-uk .price-text{color:#333}
                       </style>
                     </atlantis:webstash>
