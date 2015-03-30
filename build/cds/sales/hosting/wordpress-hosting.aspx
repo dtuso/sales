@@ -3519,7 +3519,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-1]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]</li>
-                      </ul><a data-ci="96223" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='96223' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a>
+                      </ul><a data-ci="96223" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='96223' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
