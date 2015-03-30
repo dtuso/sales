@@ -397,6 +397,18 @@
           { "ITC Code" : "TopPodWORKLink" },
           { "Description" : "Top Pod - .WORK link" }
         ]
+      },
+      { "Top TLD Pods - .SALE link" : [
+          { "ITC ID" : "97697" },
+          { "ITC Code" : "TopPodSALELink" },
+          { "Description" : "Top Pod - .SALE link" }
+        ]
+      },
+      { "Top TLD Pods - .SITE link" : [
+          { "ITC ID" : "97720" },
+          { "ITC Code" : "TopPodSITELink" },
+          { "Description" : "Top Pod - .SITE link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -827,6 +839,24 @@
           { "ITC Code" : "" },
           { "Description" : "New Available TLD's Column - .SPACE" }
         ]
+      },
+      { "New Domains Available TLD's Column - .GREEN" : [
+          { "ITC ID" : "97717" },
+          { "ITC Code" : "" },
+          { "Description" : "New Available TLD's Column - .GREEN" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .LEGAL" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "97718" },
+          { "Description" : "New Available TLD's Column - .LEGAL" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SITE" : [
+          { "ITC ID" : "" },
+          { "ITC Code" : "97719" },
+          { "Description" : "New Available TLD's Column - .SITE" }
+        ]
       }
     ],
   "Coming Soon Tlds" : [
@@ -918,6 +948,24 @@
           { "ITC ID" : "95234" },
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .ONLINE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .STORE" : [
+          { "ITC ID" : "97716" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .STORE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .NEWS" : [
+          { "ITC ID" : "97715" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .NEWS" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .LIVE" : [
+          { "ITC ID" : "97714" },
+          { "ITC Code" : "" },
+          { "Description" : "Coming Soon TLD's Column - .LIVE" }
         ]
       }
     ],

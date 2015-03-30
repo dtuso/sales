@@ -1,53 +1,32 @@
-extends ../../../../sales/homepage/_hero-polygon.jade
-prepend vars
-  - var classes = "gem"
-  - var dataCI = 97703;
-  - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCi+"' /></relative>]@T]";
-  - var marqueeBackground = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var marqueeFallback = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var polygon = "grey-bottom";
-  - var xsBannerColor = "#DEDEDE";
-
-append heroStyles
+atlantis:webstash(type="css")
   style
     :less
-      #marquee{background-color:#F3F3F4; background-size:initial;
-        .gem{
-          #marqueeImage{background-size:initial;background-position-x: 23%;}
-          mark {text-transform:uppercase;font-size:24px;margin:0 0 5px 0;}
-          .price {font-size:18px; line-height:.9;color:#333;text-transform:uppercase}
-          .price span {font-size:24px; line-height:.9;color:#EF6C0F;text-transform:uppercase}
-          .headline {font-size:36px; color:#333; margin:3% 0;line-height:.9;text-transform:uppercase}
-          .product-name{font-size:24px;color:#77c043;text-transform:uppercase;margin:0 0 5px 0}
-          button {margin:2% 0}
-          .heroContent > * {margin-left:0}
-        }
-        .gem.hero{margin-left:0;}
-        .gem.hero.polygon{
-          .heroContent{padding-top:5%}
-          #marqueeImage{display:none !important};
+      #marquee{background-color:#F3F3F4;
+        .gem{min-height:306px;
+          mark{text-transform:uppercase;font-size:1.5em;margin:0 0 5px 0;}
+          .price {font-size:1.25em;text-transform:uppercase}
+          .price span {font-size:1.5em;color:#EF6C0F;text-transform:uppercase}
+          .headline {font-size:2em;text-transform:uppercase;padding-top:5%;}
+          .product-name{font-size:1.5em;color:#77c043;text-transform:uppercase;margin:0 0 5px 0}
+          button {margin:.5em 0;font-size:1em}
+          .gem-text{width:50%}
+          img{position:absolute;top:0;right:0;max-height:100%}
         }
       }
-      .Explorer8 #marquee {background-position-x: 50%}
-      @media only screen and (min-width: 768px) {
-        .gem.hero.polygon .heroContent{width:100%}
+      @media only screen and (max-width : 1200px) {
+        #marquee .gem .gem-text{font-size:12px;width:40%}
       }
-      @media only screen and (min-width: 768px) {
-        #marquee {background-size:initial;background-position-x:28%;}
-        .gem.hero.polygon .heroContent{width:50%}
-      }
-      @media only screen and (min-width: 992px) {
-        #marquee {background-size:cover;background-position-x:44%;}
-      }
-      @media only screen and (min-width: 1200px) {
-        #marquee {background-size:cover;}
-      }
-      @media only screen and (min-width: 1750px) {
-        #marquee {background-size:cover;background-position-x:30%;}
+      @media only screen and (max-width : 767px) {
+        #marquee .gem{min-height:100%}
+        #marquee .gem img{display:none;}
+        #marquee .gem .gem-text{width:100%}
       }
 block heroContent
-  .headline.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]
-  mark.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
-  .product-name.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]
-  .price.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]
-  button.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
+.gem(data-url!="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703")
+  .gem-text
+    .headline.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]
+    mark.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
+    .product-name.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]
+    .price.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]
+    button.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
+  img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gem-background.jpg")

@@ -16,4 +16,10 @@ block tileStyles
     .merch-tile-support .promo-cta{position:absolute;bottom:5px;color:#f2812e}
     .merch-tile-support span{color:#f2812e}
 block tileCta
-  .promo-cta.walsheim-black CALL [@T[supportphone:<technical />]@T]
+  a.promo-cta.walsheim-black(href!="tel:+[@T[supportphone:<technical />]@T]") Call [@T[supportphone:<technical />]@T]
+  | 
+  | ##if(activeLanguageAny([en-gb]))
+  script.
+    $('a.promo-cta').attr('href',$('a.promo-cta').attr('href').replace(/020/i,"4420"));
+  | 
+  | ##endif
