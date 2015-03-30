@@ -333,7 +333,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_wordpress";
           var ci = "0"
-          var src = "ac"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -347,7 +347,7 @@
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
               if($(this).data("btn-src")!== undefined)
-                src = $(this).data("btn-src");
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -366,14 +366,13 @@
             .done(function(data) {
               var redirectUrl = "[@T[link:<relative path="~/hosting/wordpress-hosting-config.aspx" parammode="common" />]@T]";
               redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-              redirectUrl = redirectUrl.replace('%7b1%7d',src);
               if (redirectUrl.indexOf("?") === -1) {
                 redirectUrl += "?plan=";
               } else {
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
-              redirectUrl += "&src=" + src;
+              redirectUrl += "&src=" + btnSrc;
           
               window.location.href = redirectUrl;
             })
