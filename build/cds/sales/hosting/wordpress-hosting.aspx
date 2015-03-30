@@ -378,7 +378,7 @@
               }
               redirectUrl += productPackage;
           
-              if("false" != "false"){
+              if("true" != "false"){
                 redirectUrl += "&src=" + src
               }
           
@@ -2202,25 +2202,7 @@ top: -6px;
                       <div class="row">
                         <div class="col-xs-12">
                           <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L]  </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper text-center">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="container-fluid ols-carousel-item">
-                      <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-12">
-                          <h2 class="security-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] </h2>
-                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] </p>
+                          <p class="security-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] </p>
                         </div>
                       </div>
                     </div>

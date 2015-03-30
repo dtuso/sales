@@ -19,11 +19,11 @@
 +renderTabbedCarousel({
     backgroundColor: "",
     icode: "",
-    featuresCarouselId: "carousel-security-tabs",
+    featuresCarouselId: "carousel-security-tabs", /* the ID of the tabs area */
     title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]",
     subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]",
     numOfTabs: 6,
-    id: "carousel-security"
+    id: "carousel-security" /* the ID of the actual carousel */
   })
   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-6-title]@L]",ci:page.ci.securityCarouselSlideTab6})
   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]",ci:page.ci.securityCarouselSlideTab1})
@@ -72,17 +72,7 @@
         .col-xs-12
           //- Spammers Beware
           h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-title]@L] 
-          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L]  
-  +carouselItem(securityCarouselItem)
-    .container-fluid.ols-carousel-item
-      .row
-        .col-xs-12
-          +lazyImg("img-responsive img-center", '.carousel-container', "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_automatic-updated_02_v01.png", "", "triggerResize")
-      .row
-        .col-xs-12
-          //- Automatic updates
-          h2.security-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-title]@L] 
-          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-4-desc]@L] 
+          p.security-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-3-desc]@L] 
   +carouselItem(securityCarouselItem)
     .container-fluid.ols-carousel-item
       .row
@@ -110,11 +100,11 @@
 +renderTabbedCarousel({
     backgroundColor: "",
     icode: "",
-    featuresCarouselId: "carousel-security-tabs",
+    featuresCarouselId: "carousel-security-tabs", /* the ID of the tabs area */
     title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]",
     subtitle: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]",
     numOfTabs: 5,
-    id: "carousel-security"
+    id: "carousel-security" /* the ID of the actual carousel */
   })
   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-1-title]@L]",ci:page.ci.securityCarouselSlideTab1})
   +addTab({text:"[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-slide-2-title]@L]",ci:page.ci.securityCarouselSlideTab2})
