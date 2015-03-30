@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="[@T[localization:<language full='true' />]@T]">
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
@@ -25,7 +25,18 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
-    <meta name="p:domain_verify" content="dab477e14df859062b884b18aa901346">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta name="p:domain_verify" content="dab477e14df859062b884b18aa901346">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -86,8 +97,9 @@
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
   </head>
-  <body>
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+  <body ng-controller="">
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="domain-search">
       <div class="container">
@@ -162,60 +174,29 @@
                 <div class="col-md-12 col-sm-6">
                   <div class="tile-wrapper">
                     <atlantis:webstash type="css">
-                      <style>#p4p-list {
-  border-top-width: 3px;
-  border-bottom-width: 1px;
-  width: 80%;
-  text-align: left;
-  text-transform: none;
-  font-size: 18px;
-  padding-top: 0;
-  padding-bottom: 0;
-  color: #333;
-  background-color: #fdda54;
-  border-color: #fcc335;
-}
-#p4p-list .caret {
-  float: right;
-  margin-top: 4px;
-}
-.marquee-tile-p4p {
+                      <style>.marquee-tile.p4p {
   background-color: #77c043;
   background-repeat: no-repeat;
-  background-position: 95% 100%;
+  background-position: 5% 100%;
   background-size: 120px 110px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==);
 }
-.marquee-tile-p4p .tile-content-wrapper {
-  padding: 20px 10px;
+.marquee-tile.p4p .tile-content-wrapper {
+  padding: 3% 11% 0 44%;
+  line-height: 1.3;
 }
-.marquee-tile-p4p .header-text {
-  font-size: 18px;
-  color: #333;
-  text-transform: uppercase;
-  line-height: 20px;
-  margin-bottom: 10px;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .marquee-tile.p4p .tile-content-wrapper {
+    padding-right: 1%;
+  }
 }
-.marquee-tile-p4p .dropdown-menu {
-  width: 80%;
-  border: none;
+.marquee-tile.p4p .headline {
   background-color: #fdda54;
+  padding-left: 2%;
+  margin-left: -2%;
 }
-.marquee-tile-p4p .dropdown-menu > li > a {
-  padding: 5px 10px;
-}
-.marquee-tile-p4p .dropdown-menu > li > a:hover,
-.marquee-tile-p4p .dropdown-menu > li > a:focus {
-  background-color: #fcc335;
-  color: #333;
-}
-.marquee-tile-p4p a.cta-link {
-  display: block;
-  font-size: 16px;
-  color: #333;
-  text-transform: uppercase;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  margin-top: 10px;
+.marquee-tile.p4p button {
+  margin: 5% 0;
 }
 .Explorer8 .marquee-tile-p4p,
 .Explorer7 .marquee-tile-p4p {
@@ -224,30 +205,11 @@
 
                       </style>
                     </atlantis:webstash>
-                    <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile-p4p">
+                    <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
                       <div class="tile-content-wrapper">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col-sm-9">
-                              <div class="left-content-wrapper">
-                                <div class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-header-text]@L]</div>
-                                <div class="dropdown">
-                                  <button id="p4p-list" rule="button" data-toggle="dropdown" href="#" class="dropdown-toggle btn btn-xs walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]<b class="caret"></b></button>
-                                  <ul role="menu" aria-labelledby="p4p-list" class="dropdown-menu walsheim-black">
-                                    <li role="presentation"> <a data-ci="95743" role="menuitem" tabindex="-1" href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95743' /><param name='p4p' value='intimidating' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-intimidating]@L]</a></li>
-                                    <li role="presentation"> <a data-ci="95744" role="menuitem" tabindex="-1" href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95744' /><param name='p4p' value='confusing' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-confusing]@L]</a></li>
-                                    <li role="presentation"> <a data-ci="95745" role="menuitem" tabindex="-1" href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95745' /><param name='p4p' value='annoying' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-annoying]@L]</a></li>
-                                    <li role="presentation"> <a data-ci="95746" role="menuitem" tabindex="-1" href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95746' /><param name='p4p' value='frustration' /></relative>]@T]">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-frustration]@L]</a></li>
-                                  </ul>
-                                </div><a href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" class="cta-link walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-p4p:marquee-tile-p4p-cta-text]@L]</a>
-                              </div>
-                            </div>
-                            <div class="col-sm-3"></div>
-                            <atlantis:webstash type="js">
-                              <script>$(document).ready(function(){$('#p4p-list').dropdown();});</script>
-                            </atlantis:webstash>
-                          </div>
-                        </div>
+                        <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
+                        <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
+                        <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
                       </div>
                     </div>
                   </div>
@@ -344,19 +306,19 @@
             <div class="tile-wrapper">
               <atlantis:webstash type="css">
                 <style>
-                  .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
-                  .online-store-tile .promo-logo{width:80%}
-                  .online-store-tile .promo-text{padding-top:10px;}
-                  .online-store-tile .promo-cta{position:absolute;bottom:5px}
-                  .online-store-tile a{text-decoration:underline;color:#f2812e}
+                  .gem-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
+                  .gem-tertiary-tile .promo-logo{width:100%}
+                  .gem-tertiary-tile .promo-text{padding-top:10px;}
+                  .gem-tertiary-tile .promo-cta{position:absolute;bottom:5px}
+                  .gem-tertiary-tile a{text-decoration:underline;color:#f2812e}
                 </style>
               </atlantis:webstash>
-              <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="tile online-store-tile">
+              <div data-url="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]" data-ci='97704' class="tile gem-tertiary-tile">
                 <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/online-store-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjExLjcxMyA0NS4wMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjExLjcxMyA0NS4wMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNNTguMDY0LDMwLjU2M2M1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJCVM1Mi4zMDQsMzAuNTYzLDU4LjA2NCwzMC41NjN6IE01OC4wNjQsMjYuMDAzYy0yLjU0NCwwLTQuMDU2LTIuMDY0LTQuMDU2LTQuMjk2YzAtMi4yMzIsMS41MTItNC4yOTYsNC4wNTYtNC4yOTYNCgkJYzIuNTY4LDAsNC4wNTYsMi4wNjQsNC4wNTYsNC4yOTZDNjIuMTIxLDIzLjkzOCw2MC42MzMsMjYuMDAzLDU4LjA2NCwyNi4wMDN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTczLjE3NiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTYsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUw3My4xNzYsMTMuMzA2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05MS4zNiwyNS44MzVWMTMuMzA2aC00Ljk5MnYxNi44MDFoOS4zODV2LTQuMjcySDkxLjM2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05Ni42NDgsMzAuMTA3aDUuMDRWMTMuMzA2aC01LjA0VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTA5LjAxNiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTcsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUwxMDkuMDE2LDEzLjMwNnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMzLjAzMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NEgxMjcuMnYtMi44MDhoNS44MzJ2LTMuNTc2SDEyNy4yVjE3LjA1SDEzMy4wMzN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4xMiwyNC40NDNjMCwzLjkzNiwyLjY4OCw2LjEyMSw2Ljk2MSw2LjEyMWM0LjIsMCw2LjgxNy0yLjA4OCw2LjgxNy01LjQNCgkJYzAtMy44MTYtMy41MDQtNC43MDUtNi4wOTctNS42ODljLTEuNTYtMC41NzYtMi4zMDQtMS4wMzItMi4zMDQtMS45NDRjMC0wLjg4OCwwLjcyLTEuMjk2LDEuNTM2LTEuMjk2DQoJCWMxLjEyOCwwLDEuNjU2LDAuNzQ0LDEuNjU2LDIuMDg4aDQuOTkzYzAtMi42NC0xLjY1Ni01LjQ3Mi02LjUyOS01LjQ3MmMtMy4zODQsMC02LjY3MywxLjM2OC02LjY3Myw0Ljk0NA0KCQljMCwzLjQ1NiwzLjA5Niw0LjQ4OCw1Ljg1Nyw1LjU2OGMxLjc3NiwwLjY5NiwyLjU0NCwxLjA4LDIuNTQ0LDIuMDE2YzAsMC44ODgtMC42NDgsMS40NC0xLjY1NiwxLjQ0DQoJCWMtMS4yNzIsMC0yLjExMi0wLjg2NC0yLjExMi0yLjM3NkgxNDAuMTJ6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE1Ny41MiwzMC4xMDdoNC45OTJWMTcuNTc4aDMuNDU2di00LjI3MmgtMTEuOTA1djQuMjcyaDMuNDU2VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTc0LjU4NCwzMC41NjNjNS43ODUsMCw5LjEyMS00LjIyNCw5LjEyMS04Ljg1N3MtMy4zMzYtOC44NTctOS4xMjEtOC44NTcNCgkJYy01Ljc2LDAtOS4wOTcsNC4yMjQtOS4wOTcsOC44NTdTMTY4LjgyNCwzMC41NjMsMTc0LjU4NCwzMC41NjN6IE0xNzQuNTg0LDI2LjAwM2MtMi41NDQsMC00LjA1Ni0yLjA2NC00LjA1Ni00LjI5Ng0KCQljMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5NmMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzE3OC42NDEsMjMuOTM4LDE3Ny4xNTMsMjYuMDAzLDE3NC41ODQsMjYuMDAzeiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xODQuNjA4LDMwLjEwN2g0Ljk5MnYtNC4yOTZoMC45MzZsMi44NTYsNC4yOTZoNS44ODFsLTMuMzYtNS4xMTJjMS45Mi0xLjA4LDMuMDcyLTMuMTQ0LDMuMDcyLTUuNDI0DQoJCWMwLTMuMzg0LTIuNDcyLTYuMjY1LTYuMzEyLTYuMjY1aC04LjA2NVYzMC4xMDd6IE0xOTEuNjY0LDIxLjk0NkgxODkuNnYtNC43NTJoMi4wODhjMS4zNDQsMCwyLjIwOCwxLjA4LDIuMjA4LDIuMzc2DQoJCVMxOTMuMDA4LDIxLjk0NiwxOTEuNjY0LDIxLjk0NnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMjExLjcxMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NGgtNS44MzN2LTIuODA4aDUuODMzdi0zLjU3NmgtNS44MzNWMTcuMDVIMjExLjcxM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMuNjg1LDM4LjIxMmwtMi4wNTUsMS45MDNsLTAuMDkyLDIuNzgybDEuOTI0LDIuMDMybDIuODEzLDAuMDkybDIuMDU1LTEuOTAybDAuMDkzLTIuNzgybC0xLjkyNC0yLjAzMg0KCQlMMTMuNjg1LDM4LjIxMnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMzEuMTQ1LDM1LjcwM2wtMC40MTktMy40NTFsMi4yNi0xMy45MzNsNi4wMTMtNC4zMTZsLTEuNjM5LTMuMTcyTDI1LjcxNywwTDIwLjY2LDUuMDE4bC0wLjAxMywwLjEzNg0KCQljLTIuNDE1LDEuMjA3LTE5LjM4NSwxMC41OS0xOS4zODUsMTAuNTlsMC41NjIsMC44MjZsMTcuOTY0LTguMTI3bDcuNTgsNi41MzNoMi45ODRsLTguNjc1LTcuOTNsNC45NTEtMy43NzJsOS4wMDIsOS4wMzMNCgkJbC01LjI3OCw0LjUwMmwwLjAyNCwwLjAzNkw2LjI4OCwyMi40NDNsMC44LDE0LjkyNmwyMC45NjUtNC41MzlsMC41NzQsMy4zNTZsLTEuNjA2LDEuMDAxbC0wLjc0MiwzLjI0bDEuNzkyLDIuODExbDMuMjc3LDAuNzM0DQoJCWwyLjg0Mi0xLjc3MmwwLjc0My0zLjI0MWwtMS43OTItMi44MTFMMzEuMTQ1LDM1LjcwM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMCwxNi4wMjhsMS42MSwxMS43NDZsMy44NzMsOC4yMzJMNC42NzgsMjEuNzRMMCwxNi4wMjh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==" class="promo-logo svgfallback">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOQAAAAiCAMAAAB4OIUWAAAAaVBMVEVMaXF3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEOGpITHAAAAInRSTlMA3Zmqu+4RRHdmIYjMVTP8WgT2T+SA1bVvxAukKpBjdDuwMqTm/gAABOVJREFUeF7dmNlyrDoMRbcBG5uxpwzd6Uz6/4+8FxSVh4Mhpyo85OyHEBU25WVhtdjAR/V6aPCv6zwS6aeHs8E3ZWypSVfOQOJKkyrdHNQ0SxU1WJqIyvAWVXaeGUaKiLQBzHTfYgc5Yqny/eOGTQ1Kxg88XYdxTaIWk/o5MIhu6R6AjxwvwQGWB/+0zgAeSETjY+GG4yqjJpEeZIt8XFNMWcyBE0hRD0SRIiLFGS3w4zqdZSVep+vr4Y6MugmgsNV0qYCGk1jp+fJFYts5rPlt5YFyi2dqA35OyZGbx88jdigQeuyB4yelIl215ybzbjsAJS+okJj/YRLAKD6K/YQ+DRRIeYTFjCUR57DYJ5HQNFNWtKjLp60NQhWSl8H+rwZaKgWqCSsm4a2wPIQhZWTFkPJEZmXun9eFaDwA5pFyGh9fnv0x7eLy10ilYCwlJFwnh+lvN43pBFJGaoaUSN5rqrALJFM2ilbUGaGSpVWsUhYuDELCDBNAO29MI5BCK5DCbiWRu0AKpaasrgYppNxZz2Q5l86Ws7+eSSOlawfxazq+AcOJMqpuuKevq9xaPZMzqeHqs3EmgZYr106QQlmPtKinG2rFiLwUZfC18/16dXXkNaxXV0ZX2AuS9QYcaEmfR7yNj1GlUa7up5Tqjd/Jkrza1d9JmYhddCWRA94XGF+OaMOiF2anX+94DAVSqx0PUDDsjpBC2VKq4nh8kRYbca+q3Ubv6qSSDHNeV3pXoNkxkajI6xl4oVivMFe+zvJfHVTZZusrpJPdgSaiIv8VIke6wT56oojyGMXUyu/nA36zYqh33K5BaPGhpSz9ZpWUUBoVJLY/EeuM36z0EFo0Fw5Gh/dReD/A8oWlAo8PSm7sBEh3FDVrXEwhxYhy7kHnJMBXx+dIBBJV0kqGHWJsXghkSnnX3OodC8/e5CC74H2InYA8ZAFZOeXdg0IgufCW2IBUArlgXhSU6gH1iWg838LjestAMr5h7tgJyENq6Q+JkHcPrEBW3C5sQJITyMS8EMiU8jye6qYjrxMiyGDBZH1DAO8ErELSADQyZcE9qGtupxjB8QOC51hbcPPkQkglkKl5AbzSEqWr7xcKpPKQylcvxE5AHrL1+xLNid/QYQ6M5gkMmaxCIKPUp+ZF2uP4PlNTqC4PSQMMsRA7AXnILtiXZffAt0ilfBFsQmrDYWxeZCHpc4zjpxxk99W+dQzpnYAcJM9pIFOiOQLJl2YOmG0bUhNZDhPzQuzITRXIFB5LpFByJggInIA8ZEvk+vlChHiOOHpaOvrwhIuWIS2R7qcwNS9aruTbanOQUwYm7oEhAycgA8njy4KIVwSk7oHI+aD+BiQUkYogZaHfhXzOQaKbH604CJ2APCT0PMcwZDQn/Z30Z3IbspfbqXkBPNN3dMidSbS8Ig4iJyAPWQablMypw3r+V9UV8kGVmhfSkG2qzkJyd9bL6r3aELKw1nnIwP8AFtyDJvptt0y3CSkblJoX34Q8Xe7Z1xWKL1OQOAECmVYPNJ4eS+6BuASZjicDKY1Nal5gydcZtequny9Fa93h/DE05gggD9kSUclAiROQhURHpBl4wT2QXLRx77oNyQNpwbw4nC6PXVUWrw/Pb3093M0Na0ohmdoyZOIE5CFb2RdadA++cjLEXyFbkDLwT/PiP5AhxQTF3Y+GAAAAAElFTkSuQmCC" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDIyNi45IDM0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMjYuOSAzNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc3QzA0MyIgZD0iTTIyLjYgMjUuNkwwIDMuMiAwLjcgMzRsMzcuNS0yLjFMNDAgMTAuNCAyMi42IDI1LjZ6TTM5LjQgOEwxLjMgMGwyMS42IDIzLjhMMzkuNCA4ek01NiAxMS4xaDIuM2MtMC4yIDEuMS0xIDItMi42IDIgLTIuMyAwLTMuNC0xLjgtMy40LTMuOCAwLTIgMS4xLTMuOSAzLjItMy45IDEuNCAwIDIuMiAwLjkgMi4zIDEuN2g0LjZjLTAuMy0yLjktMy01LjItNi44LTUuMiAtNC43IDAtNy40IDMuNS03LjQgNy41IDAgMy45IDIuNiA3LjMgNy41IDcuMyAzLjkgMCA2LjQtMi4yIDYuOS01LjRoMS4zVjguM0g1NlYxMS4xek03MS40IDE2LjVjNC44IDAgNy41LTMuNSA3LjUtNy40cy0yLjgtNy40LTcuNS03LjRjLTQuOCAwLTcuNSAzLjUtNy41IDcuNFM2Ni42IDE2LjUgNzEuNCAxNi41ek03MS40IDEyLjdjLTIuMSAwLTMuNC0xLjctMy40LTMuNnMxLjMtMy42IDMuNC0zLjZjMi4xIDAgMy40IDEuNyAzLjQgMy42UzczLjUgMTIuNyA3MS40IDEyLjd6TTgwLjQgMi4xdjE0aDUuN2M0LjYgMCA3LjMtMy40IDcuMy03IDAtMy42LTIuNy03LTcuMy03SDgwLjR6TTg1LjggNS42YzIuMSAwIDMuMyAxLjcgMy4zIDMuNXMtMS4zIDMuNS0zLjMgMy41aC0xLjN2LTdIODUuOHpNMTA3LjIgMTYuMWwtNS4yLTE0aC00LjNsLTUuMSAxNEg5N2wwLjUtMS42aDQuN2wwLjUgMS42SDEwNy4yek0xMDEuMyAxMS41aC0yLjlsMS41LTUuMkwxMDEuMyAxMS41ek0xMDcuOCAyLjF2MTRoNS43YzQuNiAwIDcuMy0zLjQgNy4zLTcgMC0zLjYtMi43LTctNy4zLTdIMTA3Ljh6TTExMy4yIDUuNmMyLjEgMCAzLjMgMS43IDMuMyAzLjVzLTEuMyAzLjUtMy4zIDMuNWgtMS4zdi03SDExMy4yek0xMjEuOSAyLjF2MTRoNS43YzQuNiAwIDcuMy0zLjQgNy4zLTcgMC0zLjYtMi43LTctNy4zLTdIMTIxLjl6TTEyNy4zIDUuNmMyLjEgMCAzLjMgMS43IDMuMyAzLjVzLTEuMyAzLjUtMy4zIDMuNWgtMS4zdi03SDEyNy4zek0xNDcuNyAyLjFoLTQuNmwtMi4xIDUgLTIuMi01aC00LjhsNC43IDkuMSAtMi40IDQuOWg0LjZMMTQ3LjcgMi4xek01Ny43IDIyLjd2LTMuMWgtOXYxNGg5di0zLjFoLTQuOHYtMi4zaDQuOHYtM2gtNC44di0yLjRINTcuN3pNNzUuNyAxOS41aC01LjFsLTMgOSAtMi45LTloLTUuM3YxNGg0di04LjdsMi43IDguN2gzLjFsMi41LTguN3Y4LjdoNFYxOS41ek05MS40IDMzLjVsLTUuMi0xNGgtNC4zbC01LjEgMTRoNC41bDAuNS0xLjZoNC43bDAuNSAxLjZIOTEuNHpNODUuNSAyOC45aC0yLjlsMS41LTUuMkw4NS41IDI4Ljl6TTkyIDMzLjVoNC4ydi0xNEg5MlYzMy41ek0xMDIuNCAzMFYxOS41aC00LjF2MTRoNy44VjMwSDEwMi40ek0xMjcuMiAxOS41aC01LjFsLTMgOSAtMi45LTloLTUuM3YxNGg0di04LjdsMi43IDguN2gzLjFsMi41LTguN3Y4LjdoNFYxOS41ek0xNDMgMzMuNWwtNS4yLTE0aC00LjNsLTUuMSAxNGg0LjVsMC41LTEuNmg0LjdsMC41IDEuNkgxNDN6TTEzNyAyOC45aC0yLjlsMS41LTUuMkwxMzcgMjguOXpNMTQzLjUgMzMuNWg0LjFWMzBoMC44bDIuNCAzLjZoNC45bC0yLjgtNC4zYzEuNi0wLjkgMi41LTIuNiAyLjUtNC41IDAtMi44LTItNS4yLTUuMi01LjJoLTYuN1YzMy41ek0xNDkuNCAyNi43aC0xLjd2LTRoMS43YzEuMSAwIDEuOCAwLjkgMS44IDJDMTUxLjIgMjUuOCAxNTAuNSAyNi43IDE0OS40IDI2Ljd6TTE2NC44IDMzLjVoNC44bC01LjEtNyA1LjEtN2gtNC44bC0zLjkgNS43di01LjdoLTQuMXYxNGg0LjF2LTUuN0wxNjQuOCAzMy41ek0xNzkgMjIuN3YtMy4xaC05djE0aDl2LTMuMWgtNC44di0yLjNoNC44di0zaC00Ljh2LTIuNEgxNzl6TTE4Mi43IDMzLjVoNC4xVjIzLjFoMi45di0zLjZoLTkuOHYzLjZoMi45VjMzLjV6TTE5MC41IDMzLjVoNC4ydi0xNGgtNC4yVjMzLjV6TTIwMSAxOS41aC00LjJ2MTRoNC4xdi04bDQuNSA4aDQuMnYtMTRoLTQuMXY4LjNMMjAxIDE5LjV6TTIxOSAyOC41aDIuM2MtMC4yIDEuMS0xIDItMi42IDIgLTIuMyAwLTMuNC0xLjgtMy40LTMuOCAwLTIgMS4xLTMuOSAzLjItMy45IDEuNCAwIDIuMiAwLjkgMi4zIDEuN2g0LjZjLTAuMy0yLjktMy01LjItNi44LTUuMiAtNC43IDAtNy40IDMuNS03LjQgNy41IDAgMy45IDIuNiA3LjMgNy41IDcuMyAzLjkgMCA2LjQtMi4yIDYuOS01LjRoMS4zdi0yLjdIMjE5VjI4LjV6Ii8+PC9zdmc+" class="promo-logo svgfallback">
                   </div>
-                  <div class="promo-text walsheim-black">EVERYTHING YOU NEED TO START SELLING ONLINE.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" class="walsheim-black">Start your FREE TRIAL </a>
+                  <div class="promo-text walsheim-black">[@L[cds.sales/homepage/tiles/gem:gem-tile-text]@L]</div>
+                  <div class="promo-cta"><a href="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]" class="walsheim-black">[@L[cds.sales/homepage/tiles/gem:gem-tile-cta]@L] </a>
                   </div>
                 </div>
               </div>
@@ -1320,7 +1282,8 @@
         </div>
       </div>
     </section>
-    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
