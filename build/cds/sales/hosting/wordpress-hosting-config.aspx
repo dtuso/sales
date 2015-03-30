@@ -1328,17 +1328,16 @@ input[type="checkbox"]:checked {
   left: -9999px;
 }
 
-input[type=checkbox] + label{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -612px -9px;
-  width: 33px;
-  height: 33px;
-  margin-top: 50px;
+input[type=checkbox]:not(:checked) + label{
+  right: 3px;
+  top: 2px;
+  color: #333;
 }
 
-input[type=checkbox]:checked + label{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -647px -9px;
-  width: 41px;
-  height: 33px;
+input[type=checkbox] + label{
+  font-size: 2.5em;
+  color: #579006;
+  margin-top: 50px;
 }
 
 .domain-search-container {
@@ -1460,7 +1459,7 @@ input[type=checkbox]:checked + label{
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>" data-yearly="<%= yearly %>"/><label id="<%= package %>"></label>
+            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>" data-yearly="<%= yearly %>"/><label id="<%= package %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1477,7 +1476,7 @@ input[type=checkbox]:checked + label{
       <li id="slElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>"/><label id="<%= packageOne %>"></label>
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>"/><label id="<%= packageOne %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class ="config-text-primary">
@@ -1493,7 +1492,7 @@ input[type=checkbox]:checked + label{
       <li id="sslElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>"/><label id="<%= packageTwo %>"></label>
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>"/><label id="<%= packageTwo %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1899,6 +1898,14 @@ input[type=checkbox]:checked + label{
             parentID.append(addonTemplate(officeData));
       
             $('#officeEmail').click(function(){
+              if($('#officeEmail').hasClass("uxicon-box")){
+                $('#officeEmail').removeClass("uxicon-box");
+                $('#officeEmail').addClass("uxicon-check-box");
+              }
+              else {
+                $('#officeEmail').removeClass("uxicon-check-box");
+                $('#officeEmail').addClass("uxicon-box");
+              }
               $('input[name="'+radioName+'"]').click();
               Config.updateOrderSummary();
             });
@@ -1952,10 +1959,26 @@ input[type=checkbox]:checked + label{
             parentID.append(addonTemplate(securityData));
       
             $('#sitelock_Basic1Yr').click(function(){
+              if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
+                $('#sitelock_Basic1Yr').removeClass("uxicon-box");
+                $('#sitelock_Basic1Yr').addClass("uxicon-check-box");
+              }
+              else {
+                $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+                $('#sitelock_Basic1Yr').addClass("uxicon-box");
+              }
               $('input[name="'+checkNameOne+'"]').click();
               Config.updateOrderSummary();
             });
             $('#ssl_std_1').click(function(){
+              if($('#ssl_std_1').hasClass("uxicon-box")){
+                $('#ssl_std_1').removeClass("uxicon-box");
+                $('#ssl_std_1').addClass("uxicon-check-box");
+              }
+              else {
+                $('#ssl_std_1').removeClass("uxicon-check-box");
+                $('#ssl_std_1').addClass("uxicon-box");
+              }
               $('input[name="'+checkNameTwo+'"]').click();
               Config.updateOrderSummary();
             });
@@ -2139,22 +2162,24 @@ input[type=checkbox]:checked + label{
             ##endif
           }
       
+          var siteLockCheckOption = function(){
+            if(document.getElementById('addsiteLockOption').checked){
+              Config.addAddonToCart('siteLockOption');
+            }
+          };
+      
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
-            if (data.Success == true) {}});
-      
-          if(document.getElementById('addsslOption').checked){
-            setTimeout(function(){
-             Config.addAddonToCart('sslOption');
-            }, 1000);
-          }
-          if(document.getElementById('addsiteLockOption').checked){
-            setTimeout(function(){
-             Config.addAddonToCart('siteLockOption');
-            }, 1000);
-          }
+            if (data.Success == true) {            
+              if(document.getElementById('addsslOption').checked){
+                Config.addAddonToCart('sslOption', siteLockCheckOption);
+              } else {
+                siteLockCheckOption();
+              }
+            }
+          });
         },
-        addAddonToCart: function(addonOption){
+        addAddonToCart: function(addonOption, callback){
           ##if(isManager())
             itc="mgr_" + itc;
           ##endif
@@ -2164,6 +2189,9 @@ input[type=checkbox]:checked + label{
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
       
           $.getJSON(cartAPIUrl, function (data) {
+            if(data.Success === true && $.isFunction(callback)) {
+              callback();
+            }
           });
         },
         getCartAPIUrl: function(action,itcCode,ciCode,quantity,planSelected) {
