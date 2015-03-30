@@ -1,0 +1,50 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .wsb{background-color:#fff;color:#58585a;position:relative;}
+    .wsb-logo-wrap{position:absolute;}
+    .wsb-logo{background-position: -15px -1757px;width:440px;height:140px;margin:30px 20px 20px}
+    .wsb-text-wrap{position:absolute;top:35.5%;bottom:18%;}
+    .wsb-text{width:440px;margin:0 10px 0 20px;height:100%;}
+    .wsb-headline{font-size:32px;line-height:32px}
+    .wsb-maintext{font-size:35px;line-height:30px;font-family:'Walsheim-Black'}
+    .wsb-subtext{font-size:48px;line-height:48px;}
+    .wsb-headline>.gdhp-dash{display:inline-block;background-color:#58585a;width:305px;height:4px;margin-bottom:9px}
+    .wsb-disclaimer{font-size:22px;}
+    .wsb-disclaimer>.orange-warning{color:#f5811f;display:inline;font-family:'Walsheim-Bold';font-size:20px;}
+    .wsb>.host-btn-wrap{margin:20px;position:absolute;bottom:0;}
+    .wsb>.host-btn-wrap>.tungsten{width:216px;}
+    .wsb>.host-btn-wrap>.btn-lrg{width:220px;float:left;margin-right:10px}
+    .wsb>.host-btn-wrap>span>span.wsb-pricetext{font-family:'Walsheim-Light';font-size:28px !important;line-height:28px;margin-bottom:5px;color:#ff8a00;}
+    .wsb>.host-btn-wrap>span>span.wsb-price{font-family:'Walsheim-Bold';color:#ff8a00;}
+    .wsb .wsb-text-wrap .wsb-table-display{display:table;height:100%;width:440px;table-layout:fixed;}
+    .wsb .wsb-text-wrap .wsb-table-cell-display{display:table-cell;vertical-align:middle;width:440px;}
+    .bigtext{visibility:hidden;}
+  </style><!--[if lt IE 9]>
+  <style>
+  <div class="gdhp-tile-area">.wsb .wsb-text-wrap .wsb-table-display{display:block;height:auto;width:auto;}</div>
+  <div class="gdhp-tile-area">.wsb .wsb-text-wrap .wsb-table-cell-display{display:block;vertical-align:none;width:auto;}</div></style>
+  <![endif]-->
+</atlantis:webstash>
+<div id="gdhp-hostingtile" data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='93458' /></relative>]@T]" data-ci="93458" class="gdhp-tile wsb js-gdhpclick">
+  <div class="wsb-logo-wrap">
+    <div class="wsb-logo tile-sprite"></div>
+  </div>
+  <div class="wsb-text-wrap">
+    <div class="wsb-text">
+      <div class="wsb-table-display">
+        <div class="wsb-table-cell-display bigtext"><span class="wsb-headline tungsten">[@L[cds.sales/homepage/tile/hosting:host-tile-web-hosting]@L]<span class="gdhp-dash"></span></span><span class="wsb-maintext">[@L[cds.sales/homepage/tile/hosting:host-tile-maintext]@L]</span><span class="wsb-subtext tungsten">[@L[cds.sales/homepage/tile/hosting:host-tile-subtext]@L]</span>
+          <div class="wsb-disclaimer">[@L[cds.sales/homepage/tile/hosting:host-tile-disclaimer]@L]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="host-btn-wrap"><a id="gdhp-hostingtile-btn" href="javascript:void(0)" data-ci="93458" class="btn btn-lrg btn-orange">[@L[cds.sales/homepage/tile/hosting:host-tile-btn]@L]</a><span class="tungsten bigtext"><span class="b wsb-pricetext">[@L[cds.sales/homepage/tile/hosting:host-tile-starting]@L]</span><span class="wsb-price">
+         
+        ##if(countrySiteAny(in))
+        [@T[productprice:<current productid="294057" period="monthly" />]@T]
+        ##else
+        [@T[productprice:<current productid="32051" period="monthly" />]@T]
+        ##endif
+        [@L[cds.sales/homepage/tile/hosting:host-tile-month]@L]</span></span></div>
+</div>
