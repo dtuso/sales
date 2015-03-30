@@ -1324,6 +1324,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_hosting_4GH";
           var ci = "0"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -1336,6 +1337,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -1360,6 +1363,7 @@
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
           
               window.location.href = redirectUrl;
             })

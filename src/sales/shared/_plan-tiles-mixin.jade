@@ -119,13 +119,15 @@ mixin renderPlanTiles(columns, options)
 mixin renderCartLogic(url, itc, options)
   - addToCartRedirectUrl = url
   - itemTrackingCode = itc
-  - options = {};
-  - options.dropdown = false;
+  - options = options || {};
+  - options.dropdown = options.dropdown || false;
+  - options.srcParam = options.srcParam || false;
 
   atlantis:webstash(type="js")
     script(type="text/javascript").
       var itemTrackingCode = "!{itemTrackingCode}";
       var ci = "0"
+      var btnSrc = "ac"
 
       $(".btn-plan").click(function() {
 
@@ -138,6 +140,8 @@ mixin renderCartLogic(url, itc, options)
           var productPackage = $(this).data("plan");
           if($(this).data("ci")!== undefined)
             ci = $(this).data("ci");
+          if($(this).data("btn-src")!== undefined)
+            btnSrc = $(this).data("btn-src");
         }
 
         var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -162,6 +166,7 @@ mixin renderCartLogic(url, itc, options)
             redirectUrl += "&plan=";
           }
           redirectUrl += productPackage;
+          redirectUrl += "&src=" + btnSrc;
 
           window.location.href = redirectUrl;
         })

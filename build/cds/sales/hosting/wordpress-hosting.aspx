@@ -258,7 +258,7 @@
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
               <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="pull-left as-low-as-pricing">
                 <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
                 <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
@@ -333,6 +333,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_wordpress";
           var ci = "0"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -345,6 +346,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -369,6 +372,7 @@
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
           
               window.location.href = redirectUrl;
             })
