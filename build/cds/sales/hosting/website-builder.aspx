@@ -858,7 +858,6 @@
                   .done(function(data) {
                     var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
