@@ -221,6 +221,12 @@
           { "ITC Code" : "GtldEoiPartyLink" },
           { "Description" : ".PARTY Slide Link" }
           ]
+      },
+      { ".SITE Slide Link" : [
+          { "ITC ID" : "97775" },
+          { "ITC Code" : "GtldEoiSiteLink" },
+          { "Description" : ".SITE Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [
