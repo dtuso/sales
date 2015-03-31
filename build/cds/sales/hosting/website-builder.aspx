@@ -866,10 +866,6 @@
                     redirectUrl += productPackage;
                     redirectUrl += "&src=" + btnSrc;
                 
-                    if("false" != "false"){
-                      redirectUrl += "&src=" + src
-                    }
-                
                     window.location.href = redirectUrl;
                   })
                   .fail(function(xhr, status, error) {
