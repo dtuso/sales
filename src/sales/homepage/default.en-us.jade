@@ -1,6 +1,8 @@
 extends ./_home-page.jade
 block append seo
   meta(name="p:domain_verify" content="dab477e14df859062b884b18aa901346")
+block bugBar
+  +tldBugs(["com","club","us","org","rocks"])
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
