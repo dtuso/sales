@@ -1339,11 +1339,32 @@ input[type=checkbox]:not(:checked) + label{
 input[type=checkbox] + label{
   font-size: 2.5em;
   color: #579006;
-  margin-top: 50px;
 }
 
 .domain-search-container {
   margin-bottom: 150px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+  input[type=checkbox] + label{
+    font-size: 2.5em;
+    color: #579006;
+    right: 25px !important;
+  }
+  input[type=checkbox]:not(:checked) + label{
+    right: 28px !important;
+  }
+}
+
+@media (max-width: 767px){ 
+  input[type=checkbox] + label{
+    font-size: 2.5em;
+    color: #579006;
+    right: 15px !important;
+  }
+  input[type=checkbox]:not(:checked) + label{
+    right: 18px !important;
+  }
 }
       </style>
     </atlantis:webstash>
