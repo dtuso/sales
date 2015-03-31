@@ -497,6 +497,8 @@ Tell the world what moves you with <strong>.rocks</strong>
 Say bienvenue with <strong>.quebec</strong>
 <phrase key="MainBannerCarouselSlideTextExpert" />
 You have the answers. Share them with <strong>.expert</strong>
+<phrase key="MainBannerCarouselSlideGuru" />
+Share what you know with <strong>.guru</strong>.
 <phrase key="MainBannerCarouselSlideSave" />
 SAVE 30% or more
 <phrase key="MainBannerCarouselSlideList" comment="only need to translate the word 'and' " />
