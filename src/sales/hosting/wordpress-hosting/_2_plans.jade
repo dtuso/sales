@@ -52,7 +52,7 @@ atlantis:webstash(type="css")
     }
 
 section#plans
-  +renderCartLogic(page.config.url, page.itc)
+  +renderCartLogic(page.config.url, page.itc, {srcParam:"true"})
   +renderPlanTiles(4) 
     +planTile("planTileA")
       include ./_2_plan-A.jade
@@ -72,7 +72,7 @@ section#plans
             | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] 
             +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]")
           | 
-          | ##if(productIsOffered(99))
+          | ##if(productIsOffered(99) && !countrySiteAny(mx))
           | 
           li
             | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]

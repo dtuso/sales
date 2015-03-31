@@ -2,256 +2,298 @@
 <Text>
   <ByLocale>
     <enus>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="us"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enus>
     <esus>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="us"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </esus>
     <enca>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="ca"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enca>
     <frca>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="ca"></li>
       <li tld="quebec"></li>
+      <li tld="rocks"></li>
     </frca>
     <esmx>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </esmx>
     <esar>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </esar>
     <escl>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </escl>
     <esco>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </esco>
     <espe>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="pe"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </espe>
     <esve>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </esve>
     <ptbr>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="br"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ptbr>
     <enau>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="com-au"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enau>
     <ennz>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ennz>
     <enin>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="in"></li>
-      <li tld="co-in"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enin>
     <enmy>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="asia"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enmy>
     <enpk>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enpk>
     <enph>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enph>
     <ensg>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ensg>
     <nlbe>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="be"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </nlbe>
     <frbe>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="be"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </frbe>
     <dadk>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="dk"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </dadk>
     <dede>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="de"></li>
-      <li tld="berlin"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </dede>
     <eses>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="es"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </eses>
     <frfr>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="fr"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </frfr>
     <enie>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enie>
     <itit>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="it"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </itit>
     <nlnl>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="nl"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </nlnl>
     <nbno>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </nbno>
     <deat>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </deat>
     <plpl>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="pl"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </plpl>
     <ptpt>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ptpt>
     <dech>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </dech>
     <frch>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </frch>
     <fifi>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </fifi>
     <svse>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </svse>
     <itch>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </itch>
     <trtr>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </trtr>
     <engb>
-      <li tld="net"></li>
-      <li tld="co"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="uk"></li>
-      <li tld="cymru"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </engb>
     <elgr>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </elgr>
     <ruru>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="ru"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ruru>
     <ukua>
+      <li tld="com"></li>
+      <li tld="club"></li>
       <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </ukua>
     <enza>
-      <li tld="net"></li>
-      <li tld="co"></li>
-      <li tld="reviews"></li>
-      <li tld="biz"></li>
+      <li tld="com"></li>
+      <li tld="club"></li>
+      <li tld="co-nz"></li>
+      <li tld="org"></li>
+      <li tld="rocks"></li>
     </enza>
   </ByLocale>
   
@@ -284,5 +326,12 @@
     <reviews    cicode="97581" lpurl="/tlds/reviews"    pfid="194774"/>
     <mx         cicode="96868" lpurl="/tlds/mx-domain"  pfid="41901"/>
     <cymru      cicode="97582" lpurl="/tlds/cymru"      pfid="594711"/>
+    <co-nz      cicode="97763" lpurl="/tlds/nz-domain"  pfid="12901"/>
+    <be         cicode="97762" lpurl="/tlds/be"         pfid="12501"/>
+    <ru         cicode="97767" lpurl="/tlds/ru-domain"  pfid="171428"/>
+    <pl         cicode="97765" lpurl="/tlds/pl-domain"  pfid="168381"/>
+    <dk         cicode="97764" lpurl="/tlds/dk"         pfid="142908"/>
+    <us         cicode="97768" lpurl="/tlds/us.aspx"    pfid="11601"/>
+    <rocks      cicode="97766" lpurl="/tlds/rocks"      pfid="221207"/>
   </BugCatalog>
 </Text>

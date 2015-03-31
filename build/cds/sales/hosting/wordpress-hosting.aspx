@@ -24,7 +24,15 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/icn/88489_Facebook_image.jpg">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -262,7 +270,7 @@
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
               <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan pull-left">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="pull-left as-low-as-pricing">
                 <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
                 <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
@@ -337,7 +345,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_wordpress";
           var ci = "0"
-          var src = "ac"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -350,8 +358,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
-              if($(this).data("src")!== undefined)
-                src = $(this).data("src");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -377,6 +385,11 @@
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
+          
+              if("true" != "false"){
+                redirectUrl += "&src=" + src
+              }
           
               window.location.href = redirectUrl;
             })
@@ -1040,7 +1053,7 @@
             <ul class="green-check">
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
-              ##if(productIsOffered(99))
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
                
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
@@ -1103,15 +1116,13 @@
         #faq {
           background-color: #fff;
         }
-        #features-lose{
-          background-color: #84D54A;
-          margin:0px;
-        }
+        #features-lose,
         #training {
           background-color: #84D54A;
         } 
         #renderMidPageNavBottom,
-        #faq {
+        #faq,
+        #features-lose {
           margin:0;
           padding:0;
         }
@@ -1160,6 +1171,9 @@
           .reviews-carousel-img {min-height:71px;}
         }
         
+        .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
+          font-family: 'Walsheim-Bold'!important; /* GCE-37962 */
+        }
         
         
       </style>
@@ -3527,7 +3541,7 @@ top: -6px;
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-1]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-2]@L]</li>
                         <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-alt-2-list-item-3]@L]</li>
-                      </ul><a data-ci="96223" href="[@T[link:<relative path='/hosting/vps-hosting.aspx'><param name='ci' value='96223' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a>
+                      </ul><a data-ci="96223" href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='96223' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a>
                     </div>
                   </div>
                 </div>
@@ -4141,6 +4155,28 @@ ul li.no-check {
         .btn, 
         .word-break,
         .features-tabbed-carousel-icon .features-text {
+          word-wrap: break-word;
+          word-break: normal;
+        }
+        
+        html[lang="ja"]    .btn, 
+        html[lang="ko"]    .btn, 
+        html[lang="th"]    .btn, 
+        html[lang="th-th"] .btn, 
+        html[lang="zh-cn"] .btn, 
+        html[lang="zh-tw"] .btn, 
+        html[lang="ja"]    .word-break,
+        html[lang="ko"]    .word-break,
+        html[lang="th"]    .word-break,
+        html[lang="th-th"] .word-break,
+        html[lang="zh-cn"] .word-break,
+        html[lang="zh-tw"] .word-break,
+        html[lang="ja"]    .features-tabbed-carousel-icon .features-text,
+        html[lang="ko"]    .features-tabbed-carousel-icon .features-text,
+        html[lang="th"]    .features-tabbed-carousel-icon .features-text,
+        html[lang="th-th"] .features-tabbed-carousel-icon .features-text,
+        html[lang="zh-cn"] .features-tabbed-carousel-icon .features-text,
+        html[lang="zh-tw"] .features-tabbed-carousel-icon .features-text {
           word-wrap: break-word;
           word-break: break-all;
         }

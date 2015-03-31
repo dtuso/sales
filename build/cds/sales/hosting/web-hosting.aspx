@@ -26,7 +26,15 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -1328,7 +1336,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_hosting_4GH";
           var ci = "0"
-          var src = "ac"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -1341,8 +1349,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
-              if($(this).data("src")!== undefined)
-                src = $(this).data("src");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -1368,6 +1376,11 @@
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
+          
+              if("false" != "false"){
+                redirectUrl += "&src=" + src
+              }
           
               window.location.href = redirectUrl;
             })

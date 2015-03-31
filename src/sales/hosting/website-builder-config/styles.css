@@ -62,12 +62,18 @@ list-style: none;
     display: flex;
     align-items: center;
 }   
-@media (max-width: 768px) { 
+.product-radio {
+  margin-top :10px; 
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 1024px) { 
     .vertical-align {
         display: block;
         align-items: inherit;
     }
-    .text-xs-right{
+    .text-md-right{
       text-align: right;
     }
     .config-text-primary {
@@ -84,6 +90,23 @@ list-style: none;
     }
     .config-text-disclaimer {
       font-size: 14px;
+    }
+    .product-radio {
+      margin-top :0;
+    } 
+    .item-price{
+      border-bottom: 1px solid #EBEBEB;
+    }
+}
+@media (max-width: 428px) { 
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-md-right{
+      text-align: inherit;
+    }
+    .item-price{
+      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -118,4 +141,13 @@ list-style: none;
 }
 .item-savings-wrapper{
   text-transform: uppercase;
+}
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+.selected-radio{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
+  width: 36px;
+  height: 36px;
 }

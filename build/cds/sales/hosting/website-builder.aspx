@@ -24,7 +24,15 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -817,7 +825,7 @@
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
-                var src = "ac"
+                var btnSrc = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -830,8 +838,8 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
-                    if($(this).data("src")!== undefined)
-                      src = $(this).data("src");
+                    if($(this).data("btn-src")!== undefined)
+                      btnSrc = $(this).data("btn-src");
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -857,6 +865,11 @@
                       redirectUrl += "&plan=";
                     }
                     redirectUrl += productPackage;
+                    redirectUrl += "&src=" + btnSrc;
+                
+                    if("false" != "false"){
+                      redirectUrl += "&src=" + src
+                    }
                 
                     window.location.href = redirectUrl;
                   })
@@ -5561,7 +5574,7 @@ width: 50%;
            var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
-               $row = $("<div>", {class: "row"});
+               $row = $("<div>", {'class': 'row'});
              column++;
              var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);

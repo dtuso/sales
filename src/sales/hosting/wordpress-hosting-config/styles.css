@@ -62,19 +62,25 @@ list-style: none;
     display: flex;
     align-items: center;
 }   
-@media (max-width: 768px) { 
+.product-radio {
+  margin-top :10px; 
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 1024px) { 
     .vertical-align {
         display: block;
         align-items: inherit;
     }
-    .text-xs-right{
+    .text-md-right{
       text-align: right;
     }
     .config-text-primary {
       font-size: 20px;
     }
     .config-text-secondary {
-      font-size: 14px;
+      font-size: 20px;
     }
     .config-text-lead {
       font-size: 16px;
@@ -84,6 +90,23 @@ list-style: none;
     }
     .config-text-disclaimer {
       font-size: 14px;
+    }
+    .product-radio {
+      margin-top :0;
+    } 
+    .item-price{
+      border-bottom: 1px solid #EBEBEB;
+    }
+}
+@media (max-width: 428px) { 
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-md-right{
+      text-align: inherit;
+    }
+    .item-price{
+      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -99,7 +122,7 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .row {
+.order-item-details-wrapper .toprow {
   margin-top: 15px;
 }
 .item-title-wrapper{
@@ -119,6 +142,15 @@ list-style: none;
 .item-savings-wrapper{
   text-transform: uppercase;
 }
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+.selected-radio{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
+  width: 36px;
+  height: 36px;
+}
 #officeOption{
   text-decoration: line-through;
 }
@@ -134,4 +166,30 @@ list-style: none;
 }
 #officeStep .sf-tipper-target {
   margin-bottom: 6px;
+}
+input[type=checkbox]
+{
+height: 28px;
+width: 28px;
+}
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=checkbox]:not(:checked) + label{
+  right: 3px;
+  top: 2px;
+  color: #333;
+}
+
+input[type=checkbox] + label{
+  font-size: 2.5em;
+  color: #579006;
+  margin-top: 50px;
+}
+
+.domain-search-container {
+  margin-bottom: 150px;
 }
