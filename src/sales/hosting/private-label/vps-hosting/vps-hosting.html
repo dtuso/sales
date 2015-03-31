@@ -4,13 +4,18 @@ id: 55106aebf778fc0ec0b66ec6
 name: GCE-36425
 comments: Word updates
 url: http://www.dev-secureserver.net/hosting/vps-hosting.aspx
-assetPath: true
+assetPath: false
 ---
 {% extends 'layouts/pl-base.html' %}
 
 {% block metahead %}
 
 {% parent %}
+  <style type="text/css">
+  {% less %}
+  {% include 'css/styles.less' %}
+  {% endless %}
+  </style>
 
 {% endblock %}
 
@@ -21,26 +26,19 @@ assetPath: true
 
   <div class="vps-main-banner">
     <div class="hdrHeader g-rnd-10">
-      <div class="vpsHdrSprt notInTheCloud">&nbsp;</div>
+      <div class=" notInTheCloud">&nbsp;</div>
       <div class="hdrUptime">
         <div class="hdrUptimePct">99.9%</div>
         <div class="hdrUptimeText">UPTIME GUARANTEE<br>on network</div>
       </div>
-      <div class="hdrOs">&nbsp;</div>
-      <div class="hdrBanHeadline">Choose the Operating System<br>that's right for you!</div>
-      <div class="hdrCentOS">CentOS<sup style="font-size: 10px;">&reg;</sup></div>
-      <div class="hdrFedora">Fedora<sup style="font-size: 10px;">&reg;</sup></div>
-      <div class="hdrWindows">Windows<sup style="font-size: 10px;">&reg;</sup></div>
-      <div class="hdrPoweredBy">Powered By Linux<sup style="font-size:8px;">&reg;</sup></div>
+      <div class="hdrBanHeadline">Choose the OS that's right for you!</div>
       <table class="headerTable">
         <tbody>
           <tr>
-            <td class="headerRow headerText">
-              <div class="hdrHeadline OneLinkNoTx">Virtual Private Servers</div>
-            </td>
+            <td class="hdrHeadline">Virtual Private Servers</td>
           </tr>
           <tr>
-            <td class="headerRowDetail headerTextDetail">
+            <td>
               <div class="hdrSubLine">Resources ready in minutes, flexible plans designed to grow, and your choice of Management Levels, all on your VPS. For questions and to get started, call <b>(480) 624-2500</b>.</div>
             </td>
           </tr>
@@ -52,10 +50,6 @@ assetPath: true
       </div>
     </div>
     <div class="floatend">&nbsp;</div>
-    <div style="color:#000; font-weight:bold; font-size: 16px; margin:0px 0px 15px 10px;">Our VPS Hosting is made to grow as your needs grow.</div>
-    <div style="font-size:12px; margin:0px 10px 20px 10px;">
-      Get all the power and control of your own Virtual Server for less! With a Hunter's, New Show VPS, your RAM and storage are guaranteed - we never overload. Plus, you can add more capacity anytime with just a few clicks*. Not sure how to set it up? Our experts will help get your server p and running fast! Just choose the plan that's right for you, customize your bandwidth, control panel (Parallels® Plesk Panel or cPanel®) and backup options and leave the rest to us. Call <b>(480) 624-2500</b> to get started now.
-    </div>
 
     <h3 class="center-text">Choose from Linux or Windows</h3>
 
@@ -172,9 +166,9 @@ assetPath: true
       </div>
     </div>
     <div class="row">
-
+      <!-- 1/6 -->
       <div class="col-sm-4 text-center key-benefit cpanel-benefit">
-        <div class="img1 key-benefits-img "></div>
+        <div class="img1 key-benefits-img"></div>
         <h3 class="key-benefits-title">Feel at home with<br/>cPanel<sup>®</sup>.</h3>
         <div class="key-benefits-text">
           Hit the ground running with the industry-<br/>
@@ -184,7 +178,7 @@ assetPath: true
       </div>
 
       <div class="col-sm-4 text-center key-benefit plesk-benefit">
-        <div class="text1">Plesk<sup>&reg;</sup></div>
+        <div class="img1 key-benefits-img"></div>
         <h3 class="key-benefits-title">Keep your Windows<br/>VPS clean with<br/>Parallels Plesk.</h3>
         <div class="key-benefits-text">
           Easily manage all aspects of your server with<br/>
@@ -192,6 +186,7 @@ assetPath: true
         </div>
       </div>
 
+      <!-- 2/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img2 key-benefits-img"></div>
         <h3 class="key-benefits-title">Managed services<br/>come standard.</h3>
@@ -202,6 +197,7 @@ assetPath: true
         </div>
       </div>
 
+      <!-- 3/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img3 key-benefits-img"></div>
         <h3 class="key-benefits-title">Provisioning that'll<br/>rock your world.</h3>
@@ -211,10 +207,10 @@ assetPath: true
           minutes.
         </div>
       </div>
-
     </div>
 
     <div class="row">
+      <!-- 4/6 -->
       <div class="col-sm-4 text-center key-benefit cpanel-benefit">
         <div class="img4 key-benefits-img"></div>
         <h3 class="key-benefits-title">Find your roots.</h3>
@@ -234,6 +230,7 @@ assetPath: true
         </div>
       </div>
 
+      <!-- 5/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img5 key-benefits-img"></div>
         <h3 class="key-benefits-title">Processing power to<br/>spare.</h3>
@@ -243,6 +240,7 @@ assetPath: true
         </div>
       </div>
 
+      <!-- 6/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img6 key-benefits-img"></div>
         <h3 class="key-benefits-title">Provision-free<br/>upgrades.</h3>
@@ -252,7 +250,6 @@ assetPath: true
           provision.
         </div>
       </div>
-
     </div>
   </div>
 
@@ -295,10 +292,10 @@ assetPath: true
               <div>OS Distributions</div>
             </td>
             <td class="compare-chart-entry">
-              <div>CentOS 6, CentOS 7, Fedora, Ubuntu, Windows</div>
+              <div>CentOS 6, CentOS 7, Fedora, Ubuntu, Windows 2008, Windows 2012</div>
             </td>
-            <td class="compare-chart-entry"><div>CentOS 6, Windows</div></td>
-            <td class="compare-chart-entry"><div>CentOS 6, Windows</div></td>
+            <td class="compare-chart-entry"><div>CentOS 6, Windows 2008, Windows 2012</div></td>
+            <td class="compare-chart-entry"><div>CentOS 6, Windows 2008, Windows 2012</div></td>
           </tr>
           <tr class="compare-chart-row" style="">
             <td class="compare-chart-header"><div>Control Panel</div></td>

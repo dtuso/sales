@@ -4,13 +4,18 @@ id: 55108587f778fc0ec0b66ef4
 name: GCE-36425
 comments: Word updates
 url: http://www.dev-secureserver.net/hosting/dedicated-server.aspx
-assetPath: true
+assetPath: false
 ---
 {% extends 'layouts/pl-base.html' %}
 
 {% block metahead %}
 
 {% parent %}
+  <style type="text/css">
+  {% less %}
+  {% include 'css/styles.less' %}
+  {% endless %}
+  </style>
 
 {% endblock %}
 
@@ -33,7 +38,7 @@ assetPath: true
             <td class="hdrHeadline">Dedicated Servers</td>
           </tr>
           <tr>
-            <td class="">
+            <td>
               <div class="hdrSubLine">Resources ready in minutes, flexible plans designed to grow, and your choice of Management Levels, all on your VPS. For questions and to get started, call <b>(480) 624-2500</b>.</div>
             </td>
           </tr>
@@ -175,8 +180,9 @@ assetPath: true
       </div>
     </div>
     <div class="row">
+      <!-- 1/6 -->
       <div class="col-sm-4 text-center key-benefit cpanel-benefit">
-        <div class="img1 key-benefits-img "></div>
+        <div class="img1 key-benefits-img"></div>
         <h3 class="key-benefits-title">Feel at home with<br/>cPanel<sup>®</sup>.</h3>
         <div class="key-benefits-text">
           Hit the ground running with the industry-<br/>
@@ -184,8 +190,9 @@ assetPath: true
           love.
         </div>
       </div>
+
       <div class="col-sm-4 text-center key-benefit plesk-benefit">
-        <div class="text1">Plesk<sup>&reg;</sup></div>
+        <div class="img1 key-benefits-img"></div>
         <h3 class="key-benefits-title">Make it easy with<br/>Parallels Plesk.</h3>
         <div class="key-benefits-text">
           Manage your dedicated Windows servers with<br/>
@@ -194,6 +201,7 @@ assetPath: true
         </div>
       </div>
 
+      <!-- 2/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img2 key-benefits-img"></div>
         <h3 class="key-benefits-title">Build to grow with you<br/>and your clients.</h3>
@@ -202,6 +210,8 @@ assetPath: true
           plans anytime without having to re-provision.
         </div>
       </div>
+
+      <!-- 3/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img3 key-benefits-img"></div>
         <h3 class="key-benefits-title">Think fast.</h3>
@@ -211,7 +221,9 @@ assetPath: true
         </div>
       </div>
     </div>
+
     <div class="row">
+      <!-- 4/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img4 key-benefits-img"></div>
         <h3 class="key-benefits-title">Provisioning that's<br/>ready to go now.</h3>
@@ -221,6 +233,8 @@ assetPath: true
           hours.
         </div>
       </div>
+
+      <!-- 5/6 -->
       <div class="col-sm-4 text-center key-benefit cpanel-benefit">
         <div class="img5 key-benefits-img"></div>
         <h3 class="key-benefits-title">Access that makes<br/>you feel like a VIP.</h3>
@@ -229,6 +243,7 @@ assetPath: true
           Do it all with root (administrative) access.
         </div>
       </div>
+
       <div class="col-sm-4 text-center key-benefit plesk-benefit">
         <div class="img5 key-benefits-img"></div>
         <h3 class="key-benefits-title">Manage your data with<br/>MS SQL.</h3>
@@ -238,6 +253,8 @@ assetPath: true
           Server's capabilities.
         </div>
       </div>
+
+      <!-- 6/6 -->
       <div class="col-sm-4 text-center key-benefit">
         <div class="img6 key-benefits-img"></div>
         <h3 class="key-benefits-title">Keep your data<br/>looking good with disk<br/>mirroring</h3>
@@ -287,10 +304,10 @@ assetPath: true
               <div>OS Distributions</div>
             </td>
             <td class="compare-chart-entry">
-              <div>CentOS 6, CentOS 7, Fedora, Ubuntu, Windows</div>
+              <div>CentOS 6, CentOS 7, Fedora, Ubuntu, Windows 2008, Windows 2012</div>
             </td>
-            <td class="compare-chart-entry"><div>CentOS 6, Windows</div></td>
-            <td class="compare-chart-entry"><div>CentOS 6, Windows</div></td>
+            <td class="compare-chart-entry"><div>CentOS 6, Windows 2008, Windows 2012</div></td>
+            <td class="compare-chart-entry"><div>CentOS 6, Windows 2008, Windows 2012</div></td>
           </tr>
           <tr class="compare-chart-row" style="">
             <td class="compare-chart-header"><div>Control Panel</div></td>
@@ -532,6 +549,7 @@ assetPath: true
       bandwidthTemplate = $('#bandwidth-template').html();
     $("#osaddon").val(plans.t1.osaddon);
     $.each(plans, function(i, item) {
+      console.dir(item);
       var tier = $("#" + i + ""),
         addonPrice = currencyCalc.evaluate([item.osAddonPrice, "+", item.managedaddonprice]),
         storageHtml = storageTemplate.replace(/\{0\}/gi, item.plandetail.storage),
