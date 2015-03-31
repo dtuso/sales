@@ -34,7 +34,7 @@ append vars
   - productToDisplay.topGetItNowBtnCI = "96315";
   - productToDisplay.bottomGetItNowBtnCI = "96314";
   - productToDisplay.viewTemplatesCI = "96316";
-  - productToDisplay.disclaimerCI = "";
+  - productToDisplay.disclaimerCI = "97737";
   - productToDisplay.disclaimerText = "";
 
 block domainSearchScripts
@@ -94,7 +94,7 @@ block domainSearchStyles
 
 block bubbleContent
   h2.text-center [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-header]@L]
-  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text-37476]@L]
+  h3.text-center.price-token [@L[cds.sales/getonline:pro-ecomm-get-it-now-bubble-content-text_37476]@L]
 
 block productContent
   .row(style={"margin-top": "35px"})
@@ -105,6 +105,23 @@ block productContent
       p #{productToDisplay.getItNowDescription}
       button#getItNowTop.btn.btn-lg.btn-purchase(type="submit", data-ci="#{productToDisplay.topGetItNowBtnCI}") [@L[cds.sales/getonline:get-it-now]@L]
       p.p2 [@L[cds.sales/getonline:pro-design-product-call-us]@L]
+      .header-text.disclaimers
+        small.text-disclaimers
+          button.btn-link.see-details-disclaimer-link(data-ci="#{productToDisplay.disclaimerCI}") [@L[cds.sales/getonline:disclaimer-modal-title]@L]
+        | 
+        | ##if(countrySiteAny(uk)) 
+        div.text-vat-disclaimer [@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]
+        | 
+        | ##endif 
+
+block productDisclaimer
+  #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/getonline:disclaimer-modal-title]@L]')
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-01_34158]@L]
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-02_34158]@L]
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-03_34158]@L]
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-04_34158]@L]
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-05_34158]@L]
+    p [@L[cds.sales/getonline:disclaimer-modal-pro-ecomm-item-06_34158]@L]
 
 block domainSearchContent
 
@@ -173,7 +190,7 @@ block bottomGetItNow
     .container
       .row.text-center
         h2.got-header [@L[cds.sales/getonline:get-online-bottom-header]@L]
-        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text-37476]@L]
+        h3.price-token.got-subheader.text-center(style={'margin-top':'10px','margin-left':'5%','margin-right':'5%'}) [@L[cds.sales/getonline:pro-ecomm-get-it-now-bottom-text_37476]@L]
       .row
         .col-xs-6
           img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")

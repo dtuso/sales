@@ -431,8 +431,9 @@ block content
               | 
               | ##endif 
 
-      #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/getonline:disclaimer-modal-title]@L]')
-        p #{productToDisplay.disclaimerText}
+      block productDisclaimer
+        #default-details-modal.tokenizable-disclaimer-modal.sf-dialog(data-title!='[@L[cds.sales/getonline:disclaimer-modal-title]@L]')
+          p #{productToDisplay.disclaimerText}
 
   block domainSearchContent
     section#domainSearchWizardSection.bg-primary-o

@@ -258,7 +258,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-9 col-sm-offset-3 bubble">
             <h2 class="text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-header]@L]</h2>
-            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text-37476]@L]</h3>
+            <h3 class="text-center price-token">[@L[cds.sales/getonline:pro-design-get-it-now-bubble-content-text_37476]@L]</h3>
           </div>
         </div>
         <div style="margin-top:35px" class="row">
@@ -268,10 +268,20 @@
             <p>[@L[cds.sales/getonline:pro-design-product-get-it-now-description]@L]</p>
             <button id="getItNowTop" type="submit" data-ci="96312" class="btn btn-lg btn-purchase">[@L[cds.sales/getonline:get-it-now]@L]</button>
             <p class="p2">[@L[cds.sales/getonline:pro-design-product-call-us]@L]</p>
+            <div class="header-text disclaimers"><small class="text-disclaimers">
+                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:disclaimer-modal-title]@L]</button></small> 
+              ##if(countrySiteAny(uk)) 
+              <div class="text-vat-disclaimer">[@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]</div> 
+              ##endif 
+            </div>
           </div>
         </div>
         <div id="default-details-modal" data-title="[@L[cds.sales/getonline:disclaimer-modal-title]@L]" class="tokenizable-disclaimer-modal sf-dialog">
-          <p></p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-01_34158]@L]</p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-02_34158]@L]</p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-03_34158]@L]</p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-04_34158]@L]</p>
+          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-05_34158]@L]</p>
         </div>
       </div>
     </section>
@@ -380,7 +390,7 @@
       <div class="container">
         <div class="row text-center">
           <h2 class="got-header">[@L[cds.sales/getonline:get-online-bottom-header]@L]</h2>
-          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bottom-text-37476]@L]</h3>
+          <h3 style="margin-top:10px;margin-left:5%;margin-right:5%" class="price-token got-subheader text-center">[@L[cds.sales/getonline:pro-design-get-it-now-bottom-text_37476]@L]</h3>
         </div>
         <div class="row">
           <div class="col-xs-6"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-prof-svcs-webdesign.png" class="img-responsive center-block"></div>
