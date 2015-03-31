@@ -22,8 +22,11 @@ atlantis:webstash(type="css")
         #marquee .gem .gem-text{width:100%}
       }
 block heroContent
-  .headline.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]
-  mark.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
-  .product-name.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]
-  .price.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]
-  button.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
+.gem(data-url!="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703")
+  .gem-text
+    .headline.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]
+    mark.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
+    .product-name.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]
+    .price.walsheim-black [@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]
+    button.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
+  img(src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gem-background.jpg")
