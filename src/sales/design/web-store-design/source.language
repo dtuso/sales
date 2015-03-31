@@ -1,0 +1,458 @@
+---
+location: localization/sales/gd/design/web-store-design2/en
+id: 
+name: GCE-34158
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="Meta0Description" />
+Trust your instincts and hire [@T[companyname:name]@T]’s Web Designers to create your next website! Custom Web Site Designs for either personal or business use.
+<phrase key="Meta0Keywords" />
+graphic design, web store design, ecommerce design, web development company, web designers
+<phrase key="Meta0Title" />
+Graphic Design | Professional eCommerce Websites - [@T[companyname:nameseotitle]@T]
+<phrase key="MetaTitle" />
+eCommerce Website | Professional Online Store Design - [@T[companyname:nameseotitle]@T]
+<phrase key="MetaDescription" />
+Trust your instincts and hire [@T[companyname:name]@T] to create your next eCommerce website! We'll create an online store design that drives your traffic and sales.
+<phrase key="MetaKeywords" />
+web design, website development, website design, web designer, web design services, web design company, web design software, web designers web page design, web site design
+<phrase key="MainTitle" />
+Web Store Design Service
+<phrase key="MainSubTitle" />
+Attract customers with a professionally designed Web Store
+<phrase key="MainSubTitle_34158" />
+Make online sales easy with a professionally designed web store.
+<phrase key="MainBannerListItem1" />
+Now Available! Facebook<sup>&reg;</sup> Page Design
+<phrase key="MainBannerListItem2" />
+Plus, over [@T[currencyprice:<price usdamount="25000" dropdecimal="true" currencytype="USD" />]@T] in FREE extras&#8224;
+<phrase key="TabContentLink1" />
+Plans &amp; Pricing
+<phrase key="TabContentLink2" />
+Features
+<phrase key="TabContentLink3" />
+How it Works
+<phrase key="TabContentLink4" />
+FAQ
+<phrase key="TabContentPlanPricingTabHeaderText" />
+Let our design pros build your Web Store, so you can focus on your business.
+<phrase key="TabContentPlanPricingTabHeaderText_34158" />
+Let our design pros build your web store, so you can focus on your business.
+<phrase key="TabContentPlanPricingTabSubHeaderText" />
+Great products and prices don&#39;t mean a thing if your Web Store is complicated, confusing or looks unprofessional – your visitors will shop elsewhere. Our Professional Web Services Team knows what it takes to succeed on the Web and will create an online store that’s perfect for your business. Plus, we continue to be your professional web designer and work with you to update your site even after your store is complete!
+<phrase key="TabContentPlanPricingTabSubHeaderText_34158" />
+Great products and prices don't mean a thing if your web store is complicated, confusing or looks unprofessional – your visitors will shop elsewhere. Our Professional Web Services team knows what it takes to succeed online and will create a web store that’s perfect for your business. Plus, you never have to update your site thanks to 6 hours of professional assistance during the first 12 months.
+<phrase key="LinkViewOurDesignsText" />
+View our Designs
+<phrase key="LinkSeeItInActionText" />
+See It In Action
+<phrase key="PlanBoxStartingAt" />
+Starting at
+<phrase key="PlanBoxOneTimeFeeat_34158" />
+One-time fee of
+<phrase key="PlanBoxStandardAbovePlanDetailsCustomContent" />
+Standard
+<phrase key="PlanBoxWebStoreAbovePlanDetailsCustomContent_34158" />
+Web store
+<phrase key="PlanBoxPlus_34158" comment="Plus $149.99/mo hosting" />
+Plus monthly hosting fee
+<phrase key="PlanBoxHostingPerMo_34158" comment="Plus $149.99/mo hosting" />
+/mo
+<phrase key="PlanBoxStandardAbovePlanDetailsCustomContent_34158" />
+Web Store
+<phrase key="PlanBoxMonth" />
+month*
+<phrase key="PlanBoxMonth2" />
+month**
+<phrase key="1-month_34158" />
+1 month
+<phrase key="12-months" />
+12 months
+<phrase key="24-months" />
+24 months
+<phrase key="planbox-cart-btn" />
+Add to Cart
+<phrase key="PlanBoxAddFacebookPageDesignText" />
+Add Facebook<sup>&reg;</sup> Page Design <br />Just <strong>[@T[productprice:<current productid="855" dropdecimal="false" period="monthly" currencytype="USD" />]@T]/month</strong> <a href="#" data-ci="88674">More Info</a>
+<phrase key="PlanBoxStandardPlanDetails01Text" />
+<strong>1,500+</strong> design & color combinations
+<phrase key="PlanBoxStandardPlanDetails02Text" />
+<strong>Unlimited</strong> products. (We set up 10)
+<phrase key="PlanBoxStandardPlanDetails01Text_34158" />
+Theme-based sites based on your industry
+<phrase key="PlanBoxStandardPlanDetails02Text_34158" />
+Unlimited products (we’ll set up 5 product types or 10 products)
+<phrase key="PlanBoxStandardPlanDetails03Text" />
+<strong>Fast!</strong> Ready in as little as <a href="#" class="isToolTip" data-toggle="tooltip" title="Your Web store will be ready for you to review 2 weeks after we verify receipt of all your content and requested files." data-ci="88675">2 weeks</a>
+<phrase key="PlanBoxStandardPlanDetails03Text_34158" />
+Fast! Ready in as little as <a href="#" class="isToolTip" data-toggle="tooltip" title="Your Web store will be ready for you to review 2 weeks after we verify receipt of all your content and requested files." data-ci="88675">2 weeks</a>
+<phrase key="PlanBoxStandardPlanDetails04Text" />
+<strong>Up to 5</strong> additional site pages
+<phrase key="PlanBoxStandardPlanDetails04Text_34158" />
+Up to 5 additional site pages
+<phrase key="PlanBoxStandardPlanDetails05Text" />
+<strong>30 minutes</strong> of updates per month
+<phrase key="PlanBoxStandardPlanDetails05Text_34158" />
+6 hours of updates during first 12 months 
+<phrase key="PlanBoxDeluxeAbovePlanDetailsCustomContent" />
+Deluxe
+<phrase key="PlanBoxDeluxePlanDetails01Text" />
+<strong>Custom design</strong>, built to work with your existing logo and images 
+<phrase key="PlanBoxDeluxePlanDetails02Text" />
+<strong>Unlimited</strong> products. (We set up 20)
+<phrase key="PlanBoxDeluxePlanDetails03Text" />
+<strong>Fast!</strong> Ready in as little as <a href="#" data-ci="88679" class="isToolTip" data-toggle="tooltip" title="Your Web store will be ready for you to review 4 weeks after we receive all your content and requested files.">4 weeks</a>
+<phrase key="PlanBoxDeluxePlanDetails04Text" />
+<strong>Up to 5</strong> additional site pages
+<phrase key="PlanBoxDeluxePlanDetails05Text" />
+<strong>30 minutes</strong> of updates per month
+<phrase key="PlanBoxDeluxePlanDetails06Text" />
+<b>1-on-1 consultation</b> with your graphic designer
+<phrase key="LearnMoreBadgeText" />
+Call to Learn More!
+<phrase key="LearnMoreBadgeTel" />
+(480) 336-3344
+<phrase key="FeaturesListItem1" />
+<strong>Your success is our business.</strong> Tell us your vision and expectations for your Web store via our online interview.
+<phrase key="FeaturesListItem1_34158" />
+<strong>Your success is our business.</strong> Tell us your vision and expectations for your web store via a short phone or online interview, pick a theme and we&apos;ll start building.
+<phrase key="FeaturesListItem2" />
+<strong>Track your future store in-progress</strong> with 24/7 access to your online Design Manage. View designs, send files, and leave feedback.
+<phrase key="FeaturesListItem2_34158" />
+<strong>Track your future store in-progress.</strong> With 24/7 access to your online Design Manager, you can view designs, send files and leave feedback.
+<phrase key="FeaturesListItem3" />
+<strong>Let us keep your store current.</strong> Our staff will make up to 30 minutes of updates every month, at your request.
+<phrase key="FeaturesListItem3_34158" />
+<strong>Let us keep your store current.</strong> Our staff will make up to 6 hours of updates during your first 12 months, at your request.
+<phrase key="FeaturesListItem4" />
+<strong>Over [@T[currencyprice:<price usdamount="25000" dropdecimal="true" currencytype="USD" />]@T] in FREE extras!</strong><sup>&#8224;</sup> Every plan includes our world-class Web hosting, Search Engine Visibility, and more.
+<phrase key="FeaturesListItem5_34158" />
+<strong>No hidden fees.</strong> With our Website Design Service, you pay a one-time fee to build your site and a small monthly hosting fee. Everything else is included, so there are no surprises.<sup>&#94;&#94;&#94;</sup>
+<phrase key="FeaturesListItem5" />
+<strong>No setup fees.</strong> Your Web Store Design subscription covers everything you need to keep your store online and thriving.<sup>&#94;&#94;&#94;</sup>
+<phrase key="PlansIncludeTabText" />
+All Plans Include
+<phrase key="SupportTabText" />
+Support
+<phrase key="PlansIncludeText1" />
+<strong class="secondary-color">FREE</strong> <a href="#" class="isToolTip" data-toggle="tooltip" title="Protect your data and transactions and increase customer confidence with a [@T[companyname:name]@T] SSL Certificate &ndash; free for one year. Features up to 256-bit encryption, [@T[localization:<display type="percent" number="99.9" />]@T] browser recognition and 24/7 phone support ([@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" currencytype="USD" />]@T]/yr value)" data-ci="88683">1 year SSL Certificate</a>
+<phrase key="PlansIncludeText2" />
+<strong class="secondary-color">FREE</strong> <a href="#" class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages." data-ci="88684">SEO tools</a> to get listed by search engines
+<phrase key="PlansIncludeText2a" />
+<strong class="secondary-color">FREE</strong> <a href="#" class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages." data-ci="88684">On-page SEO (Search Engine Optimization) service</a>
+<phrase key="PlansIncludeText14" />
+<a href="#" class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages." data-ci="88684">On-page SEO service</a>
+<phrase key="PlansIncludeText3" />
+<strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space & 1,000 GB of bandwidth
+<phrase key="PlansIncludeText3_34158" />
+<strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space & 1,000 GB bandwidth
+<phrase key="PlansIncludeText4" />
+<strong class="secondary-color">FREE</strong> 1,000 email accounts
+<phrase key="PlansIncludeText5" />
+<strong class="secondary-color">FREE</strong> 24/7 Support
+<phrase key="PlansIncludeText6" />
+Fast turnaround
+<phrase key="PlansIncludeText7" />
+30 minutes of updates per month
+<phrase key="PlansIncludeText7_34158" />
+6 hours of updates during first 12 months.
+<phrase key="PlansIncludeText8" />
+<strong class="secondary-color">FREE</strong> <a href="#" data-ci="88685" class="isToolTip" data-toggle="tooltip" title="Increase traffic and sales to your site by improving your rank in the world's top search engines. Search Engine Visibility lets you easily analyze, optimize and submit your site to Google&reg;, Yahoo!&reg;, Bing&reg; and more &ndash; no technical expertise necessary. ([@T[productprice:<current productid="1401" dropdecimal="false" period="monthly" currencytype="USD" />]@T]/mo value)">Search Engine Visibility<sup>&#94;</sup></a>
+<phrase key="PlansIncludeText9" />
+<strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit**
+<phrase key="PlansIncludeText9_34158" />
+<strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search credit**
+<phrase key="PlansIncludeText10" />
+<strong class="secondary-color">FREE</strong> USD $50 Facebook<sup>&reg;</sup> Credit***
+<phrase key="PlansIncludeText11" />
+<strong class="secondary-color">FREE</strong> Website Editor – easily make updates yourself
+<phrase key="PlansIncludeText11a" />
+<strong class="secondary-color">FREE</strong> Access to your site via an easy-to-use site editor
+<phrase key="PlansIncludeText12" />
+Google Webmaster Tools
+<phrase key="PlansIncludeText13" />
+<strong class="secondary-color">FREE</strong> 10 Fotolia<sup>&reg;</sup> Credits<sup>****</sup>
+<phrase key="SupportSubTitle1" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on [@T[companyname:name]@T] Support to:</strong>
+<phrase key="SupportSubText1" />
+Get direct access to info and news that interests you
+<phrase key="SupportSubText2" />
+Interact with other members
+<phrase key="SupportSubText3" />
+Gain access to new features
+<phrase key="SupportSubText4" />
+Check out beta releases
+<phrase key="SupportSubText5" />
+Find discount codes
+<phrase key="SupportSubText6" />
+Participate in polls and much more
+<phrase key="SupportSubTitle2" />
+<strong>Receive support and exchange ideas. Join the Design Services Group on [@T[companyname:name]@T] Support to:</strong>
+<phrase key="SupportSubText7" />
+Technical support and sales: (480) 366-3344 FASTEST!
+<phrase key="SupportSubText8" />
+Email support: <a href="[@T[link:<external linktype="communityurl" path="/" secure="false"/>]@T]" data-ci="88686">Access Email Support System</a>
+<phrase key="TabContentFeaturesTabHeaderText" />
+We&#39;ll have your eCommerce store up and running fast!
+<phrase key="TabContentFeaturesTabHeaderText_34158" />
+Get your eCommerce site up and running fast!
+<phrase key="TabContentFeaturesTabSubHeaderText" />
+We&#39;ve all heard stories about Web designers who start building an online store, only to spend months completing it. With our Professional Web Service Design Team, you know your new store will be ready for your review within weeks of receiving all the necessary materials from you. Once your Internet store has launched, a variety of included tools makes managing your store easy.
+<phrase key="TabContentFeaturesTabSubHeaderText_34158" />
+We&#39;ve all heard stories about web designers who spend months building their store. But with our Professional Web Service Design team, you know your store will be ready to review within weeks of receiving your materials. And once your online store has launched, we make it easy to manage with a variety of tools.
+<phrase key="TabFeatures1CurrentFeaturesTitle" />
+Professionally Designed Storefront
+<phrase key="TabFeatures1FeatureListItems1" />
+Created by our Professional Web Service Design Team.
+<phrase key="TabFeatures1FeatureListItems2" />
+Basic setup of your first 10 products (20 for Deluxe), including descriptions and images.
+<phrase key="TabFeatures1FeatureListItems2_34158" />
+Basic setup of your first 10 products (or 5 product types), including descriptions and images. 
+<phrase key="TabFeatures1FeatureListItems3" />
+Pages for Contact Us, About Us, and Terms &amp; Conditions.
+<phrase key="TabFeatures1FeatureListItems3_34158" />
+Pages for Contact Us, About Us and Terms &amp; Conditions.
+<phrase key="TabFeatures1FeatureListItems4" />
+Up to 5 additional pages to showcase your store and products.
+<phrase key="TabFeatures1FeatureListItems5" />
+24/7 access to your online Design Manager – view and approve designs, send files, and leave feedback.
+<phrase key="TabFeatures1FeatureListItems5_34158" />	
+24/7 access to your online Design Manager. View and approve designs, send files and leave feedback. 
+<phrase key="TabFeatures1FeatureListItems6" />
+30 minutes per month of Web store updates.
+<phrase key="TabFeatures1FeatureListItems6_34158" />
+6 hours of web store updates during first 12 months.
+<phrase key="TabFeatures2CurrentFeaturesTitle" />
+Online Store Management
+<phrase key="TabFeatures2CurrentFeaturesTitle_34158" />
+Web Store Management
+<phrase key="TabFeatures2FeatureListItems1" />
+Online shopping cart with an unlimited-product catalog<sup>1</sup>.
+<phrase key="TabFeatures2FeatureListItems1_34158" />
+Online shopping cart with an unlimited product catalog<sup>1</sup>.
+<phrase key="TabFeatures2FeatureListItems2" />
+FREE hosting with guaranteed [@T[localization:<display type="percent" number="99.9" />]@T] network uptime.
+<phrase key="TabFeatures2FeatureListItems3" />
+FREE <a href="#" class="isToolTip" data-ci="88689" data-toggle="tooltip" title="Protect your data and transactions and increase customer confidence with a [@T[companyname:name]@T] SSL Certificate &ndash; free for one year. Features up to 256-bit encryption, [@T[localization:<display type="percent" number="99.9" />]@T] browser recognition and 24/7 phone support ([@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" currencytype="USD" />]@T]/yr value)">SSL certificate.</a>
+<phrase key="TabFeatures2FeatureListItems4" />
+Easy, step-by-step shipping, payment, and tax setup.
+<phrase key="TabFeatures2FeatureListItems4_34158" />
+Easy, step-by-step shipping, payment and tax setup.
+<phrase key="TabFeatures2FeatureListItems5" />
+Accept credit cards, PayPal<sup>&reg;</sup>, and more.
+<phrase key="TabFeatures2FeatureListItems5_34158" />
+Accept credit cards, PayPal<sup>&reg;</sup> and more.
+<phrase key="TabFeatures2FeatureListItems6" />
+Organize your products in multi-level categories.
+<phrase key="TabFeatures2FeatureListItems7" />
+Multiple shipping options, including UPS<sup>&reg;</sup>, USPS<sup>&reg;</sup>, and FedEx<sup>&reg;</sup>.
+<phrase key="TabFeatures2FeatureListItems7_34158" />
+Multiple shipping options, including UPS<sup>&reg;</sup>, USPS<sup>&reg;</sup> and FedEx<sup>&reg;</sup>.
+<phrase key="TabFeatures2FeatureListItems8" />
+Reporting and inventory tracking.
+<phrase key="TabFeatures2FeatureListItems9" />
+Includes secure customer login and easy checkout.
+<phrase key="TabFeatures3CurrentFeaturesTitle" />
+Marketing Tools
+<phrase key="TabFeatures3FeatureListItems1" />
+Google<sup>&reg;</sup> Product Feed to get your products listed in Google Shopping.
+<phrase key="TabFeatures3FeatureListItems2" />
+FREE <a href="#" class="isToolTip" data-ci="88690" data-toggle="tooltip" title="Increase traffic and sales to your site by improving your rank in the world&#39;s top search engines. Search Engine Visibility lets you easily analyze, optimize and submit your site to Google&reg;, Yahoo!&reg;, Bing&reg; and more &ndash; no technical expertise necessary. ([@T[productprice:<current productid="1401" dropdecimal="false" period="monthly" currencytype="USD" />]@T]/mo value)">Search Engine Visibility</a> to help drive traffic to your store.&#94;
+<phrase key="TabFeatures3FeatureListItems3" />
+Affiliate marketing integration.
+<phrase key="TabFeatures3FeatureListItems4" />
+Easily integrates with Express Email Marketing (sold separately).
+<phrase key="TabFeatures3FeatureListItems4_34158" />
+Easily integrates with GoDaddy Email Marketing (sold separately).
+<phrase key="TabFeatures3FeatureListItems5" />
+Add product cross-sells to increase revenue.
+<phrase key="TabFeatures3FeatureListItems6" />
+Add coupons, discounts, and sale pricing.
+<phrase key="TabFeatures3FeatureListItems6_34158" />
+Add coupons, discounts and sale pricing.
+<phrase key="TabFeatures3FeatureListItems7" />
+USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit.<sup>**</sup>
+<phrase key="TabFeatures3FeatureListItems8" />
+USD $50 Facebook<sup>&reg;</sup> Advertising Credit.<sup>***</sup>
+<phrase key="TabFeatures3FeatureListItems9" />
+FREE Google Webmaster Tools.
+<phrase key="TabContentHowWorksTabHeaderText" />
+Let us build a Web store that will help you build your business.
+<phrase key="TabContentHowWorksTabHeaderText_34158" />
+Let us build a web store that will help you build your business.
+<phrase key="TabContentHowWorksSubTabHeaderText" />
+Simply complete the online interview and our Web designers create an eye-catching online store complete with five promotional pages (Why Buy from Us, Company History, etc.) and 10 or 20 product pages (you set up the rest). We also do the on-page SEO (Search Engine Optimization) that will get your products in front of customers via top search engines like Google<sup>&reg;</sup> and Yahoo!<sup>&reg;</sup>.
+<phrase key="TabContentHowWorksSubTabHeaderText_34158" />
+Simply complete the online or phone interview and our web designers will create an eye-catching online store, complete with five promotional pages (Why Buy from Us, Company History, etc.). We’ll even set up the first 10 product pages (or 5 product types) and add on-page SEO (Search Engine Optimization) that will help your products get in front of customers via Google®, Yahoo!® and other top search engines.
+<phrase key="TabHowWorks1CurrentFeaturesTitle" />
+Share Your Vision
+<phrase key="TabHowWorks1FeatureListItems1" />
+Give our staff the basics on your business and products via an online interview.
+<phrase key="TabHowWorks1FeatureListItems1_34158" />
+Tell our staff about your business and products via a brief online or phone interview. 
+<phrase key="TabHowWorks1FeatureListItems2" />
+Provide examples of websites you like or don&#39;t like.
+<phrase key="TabHowWorks1FeatureListItems2_34158" />
+Select a professionally designed theme that best matches you or your brand. 
+<phrase key="TabHowWorks1FeatureListItems3" />
+Choose your layout from 1,500+ professionally designed templates and color combinations (Standard plan).
+<phrase key="TabHowWorks1FeatureListItems4" />
+Speak directly with your designer to discuss the layout of your store, header design, and other graphics (Deluxe plan).
+<phrase key="TabHowWorks1FeatureListItems5" />
+Use our online Designer Manager tool to provide our design team with the images and words you want to use in your store.
+<phrase key="TabHowWorks1FeatureListItems5_34158" />
+Use our online Design Manager to provide the images and words you want to use in your store. 
+<phrase key="TabHowWorks1FeatureListItems6" />
+Questions along the way? Just pick up the phone or send us an email.
+<phrase key="TabHowWorks2CurrentFeaturesTitle" />
+We Go To Work
+<phrase key="TabHowWorks2FeatureListItems1" />
+After reviewing your information and samples, our expert design staff creates a store based on your instructions.
+<phrase key="TabHowWorks2FeatureListItems1_34158" />
+After reviewing your information, our expert design staff creates a store based on your instructions and theme.
+<phrase key="TabHowWorks2FeatureListItems2" />
+We add your text and images, as well as SEO (Search Engine Optimization) tags on every page to improve your store&#39;s visibility on popular search engines.
+<phrase key="TabHowWorks2FeatureListItems3" />
+Your store is ready for you to review in as little as two weeks after we&#39;ve received your content for the Standard plan (four weeks for the Deluxe plan.)
+<phrase key="TabHowWorks2FeatureListItems3_34158" />
+Your store is ready for you to review in as little as two weeks after we&#39;ve received your content. 
+<phrase key="TabHowWorks2FeatureListItems4" />
+Once you&#39;ve approved your store, we send it through our quality control process and it goes live for the world to see!
+<phrase key="TabHowWorks3CurrentFeaturesTitle" />
+We Go To Work
+<phrase key="TabHowWorks3CurrentFeaturesTitle_34158" />
+Enhance and Expand
+<phrase key="TabHowWorks3FeatureListItems1" />
+Once your site has launched, contact us and we&#39;ll set up your   FREE Search Engine Visibility ([@T[productprice:<current productid="1401" dropdecimal="false" period="yearly" currencytype="USD" />]@T]/yr value), which submits your site to the world&#39;s top search engines, including Google<sup>&reg;</sup>, Yahoo!<sup>&reg;</sup> and more.
+<phrase key="TabHowWorks3FeatureListItems1_34158" />
+If you need to update the text or change an image in your store, just contact us. Each store includes 6 hours of updates during your first 12 months.
+<phrase key="TabHowWorks3FeatureListItems2" />
+If you need to update the text or change an image in your store, just contact us. Each plan includes 30 minutes of updates per month to keep your site fresh and current.
+<phrase key="FaqList1Title" />
+What is [@T[companyname:name]@T] Web Store Design?
+<phrase key="FaqList1Item1_34158" />
+Our professional Web Store Design service is for businesses that want a great-looking, effective eCommerce website to contend with large, established online retailers. 
+<phrase key="FaqList1Item2_34158" />
+If you&#39;re like most small business owners, you&#39;re far too busy to design and build the eCommerce site you need to compete on the web. But with GoDaddy, you don&#39;t have to worry – we do the hard part for you, quickly and professionally. Our professional website design staff works with you to create a custom online store that fits your style, needs and budget.
+<phrase key="FaqList1Item3_34158" />
+Here&#39;s your chance to get an affordable eCommerce website, professionally designed by a GoDaddy web expert. Our professional web services team can create the online store you want.
+<phrase key="FaqList1Item1" />
+Our professional <strong>Web design</strong> service is for businesses who want a great-looking, effective eCommerce website to contend with large, established online retailers. If you&#39;re like most small business owners, you&#39;re far too busy to design and build the eCommerce site you need to compete on the Web.
+<phrase key="FaqList1Item2" />
+But with [@T[companyname:name]@T], you don&#39;t have to worry – we do the hard part for you, quickly and professionally. Our professional <strong>website design</strong> staff works with you to create a custom online store that fits your style, needs and budget.
+<phrase key="FaqList1Item3" />
+Here&#39;s your chance to get an affordable eCommerce website, professionally designed by a [@T[companyname:name]@T] expert designer. Our Design Team can create the Web Store you want.
+<phrase key="FaqList1Item4" />
+For more information, see <a target="_faq" href="[@T[link:<external linktype="communityurl" path="help/article/5224" secure="false"/>]@T]" data-ci="88693">What is Web Store Design?</a>
+<phrase key="FaqList2Title" />
+How does [@T[companyname:name]@T] Web Store Design work?
+<phrase key="FaqList2Item1_34158" />
+Simply give our expert design team the basics about your business. Then browse our selection of themes and choose the one that best fits your brand and vision. 
+<phrase key="FaqList2Item2_34158" />
+From there, our team will create a full-featured eCommerce web site based on your comments and theme, using the images and text that you supply. 
+<phrase key="FaqList2Item3_34158" />
+Our expert designers know what it takes to sell online and will create an eye-catching web store that provides a simple, compelling shopping experience for your customers – all for less than you think. Once you stock your store and put on the finishing touches, you&#39;ll be selling your products online in no time.
+<phrase key="FaqList2Item1" />
+It all starts with your vision. Simply give our expert Web design team the basics on your business and, if you choose, even share examples of sites that you like.
+<phrase key="FaqList2Item2" />
+From there, our team will create a full-featured <strong>eCommerce web design</strong> based on your comments and direction. The Design Team constructs each page of your website using the images and text that you supply. With the purchase a Deluxe <strong>Web Store Design</strong> plan, we even work with you to create custom graphics for your new custom Web store.
+<phrase key="FaqList2Item3" />
+Our expert designers know what it takes to sell on the Internet. Our designers will create an eye-catching Web Store that provides a compelling shopping experience for your customers – all for less than you think. Once you stock your store and put the finishing touches on your setup, you&#39;ll be selling your products online in no time with a professionally designed eCommerce site.
+<phrase key="FaqList2Item4" />
+For more information, see <a target="_faq" href="[@T[link:<external linktype="communityurl" path="help/article/5220" secure="false"/>]@T]" data-ci="88694">What does a Web Store Design include/exclude?</a>
+<phrase key="FaqList3Title" />
+Can I update my site after it&#39;s complete?
+<phrase key="FaqList3Item1_34158" />
+Yes. At GoDaddy, we don&#39;t just create websites and leave customers to fend for themselves. We give you 6 hours of site updates during your first 12 months, so you can keep your store current – without the hassle of updating it yourself.
+<phrase key="FaqList3Item2_34158" />
+Using the built-in Design Manager, you can easily request updates to your web store. Just send us a description of your update and the Design Manager will notify you when the site changes are ready for your review.
+<phrase key="FaqList3Item1" />
+At [@T[companyname:name]@T], we don&#39;t just <strong>create websites</strong> and leave customers to fend for themselves. We give you 30 minutes of site updates every month, so you can keep your Web store current without the hassle of updating it yourself.
+<phrase key="FaqList3Item2" />
+Using the built-in Design Manager, you can easily request updates to your website. Just send your Design Specialist a description of your update, and the Design Manager will notify you when the site changes are ready for your review.
+<phrase key="FaqList3Item3" />
+Plus, each of our eCommerce packages include more than [@T[currencyprice:<price usdamount="34100" dropdecimal="true" currencytype="USD" />]@T] in free extras, including powerful marketing tools that you can use to promote your store each and every day.
+<phrase key="FaqList3Item4" />
+For more information, see <a target="_faq" href="[@T[link:<external linktype="communityurl" path="help/article/4606" secure="false"/>]@T]" data-ci="88695">Requesting an Update to Your Web Store.</a>
+<phrase key="FaqList4Title" />
+What happens once you&#39;ve completed my Web store?
+<phrase key="FaqList4Title_34158" />
+What happens once you&#39;ve completed my web store?
+<phrase key="FaqList4Item1_34158" />
+Once your site is published, we make it easy for you to keep your store up to date. You can log in to your account and make minor website updates on the fly. If you need to make bigger changes, we’ve got that covered too.
+<phrase key="FaqList4Item2_34158" />
+During your first 12 months, you get 6 hours of updates that you can use anytime. Our team can change text, swap out images, whatever you need.
+<phrase key="FaqList4Item3_34158" />
+And don&#39;t worry about trying to track down a difficult-to-reach webmaster. You can request site updates anytime using the Design Manager. Simply send your us a description of the update, and we&#39;ll notify you when it&#39;s ready for your review.
+<phrase key="FaqList4Item1" />
+Every month, you get 30 minutes of updates to help keep your site fresh. Our Web designers can change text, swap out images, whatever you need them to do.
+<phrase key="FaqList4Item2" />
+Don&#39;t worry about trying to track down a difficult-to-reach webmaster. You can request site updates anytime using the Design Manager. Simply send your design specialist a description of the update, and we&#39;ll notify you when it&#39;s ready for your review.
+<phrase key="FaqList4Item3" />
+Once your site is published, we make it easy for you to update your site on your own. You can log in to your account and make minor website updates on the fly, while reserving your monthly update minutes for the big changes to your site.
+<phrase key="FaqList4Item4" />
+For more information, see <a target="_faq" href="[@T[link:<external linktype="communityurl" path="help/article/4606" secure="false"/>]@T]" data-ci="88696">Requesting an Update to Your Website or Web Store.</a>
+<phrase key="FaqList5Title" />
+I purchased Web Store Design. What do I do now?
+<phrase key="FaqList5Title_34158" />
+I purchased Web Store Design, what do I do now?
+<phrase key="FaqList5Item1_34158" />
+Log in to your account and begin the online Design Manager interview, which will help you explore the key elements every web store should have and gather important information to help your designer create the perfect store for you.
+<phrase key="FaqList5Item2_34158" />
+The interview process is self-paced. You can stop at any point during the process and easily return to where you left. This is not only convenient, but also gives you time to really think about your answers. 
+<phrase key="FaqList5Item3_34158" />
+After you complete the interview, one of our expert designers will follow up with you to answer any questions and discuss the timeline for building your web store.
+<phrase key="FaqList5Item1" />
+After you purchase a <strong>custom online store</strong>, log in to your account and begin the online Design Manager interview. The interview process lets you participate in the creation of your website. We help you explore the key elements that make up a perfect Web store, and gather important information to help your designer create the perfect site for you.
+<phrase key="FaqList5Item2" />
+The interview process is self paced. You can stop at any point during the process, and easily return to where you left. This is not only convenient, but also gives you time to really think about your answers. At the end of the Interactive Online Interview, we ask you to provide the best method to contact you when it&#39;s time to review your interview.
+<phrase key="FaqList5Item3" />
+After you complete the Interactive Online Interview, one of our expert designers will follow up with you, answer any questions, and discuss the timeline for building your Web store.
+<phrase key="FaqList5Item4" />
+For more information, see <a href="[@T[link:<external linktype="HELPURL" path="/article/5258" secure="false"/>]@T]" target="_faq">Getting Started with Web Store.</a>
+<phrase key="PackageBtn" />
+Choose your Package
+<phrase key="ContentDisclaimerSymbols" />
+1, &#8225;, &#8224;, &#94;, &#94;&#94;&#94;, +, ++,  **, ***, ****
+<phrase key="ContentDisclaimerSymbols_34158" />
+1, &#8224;, &#94;, &#94;&#94;&#94;, +,  **, ***
+<phrase key="ContentDisclaimerLink" />
+Click here for product disclaimers and legal policies.
+<phrase key="ContentDicalimerText" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="disclaimer-modal-header" />
+Disclaimers
+<phrase key="DisclaimerModalItem01" />
+<sup>1</sup> Performance may begin to slow at varying numbers of products depending on potential physical and practical constraints, including (but not limited to): System architecture, system capacity, system load, end-user Internet connectivity, and end-user computer configurations.
+<phrase key="DisclaimerModalItem02" />
+&#8224; [@T[currencyprice:<price usdamount="24100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, Fotolia® Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/2012 and are subject to change.
+<phrase key="DisclaimerModalItem02_34158" />
+&#8224; [@T[currencyprice:<price usdamount="24100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/2012 and are subject to change.
+<phrase key="DisclaimerModalItem03" />
+<sup>&#94;</sup> Initial setup of Free Search Engine Visibility and website analytics accounts count towards your allotted 30 minutes of monthly site updates.
+<phrase key="DisclaimerModalItem03_34158" />
+<sup>&#94;</sup> Initial setup of Free Search Engine Visibility account will count towards your allotted monthly site updates time.
+<phrase key="DisclaimerModalItem04" />
+<sup>&#94;</sup><sup>&#94;</sup><sup>&#94;</sup> Transaction fees may be collected by third parties that you contract with such as payment gateways and merchant account providers that process credit card transactions.
+<phrase key="DisclaimerModalItem05" />
+<sup>+</sup> An early termination fee of [@T[currencyprice:<price usdamount="30000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Standard plans cancelled within six months of signup. Price does not include illustration, hand-drawing, hand-coloring or logo design.
+<phrase key="DisclaimerModalItem05_34158" />
+<sup>+</sup> An early termination fee may be applied to web store plans cancelled prior to project completion, please see our Terms of Service for more information.  Price does not include illustration, hand-drawing, hand-coloring or logo design.
+<phrase key="DisclaimerModalItem06" />
+<sup>+</sup><sup>+</sup> An early termination fee of [@T[currencyprice:<price usdamount="90000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Premium plans cancelled within six months of signup. Price does not include illustration, hand-drawing, hand-coloring or logo design.
+<phrase key="DisclaimerModalItem07" />
+&#8225; Annual discounts available on NEW purchases only.
+<phrase key="DisclaimerModalItem08" />
+<sup>*</sup><sup>*</sup> One promotional credit per customer for a new Microsoft® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply. <a href="[@T[link:<relative path="~/popups/microsoft-advertising.aspx" />]@T]" data-popup="discwin" data-popup-params='{"width":550}' data-ci="88688">View Details.</a>
+<phrase key="DisclaimerModalItem09" />
+<sup>*</sup><sup>*</sup><sup>*</sup> One promotional credit per customer for a new Facebook® Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href="[@T[link:<relative path="~/popups/facebook-ads.aspx" />]@T]" data-popup="discwin" data-popup-params='{"width":550}' data-ci="88688">View Details.</a>
+<phrase key="DisclaimerModalItem10" />
+<sup>*</sup><sup>*</sup><sup>*</sup><sup>*</sup> One promotional credit per customer, good for ten free download credits at Fotolia®. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href="[@T[link:<relative path="~/popups/fotolia.aspx" />]@T]" data-popup="discwin" data-popup-params='{"width":550}' data-ci="88688">View Details.</a>
+<phrase key="DisclaimerModalItem11-1-34158" />
+One-time Build fees not applicable to receive order level discounts
+<phrase key="DisclaimerModalItem11" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="DisclaimerModalItem12" />
+SSL Certificate is free for 1 year with purchase. After the initial free year, SSL will automatically renew at the then-current price until cancelled. You may cancel automatic renewal at any time in your [@T[companyname:name]@T] account.
+<phrase key="PremiumText21" />
+Premium

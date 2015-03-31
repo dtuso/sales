@@ -1,0 +1,536 @@
+---
+location: sales/design/web-store-design.aspx
+id: 
+name: GCE-34158
+comments:  P4P - Phase 3 - PWS Lineup Updates
+cssVersionOverride : 2
+---
+{% extends 'layouts/base.html' %}
+
+{% block metahead %}
+{% parent %}
+##if(appSettingEnabled(UXCORE_ENABLED))
+<style>
+  body {
+      font-size: 10px;
+      background-color: #d4d4d4;
+  }
+  .badge-important {
+      background-color: #F3514C;
+  }
+  .modal-dialog {
+      left: 0%;
+  }
+  a, a:hover {
+    color: #7db701;
+  }
+  .col-xs-12 {
+    padding-right: 0px;
+  }
+  .col-xs-4 {
+      padding-left: 20px;
+      padding-right: 0;
+      width: 34%;
+  }
+  #footer-legal {
+    background-color: #fff;
+  }
+</style>
+##endif
+
+{% endblock metahead %}
+
+{% block footer %}   
+<script type="text/javascript">
+      $('.chatSupportLink').attr('data-ci','93511');
+    function openPopUpWithParams (url, windowName, windowParams) {
+            window.open(url, windowName, windowParams);
+    }    
+    $(function () {
+      $('.equal-height').setColumnsEqualHeight();
+      $('.select-box').setSelectBox();
+      $('.isToolTip').tooltip();
+      $('.tab-link').tabLinks();
+      $('.equal-height').setColumnsEqualHeight();
+
+      $(".view-our-designs-link").click(function(){
+        openPopUpWithParams("http://ourdesignexamples.com#stores", "customweb_popup", "left=50,top=50,resizable=yes,scrollbars=yes,width=1000,height=950");
+      });    
+
+      // CI code click tracker
+      if (typeof FastballEvent_MouseClick === 'function' && typeof fbiLibCheckQueue === 'function') {
+        $('[data-ci]').click(function(e){
+          $this = $(this);
+          FastballEvent_MouseClick(e,$this.attr('data-ci'),$(this)[0],'a');
+          fbiLibCheckQueue();
+        });
+      }
+      
+      $('body').on('click', 'a[data-popup]', function(e) {
+        e.preventDefault();
+        var defaults = {
+          left: 20,
+          top: 20,
+          scrollbars: 'yes',
+          resizable: 'yes',
+          width: '830',
+          height: '650'
+        };
+
+        var $this = $(this),
+          href = $this.attr('href'),
+          name = $this.data('popup'),
+          params = $this.data('popup-params');
+
+        params = $.extend(defaults,params);
+        var pairs = [];
+        for (var key in params) {
+          pairs.push(key+'='+params[key]);
+        }
+        window.open(href, name, pairs);
+      });
+      $('.js-open-overview').on('click', function(e){
+          e.preventDefault();
+          window.location.hash = '';
+          $('a[href="#plan-pricing"]').tab('show');
+          window.location.hash = '#pricing';
+      }); 
+
+      cartURL = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+      managerCartUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+      managerView=false;
+      ##if(isManager())
+        managerView=true;
+      ##endif  
+      $('.addtocart-form').on('submit', function (e) {
+        $('button[type="submit"]', this).addClass('waiting');
+        e.preventDefault();
+        var $form = $(this);
+        var fields = $form.serializeObject();
+        fields['package'] = $('div.select-box',$form).find('ul li.selected').find('input[name="package"]').val();
+        var params = [fields['itc'], fields['ci'], fields['qty'], fields['package']];
+        $.ajax({
+               type: "GET",
+               url: $form.data('addtocart'),
+               contentType: "application/json",
+               data: "requestData=" + JSON.stringify({ pkgid: fields['package'], qty: fields['qty'], itc: fields['itc'], ci: fields['ci'] }),
+               dataType: "jsonp",
+               success: function (response) { 
+                 window.location = (managerView === true) ? managerCartUrl : cartURL;
+               },
+               failure: function (response) { 
+                  window.location = (managerView === true) ? managerCartUrl : cartURL;
+               }
+              });
+      });   
+    });    
+</script>
+{% endblock footer %}
+
+{% block body %}
+ <!-- Start main-banner -->
+    <section class="main-banner main-banner-ecd">
+      <div class="l-main-container container main-banner-content">
+        <h1 class="main-banner-title">[@L[cds.sales/gd/design/web-store-design2:MainTitle]@L]</h1>
+        <h2 class="main-banner-subtitle">[@L[cds.sales/gd/design/web-store-design2:MainSubTitle_34158]@L]</h2>
+        ##if(activeLanguageAny(en))
+        <a href="#" class="btn btn-primary cta-small view-our-designs-link" data-ci="88670">[@L[cds.sales/gd/design/web-store-design2:LinkViewOurDesignsText]@L]</a>
+        ##endif
+      </div>
+    </section>
+    <!-- End main-banner -->
+
+    <!-- Start main-tabs -->
+    <section class="main-tabs">
+      <div class="container">
+      <ul class="nav nav-tabs">
+        <li class="nav-tabs-item active"><a class="nav-tabs-link" href="#plan-pricing" data-toggle="tab" data-ci="88666">[@L[cds.sales/gd/design/web-store-design2:TabContentLink1]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#features" data-toggle="tab" data-ci="88667">[@L[cds.sales/gd/design/web-store-design2:TabContentLink2]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#how-it-works" data-toggle="tab" data-ci="88668">[@L[cds.sales/gd/design/web-store-design2:TabContentLink3]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+        <li class="nav-tabs-item"><a class="nav-tabs-link" href="#faq" data-toggle="tab" data-ci="88669">[@L[cds.sales/gd/design/web-store-design2:TabContentLink4]@L]</a><i class="ico ico-shape ico-shape-arrow-down"></i></li>
+      </ul>
+      </div>
+    </section>
+    <!-- End main-tabs -->
+
+    <!-- Start main-tabs panes -->
+    <div class="tab-content no-margin-top">
+      <div class="tab-pane tab-content-plans-pricing-bg-wds active" id="plan-pricing">
+      <!-- Start content -->
+    <section class="l-main-container container">
+      <!-- Start misc-banner -->
+      <section class="misc-banner">
+        <div class="l-main-container container misc-banner-content">
+        <h2>[@L[cds.sales/gd/design/web-store-design2:TabContentPlanPricingTabHeaderText_34158]@L]</h2>
+        <p>[@L[cds.sales/gd/design/web-store-design2:TabContentPlanPricingTabSubHeaderText_34158]@L]</p>
+        ##if(activeLanguageAny(en))
+        <a id="view-our-designs-link" href="#" class="misc-banner-link view-our-designs-link" data-ci="88670"><i class="ico ico-gt-alternate"></i>[@L[cds.sales/gd/design/web-store-design2:LinkViewOurDesignsText_34158]@L]</a>
+        ##endif
+        </div>
+      </section>
+      <!-- End misc-banner -->
+      <div  id="pricing" class="row equal-height">
+        <div  class="col-xs-4" id="standard">
+          <div class="grid-column no-padding-bottom">
+            <h2>[@L[cds.sales/gd/design/web-store-design2:PlanBoxWebStoreAbovePlanDetailsCustomContent_34158]@L]</h2>
+               <p class="starting-at">
+                 <span class="starting-at-above">[@L[cds.sales/gd/design/web-store-design2:PlanBoxOneTimeFeeat_34158]@L]</span>
+                 <span>[@T[productprice:<current productid="618052" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"/>]@T]</current></span>
+               </p> 
+               <p class="starting-at"> 
+               <span class="starting-at-bottom">[@L[cds.sales/gd/design/web-store-design2:PlanBoxPlus_34158]@L]</span>
+               </p>
+            <form  name="frmWebDesign" id="addtocart-form0" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+                          <input type="hidden" name="itc" value="slp_webstore" />
+                          <input type="hidden" name="ci" value="97691" />
+                          <input type="hidden" name="qty" value="1" />
+              <div class="select-box plan-box-padding">
+                <div class="select-box-head">
+                  <div class="select-box-current">
+                        <span>[@L[cds.sales/gd/design/web-store-design2:12-months]@L]&nbsp;-&nbsp;</span>
+                        <span>[@T[productprice:<current productid="618040" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"/>]@T]</span><span>[@L[cds.sales/gd/design/web-store-design2:PlanBoxHostingPerMo_34158]@L]</span>
+                        <span></span>
+                  </div>
+                  <div class="select-box-cta"><i class="ico ico-download"></i></div>
+                </div><!-- select-box-head -->
+                <div class="select-box-body">
+                  <ul class="select-box-options">
+                    <li>
+                      <label>
+                        <input type="radio" name="package" value="ecommdesign_webstore_1_month"/>
+                        <div>
+                            <span>[@L[cds.sales/gd/design/web-store-design2:1-month_34158]@L]&nbsp;-&nbsp;</span>
+                            <span>[@T[productprice:<current productid="618034" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span>[@L[cds.sales/gd/design/web-store-design2:PlanBoxHostingPerMo_34158]@L]</span>
+                              <span></span>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="selected">
+                      <label>
+                        <input type="radio" name="package" value="ecommdesign_webstore_1_year"/>
+                        <div> 
+                            <span>[@L[cds.sales/gd/design/web-store-design2:12-months]@L]&nbsp;-&nbsp;</span>
+                            <span>[@T[productprice:<current productid="618040" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span><span>[@L[cds.sales/gd/design/web-store-design2:PlanBoxHostingPerMo_34158]@L]</span>
+                              <span></span>
+                        </div>
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input type="radio" name="package" value="ecommdesign_webstore_2_years"/>
+                        <div>
+                            <span>[@L[cds.sales/gd/design/web-store-design2:24-months]@L]&nbsp;-&nbsp;</span>
+                            <span>[@T[productprice:<current productid="618042" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses"  />]@T]</span><span>[@L[cds.sales/gd/design/web-store-design2:PlanBoxHostingPerMo_34158]@L]</span>
+                              <span></span>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div><!-- select-box-body -->
+              </div><!-- select-box -->
+              <input type="hidden" name="frmWebDesign_0_addon_prepaid_0" id="frmWebDesign_0_addon_prepaid_0" value="true">
+              <p class="no-margin-bottom"><button id="btn-WebStore" type="submit" data-ci="88672" class="btn btn-warning btn-block btn-lg">[@L[cds.sales/gd/design/web-store-design2:planbox-cart-btn]@L]</button></p>
+            </form>
+            <ul class="plan-pricing-list plan-pricing-list-alternate">
+              <li class="two-lines">[@L[cds.sales/gd/design/web-store-design2:PlanBoxStandardPlanDetails01Text_34158]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/design/web-store-design2:PlanBoxStandardPlanDetails02Text_34158]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/design/web-store-design2:PlanBoxStandardPlanDetails03Text_34158]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/design/web-store-design2:PlanBoxStandardPlanDetails04Text_34158]@L]</li>
+              <li class="two-lines">[@L[cds.sales/gd/design/web-store-design2:PlanBoxStandardPlanDetails05Text_34158]@L]</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="grid-column has-badge grid-column-right">
+                   <div class="compare-top-badge-wrapper">
+                    <span class="compare-top-badge">[@L[cds.sales/gd/design/web-store-design2:LearnMoreBadgeText]@L] <b>[@T[supportphone:<designteam/>]@T]</b></span>
+                    </div>
+            <ul class="plan-pricing-tab-content-feature-list bullet-list">
+              <li>[@L[cds.sales/gd/design/web-store-design2:FeaturesListItem1_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:FeaturesListItem2_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:FeaturesListItem3_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:FeaturesListItem5_34158]@L]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+    </section>
+    <!-- End content -->
+
+    <!-- Start plan-summary -->
+    <section class="plan-summary l-main-content">
+      <div class="container l-main-container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="plan-summary-container">
+              <!-- Start Plan-summary nav tabs -->
+              <ul class="nav nav-tabs plan-summary-tabs">
+                <li class="nav-tabs-item plan-summary-tabs-item active">
+                  <a href="#ps-plan-includes" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab" data-ci="88681">[@L[cds.sales/gd/design/web-store-design2:PlansIncludeTabText]@L]</a>
+                </li>
+                <li class="nav-tabs-item plan-summary-tabs-item">
+                  <a href="#ps-support" class="nav-tabs-link plan-summary-nav-tabs-link" data-toggle="tab" data-ci="88682">[@L[cds.sales/gd/design/web-store-design2:SupportTabText]@L] </a>
+                </li>
+              </ul>
+              <!-- End Plan-summary nav tabs -->
+
+              <!-- Start Plan-summary Tab panes -->
+              <div class="tab-content no-margin-bottom">
+                <div class="tab-pane active" id="ps-plan-includes">
+                  <ul class="plan-summary-tab-pane-list">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText2]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText3_34158]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText4]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText5]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText11]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText6]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText7_34158]@L]</li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText8]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText1]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText14]@L]</li>
+                    
+                          ##if(areAdCreditsEnabled(google))
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText9]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:PlansIncludeText10]@L]</li>
+                    ##endif
+                  </ul>
+                </div>
+                <div class="tab-pane" id="ps-support">
+                  <p>[@L[cds.sales/gd/design/web-store-design2:SupportSubTitle1]@L]</p>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns no-margin-left">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText1]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText2]@L]</li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText3]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText4]@L]</li>
+                  </ul>
+                  <ul class="plan-summary-tab-pane-list plan-summary-tab-pane-list-columns">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText5]@L]</li>
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText6]@L]</li>
+                  </ul>
+                  <p>[@L[cds.sales/gd/design/web-store-design2:SupportSubTitle2]@L]</p>
+                  <ul class="plan-summary-tab-pane-list no-margin-left no-margin-bottom">
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText7]@L]</li>
+                    ##if(activeLanguageAny([en-us]))
+                    <li><span id="chat-now" class="inactive" >[@L[cds.sales/_common:ChatSupport]@L]</span> <span id="chat-eta" data-queue="General" style="display: none;">[@L[cds.sales/_common:ChatETA]@L]</span></li>
+                    ##elseif(activeLanguageAny(es) || countrySiteAny(br))
+                    <li>[@L[cds.sales/gd/design/web-store-design2:SupportSubText8]@L]</li>
+                    ##endif
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End Plan-summary Tab panes -->
+          </div>
+        </div>    
+      </div>
+    </section>
+    <!-- End plan-summary -->
+
+      </div>
+      <div class="tab-pane" id="features">
+      <!--  Start content -->
+    <section class="l-main-container container">
+      <!-- Start misc-banner -->
+      <section class="misc-banner">
+        <div class="tab-header tab-header-features">
+          <h2 class="tab-header-title">[@L[cds.sales/gd/design/web-store-design2:TabContentFeaturesTabHeaderText_34158]@L]</h2>
+          <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-store-design2:TabContentFeaturesTabSubHeaderText_34158]@L]</p>
+        </div>
+      </section>
+      <!-- End misc-banner -->
+      <div class="row tab-content">
+        <div class="col-xs-12">
+          <div class="grid-column features-grid-ecd">
+            <div class="row-icon-left features-list-ecd">
+              <i class="ico ico-storefront"></i>
+              <h2>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1CurrentFeaturesTitle]@L]</h2>
+              <ul class="ecd-pane-list">
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems1]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems2_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems3_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems4]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems5_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures1FeatureListItems6_34158]@L]</li>
+              </ul>
+            </div>
+            <div class="row-icon-left features-list-ecd">
+              <i class="ico ico-online-store"></i>
+              <h2>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2CurrentFeaturesTitle_34158]@L]</h2>
+              <ul class="ecd-pane-list">
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems1_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems2]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems3]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems4_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems5_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems6]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems7_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems8]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures2FeatureListItems9]@L]</li>
+              </ul>
+            </div>
+            <div class="row-icon-left features-list-ecd">
+              <i class="ico ico-marketing-tools"></i>
+              <h2>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3CurrentFeaturesTitle]@L]</h2>
+              <ul class="ecd-pane-list">
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems1]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems2]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems3]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems4_34158]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems5]@L]</li>
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems6_34158]@L]</li>
+                
+		   ##if(areAdCreditsEnabled(bing))
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems7]@L]</li>
+                ##endif
+		   ##if(areAdCreditsEnabled(facebook))
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems8]@L]</li>
+                ##endif
+                <li>[@L[cds.sales/gd/design/web-store-design2:TabFeatures3FeatureListItems9]@L]</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg btn-block tab-link js-open-overview" href="#" data-ci="88691"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/web-store-design2:PackageBtn]@L]</a>
+    </section>
+    <!-- End content -->
+      </div>
+      <div class="tab-pane" id="how-it-works">
+      <!--  Start content -->
+    <section class="l-main-container container">
+      <!-- Start misc-banner -->
+      <section class="misc-banner">
+        <div class="tab-header tab-header-ecd-howitworks">
+          <h2 class="tab-header-title">[@L[cds.sales/gd/design/web-store-design2:TabContentHowWorksTabHeaderText_34158]@L]</h2>
+          <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-store-design2:TabContentHowWorksSubTabHeaderText_34158]@L]</p>
+        </div>
+      </section>
+      <!-- End misc-banner -->
+      <div class="row tab-content">
+        <div class="col-xs-12">
+          <div class="grid-column tab-content-column tab-content-left tab-content-ecd-share-your-vision">
+            <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-store-design2:TabHowWorks1CurrentFeaturesTitle]@L]</h2>
+            <ul class="tab-content-list no-margin-bottom">
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks1FeatureListItems1_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks1FeatureListItems2_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks1FeatureListItems5_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks1FeatureListItems6]@L]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row tab-content">
+        <div class="col-xs-12">
+          <div class="grid-column tab-content-column tab-content-right tab-content-ecd-get-to-work">
+            <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-store-design2:TabHowWorks2CurrentFeaturesTitle]@L]</h2>
+            <ul class="tab-content-list no-margin-bottom">
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks2FeatureListItems1_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks2FeatureListItems2]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks2FeatureListItems3_34158]@L]</li>
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks2FeatureListItems4]@L]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row tab-content">
+        <div class="col-xs-12">
+          <div class="grid-column tab-content-column tab-content-left tab-content-ecd-publish-promote">
+            <h2 class="tab-content-title">[@L[cds.sales/gd/design/web-store-design2:TabHowWorks3CurrentFeaturesTitle_34158]@L]</h2>
+            <ul class="tab-content-list no-margin-bottom">
+              <li>[@L[cds.sales/gd/design/web-store-design2:TabHowWorks3FeatureListItems1_34158]@L]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-primary btn-lg btn-block tab-link js-open-overview" href="#" data-ci="88692"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/web-store-design2:PackageBtn]@L]</a>
+    </section>
+    <!-- End content -->
+
+      </div>
+      <div class="tab-pane" id="faq">
+      <section class="tab-content-top-spacing">
+      <div class="container l-main-container">
+        <div class="row tab-content">
+          <div class="col-xs-12">
+            <div class="grid-column tab-content-column-alternate">
+              <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-store-design2:FaqList1Title]@L]</h2>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList1Item1_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList1Item2_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList1Item3_34158]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-store-design2:FaqList2Title]@L]</h2>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList2Item1_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList2Item2_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList2Item3_34158]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-store-design2:FaqList3Title]@L]</h2>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList3Item1_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList3Item2_34158]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-store-design2:FaqList4Title_34158]@L]</h2>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList4Item1_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList4Item2_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList4Item3_34158]@L]</p>
+
+              <hr/>
+
+              <h2 class="h2-alternate">[@L[cds.sales/gd/design/web-store-design2:FaqList5Title]@L]</h2>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList5Item1_34158]@L]</p>
+              <p>[@L[cds.sales/gd/design/web-store-design2:FaqList5Item2_34158]@L]</p>
+              <p class="no-margin-bottom">[@L[cds.sales/gd/design/web-store-design2:FaqList5Item3_34158]@L]</p>
+        
+            </div>
+          </div>
+        </div>
+        <a class="btn btn-primary btn-lg btn-block tab-link js-open-overview" href="#" data-ci="88698"><i class="ico ico-gt"></i>[@L[cds.sales/gd/design/web-store-design2:PackageBtn]@L]</a>
+      </div>
+    </section>
+
+      </div>
+    </div>
+    <!-- End main-tabs panes -->
+    <section class="container l-main-container content-disclaimer">
+      <p class="no-margin-bottom"><small class="small-print">[@L[cds.sales/gd/design/web-store-design2:ContentDisclaimerSymbols_34158]@L] <a class="simple-link pointer-cursor" data-ci="88687" data-toggle="modal" data-target="#myModal">[@L[cds.sales/gd/design/web-store-design2:ContentDisclaimerLink]@L]</a></small></p>
+      <p><small class="small-print">[@L[cds.sales/gd/design/web-store-design2:ContentDicalimerText]@L]</small></p>
+    </section>
+
+
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        ##if(appSettingEnabled(UXCORE_ENABLED))
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        ##else
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        ##endif
+        <h4 class="modal-title"><strong>[@L[cds.sales/gd/design/web-store-design2:disclaimer-modal-header]@L]</strong></h4>
+        </div>
+        <div class="modal-body">
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem01]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem02_34158]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem03_34158]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem04]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem05_34158]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem08]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem09]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem12]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem11-1-34158]@L]</p>
+          <p>[@L[cds.sales/gd/design/web-store-design2:DisclaimerModalItem11]@L]</p>
+        </div>
+      </div>
+      </div>
+    </div>
+{% endblock body %}
