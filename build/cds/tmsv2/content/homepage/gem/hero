@@ -64,12 +64,8 @@
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci="97703" class="gem">
-  <div class="gem-text">
-    <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
-    <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
-    <div class="product-name walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]</div>
-    <div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
-    <button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
-  </div><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gem-background.jpg"/>
-</div>
+<div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
+<mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+<div class="product-name walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]</div>
+<div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
+<button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
