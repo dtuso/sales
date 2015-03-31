@@ -160,7 +160,6 @@ mixin renderCartLogic(url, itc, options)
         .done(function(data) {
           var redirectUrl = "!{addToCartRedirectUrl}";
           redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-          redirectUrl = redirectUrl.replace('%7b1%7d',src);
           if (redirectUrl.indexOf("?") === -1) {
             redirectUrl += "?plan=";
           } else {
