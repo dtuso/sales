@@ -41,12 +41,12 @@
     </div>
   </div>
   <div id="wsbPlusDomainAddCart">
-    <div class="text b">GET WEBSITE BUILDER</div>
-    <div class="text b">PLUS A FREE DOMAIN</div>
-    <div class="text b">FOR ONLY</div>
-    <div class="price-headline b orange">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MONTH</div>
+    <div class="text b">[@L[cds.sales/homepage/tile/wsb:getWebsiteBuilder]@L]</div>
+    <div class="text b">[@L[cds.sales/homepage/tile/wsb:plusFreeDomain]@L]</div>
+    <div class="text b">[@L[cds.sales/homepage/tile/wsb:forOnly]@L]</div>
+    <div class="price-headline b orange">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/homepage/tile/wsb:perMonth]@L]</div>
     <div class="wsb-btn-wrap">
-      <button id="gdhp-wsb-btn" href="javascript:void(0)" data-ci="97787" class="btn btn-lrg btn-orange">GET STARTED</button>
+      <button id="gdhp-wsb-btn" href="javascript:void(0)" data-ci="97787" class="btn btn-lrg btn-orange">[@L[cds.sales/homepage/tile/wsb:getStarted]@L]</button>
     </div>
   </div>
 </div>
