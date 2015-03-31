@@ -22,9 +22,9 @@ atlantis:webstash(type="css")
     .wsb-logo
       div.wsb-tile-logo
   #wsbPlusDomainAddCart
-    div.text.b GET WEBSITE BUILDER
-    div.text.b PLUS A FREE DOMAIN
-    div.text.b FOR ONLY
-    div.price-headline.b.orange [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MONTH
+    div.text.b [@L[cds.sales/homepage/tile/wsb:getWebsiteBuilder]@L]
+    div.text.b [@L[cds.sales/homepage/tile/wsb:plusFreeDomain]@L]
+    div.text.b [@L[cds.sales/homepage/tile/wsb:forOnly]@L]
+    div.price-headline.b.orange [@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/homepage/tile/wsb:perMonth]@L]
     .wsb-btn-wrap
-      button#gdhp-wsb-btn.btn.btn-lrg.btn-orange(href!="javascript:void(0)",data-ci="97787") GET STARTED
+      button#gdhp-wsb-btn.btn.btn-lrg.btn-orange(href!="javascript:void(0)",data-ci="97787") [@L[cds.sales/homepage/tile/wsb:getStarted]@L]
