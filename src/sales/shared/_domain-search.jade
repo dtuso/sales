@@ -691,10 +691,12 @@ mixin configDomainSearchInput(configDomainSearchParams)
                         $('.available-result').hide();
                         $('.unavailable-result').hide();
 
+                        var safeShortName = $('<div>').text(jsonData.Properties.domainInfo[0].shortName).html().toLowerCase();
+
                         if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                             var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -703,28 +705,28 @@ mixin configDomainSearchInput(configDomainSearchParams)
                             url += 'domaintocheck=' + domain;
                             url += '&tld=' + tld.val();
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
-                            var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                            var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                             $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                             $('.unavailable-result').show();
 
-                        } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                        } else if (jsonData.Properties.domainInfo[0].error.indexOf('Invalid') >= 0) {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                            var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                             $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } 
                         else if (jsonData.Properties.domainInfo[0].error != '') {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                            var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                            var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                            var takenText = '[@L[cds.sales/_common:domain-not-available]@L]';
+                            var domainText = ' <span class="domainName"> ' +safeShortName+'</span>';
                             $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                             $('.unavailable-result').show();
                         } else {
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                            var availableDomain = jsonData.Properties.domainInfo[0].shortName.split('.')[0];
-                            var availableTld = '.'+jsonData.Properties.domainInfo[0].shortName.split('.')[1];
+                            var availableDomain = safeShortName.split('.')[0];
+                            var availableTld = '.'+safeShortName.split('.')[1];
                             $('.domain-name-display-domain').html(availableDomain);
                             $('.domain-name-display-tld').html(availableTld);
                             $('.available-result').show();
