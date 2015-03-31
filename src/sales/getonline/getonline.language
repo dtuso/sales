@@ -1,7 +1,6 @@
 ---
 location: localization/sales/getonline/en
 id: 
-comment: something to push doc
 name: GCE-37476
 ---
 {% include 'modules/doc-block.html' %}

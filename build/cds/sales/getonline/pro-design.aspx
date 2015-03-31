@@ -269,7 +269,7 @@
             <button id="getItNowTop" type="submit" data-ci="96312" class="btn btn-lg btn-purchase">[@L[cds.sales/getonline:get-it-now]@L]</button>
             <p class="p2">[@L[cds.sales/getonline:pro-design-product-call-us]@L]</p>
             <div class="header-text disclaimers"><small class="text-disclaimers">
-                <button data-ci="" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:disclaimer-modal-title]@L]</button></small> 
+                <button data-ci="97736" class="btn-link see-details-disclaimer-link">[@L[cds.sales/getonline:disclaimer-modal-title]@L]</button></small> 
               ##if(countrySiteAny(uk)) 
               <div class="text-vat-disclaimer">[@L[cds.sales/getonline:price-does-not-include-taxes-vat]@L]</div> 
               ##endif 
@@ -280,8 +280,6 @@
           <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-01_34158]@L]</p>
           <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-02_34158]@L]</p>
           <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-03_34158]@L]</p>
-          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-04_34158]@L]</p>
-          <p>[@L[cds.sales/getonline:disclaimer-modal-pro-design-item-05_34158]@L]</p>
         </div>
       </div>
     </section>
