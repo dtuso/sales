@@ -1,0 +1,52 @@
+
+<atlantis:webstash type="css">
+  <style>.gdhp-tile.wsb {
+  background-color: #fff;
+  color: #58585a;
+  position: relative;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+.gdhp-tile.wsb .text {
+  padding: 0px 0 0 30px;
+  font-size: 36px;
+  line-height: 36px;
+}
+.gdhp-tile.wsb .wsb-logo .wsb-tile-logo {
+  background: url("[@T[link:<imageroot />]@T]fos/hp/all-icons.png");
+  width: 420px;
+  height: 150px;
+  margin: 30px 20px 20px;
+}
+.gdhp-tile.wsb .price-headline {
+  padding: 15px 0 0 30px;
+  font-size: 40px;
+  line-height: 40px;
+}
+.gdhp-tile.wsb .orange {
+  color: #ff8a00;
+}
+.gdhp-tile.wsb .wsb-btn-wrap {
+  margin: 20px 20px 20px 30px;
+  position: absolute;
+  bottom: 0;
+  height: 73px;
+}
+
+  </style>
+</atlantis:webstash>
+<div onclick="location.href='[@T[link:<relative path='hosting/website-builder.aspx'><param name='ci' value='97787' /></relative>]@T]';" data-ci="97787" class="gdhp-tile wsb">
+  <div class="wsb-logo-wrap">
+    <div class="wsb-logo">
+      <div class="wsb-tile-logo"></div>
+    </div>
+  </div>
+  <div id="wsbPlusDomainAddCart">
+    <div class="text b">GET WEBSITE BUILDER</div>
+    <div class="text b">PLUS A FREE DOMAIN</div>
+    <div class="text b">FOR ONLY</div>
+    <div class="price-headline b orange">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MONTH</div>
+    <div class="wsb-btn-wrap">
+      <button id="gdhp-wsb-btn" href="javascript:void(0)" data-ci="97787" class="btn btn-lrg btn-orange">GET STARTED</button>
+    </div>
+  </div>
+</div>
