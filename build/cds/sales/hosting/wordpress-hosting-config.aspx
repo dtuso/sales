@@ -1212,19 +1212,25 @@ list-style: none;
     display: flex;
     align-items: center;
 }   
-@media (max-width: 768px) { 
+.product-radio {
+  margin-top :10px; 
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 1024px) { 
     .vertical-align {
         display: block;
         align-items: inherit;
     }
-    .text-xs-right{
+    .text-md-right{
       text-align: right;
     }
     .config-text-primary {
       font-size: 20px;
     }
     .config-text-secondary {
-      font-size: 14px;
+      font-size: 20px;
     }
     .config-text-lead {
       font-size: 16px;
@@ -1234,6 +1240,23 @@ list-style: none;
     }
     .config-text-disclaimer {
       font-size: 14px;
+    }
+    .product-radio {
+      margin-top :0;
+    } 
+    .item-price{
+      border-bottom: 1px solid #EBEBEB;
+    }
+}
+@media (max-width: 428px) { 
+    .text-xs-right {
+      text-align: right;
+    }
+    .text-md-right{
+      text-align: inherit;
+    }
+    .item-price{
+      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -1249,7 +1272,7 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .row {
+.order-item-details-wrapper .toprow {
   margin-top: 15px;
 }
 .item-title-wrapper{
@@ -1268,6 +1291,15 @@ list-style: none;
 }
 .item-savings-wrapper{
   text-transform: uppercase;
+}
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
+.selected-radio{
+  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
+  width: 36px;
+  height: 36px;
 }
 #officeOption{
   text-decoration: line-through;
@@ -1296,17 +1328,16 @@ input[type="checkbox"]:checked {
   left: -9999px;
 }
 
-input[type=checkbox] + label{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -612px -9px;
-  width: 33px;
-  height: 33px;
-  margin-top: 50px;
+input[type=checkbox]:not(:checked) + label{
+  right: 3px;
+  top: 2px;
+  color: #333;
 }
 
-input[type=checkbox]:checked + label{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -647px -9px;
-  width: 41px;
-  height: 33px;
+input[type=checkbox] + label{
+  font-size: 2.5em;
+  color: #579006;
+  margin-top: 50px;
 }
 
 .domain-search-container {
@@ -1323,22 +1354,26 @@ input[type=checkbox]:checked + label{
       
     </script>
     <script type="text/template" class="itemTemplate">
-      <div class="row">
+      <div class="row toprow">
         <div class="col-xs-12 item-title-wrapper">
           <div class="item-title"><%= itemName %></div>
         </div>
-        <div class="col-xs-4">
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
           <div class="item-term"><%= itemTerm %></div>
         </div>
-        <div class="col-xs-1">
+        <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
           <div class="item-x">x</div>
         </div>
-        <div class="col-xs-3">
-          <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div>
+        <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
+          <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div> 
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
           <div class="item-total-price text-secondary"><%= itemTotal %></div>
         </div>
+      </div>
+      <div class="row">
         <div class="col-xs-12">
           <% if ( onSale ){ %>
             <div class="item-savings-wrapper text-secondary">
@@ -1351,19 +1386,19 @@ input[type=checkbox]:checked + label{
     </script>
     <script type="text/template" class="planTemplate">
       <li>
-        <div class="row">
-          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+        <div class="row vertical-align">
+          <div class="col-xs-2">
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+          </div>
+          <div class="col-xs-6">
             <div class="config-text-secondary"><%= title %></div>
           </div>
           <div class="col-xs-4">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
-        <div class="row vertical-align">
-          <div class="col-xs-1">
-            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> >
-          </div>
-          <div class="col-xs-7">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-2">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1373,7 +1408,7 @@ input[type=checkbox]:checked + label{
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+          <div class="col-xs-6 col-xs-offset-2">
             <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
             <% } %></div>
@@ -1392,23 +1427,23 @@ input[type=checkbox]:checked + label{
     <script type="text/template" class="termTemplate">
       <li>
         <div class="row vertical-align">
-          <div class="col-xs-2 col-sm-1">
-            <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> >
+          <div class="col-xs-2 col-lg-1">
+              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
           </div>
-          <div class="col-xs-5 col-sm-3">
+          <div class="col-xs-5 col-lg-3">
             <div class="config-text-primary"><%= term %> <%= month %></div>
           </div>
-          <div class="col-xs-5 col-sm-3">
+          <div class="col-xs-5 col-lg-3">
             <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
-          <div class="col-xs-12 col-sm-2">
+          <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
             <div class="config-text-lead text-xs-right">
               <% if ( onSale ){ %>
                 <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
               <% } %>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-3 col-xs-11">
+          <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0 ">
             <div class="text-xs-right config-text-lead text-secondary-o"> 
               <% if ( onSale ){ %>
                 [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
@@ -1418,12 +1453,13 @@ input[type=checkbox]:checked + label{
         </div>
       </li>
       
+      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>" data-yearly="<%= yearly %>"/><label id="<%= package %>"></label>
+            <input id = "add<%= radio %>"type="checkbox" style="margin-top:50px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>" data-yearly="<%= yearly %>"/><label id="<%= package %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1440,7 +1476,7 @@ input[type=checkbox]:checked + label{
       <li id="slElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>"/><label id="<%= packageOne %>"></label>
+            <input id ="add<%= checkOne %>" type="checkbox" style="margin-top:50px;" name="<%= checkOne %>" value="<%= packageOne %>" data-addon="<%= addonOne %>" data-monthly="<%= monthlyOne %>"  data-yearly="<%= yearlyOne %>"/><label id="<%= packageOne %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class ="config-text-primary">
@@ -1456,7 +1492,7 @@ input[type=checkbox]:checked + label{
       <li id="sslElement">
         <div class="row">
           <div class="col-xs-1">
-            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>"/><label id="<%= packageTwo %>"></label>
+            <input id = "add<%= checkTwo %>"type="checkbox" style="margin-top:50px;" name="<%= checkTwo %>" value="<%= packageTwo %>" data-addon="<%= addonTwo %>" data-monthly="<%= monthlyTwo %>"  data-yearly="<%= yearlyTwo %>"/><label id="<%= packageTwo %>" class="uxicon uxicon-box"></label>
           </div>
           <div class="col-xs-11">
             <div class="config-text-primary">
@@ -1572,9 +1608,7 @@ input[type=checkbox]:checked + label{
           {
             steps = _.without(steps, 'officeStep');
           }
-          if(!reload){
-            Config.setTitle();
-          }
+          Config.setTitle();
           Config.showSteps(steps);
           Config.addStepBreaks();
           Config.stepNumbers();
@@ -1649,7 +1683,7 @@ input[type=checkbox]:checked + label{
         },
         setTitle: function(){
           var getStarted = 'gs';
-          if (origin === getStarted){
+          if (origin === getStarted && !reload){
             $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
           }
           else{
@@ -1752,6 +1786,11 @@ input[type=checkbox]:checked + label{
               parentID.append(termTemplate(termData));
       
             }); 
+      
+            $('.radio-'+radioName).click(function(){
+              $(this).parent().find('input').trigger('click');
+            });
+      
             $('input[name="'+radioName+'"]').click(function(){
               plan = this.defaultValue;
               Config.loadData(plan);
@@ -1810,7 +1849,11 @@ input[type=checkbox]:checked + label{
               parentID.append(planTemplate(planData));
       
             });
-            
+      
+            $('.radio-'+radioName).click(function(){
+                $(this).parent().find('input').trigger('click');
+            });
+      
             $('input[name="'+radioName+'"]').click(function(){
               plan = this.defaultValue;
               Config.loadData(plan);
@@ -1855,6 +1898,14 @@ input[type=checkbox]:checked + label{
             parentID.append(addonTemplate(officeData));
       
             $('#officeEmail').click(function(){
+              if($('#officeEmail').hasClass("uxicon-box")){
+                $('#officeEmail').removeClass("uxicon-box");
+                $('#officeEmail').addClass("uxicon-check-box");
+              }
+              else {
+                $('#officeEmail').removeClass("uxicon-check-box");
+                $('#officeEmail').addClass("uxicon-box");
+              }
               $('input[name="'+radioName+'"]').click();
               Config.updateOrderSummary();
             });
@@ -1908,10 +1959,26 @@ input[type=checkbox]:checked + label{
             parentID.append(addonTemplate(securityData));
       
             $('#sitelock_Basic1Yr').click(function(){
+              if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
+                $('#sitelock_Basic1Yr').removeClass("uxicon-box");
+                $('#sitelock_Basic1Yr').addClass("uxicon-check-box");
+              }
+              else {
+                $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+                $('#sitelock_Basic1Yr').addClass("uxicon-box");
+              }
               $('input[name="'+checkNameOne+'"]').click();
               Config.updateOrderSummary();
             });
             $('#ssl_std_1').click(function(){
+              if($('#ssl_std_1').hasClass("uxicon-box")){
+                $('#ssl_std_1').removeClass("uxicon-box");
+                $('#ssl_std_1').addClass("uxicon-check-box");
+              }
+              else {
+                $('#ssl_std_1').removeClass("uxicon-check-box");
+                $('#ssl_std_1').addClass("uxicon-box");
+              }
               $('input[name="'+checkNameTwo+'"]').click();
               Config.updateOrderSummary();
             });
@@ -2095,22 +2162,24 @@ input[type=checkbox]:checked + label{
             ##endif
           }
       
+          var siteLockCheckOption = function(){
+            if(document.getElementById('addsiteLockOption').checked){
+              Config.addAddonToCart('siteLockOption');
+            }
+          };
+      
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83980',1, plan);
           $.getJSON(cartAPIUrl, function (data) {
-            if (data.Success == true) {}});
-      
-          if(document.getElementById('addsslOption').checked){
-            setTimeout(function(){
-             Config.addAddonToCart('sslOption');
-            }, 1000);
-          }
-          if(document.getElementById('addsiteLockOption').checked){
-            setTimeout(function(){
-             Config.addAddonToCart('siteLockOption');
-            }, 1000);
-          }
+            if (data.Success == true) {            
+              if(document.getElementById('addsslOption').checked){
+                Config.addAddonToCart('sslOption', siteLockCheckOption);
+              } else {
+                siteLockCheckOption();
+              }
+            }
+          });
         },
-        addAddonToCart: function(addonOption){
+        addAddonToCart: function(addonOption, callback){
           ##if(isManager())
             itc="mgr_" + itc;
           ##endif
@@ -2120,6 +2189,9 @@ input[type=checkbox]:checked + label{
           var cartAPIUrl = Config.getCartAPIUrl('update',itc,'83981',1, addon);
       
           $.getJSON(cartAPIUrl, function (data) {
+            if(data.Success === true && $.isFunction(callback)) {
+              callback();
+            }
           });
         },
         getCartAPIUrl: function(action,itcCode,ciCode,quantity,planSelected) {
