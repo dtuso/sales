@@ -6,6 +6,10 @@ block marquee
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |  ##endif
+
+block bugBar
+  +tldBugs(["com","club","co-nz","org","rocks"])
+
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting.jade
   | 

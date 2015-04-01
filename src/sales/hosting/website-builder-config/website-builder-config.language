@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/hosting/website-builder-config/en
-id: 54f6192af778fc0104ece27b
+id: 5514aacef778fc2ac4cc1879
 name: GCE-27630
 ---
 
@@ -86,7 +86,7 @@ Mobile site
 <phrase key="business_plus" />
 Business Plus
 <phrase key="business_plus_text" />
-For growing businesses
+Great for growing businesses
 <phrase key="5_email" />
 5 email addresses
 <phrase key="seo" />
@@ -98,13 +98,13 @@ Select Term Length
 <phrase key="select_term_title" />
 Extend and save
 <phrase key="select_term_subtitle" />
-Lock in your savings and avoid annual renewals with a multi-year tem.
+Lock in your savings and avoid annual renewals with a multi-year term.
 <phrase key="add_ssl" />
 Add Standard SSL Certificate
 <phrase key="add_ssl_title" />
 Protect your customers
 <phrase key="add_ssl_subtitle" />
-Keep hackers from intercepting credit card numbers, passwords and more by encrypting data that’s transferred to and from your site.
+Keep hackers from intercepting credit card numbers, passwords and more by encrypting the data transferred to and from your site.
 <phrase key="no_thanks" />
 No thanks
 <phrase key="add_gf" />
@@ -112,7 +112,7 @@ Add Get Found
 <phrase key="add_gf_title" />
 Get your business listed everywhere
 <phrase key="add_gf_subtitle" />
-View, add and update your business info on all the top sites – Google<sup>®</sup>, Facebook<sup>®</sup>, Yelp<sup>®</sup> and more – all from one place.
+View, add and update your business info on all the top sites – Google<sup>®</sup>, Foursquare<sup>®</sup>, Yelp<sup>®</sup> and more – all from one place.
 <phrase key="order_personal_wsb" />
 Personal Website Builder
 <phrase key="order_business_wsb" />

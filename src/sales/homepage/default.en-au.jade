@@ -11,7 +11,7 @@ block marquee
   |  ##endif
 
 block bugBar
-  +tldBugs(["net","co","com-au","biz"])
+  +tldBugs(["com","club","com-au","org","rocks"])
 
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting.jade
@@ -20,7 +20,7 @@ block primaryTile
 
 block secondaryTile
   |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
-  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/why-wsb/default_template" /> ]@P]
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/wsb/default_template" /> ]@P]
   |  ##else
   |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
   |  ##endif

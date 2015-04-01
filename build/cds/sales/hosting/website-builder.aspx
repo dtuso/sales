@@ -24,7 +24,15 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png">
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -140,7 +148,7 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button id="get-started-btn" data-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
@@ -200,8 +208,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -645,7 +657,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
@@ -694,7 +706,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
@@ -744,7 +756,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
@@ -794,7 +806,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
@@ -813,7 +825,7 @@
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
-                var src = "ac"
+                var btnSrc = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -826,8 +838,8 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
-                    if($(this).data("src")!== undefined)
-                      src = $(this).data("src");
+                    if($(this).data("btn-src")!== undefined)
+                      btnSrc = $(this).data("btn-src");
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -844,15 +856,15 @@
                     dataType: "jsonp"
                   })
                   .done(function(data) {
-                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]";
+                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
                       redirectUrl += "&plan=";
                     }
                     redirectUrl += productPackage;
+                    redirectUrl += "&src=" + btnSrc;
                 
                     window.location.href = redirectUrl;
                   })
@@ -3141,7 +3153,7 @@ var PlanBox6UI = {
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -3732,7 +3744,7 @@ top: -6px;
             </div>
             <atlantis:webstash type="js">
               <script type="text/javascript">
-                $(window).load(function() {
+                $(document).ready(function() {
                   setTimeout(function() {
                     $(".features-tabbed-carousel-icon:first").click();
                   }, 500);
@@ -5557,7 +5569,7 @@ width: 50%;
            var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
-               $row = $("<div>", {class: "row"});
+               $row = $("<div>", {'class': 'row'});
              column++;
              var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);
@@ -5647,7 +5659,7 @@ width: 50%;
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       

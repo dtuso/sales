@@ -26,7 +26,15 @@
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
     <meta name="twitter:description" content="[@L[cds.sales/gd/hosting/web-hosting:twitter-text]@L]">
-    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png"> 
+    <meta name="twitter:image:src" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -202,8 +210,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -630,7 +642,7 @@
                   <p class="h6">[@T[productprice:<list productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-D" data-ci="90621" data-plan="host_GridHostStrDiabloLin1Yr_in" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-D" data-ci="90621" data-plan="host_GridHostStrDiabloLin1Yr_in" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/gd/hosting/web-hosting:starter-plan-storage]@L]</strong></div>
@@ -663,7 +675,7 @@
                   <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
@@ -697,7 +709,7 @@
                   <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
@@ -732,7 +744,7 @@
                   <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
@@ -804,8 +816,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -1231,7 +1247,7 @@
                   <p class="h6">[@T[productprice:<list productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="89269" data-plan="host_GridHostEcoDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:oneHundredStorage]@L]</strong></div>
@@ -1264,7 +1280,7 @@
                   <p class="h6">[@T[productprice:<list productid="32059" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="89270" data-plan="host_GridHostDlxDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
@@ -1298,7 +1314,7 @@
                   <p class="h6">[@T[productprice:<list productid="32082" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="89271" data-plan="host_GridHostUnlDiabloLin1Yr_us" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedWeb]@L]</strong></div>
                   <div class="plan-item"><strong>[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedStorage]@L]</strong> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/web-hosting-rebrand:unlimitedHostingToolTip]@L]"></span></div>
@@ -1320,7 +1336,7 @@
         <script type="text/javascript">
           var itemTrackingCode = "slp_hosting_4GH";
           var ci = "0"
-          var src = "ac"
+          var btnSrc = "ac"
           
           $(".btn-plan").click(function() {
           
@@ -1333,8 +1349,8 @@
               var productPackage = $(this).data("plan");
               if($(this).data("ci")!== undefined)
                 ci = $(this).data("ci");
-              if($(this).data("src")!== undefined)
-                src = $(this).data("src");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
             }
           
             var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -1353,13 +1369,13 @@
             .done(function(data) {
               var redirectUrl = "[@T[link:<relative path="~/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]";
               redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-              redirectUrl = redirectUrl.replace('%7b1%7d',src);
               if (redirectUrl.indexOf("?") === -1) {
                 redirectUrl += "?plan=";
               } else {
                 redirectUrl += "&plan=";
               }
               redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
           
               window.location.href = redirectUrl;
             })
@@ -5839,7 +5855,7 @@ cursor: pointer;
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       

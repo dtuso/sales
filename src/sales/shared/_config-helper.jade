@@ -186,10 +186,20 @@ mixin configSummary(configSummaryParams)
     .row
       .savings-total-wrapper.text-secondary [@L[cds.sales/_common:total-savings]@L]:
         span.savings-total
+    | 
+    | ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
+    | 
+    .row
+    | 
+    | ##else
+    | 
     .row
       .subtotal-disclaimer.text-muted.col-sm-9 [@L[cds.sales/_common:subtotal-disclaimer]@L]
+    | 
+    | ##endif
+    | 
     .row
-      .scroll-down-wrapper.move(data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
+      .scroll-down-wrapper.move(id="scrollDownToContinueButton", data-ci= configSummaryParams.ci, data-scroll = configSummaryParams.scroll)
         p.green-text [@L[cds.sales/_common:scroll-continue]@L]
         span.green-down-arrow-icon
   if(!configSummaryJS)
@@ -309,7 +319,6 @@ mixin configStepBreak(configStepBreakParams)
           margin-bottom: 15px;
         }
         .config-step-break .icon-down {
-          cursor: pointer;
           position: relative;
           z-index: 1;
         }

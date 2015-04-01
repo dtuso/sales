@@ -9,7 +9,9 @@ block vars
   - buttonid="product-D";
   - term ="/mo[@L[cds.sales/gd/hosting/wordpress-hosting:per-mo]@L]"
   - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
-  - defaultPlan = "host_WordPressHostingPlan_D";
+  - buttonTitleText = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]";
+  - defaultPlan = page.plan.D;
+  - showDropDownList = false;
   - vat = true
   - ci = page.ci.plansAddToCartD;
   - flagText = ""; // "[@L[cds.sales/gd/hosting/wordpress-hosting:plan-D-flagtext]@L]"
@@ -18,7 +20,7 @@ block vars
 
 
 block price
-  include ./_plan-price-override.jade
+  include ./_2_plan-price-override.jade
 
 block features
   .plan-item 

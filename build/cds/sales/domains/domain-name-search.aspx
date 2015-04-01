@@ -24,7 +24,15 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
     <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800"> 
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
@@ -324,8 +332,12 @@
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -1540,8 +1552,12 @@ top: -6px;
           $(document).ready(function(){
             if ($(window).width() < 768) 
               return; /* bail out because too narrow to list more than one wide */
-            planTileMixin.autoHeighPlanBoxInsides();
-            planTileMixin.autoHeightPlanBoxes();
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
           });
           
         </script>
@@ -2135,7 +2151,7 @@ top: -6px;
       </div>
       <atlantis:webstash type="js">
         <script type="text/javascript">
-          $(window).load(function() {
+          $(document).ready(function() {
             setTimeout(function() {
               $(".features-tabbed-carousel-icon:first").click();
             }, 500);
@@ -3012,7 +3028,7 @@ ul li.no-check {
     <script>
       $(window).load(function() {
         var maxTitleHeight = 0;
-        $(".plan-title").each(function(index, title) {
+        $(".plan-title:not(.bigtext)").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
       

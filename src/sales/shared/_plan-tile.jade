@@ -46,11 +46,11 @@ block vars
   - buttonText = "";
   - showDropDownList = false;
   - buttonUrl = "";
+  - buttonTitleText = "";
   - priceText = "";
   - term = "";
   - vat = "";
   - additionalClasses = "";
-
 
 
 .pro-plan-wrap(class="#{additionalClasses}")
@@ -130,13 +130,13 @@ block vars
   block button
     .action-button-wrap.row
     if (buttonText && buttonUrl)
-      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-ci!=ci data-index="1") !{buttonText}
+      a.btn.btn-primary.btn-plan.btn-lg.btn-block(href!=buttonUrl data-ci!=ci data-index="1", alt!="#{buttonTitleText}") !{buttonText}
     else if(buttonText && showDropDownList )
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}",data-ul="#{listID}") !{buttonText}
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}",data-ul="#{listID}", title!="#{buttonTitleText}") !{buttonText}
     else if (buttonText && !showDropDownList && defaultPlan && buttonid)
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(id=buttonid ,data-ci="#{ci}",data-plan="#{defaultPlan}") !{buttonText}
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(id=buttonid ,data-ci="#{ci}",data-plan="#{defaultPlan}", title!="#{buttonTitleText}") !{buttonText}
     else
-      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}") No Action
+      button.btn.btn-purchase.btn-plan.btn-lg.btn-block(data-ci="#{ci}", title!="#{buttonTitleText}") No Action
 
   block features
     //- Feature list
