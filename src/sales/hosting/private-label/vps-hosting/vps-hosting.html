@@ -85,7 +85,7 @@ assetPath: false
           </div>
           <div class="bottom-plan-info">
             <p>
-              <button id="cart-button-0" type="button" data-plan=""  class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+              <button id="cart-button-0" type="button" data-ci="19472" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
             <p class="storage list-item"></p>
             <p class="bandwidth list-item"></p>
@@ -101,7 +101,7 @@ assetPath: false
           </div>
           <div class="bottom-plan-info">
             <p>
-              <button id="cart-button-1" type="button" data-plan=""  class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+              <button id="cart-button-1" type="button" data-ci="19473" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
             <p class="storage list-item"></p>
             <p class="bandwidth list-item"></p>
@@ -117,7 +117,7 @@ assetPath: false
           </div>
           <div class="bottom-plan-info">
             <p>
-              <button id="cart-button-2" type="button" data-plan=""  class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+              <button id="cart-button-2" type="button" data-ci="19474" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
             <p class="storage list-item"></p>
             <p class="bandwidth list-item"></p>
@@ -133,7 +133,7 @@ assetPath: false
           </div>
           <div class="bottom-plan-info">
             <p>
-              <button id="cart-button-3" type="button" data-plan=""  class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+              <button id="cart-button-3" type="button" data-ci="19475" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
             <p class="storage list-item"></p>
             <p class="bandwidth list-item"></p>
@@ -149,7 +149,7 @@ assetPath: false
           </div>
           <div class="bottom-plan-info">
             <p>
-              <button id="cart-button-4" type="button" data-plan="" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+              <button id="cart-button-4" type="button" data-ci="19476" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
             <p class="storage list-item js-flip-left"></p>
             <p class="bandwidth list-item"></p>
@@ -455,7 +455,6 @@ assetPath: false
 {% block footer %}
 
 <script src="[@T[link:<javascriptroot />]@T]fos/script/atlantis_jquery14.min.js" type="text/javascript"></script>
-<script src="[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2" type="text/javascript"></script>
 <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/currency-calc.v1.0.3.min.js" type="text/javascript"></script>
 <script>
   if(typeof currencyCalc != "undefined"){
@@ -483,7 +482,7 @@ assetPath: false
 
       var addons = generateAddonsURL();
       var quantity = 1;
-      var ci = 94077;
+      var ci = $(this).data('ci');
 
       var apiEndpoint = window.location.protocol+'//'+ window.location.host+'/api/package/add';
       apiEndpoint += "/" + itccode;
@@ -499,7 +498,7 @@ assetPath: false
         success: function (data) {
           if (data.Success) {
             var configUrl= '[@T[link:<relative path="hosting/vps-hosting-config.aspx" />]@T]';
-            configUrl =configUrl+ '&plan='+ plan +'&planaddons=pro_vps_managed';
+            configUrl =configUrl + '&ci=' + ci + '&plan='+ plan +'&planaddons=pro_vps_managed';
             window.location = configUrl;
           }
         },
