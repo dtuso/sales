@@ -510,7 +510,7 @@
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigContinueToDomain]@L]</a></div>
+            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue buttons">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigContinueToDomain]@L]</a></div>
           </div>
         </section>
       </div>
