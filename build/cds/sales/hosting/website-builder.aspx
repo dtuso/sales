@@ -148,7 +148,7 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button id="get-started-btn" data-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
@@ -856,9 +856,8 @@
                     dataType: "jsonp"
                   })
                   .done(function(data) {
-                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /><param name='src' value='{1}' /></relative>]@T]";
+                    var redirectUrl = "[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]";
                     redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-                    redirectUrl = redirectUrl.replace('%7b1%7d',src);
                     if (redirectUrl.indexOf("?") === -1) {
                       redirectUrl += "?plan=";
                     } else {
@@ -866,10 +865,6 @@
                     }
                     redirectUrl += productPackage;
                     redirectUrl += "&src=" + btnSrc;
-                
-                    if("false" != "false"){
-                      redirectUrl += "&src=" + src
-                    }
                 
                     window.location.href = redirectUrl;
                   })

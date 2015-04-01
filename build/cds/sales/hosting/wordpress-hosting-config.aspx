@@ -510,7 +510,7 @@
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigContinueToDomain]@L]</a></div>
+            <div class="col-sm-3 col-sm-push-3"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue buttons">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigContinueToDomain]@L]</a></div>
           </div>
         </section>
       </div>
@@ -869,10 +869,12 @@
                             $('.available-result').hide();
                             $('.unavailable-result').hide();
         
+                            var safeShortName = $('<div>').text(jsonData.Properties.domainInfo[0].shortName).html().toLowerCase();
+        
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -881,28 +883,28 @@
                                 url += 'domaintocheck=' + domain;
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
-                                var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
-                            } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                            } else if (jsonData.Properties.domainInfo[0].error.indexOf('Invalid') >= 0) {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                                var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var takenText = '[@L[cds.sales/_common:domain-not-available]@L]';
+                                var domainText = ' <span class="domainName"> ' +safeShortName+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                                var availableDomain = jsonData.Properties.domainInfo[0].shortName.split('.')[0];
-                                var availableTld = '.'+jsonData.Properties.domainInfo[0].shortName.split('.')[1];
+                                var availableDomain = safeShortName.split('.')[0];
+                                var availableTld = '.'+safeShortName.split('.')[1];
                                 $('.domain-name-display-domain').html(availableDomain);
                                 $('.domain-name-display-tld').html(availableTld);
                                 $('.available-result').show();
@@ -1337,11 +1339,32 @@ input[type=checkbox]:not(:checked) + label{
 input[type=checkbox] + label{
   font-size: 2.5em;
   color: #579006;
-  margin-top: 50px;
 }
 
 .domain-search-container {
   margin-bottom: 150px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+  input[type=checkbox] + label{
+    font-size: 2.5em;
+    color: #579006;
+    right: 25px !important;
+  }
+  input[type=checkbox]:not(:checked) + label{
+    right: 28px !important;
+  }
+}
+
+@media (max-width: 767px){ 
+  input[type=checkbox] + label{
+    font-size: 2.5em;
+    color: #579006;
+    right: 15px !important;
+  }
+  input[type=checkbox]:not(:checked) + label{
+    right: 18px !important;
+  }
 }
       </style>
     </atlantis:webstash>

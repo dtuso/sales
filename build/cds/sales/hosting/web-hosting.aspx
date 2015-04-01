@@ -1369,7 +1369,6 @@
             .done(function(data) {
               var redirectUrl = "[@T[link:<relative path="~/hosting/web-hosting-config-new.aspx" parammode="common" />]@T]";
               redirectUrl = redirectUrl.replace('%7b0%7d',ci);
-              redirectUrl = redirectUrl.replace('%7b1%7d',src);
               if (redirectUrl.indexOf("?") === -1) {
                 redirectUrl += "?plan=";
               } else {
@@ -1377,10 +1376,6 @@
               }
               redirectUrl += productPackage;
               redirectUrl += "&src=" + btnSrc;
-          
-              if("false" != "false"){
-                redirectUrl += "&src=" + src
-              }
           
               window.location.href = redirectUrl;
             })

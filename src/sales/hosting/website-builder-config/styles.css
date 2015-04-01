@@ -80,7 +80,7 @@ list-style: none;
       font-size: 20px;
     }
     .config-text-secondary {
-      font-size: 14px;
+      font-size: 20px;
     }
     .config-text-lead {
       font-size: 16px;
@@ -98,7 +98,7 @@ list-style: none;
       border-bottom: 1px solid #EBEBEB;
     }
 }
-@media (max-width: 428px) { 
+@media (max-width: 600px) { 
     .text-xs-right {
       text-align: right;
     }

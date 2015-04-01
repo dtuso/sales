@@ -516,7 +516,7 @@
                 <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p>
               </div>
             </div>
-            <div class="col-sm-3 col-sm-push-3 buttons"><a id="planConfigContinue" data-ci="" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/_common:continue]@L]</a></div>
+            <div class="col-sm-3 col-sm-push-3 buttons"><a id="planConfigContinue" data-ci="85539" class="btn btn-purchase btn-plan btn-md btn-block btn-continue">[@L[cds.sales/_common:continue]@L]</a></div>
           </div>
         </section>
       </div>
@@ -699,14 +699,14 @@
                   ##endif
                    
                 </ul></span><span class="input-group-btn">
-                <button type="submit" data-ci="1" class="btn btn-primary btn-lg offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
+                <button type="submit" data-ci="85541" class="btn btn-primary btn-lg offer-search-btn"> <span class="search-icon uxicon uxicon-magnifying-glass"></span><span class="search-text">[@L[cds.sales/_common:search]@L]</span></button></span>
             </div>
             <div id="search-btn-loading" style="display: none" class="loading"></div>
           </form>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12"><a id="no-domain-link" data-ci="2" class="pull-right">[@L[cds.sales/_common:dont-want-free-domain]@L] </a><span class="continue-icon pull-right"></span>
+        <div class="col-xs-12"><a id="no-domain-link" data-ci="85548" class="pull-right">[@L[cds.sales/_common:dont-want-free-domain]@L] </a><span class="continue-icon pull-right"></span>
           <div id="no-domain-loading" style="display: none" class="loading floatleft"></div>
           <div id="add-domain-loading" style="display: none" class="loading floatleft"></div>
         </div>
@@ -726,7 +726,7 @@
                   <h2 class="word-break domain-name-display domain-name-display-tld"> </h2>
                 </div>
                 <div class="col-md-4 col-sm-12 text-right">
-                  <button data-ci="3" class="btn btn-primary select-and-continue">[@L[cds.sales/_common:select-continue]@L]  </button>
+                  <button data-ci="85547" class="btn btn-primary select-and-continue">[@L[cds.sales/_common:select-continue]@L]  </button>
                 </div>
               </div>
             </div>
@@ -875,10 +875,12 @@
                             $('.available-result').hide();
                             $('.unavailable-result').hide();
         
+                            var safeShortName = $('<div>').text(jsonData.Properties.domainInfo[0].shortName).html().toLowerCase();
+        
                             if (jsonData.Properties.anyAreAvailable === false && jsonData.Properties.domainInfo[0].error === "Domain name is already taken") {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]')
                                 var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else if (jsonData.Properties.domainInfo[0].isPremium) {
@@ -887,28 +889,28 @@
                                 url += 'domaintocheck=' + domain;
                                 url += '&tld=' + tld.val();
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]'); 
-                                var premiumText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var premiumText = "[@L[cds.sales/_common:domain-premium]@L]";
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(premiumText.replace(/\{0\}/gi,domainText).replace(/\{1\}/gi,url));
                                 $('.unavailable-result').show();
         
-                            } else if (jsonData.Properties.domainInfo[0].error === "Domain name is invalid") {
+                            } else if (jsonData.Properties.domainInfo[0].error.indexOf('Invalid') >= 0) {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var invalidText = '[@L[cds.sales/_common:domain-invalid]@L]';
-                                var domainText = ' <span class="domainName"> '+jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var domainText = ' <span class="domainName"> '+safeShortName+'</span>';
                                 $('#domain-searched').html(invalidText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } 
                             else if (jsonData.Properties.domainInfo[0].error != '') {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                                var takenText = '[@L[cds.sales/_common:domain-unavailable]@L]';
-                                var domainText = ' <span class="domainName"> ' +jsonData.Properties.domainInfo[0].shortName.toLowerCase()+'</span>';
+                                var takenText = '[@L[cds.sales/_common:domain-not-available]@L]';
+                                var domainText = ' <span class="domainName"> ' +safeShortName+'</span>';
                                 $('#domain-searched').html(takenText.replace(/\{0\}/gi,domainText));
                                 $('.unavailable-result').show();
                             } else {
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
-                                var availableDomain = jsonData.Properties.domainInfo[0].shortName.split('.')[0];
-                                var availableTld = '.'+jsonData.Properties.domainInfo[0].shortName.split('.')[1];
+                                var availableDomain = safeShortName.split('.')[0];
+                                var availableTld = '.'+safeShortName.split('.')[1];
                                 $('.domain-name-display-domain').html(availableDomain);
                                 $('.domain-name-display-tld').html(availableTld);
                                 $('.available-result').show();
@@ -1236,7 +1238,7 @@ list-style: none;
       font-size: 20px;
     }
     .config-text-secondary {
-      font-size: 14px;
+      font-size: 20px;
     }
     .config-text-lead {
       font-size: 16px;
@@ -1254,7 +1256,7 @@ list-style: none;
       border-bottom: 1px solid #EBEBEB;
     }
 }
-@media (max-width: 428px) { 
+@media (max-width: 600px) { 
     .text-xs-right {
       text-align: right;
     }
@@ -1352,18 +1354,18 @@ list-style: none;
       <script type="text/template" class="planTemplate">
         <li>
           <div class="row vertical-align">
-            <div class="col-xs-1">
+            <div class="col-xs-2 col-sm-1">
               <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
             </div>
-            <div class="col-xs-7">
+            <div class="col-xs-6 col-sm-7">
               <div class="config-text-secondary"><%= title %></div>
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-4 ">
               <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+            <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
               <div class="config-text-lead bold"><%= subtitle %></div>
             </div>
             <div class="col-xs-4">
@@ -1373,7 +1375,7 @@ list-style: none;
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-7 col-xs-offset-1 col-sm-offset-1">
+            <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
               <div class="config-text-lead"><%= features %></div>
             </div>
             <div class="col-xs-4">
@@ -1390,23 +1392,23 @@ list-style: none;
       <script type="text/template" class="termTemplate">
         <li>
           <div class="row vertical-align">
-            <div class="col-xs-2 col-sm-1">
+            <div class="col-xs-2 col-lg-1">
               <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
             </div>
-            <div class="col-xs-5 col-sm-3">
+            <div class="col-xs-5 col-lg-3">
               <div class="config-text-primary"><%= term %> <%= month %></div>
             </div>
-            <div class="col-xs-5 col-sm-3">
+            <div class="col-xs-5 col-lg-3">
               <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
             </div>
-            <div class="col-xs-12 col-sm-2">
+            <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
               <div class="config-text-lead text-xs-right">
                 <% if ( onSale ){ %>
                   <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
                 <% } %>
               </div>
             </div>
-            <div class="col-xs-12 col-sm-3 col-xs-11">
+            <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0">
               <div class="text-xs-right config-text-lead text-secondary-o"> 
                 <% if ( onSale ){ %>
                   [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
