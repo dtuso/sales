@@ -70,7 +70,7 @@ block disclaimers
           p [@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]
           p [@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]
       .col-sm-3.col-sm-push-3.buttons
-        a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="") [@L[cds.sales/_common:continue]@L]
+        a.btn.btn-purchase.btn-plan.btn-md.btn-block.btn-continue(id="planConfigContinue",data-ci="85539") [@L[cds.sales/_common:continue]@L]
 
 block domainSearch
   .row
@@ -84,9 +84,9 @@ block domainSearch
     'promoCode': 'wsb-promo',
     'itcCode': 'slp_wst_3',
     'managerItcCode': 'mgr_slp_wst_3',
-    'searchCicode': '1',
-    'noDomainCicode': '2',
-    'domainCicode': '3'
+    'searchCicode': '85541',
+    'noDomainCicode': '85548',
+    'domainCicode': '85547'
     })
 
 
@@ -128,18 +128,18 @@ prepend endOfPageScripts
     script.planTemplate(type='text/template').
       <li>
         <div class="row vertical-align">
-          <div class="col-xs-2">
+          <div class="col-xs-2 col-sm-1">
             <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-6 col-sm-7">
             <div class="config-text-secondary"><%= title %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 ">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-7 col-xs-offset-2">
+          <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -149,7 +149,7 @@ prepend endOfPageScripts
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-7 col-xs-offset-2">
+          <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
             <div class="config-text-lead"><%= features %></div>
           </div>
           <div class="col-xs-4">
