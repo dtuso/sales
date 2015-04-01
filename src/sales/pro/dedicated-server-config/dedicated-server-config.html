@@ -10,6 +10,47 @@ cssVersionOverride: 1
 {% extends 'layouts/config-base.html' %}
 
 {% block steps %}
+##if(siteContextAny(pl))
+<style type="text/css">
+
+.currency-amount,
+.scroll-down-wrapper p,
+.product-added-to-cart-text{
+  color: #0090FC;
+}
+
+.plan-price,
+.orange-text{
+  color: #a92728;
+}
+
+.config-continue-to-cart-wrapper > .btn.btn-warning{
+  background-color: #a92728;
+  border: none;
+}
+
+.green-check{
+  display: none;
+}
+
+.uxicon.uxicon-chevron-down.color{
+  color: #0090FC;
+  text-align: center;
+}
+
+</style>
+
+##else
+<style type="text/css">
+
+.uxicon.uxicon-chevron-down.color{
+  color: #579006;
+  text-align: center;
+}
+
+</style>
+##endif
+
                         <form action="" method="get" id="configForm">
                             <div class="config-step medium-margin-top-step backup">
                                 <h2>[@L[cds.sales/gd/pro/dedicated-server-config:Servermanagement]@L]</h2>
