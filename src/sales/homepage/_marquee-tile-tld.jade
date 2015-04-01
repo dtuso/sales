@@ -25,7 +25,8 @@ block tileContent
   <!--[if lt IE 9]>
   img.img-responsive(src!=tldFallbackPNG)
   <![endif]-->
-  .headline !{headline}
+  block tileContentHeadline
+    .headline !{headline}
   .cta !{ctaText}
   atlantis:webstash(type="js")
     block tldTileScript
