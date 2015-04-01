@@ -1,17 +1,11 @@
 block vars
-  - dataMessageName = dataMessageName || "";
-  - ctaLink = ctaLink || false;
+  - ctaLink = ctaLink || "";
   - ctaText = ctaText || "";
   - dataCi = dataCi || "";
   - containerClass = containerClass || "";
   
 atlantis:webstash(type="css")
   block tileStyles
-if (ctaLink)
-  .tile(data-url!=ctaLink data-ci=dataCi class=containerClass data-message-name!=dataMessageName)
-    .tile-content-wrapper
-      block tileContent
-else
-  .tile(data-ci=dataCi class=containerClass data-message-name!=dataMessageName)
-    .tile-content-wrapper
-      block tileContent
+.tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
+  .tile-content-wrapper
+    block tileContent
