@@ -1,24 +1,55 @@
-extends ../../layouts/homepage/default_base
+extends ./_home-page.jade
 
-block styles
-  style.
-    .top-banner-lower-content{height:45px;background-color:#fff;width:100%}
-    .top-lower-content{margin:0 auto;position:relative;width:1000px;padding-top:13px}
-    .gdhp-share{position:relative;float:right;}
-    #pcf .pc-support-wrapper{margin-top:0px !important;}
-    body {font-family:'Walsheim-Regular'; background-color:#ededed;}
-    body .gdhp-tile-wrap{background-color:#ededed;}
-    .atn-btn-wrap{padding-top:20px;width:450px;height:54px;}
-    .atn-btn-wrap>span {visibility: visible;margin-right: 20px;float: left;}
-    .b {font-family: 'Walsheim-Bold'}
-    
-block domainSearch
-  include ./sections/domain-search.jade
-
-block marquee
-  #marquee-container-orig [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-  #marquee-container-isc(style="display:none") [@P[cdsDocument:<data app="sales" location="homepage/marquee/got-enterprise-nation/default_template" /> ]@P]
-
+block hero
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
+block marquee-tile1
+  include ../../tmsv2/content/homepage/tld-co-uk/marquee-tile.jade
+block marquee-tile2
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+block merch-tile1
+  include ./tiles/gdpro-tile.jade
+block merch-tile2
+  include ./tiles/o365-tile.jade
+block merch-tile3
+  include ../../tmsv2/content/homepage/customer-care/merch-tile.jade
+block merch-tile4
+  include ./tiles/online-store-tile.jade
+block prepend sections
+  include ./sections/_domain-promo.jade
+  atlantis:webstash(type="css")
+    style
+      :less
+        #why-godaddy{background-color:#ccc;}
+  section#why-godaddy
+    .container
+      h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]
+      .row
+        .col-sm-4
+          .feature.why-gd-registrar
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
+        .col-sm-4
+          .feature.why-gd-prices
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')          
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
+        .col-sm-4
+          .feature.why-gd-support
+            <!--[if lt IE 9]>
+            +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+            <![endif]-->
+            +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+            h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
+            p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
+  include ./sections/_website-promo.jade
+  include ./sections/_o365-promo.jade
+  include ./sections/_support-promo.jade
 block bugBar
-  +tldBugs(["com","club","uk","org","rocks"])
-
+  +tldBugs(["net","co","uk","cymru"])
