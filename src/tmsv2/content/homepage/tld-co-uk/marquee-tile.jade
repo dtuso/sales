@@ -16,7 +16,12 @@ block append tileStyles
   style.
     .co-uk.marquee-tile-tld{background-color:#dedede}
     .co-uk .price-text{color:#333}
-block tileContentHeadline
+
+block tileContent
+  img.tld.svgfallback(src!=tldSVG)
+  <!--[if lt IE 9]>
+  img.img-responsive(src!=tldFallbackPNG)
+  <![endif]-->
   | ##if(productHasDiscountMoreThan(57465, 5)) 
   | 
   .headline !{headline}
@@ -26,3 +31,8 @@ block tileContentHeadline
   .headline !{headlineNoDiscount}
   | 
   | ##endif
+  .cta !{ctaText}
+  atlantis:webstash(type="js")
+    block tldTileScript
+      script.
+        (function(){var $price = $('.!{tld}.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{tldPfid}" period="yearly" />]@T]'));$('.!{tld}.marquee-tile-tld .cta').show();})();

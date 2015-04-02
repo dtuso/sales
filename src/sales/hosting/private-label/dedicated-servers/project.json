@@ -7,13 +7,13 @@
       }
     },
     "assetPath": "fos/201401/sales/hosting/private-label/dedicated-servers",
-    "metaTitle": "Hunter's, New Show Dedicated Servers | Fully Configurable Multi-core Servers",
-    "metaDescription": "Need a Dedicated Server? Hunter's, New Show makes it easy to run your own Dedicated Web Server.",
+    "metaTitle": "[@T[companyname:nameseotitle]@T] Dedicated Servers | Fully Configurable Multi-core Servers",
+    "metaDescription": "Need a Dedicated Server? [@T[companyname:keywords]@T] makes it easy to run your own Dedicated Web Server.",
     "metaKeywords": "dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting",
-    "metaCanonicalPath": "/hosting/dedicated-server.aspx?prog_id=hunter",
-    "metaOgTitle": "og-title",
-    "metaOgImage": "fos/hp/rebrand/img/gd_rebrand_og.png",
-    "metaOgDescription": "og-description"
+    "metaCanonicalPath": "/hosting/dedicated-servers.aspx",
+    "metaOgTitle": "[@T[companyname:nameseotitle]@T] Dedicated Servers | Fully Configurable Multi-core Servers",
+    "metaOgImage": "",
+    "metaOgDescription": "Need a Dedicated Server? [@T[companyname:keywords]@T] makes it easy to run your own Dedicated Web Server."
   },
   "dedicated-server.language": {
     "cdsDetails": {
