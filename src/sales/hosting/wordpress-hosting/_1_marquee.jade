@@ -107,10 +107,47 @@ atlantis:webstash(type="css")
       margin: 0 0 0 -50px;
       padding: 16px 87px;
     }
-    #marquee .as-low-as-pricing {
-      font-size: 4.5rem;
-      margin-left: 20px;
+
+    @media (min-width: 1000px) {
+      #marquee .as-low-as-pricing {
+        float:left;
+        font-size: 4.5rem;
+        margin: 0 20px 0;
+      }
+      #get-started-btn {
+        float:left;
+      }
     }
+    @media (max-width: 999px) {
+      #get-started-btn {
+        float:none;
+      }
+      #marquee .as-low-as-pricing {
+        float:none;
+        margin:20px 0;
+        font-size: 4.5rem;
+      }
+      #marquee .marquee-product-name,
+      #marquee .marquee-product-p  {
+        font-size: 1.6rem;
+      }
+      #marquee .marquee-product-desc {
+        font-size: 3rem;
+      }
+    }
+    @media (max-width: 420px) {
+      #marquee .marquee-product-name{
+        font-size: 1rem;
+      }
+      #marquee .marquee-product-desc {
+        font-size: 2rem;
+      } 
+      #get-started-btn {
+        font-size: 1.4rem;
+      }
+
+    }
+
     #marquee .price {
       font-family: "Walsheim-Bold";
       font-size: 4.5rem;
@@ -128,17 +165,17 @@ atlantis:webstash(type="css")
     #get-started-btn {
       margin-top: 12px;
     }
-
+    
 section#marquee
   .container.marquee.marquee-white      
       .row
         .col-sm-7
-          .marquee-content-wrapper.clearfix
+          .marquee-content-wrapper.clearfix(data-fit-line!=".price")
             h1.marquee-product-name [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]
             h2.marquee-product-desc [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]
             p.marquee-product-p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]
-            button#get-started-btn.btn.btn-default-light.btn-plan.pull-left(data-ci="#{page.ci.marqueeGetStarted}", data-plan="#{page.plan.A}", data-btn-src= "gs", title!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]") [@L[cds.sales/_common:get-started]@L]
-            .pull-left.as-low-as-pricing
+            button#get-started-btn.btn.btn-default-light.btn-plan(data-ci="#{page.ci.marqueeGetStarted}", data-plan="#{page.plan.A}", data-btn-src= "gs", title!="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]") [@L[cds.sales/_common:get-started]@L]
+            .as-low-as-pricing
               p.price-text [@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]
               .price(data-tokenize!="#{page.pricing.current.A}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]
 

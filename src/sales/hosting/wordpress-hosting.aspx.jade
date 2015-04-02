@@ -142,10 +142,45 @@ prepend endOfPageScripts
             break;
         }
       }
+      function fitOntoSingleLine() {
+        $('[data-fit-line]').each(function(){
+          var $this = $(this), 
+            originalHtml = [], 
+            maxIterations= 20, 
+            decreasor = 0.95,
+            defaultContent = "W",
+            numIterations = 0,
+            classesArr = $this.data('fit-line').split(',');
 
+          // make as short as possible and check the height!
+          $this.addClass('word-break');
+          $.each(classesArr, function(idx,classSelector){
+            var $thisItem = $this.find(classSelector);
+            originalHtml[idx] = $thisItem.html(); // save the original content
+            $thisItem.html(defaultContent);           
+          });
+          var desiredHeight = $this.outerHeight()
+          // reset back to the original HTML
+          $.each(classesArr, function(idx,classSelector){
+            $this.find(classSelector).html(originalHtml[idx]);            
+          });
+
+          while($this.outerHeight() > desiredHeight && numIterations++ < maxIterations) {
+            console.log($this.outerHeight(), desiredHeight);
+            // loop thru each selector and reduce each by percentDecrease
+            $.each(classesArr, function(idx,classSelector){
+              var $thisItem = $this.find(classSelector),
+                thisItemFontSize = $thisItem.css('fontSize');
+              $thisItem.css('fontSize', parseInt(parseFloat(thisItemFontSize) * decreasor) + "px" );
+            });
+          }
+          $this.removeAttr('data-fit-line').removeClass('word-break');
+        });
+      }
       $(document).ready(function(){
 
         //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');
+        window.setTimeout(fitOntoSingleLine, 500);
 
         $('#disclaimers').on('click', '.see-product-disclaimer-link', function(){
           $("#disclaimers-modal").sfDialog({
@@ -157,7 +192,7 @@ prepend endOfPageScripts
         activateHref("#see-latest-results-btn",       "#{page.ci.seeUpToDateResults}",     "https://portal.cloudspectator.com/godaddy/#dashboard", "_blank");
         activateHref("#visitor-overprotection-link",  "#{page.ci.visitorOverprotection}",  "[@T[link:<external linktype='communityurl' path='help/article/12460/' secure='false'><param name='ci' value='#{page.ci.visitorOverprotection}' /></external>]@T]", "_self"); 
         activateHref("#wordpress-plugins-link",       "#{page.ci.wordpressPlugins}",       "[@T[link:<external linktype='communityurl' path='help/article/8964/' secure='false'><param name='ci' value='#{page.ci.wordpressPlugins}' /></external>]@T]", "_self");
-        activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_self");
+        activateHref("#uptime-promise-link",          "#{page.ci.uptimePromiseLink}",      "[@T[link:<relative path='agreements/showdoc.aspx' secure='false'><param name='ci' value='#{page.ci.uptimePromiseLink}' /><param name='pageid' value='HOSTING_SA' /></relative>]@T]", "_blank");
 
         // remove link from content (see GCE-37920)        
         try {
@@ -204,7 +239,7 @@ append pageStyles
       word-wrap: break-word;
       word-break: normal;
     }
-    
+
     html[lang="ja"]    .btn, 
     html[lang="ko"]    .btn, 
     html[lang="th"]    .btn, 
@@ -226,7 +261,7 @@ append pageStyles
       word-wrap: break-word;
       word-break: break-all;
     }
-
+    * [data-fit-line] { visibility: hidden;}
 block domainSearch
   //- nothing to see here
   //- override the landing-page.jade with a blank section
