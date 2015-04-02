@@ -10,6 +10,27 @@ cssVersionOverride: 2
 
 {% extends 'layouts/config-base.html' %}
 
+{% block metahead %}
+    {% parent %}
+
+<style type="text/css">
+  .green-check {
+    display: none;
+  }
+  .product-added-to-cart,.order-total,.green-text{
+    color:#0090FC !important;
+  }
+  .orange-text,.plan-price{
+    color:#a92728;
+  }
+  .btn-warning{
+    background-color:#a92728;
+    border: none;
+  }
+</style>
+
+{% endblock %}
+
 {% block steps %}
                       ##if(isManager())
                           <form action="[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" parammode="explicit" />]@T]" method="get" id="configForm" >
