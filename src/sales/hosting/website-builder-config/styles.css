@@ -151,3 +151,7 @@ list-style: none;
   width: 36px;
   height: 36px;
 }
+
+.hidden_div{
+  display: none;
+}

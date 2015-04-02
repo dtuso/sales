@@ -56,6 +56,12 @@ block addons
     .row.options-wrapper
       ul#getFoundList.product-options
   +configStepBreak
+  #personalCart.hidden_div [@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]
+  #addedPersonalCart.hidden_div [@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]
+  #addedBusinessPlus.hidden_div [@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]
+  #addedBusiness.hidden_div [@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]
+  #gfText.hidden_div [@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]
+
 block orderSummary
   +configSummary({
     'scroll':'.lastStep'
@@ -346,19 +352,20 @@ prepend endOfPageScripts
           });
         },
         setTitle: function(){
+
           var getStarted = 'gs';
           if (origin === getStarted && !reload){
-            $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+            $('.product-added-to-cart-text').html($('#personalCart').text());
           }
           else{
            if(plan.indexOf('wsb_personal') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+              $('.product-added-to-cart-text').html($('#addedPersonalCart').text());
             }
             else if(plan.indexOf('wsb_businessplus') >= 0){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+              $('.product-added-to-cart-text').html($('#addedBusinessPlus').text());
             }
             else{
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+              $('.product-added-to-cart-text').html($('#addedBusiness').text());
             }
 
           }
@@ -578,7 +585,7 @@ prepend endOfPageScripts
               var gfPercentSavings = gfItem[3];
               var gfListPrice = gfItem[4];
               var gfCurrentYearlyPrice =  gfItem[5];
-              var gfText = "[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]";
+              var gfText = $('#gfText').text();
               var isSale = ( parseInt(gfPercentSavings) > 0 ) ? true : false;
               var termLength = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
               var termType = "[@L[cds.sales/_common:mo]@L]";

@@ -256,6 +256,11 @@
             </style>
           </atlantis:webstash>
           <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+          <div id="personalCart" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]</div>
+          <div id="addedPersonalCart" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]</div>
+          <div id="addedBusinessPlus" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]</div>
+          <div id="addedBusiness" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]</div>
+          <div id="gfText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</div>
         </div>
         <div class="col-sm-3">
           <atlantis:webstash type="css">
@@ -1274,6 +1279,10 @@ list-style: none;
   width: 36px;
   height: 36px;
 }
+
+.hidden_div{
+  display: none;
+}
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -1540,19 +1549,20 @@ list-style: none;
             });
           },
           setTitle: function(){
+        
             var getStarted = 'gs';
             if (origin === getStarted && !reload){
-              $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:personal_cart]@L]");
+              $('.product-added-to-cart-text').html($('#personalCart').text());
             }
             else{
              if(plan.indexOf('wsb_personal') >= 0){
-                $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]");
+                $('.product-added-to-cart-text').html($('#addedPersonalCart').text());
               }
               else if(plan.indexOf('wsb_businessplus') >= 0){
-                $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]");
+                $('.product-added-to-cart-text').html($('#addedBusinessPlus').text());
               }
               else{
-                $('.product-added-to-cart-text').html("[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]");
+                $('.product-added-to-cart-text').html($('#addedBusiness').text());
               }
         
             }
@@ -1772,7 +1782,7 @@ list-style: none;
                 var gfPercentSavings = gfItem[3];
                 var gfListPrice = gfItem[4];
                 var gfCurrentYearlyPrice =  gfItem[5];
-                var gfText = "[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]";
+                var gfText = $('#gfText').text();
                 var isSale = ( parseInt(gfPercentSavings) > 0 ) ? true : false;
                 var termLength = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
                 var termType = "[@L[cds.sales/_common:mo]@L]";
