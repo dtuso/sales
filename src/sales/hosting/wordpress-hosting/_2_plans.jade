@@ -15,9 +15,14 @@ atlantis:webstash(type="css")
     #plans .pro-plans .pro-plan-wrap .plan-price-wrap {
       margin: 30px 0;
     }
-    #plans .plan-price-and-duration {
-      
+    /*
+    html[lang="en-NZ"] #plans .plan-price {
+      font-size: 4.0rem;
     }
+    html[lang="en-NZ"] #plans .plan-duration {
+      font-size: 1.7rem;
+    }
+    */
     .include-check-black, .include-check-green, .include-check-none {
       padding-left: 33px;
       position: relative;
@@ -50,6 +55,16 @@ atlantis:webstash(type="css")
     #plans .all-plans-include h3 {
       margin: 50px 0 30px;
     }
+
+
+    @media (max-width: 999px) {
+      #plans .plan-tile {
+        margin-top: 0px;
+      }
+    }
+    @media (min-width: 1000px) {
+    }
+
 
 section#plans
   +renderCartLogic(page.config.url, page.itc, {srcParam:"true"})
