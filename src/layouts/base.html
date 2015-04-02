@@ -15,7 +15,7 @@
     {% block pageDescription %}<meta name="description" content="{{ metaDescription }}" />{% endblock %}
     {% block pageKeywords %}<meta name="keywords" content="{{ metaKeywords }}" />{% endblock %}
     {% block metahead %}
-    ##if(siteContextAny(gd))
+
     <!-- Facebook Open Graph Meta Data -->
     <meta property="og:title" content="{{ metaOgTitle }}" />
     <meta property="og:type" content="product" />
@@ -27,14 +27,12 @@
     <meta property="fb:app_id" content="{{ metaOgAppID }}" />
     <meta property="fb:admins" content="{{ metaOgAdmins }}" />
     <meta property="og:description" content="{{ metaOgDescription }}" />
-
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
-    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
-    ##endif
     {% if configPage %}
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
     {% endif %}
 
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico" />
+    <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='{{ metaCanonicalPath }}' parammode='explicit'/>]@T]"/>
 
     <!-- Global CSS and Page CSS -->
 
