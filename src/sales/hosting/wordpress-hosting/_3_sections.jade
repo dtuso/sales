@@ -12,7 +12,8 @@ atlantis:webstash(type="css")
     }
     #features-more,    
     #security,
-    #faq {
+    #faq,
+    #performance {
       background-color: #fff;
     }
     #features-lose,
@@ -73,99 +74,104 @@ atlantis:webstash(type="css")
     .features-tabbed-carousel-top .features-tabbed-carousel-icon.active .feature-text {
       font-family: 'Walsheim-Bold'!important; /* GCE-37962 */
     }
+    section.mid-page-nav-section {
+      padding: 0px;
+      margin: 0px;
+    }
 
 
 +renderMidPageNav
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
-section#features(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Features]@L]", data-cicode="#{page.ci.midPageNavFeature}")
-  .container
-    .row
-      .col-sm-12
-        h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-title]@L]
-    .row
-      .col-md-3.col-sm-6.col-xs-12
-        +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]
-        p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-title]@L]
-        ul.left-aligned-round-list.short-spacing
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-2]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-3]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-4]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-5]@L]
-        p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-title]@L]
-        ul.left-aligned-round-list.short-spacing
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-item-1]@L]
-      .col-md-3.col-sm-6.col-xs-12
-        +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-desc]@L]
-      .col-md-3.col-sm-6.col-xs-12
-        +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_award-winning_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-desc]@L]
-      .col-md-3.col-sm-6.col-xs-12
-        +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_protected-website_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]
+section#mid-page-nav-tile-features.mid-page-nav-section(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Features]@L]", data-cicode="#{page.ci.midPageNavFeature}")
+  section#features
+    .container
+      .row
+        .col-sm-12
+          h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-title]@L]
+      .row
+        .col-md-3.col-sm-6.col-xs-12
+          +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-title]@L]
+          p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-title]@L]
+          ul.left-aligned-round-list.short-spacing
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-2]@L]
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-3]@L]
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-4]@L]
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-5]@L]
+          p.list-title [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-title]@L]
+          ul.left-aligned-round-list.short-spacing
+            li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-item-1]@L]
+        .col-md-3.col-sm-6.col-xs-12
+          +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-2-desc]@L]
+        .col-md-3.col-sm-6.col-xs-12
+          +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_award-winning_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-3-desc]@L]
+        .col-md-3.col-sm-6.col-xs-12
+          +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_protected-website_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-4-desc]@L]
 
-section#features-more
-  .container
-    .row
-      .col-sm-12
-        h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]
-    .row
-      .col-md-4.col-sm-6.col-xs-12
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_search-engine-visibility_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]
-      .col-md-4.col-sm-6.col-xs-12
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_site-migration_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]
-      .col-md-4.col-sm-6.col-xs-12
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_temporary-domain_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]
-    .row
-      .col-md-4.col-sm-6.col-xs-12
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_traffic-overage-protection_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]
-      .col-md-4.col-sm-6.col-xs-12
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_test-changes_02_v01.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]
+  section#features-more
+    .container
+      .row
+        .col-sm-12
+          h2.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-title]@L]
+      .row
+        .col-md-4.col-sm-6.col-xs-12
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_search-engine-visibility_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-1-desc]@L]
+        .col-md-4.col-sm-6.col-xs-12
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_site-migration_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-2-desc]@L]
+        .col-md-4.col-sm-6.col-xs-12
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_temporary-domain_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-3-desc]@L]
+      .row
+        .col-md-4.col-sm-6.col-xs-12
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_traffic-overage-protection_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-4-desc]@L]
+        .col-md-4.col-sm-6.col-xs-12
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_test-changes_02_v01.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-5-desc]@L]
 
-      .col-md-4.col-sm-6.col-xs-12
-        | 
-        | ##if(productIsOffered(107))
-        | 
-        +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png", "", "triggerResize")
-        h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]
-        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]
-        | 
-        | ##else
-        | 
-        .plan-item &nbsp; 
-        | 
-        | ##endif
-        | 
+        .col-md-4.col-sm-6.col-xs-12
+          | 
+          | ##if(productIsOffered(107))
+          | 
+          +lazyImg("img-responsive features-more-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png", "", "triggerResize")
+          h3.word-break [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-title]@L]
+          p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-more-6-desc]@L]
+          | 
+          | ##else
+          | 
+          .plan-item &nbsp; 
+          | 
+          | ##endif
+          | 
 
-section#features-lose
-  +featuresTemplates({
-    presentationTemplate: "featuresRightText", 
-    featuresId: "neverLose", 
-    additionalWrapClasses: null, 
-    lazyLoad: true, 
-    backgroundImage: "", 
-    featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_backups_02_v01.png", 
-    featuresImgAltText: null, 
-    title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-title]@L]", 
-    subtitle: "", 
-    text: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-desc]@L]", 
-    buttonText: null, buttonUrl: null, buttonColor: null})
+  section#features-lose
+    +featuresTemplates({
+      presentationTemplate: "featuresRightText", 
+      featuresId: "neverLose", 
+      additionalWrapClasses: null, 
+      lazyLoad: true, 
+      backgroundImage: "", 
+      featuresImg: "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_backups_02_v01.png", 
+      featuresImgAltText: null, 
+      title: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-title]@L]", 
+      subtitle: "", 
+      text: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-never-loose-desc]@L]", 
+      buttonText: null, buttonUrl: null, buttonColor: null})
 
 section#performance(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Performance]@L]",data-cicode="#{page.ci.midPageNavPerformance}")
   .container.maximum-performance
@@ -197,6 +203,7 @@ section#security(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:
 | 
 | ##if(activeLanguageAny(en))
 | 
+
 section#training(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Training]@L]",data-cicode="#{page.ci.midPageNavTraining}")
 
   .container
@@ -269,30 +276,29 @@ section#reviews-carousel
             h4.review-comments [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-comments]@L]
             h5.review-byline [@L[cds.sales/gd/hosting/wordpress-hosting:35561-slide-5-byline]@L]
 
-section#faq(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq]@L]" data-cicode="#{page.ci.midPageNavFAQ}")
-  +renderAccordion({ci: "#{page.ci.faqSeeAll}", id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-SeeAllQuestions]@L]"})
-    h2.h1 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-rb_your_question]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-question]@L]")
-      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-answer-1]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]")
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-1]@L]
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-2]@L]
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-3]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-question]@L]")
-      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-answer-1]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-question]@L]")
-      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-answer-1]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-question]@L]")
-      | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-answer-1]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-question]@L]")
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-1]@L]
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-2]@L]
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-3]@L]
-    +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-question]@L]")
-      p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-1]@L]
-      ul 
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-2]@L]
-        li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-3]@L]
 
-//- be sure to end the fixed navigational area
-+renderMidPageNavBottom
+section#mid-page-nav-tile-faq.mid-page-nav-section(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq]@L]" data-cicode="#{page.ci.midPageNavFAQ}")
+  section#faq
+    +renderAccordion({ci: "#{page.ci.faqSeeAll}", id: "faq-accordion", buttonID: "faq-button", buttonText: "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-SeeAllQuestions]@L]"})
+      h2.h1 [@L[cds.sales/gd/hosting/wordpress-hosting:35561-rb_your_question]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-question]@L]")
+        | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-1-answer-1]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-question]@L]")
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-1]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-2]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-2-answer-3]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-question]@L]")
+        | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-3-answer-1]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-question]@L]")
+        | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-4-answer-1]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-question]@L]")
+        | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-5-answer-1]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-question]@L]")
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-1]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-2]@L]
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-6-answer-3]@L]
+      +accordionTab("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-question]@L]")
+        p [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-1]@L]
+        ul 
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-2]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-faq-7-answer-3]@L]
