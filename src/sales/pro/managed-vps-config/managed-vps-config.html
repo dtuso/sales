@@ -1,7 +1,7 @@
 ---
 location: sales/pro/managed-vps-config
-id: 54f4e58af778fc0de4d09c5c
-name: GCE-35068
+id: 551b24e5f778fc1930ca2ecc
+name: GCE-37474
 comment: VPS SALE - Config Page Sale and Term Offering Updates
 configPage: true
 sitecore: true 
@@ -9,6 +9,27 @@ cssVersionOverride: 2
 ---
 
 {% extends 'layouts/config-base.html' %}
+
+{% block metahead %}
+    {% parent %}
+
+<style type="text/css">
+  .green-check {
+    display: none;
+  }
+  .product-added-to-cart,.order-total,.green-text{
+    color:#0090FC !important;
+  }
+  .orange-text,.plan-price{
+    color:#a92728;
+  }
+  .btn-warning{
+    background-color:#a92728;
+    border: none;
+  }
+</style>
+
+{% endblock %}
 
 {% block steps %}
                       ##if(isManager())
@@ -111,7 +132,7 @@ cssVersionOverride: 2
           ##endif
 
           
-          var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
+          var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
 
           apiEndpoint =apiEndpoint +addons;
           ##if(isManager())
@@ -518,7 +539,7 @@ cssVersionOverride: 2
       }
      
     </script>
-
+  ##if(!siteContextAny(pl))
     <!-- liveperson includes -->
     <script>
       // defer load liveperson
@@ -538,5 +559,6 @@ cssVersionOverride: 2
           script.parentNode.insertBefore(styleResource, script);
       });
     </script>
+  ##endif
 
 {% endblock %}
