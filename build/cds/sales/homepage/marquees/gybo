@@ -96,7 +96,7 @@
           </div>
           <div class="btn-wrap">
             <div id="gdhp-marq-gybo-btn" data-ci="93372" class="btn btn-warning">[@L[cds.sales/homepage/marquee/gybo:gybo-get-it-now]@L]</div>
-            <div class="rest-text">[@L[cds.sales/homepage/marquee/gybo:gybo-rest-text]@L]</div>
+            <div class="rest-text">[@L[cds.sales/homepage/marquee/gybo:gybo-rest-text-new]@L]</div>
           </div>
         </div>
       </div>

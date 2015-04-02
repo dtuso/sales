@@ -24,7 +24,18 @@
     <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
     <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
-    <meta property="fb:admins" content="633356800">[@P[cdsDocument:<data app="presentationcentral" location="salesheader/headtags" /> ]@P]
+    <meta property="fb:admins" content="633356800">
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
     <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
     </script>
     <script>
@@ -86,7 +97,8 @@
     ##endif
   </head>
   <body ng-controller="dnsCtrl">
-    <!-- HEADERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
     <section id="marquee">
       <atlantis:webstash type="css">
@@ -114,6 +126,9 @@
     <section id="domainSearch" class="bg-green-official">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #domainSearch #main-panel-title, #domainSearch .input-group-btn .search-text {font-weight:700;}
+          ##endif
           #domainSearch a { color: #333; font-weight: bold; margin-right: 30px; }
           #domainSearch { padding: 0; }
           #domainSearch #main-panel-title { font-size: 24px; font-family: 'Walsheim-Bold'; text-transform: uppercase; margin: 20px 0 10px 0;}
@@ -188,8 +203,8 @@
         <style>
           #top-pods {background-color: #e8e8e8;}
           #top-pods .plan-tile {margin-top: 5px; }
-          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 30px !important;}
-          #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:80px;}
+          #top-pods .pro-plans .pro-plan-wrap { padding: 40px 20px !important;}
+          #top-pods .pro-plans .pro-plan-wrap .plan-text{padding-top:20px;height:100px;}
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-price { font-size: 35px !important; font-weight: 300 !important; }
           #top-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
           #top-pods .pro-plan-wrap .plan-price-wrap { height: 102px;}
@@ -617,8 +632,15 @@
     <section id="promo-carousel" class="features-carousel-pro-carousel">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #promo-carousel .plan-carousel-copy {font-weight:700;}
+          ##endif
+          ##if(activeLanguageAny([en-in]))
+          #promo-carousel .plan-carousel-copy strong{display:block;}
+          ##endif
           #promo-carousel .plan-carousel-copy { font-family: 'Walsheim-Black'; font-size: 24px; text-align: center;}
           #promo-carousel .plan-carousel-copy a{text-decoration:none; color:#77c043;}
+          #promo-carousel .plan-carousel-copy .br {display:block;}
           #promo-carousel .plan-carousel-copy a:hover{text-decoration:underline;}
           #promo-carousel .btn { margin-top: 40px; }
           #promo-carousel .greenText { color: #77c043;}
@@ -980,14 +1002,18 @@ top: -6px;
               <div class="item">
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L]</div>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="item-wrapper">
-                  <div data-icode="" data-ci="" class="carousel-panel container">
-                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L]</div>
+                     
+                    ##if(ActiveLanguageAny([en-gb]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1UK]@L]</div> 
+                    ##elseif(ActiveLanguageAny([de-DE], [de-AT], [de-CH]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DE]@L]</div> 
+                    ##elseif(ActiveLanguageAny([es-ve], [es-pe], [es-mx], [es-co], [es-cl], [es-ar], [pt-br]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1ES]@L]</div> 
+                    ##elseif(ActiveLanguageAny([en-in]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1IN]@L]"<strong>- Pranav Chandra, The Great Indian Adventure</strong></div> 
+                    ##else
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide1DefaultRebrand]@L] </div> 
+                    ##endif
                   </div>
                 </div>
               </div>
@@ -995,8 +1021,26 @@ top: -6px;
                 <div class="item-wrapper">
                   <div data-icode="" data-ci="" class="carousel-panel container">
                      
-                    ##if(activeLanguageAny([en-us]))
+                    ##if(ActiveLanguageAny([en-gb]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2UK]@L] </div> 
+                    ##elseif(ActiveLanguageAny([en-IN]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2IN]@L]"<strong>- Sanjay Tilala, Jay Khoodiya Machine Tools</strong></div> 
+                    ##else
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide2DefaultRebrand]@L] </div> 
+                    ##endif
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item-wrapper">
+                  <div data-icode="" data-ci="" class="carousel-panel container">
+                     
+                    ##if(activeLanguageAny([en-us],[es-us]))
                     <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3USRebrand]@L]</div> 
+                    ##elseif(ActiveLanguageAny([es-es], [pt-pt], [fr-be], [fr-fr], [fr-ch], [de-de], [de-at], [de-ch], [en-gb], [en-ie], [nl-be], [da-dk], [it-it], [nl-nl], [pl-pl], [fi-fi], [sv-se], [it-ch], [el-gr]))
+                    <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3ES]@L] </div> 
+                    ##elseif(ActiveLanguageAny([en-in]))
+                    <div class="plan-carousel-copy">"[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3IN]@L]"<strong>- Parminder Singh Saini, AgriWire</strong></div> 
                     ##else
                     <div class="plan-carousel-copy">[@L[cds.sales/gd/domains/domain-name-search:CarouselSlide3Default]@L]</div> 
                     ##endif
@@ -1015,6 +1059,9 @@ top: -6px;
     <section id="what-do-you-get">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #what-do-you-get h3{font-weight:700;}
+          ##endif
           #what-do-you-get h3{font-family: 'Walsheim-Black'; font-size: 30px; margin-top:15px;}
           #what-do-you-get .container{padding-bottom: 70px;}
         </style>
@@ -1317,6 +1364,9 @@ top: -6px;
     <section id="why-godaddy" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #why-godaddy .why-gd-container h2, #why-godaddy .why-gd-container h3, #why-godaddy .key-benefits-title{font-weight:700;}
+          ##endif
           #why-godaddy .why-gd-container{padding:0 0 80px;}
           #why-godaddy .why-gd-banner{padding:0px;margin:0 auto;float:none;}
           #why-godaddy .why-gd-container h2{font-family:'Walsheim-Black'; font-size:40px; text-align:center;margin-bottom:10px}
@@ -1357,12 +1407,15 @@ top: -6px;
       <section id="bottom-pods" class="bg-green-official">
         <atlantis:webstash type="css">
           <style>
+            ##if(activeLanguageAny([el-gr]))
+            #bottom-pods h2.bottom-headline{font-weight:700;}
+            ##endif
             #bottom-pods {padding-bottom:0px;}
-            #bottom-pods #plans {background-color: #77c043;height:250px;}
+            #bottom-pods #plans {background-color: #77c043;margin-bottom:-200px;}
             #bottom-pods .plan-tile{margin-top:60px;}
             #bottom-pods h2.bottom-headline {font-family:'Walsheim-Black'; font-size:40px; text-align: center; color: #333; padding-top:15px;}
             #bottom-pods .pro-plan-wrap .plan-flag {font-weight: bold;}
-            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 40px 5px;}
+            #bottom-pods .pro-plans .pro-plan-wrap {padding:30px 35px 5px;}
             #bottom-pods .pro-plans .pro-plan-wrap .plan-title {text-transform:none;font-size:30px;text-align:left;}
             #bottom-pods .pro-plan-wrap .plan-price-wrap {height:116px;}
             #bottom-pods .pro-plan-wrap .plan-price-wrap .plan-strike-price {font-weight:bold;}
@@ -1790,6 +1843,9 @@ top: -6px;
         <div class="container">
           <atlantis:webstash type="css">
             <style>
+              ##if(activeLanguageAny([el-gr]))
+              #new-domains ul li span, #new-domains .col-tld-title, #new-domains .bg-warning{font-weight:700;}
+              ##endif
               #new-domains {padding:255px 0 70px 0;background-color: #e8e8e8;}
               #new-domains .container{margin:0 auto;padding-left:0px;}
               #new-domains ul{list-style-type:none; -webkit-padding-start:10px;}
@@ -1801,23 +1857,19 @@ top: -6px;
             </style>
           </atlantis:webstash>
           <div class="row">
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span></div>
-            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span></div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span>
               <ul>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span><a href="[@T[link:<relative path='/tlds/green'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLegal]@L]</span><a href="[@T[link:<relative path='/tlds/legal'><param name='ci' value='97077' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]</span><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='90328' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]</span><a href="[@T[link:<relative path='/tlds/reviews'><param name='ci' value='96021' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
               </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span>
               <ul>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
@@ -1854,6 +1906,9 @@ top: -6px;
     <section id="options" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:DomainOptionsTabRebrand]@L]" class="key-benefits-wrap tile-section bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #options #carousel-domain-options h2, #options .features-tabbed-carousel-top .headline-primary, #options .features-tabbed-carousel-top h2, #options .features-tabbed-carousel-top .feature-text {font-weight:700;}
+          ##endif
           #options {padding-top:80px;}
           #options #carousel-domain-options h2{font-family:'Walsheim-Bold';font-size:30px;text-align:left;}
           #options #carousel-domain-options .subtext {text-align:left;}
@@ -1864,7 +1919,7 @@ top: -6px;
           #options #carousel-domain-options .relative {text-align:left;padding:20px 0;}
           #options #carousel-domain-options .sub-text {text-align:left;padding-bottom: 20px;}
           #options #carousel-domain-options .last-private-item {text-align:left;padding:20px 0;}
-          #options .carousel-container .carousel-panel {min-height:596px;}
+          #options .carousel-container .carousel-panel {min-height:695px;}
           #options .headline-primary {text-transform:none;}
         </style>
       </atlantis:webstash>
@@ -2397,6 +2452,9 @@ top: -6px;
     <section id="questions" data-mid-nav-title="[@L[cds.sales/gd/domains/domain-name-search:FaqTabRebrand]@L]" class="bg-pro-gray">
       <atlantis:webstash type="css">
         <style>
+          ##if(activeLanguageAny([el-gr]))
+          #questions .question-headline {font-weight:700;}
+          ##endif
           #questions .question-headline {font-family: "Walsheim-Black"; font-size: 40px; color: #333333; text-align: center; display:block; }
           #questions #question-accordion {border:none;}
           #questions .accordion-group li.accordion-dropdown {margin:0px;}
@@ -2588,7 +2646,7 @@ top: -6px;
             </div>
             <div class="modal-body">
               <ul class="disclaimer-modal-list">
-                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem1]@L]</li>
+                <li>[@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        </li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]</li>
@@ -2623,7 +2681,8 @@ top: -6px;
         </div>
       </div>
     </section>
-    <!-- FOOTERBEGIN-->[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Footer"><Parameters><Parameter key="manifest" value="salesheader" /><Parameter key="split" value="brand2.0" /></Parameters></Data>]@P]
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
     <!-- FOOTEREND-     -->
     <!-- liveperson includes -->
     <div id="lpButtonDiv"></div><!-- End Main Content -->
