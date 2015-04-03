@@ -720,7 +720,7 @@
                   <h2 class="word-break domain-name-display domain-name-display-tld"> </h2>
                 </div>
                 <div class="col-md-4 col-sm-12 text-right">
-                  <button data-ci="" class="btn btn-primary select-and-continue">[@L[cds.sales/hosting/fosconfigcommon:gobtn]@L]  </button>
+                  <button data-ci="" class="btn btn-primary select-and-continue">[@L[cds.sales/_common:select-continue]@L]  </button>
                 </div>
               </div>
             </div>
@@ -2006,6 +2006,7 @@ input[type=checkbox] + label{
               Config.updateOrderSummary();
             });
           }
+      
           if(noSiteLock)
           {
             document.getElementById('slElement').style.display = "none";
