@@ -108,7 +108,7 @@
         var offerInfo = {
           businessName: "",
           landingPage: "getonline/pro-design.aspx",
-          packageId: "webdesign_simple_site_1_year",
+          packageId: "webdesign_website_1_year",
           itcCode: "p4p_getonline_pro_design",
           appKey: "",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
