@@ -113,8 +113,8 @@
           appKey: "",
           sfDialogErrorButtons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }],
           pricing: {
-            promo_monthly: "[@T[productprice:<current productid='618021' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
-            promo_annual: "[@T[productprice:<current productid='618050' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]",
+            promo_monthly: "[@T[productprice:<current productid='618029' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses'/>]@T]",
+            promo_annual: "[@T[productprice:<current productid='618051' dropdecimal='false' period='annual' htmlsymbol='false' negative='parentheses'/>]@T]",
             renewal_monthly: "",
             renewal_annual: ""
           }
