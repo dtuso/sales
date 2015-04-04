@@ -10,4 +10,4 @@ GET STARTED
 <phrase key="actAndSave" />
 ACT NOW AND SAVE [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true"/>]@T]
 <phrase key="onlyProduct" />
-Only <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MONTH</div>
+ONLY <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MONTH</div>

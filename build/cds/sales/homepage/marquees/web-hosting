@@ -33,6 +33,7 @@
 #webhost-m .left-column .title {
   font-size: 36px;
   line-height: 36px;
+  width: 75%;
 }
 #webhost-m .left-column .subtitle {
   font-size: 24px;
@@ -40,14 +41,52 @@
 }
 #webhost-m .right-column {
   line-height: 1.0;
-  padding-top: 100px;
+  padding-top: 135px;
 }
 #webhost-m .right-column .title {
   font-size: 24px;
   color: #333333;
+  text-align: left;
 }
 #webhost-m .right-column .price {
   color: #ff8a00;
+}
+#webhost-m .right-column button {
+  float: left;
+  background-color: #ef6c0f;
+  border-bottom-color: #c2580c;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  border-left-color: #c2580c;
+  border-left-style: solid;
+  border-left-width: 0px;
+  border-right-color: #c2580c;
+  border-right-style: solid;
+  border-right-width: 0px;
+  border-top-color: #c2580c;
+  border-top-style: solid;
+  border-top-width: 0px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Walsheim-Medium, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  height: 59px;
+  line-height: 31.9200000762939px;
+  margin-bottom: 11.078125px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 11.078125px;
+  min-width: 140px;
+  padding-bottom: 9px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 205.78125px;
 }
 
   </style>
@@ -57,11 +96,14 @@
     <div class="marquee-left-headline">
       <div class="left-column">
         <div class="logo"></div>
-        <div class="title">[@L[cds.sales/homepage/marquee/web-hosting:product]@L]</div>
-        <div class="subtitle">[@L[cds.sales/homepage/marquee/web-hosting:actAndSave]@L]</div>
+        <div class="title">[@L[cds.sales/homepage/marquee/web-hosting:product]@L]</div> 
+        ##if(productHasSavingsMoreThan(32051, 32051, 4))
+        <div class="subtitle">[@L[cds.sales/homepage/marquee/web-hosting:actAndSave]@L]</div> 
+        ##endif
       </div>
       <div class="right-column">
-        <div class="title">[@L[cds.sales/homepage/marquee/web-hosting:onlyProduct]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97797' /></relative>]@T]" class="btn btn-warning btn-lg btn-cta">[@L[cds.sales/homepage/marquee/web-hosting:cta-text]@L]</a>
+        <div class="title">[@L[cds.sales/homepage/marquee/web-hosting:onlyProduct]@L]</div>
+        <button href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97797' /></relative>]@T]" class="btn btn-warning btn-purchase btn-lg btn-cta">[@L[cds.sales/homepage/marquee/web-hosting:cta-text]@L]</button>
       </div>
     </div>
   </div>
