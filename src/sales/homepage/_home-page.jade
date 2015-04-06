@@ -86,10 +86,11 @@ block endOfPageScripts
         $("#merchandising .tile-wrapper").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight + 10);
-
-        var maxHeroHeight = 0;
-        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+        if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
+          var maxHeroHeight = 0;
+          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+        }
     }
     function tokenizeTheDataTokenizeAttribute() {
       $('[data-tokenize]').each(function(){
@@ -156,14 +157,13 @@ block content
             .hero-wrapper
               block hero  
           .col-md-4.col-sm-12
-            .container
-              .row
-                .col-md-12.col-sm-6
-                  .tile-wrapper
-                    block marquee-tile1
-                .col-md-12.col-sm-6  
-                  .tile-wrapper
-                    block marquee-tile2
+            .row
+              .col-md-12.col-sm-6
+                .tile-wrapper
+                  block marquee-tile1
+              .col-md-12.col-sm-6  
+                .tile-wrapper
+                  block marquee-tile2
   //- Secondary Tile Section
   block merchandisingTiles
     section#merchandising
