@@ -1,5 +1,3 @@
-
-
 atlantis:webstash(type="css")
   style.
     #products.tile-section{ padding-top: 0;padding-bottom: 0;}
@@ -15,6 +13,7 @@ atlantis:webstash(type="css")
       font-size: 30px;
       margin-top: 35px;
     }
+    #products.key-benefits-wrap h3.key-benefits-title{font-size:24px;}
 
     /* KEY BENEFITS */
     .key-benefits-wrap[class*="bg-"]:not(.bg-gray-light) {
@@ -90,12 +89,14 @@ atlantis:webstash(type="css")
       font-size: 16pt;
       color: #333;
     }
+    html[lang*="en-us"] .key-benefits-wrap .key-benefit .key-benefits-text {font-size:18px}
     .key-benefits-wrap .key-benefit h3.key-benefits-title {
       white-space: -moz-pre-wrap;
       margin-top: 0px;
       font-size: 30px;
       font-weight: bold;
       color: #333;
+      word-break: break-word;
     }
     .key-benefits-wrap .key-benefits-subtext {
       margin-top: 40px;
@@ -107,11 +108,10 @@ section#products.bg-gray-light.key-benefits-wrap
     .row
       .col-sm-12.text-center
         h2.h0.products-title-text [@L[cds.sales/offers/online-business:32573-heres-what-you-get]@L]
-
     .row
-
+      | 
+      | ##if(!activeLanguageAny([en-us]))
       .col-sm-4.key-benefit
-
         h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]
         .key-benefits-text [@L[cds.sales/offers/online-business:32573-a-domain-text]@L]
         .features-text
@@ -119,7 +119,6 @@ section#products.bg-gray-light.key-benefits-wrap
           .include-check-green [@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]
       
       .col-sm-4.key-benefit
-      
         h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-a-website-heading]@L]
         .key-benefits-text [@L[cds.sales/offers/online-business:32573-a-website-text]@L]
         .features-text
@@ -132,12 +131,46 @@ section#products.bg-gray-light.key-benefits-wrap
           | 
           |##endif
           | 
-
       .col-sm-4.key-benefit
-
+        h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]
+        .key-benefits-text [@L[cds.sales/offers/online-business:32573-pro-email-text]@L]
+        .features-text
+          .include-check-green [@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]
+          .include-check-green [@L[cds.sales/offers/online-business:32573-pro-email-bullet-2]@L]
+      | 
+      | ##else
+      .col-sm-3.key-benefit
+        h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-a-domain-heading]@L]
+        .key-benefits-text [@L[cds.sales/offers/online-business:32573-a-domain-text]@L]
+        .features-text
+          .include-check-green.TLD-token [@L[cds.sales/offers/online-business:32573-a-domain-bullet-1]@L]
+          .include-check-green [@L[cds.sales/offers/online-business:32573-a-domain-bullet-2]@L]
+      
+      .col-sm-3.key-benefit
+        h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-a-website-heading]@L]
+        .key-benefits-text [@L[cds.sales/offers/online-business:32573-a-website-text]@L]
+        .features-text
+          .include-check-green [@L[cds.sales/offers/online-business:32573-a-website-bullet-1]@L]
+          | 
+          |##if(productIsOffered(105))
+          | 
+          .include-check-none <strong>[@L[cds.sales/offers/online-business:32573-or]@L]</strong>
+          .include-check-green [@L[cds.sales/offers/online-business:32573-a-website-bullet-2]@L]
+          | 
+          |##endif
+          | 
+      .col-sm-3.key-benefit
         h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:32573-pro-email-heading]@L]
         .key-benefits-text [@L[cds.sales/offers/online-business:32573-pro-email-text]@L]
         .features-text
           .include-check-green [@L[cds.sales/offers/online-business:32573-pro-email-bullet-1]@L]
           .include-check-green [@L[cds.sales/offers/online-business:32573-pro-email-bullet-2]@L]
 
+      .col-sm-3.key-benefit
+        h3.headline-primary.word-break.key-benefits-title [@L[cds.sales/offers/online-business:human-support-heading]@L]
+        .key-benefits-text [@L[cds.sales/offers/online-business:human-support-text]@L]
+        .features-text
+          .include-check-green [@L[cds.sales/offers/online-business:human-support-bullet-1]@L]
+          .include-check-green [@L[cds.sales/offers/online-business:human-support-bullet-2]@L]
+    | 
+    | ##endif

@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 54f9e659f778fc1a48eed470
-name: GCEMO-547
-comments: remove underlines from links
+id: 551ad203f778fc1930ca2ead
+name: GCEMO-731
+comments: merchandising updates 4/1/2015
 ---
 {% extends 'layouts/base.html' %}
 
@@ -29,15 +29,11 @@ comments: remove underlines from links
     }
 
     .bg-images > .bg-slide2 {
-      ##if(countrySiteAny(www, ca))
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-club.jpg") !important;
-      ##else
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/GLOBAL_bg-main-banner-club.jpg") !important;
-      ##endif
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-site.jpg");
     }
 
     .bg-images > .bg-slide3 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-rocks.jpg") !important;
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-guru.jpg");
     }
     
     .bg-images > .bg-slide4 {
@@ -45,10 +41,8 @@ comments: remove underlines from links
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-london.jpg");
       ##elseif(activeLanguageAny([en-US], [es-US]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-nyc.jpg");
-      ##elseif(activeLanguageAny([en-CA], [fr-CA]))
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-quebec.jpg");
       ##else
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-global.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-company.jpg");
       ##endif
     }
 
@@ -112,16 +106,16 @@ comments: remove underlines from links
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.club</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextClub]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89140" href="[@T[link:<relative path="~/tlds/club"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.site</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Site]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="97775" href="[@T[link:<relative path="~/tlds/site"/>]@T]">[@L[cds.sales/gd/tlds/gtld:PreRegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.rocks</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextRocks]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="94265" href="[@T[link:<relative path="~/tlds/rocks"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideGuru]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/world"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
@@ -130,19 +124,14 @@ comments: remove underlines from links
                         <p class="domain no-margin-bottom"><strong>.london</strong></p>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextLondon]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="90057" href="[@T[link:<relative path="~/tlds/london"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
-                        ##elseif(ActiveLanguageAny([en-CA], [fr-CA]))
-                        <p class="domain no-margin-bottom"><strong>.quebec</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextQuebec]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="95108" href="[@T[link:<relative path="~/tlds/quebec"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##elseif(ActiveLanguageAny([en-US], [es-US]))
                         <p class="domain no-margin-bottom"><strong>.nyc</strong></p>
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##else
-                        <p class="domain no-margin-bottom"><strong>.global</strong></p>
-                        <p class="domain no-margin-bottom"><strong>[@L[cds.sales/gd/tlds/gtld:global]@L]</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextGlobal]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="94396" href="[@T[link:<relative path="~/tlds/global"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.company</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineCompany]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="90067" href="[@T[link:<relative path="~/tlds/company"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##endif
                       </div>
                     </div>

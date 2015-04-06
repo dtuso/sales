@@ -1,0 +1,116 @@
+extends _p4p.jade
+
+append vars
+  - page.title = "[@L[cds.sales/getonline:mwp-page-title]@L]";
+  - page.description = "";
+  - page.keywords = ""; 
+  - page.canonical = "";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "";
+  - page.openGraph.description = "";
+  - page.openGraph.image = "";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "";
+  - page.links.favicon = "";
+
+  - productToDisplay = productToDisplay || {};
+  - productToDisplay.name = "[@L[cds.sales/getonline:mwp-product-name]@L]";
+  - productToDisplay.landingPage = "getonline/wordpress.aspx"
+  - productToDisplay.packageId = "getonline_wordpress";
+  - productToDisplay.itcCode = "p4p_getonline_wordpress";
+  - productToDisplay.appKey = "slp_GYBO";
+  - productToDisplay.pricing.promo_monthly = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='monthly' promocode='511092015' />]@T]";
+  - productToDisplay.pricing.promo_annual = "[@T[multipleproductprice:<current productidlist='464069|101|32759' period='yearly' promocode='511092015' />]@T]";
+  - productToDisplay.pricing.renewal_monthly = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='monthly'></list>]@T]";
+  - productToDisplay.pricing.renewal_annual = "[@T[multipleproductprice:<list productidlist='464069|101|32759' period='yearly'></list>]@T]";
+  - productToDisplay.getItNowDescription = "[@L[cds.sales/getonline:mwp-product-get-it-now-description]@L]";
+  - productToDisplay.productImgUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
+  - productToDisplay.productIconUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-features-wordPress.png";
+  - productToDisplay.productDescription = "[@L[cds.sales/getonline:mwp-product-description]@L]";
+  - productToDisplay.productInfoImageUrl = "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png";
+  - productToDisplay.productYouTubeId = "";
+  - productToDisplay.productVideoInfoText = "";
+  - productToDisplay.productInfoText = "[@L[cds.sales/getonline:mwp-product-info-text]@L]";
+  - productToDisplay.productDidYouKnowText = "[@L[cds.sales/getonline:mwp-product-did-you-know-text]@L]";
+  - productToDisplay.topGetItNowBtnCI = "96305";
+  - productToDisplay.bottomGetItNowBtnCI = "96304";
+  - productToDisplay.bottomSearchAgainCI = "96301";
+  - productToDisplay.disclaimerCI = "96981";
+  - productToDisplay.disclaimerText = "[@L[cds.sales/getonline:disclaimer-modal-mwp-content]@L]";
+
+  - domainSearchWizard                                = {};
+  - domainSearchWizard.maxDomainLength                = 63;
+  - domainSearchWizard.dppErrorReturnUrl              = "[@T[link:<relative path='~/getonline/wordpress.aspx' includequery='true'><param name='tldRegErr' value='tldRegErr' /></relative>]@T]"
+  - domainSearchWizard.requireDomainToGoToCart        = true;
+  - domainSearchWizard.animateWizard                  = false;
+  - domainSearchWizard.title                          = "";
+  - domainSearchWizard.placeholderText                = "[@L[cds.sales/getonline:placeholder]@L]";
+  - domainSearchWizard.buttonText                     = "[@L[cds.sales/getonline:search]@L]";
+  - domainSearchWizard.infoTypeHere                   = "[@L[cds.sales/getonline:placeholder-message]@L]";
+  - domainSearchWizard.showInfoTypeHere               = false;
+  - domainSearchWizard.infoErrorEligibility           = "[@L[cds.sales/getonline:eligibility-error]@L]";
+  - domainSearchWizard.infoInvalidTld                 = "[@L[cds.sales/getonline:offer-only-valid]@L]";
+  - domainSearchWizard.infoDupDomainInCart            = "[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]";
+  - domainSearchWizard.showSearchButton               = true;
+  - domainSearchWizard.showChoicesWithAvailableDomain = true;
+  - domainSearchWizard.showRecommendedDomain          = true;
+  - domainSearchWizard.initialViewId                  = "domain-available-view";
+  - domainSearchWizard.searchViewSearchBtnCI          = "97072";
+  - domainSearchWizard.dupDomainInCartCI              = "97060";
+  - domainSearchWizard.availViewSearchBtnCI           = "97061";
+  - domainSearchWizard.availViewRecomSelBtnCI         = "97062";
+  - domainSearchWizard.availViewViewAllBtnCI          = "97063";
+  - domainSearchWizard.availViewSearchAgnBtnCI        = "97064";
+  - domainSearchWizard.notAvailViewSearchBtnCI        = "97065";
+  - domainSearchWizard.notAvailViewViewAllBtnCI       = "97067";
+  - domainSearchWizard.notAvailViewSearchAgnBtnCI     = "97068";
+  - domainSearchWizard.selectedViewSearchAgnBtnCI     = "97069";
+  - domainSearchWizard.selectedViewSeeProdBtnCI       = "97070";
+  - domainSearchWizard.selectedViewGoToCartBtnCI      = "97071";
+
+block targetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.text-center #{productToDisplay.name}
+    p #{productToDisplay.getItNowDescription}
+
+block productSection
+  style.
+    .wordpress-laptop{height:195px;margin-top:38px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-laptop.png) no-repeat center bottom;}
+    .wordpress-arrows{height:39px;margin-top:10px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-arrows.png) no-repeat center bottom;}
+    .wordpress-browser{height:233px;background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-wordpress-browser.png) no-repeat center bottom;}
+    .product-info-text{margin-top:20px;margin-bottom:85px;}
+
+  section#productSection.product-section
+    .container
+      .row
+        .col-sm-10.col-sm-offset-1
+          img.img-responsive.center-block(src!="#{productToDisplay.productIconUrl}")
+          h2.text-center #{productToDisplay.name}
+          h4.text-center #{productToDisplay.productDescription}
+      .row
+        .col-sm-4
+          .wordpress-laptop
+          h5.uppercase.text-center(style={'margin-top':'10px'}) [@L[cds.sales/getonline:mwp-product-info-enter-blog]@L]
+        .col-sm-4
+          h5.uppercase.text-center(style={'margin-top':'100px'}) [@L[cds.sales/getonline:mwp-product-info-publish]@L]
+          .wordpress-arrows
+        .col-sm-4
+          .wordpress-browser
+          h5.uppercase.text-center(style={'margin-top':'10px'}) <mark><span class="selected-domain-name-display"></span></mark>
+      .row
+        .col-sm-10.col-sm-offset-1(style={'margin-top':'25px'})
+          p.text-center #{productToDisplay.productInfoText}
+      .row.bubble-row
+        .col-xs-2
+          img.hero-guy(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/getonline/img/img-hero-guy.png")
+        .col-xs-10.col-sm-8.col-lg-6.bubble
+          mark.uppercase [@L[cds.sales/getonline:did-you-know]@L]
+          p #{productToDisplay.productDidYouKnowText}
+
+block bottomTargetedProduct
+  .column.website
+    img.img-responsive.center-block(src!="#{productToDisplay.productImgUrl}")
+    h3.got-subheader #{productToDisplay.name}

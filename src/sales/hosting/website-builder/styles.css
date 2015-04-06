@@ -92,11 +92,18 @@ padding-top: 40px;
 padding-bottom: 50px;
 }
 .templates-image{
-  margin: 25px auto;
+  margin: 25px auto 10px;
   box-shadow: 0 3px 7px -3px #282828;
-  height: 260px;
+  height: 132px;
   width: 200px;
   overflow: hidden;
+}
+.templates-image-name {
+  color: #333;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 .templates-image-container{
   margin: 30px 110px 40px 110px;

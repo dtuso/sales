@@ -1,0 +1,24 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .o365-upgrade-tile{background-color:#fff;color:#333;}
+    .o365-upgrade-tile-logo{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/o365-logo.png) no-repeat;position: relative;width:420px;height:93px;margin:55px 0 0 30px;}
+    .o365-upgrade-tile-text{margin:30px 30px 20px;font-size:36px;text-transform:uppercase;line-height:40px;}
+    .o365-upgrade-tile .o365-upgrade-tile-text span{color:#f2812e;display:inline;}
+    .o365-upgrade-tile>.atn-btn-wrap{position:relative;left:30px;}
+    .o365-upgrade-tile>.atn-btn-wrap>.btn-top-img{text-transform:uppercase;font-size:24px;color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;padding:14px 12px;box-sizing:border-box;height:60px;width:240px;}
+    .o365-upgrade-tile>.atn-btn-wrap>.btn-top-img:hover{background-color:#ff9b39;border-color:#cc7832}
+  </style>
+</atlantis:webstash>
+<div id="gdhp-o365upgradetile" data-url="[@T[link:<relative path="/business/office-365.aspx"><param name="ci" value="97602" /></relative>]@T]" data-ci="97602" class="gdhp-tile o365-upgrade-tile js-gdhpclick">
+  <div class="o365-upgrade-tile-logo">    </div>
+  <div class="o365-upgrade-tile-text walsheim-black">
+     
+    ##if(productHasSavingsMoreThan(31841, 31841, 0))
+    [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-text]@L]
+    ##else
+    [@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-text-no-savings]@L]
+    ##endif
+  </div>
+  <div class="atn-btn-wrap"><a id="gdhp-o365upgradetile-btn" href="javascript:void(0)" data-ci="97602" class="btn btn-top-img walsheim-reg">[@L[cds.sales/homepage/tiles/o365-upgrade-tile:o365-upgrade-tile-cta]@L]</a></div>
+</div>
