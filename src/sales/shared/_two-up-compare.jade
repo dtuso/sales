@@ -15,10 +15,11 @@ mixin twoUpCompareColumn(columnOptions)
   - columnOptions.subtitleAlign = columnOptions.subtitleAlign || "";
   - columnOptions.orContainer = columnOptions.orContainer || false;
   - columnOptions.lazyload = columnOptions.lazyload || false;
+  - columnOptions.offsetDefaultForSecondColumn = columnOptions.offsetDefaultForSecondColumn || "col-md-offset-2";
   - var offsetClass = ""
 
   if populatedColumns == 1
-    - offsetClass = "col-md-offset-2"
+    - offsetClass = columnOptions.offsetDefaultForSecondColumn
   else if populatedColumns == 0
     if columnOptions.orContainer
       - offsetClass = "or-container"
