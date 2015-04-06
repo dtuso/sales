@@ -119,7 +119,7 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
             </ul>
-            <button data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
           </div>
         </div>
       </div>
@@ -704,6 +704,7 @@
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
                 var ci = "0"
+                var btnSrc = "ac"
                 
                 $(".btn-plan").click(function() {
                 
@@ -716,6 +717,8 @@
                     var productPackage = $(this).data("plan");
                     if($(this).data("ci")!== undefined)
                       ci = $(this).data("ci");
+                    if($(this).data("btn-src")!== undefined)
+                      btnSrc = $(this).data("btn-src");
                   }
                 
                   var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
@@ -740,6 +743,7 @@
                       redirectUrl += "&plan=";
                     }
                     redirectUrl += productPackage;
+                    redirectUrl += "&src=" + btnSrc;
                 
                     window.location.href = redirectUrl;
                   })
@@ -5445,7 +5449,7 @@ width: 50%;
            var recommendedImagesTemplates = _.template('<div class="col-md-4 text-center"><div class="templates-image"><img src="<%= url %>" data-lazyload-source="<%= url %>" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive"/></div><div class="templates-image-name"><%= name %></div></div>');
            $.each(recommendedThemes,function(index){
              if(column == 0)
-               $row = $("<div>", {class: "row"});
+               $row = $("<div>", {'class': 'row'});
              column++;
              var itemData = {url:recommendedThemes[index]['URL'], name:recommendedThemes[index]['NAME']};
              var itemElement = recommendedImagesTemplates(itemData);
