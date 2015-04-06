@@ -1062,8 +1062,9 @@ ul li.no-check {
   text-transform: inherit;
 }
 .price,
-.icann-disclaimer {
-  color: #ff8a00;
+.icann-disclaimer,
+.promo-cta > a {
+  color: #ef6c0f;
 }
 #merchandising {
   background-color: #fff;
