@@ -112,13 +112,12 @@ append pageStyles
       vertical-align: baseline;
       cursor: pointer;
     }
-
 block endOfPageScripts
 
   script.
     $(window).load(function() {
       var maxTitleHeight = 0;
-      $(".plan-title").each(function(index, title) {
+      $(".plan-title:not(.bigtext)").each(function(index, title) {
         maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
       }).css("min-height", maxTitleHeight);
 
@@ -127,21 +126,13 @@ block endOfPageScripts
         maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
       }).css({height: maxIconHeight, marginBottom: 10});
 
-      // auto height the plan boxes
-      if ($(window).width() >= 768){
-        $(".pro-plans").each(function(index, outerPlan) {
-          if($(outerPlan).hasClass('ignore-same-height')) return; 
-          var maxHeight = 0;
-          $(outerPlan).find(".pro-plan-wrap").each(function(index, plan) {
-            maxHeight = $(plan).outerHeight() > maxHeight ? $(plan).outerHeight() : maxHeight;
-          });
-          if( maxHeight > 0 )$(outerPlan).find(".pro-plan-wrap").css("height", maxHeight);
-        });
-      }
-
-      $('[data-icann-fee]').each(function(){
+      $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
         var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
         $(this).html(tokenized);
+      });
+      $('[data-content*="{icannfee}"]').each(function(){
+        var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
+        $(this).attr('data-content',tokenized);
       });
       
     });
