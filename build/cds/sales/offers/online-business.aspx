@@ -2050,13 +2050,18 @@ $(window).load(function () {
           
         </style>
       </atlantis:webstash>
-      <div id="" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section   ">
+      <div id="domainSection1What" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature1.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
+              </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2 class="h0"><mark>[@L[cds.sales/offers/online-business:32573-whats-a-domain-heading]@L]</mark> [@L[cds.sales/offers/online-business:32573-whats-a-domain-text]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-whats-a-domain-subtext]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-one]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-whats-a-domain-bullet-two]@L]</div></div>
               </div>
             </div>
           </div>
@@ -2119,13 +2124,18 @@ $(window).load(function () {
           
         </style>
       </atlantis:webstash>
-      <div id="" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section   ">
+      <div id="domainSection2Email" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section features-wrap  lazyload">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-push-6">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/img-domainFeature2.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-left"/>
+              </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-pull-6">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-email-even-better-heading]@L]</h2>
+                <h4 class="headline-primary features-subtitle">[@L[cds.sales/offers/online-business:32573-email-even-better-text]@L]</h4>
+                <div class="features-text"><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-1]@L]</div><div class="include-check-green">[@L[cds.sales/offers/online-business:32573-email-even-better-bullet-2]@L]</div></div>
               </div>
             </div>
           </div>
@@ -2211,13 +2221,17 @@ $(window).load(function () {
           
         </style>
       </atlantis:webstash>
-      <div id="" style="" data-lazyload-source="" data-lazyload-callback="triggerResize" class="features tile-section   ">
+      <div id="findYourPerfectDomain" style="" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/bg-shortMod.jpg" data-lazyload-callback="triggerResize" class="features tile-section features-slim  lazyload">
         <div class="container">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-push-6 bg-slim-left">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/you-get.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="null" alt="" class="lazyload features-img features-img-right-slim"/>
+              </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-sm-pull-6 bg-slim-right">
               <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
+                <h2 class="h0">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-heading]@L]</h2>
+                <div class="features-text">[@L[cds.sales/offers/online-business:32573-find-your-perfect-name-text]@L]</div>
               </div>
             </div>
           </div>
