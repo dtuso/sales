@@ -42,14 +42,14 @@ block price
     | 
     | ##if(splitTestingSideIsActive(1349, B))
     | 
-    p.h6 [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
+    p.h6.vat-price [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
     | 
     | ##endif
     | 
     | 
     |##if(countrySiteAny(uk))
     | 
-    p.h6 [@L[cds.sales/_common:vat-price-uk]@L] 
+    p.h6.vat-price [@L[cds.sales/_common:vat-price-uk]@L] 
     | 
     |##endif
     | 
