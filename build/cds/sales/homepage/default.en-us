@@ -198,12 +198,11 @@
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
           <div class="col-md-4 col-sm-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">
-                    <atlantis:webstash type="css">
-                      <style>.marquee-tile.p4p {
+            <div class="row">
+              <div class="col-md-12 col-sm-6">
+                <div class="tile-wrapper">
+                  <atlantis:webstash type="css">
+                    <style>.marquee-tile.p4p {
   background-color: #77c043;
   background-repeat: no-repeat;
   background-position: 5% 100%;
@@ -232,20 +231,19 @@
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
 }
 
-                      </style>
-                    </atlantis:webstash>
-                    <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
-                      <div class="tile-content-wrapper">
-                        <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
-                        <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
-                        <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
-                      </div>
+                    </style>
+                  </atlantis:webstash>
+                  <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
+                    <div class="tile-content-wrapper">
+                      <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
+                      <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
+                      <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-                </div>
+              </div>
+              <div class="col-md-12 col-sm-6"> 
+                <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
               </div>
             </div>
           </div>
@@ -1447,8 +1445,9 @@ ul li.no-check {
   text-transform: inherit;
 }
 .price,
-.icann-disclaimer {
-  color: #ff8a00;
+.icann-disclaimer,
+.promo-cta > a {
+  color: #ef6c0f;
 }
 #merchandising {
   background-color: #fff;
@@ -1500,10 +1499,11 @@ section {
           $("#merchandising .tile-wrapper").each(function(index, title) {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
           }).css("min-height", maxTitleHeight + 10);
-      
-          var maxHeroHeight = 0;
-          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+          if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
+            var maxHeroHeight = 0;
+            $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+            $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+          }
       }
       function tokenizeTheDataTokenizeAttribute() {
         $('[data-tokenize]').each(function(){
