@@ -840,7 +840,7 @@ prepend endOfPageScripts
           var selectedPricePerTerm = document.getElementById('addsiteLockOption').getAttribute('data-monthly');
           var onSale = false;
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
-          var selectedTotal = currencyCalc.evaluate([selectedTerm,"*",selectedPricePerTerm]);
+          var selectedTotal = document.getElementById('addsiteLockOption').getAttribute('data-yearly');
           itc = "slp_wordpress_config";
 
           var itemData = {
