@@ -197,7 +197,7 @@
         </div>
       </div>
     </section>
-    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/search/css/styles_rebrand_03042015.css" type="text/css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/search/css/styles_rebrand_04012015.css" type="text/css" rel="stylesheet">
     <section id="top-pods">
       <atlantis:webstash type="css">
         <style>
@@ -1859,25 +1859,25 @@ top: -6px;
           <div class="row">
             <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span>
               <ul>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span><a href="[@T[link:<relative path='/tlds/green'><param name='ci' value='93954' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span><a href="[@T[link:<relative path='/tlds/green'><param name='ci' value='97717' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWebsite]@L]</span><a href="[@T[link:<relative path='/tlds/website'><param name='ci' value='90328' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLegal]@L]</span><a href="[@T[link:<relative path='/tlds/legal'><param name='ci' value='97718' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotReviews]@L]</span><a href="[@T[link:<relative path='/tlds/reviews'><param name='ci' value='96021' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSite]@L]</span><a href="[@T[link:<relative path='/tlds/site'><param name='ci' value='97719' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
               </ul>
             </div>
             <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle11]@L]</span>
               <ul>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotShop]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95449' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='90059' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWeb]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95450' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotStore]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='97716' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotOnline]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='95448' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotNews]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='97715' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotApp]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95447' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLive]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='97714' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
               </ul>
             </div>

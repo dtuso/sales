@@ -407,6 +407,8 @@ For multiple applications submitted during Priority Pre-Registration, the compan
 Is there any reason to register more than one domain name?
 <phrase key="FaqList16Item1" />
 Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCake.COM you might also want to register CatesCake.MENU and CatesCake.NYC. You can forward the new domain names to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
+<phrase key="FaqList16Item1Modified" />
+Yes. Businesses often register different domains to expand their digital footprint. So for example, if you own CatesCakes.COM you might also want to register CatesCakes.MENU and CatesCakes.NYC. You can forward the new domain names to your existing website or use them to create new ones. This increases the odds that new customers will find you online.
 <phrase key="FaqList17Title" />
 How do I register a domain with my trademark in it?
 <phrase key="FaqList17Item1" />
@@ -495,6 +497,8 @@ Tell the world what moves you with <strong>.rocks</strong>
 Say bienvenue with <strong>.quebec</strong>
 <phrase key="MainBannerCarouselSlideTextExpert" />
 You have the answers. Share them with <strong>.expert</strong>
+<phrase key="MainBannerCarouselSlideGuru" />
+Share what you know with <strong>.guru</strong>.
 <phrase key="MainBannerCarouselSlideSave" />
 SAVE 30% or more
 <phrase key="MainBannerCarouselSlideList" comment="only need to translate the word 'and' " />
