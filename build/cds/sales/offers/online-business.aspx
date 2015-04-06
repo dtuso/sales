@@ -1122,6 +1122,7 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
               });
+              
             </script>
           </atlantis:webstash>
         </div>
@@ -1355,6 +1356,7 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1577,6 +1579,7 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
