@@ -1,8 +1,8 @@
 extends ../../../../sales/homepage/_right_arrow.jade
 
 block append heroVars
-  - rightArrow.ci = "94095";
-  - rightArrow.ctaLink = "[@T[link:<external linktype='myaurl'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.ci = "95857";
+  - rightArrow.ctaLink = "[@T[link:<external linktype='MYAURL'><param name='ci' value='"+rightArrow.ci+"'/><param name='accid' value='3' /></external>]@T]";
   - rightArrow.classes += " hosting-paid-for-it";
 block append rightArrowStyles
   style
@@ -18,10 +18,10 @@ block leftContent
   .bigtext
     .line2.walsheim-black PAID FOR IT.
     .line3.tungsten 
-      span.dash ———
+      span.dash ——— 
       span SO USE IT.
 block rightContent
   .bigtext
     .line1.tungsten ACTIVATE
     .line2.walsheim-black YOUR HOSTING PLAN 
-  a.btn.btn-lg.btn-purchase GET STARTED
+  button.btn.btn-lg.btn-purchase GET STARTED
