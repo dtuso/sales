@@ -779,6 +779,9 @@ $(window).load(function () {
         section#human>*{
           margin:0;
         }
+        section#human>h4{
+          text-transform:none;
+        }
         
       </style>
     </atlantis:webstash>
