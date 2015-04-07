@@ -37,7 +37,7 @@
   width: 75%;
 }
 #webhost-m .left-column .subtitle {
-  font-size: 24px;
+  font-size: 26px;
   color: #333333;
 }
 #webhost-m .right-column {
