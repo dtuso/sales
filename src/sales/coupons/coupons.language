@@ -1,6 +1,6 @@
 ---
 location: localization/sales/coupons/en
-id: 
+id: 5522f453f778fc0b3cc5e5b5
 name: GCE-35734
 ---
 {% include 'modules/doc-block.html' %}
@@ -438,6 +438,14 @@ Claim your <strong>.property</strong> on the web.
 <strong>.photography</strong> increases your exposure.
 <phrase key="PodDotUsText" />
 Show your American pride.
+<phrase key="PodDotSiteText" />
+<strong>.site</strong> can be anything you want it to be.
+<phrase key="PodDotGreenText" />
+Show your true colors with <strong>.green</strong>
+<phrase key="PodDotWorldText" />
+Have it all? <strong>.world</strong> is for you.
+<phrase key="PodDotLegalText" />
+Grow your practice with <strong>.legal</strong>
 <phrase key="btn-buy-now" />
 Buy Now
 <phrase key="annual-purchase-required-period" />
