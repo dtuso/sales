@@ -170,7 +170,7 @@ var got1Page = {
 ##endif
 
 ##if(countrySiteAny(ca) || isManager())
-  got1Page.tldInfo.addTldIf('ca', true);
+  got1Page.tldInfo.addTldIf('ca', false);
 ##endif
 ##if(countrySiteAny(br) || isManager())
   got1Page.tldInfo.addTldIf('br', true);
