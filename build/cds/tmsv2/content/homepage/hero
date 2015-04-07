@@ -1,93 +1,102 @@
 
-<!--start got hero-->
+<!-- start right-arrow hero section-->
 <atlantis:webstash type="css">
-  <style>#marquee {
-  background-color: #ecedee;
+  <style>
+    .hero-wrapper>div{min-height:inherit;}
+    .right-arrow.hero {min-height: inherit;line-height:.9;background: transparent}
+    .right-arrow>div{min-height:inherit}
+    .right-arrow .left{background-color:rgb(119,192,67);color:#fff}
+    .right-arrow .right{background-color:transparent; color:#000}
+    .right-arrow .dash{letter-spacing:-.2rem}
+    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat; z-index:-1}
+    .right-arrow .leftContent, .right-arrow .rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+    .right-arrow .leftContent{width:80%; margin-left:10%;}
+    .right-arrow .rightContent{width:70%}
+    .right-arrow .rightContent .btn{margin:5% 0}
+    .Explorer .right-arrow .arrow{background-size: 100% 100% !important;}
+    
+  </style>
+  <style>.hero.right-arrow.hosting-free-domain {
+  font-size: 10px;
 }
-.hero.got {
-  font-size: 16px;
+.hero.right-arrow.hosting-free-domain .leftContent {
+  font-size: 1.9em;
+}
+.hero.right-arrow.hosting-free-domain .leftContent img {
+  margin-bottom: 5%;
   width: 100%;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  max-width: 200px;
 }
-.hero.got .products {
-  text-align: center;
+.hero.right-arrow.hosting-free-domain .leftContent .line1 {
+  line-height: 1;
 }
-.hero.got .product {
-  max-width: 50%;
-  margin: auto;
+.hero.right-arrow.hosting-free-domain .leftContent .line2 {
+  font-size: .7em;
+  color: #333;
+  margin-top: 5%;
 }
-.hero.got img.www {
-  width: 100%;
+.hero.right-arrow.hosting-free-domain .rightContent {
+  width: 90%;
 }
-.hero.got img.pencil {
-  padding: 4%;
-  width: 107%;
+.hero.right-arrow.hosting-free-domain .rightContent .line1 {
+  font-size: 1.6em;
 }
-.hero.got img.envelope {
-  padding: 8% 0;
-  width: 115%;
+.hero.right-arrow.hosting-free-domain .rightContent .price {
+  font-size: 1.3em;
 }
-.hero.got .addition {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-33%);
-  -ms-transform: translateY(-33%);
-  transform: translateY(-33%);
-}
-.hero.got .addition-wrapper {
-  height: 3em;
-  width: 12%;
-}
-.hero.got .pricing {
-  font-size: 150%;
-}
-.hero.got .price-wrapper {
-  width: 30%;
-  display: inline-block;
-}
-.hero.got .disclaimer {
-  font-size: 55%;
-  padding: 1% 0;
+.hero.right-arrow.hosting-free-domain .rightContent .price .space {
+  word-spacing: -7px;
 }
 @media only screen and (min-width: 768px) {
-  #marquee .product div {
-    font-size: 1.5em;
+  .hero.right-arrow.hosting-free-domain {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .hero.right-arrow.hosting-free-domain {
+    font-size: 16px;
   }
 }
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658'/></relative>]@T]" data-ci="95658" class="hero got">
-  <div class="products walsheim-black">
-    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www svgfallback"/>
-      <div class="domain">[@L[cds.sales/homepage/heros/got:domain]@L]</div>
-    </div>
-    <div class="addition-wrapper col-xs-2 bigtext">
-      <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
-    </div>
-    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website.png" class="pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil svgfallback"/>
-      <div class="website">[@L[cds.sales/homepage/heros/got:website]@L]</div>
-    </div>
-    <div class="addition-wrapper col-xs-2 bigtext">
-      <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
-    </div>
-    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-email.png" class="envelope"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDQyIDM1IiB2ZXJzaW9uPSIxIj48dGl0bGU+aWNuX2VtYWlsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjQgMjZMMCA0IDEgMzUgNDAgMzIgNDIgMTEgMjQgMjZNNDEgOEwxIDAgMjQgMjQgNDEgOCIvPjwvZz48L2c+PC9zdmc+" class="envelope svgfallback"/>
-      <div class="email">[@L[cds.sales/homepage/heros/got:email]@L]</div>
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97796'/></relative>]@T]" class="hero right-arrow hosting-free-domain walsheim-black">
+  <div class="left col-xs-6">
+    <div class="leftContent"><img src="data:image/png;base64,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" class="svgfallback"/><!--[if lt IE 9]><img src="data:image/png;base64,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"/><![endif]-->
+      <div class="line1"> </div>[@L[cds.sales/homepage/marquee/web-hosting:product]@L]
+      ##if(productHasSavingsMoreThan(32051, 32051, 4))
+      <div class="line2">[@L[cds.sales/homepage/marquee/web-hosting:actAndSave]@L]</div> 
+      ##endif
     </div>
   </div>
-  <div class="pricing walsheim-black">
-    <div class="col-xs-11">
-      <div class="priceText bigtext">[@L[cds.sales/homepage/heros/got:priceText]@L]</div>
-    </div>
-  </div>
-  <div class="cta">
-    <div class="col-xs-11"><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</a>
-      <div class="disclaimer">[@L[cds.sales/homepage/heros/got:disclaimer-new]@L]</div>
+  <div class="col-xs-1 arrow"></div>
+  <script>
+    (function(){
+    function IEVersion(){
+      var ua = window.navigator.userAgent;
+      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
+        return '8-9';
+      }
+      else if(ua.indexOf('10-current')>0 || ua.indexOf('Trident')>0){
+        return '10-current';
+      }
+    }
+    var ieVersion = IEVersion();
+      if(ieVersion != undefined)
+        if(ieVersion == '10-current'){
+          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
+          var base64 = window.btoa(utf8);
+          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
+          }
+        else{
+          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
+        }
+      })();
+  </script>
+  <div class="right col-xs-5">
+    <div class="rightContent">
+      <div class="line1">[@L[cds.sales/homepage/marquee/web-hosting:onlyProduct]@L]</div><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/marquee/web-hosting:cta-text]@L]</a>
     </div>
   </div>
 </div>
-<!--end got hero-->
+<!-- end right-arrow hero section-->
