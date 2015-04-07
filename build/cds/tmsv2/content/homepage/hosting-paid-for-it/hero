@@ -22,11 +22,7 @@
 
   </style>
 </atlantis:webstash>
-<<<<<<< HEAD
-<div data-url="[@T[link:<external linktype='myaurl'><param name='ci' value='94095'/><param name='accid' value='3' /></external>]@T]" class="hero right-arrow hosting-paid-for-it">
-=======
 <div data-url="[@T[link:<external linktype='MYAURL'><param name='ci' value='95857'/><param name='accid' value='3' /></external>]@T]" class="hero right-arrow hosting-paid-for-it">
->>>>>>> ff_sync
   <div class="left col-xs-6">
     <div class="leftContent">
       <div class="bigtext top">
