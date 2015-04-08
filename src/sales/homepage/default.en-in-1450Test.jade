@@ -1,0 +1,30 @@
+extends ./_home-page.jade
+block append pageStyles
+  style.
+    @media only screen and (min-width:768px) {#domain-promo .domain-promo-content{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg);}}
+block bugBar
+  +tldBugs(["net","co","in","co-in"])
+block hero
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
+block marquee-tile1
+  include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
+block marquee-tile2
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+block merch-tile1
+  include ./tiles/o365-tile.jade
+block merch-tile2
+  include ../../tmsv2/content/homepage/tld-co/merch-tile.jade
+block merch-tile3
+  include ./tiles/merch-tile-web-hosting.jade
+block merch-tile4
+  include ./tiles/online-store-tile.jade
+
+block domain-promo-body
+  div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
+block domain-promo-disclaimer
+
+block why-godaddy-registrar-img
+  <!--[if lt IE 9]>
+  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+  <![endif]-->
+  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
