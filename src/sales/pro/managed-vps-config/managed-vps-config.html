@@ -13,6 +13,7 @@ cssVersionOverride: 2
 {% block metahead %}
     {% parent %}
 
+##if(siteContextAny(pl))
 <style type="text/css">
   .green-check {
     display: none;
@@ -27,8 +28,21 @@ cssVersionOverride: 2
     background-color:#a92728;
     border: none;
   }
+  .uxicon.uxicon-chevron-down.color{
+  color: #0090FC;
+  text-align: center;
+}
 </style>
+##else
+<style type="text/css">
 
+.uxicon.uxicon-chevron-down.color{
+  color: #579006;
+  text-align: center;
+}
+
+</style>
+##endif
 {% endblock %}
 
 {% block steps %}
@@ -133,8 +147,8 @@ cssVersionOverride: 2
 
           
           var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
-
-          apiEndpoint =apiEndpoint +addons;
+          addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
+          apiEndpoint =apiEndpoint + addons;
           ##if(isManager())
             apiEndpoint +='&mgrshopper='+ managerId;
           ##endif
@@ -401,7 +415,7 @@ cssVersionOverride: 2
           var managedOption =$("input:radio[name='managedOption']:checked");
           var managedPrice = managedOption.data('price');
           var osOption =$("#osOption").val();
-          addonURL+= '?addons='+osOption + "-1" ;
+          addonURL+= 'addons='+osOption + "-1" ;
           if(currencyCalc.stripFormat(managedPrice) > 0)
             addonURL+= '|'+ managedOption.val() +"-1";
           return addonURL;
