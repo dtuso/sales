@@ -5864,7 +5864,7 @@ cursor: pointer;
           maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
         }).css({height: maxIconHeight, marginBottom: 10});
       
-        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
+        $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
         });
