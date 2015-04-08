@@ -769,6 +769,20 @@ $(window).load(function () {
           font-size:24px;
         }
         
+        .human-headline{
+            font-family:'Walsheim-Bold', 'Arial Black', sans-serif;
+          }
+        section#human{
+          text-align:center;
+          margin:35px 0;
+        }
+        section#human>*{
+          margin:0;
+        }
+        section#human>h4{
+          text-transform:none;
+        }
+        
       </style>
     </atlantis:webstash>
     <section id="marquee">
@@ -1122,6 +1136,7 @@ $(window).load(function () {
                   $('#defaultmarqueeviewform .type-your-business-name').show();
                 }
               });
+              
             </script>
           </atlantis:webstash>
         </div>
@@ -1355,6 +1370,7 @@ $(window).load(function () {
                     $('#domainavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1577,6 +1593,7 @@ $(window).load(function () {
                     $('#domainnotavailablemarqueeviewform .type-your-business-name').show();
                   }
                 });
+                
               </script>
             </atlantis:webstash>
           </div>
@@ -1785,7 +1802,13 @@ $(window).load(function () {
         <div>[@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]</div>
       </h2>
       <p>[@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]</p>
-    </div>
+    </div> 
+    ##if(queryValueHas( isc, human))
+    <section id="human">
+      <h2>[@L[cds.sales/offers/online-business:human-questions]@L]</h2>
+      <h4 class="headline-primary">[@L[cds.sales/offers/online-business:human-support-number]@L]</h4>
+    </section> 
+    ##endif
     <atlantis:webstash type="css">
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}

@@ -161,6 +161,7 @@
         html[lang="fr-be"] #marquee,
         html[lang="fr-ca"] #marquee {
           background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/img_mwp_usa_marquee_02_v01.jpg);
+          background-position: top center;
         }
         
         /* asia */
@@ -222,7 +223,7 @@
           background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0MDMgNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gZmlsbD0iIzc3MDI4NiIgcG9pbnRzPSIxNywwIDAsMjQuMiAzLDU2IDM4Nyw2NC4yIDQwMyw0My44IDQwMyw0LjMgIi8+PC9zdmc+");
           line-height: 1.42857;
           padding: 9px 13px;
-          font-size: 2.4rem;
+          font-size: 1.6rem;
           text-transform: none;
         }
         
@@ -236,7 +237,7 @@
           background: no-repeat scroll center center / cover rgba(0,0,0,0);
           background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI4MjlweCIgaGVpZ2h0PSI0MzFweCIgdmlld0JveD0iMCAwIDgyOSA0MzEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDgyOSA0MzEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIG9wYWNpdHk9IjAuODUiIGZpbGw9IiMxQTFBMUEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXciIHBvaW50cz0iMSwwIDg2LjI5Niw0MDMuMjk3IDcxNS41MjEsNDI5LjUzIDgyOSwxNDAuODcxIDc1MC4zODMsMCAiLz48L3N2Zz4=");
           margin: 0 0 0 -50px;
-          padding: 16px 87px;
+          padding: 40px 87px;
         }
         
         @media (min-width: 1000px) {
@@ -307,7 +308,7 @@
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
               <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-default-light btn-plan">[@L[cds.sales/_common:get-started]@L]</button>
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="as-low-as-pricing">
                 <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
                 <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
@@ -316,7 +317,7 @@
           </div>
           <div class="col-sm-5">
             <div class="marquee-flag-position">
-              <div data-tokenize="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]" class="marquee-flag-background headline-secondary text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]</div>
+              <div data-tokenize="[@T[support:<tes.CLOUDSERVERCONCIERGE_PHONE />]@T]" class="marquee-flag-background subheadline-primary text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-flag]@L]</div>
             </div>
           </div>
         </div>
