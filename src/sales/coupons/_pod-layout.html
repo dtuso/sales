@@ -346,6 +346,28 @@
     
     "pod_footer":""
   },
+  "domain_uk":{
+    "rule": "##if(countrySiteAny(uk))",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-uk tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotUkText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/uk.aspx'><param name='ci' value='" + cicodes.pod_dom_uk + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_uk,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
   "domain_in":{
     "rule": "##if(countrySiteAny(in))",
     "class":"",
@@ -368,8 +390,118 @@
 
     "pod_footer":""
   },
+  "domain_de":{
+    "rule": "##if(countrySiteAny(de))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-de tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotDeText]@L]",
+    "pod-description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/de'><param name='ci' value='" + cicodes.pod_dom_de + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_de,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_br":{
+    "rule": "##if(countrySiteAny(br))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-br tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotBrText]@L]",
+    "pod-description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/br-domain'><param name='ci' value='" + cicodes.pod_dom_br + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_br,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_fr":{
+    "rule": "##if(countrySiteAny(fr))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-fr tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotFrText]@L]",
+    "pod-description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/fr'><param name='ci' value='" + cicodes.pod_dom_fr + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_fr,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_nl":{
+    "rule": "##if(countrySiteAny(nl))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-nl tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotNlText]@L]",
+    "pod-description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/nl'><param name='ci' value='" + cicodes.pod_dom_nl + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_nl,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
+  "domain_es":{
+    "rule": "##if(countrySiteAny(es))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-es tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotEsText]@L]",
+    "pod-description":"",
+
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/es-domain'><param name='ci' value='" + cicodes.pod_dom_es + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_es,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer":""
+  },
   "domain_ca":{
-    "rule": "##if(countrySiteAny(ca) && !ShopperPriceTypeAny(8,32))",
+    "rule": "##if(countrySiteAny(ca))",
     "class":"",
 
     "pod_flag_text":"",
@@ -381,14 +513,146 @@
     
     "pod_price_prefix": default_text.price_prefix,
     "pod_price": default_text.domain_price_no_asterisk,
-    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_price_suffix": default_text.price_suffix,
     "pod_period": "",
     
     "a_href":"[@T[link:<relative path='~/tlds/ca.aspx'><param name='ci' value='" + cicodes.pod_dom_ca + "' /></relative>]@T]",
     "ci_code": cicodes.pod_dom_ca,
     "pod_button_text": default_text.button_text,
     
-    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
+    "pod_footer": ""
+  },
+  "domain_ch":{
+    "rule": "##if(countrySiteAny(ch))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-ch tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotChText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/ch'><param name='ci' value='" + cicodes.pod_dom_ch + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_ch,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_co_nz":{
+    "rule": "##if(countrySiteAny(nz))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-co-nz tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotCoNzText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/nz-domain'><param name='ci' value='" + cicodes.pod_dom_co_nz + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_co_nz,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_be":{
+    "rule": "##if(countrySiteAny(be))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-be tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotBeText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/be'><param name='ci' value='" + cicodes.pod_dom_be + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_be,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_ru":{
+    "rule": "##if(countrySiteAny(ru))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-ru tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotRuText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/ru-domain'><param name='ci' value='" + cicodes.pod_dom_ru + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_ru,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_pl":{
+    "rule": "##if(countrySiteAny(pl))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-pl tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotPlText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/pl-domain'><param name='ci' value='" + cicodes.pod_dom_pl + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_pl,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
+  },
+  "domain_dk":{
+    "rule": "##if(countrySiteAny(dk))",
+    "class":"",
+
+    "pod_flag_text":"",
+
+    "pod_icon":"<span class='tldlogo-dot-dk tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotDkText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/pl-domain'><param name='ci' value='" + cicodes.pod_dom_dk + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_dk,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer": ""
   },
   "domain_ca_no_promo":{
     "rule": "##if(countrySiteAny(ca) && ShopperPriceTypeAny(8,32))",
@@ -457,26 +721,48 @@
     "pod_footer": ""
   },
   "domain_com_mx":{
-    "rule": "##if(countrySiteAny(mx) && !ShopperPriceTypeAny(8,32))",
+    "rule": "##if(countrySiteAny(mx))",
     "class":"",
 
     "pod_flag_text":"",
     
-    "pod_icon":"<span class='tldlogo-dot-com-mx tldlogo'></span>",
+    "pod_icon":"<span class='tldlogo-dot-mx tldlogo'></span>",
     "pod_title":"",
     "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotMxText]@L]",
     "pod-description":"",
     
     "pod_price_prefix": default_text.price_prefix,
     "pod_price": default_text.domain_price_no_asterisk,
-    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_price_suffix": default_text.price_suffix,
     "pod_period": "",
 
     "a_href":"[@T[link:<relative path='~/tlds/mx-domain'><param name='ci' value='" + cicodes.pod_dom_com_mx + "' /></relative>]@T]",
     "ci_code": cicodes.pod_dom_com_mx,
     "pod_button_text": default_text.button_text,
 
-    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
+    "pod_footer": ""
+  },
+  "domain_com_au":{
+    "rule": "##if(countrySiteAny(au))",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-com-au tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle":"[@L[cds.sales/gd/domains/domain-name-search:PodDotComAuText]@L]",
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_no_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+
+    "a_href":"[@T[link:<relative path='~/tlds/au-domain'><param name='ci' value='" + cicodes.pod_dom_com_au + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_com_au,
+    "pod_button_text": default_text.button_text,
+
+    "pod_footer": ""
   },
   "domain_com_mx_no_promo":{
     "rule": "##if(countrySiteAny(mx) && ShopperPriceTypeAny(8,32))",
@@ -706,29 +992,29 @@
 
 
   "domain_com":{
-    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "rule": "",
     "class":"",
 
     "pod_flag_text":"",
     
-    "pod_icon":"<span class='tldlogo-dot-com tldlogo'></span>",
+    "pod_icon":"<span class='tldlogo-dot-com-verisign tldlogo'></span>",
     "pod_title":"",
     "pod_subtitle": L1 + "PodDotComText" + L2,
     "pod-description":"",
     
     "pod_price_prefix":  L1 + "pod-price-prefix-domain_com" + L2,
     "pod_price": default_text.domain_price_asterisk,
-    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_price_suffix": default_text.price_suffix,
     "pod_period": "",
     
-    "a_href":"[@T[link:<relative path='~/domains/domain-name-search.aspx'><param name='ci' value='" + cicodes.pod_dom_com + "' /></relative>]@T]",
+    "a_href":"[@T[link:<relative path='~/tlds/com'><param name='ci' value='" + cicodes.pod_dom_com + "' /></relative>]@T]",
     "ci_code": cicodes.pod_dom_com,
     "pod_button_text": L1 + "find-your-dotcom" + L2,
     
-    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price" + L2
+    "pod_footer": ""
   },
   "domain_com_no_promo":{
-    "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
+    "rule": "",
     "class":"",
 
     "pod_flag_text":"",
@@ -752,7 +1038,7 @@
 
 
   "domain_co":{
-    "rule": "##if(!ShopperPriceTypeAny(8,32) && countrySiteAny(in,br))",
+    "rule": "",
     "class":"",
 
     "pod_flag_text":"",
@@ -764,14 +1050,14 @@
     
     "pod_price_prefix":  L1 + "now-just" + L2,
     "pod_price": default_text.domain_price_no_asterisk,
-    "pod_price_suffix": L1 + "when-you-register-2-years-or-more" + L2,
+    "pod_price_suffix": default_text.price_suffix,
     "pod_period": "",
     
     "a_href":"[@T[link:<relative path='~/tlds/co-domain.aspx'><param name='ci' value='" + cicodes.pod_dom_co + "' /></relative>]@T]",
     "ci_code": cicodes.pod_dom_co,
     "pod_button_text": default_text.button_text,
     
-    "pod_footer": L1 + "1st-year-price-is-price-additional-years-are-original-price-no-asterisk" + L2
+    "pod_footer": ""
   },
   "domain_co_no_promo":{
     "rule": "##if(ShopperPriceTypeAny(8,32) || !countrySiteAny(in,br))",
@@ -829,13 +1115,123 @@
     
     "pod_footer":""
   },
+  "domain_website":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-website tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotWebsiteText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/website'><param name='ci' value='" + cicodes.pod_dom_website + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_website,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_site":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-site tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotSiteText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/site'><param name='ci' value='" + cicodes.pod_dom_site + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_site,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_green":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-green tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotGreenText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/green'><param name='ci' value='" + cicodes.pod_dom_green + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_green,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_world":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-world tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotWorldText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/world'><param name='ci' value='" + cicodes.pod_dom_world + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_world,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
+  "domain_legal":{
+    "rule": "",
+    "class":"",
+
+    "pod_flag_text":"",
+    
+    "pod_icon":"<span class='tldlogo-dot-legal tldlogo'></span>",
+    "pod_title":"",
+    "pod_subtitle": L1 + "PodDotLegalText" + L2,
+    "pod-description":"",
+    
+    "pod_price_prefix": default_text.price_prefix,
+    "pod_price": default_text.domain_price_asterisk,
+    "pod_price_suffix": default_text.price_suffix,
+    "pod_period": "",
+    
+    "a_href":"[@T[link:<relative path='~/tlds/legal'><param name='ci' value='" + cicodes.pod_dom_legal + "' /></relative>]@T]",
+    "ci_code": cicodes.pod_dom_legal,
+    "pod_button_text": default_text.button_text,
+    
+    "pod_footer":""
+  },
   "domain_net":{
     "rule": "",
     "class":"",
 
     "pod_flag_text":"",
     
-    "pod_icon":"<span class='tldlogo-dot-net tldlogo'></span>",
+    "pod_icon":"<span class='tldlogo-dot-net-verisign tldlogo'></span>",
     "pod_title":"",
     "pod_subtitle": L1 + "PodDotNetText" + L2,
     "pod-description":"",
@@ -874,7 +1270,7 @@
     "pod_footer":""
   },
   "domain_guru":{
-    "rule": "",
+    "rule": "##if(!countrySiteAny(www,ca,in,uk,mx,au,de,br,fr,es,nl,ch,nz,be,ru,pl,dk))",
     "class":"",
 
     "pod_flag_text":"",

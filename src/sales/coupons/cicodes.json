@@ -49,6 +49,24 @@
     "pod_dom_today":          "95649",
     "pod_dom_bargainbin":     "95650",
     "disclaimers":            "95651",
-    "disclaimers_x":          "95652"
+    "disclaimers_x":          "95652",
+    "pod_dom_site":           "97816",
+    "pod_dom_website":        "97817",
+    "pod_dom_uk":             "97814",
+    "pod_dom_com_au":         "97804",
+    "pod_dom_de":             "97805",
+    "pod_dom_br":             "97801",
+    "pod_dom_fr":             "97808",
+    "pod_dom_es":             "97807",
+    "pod_dom_nl":             "97811",
+    "pod_dom_ch":             "97802",
+    "pod_dom_co_nz":          "97803",
+    "pod_dom_be":             "97800",
+    "pod_dom_ru":             "97813",
+    "pod_dom_pl":             "97812",
+    "pod_dom_dk":             "97806",
+    "pod_dom_green":          "97809",
+    "pod_dom_world":          "97815",
+    "pod_dom_legal":          "97810"
   }
 }

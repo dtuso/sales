@@ -1,15 +1,15 @@
 extends ../../../../sales/homepage/_right_arrow.jade
 
 block append heroVars
-  - rightArrow.ci = "94097";
-  - rightArrow.ctaLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
+  - rightArrow.ci = "95862";
+  - rightArrow.ctaLink = "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
   - rightArrow.classes += " wsb-free-domain-typo";
     - rightArrow.arrowTextColor = '#333';
 block append rightArrowStyles
   style
     :less
       .hero.right-arrow.wsb-free-domain-typo{
-        .leftContent{
+        .leftContent{white-space: nowrap;
           .products{
             .product{display:inline-block;width:43%; margin-right:20%}
             .product>img{width:100%}
@@ -49,8 +49,8 @@ block rightContent
     .line3.walsheim-black [@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH
     .line4.tungsten
       span THIS
-      span.dash ———
+      span.dash  ——— 
       span IS NOT A TYPO
     .line5.walsheim-bold AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.
-  a.btn.btn-lg.btn-purchase GET STARTED
-  .line6.walsheim-black Free domain with annual plan only. Other restrictions apply.
+  button.btn.btn-lg.btn-purchase GET STARTED
+  .line6 Free domain with annual plan only. Other restrictions apply.

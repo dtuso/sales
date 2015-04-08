@@ -1,0 +1,13 @@
+---
+location: localization/sales/homepage/marquee/web-hosting/en
+id: false
+name: GCEMO-827
+---
+<phrase key="product" />
+WEB HOSTING PLUS A FREE DOMAIN
+<phrase key="cta-text" />
+GET STARTED
+<phrase key="actAndSave" />
+ACT NOW AND SAVE [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" showsymbol="true"/>]@T]
+<phrase key="onlyProduct" />
+ONLY <div class="price">[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]<span class="space"> </span>/MO</div>
