@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/dedicated-server.aspx
-id: 55108587f778fc0ec0b66ef4
+id: 5525ae2af778fc2e5c23b535
 name: GCE-36425
 comments: Word updates
 url: http://www.dev-secureserver.net/hosting/dedicated-server.aspx
@@ -504,6 +504,7 @@ assetPath: false
       apiEndpoint += "/" + quantity;
       apiEndpoint += "/" + plan;
       apiEndpoint += window.location.search;
+      apiEndpoint += ((apiEndpoint.indexOf('?')<0) ? "?" : "&") + addons;
 
       $.ajax({
         type: 'POST',
@@ -564,9 +565,8 @@ assetPath: false
   }
 
   function generateAddonsURL() {
-    var addonURL = '';
-    var osOption = $("#osaddon").val();
-    addonURL += '?addons=' + osOption + "-1";
+    var addonURL = '', osOption = $("#osaddon").val();
+    addonURL += 'addons=' + osOption + "-1";
     addonURL += '|pro_ds_managed-1';
     return addonURL;
   }
