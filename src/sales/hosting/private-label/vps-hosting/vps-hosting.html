@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/vps-hosting.aspx
-id: 55106aebf778fc0ec0b66ec6
+id: 5525ae1bf778fc2e5c23b534
 name: GCE-36425
 comments: Word updates
 url: http://www.dev-secureserver.net/hosting/vps-hosting.aspx
@@ -490,6 +490,7 @@ assetPath: false
       apiEndpoint += "/" + quantity;
       apiEndpoint += "/" + plan;
       apiEndpoint += window.location.search;
+      apiEndpoint += ((apiEndpoint.indexOf('?')<0) ? "?" : "&") + addons;
 
       $.ajax({
         type: 'POST',
@@ -549,9 +550,8 @@ assetPath: false
   }
 
   function generateAddonsURL(){
-    var addonURL='';
-    var osOption =$("#osaddon").val();
-    addonURL+= '?addons='+osOption + "-1" ;
+    var addonURL='', osOption =$("#osaddon").val();
+    addonURL+= 'addons=' + osOption + "-1" ;
     addonURL+= '|pro_vps_managed-1';
     return addonURL;
   }
