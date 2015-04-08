@@ -259,8 +259,14 @@ block plans
 
 block sections
   +renderMidPageNav
+    | 
+    | ##if(activeLanguageAny([en-IN]))
+    +priceBlock('[@T[productprice:<current productid="294057" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#planTileOne", {"ci":"95886"})
+    | 
+    | ##else
     +priceBlock('[@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]', "[@L[cds.sales/_common:month]@L]", "#planTileOne", {"ci":"95886"})
-
+    | 
+    | ##endif
   section#one-click-install.features.tile-section.one-click-wrapper
     .container
       .row
