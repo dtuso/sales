@@ -241,8 +241,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals(); 
-  tokenizeTheDataTokenizeAttribute();
+  tokenizeDisclaimerModals();
 
   wireupModals();
 
@@ -297,18 +296,6 @@ function showAndOrderDynamicTldsInList(selector) {
 
   //- show sorted list
   $this.find('.tld-list').show();
-}
-
-function tokenizeTheDataTokenizeAttribute() {
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
 }
 
 function tokenizeDisclaimerModals() {
@@ -1812,7 +1799,7 @@ $(window).load(function () {
     <atlantis:webstash type="css">
       <style>
         #products.tile-section{ padding-top: 0;padding-bottom: 0;}
-        #products {padding-bottom:40px;}
+        #products {padding-bottom:40px!important;}
         #products.key-benefits-wrap h2.products-title-text {
           color:#333;
           font-size: 40px;
