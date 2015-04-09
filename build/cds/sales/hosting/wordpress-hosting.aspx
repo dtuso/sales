@@ -4361,20 +4361,11 @@ ul li.no-check {
     </atlantis:webstash>
     <script>
       $(window).load(function() {
-        var maxTitleHeight = 0;
-        $(".plan-title:not(.bigtext)").each(function(index, title) {
-          maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-        }).css("min-height", maxTitleHeight);
-      
-        var maxIconHeight = 0;
-        $(".plan-image").each(function(index, image) {
-          maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
-        }).css({height: maxIconHeight, marginBottom: 10});
-      
         $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
         });
+        
         $('[data-content*="{icannfee}"]').each(function(){
           var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).attr('data-content',tokenized);
