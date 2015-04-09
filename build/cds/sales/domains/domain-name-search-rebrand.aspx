@@ -240,7 +240,6 @@
           #top-pods .tldlogo-wrap{min-height:50px;}
         </style>
       </atlantis:webstash>
-      <h1>marker = </h1>
       <atlantis:webstash type="js">
         <script type="text/javascript">
           var planTileMixin = {
@@ -1520,7 +1519,6 @@ top: -6px;
           </style>
         </atlantis:webstash>
         <h2 class="bottom-headline">[@L[cds.sales/gd/domains/domain-name-search:FourPodsAboveText]@L]</h2>
-        <h1>marker = true</h1>
         <div class="pro-plans-wrap ">
           <div id="plans" data-icode="" class="container pro-plans">
             <div class="row">

@@ -156,7 +156,6 @@
        
       ##if(activeLanguageAny([en-IN])) 
        
-      <h1>marker = </h1>
       <atlantis:webstash type="js">
         <script type="text/javascript">
           var planTileMixin = {
@@ -763,7 +762,6 @@
       </div> 
       ##else
        
-      <h1>marker = true</h1>
       <div class="pro-plans-wrap ">
         <div id="plans" data-icode="" class="container pro-plans">
           <div class="row"> 

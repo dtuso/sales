@@ -447,7 +447,6 @@
           });
         </script>
       </atlantis:webstash>
-      <h1>marker = </h1>
       <atlantis:webstash type="js">
         <script type="text/javascript">
           var planTileMixin = {

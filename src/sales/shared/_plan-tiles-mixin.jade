@@ -43,8 +43,6 @@ mixin renderPlanTiles(columns, options)
   else
     - containerClass = "container"
 
-  h1 marker = #{hasIncludedPlanTilesMixinCss}
-
   if (typeof hasIncludedPlanTilesMixinJs == 'undefined')
     - hasIncludedPlanTilesMixinJs = true
     atlantis:webstash(type="js")
