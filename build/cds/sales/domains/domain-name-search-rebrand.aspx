@@ -2114,9 +2114,9 @@ top: -6px;
                     <h2>[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationTitleRebrand]@L]</h2>
                     <div class="subtext">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationSubTitleRebrand]@L]</div>
                     <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationText1Rebrand]@L]</div>
-                    <ul>
-                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem1Rebrand]@L]</span></li>
-                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem2Rebrand]@L]</span></li>
+                    <ul class="green-check">
+                      <li class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem1Rebrand]@L]</li>
+                      <li class="check-text">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem2Rebrand]@L]</li>
                     </ul>
                     <div class="last-private-item">[@L[cds.sales/gd/domains/domain-name-search:PrivateRegistrationItem3Rebrand]@L]</div>
                   </div>
@@ -2128,10 +2128,10 @@ top: -6px;
                     <h2>[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationTitleRebrand]@L]</h2>
                     <div class="relative">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitle1Rebrand]@L]</div>
                     <div class="sub-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationSubTitleTwo]@L]</div>
-                    <ul class="single-line">
-                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText1Rebrand]@L]</span></li>
-                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText2Rebrand]@L]</span></li>
-                      <li><span class="include-check"></span><span class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText3Rebrand]@L]</span></li>
+                    <ul class="green-check">
+                      <li class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText1Rebrand]@L]</li>
+                      <li class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText2Rebrand]@L]</li>
+                      <li class="check-text">[@L[cds.sales/gd/domains/domain-name-search:ProtectedRegistrationText3Rebrand]@L]</li>
                     </ul>
                   </div>
                 </div>
