@@ -10,21 +10,20 @@
   background-position-x: -28px;
 }
 .com.tld.rajesh.tile h2 {
-  font-size: 2em;
+  font-size: 1.4em;
   margin: 10px 0 5px;
 }
 .com.tld.rajesh.tile h3 {
-  font-size: 2.1em;
+  font-size: 1.4em;
   margin: 0;
   color: #78c044;
 }
-.com.tld.rajesh.tile .cta {
-  font-size: 2.7em;
-  color: #ff8a00;
+.com.tld.rajesh.tile .price {
+  font-size: 1.5em;
   line-height: 0.8em;
 }
 .com.tld.rajesh.tile .disclaimer {
-  font-size: 1em;
+  font-size: .5em;
   margin: 15px 0 10px;
 }
 
@@ -39,7 +38,7 @@
             <div class="header-wrapper">
               <h2 class="header-text walsheim-black">Big dreams. Small price.</h2>
               <h3 class="maintext walsheim-black">NEW .COM</h3>
-              <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]" class="cta walsheim-black">{0}*</div>
+              <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]" class="price walsheim-black">{0}*</div>
               <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' promocode='0' />]@T]" class="disclaimer">*2 year minimum registration required. Subsequent years charged at {0}/yr.</div>
             </div>
           </div>

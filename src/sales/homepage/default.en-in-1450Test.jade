@@ -13,11 +13,11 @@ block marquee-tile2
 block merch-tile1
   include ./tiles/o365-tile.jade
 block merch-tile2
-  include ../../tmsv2/content/homepage/tld-co/merch-tile.jade
-block merch-tile3
   include ./tiles/merch-tile-web-hosting.jade
-block merch-tile4
+block merch-tile3
   include ./tiles/online-store-tile.jade
+block merch-tile4
+  include ./tiles/gem.jade
 
 block domain-promo-body
   div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
@@ -28,3 +28,8 @@ block why-godaddy-registrar-img
   +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
   <![endif]-->
   +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+block why-godaddy-prices-img
+  <!--[if lt IE 9]>
+  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','TLD Boards')
+  <![endif]-->
+  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
