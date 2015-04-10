@@ -153,7 +153,7 @@
                   <label for="search-input" class="sr-only">[@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]</label>
                   <input id="search-input" type="text" autocomplete="off" placeholder="[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
                 </div>
-                <p class="form-error">[@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
+                <p class="form-error">[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
               </fieldset>
             </div>
             <div class="col-sm-6">
@@ -335,7 +335,7 @@ ul li.no-check {
             var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
             
             if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
-              $(".form-error").text("[@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
+              $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
               $("fieldset.step-1 input").removeClass("search-bar");
               $("fieldset.step-1 .form-group").addClass("has-error");
               $(".form-error").show()
