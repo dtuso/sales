@@ -338,6 +338,10 @@ Click here for product disclaimers and legal policies.
 Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
 <phrase key="DisclaimerModalHeader" />
 Disclaimers
+<phrase key="DisclaimerModalItem01" />
+&#134; [@T[currencyprice:<price usdamount="29100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/12 and are subject to change.
+<phrase key="DisclaimerModalItem01_34158" />
+&#134; [@T[currencyprice:<price usdamount="29100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft<sup>&reg;</sup> Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/12 and are subject to change.
 <phrase key="DisclaimerModalItem02" />
 + An early termination fee of [@T[currencyprice:<price usdamount="15000" dropdecimal="true" currencytype="USD" />]@T] will be applied to Standard plans cancelled within six months of signup.
 <phrase key="DisclaimerModalItem02_34158" />
