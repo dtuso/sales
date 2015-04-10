@@ -22,5 +22,13 @@
         "email": "clbrown@godaddy.com"
       }
     }
+  },
+  "vps-hosting.rule": {
+    "cdsDetails": {
+      "champion": {
+        "name": "Colyn Brown",
+        "email": "clbrown@godaddy.com"
+      }
+    }
   }
 }
