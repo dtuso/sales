@@ -72,8 +72,6 @@ month**
 24 months
 <phrase key="planbox-cart-btn" />
 Add to Cart
-<phrase key="PlanBoxAddFacebookPageDesignText" />
-Add Facebook<sup>&reg;</sup> Page Design <br />Just <strong>[@T[productprice:<current productid="855" dropdecimal="false" period="monthly" currencytype="USD" />]@T]/month</strong> <a href="#" data-ci="88674">More Info</a>
 <phrase key="PlanBoxStandardPlanDetails01Text" />
 <strong>1,500+</strong> design & color combinations
 <phrase key="PlanBoxStandardPlanDetails02Text" />
@@ -162,8 +160,6 @@ Fast turnaround
 <strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit**
 <phrase key="PlansIncludeText9_34158" />
 <strong class="secondary-color">FREE</strong> USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search credit**
-<phrase key="PlansIncludeText10" />
-<strong class="secondary-color">FREE</strong> USD $50 Facebook<sup>&reg;</sup> Credit***
 <phrase key="PlansIncludeText11" />
 <strong class="secondary-color">FREE</strong> Website Editor – easily make updates yourself
 <phrase key="PlansIncludeText11a" />
@@ -272,8 +268,6 @@ Add coupons, discounts, and sale pricing.
 Add coupons, discounts and sale pricing.
 <phrase key="TabFeatures3FeatureListItems7" />
 USD $100 Bing<sup>&reg;</sup>/Yahoo!<sup>&reg;</sup> Search Credit.<sup>**</sup>
-<phrase key="TabFeatures3FeatureListItems8" />
-USD $50 Facebook<sup>&reg;</sup> Advertising Credit.<sup>***</sup>
 <phrase key="TabFeatures3FeatureListItems9" />
 FREE Google Webmaster Tools.
 <phrase key="TabContentHowWorksTabHeaderText" />
@@ -412,8 +406,6 @@ After you complete the Interactive Online Interview, one of our expert designers
 For more information, see <a href="[@T[link:<external linktype="HELPURL" path="/article/5258" secure="false"/>]@T]" target="_faq">Getting Started with Web Store.</a>
 <phrase key="PackageBtn" />
 Choose your Package
-<phrase key="PackageBtn_34158" />
-Get Started
 <phrase key="ContentDisclaimerSymbols" />
 1, &#8225;, &#8224;, &#94;, &#94;&#94;&#94;, +, ++,  **, ***, ****
 <phrase key="ContentDisclaimerSymbols_34158" />
@@ -429,7 +421,7 @@ Disclaimers
 <phrase key="DisclaimerModalItem02" />
 &#8224; [@T[currencyprice:<price usdamount="24100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, Fotolia® Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/2012 and are subject to change.
 <phrase key="DisclaimerModalItem02_34158" />
-&#8224; [@T[currencyprice:<price usdamount="24100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, Facebook® Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/2012 and are subject to change.
+&#8224; [@T[currencyprice:<price usdamount="24100" dropdecimal="true" currencytype="USD" />]@T] value based on Microsoft® Advertising Credit, website analytics, Search Engine Visibility, and SSL Certificate. Comparison prices are accurate as of 9/20/2012 and are subject to change.
 <phrase key="DisclaimerModalItem03" />
 <sup>&#94;</sup> Initial setup of Free Search Engine Visibility and website analytics accounts count towards your allotted 30 minutes of monthly site updates.
 <phrase key="DisclaimerModalItem03_34158" />
