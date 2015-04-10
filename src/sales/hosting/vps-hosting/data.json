@@ -1,0 +1,33 @@
+{
+  "centos": {
+    "plans": {
+      "economy": {
+        "us": [{
+          "id": "",
+          "price": "",
+          "duration": ""
+        }],
+        "eu": [{
+          "id": "",
+          "price": "",
+          "duration": ""
+        }]
+      },
+      "deluxe": {
+        "us": [{
+          "id": "",
+          "price": "",
+          "duration": ""
+        }],
+        "eu": [{
+          "id": "",
+          "price": "",
+          "duration": ""
+        }]
+      }
+    },
+    "details": {
+      "economy": ["OS: Linux CentOS", "", ""]
+    }
+  }
+}
