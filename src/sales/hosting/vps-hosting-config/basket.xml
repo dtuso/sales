@@ -1,0 +1,3062 @@
+<Packages>
+  <Package id="vps_us_centos_basic_1" QtyIsDuration="false">
+    <ProductId>171822</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_basic_6" QtyIsDuration="false">
+    <ProductId>171830</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_basic_12" QtyIsDuration="false">
+    <ProductId>171825</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_basic_24" QtyIsDuration="false">
+    <ProductId>171834</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_eco_1" QtyIsDuration="false">
+    <ProductId>171824</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_eco_6" QtyIsDuration="false">
+    <ProductId>171832</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_eco_12" QtyIsDuration="false">
+    <ProductId>171833</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_eco_24" QtyIsDuration="false">
+    <ProductId>171836</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_eco_1" QtyIsDuration="true">
+    <ProductId>3049</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_eco_6" QtyIsDuration="true">
+    <ProductId>3049</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_eco_12" QtyIsDuration="true">
+    <ProductId>3049</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_eco_24" QtyIsDuration="true">
+    <ProductId>3049</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_val_1" QtyIsDuration="false">
+    <ProductId>171847</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_val_6" QtyIsDuration="false">
+    <ProductId>171852</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_val_12" QtyIsDuration="false">
+    <ProductId>171853</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_val_24" QtyIsDuration="false">
+    <ProductId>171855</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_val_1" QtyIsDuration="true">
+    <ProductId>3050</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_val_6" QtyIsDuration="true">
+    <ProductId>3050</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_val_12" QtyIsDuration="true">
+    <ProductId>3050</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_val_24" QtyIsDuration="true">
+    <ProductId>3050</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_val_1" QtyIsDuration="true">
+    <ProductId>3840</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_val_6" QtyIsDuration="true">
+    <ProductId>3840</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_val_12" QtyIsDuration="true">
+    <ProductId>3840</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_val_24" QtyIsDuration="true">
+    <ProductId>3840</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_deluxe_1" QtyIsDuration="false">
+    <ProductId>171863</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_deluxe_6" QtyIsDuration="false">
+    <ProductId>171868</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_deluxe_12" QtyIsDuration="false">
+    <ProductId>171869</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_deluxe_24" QtyIsDuration="false">
+    <ProductId>171871</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_deluxe_1" QtyIsDuration="true">
+    <ProductId>3051</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_deluxe_6" QtyIsDuration="true">
+    <ProductId>3051</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_deluxe_12" QtyIsDuration="true">
+    <ProductId>3051</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_deluxe_24" QtyIsDuration="true">
+    <ProductId>3051</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_deluxe_1" QtyIsDuration="true">
+    <ProductId>3841</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_deluxe_6" QtyIsDuration="true">
+    <ProductId>3841</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_deluxe_12" QtyIsDuration="true">
+    <ProductId>3841</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_deluxe_24" QtyIsDuration="true">
+    <ProductId>3841</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_premium_1" QtyIsDuration="false">
+    <ProductId>171879</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_premium_6" QtyIsDuration="false">
+    <ProductId>171884</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_premium_12" QtyIsDuration="false">
+    <ProductId>171885</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_premium_24" QtyIsDuration="false">
+    <ProductId>171887</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_premium_1" QtyIsDuration="true">
+    <ProductId>3052</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_premium_6" QtyIsDuration="true">
+    <ProductId>3052</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_premium_12" QtyIsDuration="true">
+    <ProductId>3052</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_premium_24" QtyIsDuration="true">
+    <ProductId>3052</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_premium_1" QtyIsDuration="true">
+    <ProductId>3842</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_premium_6" QtyIsDuration="true">
+    <ProductId>3842</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_premium_12" QtyIsDuration="true">
+    <ProductId>3842</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_premium_24" QtyIsDuration="true">
+    <ProductId>3842</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_ult_1" QtyIsDuration="false">
+    <ProductId>171895</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_ult_6" QtyIsDuration="false">
+    <ProductId>171900</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_ult_12" QtyIsDuration="false">
+    <ProductId>171901</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_centos_ult_24" QtyIsDuration="false">
+    <ProductId>171903</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_ult_1" QtyIsDuration="true">
+    <ProductId>3053</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_ult_6" QtyIsDuration="true">
+    <ProductId>3053</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_ult_12" QtyIsDuration="true">
+    <ProductId>3053</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_fedora_ult_24" QtyIsDuration="true">
+    <ProductId>3053</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_ult_1" QtyIsDuration="true">
+    <ProductId>3843</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_ult_6" QtyIsDuration="true">
+    <ProductId>3843</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_ult_12" QtyIsDuration="true">
+    <ProductId>3843</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_us_windows_ult_24" QtyIsDuration="true">
+    <ProductId>3843</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_ftp_15" ProductId="3070" />
+        <AddOn Name="us_addon_ftp_30" ProductId="133" />
+        <AddOn Name="us_addon_ftp_60" ProductId="3071" />
+        <AddOn Name="us_addon_ftp_120" ProductId="3072" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_managedbackup_7" ProductId="1368" />
+        <AddOn Name="us_addon_managedbackup_30" ProductId="1362" />
+        <AddOn Name="us_addon_managedbackup_4" ProductId="1363" />
+        <AddOn Name="us_addon_managedbackup_12" ProductId="1364" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="us_addon_bandwidth_500" ProductId="1225" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_30" ProductId="1222" />
+        <AddOn Name="us_addon_controlpanel_100" ProductId="1223" />
+        <AddOn Name="us_addon_controlpanel_unlimited" ProductId="1224" />
+      </AddOnGroup>
+      <AddOnGroup Block="1240" MaxSelection="1">
+        <AddOn Name="us_addon_assistedservice" ProductId="1264"/>
+      </AddOnGroup>
+      <AddOnGroup Requires="1222|1223|1224" MaxSelection="1">
+        <AddOn Name="us_addon_controlpanel_powerpack" ProductId="2751" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_basic_1" QtyIsDuration="false">
+    <ProductId>171918</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_basic_6" QtyIsDuration="false">
+    <ProductId>171926</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_basic_12" QtyIsDuration="false">
+    <ProductId>171921</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_basic_24" QtyIsDuration="false">
+    <ProductId>171930</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_eco_1" QtyIsDuration="false">
+    <ProductId>171920</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_eco_6" QtyIsDuration="false">
+    <ProductId>171928</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_eco_12" QtyIsDuration="false">
+    <ProductId>171929</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_eco_24" QtyIsDuration="false">
+    <ProductId>171932</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_eco_1" QtyIsDuration="true">
+    <ProductId>3062</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_eco_6" QtyIsDuration="true">
+    <ProductId>3062</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_eco_12" QtyIsDuration="true">
+    <ProductId>3062</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_eco_24" QtyIsDuration="true">
+    <ProductId>3062</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_val_1" QtyIsDuration="false">
+    <ProductId>171943</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_val_6" QtyIsDuration="false">
+    <ProductId>171948</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_val_12" QtyIsDuration="false">
+    <ProductId>171949</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_val_24" QtyIsDuration="false">
+    <ProductId>171951</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_val_1" QtyIsDuration="true">
+    <ProductId>3063</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_val_6" QtyIsDuration="true">
+    <ProductId>3063</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_val_12" QtyIsDuration="true">
+    <ProductId>3063</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_val_24" QtyIsDuration="true">
+    <ProductId>3063</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_val_1" QtyIsDuration="true">
+    <ProductId>3845</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_val_6" QtyIsDuration="true">
+    <ProductId>3845</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_val_12" QtyIsDuration="true">
+    <ProductId>3845</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_val_24" QtyIsDuration="true">
+    <ProductId>3845</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_deluxe_1" QtyIsDuration="false">
+    <ProductId>171959</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_deluxe_6" QtyIsDuration="false">
+    <ProductId>171964</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_deluxe_12" QtyIsDuration="false">
+    <ProductId>171965</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_deluxe_24" QtyIsDuration="false">
+    <ProductId>171967</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_deluxe_1" QtyIsDuration="true">
+    <ProductId>3064</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_deluxe_6" QtyIsDuration="true">
+    <ProductId>3064</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_deluxe_12" QtyIsDuration="true">
+    <ProductId>3064</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_deluxe_24" QtyIsDuration="true">
+    <ProductId>3064</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_deluxe_1" QtyIsDuration="true">
+    <ProductId>3846</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_deluxe_6" QtyIsDuration="true">
+    <ProductId>3846</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_deluxe_12" QtyIsDuration="true">
+    <ProductId>3846</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_deluxe_24" QtyIsDuration="true">
+    <ProductId>3846</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_premium_1" QtyIsDuration="false">
+    <ProductId>171975</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_premium_6" QtyIsDuration="false">
+    <ProductId>171980</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_premium_12" QtyIsDuration="false">
+    <ProductId>171981</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_premium_24" QtyIsDuration="false">
+    <ProductId>171983</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_premium_1" QtyIsDuration="true">
+    <ProductId>3065</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_premium_6" QtyIsDuration="true">
+    <ProductId>3065</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_premium_12" QtyIsDuration="true">
+    <ProductId>3065</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_premium_24" QtyIsDuration="true">
+    <ProductId>3065</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_premium_1" QtyIsDuration="true">
+    <ProductId>3847</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_premium_6" QtyIsDuration="true">
+    <ProductId>3847</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_premium_12" QtyIsDuration="true">
+    <ProductId>3847</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_premium_24" QtyIsDuration="true">
+    <ProductId>3847</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_ult_1" QtyIsDuration="false">
+    <ProductId>171991</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_ult_6" QtyIsDuration="false">
+    <ProductId>171996</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_ult_12" QtyIsDuration="false">
+    <ProductId>171997</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_centos_ult_24" QtyIsDuration="false">
+    <ProductId>171999</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_ult_1" QtyIsDuration="true">
+    <ProductId>3066</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_ult_6" QtyIsDuration="true">
+    <ProductId>3066</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_ult_12" QtyIsDuration="true">
+    <ProductId>3066</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_fedora_ult_24" QtyIsDuration="true">
+    <ProductId>3066</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_ult_1" QtyIsDuration="true">
+    <ProductId>3848</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_ult_6" QtyIsDuration="true">
+    <ProductId>3848</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_ult_12" QtyIsDuration="true">
+    <ProductId>3848</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_eu_windows_ult_24" QtyIsDuration="true">
+    <ProductId>3848</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="eu_addon_bandwidth_500" ProductId="1668" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="1674" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_30" ProductId="1665" />
+        <AddOn Name="eu_addon_controlpanel_100" ProductId="1666" />
+        <AddOn Name="eu_addon_controlpanel_unlimited" ProductId="1667" />
+      </AddOnGroup>
+      <AddOnGroup Requires="1665|1666|1667" MaxSelection="1">
+        <AddOn Name="eu_addon_controlpanel_powerpack" ProductId="1695" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_basic_1" QtyIsDuration="false">
+    <ProductId>172014</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_basic_6" QtyIsDuration="false">
+    <ProductId>172022</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_basic_12" QtyIsDuration="false">
+    <ProductId>172017</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_basic_24" QtyIsDuration="false">
+    <ProductId>172026</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_eco_1" QtyIsDuration="false">
+    <ProductId>172016</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_eco_6" QtyIsDuration="false">
+    <ProductId>172024</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_eco_12" QtyIsDuration="false">
+    <ProductId>172025</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_eco_24" QtyIsDuration="false">
+    <ProductId>172028</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_eco_1" QtyIsDuration="true">
+    <ProductId>3081</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_eco_6" QtyIsDuration="true">
+    <ProductId>3081</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_eco_12" QtyIsDuration="true">
+    <ProductId>3081</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_eco_24" QtyIsDuration="true">
+    <ProductId>3081</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_val_1" QtyIsDuration="false">
+    <ProductId>172039</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_val_6" QtyIsDuration="false">
+    <ProductId>172044</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_val_12" QtyIsDuration="false">
+    <ProductId>172045</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_val_24" QtyIsDuration="false">
+    <ProductId>172047</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_val_1" QtyIsDuration="true">
+    <ProductId>3082</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_val_6" QtyIsDuration="true">
+    <ProductId>3082</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_val_12" QtyIsDuration="true">
+    <ProductId>3082</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_val_24" QtyIsDuration="true">
+    <ProductId>3082</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_val_1" QtyIsDuration="true">
+    <ProductId>3849</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_val_6" QtyIsDuration="true">
+    <ProductId>3849</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_val_12" QtyIsDuration="true">
+    <ProductId>3849</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_val_24" QtyIsDuration="true">
+    <ProductId>3849</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_deluxe_1" QtyIsDuration="false">
+    <ProductId>172055</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_deluxe_6" QtyIsDuration="false">
+    <ProductId>172060</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_deluxe_12" QtyIsDuration="false">
+    <ProductId>172061</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_deluxe_24" QtyIsDuration="false">
+    <ProductId>172063</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_deluxe_1" QtyIsDuration="true">
+    <ProductId>3083</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_deluxe_6" QtyIsDuration="true">
+    <ProductId>3083</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_deluxe_12" QtyIsDuration="true">
+    <ProductId>3083</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_deluxe_24" QtyIsDuration="true">
+    <ProductId>3083</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_deluxe_1" QtyIsDuration="true">
+    <ProductId>3087</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_deluxe_6" QtyIsDuration="true">
+    <ProductId>3087</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_deluxe_12" QtyIsDuration="true">
+    <ProductId>3087</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_deluxe_24" QtyIsDuration="true">
+    <ProductId>3087</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_premium_1" QtyIsDuration="false">
+    <ProductId>172071</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_premium_6" QtyIsDuration="false">
+    <ProductId>172076</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_premium_12" QtyIsDuration="false">
+    <ProductId>172077</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_premium_24" QtyIsDuration="false">
+    <ProductId>172079</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_premium_1" QtyIsDuration="true">
+    <ProductId>3084</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_premium_6" QtyIsDuration="true">
+    <ProductId>3084</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_premium_12" QtyIsDuration="true">
+    <ProductId>3084</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_premium_24" QtyIsDuration="true">
+    <ProductId>3084</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_premium_1" QtyIsDuration="true">
+    <ProductId>3088</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_premium_6" QtyIsDuration="true">
+    <ProductId>3088</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_premium_12" QtyIsDuration="true">
+    <ProductId>3088</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_premium_24" QtyIsDuration="true">
+    <ProductId>3088</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_ult_1" QtyIsDuration="false">
+    <ProductId>172087</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_ult_6" QtyIsDuration="false">
+    <ProductId>172092</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_ult_12" QtyIsDuration="false">
+    <ProductId>172093</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_centos_ult_24" QtyIsDuration="false">
+    <ProductId>172095</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+     <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_bandwidth" ProductId="172117" MatchParentDuration="false" MaxQty="10"/>
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="addon_centos_controlpanel_cpanel" ProductId="172113" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_ult_1" QtyIsDuration="true">
+    <ProductId>3085</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_ult_6" QtyIsDuration="true">
+    <ProductId>3085</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_ult_12" QtyIsDuration="true">
+    <ProductId>3085</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_fedora_ult_24" QtyIsDuration="true">
+    <ProductId>3085</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_ult_1" QtyIsDuration="true">
+    <ProductId>3850</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_ult_6" QtyIsDuration="true">
+    <ProductId>3850</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_ult_12" QtyIsDuration="true">
+    <ProductId>3850</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_ap_windows_ult_24" QtyIsDuration="true">
+    <ProductId>3850</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="ap_addon_bandwidth_500" ProductId="3253" MatchParentDuration="false" MaxQty="4"/>
+      </AddOnGroup>
+      <AddOnGroup Block="3257" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_30" ProductId="3250" />
+        <AddOn Name="ap_addon_controlpanel_100" ProductId="3251" />
+        <AddOn Name="ap_addon_controlpanel_unlimited" ProductId="3252" />
+      </AddOnGroup>
+      <AddOnGroup Requires="3250|3251|3252" MaxSelection="1">
+        <AddOn Name="ap_addon_controlpanel_powerpack" ProductId="3261" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+</Packages>
