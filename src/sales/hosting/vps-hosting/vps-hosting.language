@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/hosting/vps-hosting/en
-id: 53d7f2d7f778fc27484de56f
-name: FOS-24858
-comments: Removed hard line breaks
+id: false
+name: FOS-38510
+comments: Removed facebook credits
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -183,8 +183,6 @@ Money-back guarantee
 <strong class="secondary-color">FREE!</strong> Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Google<sup>&reg;</sup> Adwords<sup>&reg;</sup> Credit
 <phrase key="SupportBingCredits" />
 <strong class="secondary-color">FREE!</strong> Up to [@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T] Bing Ad Credit
-<phrase key="SupportFacebookCredits" />
-<strong class="secondary-color">FREE!</strong> [@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T] Facebook<sup>&reg;</sup> Advertising Credit
 <phrase key="SupportSubText5" />
 <strong class="secondary-color">FREE!</strong> <a class="isToolTip" data-html="true" href="javascript:atl_PopUp(&#039;[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /></relative>]@T]&#039;,&#039;foto_popup&#039;,&#039;left=50,top=50,scrollbars=yes,resizable=yes,width=600,height=550&#039;);" title="<strong>What can you do with 10 FREE credits from Fotolia.com?</strong><br />Fotolia&reg; has over 8,000,000 royalty-free photos, illustrations and videos available for your use. Quickly search and find images that will capture attention and add visual punch to your website. Use your free credits toward any photo, illustration or video; additional images start at just [@T[currencyprice:<price usdamount="75" dropdecimal="false" />]@T] each." data-ci="88973">10 Fotolia<sup>&reg;</sup> Credits</a>
 <phrase key="SupportSubText7" />
@@ -455,8 +453,6 @@ SSL Certificate is free for 1 year with purchase. After the initial free year, S
 One promotional credit per customer for a new Google AdWords account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Minimum spend [@T[currencyprice:<price usdamount="2500" dropdecimal="false" />]@T]. Offer valid to US & Canada residents only, excluding government controlled entities and parties. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/google-adwords.aspx'><param name='ci' value='90612' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="BingRestrictions" />
 One promotional credit per customer for a new Microsoft<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid to US residents only, other restrictions apply.<br/><a href=&quot;javascript:void(window.open('[@T[appSetting:<setting name='BING_AD_CREDIT_LINK' />]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=1060,height=675'))&quot;>View Details</a>
-<phrase key="FacebookRestrictions" />
-One promotional credit per customer for a new Facebook<sup class='supsymbol'>&reg;</sup> Advertiser account. Products purchased using a Gift Card or Alipay do not provide eligibility for advertising credits. Offer valid only for purchase of advertising in the US, Canada, UK, and Australia. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/facebook-ads.aspx'><param name='ci' value='90611' /><param name='app_hdr' value='99' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 <phrase key="FotoliaRestrictions" />
 One free promotional credit per customer, good for ten free download credits at Fotolia. Products purchased using a Gift Card or Alipay do not provide eligibility for photography credits. Other restrictions apply. <a href=&quot;javascript:void(window.open('[@T[link:<relative path='/popups/fotolia.aspx'><param name='app_hdr' value='99' /><param name='ci' value='88993' /></relative>]@T]','_more','left=20,top=20,scrollbars=yes,resizable=yes,width=550,height=675'))&quot;>View Details</a>
 
