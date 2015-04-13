@@ -1464,7 +1464,7 @@ input[type=checkbox] + label{
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1474,7 +1474,7 @@ input[type=checkbox] + label{
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
             <% } %></div>
@@ -1579,9 +1579,9 @@ input[type=checkbox] + label{
       
     </script>
     <script>
-      var plan = getParameterByName('plan');
+      var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
       // gs for get started button, ac for add to cart button
-      var origin = getParameterByName('src');
+      var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
       var reload = false;
       var noSiteLock = false;
       var noEmail = false;
