@@ -1,7 +1,7 @@
 ---
 location: sales/pro/dedicated-server-config
-id: 551c45c8f778fc25405d0859
-name: GCE-37575
+id: 552c0432f778fc0c1078b6d1
+name: GCE-37474
 comments: Update config page so that PL can use it in addition to pro
 configPage: true
 sitecore: true 
@@ -147,6 +147,7 @@ cssVersionOverride: 1
             //update package with add on if package is already added
             var apiEndpoint = '[@T[link:<relative path="api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',qty).replace('{4}',packageId);
             
+            addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
             apiEndpoint =apiEndpoint +addons;
             ##if(isManager())
               apiEndpoint +='&mgrshopper='+ managerId;
@@ -363,7 +364,7 @@ cssVersionOverride: 1
             var managedOption = $('input:radio[name="managedOption"]:checked');
             var managedPrice = managedOption.data('price');
             var osOption = $('#osAddon').val();
-            addonURL += '?addons=' + osOption + "-1";
+            addonURL += 'addons=' + osOption + "-1";
             if (currencyCalc.stripFormat(managedPrice) > 0)
                 addonURL += '|' + managedOption.val() + "-1";
             return addonURL;
