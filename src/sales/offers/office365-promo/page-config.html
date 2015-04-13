@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 5522f30bf778fc0b3cc5e5b3
+id: 552c350cf778fc0c1078b774
 name: GCE-37618
 comments: remove UK from restricted markets.
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
@@ -719,7 +719,7 @@ assetPath: false
         var urlFragment = '/' + got2Page.itcCode; //itc code
         urlFragment += '/' + got2Page.ciCode; //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment    += '/' + got2Page.packageId);  //Plan Name (aka Package Id)
+        urlFragment    += '/' + got2Page.packageId;  //Plan Name (aka Package Id)
         var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
