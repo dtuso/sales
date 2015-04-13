@@ -1,0 +1,23 @@
+---
+location: sales/hosting/vps-hosting.aspx.rule
+id: 
+name: GCE-37611
+comments: all markets should redirect to pro page.
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': 'mobileRedirectRequired()',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[mobileRedirectLink:<data redirectKey=\"sales.productlanding.virtualdedicated\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/hosting/vps_hosting.aspx\"><param name=\"ci\" value=\"84176\"/></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!isManager() && siteContextAny(gd)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/pro/managed-vps\"></relative>]@T]' }"
+  }
+]
