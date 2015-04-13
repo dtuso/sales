@@ -6,17 +6,17 @@
     .tile.paris .header-wrapper {padding:45px 30px 0 20px;}
     .tile.paris .body-wrapper {padding: 210px 30px 0 20px;}
     .tile.paris .cta-wrapper {padding: 0 30px 20px 20px;}
-    .tile .header-text { font-size: 64px; color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
-    .tile .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; font-size:30px;}
+    .tile.paris .header-text { font-size: 64px; color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+    .tile.paris .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; font-size:30px;}
     .tile.paris .price-text {margin-top:-10px;}
     .tile.paris .price-text strike {color:#fff;font-size:30px;padding-right:10px;}
     .tile.paris .current-price {color:#ef6c0f;font-size:36px;}
-    .tile .cta-wrapper { position: absolute; bottom: 0; }
-    .tile .btn-cta { font-size: 18px; text-transform: uppercase; margin: 0 0 0 0; font-family: 'Walsheim-Bold';}
+    .tile.paris .cta-wrapper { position: absolute; bottom: 0; }
+    .tile.paris .btn-cta { font-size: 18px; text-transform: uppercase; margin: 0 0 0 0; font-family: 'Walsheim-Bold';}
     
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:&lt;relative path='/tlds/paris'&gt;&lt;param name='ci' value='97837' /&gt;&lt;/relative&gt;]@T]" data-ci="97837" class="tile paris js-gdhpclick">
+<div data-url="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]" data-ci="97837" class="tile paris js-gdhpclick">
   <div class="header-wrapper">
     <h2 class="header-text">VOILÀ!</h2>
   </div>
@@ -24,5 +24,5 @@
     <div class="body-text">.paris pour</div>
     <div class="price-text walsheim-black">[@T[productprice:<template productid="622895" period="yearly" checktmspromocode="true"><strike><![CDATA[<strike>{1}</strike><span class="current-price">{0}</span>]]></strike><nostrike><![CDATA[<span class="current-price">{0}</span>]]></nostrike></template>]@T]</div>
   </div>
-  <div class="cta-wrapper"><a href="[@T[link:&lt;relative path='/tlds/paris'&gt;&lt;param name='ci' value='97837' /&gt;&lt;/relative&gt;]@T]" class="btn btn-warning btn-cta">Rechercher Maintenant</a></div>
+  <div class="cta-wrapper"><a href="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]" class="btn btn-warning btn-cta">Rechercher Maintenant</a></div>
 </div>
