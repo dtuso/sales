@@ -645,13 +645,13 @@
                      
                     ##if(splitTestingSideIsActive(1349, B))
                      
-                    <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    <p class="h6 vat-price">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                     ##endif
                      
                      
                     ##if(countrySiteAny(uk))
                      
-                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                     ##endif
                      
                   </div>
@@ -694,13 +694,13 @@
                      
                     ##if(splitTestingSideIsActive(1349, B))
                      
-                    <p class="h6">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    <p class="h6 vat-price">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                     ##endif
                      
                      
                     ##if(countrySiteAny(uk))
                      
-                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                     ##endif
                      
                   </div>
@@ -744,13 +744,13 @@
                      
                     ##if(splitTestingSideIsActive(1349, B))
                      
-                    <p class="h6">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    <p class="h6 vat-price">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                     ##endif
                      
                      
                     ##if(countrySiteAny(uk))
                      
-                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                     ##endif
                      
                   </div>
@@ -794,13 +794,13 @@
                      
                     ##if(splitTestingSideIsActive(1349, B))
                      
-                    <p class="h6">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    <p class="h6 vat-price">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
                     ##endif
                      
                      
                     ##if(countrySiteAny(uk))
                      
-                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
                     ##endif
                      
                   </div>
@@ -5525,6 +5525,10 @@ width: 50%;
         }
         .marquee ul { padding: 0; }
         
+        #plans p.vat-price {
+          margin-top:8px;
+        }
+        
       </style>
     </atlantis:webstash>
     <script type="text/javascript">
@@ -5658,20 +5662,12 @@ width: 50%;
     </script>
     <script>
       $(window).load(function() {
-        var maxTitleHeight = 0;
-        $(".plan-title:not(.bigtext)").each(function(index, title) {
-          maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-        }).css("min-height", maxTitleHeight);
       
-        var maxIconHeight = 0;
-        $(".plan-image").each(function(index, image) {
-          maxIconHeight = $(image).height() > maxIconHeight ? $(image).height() : maxIconHeight;
-        }).css({height: maxIconHeight, marginBottom: 10});
-      
-        $('[data-icann-fee]','[att*="{icannfee}"]').each(function(){
+        $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);
         });
+        
         $('[data-content*="{icannfee}"]').each(function(){
           var tokenized = $(this).attr('data-content').replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).attr('data-content',tokenized);
