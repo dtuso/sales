@@ -1,0 +1,44 @@
+
+<atlantis:webstash type="css">
+  <style>
+    .tile { width: 480px; height: 480px; position: relative; float: left;margin: 40px 10px 0;cursor: pointer; background-color: #333; }
+    .tile .header-wrapper { background-color: #77c043; padding: 30px 30px 0 30px; }
+    .tile .body-wrapper { padding: 15px 30px 0 30px; }
+    .tile .cta-wrapper { padding: 0 30px 30px 30px; }
+    .tile .disclaimer-wrapper { position: absolute; bottom: 0; }
+    .tile .header-text { font-size: 48px; color: #333; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+    .tile .arrow-separator { border-left: 160px solid transparent; border-right: 320px solid transparent; border-top: 80px solid #77c043;}
+    .tile .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+    .tile .cta-wrapper { position: absolute; bottom: 0; }
+    .tile .btn-cta { font-size: 24px; text-transform: uppercase; margin: 0 0 0 0; }
+    .tile .disclaimer { color: #fff; padding-top: 15px; }
+    
+  </style>
+  <style>
+    .arrow-separator {display:none;}
+    .tile.paris {background-image:url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/paris-tile-background.png");}
+    .tile.paris * {text-transform:uppercase;}
+    .tile.paris .header-wrapper {background-color:transparent;padding:45px 30px 0 20px;}
+    .tile.paris .body-wrapper {padding: 210px 30px 0 20px;}
+    .tile.paris .cta-wrapper {padding: 0 30px 20px 20px;}
+    .tile.paris .header-text {font-size:64px;color:#fff;}
+    .tile.paris .body-text {font-size:30px;}
+    .tile.paris .price-text {margin-top:-10px;}
+    .tile.paris .price-text strike {color:#fff;font-size:30px;padding-right:10px;}
+    .tile.paris .current-price {color:#ef6c0f;font-size:36px;}
+    .tile.paris .btn-cta {font-size:18px;font-family: 'Walsheim-Bold';}
+    
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]" data-ci='97837' class="tile down-arrow-tile js-gdhpclick paris">
+  <div class="header-wrapper">
+    <h2 class="header-text">VOILÀ!</h2>
+  </div>
+  <div class="arrow-separator"></div>
+  <div class="body-wrapper">
+    <div class="body-text">.paris pour</div>
+    <div class="price-text walsheim-black">[@T[productprice:<template productid="622895" period="yearly" checktmspromocode="true"><strike><![CDATA[<strike>{1}</strike><span class="current-price">{0}</span>]]></strike><nostrike><![CDATA[<span class="current-price">{0}</span>]]></nostrike></template>]@T]</div>
+  </div>
+  <div class="cta-wrapper"><a href="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]" class="btn btn-warning btn-cta">Rechercher Maintenant</a>
+  </div>
+</div>
