@@ -123,6 +123,14 @@ $(document).ready(function(){
     var linkText = $("#pretty-link").text();
     var splitLink = linkText.split('&');
     $("#pretty-link").text(splitLink[0]);
+    var lowestBasic = lowestPriceOfTier("Basic");
+    var lowestDeluxe = lowestPriceOfTier("Deluxe");
+    var lowestUltimate = lowestPriceOfTier("Ultimate");
+    lowestPriceOfTier("Test");
+
+    document.getElementById("tierOnePrice").innerHTML = lowestBasic;
+    document.getElementById("tierTwoPrice").innerHTML = lowestDeluxe;
+    document.getElementById("tierThreePrice").innerHTML = lowestUltimate;
 });
 
 function RecordClick(c, a, b) {
@@ -165,6 +173,69 @@ $('.nav-tabs a.js-tab-init').each(function() {
     });
 });
 
+function lowestPriceOfTier(tier){
+  var prices;
+  if(tier=="Basic"){
+    prices = [  '[@T[productprice:<current productid="580967" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580970" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580979" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580982" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580988" period="monthly"/>]@T]'];
+  }
+  else if(tier=="Deluxe")  {
+    prices = [  '[@T[productprice:<current productid="580969" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580978" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580981" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580984" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="580990" period="monthly"/>]@T]'];
+  }
+  else if(tier=="Ultimate"){
+    prices = [  '[@T[productprice:<current productid="580995" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="581001" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="581003" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="581005" period="monthly"/>]@T]',
+                '[@T[productprice:<current productid="581009" period="monthly"/>]@T]'];
+  }
+  else if(tier=="Test"){
+    prices = [  '$2.10',
+                '$2.11',
+                '$10.00',
+                '$6.00',
+                '$2.15'];
+  }
+
+  var stringLengths = [ prices[0].length,
+                        prices[1].length,
+                        prices[2].length,
+                        prices[3].length,
+                        prices[4].length];
+
+  var minLength = stringLengths.sort(function (a, b) { return a.length - b.length; })[0];
+
+  var minLengthIndexes = [];
+
+  for (var i = stringLengths.length - 1; i >= 0; i--) {
+    if(stringLengths[i] == minLength){
+      minLengthIndexes.push(i);
+    }
+  };
+
+  if(minLengthIndexes.length == 1){
+    console.log("Only one index");
+    console.log(prices[minLengthIndexes[0]]);
+    return prices[minLengthIndexes[0]];
+  }
+  else{
+    currentMin = prices[minLengthIndexes[0]];
+    for (var i = minLengthIndexes.length - 1; i >= 0; i--) {
+      if(prices[minLengthIndexes[i]] < currentMin){
+        currentMin = prices[minLengthIndexes[i]];
+      }
+    };
+    return currentMin;
+  }
+}
+
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -204,21 +275,13 @@ $(".js-add-to-cart").bind("click",function(event){
       var newCartCt = pcCartCt + 1;
       pcUpdateCart(newCartCt);
       ##endif
-      ##if(isManager())
-      var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/mgrcart/{0}" />]@T]'
-      ##else
-      var linkLocation = '[@T[link:<external linktype="GUIURL" path="/syncshopper/cart/{0}" />]@T]'
-      ##endif
-      linkLocation = linkLocation.replace("{0}", data.Shopper);
-      window.location = linkLocation;
+      configLocation = "[@T[link:<relative path='/hosting/wordpress-config.aspx'></relative>]@T]" + "&plan=" +packageId + "&src=ac";
+      window.location = configLocation;
     }
     else
     {
-      ##if(isManager())
-      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-      ##else
-      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-      ##endif
+      configLocation = "[@T[link:<relative path='/hosting/wordpress-config.aspx'></relative>]@T]" + "&plan=" +packageId + "&src=ac";
+      window.location = configLocation;
     }
   });
 }); 
