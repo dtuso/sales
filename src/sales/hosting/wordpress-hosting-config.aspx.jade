@@ -173,9 +173,9 @@ prepend endOfPageScripts
     </li>
 
   script.
-    var plan = getParameterByName('plan');
+    var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
     // gs for get started button, ac for add to cart button
-    var origin = getParameterByName('src');
+    var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
     var reload = false;
     var noSiteLock = false;
     var noEmail = false;
