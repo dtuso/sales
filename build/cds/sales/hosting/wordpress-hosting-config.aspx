@@ -134,7 +134,7 @@
     <div class="container configuration-container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]</span></p>
+          <p class="product-added-to-cart"><span class="uxicon uxicon-checkmark green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]</span></p>
         </div>
       </div>
       <div class="row">
@@ -258,27 +258,6 @@
               </div>
             </div>
           </div>
-          <atlantis:webstash type="css">
-            <style>
-              .config-step-break {
-                margin-top: 15px;
-                margin-bottom: 15px;
-              }
-              .config-step-break .icon-down {
-                position: relative;
-                z-index: 1;
-              }
-              .icon-down {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 20px;
-                height: 15px;
-                background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) -49px -2px no-repeat;
-              }
-            </style>
-          </atlantis:webstash>
-          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
         </div>
         <div class="col-sm-3">
           <atlantis:webstash type="css">
@@ -325,6 +304,7 @@
               .scroll-down-wrapper{
                 cursor: pointer;
                 margin-top: 15px;
+                text-align:center;
               }
               .scroll-down-wrapper p{
                 font-size: 12px;
@@ -391,7 +371,8 @@
              
             <div class="row">
               <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
-                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
+                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p>
+                <p class="uxicon uxicon-chevron-down"></p>
               </div>
             </div>
           </div>
@@ -1148,125 +1129,117 @@ ul li.no-check {
         .domain-search-container{
           margin-bottom:200px;
         }
+        .config-step {
+          font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+        }
+        .config-step .step-title {
+        font-size: 36px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        font-weight: 100;
+        line-height: 1.1;
+        color: #333;
+        }
+        .config-step .step-subtitle {
+        margin-left: 15px;
+        }
+        .config-text-primary {
+          font-size: 30px;
+          font-weight: 200;
+        }
+        .config-text-secondary {
+          font-size: 24px;
+          font-family: 'Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif’Helvetica Neue’ - 200';
+        }
+        .config-text-lead {
+          font-size: 16px;
+        }
+        .bold{
+          font-weight: 600;
+        }
+        .config-text-lead-secondary {
+          font-size: 14px;
         
+        }
+        .config-step{
+          display: none;
+        }
+        .vertical-align {
+            display: flex;
+            align-items: center;
+        }   
+        .product-options li {
+          border-bottom: 1px solid #C3C3C3;
+          padding-bottom: 25px;
+          padding-top: 10px;
+        }
+        .product-options li:last-child{
+          border-bottom:none;
+        }
+        .product-options {
+        list-style: none;
+        }
+        
+        .input_hidden {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        
+        @media (max-width: 1024px) { 
+            .vertical-align {
+                display: block;
+                align-items: inherit;
+            }
+            .text-md-right{
+              text-align: right;
+            }
+            .config-text-primary {
+              font-size: 20px;
+            }
+            .config-text-secondary {
+              font-size: 20px;
+            }
+            .config-text-lead {
+              font-size: 16px;
+            }
+            .config-text-save {
+              font-size: 14px;
+            }
+            .config-text-disclaimer {
+              font-size: 14px;
+            }
+            .product-radio {
+              margin-top :0;
+            } 
+        }
+        @media (max-width: 428px) { 
+            .text-xs-right {
+              text-align: right;
+            }
+            .text-md-right{
+              text-align: inherit;
+            }
+        
+        }
       </style>
       <style>
-.config-step {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-.config-step .step-title {
-font-size: 36px;
-margin-top: 40px;
-margin-bottom: 15px;
-margin-left: 15px;
-font-weight: 100;
-line-height: 1.1;
-color: #333;
-}
-.config-step .step-subtitle {
-margin-left: 15px;
-}
-.config-text-primary {
-  font-size: 30px;
-  font-weight: 200;
-}
-.config-text-secondary {
-  font-size: 24px;
-}
-.config-text-lead {
-  font-size: 16px;
-}
-.bold{
-  font-weight: 600;
-}
-.config-text-lead-secondary {
-  font-size: 14px;
-
-}
-.product-options li {
-  border-bottom: 1px solid #C3C3C3;
-  padding-bottom: 25px;
-  padding-top: 10px;
-}
-.product-options li:last-child{
-  border-bottom:none;
-}
-.config-step{
-  display: none;
-}
 .green-check {
-  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
-  width: 34px;
-  height: 27px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 4px 10px 0;
+  color:#679B08;
   position: relative;
+  font-size:2em;
+  margin-bottom: 10px;
 }
 .disclaimers-section{
-  margin-top: 30px;
+  margin-top: -30px;
   margin-bottom: 30px;
-}
-.product-options {
-list-style: none;
-}
-.vertical-align {
-    display: flex;
-    align-items: center;
-}   
-.product-radio {
-  margin-top :10px; 
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 35px;
-  height: 35px;
-}
-@media (max-width: 1024px) { 
-    .vertical-align {
-        display: block;
-        align-items: inherit;
-    }
-    .text-md-right{
-      text-align: right;
-    }
-    .config-text-primary {
-      font-size: 20px;
-    }
-    .config-text-secondary {
-      font-size: 20px;
-    }
-    .config-text-lead {
-      font-size: 16px;
-    }
-    .config-text-save {
-      font-size: 14px;
-    }
-    .config-text-disclaimer {
-      font-size: 14px;
-    }
-    .product-radio {
-      margin-top :0;
-    } 
-    .item-price{
-      border-bottom: 1px solid #EBEBEB;
-    }
-}
-@media (max-width: 428px) { 
-    .text-xs-right {
-      text-align: right;
-    }
-    .text-md-right{
-      text-align: inherit;
-    }
-    .item-price{
-      border-bottom: none;
-    }
 }
 .product-added-to-cart-text{
   position: relative;
   left:10px;
   font-size: 30px;
 }
-
 .product-added-to-cart{
   padding:0 10px;
   float:left;
@@ -1274,35 +1247,10 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .toprow {
-  margin-top: 15px;
+input[type=radio]:checked + label{
+  color: #579006;
 }
-.item-title-wrapper{
-  border-bottom: 1px solid #333;
-}
-.item-title{
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.item-term,.item-x,.item-price,.item-total-price{
-  margin-top: 5px;
-}
-.item-total-price{
-  text-align: right;
-}
-.item-savings-wrapper{
-  text-transform: uppercase;
-}
-.input_hidden {
-    position: absolute;
-    left: -9999px;
-}
-.selected-radio{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
-  width: 36px;
-  height: 36px;
-}
+
 #officeOption{
   text-decoration: line-through;
 }
@@ -1366,16 +1314,101 @@ input[type=checkbox] + label{
     right: 18px !important;
   }
 }
-      </style>
+      </style> 
+      ##if(siteContextAny(pl))
+       
+      <style>
+        input[type=radio]:checked + label {
+          color: #a92728!important;
+        }
+        input[type=checkbox] + label {
+          color: #a92728;
+        }
+        .green-check,.product-added-to-cart,.text-secondary,.text-secondary-o {
+          color: #a92728;
+        }
+        .order-total-wrapper, .scroll-down-wrapper p{
+          color: #0090FC;
+        }
+        .container{
+          width: 1000px;
+          max-width: 1000px;
+          min-width: 1000px;
+        }
+        .config-text-primary{
+          font-size:26px;
+        }
+        .config-text-lead{
+          font-size:14px;
+        }
+        .btn-continue,.btn-continue:hover{
+          background-color: #0090FC !important;
+          border-color: #0090FC !important;
+        }
+        .product-added-to-cart{
+          margin-top:15px;
+        }
+      </style> 
+      ##endif
+       
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .down-arrow{
+          text-align:center;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="breakTemplate">
-      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup uxicon uxicon-chevron-down down-arrow"></div>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .item-title{
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        .item-term,.item-x,.item-price,.item-total-price{
+          margin-top: 5px;
+        }
+        .item-total-price{
+          text-align: right;
+        }
+        .item-savings-wrapper{
+          text-transform: uppercase;
+        }
+        .order-item-details-wrapper .toprow {
+          margin-top: 15px;
+        }
+        .item-title-wrapper{
+          border-bottom: 1px solid #333;
+        }
+        @media (max-width: 428px) { 
+          .text-xs-right {
+            text-align: right;
+          }
+          .text-md-right{
+            text-align: inherit;
+          }
+          .item-price{
+            border-bottom: none;
+          }
+        }
+        @media (max-width: 1024px) { 
+          .item-price{
+            border-bottom: 1px solid #EBEBEB;
+          }
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="itemTemplate">
       <div class="row toprow">
         <div class="col-xs-12 item-title-wrapper">
@@ -1407,21 +1440,31 @@ input[type=checkbox] + label{
       </div>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .plan-circle{
+          font-size:2em;
+          margin-bottom:0;
+        }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="planTemplate">
       <li>
         <div class="row vertical-align">
-          <div class="col-xs-2">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+          <div class="col-xs-2 col-lg-1"> 
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%=  package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="uxicon plan-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-6 col-lg-7">
             <div class="config-text-secondary"><%= title %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-lg-4">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1431,7 +1474,7 @@ input[type=checkbox] + label{
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
             <% } %></div>
@@ -1447,11 +1490,21 @@ input[type=checkbox] + label{
       </li>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .term-circle{
+          font-size:2em;
+          margin-bottom:0;
+        
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="termTemplate">
       <li>
         <div class="row vertical-align">
           <div class="col-xs-2 col-lg-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <label class="uxicon term-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
           </div>
           <div class="col-xs-5 col-lg-3">
             <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -1475,8 +1528,6 @@ input[type=checkbox] + label{
           </div>
         </div>
       </li>
-      
-      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>
@@ -1528,9 +1579,9 @@ input[type=checkbox] + label{
       
     </script>
     <script>
-      var plan = getParameterByName('plan');
+      var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
       // gs for get started button, ac for add to cart button
-      var origin = getParameterByName('src');
+      var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
       var reload = false;
       var noSiteLock = false;
       var noEmail = false;
