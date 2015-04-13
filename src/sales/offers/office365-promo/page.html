@@ -909,14 +909,14 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         </h4>
       </div>
       <div class="modal-body">
-        ##if(queryValueHas(isc,sageonea) || queryValueHas(isc,sageoneb) || queryValueHas(isc,sageonec))
-        <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-33745]@L]</p>
-        ##endif
         ##if(productIsOffered(98))
         <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-GetPaid_37618]@L]</p>
         ##endif
         ##if(!productIsOffered(98))
         <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-no-GetPaid_37618]@L]</p>
+        ##endif
+        ##if(queryValueHas(isc,sageonea) || queryValueHas(isc,sageoneb) || queryValueHas(isc,sageonec))
+        <p>[@L[cds.sales/offers/office365-promo:disclaimer-modal-content-33745]@L]</p>
         ##endif
       </div>
     </div>
