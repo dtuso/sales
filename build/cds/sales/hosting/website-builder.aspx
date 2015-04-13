@@ -4937,7 +4937,7 @@ top: -6px;
             [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a>
           </p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
-            <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
+            <p data-icann-fee="">[@L[cds.sales/gd/hosting/website-builder:38337-restristions-apply-tooltip]@L]</p>
             <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
             ##if(splitTestingSideIsActive(1349, B))
              
