@@ -126,7 +126,6 @@ $(document).ready(function(){
     var lowestBasic = lowestPriceOfTier("Basic");
     var lowestDeluxe = lowestPriceOfTier("Deluxe");
     var lowestUltimate = lowestPriceOfTier("Ultimate");
-    lowestPriceOfTier("Test");
 
     document.getElementById("tierOnePrice").innerHTML = lowestBasic;
     document.getElementById("tierTwoPrice").innerHTML = lowestDeluxe;
@@ -196,13 +195,6 @@ function lowestPriceOfTier(tier){
                 '[@T[productprice:<current productid="581005" period="monthly"/>]@T]',
                 '[@T[productprice:<current productid="581009" period="monthly"/>]@T]'];
   }
-  else if(tier=="Test"){
-    prices = [  '$2.10',
-                '$2.11',
-                '$10.00',
-                '$6.00',
-                '$2.15'];
-  }
 
   var stringLengths = [ prices[0].length,
                         prices[1].length,
@@ -221,8 +213,6 @@ function lowestPriceOfTier(tier){
   };
 
   if(minLengthIndexes.length == 1){
-    console.log("Only one index");
-    console.log(prices[minLengthIndexes[0]]);
     return prices[minLengthIndexes[0]];
   }
   else{
