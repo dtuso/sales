@@ -3,6 +3,9 @@ extends ../../layouts/homepage/default_base
 block marquee
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/web-hosting/default_template" /> ]@P]
 
+ block bugBar
+  +tldBugs(["com","co","global","eu"])
+
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade
   | 
