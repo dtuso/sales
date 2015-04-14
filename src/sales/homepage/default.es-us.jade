@@ -5,7 +5,9 @@ block styles
     .gdhp-search-box .domainSearchBox{width:780px;}
 
 block marquee
-  |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/web-hosting/default_template" /> ]@P]
+block bugBar
+  +tldBugs(["com","club","us","org","rocks"])
 
 block tiles
   atlantis:webstash(type="css")

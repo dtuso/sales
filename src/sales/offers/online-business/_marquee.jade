@@ -42,6 +42,20 @@ atlantis:webstash(type="css")
       font-size:24px;
     }
 
+    .human-headline{
+        font-family:'Walsheim-Bold', 'Arial Black', sans-serif;
+      }
+    section#human{
+      text-align:center;
+      margin:35px 0;
+    }
+    section#human>*{
+      margin:0;
+    }
+    section#human>h4{
+      text-transform:none;
+    }
+
 section#marquee
   include ./_1_default-marquee-view.jade
   include ./_2_domain-available-marquee-view.jade
@@ -54,3 +68,11 @@ section#marquee
     img(src!="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/offers/online-business/WarningSign.png")
     div [@L[cds.sales/offers/online-business:32573-something-unexpected-happened]@L]
   p [@L[cds.sales/offers/online-business:32573-generic-domain-search-error]@L]
+
+| 
+| ##if(queryValueHas( isc, human))
+section#human
+  h2 [@L[cds.sales/offers/online-business:human-questions]@L]
+  h4.headline-primary [@L[cds.sales/offers/online-business:human-support-number]@L]
+| 
+| ##endif
