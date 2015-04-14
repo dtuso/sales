@@ -1,35 +1,64 @@
 extends ./_home-page.jade
 block append pageStyles
-  style.
-    @media only screen and (min-width:768px) {#domain-promo .domain-promo-content{background-image:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg);}}
+
 block bugBar
   +tldBugs(["net","co","in","co-in"])
 block hero
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
+  include ../../tmsv2/content/homepage/got-cricket/hero.jade
 block marquee-tile1
   include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
 block marquee-tile2
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block merch-tile1
-  include ./tiles/o365-tile.jade
+  | PROFESSIONAL EMAIL
 block merch-tile2
   include ./tiles/merch-tile-web-hosting.jade
 block merch-tile3
-  include ./tiles/online-store-tile.jade
+  | DBP
 block merch-tile4
-  include ./tiles/gem.jade
+  | SIELOCK
 
-block domain-promo-body
-  div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
-block domain-promo-disclaimer
+block domain-promo
+  atlantis:webstash(type="css")
+        style
+          :less
+            #domain-promo { color: #fff; 
+              .domain-promo-content{
+                @media only screen and (max-width:767px) {background-image:none !important;}
+                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg) 50% 100% #333 no-repeat;background-size:cover;
+              }
+              .domain-promo-text{padding:7% 2% 7% 0;}
+              .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
+              h1{display:inline;color:#fff;text-transform:none;font-size:1.6rem;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
+              h3{font-size:3.4rem;text-transform:uppercase;}
+              .btn{margin-top:20px}
+              .domain-promo-text div{max-width:360px;}
+              .domain-promo-text .customer-website{font-size:12px;margin-top:40px;}
+            }
 
-block why-godaddy-registrar-img
-  <!--[if lt IE 9]>
-  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
-  <![endif]-->
-  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
-block why-godaddy-prices-img
-  <!--[if lt IE 9]>
-  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','TLD Boards')
-  <![endif]-->
-  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
+      section#domain-promo.bg-green-official
+        h2.text-center [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
+        div.domain-promo-content
+          .container
+            .row
+              .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
+                h3.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]
+                div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
+                a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]") [@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]
+
+block why-godaddy-feature-1
+  .why-gd-registrar
+    <!--[if lt IE 9]>
+    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.png','Pin Point Globe')
+    <![endif]-->
+    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/globe-europe-africa-asia.svg','Pin Point Globe')
+    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
+    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
+block why-godaddy-feature-2
+  .why-gd-support
+    <!--[if lt IE 9]>
+    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','TLD Boards')
+    <![endif]-->
+    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
+    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
+    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]

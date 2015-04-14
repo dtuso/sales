@@ -186,14 +186,12 @@ block content
       atlantis:webstash(type="css")
         style
           :less
-            #domain-promo { color: #fff; }
-            .domain-promo-content{
-              background-color:#333;
-              @media only screen and (min-width:768px) {background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;background-size:cover;}
-            }
-            .Explorer8 .domain-promo-content{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;background-size:cover;}
-            .domain-promo-text{padding:7% 2% 1%;}
-            #domain-promo{
+            #domain-promo { color: #fff; 
+              .domain-promo-content{
+                @media only screen and (max-width:767px) {background-image:none !important;}
+                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333 no-repeat;background-size:cover;
+              }
+              .domain-promo-text{padding:7% 2% 1%;}
               .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
               h1{display:inline;color:#fff;text-transform:none;font-size:1.6rem;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
               h3{font-size:3.4rem;text-transform:uppercase;}
@@ -209,11 +207,9 @@ block content
             .row
               .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
                 h3.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]
-                block domain-promo-body
-                  div [@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]
+                div [@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]
                 a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]") [@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]
-                block domain-promo-disclaimer
-                  p.customer-website.hidden-xs [@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]
+                p.customer-website.hidden-xs [@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]
 
     block why-godaddy
       atlantis:webstash(type="css")
@@ -226,32 +222,35 @@ block content
           h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]
           .row
             .col-sm-4
-                .feature.why-gd-registrar
-                  block why-godaddy-registrar-img
+              .feature
+                block why-godaddy-feature-1
+                  .why-gd-registrar
                     <!--[if lt IE 9]>
                     +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
                     <![endif]-->
                     +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
-                  h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
-                  p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
+                    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
+                    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
             .col-sm-4
-              .feature.why-gd-prices
-                block why-godaddy-prices-img
+              .feature
+                block why-godaddy-feature-2
+                  .why-gd-prices
                   <!--[if lt IE 9]>
                   +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
                   <![endif]-->
                   +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')
-                h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
-                p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
+                  h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
+                  p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
             .col-sm-4
-              .feature.why-gd-support
-                block why-godaddy-support-img
-                <!--[if lt IE 9]>
-                +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
-                <![endif]-->
-                +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
-                h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
-                p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
+              .feature
+                block why-godaddy-feature-3
+                  .why-gd-support
+                  <!--[if lt IE 9]>
+                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+                  <![endif]-->
+                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+                  h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
+                  p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
 
     block website-promo
       atlantis:webstash(type="css")
@@ -280,7 +279,8 @@ block content
             a.btn.btn-default-dark.website-promo-hosting-btn(data-url!="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]") LEARN MORE    
 
     block o365-promo
-      ##if(productIsOffered(Office365))
+      | 
+      | ##if(productIsOffered(99))
       atlantis:webstash(type="css")
         style
           :less
@@ -311,7 +311,8 @@ block content
               +lazyImg('o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','Office 365 image')
               <![endif]-->
               +lazyImg('svgfallback o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','Office 365 image')
-      ##endif
+      | 
+      | ##endif
 
     block support-promo
       atlantis:webstash(type="css")

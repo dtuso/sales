@@ -1166,6 +1166,8 @@
         </div>
       </div>
     </section>
+     
+    ##if(productIsOffered(99))
     <atlantis:webstash type="css">
       <style>#o365-promo {
   padding-bottom: 105px;
@@ -1192,7 +1194,7 @@
   overflow: visible;
   position: absolute;
   margin-top: 100px;
-  right: 50px;
+  right: 120px;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
 }
 .Explorer8 #o365-promo .promo-flag {
@@ -1204,7 +1206,7 @@
 }
 .o365-promo-image {
   padding-top: 115px;
-  width: 140%;
+  width: 130%;
 }
 
       </style>
@@ -1227,7 +1229,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##endif
     <atlantis:webstash type="css">
       <style>#support-promo {
   background-color: #333;
