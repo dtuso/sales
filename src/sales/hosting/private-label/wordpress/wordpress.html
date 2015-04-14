@@ -123,13 +123,75 @@ $(document).ready(function(){
     var linkText = $("#pretty-link").text();
     var splitLink = linkText.split('&');
     $("#pretty-link").text(splitLink[0]);
-    var lowestBasic = lowestPriceOfTier("Basic");
-    var lowestDeluxe = lowestPriceOfTier("Deluxe");
-    var lowestUltimate = lowestPriceOfTier("Ultimate");
 
-    document.getElementById("tierOnePrice").innerHTML = lowestBasic;
-    document.getElementById("tierTwoPrice").innerHTML = lowestDeluxe;
-    document.getElementById("tierThreePrice").innerHTML = lowestUltimate;
+    var basicPrices =     [ '[@T[productprice:<current productid="580967" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580970" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580979" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580982" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580988" period="monthly"/>]@T]'];
+    var deluxePrices =    [ '[@T[productprice:<current productid="580969" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580978" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580981" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580984" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="580990" period="monthly"/>]@T]'];
+    var ultimatePrices =  [ '[@T[productprice:<current productid="580995" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="581001" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="581003" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="581005" period="monthly"/>]@T]',
+                            '[@T[productprice:<current productid="581009" period="monthly"/>]@T]'];
+
+    var basicSavings =       [ '[@T[productcompare:<percent primaryproductid="580967" secondaryproductid="580968" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580971" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580979" secondaryproductid="580980" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580982" secondaryproductid="580983" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580988" secondaryproductid="580989" hidebelow="1" showsymbol="true"/>]@T]'];
+    var deluxeSavings =      [ '[@T[productcompare:<percent primaryproductid="580969" secondaryproductid="580994" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580978" secondaryproductid="580996" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580981" secondaryproductid="581002" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580984" secondaryproductid="581004" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="580990" secondaryproductid="581008" hidebelow="1" showsymbol="true"/>]@T]'];
+    var ultimateSavings =    [ '[@T[productcompare:<percent primaryproductid="580995" secondaryproductid="581012" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="581001" secondaryproductid="581014" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="581003" secondaryproductid="581020" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="581005" secondaryproductid="581022" hidebelow="1" showsymbol="true"/>]@T]',
+                               '[@T[productcompare:<percent primaryproductid="581009" secondaryproductid="581026" hidebelow="1" showsymbol="true"/>]@T]'];
+
+    var basicRenewPrices =    [ '[@T[productprice:<current productid="580968" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="580971" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="580980" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="580983" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="580989" period="monthly"/>]@T]'];
+    var deluxeRenewPrices =   [ '[@T[productprice:<current productid="580994" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="580996" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581002" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581004" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581008" period="monthly"/>]@T]'];
+    var ultimateRenewPrices = [ '[@T[productprice:<current productid="581012" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581014" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581020" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581022" period="monthly"/>]@T]',
+                                '[@T[productprice:<current productid="581026" period="monthly"/>]@T]'];
+
+    var lowestBasicIndex = lowestPriceOfTier(basicPrices);
+    var lowestDeluxeIndex = lowestPriceOfTier(deluxePrices);
+    var lowestUltimateIndex = lowestPriceOfTier(ultimatePrices);
+
+    document.getElementById("tierOnePrice").innerHTML = basicPrices[lowestBasicIndex];
+    document.getElementById("oursPrice").innerHTML = basicPrices[lowestBasicIndex];
+    document.getElementById("techPrice").innerHTML = basicPrices[lowestBasicIndex];
+    document.getElementById("tierTwoPrice").innerHTML = deluxePrices[lowestDeluxeIndex];
+    document.getElementById("tierThreePrice").innerHTML = ultimatePrices[lowestUltimateIndex];
+
+    var savingsCount = displaySavings(lowestBasicIndex, "basicRenewal", basicSavings, basicRenewPrices);
+    savingsCount += displaySavings(lowestDeluxeIndex, "deluxeRenewal", deluxeSavings, deluxeRenewPrices);
+    savingsCount += displaySavings(lowestUltimateIndex, "ultimateRenewal", ultimateSavings, ultimateRenewPrices);
+
+    if(savingsCount != 0){
+      document.getElementById("basicRenewal").style.height = '40px';
+      document.getElementById("deluxeRenewal").style.height = '40px';
+      document.getElementById("ultimateRenewal").style.height = '40px';
+      document.getElementById("plans-pricing").style.height = '565px';
+    }
 });
 
 function RecordClick(c, a, b) {
@@ -173,28 +235,7 @@ $('.nav-tabs a.js-tab-init').each(function() {
 });
 
 function lowestPriceOfTier(tier){
-  var prices;
-  if(tier=="Basic"){
-    prices = [  '[@T[productprice:<current productid="580967" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580970" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580979" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580982" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580988" period="monthly"/>]@T]'];
-  }
-  else if(tier=="Deluxe")  {
-    prices = [  '[@T[productprice:<current productid="580969" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580978" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580981" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580984" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="580990" period="monthly"/>]@T]'];
-  }
-  else if(tier=="Ultimate"){
-    prices = [  '[@T[productprice:<current productid="580995" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="581001" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="581003" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="581005" period="monthly"/>]@T]',
-                '[@T[productprice:<current productid="581009" period="monthly"/>]@T]'];
-  }
+  var prices = tier;
 
   var stringLengths = [ prices[0].length,
                         prices[1].length,
@@ -213,16 +254,30 @@ function lowestPriceOfTier(tier){
   };
 
   if(minLengthIndexes.length == 1){
-    return prices[minLengthIndexes[0]];
+    return minLengthIndexes[0];
   }
   else{
     currentMin = prices[minLengthIndexes[0]];
+    currentMinIndex = minLengthIndexes[0];
     for (var i = minLengthIndexes.length - 1; i >= 0; i--) {
       if(prices[minLengthIndexes[i]] < currentMin){
         currentMin = prices[minLengthIndexes[i]];
+        currentMinIndex = minLengthIndexes[i];
       }
     };
-    return currentMin;
+    return currentMinIndex;
+  }
+}
+
+function displaySavings(lowestPriceIndex, tierID, tierSavings, tierRenewal){
+  if(tierSavings[lowestPriceIndex] == ''){
+    return 0;
+  }
+  else{
+    var newOnSaleString = "<p class='onSale'>On sale - Save " + tierSavings[lowestPriceIndex] + "</p>";
+    newOnSaleString += "\n<p class='renewalPrice'>" + tierRenewal[lowestPriceIndex] + " /month when you renew</p>";
+    document.getElementById(tierID).innerHTML = newOnSaleString;
+    return 1;
   }
 }
 
