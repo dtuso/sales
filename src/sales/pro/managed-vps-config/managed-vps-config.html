@@ -1,6 +1,6 @@
 ---
 location: sales/pro/managed-vps-config
-id: 552d8168f778fc0c1078b816
+id: 552d951af778fc1164ef9fcc
 name: GCE-37474
 comment: VPS SALE - Config Page Sale and Term Offering Updates
 configPage: true
@@ -141,17 +141,10 @@ cssVersionOverride: 2
           var addons = Config.generateAddonsURL();
           var quantity=1;
           
-          ##if(isManager())
-          var managerId= Config.getParameterByName('mgrshopper');
-          ##endif
-
-          
           var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
           addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
           apiEndpoint =apiEndpoint + addons;
-          ##if(isManager())
-            apiEndpoint +='&mgrshopper='+ managerId;
-          ##endif
+
           $.ajax({
                 type: 'POST',
                 url: apiEndpoint,
@@ -385,7 +378,8 @@ cssVersionOverride: 2
             var secondaryPrice = $(this).attr('data-price');
             var percent = getPercentage(oneMonthPrice,secondaryPrice);
             if(percent > 0){
-               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percent + '%' ;
+               var percentString = '[@T[localization:<display type="percent" number="1" />]@T]';
+               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percentString.replace('1',percent);  ;
                var strikeString=  "<span class='product-desc'> - <strike>" + oneMonthPrice + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" ;
                $(this).parent().find('.price').append(savingsString + strikeString);
             }
