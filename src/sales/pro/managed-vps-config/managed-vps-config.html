@@ -298,7 +298,11 @@ cssVersionOverride: 2
           
           if (term >= 12) {
             if(selectedAddonValue == 'pro_vps_managed_plus'){
+              ##if(siteContextAny(pl))
+              managedPrice = "[@T[productprice:<current productid='483562' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##else
               managedPrice = "[@T[productprice:<current productid='483562' period='yearly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##endif
             }
             else if (selectedAddonValue == 'pro_vps_managed'){
               managedPrice = "[@T[productprice:<current productid='483560' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
@@ -354,9 +358,17 @@ cssVersionOverride: 2
             var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
             if(selectedAddonValue == 'pro_vps_managed_plus'){
               if(termLength == 12){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }else if(termLength > 12 ){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }
             }
             //var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
