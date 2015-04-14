@@ -1,0 +1,32 @@
+---
+location: sales/homepage/tile/paris/default_template
+id: false
+name: GCEMO-828-paris
+---
+
+atlantis:webstash(type="css")
+  style.
+    .tile.paris { width: 480px; height: 480px; position: relative; float: left;margin: 40px 10px 0;cursor: pointer; background-color: #333; background-image:url("[@T[link:<imageroot />]@T]fos/hp/rebrand/img/paris-tile-background.png"); }
+    .tile.paris * {text-transform:uppercase;}
+    .tile.paris .header-wrapper {padding:45px 30px 0 20px;}
+    .tile.paris .body-wrapper {padding: 210px 30px 0 20px;}
+    .tile.paris .cta-wrapper {padding: 0 30px 20px 20px;}
+    .tile.paris .header-text { font-size: 64px; color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-top: 0;margin-bottom: 0; line-height: 1;}
+    .tile.paris .body-text { color: #fff; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; font-size:30px;}
+    .tile.paris .price-text {margin-top:-10px;}
+    .tile.paris .price-text strike {color:#fff;font-size:30px;padding-right:10px;}
+    .tile.paris .current-price {color:#ef6c0f;font-size:36px;}
+    .tile.paris .cta-wrapper { position: absolute; bottom: 0; }
+    .tile.paris .btn-cta { font-size: 18px; text-transform: uppercase; margin: 0 0 0 0; font-family: 'Walsheim-Bold';}
+
+.tile.paris.js-gdhpclick(data-url!="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]" data-ci!="97837")
+
+  .header-wrapper
+    h2.header-text VOILÀ!
+  
+  .body-wrapper
+    .body-text .paris pour
+    .price-text.walsheim-black [@T[productprice:<template productid="622895" period="yearly" checktmspromocode="true"><strike><![CDATA[<strike>{1}</strike><span class="current-price">{0}</span>]]></strike><nostrike><![CDATA[<span class="current-price">{0}</span>]]></nostrike></template>]@T]
+
+  .cta-wrapper
+    a.btn.btn-warning.btn-cta(href!="[@T[link:<relative path='/tlds/paris'><param name='ci' value='97837' /></relative>]@T]") Rechercher Maintenant
