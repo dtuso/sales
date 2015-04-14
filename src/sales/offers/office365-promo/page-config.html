@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 
-name: GCE-33745
-comments: POB for sage
+id: 552c350cf778fc0c1078b774
+name: GCE-37618
+comments: remove UK from restricted markets.
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
 metaCanonicalPath:  /offers/office365-promo-config.aspx
 assetPath: false
@@ -703,17 +703,23 @@ assetPath: false
         }
         $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
 
-      var sageIsc = getParameterByName("isc");
-      var packageId = got2Page.packageId;
-      if(sageIsc != undefined && (sageIsc === "sageonea") || (sageIsc === "sageoneb") || (sageIsc === "sageonec"))
-      {
-          packageId = got2Page.sagePackageId;
-      }
+        got2Page.ciCode = $(thisClick).data('ci');
+        got2Page.iscCode = getParameterByName("isc");
+
+        if(!got2Page.canOfferGetPaid) {
+          got2Page.packageId = got2Page.noGetPaidPackageId;
+        }
+        
+        if(got2Page.iscCode != undefined && (got2Page.iscCode === "sageonea") || (got2Page.iscCode === "sageoneb") || (got2Page.iscCode === "sageonec"))
+        {
+            got2Page.packageId = got2Page.sagePackageId;
+        }
+
         // add Got2 to the cart  
         var urlFragment = '/' + got2Page.itcCode; //itc code
-        urlFragment += '/' + $(thisClick).data('ci'); //ci code
+        urlFragment += '/' + got2Page.ciCode; //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+        urlFragment    += '/' + got2Page.packageId;  //Plan Name (aka Package Id)
         var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
