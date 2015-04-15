@@ -69,7 +69,7 @@ assetPath: false
     <div id="storage-template">
       Storage: <strong>{0}</strong>
       <div class="g-toolTip sf-tipper-target">
-        <span class="g-toolTip-right-tip">Disk space includes operating system files, which can be close to 1GB in a CentOD/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
+        <span class="g-toolTip-right-tip">Disk space includes operating system files, which can be close to 1GB in a CentOS/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
       </div>
     </div>
     <div id="bandwidth-template">
@@ -505,8 +505,10 @@ assetPath: false
           }
         },
         error: function(){
-          if(console != undefined) {
+          if (typeof console != "undefined" && typeof console.log != "undefined" ) {
             console.log('package api post failure');
+          } else {
+            alert('package api post failure');
           }
           success = false;
         }
