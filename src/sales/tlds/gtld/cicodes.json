@@ -227,6 +227,12 @@
           { "ITC Code" : "GtldEoiSiteLink" },
           { "Description" : ".SITE Slide Link" }
           ]
+      },
+      { ".WORLD Slide Link" : [
+          { "ITC ID" : "97874" },
+          { "ITC Code" : "GtldEoiWorldLink" },
+          { "Description" : ".WORLD Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [
