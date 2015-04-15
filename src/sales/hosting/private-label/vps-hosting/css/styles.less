@@ -1,3 +1,6 @@
+
+@imgPath : '[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img';
+
 .main-banner.main-banner-wp {
   background: none repeat scroll 0 0 white;
   min-height: 268px;
@@ -189,22 +192,22 @@ section.top-thrt-sect > div.brpl-first-cont {
   padding-top: 0;
 }
 .dailyBuglIco {
-  background: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/features_sprite.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  background: ~"url(@{imgPath}/features_sprite.png)" no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   height: 41px;
   width: 42px;
 }
 .smrtToolIco {
-  background: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/features_sprite.png") no-repeat scroll 0 -43px rgba(0, 0, 0, 0);
+  background: ~"url(@{imgPath}/features_sprite.png)"  no-repeat scroll 0 -43px rgba(0, 0, 0, 0);
   height: 40px;
   width: 42px;
 }
 .trustSealIco {
-  background: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/features_sprite.png") no-repeat scroll 0 -86px rgba(0, 0, 0, 0);
+  background: ~"url(@{imgPath}/features_sprite.png)"  no-repeat scroll 0 -86px rgba(0, 0, 0, 0);
   height: 49px;
   width: 42px;
 }
 .whatYouGetIco {
-  background: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/features_sprite.png") no-repeat scroll 0 -137px rgba(0, 0, 0, 0);
+  background: ~"url(@{imgPath}/features_sprite.png)"  no-repeat scroll 0 -137px rgba(0, 0, 0, 0);
   height: 43px;
   width: 42px;
 }
@@ -224,7 +227,7 @@ section.top-thrt-sect > div.brpl-first-cont {
 }
 .brpl-right-tab-content > ul {
   display: block;
-  list-style-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/bul_arrow_434343.gif");
+  list-style-image: ~"url(@{imgPath}/bul_arrow_434343.gif)";
 }
 .brpl-right-tab-content > p {
   width: 90%;
@@ -292,6 +295,7 @@ div.view-compplans-tab {
   float: left;
   width: 67%;
 }
+
 .col-pl-threats div.tab-content-column-alternate {
   padding-left: 20px;
   padding-top: 0;
@@ -310,13 +314,12 @@ div.view-compplans-tab {
 body {
   background: none repeat scroll 0 0 #fff;
 }
-
-
 .headerTable {
   position: absolute;
   top: 0;
   width: 560px;
 }
+
 .hdrHeader {
   background: ~"url([@T[link:<imageroot />]@T]fos/hdr/0/74497_Ded_hdr.jpg)" no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   height: 254px;
@@ -759,7 +762,6 @@ div, table, td, span {
 .compare-chart-pro table {
   width:100%;
   text-align:center;
-  /*background-color: #f0f1ec;*/
 }
 .compare-chart-pro table tr th:first-child {
   width: 30%;
@@ -828,7 +830,7 @@ div, table, td, span {
 }
 
 .pro-icon {
-  background-image: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png');
+  background-image: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)";
   display: inline-block;
   background-size: 205px auto;
 }
@@ -870,13 +872,13 @@ ul.bullets {
   margin-bottom: 10px;
 }
 .cpanel-benefit .img1{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -2647px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -2647px;
   width: 147px;
   height: 38px;
   margin:36px auto;
 }
 .plesk-benefit .img1{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/dedicated-servers/img/plesk_icon.png') no-repeat 0 0;
+  background: ~"url(@{imgPath}/plesk_icon.png)" no-repeat 0 0;
   width: 121px;
   height: 38px;
   margin: 25px auto 53px;
@@ -884,37 +886,37 @@ ul.bullets {
 }
 
 .img2{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -2695px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -2695px;
   width: 92px;
   height: 88px;
   margin: 6px auto;
 }
 .img3{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -2793px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -2793px;
   width: 85px;
   height: 90px;
   margin: 4px auto;
 }
 .cpanel-benefit .img4{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -2893px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -2893px;
   width: 115px;
   height: 80px;
   margin: 16px auto;
 }
 .plesk-benefit .img4{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/windows_icon.png') no-repeat 0 0;
+  background: ~"url(@{imgPath}/windows_icon.png)" no-repeat 0 0;
   width: 81px;
   height: 96px;
   margin: 0px auto;
 }
 .img5{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -2983px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -2983px;
   width: 135px;
   height: 94px;
   margin: 2px auto;
 }
 .img6{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png') no-repeat 0 -3087px;
+  background: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)" no-repeat 0 -3087px;
   width: 94px;
   height: 90px;
   margin: 5px auto;
@@ -1005,7 +1007,7 @@ ul.bullets {
   display: block;
 }
 .g-toolTip.sf-tipper-target {
-  background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/scotty/hosting/private-label/vps-hosting/img/pro-sprite-20140903.png");
+  background-image: ~"url(@{imgPath}/pro-sprite-20150414-reseller.png)";
   background-position: 0 -1069px;
   background-size: 205px auto;
   display: inline-block;
