@@ -1,6 +1,6 @@
 ---
 location: sales/hosting/private-label/dedicated-server.aspx
-id: 552da9b3f778fc1164ef9fd8
+id: 552e9a78f778fc1164ef9fe6
 name: GCE-36425
 comments: Word updates
 url: http://www.dev-secureserver.net/hosting/dedicated-server.aspx
@@ -69,7 +69,7 @@ assetPath: false
     <div id="storage-template">
       Storage: <strong>{0}</strong>
       <div class="g-toolTip sf-tipper-target">
-        <span class="g-toolTip-right-tip">Disk space includes operating system files, which can be close to 1GB in a CentOD/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
+        <span class="g-toolTip-right-tip">Disk space includes operating system files, which can be close to 1GB in a CentOS/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
       </div>
     </div>
     <div id="bandwidth-template">
@@ -446,22 +446,22 @@ assetPath: false
         url: apiEndpoint,
         dataType: 'json',
         success: function(data) {
-        if (data.Success) {
-        var configUrl = '[@T[link:<relative path="hosting/dedicated-servers-config.aspx" parammode="common" />]@T]';
-        configUrl = configUrl + '&ci=' + ci + '&plan=' + plan + '&planaddons=pro_ds_managed';
-        window.location = configUrl;
-        }
+          if (data.Success) {
+            var configUrl = '[@T[link:<relative path="hosting/dedicated-servers-config.aspx" parammode="common" />]@T]';
+            configUrl = configUrl + '&ci=' + ci + '&plan=' + plan + '&planaddons=pro_ds_managed';
+            window.location = configUrl;
+          }
         },
         error: function() {
-        if (console != undefined) {
-        console.log('package api post failure');
-        }
-        success = false;
+          if (typeof console != "undefined" && typeof console.log != "undefined" ) {
+            console.log('package api post failure');
+          } else {
+            alert('package api post failure');
+          }
+          success = false;
         }
       }); /* end $.ajax() */
-
     }); /* end $('.js-addtocart-btn').click() */
-
   }); /* end $(document).ready() */
 
   function getData(successCallback) {
@@ -474,7 +474,6 @@ assetPath: false
         }
       }
     });
-
   }
 
   function processDSData(data) {
