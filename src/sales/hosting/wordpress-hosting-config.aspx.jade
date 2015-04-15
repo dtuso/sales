@@ -18,10 +18,46 @@ append vars
 append pageStyles
   style
     include ./wordpress-hosting-config/styles.css 
-
+  | 
+  |##if(siteContextAny(pl))
+  | 
+  style.
+    input[type=radio]:checked + label {
+      color: #a92728!important;
+    }
+    input[type=checkbox] + label {
+      color: #a92728;
+    }
+    .green-check,.product-added-to-cart,.text-secondary,.text-secondary-o {
+      color: #a92728;
+    }
+    .order-total-wrapper, .scroll-down-wrapper p{
+      color: #0090FC;
+    }
+    .container{
+      width: 1000px;
+      max-width: 1000px;
+      min-width: 1000px;
+    }
+    .config-text-primary{
+      font-size:26px;
+    }
+    .config-text-lead{
+      font-size:14px;
+    }
+    .btn-continue,.btn-continue:hover{
+      background-color: #0090FC !important;
+      border-color: #0090FC !important;
+    }
+    .product-added-to-cart{
+      margin-top:15px;
+    }
+  | 
+  |##endif
+  | 
 block header
   p.product-added-to-cart
-    span.green-check
+    span.uxicon.uxicon-checkmark.green-check
     span.product-added-to-cart-text [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]
 
 block addons
@@ -52,7 +88,6 @@ block addons
       .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSecuring]@L]
     .row.options-wrapper
       ul#securityList.product-options
-  +configStepBreak
 block orderSummary
   +configSummary()
 
@@ -82,107 +117,13 @@ block domainSearch
 
 prepend endOfPageScripts
   
-  script.breakTemplate(type='text/template').
-    <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+  +breakTemplate()
 
-  script.itemTemplate(type='text/template').
-    <div class="row toprow">
-      <div class="col-xs-12 item-title-wrapper">
-        <div class="item-title"><%= itemName %></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-        <div class="item-term"><%= itemTerm %></div>
-      </div>
-      <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
-        <div class="item-x">x</div>
-      </div>
-      <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
-        <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div> 
-      </div>
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-        <div class="item-total-price text-secondary"><%= itemTotal %></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <% if ( onSale ){ %>
-          <div class="item-savings-wrapper text-secondary">
-            [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
-          </div>
-        <% } %>
-      </div>
-    </div>
+  +itemTemplate()
 
-  script.planTemplate(type='text/template').
-    <li>
-      <div class="row vertical-align">
-        <div class="col-xs-2">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
-        </div>
-        <div class="col-xs-6">
-          <div class="config-text-secondary"><%= title %></div>
-        </div>
-        <div class="col-xs-4">
-          <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-2">
-          <div class="config-text-lead bold"><%= subtitle %></div>
-        </div>
-        <div class="col-xs-4">
-          <% if ( onSale ){ %>
-              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-            <% } %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-2">
-          <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
-          <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
-          <% } %></div>
-        </div>
-        <div class="col-xs-4">
-          <div class="config-text-lead text-secondary-o">
-            <% if ( onSale ){ %>
-              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </li>
+  +planTemplate()
 
-  script.termTemplate(type='text/template').
-    <li>
-      <div class="row vertical-align">
-        <div class="col-xs-2 col-lg-1">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
-        </div>
-        <div class="col-xs-5 col-lg-3">
-          <div class="config-text-primary"><%= term %> <%= month %></div>
-        </div>
-        <div class="col-xs-5 col-lg-3">
-          <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-        </div>
-        <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
-          <div class="config-text-lead text-xs-right">
-            <% if ( onSale ){ %>
-              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-            <% } %>
-          </div>
-        </div>
-        <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0 ">
-          <div class="text-xs-right config-text-lead text-secondary-o"> 
-            <% if ( onSale ){ %>
-              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </li>
-
+  +termTemplate()
 
   script.addonTemplate(type='text/template').
     <li>
@@ -232,9 +173,9 @@ prepend endOfPageScripts
     </li>
 
   script.
-    var plan = getParameterByName('plan');
+    var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
     // gs for get started button, ac for add to cart button
-    var origin = getParameterByName('src');
+    var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
     var reload = false;
     var noSiteLock = false;
     var noEmail = false;

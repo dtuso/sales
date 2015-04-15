@@ -1,6 +1,6 @@
 ---
 location: sales/pro/managed-vps-config
-id: 551b24e5f778fc1930ca2ecc
+id: 552d951af778fc1164ef9fcc
 name: GCE-37474
 comment: VPS SALE - Config Page Sale and Term Offering Updates
 configPage: true
@@ -24,7 +24,7 @@ cssVersionOverride: 2
   .orange-text,.plan-price{
     color:#a92728;
   }
-  .btn-warning{
+  .btn-warning,.btn-warning:hover{
     background-color:#a92728;
     border: none;
   }
@@ -141,17 +141,10 @@ cssVersionOverride: 2
           var addons = Config.generateAddonsURL();
           var quantity=1;
           
-          ##if(isManager())
-          var managerId= Config.getParameterByName('mgrshopper');
-          ##endif
-
-          
           var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
           addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
           apiEndpoint =apiEndpoint + addons;
-          ##if(isManager())
-            apiEndpoint +='&mgrshopper='+ managerId;
-          ##endif
+
           $.ajax({
                 type: 'POST',
                 url: apiEndpoint,
@@ -298,7 +291,11 @@ cssVersionOverride: 2
           
           if (term >= 12) {
             if(selectedAddonValue == 'pro_vps_managed_plus'){
+              ##if(siteContextAny(pl))
+              managedPrice = "[@T[productprice:<current productid='483562' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##else
               managedPrice = "[@T[productprice:<current productid='483562' period='yearly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##endif
             }
             else if (selectedAddonValue == 'pro_vps_managed'){
               managedPrice = "[@T[productprice:<current productid='483560' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
@@ -354,9 +351,17 @@ cssVersionOverride: 2
             var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
             if(selectedAddonValue == 'pro_vps_managed_plus'){
               if(termLength == 12){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }else if(termLength > 12 ){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }
             }
             //var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
@@ -373,7 +378,8 @@ cssVersionOverride: 2
             var secondaryPrice = $(this).attr('data-price');
             var percent = getPercentage(oneMonthPrice,secondaryPrice);
             if(percent > 0){
-               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percent + '%' ;
+               var percentString = '[@T[localization:<display type="percent" number="1" />]@T]';
+               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percentString.replace('1',percent);  ;
                var strikeString=  "<span class='product-desc'> - <strike>" + oneMonthPrice + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" ;
                $(this).parent().find('.price').append(savingsString + strikeString);
             }

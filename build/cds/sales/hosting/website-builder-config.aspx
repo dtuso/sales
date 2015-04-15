@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/hosting/website-builder:og-description]@L]">
     <meta property="og:type" content="website">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
     <script>
       window.ux = window.ux || {};
@@ -118,7 +122,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
@@ -336,6 +342,7 @@
               .scroll-down-wrapper{
                 cursor: pointer;
                 margin-top: 15px;
+                text-align:center;
               }
               .scroll-down-wrapper p{
                 font-size: 12px;
@@ -402,7 +409,8 @@
              
             <div class="row">
               <div id="scrollDownToContinueButton" data-ci="" data-scroll=".lastStep" class="scroll-down-wrapper move">
-                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
+                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p>
+                <p class="uxicon uxicon-chevron-down"></p>
               </div>
             </div>
           </div>
@@ -1159,7 +1167,100 @@ ul li.no-check {
         .domain-search-container{
           margin-bottom:200px;
         }
+        .config-step {
+          font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+        }
+        .config-step .step-title {
+        font-size: 36px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        font-weight: 100;
+        line-height: 1.1;
+        color: #333;
+        }
+        .config-step .step-subtitle {
+        margin-left: 15px;
+        }
+        .config-text-primary {
+          font-size: 30px;
+          font-weight: 200;
+        }
+        .config-text-secondary {
+          font-size: 24px;
+          font-family: 'Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif’Helvetica Neue’ - 200';
+        }
+        .config-text-lead {
+          font-size: 16px;
+        }
+        .bold{
+          font-weight: 600;
+        }
+        .config-text-lead-secondary {
+          font-size: 14px;
         
+        }
+        .config-step{
+          display: none;
+        }
+        .vertical-align {
+            display: flex;
+            align-items: center;
+        }   
+        .product-options li {
+          border-bottom: 1px solid #C3C3C3;
+          padding-bottom: 25px;
+          padding-top: 10px;
+        }
+        .product-options li:last-child{
+          border-bottom:none;
+        }
+        .product-options {
+        list-style: none;
+        }
+        
+        .input_hidden {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        
+        @media (max-width: 1024px) { 
+            .vertical-align {
+                display: block;
+                align-items: inherit;
+            }
+            .text-md-right{
+              text-align: right;
+            }
+            .config-text-primary {
+              font-size: 20px;
+            }
+            .config-text-secondary {
+              font-size: 20px;
+            }
+            .config-text-lead {
+              font-size: 16px;
+            }
+            .config-text-save {
+              font-size: 14px;
+            }
+            .config-text-disclaimer {
+              font-size: 14px;
+            }
+            .product-radio {
+              margin-top :0;
+            } 
+        }
+        @media (max-width: 428px) { 
+            .text-xs-right {
+              text-align: right;
+            }
+            .text-md-right{
+              text-align: inherit;
+            }
+        
+        }
       </style>
       <style>
 .config-step {
