@@ -1,8 +1,8 @@
 ---
 location: sales/pro/dedicated-server-config
-id:  54c1c3f9f778fc1dd09be012
-name: GCE-32525
-comments: Update javascript with 2 skills to implement Pro-Active Chat for Hosting LP - Pro pages
+id: 552c0432f778fc0c1078b6d1
+name: GCE-37474
+comments: Update config page so that PL can use it in addition to pro
 configPage: true
 sitecore: true 
 cssVersionOverride: 1
@@ -10,6 +10,47 @@ cssVersionOverride: 1
 {% extends 'layouts/config-base.html' %}
 
 {% block steps %}
+##if(siteContextAny(pl))
+<style type="text/css">
+
+.currency-amount,
+.scroll-down-wrapper p,
+.product-added-to-cart-text{
+  color: #0090FC;
+}
+
+.plan-price,
+.orange-text{
+  color: #a92728;
+}
+
+.config-continue-to-cart-wrapper > .btn.btn-warning{
+  background-color: #a92728;
+  border: none;
+}
+
+.green-check{
+  display: none;
+}
+
+.uxicon.uxicon-chevron-down.color{
+  color: #0090FC;
+  text-align: center;
+}
+
+</style>
+
+##else
+<style type="text/css">
+
+.uxicon.uxicon-chevron-down.color{
+  color: #579006;
+  text-align: center;
+}
+
+</style>
+##endif
+
                         <form action="" method="get" id="configForm">
                             <div class="config-step medium-margin-top-step backup">
                                 <h2>[@L[cds.sales/gd/pro/dedicated-server-config:Servermanagement]@L]</h2>
@@ -104,8 +145,9 @@ cssVersionOverride: 1
             var managerId= Config.getParameterByName('mgrshopper');
             ##endif
             //update package with add on if package is already added
-            var apiEndpoint = '[@T[link:<relative path="api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',qty).replace('{4}',packageId);
+            var apiEndpoint = '[@T[link:<relative path="api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',qty).replace('{4}',packageId);
             
+            addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
             apiEndpoint =apiEndpoint +addons;
             ##if(isManager())
               apiEndpoint +='&mgrshopper='+ managerId;
@@ -322,7 +364,7 @@ cssVersionOverride: 1
             var managedOption = $('input:radio[name="managedOption"]:checked');
             var managedPrice = managedOption.data('price');
             var osOption = $('#osAddon').val();
-            addonURL += '?addons=' + osOption + "-1";
+            addonURL += 'addons=' + osOption + "-1";
             if (currencyCalc.stripFormat(managedPrice) > 0)
                 addonURL += '|' + managedOption.val() + "-1";
             return addonURL;
@@ -410,7 +452,14 @@ cssVersionOverride: 1
             }
             var content='';
             content += '<li><input type="radio" name="'+optionname+'" value="'+packageId+'"  data-term="' +  planItem[0] + '" data-price="'+price+'"'+ '" data-discount="'+discount+'"'+ checkedRadiobutton + '/><span><strong> '+planItem[0] +' '+ monthString + ' - '+' </strong></span><span class="price orange-text"> '+price+' [@L[cds.sales/gd/hosting/vps-hosting-config:mo]@L] </span></li>';
+            ##if(siteContextAny(gd))
             parentid.append(content);
+            ##else
+            if(planItem[0] == 1 || planItem[0] == 3 || planItem[0] == 12 || planItem[0] == 24)
+            {
+              parentid.append(content);
+            }
+            ##endif
         });
 
       }
@@ -444,7 +493,7 @@ cssVersionOverride: 1
       }
 
     </script>
-
+    ##if(!siteContextAny(pl))
     <!-- liveperson includes -->
     <script>
       // defer load liveperson
@@ -464,5 +513,6 @@ cssVersionOverride: 1
           script.parentNode.insertBefore(styleResource, script);
       });
     </script>
+    ##endif
 
 {% endblock %}
