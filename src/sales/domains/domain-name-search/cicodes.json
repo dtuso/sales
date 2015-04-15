@@ -179,6 +179,18 @@
           { "ITC Code" : "SliderBerlinLink" },
           { "Description" : "Slide .BERLIN Link" }
         ]
+      },
+      { "Slide .EMAIL Link" : [
+          { "ITC ID" : "97875" },
+          { "ITC Code" : "SliderEmailLink" },
+          { "Description" : "Slide .EMAIL Link" }
+        ]
+      },
+      { "Slide .GUIDE Link" : [
+          { "ITC ID" : "97876" },
+          { "ITC Code" : "SliderGuideLink" },
+          { "Description" : "Slide .GUIDE Link" }
+        ]
       }
     ],
   "Top Tld Pods" : [
