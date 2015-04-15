@@ -868,7 +868,7 @@
               <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line1]@L]</li>
               <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line2]@L]</li>
               <li>[@L[cds.sales/homepage/sections/_o365-promo:plan-features-line3]@L]</li>
-            </ul><a data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
+            </ul><a data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='95786' /></relative>]@T]" class="btn btn-default-dark">[@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]</a>
           </div>
           <div class="col-sm-6">
             <div class="promo-flag">[@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]</div><!--[if lt IE 9]><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload o365-promo-image"/><![endif]--><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="Office 365 image" class="lazyload svgfallback o365-promo-image"/>
