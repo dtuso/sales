@@ -545,7 +545,7 @@ prepend endOfPageScripts
           var officeCurrentMonthlyPrice = officeItem[1];
           var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMonthlyRenewEmail]@L]";
           //officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
-          officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice)
+          officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice);
           var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
           var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
           var termType = "[@L[cds.sales/_common:yr]@L]";
