@@ -1,6 +1,6 @@
 ---
 location: sales/pro/dedicated-server-config
-id: 552c0432f778fc0c1078b6d1
+id: 552edca5f778fc1164efa003
 name: GCE-37474
 comments: Update config page so that PL can use it in addition to pro
 configPage: true
@@ -141,17 +141,12 @@ cssVersionOverride: 1
             var packageId = $('input:radio[name="termOption"]:checked').val();;
             var addons = Config.generateAddonsURL();
 
-            ##if(isManager())
-            var managerId= Config.getParameterByName('mgrshopper');
-            ##endif
             //update package with add on if package is already added
             var apiEndpoint = '[@T[link:<relative path="api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',qty).replace('{4}',packageId);
             
             addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
             apiEndpoint =apiEndpoint +addons;
-            ##if(isManager())
-              apiEndpoint +='&mgrshopper='+ managerId;
-            ##endif
+            
             $.ajax({
                   type: 'POST',
                   url: apiEndpoint,
