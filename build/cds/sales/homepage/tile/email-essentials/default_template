@@ -38,7 +38,7 @@
   display: inline;
 }
 .gdhp-tile.email-essentials .storage {
-  padding: .5em 0 .5em 0;
+  padding: .35em 0 .35em 0;
 }
 .gdhp-tile.email-essentials .big-price {
   font-size: 36px;
@@ -75,15 +75,15 @@
   <div class="text">
     <div class="hdl-container">
       <div class="email-logo"></div>
-      <div class="headline green">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
-    </div><span class="subtext white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</span><span class="subtext white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</span><span class="dom-at green">[@L[cds.sales/homepage/tile/email-essentials:]@L]</span>
-    <div class="big-price storage white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
-    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
-    <div class="big-price b orange">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
-    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
+      <div class="headline green">[@L[cds.sales/homepage/tile/email-essentials:headline-text]@L]</div>
+    </div><span class="subtext white">[@L[cds.sales/homepage/tile/email-essentials:body-text]@L]</span><span class="dom-at green">[@L[cds.sales/homepage/tile/email-essentials:email]@L]</span>
+    <div class="big-price storage white">[@L[cds.sales/homepage/tile/email-essentials:space-text]@L]</div>
+    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:list-price-text]@L]</div>
+    <div class="big-price b orange">[@L[cds.sales/homepage/tile/email-essentials:current-price-text]@L]</div>
+    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:sub-text]@L]</div>
     <div class="email-btn-container">
-      <button href="javascript:void(0)" data-ci="97724" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/tile/email-essentials:]@L]</button>
-    </div><br/>
-    <div class="disclaimer white">[@L[cds.sales/homepage/tile/email-essentials:]@L]</div>
+      <button href="javascript:void(0)" data-ci="97724" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/tile/email-essentials:cta-text]@L]</button>
+    </div>
+    <div class="disclaimer white">*[@L[cds.sales/homepage/tile/email-essentials:legal-text]@L]</div>
   </div>
 </div>
