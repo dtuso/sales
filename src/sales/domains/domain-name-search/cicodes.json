@@ -149,6 +149,48 @@
           { "ITC Code" : "" },
           { "Description" : "Slide Expression of Interrest Link" }
         ]
+      },
+      { "Slide .LONDON Link" : [
+          { "ITC ID" : "97824" },
+          { "ITC Code" : "SliderLondonLink" },
+          { "Description" : "Slide .LONDON Link" }
+        ]
+      },
+      { "Slide .WALES Link" : [
+          { "ITC ID" : "97826" },
+          { "ITC Code" : "SliderWalesLink" },
+          { "Description" : "Slide .WALES Link" }
+        ]
+      },
+      { "Slide .CYMRU Link" : [
+          { "ITC ID" : "97823" },
+          { "ITC Code" : "SliderCymruLink" },
+          { "Description" : "Slide .CYMRU Link" }
+        ]
+      },
+      { "Slide .SITE Link" : [
+          { "ITC ID" : "97825" },
+          { "ITC Code" : "SliderSiteLink" },
+          { "Description" : "Slide .SITE Link" }
+        ]
+      },
+      { "Slide .BERLIN Link" : [
+          { "ITC ID" : "97822" },
+          { "ITC Code" : "SliderBerlinLink" },
+          { "Description" : "Slide .BERLIN Link" }
+        ]
+      },
+      { "Slide .EMAIL Link" : [
+          { "ITC ID" : "97875" },
+          { "ITC Code" : "SliderEmailLink" },
+          { "Description" : "Slide .EMAIL Link" }
+        ]
+      },
+      { "Slide .GUIDE Link" : [
+          { "ITC ID" : "97876" },
+          { "ITC Code" : "SliderGuideLink" },
+          { "Description" : "Slide .GUIDE Link" }
+        ]
       }
     ],
   "Top Tld Pods" : [
@@ -397,6 +439,30 @@
           { "ITC Code" : "TopPodWORKLink" },
           { "Description" : "Top Pod - .WORK link" }
         ]
+      },
+      { "Top TLD Pods - .SITE link" : [
+          { "ITC ID" : "97720" },
+          { "ITC Code" : "TopPodSITELink" },
+          { "Description" : "Top Pod - .SITE link" }
+        ]
+      },
+      { "Top TLD Pods - .SALE link" : [
+          { "ITC ID" : "97697" },
+          { "ITC Code" : "TopPodSALELink" },
+          { "Description" : "Top Pod - .SALE link" }
+        ]
+      },
+      { "Top TLD Pods - .UK link" : [
+          { "ITC ID" : "97820" },
+          { "ITC Code" : "TopPodUKLink" },
+          { "Description" : "Top Pod - .UK link" }
+        ]
+      },
+      { "Top TLD Pods - .CO link" : [
+          { "ITC ID" : "97819" },
+          { "ITC Code" : "TopPodCOLink" },
+          { "Description" : "Top Pod - .CO link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -621,6 +687,24 @@
           { "ITC Code" : "ButtomPodSpace" },
           { "Description" : "Buttom TLD Pods - .SPACE" }
         ]
+      },
+      { "Buttom TLD Pods - .GREEN" : [
+          { "ITC ID" : "97828" },
+          { "ITC Code" : "ButtomPodGreen" },
+          { "Description" : "Buttom TLD Pods - .GREEN" }
+        ]
+      },
+      { "Buttom TLD Pods - .SITE" : [
+          { "ITC ID" : "97829" },
+          { "ITC Code" : "ButtomPodSite" },
+          { "Description" : "Buttom TLD Pods - .SITE" }
+        ]
+      },
+      { "Buttom TLD Pods - .DESIGN" : [
+          { "ITC ID" : "97827" },
+          { "ITC Code" : "ButtomPodDesign" },
+          { "Description" : "Buttom TLD Pods - .DESIGN" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -827,6 +911,30 @@
           { "ITC Code" : "" },
           { "Description" : "New Available TLD's Column - .SPACE" }
         ]
+      },
+      { "New Domains Available TLD's Column - .GREEN" : [
+          { "ITC ID" : "97717" },
+          { "ITC Code" : "NewAvailGreen" },
+          { "Description" : "New Available TLD's Column - .GREEN" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .Legal" : [
+          { "ITC ID" : "97718" },
+          { "ITC Code" : "NewAvailLegal" },
+          { "Description" : "New Available TLD's Column - .LEGAL" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SITE" : [
+          { "ITC ID" : "97719" },
+          { "ITC Code" : "NewAvailSite" },
+          { "Description" : "New Available TLD's Column - .SITE" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .CHAT" : [
+          { "ITC ID" : "97830" },
+          { "ITC Code" : "NewAvailChat" },
+          { "Description" : "New Available TLD's Column - .CHAT" }
+        ]
       }
     ],
   "Coming Soon Tlds" : [
@@ -918,6 +1026,24 @@
           { "ITC ID" : "95234" },
           { "ITC Code" : "" },
           { "Description" : "Coming Soon TLD's Column - .ONLINE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .STORE" : [
+          { "ITC ID" : "97716" },
+          { "ITC Code" : "ComingSoonSTORE" },
+          { "Description" : "Coming Soon TLD's Column - .STORE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .NEWS" : [
+          { "ITC ID" : "97715" },
+          { "ITC Code" : "ComingSoonNEWS" },
+          { "Description" : "Coming Soon TLD's Column - .NEWS" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .LIVE" : [
+          { "ITC ID" : "97714" },
+          { "ITC Code" : "ComingSoonLIVE" },
+          { "Description" : "Coming Soon TLD's Column - .LIVE" }
         ]
       }
     ],
