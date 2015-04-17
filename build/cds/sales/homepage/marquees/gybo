@@ -30,12 +30,12 @@
     #gybo .product-text{font-size:28px;line-height:28px;text-align:center;max-width:160px}
     #gybo .product-subtext{font-family:'Walsheim-Medium';font-size:18px;line-height:18px;text-align:center;padding:5px 0 0 0;}
     html[lang|="el"] #gybo .product-subtext{font-family:Arial, Sans-serif;}
-    #gybo .cond-text{font-size:41px;line-height:41px;display:block;margin-top:10px;}
+    #gybo .cond-text{font-size:41px;line-height:.9;display:block;margin-top:10px;}
     #gybo .rest-text{font-family:'Walsheim-Medium';font-size:12px;line-height:12px;display:block;padding-top:10px;text-align:center;}
     html[lang|="el"] #gybo .rest-text{font-family:Arial, Sans-serif;}
     #gybo .btn-wrapper>.price-text{color:#ffffff;background-color:#ff8a00;width:140px;height:125px;display:block;margin:20px 0 10px 0;padding:35px 10px 0 10px;box-sizing:content-box;}
     
-    #gybo .btn-wrapper>.price-text>.price{line-height:1.1; font-family:'walsheim-black'}
+    #gybo .btn-wrapper>.price-text>.price{line-height:.9; font-family:'walsheim-black'; font-size:36px}
     html[lang|="el"] #gybo .btn-wrapper>.price-text>.price{font-family:Arial, Sans-serif;font-weight:700;}
     #gybo .plus-img,.equal-img{font-size:100px;padding:20px 20px 0 20px; font-family:'walsheim-black'}
     html[lang|="el"] #gybo .plus-img,html[lang|="el"] .equal-img{font-family:Arial, Sans-serif;font-weight:700;}
@@ -48,7 +48,7 @@
     html[lang|="de"] #gybo .headline{font-size:48px;}
     html[lang|="de"] #gybo .product-text{font-size:24px;}
     html[lang|="de"] #gybo .btn-wrap>.btn{font-size:18px;}
-    html[lang|="es"] #gybo .btn-wrap>.btn{font-size:14px;}
+    html[lang|="es"] #gybo .btn-wrap>.btn{font-size:13px;}
     html[lang|="it"] #gybo .headline{font-size:48px;}
     html[lang|="it"] #gybo .product-text{font-size:24px;}
     html[lang|="it"] #gybo .btn-wrap>.btn{font-size:14px;}
@@ -90,7 +90,7 @@
         </div>
         <div class="equal-img">=</div>
         <div class="btn-wrapper">
-          <div class="price-text bigtext">
+          <div class="price-text">
             <div class="price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T] </div>
             <div class="cond-text tungsten">[@L[cds.sales/homepage/marquee/gybo:gybo-per-month]@L]</div>
           </div>

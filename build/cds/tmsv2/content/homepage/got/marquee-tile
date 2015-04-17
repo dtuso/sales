@@ -1,42 +1,60 @@
 
 <atlantis:webstash type="css">
-  <style>.gtld-marquee-got {
+  <style>.marquee-tile.got {
   background-color: #333;
-  font-family: 'Walsheim-Black';
+  font-size: 14px;
 }
-.gtld-marquee-got .tile-content-wrapper {
+.marquee-tile.got .tile-content-wrapper {
   padding: 15px 0 0 10px;
 }
-.gtld-marquee-got .header-text {
-  font-size: 25px;
+.marquee-tile.got .products {
+  font-size: 1.5em;
   color: #77c043;
   margin: 0;
 }
-.gtld-marquee-got .price-text {
-  font-size: 25px;
+.marquee-tile.got .price-text {
+  font-size: 1.5em;
   color: #fff;
   margin: -3px 0 0;
-  text-transform: uppercase;
 }
-.gtld-marquee-got .price {
-  font-size: 36px;
+.marquee-tile.got .price {
+  font-size: 1.5em;
   margin: -10px 0 0;
-  text-transform: uppercase;
 }
-.gtld-marquee-got .restrictions-text {
+.marquee-tile.got .disclaimer {
   font-size: 10px;
-  font-family: "Walsheim-Regular";
   color: #fff;
   margin: 5px 0 0;
+}
+@media only screen and (min-width: 480px) {
+  .marquee-tile.got {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .marquee-tile.got {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .marquee-tile.got {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .marquee-tile.got {
+    font-size: 16px;
+  }
 }
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile gtld-marquee-got">
+<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
   <div class="tile-content-wrapper">
-    <h2 class="header-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]</h2>
-    <div class="price-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]</div>
-    <div class="price">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]</div>
-    <div class="restrictions-text">[@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text-new]@L]</div>
+    <div class="walsheim-black">
+      <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
+      <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
+    </div>
+    <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
   </div>
 </div>
