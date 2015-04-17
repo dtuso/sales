@@ -1459,6 +1459,9 @@ ul li.no-check {
   min-height: 140px;
   margin: 5px 0;
 }
+#merchandising .promo-cta {
+  text-transform: uppercase;
+}
 section {
   padding-top: 0;
   padding-bottom: 0;
