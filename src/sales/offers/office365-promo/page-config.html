@@ -1,6 +1,6 @@
 ---
 location: sales/offers/office365-promo-config.aspx
-id: 5531850cf778fc0d10298fb6
+id: 55318d5bf778fc0d10298fb8
 name: GCE-38839
 comments: JS issue found on POB config page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
@@ -716,17 +716,23 @@ assetPath: false
         }
         $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
 
-      var sageIsc = getParameterByName("isc");
-      var packageId = got2Page.packageId;
-      if(sageIsc != undefined && (sageIsc === "sageonea") || (sageIsc === "sageoneb") || (sageIsc === "sageonec"))
-      {
-          packageId = got2Page.sagePackageId;
-      }
+        got2Page.ciCode = $(thisClick).data('ci');
+        got2Page.iscCode = getParameterByName("isc");
+
+        if(!got2Page.canOfferGetPaid) {
+          got2Page.packageId = got2Page.noGetPaidPackageId;
+        }
+        
+        if(got2Page.iscCode != undefined && (got2Page.iscCode === "sageonea") || (got2Page.iscCode === "sageoneb") || (got2Page.iscCode === "sageonec"))
+        {
+            got2Page.packageId = got2Page.sagePackageId;
+        }
+
         // add Got2 to the cart  
         var urlFragment = '/' + got2Page.itcCode; //itc code
-        urlFragment += '/' + $(thisClick).data('ci'); //ci code
+        urlFragment += '/' + got2Page.ciCode; //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+        urlFragment    += '/' + got2Page.packageId;  //Plan Name (aka Package Id)
         var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';
