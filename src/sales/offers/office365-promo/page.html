@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 
-name: GCE-37618
-notes: remove UK from restricted markets.
+id: 55357af27653e503b4472484
+name: GCE-38722
+comments: Option to bypass the first panel on POB
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
 metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
@@ -509,6 +509,13 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         slideToShowSearch( $gotSlidesDr );
       }); 
 
+      var mode = getParameterByName('mode');
+      switch(mode) {
+        case 'search' :
+          slideToShowSearch( $gotSlidesDr );
+          break;
+      }
+
     });
     
     $.ajaxSetup({cache:false});
@@ -851,7 +858,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 {% less %}
   #disclaimerModal .modal-title {font-size:24px}
   #disclaimerModal .modal-dialog {width:730px; font-size:16px; line-height:1.4em;}
-
+  #disclaimers {margin: 20px 0 70px;}
   #disclaimers p {margin-bottom:2px;}
   #disclaimers .disclaimer-link-area a,
   #disclaimers .disclaimer-link-area a:link,
@@ -860,7 +867,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #disclaimers .disclaimer-link-area a:hover{color:#7db701}
 
   #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip:after {border-bottom: 18px solid rgba(0, 0, 0, 0);border-right: 14px solid #262626;left: -14px;}
-  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -310px;width: 300px;top: 5px;}
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -510px;width: 500px;top: 5px;}
   #disclaimers .bing-ad-credits-area a,
   #disclaimers .bing-ad-credits-area a:link,
   #disclaimers .bing-ad-credits-area a:visited{color:#7db701; text-decoration:underline;}
