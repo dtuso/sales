@@ -1141,13 +1141,6 @@
               </li> 
               ##endif
                
-               
-              ##if(areAdCreditsEnabled(facebook))
-               
-              <li><span data-tokenize="[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-facebook]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li> 
-              ##endif
-               
             </ul>
           </div>
         </div>
