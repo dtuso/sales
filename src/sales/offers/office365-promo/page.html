@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo.aspx
-id: 5527f1e7f778fc1e18d99eac
-name: GCE-37618
-notes: remove UK from restricted markets.
+id: 5535393df778fc1720cbbbf9
+name: GCE-38722
+comments: Option to bypass the first panel on POB
 url: http://www.dev-godaddy.com/offers/office365-promo.aspx
 assetPath: false
 metaTitle:          "[@L[cds.sales/offers/office365-promo:page-title]@L]"
@@ -37,7 +37,6 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   html body#offers .col-xs-4 {width: 33.3333%;}
   html body#offers .col-xs-8 {width: 66.6667%;}
   .condensed{font-family:HelveticaNeue-CondensedBold,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}
-  .tungsten {font-family: Tungsten,"Tungsten A","Tungsten B","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight: 700;}
   .loading{background:~"url(@{imgPath}ajax-loader_lg.gif)" no-repeat;content:"";height:35px;margin:2px 12px;width:35px;display:none;}
   .disabled{pointer-events:none;cursor:not-allowed;opacity:.25;filter:alpha(opacity=25);-webkit-box-shadow:none;box-shadow:none}
 
@@ -509,6 +508,13 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
         slideToShowSearch( $gotSlidesDr );
       }); 
 
+        
+      var mode = getParameterByName('mode');
+      switch(mode) {
+        case 'search' : 
+          slideToShowSearch( $gotSlidesDr );
+          break;
+      }
     });
     
     $.ajaxSetup({cache:false});
@@ -693,7 +699,6 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
             $this.attr("action",newAction);
           });
 
-
     });  /* end document ready */
 
   })(); /* end IIIF */
@@ -851,7 +856,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
 {% less %}
   #disclaimerModal .modal-title {font-size:24px}
   #disclaimerModal .modal-dialog {width:730px; font-size:16px; line-height:1.4em;}
-
+  #disclaimers {margin: 20px 0 70px;}
   #disclaimers p {margin-bottom:2px;}
   #disclaimers .disclaimer-link-area a,
   #disclaimers .disclaimer-link-area a:link,
@@ -860,7 +865,7 @@ metaOgDescription:  "[@L[cds.sales/offers/office365-promo:og-description]@L]"
   #disclaimers .disclaimer-link-area a:hover{color:#7db701}
 
   #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip:after {border-bottom: 18px solid rgba(0, 0, 0, 0);border-right: 14px solid #262626;left: -14px;}
-  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -310px;width: 300px;top: 5px;}
+  #disclaimers .bing-ad-credits-area .g-toolTip span.g-toolTip-tip {right: -510px;width: 500px;top: 5px;}
   #disclaimers .bing-ad-credits-area a,
   #disclaimers .bing-ad-credits-area a:link,
   #disclaimers .bing-ad-credits-area a:visited{color:#7db701; text-decoration:underline;}
