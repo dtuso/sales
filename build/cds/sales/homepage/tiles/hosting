@@ -14,6 +14,8 @@
     .hosting-tile>.host-btn-wrap>.btn-lrg{width:220px;float:left;margin-right:10px}
     .hosting-tile>.host-btn-wrap>span>span.hosting-tile-pricetext{font-size:24px;line-height:24px;margin-bottom:5px;color:#EF6C0F;}
     .hosting-tile>.host-btn-wrap>span>span.hosting-tile-price{font-family:'Walsheim-Black', 'Arial Black', sans-serif;color:#EF6C0F;font-size:24px;line-height:35px;letter-spacing:-0.72px}
+    html[lang|="el"] .hosting-tile-maintext, .hosting-tile-subtext{font-size:22px;line-height:22px}
+    
   </style>
 </atlantis:webstash>
 <div id="gdhp-hostingtile" data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='93458' /></relative>]@T]" data-ci="93458" class="gdhp-tile hosting-tile js-gdhpclick">
