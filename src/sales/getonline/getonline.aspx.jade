@@ -60,7 +60,7 @@ append endOfPageScripts
           var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
           
           if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
-            $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
+            $(".form-error").text("[@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
             $("fieldset.step-1 input").removeClass("search-bar");
             $("fieldset.step-1 .form-group").addClass("has-error");
             $(".form-error").show()
@@ -167,7 +167,7 @@ block content
               .form-group
                 label.sr-only(for="search-input") [@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]
                 input#search-input.form-control.search-bar(type='text', autocomplete='off', placeholder='[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]', name='domain', maxlength='63', aria-describedby="inputWarning2Status")
-              p.form-error [@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]
+              p.form-error [@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]
           .col-sm-6
             fieldset.step-2
               legend [@L[cds.sales/getonline:QuestionsLP-2-Step2]@L]
