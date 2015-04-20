@@ -31,7 +31,7 @@ block append pageStyles
       @dark-gray:#dedede;
       @shadow:rgba(0,0,0,0.1);
       @dark-green:#008a30;
-      @gd-orange:#ff8a00;
+      @gd-orange:#ef6c0f;
       @desktop: ~"only screen and (min-width:991px)";
       @desktop-lg: ~"only screen and (min-width:1200px)";
       @desktop-sm: ~"only screen and (min-width:768px)";
@@ -59,7 +59,7 @@ block append pageStyles
       #bugbar{margin:10px 0;}
       #domain-search{margin-top: 10px;}
       #domain-name-input{text-transform:inherit}
-      .price,.icann-disclaimer{color:@gd-orange}
+      .price,.icann-disclaimer,.promo-cta>a{color:@gd-orange}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
         .tile-wrapper{min-height:140px;margin:5px 0}
         .promo-cta{text-transform:uppercase}
@@ -87,10 +87,11 @@ block endOfPageScripts
         $("#merchandising .tile-wrapper").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight + 10);
-
-        var maxHeroHeight = 0;
-        $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-        $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+        if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
+          var maxHeroHeight = 0;
+          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+        }
     }
     function tokenizeTheDataTokenizeAttribute() {
       $('[data-tokenize]').each(function(){
@@ -157,7 +158,6 @@ block content
             .hero-wrapper
               block hero  
           .col-md-4.col-sm-12
-            .container
               .row
                 .col-md-12.col-sm-6
                   .tile-wrapper
