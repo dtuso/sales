@@ -52,6 +52,7 @@
   margin: 1em 0 1em 0;
   display: block;
   font-family: walsheim-medium;
+  text-transform: uppercase;
 }
 .gdhp-tile.email-essentials .disclaimer {
   clear: both;
