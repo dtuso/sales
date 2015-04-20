@@ -40,7 +40,7 @@
     html[lang|="el"] #gybo .plus-img,html[lang|="el"] .equal-img{font-family:Arial, Sans-serif;font-weight:700;}
     #gybo .btn-wrap>.btn{width:130px;font-family:'Walsheim-Medium';box-sizing:content-box;}
     html[lang|="el"] #gybo .btn-wrap>.btn{font-family:Arial, Sans-serif;}
-    #gybo .image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee.jpg) no-repeat;width:160px;height:160px;margin-bottom:10px;}
+    #gybo .image{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gybo_marquee_20150420.png) no-repeat;width:160px;height:160px;margin-bottom:10px;}
     #gybo .domain{background-position: 0px 0px}
     #gybo .wsb{background-position: 0px -162px}
     #gybo .o365{background-position: 0px -324px}
