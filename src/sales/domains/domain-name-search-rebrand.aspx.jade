@@ -161,6 +161,10 @@ append endOfPageScripts
               $container.data('hasIframe', true);
           }
       });
+  script(type="text/javascript").
+    $("#question-btn").on('click',function(e){
+        $("#question-btn").hide();
+    });
 
 block domainSearch
   //- remove domain search from top of page
