@@ -1156,7 +1156,7 @@ ul li.no-check {
         }
         .config-text-secondary {
           font-size: 24px;
-          font-family: 'Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif’Helvetica Neue’ - 200';
+          font-weight: 200;
         }
         .config-text-lead {
           font-size: 16px;
@@ -1671,9 +1671,6 @@ input[type=checkbox] + label{
           
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
-          }
-          else {
-            plan='mwp_basic_12month';
           }
           if( plan.indexOf('mwp_ultimate') >= 0)
           {

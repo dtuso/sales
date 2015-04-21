@@ -260,9 +260,6 @@ prepend endOfPageScripts
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
-        else {
-          plan='mwp_basic_12month';
-        }
         if( plan.indexOf('mwp_ultimate') >= 0)
         {
           steps = _.without(steps, 'securityStep');
