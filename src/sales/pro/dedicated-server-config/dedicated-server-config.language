@@ -1,6 +1,6 @@
 ---
 location: localization/sales/gd/pro/dedicated-server-config/en
-id: 547cf285f778fc1db8259f29
+id: false
 name: GCE-31530
 comments: Web Pro Config Page Content Updates
 ---
@@ -8,13 +8,13 @@ comments: Web Pro Config Page Content Updates
 <phrase key="page-title" />
 Dedicated Servers | Fully Configurable Multi-core Servers
 <phrase key="meta-description" />
-Need a Dedicated Server? GoDaddy makes it easy to run your own Dedicated Web Server.
+Need a Dedicated Server? [@T[companyname:name]@T] makes it easy to run your own Dedicated Web Server.
 <phrase key="meta-keywords" />
 dedicated server, dedicated servers, dedicated server hosting, dedicated server web hosting
 <phrase key="og-title" />
-GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+[@T[companyname:name]@T] Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
 <phrase key="og-description" />
-Get the most out of your website! GoDaddy Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
+Get the most out of your website! [@T[companyname:name]@T] Dedicated Servers provide you with the ultimate in hosting performance, control &amp; convenience.
 <phrase key="configTitleLink" />
 Change plan
 <phrase key="configTitleText" />

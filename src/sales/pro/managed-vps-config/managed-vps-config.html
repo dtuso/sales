@@ -1,7 +1,7 @@
 ---
 location: sales/pro/managed-vps-config
-id: 54f4e58af778fc0de4d09c5c
-name: GCE-35068
+id: 552d951af778fc1164ef9fcc
+name: GCE-37474
 comment: VPS SALE - Config Page Sale and Term Offering Updates
 configPage: true
 sitecore: true 
@@ -9,6 +9,41 @@ cssVersionOverride: 2
 ---
 
 {% extends 'layouts/config-base.html' %}
+
+{% block metahead %}
+    {% parent %}
+
+##if(siteContextAny(pl))
+<style type="text/css">
+  .green-check {
+    display: none;
+  }
+  .product-added-to-cart,.order-total,.green-text{
+    color:#0090FC !important;
+  }
+  .orange-text,.plan-price{
+    color:#a92728;
+  }
+  .btn-warning,.btn-warning:hover{
+    background-color:#a92728;
+    border: none;
+  }
+  .uxicon.uxicon-chevron-down.color{
+  color: #0090FC;
+  text-align: center;
+}
+</style>
+##else
+<style type="text/css">
+
+.uxicon.uxicon-chevron-down.color{
+  color: #579006;
+  text-align: center;
+}
+
+</style>
+##endif
+{% endblock %}
 
 {% block steps %}
                       ##if(isManager())
@@ -106,17 +141,10 @@ cssVersionOverride: 2
           var addons = Config.generateAddonsURL();
           var quantity=1;
           
-          ##if(isManager())
-          var managerId= Config.getParameterByName('mgrshopper');
-          ##endif
+          var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" />]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
+          addons = (apiEndpoint.indexOf('?') >= 0) ? '&'+addons : '?'+addons;
+          apiEndpoint =apiEndpoint + addons;
 
-          
-          var apiEndpoint = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}" parammode="explicit"/>]@T]'.replace('{0}','update').replace('{1}',itccode).replace('{2}',ci).replace('{3}',quantity).replace('{4}',packageId);
-
-          apiEndpoint =apiEndpoint +addons;
-          ##if(isManager())
-            apiEndpoint +='&mgrshopper='+ managerId;
-          ##endif
           $.ajax({
                 type: 'POST',
                 url: apiEndpoint,
@@ -263,7 +291,11 @@ cssVersionOverride: 2
           
           if (term >= 12) {
             if(selectedAddonValue == 'pro_vps_managed_plus'){
+              ##if(siteContextAny(pl))
+              managedPrice = "[@T[productprice:<current productid='483562' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##else
               managedPrice = "[@T[productprice:<current productid='483562' period='yearly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
+              ##endif
             }
             else if (selectedAddonValue == 'pro_vps_managed'){
               managedPrice = "[@T[productprice:<current productid='483560' period='yearly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]";
@@ -319,9 +351,17 @@ cssVersionOverride: 2
             var selectedAddonValue = $('input:radio[name="managedOption"]').filter(':checked').val();
             if(selectedAddonValue == 'pro_vps_managed_plus'){
               if(termLength == 12){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }else if(termLength > 12 ){
-                totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##if(siteContextAny(pl))
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##else
+                  totalAddonPrice = currencyCalc.evaluate([osAddonPrice,"+","[@T[productprice:<current productid='483562' period='monthly' percentoff='25.00' dropdecimal='false' htmlsymbol='false' negative='parentheses' />]@T]"]);
+                ##endif
               }
             }
             //var totalAddonPrice =getAddOnDiscount(term.data('addondiscount'),totalAddonPrice);
@@ -338,7 +378,8 @@ cssVersionOverride: 2
             var secondaryPrice = $(this).attr('data-price');
             var percent = getPercentage(oneMonthPrice,secondaryPrice);
             if(percent > 0){
-               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percent + '%' ;
+               var percentString = '[@T[localization:<display type="percent" number="1" />]@T]';
+               var savingsString = " - [@L[fosconfigcommon:save]@L]&nbsp;" + percentString.replace('1',percent);  ;
                var strikeString=  "<span class='product-desc'> - <strike>" + oneMonthPrice + "</strike>[@L[fosconfigcommon:permonth]@L]</span>" ;
                $(this).parent().find('.price').append(savingsString + strikeString);
             }
@@ -380,7 +421,7 @@ cssVersionOverride: 2
           var managedOption =$("input:radio[name='managedOption']:checked");
           var managedPrice = managedOption.data('price');
           var osOption =$("#osOption").val();
-          addonURL+= '?addons='+osOption + "-1" ;
+          addonURL+= 'addons='+osOption + "-1" ;
           if(currencyCalc.stripFormat(managedPrice) > 0)
             addonURL+= '|'+ managedOption.val() +"-1";
           return addonURL;
@@ -518,7 +559,7 @@ cssVersionOverride: 2
       }
      
     </script>
-
+  ##if(!siteContextAny(pl))
     <!-- liveperson includes -->
     <script>
       // defer load liveperson
@@ -538,5 +579,6 @@ cssVersionOverride: 2
           script.parentNode.insertBefore(styleResource, script);
       });
     </script>
+  ##endif
 
 {% endblock %}
