@@ -1156,7 +1156,7 @@ ul li.no-check {
         }
         .config-text-secondary {
           font-size: 24px;
-          font-family: 'Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif’Helvetica Neue’ - 200';
+          font-weight: 200;
         }
         .config-text-lead {
           font-size: 16px;
@@ -1672,9 +1672,6 @@ input[type=checkbox] + label{
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
-          else {
-            plan='mwp_basic_12month';
-          }
           if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
           {
             steps = _.without(steps, 'securityStep');
@@ -1957,7 +1954,7 @@ input[type=checkbox] + label{
             var officeCurrentMonthlyPrice = officeItem[1];
             var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMonthlyRenewEmail]@L]";
             //officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
-            officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice)
+            officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice);
             var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
             var termType = "[@L[cds.sales/_common:yr]@L]";
