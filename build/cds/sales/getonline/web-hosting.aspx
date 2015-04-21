@@ -851,7 +851,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
                   <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                   <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97048" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
                 </div>
               </div>
@@ -883,7 +883,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>
@@ -960,7 +960,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>
