@@ -1,8 +1,65 @@
 ---
 location: localization/sales/gd/cce/en
-id: 53bb2869f778fc1e74b1696e
-name: FOS-23107
+id: 55359db7f778fc1264ba38df
+name: mcx-38814
+comments: icannfee token
 ---
 {% include '../../modules/doc-block.html' %}
+<phrase key="page-title" />
+Exclusive website builder discounts from [@T[companyname:name]@T] and CCE – [@T[companyname:name]@T]
+<phrase key="meta-description" />
+[@T[companyname:name]@T] and CCE have partnered to get your Brazilian business online with an exclusive website builder discount! 
+<phrase key="meta-keywords" />
+[@T[companyname:name]@T], CCE, Brazil, Brazilian website builder, Website builder discount, exclusive website builder discount, website builder brazil
 <phrase key="ComingSoon" />
 Coming Soon
+<phrase key="WelcomeTo" />
+Welcome to [@T[companyname:name]@T]
+<phrase key="YourBest" />
+YOUR BEST FRIEND
+<phrase key="ForBusiness" />
+FOR BUSINESS.
+<phrase key="PutYourBusiness" />
+Put your business or big idea online with this exclusive offer from [@T[companyname:name]@T] and CCE.
+<phrase key="FiftyPercentOff" />
+50% OFF
+<phrase key="WebsiteBuilder" />
+WEBSITE BUILDER
+<phrase key="Includes" />
+Includes
+<phrase key="FreeDotCom" />
+<b>FREE .COM.BR</b>
+<phrase key="OrOtherDomain" /> 
+or other domain
+<phrase key="BannerTooltipText" />
+One FREE .COM, .COM.BR, .CO, .NET or .ORG with purchase of a new 12-, 24- or 36-month plan. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year. You must add the domain name into your cart before purchase, and you must select a domain term length equal to or less than the term length of your plan to qualify for the free domain offer. If you purchase a domain name for a term longer than the term of the plan, you will be charged for the additional registration term at the then-current rate. Cannot be used in conjunction with any other offer, sale, discount or promotion. Free domain offer applies only to the initial purchase term. After the initial purchase term, domains purchased through this offer will renew at the then-current renewal price.
+<phrase key="GetStartedButton" />
+Get Started
+<phrase key="WhyWebsiteBuilder" />
+Why Website Builder?
+<phrase key="EasyToUse" />
+<b>EASY</b> to use
+<phrase key="HundredsOf" />
+<b>HUNDREDS</b> of customizable designs
+<phrase key="FreeDomain" />
+<b>FREE</b> domain and hosting
+<phrase key="NowOnly" />
+Now only
+<phrase key="PerYear" />
+/yr
+<phrase key="FiftyPercent" />
+50% off
+<phrase key="WhyUsItsSimple" />
+WHY US? IT'S SIMPLE.
+<phrase key="AwardWinning" />
+Award-winning 24/7 support.
+<phrase key="MoreThan" />
+More than 12 million customers.
+<phrase key="WorldsNumberOneDomain" />
+World’s #1 domain name registrar.
+<phrase key="ClickHereFor" />
+Click here for product disclaimers and legal policies
+<phrase key="ThirdPartyLogos" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
+<phrase key="disclaimer-header" />
+Disclaimers
