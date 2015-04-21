@@ -3822,6 +3822,10 @@ height: 27px;
               $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
               event.stopPropagation();
             }
+            if ($('#test-faq').find('.caret-right').length > 0)
+              $("#test-button").show();
+            else
+              $("#test-button").hide();
           });
           $(window).load(function() {
             $("#test-faq .accordion-dropdown:first").click();
@@ -3832,6 +3836,7 @@ height: 27px;
                             .removeClass("caret-right")
                             .addClass("caret-down");
             $('#test-faq').find('.accordion-dropdown').addClass("active");
+            $("#test-button").hide();
            });
         </script>
       </atlantis:webstash>

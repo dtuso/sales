@@ -3118,7 +3118,7 @@ var PlanBox6UI = {
                   </div>
                 </div>
                 <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 ">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 col-md-offset-1">
                           <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
@@ -3146,12 +3146,6 @@ var PlanBox6UI = {
                           <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
-                          <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
                           </div>
                         </div>
                 </div>
@@ -3550,7 +3544,6 @@ top: -6px;
                     <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
                     <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
                     <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
-                    <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
@@ -3628,22 +3621,6 @@ top: -6px;
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                     <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
                                   </div>
                                 </div>
                               </div>
@@ -4453,6 +4430,10 @@ top: -6px;
               $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
               event.stopPropagation();
             }
+            if ($('#faq-accordion').find('.caret-right').length > 0)
+              $("#faq-button").show();
+            else
+              $("#faq-button").hide();
           });
           $(window).load(function() {
             $("#faq-accordion .accordion-dropdown:first").click();
@@ -4463,6 +4444,7 @@ top: -6px;
                             .removeClass("caret-right")
                             .addClass("caret-down");
             $('#faq-accordion').find('.accordion-dropdown').addClass("active");
+            $("#faq-button").hide();
            });
         </script>
       </atlantis:webstash>

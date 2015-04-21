@@ -3209,6 +3209,10 @@ top: -6px;
                 $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
                 event.stopPropagation();
               }
+              if ($('#faq-accordion').find('.caret-right').length > 0)
+                $("#faq-button").show();
+              else
+                $("#faq-button").hide();
             });
             $(window).load(function() {
               $("#faq-accordion .accordion-dropdown:first").click();
@@ -3219,6 +3223,7 @@ top: -6px;
                               .removeClass("caret-right")
                               .addClass("caret-down");
               $('#faq-accordion').find('.accordion-dropdown').addClass("active");
+              $("#faq-button").hide();
              });
           </script>
         </atlantis:webstash>
