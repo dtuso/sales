@@ -1,7 +1,7 @@
 ---
-id:  55130213f778fc10943afe86
-name: GCE-35561
-comments: Managed WordPress Hosting rebrand
+id:  null
+name: GCE-38465
+comments: Change SideKick wording
 location: localization/sales/gd/hosting/wordpress-hosting/en
 ---
 {% include 'modules/doc-block.html' %}
@@ -255,6 +255,8 @@ Top-notch training to master WordPress basics
 Step me through
 <phrase key="35561-training-item-1-desc" comment="" />
 Use these 120 voice-guided, interactive walkthroughs to learn the basics of building WordPress sites. No videos, no documentation. Just click, follow and absorb.
+<phrase key="38465-training-item-1-desc" comment="" />
+Use these hundreds of voice-guided, interactive walkthroughs to learn the basics of building WordPress sites. No videos, no documentation. Just click, follow and absorb.
 <phrase key="35561-training-item-1-note" comment="" />
 Powered by SIDEKICK
 <phrase key="35561-training-item-2-title" comment="" />

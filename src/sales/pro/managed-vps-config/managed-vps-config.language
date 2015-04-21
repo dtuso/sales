@@ -1,22 +1,22 @@
 ---
 location: localization/sales/gd/pro/managed-vps-config/en
-id: 547cf248f778fc1db8259f28
-name: GCE-31530
+id: 551daa38f778fc18089b86b9
+name: GCE-37474
 comments: Web Pro Config Page Content Updates
 ---
 
 {% include 'modules/doc-block.html' %}
 
 <phrase key="page-title" />
-VPS Hosting | Affordable &amp; Configurable VPS plans - GoDaddy
+VPS Hosting | Affordable &amp; Configurable VPS plans - [@T[companyname:name]@T]
 <phrase key="meta-description" />
 VPS Hosting gives you more power than traditional hosting. Our VPS hosting solutions are affordable and easier to manage than a dedicated server.
 <phrase key="meta-keywords" />
 vps hosting,vps,virtual server,windows vps, linux vps, vps server,virtual private server,virtual servers,virtual private servers,windows virtual server,linux virtual server,virtual private server hosting,vps servers,virtual dedicated server
 <phrase key="og-title" />
-GoDaddy Virtual Private Servers
+[@T[companyname:name]@T] Virtual Private Servers
 <phrase key="og-description" />
-Need a hosting plan that grows with your business but doesn't break the bank? Get all the power and control of a dedicated server for less with a Virtual Private Server from GoDaddy!
+Need a hosting plan that grows with your business but doesn't break the bank? Get all the power and control of a dedicated server for less with a Virtual Private Server from [@T[companyname:name]@T]!
 <phrase key="configTitleText" />
 Configure your server
 <phrase key="servermanagement" />

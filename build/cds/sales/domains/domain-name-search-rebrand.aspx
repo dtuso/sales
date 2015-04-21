@@ -1569,7 +1569,7 @@ top: -6px;
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLegal]@L]</span><a href="[@T[link:<relative path='/tlds/legal'><param name='ci' value='97718' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotChat]@L]</span><a href="[@T[link:<relative path='/tlds/chat'><param name='ci' value='97830' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSite]@L]</span><a href="[@T[link:<relative path='/tlds/site'><param name='ci' value='97719' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
@@ -2594,7 +2594,7 @@ ul li.no-check {
     </script>
     <script>
       $(window).load(function() {
-      
+        
         $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);

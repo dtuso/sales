@@ -50,7 +50,7 @@ var got1Page = {
 ##endif
 
 ##if(countrySiteAny(ca) || isManager())
-  got1Page.tldInfo.addTldIf('ca', true);
+  got1Page.tldInfo.addTldIf('ca', false);
 ##endif
 ##if(countrySiteAny(br) || isManager())
   got1Page.tldInfo.addTldIf('br', true);
@@ -121,8 +121,7 @@ $(document).ready(function() {
   showAndOrderDynamicTldsInList("#domain-available-marquee-view .invalid-TLD-entered");
   showAndOrderDynamicTldsInList("#domain-not-available-marquee-view .invalid-TLD-entered");
 
-  tokenizeDisclaimerModals(); 
-  tokenizeTheDataTokenizeAttribute();
+  tokenizeDisclaimerModals();
 
   wireupModals();
 
@@ -177,18 +176,6 @@ function showAndOrderDynamicTldsInList(selector) {
 
   //- show sorted list
   $this.find('.tld-list').show();
-}
-
-function tokenizeTheDataTokenizeAttribute() {
-  $('[data-tokenize]').each(function(){
-    var $this = $(this),
-      html = $this.html(),
-      val = $this.data('tokenize'),
-        tokenizedHtml = html.replace(/\{0\}/gi, val);
-    $this
-      .html(tokenizedHtml)
-      .removeAttr('data-tokenize');
-  });
 }
 
 function tokenizeDisclaimerModals() {
