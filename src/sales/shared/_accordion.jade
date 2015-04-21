@@ -53,6 +53,10 @@ mixin renderAccordion(options)
           $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
           event.stopPropagation();
         }
+        if ($('##{options.id}').find('.caret-right').length > 0)
+          $("##{options.buttonID}").show();
+        else
+          $("##{options.buttonID}").hide();
       });
       $(window).load(function() {
         $("##{options.id} .accordion-dropdown:first").click();
@@ -63,4 +67,5 @@ mixin renderAccordion(options)
                         .removeClass("caret-right")
                         .addClass("caret-down");
         $('##{options.id}').find('.accordion-dropdown').addClass("active");
+        $("##{options.buttonID}").hide();
        });
