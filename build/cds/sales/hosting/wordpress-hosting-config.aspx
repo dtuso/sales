@@ -1675,11 +1675,11 @@ input[type=checkbox] + label{
           else {
             plan='mwp_basic_12month';
           }
-          if( plan.indexOf('mwp_ultimate') >= 0)
+          if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
           {
             steps = _.without(steps, 'securityStep');
           }
-          else if( (plan.indexOf('1month') >= 0))
+          else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
           {
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
@@ -1713,19 +1713,19 @@ input[type=checkbox] + label{
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
-          if( plan.indexOf('mwp_ultimate') >= 0)
+          if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
           {
             steps = _.without(steps, 'securityStep');
             document.getElementById('addsslOption').checked = false;
             document.getElementById('addsiteLockOption').checked = false;
           }
-          else if( plan.indexOf('mwp_developer') >= 0)
+          else if((plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
             $('#slElement').css("border-bottom", "none");
           }
-          else if( (plan.indexOf('1month') >= 0))
+          else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
           {
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
@@ -1736,7 +1736,7 @@ input[type=checkbox] + label{
           }
           if(noSiteLock)
           {
-            if( plan.indexOf('mwp_developer') >= 0)
+            if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
             {
               steps = _.without(steps, 'securityStep');
             }
@@ -1767,21 +1767,21 @@ input[type=checkbox] + label{
             $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
           }
           else{
-           if(plan.indexOf('mwp_basic') >= 0){
+           if((plan.indexOf('mwp_basic') >= 0)|| (plan.indexOf('tier1') >= 0)){
               ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
               ##else
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
               ##endif
             }
-            else if(plan.indexOf('mwp_deluxe') >= 0){
+            else if((plan.indexOf('mwp_deluxe') >= 0) || (plan.indexOf('tier2') >= 0)){
               ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
               ##else
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
               ##endif
             }
-            else if(plan.indexOf('mwp_ultimate') >= 0){
+            else if((plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0)){
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
             }
             else{
@@ -2069,7 +2069,7 @@ input[type=checkbox] + label{
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
           }
-          if( plan.indexOf('mwp_developer') >= 0)
+          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
@@ -2238,7 +2238,9 @@ input[type=checkbox] + label{
             ##if(countrysiteany(mx))
       
             ##else
-            plan = plan + "_withEmail";
+            if(plan.indexOf('mwp') >= 0){
+              plan = plan + "_withEmail";
+            }
             ##endif
           }
       
@@ -2315,7 +2317,7 @@ input[type=checkbox] + label{
       $(document).ready(function(){
         $('#planConfigContinue').click(function(){
           Config.addPlanToCart();
-          if(plan.indexOf('1month') >= 0){
+          if((plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0)){
             setTimeout(function(){
               ##if(isManager())
               window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
