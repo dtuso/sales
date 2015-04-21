@@ -8,15 +8,15 @@ block hero
 block marquee-tile1
   include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
 block marquee-tile2
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+  include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
 block merch-tile1
   | PROFESSIONAL EMAIL
 block merch-tile2
   include ./tiles/merch-tile-web-hosting.jade
 block merch-tile3
-  | DBP
-block merch-tile4
   | SIELOCK
+block merch-tile4
+  include ./tiles/gdpro-tile.jade
 
 block domain-promo
   atlantis:webstash(type="css")
@@ -62,3 +62,28 @@ block why-godaddy-feature-2
     +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
     h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
     p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
+block website-promo
+  atlantis:webstash(type="css")
+    style
+      :less
+        #website-promo .shape-text{color:#333}
+        #website-promo ul{margin-left:-20px;}
+        #website-promo .bg-gray-darkest .two-up-text-wrap {
+        @media (min-width: 1000px){margin-left:8.333333333333332%;}
+        }
+        .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
+        .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
+  section#website-promo
+    +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/east-website_promo.png", style: "min-height: 100%;"})
+      +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
+        ul
+          li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]
+          li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]
+          li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]
+        a.btn.btn-default-light.website-promo-wsb-btn(data-url!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]") LEARN MORE
+      +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]", shapeColor: "gold"})
+        ul
+          li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]
+          li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]
+          li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]
+        a.btn.btn-default-dark.website-promo-hosting-btn(data-url!="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]") LEARN MORE

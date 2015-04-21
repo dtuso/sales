@@ -347,20 +347,16 @@
       <style>#domain-promo {
   color: #fff;
 }
-.domain-promo-content {
-  background-color: #333;
-}
-@media only screen and (min-width: 768px) {
-  .domain-promo-content {
-    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
-    background-size: cover;
-  }
-}
-.Explorer8 .domain-promo-content {
-  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
+#domain-promo .domain-promo-content {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333333 no-repeat;
   background-size: cover;
 }
-.domain-promo-text {
+@media only screen and (max-width: 767px) {
+  #domain-promo .domain-promo-content {
+    background-image: none !important;
+  }
+}
+#domain-promo .domain-promo-text {
   padding: 7% 2% 1%;
 }
 #domain-promo .text-center {
