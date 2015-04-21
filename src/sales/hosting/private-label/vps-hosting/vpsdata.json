@@ -1,3 +1,7 @@
+---
+location: sales/hosting/private-label/dedicated-server.aspx
+id: false
+---
 {
    "vpsdata":{
       "linux":{
@@ -529,7 +533,6 @@
          }
       }
    },
-
    "vpsprodata": {
        "windows" : {
                   "t1" : {
@@ -542,7 +545,7 @@
                               "ram": "2 GB",
                               "storage": "40 GB",
                               "bandwidth": "1 TB"
-                         }
+                           }
                      },
                   "t2" : {
                         "productprice" : "[@T[productprice:<current productid=\"458321\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
@@ -594,7 +597,6 @@
                      }
          },
         "linux" : {
-
                   "t1" : {
                         "productprice" : "[@T[productprice:<current productid=\"458319\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "id": "pro_vps_linux_t1_12month",
@@ -602,7 +604,7 @@
                          "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "osAddonPrice": "[@T[productprice:<current productid=\"483558\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
                          "plandetail":{
-                              "ram": "2 GB",
+                              "ram": "1 GB",
                               "storage": "40 GB",
                               "bandwidth": "1 TB"
                          }
