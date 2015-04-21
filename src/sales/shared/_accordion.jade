@@ -67,8 +67,5 @@ mixin renderAccordion(options)
                         .removeClass("caret-right")
                         .addClass("caret-down");
         $('##{options.id}').find('.accordion-dropdown').addClass("active");
-        if ($('##{options.id}').find('.caret-right').length > 0)
-          $("##{options.buttonID}").show();
-        else
-          $("##{options.buttonID}").hide();
+        $("##{options.buttonID}").hide();
        });
