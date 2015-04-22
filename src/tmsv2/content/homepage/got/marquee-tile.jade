@@ -3,23 +3,34 @@ extends ../../../../sales/homepage/_tile.jade
 append vars
   - ctaLink = "[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]";
   - dataCi = 95726;
-  - containerClass = "gtld-marquee-got";
+  - containerClass = "marquee-tile got";
 
 block append tileStyles
   style
     :less
-      .upper() {
-        text-transform:uppercase;
+      .marquee-tile.got {
+        background-color:#333; font-size:14px;
+        .tile-content-wrapper {padding:15px 0 0 10px;}
+        .products {font-size: 1.5em;color:#77c043;margin:0;text-transform:uppercase;}
+        .price-text {font-size: 1.5em;color:#fff;margin:-3px 0 0;text-transform:uppercase;}
+        .price {font-size:1.5em;margin:-10px 0 0;}
+        .disclaimer {font-size:10px;color:#fff;margin:5px 0 0;}
+        @media only screen and (min-width:480px){
+          font-size:18px;
+        }
+        @media only screen and (min-width:768px){
+          font-size:15px;
+        }
+        @media only screen and (min-width:992px){
+          font-size:13px;
+        }
+        @media only screen and (min-width:1200px){
+          font-size:16px;
+        }
       }
-      .gtld-marquee-got {background-color:#333;font-family:'Walsheim-Black';}
-      .gtld-marquee-got .tile-content-wrapper {padding:15px 0 0 10px;}
-      .gtld-marquee-got .header-text {font-size: 25px;color:#77c043;margin:0;}
-      .gtld-marquee-got .price-text {font-size: 25px;color:#fff;margin:-3px 0 0;.upper()}
-      .gtld-marquee-got .price {font-size:36px;margin:-10px 0 0;.upper()}
-      .gtld-marquee-got .restrictions-text {font-size:10px;font-family:"Walsheim-Regular";color:#fff;margin:5px 0 0;}
 
 block tileContent
-  h2.header-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-domain]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-wsb]@L] + [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-email]@L]
-  .price-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price-text]@L]
-  .price [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-price]@L]
-  .restrictions-text [@L[cds.sales/homepage/tile/marquee-tile-got:marquee-tile-got-rest-text-new]@L]
+  .walsheim-black
+    .products [@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]
+    .price-text [@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]
+  .disclaimer [@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]
