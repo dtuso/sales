@@ -1676,11 +1676,6 @@ input[type=checkbox] + label{
           {
             steps = _.without(steps, 'securityStep');
           }
-          else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
-          {
-            document.getElementById('slElement').style.display = "none";
-            document.getElementById('addsiteLockOption').checked = false;
-          }
           if(noEmail)
           {
             steps = _.without(steps, 'officeStep');
@@ -1726,6 +1721,8 @@ input[type=checkbox] + label{
           {
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
+            $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+            $('#sitelock_Basic1Yr').addClass("uxicon-box");
           }
           if(noEmail)
           {
@@ -2035,6 +2032,12 @@ input[type=checkbox] + label{
             
             parentID.append(addonTemplate(securityData));
       
+            if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
+            {
+              document.getElementById('slElement').style.display = "none";
+              document.getElementById('addsiteLockOption').checked = false;
+            }
+      
             $('#sitelock_Basic1Yr').click(function(){
               if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
                 $('#sitelock_Basic1Yr').removeClass("uxicon-box");
@@ -2237,6 +2240,9 @@ input[type=checkbox] + label{
             ##else
             if(plan.indexOf('mwp') >= 0){
               plan = plan + "_withEmail";
+            }
+            if(plan.indexOf('wordpress') >= 0){
+              plan = plan.replace('wordpress_','wordpress_o365_');
             }
             ##endif
           }
