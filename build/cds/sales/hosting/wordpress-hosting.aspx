@@ -4322,7 +4322,6 @@ ul li.no-check {
             });
         
             while($this.outerHeight() > desiredHeight && numIterations++ < maxIterations) {
-        
               // loop thru each selector and reduce each by percentDecrease
               $.each(classesArr, function(idx,classSelector){
                 var $thisItem = $this.find(classSelector),
