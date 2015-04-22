@@ -499,6 +499,10 @@ Say bienvenue with <strong>.quebec</strong>
 You have the answers. Share them with <strong>.expert</strong>
 <phrase key="MainBannerCarouselSlideGuru" />
 Share what you know with <strong>.guru</strong>.
+<phrase key="MainBannerCarouselSlideSale" />
+Make the <strong>.sale</strong>
+<phrase key="MainBannerCarouselSlideTech" />
+Share your love of technology.
 <phrase key="MainBannerCarouselSlideSave" />
 SAVE 30% or more
 <phrase key="MainBannerCarouselSlideList" comment="only need to translate the word 'and' " />
