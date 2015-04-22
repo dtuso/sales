@@ -6,6 +6,11 @@ block vars
   
 atlantis:webstash(type="css")
   block tileStyles
-.tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
-  .tile-content-wrapper
-    block tileContent
+if ctaLink != ""
+  .tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
+    .tile-content-wrapper
+      block tileContent
+else
+  .tile(class=containerClass)
+    .tile-content-wrapper
+      block tileContent

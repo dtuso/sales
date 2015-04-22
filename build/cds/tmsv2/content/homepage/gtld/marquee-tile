@@ -41,14 +41,14 @@
   <div class="tile-content-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-xs-6 left">
           <div class="left-content-wrapper">
             <div class="header-wrapper">
               <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-xs-6 right">
           <div class="right-content-wrapper">
             <div class="gtld-links-wrapper">
               <ul>
