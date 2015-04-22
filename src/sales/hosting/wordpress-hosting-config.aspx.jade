@@ -319,17 +319,9 @@ prepend endOfPageScripts
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
-        else {
-          plan='mwp_basic_12month';
-        }
         if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
         {
           steps = _.without(steps, 'securityStep');
-        }
-        else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
-        {
-          document.getElementById('slElement').style.display = "none";
-          document.getElementById('addsiteLockOption').checked = false;
         }
         if(noEmail)
         {
@@ -376,6 +368,8 @@ prepend endOfPageScripts
         {
           document.getElementById('slElement').style.display = "none";
           document.getElementById('addsiteLockOption').checked = false;
+          $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+          $('#sitelock_Basic1Yr').addClass("uxicon-box");
         }
         if(noEmail)
         {
@@ -685,6 +679,12 @@ prepend endOfPageScripts
           
           parentID.append(addonTemplate(securityData));
 
+          if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
+          {
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
+          }
+
           $('#sitelock_Basic1Yr').click(function(){
             if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
               $('#sitelock_Basic1Yr').removeClass("uxicon-box");
@@ -887,6 +887,9 @@ prepend endOfPageScripts
           ##else
           if(plan.indexOf('mwp') >= 0){
             plan = plan + "_withEmail";
+          }
+          if(plan.indexOf('wordpress') >= 0){
+            plan = plan.replace('wordpress_','wordpress_o365');
           }
           ##endif
         }
