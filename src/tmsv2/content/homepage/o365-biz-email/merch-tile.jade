@@ -1,6 +1,6 @@
 extend ../../../../sales/homepage/_merch-tile_base.jade
 
-prepend vars
+append vars
   - ctaLink = "[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]";  
   - dataCi = 97911;
   - containerClass = "merch-tile-0365-biz-email";
@@ -8,6 +8,7 @@ prepend vars
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/india-pro-email-tertiary-tile-icon@2x.png";
   - promoText = "[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-text]@L]";
   - merchTilePFID = 31841;
+  - ctaText = "Save up to [@T[localization:<display type='percent' number='9' />]@T]";
   - ctaTextContainsPercent = true;
   - ctaFallBackText = "[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]";
   - logoText = false;
@@ -17,6 +18,16 @@ block tileStyles
     .merch-tile-0365-biz-email .tile-content-wrapper{padding:20px 15px;color:#333}
     .merch-tile-0365-biz-email .promo-logo{width:80%}
     .merch-tile-0365-biz-email .promo-text{padding-top:10px}
-    .merch-tile-0365-biz-email .promo-cta{position:absolute;bottom:5px}
+    .merch-tile-0365-biz-email .promo-cta{position:absolute;bottom:5px;display:none;}
     .merch-tile-0365-biz-email a{text-decoration:underline;color:#f2812e}
     .merch-tile-0365-biz-email .promo-logo-wrapper{margin-top: 10px;}
+
+block append tileContent
+  script.
+    var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+    $cta=$('.merch-tile-0365-biz-email .promo-cta');
+    if(savings<5)
+      $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
+    else
+      $cta.html($cta.html().replace("9", savings));
+    $cta.show();

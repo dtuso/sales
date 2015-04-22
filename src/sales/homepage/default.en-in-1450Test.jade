@@ -2,19 +2,19 @@ extends ./_home-page.jade
 block append pageStyles
 
 block bugBar
-  +tldBugs(["net","co","in","co-in"])
+  +tldBugs(["com","co","in","co-in","biz"])
 block hero
-  include ../../tmsv2/content/homepage/got-cricket/hero.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile1
   include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
 block marquee-tile2
-  include ../../tmsv2/content/homepage/tld-com-rajesh/marquee-tile.jade
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
 block merch-tile1
-  | PROFESSIONAL EMAIL
+  include ../../tmsv2/content/homepage/o365-biz-email/merch-tile.jade
 block merch-tile2
   include ./tiles/merch-tile-web-hosting.jade
 block merch-tile3
-  | SIELOCK
+  include ../../tmsv2/content/homepage/sitelock/merch-tile.jade
 block merch-tile4
   include ./tiles/gdpro-tile.jade
 
@@ -22,7 +22,7 @@ block domain-promo
   atlantis:webstash(type="css")
         style
           :less
-            #domain-promo { color: #fff; 
+            #domain-promo { color: #fff;
               .domain-promo-content{
                 @media only screen and (max-width:767px) {background-image:none !important;}
                 background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/nutcutlal-background.jpg) 50% 100% #333 no-repeat;background-size:cover;
@@ -43,7 +43,7 @@ block domain-promo
             .row
               .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
                 h3.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]
-                div From classic <h1>domain names</h1> like <strong>.com</strong> and <strong>.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
+                div From classic <h1>domain names</h1> like <strong>.com</strong>, <strong>.in</strong> and <strong>co.in</strong> to new domain names like <strong>.club</strong>, <strong>.guru</strong>, even <strong>.rocks</strong>, we can help you find the right name for your business.
                 a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]") [@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]
 
 block why-godaddy-feature-1
@@ -60,8 +60,8 @@ block why-godaddy-feature-2
     +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.png','TLD Boards')
     <![endif]-->
     +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/more-names-icon.svg','TLD Boards')
-    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
-    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
+    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
+    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
 block website-promo
   atlantis:webstash(type="css")
     style
@@ -87,3 +87,27 @@ block website-promo
           li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]
           li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]
         a.btn.btn-default-dark.website-promo-hosting-btn(data-url!="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]") LEARN MORE
+
+block prepend support-promo
+  style
+    :less
+      section#testimonial{background-color:#f3f3f3; color:#333; padding: 25px 0; font-size:12px;
+        img{width:10%;margin:0 auto 20px; min-width:90px}
+        .testimony{font-size:1.5em; margin: 0 19%;}
+        .customer{font-size:1em; text-transform:uppercase;text-align:center; margin-top:10px;
+          .referance{color:#999}
+        }
+        @media only screen and (min-width:768px){
+          font-size:16px;
+        }
+      }
+  section#testimonial
+    .container.walsheim-bold
+      <!--[if lt IE 9]>
+      +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.png','TLD Boards')
+      <![endif]-->
+      +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/testimonial-icon.svg','TLD Boards')
+      .testimony "Our style of business is simple and straightforward, and I appreciate the same quality in GoDaddy. I found the plans easy to understand, pricing reasonable and their reputation is among the best."
+      .customer
+        span.referance Ms. Jaya Prasad, 
+        span.company Ideasugar
