@@ -2242,7 +2242,7 @@ input[type=checkbox] + label{
               plan = plan + "_withEmail";
             }
             if(plan.indexOf('wordpress') >= 0){
-              plan = plan.replace('wordpress_','wordpress_o365');
+              plan = plan.replace('wordpress_','wordpress_o365_');
             }
             ##endif
           }
