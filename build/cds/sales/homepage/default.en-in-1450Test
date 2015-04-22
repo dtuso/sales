@@ -325,7 +325,7 @@
                   <div class="promo-text walsheim-black">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-text]@L]</div>
                   <div class="promo-cta">
                     ##if(productHasSavingsMoreThan(31841, 31841, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">Save up to [@T[localization:<display type='percent' number='9' />]@T]</a>
+                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">Save up to {0}</a>
                     ##else
                     <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]</a>
                     ##endif
@@ -336,7 +336,7 @@
                     if(savings<5)
                       $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
                     else
-                      $cta.html($cta.html().replace("9", savings));
+                      $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
                     $cta.show();
                   </script>
                 </div>

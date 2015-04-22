@@ -8,7 +8,7 @@ append vars
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/india-pro-email-tertiary-tile-icon@2x.png";
   - promoText = "[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-text]@L]";
   - merchTilePFID = 31841;
-  - ctaText = "Save up to [@T[localization:<display type='percent' number='9' />]@T]";
+  - ctaText = "Save up to {0}";
   - ctaTextContainsPercent = true;
   - ctaFallBackText = "[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]";
   - logoText = false;
@@ -29,5 +29,5 @@ block append tileContent
     if(savings<5)
       $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
     else
-      $cta.html($cta.html().replace("9", savings));
+      $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
     $cta.show();
