@@ -2321,6 +2321,10 @@ top: -6px;
               $(dropdownCaret).removeClass("caret-right").addClass("caret-down");
               event.stopPropagation();
             }
+            if ($('#question-accordion').find('.caret-right').length > 0)
+              $("#question-btn").show();
+            else
+              $("#question-btn").hide();
           });
           $(window).load(function() {
             $("#question-accordion .accordion-dropdown:first").click();
@@ -2331,6 +2335,7 @@ top: -6px;
                             .removeClass("caret-right")
                             .addClass("caret-down");
             $('#question-accordion').find('.accordion-dropdown').addClass("active");
+            $("#question-btn").hide();
            });
         </script>
       </atlantis:webstash>
