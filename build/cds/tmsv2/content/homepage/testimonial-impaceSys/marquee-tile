@@ -1,0 +1,48 @@
+
+<atlantis:webstash type="css">
+  <style>.testimonial.merch-tile {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  background: #333;
+  padding: 10px;
+  font-size: 13px;
+  cursor: default;
+}
+@media only screen and (min-width: 480px) {
+  .testimonial.merch-tile {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .testimonial.merch-tile {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .testimonial.merch-tile {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .testimonial.merch-tile {
+    font-size: 16px;
+  }
+}
+.testimonial.merch-tile .testimony {
+  color: #77C043;
+  font-size: 1.25em;
+  margin-bottom: 10px;
+}
+.testimonial.merch-tile .customer {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1em;
+}
+
+  </style>
+</atlantis:webstash>
+<div class="tile testimonial merch-tile ">
+  <div class="tile-content-wrapper">
+    <div class="testimony">"There's a reason why GoDaddy is the number one registrar in the world."</div>
+    <div class="customer">Mr. Atul Chaundhari, Impace Systems</div>
+  </div>
+</div>

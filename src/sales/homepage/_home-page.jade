@@ -183,6 +183,172 @@ block content
             .tile-wrapper
               block merch-tile4
   block sections
+    block domain-promo
+      atlantis:webstash(type="css")
+        style
+          :less
+            #domain-promo { color: #fff; 
+              .domain-promo-content{
+                @media only screen and (max-width:767px) {background-image:none !important;}
+                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333 no-repeat;background-size:cover;
+              }
+              .domain-promo-text{padding:7% 2% 1%;}
+              .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
+              h1{display:inline;color:#fff;text-transform:none;font-size:1.6rem;font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;}
+              h3{font-size:3.4rem;text-transform:uppercase;}
+              .btn{margin-top:20px}
+              .domain-promo-text div{max-width:360px;}
+              .domain-promo-text .customer-website{font-size:12px;margin-top:40px;}
+            }
+
+      section#domain-promo.bg-green-official
+        h2.text-center [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
+        div.domain-promo-content
+          .container
+            .row
+              .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
+                h3.walsheim-black [@L[cds.sales/homepage/sections/_domain-promo:body-header-text]@L]
+                div [@L[cds.sales/homepage/sections/_domain-promo:body-text]@L]
+                a.btn.btn-default-light(data-url!="[@T[link:<relative path='/domains/domain-name-search.aspx'><param name='ci' value='95782' /></relative>]@T]") [@L[cds.sales/homepage/sections/_domain-promo:cta-text]@L]
+                p.customer-website.hidden-xs [@L[cds.sales/homepage/sections/_domain-promo:customer-site-text]@L]
+
+    block why-godaddy
+      atlantis:webstash(type="css")
+        style
+          :less
+            #why-godaddy{background-color:#ccc;}
+
+      section#why-godaddy
+        .container
+          h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:header-text]@L]
+          .row
+            .col-sm-4
+              .feature
+                block why-godaddy-feature-1
+                  .why-gd-registrar
+                    <!--[if lt IE 9]>
+                    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
+                    <![endif]-->
+                    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
+                    h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
+                    p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
+            .col-sm-4
+              .feature
+                block why-godaddy-feature-2
+                  .why-gd-prices
+                  <!--[if lt IE 9]>
+                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+                  <![endif]-->
+                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')
+                  h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
+                  p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
+            .col-sm-4
+              .feature
+                block why-godaddy-feature-3
+                  .why-gd-support
+                  <!--[if lt IE 9]>
+                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+                  <![endif]-->
+                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+                  h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
+                  p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
+
+    block website-promo
+      atlantis:webstash(type="css")
+        style
+          :less
+            #website-promo .shape-text{color:#333}
+            #website-promo ul{margin-left:-20px;}
+            #website-promo .bg-gray-darkest .two-up-text-wrap {
+            @media (min-width: 1000px){margin-left:8.333333333333332%;}
+            }
+            .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
+            .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
+      section#website-promo
+        +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
+          +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
+            ul
+              li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]
+              li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line2]@L]
+              li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line3]@L]
+            a.btn.btn-default-light.website-promo-wsb-btn(data-url!="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95790' /></relative>]@T]") LEARN MORE
+          +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:hosting-title-text]@L]", backgroundColor: "gb-green-official-light", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:hosting-shape-text]@L]", shapeColor: "gold"})
+            ul
+              li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line1]@L]
+              li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line2]@L]
+              li [@L[cds.sales/homepage/sections/_website-promo:hosting-feature-line3]@L]
+            a.btn.btn-default-dark.website-promo-hosting-btn(data-url!="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95791' /></relative>]@T]") LEARN MORE    
+
+    block o365-promo
+      | 
+      | ##if(productIsOffered(99))
+      atlantis:webstash(type="css")
+        style
+          :less
+            #o365-promo{padding-bottom:105px}
+            #o365-promo h2{font-size:4.5rem;}
+            #o365-promo h3{font-size:4rem;text-transform:uppercase;}
+            #o365-promo .o365-promo-text p{max-width:420px;}
+            #o365-promo .promo-flag{color:#000; font-family:Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;font-size:28px;font-size:2.8rem;padding:10px 20px;text-transform:uppercase;line-height:1;background-size:cover;overflow:visible;position:absolute;margin-top:100px;right:25%;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;}
+            .Explorer8 #o365-promo .promo-flag{background-color:#fedc45}
+            .o365-promo-text ul{list-style-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAABaElEQVQ4y53UsWoVQRSA4e9eJCCIZXCLVDZ2+giWlrGToIXiWk1hY2OVGAVTpchWTmWTwkZCVFRs7AxYpEtESRdGfAEhoKbIBG7W3bu798DC7J6Z//x7mJmRGaOsiodYwQ98z8+30Yyw8zjApVrq9XhWwQYYrA42LKtiLv/mQi21FUNanMXwXgOMk34aZDjF7kMM6QYMNWyzWz4d9DbsY3fGsKyKq2VVXJjCvNNi92TyZVRWxTye4y5+YRUvYkhHE8XOYR+Xa7DPMaTrkx/G2M4wmMcG9sqqWCqr4rQltxtgZ3o3aXgFO7jYsGAXj3ORTjsYx5D2sYS/DcBreNdi97Sp0WOIIb3NJn1jJ4b0qRWYoWvY7AlcbkvUN/Z9fO1h974XMIb0G4v4OQX4bFq1/45eDOkQN3HUMH8XbwYBM/QLHjSkVmJI/wYDM/Ql1mt2Wzqi67Z5hI95vNZl1wmMIf3BrWz2qgsGx1qqaedhoYAzAAAAAElFTkSuQmCC);margin:0 0 20px -12px}
+            .o365-promo-image{padding-top:115px;}
+
+      section#o365-promo
+        .container
+          h2.text-center.walsheim-black [@L[cds.sales/homepage/sections/_o365-promo:header-text]@L]
+          .row
+            .col-sm-6.o365-promo-text
+              h3.walsheim-black [@L[cds.sales/homepage/sections/_o365-promo:sub-header-text]@L]
+              p [@L[cds.sales/homepage/sections/_o365-promo:body-text]@L]
+              ul
+                li [@L[cds.sales/homepage/sections/_o365-promo:plan-features-line1]@L]
+                li [@L[cds.sales/homepage/sections/_o365-promo:plan-features-line2]@L]
+                li [@L[cds.sales/homepage/sections/_o365-promo:plan-features-line3]@L]
+              a.btn.btn-default-dark(data-url!="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95786' /></relative>]@T]") [@L[cds.sales/homepage/sections/_o365-promo:cta-text]@L]
+            .col-sm-6
+              .promo-flag [@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]
+              <!--[if lt IE 9]>
+              +lazyImg('o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','Office 365 image')
+              <![endif]-->
+              +lazyImg('svgfallback o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','Office 365 image')
+      | 
+      | ##endif
+
+    block support-promo
+      atlantis:webstash(type="css")
+        style
+          :less
+            #support-promo{background-color:#333;padding-bottom:50px;}
+            #support-promo h2{margin:35px 0 50px}
+            #support-promo h3{margin-top:0;text-transform:uppercase;font-size:4rem;}
+            #support-promo p{max-width:390px;}
+            #support-promo .support-promo-text .container{padding:0}
+            .support-promo-img{width:100%;
+              @media only screen and (min-width:768px){width:80%;margin-left:10%;}
+              @media only screen and (min-width:1200px){width:60%;margin-left:20%;}
+            }
+            .support-promo-number{font-size:2.0rem;margin-top:2%}
+
+      section#support-promo
+        .container
+          h2.text-center.walsheim-black.text-white [@L[cds.sales/homepage/sections/_support-promo:header-text]@L]
+          .row
+            .col-xs-6.text-center
+              <!--[if lt IE 9]>
+              +lazyImg('support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
+              <![endif]-->
+              +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
+            .col-xs-6
+              .support-promo-text.text-white
+                h3.walsheim-black [@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]
+                p [@L[cds.sales/homepage/sections/_support-promo:body-text]@L]
+                .container
+                  .row
+                    .col-md-4.col-xs-12
+                      a.btn.btn-default-light(data-url!="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]") [@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]
+                    .col-md-8.col-xs-12
+                      .support-promo-number.walsheim-medium [@T[supportphone:<technical />]@T]
 
   block limitations
     section#limitations-social
