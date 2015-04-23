@@ -1,0 +1,136 @@
+---
+location: localization/sales/gd/tlds/info/en
+name: FOS-38815
+description: Update all pages using new ICANN token Round 2
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="Meta0Description" />
+Get your .INFO Web address today! Register your .INFO domain and create a unique identity on the Internet for your Web site.
+<phrase key="Meta0Keywords" />
+dot info, .info, .info domain, .info domain name, domain registration, registrar, .info TLD, renewal, transfer domain, cheap, inexpensive, domain, register, DNS, URL, web address, internet address, web site name, bulk domain registration, buy domain, private domain registration, bulk price, [@T[companyname:name]@T].com, [@T[companyname:name]@T], [@T[companyname:name]@T], godaddy
+<phrase key="Meta0Title" />
+.INFO Domain Names | Register Your Domain - Go Daddy
+<phrase key="SearchHeader1HeaderText" />
+Share your info with the world
+<phrase key="SearchHeader1SocialData1Description" />
+.INFO Domains from [@T[companyname:name]@T] There's no better way to get your business or group in front of a global audience than with your own .INFO domain. Whether you'd like to publish information about your product line, cause or event, .INFO is a great way to go. .INFO domains can be registered by anyone.
+<phrase key="SearchHeader1SocialData4Title" />
+[@T[companyname:dotcom]@T] .INFO Domain
+<phrase key="SearchHeader1SocialData5TweetText" />
+Got info you\'d like to share? Register a .INFO domain from @GoDaddy and share information about your business or cause.
+<phrase key="SearchHeader1SubheaderText" />
+Perfect for businesses or individuals.
+<phrase key="SearchHeader1Title" />
+.INFO Domain Names | Register or Transfer Your Domain
+<phrase key="Detail2Details0Text" />
+<p>There's no better way to get your business or group in front of a global audience than with your own .INFO domain. Whether you'd like to publish information about your product line, cause or event, .INFO is a great way to go. These domains can be registered by anyone.</p>
+<phrase key="Detail2Details0Title" />
+Spread the word about your product, service or cause!
+<phrase key="Detail2Details1Text" />
+<ul><li>You'd like to share information, research or product specifications.</li><li>The .COM you want has already been registered by someone else, but the .INFO version of that domain has not.</li><li>Your business has already registered a .COM and would like to protect its brand from <span data-qh="150" class="pointer qh-dash">cyber-squatters</span> by registering the corresponding .INFO.</li><li>.INFO is the ideal way to connect with international customers.</li><li>You'd like to share wedding plans, details on the annual family reunion or how-to tips online.</li></ul>
+<phrase key="Detail2Details1Title" />
+Choose .INFO if:
+<phrase key="List0Items0Text" />
+<span data-qh="210" class="pointer qh-dash">[@T[companyname:name]@T] Photo Album<sup>&dagger;</sup></span>
+<phrase key="List0Items1Text" />
+<span data-qh="211" class="pointer qh-dash">Hosting with Website Builder<sup>&dagger;</sup></span>
+<phrase key="List0Items2Text" />
+<span data-qh="200" class="pointer qh-dash">Personalized email</span>
+<phrase key="List0Items3Text" />
+<span data-qh="201" class="pointer qh-dash">&quot;For Sale&quot; page</span>
+<phrase key="List0Items4Text" />
+<span data-qh="202" class="pointer qh-dash">Parked Page</span>
+<phrase key="List0Items5Text" />
+<span data-qh="203" class="pointer qh-dash">Domain forwarding & masking</span>
+<phrase key="List0Items6Text" />
+<span data-qh="204" class="pointer qh-dash">100-pack email forwarding</span>
+<phrase key="List0Items7Text" />
+<span data-qh="205" class="pointer qh-dash">Getting started guide</span>
+<phrase key="List0Items8Text" />
+<span data-qh="206" class="pointer qh-dash">Total DNS control</span>
+<phrase key="List0Items9Text" />
+<span data-qh="207" class="pointer qh-dash">Change of registration</span>
+<phrase key="List0Items10Text" />
+<span data-qh="208" class="pointer qh-dash">Status alerts</span>
+<phrase key="List0Items11Text" />
+<span data-qh="209" class="pointer qh-dash">Domain locking</span>
+<phrase key="List0TabText" />
+Free Extras
+<phrase key="List0Title" />
+Free Extras
+<phrase key="Support1CommunityGroup" />
+product group of your choice
+<phrase key="Support1TabText" />
+Support
+<phrase key="Support1Title" />
+Support
+<phrase key="List2Items0Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/327" secure="false"/>]@T]">How do domain names work?</a>
+<phrase key="List2Items1Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/45" secure="false"/>]@T]">What is a nameserver?</a>
+<phrase key="List2Items2Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/663" secure="false"/>]@T]">Can a domain registered elsewhere use your system to register new nameservers?</a>
+<phrase key="List2Items3Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/330" secure="false"/>]@T]">Who is listed as a domain's registrant?</a>
+<phrase key="List2Items4Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/605" secure="false"/>]@T]">What is the Uniform Domain Name Dispute Resolution Policy?</a>
+<phrase key="List2Items5Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/331" secure="false"/>]@T]">What if I misspelled my domain when I registered it?</a>
+<phrase key="List2Items6Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/572" secure="false"/>]@T]">When can I register an expired domain?</a>
+<phrase key="List2Items7Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/1497" secure="false"/>]@T]">What is a domain name?</a>
+<phrase key="List2Items8Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/334" secure="false"/>]@T]">What is a Top-Level Domain (TLD)?</a>
+<phrase key="List2Items9Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/335" secure="false"/>]@T]">What is a Second-Level Domain (SLD)?</a>
+<phrase key="List2Items10Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/336" secure="false"/>]@T]">Can I register domains if I don't have a hosting provider?</a>
+<phrase key="List2Items11Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/606" secure="false"/>]@T]">What do I do if I have a trademark dispute?</a>
+<phrase key="List2Items12Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/664" secure="false"/>]@T]">Setting nameservers for your domains</a>
+<phrase key="List2Items13Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/338" secure="false"/>]@T]">What does it mean to park a domain name?</a>
+<phrase key="List2Items14Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/342" secure="false"/>]@T]">Which domain extensions or Top-Level Domains can I register?</a>
+<phrase key="List2Items15Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/341" secure="false"/>]@T]">Registering domains</a>
+<phrase key="List2Items16Text" />
+<a class="c70" target="_faq" href="[@T[link:<external linktype="COMMUNITYURL" path="help/article/964" secure="false"/>]@T]">What is a WhoIs listing?</a>
+<phrase key="List2TabText" />
+FAQs
+<phrase key="List2Title" />
+FAQs
+<phrase key="QuickHelp4QuickHelpItems0Text" />
+A cyber-squatter is a person or organization that registers a domain name with no intention of using it for a reputable website. Cyber-squatters often buy up promising domain names in the hopes of selling them for a profit.
+<phrase key="QuickHelp4QuickHelpItems1Text" />
+Share photos of your new baby or latest adventure with Online Photo Album. Offers login-free sharing at your personal domain name (password protection is optional). <strong>Free [@T[companyname:name]@T] Photo Album with domain name is Ad-supported.</strong>
+<phrase key="QuickHelp4QuickHelpItems2Text" />
+Design a one-page website for you, your family or your business in minutes! Just choose your theme and add your own text, background and contact form &#8212; it's that easy! Hosting for your InstantPage&reg; site is also included.
+<phrase key="QuickHelp4QuickHelpItems3Text" />
+Forget email addresses made up of strings of numbers! Your [@T[companyname:name]@T] email address is easy to remember because it has your domain name right in it.
+<phrase key="QuickHelp4QuickHelpItems4Text" />
+Looking to sell your domain name? Let the world know with this pre-built Web page &#8212; a few seconds is all it takes. <i>Membership to the Sponsored Community required.</i>
+<phrase key="QuickHelp4QuickHelpItems5Text" />
+[@T[companyname:name]@T] automatically &quot;parks&quot; your unused domain name(s), presenting visitors with a professional Web page. <i>Membership to the Sponsored Community required.</i>
+<phrase key="QuickHelp4QuickHelpItems6Text" />
+Direct any domain name you own to your website &#8212; anyone who types that domain name into their browser is taken directly to your website.
+<phrase key="QuickHelp4QuickHelpItems7Text" />
+Automatically redirect emails to an existing account, keeping your main email address private.
+<phrase key="QuickHelp4QuickHelpItems8Text" />
+Step-by-step instructions on getting your business or personal website up and running in a few hours. Includes tons of examples.
+<phrase key="QuickHelp4QuickHelpItems9Text" />
+Manage your domain nameserver (DNS) records and set your email, FTP, sub-domains and website location &#8212; all from one control panel.
+<phrase key="QuickHelp4QuickHelpItems10Text" />
+Assign your domain name to someone else or change the contacts for your domain online anytime.
+<phrase key="QuickHelp4QuickHelpItems11Text" />
+Monitor the status of your domain and get instant alerts if there's been a change.
+<phrase key="QuickHelp4QuickHelpItems12Text" />
+Domain locking prevents accidental or intentional transfers of domain ownership and stops anyone from redirecting your nameservers.
+<phrase key="QuickHelp4QuickHelpItems13Text" />
+Buy a new .COM, get one new .INFO free for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain per year.
+<phrase key="Disclaimer5CurrentModal2Text" />
+Click here for product disclaimers and legal policies.
+<phrase key="Disclaimer5Disclaimers0" />
+Third-party logos and marks are registered trademarks of their respective owners. All rights reserved.
