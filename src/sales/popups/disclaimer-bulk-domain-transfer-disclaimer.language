@@ -1,0 +1,6 @@
+---
+location: localization/sales/gd/popups/disclaimer-bulk-domain-transfer-disclaimer/en
+name: FOS-38815
+description: Update all pages using new ICANN token Round 2
+---
+{% include '../../modules/doc-block.html' %}
