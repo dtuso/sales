@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 55037814f778fc12bce6e7c8
-name: GCEMO-712
-comments: merch updates 3/13/2015
+id: 55382feaf778fc1458efd5fb
+name: MXCMO-864
+comments: merch updates 4/29/2015
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
@@ -499,6 +499,10 @@ Say bienvenue with <strong>.quebec</strong>
 You have the answers. Share them with <strong>.expert</strong>
 <phrase key="MainBannerCarouselSlideGuru" />
 Share what you know with <strong>.guru</strong>.
+<phrase key="MainBannerCarouselSlideSale" />
+Make the <strong>.sale</strong>
+<phrase key="MainBannerCarouselSlideTech" />
+Share your love of technology.
 <phrase key="MainBannerCarouselSlideSave" />
 SAVE 30% or more
 <phrase key="MainBannerCarouselSlideList" comment="only need to translate the word 'and' " />

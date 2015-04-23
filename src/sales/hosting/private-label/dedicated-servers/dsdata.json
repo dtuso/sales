@@ -1,63 +1,67 @@
+---
+location: packages/dslp/config
+id: false
+---
 {"dsprodata": {
     "windows" : {
         "t1" : {
             "productprice" : "[@T[productprice:<current productid=\"458239\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_windows_t1_12month",
             "osaddon": "pro_ds_os_windows",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483564\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
                 "ram": "2 GB",
-                "storage": "40 GB",
-                "bandwidth": "1 TB"
+                "storage": "512 GB",
+                "bandwidth": "5 TB"
             }
         },
         "t2" : {
             "productprice" : "[@T[productprice:<current productid=\"458241\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_windows_t2_12month",
             "osaddon": "pro_ds_os_windows",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483564\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "2 GB",
-                "storage": "60 GB",
-                "bandwidth": "2 TB"
+                "ram": "4 GB",
+                "storage": "1 TB",
+                "bandwidth": "10 TB"
             }
         },
         "t3" : {
             "productprice" : "[@T[productprice:<current productid=\"458264\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_windows_t3_12month",
             "osaddon": "pro_ds_os_windows",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483564\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "3 GB",
-                "storage": "90 GB",
-                "bandwidth": "3 TB"
+                "ram": "8 GB",
+                "storage": "1.5 TB",
+                "bandwidth": "10 TB"
             }
         },
         "t4" : {
             "productprice" : "[@T[productprice:<current productid=\"458280\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_windows_t4_12month",
             "osaddon": "pro_ds_os_windows",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483564\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "4 GB",
-                "storage": "120 GB",
-                "bandwidth": "4 TB"
+                "ram": "16 GB",
+                "storage": "2 TB",
+                "bandwidth": "15 TB"
             }
         },
         "t5" : {
             "productprice" : "[@T[productprice:<current productid=\"458296\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_windows_t5_12month",
             "osaddon": "pro_ds_os_windows",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483564\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "8 GB",
-                "storage": "240 GB",
-                "bandwidth": "8 TB"
+                "ram": "32 GB",
+                "storage": "2 TB",
+                "bandwidth": "20 TB"
             }
         }
     },
@@ -67,60 +71,60 @@
             "productprice" : "[@T[productprice:<current productid=\"458239\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_linux_t1_12month",
             "osaddon": "pro_ds_os_linux",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483566\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
                 "ram": "2 GB",
-                "storage": "40 GB",
-                "bandwidth": "1 TB"
+                "storage": "512 GB",
+                "bandwidth": "5 TB"
             }
         },
         "t2" : {
             "productprice" : "[@T[productprice:<current productid=\"458241\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_linux_t2_12month",
             "osaddon": "pro_ds_os_linux",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483566\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "2 GB",
-                "storage": "60 GB",
-                "bandwidth": "2 TB"
+                "ram": "4 GB",
+                "storage": "1 TB",
+                "bandwidth": "10 TB"
             }
         },
         "t3" : {
             "productprice" : "[@T[productprice:<current productid=\"458264\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_linux_t3_12month",
             "osaddon": "pro_ds_os_linux",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483566\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "3 GB",
-                "storage": "90 GB",
-                "bandwidth": "3 TB"
+                "ram": "8 GB",
+                "storage": "1.5 TB",
+                "bandwidth": "10 TB"
             }
         },
         "t4" : {
             "productprice" : "[@T[productprice:<current productid=\"458280\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_linux_t4_12month",
             "osaddon": "pro_ds_os_linux",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483566\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "4 GB",
-                "storage": "120 GB",
-                "bandwidth": "4 TB"
+                "ram": "16 GB",
+                "storage": "2 TB",
+                "bandwidth": "15 TB"
             }
         },
         "t5" : {
             "productprice" : "[@T[productprice:<current productid=\"458296\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "id": "pro_ds_linux_t5_12month",
             "osaddon": "pro_ds_os_linux",
-            "managedaddonprice": "[@T[productprice:<current productid=\"483560\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
+            "managedaddonprice": "[@T[productprice:<current productid=\"575886\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "osAddonPrice": "[@T[productprice:<current productid=\"483566\" dropdecimal=\"false\" period=\"monthly\"  htmlsymbol=\"false\" negative=\"parentheses\" />]@T]",
             "plandetail":{
-                "ram": "8 GB",
-                "storage": "240 GB",
-                "bandwidth": "8 TB"
+                "ram": "32 GB",
+                "storage": "2 TB",
+                "bandwidth": "20 TB"
             }
         }
     }
