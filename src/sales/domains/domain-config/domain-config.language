@@ -1,8 +1,8 @@
 ---
 location: localization/sales/domains/domain-configuration/en
 id: 
-name: GCE-30455
-comments: Intergrate with TMS and rewrite with AngularJS
+name: GCE-38816
+comments: Free O365 with WSB on Config Page
 ---
 ##if(false)
 {% include 'modules/doc-block.html' %}
@@ -38,13 +38,13 @@ Business Protection
 <phrase key="business.protection" comment=""/>
 Business Protection
 <phrase key="product.name.dpp_business_bundle" comment=""/>
-Privacy &amp; Business Protection
+Privacy & Business Protection
 <phrase key="privacy.and.business.protection" comment=""/>
-Privacy &amp; Business Protection
+Privacy & Business Protection
 <phrase key="product.name.dpp_business_only_bundle" comment=""/>
-Business Registration &amp; Certified Domain
+Business Registration & Certified Domain
 <phrase key="business.registration.certified.domain" comment=""/>
-Business Registration &amp; Certified Domain
+Business Registration & Certified Domain
 <phrase key="hide.your.personal.information" comment=""/>
 Hide your personal information from WHOIS searches and protect your identity.
 <phrase key="tooltip.protect.yourself.with" comment=""/>
@@ -78,7 +78,7 @@ Get more hits, visits, and sales on your website and inspire trust.
 <phrase key="certified.domain" comment=""/>
 Certified Domain Seal
 <phrase key="proves.to.visitors.that.your" comment=""/>
-proves to visitors that your site&rsquo; ownership is valid.
+proves to visitors that your site ownership is valid.
 <phrase key="creates.an.online.business.card" comment=""/>
 creates an online business card in the WHOIS directory.
 <phrase key="term.headline" comment=""/>
@@ -130,13 +130,13 @@ Ultimate
 <phrase key="business.personal.themes" comment=""/>
 300 Business/Personal Themes
 <phrase key="business.plus.email.adressess" comment=""/>
-10 Business Email Addresses<sup class="supsymbol">2</sup>
+10 Business Email Addresses<sup>2</sup>
 <phrase key="business.email.adressess" comment=""/>
-5 Business Email Addresses<sup class="supsymbol">2</sup>
+5 Business Email Addresses<sup>2</sup>
 <phrase key="mobile.site" comment=""/>
 Mobile Site
 <phrase key="ssl.certificates" comment=""/>
-FREE SSL Certificate<sup class="supsymbol">&dagger;&dagger;</sup>
+FREE SSL Certificate<sup>&dagger;&dagger;</sup>
 <phrase key="webhosting.econ.li.1" comment=""/>
 1 Website
 <phrase key="webhosting.econ.li.2" comment=""/>
@@ -144,33 +144,33 @@ FREE SSL Certificate<sup class="supsymbol">&dagger;&dagger;</sup>
 <phrase key="webhosting.econ.li.3" comment=""/>
 Unlimited Bandwidth
 <phrase key="webhosting.econ.li.4" comment=""/>
-100 Email Addresses<sup class="supsymbol">^^</sup>
+100 Email Addresses<sup>^^</sup>
 <phrase key="webhosting.econ.li.5" comment=""/>
 10 MySQL Databases (1 GB ea.)
 <phrase key="webhosting.del.li.1" comment=""/>
 Unlimited Websites
 <phrase key="webhosting.del.li.2" comment=""/>
-Unlimited Disk Space<sup class="supsymbol">&dagger;</sup>
+Unlimited Disk Space<sup>&dagger;</sup>
 <phrase key="webhosting.del.li.3" comment=""/>
 Unlimited Bandwidth
 <phrase key="webhosting.del.li.4" comment=""/>
-500 Email Addresses<sup class="supsymbol">^^</sup>
+500 Email Addresses<sup>^^</sup>
 <phrase key="webhosting.del.li.5" comment=""/>
 25 MySQL Databases (1 GB ea.)
 <phrase key="webhosting.ult.li.1" comment=""/>
 Unlimited Websites
 <phrase key="webhosting.ult.li.2" comment=""/>
-Unlimited Disk Space<sup class="supsymbol">&dagger;</sup>
+Unlimited Disk Space<sup>&dagger;</sup>
 <phrase key="webhosting.ult.li.3" comment=""/>
 Unlimited Bandwidth
 <phrase key="webhosting.ult.li.4" comment=""/>
 Unlimited MySQL Databases (1 GB ea.)
 <phrase key="webhosting.ult.li.5" comment=""/>
-1000 Email Addresses<sup class="supsymbol">^^</sup>
+1000 Email Addresses<sup>^^</sup>
 <phrase key="webhosting.ult.li.6" comment=""/>
 FREE Premium DNS
 <phrase key="webhosting.ult.li.7" comment=""/>
-FREE SSL Certificate<sup class="supsymbol">&dagger;&dagger;</sup>
+FREE SSL Certificate<sup>&dagger;&dagger;</sup>
 <phrase key="host.my.website" comment=""/>
 Host my Website
 <phrase key="godaddy.hosting.provides.an.easy" comment=""/>
@@ -182,7 +182,7 @@ or
 <phrase key="add.email.to.your.domain" comment=""/>
 Add email to your domain
 <phrase key="get.reliable.mobile.ready.email" comment=""/>
-Get reliable, mobile-ready email with addresses that highlight your business or website. It&rsquo;s you@yourdomainname.com.
+Get reliable, mobile-ready email with addresses that highlight your business or website. It's you@yourdomainname.com.
 <phrase key="business.email" comment=""/>
 Business Email
 <phrase key="five.addresses" comment=""/>
@@ -190,9 +190,9 @@ Business Email
 <phrase key="two.gb.storage" comment=""/>
 2GB Storage
 <phrase key="group.calendar" comment=""/>
-Group Calendar<sup class="supsymbol">&dagger;&dagger;&dagger;</sup>
+Group Calendar<sup>&dagger;&dagger;&dagger;</sup>
 <phrase key="cloud.storage" comment=""/>
-Cloud Storage (1GB)<sup class="supsymbol">&dagger;&dagger;&dagger;</sup>
+Cloud Storage (1GB)<sup>&dagger;&dagger;&dagger;</sup>
 <phrase key="unlimited.business.email" comment=""/>
 Unlimited Business Email
 <phrase key="ten.addresses" comment=""/>
@@ -227,20 +227,26 @@ Options
 Business Registration
 <phrase key="step.title.email" comment=""/>
 Email
+<phrase key="price.domain"/>
+/domain
+<phrase key="price.mo"/>
+/mo
 <phrase key="price.per.domain" comment="{0} will be a price"/>
-{0}<span class="pricing-per weight-regular">/domain</span>
+{0}<span>/domain</span>
 <phrase key="price.per.month" comment="This will become price per month with the {0} being the price"/>
-{0}<span class="pricing-per">/mo</span>
+{0}<span>/mo</span>
 <phrase key="as.low.as.per.month" comment="{0} will be a price"/>
 As low as {0}/mo
 <phrase key="as.low.as.per.month.free.domain" comment="{0} will be a price"/>
+As low as {0}/mo, including a free domain**.
+<phrase key="as.low.as.per.month.free.domain.O365" comment="{0} will be a price"/>
 As low as {0}/mo, including a free domain**.
 <phrase key="summary.year.term" comment="{0} will be a number"/>
 {0} year term
 <phrase key="summary.year.term.fee" comment="{0} will be a number"/>
 {0} year term + fees
 <phrase key="limitations.symbols" />
-*, <span class="disclaimer-free-domain">**,</span> 1, 2, 3, ^^, &dagger;, &dagger;&dagger;, &dagger;&dagger;&dagger; 
+*, <span>**,</span> 1, 2, 3, ^^, &dagger;, &dagger;&dagger;, &dagger;&dagger;&dagger; 
 <phrase key="limitations.link" />
 Click here for product limitations.
 <phrase key="limitations.modal.header" />
@@ -266,7 +272,7 @@ Email Essentials
 <phrase key="step.o365.plan1.li2" comment="" />
 2GB secure file storage
 <phrase key="step.o365.plan1.li3" comment="" />
-Email, calendar &amp; contacts in sync across all devices
+Email, calendar & contacts in sync across all devices
 <phrase key="step.o365.plan2.title" comment="" />
 Business Essentials
 <phrase key="step.o365.plan2.list.title" comment="" />
@@ -276,7 +282,7 @@ All features from Email Essentials And…
 <phrase key="step.o365.plan2.li2" comment="" />
 1TB secure file storage
 <phrase key="step.o365.plan2.li3" comment="" />
-Simple file sharing &amp; online collaboration
+Simple file sharing & online collaboration
 <phrase key="step.o365.plan2.li4" comment="" />
 Unlimited HD video conferencing
 <phrase key="step.o365.plan2.li5" comment="" />
@@ -286,7 +292,7 @@ Productivity Plus
 <phrase key="step.o365.plan3.list.title" comment="" />
 All features from Business Essentials PLUS…
 <phrase key="step.o365.plan3.li1" comment="" />
-Full Microsoft Office on 5 PCs or Macs and 5 iPads or Windows tablets per user<sup class="supsymbol">3</sup>
+Full Microsoft Office on 5 PCs or Macs and 5 iPads or Windows tablets per user<sup>3</sup>
 <phrase key="step.o365.plan3.li2" comment="" />
 Office Mobile Apps for smartphone access and editing
 <phrase key="step.wsbAndHosing.wsb.desc" comment="" />
@@ -294,9 +300,9 @@ Do-it-yourself, easy-to-use site designer. No technical skills needed.
 <phrase key="step.wsbAndHosing.hosting.desc" comment="" />
 Web hosting with cPanel to build and manage websites. Some technical skills needed.
 <phrase key="step.wsbAndHosing.wsb.perfect" comment="" />
-<span class="perfect">Perfect for:</span> Basic, personal and small business websites
+<span>Perfect for:</span> Basic, personal and small business websites
 <phrase key="step.wsbAndHosing.hosting.perfect" comment="" />
-<span class="perfect">Perfect for:</span> Web designers, web developers and businesses that use a designer
+<span>Perfect for:</span> Web designers, web developers and businesses that use a designer
 <phrase key="as.low.as.per.month.free.domain.splitB" comment="{0} will be a price"/>
 As low as {0}/mo + a free domain**
 <phrase key="step.o365.plan2.title.OnlineEssentials" comment="" />
@@ -305,43 +311,25 @@ Online Essentials
 All features from Online Essentials PLUS…
 <phrase key="step.o365.plan3.title.BusinessPremium" comment="" />
 Business Premium
-<phrase key="plan.price.per.domain" comment="{{ListPrice}} and {{CurrentPrice}} will be a price"/>
-<span class="list-price weight-light">{{ListPrice}}</span> {{CurrentPrice}}<span class="pricing-per weight-regular">/domain</span>
-<phrase key="plan.price.per.mo" comment="{{CurrentPrice}} will be a price"/>
-{{CurrentPrice}}<span class="pricing-per weight-regular">/mo</span>
-<phrase key="step.privacy" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Domain Privacy</span>
-<phrase key="step.email" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Email</span>
-<phrase key="step.get.found" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Get Found</span>
-<phrase key="step.ssl.certificates" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>SSL Certificates</span>
-<phrase key="step.online.bookkeeping" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Online Bookkeeping</span>
-<phrase key="step.get.paid" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Get Paid</span>
-<phrase key="step.websites.and.hosting" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Websites &amp; Hosting</span>
-<phrase key="step.hosting" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Hosting</span>
-<phrase key="step.websites" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Websites</span>
-<phrase key="step.calendar" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Calendar</span>
-<phrase key="step.online.storage" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Online Storage</span>
-<phrase key="step.certified.domain" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Certified Domain</span>
-<phrase key="step.business.registration" comment="{{card.number}} will be a updated to the position number the step is displayed as"/>
-Step {{card.number}}<span>Business Registration</span>
-<phrase key="lowest.price.domain" comment="{{lowestPrice}} will be replaced with a price"/>
-As low as {{lowestPrice}}/domain
-<phrase key="lowest.price.month" comment="{{lowestPrice}} will be replaced with a price"/>
-As low as {{lowestPrice}}/mo
-<phrase key="ItemAddedMsgTextNew" />
-Select options for 1 domain.
-<phrase key="ItemsAddedMsgTextNew" />
-Select options for {{numDomains}} domains.
-<phrase key="close" />
-Close
+<phrase key="privacy.business.protection.options1" comment=""/>
+Privacy hides your personal information from public view in the WHOIS directory.
+<phrase key="privacy.business.protection.options2" comment=""/>
+Protected Registration prevents accidental domain expiration or malicious transfer.
+<phrase key="privacy.business.protection.options3" comment=""/>
+Certified Domain Seal proves to visitors that your site's ownership is valid.
+<phrase key="privacy.business.protection.options4" comment=""/>
+Business Registration creates an online business card in the WHOIS directory.
+<phrase key="privacy.business.protection.locu.options1" comment=""/>
+Privacy hides your personal information from public view in the WHOIS directory.
+<phrase key="privacy.business.protection.locu.options2" comment=""/>
+Protected Registration prevents accidental domain expiration or malicious transfer.
+<phrase key="privacy.business.protection.locu.options3" comment=""/>
+Certified Domain Seal proves to visitors that your site's ownership is valid.
+<phrase key="privacy.business.protection.locu.options4" comment=""/>
+Get Found creates an online business card in the WHOIS directory.
+<phrase key="privacy.business.protection.biz.options4" comment=""/>
+Business Registration creates an online business card in the WHOIS directory.
+<phrase key="as.low.as" />
+As low as 
+<phrase key="as.low.as.free.domain" />
++ a free domain**
