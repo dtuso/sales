@@ -1,0 +1,28 @@
+extends ../../../../sales/homepage/_tile.jade
+
+prepend vars
+  - ctaLink = "";
+  - containerClass = "testimonial merch-tile ";
+
+block tileStyles
+  style
+    :less
+      .testimonial.merch-tile{font-family:'Walsheim-Black', 'Arial Black', sans-serif; background:#333; padding:10px; font-size:13px;cursor:default;
+        @media only screen and (min-width:480px){
+         font-size:18px;
+        }
+        @media only screen and (min-width:768px){
+          font-size:15px;
+        }
+        @media only screen and (min-width:992px){
+          font-size:13px;
+        }
+        @media only screen and (min-width:1200px){
+          font-size:16px;
+        }
+        .testimony {color:#77C043;font-size:1.25em; margin-bottom: 10px;}
+        .customer {text-transform:uppercase;color:#fff;font-size:1em}
+      }
+block tileContent
+  .testimony "There's a reason why GoDaddy is the number one registrar in the world."
+  .customer Mr. Atul Chaundhari, Impace Systems
