@@ -4,3 +4,23 @@ name: FOS-38815
 description: Update all pages using new ICANN token Round 2
 ---
 {% include '../../modules/doc-block.html' %}
+<phrase key="DisclaimerModal0DisclaimerItems0Text" />
+* Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year.
+<phrase key="DisclaimerModal0DisclaimerItems1Text" />
+*** Domains with bulk pricing do not qualify for additional promotional discounts.
+<phrase key="DisclaimerModal0DisclaimerItems2Text" />
+&#8224; Free [@T[companyname:name]@T] Photo Album service is ad-supported. Free InstantPage&#174/Hosting with Website Builder and [@T[companyname:name]@T] Photo Album are not included with .XXX domain registrations. All comparison prices are accurate as of 11/5/2012 and are subject to change without notice.
+<phrase key="DisclaimerModal0DisclaimerItems3Text" />
+&#8224;&#8224; .CA domain names will be registered through [@T[companyname:name]@T] Domains Canada, Inc., a CIRA certified registrar.
+<phrase key="DisclaimerModal0DisclaimerItems4Text" />
+&#43; Special savings apply only to first year of registration. You must purchase entire section to qualify for special savings.
+<phrase key="DisclaimerModal0DisclaimerItems5Text" />
+&#43;&#43; .CO.UK, .ORG.UK, .ME.UK, .EU, .ES, .SE, .COM.AU, .NET.AU and .ORG.AU domains not included.
+<phrase key="DisclaimerModal0DisclaimerItems6Text" />
+&#94;&#94; Discount based on current retail value.
+<phrase key="DisclaimerModal0DisclaimerItems7Text" />
+&#94;&#94;&#94; Buy a new .COM or .CO, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name per year.
+<phrase key="DisclaimerModal0DisclaimerItems8Text" />
+&plusmn; com.au, net.au, and org.au domain names can only be registred for 2 years.
+<phrase key="DisclaimerModal0DisclaimerItems9Text" />
+Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
