@@ -67,6 +67,10 @@
     "pod_dom_dk":             "97806",
     "pod_dom_green":          "97809",
     "pod_dom_world":          "97815",
-    "pod_dom_legal":          "97810"
+    "pod_dom_legal":          "97810",
+    "pod_dom_design":         "98001",
+    "pod_dom_work":           "98004",
+    "pod_dom_io":             "98002",
+    "pod_dom_video":          "98003"
   }
 }
