@@ -301,7 +301,7 @@
                     var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
                     $cta=$('.merch-tile-0365-biz-email .promo-cta');
                     if(savings<5)
-                      $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
+                      $cta.html($cta.html().replace(($cta.text().trim()),'[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]'))
                     else
                       $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
                     $cta.show();
