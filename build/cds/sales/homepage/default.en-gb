@@ -197,46 +197,44 @@
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
           <div class="col-md-4 col-sm-12">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-12 col-sm-6">
-                  <div class="tile-wrapper">
-                    <atlantis:webstash type="css">
-                      <style>
-                        .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
-                        .marquee-tile-tld .price-text {color:#fff;}
-                        .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
-                        .marquee-tile-tld .cta {display:none}
-                        .marquee-tile-tld .price {font-size:1.5em}
-                        .co-uk.marquee-tile-tld img{width:25%}
-                        
-                      </style>
-                      <style>
-                        .co-uk.marquee-tile-tld{background-color:#dedede}
-                        .co-uk .price-text{color:#333}
-                        
-                      </style>
-                    </atlantis:webstash>
-                    <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld">
-                      <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NCAxMDYuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDEwNi44IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMjAyQzU1IiBkPSJNNC44IDYzLjhDMi4yIDYzLjggMCA2NiAwIDY4LjdjMCAyLjcgMi4yIDQuOCA0LjggNC44IDIuNyAwIDQuOC0yLjIgNC44LTQuOEM5LjcgNjYgNy41IDYzLjggNC44IDYzLjhNMTQ5IDcxLjVjLTMuMSAwLTQuNS0xLjUtNi0zLjNsLTExLjMtMTQgNi4xLTUuMWMyLjUtMi4xIDQuOC0zLjcgNy44LTMuNyAwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xaC0xMi44Yy0wLjUgMC0wLjggMC4zLTAuOCAxIDAgMC43IDAuMiAxIDAuOCAxaDAuN2MyLjEgMCAyLjIgMS40IDAuOCAyLjdsLTkuNCA3LjdWMTkuNmMwLTEuNS0xLTIuMS0yLjctMS4zbC0xMC4yIDUuMWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43bDAgMzguNGMwIDIuNS0xLjMgMy42LTMgMy42IC0xLjggMC0zLTEuMS0zLTMuNlY0MS42YzAtMS41LTEtMi4xLTIuNy0xLjNsLTEwLjIgNS4xYy0wLjggMC40LTAuNyAxLjIgMCAxLjMgMS43IDAuMyAzLjQgMC40IDMuNCA0Ljd2MTIuM2MwIDIuNS0yLjEgNi4yLTUuMSA2LjIgLTMuMiAwLTQuOS0yLjUtNC45LTcuM1Y0NS4xYzAtMS41LTEtMi4xLTIuNy0xLjNMNzcgNDguOWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43VjY0YzAgNy4xIDQuNSAxMC4zIDkuNSAxMC4zIDQuMSAwIDguNC0xLjYgMTAuNi01LjIgMC4yIDIuNyAwLjkgNC41IDQuNCA0LjVoMjIuN2MwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xIC0xLjggMC0yLjYtMC44LTIuNi0yLjl2LTExbDguOSAxMi4zYzAuOSAxLjIgMC4yIDEuNy0xIDEuNyAtMC41IDAtMC44IDAuMy0wLjggMSAwIDAuNyAwLjIgMSAwLjggMUgxNDljMC42IDAgMC44LTAuMyAwLjgtMUMxNDkuOCA3MS44IDE0OS42IDcxLjUgMTQ5IDcxLjVNMjcuMSA3MC4xYy02LjUgMC0xMC41LTQuMy0xMC41LTExLjMgMC02LjkgNC4xLTExLjUgMTAuMy0xMS41IDIuNCAwIDQuMSAwLjQgNy4yIDEuN2wwLjYgMC4ydi00LjNMMzQuNCA0NWMtMy4zLTEuMS01LjItMS40LTcuNy0xLjQgLTguNCAwLTE0LjIgNi40LTE0LjIgMTUuNiAwIDguOCA1LjggMTQuOCAxNC4zIDE0LjggMi43IDAgNC43LTAuNCA4LTEuNWwwLjMtMC4xdi00LjFsLTAuNiAwLjJDMzEuNiA2OS43IDI5LjcgNzAuMSAyNy4xIDcwLjFNNTEuMSA0My41Yy04LjUgMC0xNC45IDYuNS0xNC45IDE1LjIgMCA4LjYgNi40IDE1LjIgMTQuOSAxNS4yIDguNSAwIDE0LjgtNi41IDE0LjgtMTUuMkM2NS45IDUwLjEgNTkuNiA0My41IDUxLjEgNDMuNU01MS4xIDcwLjFjLTYuMyAwLTEwLjgtNC44LTEwLjgtMTEuMyAwLTYuNiA0LjYtMTEuNCAxMC44LTExLjQgNi4xIDAgMTAuOCA0LjkgMTAuOCAxMS40QzYxLjkgNjUuMiA1Ny4yIDcwLjEgNTEuMSA3MC4xTTEyMC42IDBjLTE1LjQgMC0zMCA2LjYtNDAuMSAxOC4yIC0xLjIgMS40LTEuMSAzLjQgMC4zIDQuNiAwLjYgMC41IDEuNCAwLjggMi4yIDAuOCAwLjkgMCAxLjgtMC40IDIuNS0xLjEgOC45LTEwLjEgMjEuNy0xNS45IDM1LjItMTUuOSAyNS44IDAgNDYuOSAyMSA0Ni45IDQ2LjkgMCAyNS44LTIxIDQ2LjktNDYuOSA0Ni45IC0xNi4xIDAtMzAuOS04LjEtMzkuNi0yMS44IC0xLTEuNS0zLTItNC41LTEgLTEuNSAxLTIgMy0xIDQuNSA5LjkgMTUuNSAyNi43IDI0LjggNDUuMSAyNC44IDI5LjQgMCA1My40LTI0IDUzLjQtNTMuNEMxNzQgMjQgMTUwIDAgMTIwLjYgME03Ny42IDY4LjVjMC0yLjctMi4yLTQuOC00LjgtNC44IC0yLjcgMC00LjggMi4yLTQuOCA0LjggMCAyLjcgMi4yIDQuOCA0LjggNC44Qzc1LjQgNzMuMyA3Ny42IDcxLjEgNzcuNiA2OC41Ii8+PC9zdmc+" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,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" class="img-responsive"><![endif]-->
-                        ##if(productHasDiscountMoreThan(57465, 5)) 
-                         
-                        <div class="headline">[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] OFF 100% BRILLIANT</div> 
-                        ##else
-                         
-                        <div class="headline">100% BRILLIANT</div> 
-                        ##endif
-                        <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
-                        <atlantis:webstash type="js">
-                          <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
-                        </atlantis:webstash>
-                      </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-6">
+                <div class="tile-wrapper">
+                  <atlantis:webstash type="css">
+                    <style>
+                      .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}
+                      .marquee-tile-tld .price-text {color:#fff;}
+                      .marquee-tile-tld .headline {color:#77C043; font-size:1.1em; margin:5% 0}
+                      .marquee-tile-tld .cta {display:none}
+                      .marquee-tile-tld .price {font-size:1.5em}
+                      .co-uk.marquee-tile-tld img{width:25%}
+                      
+                    </style>
+                    <style>
+                      .co-uk.marquee-tile-tld{background-color:#dedede}
+                      .co-uk .price-text{color:#333}
+                      
+                    </style>
+                  </atlantis:webstash>
+                  <div data-url="[@T[link:<relative path='/tlds/co-uk.aspx'><param name='ci' value='96168'/></relative>]@T]" data-ci="96168" class="tile co-uk marquee-tile-tld">
+                    <div class="tile-content-wrapper"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE3NCAxMDYuOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDEwNi44IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMjAyQzU1IiBkPSJNNC44IDYzLjhDMi4yIDYzLjggMCA2NiAwIDY4LjdjMCAyLjcgMi4yIDQuOCA0LjggNC44IDIuNyAwIDQuOC0yLjIgNC44LTQuOEM5LjcgNjYgNy41IDYzLjggNC44IDYzLjhNMTQ5IDcxLjVjLTMuMSAwLTQuNS0xLjUtNi0zLjNsLTExLjMtMTQgNi4xLTUuMWMyLjUtMi4xIDQuOC0zLjcgNy44LTMuNyAwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xaC0xMi44Yy0wLjUgMC0wLjggMC4zLTAuOCAxIDAgMC43IDAuMiAxIDAuOCAxaDAuN2MyLjEgMCAyLjIgMS40IDAuOCAyLjdsLTkuNCA3LjdWMTkuNmMwLTEuNS0xLTIuMS0yLjctMS4zbC0xMC4yIDUuMWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43bDAgMzguNGMwIDIuNS0xLjMgMy42LTMgMy42IC0xLjggMC0zLTEuMS0zLTMuNlY0MS42YzAtMS41LTEtMi4xLTIuNy0xLjNsLTEwLjIgNS4xYy0wLjggMC40LTAuNyAxLjIgMCAxLjMgMS43IDAuMyAzLjQgMC40IDMuNCA0Ljd2MTIuM2MwIDIuNS0yLjEgNi4yLTUuMSA2LjIgLTMuMiAwLTQuOS0yLjUtNC45LTcuM1Y0NS4xYzAtMS41LTEtMi4xLTIuNy0xLjNMNzcgNDguOWMtMC44IDAuNC0wLjcgMS4yIDAgMS4zIDEuNyAwLjMgMy40IDAuNCAzLjQgNC43VjY0YzAgNy4xIDQuNSAxMC4zIDkuNSAxMC4zIDQuMSAwIDguNC0xLjYgMTAuNi01LjIgMC4yIDIuNyAwLjkgNC41IDQuNCA0LjVoMjIuN2MwLjYgMCAwLjgtMC4zIDAuOC0xIDAtMC43LTAuMy0xLTAuOC0xIC0xLjggMC0yLjYtMC44LTIuNi0yLjl2LTExbDguOSAxMi4zYzAuOSAxLjIgMC4yIDEuNy0xIDEuNyAtMC41IDAtMC44IDAuMy0wLjggMSAwIDAuNyAwLjIgMSAwLjggMUgxNDljMC42IDAgMC44LTAuMyAwLjgtMUMxNDkuOCA3MS44IDE0OS42IDcxLjUgMTQ5IDcxLjVNMjcuMSA3MC4xYy02LjUgMC0xMC41LTQuMy0xMC41LTExLjMgMC02LjkgNC4xLTExLjUgMTAuMy0xMS41IDIuNCAwIDQuMSAwLjQgNy4yIDEuN2wwLjYgMC4ydi00LjNMMzQuNCA0NWMtMy4zLTEuMS01LjItMS40LTcuNy0xLjQgLTguNCAwLTE0LjIgNi40LTE0LjIgMTUuNiAwIDguOCA1LjggMTQuOCAxNC4zIDE0LjggMi43IDAgNC43LTAuNCA4LTEuNWwwLjMtMC4xdi00LjFsLTAuNiAwLjJDMzEuNiA2OS43IDI5LjcgNzAuMSAyNy4xIDcwLjFNNTEuMSA0My41Yy04LjUgMC0xNC45IDYuNS0xNC45IDE1LjIgMCA4LjYgNi40IDE1LjIgMTQuOSAxNS4yIDguNSAwIDE0LjgtNi41IDE0LjgtMTUuMkM2NS45IDUwLjEgNTkuNiA0My41IDUxLjEgNDMuNU01MS4xIDcwLjFjLTYuMyAwLTEwLjgtNC44LTEwLjgtMTEuMyAwLTYuNiA0LjYtMTEuNCAxMC44LTExLjQgNi4xIDAgMTAuOCA0LjkgMTAuOCAxMS40QzYxLjkgNjUuMiA1Ny4yIDcwLjEgNTEuMSA3MC4xTTEyMC42IDBjLTE1LjQgMC0zMCA2LjYtNDAuMSAxOC4yIC0xLjIgMS40LTEuMSAzLjQgMC4zIDQuNiAwLjYgMC41IDEuNCAwLjggMi4yIDAuOCAwLjkgMCAxLjgtMC40IDIuNS0xLjEgOC45LTEwLjEgMjEuNy0xNS45IDM1LjItMTUuOSAyNS44IDAgNDYuOSAyMSA0Ni45IDQ2LjkgMCAyNS44LTIxIDQ2LjktNDYuOSA0Ni45IC0xNi4xIDAtMzAuOS04LjEtMzkuNi0yMS44IC0xLTEuNS0zLTItNC41LTEgLTEuNSAxLTIgMy0xIDQuNSA5LjkgMTUuNSAyNi43IDI0LjggNDUuMSAyNC44IDI5LjQgMCA1My40LTI0IDUzLjQtNTMuNEMxNzQgMjQgMTUwIDAgMTIwLjYgME03Ny42IDY4LjVjMC0yLjctMi4yLTQuOC00LjgtNC44IC0yLjcgMC00LjggMi4yLTQuOCA0LjggMCAyLjcgMi4yIDQuOCA0LjggNC44Qzc1LjQgNzMuMyA3Ny42IDcxLjEgNzcuNiA2OC41Ii8+PC9zdmc+" class="tld svgfallback"><!--[if lt IE 9]><img src="data:image/png;base64,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" class="img-responsive"><![endif]-->
+                      ##if(productHasDiscountMoreThan(57465, 5)) 
+                       
+                      <div class="headline">[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true"/>]@T] OFF 100% BRILLIANT</div> 
+                      ##else
+                       
+                      <div class="headline">100% BRILLIANT</div> 
+                      ##endif
+                      <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
+                      <atlantis:webstash type="js">
+                        <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
+                      </atlantis:webstash>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 col-sm-6"> 
-                  <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-                </div>
+              </div>
+              <div class="col-md-12 col-sm-6"> 
+                <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
               </div>
             </div>
           </div>
@@ -272,25 +270,36 @@
             <div class="tile-wrapper">
               <atlantis:webstash type="css">
                 <style>
-                  .o365-tile .tile-content-wrapper{padding:20px 15px;color:#333}
-                  .o365-tile .promo-logo{width:80%}
-                  .o365-tile .promo-text{padding-top:10px}
-                  .o365-tile .promo-cta{position:absolute;bottom:5px}
-                  .o365-tile a{text-decoration:underline;color:#f2812e}
+                  .merch-tile-0365-biz-email .tile-content-wrapper{padding:20px 15px;color:#333}
+                  .merch-tile-0365-biz-email .promo-logo{width:80%}
+                  .merch-tile-0365-biz-email .promo-text{padding-top:10px}
+                  .merch-tile-0365-biz-email .promo-cta{position:absolute;bottom:5px;display:none;}
+                  .merch-tile-0365-biz-email a{text-decoration:underline;color:#f2812e}
+                  .merch-tile-0365-biz-email .promo-logo-wrapper{margin-top: 10px;}
+                  
                 </style>
               </atlantis:webstash>
-              <div data-url="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]" data-ci='95779' class="tile o365-tile">
+              <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="tile merch-tile-0365-biz-email">
                 <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/O365-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDExLjQzOCA5MC41MzYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQxMS40MzggOTAuNTM2IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xNTQuMjI1LDQ0LjY0MmMwLDUuNzc4LTEuMDUyLDEwLjg0NC0zLjE1NywxNS4xOTVjLTIuMTExLDQuMzUxLTUuMTM3LDcuNzAxLTkuMDg3LDEwLjA0Nw0KCQljLTMuOTQ4LDIuMzQ2LTguNDk0LDMuNTIyLTEzLjY0MywzLjUyMmMtNC45NzMsMC05LjM5Mi0xLjE0Mi0xMy4yNjYtMy40MjRjLTMuODc2LTIuMjgzLTYuODY4LTUuNTI0LTguOTg3LTkuNzMNCgkJYy0yLjEyMS00LjE5OS0zLjE4Mi04Ljk2LTMuMTgyLTE0LjI4NGMwLTUuNzMxLDEuMDczLTEwLjc3MywzLjIxOS0xNS4xNGMyLjE0LTQuMzYyLDUuMjIzLTcuNzEzLDkuMjMzLTEwLjA0Ng0KCQljNC4wMTEtMi4zMzQsOC42NTUtMy41MDMsMTMuOTI3LTMuNTAzYzQuODIsMCw5LjE0MywxLjE0OSwxMi45NjcsMy40NDRjMy44MTksMi4yOTUsNi43NzIsNS41MjcsOC44NTQsOS42ODcNCgkJQzE1My4xODYsMzQuNTczLDE1NC4yMjUsMzkuMzE4LDE1NC4yMjUsNDQuNjQyIE0xNDcuNTY2LDQ1LjQ3NWMwLTcuMDY3LTEuNjUzLTEyLjU4LTQuOTU3LTE2LjU0DQoJCWMtMy4zMTEtMy45NTktNy45MTQtNS45NDItMTMuODE1LTUuOTQyYy0zLjcxLDAtNy4wMzYsMC45NDItOS45NzQsMi44MThjLTIuOTM4LDEuODgxLTUuMjE3LDQuNTQ3LTYuODMzLDguMDA2DQoJCWMtMS42MTMsMy40Ni0yLjQyMiw3LjMxOC0yLjQyMiwxMS41NzljMCw0LjMzOSwwLjc3Niw4LjIwOSwyLjMzLDExLjYwMmMxLjU1MiwzLjM5MywzLjc2Myw2LjAxNiw2LjY0LDcuODczDQoJCWMyLjg3OSwxLjg1Myw2LjE0NSwyLjc4Myw5LjgwNCwyLjc4M2M2LjAwNCwwLDEwLjcxMS0xLjk3LDE0LjExOC01LjkwNkMxNDUuODY0LDU3LjgxMywxNDcuNTY2LDUyLjM4NywxNDcuNTY2LDQ1LjQ3NSIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0xODEuNTEzLDIwLjUzNWMtMS4yMTQtMC42ODQtMi41ODYtMS4wMjQtNC4xMjgtMS4wMjRjLTQuMzM5LDAtNi41MDksMi43NC02LjUwOSw4LjIxN3Y1Ljk3N2g5LjA4M3Y1LjI1OA0KCQloLTkuMDgzVjcyLjQ2aC02LjIwOFYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4MS05LjUzOWMyLjMyMi0yLjQyMyw1LjI3Ny0zLjYzNSw4Ljg2LTMuNjM1DQoJCWMxLjg5MiwwLDMuMzg5LDAuMjI3LDQuNTAzLDAuNjg0VjIwLjUzNXoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjAyLjkwNCwyMC41MzVjLTEuMjEyLTAuNjg0LTIuNTg2LTEuMDI0LTQuMTI2LTEuMDI0Yy00LjMzOSwwLTYuNTA5LDIuNzQtNi41MDksOC4yMTd2NS45NzdoOS4wODN2NS4yNTgNCgkJaC05LjA4M1Y3Mi40NmgtNi4yMVYzOC45NjNoLTYuNTg1di01LjI1OGg2LjU4NXYtNi4yODJjMC0zLjk0MSwxLjE2MS03LjExOSwzLjQ4My05LjUzOWMyLjMyMi0yLjQyMyw1LjI3NS0zLjYzNSw4Ljg1OC0zLjYzNQ0KCQljMS44OTQsMCwzLjM5MSwwLjIyNyw0LjUwNCwwLjY4NFYyMC41MzV6Ii8+DQoJPHBhdGggZmlsbD0iI0VCM0QwMSIgZD0iTTIxNC4zNSwxOS44MTZjMCwxLjE2MS0wLjQwMywyLjEyNy0xLjIxMiwyLjg5M2MtMC44MDksMC43Ny0xLjc2NSwxLjE1My0yLjg3NSwxLjE1Mw0KCQljLTEuMTM1LDAtMi4wOTctMC4zNjgtMi44NzctMS4xMTRjLTAuNzgyLTAuNzQzLTEuMTcyLTEuNzI0LTEuMTcyLTIuOTMyYzAtMS4wODcsMC4zODMtMi4wMjUsMS4xNTMtMi44MTgNCgkJYzAuNzcyLTAuNzk4LDEuNzM1LTEuMTkyLDIuODk2LTEuMTkyYzEuMTU3LDAsMi4xMzEsMC4zODcsMi45MTQsMS4xNzJDMjEzLjk1OCwxNy43NTYsMjE0LjM1LDE4LjcwMSwyMTQuMzUsMTkuODE2IE0yMTMuMjksNzIuNDU2DQoJCWgtNi4yMDlWMzMuNzAxaDYuMjA5VjcyLjQ1NnoiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMjQ4LjcxNSw3MC42ODJjLTMuMDAyLDEuODE4LTYuNTUsMi43MjUtMTAuNjM3LDIuNzI1Yy0zLjUzLDAtNi43MDQtMC44MTctOS41MTktMi40MzkNCgkJYy0yLjgxNS0xLjYzLTUtMy45MzMtNi41NjYtNi45MTFjLTEuNTY1LTIuOTc1LTIuMzQ1LTYuMzE3LTIuMzQ1LTEwLjAyN2MwLTYuNDA3LDEuODMzLTExLjU1Niw1LjUwNC0xNS40NDUNCgkJYzMuNjcxLTMuODgyLDguNTYzLTUuODI4LDE0LjY2Ny01LjgyOGMzLjM4MywwLDYuMzcyLDAuNjU3LDguOTcyLDEuOTd2Ni4zNTZjLTIuOTAyLTIuMDE3LTUuOTgxLTMuMDI2LTkuMjM1LTMuMDI2DQoJCWMtNC4wMTEsMC03LjI3MywxLjQzNS05Ljc4NSw0LjI5NmMtMi41MSwyLjg2Ni0zLjc2Nyw2LjU2My0zLjc2NywxMS4xMWMwLDQuNTE5LDEuMTk1LDguMDg0LDMuNTc5LDEwLjcxMQ0KCQljMi4zODIsMi42MjMsNS41OCwzLjkzMyw5LjU5MSwzLjkzM2MzLjM4MywwLDYuNTYxLTEuMTA3LDkuNTQtMy4zMzFWNzAuNjgyeiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0yODYuODUyLDU0LjYzNWgtMjcuMzY0YzAuMTA0LDQuMzY2LDEuMjU3LDcuNywzLjQ2NiwxMC4wMTFjMi4yMDYsMi4zMDYsNS4yNjMsMy40Niw5LjE3NSwzLjQ2DQoJCWM0LjM5MSwwLDguMzkxLTEuNDExLDEyLjAwMS00LjIzOHY1Ljc5M2MtMy4zODEsMi40OTgtNy44NzQsMy43NDUtMTMuNDczLDMuNzQ1Yy01LjUyOSwwLTkuODM5LTEuNzg3LTEyLjk0Ny01LjM1Ng0KCQljLTMuMTAyLTMuNTY5LTQuNjU1LTguNTEtNC42NTUtMTQuODE5YzAtMy44MzUsMC43NzgtNy4zMzMsMi4zMy0xMC41YzEuNTUtMy4xNjcsMy42OTItNS42MTcsNi40MTMtNy4zNjENCgkJYzIuNzI3LTEuNzQsNS43NTYtMi42MTUsOS4wODMtMi42MTVjNS4wMTksMCw4LjkzOCwxLjYzNCwxMS43NTMsNC45MDZjMi44MTQsMy4yNjQsNC4yMiw3LjgzOCw0LjIyLDEzLjcxN1Y1NC42MzV6DQoJCSBNMjgwLjQ5Niw0OS4zNzNjLTAuMDUzLTMuNTgxLTAuOTE2LTYuMzY0LTIuNTk2LTguMzQ2Yy0xLjY3Ny0xLjk4MS00LjA0Mi0yLjk3MS03LjA5My0yLjk3MWMtMi44NzcsMC01LjM0LDEuMDM2LTcuMzgsMy4xMDQNCgkJYy0yLjA0NiwyLjA2OC0zLjMzMSw0LjgwOC0zLjg1OCw4LjIxM0gyODAuNDk2eiIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik0zMzQuMDc5LDU3LjA5M2MwLDQuODk0LTEuNzUzLDguODM5LTUuMjYsMTEuODI5Yy0zLjUwNywyLjk5LTguMTE1LDQuNDg0LTEzLjgxNSw0LjQ4NA0KCQljLTUuMTcyLDAtOS4yODYtMC45ODUtMTIuMzQxLTIuOTUxdi02LjY2MWMzLjY2MiwyLjg3Myw3Ljg0OSw0LjMxMiwxMi41NjUsNC4zMTJjMy44MTIsMCw2Ljg0Ni0wLjk0Myw5LjEwMy0yLjgxOQ0KCQljMi4yNjEtMS44NzYsMy4zOTEtNC40MjEsMy4zOTEtNy42MjdjMC03LjA4Ny01LjA0OS0xMC42MzMtMTUuMTQtMTAuNjMzaC00LjUwNHYtNS4yNjJoNC4yNzVjOC45MzEsMCwxMy4zOTktMy4zMzEsMTMuMzk5LTkuOTkyDQoJCWMwLTYuMTU3LTMuNDA3LTkuMjMzLTEwLjIyLTkuMjMzYy0zLjgzNSwwLTcuNDI5LDEuMjg2LTEwLjc4MywzLjg1OHYtNi4wMTdjMy40NTYtMi4wNjgsNy41NjYtMy4xMDQsMTIuMzM3LTMuMTA0DQoJCWM0LjQ5MiwwLDguMTE3LDEuMTg5LDEwLjg4MiwzLjU3N2MyLjc2MiwyLjM4NCw0LjE0Miw1LjUwOCw0LjE0Miw5LjM2NmMwLDcuMTQyLTMuNjA3LDExLjczMi0xMC44MjQsMTMuNzh2MC4xNDkNCgkJYzMuODM1LDAuNDMsNi45MzEsMS44MTMsOS4yNzYsNC4xNjNDMzMyLjkwNiw1MC42NTksMzM0LjA3OSw1My41ODcsMzM0LjA3OSw1Ny4wOTMiLz4NCgk8cGF0aCBmaWxsPSIjRUIzRDAxIiBkPSJNMzc0LjkxMyw1NS4yNDFjMCwzLjQzMi0wLjczNyw2LjU0Ny0yLjIxMiw5LjM0NmMtMS40NzQsMi43OTktMy41MSw0Ljk3Mi02LjExNCw2LjUwOQ0KCQljLTIuNTk3LDEuNTQtNS41MTIsMi4zMS04Ljc0MSwyLjMxYy01LjQyNCwwLTkuNjc5LTIuMTgxLTEyLjc3Ni02LjU0OGMtMy4wOS00LjM2My00LjYzNC0xMC40NjEtNC42MzQtMTguMjgzDQoJCWMwLTYuMjA0LDAuOTE2LTExLjY4OCwyLjc0Ni0xNi40NDJjMS44MjktNC43NTgsNC40MTktOC40MjEsNy43NzMtMTAuOTkyYzMuMzU4LTIuNTc3LDcuMjMtMy44NjMsMTEuNjItMy44NjMNCgkJYzMuNzM1LDAsNi43MzgsMC41MTYsOS4wMTEsMS41NTJ2NS44NjhjLTIuODAxLTEuNDM5LTUuNzU2LTIuMTU4LTguODU5LTIuMTU4Yy00Ljc5NCwwLTguNjMzLDIuMTUtMTEuNTI0LDYuNDU0DQoJCWMtMi44OTEsNC4zMDEtNC4zMzYsMTAuMDM1LTQuMzM2LDE3LjIwMWgwLjE1MmMyLjQ5OC01LjEyNSw2LjYyNS03LjY4NSwxMi4zNzctNy42ODVjNC42OTMsMCw4LjQ1NiwxLjUzMiwxMS4yODIsNC42MDENCgkJQzM3My41MDQsNDYuMTc1LDM3NC45MTMsNTAuMjE3LDM3NC45MTMsNTUuMjQxIE0zNjguNTU3LDU2LjAzNGMwLTMuNzg4LTAuOTI5LTYuNzc1LTIuNzgxLTguOTcyDQoJCWMtMS44NTUtMi4xOTMtNC40NDktMy4yODgtNy43NzktMy4yODhjLTMuMDI2LDAtNS41NzQsMS4wNjQtNy42NDUsMy4xOThjLTIuMDY5LDIuMTI3LTMuMTAyLDQuNzExLTMuMTAyLDcuNzM2DQoJCWMwLDMuODEyLDEuMDI4LDYuOTk4LDMuMDgyLDkuNTU1YzIuMDU3LDIuNTY0LDQuNjUsMy44NDMsNy43ODEsMy44NDNjMy4xMDIsMCw1LjYyLTEuMTE0LDcuNTQ5LTMuMzUxDQoJCUMzNjcuNTkxLDYyLjUyMywzNjguNTU3LDU5LjYxNSwzNjguNTU3LDU2LjAzNCIvPg0KCTxwYXRoIGZpbGw9IiNFQjNEMDEiIGQ9Ik00MTEuNDM4LDU1Ljg4MmMwLDUuMjc3LTEuNzQ1LDkuNTExLTUuMjQsMTIuNzIxYy0zLjQ5NSwzLjIwMS04LjE1OSw0LjgtMTMuOTg3LDQuOA0KCQljLTUuMDQ3LDAtOC43OTMtMC43NTQtMTEuMjM4LTIuMjY3di02LjU4N2MzLjY4MiwyLjM3Nyw3LjQ1MywzLjU2MiwxMS4zMTUsMy41NjJjMy44MzUsMCw2LjkyNS0xLjA3NSw5LjI3MS0zLjIyMQ0KCQljMi4zNTEtMi4xNDYsMy41MjQtNS4wMTksMy41MjQtOC42MjRjMC0zLjUzNy0xLjE5LTYuMzA1LTMuNTU5LTguMzExYy0yLjM3My0yLjAwNS01LjgxNy0zLjAwNi0xMC4zMzItMy4wMDYNCgkJYy0zLjYxLDAtNi42NzcsMC4xNDgtOS4xOTgsMC40NDlsMS44NTMtMjcuMjEyaDI1LjA5NXY1LjYwMmgtMTkuNzE5bC0xLjA5NywxNS45MzRsNC45OTYtMC4xOTJjNS42NTIsMCwxMC4xMiwxLjQzMSwxMy4zOTksNC4yOA0KCQlDNDA5Ljc5Nyw0Ni42Niw0MTEuNDM4LDUwLjY4Niw0MTEuNDM4LDU1Ljg4MiIvPg0KCTxwb2x5Z29uIGZpbGw9IiNFQjNEMDEiIHBvaW50cz0iNzUuNTIxLDgyLjk5MiA3NS41MTMsODIuOTg3IDc1LjUxMyw3Ljc3NiA0OC41NjUsMCAwLjEyMSwxOC4xOSAwLDE4LjIxMyAwLjAwNiw3Mi41OTcgDQoJCTE2LjUzNyw2Ni4xMjcgMTYuNTM3LDIxLjg4IDQ4LjU2NSwxNC4yMjIgNDguNTYxLDc5LjI3OCAwLjAzMyw3Mi41OTcgNDguNTYxLDkwLjUxNyA0OC41NjEsOTAuNTM2IDc1LjUxMyw4My4wNzcgNzUuNTEzLDgyLjk5MiAJDQoJCSIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=" class="promo-logo svgfallback">
+                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/india-pro-email-tertiary-tile-icon@2x.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE5NS40IDM0LjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE5NS40IDM0LjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik00OC43IDE2LjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNTQuNiA5LjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM1Ni40IDguNCA1NS43IDkuMyA1NC42IDkuM3pNNjEuMSAxNi4xaDQuMXYtMy42SDY2bDIuNCAzLjZoNC45bC0yLjgtNC4zQzcyIDEwLjkgNzMgOS4yIDczIDcuM2MwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNjYuOSA5LjNoLTEuN3YtNEg2N2MxLjEgMCAxLjggMC45IDEuOCAyQzY4LjggOC40IDY4LjEgOS4zIDY2LjkgOS4zek04MS4yIDE2LjVjNC44IDAgNy41LTMuNSA3LjUtNy40Uzg2IDEuNyA4MS4yIDEuN2MtNC44IDAtNy41IDMuNS03LjUgNy40Uzc2LjQgMTYuNSA4MS4yIDE2LjV6TTgxLjIgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTODMuMyAxMi43IDgxLjIgMTIuN3pNOTkuMiA1LjVWMi4xaC05djE0aDQuMXYtNC4yaDQuOFY4LjZoLTQuOFY1LjVIOTkuMnpNMTA5LjggNS4yVjIuMWgtOXYxNGg5VjEzSDEwNXYtMi4zaDQuOHYtM0gxMDVWNS4ySDEwOS44ek0xMTEgMTEuNGMwIDMuMyAyLjIgNS4xIDUuOCA1LjEgMy41IDAgNS42LTEuNyA1LjYtNC41IDAtMy4yLTIuOS0zLjktNS00LjcgLTEuMy0wLjUtMS45LTAuOS0xLjktMS42IDAtMC43IDAuNi0xLjEgMS4zLTEuMSAwLjkgMCAxLjQgMC42IDEuNCAxLjdoNC4xYzAtMi4yLTEuNC00LjYtNS40LTQuNiAtMi44IDAtNS41IDEuMS01LjUgNC4xIDAgMi45IDIuNiAzLjcgNC44IDQuNiAxLjUgMC42IDIuMSAwLjkgMi4xIDEuNyAwIDAuNy0wLjUgMS4yLTEuNCAxLjIgLTEuMSAwLTEuNy0wLjctMS43LTJIMTExek0xMjMuNCAxMS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgxMjMuNHpNMTM2LjMgMTYuMWg0LjJ2LTE0aC00LjJWMTYuMXpNMTQ5LjUgMTYuNWM0LjggMCA3LjUtMy41IDcuNS03LjRzLTIuOC03LjQtNy41LTcuNGMtNC44IDAtNy41IDMuNS03LjUgNy40UzE0NC43IDE2LjUgMTQ5LjUgMTYuNXpNMTQ5LjUgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTMTUxLjYgMTIuNyAxNDkuNSAxMi43ek0xNjIuNyAyLjFoLTQuMnYxNGg0LjF2LThsNC41IDhoNC4ydi0xNGgtNC4xdjguM0wxNjIuNyAyLjF6TTE4NyAxNi4xbC01LjItMTRoLTQuM2wtNS4xIDE0aDQuNWwwLjUtMS42aDQuN2wwLjUgMS42SDE4N3pNMTgxLjEgMTEuNGgtMi45bDEuNS01LjJMMTgxLjEgMTEuNHpNMTkxLjcgMTIuNVYyLjFoLTQuMXYxNGg3Ljh2LTMuNkgxOTEuN3pNNTcuNyAyMy4ydi0zLjFoLTl2MTRoOVYzMWgtNC44di0yLjNoNC44di0zaC00Ljh2LTIuNEg1Ny43ek03NS43IDIwLjFoLTUuMWwtMyA5IC0yLjktOWgtNS4zdjE0aDR2LTguN2wyLjcgOC43aDMuMWwyLjUtOC43djguN2g0VjIwLjF6TTkxLjQgMzQuMWwtNS4yLTE0aC00LjNsLTUuMSAxNGg0LjVsMC41LTEuNmg0LjdsMC41IDEuNkg5MS40ek04NS40IDI5LjRoLTIuOWwxLjUtNS4yTDg1LjQgMjkuNHpNOTEuOSAzNC4xaDQuMnYtMTRoLTQuMlYzNC4xek0xMDIuNCAzMC41VjIwLjFoLTQuMXYxNGg3Ljh2LTMuNkgxMDIuNHpNMjMuNyAyNS41TDAgMy4yIDAuNyAzNCA0MCAzMS44bDItMjEuNEwyMy43IDI1LjV6TTQxLjQgOGwtNDAtOEwyNCAyMy44IDQxLjQgOHoiLz48L3N2Zz4=" class="promo-logo svgfallback">
                   </div>
-                  <div class="promo-text walsheim-black">WORK ANYWHERE WITH MICROSOFT OFFICE.</div>
+                  <div class="promo-text walsheim-black">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-text]@L]</div>
                   <div class="promo-cta">
                     ##if(productHasSavingsMoreThan(31841, 31841, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">Save up to [@T[productcompare:<percent primaryproductid='31841' secondaryproductid='31841' showsymbol='true'/>]@T]</a>
+                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">Save up to {0}</a>
                     ##else
-                    <a class="walsheim-black" href="[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='95779' /></relative>]@T]">LEARN MORE</a>
+                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]</a>
                     ##endif
                   </div>
+                  <script>
+                    var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+                    $cta=$('.merch-tile-0365-biz-email .promo-cta');
+                    if(savings<5)
+                      $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
+                    else
+                      $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
+                    $cta.show();
+                  </script>
                 </div>
               </div>
             </div>
@@ -349,20 +358,16 @@
       <style>#domain-promo {
   color: #fff;
 }
-.domain-promo-content {
-  background-color: #333;
-}
-@media only screen and (min-width: 768px) {
-  .domain-promo-content {
-    background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
-    background-size: cover;
-  }
-}
-.Explorer8 .domain-promo-content {
-  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% no-repeat;
+#domain-promo .domain-promo-content {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333333 no-repeat;
   background-size: cover;
 }
-.domain-promo-text {
+@media only screen and (max-width: 767px) {
+  #domain-promo .domain-promo-content {
+    background-image: none !important;
+  }
+}
+#domain-promo .domain-promo-text {
   padding: 7% 2% 1%;
 }
 #domain-promo .text-center {
@@ -824,6 +829,8 @@
         </div>
       </div>
     </section>
+     
+    ##if(productIsOffered(99))
     <atlantis:webstash type="css">
       <style>#o365-promo {
   padding-bottom: 105px;
@@ -850,7 +857,7 @@
   overflow: visible;
   position: absolute;
   margin-top: 100px;
-  right: 50px;
+  right: 25%;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMTgxLjggNjQuMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTgxLjggNjQuMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkVEQzQ1IiBwb2ludHM9IjE3LDAgMCwyNC4yIDMsNTYgMTY0LjUsNjQuMiAxODEuOCw0My44IDE4MSw0LjMgIi8+DQo8L3N2Zz4NCg==) no-repeat center center;
 }
 .Explorer8 #o365-promo .promo-flag {
@@ -862,7 +869,6 @@
 }
 .o365-promo-image {
   padding-top: 115px;
-  width: 140%;
 }
 
       </style>
@@ -885,7 +891,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
+    ##endif
     <atlantis:webstash type="css">
       <style>#support-promo {
   background-color: #333;
@@ -1103,8 +1110,9 @@ ul li.no-check {
   text-transform: inherit;
 }
 .price,
-.icann-disclaimer {
-  color: #ff8a00;
+.icann-disclaimer,
+.promo-cta > a {
+  color: #ef6c0f;
 }
 #merchandising {
   background-color: #fff;
@@ -1159,10 +1167,11 @@ section {
           $("#merchandising .tile-wrapper").each(function(index, title) {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
           }).css("min-height", maxTitleHeight + 10);
-      
-          var maxHeroHeight = 0;
-          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+          if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
+            var maxHeroHeight = 0;
+            $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
+            $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+          }
       }
       function tokenizeTheDataTokenizeAttribute() {
         $('[data-tokenize]').each(function(){
