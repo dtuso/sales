@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/design/web-design/en
-id: 
-name: GCE-34158
+id: 55382221f778fc1458efd5da
+name: MCX-38784
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -99,7 +99,7 @@ Support
 <phrase key="List0Items154090Text" />
 <strong class="secondary-color">FREE</strong> <a class="isToolTip" data-toggle="tooltip" title="Our experts will work to improve your search rankings and increase traffic to your site by adding relevant keywords and tags to your pages.">SEO tools</a> to get listed by search engines
 <phrase key="List0Items154091Text" />
-<strong class="secondary-color">FREE</strong> Hosting: 50 GB disk space &amp; 1,000 GB bandwidth
+Hosting: 50 GB disk space &amp; 1,000 GB bandwidth
 <phrase key="List0Items154092Text" />
 <strong class="secondary-color">FREE</strong> 1,000 email accounts
 <phrase key="List0Items154093Text" />
@@ -110,8 +110,6 @@ Support
 Fast turnaround
 <phrase key="List0Items154095Text_34158" />
 Fast turnaround. Sites are up as quickly as one week!
-<phrase key="List0Items1Text_34158" />
-6 hours of updates during first 12 months
 <phrase key="List0Items154096Text" />
 30 minutes of updates per month
 <phrase key="List0Items154097Text" />
