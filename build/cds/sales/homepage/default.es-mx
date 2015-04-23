@@ -90,7 +90,7 @@
     </atlantis:webstash>
     <div class="gdhp-tile-wrap">
       <div class="gdhp-tile-area"> 
-        [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
          
         [@P[cdsDocument:<data app="sales" location="homepage/tile/email-essentials/default_template" /> ]@P]
       </div>
