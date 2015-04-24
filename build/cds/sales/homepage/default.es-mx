@@ -93,7 +93,7 @@
       <div class="gdhp-tile-area"> 
         [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting-old-brand/default_template" /> ]@P]
          
-        [@P[cdsDocument:<data app="sales" location="homepage/tiles/o365-upgrade-tile" /> ]@P]
+        [@P[cdsDocument:<data app="sales" location="homepage/tile/email-essentials/default_template" /> ]@P]
       </div>
     </div>
     <div id="myVideoModal" data-url="video-close" class="modal fade videoModal js-gdhpclick">
