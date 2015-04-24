@@ -18,6 +18,22 @@ append vars
 append pageStyles
   style
     include ./wordpress-hosting-config/styles.css 
+  style.
+    ##if(countrysiteany(in))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(mx))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(br))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
 
 block header
   p.product-added-to-cart

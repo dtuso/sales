@@ -1367,6 +1367,24 @@ input[type=checkbox] + label{
   }
 }
       </style>
+      <style>
+        ##if(countrysiteany(in))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        ##if(countrysiteany(mx))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        ##if(countrysiteany(br))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        
+      </style>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
