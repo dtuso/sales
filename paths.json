@@ -48,7 +48,7 @@
   "promos-si":		    	     "./offers/stick-it-to-high-prices/",
   "qsc":                     "./ecommerce/shopping-cart/",
   "research":                "./research/",
-  "search":                  "./domains/search/",
+  "search":                  "./domains/domain-name-search/",
   "search-config":           "./domains/search/search.config",
   "searchresults":           "./domains/searchresults/",
   "serp":                    "./domains/searchresults/",
