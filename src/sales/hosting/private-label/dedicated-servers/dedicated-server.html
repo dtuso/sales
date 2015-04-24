@@ -1,9 +1,7 @@
 ---
 location: sales/hosting/private-label/dedicated-server.aspx
-id: 553162ecf778fc0d10298fa3
-name: GCE-38777
-comments: Phone Update
-url: http://www.dev-secureserver.net/hosting/dedicated-server.aspx
+name: GCE-38672
+comments: Pricing squeeze
 assetPath: false
 ---
 {% extends 'layouts/pl-base.html' %}
@@ -66,103 +64,38 @@ assetPath: false
     </div>
     <input type="hidden" id="osaddon">
 
-    <div id="storage-template">
-      Storage: <strong>{0}</strong>
-      <div class="g-toolTip sf-tipper-target">
-        <span class="g-toolTip-right-tip">Disk space includes operating system files, which can be close to 1GB in a CentOS/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
-      </div>
-    </div>
-    <div id="bandwidth-template">
-      Bandwidth: <strong>{0}</strong>/mo 
-    </div>
-
-    <div class="row plan-tiles">
-
-      <!-- 1 -->   
-      <div class="plan brpl-plan set-active-col">
-        <div id="t1" class="inner-grid-container">
+    <script id="plan-tile-tempalte" type="text/template" style="display:none;">
+      <div class="plan brpl-plan">
+        <div class="inner-grid-container" id="<%= id %>">
           <div class="top-plan-info active-column">
-            <h2 class="ram"></h2>
-            <p class="brpl-price-mo">Managed plans starting at <br><span class="brpl-price"></span><span class="slash-month">/mo</span></p>
+            <h2 class="ram">
+              <%= ram %> RAM
+            </h2>
+            <p class="plans-start-at">Managed plans starting at </p>
+            <p class="plans-price-line" data-fit-line=".brpl-price,.slash-month">
+              <span class="brpl-price"><%= price %></span><span class="slash-month">/mo</span>
+            </p>
           </div>
           <div class="bottom-plan-info">
-            <p>
-              <button id="cart-button-0" type="button" data-ci="19060" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
+            <p class="button">
+              <button id="" type="button" data-ci="<%= ci %>" data-plan="<%= dataPlan %>" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
             </p>
-            <p class="storage list-item"></p>
-            <p class="bandwidth list-item"></p>
+            <p class="list-item storage">
+              Storage: <strong><%= storage %></strong>
+              <span class="g-toolTip sf-tipper-target">
+                <span class="<%= toolTipDirection %>">Disk space includes operating system files, which can be close to 1GB in a CentOS/Fedora server or 24GB on a Windows server. Please take that into consideration when choosing a server size that best fits your needs.</span>
+              </span>              
+            </p>
+            <p class="list-item bandwidth">
+              Bandwidth: <strong><%= bandwidth %></strong>/mo 
+            </p>
           </div>
         </div>
       </div>
+    </script>
 
-      <!-- 2 -->   
-      <div class="plan brpl-plan set-active-col">
-        <div id="t2" class="inner-grid-container">
-          <div class="top-plan-info active-column">
-            <h2 class="ram"></h2>
-            <p class="brpl-price-mo">Managed plans starting at <br><span class="brpl-price"></span><span class="slash-month">/mo</span></p>
-          </div>
-          <div class="bottom-plan-info">
-            <p>
-              <button id="cart-button-1" type="button" data-ci="19063" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
-            </p>
-            <p class="storage list-item"></p>
-            <p class="bandwidth list-item"></p>
-          </div>
-        </div>
-      </div>
+    <div id="plan-tiles" class="row plan-tiles"></div>
 
-      <!-- 3 -->
-      <div class="plan brpl-plan set-active-col">
-        <div id="t3" class="inner-grid-container">
-          <div class="top-plan-info active-column">
-            <h2 class="ram"></h2>
-            <p class="brpl-price-mo">Managed plans starting at <br><span class="brpl-price"></span><span class="slash-month">/mo</span></p>
-          </div>
-          <div class="bottom-plan-info">
-            <p>
-              <button id="cart-button-2" type="button" data-ci="19061" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
-            </p>
-            <p class="storage list-item"></p>
-            <p class="bandwidth list-item"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="plan brpl-plan set-active-col">
-        <div id="t4" class="inner-grid-container">
-          <div class="top-plan-info active-column">
-            <h2 class="ram"></h2>
-            <p class="brpl-price-mo">Managed plans starting at <br><span class="brpl-price"></span><span class="slash-month">/mo</span></p>
-          </div>
-          <div class="bottom-plan-info">
-            <p>
-              <button id="cart-button-3" type="button" data-ci="19062" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
-            </p>
-            <p class="storage list-item"></p>
-            <p class="bandwidth list-item"></p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="plan brpl-plan set-active-col">
-        <div id="t5" class="inner-grid-container">
-          <div class="top-plan-info active-column">
-            <h2 class="ram"></h2>
-            <p class="brpl-price-mo">Managed plans starting at <br><span class="brpl-price"></span><span class="slash-month">/mo</span></p>
-          </div>
-          <div class="bottom-plan-info">
-            <p>
-              <button id="cart-button-4" type="button" data-ci="19065" class="btn js-addtocart-btn btn--push-down btn-default add-to-cart-btn plan-box-button">Configure</button>
-            </p>
-            <p class="storage list-item js-flip-left"></p>
-            <p class="bandwidth list-item"></p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="container" style="width:1000px;text-align:center;">
@@ -423,7 +356,7 @@ assetPath: false
     });
 
 
-    $('.js-addtocart-btn').click(function() {
+    $('#plan-tiles').on('click', '.js-addtocart-btn', function(){
       var plan = $(this).data('plan');
       var osOption = $('#osaddon').val().split('_')[3];
       var itccode = osOption == 'linux' ? 'pro_DS_Linux' : 'pro_DS_Windows';
@@ -476,27 +409,80 @@ assetPath: false
     });
   }
 
-  function processDSData(data) {
-    var os = $('input:radio[name=os]:checked').attr('id'),
+  function processDSData(data){
+    var cnt = 0,
+      os  = $('input:radio[name=os]:checked').attr('id'),
       plans = data[os],
-      storageTemplate = $('#storage-template').html(),
-      bandwidthTemplate = $('#bandwidth-template').html();
-    $("#osaddon").val(plans.t1.osaddon);
-    $.each(plans, function(i, item) {
-      var tier = $("#" + i + ""),
-        addonPrice = currencyCalc.evaluate([item.osAddonPrice, "+", item.managedaddonprice]),
-        storageHtml = storageTemplate.replace(/\{0\}/gi, item.plandetail.storage),
-        bandwidthHtml = bandwidthTemplate.replace(/\{0\}/gi, item.plandetail.bandwidth);
-      tier.find('.ram').text(item.plandetail.ram + ' RAM');
-      tier.find('.brpl-price').text(currencyCalc.evaluate([item.productprice, "+", addonPrice]));
-      tier.find('.storage').html(storageHtml);
-      tier.find('.bandwidth').html(bandwidthHtml);
-      tier.find('.js-addtocart-btn').attr('data-plan', item.id);
-      tier.find('.storage.js-flip-left').find('.g-toolTip-right-tip')
-        .removeClass('g-toolTip-right-tip')
-        .addClass('g-toolTip-left-tip');
+      planTileTempalte = _.template($('#plan-tile-tempalte').text()),
+      $planTilesContainer = $('#plan-tiles'),
+      lastPlanId = '';
+
+    // tooltip floats to the left on the last one, so find which one is last
+    $.each(plans, function(i, item){
+      lastPlanId = item.id;
     });
+
+    // set the correct addon 
+    $("#osaddon").val(plans.t1.osaddon);
+
+    // loop it!
+    $.each(plans, function(i, item){
+      var addonPrice=currencyCalc.evaluate([item.osAddonPrice,"+",item.managedaddonprice]),
+        planItemData = {
+            id: i,
+            ci: ['19472','19473','19474','19475','19476'][cnt++],
+            ram: item.plandetail.ram,
+            price: currencyCalc.evaluate([item.productprice,"+",addonPrice]),
+            storage: item.plandetail.storage,
+            bandwidth: item.plandetail.bandwidth,
+            dataPlan: item.id,
+            toolTipDirection: (item.id == lastPlanId) ? "g-toolTip-left-tip" : "g-toolTip-right-tip"
+          };
+
+      var planTileCompiled = planTileTempalte(planItemData);
+      $planTilesContainer.append(planTileCompiled);
+    });
+
+    // keep pricing text from wrapping
+    $planTilesContainer.find('[data-fit-line]').each(function(){
+      var $this = $(this), 
+        originalHtml = [], 
+        maxIterations= 20, 
+        decreasor = 0.95,
+        defaultContent = "W",
+        numIterations = 0,
+        classesArr = $this.data('fit-line').split(',');
+
+      // make as short as possible and check the height!
+      $this.addClass('word-break');
+      $.each(classesArr, function(idx,classSelector){
+        var $thisItem = $this.find(classSelector);
+        originalHtml[idx] = $thisItem.html(); // save the original content
+        $thisItem.html(defaultContent);           
+      });
+      var desiredHeight = $this.outerHeight();
+      // reset back to the original HTML
+      $.each(classesArr, function(idx,classSelector){
+        $this.find(classSelector).html(originalHtml[idx]);            
+      });
+
+      while($this.outerHeight() > desiredHeight && numIterations++ < maxIterations) {
+
+        // loop thru each selector and reduce each by percentDecrease
+        $.each(classesArr, function(idx,classSelector){
+          var $thisItem = $this.find(classSelector),
+            thisItemFontSize = $thisItem.css('fontSize');
+          $thisItem.css('fontSize', parseInt(parseFloat(thisItemFontSize) * decreasor) + "px" );
+        });
+      }
+      $this.removeAttr('data-fit-line').removeClass('word-break');
+    });
+
   }
+
+
+
+
 
   function generateAddonsURL() {
     var addonURL = '', osOption = $("#osaddon").val();
