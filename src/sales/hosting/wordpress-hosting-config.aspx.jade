@@ -179,7 +179,8 @@ prepend endOfPageScripts
     var reload = false;
     var noSiteLock = false;
     var noEmail = false;
-    var itc = "slp_wordpress";
+    var isPro = plan.indexOf('wordpress') >= 0
+    var itc = isPro ? "pro_wordpress" : "slp_wordpress";
 
     ##if(!productIsOffered(107))
       noSiteLock = true;
@@ -279,7 +280,7 @@ prepend endOfPageScripts
       resetPage: function(){
         var steps = ['planStep','termStep','officeStep', 'securityStep'];
         var addToCart = 'ac';
-        itc = "slp_wordpress_config";
+        itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
         
         $('.config-step').hide();
         $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -725,7 +726,7 @@ prepend endOfPageScripts
           var selectedTerm = '1';
           var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
           var onSale = true;
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -753,7 +754,7 @@ prepend endOfPageScripts
           var selectedTerm = '1';
           var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
           var onSale = false;
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -782,7 +783,7 @@ prepend endOfPageScripts
           var onSale = false;
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
           var selectedTotal = document.getElementById('addsiteLockOption').getAttribute('data-yearly');
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -911,11 +912,21 @@ prepend endOfPageScripts
         if((plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0)){
           setTimeout(function(){
             ##if(isManager())
-            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+              if(isPro){
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+              }
+              else{
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+              }
             ##else
-            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+              if(isPro){
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+              }
+              else{
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+              }
             ##endif
-            }, 2000);
+          }, 2000);
         }
         else {
           $('.configuration-container').hide();
@@ -925,11 +936,21 @@ prepend endOfPageScripts
       });
     });
     $('#noFreeDomain').click(function(){
-        ##if(isManager())
-        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-        ##else
-        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-        ##endif
+      ##if(isManager())
+        if(isPro){
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##else
+        if(isPro){
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##endif
 
     });
     $('#scrollDownToContinueButton').click(function(){
