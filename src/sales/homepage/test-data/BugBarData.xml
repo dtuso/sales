@@ -298,7 +298,7 @@
     <paris      cicode="97970" lpurl="/tlds/paris"      pfid="622895"/>
     <global     cicode="97869" lpurl="/tlds/global"     pfid="483124"/>
     <eu         cicode="97868" lpurl="/tlds/eu-domain"  pfid="2851"/>
-    <london     cicode="98021" lpurl="/tlds/eu-domain"  pfid="342462"/>
-    <work       cicode="98022" lpurl="/tlds/eu-domain"  pfid="567686"/>
+    <london     cicode="98021" lpurl="/tlds/london"     pfid="342462"/>
+    <work       cicode="98022" lpurl="/tlds/work"       pfid="567686"/>
   </BugCatalog>
 </Text>
