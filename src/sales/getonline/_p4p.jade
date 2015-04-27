@@ -43,6 +43,8 @@ append vars
 block seo
   title #{page.title}
   meta(name="robots" content="noindex, nofollow")
+  link(rel="shortcut icon" href!="#{page.favicon}")
+
 
 append headScripts
   atlantis:webstash(type="js")

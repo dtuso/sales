@@ -175,7 +175,100 @@ append pageStyles
     .domain-search-container{
       margin-bottom:200px;
     }
+    .config-step {
+      font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+    }
+    .config-step .step-title {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    font-weight: 100;
+    line-height: 1.1;
+    color: #333;
+    }
+    .config-step .step-subtitle {
+    margin-left: 15px;
+    }
+    .config-text-primary {
+      font-size: 30px;
+      font-weight: 200;
+    }
+    .config-text-secondary {
+      font-size: 24px;
+      font-weight: 200;
+    }
+    .config-text-lead {
+      font-size: 16px;
+    }
+    .bold{
+      font-weight: 600;
+    }
+    .config-text-lead-secondary {
+      font-size: 14px;
 
+    }
+    .config-step{
+      display: none;
+    }
+    .vertical-align {
+        display: flex;
+        align-items: center;
+    }   
+    .product-options li {
+      border-bottom: 1px solid #C3C3C3;
+      padding-bottom: 25px;
+      padding-top: 10px;
+    }
+    .product-options li:last-child{
+      border-bottom:none;
+    }
+    .product-options {
+    list-style: none;
+    }
+
+    .input_hidden {
+        position: absolute;
+        left: -9999px;
+    }
+
+
+    @media (max-width: 1024px) { 
+        .vertical-align {
+            display: block;
+            align-items: inherit;
+        }
+        .text-md-right{
+          text-align: right;
+        }
+        .config-text-primary {
+          font-size: 20px;
+        }
+        .config-text-secondary {
+          font-size: 20px;
+        }
+        .config-text-lead {
+          font-size: 16px;
+        }
+        .config-text-save {
+          font-size: 14px;
+        }
+        .config-text-disclaimer {
+          font-size: 14px;
+        }
+        .product-radio {
+          margin-top :0;
+        } 
+    }
+    @media (max-width: 428px) { 
+        .text-xs-right {
+          text-align: right;
+        }
+        .text-md-right{
+          text-align: inherit;
+        }
+
+    }
 block endOfPageScripts
 
   //-:script From http://img2.wsimg.com/fos/script/sales17.min.js
