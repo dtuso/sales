@@ -14,7 +14,9 @@
     span.hosting-tile-price{display:inline;font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
     .hosting-tile>.host-btn-wrap{position:absolute;left:20px;bottom:20px;}
     .hosting-tile>.host-btn-wrap>.btn-lrg{float:left;margin-right:10px;width:100%;min-width:240px;height:100%;white-space:normal;}
-    html[lang|="el"] .hosting-tile-maintext, html[lang|="el"] .hosting-tile-subtext{font-size:22px;line-height:22px}
+    html[lang|="el"] .hosting-tile, html[lang|="sv"] .hosting-tile, html[lang|="pt"] .hosting-tile {font-size:22px;line-height:22px}
+    html[lang|="pt"] .hosting-tile-headline, html[lang|="tr"] .hosting-tile-headline {font-size:30px;}
+    html[lang|="pl"] .hosting-tile-headline {padding-bottom:5px;}
     
   </style>
 </atlantis:webstash>
