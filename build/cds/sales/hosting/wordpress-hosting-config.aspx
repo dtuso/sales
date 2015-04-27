@@ -724,6 +724,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
+        var srcIsPro = window.location.href.indexOf("pro") > -1
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
@@ -751,9 +752,19 @@
             $.getJSON(url, function (data) {
                 if (data == 'removed') {
                   ##if(isManager())
-                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##else
-                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##endif
                 }
             });
@@ -788,17 +799,31 @@
         
                 if (domaintoadd == '') {
                      ##if(isManager())
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
-                      ##else
+                      }
+                    ##else
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
-                      ##endif
+                      }
+                    ##endif
             } else {
                 ConfigSearch.removeDoamin();
             }
             });
         
             $('.select-and-continue').bind('click', function () {
-                window.location = nextStepUrl;       
+              if(srcIsPro){
+                nextStepUrl += (nextStepUrl.indexOf('?') >= 0) ? "&" : "?";
+                nextStepUrl += 'pro=1';
+              }
+              window.location = nextStepUrl;       
             });
         });
         
@@ -1605,7 +1630,8 @@ input[type=checkbox] + label{
       var reload = false;
       var noSiteLock = false;
       var noEmail = false;
-      var itc = "slp_wordpress";
+      var isPro = plan.indexOf('wordpress') >= 0
+      var itc = isPro ? "pro_wordpress" : "slp_wordpress";
       
       ##if(!productIsOffered(107))
         noSiteLock = true;
@@ -1705,7 +1731,7 @@ input[type=checkbox] + label{
         resetPage: function(){
           var steps = ['planStep','termStep','officeStep', 'securityStep'];
           var addToCart = 'ac';
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
           
           $('.config-step').hide();
           $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -2151,7 +2177,7 @@ input[type=checkbox] + label{
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
             var onSale = true;
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2179,7 +2205,7 @@ input[type=checkbox] + label{
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
             var onSale = false;
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2208,7 +2234,7 @@ input[type=checkbox] + label{
             var onSale = false;
             var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
             var selectedTotal = document.getElementById('addsiteLockOption').getAttribute('data-yearly');
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2337,11 +2363,21 @@ input[type=checkbox] + label{
           if((plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0)){
             setTimeout(function(){
               ##if(isManager())
-              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                if(isPro){
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                }
+                else{
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                }
               ##else
-              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                if(isPro){
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                }
+                else{
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                }
               ##endif
-              }, 2000);
+            }, 2000);
           }
           else {
             $('.configuration-container').hide();
@@ -2351,11 +2387,21 @@ input[type=checkbox] + label{
         });
       });
       $('#noFreeDomain').click(function(){
-          ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-          ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-          ##endif
+        ##if(isManager())
+          if(isPro){
+            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+          }
+          else{
+            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+          }
+        ##else
+          if(isPro){
+            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+          }
+          else{
+            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+          }
+        ##endif
       
       });
       $('#scrollDownToContinueButton').click(function(){
