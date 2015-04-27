@@ -15,6 +15,7 @@
     .hosting-tile>.host-btn-wrap{position:absolute;left:20px;bottom:20px;}
     .hosting-tile>.host-btn-wrap>.btn-lrg{float:left;margin-right:10px;width:100%;min-width:240px;height:100%;white-space:normal;}
     html[lang|="el"] .hosting-tile, html[lang|="sv"] .hosting-tile, html[lang|="pt"] .hosting-tile {font-size:22px;line-height:22px}
+    html[lang|="pt"] .hosting-tile-headline {font-size:30px;}
     
   </style>
 </atlantis:webstash>
