@@ -819,8 +819,10 @@
             });
         
             $('.select-and-continue').bind('click', function () {
-              nextStepUrl += (nextStepUrl.indexOf('?') >= 0) ? "&" : "?";
-              nextStepUrl += 'pro=1';
+              if(srcIsPro){
+                nextStepUrl += (nextStepUrl.indexOf('?') >= 0) ? "&" : "?";
+                nextStepUrl += 'pro=1';
+              }
               window.location = nextStepUrl;       
             });
         });
