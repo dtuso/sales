@@ -71,6 +71,7 @@
     "pod_dom_design":         "98001",
     "pod_dom_work":           "98004",
     "pod_dom_io":             "98002",
-    "pod_dom_video":          "98003"
+    "pod_dom_video":          "98003",
+    "pod_dom_tech":           "98024"
   }
 }
