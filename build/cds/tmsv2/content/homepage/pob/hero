@@ -1,0 +1,13 @@
+
+<style>#marquee {
+  background-color: #f3f3f3;
+}
+
+</style>
+<div class="pob personalized hero">
+  <div class="flag">[@L[cds.tmsv2/content/homepage/pob:flag]@L]</div>
+  <div class="headline">[@L[cds.tmsv2/content/homepage/pob:headline]@L]</div>
+  <div class="priceText">[@L[cds.tmsv2/content/homepage/pob:pricetext]@L]</div>
+  <div class="cta">[@L[cds.tmsv2/content/homepage/pob:cta]@L]</div>
+  <div class="disclaimer">[@L[cds.tmsv2/content/homepage/pob:disclaimer]@L]</div>
+</div>
