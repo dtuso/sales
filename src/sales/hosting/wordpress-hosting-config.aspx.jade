@@ -34,10 +34,7 @@ append pageStyles
       margin-bottom: 200px;
     }
     ##endif
-  | 
-  |##if(siteContextAny(pl))
-  | 
-  style.
+    ##if(siteContextAny(pl))
     input[type=radio]:checked + label {
       color: #a92728!important;
     }
@@ -68,6 +65,7 @@ append pageStyles
     .product-added-to-cart{
       margin-top:15px;
     }
+    ##endif
 
 block header
   p.product-added-to-cart

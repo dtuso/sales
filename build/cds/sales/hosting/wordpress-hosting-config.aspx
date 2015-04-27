@@ -1337,10 +1337,7 @@ input[type=checkbox] + label{
           margin-bottom: 200px;
         }
         ##endif
-      </style> 
-      ##if(siteContextAny(pl))
-       
-      <style>
+        ##if(siteContextAny(pl))
         input[type=radio]:checked + label {
           color: #a92728!important;
         }
@@ -1371,6 +1368,7 @@ input[type=checkbox] + label{
         .product-added-to-cart{
           margin-top:15px;
         }
+        ##endif
         
       </style>
     </atlantis:webstash>
