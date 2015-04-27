@@ -5,6 +5,7 @@
 }
 .gdhp-tile.email-essentials .text {
   padding: 60px 0 0 30px;
+  text-transform: uppercase;
 }
 .gdhp-tile.email-essentials > div {
   font-size: 16px;
@@ -37,7 +38,7 @@
   display: inline;
 }
 .gdhp-tile.email-essentials .storage {
-  padding: .5em 0 .5em 0;
+  padding: .35em 0 .35em 0;
 }
 .gdhp-tile.email-essentials .big-price {
   font-size: 36px;
@@ -51,6 +52,7 @@
   margin: 1em 0 1em 0;
   display: block;
   font-family: walsheim-medium;
+  text-transform: uppercase;
 }
 .gdhp-tile.email-essentials .disclaimer {
   clear: both;
@@ -74,15 +76,15 @@
   <div class="text">
     <div class="hdl-container">
       <div class="email-logo"></div>
-      <div class="headline green">EMAIL ESSENTIALS</div>
-    </div><span class="subtext white">EMAIL PROFISSIONAL</span><span class="subtext white">COM SEU DOM&Iacute;NIO:</span><span class="dom-at green">SEUNOME@NOMESUAEMPRESA.COM</span>
-    <div class="big-price storage white">5G DE ESPA&Ccedil;O</div>
-    <div class="white">DE [@T[productprice:<list productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T] POR APENAS</div>
-    <div class="big-price b orange">[@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/M&Ecirc;S</div>
-    <div class="white">POR CAIXA POSTAL</div>
+      <div class="headline green">[@L[cds.sales/homepage/tile/email-essentials:headline-text]@L]</div>
+    </div><span class="subtext white">[@L[cds.sales/homepage/tile/email-essentials:body-text]@L]</span><span class="dom-at green">[@L[cds.sales/homepage/tile/email-essentials:email]@L]</span>
+    <div class="big-price storage white">[@L[cds.sales/homepage/tile/email-essentials:space-text]@L]</div>
+    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:list-price-text]@L]</div>
+    <div class="big-price b orange">[@L[cds.sales/homepage/tile/email-essentials:current-price-text]@L]</div>
+    <div class="white">[@L[cds.sales/homepage/tile/email-essentials:sub-text]@L]</div>
     <div class="email-btn-container">
-      <button href="javascript:void(0)" data-ci="97724" class="btn btn-top-img btn-orange">COMECE J&Aacute; </button>
-    </div><br/>
-    <div class="disclaimer white">*Compra anual necess&aacute;ria</div>
+      <button href="javascript:void(0)" data-ci="97724" class="btn btn-top-img btn-orange">[@L[cds.sales/homepage/tile/email-essentials:cta-text]@L]</button>
+    </div>
+    <div class="disclaimer white">*[@L[cds.sales/homepage/tile/email-essentials:legal-text]@L]</div>
   </div>
 </div>
