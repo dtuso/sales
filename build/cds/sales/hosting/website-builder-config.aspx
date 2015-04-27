@@ -756,6 +756,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
+        var srcIsPro = window.location.href.indexOf("pro") > -1
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
@@ -783,9 +784,19 @@
             $.getJSON(url, function (data) {
                 if (data == 'removed') {
                   ##if(isManager())
-                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##else
-                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##endif
                 }
             });
@@ -820,17 +831,31 @@
         
                 if (domaintoadd == '') {
                      ##if(isManager())
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
-                      ##else
+                      }
+                    ##else
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
-                      ##endif
+                      }
+                    ##endif
             } else {
                 ConfigSearch.removeDoamin();
             }
             });
         
             $('.select-and-continue').bind('click', function () {
-                window.location = nextStepUrl;       
+              if(srcIsPro){
+                nextStepUrl += (nextStepUrl.indexOf('?') >= 0) ? "&" : "?";
+                nextStepUrl += 'pro=1';
+              }
+              window.location = nextStepUrl;       
             });
         });
         
