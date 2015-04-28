@@ -13,7 +13,7 @@
   top: 0;
   left: -4%;
   font-size: 1.25em;
-  padding: 0 40px 10px 40px;
+  padding: 6px 40px 10px 40px;
   background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHZpZXdCb3g9IjAgMCAxMjUgNjUiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxwYXRoIGQ9Ik0xMjUgMEw5NSA1NSAzMCA2NSAzMCA2NSAwIDAgMCAwIDEyNSAwIDEyNSAweiIgZmlsbD0iI0ZFREM0NSIvPjwvc3ZnPg==);
 }
 #marquee .pob.hero .headline {
@@ -40,7 +40,8 @@
     padding-top: 90px;
   }
   #marquee .pob.hero .flag {
-    padding-bottom: 40px;
+    padding-bottom: 25px;
+    padding-top: 15px;
   }
 }
 .Explorer8 #marquee .pob.hero .flag {
