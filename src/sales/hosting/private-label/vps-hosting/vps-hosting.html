@@ -478,7 +478,7 @@ assetPath: false
       os  = $('input:radio[name=os]:checked').attr('id'),
       plans = data[os],
       planTileTempalte = _.template($('#plan-tile-tempalte').text()),
-      $planTilesContainer = $('#plan-tiles'),
+      $planTilesContainer = $('#plan-tiles').empty(),
       lastPlanId = '';
 
     // tooltip floats to the left on the last one, so find which one is last
