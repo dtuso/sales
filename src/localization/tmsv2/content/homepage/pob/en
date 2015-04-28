@@ -7,4 +7,4 @@ Only <span class="price">[@T[multipleproductprice:<current productidlist="101|75
 <phrase key="cta" />
 Get it now
 <phrase key="disclaimer" />
-*1st year only. Bundle renews at /mo. Annual purchase required. Limit 5 seats. See offer details.
+*1st year only. Bundle renews at [@T[multipleproductprice:<list productidlist="101|7524|326366|31841" period="monthly"></list>]@T]/mo. Annual purchase required. Limit 5 seats. See offer details.
