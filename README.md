@@ -122,7 +122,7 @@ Windows CMD:
 Git Bash Shell:
 ```echo 'export NODE_TLS_REJECT_UNAUTHORIZED="0"' >> ~/.profile```
 
-After that, Restart your terminal session and it should work.
+After that, restart your terminal session and it should work.
 
 #### LANGUAGE
 
