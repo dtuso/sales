@@ -48,7 +48,7 @@
 }
 
 </style>
-<div class="pob personalized hero">
+<div data-url="[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='98027'/></relative>]@T]" data-ci='98027' class="pob personalized hero">
   <div class="flag">[@L[cds.tmsv2/content/homepage/pob:flag]@L]</div>
   <div class="headline">[@L[cds.tmsv2/content/homepage/pob:headline]@L]</div>
   <div class="priceText">[@L[cds.tmsv2/content/homepage/pob:pricetext]@L]</div>
