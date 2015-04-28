@@ -1,8 +1,7 @@
 ---
 location: sales/hosting/web-hosting-config-new.aspx
-id: 54b568fbf778fc1004052398
-name: GCE-31997
-comments: Update Web Hosting Product to use new key
+name: MCX-38200
+comments: SiteLock Monthly Price in SSL/Hosting Configs 
 url: http://www.dev-godaddy.com/hosting/web-hosting-config-new.aspx
 assetPath: false
 ---
@@ -84,7 +83,7 @@ assetPath: false
             <div><span class="ssl-checkbox" id="sslCheckbox"></span>[@L[cds.sales/hosting/fosconfigcommon:addsslcert]@L]<span id="sslPrice"></span>/[@L[cds.sales/hosting/fosconfigcommon:termyearshort]@L]</div>
           </div>
         </div>
-        ##if(!activeLanguageAny([da-dk],[fi-fi],[nb-no],[ru-ru],[sv-se],[uk-ua],[tr-tr]))
+        ##if(productIsOffered(107))
         <div id="siteLockAddonWrapper" class="plan-type column-5" style="overflow: visible !important;">
           <span class="section-header">[@L[cds.sales/hosting/web-hosting-config:protect-from-hackers]@L]
             <div class="g-toolTip lg-tooltip">
@@ -96,7 +95,7 @@ assetPath: false
             <div class="sitelock-sent-container">
               <span class="sitelock-checkbox" id="siteLockCheckbox"></span>
               <span class="sitelk-add-snt">[@L[cds.sales/hosting/web-hosting-config:add-site-lock]@L]</span>
-              <div style="width: 470px;">[@L[cds.sales/hosting/web-hosting-config:stlk-web-security]@L] - [@T[productprice:<current productid="181769" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/gd/ssl/categorylp:yr]@L]</div>
+              <div style="width: 470px;">[@L[cds.sales/hosting/web-hosting-config:stlk-web-security]@L] - [@T[productprice:<current productid="181769" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</div>
             </div>
           </div>
         </div>
@@ -395,9 +394,9 @@ function validReferrer(){
 
 
 $(document).ready(function () {
-  // if(!validReferrer()){
-  //   window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/hosting/web-hosting.aspx" secure="false"><param name="ci" value="9009" /></relative>]@T]');
-  //   }
+  if(!validReferrer()){
+    window.location.assign('[@T[link:<relative linktype="SITEURL" path="~/hosting/web-hosting.aspx" secure="false"><param name="ci" value="9009" /></relative>]@T]');
+    }
     $('#planSelected').val(getInitialPackage())
     planChanged();
     $('li[data-main]').live('click', function (e) {
