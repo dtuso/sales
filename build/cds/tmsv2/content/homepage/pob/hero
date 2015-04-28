@@ -43,6 +43,9 @@
     padding-bottom: 40px;
   }
 }
+.Explorer8 #marquee .pob.hero .flag {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/pob-flag.png);
+}
 
 </style>
 <div class="pob personalized hero">
