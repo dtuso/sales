@@ -1,21 +1,22 @@
-extends ../_hero-small.jade
+extends ../_banner-small.jade
 
-append vars
-  - ctaLink = "[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]";  
+block append vars
   - dataCi = 97911;
-  - containerClass = "merch-tile-0365-biz-email";
+  - containerClass = "banner-small-0365-biz-email";
   - logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE5NS40IDM0LjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE5NS40IDM0LjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik00OC43IDE2LjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNTQuNiA5LjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM1Ni40IDguNCA1NS43IDkuMyA1NC42IDkuM3pNNjEuMSAxNi4xaDQuMXYtMy42SDY2bDIuNCAzLjZoNC45bC0yLjgtNC4zQzcyIDEwLjkgNzMgOS4yIDczIDcuM2MwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNjYuOSA5LjNoLTEuN3YtNEg2N2MxLjEgMCAxLjggMC45IDEuOCAyQzY4LjggOC40IDY4LjEgOS4zIDY2LjkgOS4zek04MS4yIDE2LjVjNC44IDAgNy41LTMuNSA3LjUtNy40Uzg2IDEuNyA4MS4yIDEuN2MtNC44IDAtNy41IDMuNS03LjUgNy40Uzc2LjQgMTYuNSA4MS4yIDE2LjV6TTgxLjIgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTODMuMyAxMi43IDgxLjIgMTIuN3pNOTkuMiA1LjVWMi4xaC05djE0aDQuMXYtNC4yaDQuOFY4LjZoLTQuOFY1LjVIOTkuMnpNMTA5LjggNS4yVjIuMWgtOXYxNGg5VjEzSDEwNXYtMi4zaDQuOHYtM0gxMDVWNS4ySDEwOS44ek0xMTEgMTEuNGMwIDMuMyAyLjIgNS4xIDUuOCA1LjEgMy41IDAgNS42LTEuNyA1LjYtNC41IDAtMy4yLTIuOS0zLjktNS00LjcgLTEuMy0wLjUtMS45LTAuOS0xLjktMS42IDAtMC43IDAuNi0xLjEgMS4zLTEuMSAwLjkgMCAxLjQgMC42IDEuNCAxLjdoNC4xYzAtMi4yLTEuNC00LjYtNS40LTQuNiAtMi44IDAtNS41IDEuMS01LjUgNC4xIDAgMi45IDIuNiAzLjcgNC44IDQuNiAxLjUgMC42IDIuMSAwLjkgMi4xIDEuNyAwIDAuNy0wLjUgMS4yLTEuNCAxLjIgLTEuMSAwLTEuNy0wLjctMS43LTJIMTExek0xMjMuNCAxMS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgxMjMuNHpNMTM2LjMgMTYuMWg0LjJ2LTE0aC00LjJWMTYuMXpNMTQ5LjUgMTYuNWM0LjggMCA3LjUtMy41IDcuNS03LjRzLTIuOC03LjQtNy41LTcuNGMtNC44IDAtNy41IDMuNS03LjUgNy40UzE0NC43IDE2LjUgMTQ5LjUgMTYuNXpNMTQ5LjUgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTMTUxLjYgMTIuNyAxNDkuNSAxMi43ek0xNjIuNyAyLjFoLTQuMnYxNGg0LjF2LThsNC41IDhoNC4ydi0xNGgtNC4xdjguM0wxNjIuNyAyLjF6TTE4NyAxNi4xbC01LjItMTRoLTQuM2wtNS4xIDE0aDQuNWwwLjUtMS42aDQuN2wwLjUgMS42SDE4N3pNMTgxLjEgMTEuNGgtMi45bDEuNS01LjJMMTgxLjEgMTEuNHpNMTkxLjcgMTIuNVYyLjFoLTQuMXYxNGg3Ljh2LTMuNkgxOTEuN3pNNTcuNyAyMy4ydi0zLjFoLTl2MTRoOVYzMWgtNC44di0yLjNoNC44di0zaC00Ljh2LTIuNEg1Ny43ek03NS43IDIwLjFoLTUuMWwtMyA5IC0yLjktOWgtNS4zdjE0aDR2LTguN2wyLjcgOC43aDMuMWwyLjUtOC43djguN2g0VjIwLjF6TTkxLjQgMzQuMWwtNS4yLTE0aC00LjNsLTUuMSAxNGg0LjVsMC41LTEuNmg0LjdsMC41IDEuNkg5MS40ek04NS40IDI5LjRoLTIuOWwxLjUtNS4yTDg1LjQgMjkuNHpNOTEuOSAzNC4xaDQuMnYtMTRoLTQuMlYzNC4xek0xMDIuNCAzMC41VjIwLjFoLTQuMXYxNGg3Ljh2LTMuNkgxMDIuNHpNMjMuNyAyNS41TDAgMy4yIDAuNyAzNCA0MCAzMS44bDItMjEuNEwyMy43IDI1LjV6TTQxLjQgOGwtNDAtOEwyNCAyMy44IDQxLjQgOHoiLz48L3N2Zz4="
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/india-pro-email-tertiary-tile-icon@2x.png";
-  - bodyText = "[@L[cds.tmsv2/content/homepage/o365-biz-email/merch-tile:promo-text]@L]";
-  - ctaText = "[@L[cds.tmsv2/content/homepage/o365-biz-email/merch-tile:cta]@L]";
-  - logoText = false;
+  - titleText = "";
+  - bodyText = "[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:promo-text]@L]";
+  - ctaText = "[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta]@L]";
+  - ctaLink = "[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]";  
+
 
 block scripts
   script.
     var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
-    $cta=$('.merch-tile-0365-biz-email a');
+    $cta=$('.banner-small-0365-biz-email a');
     if(savings<5)
-      $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/merch-tile:cta-fallback]@L]"')
+      $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]"')
     else
       $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
     $cta.show();

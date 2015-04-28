@@ -4,6 +4,7 @@
   height: 100%;
   background-color: #fff;
   padding: 5px;
+  text-transform: uppercase;
 }
 .hero-small img {
   float: left;
@@ -11,22 +12,33 @@
   max-width: 100%;
   padding-right: 10px;
 }
-.hero-small h2 {
-  margin: 0;
+.hero-small .title {
   height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
 }
-.hero-small h2 span {
+.hero-small .title span {
   display: table;
   height: 100%;
 }
-.hero-small h2 span span {
+.hero-small .title span span {
   display: table-cell;
   vertical-align: middle;
+}
+.hero-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .75em 0;
+}
+.hero-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 
 </style>
 <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="hero-small co-tertiary-tile">
-  <h2 class="h3 text-primary-o headline-primary"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png"/>
-  </h2>
-  <h3 class="h5 headline-primary">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:promo-text]@L]</h3><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" style="text-decoration:underline;text-transform:uppercase;" class="text-purchase walsheim-bold">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:cta]@L] </a>
+  <div class="title text-primary-o"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png"/>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:promo-text]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:cta]@L] </a>
 </div>

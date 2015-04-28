@@ -1,11 +1,11 @@
-extends ../_hero-small.jade
+extends ../_banner-small.jade
 
 block append vars
-  - ctaLink = "[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]";
-  - ctaText = "[@L[cds.tmsv2/content/homepage/gem/merch-tile:cta]@L]";
   - dataCi = 97704;
-  - containerClass = "gem-tertiary-tile";
+  - containerClass = "banner-small-gem";
   - logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiPjxwYXRoIGQ9Ik0xLjQgMEw0Mi40IDguMiAyNC42IDI0LjUgMS40IDB6TTQzIDEwLjdMNDEgMzIuOCAwLjcgMzUgMCAzLjMgMjQuMyAyNi4zIDQzIDEwLjd6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+";
   - logoImageFallback = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOQAAAAiCAMAAAB4OIUWAAAAaVBMVEVMaXF3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEOGpITHAAAAInRSTlMA3Zmqu+4RRHdmIYjMVTP8WgT2T+SA1bVvxAukKpBjdDuwMqTm/gAABOVJREFUeF7dmNlyrDoMRbcBG5uxpwzd6Uz6/4+8FxSVh4Mhpyo85OyHEBU25WVhtdjAR/V6aPCv6zwS6aeHs8E3ZWypSVfOQOJKkyrdHNQ0SxU1WJqIyvAWVXaeGUaKiLQBzHTfYgc5Yqny/eOGTQ1Kxg88XYdxTaIWk/o5MIhu6R6AjxwvwQGWB/+0zgAeSETjY+GG4yqjJpEeZIt8XFNMWcyBE0hRD0SRIiLFGS3w4zqdZSVep+vr4Y6MugmgsNV0qYCGk1jp+fJFYts5rPlt5YFyi2dqA35OyZGbx88jdigQeuyB4yelIl215ybzbjsAJS+okJj/YRLAKD6K/YQ+DRRIeYTFjCUR57DYJ5HQNFNWtKjLp60NQhWSl8H+rwZaKgWqCSsm4a2wPIQhZWTFkPJEZmXun9eFaDwA5pFyGh9fnv0x7eLy10ilYCwlJFwnh+lvN43pBFJGaoaUSN5rqrALJFM2ilbUGaGSpVWsUhYuDELCDBNAO29MI5BCK5DCbiWRu0AKpaasrgYppNxZz2Q5l86Ws7+eSSOlawfxazq+AcOJMqpuuKevq9xaPZMzqeHqs3EmgZYr106QQlmPtKinG2rFiLwUZfC18/16dXXkNaxXV0ZX2AuS9QYcaEmfR7yNj1GlUa7up5Tqjd/Jkrza1d9JmYhddCWRA94XGF+OaMOiF2anX+94DAVSqx0PUDDsjpBC2VKq4nh8kRYbca+q3Ubv6qSSDHNeV3pXoNkxkajI6xl4oVivMFe+zvJfHVTZZusrpJPdgSaiIv8VIke6wT56oojyGMXUyu/nA36zYqh33K5BaPGhpSz9ZpWUUBoVJLY/EeuM36z0EFo0Fw5Gh/dReD/A8oWlAo8PSm7sBEh3FDVrXEwhxYhy7kHnJMBXx+dIBBJV0kqGHWJsXghkSnnX3OodC8/e5CC74H2InYA8ZAFZOeXdg0IgufCW2IBUArlgXhSU6gH1iWg838LjestAMr5h7tgJyENq6Q+JkHcPrEBW3C5sQJITyMS8EMiU8jye6qYjrxMiyGDBZH1DAO8ErELSADQyZcE9qGtupxjB8QOC51hbcPPkQkglkKl5AbzSEqWr7xcKpPKQylcvxE5AHrL1+xLNid/QYQ6M5gkMmaxCIKPUp+ZF2uP4PlNTqC4PSQMMsRA7AXnILtiXZffAt0ilfBFsQmrDYWxeZCHpc4zjpxxk99W+dQzpnYAcJM9pIFOiOQLJl2YOmG0bUhNZDhPzQuzITRXIFB5LpFByJggInIA8ZEvk+vlChHiOOHpaOvrwhIuWIS2R7qcwNS9aruTbanOQUwYm7oEhAycgA8njy4KIVwSk7oHI+aD+BiQUkYogZaHfhXzOQaKbH604CJ2APCT0PMcwZDQn/Z30Z3IbspfbqXkBPNN3dMidSbS8Ig4iJyAPWQablMypw3r+V9UV8kGVmhfSkG2qzkJyd9bL6r3aELKw1nnIwP8AFtyDJvptt0y3CSkblJoX34Q8Xe7Z1xWKL1OQOAECmVYPNJ4eS+6BuASZjicDKY1Nal5gydcZtequny9Fa93h/DE05gggD9kSUclAiROQhURHpBl4wT2QXLRx77oNyQNpwbw4nC6PXVUWrw/Pb3093M0Na0ohmdoyZOIE5CFb2RdadA++cjLEXyFbkDLwT/PiP5AhxQTF3Y+GAAAAAElFTkSuQmCC';
-  - bodyText = "[@L[cds.tmsv2/content/homepage/gem/merch-tile:body]@L]";
-  - titleText = "[@L[cds.tmsv2/content/homepage/gem/merch-tile:title]@L]"
+  - titleText = "[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]";
+  - bodyText = "[@L[cds.tmsv2/content/homepage/gem/banner-small:body]@L]";
+  - ctaText = "[@L[cds.tmsv2/content/homepage/gem/banner-small:cta]@L]";
+  - ctaLink = "[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]";
