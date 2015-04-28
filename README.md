@@ -114,7 +114,7 @@ gulp html
 
 Running this task requires you to be logged in if you want your content uploaded to CDS. At the command prompt just type: ```node ./lib/login.js``` and type in your username and password. 
 
-If you get a 'no success' message when trying to log in and you have the correct permissions to access CDS, you might neeed to set your SSL certificate policy for node to accept untrusted certificates. To accomplish this, run the following commands:
+If you get a ```no success``` message when trying to log in and you have the correct permissions to access CDS2, you might neeed to set your SSL certificate policy for node to accept untrusted certificates. To accomplish this, run the following commands:
 
 Windows CMD:
 ```SETX NODE_TLS_REJECT_UNAUTHORIZED 0```
@@ -122,7 +122,7 @@ Windows CMD:
 Git Bash Shell:
 ```echo 'export NODE_TLS_REJECT_UNAUTHORIZED="0"' >> ~/.profile```
 
-After that, restart your terminal session after the command has been completed and it should work.
+After that, Restart your terminal session and it should work.
 
 #### LANGUAGE
 
