@@ -83,9 +83,9 @@ block endOfPageScripts
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
     var reSizeTiles = function(){
       var maxTitleHeight = 0;
-        $("#merchandising .promo-text").each(function(index, title) {
+        $("#merchandising .body").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-        }).css("min-height", maxTitleHeight + 10);
+        }).css("min-height", maxTitleHeight);
         if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
           var maxHeroHeight = 0;
           $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});

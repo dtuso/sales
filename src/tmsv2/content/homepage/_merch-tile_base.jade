@@ -10,21 +10,34 @@ block vars
   - containerClass         = containerClass || "";
 
 block merchTileStyles
+  style
+    :less
+      .merch-tile{
+        width:100%;
+        height:100%;
+        background-color: #fff;
+        padding:5px;
+        img {
+          float: left;
+          height: 2.5em;
+          max-width:100%;
+        }
+      }
 
 .merch-tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
-    block logo
-      .promo-logo-wrapper(style!='background:url(#{logoImage}) no-repeat left center;background-size:contain;height:3.5em;margin-bottom:10px;')
-        if (logoImageFallback)
-          <!--[if lt IE 9]>
-          img.promo-logo(src!=logoImageFallback)
-          <![endif]-->
-          img.promo-logo.svgfallback(src!=logoImage)
-        else
-          img.promo-logo(src!=logoImage)
-        if (logoText)
-          h2 !{logoText}
-    block body
-      h3 !{promoText}
-    block cta
-        a.text-purchase.walsheim-black(href!=ctaLink style='text-decoration:underline;padding-top:8px;text-transform:uppercase;') !{ctaText} 
-    block scripts
+  block logo
+    .promo-logo-wrapper
+      if (logoImageFallback)
+        <!--[if lt IE 9]>
+        img.promo-logo(src!=logoImageFallback)
+        <![endif]-->
+        img.promo-logo.svgfallback(src!=logoImage)
+      else
+        img.promo-logo(src!=logoImage)
+      if (logoText)
+        h2 !{logoText}
+  block body
+    h3.h5.headline-primary !{promoText}
+  block cta
+      a.text-purchase.walsheim-black(href!=ctaLink style='text-decoration:underline;padding-top:8px;text-transform:uppercase;') !{ctaText} 
+  block scripts
