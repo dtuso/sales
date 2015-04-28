@@ -1,4 +1,4 @@
-extend ../../../../sales/homepage/_merch-tile_base.jade
+extends ../_merch-tile_base.jade
 
 append vars
   - ctaLink = "[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]";
@@ -10,10 +10,3 @@ append vars
   - promoText = "[@L[cds.tmsv2/content/homepage/tld-ninja/merch-tile:promo-text]@L]";
   - ctaTextContainsPercent = false;
   - logoText = false;
-
-block tileStyles
-  style.
-    .ninja-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .ninja-tertiary-tile .promo-logo{width:70%}
-    .ninja-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .ninja-tertiary-tile a{text-decoration:underline;color:#f2812e}

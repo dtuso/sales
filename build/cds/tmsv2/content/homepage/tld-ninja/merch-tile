@@ -1,11 +1,14 @@
 
 <atlantis:webstash type="css">
   <style>
-    .ninja-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .ninja-tertiary-tile .promo-logo{width:70%}
-    .ninja-tertiary-tile .promo-text{padding-top:10px;text-transform:uppercase;}
-    .ninja-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .ninja-tertiary-tile a{text-decoration:underline;color:#f2812e}
+    :less
+      #merchandising {
+        .tile-content-wrapper{text-transform:uppercase;}
+        .promo-text{padding-top:10px;}
+        .promo-cta{position:absolute;bottom:5px;color:#f2812e;}
+        a{text-decoration:underline;color:#f2812e}
+      }
+    
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]" data-ci='97559' class="tile ninja-tertiary-tile">

@@ -1,33 +1,30 @@
-extend ./_tile.jade
-
-block append vars
+block vars
+  - merchTileVars          = {};
   - logoImage              = logoImage || "";
   - logoImageFallback      = logoImageFallback || "";
   - logoText               = logoText || "";
   - promoText              = promoText || "";
-  - ctaText                = "Save up to [@T[productcompare:<percent primaryproductid='"+merchTilePFID+"' secondaryproductid='"+merchTilePFID+"' showsymbol='true'/>]@T]";
-  - merchTilePFID          = merchTilePFID || "";
-  - ctaTextContainsPercent = ctaTextContainsPercent || false;
-  - ctaFallBackText        = ctaFallBackText || "";
+  - ctaLink                = ctaLink || "";
+  - ctaText                = ctaText || "";
+  - dataCi                 = dataCi || "";
+  - containerClass         = containerClass || "";
 
-block tileContent
-  .promo-logo-wrapper
-    if (logoImageFallback)
-      <!--[if lt IE 9]>
-      img.promo-logo(src!=logoImageFallback)
-      <![endif]-->
-      img.promo-logo.svgfallback(src!=logoImage)
-    else
-      img.promo-logo(src!=logoImage)
-    if (logoText)
-      .promo-logo-text.walsheim-black !{logoText}
-  .promo-text.walsheim-black !{promoText}
-  .promo-cta
-    if (ctaTextContainsPercent)
-      | ##if(productHasSavingsMoreThan(!{merchTilePFID}, !{merchTilePFID}, 0))
-      | <a class="walsheim-black" href="!{ctaLink}">!{ctaText}</a>
-      | ##else
-      | <a class="walsheim-black" href="!{ctaLink}">!{ctaFallBackText}</a>
-      | ##endif
-    else
-      a.walsheim-black(href!=ctaLink) !{ctaText} 
+block merchTileStyles
+
+.merch-tile(data-url!=ctaLink data-ci=dataCi class=containerClass)
+    block logo
+      .promo-logo-wrapper(style!='background:url(#{logoImage}) no-repeat left center;background-size:contain;height:3.5em;margin-bottom:10px;')
+        if (logoImageFallback)
+          <!--[if lt IE 9]>
+          img.promo-logo(src!=logoImageFallback)
+          <![endif]-->
+          img.promo-logo.svgfallback(src!=logoImage)
+        else
+          img.promo-logo(src!=logoImage)
+        if (logoText)
+          h2 !{logoText}
+    block body
+      h3 !{promoText}
+    block cta
+        a.text-purchase.walsheim-black(href!=ctaLink style='text-decoration:underline;padding-top:8px;text-transform:uppercase;') !{ctaText} 
+    block scripts

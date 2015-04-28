@@ -1,4 +1,4 @@
-extend ../../../../sales/homepage/_merch-tile_base.jade
+extends ../_merch-tile_base.jade
 
 append vars
   - ctaLink = "[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]";
@@ -10,10 +10,3 @@ append vars
   - promoText = "[@L[cds.tmsv2/content/homepage/online-store/merch-tile:promo-text]@L]";
   - ctaTextContainsPercent = false;
   - logoText = false;
-
-block tileStyles
-  style.
-    .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
-    .online-store-tile .promo-logo{width:80%}
-    .online-store-tile .promo-cta{position:absolute;bottom:5px}
-    .online-store-tile a{text-decoration:underline;color:#f2812e}

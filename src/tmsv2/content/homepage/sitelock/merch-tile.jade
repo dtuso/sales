@@ -1,4 +1,4 @@
-extend ../../../../sales/homepage/_merch-tile_base.jade
+extends ../_merch-tile_base.jade
 
 append vars
   - dataCi = 97979;
@@ -10,12 +10,3 @@ append vars
   - promoText = "[@L[cds.tmsv2/content/homepage/sitelock/merch-tile:promoText]@L]";
   - ctaTextContainsPercent = false;
   - logoText = false;
-block tileStyles
-  style
-    :less
-      .merch-tile.sitelock{
-        .tile-content-wrapper{padding:20px 15px}
-        .promo-text{text-transform:uppercase; padding-top: 10px;}
-        .promo-cta{position:absolute; bottom:5px;}
-        .promo-logo{width:66%;}
-      }

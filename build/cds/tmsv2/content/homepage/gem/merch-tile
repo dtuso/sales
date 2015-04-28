@@ -1,11 +1,14 @@
 
 <atlantis:webstash type="css">
   <style>
-    .gem-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .gem-tertiary-tile .promo-logo{width:100%}
-    .gem-tertiary-tile .promo-text{padding-top:10px;text-transform:uppercase;}
-    .gem-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .gem-tertiary-tile a{text-decoration:underline;color:#f2812e}
+    :less
+      #merchandising {
+        .tile-content-wrapper{text-transform:uppercase;}
+        .promo-text{padding-top:10px;}
+        .promo-cta{position:absolute;bottom:5px;color:#f2812e;}
+        a{text-decoration:underline;color:#f2812e}
+      }
+    
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]" data-ci='97704' class="tile gem-tertiary-tile">

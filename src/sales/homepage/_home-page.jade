@@ -61,9 +61,7 @@ block append pageStyles
       #domain-name-input{text-transform:inherit}
       .price,.icann-disclaimer,.promo-cta>a{color:@gd-orange}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
-        .tile-wrapper{min-height:140px;margin:5px 0}
-        .promo-cta{text-transform:uppercase}
-        .promo-text{padding-top:10px;text-transform:uppercase}
+        .tile-wrapper{margin:5px 0}
       }
       section { padding-top: 0; padding-bottom: 0;}
       #why-godaddy { padding-bottom: 50px; }
@@ -85,7 +83,7 @@ block endOfPageScripts
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
     var reSizeTiles = function(){
       var maxTitleHeight = 0;
-        $("#merchandising .tile-wrapper").each(function(index, title) {
+        $("#merchandising .promo-text").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight + 10);
         if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
@@ -183,6 +181,21 @@ block content
           .col-md-3.col-sm-6.col-xs-6
             .tile-wrapper
               block merch-tile4
+          .col-md-3.col-sm-6.col-xs-6
+            .tile-wrapper
+              block merch-tile5
+          .col-md-3.col-sm-6.col-xs-6
+            .tile-wrapper
+              block merch-tile6
+          .col-md-3.col-sm-6.col-xs-6
+            .tile-wrapper
+              block merch-tile7
+          .col-md-3.col-sm-6.col-xs-6
+            .tile-wrapper
+              block merch-tile8
+          .col-md-3.col-sm-6.col-xs-6
+            .tile-wrapper
+              block merch-tile9
   block sections
     block domain-promo
       atlantis:webstash(type="css")

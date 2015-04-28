@@ -1,11 +1,14 @@
 
 <atlantis:webstash type="css">
   <style>
-    .merch-tile-support .tile-content-wrapper{padding:20px 15px;color:#333;cursor:default;}
-    .merch-tile-support .promo-logo{width:60%}
-    .merch-tile-support .promo-text{padding-top:10px;text-transform:uppercase;}
-    .merch-tile-support .promo-cta{position:absolute;bottom:5px;color:#f2812e}
-    .merch-tile-support span{color:#f2812e}
+    :less
+      #merchandising {
+        .tile-content-wrapper{text-transform:uppercase;}
+        .promo-text{padding-top:10px;}
+        .promo-cta{position:absolute;bottom:5px;color:#f2812e;}
+        a{text-decoration:underline;color:#f2812e}
+      }
+    
   </style>
 </atlantis:webstash>
 <div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="tile merch-tile-support">

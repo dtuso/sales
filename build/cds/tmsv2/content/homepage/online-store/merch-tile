@@ -1,11 +1,14 @@
 
 <atlantis:webstash type="css">
   <style>
-    .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
-    .online-store-tile .promo-logo{width:80%}
-    .online-store-tile .promo-text{padding-top:10px;text-transform:uppercase}
-    .online-store-tile .promo-cta{position:absolute;bottom:5px}
-    .online-store-tile a{text-decoration:underline;color:#f2812e}
+    :less
+      #merchandising {
+        .tile-content-wrapper{text-transform:uppercase;}
+        .promo-text{padding-top:10px;}
+        .promo-cta{position:absolute;bottom:5px;color:#f2812e;}
+        a{text-decoration:underline;color:#f2812e}
+      }
+    
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="tile online-store-tile">

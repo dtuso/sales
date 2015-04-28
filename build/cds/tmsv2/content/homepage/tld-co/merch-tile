@@ -1,19 +1,37 @@
 
-<atlantis:webstash type="css">
-  <style>
-    .co-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .co-tertiary-tile .promo-logo{width:70%}
-    .co-tertiary-tile .promo-text{padding-top:10px;text-transform:uppercase;}
-    .co-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .co-tertiary-tile a{text-decoration:underline;color:#f2812e}
-  </style>
-</atlantis:webstash>
+<style>#merchandising .tile-content-wrapper {
+  text-transform: uppercase;
+}
+#merchandising .promo-text {
+  padding-top: 10px;
+}
+#merchandising .promo-cta {
+  color: #f2812e;
+}
+#merchandising a {
+  text-decoration: underline;
+  color: #f2812e;
+}
+#merchandising .promo-logo-wrapper {
+  height: 3.5em;
+}
+
+</style>
 <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="tile co-tertiary-tile">
   <div class="tile-content-wrapper">
-    <div class="promo-logo-wrapper"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png" class="promo-logo"/>
+    <div style="background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png) no-repeat left center;background-size:contain" class="promo-logo-wrapper">
     </div>
     <div class="promo-text walsheim-black">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:promo-text]@L]</div>
     <div class="promo-cta"><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" class="walsheim-black">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:cta]@L] </a>
     </div>
+    <script>
+      var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+      $cta=$('co-tertiary-tile .promo-cta');
+      if(savings<5)
+        $cta.html('"[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]"')
+      else
+        $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
+      $cta.show();
+    </script>
   </div>
 </div>

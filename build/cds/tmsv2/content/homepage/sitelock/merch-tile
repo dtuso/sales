@@ -1,18 +1,19 @@
 
 <atlantis:webstash type="css">
-  <style>.merch-tile.sitelock .tile-content-wrapper {
-  padding: 20px 15px;
-}
-.merch-tile.sitelock .promo-text {
+  <style>#merchandising .tile-content-wrapper {
   text-transform: uppercase;
+}
+#merchandising .promo-text {
   padding-top: 10px;
 }
-.merch-tile.sitelock .promo-cta {
+#merchandising .promo-cta {
   position: absolute;
   bottom: 5px;
+  color: #f2812e;
 }
-.merch-tile.sitelock .promo-logo {
-  width: 66%;
+#merchandising a {
+  text-decoration: underline;
+  color: #f2812e;
 }
 
   </style>

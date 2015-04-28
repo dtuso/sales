@@ -1,4 +1,4 @@
-extend ../../../../sales/homepage/_merch-tile_base.jade
+extends ../_merch-tile_base.jade
 
 append vars
   - ctaLink = "[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]";
@@ -10,10 +10,3 @@ append vars
   - promoText = "[@L[cds.sales/homepage/tiles/gem:gem-tile-text]@L]";
   - ctaTextContainsPercent = false;
   - logoText = false;
-
-block tileStyles
-  style.
-    .gem-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .gem-tertiary-tile .promo-logo{width:100%}
-    .gem-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .gem-tertiary-tile a{text-decoration:underline;color:#f2812e}

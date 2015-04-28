@@ -1,11 +1,14 @@
 
 <atlantis:webstash type="css">
   <style>
-    .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
-    .gdpro-tile .promo-logo{width:80%}
-    .gdpro-tile .promo-text{padding-top:10px;text-transform:uppercase;}
-    .gdpro-tile .promo-cta{position:absolute;bottom:5px}
-    .gdpro-tile a{text-decoration:underline;color:#f2812e}
+    :less
+      #merchandising {
+        .tile-content-wrapper{text-transform:uppercase;}
+        .promo-text{padding-top:10px;}
+        .promo-cta{position:absolute;bottom:5px;color:#f2812e;}
+        a{text-decoration:underline;color:#f2812e}
+      }
+    
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="tile gdpro-tile">

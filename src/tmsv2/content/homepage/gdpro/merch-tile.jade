@@ -1,4 +1,4 @@
-extend ../../../../sales/homepage/_merch-tile_base.jade
+extends ../_merch-tile_base.jade
 
 append vars
   - ctaLink = "[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]";
@@ -9,10 +9,3 @@ append vars
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png";
   - promoText = "[@L[cds.tmsv2/content/homepage/gdpro/merch-tile:promo-text]@L]";
   - ctaTextContainsPercent = false;
-
-block tileStyles
-  style.
-    .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
-    .gdpro-tile .promo-logo{width:80%}
-    .gdpro-tile .promo-cta{position:absolute;bottom:5px}
-    .gdpro-tile a{text-decoration:underline;color:#f2812e}
