@@ -1,6 +1,5 @@
 ---
 location: localization/sales/gd/category-listing/hosting-ssl/en
-id: 55359be7f778fc1264ba38de
 name: mcx-38814
 comments: icannfee token
 ---
@@ -36,7 +35,7 @@ Shared Web Hosting
 <phrase key="subcategory-1-product-1-description" />
 Our shared hosting not only delivers some of the industry's fastest load times, it offers advanced scalability to grow as you need it.
 <phrase key="subcategory-1-product-1-bullet-1" />
-Guaranteed 99.9% uptime.
+Guaranteed [@T[localization:<display type="percent" number="99.9" />]@T] uptime.
 <phrase key="subcategory-1-product-1-bullet-2" />
 Award-winning phone support.
 <phrase key="subcategory-1-product-1-bullet-3" />
