@@ -1,0 +1,76 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]" data-ci='95801' class="banner-small web-hosting-price">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/web-hosting-price/banner-small/web-hosting-icon.png" alt="[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjM1IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzUgMzUiPjxwYXRoIGQ9Ik0yMyAzNUwyMyAwLjQgMzUgMC44IDM1IDM0LjYgMjMgMzV6TTI4LjEgMzIuM0wyOS45IDMyLjIgMjkuOSAzMC41IDI4LjEgMzAuNSAyOC4xIDMyLjN6TTI1LjkgMjQuNUwzMi4xIDI0LjcgMzIuMSAyMyAyNS45IDIzIDI1LjkgMjQuNXpNMjUuOSAyMS41TDMyLjEgMjEuNSAzMi4xIDIxLjUgMzIuMSAxOS44IDI1LjkgMTkuOCAyNS45IDIxLjV6TTI1LjkgNC4xTDI1LjkgNS44IDMyLjEgNS42IDMyLjEgNC4xIDI1LjkgNC4xek0zMi4xIDcuM0wyNS45IDcuMyAyNS45IDguOSAzMi4xIDguNiAzMi4xIDcuM3pNMjUuOSAxMy42TDI1LjkgMTUuMyAzMi4xIDE1IDMyLjEgMTMuNiAyNS45IDEzLjZ6TTMyLjEgMTJMMzIgMTAuNCAyNS45IDEwLjQgMjUuOSAxMi4xIDMyLjEgMTJ6TTMyLjEgMTYuN0wyNS45IDE2LjcgMjUuOSAxOC4zIDMyLjEgMTguMyAzMi4xIDE2Ljd6TTAgMzQuNkwwIDAuNCAyMC44IDAgMjAuMiAzNC42IDAgMzQuNnpNOS43IDMyLjNMMTEuNSAzMi40IDExLjUgMzAuNSA5LjYgMzAuNSA5LjcgMzIuM3pNNCAyNC43TDE3LjMgMjQuNSAxNy4zIDIzIDMuOSAyMyA0IDI0Ljd6TTMuOSAyMS41TDE3LjMgMjEuNSAxNy4zIDE5LjggMy45IDE5LjggMy45IDIxLjV6TTMuOSA0LjFMNCA1LjYgMTcuMyA1LjggMTcuMyA0LjEgMy45IDQuMXpNMTcuMyA3LjNMMy45IDcuMyAzLjkgOC42IDE3LjMgOC45IDE3LjMgNy4zek0zLjkgMTJMMTcuMyAxMi4xIDE3LjMgMTAuNCA0IDEwLjQgMy45IDEyek0zLjkgMTMuNkw0IDE1IDE3LjMgMTUuMyAxNy4zIDEzLjYgMy45IDEzLjZ6TTE3LjMgMTYuN0w0IDE2LjcgMy45IDE4LjMgMTcuNCAxOC4zIDE3LjMgMTYuN3oiIGZpbGw9IiM3N0MwNDMiLz48L3N2Zz4=" alt="[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]" class="svgfallback"/><span><span>[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]</span></span>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:body]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta]@L] </a>
+  <script>
+    var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
+    $cta=$('.banner-small.web-hosting-price a');
+    if(savings<5)
+      $cta.html('"[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]"')
+    else
+      $cta.html($cta.html().replace("{0}", savings));
+    $cta.show();
+  </script>
+</div>

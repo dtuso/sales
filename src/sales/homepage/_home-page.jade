@@ -61,8 +61,7 @@ block append pageStyles
       #domain-name-input{text-transform:inherit}
       .price,.icann-disclaimer,.promo-cta>a{color:@gd-orange}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
-        .tile-wrapper{min-height:140px;margin:5px 0}
-        .promo-cta{text-transform:uppercase}
+        #banner-small-1,#banner-small-2,#banner-small-3,#banner-small-4,#banner-small-5,#banner-small-6,#banner-small-7,#banner-small-8,#banner-small-9{margin:5px 0}
       }
       section { padding-top: 0; padding-bottom: 0;}
       #why-godaddy { padding-bottom: 50px; }
@@ -84,9 +83,9 @@ block endOfPageScripts
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
     var reSizeTiles = function(){
       var maxTitleHeight = 0;
-        $("#merchandising .tile-wrapper").each(function(index, title) {
+        $("#merchandising .body").each(function(index, title) {
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-        }).css("min-height", maxTitleHeight + 10);
+        }).css("min-height", maxTitleHeight);
         if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
           var maxHeroHeight = 0;
           $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
@@ -170,18 +169,14 @@ block content
     section#merchandising
       .container
         .row
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper 
-              block merch-tile1
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile2
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile3
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile4
+          #banner-small-1.col-md-3.col-sm-6.col-xs-6
+              block banner-small1
+          #banner-small-2.col-md-3.col-sm-6.col-xs-6
+              block banner-small2
+          #banner-small-3.col-md-3.col-sm-6.col-xs-6
+              block banner-small3
+          #banner-small-4.col-md-3.col-sm-6.col-xs-6
+              block banner-small4
   block sections
     block domain-promo
       atlantis:webstash(type="css")
