@@ -1,6 +1,6 @@
 ## UPDATE (December 9, 2014)
 
-Package.json versions have been changed to static versions, to prevent newer untested versions from being installed. To ensure we are all using the same versions, Delete node_modules folder and run npm install. After npm has been reinstalled, we should all be using the same depenency versions.
+Package.json versions have been changed to static versions, to prevent newer untested versions from being installed. To ensure we are all using the same versions, Delete node_modules folder and run npm install. After npm has been reinstalled, we should all be using the same dependency versions.
 
 ## UPDATE (October 13, 2014)
 
@@ -9,7 +9,7 @@ An additional feature was added to cds-lib.  This feature will create a file and
 
 ---
 
-**Full documenation (under construction) can/will be found here:**
+**Full documentation (under construction) can/will be found here:**
 
 https://github.secureserver.net/FOS-CDS-Pages/Sales/wiki/_pages
 
