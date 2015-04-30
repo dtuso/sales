@@ -12,6 +12,10 @@ block bannerSmallStyles
   style
     :less
       .banner-small{
+        min-height: inherit;
+        max-height: inherit;
+        min-width: inherit;
+        max-width: inherit;
         width:100%;
         height:100%;
         background-color: #fff;
@@ -40,24 +44,32 @@ block bannerSmallStyles
         }
         .body {
           font-family:'Walsheim-Bold', 'Arial Black', sans-serif;
-          margin:.75em 0;
+          margin:.5em 0 2.5em 0;
+          line-height:1.2;
         }
         a {
           color: #ef6c0f;
           font-family:'Walsheim-Bold', 'Arial Black', sans-serif;
+          position:absolute;
+          bottom:5px;
         }
+      }
+      @media only screen and (max-width:550px){
+        .banner-small .title img{display:none;}
+        .banner-small .title img[alt=""]{display:block;}
+      }
+      @media only screen and (min-width:992px) and (max-width:1199px){
+        .banner-small .title img{display:none;}
+        .banner-small .title img[alt=""]{display:block;}
       }
 
 .banner-small(data-url!=ctaLink data-ci=dataCi class=containerClass)
   block logo
     .title.text-primary-o
-      if (logoImageFallback)
-        <!--[if lt IE 9]>
-        img(src!=logoImageFallback)
-        <![endif]-->
-        img.svgfallback(src!=logoImage)
-      else
-        img(src!=logoImage)
+      <!--[if lt IE 9]>
+      img(src!=logoImageFallback alt!=titleText)
+      <![endif]-->
+      img.svgfallback(src!=logoImage alt!=titleText)
       if (titleText)
         span
           span !{titleText}

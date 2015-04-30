@@ -61,7 +61,7 @@ block append pageStyles
       #domain-name-input{text-transform:inherit}
       .price,.icann-disclaimer,.promo-cta>a{color:@gd-orange}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
-        .tile-wrapper{margin:5px 0}
+        #banner-small-1,#banner-small-2,#banner-small-3,#banner-small-4,#banner-small-5,#banner-small-6,#banner-small-7,#banner-small-8,#banner-small-9{margin:5px 0}
       }
       section { padding-top: 0; padding-bottom: 0;}
       #why-godaddy { padding-bottom: 50px; }
@@ -169,33 +169,24 @@ block content
     section#merchandising
       .container
         .row
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper 
-              block merch-tile1
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile2
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile3
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile4
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile5
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile6
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile7
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile8
-          .col-md-3.col-sm-6.col-xs-6
-            .tile-wrapper
-              block merch-tile9
+          #banner-small-1.col-md-3.col-sm-6.col-xs-6
+              block banner-small1
+          #banner-small-2.col-md-3.col-sm-6.col-xs-6
+              block banner-small2
+          #banner-small-3.col-md-3.col-sm-6.col-xs-6
+              block banner-small3
+          #banner-small-4.col-md-3.col-sm-6.col-xs-6
+              block banner-small4
+          #banner-small-5.col-md-3.col-sm-6.col-xs-6
+              block banner-small5
+          #banner-small-6.col-md-3.col-sm-6.col-xs-6
+              block banner-small6
+          #banner-small-7.col-md-3.col-sm-6.col-xs-6
+              block banner-small7
+          #banner-small-8.col-md-3.col-sm-6.col-xs-6
+              block banner-small8
+          #banner-small-9.col-md-3.col-sm-6.col-xs-6
+              block banner-small9
   block sections
     block domain-promo
       atlantis:webstash(type="css")

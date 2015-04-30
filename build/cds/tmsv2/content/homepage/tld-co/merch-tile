@@ -1,44 +1,44 @@
 
-<style>.hero-small {
+<style>.banner-small {
   width: 100%;
   height: 100%;
   background-color: #fff;
   padding: 5px;
   text-transform: uppercase;
 }
-.hero-small img {
+.banner-small img {
   float: left;
   height: 2em;
   max-width: 100%;
   padding-right: 10px;
 }
-.hero-small .title {
+.banner-small .title {
   height: 2em;
   font-size: 24px;
   letter-spacing: -1px;
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   line-height: .9;
 }
-.hero-small .title span {
+.banner-small .title span {
   display: table;
   height: 100%;
 }
-.hero-small .title span span {
+.banner-small .title span span {
   display: table-cell;
   vertical-align: middle;
 }
-.hero-small .body {
+.banner-small .body {
   font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
   margin: .75em 0;
 }
-.hero-small a {
+.banner-small a {
   color: #ef6c0f;
   font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="hero-small co-tertiary-tile">
+<div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="banner-small banner-small-tld-co">
   <div class="title text-primary-o"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png"/>
   </div>
-  <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:promo-text]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/merch-tile:cta]@L] </a>
+  <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L] </a>
 </div>
