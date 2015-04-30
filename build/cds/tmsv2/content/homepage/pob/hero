@@ -1,0 +1,58 @@
+
+<style>#marquee {
+  background-color: #f3f3f3;
+}
+#marquee .pob.hero {
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  padding-top: 60px;
+  font-size: 13px;
+}
+#marquee .pob.hero .flag {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  font-size: 1.25em;
+  padding: 6px 40px 10px 40px;
+  background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHZpZXdCb3g9IjAgMCAxMjUgNjUiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxwYXRoIGQ9Ik0xMjUgMEw5NSA1NSAzMCA2NSAzMCA2NSAwIDAgMCAwIDEyNSAwIDEyNSAweiIgZmlsbD0iI0ZFREM0NSIvPjwvc3ZnPg==);
+}
+#marquee .pob.hero .headline {
+  font-size: 2.25em;
+  color: #77C043;
+  line-height: .95em;
+  max-width: 550px;
+}
+#marquee .pob.hero .priceText {
+  font-size: 1.8em;
+}
+#marquee .pob.hero .priceText .price {
+  font-size: 1.4em;
+}
+#marquee .pob.hero .disclaimer {
+  font-size: 10px;
+  margin: 15px 0 10px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: none;
+}
+@media only screen and (min-width: 480px) {
+  #marquee .pob.hero {
+    font-size: 16px;
+    padding-top: 90px;
+  }
+  #marquee .pob.hero .flag {
+    padding-bottom: 25px;
+    padding-top: 15px;
+  }
+}
+.Explorer8 #marquee .pob.hero .flag {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/pob-flag.png);
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='98027'/></relative>]@T]" data-ci='98027' class="pob personalized hero">
+  <div class="flag">[@L[cds.tmsv2/content/homepage/pob:flag]@L]</div>
+  <div class="headline">[@L[cds.tmsv2/content/homepage/pob:headline]@L]</div>
+  <div class="priceText">[@L[cds.tmsv2/content/homepage/pob:pricetext]@L]</div>
+  <button class="cta btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/pob:cta]@L]</button>
+  <div class="disclaimer">[@L[cds.tmsv2/content/homepage/pob:disclaimer]@L]</div>
+</div>

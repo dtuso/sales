@@ -1,7 +1,7 @@
 ---
 location: localization/sales/coupons/en
-id: 5522f453f778fc0b3cc5e5b5
-name: GCE-35734
+id: 55382e64f778fc1458efd5f1
+name: MXCMO-865
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -446,6 +446,16 @@ Show your true colors with <strong>.green</strong>
 Have it all? <strong>.world</strong> is for you.
 <phrase key="PodDotLegalText" />
 Grow your practice with <strong>.legal</strong>
+<phrase key="PodDotDesignText" />
+Perfect for the creative space
+<phrase key="PodDotWorkText" />
+<strong>.work</strong> has a job to do.
+<phrase key="PodDotTechText" />
+Tell them you're all about technology with <strong>.tech</strong>.
+<phrase key="PodDotIoText" />
+Popular domain for startups, engineers, coders, and geeks
+<phrase key="PodDotVideoText" />
+Be seen online with <strong>.video</strong>.
 <phrase key="btn-buy-now" />
 Buy Now
 <phrase key="annual-purchase-required-period" />
