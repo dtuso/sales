@@ -1,0 +1,10 @@
+---
+location: localization/sales/gd/popups/disclaimer-asdag1/en
+name: FOS-38815
+description: Update all pages using new ICANN token Round 2
+---
+{% include '../../modules/doc-block.html' %}
+<phrase key="DisclaimerModal0DisclaimerItems0Text" />
+* Plus ICANN fee [@T[domains:<icannfee/>]@T] per domain name per year.
+<phrase key="DisclaimerModal0DisclaimerItems1Text" />
+&dagger; Free [@T[companyname:name]@T] Photo Album service is ad-supported.
