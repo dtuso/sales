@@ -463,6 +463,12 @@
           { "ITC Code" : "TopPodCOLink" },
           { "Description" : "Top Pod - .CO link" }
         ]
+      },
+      { "Top TLD Pods - .DESIGN link" : [
+          { "ITC ID" : "98031" },
+          { "ITC Code" : "TopPodDESIGNLink" },
+          { "Description" : "Top Pod - .DESIGN link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -705,6 +711,24 @@
           { "ITC Code" : "ButtomPodDesign" },
           { "Description" : "Buttom TLD Pods - .DESIGN" }
         ]
+      },
+      { "Buttom TLD Pods - .WORK" : [
+          { "ITC ID" : "98032" },
+          { "ITC Code" : "ButtomPodWork" },
+          { "Description" : "Buttom TLD Pods - .WORK" }
+        ]
+      },
+      { "Buttom TLD Pods - .TECH" : [
+          { "ITC ID" : "98033" },
+          { "ITC Code" : "ButtomPodTech" },
+          { "Description" : "Buttom TLD Pods - .TECH" }
+        ]
+      },
+      { "Buttom TLD Pods - .WALES" : [
+          { "ITC ID" : "98034" },
+          { "ITC Code" : "ButtomPodWales" },
+          { "Description" : "Buttom TLD Pods - .WALES" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -934,6 +958,18 @@
           { "ITC ID" : "97830" },
           { "ITC Code" : "NewAvailChat" },
           { "Description" : "New Available TLD's Column - .CHAT" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .VIDEO" : [
+          { "ITC ID" : "98036" },
+          { "ITC Code" : "NewAvailVideo" },
+          { "Description" : "New Available TLD's Column - .VIDEO" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .DESIGN" : [
+          { "ITC ID" : "98035" },
+          { "ITC Code" : "NewAvailDesign" },
+          { "Description" : "New Available TLD's Column - .DESIGN" }
         ]
       }
     ],
