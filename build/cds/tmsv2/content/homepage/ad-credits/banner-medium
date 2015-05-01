@@ -7,7 +7,7 @@
   .banner-medium.basic .btn-purchase { position: absolute; bottom: .5em; }
   
 </style>
-<div data-url="[@T[link:<relative path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></relative>]@T]" data-ci="98071" class="banner-medium basic ad-credits">
+<div data-url="[@T[link:<external linktype="myaurl" path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></external>]@T]" data-ci="98071" class="banner-medium basic ad-credits">
   <div class="title text-primary-o">Free Advertising Credits. </div>
-  <div class="body">Increase traffic to your site with Advertising Credits.</div><a href="[@T[link:<relative path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></relative>]@T]" class="btn btn-sm btn-purchase">Learn More</a>
+  <div class="body">Increase traffic to your site with Advertising Credits.</div><a href="[@T[link:<external linktype="myaurl" path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></external>]@T]" class="btn btn-sm btn-purchase">Learn More</a>
 </div>
