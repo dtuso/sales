@@ -47,6 +47,7 @@
 }
 #marquee .hero.polygon.cricket.got div.products {
   padding-bottom: 2%;
+  white-space: nowrap;
 }
 #marquee .hero.polygon.cricket.got div.products > div {
   display: inline;
