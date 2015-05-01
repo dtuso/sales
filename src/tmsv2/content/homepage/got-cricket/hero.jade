@@ -3,14 +3,15 @@ prepend vars
   - var classes = "got cricket"
   - var dataCI = 97836;
   - var ctaLink = "[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='"+dataCI+"'/></relative>]@T]";
-  - var marqueeBackground = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/cricket/GOT-IndiaMarquee-005.jpg";
+  - var marqueeBackground = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/got-cricket-marquee-background.jpg";
   - var polygon = "grey-mid";
   - var xsBannerColor = "#333";
 
 append heroStyles
   style
     :less
-      #marquee{background-position-x:43%; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+      #marquee{background-position:43%; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+        @media only screen and (min-width:1000px){background-position:50%}
         .hero.polygon.cricket.got { color:#fff;
           .headline { line-height:.9; padding-bottom:2%;
             .line1 {font-size: 1.7em;}
