@@ -45,6 +45,10 @@ assetPath: false
    .sitelock-sent-container{
     min-width: 350px;
     }
+    .annual-price{
+        font-size:12px;
+        display:block !important;
+    }
   </style>
   </head>
 <body>
@@ -127,6 +131,9 @@ assetPath: false
               <span class="sitelock-checkbox" id="siteLockCheckbox"></span>
               <span class="sitelk-add-snt">[@L[cds.sales/hosting/web-hosting-config:add-site-lock]@L]</span>
               <div style="width: 470px;">[@L[cds.sales/hosting/web-hosting-config:stlk-web-security]@L] - [@T[productprice:<current productid="181769" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</div>
+              <div class="annual-price">
+                [@T[productprice:<current productid="181769" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/security/website-security-new:term-year]@L] [@L[cds.sales/security/website-security-new:billed-annual]@L]
+              </div>
             </div>
           </div>
         </div>
