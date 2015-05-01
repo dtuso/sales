@@ -315,212 +315,6 @@
 }
 
             </style>
-            <div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="banner-small support">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/banner-small/support_icon.png" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzAgMzUiPjxwYXRoIGQ9Ik0yNy4zIDE4LjFMMjYuOCAyNSAyNiAyNi4zIDIyLjcgMjYuMyAyMy41IDE3IDI2LjEgMTcuMSAyNy4zIDE4LjF6TTI4LjYgMjYuN0wyNi41IDMwLjEgMTkgMzUgMTYuNCAzNSAxNSAzMi44IDE1LjYgMzAuNyAxNS44IDMwLjcgMTkuMSAzMS43IDI1LjggMjkuMSAyNy41IDI2LjcgMjguNiAxMCAyMC44IDQgOCA0LjEgMS44IDEwLjQgMi43IDIxLjggMiAyMS45IDAgOS45IDguMSAwIDIxLjUgMC4yIDMwIDkuNyAyOC42IDI2Ljd6TTMuNiAxNy4zTDYuOSAxNy4zIDcuNiAyNS44IDQuNiAyNi4yIDMuNSAyNS4yIDIuNyAxNy45IDMuNiAxNy4zeiIgZmlsbD0iIzc3QzA0MyIvPjwvc3ZnPg==" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]</span></span>
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:body]@L]</div><a href="tel:+[@T[supportphone:<technical />]@T]">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:cta]@L] </a>
-              <script>$('html[lang="en-gb"] .banner-small.support .promo-cta a').attr('href',$('.banner-small.support .promo-cta a').attr('href').replace(/020/i,"4420"));</script>
-            </div>
-          </div>
-          <div id="banner-small-2" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="banner-small gdpro">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gdpro/banner-small/gd-pro-logo.png" alt=""><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIyMTQiIHZpZXdCb3g9Ii0wLjUgLTAuNSA3OTMgMjE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0wLjUgLTAuNSA3OTMgMjE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRjE2RTAwIiBwb2ludHM9IjYyMS45IDAgNTQxLjIgNzEuMSA1NDkuMSAxNTguNSA2NjYuOSAyMTIuNiA3OTIgMTUzLjEgNzY5LjUgNDYuMiAiLz48cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNNTEuNiAxMDMuOWgzOC45djEyLjFoLTkuMWMtMy42IDE4LjItMTcgMzEtMzkuNSAzMUMxNS4yIDE0NyAwIDEyNi4zIDAgMTA0LjVzMTYuNC00Mi41IDQxLjktNDIuNWMxOS40IDAgMzMuNCAxMi4xIDM0LjYgMjYuMUg2My4yYy0xLjItNy45LTkuNy0xNC42LTIxLjMtMTQuNiAtMTcuNiAwLTI3LjkgMTQuNi0yNy45IDMxIDAgMTUuOCA5LjcgMzEgMjkuOCAzMSAxNCAwIDIxLjktOS4xIDIzLjctMTguOEg1MS42TDUxLjYgMTAzLjkgNTEuNiAxMDMuOSA1MS42IDEwMy45eiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik05NC43IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41Uzk0LjcgMTMzIDk0LjcgMTE3LjJ6TTEzOS43IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzEzMyAxMzQuOCAxMzkuNyAxMjYuOSAxMzkuNyAxMTcuMnpNMTg5LjUgNjMuMmMyNi43IDAgNDEuOSAyMCA0MS45IDQwLjdzLTE1LjIgNDAuNy00MS45IDQwLjdIMTYzLjRWNjMuMkgxODkuNUwxODkuNSA2My4yek0xNzYuNyA3NS4zdjU3LjdoMTIuOGMxOC4yIDAgMjguNS0xNCAyOC41LTI4LjVTMjA3LjcgNzUuOSAxODkuNSA3NS45QzE4OS41IDc1LjMgMTc2LjcgNzUuMyAxNzYuNyA3NS4zek0yOTUuOCA5MC41djU0LjFoLTEyLjh2LTcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNVY4OS45TDI5NS44IDkwLjUgMjk1LjggOTAuNXpNMjgzIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzI3NyAxMzQuOCAyODMgMTI2LjkgMjgzIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0zNTEuMSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjNMMzUxLjEgMTM3LjN6TTM1MS4xIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzM0NC40IDEzNC44IDM1MS4xIDEyNi45IDM1MS4xIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00MTguNSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjN6TTQxOC41IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzQxMi40IDEzNC44IDQxOC41IDEyNi45IDQxOC41IDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00NDIuOCAxNTAuNmgxMi4xYzAgNi4xIDQuMyAxMC45IDEyLjggMTAuOSA5LjEgMCAxMy40LTQuMyAxMy40LTE0LjZ2LTEwLjNjLTMuNiA2LjEtOS43IDkuMS0xNy42IDkuMXMtMTMuNC0zLTE2LjQtNy4zYy0yLjQtNC4zLTMuNi04LjUtMy42LTE1Ljh2LTMyLjJoMTMuNHYyNy45YzAgOS4xIDIuNCAxNi40IDExLjUgMTYuNCA5LjEgMCAxMi44LTcuMyAxMi44LTE2LjRWOTAuNWgxMi44djU2LjVjMCAxOC4yLTEwLjMgMjYuMS0yNy45IDI2LjFDNDUyLjUgMTczLjEgNDQyLjggMTYyLjggNDQyLjggMTUwLjZ6Ii8+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTQ5OS45IDkxLjdjMC01LjUgMy42LTEwLjMgMTAuMy0xMC4zczEwLjMgNC45IDEwLjMgMTAuMyAtMy42IDEwLjMtMTAuMyAxMC4zQzUwNC4xIDEwMiA0OTkuOSA5Ni42IDQ5OS45IDkxLjd6TTUxOC43IDkxLjdjMC00LjktMy05LjEtOC41LTkuMSAtNS41IDAtOC41IDQuMy04LjUgOS4xIDAgNC4zIDMgOC41IDguNSA4LjVDNTE1IDEwMC4yIDUxOC43IDk2IDUxOC43IDkxLjd6TTUwNi41IDk2LjZ2LTExLjVoNC4zYzIuNCAwIDMuNiAxLjggMy42IDMuNiAwIDEuOC0xLjIgMy0yLjQgMy42bDIuNCA0LjNoLTEuOGwtMi40LTMuNmgtMi40djMuNkw1MDYuNSA5Ni42IDUwNi41IDk2LjYgNTA2LjUgOTYuNnpNNTEwLjggOTEuN2MxLjIgMCAyLjQtMS4yIDIuNC0yLjRzLTEuMi0yLjQtMi40LTIuNGgtM3Y0LjlDNTA3LjggOTEuNyA1MTAuOCA5MS43IDUxMC44IDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTU4OS43IDYzLjJoMjkuMmMxNy42IDAgMjguNSAxMy40IDI4LjUgMjguNXMtMTEuNSAyOC41LTI4LjUgMjguNUg2MDMuMXYyNC4zaC0xMy40TDU4OS43IDYzLjIgNTg5LjcgNjMuMiA1ODkuNyA2My4yek02MzQuMSA5MS43YzAtOS4xLTYuMS0xNi40LTE1LjItMTYuNEg2MDMuMXYzMi44aDE1LjhDNjI4IDEwOC4xIDYzNC4xIDEwMC44IDYzNC4xIDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MC42IDEwMmMtMS44LTAuNi0zLTAuNi00LjktMC42IC0xMC45IDAtMTcgNi4xLTE3IDE5LjR2MjMuMWgtMTIuOFY4OS45aDEyLjh2OC41YzIuNC00LjkgOS43LTkuNyAxNy05LjcgMS44IDAgMy42IDAgNC45IDAuNlYxMDJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MS44IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41QzcwMy4zIDE0NS44IDY5MS44IDEzMyA2OTEuOCAxMTcuMnpNNzM2LjEgMTE3LjJjMC05LjEtNi4xLTE3LTE1LjgtMTdzLTE1LjggNy45LTE1LjggMTcgNi4xIDE3IDE1LjggMTdDNzMwIDEzNC44IDczNi4xIDEyNi45IDczNi4xIDExNy4yeiIvPjwvc3ZnPg==" alt="" class="svgfallback">
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:body]@L]</div><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-3" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <style>.banner-small.gem .title span span{font-size:.85em;}</style>
-            <div data-url="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]" data-ci='97704' class="banner-small gem">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gem/banner-small/gem-icon.png" alt="[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiPjxwYXRoIGQ9Ik0xLjQgMEw0Mi40IDguMiAyNC42IDI0LjUgMS40IDB6TTQzIDEwLjdMNDEgMzIuOCAwLjcgMzUgMCAzLjMgMjQuMyAyNi4zIDQzIDEwLjd6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]</span></span>
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/gem/banner-small:body]@L]</div><a href="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gem/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-4" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
             <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small 0365-biz-email">
               <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]</span></span>
               </div>
@@ -529,286 +323,14 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
                 $cta=$('.banner-small.0365-biz-email a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
               </script>
             </div>
           </div>
-          <div id="banner-small-5" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="banner-small online-store">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/online-store/banner-small/online-store-icon.png" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIxLjUgMCAzMCAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxLjUgMCAzMCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc3QzA0MyIgZD0iTTI2LjkgMTQuMmwtMS44IDEwLjkgMC40IDIuNyAxLjUgMC4zIDEuNCAyLjIgLTAuNiAyLjUgLTIuMiAxLjQgLTIuNS0wLjYgLTEuNC0yLjIgMC42LTIuNSAxLjItMC44IC0wLjQtMi42TDcgMjkuMSA2LjMgMTcuNGwxOC42LTQuM2gtMC4xbDQuMS0zLjVMMjIgMi41bC0zLjggMyA2LjYgNi4xaC0yLjJsLTUuOS01TDIuOSAxMi45bC0wLjQtMC43YzAgMCAxMy03LjMgMTQuOS04LjJWMy45TDIxLjMgMGw4LjkgOC40IDEuMyAyLjVMMjYuOSAxNC4yek01LjcgMjhsLTMtNi40IC0xLjItOS4xIDMuNiA0LjRMNS43IDI4ek0xMiAyOS43bDIuMiAwLjEgMS41IDEuNiAtMC4xIDIuMUwxNCAzNWwtMi4xLTAuMSAtMS41LTEuNnYtMi4xTDEyIDI5Ljd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]</span></span>
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/online-store/banner-small:body]@L]</div><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/online-store/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-6" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <div data-url="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]" data-ci='97979' class="banner-small sitelock">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/sitelock/banner-small/sitelock-icon.png" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMjggMzUiPjxwYXRoIGQ9Ik0wIDM1TDAgOC41QzAgOC41IDMuNSA4LjUgMy41IDguNSA0LjUgMy43IDguNyAwIDEzLjggMCAxOC45IDAgMjMuMiAzLjcgMjQuMiA4LjUgMjQuMiA4LjUgMjggOC41IDI4IDguNUwyOCAzNSAwIDM1ek00LjUgMTMuMUw0LjUgMzAuNCAyMy41IDMwLjQgMjMuNSAxNi41IDE0IDI4LjcgNi40IDIyLjUgOS40IDE4LjcgMTMuNyAyMi43IDIwLjcgMTMuMSA0LjUgMTMuMXpNMTMuOCA0LjRDMTEuMiA0LjQgOC45IDYuMSA4LjEgOC40IDguMSA4LjQgMTkuNiA4LjQgMTkuNiA4LjQgMTguNyA2LjEgMTYuNSA0LjQgMTMuOCA0LjR6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]</span></span>
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:body]@L]</div><a href="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-7" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="banner-small tld-co">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-co/banner-small/co-logo.png" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MyIgaGVpZ2h0PSI2MTIiIHZpZXdCb3g9IjU0LjUgMCA2ODMgNjEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDU0LjUgMCA2ODMgNjEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBkaXNwbGF5PSJub25lIi8+PGcgZGlzcGxheT0ibm9uZSI+PGcgZGlzcGxheT0iaW5saW5lIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNNDc0LjcgNDUyLjlMNTUgNTcuN2wxMi4yIDU0Ny4zTDc2My4yIDU2Ni41bDM1LTM3OS40TDQ3NC43IDQ1Mi45ek03ODUuOSAxNDEuNkw3OS41IDBsNDAwLjQgNDIzLjJMNzg1LjkgMTQxLjZ6Ii8+PC9nPjwvZz48cGF0aCBmaWxsPSIjRkY2RTAwIiBkPSJNNTEzLjIgMzk2LjljLTMzLjIgMC01OS41IDI2LjItNTkuNSA1OS41czI2LjIgNTkuNSA1OS41IDU5LjUgNTkuNS0yNi4yIDU5LjUtNTkuNVM1NDYuNCAzOTYuOSA1MTMuMiAzOTYuOXpNNjYzLjUgMTEwLjJjLTIxLTIxLTg5LjItODkuMi05Ny45LTk3LjlDNTUzLjQgMS43IDU0OS45IDAgNTM1LjkgMEg5MS43Yy0yMSAwLTM2LjcgMTUuNy0zNi43IDM2Ljd2NTQwLjNjMCAxOS4yIDE1LjcgMzUgMzYuNyAzNWg1NDAuM2MxOS4yIDAgMzYuNy0xNS43IDM2LjctMzYuN1YxMjQuMUM2NjguOCAxMTUuNCA2NjcgMTEzLjcgNjYzLjUgMTEwLjJ6TTEyMS41IDU1Ny44Yy0xNCAwLTI2LjItMTIuMi0yNi4yLTI2LjIgMC0xNCAxMi4yLTI2LjIgMjYuMi0yNi4yIDE0IDAgMjYuMiAxMi4yIDI2LjIgMjYuMkMxNDcuNyA1NDUuNiAxMzUuNSA1NTcuOCAxMjEuNSA1NTcuOHpNMjc1LjMgNTE1LjhjMjEgMCAzOC41LTEwLjUgNDktMjYuMiAxLjctMS43IDUuMi03IDguNy04LjcgMTQtOC43IDM1LTguNyA1NC4yLTEwLjUgLTcgNTYtNTQuMiA5Ny45LTExMS45IDk3LjkgLTYyLjkgMC0xMTMuNy01MC43LTExMy43LTExMy43UzIxMi40IDM0MSAyNzUuMyAzNDFjNTYgMCAxMDMuMiA0My43IDExMS45IDk3LjkgLTE5LjIgMS43LTQwLjIgMS43LTU0LjItNyAtMS43LTEuNy03LTUuMi04LjctOC43IC0xMC41LTE1LjctMjgtMjYuMi00OS0yNi4yIC0zMy4yIDAtNTkuNSAyNi4yLTU5LjUgNTkuNVMyNDIuMSA1MTUuOCAyNzUuMyA1MTUuOHpNNTEzLjIgNTcwYy02Mi45IDAtMTEzLjctNTAuNy0xMTMuNy0xMTMuN1M0NTAuMiAzNDIuNyA1MTMuMiAzNDIuN3MxMTMuNyA1MC43IDExMy43IDExMy43UzU3Ni4xIDU3MCA1MTMuMiA1NzB6Ii8+PHBhdGggZmlsbD0iI0ZGNkUwMCIgZD0iTTY5Ni44IDYxMnYtMjFoLTd2LTMuNWgyMXYzLjVoLTdWNjEySDY5Ni44ek03MTIuNSA2MTJ2LTI2LjJoN2w1LjIgMTcuNSA1LjItMTcuNWg3VjYxMmgtNS4ydi0xOS4yTDcyNi41IDYxMmgtNS4ybC01LjItMTkuMlY2MTJINzEyLjV6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]</span></span>
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-8" class="col-md-3 col-sm-6 col-xs-6">
-            <style>.banner-small {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  padding: 5px;
-  text-transform: uppercase;
-}
-.banner-small img {
-  float: left;
-  height: 2em;
-  max-width: 100%;
-  padding-right: 10px;
-}
-.banner-small .title {
-  height: 2em;
-  font-size: 24px;
-  letter-spacing: -1px;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  line-height: .9;
-}
-.banner-small .title span {
-  display: table;
-  height: 100%;
-}
-.banner-small .title span span {
-  display: table-cell;
-  vertical-align: middle;
-}
-.banner-small .body {
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  margin: .5em 0 2.5em 0;
-  line-height: 1.2;
-}
-.banner-small a {
-  color: #ef6c0f;
-  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
-  position: absolute;
-  bottom: 5px;
-}
-@media only screen and (max-width: 550px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .banner-small .title img {
-    display: none;
-  }
-  .banner-small .title img[alt=""] {
-    display: block;
-  }
-}
-
-            </style>
-            <div data-url="[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]" data-ci='97559' class="banner-small tld-ninja">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-ninja/banner-small/ninja-logo.png" alt=""><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIxODciIHZpZXdCb3g9Ii0wLjUgMjEyLjUgNzkzIDE4NyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMC41IDIxMi41IDc5MyAxODciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxjaXJjbGUgZmlsbD0iIzQxNDI0MiIgY3g9IjE2IiBjeT0iMzU0IiByPSIxNiIvPjxwYXRoIGZpbGw9IiM0MTQyNDIiIGQ9Ik0xNTQuOCAzMzkuMWMtMC41IDEuNi01Ny42LTExNC4yLTU3LjYtMTE0LjJINzcuOUw0OC42IDM3MGgxOC43bDI0LjYtMTE1LjggNTYuNiAxMTUuOGgxOC4xbDI4LjgtMTQ1LjJoLTE1LjVDMTc5LjkgMjI0LjkgMTU1LjMgMzM3LjUgMTU0LjggMzM5LjF6TTM4OS42IDIyNC45YzAgMC0yNC41IDExMi4xLTI1LjEgMTE0LjIgLTAuNSAxLjYtNTcuNi0xMTQuMi01Ny42LTExNC4ySDI4Ny43bC0yOS40IDE0NS4yaDE4LjdsMjQuNi0xMTUuOCA1Ny4xIDExNS44aDE3LjZsMjguOC0xNDUuMkgzODkuNnoiLz48cG9seWdvbiBmaWxsPSIjNDE0MjQyIiBwb2ludHM9IjIwMy45IDM3MCAyMjAuNCAzNzAgMjUwLjMgMjI0LjkgMjM0LjMgMjI0LjkgIi8+PHBhdGggZmlsbD0iIzQxNDI0MiIgZD0iTTU0Ny42IDIyNC45bC04OS43IDE0NS4yaDIwLjNsMTkuNy0zMi42aDcybDUuMyAzMi42aDE3LjZsLTI1LjEtMTQ1LjJINTQ3LjZ6TTUwNy41IDMyMmw0Ny41LTc5IDEyLjggNzlINTA3LjV6TTQ1MS41IDIyNC45YzAgMC05LjEgNDkuNi0xNC45IDc3LjQgLTUuMyAyOC4zLTguNSA0Ny0xOS4yIDU4LjcgLTEwLjcgMTEuNy0zMy4xIDIzLjUtMzMuMSAyMy41bDYuNCAxNC45YzAgMCAxOS43LTUuOSAzOC40LTI3LjIgMTguNy0yMS4zIDE4LjEtMzYuMyAyNS42LTY4LjMgNi45LTMyIDE0LjktNzkgMTQuOS03OUg0NTEuNXpNNzA4LjIgMjEyLjZjLTQ2LjQgMC04My44IDM3LjQtODMuOCA4My44czM3LjQgODMuOCA4My44IDgzLjhTNzkyIDM0Mi44IDc5MiAyOTYuNCA3NTQuNiAyMTIuNiA3MDguMiAyMTIuNnpNNzU5LjQgMzM5LjZjLTEyLjgtMS42LTE3LjEtMjIuNC0zMS0yMi40IC01LjMgMC04IDAtMjcuMiAxMC43IC0xOS4yIDEwLjctMjcuOCAxMS4yLTM0LjcgMTAuMSAtNi45LTEuMS0yMi45LTkuNi0yMS45LTM5LjUgMS42LTI5LjkgMTguNy00MCAzMy4xLTQwIDIxLjkgMCAzNS44IDI2LjIgNTIuOCAyNy4yIDE5LjcgMS4xIDIwLjMtMTguNyAzNy45LTE4LjcgOS42IDAgMTQuOSAxOS43IDE0LjQgMzMuMUM3ODEuOSAzMTIuOSA3NzIuMyAzNDEuOCA3NTkuNCAzMzkuNnpNNzA0LjUgMjg3LjNjLTQuOC02LjktMTAuMS0xNy42LTIwLjMtMTkuMiAtNi40LTEuMS0xNC45IDIuMS0xOC43IDQuMyAwIDAgMTAuMSAxLjEgMTcuMSA4LjUgLTExLjcgMC41LTE2LjUgNC44LTE2LjUgNC44IDUuMyAwIDExLjcgMi4xIDE2IDQuMyAtMS42IDIuMS0yLjcgNC44LTIuNyA4IDAgNy41IDUuOSAxMi44IDEyLjggMTIuOCA1LjkgMCAxMC4xLTMuNyAxMi4zLTguNSAxLjYgMC41IDMuNyAxLjEgNC4zIDEuMSA1LjMgMC41IDEwLjctMS42IDEzLjktNC4zQzcxNS4xIDI5OS42IDcwOS44IDI5NC4zIDcwNC41IDI4Ny4zek02OTIuMiAzMDIuOGMtMi43IDAtNC44LTIuMS00LjgtNC44czIuMS00LjggNC44LTQuOCA0LjggMi4xIDQuOCA0LjhTNjk0LjkgMzAyLjggNjkyLjIgMzAyLjh6TTczMy4zIDI5OC41YzEuNiAxLjEgMy4yIDMuMiA1LjMgMy43IDMuMiAyLjEgNy41IDIuNyAxMy45IDIuNyAxLjYgMy43IDQuOCA1LjkgOS4xIDUuOSA1LjMgMCAxMC4xLTQuMyAxMC4xLTEwLjEgMC0yLjctMS4xLTQuOC0yLjctNi45IDEuNi0xLjYgNS4zLTMuNyA1LjMtMy43di0xMS4yYy02LjkgMC0xMy45IDUuOS0xOS4yIDExLjJDNzQ3LjcgMjk4IDczMy4zIDI5OC41IDczMy4zIDI5OC41ek03NjIuMSAyOTcuNWMyLjEgMCAzLjcgMS42IDMuNyAzLjcgMCAxLjYtMi4xIDMuNy0zLjcgMy43IC0yLjEgMC0zLjctMS42LTMuNy0zLjdDNzU4LjQgMjk5LjEgNzYwIDI5Ny41IDc2Mi4xIDI5Ny41eiIvPjwvc3ZnPg==" alt="" class="svgfallback">
-              </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/tld-ninja/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-ninja/banner-small:cta]@L] </a>
-            </div>
-          </div>
-          <div id="banner-small-9" class="col-md-3 col-sm-6 col-xs-6">
+          <div id="banner-small-2" class="col-md-3 col-sm-6 col-xs-6">
             <style>.banner-small {
   min-height: inherit;
   max-height: inherit;
@@ -878,11 +400,148 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
                 $cta=$('.banner-small.web-hosting-price a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
               </script>
+            </div>
+          </div>
+          <div id="banner-small-3" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="banner-small gdpro">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gdpro/banner-small/gd-pro-logo.png" alt=""><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIyMTQiIHZpZXdCb3g9Ii0wLjUgLTAuNSA3OTMgMjE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0wLjUgLTAuNSA3OTMgMjE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRjE2RTAwIiBwb2ludHM9IjYyMS45IDAgNTQxLjIgNzEuMSA1NDkuMSAxNTguNSA2NjYuOSAyMTIuNiA3OTIgMTUzLjEgNzY5LjUgNDYuMiAiLz48cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNNTEuNiAxMDMuOWgzOC45djEyLjFoLTkuMWMtMy42IDE4LjItMTcgMzEtMzkuNSAzMUMxNS4yIDE0NyAwIDEyNi4zIDAgMTA0LjVzMTYuNC00Mi41IDQxLjktNDIuNWMxOS40IDAgMzMuNCAxMi4xIDM0LjYgMjYuMUg2My4yYy0xLjItNy45LTkuNy0xNC42LTIxLjMtMTQuNiAtMTcuNiAwLTI3LjkgMTQuNi0yNy45IDMxIDAgMTUuOCA5LjcgMzEgMjkuOCAzMSAxNCAwIDIxLjktOS4xIDIzLjctMTguOEg1MS42TDUxLjYgMTAzLjkgNTEuNiAxMDMuOSA1MS42IDEwMy45eiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik05NC43IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41Uzk0LjcgMTMzIDk0LjcgMTE3LjJ6TTEzOS43IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzEzMyAxMzQuOCAxMzkuNyAxMjYuOSAxMzkuNyAxMTcuMnpNMTg5LjUgNjMuMmMyNi43IDAgNDEuOSAyMCA0MS45IDQwLjdzLTE1LjIgNDAuNy00MS45IDQwLjdIMTYzLjRWNjMuMkgxODkuNUwxODkuNSA2My4yek0xNzYuNyA3NS4zdjU3LjdoMTIuOGMxOC4yIDAgMjguNS0xNCAyOC41LTI4LjVTMjA3LjcgNzUuOSAxODkuNSA3NS45QzE4OS41IDc1LjMgMTc2LjcgNzUuMyAxNzYuNyA3NS4zek0yOTUuOCA5MC41djU0LjFoLTEyLjh2LTcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNVY4OS45TDI5NS44IDkwLjUgMjk1LjggOTAuNXpNMjgzIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzI3NyAxMzQuOCAyODMgMTI2LjkgMjgzIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0zNTEuMSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjNMMzUxLjEgMTM3LjN6TTM1MS4xIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzM0NC40IDEzNC44IDM1MS4xIDEyNi45IDM1MS4xIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00MTguNSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjN6TTQxOC41IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzQxMi40IDEzNC44IDQxOC41IDEyNi45IDQxOC41IDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00NDIuOCAxNTAuNmgxMi4xYzAgNi4xIDQuMyAxMC45IDEyLjggMTAuOSA5LjEgMCAxMy40LTQuMyAxMy40LTE0LjZ2LTEwLjNjLTMuNiA2LjEtOS43IDkuMS0xNy42IDkuMXMtMTMuNC0zLTE2LjQtNy4zYy0yLjQtNC4zLTMuNi04LjUtMy42LTE1Ljh2LTMyLjJoMTMuNHYyNy45YzAgOS4xIDIuNCAxNi40IDExLjUgMTYuNCA5LjEgMCAxMi44LTcuMyAxMi44LTE2LjRWOTAuNWgxMi44djU2LjVjMCAxOC4yLTEwLjMgMjYuMS0yNy45IDI2LjFDNDUyLjUgMTczLjEgNDQyLjggMTYyLjggNDQyLjggMTUwLjZ6Ii8+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTQ5OS45IDkxLjdjMC01LjUgMy42LTEwLjMgMTAuMy0xMC4zczEwLjMgNC45IDEwLjMgMTAuMyAtMy42IDEwLjMtMTAuMyAxMC4zQzUwNC4xIDEwMiA0OTkuOSA5Ni42IDQ5OS45IDkxLjd6TTUxOC43IDkxLjdjMC00LjktMy05LjEtOC41LTkuMSAtNS41IDAtOC41IDQuMy04LjUgOS4xIDAgNC4zIDMgOC41IDguNSA4LjVDNTE1IDEwMC4yIDUxOC43IDk2IDUxOC43IDkxLjd6TTUwNi41IDk2LjZ2LTExLjVoNC4zYzIuNCAwIDMuNiAxLjggMy42IDMuNiAwIDEuOC0xLjIgMy0yLjQgMy42bDIuNCA0LjNoLTEuOGwtMi40LTMuNmgtMi40djMuNkw1MDYuNSA5Ni42IDUwNi41IDk2LjYgNTA2LjUgOTYuNnpNNTEwLjggOTEuN2MxLjIgMCAyLjQtMS4yIDIuNC0yLjRzLTEuMi0yLjQtMi40LTIuNGgtM3Y0LjlDNTA3LjggOTEuNyA1MTAuOCA5MS43IDUxMC44IDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTU4OS43IDYzLjJoMjkuMmMxNy42IDAgMjguNSAxMy40IDI4LjUgMjguNXMtMTEuNSAyOC41LTI4LjUgMjguNUg2MDMuMXYyNC4zaC0xMy40TDU4OS43IDYzLjIgNTg5LjcgNjMuMiA1ODkuNyA2My4yek02MzQuMSA5MS43YzAtOS4xLTYuMS0xNi40LTE1LjItMTYuNEg2MDMuMXYzMi44aDE1LjhDNjI4IDEwOC4xIDYzNC4xIDEwMC44IDYzNC4xIDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MC42IDEwMmMtMS44LTAuNi0zLTAuNi00LjktMC42IC0xMC45IDAtMTcgNi4xLTE3IDE5LjR2MjMuMWgtMTIuOFY4OS45aDEyLjh2OC41YzIuNC00LjkgOS43LTkuNyAxNy05LjcgMS44IDAgMy42IDAgNC45IDAuNlYxMDJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MS44IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41QzcwMy4zIDE0NS44IDY5MS44IDEzMyA2OTEuOCAxMTcuMnpNNzM2LjEgMTE3LjJjMC05LjEtNi4xLTE3LTE1LjgtMTdzLTE1LjggNy45LTE1LjggMTcgNi4xIDE3IDE1LjggMTdDNzMwIDEzNC44IDczNi4xIDEyNi45IDczNi4xIDExNy4yeiIvPjwvc3ZnPg==" alt="" class="svgfallback">
+              </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:body]@L]</div><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:cta]@L] </a>
+            </div>
+          </div>
+          <div id="banner-small-4" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <style>.banner-small.gem .title span span{font-size:.85em;}</style>
+            <div data-url="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]" data-ci='97704' class="banner-small gem">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gem/banner-small/gem-icon.png" alt="[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiPjxwYXRoIGQ9Ik0xLjQgMEw0Mi40IDguMiAyNC42IDI0LjUgMS40IDB6TTQzIDEwLjdMNDEgMzIuOCAwLjcgMzUgMCAzLjMgMjQuMyAyNi4zIDQzIDEwLjd6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/gem/banner-small:title]@L]</span></span>
+              </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/gem/banner-small:body]@L]</div><a href="[@T[link:<relative path='/business/email-marketing-software'><param name='ci' value='97704' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gem/banner-small:cta]@L] </a>
             </div>
           </div>
         </div>
