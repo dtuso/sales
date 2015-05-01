@@ -1,0 +1,67 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="banner-small gdpro">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gdpro/banner-small/gd-pro-logo.png" alt=""/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIyMTQiIHZpZXdCb3g9Ii0wLjUgLTAuNSA3OTMgMjE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0wLjUgLTAuNSA3OTMgMjE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRjE2RTAwIiBwb2ludHM9IjYyMS45IDAgNTQxLjIgNzEuMSA1NDkuMSAxNTguNSA2NjYuOSAyMTIuNiA3OTIgMTUzLjEgNzY5LjUgNDYuMiAiLz48cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNNTEuNiAxMDMuOWgzOC45djEyLjFoLTkuMWMtMy42IDE4LjItMTcgMzEtMzkuNSAzMUMxNS4yIDE0NyAwIDEyNi4zIDAgMTA0LjVzMTYuNC00Mi41IDQxLjktNDIuNWMxOS40IDAgMzMuNCAxMi4xIDM0LjYgMjYuMUg2My4yYy0xLjItNy45LTkuNy0xNC42LTIxLjMtMTQuNiAtMTcuNiAwLTI3LjkgMTQuNi0yNy45IDMxIDAgMTUuOCA5LjcgMzEgMjkuOCAzMSAxNCAwIDIxLjktOS4xIDIzLjctMTguOEg1MS42TDUxLjYgMTAzLjkgNTEuNiAxMDMuOSA1MS42IDEwMy45eiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik05NC43IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41Uzk0LjcgMTMzIDk0LjcgMTE3LjJ6TTEzOS43IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzEzMyAxMzQuOCAxMzkuNyAxMjYuOSAxMzkuNyAxMTcuMnpNMTg5LjUgNjMuMmMyNi43IDAgNDEuOSAyMCA0MS45IDQwLjdzLTE1LjIgNDAuNy00MS45IDQwLjdIMTYzLjRWNjMuMkgxODkuNUwxODkuNSA2My4yek0xNzYuNyA3NS4zdjU3LjdoMTIuOGMxOC4yIDAgMjguNS0xNCAyOC41LTI4LjVTMjA3LjcgNzUuOSAxODkuNSA3NS45QzE4OS41IDc1LjMgMTc2LjcgNzUuMyAxNzYuNyA3NS4zek0yOTUuOCA5MC41djU0LjFoLTEyLjh2LTcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNVY4OS45TDI5NS44IDkwLjUgMjk1LjggOTAuNXpNMjgzIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzI3NyAxMzQuOCAyODMgMTI2LjkgMjgzIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0zNTEuMSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjNMMzUxLjEgMTM3LjN6TTM1MS4xIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzM0NC40IDEzNC44IDM1MS4xIDEyNi45IDM1MS4xIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00MTguNSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjN6TTQxOC41IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzQxMi40IDEzNC44IDQxOC41IDEyNi45IDQxOC41IDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00NDIuOCAxNTAuNmgxMi4xYzAgNi4xIDQuMyAxMC45IDEyLjggMTAuOSA5LjEgMCAxMy40LTQuMyAxMy40LTE0LjZ2LTEwLjNjLTMuNiA2LjEtOS43IDkuMS0xNy42IDkuMXMtMTMuNC0zLTE2LjQtNy4zYy0yLjQtNC4zLTMuNi04LjUtMy42LTE1Ljh2LTMyLjJoMTMuNHYyNy45YzAgOS4xIDIuNCAxNi40IDExLjUgMTYuNCA5LjEgMCAxMi44LTcuMyAxMi44LTE2LjRWOTAuNWgxMi44djU2LjVjMCAxOC4yLTEwLjMgMjYuMS0yNy45IDI2LjFDNDUyLjUgMTczLjEgNDQyLjggMTYyLjggNDQyLjggMTUwLjZ6Ii8+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTQ5OS45IDkxLjdjMC01LjUgMy42LTEwLjMgMTAuMy0xMC4zczEwLjMgNC45IDEwLjMgMTAuMyAtMy42IDEwLjMtMTAuMyAxMC4zQzUwNC4xIDEwMiA0OTkuOSA5Ni42IDQ5OS45IDkxLjd6TTUxOC43IDkxLjdjMC00LjktMy05LjEtOC41LTkuMSAtNS41IDAtOC41IDQuMy04LjUgOS4xIDAgNC4zIDMgOC41IDguNSA4LjVDNTE1IDEwMC4yIDUxOC43IDk2IDUxOC43IDkxLjd6TTUwNi41IDk2LjZ2LTExLjVoNC4zYzIuNCAwIDMuNiAxLjggMy42IDMuNiAwIDEuOC0xLjIgMy0yLjQgMy42bDIuNCA0LjNoLTEuOGwtMi40LTMuNmgtMi40djMuNkw1MDYuNSA5Ni42IDUwNi41IDk2LjYgNTA2LjUgOTYuNnpNNTEwLjggOTEuN2MxLjIgMCAyLjQtMS4yIDIuNC0yLjRzLTEuMi0yLjQtMi40LTIuNGgtM3Y0LjlDNTA3LjggOTEuNyA1MTAuOCA5MS43IDUxMC44IDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTU4OS43IDYzLjJoMjkuMmMxNy42IDAgMjguNSAxMy40IDI4LjUgMjguNXMtMTEuNSAyOC41LTI4LjUgMjguNUg2MDMuMXYyNC4zaC0xMy40TDU4OS43IDYzLjIgNTg5LjcgNjMuMiA1ODkuNyA2My4yek02MzQuMSA5MS43YzAtOS4xLTYuMS0xNi40LTE1LjItMTYuNEg2MDMuMXYzMi44aDE1LjhDNjI4IDEwOC4xIDYzNC4xIDEwMC44IDYzNC4xIDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MC42IDEwMmMtMS44LTAuNi0zLTAuNi00LjktMC42IC0xMC45IDAtMTcgNi4xLTE3IDE5LjR2MjMuMWgtMTIuOFY4OS45aDEyLjh2OC41YzIuNC00LjkgOS43LTkuNyAxNy05LjcgMS44IDAgMy42IDAgNC45IDAuNlYxMDJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MS44IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41QzcwMy4zIDE0NS44IDY5MS44IDEzMyA2OTEuOCAxMTcuMnpNNzM2LjEgMTE3LjJjMC05LjEtNi4xLTE3LTE1LjgtMTdzLTE1LjggNy45LTE1LjggMTcgNi4xIDE3IDE1LjggMTdDNzMwIDEzNC44IDczNi4xIDEyNi45IDczNi4xIDExNy4yeiIvPjwvc3ZnPg==" alt="" class="svgfallback"/>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:body]@L]</div><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:cta]@L] </a>
+</div>

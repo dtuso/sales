@@ -31,8 +31,6 @@ block tileContent
   .headline !{headlineNoDiscount}
   | 
   | ##endif
-  .cta !{ctaText}
-  atlantis:webstash(type="js")
-    block tldTileScript
-      script.
-        (function(){var $price = $('.!{tld}.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{tldPfid}" period="yearly" />]@T]'));$('.!{tld}.marquee-tile-tld .cta').show();})();
+  .cta 
+    span.price-text STARTING AT
+    span.price [@T[productprice:<current productid="57465" period="yearly" />]@T]/YR
