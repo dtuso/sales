@@ -24,9 +24,6 @@
      
     <div class="headline">100% BRILLIANT</div> 
     ##endif
-    <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
-    <atlantis:webstash type="js">
-      <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
-    </atlantis:webstash>
+    <div class="cta"> <span class="price-text">STARTING AT</span><span class="price">[@T[productprice:<current productid="57465" period="yearly" />]@T]/YR</span></div>
   </div>
 </div>
