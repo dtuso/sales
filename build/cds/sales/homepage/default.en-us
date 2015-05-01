@@ -329,7 +329,7 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
                 $cta=$('.banner-small.0365-biz-email a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
@@ -406,7 +406,7 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
                 $cta=$('.banner-small.web-hosting-price a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
