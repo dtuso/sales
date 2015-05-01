@@ -123,7 +123,12 @@ assetPath: false
               </span>
               </div>
         <div>
-          - [@T[productprice:<current productid="181769" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</div> 
+          - [@T[productprice:<current productid="181769" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+        </div> 
+
+          <div class="annual-price">
+            [@T[productprice:<current productid="181769" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/security/website-security-new:term-year]@L] [@L[cds.sales/security/website-security-new:billed-annual]@L]
+          </div>
         </div>
       </div>
 </div>
