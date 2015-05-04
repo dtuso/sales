@@ -1,0 +1,22 @@
+block vars
+  - var marqueeBackground = marqueeBackground || "";
+  - var marqueeFallback = marqueeFallback || marqueeBackground;
+  - var classes = (classes? classes + " hero polygon": "hero polygon")
+  - var dataCI = dataCI || "";
+  - var ctaLink = ctaLink || "";
+  - var xsBannerColor = xsBannerColor || "transparent";
+
+atlantis:webstash(type="css")
+  block heroStyles
+    style
+      :less
+        .leftContent{}
+        .rightContent{}
+
+
+div(class=classes data-url!=ctaLink, data-ci=dataCI)
+  .heroContentWrapper
+    .leftContent.col-xs-12.col-md-6
+      block leftContent
+    .rightContent.col-xs-12.col-md-6
+      block rightContent

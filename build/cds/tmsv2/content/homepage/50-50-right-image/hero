@@ -1,27 +1,6 @@
 
 <atlantis:webstash type="css">
   <style>
-    #marquee .hero-wrapper>div, .hero, .heroContentWrapper {min-height:inherit}
-    #marquee #marqueeImage {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover; height:175px}
-    @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover;}}
-    #marquee .heroContentWrapper {margin-left: 14%;margin-right:14%; position:relative}
-    #marquee .heroContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%)}
-    .hero {background-color:#DEDEDE; margin-left:-60px}
-    .Explorer8 #marquee .hero.polygon{background:url() no-repeat;}
-    .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat;}
-    .Explorer8 #marquee .heroContent{position:relative;}
-    .Explorer8 #marquee .heroContentWrapper{padding:3% 0 0 7%; margin:0}
-  </style>
-  <style>@media only screen and (min-width: 768px) {
-  #marquee .hero.polygon {
-    background-color: transparent;
-    background: url();
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    width: 70%;
-  }
-}
-
   </style>
   <style>#marquee {
   background-color: #F3F3F4;
@@ -53,11 +32,9 @@
 }
 #marquee .fifty-right-image .product-name {
   font-size: 36px;
-  color: #77c043;
   line-height: 35px;
 }
 #marquee .fifty-right-image .subtitle {
-  width: 70%;
   font-size: 16px;
   line-height: 20px;
   font-family: 'Arial';
@@ -70,26 +47,22 @@
   font-size: 10px;
   font-family: Arial;
 }
-#marquee .hero.polygon #marqueeImage {
-  display: none !important;
-}
-#marquee .hero-wrapper {
-  min-height: 315px;
-}
 
   </style>
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="fifty-right-image hero polygon">
-  <div id="marqueeImage" class="col-xs-12 visible-xs"></div>
   <div class="heroContentWrapper">
-    <div class="heroContent">
+    <div class="leftContent col-xs-12 col-md-6">
       <mark>[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
       <div class="headline">GODADDY PRODUCT</div>
-      <div class="product-name">LOREM IPSUM DOLOR SIT AMET</div>
+      <div class="product-name text-primary">LOREM IPSUM DOLOR SIT AMET</div>
       <div class="subtitle">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
-      <div class="price">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
+      <div class="price">Starting at <span>[@T[productprice:<current productid="566281" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></div>
       <button class="btn btn-md btn-primary">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
       <div class="disclaimer">Disclaimer text is smaller and will take up this area</div>
+    </div>
+    <div class="rightContent col-xs-12 col-md-6">
+      <div>this should be on the right</div>
     </div>
   </div>
 </div>
