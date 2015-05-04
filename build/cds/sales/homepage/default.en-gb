@@ -231,7 +231,7 @@
                        
                       <div class="headline">100% BRILLIANT</div> 
                       ##endif
-                      <div class="cta"> <span class="price-text">STARTING AT</span><span class="price">[@T[productprice:<current productid="57465" period="yearly" />]@T]/YR</span></div>
+                      <div class="cta"> <span class="price-text">STARTING AT </span><span class="price">[@T[productprice:<current productid="57465" period="yearly" />]@T]/YR</span></div>
                     </div>
                   </div>
                 </div>
