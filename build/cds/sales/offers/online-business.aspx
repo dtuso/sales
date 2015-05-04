@@ -155,6 +155,18 @@ var got1Page = {
     itc_wsb: 'slp_GYBO1',
     itc_ols: 'slp_GYBO2',
   },
+  selectAndContinueBtnCiCodes: [
+    98106,98107,98108,98109,98110,98111,98112,98113,98114,98115,
+    98117,98118,98119,98120,98121,98122,98123,98124,98125,98126,
+    98127,98128,98129,98130,98131,98132,98133,98134,98135,98136,
+    98137,98138,98139,98140,98141,98142,98143,98144,98145,98146,
+    98147,98148,98149,98150,98151,98152,98153,98154,98155,98156,
+    98157,98158,98159,98160,98161,98162,98163,98164,98165,98166,
+    98167,98168,98169,98170,98171,98172,98173,98174,98175,98176,
+    98177,98178,98179,98180,98181,98182,98183,98184,98185,98186,
+    98187,98188,98189,98190,98191,98192,98193,98194,98195,98196,
+    98197,98198,98199,98200,98201,98202,98203,98204,98205,98116
+  ],
   pricing: {
     promo_wsb: '[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]',
     promo_ols: '[@T[multipleproductprice:<current productidlist="464069|101|40972" period="monthly" promocode="75315678" />]@T]',
@@ -400,7 +412,6 @@ function domainSearchFormSubmit(e, domain) {
     dataType: 'json',
     cache: false,
     success: function(data){ 
-
       var 
         exactMatchDomain = data.ExactMatchDomain || {},
         searchedForDomain = exactMatchDomain.Fqdn ? exactMatchDomain.Fqdn : domain,
@@ -456,7 +467,15 @@ function verifyDomainIsStillAvailable(e) {
   var $this = $(e.target),
     $thisParent = $this.parent(),
     domain = $this.data('domain'),
-    apiEndpoint2;
+    apiEndpoint2,
+    positionalCiCode = $this.data('positional-ci-code'),
+    positionalPos = $this.data('positional-pos');
+
+  // log CI based upon position
+  if($.isFunction(FastballEvent_MouseClick) && $.isFunction(fbiLibCheckQueue)) {
+    FastballEvent_MouseClick(e, positionalCiCode, $this[0], 'button');
+    fbiLibCheckQueue();
+  }
 
   $thisParent.find('.spin-results-message').hide(); // aka $this, but code is easier to read with the find()
   $thisParent.find('.checking-availability').show();
@@ -475,7 +494,7 @@ function verifyDomainIsStillAvailable(e) {
       data = data || {};
       data.Properties = data.Properties || {};
       data.Properties.domainInfo = data.Properties.domainInfo || [{isAvailable: false}];
-      if(data.Properties.domainInfo[0].isAvailable) {
+      if(data.Properties.domainInfo[0].isAvailable) {        
         showChoicesScreen(e);
       } else {
         // display domain is now unavailable message
@@ -559,15 +578,19 @@ function showSearchSpins($this, domain, alternateDomains){
 
   // clear any spins from the DOM
   $('#spin-results .spin-result').remove();
-  totalSpinResults =  0;
-  var $spinResults = $('#spin-results');
-  var $spinTemplate = $('#spin-template-wrap').find('.spin-template');
+  var $spinResults = $('#spin-results'),
+    $spinTemplate = $('#spin-template-wrap').find('.spin-template'),
+    ciIndex =0;
   $.each(alternateDomains, function(idx,domain){
     var $newSpin = $spinTemplate.clone();
     $newSpin.removeClass('spin-template');
     $newSpin.find('.domain-name-display').text(domain.NameWithoutExtension);
     $newSpin.find('.domain-name-display-tld').text('.' + domain.Extension);
-    $newSpin.find('.select-and-continue').show().data('domain', domain);
+    $newSpin.find('.select-and-continue')
+      .show()
+      .data('domain', domain)
+      .data('positional-ci-code', got1Page.selectAndContinueBtnCiCodes[Math.min(ciIndex++,99)])
+      .data('positional-pos', ciIndex);
     $spinResults.append($newSpin);
   });
   got1Page.totalSpinResults = alternateDomains.length;
