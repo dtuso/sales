@@ -8,6 +8,6 @@
   
 </style>
 <div data-url="[@T[link:<external linktype="myaurl" path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></external>]@T]" data-ci="98071" class="banner-medium basic ad-credits">
-  <div class="title text-primary-o">Free Advertising Credits. </div>
-  <div class="body">Increase traffic to your site with Advertising Credits.</div><a href="[@T[link:<external linktype="myaurl" path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></external>]@T]" class="btn btn-sm btn-purchase">Learn More</a>
+  <div class="title text-primary-o">[@L[cds.tmsv2/content/homepage/ad-credits/banner-medium:titleText]@L] </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/ad-credits/banner-medium:bodyText]@L]</div><a href="[@T[link:<external linktype="myaurl" path="/payments.aspx"><param name="ci" value="98071"/><param name="paymentstab" value="adcredits"/></external>]@T]" class="btn btn-sm btn-purchase">[@L[cds.tmsv2/content/homepage/ad-credits/banner-medium:ctaText]@L]</a>
 </div>
