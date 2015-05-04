@@ -468,11 +468,14 @@ function verifyDomainIsStillAvailable(e) {
     $thisParent = $this.parent(),
     domain = $this.data('domain'),
     apiEndpoint2,
+    ciCode = $this.data('ci'),
     positionalCiCode = $this.data('positional-ci-code'),
     positionalPos = $this.data('positional-pos');
 
   // log CI based upon position
   if($.isFunction(FastballEvent_MouseClick) && $.isFunction(fbiLibCheckQueue)) {
+    FastballEvent_MouseClick(e, ciCode, $this[0], 'button');
+    fbiLibCheckQueue();
     FastballEvent_MouseClick(e, positionalCiCode, $this[0], 'button');
     fbiLibCheckQueue();
   }
