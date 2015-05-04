@@ -1,0 +1,68 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="banner-small support">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/banner-small/support_icon.png" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzAgMzUiPjxwYXRoIGQ9Ik0yNy4zIDE4LjFMMjYuOCAyNSAyNiAyNi4zIDIyLjcgMjYuMyAyMy41IDE3IDI2LjEgMTcuMSAyNy4zIDE4LjF6TTI4LjYgMjYuN0wyNi41IDMwLjEgMTkgMzUgMTYuNCAzNSAxNSAzMi44IDE1LjYgMzAuNyAxNS44IDMwLjcgMTkuMSAzMS43IDI1LjggMjkuMSAyNy41IDI2LjcgMjguNiAxMCAyMC44IDQgOCA0LjEgMS44IDEwLjQgMi43IDIxLjggMiAyMS45IDAgOS45IDguMSAwIDIxLjUgMC4yIDMwIDkuNyAyOC42IDI2Ljd6TTMuNiAxNy4zTDYuOSAxNy4zIDcuNiAyNS44IDQuNiAyNi4yIDMuNSAyNS4yIDIuNyAxNy45IDMuNiAxNy4zeiIgZmlsbD0iIzc3QzA0MyIvPjwvc3ZnPg==" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]" class="svgfallback"/><span><span>[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]</span></span>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:body]@L]</div><a href="tel:+[@T[supportphone:<technical />]@T]">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:cta]@L] </a>
+  <script>$('html[lang="en-gb"] .banner-small.support .promo-cta a').attr('href',$('.banner-small.support .promo-cta a').attr('href').replace(/020/i,"4420"));</script>
+</div>
