@@ -208,42 +208,64 @@
               <div class="col-md-12 col-sm-6">
                 <div class="tile-wrapper">
                   <atlantis:webstash type="css">
-                    <style>.marquee-tile.p4p {
-  background-color: #77c043;
-  background-repeat: no-repeat;
-  background-position: 5% 100%;
-  background-size: 120px 110px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==);
+                    <style>.marquee-tile.got {
+  background-color: #333;
+  font-size: 14px;
 }
-.marquee-tile.p4p .tile-content-wrapper {
-  padding: 3% 11% 0 44%;
-  line-height: 1.3;
+.marquee-tile.got .tile-content-wrapper {
+  padding: 15px 0 0 10px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .marquee-tile.p4p .tile-content-wrapper {
-    padding-right: 1%;
+.marquee-tile.got .products {
+  font-size: 1.5em;
+  color: #77c043;
+  margin: 0;
+  text-transform: uppercase;
+}
+.marquee-tile.got .price-text {
+  font-size: 1.5em;
+  color: #fff;
+  margin: -3px 0 0;
+  text-transform: uppercase;
+}
+.marquee-tile.got .price {
+  font-size: 1.5em;
+  margin: -10px 0 0;
+}
+.marquee-tile.got .disclaimer {
+  font-size: 10px;
+  color: #fff;
+  margin: 5px 0 0;
+}
+@media only screen and (min-width: 480px) {
+  .marquee-tile.got {
+    font-size: 18px;
   }
 }
-.marquee-tile.p4p .headline {
-  background-color: #fdda54;
-  padding-left: 2%;
-  margin-left: -2%;
+@media only screen and (min-width: 768px) {
+  .marquee-tile.got {
+    font-size: 15px;
+  }
 }
-.marquee-tile.p4p button {
-  margin: 5% 0;
+@media only screen and (min-width: 992px) {
+  .marquee-tile.got {
+    font-size: 13px;
+  }
 }
-.Explorer8 .marquee-tile-p4p,
-.Explorer7 .marquee-tile-p4p {
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
+@media only screen and (min-width: 1200px) {
+  .marquee-tile.got {
+    font-size: 16px;
+  }
 }
 
                     </style>
                   </atlantis:webstash>
-                  <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
+                  <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
                     <div class="tile-content-wrapper">
-                      <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
-                      <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
-                      <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
+                      <div class="walsheim-black">
+                        <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
+                        <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
+                      </div>
+                      <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
                     </div>
                   </div>
                 </div>
@@ -329,7 +351,7 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
                 $cta=$('.banner-small.0365-biz-email a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
@@ -406,7 +428,7 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
                 $cta=$('.banner-small.web-hosting-price a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();

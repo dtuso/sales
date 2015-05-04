@@ -231,10 +231,7 @@
                        
                       <div class="headline">100% BRILLIANT</div> 
                       ##endif
-                      <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
-                      <atlantis:webstash type="js">
-                        <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
-                      </atlantis:webstash>
+                      <div class="cta"> <span class="price-text">STARTING AT </span><span class="price">[@T[productprice:<current productid="57465" period="yearly" />]@T]/YR</span></div>
                     </div>
                   </div>
                 </div>
@@ -388,7 +385,7 @@
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
                 $cta=$('.banner-small.0365-biz-email a');
                 if(savings<5)
-                  $cta.html('"[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]"')
+                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
                 else
                   $cta.html($cta.html().replace("{0}", savings));
                 $cta.show();
