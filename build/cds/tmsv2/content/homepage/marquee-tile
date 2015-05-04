@@ -1,62 +1,66 @@
 
 <atlantis:webstash type="css">
-  <style>.marquee-tile.got {
-  background-color: #333;
-  font-size: 14px;
+  <style>.gtld-marquee-tile {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxIiBpZD0iTGF5ZXJfMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDM2MiAxMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MiAxMzUiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iIzc3YzA0MyIgZD0iTTAgMGgzNjJ2MTM1SDBWMHoiLz4NCiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGZpbGw9IiMzMzMzMzMiIGQ9Ik0xOTYgMTM1aDE2NlYwTDE4MSAwIDE5NiAxMzV6Ii8+DQo8L3N2Zz4NCg==);
 }
-.marquee-tile.got .tile-content-wrapper {
-  padding: 15px 0 0 10px;
+.gtld-marquee-tile .left-content-wrapper {
+  padding-left: 10%;
 }
-.marquee-tile.got .products {
-  font-size: 1.5em;
-  color: #77c043;
+.gtld-marquee-tile .header-text {
+  font-size: 40px;
+  color: #333;
+  margin: 25px 0 0 10px;
+}
+.gtld-marquee-tile .gtld-links-wrapper {
+  padding-left: -15px;
+}
+.gtld-marquee-tile ul {
+  list-style-type: none;
+  padding: 20px 0 0 20px;
+}
+.gtld-marquee-tile li {
+  color: #F1812D;
+  font-size: 20px;
+  line-height: 25px;
   margin: 0;
-  text-transform: uppercase;
 }
-.marquee-tile.got .price-text {
-  font-size: 1.5em;
-  color: #fff;
-  margin: -3px 0 0;
-  text-transform: uppercase;
+.gtld-marquee-tile li:hover {
+  color: #77c043;
 }
-.marquee-tile.got .price {
-  font-size: 1.5em;
-  margin: -10px 0 0;
-}
-.marquee-tile.got .disclaimer {
-  font-size: 10px;
-  color: #fff;
-  margin: 5px 0 0;
-}
-@media only screen and (min-width: 480px) {
-  .marquee-tile.got {
-    font-size: 18px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .marquee-tile.got {
-    font-size: 15px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .marquee-tile.got {
-    font-size: 13px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .marquee-tile.got {
-    font-size: 16px;
-  }
+.Explorer8 .gtld-marquee-tile,
+.Explorer7 .gtld-marquee-tile {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);
 }
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
+<div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci='95897' class="tile gtld-marquee-tile">
   <div class="tile-content-wrapper">
-    <div class="walsheim-black">
-      <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
-      <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 left">
+          <div class="left-content-wrapper">
+            <div class="header-wrapper">
+              <h2 class="header-text walsheim-black">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-6 right">
+          <div class="right-content-wrapper">
+            <div class="gtld-links-wrapper">
+              <ul>
+                <li data-url="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" data-ci='95716' class="walsheim-black tld-guru">.guru</li>
+                <li data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" data-ci='95713' class="walsheim-black tld-club">.club</li>
+                <li data-url="[@T[link:<relative path='/tlds/global'><param name='ci' value='98104' /></relative>]@T]" data-ci='98104' class="walsheim-black tld-global">.global</li>
+                <li data-url="[@T[link:<relative path='/tlds/life'><param name='ci' value='98105' /></relative>]@T]" data-ci='98105' class="walsheim-black tld-life">.life</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
   </div>
 </div>
