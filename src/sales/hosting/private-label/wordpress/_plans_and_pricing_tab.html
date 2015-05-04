@@ -1,124 +1,96 @@
 <div class="plans-wrapper">
-  <div class="col-xs-4 plan-box">
-    <h2 class="plan-name">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Starter]@L]</h2>
+  <div id="planTileA" class="col-xs-4 plan-box">
+    <h2 class="plan-name">Basic</h2>
+    <p class="plan-description">Think basic sites and blogs and startups.</p>
     <div class="price-wrapper">
-      <p class="price-lead">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-StartingAt]@L]</p>
+      <p class="price-lead">As low as</p>
       <p class="price-text">
-        <span class="price">[@T[productprice:<current productid="32759" dropdecimal="false" period="monthly" negative="parentheses" symboltagname="span" symbolcssclass="currency-symbol" />]@T]</span>
+        <span class="price" id="tierOnePrice">[@T[productprice:<current productid="580988" dropdecimal="false" period="monthly" negative="parentheses"  />]@T]</span>
         <span class="time-period">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-Month]@L]</span>
       </p>
+      <div id="basicRenewal">
+      </div>
       <!-- price text -->
       <div class="plan-highlights-list">
         <ul>
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-7-25000MonthlyVisitorsOn1Website]@L]
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-100GBStorage]@L]
-            <br>
-            [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-9-StoreApproximately22000ImagesOr500Standard]@L]
-          </li>
+          <li>1 website</li>
+          <li><strong>10GB SSD</strong> storage <span class="g-toolTip sf-tipper-target"><span>Our servers have high-performance SSD drives for both files & databases so your sites load incredibly fast. Storage is shared across your plan’s sites.</span></span></li>
+          <li><strong>25,000</strong> monthly visitors <span class="g-toolTip sf-tipper-target"><span>Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every 10,000 visitors over your hosting plan, across all sites.</span></span></li>
+          <li>sFTP</li>
+
         </ul>
       </div>
       <!-- plan highlights list -->
     </div>
-    <form class="plan-form">
-        <!-- price-wrapper -->
-        <div class="plan-dropdown-wrapper-1">
-          <select name="plan">
-            <option value='{"pkgid": "wordpresspl_economy_1mo", "qty": 1, "itc": "slp_wordpress", "ci": "94281"}'>3 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32761" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32761" secondaryproductid="32761" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_economy_12mo", "qty": 1, "itc": "slp_wordpress", "ci": "94281"}' selected="selected">12 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32759" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_economy_24mo", "qty": 1, "itc": "slp_wordpress", "ci": "94281"}'>24 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32768" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32768" secondaryproductid="32768" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_economy_36mo", "qty": 1, "itc": "slp_wordpress", "ci": "94281"}'>36 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32771" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32771" secondaryproductid="32771" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_economy_60mo", "qty": 1, "itc": "slp_wordpress", "ci": "94281"}'>60 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32777" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32777" secondaryproductid="32777" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-          </select>
-        </div>
         <!-- plan dropdown wrapper -->
-        <div class="add-to-cart-wrapper">
-          <button class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
-        </div>
-        <!-- add to cart wrapper -->
+      <div class="add-to-cart-wrapper one">
+        <button id="product-A" data-plan="mwp_basic_12month" data-ci="94281" class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
+      </div>
     </form>
   </div> 
   <!-- plan box -->
 
-  <div class="col-xs-4 plan-box">
-    <h2 class="plan-name">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Business]@L]</h2>
+  <div id="planTileB" class="col-xs-4 plan-box">
+    <h2 class="plan-name">Deluxe</h2>
+    <p class="plan-description">For small business and bloggers on the way up.</p>
     <div class="price-wrapper">
-      <p class="price-lead">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-StartingAt]@L]</p>
+      <p class="price-lead">As low as</p>
       <p class="price-text">
-        <span class="price">[@T[productprice:<current productid="32767" dropdecimal="false" period="monthly" negative="parentheses" symboltagname="span" symbolcssclass="currency-symbol" />]@T]</span>
+        <span class="price" id="tierTwoPrice">[@T[productprice:<current productid="580990" dropdecimal="false" period="monthly" negative="parentheses"  />]@T]</span>
         <span class="time-period">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-Month]@L]</span>
       </p>
+      <div id="deluxeRenewal">
+      </div>
       <!-- price text -->
       <div class="plan-highlights-list">
         <ul>
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-7-250000MonthlyVisitorsOn5Websites]@L]
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-4-500GBStorage]@L]
-            <br>
-            [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-10-StoreApproximately110000ImagesOr2500]@L]
-          </li>
-
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-7-OneClickStagingEnvironmentSSHCommandLine]@L]
+          <li>1 website</li>
+          <li><strong>15GB SSD</strong> storage <span class="g-toolTip sf-tipper-target"><span>Our servers have high-performance SSD drives for both files & databases so your sites load incredibly fast. Storage is shared across your plan’s sites.</span></span></li>
+          <li><strong>100,000</strong> monthly visitors <span class="g-toolTip sf-tipper-target"><span>Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every 10,000 visitors over your hosting plan, across all sites.</span></span></li>
+          <li>One-click staging site</li>
+          <li>SSH / sFTP</li>
+          <li>Search engine optimization plugin</li>
         </ul>
       </div>
       <!-- plan highlights list -->
     </div>
-    <form class="plan-form">
-      <!-- price-wrapper -->
-        <div class="plan-dropdown-wrapper-2">
-          <select name="plan">
-            <option value='{"pkgid":"wordpresspl_deluxe_1mo", "qty": 1, "itc": "slp_wordpress", "ci": "94282"}'>1 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32758" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32758" secondaryproductid="32758" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_deluxe_12mo", "qty": 1, "itc": "slp_wordpress", "ci": "94282"}' selected="selected">12 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32767" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32767" secondaryproductid="32767" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-            <option value='{"pkgid":"wordpresspl_deluxe_24mo", "qty": 1, "itc": "slp_wordpress", "ci": "94282"}'>24 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32770" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32770" secondaryproductid="32770" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T] </option>
-            <option value='{"pkgid":"wordpresspl_deluxe_36mo", "qty": 1, "itc": "slp_wordpress", "ci": "94282"}'>36 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32773" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32773" secondaryproductid="32773" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T] </option>
-            <option value='{"pkgid":"wordpresspl_deluxe_60mo", "qty": 1, "itc": "slp_wordpress", "ci": "94282"}'>60 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32779" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32779" secondaryproductid="32779" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T] </option>            
-          </select>
-        </div>
-        <!-- plan dropdown wrapper -->
-        <div class="add-to-cart-wrapper">
-          <button class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
-        </div>
-        <!-- add to cart wrapper -->
-      </form>
+    <div class="add-to-cart-wrapper two">
+      <button id="product-B" data-plan="mwp_deluxe_12month" data-ci="94282" class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
+    </div>
+    <!-- add to cart wrapper -->
   </div> 
   <!-- plan box -->
 
-  <div class="col-xs-4 plan-box">
-    <h2 class="plan-name">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-1-Pro]@L]</h2>
+  <div id="planTileC" class="col-xs-4 plan-box">
+    <h2 class="plan-name">Ultimate</h2>
+    <p class="plan-description">Everything in Deluxe plan, PLUS top-notch security.</p>
     <div class="price-wrapper">
-      <p class="price-lead">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-StartingAt]@L]</p>
+      <p class="price-lead">As low as</p>
       <p class="price-text">
-        <span class="price">[@T[productprice:<current productid="32790" dropdecimal="false" period="monthly" negative="parentheses" symboltagname="span" symbolcssclass="currency-symbol" />]@T]</span>
+        <span class="price" id="tierThreePrice">[@T[productprice:<current productid="581009" dropdecimal="false" period="monthly" negative="parentheses"  />]@T]</span>
         <span class="time-period">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-Month]@L]</span>
       </p>
+      <div id="ultimateRenewal">
+      </div>
       <!-- price text -->
       <div class="plan-highlights-list">
         <ul>
-         [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-5-MillionsMonthlyVisitors25Website]@L]
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-UnlimitedStorage]@L]
-            <br>
-             [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-StoreUnlimitedImagesAndVideos]@L]
-          </li>
-          [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-7-OneClickStagingEnvironmentSSHCommandLine]@L]
+         <li>2 websites</li>
+          <li><strong>30GB SSD</strong> storage <span class="g-toolTip sf-tipper-target"><span>Our servers have high-performance SSD drives for both files & databases so your sites load incredibly fast. Storage is shared across your plan’s sites.</span></span></li>
+          <li><strong>400,000</strong> monthly visitors <span class="g-toolTip sf-tipper-target"><span>Visitors are the number of unique IP addresses that come to all your plan’s sites within a 24-hour period. Daily counts are added to calculate total monthly visitors. We don’t count robots (e.g., Google search bot) against your total. If you opt in to our Visitor Overage Protection Plan, you’ll be charged a small fee for every 10,000 visitors over your hosting plan, across all sites.</span></span></li>
+          <li>One-click staging site</li>
+          <li>SSH / sFTP</li>
+          <li>Search engine optimization plugin</li>
+          <li>Malware scan & removal</li>
+          <li>Standard SSL Certificate - 1 year free ( renewed annually) <span class="g-toolTip sf-tipper-target"><span>A [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T] value, your SSL certificate keeps payments and customer data secure and helps increase your Google search ranking. The SSL certificate is free for one year with purchase. After the initial free year, the certificate will automatically renew at the then-current price until canceled. You can cancel your automatic renewal certificate at any time.</span></span></li>
         </ul>
       </div>
       <!-- plan highlights list -->
     </div>
-    <form class="plan-form">
-      <!-- price-wrapper -->
-      <div class="plan-dropdown-wrapper-3">
-        <select name="plan">
-          <option value='{"pkgid":"wordpresspl_ultimate_1mo", "qty": 1, "itc": "slp_wordpress", "ci": "94283"}'>1 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32784" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32784" secondaryproductid="32784" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-          <option value='{"pkgid":"wordpresspl_ultimate_12mo", "qty": 1, "itc": "slp_wordpress", "ci": "94283"}' selected="selected">12 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32790" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32790" secondaryproductid="32790" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-          <option value='{"pkgid":"wordpresspl_ultimate_24mo", "qty": 1, "itc": "slp_wordpress", "ci": "94283"}'>24 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32792" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32792" secondaryproductid="32792" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-          <option value='{"pkgid":"wordpresspl_ultimate_36mo", "qty": 1, "itc": "slp_wordpress", "ci": "94283"}'>36 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32794" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32794" secondaryproductid="32794" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-          <option value='{"pkgid":"wordpresspl_ultimate_60mo", "qty": 1, "itc": "slp_wordpress", "ci": "94283"}'>60 [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-mo]@L] - [@T[productprice:<current productid="32798" period="monthly"/>]@T][@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-2-per-mo]@L] [@T[productcompare:<percent primaryproductid="32798" secondaryproductid="32798" hidebelow="1"><html><![CDATA[{0}]]>% [@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-off]@L]</html></percent>]@T]</option>
-        </select>
-      </div>
-      <!-- plan dropdown wrapper -->
-      <div class="add-to-cart-wrapper">
-          <button class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
-      </div>
+    <div class="add-to-cart-wrapper">
+        <button id="product-C" data-plan="mwp_ultimate_12month" data-ci="94282" class="btn plan-box-button js-add-to-cart">[@L[cds.sales/hosting/private-label/wordpress:WordPressPrivateLabel-3-AddToCart]@L]</button>
+    </div>
       <!-- add to cart wrapper -->
-    </form>
   </div> 
   <!-- plan box -->
 
