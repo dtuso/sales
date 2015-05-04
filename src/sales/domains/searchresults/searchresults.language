@@ -1,6 +1,5 @@
 ---
 location: localization/sales/domains/searchresults-new3/en
-id: 
 name: FOS-24164
 ---
 {% include 'modules/doc-block.html' %}
