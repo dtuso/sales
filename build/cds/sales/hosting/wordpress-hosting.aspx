@@ -945,7 +945,7 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">sFTP</div>
+                <div class="plan-item">SFTP</div>
                 <div class="plan-item">&nbsp; </div>
                 <div class="plan-item">&nbsp; </div> 
                 ##if(productIsOffered(107))
