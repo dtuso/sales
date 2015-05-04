@@ -1,22 +1,45 @@
 
-<atlantis:webstash type="css">
-  <style>
-    .merch-tile-support .tile-content-wrapper{padding:20px 15px;color:#333;cursor:default;}
-    .merch-tile-support .promo-logo{width:60%}
-    .merch-tile-support .promo-text{padding-top:10px}
-    .merch-tile-support .promo-cta{position:absolute;bottom:5px;color:#f2812e}
-    .merch-tile-support span{color:#f2812e}
-  </style>
-</atlantis:webstash>
-<div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="tile merch-tile-support">
-  <div class="tile-content-wrapper">
-    <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/merch-tile/C3-support-logo.png" class="promo-logo"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDEyMy40IDM1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjMuNCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTMuNSAxNy4zbC0wLjkgMC42IDAuOCA3LjMgMSAxIDIuOS0wLjQgLTAuNy04LjVIMy41ek0yMC44IDAuMkw3LjkgMCAwIDkuOWwxLjkgMTIgMC43IDBMMS43IDEwLjRsNi02LjRMMjAuMSA0bDcuNSA2IC0xLjEgMTYuNyAtMS42IDIuNCAtNi41IDIuNiAtMy4yLTFMMTUgMzAuN2wtMC42IDIuMSAxLjQgMi4yIDIuNSAwIDcuMi00LjkgMi4xLTMuM0wyOSA5LjcgMjAuOCAwLjJ6TTI1LjkgMjVsMC41LTYuOSAtMS4xLTEgLTIuNiAwTDIyIDI2LjNsMy4xIDBMMjUuOSAyNXpNMzUuMiAxNS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgzNS4yek00Ny44IDE1LjJjMCAzIDIuMiA1LjIgNS44IDUuMiAzLjYgMCA1LjgtMi4yIDUuOC01LjJWNi4xaC00LjF2OS4xYzAgMS0wLjcgMS44LTEuNyAxLjhzLTEuNy0wLjgtMS43LTEuOFY2LjFoLTQuMVYxNS4yek02MC41IDIwLjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNNjYuMyAxMy4zaC0xLjd2LTRoMS43YzEuMSAwIDEuOCAwLjkgMS44IDJDNjguMiAxMi40IDY3LjUgMTMuMyA2Ni4zIDEzLjN6TTcyLjkgMjAuMUg3N3YtMy42aDIuNWMzLjIgMCA1LjItMi40IDUuMi01LjIgMC0yLjgtMi01LjItNS4yLTUuMmgtNi43VjIwLjF6TTc4LjcgMTMuM0g3N3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM4MC42IDEyLjQgNzkuOCAxMy4zIDc4LjcgMTMuM3pNOTIuMSAyMC41YzQuOCAwIDcuNS0zLjUgNy41LTcuNHMtMi44LTcuNC03LjUtNy40Yy00LjggMC03LjUgMy41LTcuNSA3LjRTODcuNCAyMC41IDkyLjEgMjAuNXpNOTIuMSAxNi43Yy0yLjEgMC0zLjQtMS43LTMuNC0zLjZzMS4zLTMuNiAzLjQtMy42YzIuMSAwIDMuNCAxLjcgMy40IDMuNlM5NC4yIDE2LjcgOTIuMSAxNi43ek0xMDEuMSAyMC4xaDQuMXYtMy42aDAuOGwyLjQgMy42aDQuOWwtMi44LTQuM2MxLjYtMC45IDIuNS0yLjYgMi41LTQuNSAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNMTA3IDEzLjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkMxMDguOCAxMi40IDEwOC4xIDEzLjMgMTA3IDEzLjN6TTExNi40IDIwLjFoNC4xVjkuNmgyLjlWNi4xaC05Ljh2My42aDIuOVYyMC4xeiIvPjwvc3ZnPg==" class="promo-logo svgfallback"/>
-    </div>
-    <div class="promo-text walsheim-black">AWARD-WINNING, 24/7 SERVICE AND SUPPORT.</div>
-    <div class="promo-cta"><a href="tel:+[@T[supportphone:<technical />]@T]" class="walsheim-black">Call [@T[supportphone:<technical />]@T] </a>
-    </div> 
-    ##if(activeLanguageAny([en-gb]))
-    <script>$('.merch-tile-support .promo-cta a').attr('href',$('.merch-tile-support .promo-cta a').attr('href').replace(/020/i,"4420"));</script> 
-    ##endif
+<style>.banner-small {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .75em 0;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+
+</style>
+<div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="banner-small banner-small-support">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAjCAMAAAC0CkrjAAAAn1BMVEVMaXF3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEN3wEMw6YVHAAAANHRSTlMARxWg2t0Q7wPrers4nPYBzvnE5/yQqDMaBgofrCQOppUpgZlVsXJhylviP21QZ4jVi/JZraDZTwAAATZJREFUeF510uduwkAQhdHrAl5X3MCNYnovSe77P1tsFIt4Yc/P+aSRRhr80VJGVmvQmhboWVrsWQj8MzcpqfEiXL5xXnlMjoeNbqNYpeSxq3uyHqFHsxlpePIirqUKVAcGHhq5Tb+psqKmPQPKkIbAJ8fA1DF53ShbmiESU0BlZ8E1obQyUVtQGse4sYCKscWZOVS2PnRmUInvgK1B5bED4kvtuhNI7pbli2QPrBckI0ja4TnQgIvBxlzKLkmPGaAZKcmZlEOSGSsgX59IelI+PXOJxoHkVcoBGXkBWlOSe/SUJBPt1L0aHfRUJB/HA1qeRXuHnoykc3HxpA8h0TebTbHyoYYqWUJNxA6U5rcwFHgz0wGMzkbAbY530zR2HJO0f/CJzaeJjo++2EiuUCgH/DaG6PwCZdQqzgnLcf4AAAAASUVORK5CYII="/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzAgMzUiPjxwYXRoIGQ9Ik0yNy4zIDE4LjFMMjYuOCAyNSAyNiAyNi4zIDIyLjcgMjYuMyAyMy41IDE3IDI2LjEgMTcuMSAyNy4zIDE4LjF6TTI4LjYgMjYuN0wyNi41IDMwLjEgMTkgMzUgMTYuNCAzNSAxNSAzMi44IDE1LjYgMzAuNyAxNS44IDMwLjcgMTkuMSAzMS43IDI1LjggMjkuMSAyNy41IDI2LjcgMjguNiAxMCAyMC44IDQgOCA0LjEgMS44IDEwLjQgMi43IDIxLjggMiAyMS45IDAgOS45IDguMSAwIDIxLjUgMC4yIDMwIDkuNyAyOC42IDI2Ljd6TTMuNiAxNy4zTDYuOSAxNy4zIDcuNiAyNS44IDQuNiAyNi4yIDMuNSAyNS4yIDIuNyAxNy45IDMuNiAxNy4zeiIgZmlsbD0iIzc3QzA0MyIvPjwvc3ZnPg==" class="svgfallback"/><span><span>[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]</span></span>
   </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:body]@L]</div><a href="tel:+[@T[supportphone:<technical />]@T]">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:cta]@L] </a>
+  <script>$('html[lang="en-gb"] .banner-small-support .promo-cta a').attr('href',$('.banner-small-support .promo-cta a').attr('href').replace(/020/i,"4420"));</script>
 </div>

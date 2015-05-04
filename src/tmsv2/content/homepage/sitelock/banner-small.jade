@@ -1,0 +1,11 @@
+extends ../_banner-small.jade
+
+block append vars
+  - dataCi = 97979;
+  - containerClass = "sitelock";
+  - logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMjggMzUiPjxwYXRoIGQ9Ik0wIDM1TDAgOC41QzAgOC41IDMuNSA4LjUgMy41IDguNSA0LjUgMy43IDguNyAwIDEzLjggMCAxOC45IDAgMjMuMiAzLjcgMjQuMiA4LjUgMjQuMiA4LjUgMjggOC41IDI4IDguNUwyOCAzNSAwIDM1ek00LjUgMTMuMUw0LjUgMzAuNCAyMy41IDMwLjQgMjMuNSAxNi41IDE0IDI4LjcgNi40IDIyLjUgOS40IDE4LjcgMTMuNyAyMi43IDIwLjcgMTMuMSA0LjUgMTMuMXpNMTMuOCA0LjRDMTEuMiA0LjQgOC45IDYuMSA4LjEgOC40IDguMSA4LjQgMTkuNiA4LjQgMTkuNiA4LjQgMTguNyA2LjEgMTYuNSA0LjQgMTMuOCA0LjR6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+"
+  - logoImageFallback = "[@T[link:<imageroot />]@T]fos/tmsv2/content/sitelock/banner-small/sitelock-icon.png";
+  - titleText = "[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]";
+  - bodyText = "[@L[cds.tmsv2/content/homepage/sitelock/banner-small:body]@L]";
+  - ctaText = "[@L[cds.tmsv2/content/homepage/sitelock/banner-small:cta]@L]";
+  - ctaLink = "[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='"+dataCi+"' /></relative>]@T]";  
