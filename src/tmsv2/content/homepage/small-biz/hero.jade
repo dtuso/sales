@@ -1,0 +1,17 @@
+style
+  :less
+    #marquee{background-color:#f3f3f3}
+    .small-business{font-family:'Walsheim-Black', 'Arial Black', sans-serif;font-size:.75em;line-height:1;text-transform:Uppercase;
+      .headline,.btn{margin-bottom:.9em}
+      .headline{padding-top:1.75em;font-size:1.250em;}
+      .offer{font-size:2.25em;line-height:1;margin-bottom:.6em}
+      .learn-more{display:block;font-size:1em;line-height:1;text-transform:none;font-family:Arial;}
+    } 
+    @media only screen and (min-width : 768px) {
+      .small-business{font-size:1em;padding-right:30%;}
+    }
+.hero.small-business(data-url!="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]")
+  .headline Celebrate small business week<br />like a boss... (Because you are the boss).
+  .offer.text-primary Get the right bundle for your business.
+  a.btn.btn-md.btn-purchase(href!="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]") Get Started
+  a.learn-more.text-primary.hover-text-primary(href!="[@T[link:<relative path='/business/small-business-week'><param name='ci' value='98067' /></relative>]@T]") Learn more about Small Business Week

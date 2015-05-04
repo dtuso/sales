@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/homepage:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
     <meta property="og:type" content="website">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -117,7 +121,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -177,7 +183,7 @@
     <section id="bugbar">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12"><span class="tld-links"><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAATCAMAAAAOJhUTAAAAPFBMVEVMaXEAYqkAXqYAXacAXaYAXqgtRF4AW6YAXqd0eogAZq8dNF0At/k0ndcHqekAw/+emZRyqdUAWaMAluR1esaJAAAAEnRSTlMAPKnB82MDiOIMKR39rvzXH4C5w3lZAAABDElEQVR4Xt2QwXLDIAxEJYGQBE6TOP//r10BzbiTew/dg7Qsfjse6P+psZmOHbCacoadOw0c1j3/+r7U86xugaCLV3jBx4Ko4ELC6lxvgv1cAjJ+vI8o59bOjCj6oxGN2WN5rySYZXqJ5bOiimA5Pe7H/dnIkDBwcbeosyozHxhlEGe0Erodx3HvWSsEtTFCkQd8OFps0bBKpBXEF3RwEkZbWTtNeRPtQjxfr9etk+1eNlOG5/R4r76IuBCkNwDzR4W7OlbDKNq1ZIt8EhQNo1k+oIPzTgpf058a5ZPYQtmU88ZT1sYmgCeBjN4KFfdiPX1jeBdumYpmhxmqGIsuCqhdfEx4ZQ3KicMf6BvVuxIPgsiNJwAAAABJRU5ErkJggg==" class="tld-image com"/><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='93296' /><param name='tld' value='co' /></relative>]@T]" class="tld-link co"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATBAMAAACAfiv/AAAAJ1BMVEX/cwD4p2RMaXGMnAX8oyT/bQD/////jiv18vL83dn7ysP5gwD5uaW+a2q+AAAABXRSTlP9/AAE9/nKmfkAAABpSURBVHgBYwiFAiMFODMIwQw1ADNZgSA0AC5KHDMAzmRFFi0PDQ2vBjOPpU0PWJa2AMgMTJuRwZmxLAfIjEgMmHasPTyNgSE0LDU02m1p6LQCiOiyBpDojoVwtZyiQBPCp4FNCI2GmgsAdG9DIIl4bvcAAAAASUVORK5CYII=" class="tld-image co"/><span class="price">[@T[productprice:<current productid='56401' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/uk'><param name='ci' value='95298' /><param name='tld' value='uk' /></relative>]@T]" class="tld-link uk"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAB8lBMVEVMaXE8q9hAudk8n9a41eQ/tNc1pNM0mNFCnstioMRBvto9ndc2ls86sNw+sto5o89awtosn9NBu9kvp+g7uNpIod45q9tAvto7stw+mtVAuNhFeqs9tts/tthNg7Eyl9pZjms0qt0/uttAs9g/j844s98/uNg5r947sNU2o9c6j8M5kM41jsY8q9hAs9c2pdVAxeI4rd07stw6rNs9vuVdxdwzdp06sNk3sOCn1OUyos5Qsdk9q8g6uus+rNcqsNs5utk5qdNAu9kxmsZBvtpAu9oogsU2tORAwN4+vNtBu9lIlr1Bu9syms08suRioX4/ttQ+ndQrmt2OyN673OM4stwpnOU4s+M7rttLpsU+tNoytd46stZxnlxNq7VAvdtbvN9FkcNinoVXn6M9vuNCqdZmjYlQm6w3ptUzutw/t9Y7pNhAt9gzkdEzntY+pdY8vN0/nNQoZpwvZYw8p9tBudg5qNMqjctQi5Y7ud46q9k9ut4/qto/s9V4lzY+sNQ1lctNfaw+tdo+odRBu9lEtdc9tto8sdU/wtxAmNI+ltI+rNhArNY7sdw7t9k9o9ZAtdgrhck+vd49pddAud1CrM06ocI/ntk9uNw3vds8qNZKia4+stdAn9RHoLo4i6w8t+BCu9lPqrV0wdI0wd0/v9s8maRaAAAApHRSTlMATdUyD8cOBwsC8DsiEr8/zJTmid+qO+2ZbdoR3s8ZVCEo0Ck6l8xUzFlLA2CI3pX+Ic9Hv9Ysv1kst3XWLHW/87f0ddTgJoTz3c9yzmXcE+9XYVpFszO8cK7Z2dkWKfiVSGFy3B0UdUTn71vYZIuz4k8VCL+o51Au6Kq3XdUkyEAUJJ0zzdzPOKhmypWPqH/8FuY2q8u3hImqhTPKi5qC7fl3pgaMxQMAAAEnSURBVHgBRcwDcgMBAEDRH+2mTW3baZvUtm2ltm3btol7dnYmmb4DPCSCta2DXZ6dg621gJFFVqGNo32BvaNNZrIFEjHGKjVHiUSZEpegAIiKjo3HJCnDyguwTEwD8On3AfAtalJj4r3ojaSxXQZarym43AzbW0HMd0fw8wT/3Xd4uA3fD2WgpQQCzeHg5xsef59CNraWB2sgVA47+je4v4h42TafFcxgdATt9eeZqL75CF9fmhsTgWE5EeevVzqd/ut5dT6go64T6Qs6EU8jDXdrCzNh1DZ3ow3xQ3GkMNNopukLcEdZ30r1kAzx8NiXf209KgHt5MR4Lyb+DR4agGBDaRlI1Om5HsEgcVJVBrm4Vrm6FGernDCq6Cp3dpO7OXvKLAH+AH7EOvRbtTkkAAAAAElFTkSuQmCC" class="tld-image uk"/><span class="price">[@T[productprice:<current productid='410930' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/eu-domain'><param name='ci' value='97868' /><param name='tld' value='eu' /></relative>]@T]" class="tld-link eu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAATCAMAAAC9bj0JAAAAe1BMVEVMaXEbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmSm/+QPAAAAKHRSTlMAe+YH+C/ScFCAIPydrA4LJqbNSjTI1z/cdOyOiLVlE7pgHiHf8CK/Z9GJewAAAI9JREFUeF7NzUcSgzAQRNFGyGBElAgmOoe+/wk9BlZm7/JfqeapZvAH3eyDasiAZ3/PgYOuFzA9qUjnY0/uAI9cIKUq5Bu7FaIVfM3RGDPx9QUF19wWbPip2q4axCtvPl4CqUCkjkDCeCw9LbOKbC4JBWI2wCmgxDYD5lctkGgPQN6d3RTKHFfbBmHmLH7QG4yVD+Ajp8sHAAAAAElFTkSuQmCC" class="tld-image eu"/><span class="price">[@T[productprice:<current productid='2851' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a></span>
+          <div class="col-sm-12"><span class="tld-links"><a href="[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='94303' /><param name='tld' value='com' /></relative>]@T]" class="tld-link com"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAATCAMAAAAOJhUTAAAAPFBMVEVMaXEAYqkAXqYAXacAXaYAXqgtRF4AW6YAXqd0eogAZq8dNF0At/k0ndcHqekAw/+emZRyqdUAWaMAluR1esaJAAAAEnRSTlMAPKnB82MDiOIMKR39rvzXH4C5w3lZAAABDElEQVR4Xt2QwXLDIAxEJYGQBE6TOP//r10BzbiTew/dg7Qsfjse6P+psZmOHbCacoadOw0c1j3/+r7U86xugaCLV3jBx4Ko4ELC6lxvgv1cAjJ+vI8o59bOjCj6oxGN2WN5rySYZXqJ5bOiimA5Pe7H/dnIkDBwcbeosyozHxhlEGe0Erodx3HvWSsEtTFCkQd8OFps0bBKpBXEF3RwEkZbWTtNeRPtQjxfr9etk+1eNlOG5/R4r76IuBCkNwDzR4W7OlbDKNq1ZIt8EhQNo1k+oIPzTgpf058a5ZPYQtmU88ZT1sYmgCeBjN4KFfdiPX1jeBdumYpmhxmqGIsuCqhdfEx4ZQ3KicMf6BvVuxIPgsiNJwAAAABJRU5ErkJggg==" class="tld-image com"/><span class="price">[@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='89153' /><param name='tld' value='club' /></relative>]@T]" class="tld-link club"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAATCAMAAAAkluS8AAAAQlBMVEVMaXEuS2mbAABUgKgAUqEAVJ0nLDUAL5wDRoYAUJ8AV6PRKBEsg8MAWKM0NjvmFBg7OTsyNTvOOQDyEh7iAADwAABfcNDZAAAAFHRSTlMACfsirFwO/cuE6oQ6z0uuLmpP9P/5xV8AAACuSURBVHhe3ZDLEsMgCEWvFoRr0nfy/7/awJhJF9l3pmchIxwFxX+hYuazkixAIalosSoDxUAskAgNaFvoeNiBFwS0hEwPJSq4xOpDJIDMmNApZ56gx3ZDQwPQ/MxzmvV593LUU29v+5pu16/7wk+vDK8z2011ed/6MZ+QGr5mOeeLNGpd1+m6vzeh2iBPZG/ca12e3P8vIYYmsAFR7nUCVNx9pidEi4ZOwBNR/IoP694KKDTjkFEAAAAASUVORK5CYII=" class="tld-image club"/><span class="price">[@T[productprice:<current productid='172137' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a><a href="[@T[link:<relative path='/tlds/uk'><param name='ci' value='95298' /><param name='tld' value='uk' /></relative>]@T]" class="tld-link uk"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAB8lBMVEVMaXE8q9hAudk8n9a41eQ/tNc1pNM0mNFCnstioMRBvto9ndc2ls86sNw+sto5o89awtosn9NBu9kvp+g7uNpIod45q9tAvto7stw+mtVAuNhFeqs9tts/tthNg7Eyl9pZjms0qt0/uttAs9g/j844s98/uNg5r947sNU2o9c6j8M5kM41jsY8q9hAs9c2pdVAxeI4rd07stw6rNs9vuVdxdwzdp06sNk3sOCn1OUyos5Qsdk9q8g6uus+rNcqsNs5utk5qdNAu9kxmsZBvtpAu9oogsU2tORAwN4+vNtBu9lIlr1Bu9syms08suRioX4/ttQ+ndQrmt2OyN673OM4stwpnOU4s+M7rttLpsU+tNoytd46stZxnlxNq7VAvdtbvN9FkcNinoVXn6M9vuNCqdZmjYlQm6w3ptUzutw/t9Y7pNhAt9gzkdEzntY+pdY8vN0/nNQoZpwvZYw8p9tBudg5qNMqjctQi5Y7ud46q9k9ut4/qto/s9V4lzY+sNQ1lctNfaw+tdo+odRBu9lEtdc9tto8sdU/wtxAmNI+ltI+rNhArNY7sdw7t9k9o9ZAtdgrhck+vd49pddAud1CrM06ocI/ntk9uNw3vds8qNZKia4+stdAn9RHoLo4i6w8t+BCu9lPqrV0wdI0wd0/v9s8maRaAAAApHRSTlMATdUyD8cOBwsC8DsiEr8/zJTmid+qO+2ZbdoR3s8ZVCEo0Ck6l8xUzFlLA2CI3pX+Ic9Hv9Ysv1kst3XWLHW/87f0ddTgJoTz3c9yzmXcE+9XYVpFszO8cK7Z2dkWKfiVSGFy3B0UdUTn71vYZIuz4k8VCL+o51Au6Kq3XdUkyEAUJJ0zzdzPOKhmypWPqH/8FuY2q8u3hImqhTPKi5qC7fl3pgaMxQMAAAEnSURBVHgBRcwDcgMBAEDRH+2mTW3baZvUtm2ltm3btol7dnYmmb4DPCSCta2DXZ6dg621gJFFVqGNo32BvaNNZrIFEjHGKjVHiUSZEpegAIiKjo3HJCnDyguwTEwD8On3AfAtalJj4r3ojaSxXQZarym43AzbW0HMd0fw8wT/3Xd4uA3fD2WgpQQCzeHg5xsef59CNraWB2sgVA47+je4v4h42TafFcxgdATt9eeZqL75CF9fmhsTgWE5EeevVzqd/ut5dT6go64T6Qs6EU8jDXdrCzNh1DZ3ow3xQ3GkMNNopukLcEdZ30r1kAzx8NiXf209KgHt5MR4Lyb+DR4agGBDaRlI1Om5HsEgcVJVBrm4Vrm6FGernDCq6Cp3dpO7OXvKLAH+AH7EOvRbtTkkAAAAAElFTkSuQmCC" class="tld-image uk"/><span class="price">[@T[productprice:<current productid='410930' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/eu-domain'><param name='ci' value='97868' /><param name='tld' value='eu' /></relative>]@T]" class="tld-link eu"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAATCAMAAAC9bj0JAAAAe1BMVEVMaXEbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmQbNmSm/+QPAAAAKHRSTlMAe+YH+C/ScFCAIPydrA4LJqbNSjTI1z/cdOyOiLVlE7pgHiHf8CK/Z9GJewAAAI9JREFUeF7NzUcSgzAQRNFGyGBElAgmOoe+/wk9BlZm7/JfqeapZvAH3eyDasiAZ3/PgYOuFzA9qUjnY0/uAI9cIKUq5Bu7FaIVfM3RGDPx9QUF19wWbPip2q4axCtvPl4CqUCkjkDCeCw9LbOKbC4JBWI2wCmgxDYD5lctkGgPQN6d3RTKHFfbBmHmLH7QG4yVD+Ajp8sHAAAAAElFTkSuQmCC" class="tld-image eu"/><span class="price">[@T[productprice:<current productid='2851' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span></a><a href="[@T[link:<relative path='/tlds/london'><param name='ci' value='98021' /><param name='tld' value='london' /></relative>]@T]" class="tld-link london"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAAATCAMAAAAJZMsGAAABMlBMVEVMaXEIAAAAAAABAAAAAAADAAAEAAACAAAAAAAAAAAEAAAAAAAAAAAUAQEKAQEIAAABAAAAAAABAAAAAAACAAABAAADAAAAAAAFAAAGAAAAAAAHAAACAAAFAAAAAAAAAAAFAAAAAAABAAACAAAAAAAAAAACAAABAAAEAAAFAAAEAAAAAAAJAAEFAAACAAAEAAAAAAAAAAACAAAAAAAAAAAFAAABAAAHAQEFAAADAAAHAAAAAAAFAAAKAQEEAAAAAAAAAAAAAAABAAAAAABwCQxgBwo4BAakDRHFEBVuCQvCDxW/DxXLEBaFCw5oCAuvDhOrDhIAAAAAAAAAAAAHAAACAAAAAAAQAgIAAAACAAAIAAEQAQEJAQEJAQEFAAAEAAAAAADGDxWvDhO2DhSyDhMFAADLuLNOAAAAYHRSTlMAFf7ntE55AbqnKfq4BUk7pfLe2+K8D7ERZ/cCazHw7Qpy6q/kkKuUJW5anlOKV3XBvku2xEShNJqBLtF8i2LJPzfPd3pGFm0QhPHV21A16WXMmdWShSFsiV0gcBy4f7+LPjQYAAABvklEQVR4Xu2Sx1bbUBCGR9IVQcWRYyzbcpGMbdwA19ihxRBaeu/9tyHv/wrcIi2ArFix4NvMzD1H39Gc+enWcceGu1UiRaFlILuWk33fXeMPVr4ihj2WZ+nPNikeNaPw/aps77XGAVGFWZSwiX8p1WkZoAhkNDEMgR5pwIYYdiHQyyQ4gKQudUXgB5kAJSwhG+vWEU1SoxBTMaSBGpUi3BfDGEPz+z4g/i+VhWImdCvAb/JQvK4rOAh46UAvKB2WyEh0fPNqA495byLC3xUYMEpKB1uDc133BGjz0gYOeLHAIr39MNGt85KWC243O2Wzf7izWa9yXQYMA1vnutfvnv1P9wWYSF0wQ/2SzpI6r2+4tdXmqNNNyWUnTUwdh57Pz16eSl2GJDkHX3kJAE3qtimEnuha/FO1bG4fQMf+hoZa1vsF6CHNF4uzp1JXM82eLU8RjqrmA6TVKbaoCyQ6VjF9dYpqBKA4BAJ1ii5NgZDenp/PT2RQBPk4KE4SFF9sthsH5RASlTVPvxSUn1QAQG9evTgmTm+Zua5fvhrjowF/2mGujPGf5fGAffKSGFu18GMc4w/+hKjrW3Rj7rgARv9iRkO1GTgAAAAASUVORK5CYII=" class="tld-image london"/><span class="price">[@T[productprice:<current productid='342462' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T]</span><span class="icann-disclaimer">*</span></a></span>
             <atlantis:webstash type="css">
               <style>
                 .tld-links a { font-size: 14px; color: #333; margin-right: 30px; display: inline-block; }
@@ -225,10 +231,7 @@
                        
                       <div class="headline">100% BRILLIANT</div> 
                       ##endif
-                      <div class="cta">[@L[cds.tmsv2/content/homepage/marquee-tile-tld:starting-at]@L]</div>
-                      <atlantis:webstash type="js">
-                        <script>(function(){var $price = $('.co-uk.marquee-tile-tld .cta .price');$price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));$('.co-uk.marquee-tile-tld .cta').show();})();</script>
-                      </atlantis:webstash>
+                      <div class="cta"> <span class="price-text">STARTING AT </span><span class="price">[@T[productprice:<current productid="57465" period="yearly" />]@T]/YR</span></div>
                     </div>
                   </div>
                 </div>
@@ -244,111 +247,286 @@
     <section id="merchandising">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="tile-wrapper"> 
-              <atlantis:webstash type="css">
-                <style>
-                  .gdpro-tile .tile-content-wrapper{padding:12px 20px 20px 15px;color:#333}
-                  .gdpro-tile .promo-logo{width:80%}
-                  .gdpro-tile .promo-text{padding-top:10px}
-                  .gdpro-tile .promo-cta{position:absolute;bottom:5px}
-                  .gdpro-tile a{text-decoration:underline;color:#f2812e}
-                </style>
-              </atlantis:webstash>
-              <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="tile gdpro-tile">
-                <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/GD-pro-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAyLjc3MiAxODMuMjg0IDQ5Ny4yMjggMTMzLjQzMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cG9seWdvbiBmaWxsPSIjRkY4MzAwIiBwb2ludHM9IjM5My40NDksMTgzLjI4NCAzNDIuNzA4LDIyOC4yNDkgMzQ3LjUxLDI4Mi45ODggNDIxLjM1NiwzMTYuNzE2IDUwMCwyNzkuNTczIDQ4NS44MjIsMjEyLjYxICIvPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTM1LjIzOSwyNDguNjAzaDI0LjI5N3Y3LjUxNWgtNS42MThjLTIuMjYyLDExLjQ1NC0xMC43MjUsMTkuMzM1LTI0Ljg3OSwxOS4zMzUNCgkJYy0xNi43MDgsMC0yNi4yNjYtMTIuOTE0LTI2LjI2Ni0yNi43NzZjMC0xMy44NjIsMTAuMTQyLTI2Ljc3NiwyNi4yNjYtMjYuNzc2YzEyLjAzOSwwLDIwLjk0LDcuNTE1LDIxLjc0MiwxNi41NjFoLTguNDYzDQoJCWMtMC44NzYtNS4wMzQtNi4yMDMtOS4wNDctMTMuMjc5LTkuMDQ3Yy0xMC45NDQsMC0xNy42NTUsOS4yNjYtMTcuNjU1LDE5LjI2MWMwLDkuOTk2LDYuMTI5LDE5LjI2MywxOC43NTIsMTkuMjYzDQoJCWM4LjY4MiwwLDEzLjg2Mi01LjU0NSwxNC44ODMtMTEuODE5aC05Ljc3N3YtNy41MTVIMzUuMjM5eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTYyLjUyOCwyNTcuMjEzYzAtOS42MzEsNy4wNzctMTcuODc3LDE3Ljg3NS0xNy44NzdjMTAuOTQ0LDAsMTguMDIyLDguMjQ1LDE4LjAyMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIyLDE3Ljg3NUM2OS42MDQsMjc1LjA4OCw2Mi41MjgsMjY2Ljg0Myw2Mi41MjgsMjU3LjIxM3ogTTkwLjQ3MSwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM4Ni41MywyNjguMDEyLDkwLjQ3MSwyNjMuMDQ5LDkwLjQ3MSwyNTcuMjEzeiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xMjEuODQyLDIyMy4xNDFjMTYuOTI2LDAsMjYuNDg1LDEyLjYyMSwyNi40ODUsMjUuNTM2cy05LjU1OCwyNS41MzYtMjYuNDg1LDI1LjUzNkgxMDUuMjh2LTUxLjA3MQ0KCQlIMTIxLjg0MnogTTExMy42NzEsMjMwLjY1N3YzNi4wNDNoOC4xNzFjMTEuMzgxLDAsMTcuODc1LTguOTAxLDE3Ljg3NS0xOC4wMjJjMC05LjExOS02LjQ5NC0xOC4wMi0xNy44NzUtMTguMDINCgkJQzEyMS44NDIsMjMwLjY1NywxMTMuNjcxLDIzMC42NTcsMTEzLjY3MSwyMzAuNjU3eiIvPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0xODguNTI5LDI0MC4yMTJ2MzMuOTk4aC03Ljk1MnYtNC41OTdjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczDQoJCWMtMTAuMzYsMC0xNy40MzgtOC4yNDUtMTcuNDM4LTE3Ljg3NWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi00LjU5N2g3Ljk1MlYyNDAuMjEyeg0KCQkgTTE4MC41NzcsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMxNzYuNjM2LDI2OC4wMTIsMTgwLjU3NywyNjMuMDQ5LDE4MC41NzcsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yMjMuMTExLDI2OS42MTVjLTIuMTE2LDMuNDMtNi41NjYsNS40NzMtMTAuNTA3LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTQxLDAsOC4zOTEsMi4wNDQsMTAuNTA3LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MkwyMjMuMTExLDI2OS42MTUNCgkJTDIyMy4xMTEsMjY5LjYxNXogTTIyMy4xMTEsMjU3LjIxM2MwLTUuODM4LTMuOTQxLTEwLjc5OC0xMC4wNjgtMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OA0KCQlzMy45MzksMTAuNzk4LDkuOTIzLDEwLjc5OEMyMTkuMTcyLDI2OC4wMTIsMjIzLjExMSwyNjMuMDQ5LDIyMy4xMTEsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yNjUuNTAyLDI2OS42MTVjLTIuMTE0LDMuNDMtNi41NjYsNS40NzMtMTAuNTA1LDUuNDczYy0xMC4zNiwwLTE3LjQzOC04LjI0NS0xNy40MzgtMTcuODc1DQoJCWMwLTkuNjMxLDcuMDc3LTE3Ljg3NywxNy40MzgtMTcuODc3YzMuOTM5LDAsOC4zOTEsMi4wNDQsMTAuNTA1LDUuNDczdi0yMS42NjhoNy45NTJ2NTEuMDcxaC03Ljk1MlYyNjkuNjE1eiBNMjY1LjUwMiwyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUMyNjEuNTYxLDI2OC4wMTIsMjY1LjUwMiwyNjMuMDQ5LDI2NS41MDIsMjU3LjIxM3oiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0yODAuNzUyLDI3OC4wNzhoNy43MzNjMC4wNzIsMy43OTQsMi41NTMsNi45MzEsOC4wOTgsNi45MzFjNS42OSwwLDguNTM2LTIuNTUzLDguNTM2LTkuMTkzdi02LjM0Nw0KCQljLTIuMTE2LDMuNjQ4LTYuMDU1LDUuNjE4LTExLjA5LDUuNjE4Yy00Ljg4OCwwLTguMzE3LTEuNzUxLTEwLjIxNC00LjU5N2MtMS42NzctMi41NTMtMi4xODgtNS4zOTktMi4xODgtMTAuMDY4di0yMC4yMWg3Ljk1Mg0KCQl2MTcuNTg0YzAsNS44MzYsMS42NzcsMTAuMjg4LDcuMzY4LDEwLjI4OGM1LjU0NSwwLDguMTcxLTQuNDUyLDguMTcxLTEwLjI4OHYtMTcuNTg0aDcuOTUydjM1LjYwNA0KCQljMCwxMS42LTYuMzQ4LDE2LjI2OS0xNy41MSwxNi4yNjlDMjg2LjgwOCwyOTIuMDg3LDI4MC44MjQsMjg1LjUyMiwyODAuNzUyLDI3OC4wNzh6Ii8+DQo8L2c+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNMzE2LjcxNCwyNDAuOTExYzAtMy4zMjcsMi4zOTktNi40MjcsNi4zMzgtNi40MjdzNi4zMzgsMy4xLDYuMzM4LDYuNDI3YzAsMy4zMjctMi4zOTksNi40MjYtNi4zMzgsNi40MjYNCgkJUzMxNi43MTQsMjQ0LjIzOCwzMTYuNzE0LDI0MC45MTF6IE0zMjguMzQxLDI0MC45MTFjMC0yLjg3Mi0xLjk5Ny01LjUzMi01LjI4OS01LjUzMmMtMy4yNzQsMC01LjI3MSwyLjY2Mi01LjI3MSw1LjUzMg0KCQljMCwyLjg1MywxLjk5Nyw1LjUxNyw1LjI3MSw1LjUxN0MzMjYuMzQ0LDI0Ni40MjYsMzI4LjM0MSwyNDMuNzY0LDMyOC4zNDEsMjQwLjkxMXogTTMyMC44ODIsMjQ0LjIwM3YtNy4xMjdoMi42MjcNCgkJYzEuNDE4LDAsMi4zNDYsMS4xMDQsMi4zNDYsMi4zODFjMCwxLjAzMi0wLjYzLDEuOTQyLTEuNjQ2LDIuMjIzbDEuNTkzLDIuNTIxaC0wLjk2M2wtMS41MjMtMi40MTZoLTEuNTkzdjIuNDE2aC0wLjg0MVYyNDQuMjAzeg0KCQkgTTMyMy40MzgsMjQxLjAzNGMwLjkyNiwwLDEuNTIzLTAuNzE4LDEuNTIzLTEuNTc2YzAtMC44NzYtMC41OTctMS42MTEtMS41MjMtMS42MTFoLTEuNzE4djMuMTg2DQoJCUMzMjEuNzIsMjQxLjAzNCwzMjMuNDM4LDI0MS4wMzQsMzIzLjQzOCwyNDEuMDM0eiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTM3My4wMzIsMjIzLjE0MWgxOC4zMTNjMTAuOTQ0LDAsMTguMDIyLDguMjQzLDE4LjAyMiwxNy44NzVzLTcuMDc3LDE3Ljg3NS0xOC4wMjIsMTcuODc1aC05LjkyMXYxNS4zMjINCgkJaC04LjM5MXYtNTEuMDcxSDM3My4wMzJ6IE00MDAuOTc3LDI0MS4wMTZjMC01LjYxOC0zLjc5NC0xMC4zNi05LjYzMS0xMC4zNmgtOS45MjF2MjAuNzIxaDkuOTIxDQoJCUMzOTcuMTgyLDI1MS4zNzYsNDAwLjk3NywyNDYuNjMzLDQwMC45NzcsMjQxLjAxNnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzYuMjg4LDI0Ny41ODJjLTEuMjQxLTAuMjkzLTEuODk3LTAuMzY1LTMuMTM3LTAuMzY1Yy02Ljc4NCwwLTEwLjUwNSwzLjg2Ny0xMC41MDUsMTIuMzN2MTQuNjY0aC03Ljk1Mg0KCQl2LTMzLjk5OGg3Ljk1MnY1LjQ3M2MxLjUzMi0zLjEzNyw1Ljk4My01LjkxLDEwLjUwNS01LjkxYzEuMjQxLDAsMi4yNjIsMC4xNDYsMy4xMzcsMC41MTFWMjQ3LjU4MnoiLz4NCjwvZz4NCjxnPg0KCTxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik00MzcuMDkyLDI1Ny4yMTNjMC05LjYzMSw3LjA3Ny0xNy44NzcsMTcuODc3LTE3Ljg3N2MxMC45NDIsMCwxOC4wMiw4LjI0NSwxOC4wMiwxNy44NzcNCgkJYzAsOS42My03LjA3NywxNy44NzUtMTguMDIsMTcuODc1QzQ0NC4xNjgsMjc1LjA4OCw0MzcuMDkyLDI2Ni44NDMsNDM3LjA5MiwyNTcuMjEzeiBNNDY1LjAzMywyNTcuMjEzDQoJCWMwLTUuODM4LTMuOTM5LTEwLjc5OC0xMC4wNjctMTAuNzk4Yy01Ljk4MywwLTkuOTIzLDQuOTYyLTkuOTIzLDEwLjc5OHMzLjkzOSwxMC43OTgsOS45MjMsMTAuNzk4DQoJCUM0NjEuMDk0LDI2OC4wMTIsNDY1LjAzMywyNjMuMDQ5LDQ2NS4wMzMsMjU3LjIxM3oiLz4NCjwvZz4NCjwvc3ZnPg0K" class="promo-logo svgfallback">
-                  </div>
-                  <div class="promo-text walsheim-black">BUILDING SITES FOR OTHERS? CHECK OUT GODADDY PRO.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" class="walsheim-black">Learn more </a>
-                  </div>
-                </div>
+          <div id="banner-small-1" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <div data-url="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]" data-ci='95777' class="banner-small gdpro">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/gdpro/banner-small/gd-pro-logo.png" alt=""><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIyMTQiIHZpZXdCb3g9Ii0wLjUgLTAuNSA3OTMgMjE0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IC0wLjUgLTAuNSA3OTMgMjE0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRjE2RTAwIiBwb2ludHM9IjYyMS45IDAgNTQxLjIgNzEuMSA1NDkuMSAxNTguNSA2NjYuOSAyMTIuNiA3OTIgMTUzLjEgNzY5LjUgNDYuMiAiLz48cGF0aCBmaWxsPSIjMzQzMzM0IiBkPSJNNTEuNiAxMDMuOWgzOC45djEyLjFoLTkuMWMtMy42IDE4LjItMTcgMzEtMzkuNSAzMUMxNS4yIDE0NyAwIDEyNi4zIDAgMTA0LjVzMTYuNC00Mi41IDQxLjktNDIuNWMxOS40IDAgMzMuNCAxMi4xIDM0LjYgMjYuMUg2My4yYy0xLjItNy45LTkuNy0xNC42LTIxLjMtMTQuNiAtMTcuNiAwLTI3LjkgMTQuNi0yNy45IDMxIDAgMTUuOCA5LjcgMzEgMjkuOCAzMSAxNCAwIDIxLjktOS4xIDIzLjctMTguOEg1MS42TDUxLjYgMTAzLjkgNTEuNiAxMDMuOSA1MS42IDEwMy45eiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik05NC43IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41Uzk0LjcgMTMzIDk0LjcgMTE3LjJ6TTEzOS43IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzEzMyAxMzQuOCAxMzkuNyAxMjYuOSAxMzkuNyAxMTcuMnpNMTg5LjUgNjMuMmMyNi43IDAgNDEuOSAyMCA0MS45IDQwLjdzLTE1LjIgNDAuNy00MS45IDQwLjdIMTYzLjRWNjMuMkgxODkuNUwxODkuNSA2My4yek0xNzYuNyA3NS4zdjU3LjdoMTIuOGMxOC4yIDAgMjguNS0xNCAyOC41LTI4LjVTMjA3LjcgNzUuOSAxODkuNSA3NS45QzE4OS41IDc1LjMgMTc2LjcgNzUuMyAxNzYuNyA3NS4zek0yOTUuOCA5MC41djU0LjFoLTEyLjh2LTcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNVY4OS45TDI5NS44IDkwLjUgMjk1LjggOTAuNXpNMjgzIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3cy0xNS44IDcuOS0xNS44IDE3IDYuMSAxNyAxNS44IDE3QzI3NyAxMzQuOCAyODMgMTI2LjkgMjgzIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik0zNTEuMSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjNMMzUxLjEgMTM3LjN6TTM1MS4xIDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzM0NC40IDEzNC44IDM1MS4xIDEyNi45IDM1MS4xIDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00MTguNSAxMzcuM2MtMy42IDUuNS0xMC4zIDguNS0xNyA4LjUgLTE2LjQgMC0yNy45LTEzLjQtMjcuOS0yOC41czExLjUtMjguNSAyNy45LTI4LjVjNi4xIDAgMTMuNCAzIDE3IDguNXYtMzQuNmgxMi44djgxLjRoLTEyLjhWMTM3LjN6TTQxOC41IDExNy4yYzAtOS4xLTYuMS0xNy0xNS44LTE3IC05LjcgMC0xNS44IDcuOS0xNS44IDE3czYuMSAxNyAxNS44IDE3QzQxMi40IDEzNC44IDQxOC41IDEyNi45IDQxOC41IDExNy4yeiIvPjxwYXRoIGZpbGw9IiMzNDMzMzQiIGQ9Ik00NDIuOCAxNTAuNmgxMi4xYzAgNi4xIDQuMyAxMC45IDEyLjggMTAuOSA5LjEgMCAxMy40LTQuMyAxMy40LTE0LjZ2LTEwLjNjLTMuNiA2LjEtOS43IDkuMS0xNy42IDkuMXMtMTMuNC0zLTE2LjQtNy4zYy0yLjQtNC4zLTMuNi04LjUtMy42LTE1Ljh2LTMyLjJoMTMuNHYyNy45YzAgOS4xIDIuNCAxNi40IDExLjUgMTYuNCA5LjEgMCAxMi44LTcuMyAxMi44LTE2LjRWOTAuNWgxMi44djU2LjVjMCAxOC4yLTEwLjMgMjYuMS0yNy45IDI2LjFDNDUyLjUgMTczLjEgNDQyLjggMTYyLjggNDQyLjggMTUwLjZ6Ii8+PHBhdGggZmlsbD0iIzM0MzMzNCIgZD0iTTQ5OS45IDkxLjdjMC01LjUgMy42LTEwLjMgMTAuMy0xMC4zczEwLjMgNC45IDEwLjMgMTAuMyAtMy42IDEwLjMtMTAuMyAxMC4zQzUwNC4xIDEwMiA0OTkuOSA5Ni42IDQ5OS45IDkxLjd6TTUxOC43IDkxLjdjMC00LjktMy05LjEtOC41LTkuMSAtNS41IDAtOC41IDQuMy04LjUgOS4xIDAgNC4zIDMgOC41IDguNSA4LjVDNTE1IDEwMC4yIDUxOC43IDk2IDUxOC43IDkxLjd6TTUwNi41IDk2LjZ2LTExLjVoNC4zYzIuNCAwIDMuNiAxLjggMy42IDMuNiAwIDEuOC0xLjIgMy0yLjQgMy42bDIuNCA0LjNoLTEuOGwtMi40LTMuNmgtMi40djMuNkw1MDYuNSA5Ni42IDUwNi41IDk2LjYgNTA2LjUgOTYuNnpNNTEwLjggOTEuN2MxLjIgMCAyLjQtMS4yIDIuNC0yLjRzLTEuMi0yLjQtMi40LTIuNGgtM3Y0LjlDNTA3LjggOTEuNyA1MTAuOCA5MS43IDUxMC44IDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTU4OS43IDYzLjJoMjkuMmMxNy42IDAgMjguNSAxMy40IDI4LjUgMjguNXMtMTEuNSAyOC41LTI4LjUgMjguNUg2MDMuMXYyNC4zaC0xMy40TDU4OS43IDYzLjIgNTg5LjcgNjMuMiA1ODkuNyA2My4yek02MzQuMSA5MS43YzAtOS4xLTYuMS0xNi40LTE1LjItMTYuNEg2MDMuMXYzMi44aDE1LjhDNjI4IDEwOC4xIDYzNC4xIDEwMC44IDYzNC4xIDkxLjd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MC42IDEwMmMtMS44LTAuNi0zLTAuNi00LjktMC42IC0xMC45IDAtMTcgNi4xLTE3IDE5LjR2MjMuMWgtMTIuOFY4OS45aDEyLjh2OC41YzIuNC00LjkgOS43LTkuNyAxNy05LjcgMS44IDAgMy42IDAgNC45IDAuNlYxMDJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5MS44IDExNy4yYzAtMTUuMiAxMS41LTI4LjUgMjguNS0yOC41IDE3LjYgMCAyOC41IDEzLjQgMjguNSAyOC41cy0xMS41IDI4LjUtMjguNSAyOC41QzcwMy4zIDE0NS44IDY5MS44IDEzMyA2OTEuOCAxMTcuMnpNNzM2LjEgMTE3LjJjMC05LjEtNi4xLTE3LTE1LjgtMTdzLTE1LjggNy45LTE1LjggMTcgNi4xIDE3IDE1LjggMTdDNzMwIDEzNC44IDczNi4xIDEyNi45IDczNi4xIDExNy4yeiIvPjwvc3ZnPg==" alt="" class="svgfallback">
               </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:body]@L]</div><a href="[@T[link:<relative path='/pro'><param name='ci' value='95777' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/gdpro/banner-small:cta]@L] </a>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="tile-wrapper">
-              <atlantis:webstash type="css">
-                <style>
-                  .merch-tile-0365-biz-email .tile-content-wrapper{padding:20px 15px;color:#333}
-                  .merch-tile-0365-biz-email .promo-logo{width:80%}
-                  .merch-tile-0365-biz-email .promo-text{padding-top:10px}
-                  .merch-tile-0365-biz-email .promo-cta{position:absolute;bottom:5px;display:none;}
-                  .merch-tile-0365-biz-email a{text-decoration:underline;color:#f2812e}
-                  .merch-tile-0365-biz-email .promo-logo-wrapper{margin-top: 10px;}
-                  
-                </style>
-              </atlantis:webstash>
-              <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="tile merch-tile-0365-biz-email">
-                <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/india-pro-email-tertiary-tile-icon@2x.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDE5NS40IDM0LjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE5NS40IDM0LjEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik00OC43IDE2LjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNTQuNiA5LjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM1Ni40IDguNCA1NS43IDkuMyA1NC42IDkuM3pNNjEuMSAxNi4xaDQuMXYtMy42SDY2bDIuNCAzLjZoNC45bC0yLjgtNC4zQzcyIDEwLjkgNzMgOS4yIDczIDcuM2MwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMTYuMXpNNjYuOSA5LjNoLTEuN3YtNEg2N2MxLjEgMCAxLjggMC45IDEuOCAyQzY4LjggOC40IDY4LjEgOS4zIDY2LjkgOS4zek04MS4yIDE2LjVjNC44IDAgNy41LTMuNSA3LjUtNy40Uzg2IDEuNyA4MS4yIDEuN2MtNC44IDAtNy41IDMuNS03LjUgNy40Uzc2LjQgMTYuNSA4MS4yIDE2LjV6TTgxLjIgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTODMuMyAxMi43IDgxLjIgMTIuN3pNOTkuMiA1LjVWMi4xaC05djE0aDQuMXYtNC4yaDQuOFY4LjZoLTQuOFY1LjVIOTkuMnpNMTA5LjggNS4yVjIuMWgtOXYxNGg5VjEzSDEwNXYtMi4zaDQuOHYtM0gxMDVWNS4ySDEwOS44ek0xMTEgMTEuNGMwIDMuMyAyLjIgNS4xIDUuOCA1LjEgMy41IDAgNS42LTEuNyA1LjYtNC41IDAtMy4yLTIuOS0zLjktNS00LjcgLTEuMy0wLjUtMS45LTAuOS0xLjktMS42IDAtMC43IDAuNi0xLjEgMS4zLTEuMSAwLjkgMCAxLjQgMC42IDEuNCAxLjdoNC4xYzAtMi4yLTEuNC00LjYtNS40LTQuNiAtMi44IDAtNS41IDEuMS01LjUgNC4xIDAgMi45IDIuNiAzLjcgNC44IDQuNiAxLjUgMC42IDIuMSAwLjkgMi4xIDEuNyAwIDAuNy0wLjUgMS4yLTEuNCAxLjIgLTEuMSAwLTEuNy0wLjctMS43LTJIMTExek0xMjMuNCAxMS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgxMjMuNHpNMTM2LjMgMTYuMWg0LjJ2LTE0aC00LjJWMTYuMXpNMTQ5LjUgMTYuNWM0LjggMCA3LjUtMy41IDcuNS03LjRzLTIuOC03LjQtNy41LTcuNGMtNC44IDAtNy41IDMuNS03LjUgNy40UzE0NC43IDE2LjUgMTQ5LjUgMTYuNXpNMTQ5LjUgMTIuN2MtMi4xIDAtMy40LTEuNy0zLjQtMy42czEuMy0zLjYgMy40LTMuNmMyLjEgMCAzLjQgMS43IDMuNCAzLjZTMTUxLjYgMTIuNyAxNDkuNSAxMi43ek0xNjIuNyAyLjFoLTQuMnYxNGg0LjF2LThsNC41IDhoNC4ydi0xNGgtNC4xdjguM0wxNjIuNyAyLjF6TTE4NyAxNi4xbC01LjItMTRoLTQuM2wtNS4xIDE0aDQuNWwwLjUtMS42aDQuN2wwLjUgMS42SDE4N3pNMTgxLjEgMTEuNGgtMi45bDEuNS01LjJMMTgxLjEgMTEuNHpNMTkxLjcgMTIuNVYyLjFoLTQuMXYxNGg3Ljh2LTMuNkgxOTEuN3pNNTcuNyAyMy4ydi0zLjFoLTl2MTRoOVYzMWgtNC44di0yLjNoNC44di0zaC00Ljh2LTIuNEg1Ny43ek03NS43IDIwLjFoLTUuMWwtMyA5IC0yLjktOWgtNS4zdjE0aDR2LTguN2wyLjcgOC43aDMuMWwyLjUtOC43djguN2g0VjIwLjF6TTkxLjQgMzQuMWwtNS4yLTE0aC00LjNsLTUuMSAxNGg0LjVsMC41LTEuNmg0LjdsMC41IDEuNkg5MS40ek04NS40IDI5LjRoLTIuOWwxLjUtNS4yTDg1LjQgMjkuNHpNOTEuOSAzNC4xaDQuMnYtMTRoLTQuMlYzNC4xek0xMDIuNCAzMC41VjIwLjFoLTQuMXYxNGg3Ljh2LTMuNkgxMDIuNHpNMjMuNyAyNS41TDAgMy4yIDAuNyAzNCA0MCAzMS44bDItMjEuNEwyMy43IDI1LjV6TTQxLjQgOGwtNDAtOEwyNCAyMy44IDQxLjQgOHoiLz48L3N2Zz4=" class="promo-logo svgfallback">
-                  </div>
-                  <div class="promo-text walsheim-black">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-text]@L]</div>
-                  <div class="promo-cta">
-                    ##if(productHasSavingsMoreThan(31841, 31841, 0))
-                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">Save up to {0}</a>
-                    ##else
-                    <a class="walsheim-black" href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]</a>
-                    ##endif
-                  </div>
-                  <script>
-                    var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
-                    $cta=$('.merch-tile-0365-biz-email .promo-cta');
-                    if(savings<5)
-                      $cta.html($cta.html().replace(($cta.text().trim()),'[@L[cds.sales/homepage/tiles/o365-biz-email:o365-biz-email-tile-cta]@L]'))
-                    else
-                      $cta.html($cta.html().replace("{0}", (savings/100).toLocaleString('[@T[localization:<language full="true" />]@T]', { style:'percent', maximumSignificantDigits: 2})));
-                    $cta.show();
-                  </script>
-                </div>
+          <div id="banner-small-2" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small 0365-biz-email">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]</span></span>
               </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:body]@L]</div><a href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta]@L] </a>
+              <script>
+                var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
+                $cta=$('.banner-small.0365-biz-email a');
+                if(savings<5)
+                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
+                else
+                  $cta.html($cta.html().replace("{0}", savings));
+                $cta.show();
+              </script>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="tile-wrapper">
-              <atlantis:webstash type="css">
-                <style>
-                  .merch-tile-support .tile-content-wrapper{padding:20px 15px;color:#333;cursor:default;}
-                  .merch-tile-support .promo-logo{width:60%}
-                  .merch-tile-support .promo-text{padding-top:10px}
-                  .merch-tile-support .promo-cta{position:absolute;bottom:5px;color:#f2812e}
-                  .merch-tile-support span{color:#f2812e}
-                </style>
-              </atlantis:webstash>
-              <div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="tile merch-tile-support">
-                <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/merch-tile/C3-support-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDEyMy40IDM1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjMuNCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTMuNSAxNy4zbC0wLjkgMC42IDAuOCA3LjMgMSAxIDIuOS0wLjQgLTAuNy04LjVIMy41ek0yMC44IDAuMkw3LjkgMCAwIDkuOWwxLjkgMTIgMC43IDBMMS43IDEwLjRsNi02LjRMMjAuMSA0bDcuNSA2IC0xLjEgMTYuNyAtMS42IDIuNCAtNi41IDIuNiAtMy4yLTFMMTUgMzAuN2wtMC42IDIuMSAxLjQgMi4yIDIuNSAwIDcuMi00LjkgMi4xLTMuM0wyOSA5LjcgMjAuOCAwLjJ6TTI1LjkgMjVsMC41LTYuOSAtMS4xLTEgLTIuNiAwTDIyIDI2LjNsMy4xIDBMMjUuOSAyNXpNMzUuMiAxNS40YzAgMy4zIDIuMiA1LjEgNS44IDUuMSAzLjUgMCA1LjYtMS43IDUuNi00LjUgMC0zLjItMi45LTMuOS01LTQuNyAtMS4zLTAuNS0xLjktMC45LTEuOS0xLjYgMC0wLjcgMC42LTEuMSAxLjMtMS4xIDAuOSAwIDEuNCAwLjYgMS40IDEuN2g0LjFjMC0yLjItMS40LTQuNi01LjQtNC42IC0yLjggMC01LjUgMS4xLTUuNSA0LjEgMCAyLjkgMi42IDMuNyA0LjggNC42IDEuNSAwLjYgMi4xIDAuOSAyLjEgMS43IDAgMC43LTAuNSAxLjItMS40IDEuMiAtMS4xIDAtMS43LTAuNy0xLjctMkgzNS4yek00Ny44IDE1LjJjMCAzIDIuMiA1LjIgNS44IDUuMiAzLjYgMCA1LjgtMi4yIDUuOC01LjJWNi4xaC00LjF2OS4xYzAgMS0wLjcgMS44LTEuNyAxLjhzLTEuNy0wLjgtMS43LTEuOFY2LjFoLTQuMVYxNS4yek02MC41IDIwLjFoNC4xdi0zLjZoMi41YzMuMiAwIDUuMi0yLjQgNS4yLTUuMiAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNNjYuMyAxMy4zaC0xLjd2LTRoMS43YzEuMSAwIDEuOCAwLjkgMS44IDJDNjguMiAxMi40IDY3LjUgMTMuMyA2Ni4zIDEzLjN6TTcyLjkgMjAuMUg3N3YtMy42aDIuNWMzLjIgMCA1LjItMi40IDUuMi01LjIgMC0yLjgtMi01LjItNS4yLTUuMmgtNi43VjIwLjF6TTc4LjcgMTMuM0g3N3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkM4MC42IDEyLjQgNzkuOCAxMy4zIDc4LjcgMTMuM3pNOTIuMSAyMC41YzQuOCAwIDcuNS0zLjUgNy41LTcuNHMtMi44LTcuNC03LjUtNy40Yy00LjggMC03LjUgMy41LTcuNSA3LjRTODcuNCAyMC41IDkyLjEgMjAuNXpNOTIuMSAxNi43Yy0yLjEgMC0zLjQtMS43LTMuNC0zLjZzMS4zLTMuNiAzLjQtMy42YzIuMSAwIDMuNCAxLjcgMy40IDMuNlM5NC4yIDE2LjcgOTIuMSAxNi43ek0xMDEuMSAyMC4xaDQuMXYtMy42aDAuOGwyLjQgMy42aDQuOWwtMi44LTQuM2MxLjYtMC45IDIuNS0yLjYgMi41LTQuNSAwLTIuOC0yLTUuMi01LjItNS4yaC02LjdWMjAuMXpNMTA3IDEzLjNoLTEuN3YtNGgxLjdjMS4xIDAgMS44IDAuOSAxLjggMkMxMDguOCAxMi40IDEwOC4xIDEzLjMgMTA3IDEzLjN6TTExNi40IDIwLjFoNC4xVjkuNmgyLjlWNi4xaC05Ljh2My42aDIuOVYyMC4xeiIvPjwvc3ZnPg==" class="promo-logo svgfallback">
-                  </div>
-                  <div class="promo-text walsheim-black">AWARD-WINNING, 24/7 SERVICE AND SUPPORT.</div>
-                  <div class="promo-cta"><a href="tel:+[@T[supportphone:<technical />]@T]" class="walsheim-black">Call [@T[supportphone:<technical />]@T] </a>
-                  </div> 
-                  ##if(activeLanguageAny([en-gb]))
-                  <script>$('.merch-tile-support .promo-cta a').attr('href',$('.merch-tile-support .promo-cta a').attr('href').replace(/020/i,"4420"));</script> 
-                  ##endif
-                </div>
+          <div id="banner-small-3" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <div data-url="tel:+[@T[supportphone:<technical />]@T]" data-ci='96330' class="banner-small support">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/customer-care/banner-small/support_icon.png" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzAgMzUiPjxwYXRoIGQ9Ik0yNy4zIDE4LjFMMjYuOCAyNSAyNiAyNi4zIDIyLjcgMjYuMyAyMy41IDE3IDI2LjEgMTcuMSAyNy4zIDE4LjF6TTI4LjYgMjYuN0wyNi41IDMwLjEgMTkgMzUgMTYuNCAzNSAxNSAzMi44IDE1LjYgMzAuNyAxNS44IDMwLjcgMTkuMSAzMS43IDI1LjggMjkuMSAyNy41IDI2LjcgMjguNiAxMCAyMC44IDQgOCA0LjEgMS44IDEwLjQgMi43IDIxLjggMiAyMS45IDAgOS45IDguMSAwIDIxLjUgMC4yIDMwIDkuNyAyOC42IDI2Ljd6TTMuNiAxNy4zTDYuOSAxNy4zIDcuNiAyNS44IDQuNiAyNi4yIDMuNSAyNS4yIDIuNyAxNy45IDMuNiAxNy4zeiIgZmlsbD0iIzc3QzA0MyIvPjwvc3ZnPg==" alt="[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/customer-care/banner-small:title]@L]</span></span>
               </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:body]@L]</div><a href="tel:+[@T[supportphone:<technical />]@T]">[@L[cds.tmsv2/content/homepage/customer-care/banner-small:cta]@L] </a>
+              <script>$('html[lang="en-gb"] .banner-small.support .promo-cta a').attr('href',$('.banner-small.support .promo-cta a').attr('href').replace(/020/i,"4420"));</script>
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 col-xs-6">
-            <div class="tile-wrapper">
-              <atlantis:webstash type="css">
-                <style>
-                  .online-store-tile .tile-content-wrapper{padding:20px 15px;color:#333}
-                  .online-store-tile .promo-logo{width:80%}
-                  .online-store-tile .promo-text{padding-top:10px;}
-                  .online-store-tile .promo-cta{position:absolute;bottom:5px}
-                  .online-store-tile a{text-decoration:underline;color:#f2812e}
-                </style>
-              </atlantis:webstash>
-              <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="tile online-store-tile">
-                <div class="tile-content-wrapper">
-                  <div class="promo-logo-wrapper"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/online-store-logo.png" class="promo-logo"><![endif]--><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOC4xLjEsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMjExLjcxMyA0NS4wMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjExLjcxMyA0NS4wMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNNTguMDY0LDMwLjU2M2M1Ljc4NSwwLDkuMTIxLTQuMjI0LDkuMTIxLTguODU3cy0zLjMzNi04Ljg1Ny05LjEyMS04Ljg1N2MtNS43NiwwLTkuMDk3LDQuMjI0LTkuMDk3LDguODU3DQoJCVM1Mi4zMDQsMzAuNTYzLDU4LjA2NCwzMC41NjN6IE01OC4wNjQsMjYuMDAzYy0yLjU0NCwwLTQuMDU2LTIuMDY0LTQuMDU2LTQuMjk2YzAtMi4yMzIsMS41MTItNC4yOTYsNC4wNTYtNC4yOTYNCgkJYzIuNTY4LDAsNC4wNTYsMi4wNjQsNC4wNTYsNC4yOTZDNjIuMTIxLDIzLjkzOCw2MC42MzMsMjYuMDAzLDU4LjA2NCwyNi4wMDN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTczLjE3NiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTYsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUw3My4xNzYsMTMuMzA2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05MS4zNiwyNS44MzVWMTMuMzA2aC00Ljk5MnYxNi44MDFoOS4zODV2LTQuMjcySDkxLjM2eiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik05Ni42NDgsMzAuMTA3aDUuMDRWMTMuMzA2aC01LjA0VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTA5LjAxNiwxMy4zMDZoLTUuMDg4djE2LjgwMWg0Ljk5MnYtOS42MjVsNS40OTcsOS42MjVoNS4wODhWMTMuMzA2aC01LjAxNnY5Ljk2MUwxMDkuMDE2LDEzLjMwNnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMzLjAzMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NEgxMjcuMnYtMi44MDhoNS44MzJ2LTMuNTc2SDEyNy4yVjE3LjA1SDEzMy4wMzN6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE0MC4xMiwyNC40NDNjMCwzLjkzNiwyLjY4OCw2LjEyMSw2Ljk2MSw2LjEyMWM0LjIsMCw2LjgxNy0yLjA4OCw2LjgxNy01LjQNCgkJYzAtMy44MTYtMy41MDQtNC43MDUtNi4wOTctNS42ODljLTEuNTYtMC41NzYtMi4zMDQtMS4wMzItMi4zMDQtMS45NDRjMC0wLjg4OCwwLjcyLTEuMjk2LDEuNTM2LTEuMjk2DQoJCWMxLjEyOCwwLDEuNjU2LDAuNzQ0LDEuNjU2LDIuMDg4aDQuOTkzYzAtMi42NC0xLjY1Ni01LjQ3Mi02LjUyOS01LjQ3MmMtMy4zODQsMC02LjY3MywxLjM2OC02LjY3Myw0Ljk0NA0KCQljMCwzLjQ1NiwzLjA5Niw0LjQ4OCw1Ljg1Nyw1LjU2OGMxLjc3NiwwLjY5NiwyLjU0NCwxLjA4LDIuNTQ0LDIuMDE2YzAsMC44ODgtMC42NDgsMS40NC0xLjY1NiwxLjQ0DQoJCWMtMS4yNzIsMC0yLjExMi0wLjg2NC0yLjExMi0yLjM3NkgxNDAuMTJ6Ii8+DQoJPHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTE1Ny41MiwzMC4xMDdoNC45OTJWMTcuNTc4aDMuNDU2di00LjI3MmgtMTEuOTA1djQuMjcyaDMuNDU2VjMwLjEwN3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTc0LjU4NCwzMC41NjNjNS43ODUsMCw5LjEyMS00LjIyNCw5LjEyMS04Ljg1N3MtMy4zMzYtOC44NTctOS4xMjEtOC44NTcNCgkJYy01Ljc2LDAtOS4wOTcsNC4yMjQtOS4wOTcsOC44NTdTMTY4LjgyNCwzMC41NjMsMTc0LjU4NCwzMC41NjN6IE0xNzQuNTg0LDI2LjAwM2MtMi41NDQsMC00LjA1Ni0yLjA2NC00LjA1Ni00LjI5Ng0KCQljMC0yLjIzMiwxLjUxMi00LjI5Niw0LjA1Ni00LjI5NmMyLjU2OCwwLDQuMDU2LDIuMDY0LDQuMDU2LDQuMjk2QzE3OC42NDEsMjMuOTM4LDE3Ny4xNTMsMjYuMDAzLDE3NC41ODQsMjYuMDAzeiIvPg0KCTxwYXRoIGZpbGw9IiM3OEMwNDQiIGQ9Ik0xODQuNjA4LDMwLjEwN2g0Ljk5MnYtNC4yOTZoMC45MzZsMi44NTYsNC4yOTZoNS44ODFsLTMuMzYtNS4xMTJjMS45Mi0xLjA4LDMuMDcyLTMuMTQ0LDMuMDcyLTUuNDI0DQoJCWMwLTMuMzg0LTIuNDcyLTYuMjY1LTYuMzEyLTYuMjY1aC04LjA2NVYzMC4xMDd6IE0xOTEuNjY0LDIxLjk0NkgxODkuNnYtNC43NTJoMi4wODhjMS4zNDQsMCwyLjIwOCwxLjA4LDIuMjA4LDIuMzc2DQoJCVMxOTMuMDA4LDIxLjk0NiwxOTEuNjY0LDIxLjk0NnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMjExLjcxMywxNy4wNXYtMy43NDRoLTEwLjgyNXYxNi44MDFoMTAuODI1di0zLjc0NGgtNS44MzN2LTIuODA4aDUuODMzdi0zLjU3NmgtNS44MzNWMTcuMDVIMjExLjcxM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMTMuNjg1LDM4LjIxMmwtMi4wNTUsMS45MDNsLTAuMDkyLDIuNzgybDEuOTI0LDIuMDMybDIuODEzLDAuMDkybDIuMDU1LTEuOTAybDAuMDkzLTIuNzgybC0xLjkyNC0yLjAzMg0KCQlMMTMuNjg1LDM4LjIxMnoiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMzEuMTQ1LDM1LjcwM2wtMC40MTktMy40NTFsMi4yNi0xMy45MzNsNi4wMTMtNC4zMTZsLTEuNjM5LTMuMTcyTDI1LjcxNywwTDIwLjY2LDUuMDE4bC0wLjAxMywwLjEzNg0KCQljLTIuNDE1LDEuMjA3LTE5LjM4NSwxMC41OS0xOS4zODUsMTAuNTlsMC41NjIsMC44MjZsMTcuOTY0LTguMTI3bDcuNTgsNi41MzNoMi45ODRsLTguNjc1LTcuOTNsNC45NTEtMy43NzJsOS4wMDIsOS4wMzMNCgkJbC01LjI3OCw0LjUwMmwwLjAyNCwwLjAzNkw2LjI4OCwyMi40NDNsMC44LDE0LjkyNmwyMC45NjUtNC41MzlsMC41NzQsMy4zNTZsLTEuNjA2LDEuMDAxbC0wLjc0MiwzLjI0bDEuNzkyLDIuODExbDMuMjc3LDAuNzM0DQoJCWwyLjg0Mi0xLjc3MmwwLjc0My0zLjI0MWwtMS43OTItMi44MTFMMzEuMTQ1LDM1LjcwM3oiLz4NCgk8cGF0aCBmaWxsPSIjNzhDMDQ0IiBkPSJNMCwxNi4wMjhsMS42MSwxMS43NDZsMy44NzMsOC4yMzJMNC42NzgsMjEuNzRMMCwxNi4wMjh6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==" class="promo-logo svgfallback">
-                  </div>
-                  <div class="promo-text walsheim-black">EVERYTHING YOU NEED TO START SELLING ONLINE.</div>
-                  <div class="promo-cta"><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" class="walsheim-black">Start your FREE TRIAL </a>
-                  </div>
-                </div>
+          <div id="banner-small-4" class="col-md-3 col-sm-6 col-xs-6">
+            <style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+            </style>
+            <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="banner-small online-store">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/online-store/banner-small/online-store-icon.png" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIxLjUgMCAzMCAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxLjUgMCAzMCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc3QzA0MyIgZD0iTTI2LjkgMTQuMmwtMS44IDEwLjkgMC40IDIuNyAxLjUgMC4zIDEuNCAyLjIgLTAuNiAyLjUgLTIuMiAxLjQgLTIuNS0wLjYgLTEuNC0yLjIgMC42LTIuNSAxLjItMC44IC0wLjQtMi42TDcgMjkuMSA2LjMgMTcuNGwxOC42LTQuM2gtMC4xbDQuMS0zLjVMMjIgMi41bC0zLjggMyA2LjYgNi4xaC0yLjJsLTUuOS01TDIuOSAxMi45bC0wLjQtMC43YzAgMCAxMy03LjMgMTQuOS04LjJWMy45TDIxLjMgMGw4LjkgOC40IDEuMyAyLjVMMjYuOSAxNC4yek01LjcgMjhsLTMtNi40IC0xLjItOS4xIDMuNiA0LjRMNS43IDI4ek0xMiAyOS43bDIuMiAwLjEgMS41IDEuNiAtMC4xIDIuMUwxNCAzNWwtMi4xLTAuMSAtMS41LTEuNnYtMi4xTDEyIDI5Ljd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]</span></span>
               </div>
+              <div class="body">[@L[cds.tmsv2/content/homepage/online-store/banner-small:body]@L]</div><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/online-store/banner-small:cta]@L] </a>
             </div>
           </div>
         </div>
@@ -1119,12 +1297,16 @@ ul li.no-check {
   padding: 10px 0;
   font-size: 16px;
 }
-#merchandising .tile-wrapper {
-  min-height: 140px;
+#merchandising #banner-small-1,
+#merchandising #banner-small-2,
+#merchandising #banner-small-3,
+#merchandising #banner-small-4,
+#merchandising #banner-small-5,
+#merchandising #banner-small-6,
+#merchandising #banner-small-7,
+#merchandising #banner-small-8,
+#merchandising #banner-small-9 {
   margin: 5px 0;
-}
-#merchandising .promo-cta {
-  text-transform: uppercase;
 }
 section {
   padding-top: 0;
@@ -1164,9 +1346,9 @@ section {
       function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
       var reSizeTiles = function(){
         var maxTitleHeight = 0;
-          $("#merchandising .tile-wrapper").each(function(index, title) {
+          $("#merchandising .body").each(function(index, title) {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
-          }).css("min-height", maxTitleHeight + 10);
+          }).css("min-height", maxTitleHeight);
           if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
             var maxHeroHeight = 0;
             $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});

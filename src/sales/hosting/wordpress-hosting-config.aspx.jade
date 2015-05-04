@@ -18,10 +18,58 @@ append vars
 append pageStyles
   style
     include ./wordpress-hosting-config/styles.css 
+  style.
+    ##if(countrysiteany(in))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(mx))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(br))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(siteContextAny(pl))
+    input[type=radio]:checked + label {
+      color: #a92728!important;
+    }
+    input[type=checkbox] + label {
+      color: #a92728;
+    }
+    .green-check,.product-added-to-cart,.text-secondary,.text-secondary-o {
+      color: #a92728;
+    }
+    .order-total-wrapper, .scroll-down-wrapper p{
+      color: #0090FC;
+    }
+    .container{
+      width: 1000px;
+      max-width: 1000px;
+      min-width: 1000px;
+    }
+    .config-text-primary{
+      font-size:26px;
+    }
+    .config-text-lead{
+      font-size:14px;
+    }
+    .btn-continue,.btn-continue:hover{
+      background-color: #0090FC !important;
+      border-color: #0090FC !important;
+    }
+    .product-added-to-cart{
+      margin-top:15px;
+    }
+    ##endif
 
 block header
   p.product-added-to-cart
-    span.green-check
+    span.uxicon.uxicon-checkmark.green-check
     span.product-added-to-cart-text [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]
 
 block addons
@@ -43,7 +91,7 @@ block addons
 
   +configStep({"id":"officeStep","flagColor":"blue","flagText":"<span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]"})
     .row
-      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" ></span>
+      .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigOfficeToolTip]@L]" ></span>
     .row.options-wrapper
       ul#officeList.product-options
 
@@ -52,7 +100,6 @@ block addons
       .step-title [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigSecuring]@L]
     .row.options-wrapper
       ul#securityList.product-options
-  +configStepBreak
 block orderSummary
   +configSummary()
 
@@ -82,107 +129,13 @@ block domainSearch
 
 prepend endOfPageScripts
   
-  script.breakTemplate(type='text/template').
-    <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+  +breakTemplate()
 
-  script.itemTemplate(type='text/template').
-    <div class="row toprow">
-      <div class="col-xs-12 item-title-wrapper">
-        <div class="item-title"><%= itemName %></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-        <div class="item-term"><%= itemTerm %></div>
-      </div>
-      <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
-        <div class="item-x">x</div>
-      </div>
-      <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
-        <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div> 
-      </div>
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-        <div class="item-total-price text-secondary"><%= itemTotal %></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <% if ( onSale ){ %>
-          <div class="item-savings-wrapper text-secondary">
-            [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
-          </div>
-        <% } %>
-      </div>
-    </div>
+  +itemTemplate()
 
-  script.planTemplate(type='text/template').
-    <li>
-      <div class="row vertical-align">
-        <div class="col-xs-2">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
-        </div>
-        <div class="col-xs-6">
-          <div class="config-text-secondary"><%= title %></div>
-        </div>
-        <div class="col-xs-4">
-          <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-2">
-          <div class="config-text-lead bold"><%= subtitle %></div>
-        </div>
-        <div class="col-xs-4">
-          <% if ( onSale ){ %>
-              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-            <% } %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-xs-offset-2">
-          <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
-          <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
-          <% } %></div>
-        </div>
-        <div class="col-xs-4">
-          <div class="config-text-lead text-secondary-o">
-            <% if ( onSale ){ %>
-              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </li>
+  +planTemplate()
 
-  script.termTemplate(type='text/template').
-    <li>
-      <div class="row vertical-align">
-        <div class="col-xs-2 col-lg-1">
-            <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
-        </div>
-        <div class="col-xs-5 col-lg-3">
-          <div class="config-text-primary"><%= term %> <%= month %></div>
-        </div>
-        <div class="col-xs-5 col-lg-3">
-          <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-        </div>
-        <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
-          <div class="config-text-lead text-xs-right">
-            <% if ( onSale ){ %>
-              <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-            <% } %>
-          </div>
-        </div>
-        <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0 ">
-          <div class="text-xs-right config-text-lead text-secondary-o"> 
-            <% if ( onSale ){ %>
-              [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-            <% } %>
-          </div>
-        </div>
-      </div>
-    </li>
-
+  +termTemplate()
 
   script.addonTemplate(type='text/template').
     <li>
@@ -232,13 +185,14 @@ prepend endOfPageScripts
     </li>
 
   script.
-    var plan = getParameterByName('plan');
+    var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
     // gs for get started button, ac for add to cart button
-    var origin = getParameterByName('src');
+    var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
     var reload = false;
     var noSiteLock = false;
     var noEmail = false;
-    var itc = "slp_wordpress";
+    var isPro = plan.indexOf('wordpress') >= 0
+    var itc = isPro ? "pro_wordpress" : "slp_wordpress";
 
     ##if(!productIsOffered(107))
       noSiteLock = true;
@@ -319,17 +273,9 @@ prepend endOfPageScripts
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
-        else {
-          plan='mwp_basic_12month';
-        }
-        if( plan.indexOf('mwp_ultimate') >= 0)
+        if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
         {
           steps = _.without(steps, 'securityStep');
-        }
-        else if( (plan.indexOf('1month') >= 0))
-        {
-          document.getElementById('slElement').style.display = "none";
-          document.getElementById('addsiteLockOption').checked = false;
         }
         if(noEmail)
         {
@@ -346,7 +292,7 @@ prepend endOfPageScripts
       resetPage: function(){
         var steps = ['planStep','termStep','officeStep', 'securityStep'];
         var addToCart = 'ac';
-        itc = "slp_wordpress_config";
+        itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
         
         $('.config-step').hide();
         $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -360,22 +306,24 @@ prepend endOfPageScripts
         if (origin === addToCart){
           steps = _.without(steps, 'planStep');
         }
-        if( plan.indexOf('mwp_ultimate') >= 0)
+        if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
         {
           steps = _.without(steps, 'securityStep');
           document.getElementById('addsslOption').checked = false;
           document.getElementById('addsiteLockOption').checked = false;
         }
-        else if( plan.indexOf('mwp_developer') >= 0)
+        else if((plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
         {
           document.getElementById('sslElement').style.display = "none";
           document.getElementById('addsslOption').checked = false;
           $('#slElement').css("border-bottom", "none");
         }
-        else if( (plan.indexOf('1month') >= 0))
+        else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
         {
           document.getElementById('slElement').style.display = "none";
           document.getElementById('addsiteLockOption').checked = false;
+          $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+          $('#sitelock_Basic1Yr').addClass("uxicon-box");
         }
         if(noEmail)
         {
@@ -383,7 +331,7 @@ prepend endOfPageScripts
         }
         if(noSiteLock)
         {
-          if( plan.indexOf('mwp_developer') >= 0)
+          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
           {
             steps = _.without(steps, 'securityStep');
           }
@@ -414,21 +362,21 @@ prepend endOfPageScripts
           $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
         }
         else{
-         if(plan.indexOf('mwp_basic') >= 0){
+         if((plan.indexOf('mwp_basic') >= 0)|| (plan.indexOf('tier1') >= 0)){
             ##if(countrysiteany(pt) || countrysiteany(ua))
             $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
             ##else
             $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
             ##endif
           }
-          else if(plan.indexOf('mwp_deluxe') >= 0){
+          else if((plan.indexOf('mwp_deluxe') >= 0) || (plan.indexOf('tier2') >= 0)){
             ##if(countrysiteany(pt) || countrysiteany(ua))
             $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
             ##else
             $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
             ##endif
           }
-          else if(plan.indexOf('mwp_ultimate') >= 0){
+          else if((plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0)){
             $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
           }
           else{
@@ -604,7 +552,7 @@ prepend endOfPageScripts
           var officeCurrentMonthlyPrice = officeItem[1];
           var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMonthlyRenewEmail]@L]";
           //officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
-          officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice)
+          officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice);
           var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
           var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
           var termType = "[@L[cds.sales/_common:yr]@L]";
@@ -685,6 +633,12 @@ prepend endOfPageScripts
           
           parentID.append(addonTemplate(securityData));
 
+          if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
+          {
+            document.getElementById('slElement').style.display = "none";
+            document.getElementById('addsiteLockOption').checked = false;
+          }
+
           $('#sitelock_Basic1Yr').click(function(){
             if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
               $('#sitelock_Basic1Yr').removeClass("uxicon-box");
@@ -716,7 +670,7 @@ prepend endOfPageScripts
           document.getElementById('slElement').style.display = "none";
           document.getElementById('addsiteLockOption').checked = false;
         }
-        if( plan.indexOf('mwp_developer') >= 0)
+        if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
         {
           document.getElementById('sslElement').style.display = "none";
           document.getElementById('addsslOption').checked = false;
@@ -784,7 +738,7 @@ prepend endOfPageScripts
           var selectedTerm = '1';
           var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
           var onSale = true;
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -812,7 +766,7 @@ prepend endOfPageScripts
           var selectedTerm = '1';
           var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
           var onSale = false;
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -841,7 +795,7 @@ prepend endOfPageScripts
           var onSale = false;
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
           var selectedTotal = document.getElementById('addsiteLockOption').getAttribute('data-yearly');
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
 
           var itemData = {
                 itemName: selectedAddon,
@@ -885,7 +839,12 @@ prepend endOfPageScripts
           ##if(countrysiteany(mx))
 
           ##else
-          plan = plan + "_withEmail";
+          if(plan.indexOf('mwp') >= 0){
+            plan = plan + "_withEmail";
+          }
+          if(plan.indexOf('wordpress') >= 0){
+            plan = plan.replace('wordpress_','wordpress_o365_');
+          }
           ##endif
         }
 
@@ -962,14 +921,24 @@ prepend endOfPageScripts
     $(document).ready(function(){
       $('#planConfigContinue').click(function(){
         Config.addPlanToCart();
-        if(plan.indexOf('1month') >= 0){
+        if((plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0)){
           setTimeout(function(){
             ##if(isManager())
-            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+              if(isPro){
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+              }
+              else{
+                window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+              }
             ##else
-            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+              if(isPro){
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+              }
+              else{
+                window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+              }
             ##endif
-            }, 2000);
+          }, 2000);
         }
         else {
           $('.configuration-container').hide();
@@ -979,11 +948,21 @@ prepend endOfPageScripts
       });
     });
     $('#noFreeDomain').click(function(){
-        ##if(isManager())
-        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-        ##else
-        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-        ##endif
+      ##if(isManager())
+        if(isPro){
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##else
+        if(isPro){
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##endif
 
     });
     $('#scrollDownToContinueButton').click(function(){

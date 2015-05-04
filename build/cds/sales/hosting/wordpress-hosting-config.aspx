@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting-config.aspx' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]">
-    <meta name="keywords" content=" ">
+    <meta name="keywords" content=" "> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-description]@L]">
     <meta property="og:type" content="website">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
     <script>
       window.ux = window.ux || {};
@@ -118,7 +122,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css">
@@ -134,7 +140,7 @@
     <div class="container configuration-container">
       <div class="row">
         <div class="col-sm-12">
-          <p class="product-added-to-cart"><span class="green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]</span></p>
+          <p class="product-added-to-cart"><span class="uxicon uxicon-checkmark green-check"></span><span class="product-added-to-cart-text">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]</span></p>
         </div>
       </div>
       <div class="row">
@@ -241,7 +247,7 @@
           <div class="row">
             <div id="officeStep" class="col-sm-11 config-step"><span class="flag blue"><span class="step-number-text"><span class='step-number bold'>[@L[cds.sales/gd/hosting/website-builder-config:step]@L]</span> | [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddEmail]@L]</span></span>
               <div class="row">
-                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" ></span></div>
+                <div class="step-title">[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigExclusive]@L] [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMSEmail]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigOfficeToolTip]@L]" ></span></div>
               </div>
               <div class="row options-wrapper">
                 <ul id="officeList" class="product-options"></ul>
@@ -258,27 +264,6 @@
               </div>
             </div>
           </div>
-          <atlantis:webstash type="css">
-            <style>
-              .config-step-break {
-                margin-top: 15px;
-                margin-bottom: 15px;
-              }
-              .config-step-break .icon-down {
-                position: relative;
-                z-index: 1;
-              }
-              .icon-down {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 20px;
-                height: 15px;
-                background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) -49px -2px no-repeat;
-              }
-            </style>
-          </atlantis:webstash>
-          <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
         </div>
         <div class="col-sm-3">
           <atlantis:webstash type="css">
@@ -325,6 +310,7 @@
               .scroll-down-wrapper{
                 cursor: pointer;
                 margin-top: 15px;
+                text-align:center;
               }
               .scroll-down-wrapper p{
                 font-size: 12px;
@@ -391,7 +377,8 @@
              
             <div class="row">
               <div id="scrollDownToContinueButton" data-ci="" data-scroll="" class="scroll-down-wrapper move">
-                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p><span class="green-down-arrow-icon"></span>
+                <p class="green-text">[@L[cds.sales/_common:scroll-continue]@L]</p>
+                <p class="uxicon uxicon-chevron-down"></p>
               </div>
             </div>
           </div>
@@ -737,6 +724,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
+        var srcIsPro = window.location.href.indexOf("pro") > -1
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
@@ -764,9 +752,19 @@
             $.getJSON(url, function (data) {
                 if (data == 'removed') {
                   ##if(isManager())
-                    window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true"  />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##else
-                    window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    if(srcIsPro){
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                    }
+                    else{
+                      window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                    }
                   ##endif
                 }
             });
@@ -801,17 +799,31 @@
         
                 if (domaintoadd == '') {
                      ##if(isManager())
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
-                      ##else
+                      }
+                    ##else
+                      if(srcIsPro){
+                        window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                      }
+                      else{
                         window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
-                      ##endif
+                      }
+                    ##endif
             } else {
                 ConfigSearch.removeDoamin();
             }
             });
         
             $('.select-and-continue').bind('click', function () {
-                window.location = nextStepUrl;       
+              if(srcIsPro){
+                nextStepUrl += (nextStepUrl.indexOf('?') >= 0) ? "&" : "?";
+                nextStepUrl += 'pro=1';
+              }
+              window.location = nextStepUrl;       
             });
         });
         
@@ -1148,125 +1160,117 @@ ul li.no-check {
         .domain-search-container{
           margin-bottom:200px;
         }
+        .config-step {
+          font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
+        }
+        .config-step .step-title {
+        font-size: 36px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+        font-weight: 100;
+        line-height: 1.1;
+        color: #333;
+        }
+        .config-step .step-subtitle {
+        margin-left: 15px;
+        }
+        .config-text-primary {
+          font-size: 30px;
+          font-weight: 200;
+        }
+        .config-text-secondary {
+          font-size: 24px;
+          font-weight: 200;
+        }
+        .config-text-lead {
+          font-size: 16px;
+        }
+        .bold{
+          font-weight: 600;
+        }
+        .config-text-lead-secondary {
+          font-size: 14px;
         
+        }
+        .config-step{
+          display: none;
+        }
+        .vertical-align {
+            display: flex;
+            align-items: center;
+        }   
+        .product-options li {
+          border-bottom: 1px solid #C3C3C3;
+          padding-bottom: 25px;
+          padding-top: 10px;
+        }
+        .product-options li:last-child{
+          border-bottom:none;
+        }
+        .product-options {
+        list-style: none;
+        }
+        
+        .input_hidden {
+            position: absolute;
+            left: -9999px;
+        }
+        
+        
+        @media (max-width: 1024px) { 
+            .vertical-align {
+                display: block;
+                align-items: inherit;
+            }
+            .text-md-right{
+              text-align: right;
+            }
+            .config-text-primary {
+              font-size: 20px;
+            }
+            .config-text-secondary {
+              font-size: 20px;
+            }
+            .config-text-lead {
+              font-size: 16px;
+            }
+            .config-text-save {
+              font-size: 14px;
+            }
+            .config-text-disclaimer {
+              font-size: 14px;
+            }
+            .product-radio {
+              margin-top :0;
+            } 
+        }
+        @media (max-width: 428px) { 
+            .text-xs-right {
+              text-align: right;
+            }
+            .text-md-right{
+              text-align: inherit;
+            }
+        
+        }
       </style>
       <style>
-.config-step {
-  font-family: "Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-.config-step .step-title {
-font-size: 36px;
-margin-top: 40px;
-margin-bottom: 15px;
-margin-left: 15px;
-font-weight: 100;
-line-height: 1.1;
-color: #333;
-}
-.config-step .step-subtitle {
-margin-left: 15px;
-}
-.config-text-primary {
-  font-size: 30px;
-  font-weight: 200;
-}
-.config-text-secondary {
-  font-size: 24px;
-}
-.config-text-lead {
-  font-size: 16px;
-}
-.bold{
-  font-weight: 600;
-}
-.config-text-lead-secondary {
-  font-size: 14px;
-
-}
-.product-options li {
-  border-bottom: 1px solid #C3C3C3;
-  padding-bottom: 25px;
-  padding-top: 10px;
-}
-.product-options li:last-child{
-  border-bottom:none;
-}
-.config-step{
-  display: none;
-}
 .green-check {
-  background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v2.png) no-repeat -48px -90px transparent;
-  width: 34px;
-  height: 27px;
-  cursor: pointer;
-  display: inline-block;
-  padding: 4px 10px 0;
+  color:#679B08;
   position: relative;
+  font-size:2em;
+  margin-bottom: 10px;
 }
 .disclaimers-section{
-  margin-top: 30px;
+  margin-top: -30px;
   margin-bottom: 30px;
-}
-.product-options {
-list-style: none;
-}
-.vertical-align {
-    display: flex;
-    align-items: center;
-}   
-.product-radio {
-  margin-top :10px; 
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 35px;
-  height: 35px;
-}
-@media (max-width: 1024px) { 
-    .vertical-align {
-        display: block;
-        align-items: inherit;
-    }
-    .text-md-right{
-      text-align: right;
-    }
-    .config-text-primary {
-      font-size: 20px;
-    }
-    .config-text-secondary {
-      font-size: 20px;
-    }
-    .config-text-lead {
-      font-size: 16px;
-    }
-    .config-text-save {
-      font-size: 14px;
-    }
-    .config-text-disclaimer {
-      font-size: 14px;
-    }
-    .product-radio {
-      margin-top :0;
-    } 
-    .item-price{
-      border-bottom: 1px solid #EBEBEB;
-    }
-}
-@media (max-width: 428px) { 
-    .text-xs-right {
-      text-align: right;
-    }
-    .text-md-right{
-      text-align: inherit;
-    }
-    .item-price{
-      border-bottom: none;
-    }
 }
 .product-added-to-cart-text{
   position: relative;
   left:10px;
   font-size: 30px;
 }
-
 .product-added-to-cart{
   padding:0 10px;
   float:left;
@@ -1274,35 +1278,10 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .toprow {
-  margin-top: 15px;
+input[type=radio]:checked + label{
+  color: #579006;
 }
-.item-title-wrapper{
-  border-bottom: 1px solid #333;
-}
-.item-title{
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.item-term,.item-x,.item-price,.item-total-price{
-  margin-top: 5px;
-}
-.item-total-price{
-  text-align: right;
-}
-.item-savings-wrapper{
-  text-transform: uppercase;
-}
-.input_hidden {
-    position: absolute;
-    left: -9999px;
-}
-.selected-radio{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
-  width: 36px;
-  height: 36px;
-}
+
 #officeOption{
   text-decoration: line-through;
 }
@@ -1367,15 +1346,114 @@ input[type=checkbox] + label{
   }
 }
       </style>
+      <style>
+        ##if(countrysiteany(in))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        ##if(countrysiteany(mx))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        ##if(countrysiteany(br))
+        .domain-search-container{
+          margin-bottom: 200px;
+        }
+        ##endif
+        ##if(siteContextAny(pl))
+        input[type=radio]:checked + label {
+          color: #a92728!important;
+        }
+        input[type=checkbox] + label {
+          color: #a92728;
+        }
+        .green-check,.product-added-to-cart,.text-secondary,.text-secondary-o {
+          color: #a92728;
+        }
+        .order-total-wrapper, .scroll-down-wrapper p{
+          color: #0090FC;
+        }
+        .container{
+          width: 1000px;
+          max-width: 1000px;
+          min-width: 1000px;
+        }
+        .config-text-primary{
+          font-size:26px;
+        }
+        .config-text-lead{
+          font-size:14px;
+        }
+        .btn-continue,.btn-continue:hover{
+          background-color: #0090FC !important;
+          border-color: #0090FC !important;
+        }
+        .product-added-to-cart{
+          margin-top:15px;
+        }
+        ##endif
+        
+      </style>
     </atlantis:webstash>
     <script type="text/javascript">
       endOfPageScripts();
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .down-arrow{
+          text-align:center;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="breakTemplate">
-      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup uxicon uxicon-chevron-down down-arrow"></div>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .item-title{
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        .item-term,.item-x,.item-price,.item-total-price{
+          margin-top: 5px;
+        }
+        .item-total-price{
+          text-align: right;
+        }
+        .item-savings-wrapper{
+          text-transform: uppercase;
+        }
+        .order-item-details-wrapper .toprow {
+          margin-top: 15px;
+        }
+        .item-title-wrapper{
+          border-bottom: 1px solid #333;
+        }
+        @media (max-width: 428px) { 
+          .text-xs-right {
+            text-align: right;
+          }
+          .text-md-right{
+            text-align: inherit;
+          }
+          .item-price{
+            border-bottom: none;
+          }
+        }
+        @media (max-width: 1024px) { 
+          .item-price{
+            border-bottom: 1px solid #EBEBEB;
+          }
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="itemTemplate">
       <div class="row toprow">
         <div class="col-xs-12 item-title-wrapper">
@@ -1407,21 +1485,31 @@ input[type=checkbox] + label{
       </div>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .plan-circle{
+          font-size:2em;
+          margin-bottom:0;
+        }
+        
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="planTemplate">
       <li>
         <div class="row vertical-align">
-          <div class="col-xs-2">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+          <div class="col-xs-2 col-lg-1"> 
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%=  package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="uxicon plan-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
           </div>
-          <div class="col-xs-6">
+          <div class="col-xs-6 col-lg-7">
             <div class="config-text-secondary"><%= title %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 col-lg-4">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
           <div class="col-xs-4">
@@ -1431,7 +1519,7 @@ input[type=checkbox] + label{
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-2">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
             <% } %></div>
@@ -1447,11 +1535,21 @@ input[type=checkbox] + label{
       </li>
       
     </script>
+    <atlantis:webstash type="css">
+      <style>
+        .term-circle{
+          font-size:2em;
+          margin-bottom:0;
+        
+        }
+      </style>
+    </atlantis:webstash>
     <script type="text/template" class="termTemplate">
       <li>
         <div class="row vertical-align">
           <div class="col-xs-2 col-lg-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <label class="uxicon term-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
           </div>
           <div class="col-xs-5 col-lg-3">
             <div class="config-text-primary"><%= term %> <%= month %></div>
@@ -1475,8 +1573,6 @@ input[type=checkbox] + label{
           </div>
         </div>
       </li>
-      
-      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>
@@ -1528,13 +1624,14 @@ input[type=checkbox] + label{
       
     </script>
     <script>
-      var plan = getParameterByName('plan');
+      var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
       // gs for get started button, ac for add to cart button
-      var origin = getParameterByName('src');
+      var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
       var reload = false;
       var noSiteLock = false;
       var noEmail = false;
-      var itc = "slp_wordpress";
+      var isPro = plan.indexOf('wordpress') >= 0
+      var itc = isPro ? "pro_wordpress" : "slp_wordpress";
       
       ##if(!productIsOffered(107))
         noSiteLock = true;
@@ -1615,17 +1712,9 @@ input[type=checkbox] + label{
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
-          else {
-            plan='mwp_basic_12month';
-          }
-          if( plan.indexOf('mwp_ultimate') >= 0)
+          if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
           {
             steps = _.without(steps, 'securityStep');
-          }
-          else if( (plan.indexOf('1month') >= 0))
-          {
-            document.getElementById('slElement').style.display = "none";
-            document.getElementById('addsiteLockOption').checked = false;
           }
           if(noEmail)
           {
@@ -1642,7 +1731,7 @@ input[type=checkbox] + label{
         resetPage: function(){
           var steps = ['planStep','termStep','officeStep', 'securityStep'];
           var addToCart = 'ac';
-          itc = "slp_wordpress_config";
+          itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
           
           $('.config-step').hide();
           $('.step-number').html('[@L[cds.sales/gd/hosting/website-builder-config:step]@L]');
@@ -1656,22 +1745,24 @@ input[type=checkbox] + label{
           if (origin === addToCart){
             steps = _.without(steps, 'planStep');
           }
-          if( plan.indexOf('mwp_ultimate') >= 0)
+          if( (plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0))
           {
             steps = _.without(steps, 'securityStep');
             document.getElementById('addsslOption').checked = false;
             document.getElementById('addsiteLockOption').checked = false;
           }
-          else if( plan.indexOf('mwp_developer') >= 0)
+          else if((plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
             $('#slElement').css("border-bottom", "none");
           }
-          else if( (plan.indexOf('1month') >= 0))
+          else if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
           {
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
+            $('#sitelock_Basic1Yr').removeClass("uxicon-check-box");
+            $('#sitelock_Basic1Yr').addClass("uxicon-box");
           }
           if(noEmail)
           {
@@ -1679,7 +1770,7 @@ input[type=checkbox] + label{
           }
           if(noSiteLock)
           {
-            if( plan.indexOf('mwp_developer') >= 0)
+            if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
             {
               steps = _.without(steps, 'securityStep');
             }
@@ -1710,21 +1801,21 @@ input[type=checkbox] + label{
             $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigBasicInCart]@L]');
           }
           else{
-           if(plan.indexOf('mwp_basic') >= 0){
+           if((plan.indexOf('mwp_basic') >= 0)|| (plan.indexOf('tier1') >= 0)){
               ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]');
               ##else
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedBasic]@L]");
               ##endif
             }
-            else if(plan.indexOf('mwp_deluxe') >= 0){
+            else if((plan.indexOf('mwp_deluxe') >= 0) || (plan.indexOf('tier2') >= 0)){
               ##if(countrysiteany(pt) || countrysiteany(ua))
               $('.product-added-to-cart-text').html('[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]');
               ##else
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedDeluxe]@L]");
               ##endif
             }
-            else if(plan.indexOf('mwp_ultimate') >= 0){
+            else if((plan.indexOf('mwp_ultimate') >= 0) || (plan.indexOf('tier3') >= 0)){
               $('.product-added-to-cart-text').html("[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigAddedUltimate]@L]");
             }
             else{
@@ -1900,7 +1991,7 @@ input[type=checkbox] + label{
             var officeCurrentMonthlyPrice = officeItem[1];
             var officeRenews = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigMonthlyRenewEmail]@L]";
             //officeRenews = officeRenews.replace('{0}', officeCurrentYearlyPrice)
-            officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice)
+            officeRenews = officeRenews.replace('{1}', officeCurrentMonthlyPrice);
             var monthlyPrice = "[@T[currencyprice:<price usdamount='0' /> ]@T]";
             var officeText = "[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigO365]@L] - [@L[cds.sales/hosting/wordpress-hosting:rebrandConfigFirstYearO365]@L]";
             var termType = "[@L[cds.sales/_common:yr]@L]";
@@ -1981,6 +2072,12 @@ input[type=checkbox] + label{
             
             parentID.append(addonTemplate(securityData));
       
+            if( (plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0))
+            {
+              document.getElementById('slElement').style.display = "none";
+              document.getElementById('addsiteLockOption').checked = false;
+            }
+      
             $('#sitelock_Basic1Yr').click(function(){
               if($('#sitelock_Basic1Yr').hasClass("uxicon-box")){
                 $('#sitelock_Basic1Yr').removeClass("uxicon-box");
@@ -2012,7 +2109,7 @@ input[type=checkbox] + label{
             document.getElementById('slElement').style.display = "none";
             document.getElementById('addsiteLockOption').checked = false;
           }
-          if( plan.indexOf('mwp_developer') >= 0)
+          if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
           {
             document.getElementById('sslElement').style.display = "none";
             document.getElementById('addsslOption').checked = false;
@@ -2080,7 +2177,7 @@ input[type=checkbox] + label{
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addofficeOption').getAttribute('data-yearly');
             var onSale = true;
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2108,7 +2205,7 @@ input[type=checkbox] + label{
             var selectedTerm = '1';
             var selectedPricePerTerm = document.getElementById('addsslOption').getAttribute('data-yearly');
             var onSale = false;
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2137,7 +2234,7 @@ input[type=checkbox] + label{
             var onSale = false;
             var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
             var selectedTotal = document.getElementById('addsiteLockOption').getAttribute('data-yearly');
-            itc = "slp_wordpress_config";
+            itc = isPro ? "pro_wordpress_config" : "slp_wordpress_config";
       
             var itemData = {
                   itemName: selectedAddon,
@@ -2181,7 +2278,12 @@ input[type=checkbox] + label{
             ##if(countrysiteany(mx))
       
             ##else
-            plan = plan + "_withEmail";
+            if(plan.indexOf('mwp') >= 0){
+              plan = plan + "_withEmail";
+            }
+            if(plan.indexOf('wordpress') >= 0){
+              plan = plan.replace('wordpress_','wordpress_o365_');
+            }
             ##endif
           }
       
@@ -2258,14 +2360,24 @@ input[type=checkbox] + label{
       $(document).ready(function(){
         $('#planConfigContinue').click(function(){
           Config.addPlanToCart();
-          if(plan.indexOf('1month') >= 0){
+          if((plan.indexOf('1month') >= 0) || (plan.indexOf('001mo') >= 0)){
             setTimeout(function(){
               ##if(isManager())
-              window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+                if(isPro){
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                }
+                else{
+                  window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+                }
               ##else
-              window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+                if(isPro){
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+                }
+                else{
+                  window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+                }
               ##endif
-              }, 2000);
+            }, 2000);
           }
           else {
             $('.configuration-container').hide();
@@ -2275,11 +2387,21 @@ input[type=checkbox] + label{
         });
       });
       $('#noFreeDomain').click(function(){
-          ##if(isManager())
-          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-          ##else
-          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-          ##endif
+        ##if(isManager())
+          if(isPro){
+            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+          }
+          else{
+            window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+          }
+        ##else
+          if(isPro){
+            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+          }
+          else{
+            window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+          }
+        ##endif
       
       });
       $('#scrollDownToContinueButton').click(function(){

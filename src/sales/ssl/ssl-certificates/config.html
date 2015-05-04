@@ -1,9 +1,8 @@
 ---
 location: sales/ssl/ssl-certificates-config.aspx
 url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
-id:  552edcc8bb84bc04149d3597
-name: GCE-37324
-comments:  EN:Sales:Scroll bar shows 
+name: MCX-38200
+comments: SiteLock Monthly Price in SSL/Hosting Configs 
 assetPath: false
 ---
 ##if(false)
@@ -124,7 +123,12 @@ assetPath: false
               </span>
               </div>
         <div>
-          [@L[cds.sales/security/website-security-new:for-base-price-per-year]@L]</div> 
+          - [@T[productprice:<current productid="181769" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]
+        </div> 
+
+          <div class="annual-price">
+            [@T[productprice:<current productid="181769" dropdecimal="flase" period="yearly" htmlsymbol="false" negative="parentheses" />]@T][@L[cds.sales/security/website-security-new:term-year]@L] [@L[cds.sales/security/website-security-new:billed-annual]@L]
+          </div>
         </div>
       </div>
 </div>
