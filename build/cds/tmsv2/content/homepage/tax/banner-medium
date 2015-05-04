@@ -1,0 +1,13 @@
+
+<style>
+  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
+  .banner-medium.basic { background: #fff; font-size: 1em; line-height: 1; }
+  .banner-medium.basic .title { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-bottom: 0; margin-top: 0;text-transform: uppercase;font-size:1.25em; }
+  .banner-medium.basic .body { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; margin: .5em 0 42px 0; }
+  .banner-medium.basic .btn-purchase { position: absolute; bottom: .5em; }
+  
+</style>
+<div data-url="[@T[link:<relative path="/tlds/tax"><param name="ci" value="98076"/></relative>]@T]" data-ci="98076" class="banner-medium basic tax">
+  <div class="title text-primary-o">Keep a calculator under your pillow? </div>
+  <div class="body">.tax is for you.  Just <span class="text-purchase">[@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr</span></div><a href="[@T[link:<relative path="/tlds/tax"><param name="ci" value="98076"/></relative>]@T]" class="btn btn-sm btn-purchase">Get Started</a>
+</div>
