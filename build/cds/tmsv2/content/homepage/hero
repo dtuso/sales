@@ -1,4 +1,6 @@
 
+ ##if(activeLanguageAny([en-us]))
+ 
 <style>#marquee {
   background-color: #f3f3f3;
 }
@@ -39,4 +41,113 @@
 <div data-url="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]" class="hero small-business">
   <div class="headline">Celebrate small business week<br />like a boss... (Because you are the boss).</div>
   <div class="offer text-primary">Get the right bundle for your business.</div><a href="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]" class="btn btn-md btn-purchase">Get Started</a><a href="[@T[link:<relative path='/business/small-business-week'><param name='ci' value='98067' /></relative>]@T]" class="learn-more text-primary hover-text-primary">Learn more about Small Business Week</a>
+</div>##else
+ 
+<!--start got hero-->
+<atlantis:webstash type="css">
+  <style>#marquee {
+  background-color: #ecedee;
+}
+#marquee .hero.got {
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#marquee .hero.got .products {
+  text-align: center;
+  overflow: hidden;
+}
+#marquee .hero.got .product {
+  max-width: 50%;
+  margin: auto;
+  font-size: 1em;
+}
+#marquee .hero.got img.www {
+  width: 80%;
+}
+#marquee .hero.got img.pencil {
+  padding: 4%;
+  width: 87%;
+}
+#marquee .hero.got img.envelope {
+  padding: 8% 0;
+  width: 95%;
+}
+#marquee .hero.got .addition {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-33%);
+  -ms-transform: translateY(-33%);
+  transform: translateY(-33%);
+}
+#marquee .hero.got .addition-wrapper {
+  padding-top: 8%;
+  width: 12%;
+  font-size: 2em;
+}
+#marquee .hero.got .pricing {
+  font-size: 1.5em;
+}
+#marquee .hero.got .price-wrapper {
+  width: 30%;
+  display: inline-block;
+}
+#marquee .hero.got .disclaimer {
+  font-size: 10px;
+  padding: 1% 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+@media only screen and (min-width: 480px) {
+  #marquee .hero.got {
+    font-size: 14px;
+  }
+  #marquee .hero.got .addition-wrapper {
+    font-size: 4em;
+  }
+  #marquee .hero.got .product {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #marquee .hero.got {
+    font-size: 18px;
+  }
+}
+
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658'/></relative>]@T]" data-ci="95658" class="hero got">
+  <div class="products walsheim-black">
+    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www svgfallback"/>
+      <div class="domain">[@L[cds.sales/homepage/heros/got:domain]@L]</div>
+    </div>
+    <div class="addition-wrapper col-xs-2">
+      <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+    </div>
+    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website.png" class="pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil svgfallback"/>
+      <div class="website">[@L[cds.sales/homepage/heros/got:website]@L]</div>
+    </div>
+    <div class="addition-wrapper col-xs-2">
+      <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+    </div>
+    <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-email.png" class="envelope"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDQyIDM1IiB2ZXJzaW9uPSIxIj48dGl0bGU+aWNuX2VtYWlsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjQgMjZMMCA0IDEgMzUgNDAgMzIgNDIgMTEgMjQgMjZNNDEgOEwxIDAgMjQgMjQgNDEgOCIvPjwvZz48L2c+PC9zdmc+" class="envelope svgfallback"/>
+      <div class="email">[@L[cds.sales/homepage/heros/got:email]@L]</div>
+    </div>
+  </div>
+  <div class="pricing walsheim-black">
+    <div class="col-xs-11">
+      <div class="priceText">[@L[cds.sales/homepage/heros/got:priceText]@L]</div>
+    </div>
+  </div>
+  <div class="cta">
+    <div class="col-xs-11"><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</a>
+      <div class="disclaimer">[@L[cds.sales/homepage/heros/got:disclaimer-new]@L]</div>
+    </div>
+  </div>
 </div>
+<!--end got hero--> 
+##endif
