@@ -38,5 +38,5 @@
 </style>
 <div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='98066' /></relative>]@T]" class="hero small-business">
   <div class="headline">Celebrate small business week<br />like a boss... (Because you are the boss).</div>
-  <div class="offer text-primary">Get the right bundle for your business.</div><a href="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='98066' /></relative>]@T]" class="btn btn-md btn-purchase">Get Started</a><a href="[@T[link:<relative path='/business/small-business-week.aspx'><param name='ci' value='98067' /></relative>]@T]" class="learn-more text-primary hover-text-primary">Learn more about Small Business Week</a>
+  <div class="offer text-primary">Get the right bundle for your business.</div><a href="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='98066' /></relative>]@T]" class="btn btn-md btn-purchase">Get Started</a><a href="[@T[link:<relative path='/business/small-business-week'><param name='ci' value='98067' /></relative>]@T]" class="learn-more text-primary hover-text-primary">Learn more about Small Business Week</a>
 </div>
