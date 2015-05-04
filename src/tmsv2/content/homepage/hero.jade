@@ -1,2 +1,9 @@
-|  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+|  ##if(activeLanguageAny([en-us]))
+| 
+include ./small-biz/hero.jade
+| 
+| ##else
+| 
 include ./got/hero.jade
+| 
+| ##endif
