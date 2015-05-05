@@ -1,0 +1,969 @@
+---
+name: mcx-31432
+comments: Update all pages using new ICANN token
+location: localization/sales/homepage/locales/en/en
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="as-low-as" />
+As low as 
+<phrase key="top-banner-headline" />
+.MENU NOW AVAILABLE
+<phrase key="top-banner-maintext" />
+Find the right name, right now.
+<phrase key="top-banner-subtext" />
+Be one of the first to register just-released domains, including .MENU. Get yours today.
+<phrase key="btn-top-img" />
+Search Now
+<phrase key="search-now" />
+Search Now
+<phrase key="slider-gtld-flipboard-text-v2" />
+MyWebsite
+<phrase key="block1-pod1-wsb-headline" />
+WEBSITE BUILDER
+<phrase key="block1-pod1-wsb-subtext" />
+Create a site you can be proud of
+<phrase key="block1-pod2-menu-headline" />
+.MENU NOW AVAILABLE
+<phrase key="block1-pod2-menu-maintext" />
+Attract customers with a delicious new domain.
+<phrase key="block1-pod2-menu-btn" />
+Search Now
+<phrase key="block1-pod3-WSB-headline-INTL" />
+WHY WEBSITE BUILDER?
+<phrase key="block1-pod3-getfound-subtext-INTL" />
+You can get online in no time with 100s of ready-made designs
+<phrase key="block2-pod1-hosting-headline-INTL" />
+WEB HOSTING
+<phrase key="block2-pod1-hosting-subtext-INTL" />
+Fast, secure, reliable, trusted by millions.
+<phrase key="block2-pod1-hosting-limitation-INTL" />
+<span class="hosting-orange">FREE</span> domain included - restrictions apply
+<phrase key="sitelock-pod2-headline" />
+Protect your site against hackers and malware.
+<phrase key="block2-pod3-ssl-headline-INTL" />
+SSL CERTIFICATES
+<phrase key="block2-pod3-ssl-subtext-INTL" />
+Protect your customers and yourself with secure online payments and transactions
+<phrase key="block3-pod1-CNO-headline" />
+DOMAINS
+<phrase key="block3-pod1-CNO-maintext" />
+Save on our most popular domains
+<phrase key="block3-pod1-CNO-subtext" />
+.COM, .NET &amp; .ORG
+<phrase key="block3-pod2-whygd-maintext" />
+WHY GODADDY?
+<phrase key="block3-pod2-whygd-subtext" />
+More than <span class="b">12 million</span> people trust us with their domains. You can too.
+<phrase key="customer-story" />
+CUSTOMER STORY
+<phrase key="block3-pod3-domainsCustomer-headline" />
+Torrent Waterproofing has a .COM and a .CA because we wanted to stand out from our larger competition and maintain our credibility.
+<phrase key="block3-pod3-domainsCustomer-subtext" />
+George Tipton, TorrentWaterProofing.com
+<phrase key="block3-pod3-domainsCustomer-btn" />
+Find your Domain
+<phrase key="bottom-banner-headline-INTL" />
+It all starts with a domain…
+<phrase key="bottom-banner-subtext-INTL" />
+Your dream of starting your own business is closer than you think. Use the search box below to find the perfect domain and take the first step towards becoming your own boss.
+<phrase key="bottom-banner-subtext" />
+Watch the Big Game Commercial
+<phrase key="domain-banner-search-btn" />
+Search Domain
+<phrase key="onsale" />
+On Sale
+<phrase key="price-starting-text" />
+Starting at
+<phrase key="slider-action-btn" />
+Get Started
+<phrase key="customer-story" />
+CUSTOMER STORY
+<phrase key="sitelock-pod2-headline" />
+Protect your site against hackers and malware.
+<phrase key="bigleapwin-pod2-headline" />
+GET FOUND
+<phrase key="bigleapwin-pod2-maintext" />
+"Get Found brings customers in the door"
+<phrase key="bigleapwin-pod2-subtext" />
+Jamie McDonald, BearsBBQ.com
+<phrase key="bigleapwin-pod2-subtext2" />
+Winner of the Big Leap
+<phrase key="bigleapwin-pod2-btn" />
+Learn More About Get Found
+<phrase key="gtld-club-pod2-headline" />
+.CLUB NOW AVAILABLE
+<phrase key="gtld-club-pod2-maintext" />
+Get the domain that brings everyone together.
+<phrase key="block2-pod1-O365-headline" />
+FROM GODADDY
+<phrase key="block2-pod1-O365-subtext" />
+Professional email and business solutions
+<phrase key="INTL-domains-ca-headline" />
+.CA FOR CANADA
+<phrase key="INTL-domains-ca-subtext" />
+Get the domain that's as Canadian as hockey
+<phrase key="INTL-domains-uk-headline" />
+.CO.UK FOR UNITED KINGDOM
+<phrase key="INTL-domains-uk-subtext" />
+Show your customers you do business in the UK
+<phrase key="top-marq-selena-maintext-v2" />
+Beef up your business.
+<phrase key="top-marq-selena-subtext" />
+It starts with a domain.
+<phrase key="top-marq-selena-savings-text" />
+Save up to <span class="condensed">55%</span> on
+<phrase key="price-starting-text" />
+Starting at
+<phrase key="block1-pod3-getfound-headline" />
+GET FOUND
+<phrase key="block1-pod3-getfound-subtext" />
+Attract customers to your website on Google<sup class="supsymbol">&reg;</sup>, Facebook<sup class="supsymbol">&reg;</sup> and more
+<phrase key="bottom-marq-danica-headline"  />
+See why Danica's racing to Selena's small business.
+<phrase key="bottom-marq-danica-btn"  />
+Watch the Commercial
+<phrase key="top-banner-headline-en.us" />
+Get online. Get business.
+<phrase key="top-banner-maintext-en.us" />
+It all starts with a domain.
+<phrase key="art-gallery" />
+Art Gallery
+<phrase key="top-banner-headline-cell" />
+The right name, right now.
+<phrase key="top-banner-maintext-cell" />
+100s of new choices.
+<phrase key="top-banner-subtext-cell" />
+Memorable Domains = More Customers
+<phrase key="new-domain-flag" />
+NEW DOMAINS
+<phrase key="club" />
+.club
+<phrase key="email" />
+.email
+<phrase key="guru" />
+.guru
+<phrase key="reviews" />
+.reviews
+<phrase key="today" />
+.today
+<phrase key="directory" />
+.directory
+<phrase key="london" />
+.london
+<phrase key="land" />
+.land
+<phrase key="academy" />
+.academy
+<phrase key="ninja" />
+.ninja
+<phrase key="rentals" />
+.rentals
+<phrase key="wiki" />
+.wiki
+<phrase key="expert" />
+.expert
+<phrase key="cool" />
+.cool
+<phrase key="vegas" />
+.vegas
+<phrase key="company" />
+.company
+<phrase key="xyz" />
+.xyz
+<phrase key="tips" />
+.tips
+<phrase key="photography" />
+.photography
+<phrase key="photos" />
+.photos
+<phrase key="services" />
+.services
+<phrase key="lawyer" />
+.lawyer
+<phrase key="rocks" />
+.rocks
+<phrase key="dot-uk" />
+.uk
+<phrase key="dot-eu" />
+.eu
+<phrase key="dot-at" />
+.at
+<phrase key="dot-be" />
+.be
+<phrase key="dot-dk" />
+.dk
+<phrase key="dot-fr" />
+.fr
+<phrase key="dot-de" />
+.de
+<phrase key="dot-it" />
+.it
+<phrase key="dot-nl" />
+.nl
+<phrase key="dot-pl" />
+.pl
+<phrase key="dot-ru" />
+.ru
+<phrase key="dot-us" />
+.us
+<phrase key="dot-co-za" />
+.co.za
+<phrase key="dot-es" />
+.es
+<phrase key="dot-se" />
+.se
+<phrase key="dot-ch" />
+.ch
+<phrase key="com-br" />
+.com.br
+<phrase key="dot-ca" />
+.ca
+<phrase key="com-mx" />
+.com.mx
+<phrase key="com-au" />
+.com.au
+<phrase key="dot-org" />
+.org
+<phrase key="dot-net" />
+.net
+<phrase key="dot-com" />
+.com
+<phrase key="dot-mx" />
+.mx
+<phrase key="info" />
+.info
+<phrase key="dot-com-co" />
+.com.co
+<phrase key="my-website" />
+MyWebsite
+<phrase key="big-leap-contestant" />
+Big Leap Contestant
+<phrase key="domains-big-subtext-en.us" />
+Be one of the first to register<br />just-released domains, including .MENU.
+<phrase key="domains-cust-headline-en.us" />
+GoDaddy gave me great domain options so I could keep the name I love.
+<phrase key="domains-cust-maintext-en.us" />
+Kenny Foster, BotasHombre.org
+<phrase key="domains-cust-btn-en.us" />
+Search Domains
+<phrase key="wsb-big-maintext-en.us" />
+Build a site you can be proud of
+<phrase key="wsb-limitation-en.us" />
+<span class="hosting-orange">FREE</span> domain - restrictions apply
+<phrase key="wsb-cust-headline-en.us" />
+My website is absolutely perfect. I couldn't be happier with it.
+<phrase key="wsb-cust-maintext-en.us" />
+Anne Tochka, AnneTochka.com
+<phrase key="learn-more" />
+Learn More
+<phrase key="hosting-cust-headline-en.us" />
+GoDaddy Hosting kept my site up so I didn't miss any orders.
+<phrase key="hosting-cust-maintext-en.us" />
+Kyle Mauch, AthletesBrand.com
+<phrase key="getfound-big-headline-en.us" />
+Attract customers online and in the real world.
+<phrase key="sev-headline-en.us" />
+SEARCH ENGINE VISIBILITY
+<phrase key="sev-maintext-en.us" />
+Boost traffic to your site with some of the biggest names online
+<phrase key="gdob-headline-en.us" />
+GODADDY ONLINE BOOKKEEPING
+<phrase key="gdob-maintext-en.us" />
+Organize all your business finances, all in one place.
+<phrase key="gdob-cust-headline-en.us" />
+I now know exactly where I am financially.
+<phrase key="gdob-cust-maintext-en.us" />
+Dawn Simpson, GreatLakesTack.com
+<phrase key="bigleapwin-pod2-maintext-en.us" />
+Get Found brings customers in the door
+<phrase key="intl-marquee-headline-en" />
+DOMAIN NAMES
+<phrase key="intl-marquee-maintext-en" />
+Take the first step<span class="condensed">with your own domain</span>
+<phrase key="intl-marquee-subtext-en" />
+<ul><li>Free, award-winning support</li><li>Trusted as the world's #1 registrar</li><li>12-million customers worldwide</li></ul>
+<phrase key="largepod-O365-headline" />
+FROM GODADDY
+<phrase key="largepod-O365-subtext" />
+Professional email and business solutions.
+<phrase key="largepod2-O365-headline" />
+MICROSOFT OFFICE 365
+<phrase key="largepod2-O365-maintext" />
+<ul><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Outlook</li></ul>
+<phrase key="largepod2-O365-subtext" />
+Work anywhere with web versions of your favorite business solutions.
+<phrase key="largepod-businessemail-headline" />
+BUSINESS-CLASS EMAIL
+<phrase key="largepod-businessemail-maintext" />
+Promote your business with every email.
+<phrase key="largepod-whygdemail-headline" />
+WHY GODADDY EMAIL?
+<phrase key="largepod-whygdemail-maintext" />
+Work from anywhere with desktop, web and mobile access.
+<phrase key="largepod-hosting-headline" />
+WEB HOSTING
+<phrase key="largepod-hosting-subtext" />
+Fast, secure, reliable, trusted by millions.
+<phrase key="largepod-hosting-limitation" />
+<span class="hosting-orange">FREE</span> domain included - restrictions apply
+<phrase key="mediumpod-hosting-headline" />
+WEB HOSTING
+<phrase key="mediumpod-hosting-subtext" />
+Get a <span class="b">FREE</span> domain when you purchase a hosting plan.
+<phrase key="mediumpod-hosting-limitation" />
+-Restrictions apply
+<phrase key="mediumpod-ssl-headline" />
+SSL CERTIFICATES
+<phrase key="mediumpod-ssl-subtext" />
+Protect your customers and yourself with secure online payments and transactions.
+<phrase key="largepod-wsb-headline" />
+WEBSITE BUILDER
+<phrase key="largepod-wsb-maintext" />
+Build a site you can be proud of.
+<phrase key="largepod-wsb-limitation" />
+<span class="hosting-orange">FREE</span> domain - restrictions apply
+<phrase key="largepod-whywsb-headline" />
+WHY WEBSITE BUILDER?
+<phrase key="largepod-whywsb-subtext1" />
+<span class="b">EASY</span> to use
+<phrase key="largepod-whywsb-subtext2" />
+<span class="b">HUNDREDS</span> of customizable designs
+<phrase key="largepod-whywsb-subtext3" />
+<span class="b">FREE</span> domain &amp; hosting
+<phrase key="largepod-vded-headline" />
+VIRTUAL PRIVATE SERVERS
+<phrase key="largepod-vded-subtext" />
+Powerful.<br />Flexible.<br />Affordable.
+<phrase key="mediumpod-ded-headline" />
+DEDICATED SERVERS
+<phrase key="mediumpod-ded-maintext" />
+Need the ultimate in power and control? Customize your own dedicated server.
+<phrase key="in-mediumpod-emailCustomer-maintext" />
+Business email from GoDaddy helped build trust in the GIA brand
+<phrase key="in-mediumpod-emailCustomer-subtext" />
+Pranav Chandra, TheGreatIndianAdventure.com
+<phrase key="in-mediumpod-emailCustomer-btn" />
+Get Started with Business Email
+<phrase key="in-mediumpod-partner-headline" />
+GODADDY PARTNER PROGRAM
+<phrase key="in-mediumpod-partner-subtext" />
+Team up with us to launch your own profitable online business.
+<phrase key="largepod-orange-headline" />
+The right name, right now.
+<phrase key="largepod-orange-maintext" />
+100s of new choices.
+<phrase key="in-mediumpod-domaincust-headline" />
+A GoDaddy domain name helped IdeaSugar go global.
+<phrase key="in-mediumpod-domaincust-maintext" />
+Jaya Prasad, IdeaSugar.com
+<phrase key="in-mediumpod-domaincust-btn" />
+Find A Domain
+<phrase key="top-banner-headline-london" />
+PRE-REGISTER .LONDON
+<phrase key="top-banner-maintext-london" />
+Court 8 million shoppers with <span class="b">.london</span>
+<phrase key="top-banner-maintext2-london" />
+Court 8 million
+<phrase key="top-banner-maintext3-london" />
+shoppers<span class="b">with .london</span>
+<phrase key="top-banner-btn-london" />
+Find Your .london
+<phrase key="top-banner-subtext-london" />
+Explore More Domains
+<phrase key="danica-bottom-headline-pole" />
+CONGRATULATIONS,
+<phrase key="danica-bottom-headline" />
+CONGRATULATIONS!
+<phrase key="danica-bottom-maintext" />
+DANICA!
+<phrase key="danica-bottom-subtext-pole" />
+Another NASCAR<sup class="supsymbol">&reg;</sup> pole position for GoDaddy and #10
+<phrase key="danica-bottom-subtext-topten" />
+Great finish, Danica.  We're proud of you!
+<phrase key="danica-bottom-subtext-win" />
+We're proud to be a part of your 1st NASCAR<sup class="supsymbol">&reg;</sup> win!
+<phrase key="vote-bottom-headline" />
+Vote Danica into the
+<phrase key="vote-bottom-maintext" />
+NASCAR<sup class="supsymbol">&reg;</sup> All Star Race.
+<phrase key="vote-bottom-subtext" />
+Help Danica debut the new GoDaddy Cares car <br />and drive awareness for three of our favorite charities.
+<phrase key="vote-bottom-btn" />
+Vote Today & Everyday
+<phrase key="vote-bottom-photocredits" />
+CIA Stock Photography
+<phrase key="top-banner-headline-club" />
+Bring everyone together with
+<phrase key="top-banner-maintext-club" />
+YourWebsite
+<phrase key="top-banner-subtext-club" />
+.club
+<phrase key="top-banner-btn-club" />
+Find your .club
+<phrase key="top-banner-search-more" />
+Explore More Domains
+<phrase key="en-uk-top-banner-headline" />
+Give your big idea
+<phrase key="uk-top-banner-headline" />
+Shorten the path home for only
+<phrase key="uk-top-banner-search-btn" />
+Get Yours Now
+<phrase key="en-uk-top-banner-maintext" />
+a head start.
+<phrase key="en-uk-top-banner-subtext" />
+Find the perfect domain name today.
+<phrase key="en-uk-save-up" />
+SAVE UP TO
+<phrase key="en-uk-55" />
+55%
+<phrase key="en-uk-tld-com" />
+.com
+<phrase key="en-uk-tld-couk" />
+.co.uk
+<phrase key="en-uk-tld-co" />
+.co
+<phrase key="en-uk-tld-london" />
+.london
+<phrase key="in-topmarq-headline" />
+DOMAIN NAMES
+<phrase key="in-topmarq-maintext" />
+Find success online with the right domain
+<phrase key="in-topmarq-subtext" />
+Get big savings and free 24/7 support with the world's #1 registrar.
+<phrase key="in-bottom-banner-headline" />
+Get online and
+<phrase key="in-bottom-banner-subtext" />
+get more customers.
+<phrase key="in-hostingday-maintext" />
+WORLD HOSTING DAY INDIA, MAY 27-28 IN MUMBAI.
+<phrase key="in-hostingday-subtext" />
+<span class="b">Use code GDVWF63</span> to register for free.
+<phrase key="block1-pod3-WSB-subtext-INTL" />
+You can get online fast with 100s of professional designs
+<phrase key="rotate1-topmarq-headline" />
+Website Builder
+<phrase key="rotate1-topmarq-maintext" />
+/mo
+<phrase key="rotate1-topmarq-list" />
+<li><span class="black-check"></span><span class="wsb-list-text b">EASY</span> to use - no technical skills required</li><li><span class="black-check"></span><span class="wsb-list-text b">HUNDREDS</span> of customizable designs</li><li><span class="black-check"></span><span class="wsb-list-text b">FREE DOMAIN</span> and <span class="b">FREE HOSTING</span></li>
+<phrase key="rotate2-topmarq-headline" />
+<span class="lquote">"</span>With GoDaddy taking care of my website, I can focus on making and selling beer."
+<phrase key="rotate2-topmarq-maintext" />
+Learn More
+<phrase key="rotate2-topmarq-maintext-mo" />
+/month
+<phrase key="rotate2-topmarq-subtext" />
+Marc Rosenblum,
+<phrase key="rotate2-topmarq-subtext2" />
+SantaCruzAleWorks.com
+<phrase key="rotate2-topmarq-salestext" />
+Website Builder, starting at
+<phrase key="rotate1-topmarq-commercial" />
+Watch Commercial
+<phrase key="topmarq-wsb-maintext" />
+Create your own site for just 
+<phrase key="topmarq-wsb-list" />
+<li><span class="black-check"></span><span class="wsb-list-text b">FREE hosting</span></li><li><span class="black-check"></span><span class="wsb-list-text b">FREE domain</span></li><li><span class="black-check"></span><span class="wsb-list-text b">Hundreds of FREE designs</span></li>
+<phrase key="topmarq-wsb-laptop" />
+Your website here.
+<phrase key="topmarq-wsb-mobile" />
+Here too!
+<phrase key="topmarq-wsb-save-up" />
+SAVE UP TO 80%
+<phrase key="topmarq-choice-headline" />
+Create your own website.
+<phrase key="topmarq-choice-maintext" />
+Your choice, just
+<phrase key="topmarq-choice-wsb-headline" />
+Simple site builder
+<phrase key="topmarq-choice-perfect" />
+Perfect for:
+<phrase key="topmarq-choice-wsb-subtext" />
+Individuals and small businesses
+<phrase key="topmarq-choice-wsb-btn" />
+Get Started with Website Builder
+<phrase key="topmarq-choice-mwp-headline" />
+Powerful design tools
+<phrase key="topmarq-choice-mwp-subtext" />
+Bloggers, designers and growing businesses
+<phrase key="topmarq-choice-mwp-btn" />
+Get Started with Managed WordPress
+<phrase key="topmarq-choice-or" />
+or
+<phrase key="drtv-see-ad" />
+Did you see our ad?
+<phrase key="drtv-click-here" />
+Click here.
+<phrase key="campus-party-text" />
+We're helping Mexico redefine the web at
+<phrase key="topmarq-com-headline" />
+Huge savings
+<phrase key="topmarq-com-maintext" />
+you don't want to miss.
+<phrase key="topmarq-com-first-yr" />
+/1st year
+<phrase key="topmarq-com-find-btn" />
+Find Your .com
+<phrase key="topmarq-com-subtext" />
+2 year minimum registration required.  Subsequent years charged at 
+<phrase key="topmarq-com-yr" />
+/yr.
+<phrase key="topmarq-com-onsale" />
+ON SALE
+<phrase key="topmarq-com-new" />
+New <span class="b">.com</span> for just
+<phrase key="topmarq-headline-uk" />
+Get a <span class="b free-orange">FREE</span> domain
+<phrase key="topmarq-maintext-uk" />
+when you purchase Website Builder for
+<phrase key="topmarq-new-uk" />
+NEW
+<phrase key="topmarq-subtext-uk" />
+Now includes <span class="b">.uk</span> and <span class="b">.co.uk!</span>
+<phrase key="largetile-dotco-maintext" />
+Get the name you really want.
+<phrase key="largetile-dotco-subtext" />
+Now only
+<phrase key="largetile-dotco-savings" />
+Save over 50%
+<phrase key="largetile-dotco-btn" />
+Find Your .co
+<phrase key="medtile-dotco-save" />
+SAVE OVER
+<phrase key="topmarq-choice-mwp-headline2" />
+Powerful Site/Blog Builder
+<phrase key="topmarq-choice-mwp-subtext2" />
+Bloggers, designers and businesses that use WordPress
+<phrase key="topmarq-choice-wsb-headline2" />
+Easy Site Builder
+<phrase key="topmarq-choice-wsb-subtext2" />
+Anyone who wants a personal or small business website.
+<phrase key="topmarq-vegas-headline" />
+PRE-REGISTER NOW
+<phrase key="topmarq-vegas-maintext" />
+Viva .vegas!
+<phrase key="topmarq-vegas-button" />
+Find Your .vegas
+<phrase key="UKoneEuro-domain-marquee-headline" />
+Save <span class="b">BIG</span> on <span class="b">.com</span> and <span class="b">.co.uk</span>
+<phrase key="UKoneEuro-domain-marquee-maintext" />
+Your choice, <span>only [@T[productprice:<current productid="57465" period="yearly" promocode="29584738" />]@T]</span>
+<phrase key="UKoneEuro-domain-marquee-promo" />
+Add promo code &#8220;UKsavings&#8221; in your cart
+<phrase key="UKoneEuro-domain-marquee-promo2" />
+ADD PROMO CODE &#8220;UKSAVINGS&#8221; IN YOUR CART
+<phrase key="UKoneEuro-domain-marquee-restriction" />
+Promo price valid for 1st year of one new .co.uk or .com domain. <span class="g-toolTip">See restrictions.<span>*Plus ICANN fee of [@T[domains:<icannfee/>]@T] per .COM domain name per year. [@T[productprice:<current productid="57465" period="yearly" promocode="29584738" />]@T] price good for the first year of one new or transfer .COM or .CO.UK per customer. Additional years or domains may be purchased for regular price. Must pay in GBP (£) to use this offer. Discounts cannot be used in conjunction with any other offer or promotion. Not all payment methods valid with this offer, acceptable payments will display in cart at checkout. After the first year, discounted products will renew at the then-current renewal list price. Offer valid for customers in the U.K. only. Go Daddy reserves the right to deny use of this offer and/or cancel domains purchased using this offer if the offer is abused or used fraudulently, as determined by Go Daddy in its sole discretion.</span></span>
+<phrase key="UKoneEuro-domain-marquee-special-offer" />
+SPECIAL OFFER
+<phrase key="EMEA-gtld-headline" />
+GET ONLINE TODAY
+<phrase key="EMEA-gtld-maintest" />
+Choose the domain that's right for you
+<phrase key="EMEA-gtld-list-one" />
+<span class="b">Free</span> 24/7 support
+<phrase key="EMEA-gtld-list-two" />
+World leader in domains
+<phrase key="EMEA-gtld-list-three" />
+Big savings and selection
+<phrase key="EMEA-gtld-find-domain" />
+FIND YOUR DOMAIN
+<phrase key="free-cctld-headline" />
+SO EASY A DOG COULD DO IT
+<phrase key="free-cctld-maintext-com-br" />
+Get a <span class="b">FREE</span> <span class="b">.com.br</span>
+<phrase key="free-cctld-maintext-com-mx" />
+Get a <span class="b">FREE</span> <span class="b">.com.mx</span>
+<phrase key="free-cctld-domain" />
+<span class="b">domain*</span>
+<phrase key="free-cctld-maintext-wsb" />
+when you purchase Website Builder for
+<phrase key="free-cctld-subtext" />
+Or choose from other top domains, including <span class="b">.com.</span>
+<phrase key="free-cctld-restrictions" />
+* Restrictions apply
+<phrase key="free-cctld-free-upper" />
+FREE
+<phrase key="free-cctld-domain-upper" />
+DOMAIN
+<phrase key="299-tile-headline-example" />
+Huge Savings you don't want to miss.
+<phrase key="299-tile-headline" />
+Huge Savings
+<phrase key="299-tile-maintext" />
+you don't want to miss.
+<phrase key="299-tile-monitor-headline" />
+New <span class="b">.com</span> for just
+<phrase key="299-tile-monitor-maintext" />
+/1st year
+<phrase key="299-tile-monitor-subtext" />
+Find Your .com
+<phrase key="299-tile-limitation1" />
+2 year minimum registration required.
+<phrase key="299-tile-limitation2" />
+Subsequent years charged at [@T[productprice:<current productid="10101" period="yearly" />]@T]/yr.
+<phrase key="o365-marq-headline" />
+OFFICE 365 FROM GODADDY
+<phrase key="o365-marq-maintext" />
+Save up to 
+<phrase key="o365-marq-subtext" />
+on professional email and business tools.
+<phrase key="o365-marq-button" />
+Get Started for 
+<phrase key="o365-marq-sale-text" />
+HURRY, OFFER ENDS AUGUST 31!
+<phrase key="london-marq-last-chance" />
+LAST CHANCE FOR PRIORITY PRE-REGISTRATION
+<phrase key="EMEA-belfast-help" />
+GET HELP IN YOUR LANGUAGE
+<phrase key="EMEA-belfast-call" />
+CALL
+<phrase key="danica-tony-headline" />
+Get a <span class="danica-tony-yellow">FREE domain</span> when you purchase
+<phrase key="danica-tony-maintext" />
+Website Builder for just 
+<phrase key="danica-tony-commercial" />
+Watch the commercial
+<phrase key="nyc-headline" />
+Start spreading the news!
+<phrase key="nyc-maintext" />
+<span class="b">.nyc</span> is here - and it's just for New York City.
+<phrase key="nyc-pricing-text" />
+Pre-register now for 
+<phrase key="nyc-btn-text" />
+Find Your <span class="b">.nyc</span>
+<phrase key="nyc-new-flag" />
+NEW
+<phrase key="30-percent-marquee-percent_example" />
+30% OFF
+<phrase key="30-percent-marquee-percent_num" />
+30 
+<phrase key="30-percent-marquee-percent" />
+%
+<phrase key="30-percent-marquee-percent-off" />
+OFF
+<phrase key="30-percent-marquee-percent-subtext" />
+new products
+<phrase key="30-percent-marquee-headline" />
+Let's get back to business.
+<phrase key="30-percent-marquee-maintext" />
+It starts with GoDaddy.
+<phrase key="30-percent-marquee-domain-cta" />
+Find a domain
+<phrase key="30-percent-marquee-wsb-cta" />
+Build a website
+<phrase key="30-percent-marquee-hosting-cta" />
+Get hosting
+<phrase key="30-percent-marquee-limitation-cta" />
+*Restrictions apply. See Offer Limitations above for details.
+<phrase key="free-domain-prod-headline" />
+Get a <span class="free-domain-text b">FREE DOMAIN</span> with your choice of these products.
+<phrase key="free-domain-prod-wsb" />
+WEBSITE BUILDER
+<phrase key="free-domain-prod-host" />
+WEB HOSTING
+<phrase key="free-domain-prod-wp" />
+MANAGED WORDPRESS
+<phrase key="free-domain-prod-restrictions" />
+Restrictions apply
+<phrase key="multi-email-headline" />
+Save
+<phrase key="multi-email-maintext" />
+and <span class="b">get results</span> with new business solutions.
+<phrase key="multi-email-subtext-enter" />
+Enter Discount Code
+<phrase key="multi-email-subtext-checkout" />
+at Checkout.
+<phrase key="multi-email-quote" />
+"I would say about 90% of the customers find me online."
+<phrase key="multi-email-quote-sub" />
+Dana Brown, Business Owner & GoDaddy customer simply-sweets.com
+<phrase key="multi-email-limitation" />
+See offer limitations
+<phrase key="multi-email-limitation-text" />
+Not applicable to ICANN fees, taxes, premium domains, premium templates, Search Engine Visibility advertising budget, gift cards or Trademark Holders/Priority Pre-registration or pre-registration fees. Offer good towards new product purchases only and cannot be used on product renewals. Cannot be used in conjunction with any other offer, sale, discount or promotion. After the initial purchase term, discounted products will renew at the then-current renewal list price.
+<phrase key="gybo-marq-headline" />
+A suite deal.
+<phrase key="gybo-marq-domain" />
+DOMAIN
+<phrase key="gybo-marq-email" />
+EMAIL
+<phrase key="gybo-marq-wsb" />
+WEBSITE BUILDER
+<phrase key="gybo-marq-powered" />
+Powered by
+<phrase key="gybo-marq-o365" />
+Microsoft Office 365
+<phrase key="gybo-marq-per-month" />
+per month
+<phrase key="gybo-marq-btn" />
+GET IT NOW
+<phrase key="gybo-marq-disclaimer" />
+First year only. Other restrictions apply.
+<phrase key="email-999-maintext" />
+off .com
+<phrase key="email-999-right-headline" />
+Get a new .com for only 
+<phrase key="email-999-right-maintext" />
+Was 
+<phrase key="email-999-limitation-text" />
+*Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain name year. Applies to new first-year registrations only. Cannot be used in conjunction with any other offer, sale, discount or promotion. After the initial purchase term, discounted products will renew at the then-current renewal list price. Offer expires Sunday, August 31, 2014 midnight (Pacific Time).
+<phrase key="abandoned-headline" />
+Your order is almost complete.
+<phrase key="abandoned-maintext" />
+Check out now to purchase items you left in your cart.
+<phrase key="abandoned-subtext" />
+Go To Cart
+<phrase key="shiksha-headline" />
+Share your knowledge.
+<phrase key="shiksha-maintext" />
+<span class="shiksha-marquee-period b">.</span><span class="shiksha-marquee-name b">shiksha</span> is for learning.
+<phrase key="shiksha-pricing-register" />
+Register now for
+<phrase key="dbp-bugbar-text" />
+Domain Privacy Now [@T[productcompare:<percent primaryproductid="7001" secondaryproductid="7001"><html><![CDATA[{0}%]]></html></percent>]@T] off
+<phrase key="vegas-marq-decision" />
+A VEGAS DECISION
+<phrase key="vegas-marq-morning" />
+<span class="rebrand-dash">&mdash;&mdash;&mdash;&mdash;</span> YOU WON'T REGRET IN THE MORNING.
+<phrase key="vegas-marq-new-domains" />
+New .vegas domains are available.
+<phrase key="vegas-marq-find-vegas" />
+FIND YOUR .VEGAS
+<phrase key="stickit-marq-stickit" />
+STICK IT!
+<phrase key="stickit-marq-high-prices" />
+<span class="rebrand-dash">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span> TO HIGH PRICES
+<phrase key="stickit-marq-wsb" />
+Website Builder just
+<phrase key="stickit-marq-free-domain" />
+includes <span class="walsheim-black">FREE</span> domain.
+<phrase key="stickit-marq-get-started" />
+GET STARTED
+<phrase key="stickit-marq-restrictions" />
+Restrictions apply.
+<phrase key="gtld-tile-headline" />
+THE RIGHT NAME, RIGHT NOW
+<phrase key="gtld-tile-maintext" />
+100s OF NEW CHOICES
+<phrase key="gtld-tile-subtext" />
+Memorable domains = More customers
+<phrase key="gtld-tile-btn" />
+SEARCH NOW
+<phrase key="gybo-tile-disclaimer" />
+<span>First year only.</span><span>Other restrictions apply.</span>
+<phrase key="wsb-tile-text" />
+<span class="wsb-tile-product">WEBSITE BUILDER</span><span class="wsb-tile-offer tungsten">AND A FREE DOMAIN FOR ONLY</span><span class="wsb-tile-price js-gdhpPriceResize" data-maxchar="11">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</span>
+<phrase key="whyus-logo-domains" />
+Domains
+<phrase key="whyus-logo-wsb" />
+Website Builder
+<phrase key="whyus-logo-onlinestore" />
+Online Stores
+<phrase key="whyus-logo-getfound" />
+Get Found Tool
+<phrase key="whyus-logo-support" />
+24/7 Support
+<phrase key="whyus-logo-hosting" />
+Web Hosting
+<phrase key="whyus-logo-o365" />
+Microsoft&reg; Office 365 from GoDaddy
+<phrase key="why-us-headline" />
+WHAT WE DO.
+<phrase key="why-us-maintext" />
+<div>Life online starts with a domain name.</div>
+<div>That’s where domain name registrars like GoDaddy come in. Over 12 million people trust us to make them look like rock stars on the web, starting with fast, efficient domain name registration. Then we load them up with everything they need to build and manage an online business. Everything. </div>
+<div>The world's leading domain name registrar since 2005, GoDaddy offers the web’s widest selection of <h1>domain names</h1> plus a user-friendly Website Builder, affordable hosting, security tools and more. We’re your one-stop web shop.</div>
+<div>Don’t understand domains, building websites or hosting? Our support team is here around the clock to talk you through it. Seriously, you should call them – [@T[supportphone:<technical />]@T]. They’ll help you find the right name, build a website, create an Online Store – even list it on top search engines so you can Get Found by customers.</div>
+<div>Still reading? Why? You could be registering a domain and launching an empire. Or possibly improving the speed and reliability of a website you already have (we’re not just the #1 domain name registrar, we’re tops in hosting, too). So get going.</div>
+<div>This is your moment.</div>
+<phrase key="why-us-maintext-india" />
+<p>It starts with a domain name.</p>
+<p>Over 12 million people trust GoDaddy to make them look like rock stars on the web. We’ve loaded them up with everything they need to build and manage an online business. Everything. And for a lot of them, it all started with a domain name.</p>
+<div>As the world's leading domain name registrar since 2005, we've helped millions of customers find success online with the right <h1>domain names</h1> — and we can do it for you, too.</div>
+<p>If you don’t understand domain registration, our support team is here 24/7, waiting to talk you through it. Seriously, you should call them. They love to help - [@T[supportphone:<technical />]@T]. They’ll help you get a domain name, build or host your website, and even manage your business from anywhere.</p>
+<p>Still reading? Why? You could be registering a domain or starting your amazing website. Maybe even building that web store for your customers or hosting your site (we’re not just the #1 registrar, we’re tops in hosting, too). And don’t forget, we’re always here to help.</p>
+<phrase key="domain-search-btn" />
+SEARCH DOMAIN
+<phrase key="host-tile-maintext" />
+FAST. SECURE. RELIABLE.
+<phrase key="host-tile-subtext" />
+AND ALL THE OTHER BUZZWORDS
+<phrase key="host-tile-disclaimer" />
+<span class="orange-warning">FREE</span> domain included - restrictions apply
+<phrase key="host-tile-starting" />
+Starting at
+<phrase key="host-tile-month" />
+/MONTH
+<phrase key="domain-wsb-tile-offer1" />
+FREE DOMAIN
+<phrase key="domain-wsb-tile-offer2" />
+WHEN YOU BUY WEBSITE BUILDER
+<phrase key="co-uk-tile-headline" />
+.CO.UK FOR ONLY [@T[productprice:<current productid="57465" checktmspromocode='true' period="yearly" />]@T]/YR
+<phrase key="co-uk-tile-headline-2" />
+.CO.UK FOR ONLY [@T[productprice:<current productid="57465" checktmspromocode='true' period="yearly" />]@T]/YR
+<phrase key="co-uk-tile-maintext-off" />
+OFF.
+<phrase key="co-uk-tile-maintext-brilliant" />
+100% BRILLIANT.
+<phrase key="co-uk-tile-maintext" />
+OFF. 100% BRILLIANT.
+<phrase key="cheapdomain-marq-headline" />
+GET A .COM
+<phrase key="cheapdomain-marq-subheadline" />
+OR .CO.UK
+<phrase key="cheapdomain-marq-price" />
+FOR
+<phrase key="cheapdomain-marq-maintext" />
+OR BUY HALF A BAG OF CRISPS.
+<phrase key="domain-wsb-marq-headline" />
+FREE DOMAIN
+<phrase key="domain-wsb-marq-maintext" />
+WHEN YOU BUY WEBSITE BUILDER
+<phrase key="domain-wsb-marq-subtext" />
+THIS <span class="gdhp-dash"></span> IS NOT A TYPO
+<phrase key="domain-wsb-marq-subtext2" />
+AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.
+<phrase key="domain-wsb-marq-limitations" />
+Restrictions apply.
+<phrase key="gybo-headline" />
+A SUITE DEAL
+<phrase key="gybo-per-month" />
+PER MONTH
+<phrase key="gybo-get-it-now" />
+GET IT NOW
+<phrase key="gybo-rest-text" />
+First year only.<br /> Other restrictions apply.
+<phrase key="299-tile-huge" />
+HUGE SAVINGS
+<phrase key="299-tile-dont" />
+YOU DON'T WANT TO MISS
+<phrase key="299-tile-button" />
+FIND YOUR .COM
+<phrase key="299-tile-sale" />
+SALE
+<phrase key="299-tile-new-domains" />
+New domains for just
+<phrase key="aband-cart-headline" />
+YOU DID THE RESEARCH.
+<phrase key="aband-cart-maintext" />
+YOU SHOPPED
+<phrase key="aband-cart-subtext" />
+<span class="rebrand-dash">&mdash;</span>SMART.
+<phrase key="aband-cart-headline-rt" />
+NOW
+<phrase key="aband-cart-maintext-rt" />
+YOU JUST NEED TO...
+<phrase key="aband-cart-btn" />
+GO TO CART
+<phrase key="active-o365-headline" />
+WORK ANYTIME, ANYWHERE
+<phrase key="active-o365-maintext" />
+SET UP YOUR EMAIL
+<phrase key="active-o365-subtext" />
+IN JUST ONE STEP.
+<phrase key="active-o365-subtext2" />
+<span class="rebrand-dash">&mdash;&mdash;</span> EASY, PEASY.
+<phrase key="active-o365-headline-rt" />
+ACTIVATE
+<phrase key="active-o365-maintext-rt" />
+OFFICE 365 EMAIL
+<phrase key="active-o365-btn" />
+START NOW
+<phrase key="start-o365-headline" />
+YOU STILL HAVE INACTIVE
+<phrase key="start-o365-maintext" />
+OFFICE 365 ACCOUNTS.
+<phrase key="start-o365-subtext" />
+PUT THOSE SLACKERS
+<phrase key="start-o365-subtext2" />
+<span class="rebrand-dash">&mdash;&mdash;&mdash;&mdash;</span> TO WORK.
+<phrase key="ddc-marq-headline" />
+LOVE DOMAINS?
+<phrase key="ddc-marq-maintext" />
+<span class="rebrand-dash">&mdash;</span> JOIN THE CLUB.
+<phrase key="ddc-marq-headline-rt" />
+SAVE UP TO
+<phrase key="ddc-marq-maintext-rt" />
+EVERY DAY
+<phrase key="ddc-marq-btn" />
+JOIN DISCOUNT DOMAIN CLUB
+<phrase key="danica-win-tile-headline" />
+CONGRATS,
+<phrase key="danica-win-tile-maintext" />
+DANICA
+<phrase key="danica-win-tile-subtext" />
+<span class="rebrand-dash">&mdash;</span> ON YOUR
+<phrase key="danica-win-tile-subtext2" />
+FIRST NASCAR<sup class="supsymbol">&reg;</sup> WIN!
+<phrase key="danica-pole-tile-subtext" />
+<span class="rebrand-dash">&mdash;</span> ON WINNING
+<phrase key="danica-pole-tile-subtext2" />
+THE POLE
+<phrase key="danica-ten-tile-subtext" />
+<span class="rebrand-dash">&mdash;&mdash;&mdash;</span> ON A
+<phrase key="danica-ten-tile-subtext2" />
+GREAT FINISH!
+<phrase key="nbcf-tile-headline" />
+JOIN US
+<phrase key="nbcf-tile-maintext" />
+IN SUPPORTING THE
+<phrase key="nbcf-tile-subtext" />
+NATIONAL BREAST
+<phrase key="nbcf-tile-subtext2" />
+CANCER FOUNDATION.
+<phrase key="nbcf-tile-btn" />
+DONATE
+<phrase key="nyc-rebrand-headline" />
+.NYC DOMAINS NOW
+<phrase key="nyc-rebrand-maintext" />
+AVAILABLE FOR NYC.
+<phrase key="nyc-rebrand-subtext" />
+SHHHH<span class="rebrand-dash">&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+<phrase key="nyc-rebrand-subtext2" />
+DON'T TELL NEW JERSEY.
+<phrase key="nyc-pricing-yr" />
+/yr
+<phrase key="nyc-rebrand-btn" />
+FIND YOUR .NYC
+<phrase key="freedomwsb-headline-mx" />
+GET A FREE .COM.MX*
+<phrase key="freedomwsb-headline-latam" />
+GET A FREE DOMAIN*
+<phrase key="freedomwsb-maintext-mx" />
+WHEN YOU PURCHASE WEBSITE BUILDER
+<phrase key="freedomwsb-subtext" />
+For every business that's on your mind.
+<phrase key="freedomwsb-subtext2" />
+A website can make it real.
+<phrase key="freedomwsb-btn" />
+FIRST STEPS
+<phrase key="in-diwali-299-maintext" />
+for a brighter Diwali.
+<phrase key="in-gybo-headline" />
+A special offer to help your business shine.
+<phrase key="in-gybo-per-month" />
+per month
+<phrase key="in-gybo-get-it-now" />
+Get It Now
+<phrase key="in-gybo-restrictions" />
+First year only.  Other restrictions apply.
+<phrase key="br-rebrand-headline" />
+THE FUTURE OF YOUR IDEA
+<phrase key="br-rebrand-maintext" />
+STARTS WITH A DOMAIN.
+<phrase key="br-rebrand-get-brcom" />
+GET YOUR .COM.BR
+<phrase key="br-rebrand-subtext" />
+GET A FREE .COM.BR*
+<phrase key="br-rebrand-subtext2" />
+WHEN YOU PURCHASE WEBSITE BUILDER
+<phrase key="br-rebrand-just" />
+JUST
+<phrase key="br-rebrand-btn" />
+FIND YOURS NOW
+<phrase key="br-rebrand-restrictions" />
+Free domain with annual plan only. Other restrictions apply.
+<phrase key="scopesupport" />
+Scope of Support
