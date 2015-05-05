@@ -1,0 +1,67 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='99078' /></relative>]@T]" data-ci='99078' class="banner-small tld-club">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-club/banner-small/club-bday.png" alt=""/><![endif]--><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-club/banner-small/club-bday.png" alt="" class="svgfallback"/>
+  </div>
+  <div class="body">Today only! Celebrate 1 year of .club. Get your own for just [@T[productprice:<current productid='172137' period='yearly' />]@T].</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='99078' /></relative>]@T]">Search now </a>
+</div>
