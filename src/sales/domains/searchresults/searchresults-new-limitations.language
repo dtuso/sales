@@ -1,0 +1,26 @@
+---
+location: localization/sales/domains/searchresults-new-limitations/en
+name: mcx-31432
+comments: Update all pages using new ICANN token
+---
+{% include 'modules/doc-block.html' %}
+<phrase key="limitations-modal-header" />
+Product Limitations
+<phrase key="icann-fee" />
+* Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain per year. Sale pricing for new domain registrations only, not for renewals or transfers.
+<phrase key="bulk-pricing" />
+*** Domains with bulk pricing do not qualify for additional promotional discounts.
+<phrase key="free-ip-hosting" />
+&dagger; Free InstantPage®/Hosting with Website Builder are not included with .XXX domain registrations. All comparison prices are accurate as of 8/21/2013 and are subject to change without notice.
+<phrase key="ca-domain" />
+&dagger;&dagger; .CA domain names will be registered through [@T[companyname:name]@T] Domains Canada, Inc., a CIRA certified registrar.
+<phrase key="savings" />
++ Special savings apply only to first year of registration. You must purchase entire section to qualify for special savings.
+<phrase key="tlds-excluded" />
+++ .CO.UK, .ORG.UK, .ME.UK, .EU, .ES, .SE, .COM.AU, .NET.AU and .ORG.AU domains not included.
+<phrase key="discount-base" />
+^^ Discount based on current retail value.
+<phrase key="free-info" />
+^^^ Buy a new .COM, get one new .INFO for FREE for 1st year only. Not valid on renewals or transfers. Plus ICANN fee of [@T[domains:<icannfee/>]@T] per domain per year.
+<phrase key="au-domains" />
+&plusmn; com.au, net.au, and org.au domain names can only be registered for 2 years. Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
