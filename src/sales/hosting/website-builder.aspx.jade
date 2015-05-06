@@ -139,7 +139,7 @@ block marqueeContent
     | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]
     | 
-    |##if(productIsOffered(99))
+    |##if(productIsOffered(99) && !countrySiteAny(mx))
     | 
     li [@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L].
     | 
@@ -150,7 +150,7 @@ block marqueeContent
     |##endif
     | 
   | 
-  |##if(productIsOffered(99))
+  |##if(productIsOffered(99) && !countrySiteAny(mx))
   | 
   button.btn.btn-default-light.btn-plan(id="get-started-btn",data-btn-src="gs",data-plan="wsb_personal_o365_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
   | 
@@ -165,7 +165,7 @@ block plans
   section#plans
     +renderPlanTiles(3) 
       | 
-      |##if(productIsOffered(99))
+      |##if(productIsOffered(99) && !countrySiteAny(mx))
       | 
       | 
       |##if(countrySiteAny(uk))
