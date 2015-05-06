@@ -1,8 +1,8 @@
 ---
 location: sales/contact-us.aspx
 id: 
-name: GCEMO-498
-comments: Update phone numbers
+name: MCX-39757
+comments: Update GUI market urls
 ---
 {% extends 'layouts/base.html' %}
 
@@ -609,7 +609,7 @@ comments: Update phone numbers
     }
 
   function loadSupportData(){
-    var supportNumberUrl = pc.page.sharedObjectMgr.get('pc_url_gui')+ 'pcjson/support/allmarkets';
+    var supportNumberUrl = "[@T[link:<external linktype='guiurl' path='/pcjson/support/allmarkets' secure='true' parammode='explicit'/>]@T]";
 
     $.ajax({
     url: supportNumberUrl,
@@ -622,7 +622,7 @@ comments: Update phone numbers
     });
   }
   function loadMarketSupportData(countryName){
-    var supportNumberUrl = pc.page.sharedObjectMgr.get('pc_url_gui')+ 'pcjson/support/includemarket';
+    var supportNumberUrl = "[@T[link:<external linktype='guiurl' path='/pcjson/support/includemarket' secure='true' parammode='explicit'/>]@T]";
 
     $.ajax({
     url: supportNumberUrl,
