@@ -296,7 +296,7 @@
           <div id="addedBusinessPlus" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]</div>
           <div id="addedBusiness" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]</div>
           <div id="gfText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</div> 
-          ##if(productIsOffered(99))
+          ##if(productIsOffered(99) && !countrySiteAny(mx))
            
           <div id="extraRowLeftText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:free_email]@L]</div>
           <div id="extraRowRightText" class="hidden_div"> 
@@ -1657,7 +1657,7 @@ input[type=radio]:checked + label {
       <script>
         $.ajaxSetup({cache:false,async:false});
         
-        ##if(productIsOffered(99))
+        ##if(productIsOffered(99) && !countrySiteAny(mx))
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_o365_12month";
         ##else
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_12month";
@@ -1677,7 +1677,7 @@ input[type=radio]:checked + label {
         gfAvailable = true;
         ##endif
         
-        ##if(productIsOffered(99))
+        ##if(productIsOffered(99) && !countrySiteAny(mx))
         o365Available = true;
         ##endif
         
@@ -1701,7 +1701,7 @@ input[type=radio]:checked + label {
             text:{
               title:"[@L[cds.sales/gd/hosting/website-builder-config:business]@L]",
               subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]",
-              ##if(productIsOffered(99))
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
                 features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] ",
               ##else
                 features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]",
@@ -1716,7 +1716,7 @@ input[type=radio]:checked + label {
             text:{
               title:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]",
               subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]",
-              ##if(productIsOffered(99))
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
                 features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
               ##else
                 features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
@@ -2136,7 +2136,7 @@ input[type=radio]:checked + label {
                 };
             parentID.append(itemTemplate(itemData));
         
-            ##if(productIsOffered(99))
+            ##if(productIsOffered(99) && !countrySiteAny(mx))
               var o365Data = {
                   itemName: '[@L[cds.sales/gd/hosting/website-builder-config:starter_email]@L]',
                   itemTerm: '12' + monthString,
