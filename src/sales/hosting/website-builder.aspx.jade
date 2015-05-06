@@ -138,12 +138,55 @@ block marqueeContent
     |##endif
     | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]
+    | 
+    |##if(productIsOffered(99))
+    | 
+    li [@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L].
+    | 
+    |##else
+    | 
     li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]
+    | 
+    |##endif
+    | 
+  | 
+  |##if(productIsOffered(99))
+  | 
+  button.btn.btn-default-light.btn-plan(id="get-started-btn",data-btn-src="gs",data-plan="wsb_personal_o365_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
+  | 
+  |##else
+  | 
   button.btn.btn-default-light.btn-plan(id="get-started-btn",data-btn-src="gs",data-plan="wsb_personal_12month",data-ci="87757") [@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]
+  | 
+  |##endif
+  | 
 
 block plans
   section#plans
     +renderPlanTiles(3) 
+      | 
+      |##if(productIsOffered(99))
+      | 
+      | 
+      |##if(countrySiteAny(uk))
+      | 
+      +planTile("plan-A")
+        include ./website-builder/plans/_plan-website-builder-personal-uk_o365.jade
+      | 
+      |##else
+      | 
+      +planTile("plan-A")
+        include ./website-builder/plans/_plan-website-builder-personal_o365.jade
+      | 
+      |##endif
+      | 
+      +planTile
+        include ./website-builder/plans/_plan-website-builder-business_o365.jade
+      +planTile
+        include ./website-builder/plans/_plan-website-builder-unlimited_o365.jade
+      | 
+      |##else
+      | 
       | 
       |##if(countrySiteAny(uk))
       | 
@@ -161,6 +204,9 @@ block plans
         include ./website-builder/plans/_plan-website-builder-business.jade
       +planTile
         include ./website-builder/plans/_plan-website-builder-unlimited.jade
+      | 
+      |##endif
+      | 
         
       +renderCartLogic("[@T[link:<relative path='~/hosting/website-builder-config.aspx'><param name='ci' value='{0}' /></relative>]@T]", "slp_wst_3" )
   

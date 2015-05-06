@@ -6,6 +6,7 @@
 - var planTemplateCss = false;
 - var itemTemplateCss = false;
 - var termTemplateCss = false;
+- var noThanksAddonTemplateCss = false;
 
 
 
@@ -446,6 +447,9 @@ mixin planTemplate(planTemplateParams)
   - planTemplateParams.isToolTip          = planTemplateParams.isToolTip || "isToolTip" ;
   - planTemplateParams.toolTipContent     = planTemplateParams.toolTipContent || "toolTipContent" ;
   - planTemplateParams.percentSavings     = planTemplateParams.percentSavings || "percentSavings" ;
+  - planTemplateParams.extraRow           = planTemplateParams.extraRow || "extraRow" ;
+  - planTemplateParams.extraRowLeftText   = planTemplateParams.extraRowLeftText || "extraRowLeftText" ;
+  - planTemplateParams.extraRowRightText  = planTemplateParams.extraRowRightText || "extraRowRightText" ;
   
   if(!planTemplateCss)
     - planTemplateCss = true;
@@ -494,6 +498,16 @@ mixin planTemplate(planTemplateParams)
           </div>
         </div>
       </div>
+      <% if (#{planTemplateParams.extraRow}){ %> 
+        <div class="row">
+        <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+          <div class="config-text-lead bold"><%= #{planTemplateParams.extraRowLeftText} %></div>
+        </div>
+        <div class="col-xs-4">
+            <%= #{planTemplateParams.extraRowRightText} %>
+        </div>
+      </div>
+     <% } %>
     </li>
 
 mixin termTemplate(termTemplateParams)
@@ -549,3 +563,54 @@ mixin termTemplate(termTemplateParams)
         </div>
       </div>
     </li>
+
+mixin noThanksAddonTemplate(noThanksnoThanksAddonTemplateParams)
+  - noThanksAddonTemplateParams                    = noThanksAddonTemplateParams || {};
+  - noThanksAddonTemplateParams.radio              = noThanksAddonTemplateParams.radio || "radio" ;
+  - noThanksAddonTemplateParams.checked            = noThanksAddonTemplateParams.checked || "checked" ;
+  - noThanksAddonTemplateParams.package            = noThanksAddonTemplateParams.package || "package" ;
+  - noThanksAddonTemplateParams.monthly            = noThanksAddonTemplateParams.monthly || "monthly" ;
+  - noThanksAddonTemplateParams.addon              = noThanksAddonTemplateParams.addon || "addon" ;
+  - noThanksAddonTemplateParams.yearly             = noThanksAddonTemplateParams.yearly || "yearly" ;
+  - noThanksAddonTemplateParams.currentPrice       = noThanksAddonTemplateParams.currentPrice || "currentPrice" ;
+  - noThanksAddonTemplateParams.addonText          = noThanksAddonTemplateParams.onSale || "addonText" ;
+  - noThanksAddonTemplateParams.termType           = noThanksAddonTemplateParams.termType || "termType" ;
+
+  if(!addonTemplateCss)
+    - noThanksAddonTemplateCss = true;
+    atlantis:webstash(type="css")
+      style.
+        .addon-circle{
+          font-size:2em;
+          margin-bottom:0;
+
+        }
+
+  script.noThanksAddonTemplate(type='text/template').
+      <li>
+        <div class="row">
+          <div class="col-xs-2 col-md-1">
+          <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= #{noThanksAddonTemplateParams.radio} %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !#{noThanksAddonTemplateParams.checked} ){ %>checked="checked"<% } %> class="input_hidden" >
+            <label class="uxicon addon-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( !#{noThanksAddonTemplateParams.checked} ){ %>uxicon-radio-filled<% } %>" id ="no_thanks_label"></label>
+          </div>
+          <div class="col-xs-10 col-md-11">
+            <div class ="config-text-primary">
+              [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-xs-2 col-md-1">
+          <input id = "add<%= #{noThanksAddonTemplateParams.radio} %>"type="radio" style="margin-right:4px;" name="<%= #{noThanksAddonTemplateParams.radio} %>" value="<%= #{noThanksAddonTemplateParams.package} %>" data-addon="<%= #{noThanksAddonTemplateParams.addon} %>" data-monthly="<%= #{noThanksAddonTemplateParams.monthly} %>"  data-yearly="<%= #{noThanksAddonTemplateParams.yearly} %>" <% if ( #{noThanksAddonTemplateParams.checked} ){ %>checked="checked"<% } %> class="input_hidden" >
+            <label class="uxicon addon-circle uxicon-circle-outline vertical-align radio-<%= #{noThanksAddonTemplateParams.radio} %> <% if ( #{noThanksAddonTemplateParams.checked} ){ %>uxicon-radio-filled<% } %>" id="<%= #{noThanksAddonTemplateParams.package} %>"></label>
+          </div>
+          <div class="col-xs-10 col-md-11">
+            <div class="config-text-primary">
+              <%= #{noThanksAddonTemplateParams.addonText} %> <span class="text-secondary-o"><%= #{noThanksAddonTemplateParams.currentPrice} %>/<%= #{noThanksAddonTemplateParams.termType} %></span>
+            </div>
+          </div>
+        </div>
+      </li>
+

@@ -724,7 +724,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
-        var srcIsPro = window.location.href.indexOf("pro") > -1
+        var srcIsPro = window.location.href.indexOf("pro") > -1;
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
