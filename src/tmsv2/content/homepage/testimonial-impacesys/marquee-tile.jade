@@ -7,7 +7,7 @@ prepend vars
 block tileStyles
   style
     :less
-      .testimonial.merch-tile{font-family:'Walsheim-Black', 'Arial Black', sans-serif; background:#333; padding:10px; font-size:13px;cursor:default;
+      .testimonial.merch-tile{font-family:'Walsheim-Black', 'Arial Black', sans-serif; background:#333; padding:10px; font-size:13px;cursor:default; position:relative;
         @media only screen and (min-width:480px){
          font-size:18px;
         }
@@ -20,9 +20,12 @@ block tileStyles
         @media only screen and (min-width:1200px){
           font-size:16px;
         }
-        .testimony {color:#77C043;font-size:1.25em; margin-bottom: 10px;}
-        .customer {text-transform:uppercase;color:#fff;font-size:1em}
+        .tile-content-wrapper { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
+          .testimony {font-size:1.25em; margin-bottom: 10px; font-size: 1.25em;color:#fff;line-height:1.2}
+          .customer {text-transform:uppercase;font-size:1em;color:#77C043;}
+        }
       }
+      .Explorer8 .testimonial.merch-tile .tile-content-wrapper {position: relative;top: 0;}
 block tileContent
   .testimony "There's a reason why GoDaddy is the number one registrar in the world."
-  .customer Mr. Atul Chaundhari, Impace Systems
+  .customer Mr. Atul Chaudhari, Impace Systems
