@@ -1,51 +1,132 @@
 
 <atlantis:webstash type="css">
-  <style>
+  <style>.leftContent {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.rightContent {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  .leftContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .rightContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .leftContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .rightContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .leftContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .rightContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .leftContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .rightContent {
+    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+}
+
   </style>
   <style>#marquee {
   background-color: #F3F3F4;
   background-size: initial;
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
 }
-#marquee .fifty-right-image #marqueeImage {
-  background-size: initial;
-  background-position: 23%;
-}
-#marquee .fifty-right-image mark {
+#marquee .fifty-right-image .leftContent mark {
   font-size: 16px;
   margin: 0 0 5px 0;
   font-family: 'Walsheim Bold', 'Arial Black', sans-serif;
 }
-#marquee .fifty-right-image .price {
+#marquee .fifty-right-image .leftContent .price {
   font-size: 18px;
   color: #333;
 }
-#marquee .fifty-right-image .price span {
+#marquee .fifty-right-image .leftContent .price span {
   font-size: 36px;
   color: #EF6C0F;
 }
-#marquee .fifty-right-image .headline {
+#marquee .fifty-right-image .leftContent .headline {
   font-size: 24px;
   color: #333;
   line-height: .9;
   font-family: 'Walsheim Bold', 'Arial Black', sans-serif;
 }
-#marquee .fifty-right-image .product-name {
+#marquee .fifty-right-image .leftContent .product-name {
   font-size: 36px;
   line-height: 35px;
 }
-#marquee .fifty-right-image .subtitle {
+#marquee .fifty-right-image .leftContent .subtitle {
   font-size: 16px;
   line-height: 20px;
   font-family: 'Arial';
 }
-#marquee .fifty-right-image button {
+#marquee .fifty-right-image .leftContent button {
   margin-top: 3%;
   margin-bottom: 2%;
 }
-#marquee .fifty-right-image .disclaimer {
+#marquee .fifty-right-image .leftContent .disclaimer {
   font-size: 10px;
   font-family: Arial;
+}
+#marquee .fifty-right-image .rightContent div {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
   </style>
@@ -62,7 +143,7 @@
       <div class="disclaimer">Disclaimer text is smaller and will take up this area</div>
     </div>
     <div class="rightContent col-xs-12 col-md-6">
-      <div>this should be on the right</div>
+      <div> </div>
     </div>
   </div>
 </div>

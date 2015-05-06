@@ -3,8 +3,10 @@ prepend vars
   - var classes = "fifty-right-image"
   - var dataCI = 97703;
   - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCI+"' /></relative>]@T]";
-  - var marqueeBackground = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var marqueeFallback = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
+  - var leftImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
+  - var xsLeftImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
+  - var rightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
+  - var xsRightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
   - var polygon = "grey-bottom";
   - var xsBannerColor = "#DEDEDE";
 
@@ -13,7 +15,7 @@ append heroStyles
     :less
       #marquee{background-color:#F3F3F4; background-size:initial;font-family:'Walsheim-Black', 'Arial Black', sans-serif;
         .fifty-right-image{
-          #marqueeImage{background-size:initial;background-position:23%;}
+        .leftContent{
           mark {font-size:16px;margin:0 0 5px 0;font-family:'Walsheim Bold', 'Arial Black', sans-serif;}
           .price {font-size:18px;color:#333;
             span{font-size:36px;color:#EF6C0F;}
@@ -23,6 +25,10 @@ append heroStyles
           .subtitle{font-size:16px;line-height:20px;font-family:'Arial';}
           button{margin-top:3%;margin-bottom:2%;}
           .disclaimer{font-size: 10px;font-family: Arial;}
+          }
+        .rightContent{
+           div{height: 100%;width: 50%;position: absolute;right: 0;top: 0;}
+          }
         }
       }
 block leftContent
@@ -34,4 +40,4 @@ block leftContent
   button.btn.btn-md.btn-primary [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
   .disclaimer Disclaimer text is smaller and will take up this area
 block rightContent
-  div this should be on the right
+  div 
