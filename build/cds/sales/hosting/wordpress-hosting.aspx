@@ -312,7 +312,7 @@
           <div class="col-sm-7">
             <div data-fit-line=".price" class="marquee-content-wrapper clearfix">
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
-              <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
+              <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
               <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="as-low-as-pricing">
