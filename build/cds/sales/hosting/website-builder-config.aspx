@@ -1657,7 +1657,7 @@ input[type=radio]:checked + label {
       <script>
         $.ajaxSetup({cache:false,async:false});
         
-        ##if(productIsOffered(104))
+        ##if(productIsOffered(99))
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_o365_12month";
         ##else
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_12month";
