@@ -1,7 +1,8 @@
 ---
 location: localization/sales/offers/office365-promo/en
-name: mcx-31432
-comments: Update all pages using new ICANN token
+id: 
+name: MCXMO-969
+comments: Fixing headline text.
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="page-title" />
@@ -29,7 +30,7 @@ Save up to {0}
 <phrase key="top-banner-best-deal"/>
 Best. Deal. <em>Anywhere.</em>
 <phrase key="top-banner-best-deal-split-30495"/>
-Get the <em>best deal Anywhere</em>
+Get the <em>best deal anywhere</em>
 <phrase key="top-banner-save"/>
 Save on Microsoft Office 365 Business Premium. 
 <phrase key="top-banner-plus"/>
