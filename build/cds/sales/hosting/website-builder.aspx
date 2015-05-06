@@ -152,7 +152,7 @@
               ##endif
                
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li> 
-              ##if(productIsOffered(99))
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
                
               <li>[@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L].</li> 
               ##else
@@ -161,7 +161,7 @@
               ##endif
                
             </ul> 
-            ##if(productIsOffered(99))
+            ##if(productIsOffered(99) && !countrySiteAny(mx))
              
             <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_o365_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button> 
             ##else
@@ -638,7 +638,7 @@
           <div class="row">
              
              
-            ##if(productIsOffered(99))
+            ##if(productIsOffered(99) && !countrySiteAny(mx))
              
              
             ##if(countrySiteAny(uk))
