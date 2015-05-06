@@ -108,15 +108,15 @@ disableSavingCheck is needed since the product token would show as being no sale
       "got_bundle":                    {"period":"monthly",  "bundle":    ["464069","101","7524"],          "promocode":"24681357"},
       "o365_bundle":                   {"period":"monthly",  "bundle":    ["31841","101","7524","326366"],  "promocode":"33572469"},
 
-      "domain_com_top_deal":           {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
-      "domain_com":                    {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
-      "domain_co":                     {"period":"yearly",   "allPlans":  ["56401"],  "promocode":"0"},
+      "domain_com_top_deal":           {"period":"yearly",   "allPlans":  ["101"]                    },
+      "domain_com":                    {"period":"yearly",   "allPlans":  ["101"]                    },
+      "domain_co":                     {"period":"yearly",   "allPlans":  ["56401"]                  },
       "domain_com_mx":                 {"period":"yearly",   "allPlans":  ["12801"],  "disableSavingCheck":"true",  "promocode":"444888"},
       "domain_co_uk":                  {"period":"yearly",   "allPlans":  ["57465"],  "promocode":"444888"},
       "domain_ca":                     {"period":"yearly",   "allPlans":  ["9405"],  "disableSavingCheck":"true",   "promocode":"444888"},
-      "domain_com_top_deal_no_promo":  {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
-      "domain_com_no_promo":           {"period":"yearly",   "allPlans":  ["101"],    "promocode":"0"},
-      "domain_co_no_promo":            {"period":"yearly",   "allPlans":  ["56401"],  "promocode":"0"},
+      "domain_com_top_deal_no_promo":  {"period":"yearly",   "allPlans":  ["101"]                    },
+      "domain_com_no_promo":           {"period":"yearly",   "allPlans":  ["101"]                    },
+      "domain_co_no_promo":            {"period":"yearly",   "allPlans":  ["56401"]                  },
       "domain_com_mx_no_promo":        {"period":"yearly",   "allPlans":  ["12801"],  "promocode":"0"},
       "domain_co_uk_no_promo":         {"period":"yearly",   "allPlans":  ["57465"],  "promocode":"0"},
       "domain_ca_no_promo":            {"period":"yearly",   "allPlans":  ["9405"],   "promocode":"0"},
@@ -179,7 +179,7 @@ disableSavingCheck is needed since the product token would show as being no sale
     }
   -%}
   {% for product in productData %}
-    '{{ loop.key }}': [{% if product.promocode %}{% set promocode = ' promocode="' + product.promocode + '"' %}{% else %}{% set promocode = '' %}{% endif %}
+    '{{ loop.key }}': [{% if product.promocode %}{% set promocode = ' promocode="' + product.promocode + '"' %}{% else %}{% set promocode = ' checktmspromocode="true"' %}{% endif %}
       {% for plan in product.allPlans -%}
       {
         'period':'{{ product.period }}',
