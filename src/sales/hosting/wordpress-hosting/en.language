@@ -1,7 +1,7 @@
 ---
-id:  null
-name: GCE-38465
-comments: Change SideKick wording
+id: false
+name: MCX-39123
+comments: GoDaddy LP text only changes
 location: localization/sales/gd/hosting/wordpress-hosting/en
 ---
 {% include 'modules/doc-block.html' %}
@@ -19,6 +19,8 @@ Save time, stress and, yes, even cash with [@T[companyname:name]@T] Managed Word
 Managed WordPress
 <phrase key="35561-marquee-product-desc" comment="" />
 WordPress hosting for creators, not administrators
+<phrase key="39123-marquee-product-desc" comment="" />
+WordPress hosting made simple and blazing fast
 <phrase key="35561-marquee-product-p" comment="" />
 We handle the hosting setup and management dirty work so you can focus on creating an amazing website.
 <phrase key="35561-marquee-flag" comment="{0} will be tokenized with a phone number" />
@@ -31,6 +33,8 @@ As low as
 Basic
 <phrase key="35561-basic-desc" comment="" />
 Think basic sites and blogs and startups.
+<phrase key="39123-basic-desc" comment="" />
+Perfect for basic sites or blogs
 <phrase key="35561-basic-btn-alt-text" comment="" />
 Add Basic Plan to Cart
 <phrase key="35561-basic-feature-1" comment="" />
@@ -39,10 +43,14 @@ Add Basic Plan to Cart
 <strong>10GB SSD</strong> storage
 <phrase key="35561-basic-feature-3" comment="{0} will be the number of monthly users" />
 <strong>{0}</strong> monthly visitors
+<phrase key="39123-basic-feature-4" comment="" />
+SFTP access
 <phrase key="35561-deluxe" comment="" />
 Deluxe
 <phrase key="35561-deluxe-desc" comment="" />
 For small business and bloggers on the way up.
+<phrase key="39123-deluxe-desc" comment="" />
+Plus an integrated SEO wizard to help get your site found on Google.
 <phrase key="35561-deluxe-btn-alt-text" comment="" />
 Add Deluxe Plan to Cart
 <phrase key="35561-deluxe-feature-1" comment="" />
@@ -61,6 +69,8 @@ Search engine optimization plugin
 Ultimate
 <phrase key="35561-ultimate-desc" comment="Note the word plus is in all capitals letters for emphasis" />
 Everything in Deluxe plan, PLUS top-notch security
+<phrase key="39123-ultimate-desc" comment="" />
+Get everything in deluxe with top notch security features.
 <phrase key="35561-ultimate-btn-alt-text" comment="" />
 Add Ultimate Plan to Cart
 <phrase key="35561-ultimate-feature-1" comment="" />
@@ -75,14 +85,20 @@ One-click staging site
 SSH / SFTP access
 <phrase key="35561-ultimate-feature-6" comment="" />
 Search engine optimization plugin
+<phrase key="39123-ultimate-feature-6" comment="" />
+Search Engine Optimization for 2 sites
 <phrase key="35561-ultimate-feature-7" comment="" />
 Malware scan &amp; removal
+<phrase key="39123-ultimate-feature-7" comment="" />
+Malware scan and removal for 2 sites
 <phrase key="35561-ultimate-feature-8" comment="" />
 SSL certificate – First year free ({0} renewal annually)
 <phrase key="35561-developer" comment="" />
 Developer
 <phrase key="35561-developer-desc" comment="" />
 Created expressly for web developers and creative agencies.
+<phrase key="39123-developer-desc" comment="" />
+Just what a Pro needs and nothing more, for up to 5 sites.
 <phrase key="35561-developer-btn-alt-text" comment="" />
 Add Developer Plan to Cart
 <phrase key="35561-developer-feature-1" comment="" />
@@ -97,8 +113,14 @@ One-click staging site
 SSH / SFTP access
 <phrase key="35561-developer-feature-6" comment="" />
 SSL certificate – First year free ({0} renewal annually)
+<phrase key="39123-developer-feature-6" comment="" />
+1 SSL certificate – 1 year free ({0} renewal annually)
 <phrase key="35561-per-mo" comment="per month (for pricing)" />
 /mo
+<phrase key="39123-tooltip-seo" comment="" />
+Includes an integrated SEO wizard for step-by-step instructions to optimize your site with SEO fundamentals to get your site seen on major search engines, like Google.
+<phrase key="39123-tooltip-malware" comment="" />
+Keep your website safe with SiteLock Professional malware detection and removal. A {0} value per site.
 <phrase key="35561-tooltip-ssd" comment="" />
 Our servers have high-performance SSD drives for both files &amp; databases so your sites load incredibly fast. Storage is shared across your plan’s sites.
 <phrase key="35561-tooltip-visitors" comment="" />
@@ -151,6 +173,8 @@ Automatic WordPress core updates
 Nightly backups w/ 1-click restore
 <phrase key="35561-key-1-list-1-item-4" comment="" />
 DDoS protection &amp; site monitoring
+<phrase key="39123-key-1-list-1-item-4" comment="" />
+DDoS protection &amp; network monitoring
 <phrase key="35561-key-1-list-1-item-5" comment="" />
 Optimized WordPress servers
 <phrase key="35561-key-1-list-2-title" comment="" />
