@@ -5434,7 +5434,7 @@ width: 50%;
         /* TODO: can this styling be abstracted into landing-page.jade? */
         body { background-color: #d9d9d9; }
         #marquee { 
-          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wsb-marquee-02_v1.jpg) no-repeat top center; 
           padding-bottom: 120px;
           margin-bottom: 0;
           background-size: cover;
@@ -5459,7 +5459,7 @@ width: 50%;
         html[lang="en-nz"] #marquee,
         html[lang="fr-be"] #marquee,
         html[lang="fr-ca"] #marquee {
-          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wsb-marquee-02_v1.jpg);
         }
         
         /* asia */
