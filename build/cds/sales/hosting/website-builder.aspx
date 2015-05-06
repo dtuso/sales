@@ -151,10 +151,24 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-1]@L]</li> 
               ##endif
                
-              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li>
-              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li>
-            </ul>
-            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button>
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li> 
+              ##if(productIsOffered(99))
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L].</li> 
+              ##else
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li> 
+              ##endif
+               
+            </ul> 
+            ##if(productIsOffered(99))
+             
+            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_o365_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button> 
+            ##else
+             
+            <button id="get-started-btn" data-btn-src="gs" data-plan="wsb_personal_12month" data-ci="87757" class="btn btn-default-light btn-plan">[@L[cds.sales/gd/hosting/website-builder:get-started-btn-general]@L]</button> 
+            ##endif
+             
           </div>
         </div>
       </div>
@@ -624,6 +638,9 @@
           <div class="row">
              
              
+            ##if(productIsOffered(99))
+             
+             
             ##if(countrySiteAny(uk))
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
@@ -633,28 +650,157 @@
                   <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
                 </div>
                 <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(632603, 632603, 0))
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="632603" secondaryproductid="632603" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                    ##endif
+                     
+                    <p class="h6 vat-price">[@T[productprice:<list productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                </div>
+              </div>
+            </div> 
+            ##else
+             
+            <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap undefined">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(632603, 632603, 0))
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="632603" secondaryproductid="632603" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                    ##endif
+                     
+                    <p class="h6 vat-price">[@T[productprice:<list productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                </div>
+              </div>
+            </div> 
+            ##endif
+             
+            <div class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap undefined">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:popular-tag]@L]</div>
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:business-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:business-description]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="632605" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(632605, 632605, 0))
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="632605" secondaryproductid="632605" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                    ##endif
+                     
+                    <p class="h6 vat-price">[@T[productprice:<list productid="632605" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap undefined">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:unlimited-plan-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:unlimited-description]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="632621" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
+                    ##if(productHasSavingsMoreThan(632621, 632621, 0))
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="632621" secondaryproductid="632621" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                    ##endif
+                     
+                    <p class="h6 vat-price">[@T[productprice:<list productid="632621" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                </div>
+                <div class="action-button-wrap row"></div>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="features-wrap">
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
+                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
+                </div>
+              </div>
+            </div> 
+            ##else
+             
+             
+            ##if(countrySiteAny(uk))
+             
+            <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
+              <div class="pro-plan-wrap undefined">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]</p>
+                </div>
+                <div class="price-wrap">
                   <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                     ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                     <br><strong>
-                       
-                      ##if(splitTestingSideIsActive(1349, A))
-                       
-                      [@L[cds.sales/_common:was]@L] 
-                      <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##else
-                       
-                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##endif
-                       </strong> 
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
                     ##endif
-                     
-                     
-                    ##if(splitTestingSideIsActive(1349, B))
                      
                     <p class="h6 vat-price">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                    ##endif
-                     
-                     
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -677,6 +823,7 @@
              
             <div id="plan-A" class="col-sm-4 plan-tile plan-pro">
               <div class="pro-plan-wrap undefined">
+                <div class="plan-flag">[@L[cds.sales/gd/hosting/website-builder:wsb-plus-seo]@L]</div>
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/website-builder:personal-title]@L]</h3>
                   <p class="plan-text">[@L[cds.sales/gd/hosting/website-builder:personal-description]@L]</p>
@@ -684,26 +831,10 @@
                 <div class="price-wrap">
                   <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                     ##if(productHasSavingsMoreThan(7524, 7524, 0))
-                     <br><strong>
-                       
-                      ##if(splitTestingSideIsActive(1349, A))
-                       
-                      [@L[cds.sales/_common:was]@L] 
-                      <strike>[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##else
-                       
-                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##endif
-                       </strong> 
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
                     ##endif
-                     
-                     
-                    ##if(splitTestingSideIsActive(1349, B))
                      
                     <p class="h6 vat-price">[@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                    ##endif
-                     
-                     
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -734,26 +865,10 @@
                 <div class="price-wrap">
                   <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                     ##if(productHasSavingsMoreThan(7509, 7509, 0))
-                     <br><strong>
-                       
-                      ##if(splitTestingSideIsActive(1349, A))
-                       
-                      [@L[cds.sales/_common:was]@L] 
-                      <strike>[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##else
-                       
-                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##endif
-                       </strong> 
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7509" secondaryproductid="7509" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
                     ##endif
-                     
-                     
-                    ##if(splitTestingSideIsActive(1349, B))
                      
                     <p class="h6 vat-price">[@T[productprice:<list productid="7509" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                    ##endif
-                     
-                     
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -784,26 +899,10 @@
                 <div class="price-wrap">
                   <div class="plan-price-wrap row"><span class="plan-price text-warning">[@T[productprice:<current productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="plan-duration text-warning">/[@L[cds.sales/_common:month]@L]</span> 
                     ##if(productHasSavingsMoreThan(7514, 7514, 0))
-                     <br><strong>
-                       
-                      ##if(splitTestingSideIsActive(1349, A))
-                       
-                      [@L[cds.sales/_common:was]@L] 
-                      <strike>[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</strike> <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##else
-                       
-                      [@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span> 
-                      ##endif
-                       </strong> 
+                     <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7514" secondaryproductid="7514" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
                     ##endif
-                     
-                     
-                    ##if(splitTestingSideIsActive(1349, B))
                      
                     <p class="h6 vat-price">[@T[productprice:<list productid="7514" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]</p> 
-                    ##endif
-                     
-                     
                     ##if(countrySiteAny(uk))
                      
                     <p class="h6 vat-price">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
@@ -826,7 +925,9 @@
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_ssl]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-width='300' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_ssl_tooltip]@L]'></span></div>
                 </div>
               </div>
-            </div>
+            </div> 
+            ##endif
+             
             <atlantis:webstash type="js">
               <script type="text/javascript">
                 var itemTrackingCode = "slp_wst_3";
