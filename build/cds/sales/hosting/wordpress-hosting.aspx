@@ -312,7 +312,7 @@
           <div class="col-sm-7">
             <div data-fit-line=".price" class="marquee-content-wrapper clearfix">
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
-              <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-desc]@L]</h2>
+              <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-marquee-product-desc]@L]</h2>
               <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
               <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan">[@L[cds.sales/_common:get-started]@L]</button>
               <div class="as-low-as-pricing">
@@ -919,7 +919,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-basic-desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -945,7 +945,7 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">SFTP</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-basic-feature-4]@L]</div>
                 <div class="plan-item">&nbsp; </div>
                 <div class="plan-item">&nbsp; </div> 
                 ##if(productIsOffered(107))
@@ -960,7 +960,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-deluxe-desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -988,7 +988,7 @@
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L] </div> 
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-seo]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##if(productIsOffered(107))
                  
                 <div class="plan-item">&nbsp; </div> 
@@ -1001,7 +1001,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -1029,16 +1029,16 @@
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L] </div> 
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-feature-6]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-seo]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##if(productIsOffered(107))
                  
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-7]@L]  </div> 
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-feature-7]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-malware]@L]" data-tokenize="[@T[productprice:<list productid='181771' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##endif
                  
                  
                 ##if(productIsOffered(22))
                  
-                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-8]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##else
                  
                 <div class="plan-item">&nbsp; </div> 
@@ -1050,7 +1050,7 @@
               <div class="pro-plan-wrap pro-plan-wrap-alternate">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -1087,7 +1087,7 @@
                  
                 ##if(productIsOffered(22))
                  
-                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
                 ##else
                  
                 <div class="plan-item">&nbsp; </div> 
@@ -1524,7 +1524,7 @@
                 <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-1]@L]</li>
                 <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-2]@L]</li>
                 <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-3]@L]</li>
-                <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-4]@L]</li>
+                <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39123-key-1-list-1-item-4]@L]</li>
                 <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-1-item-5]@L]</li>
               </ul>
               <p class="list-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-key-1-list-2-title]@L]</p>
@@ -1768,7 +1768,6 @@
           <div class="row">
             <div class="col-sm-10 col-sm-offset-1 col-xs-12">
               <h2 class="h1">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-title]@L]</h2>
-              <h4 class="headline-primary">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-security-subtitle]@L]</h4>
             </div>
           </div>
           <div class="row">
