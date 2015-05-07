@@ -1,148 +1,60 @@
 
-<atlantis:webstash type="css">
-  <style>.leftContent {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.rightContent {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-/* Large desktop */
-@media (min-width: 1200px) {
-  .leftContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .rightContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) {
-  .leftContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .rightContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {
-  .leftContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .rightContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-/* Landscape phones and down */
-@media (max-width: 480px) {
-  .leftContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .rightContent {
-    background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-}
-
-  </style>
-  <style>#marquee {
-  background-color: #F3F3F4;
-  background-size: initial;
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-}
-#marquee .fifty-right-image .leftContent mark {
-  font-size: 16px;
-  margin: 0 0 5px 0;
-  font-family: 'Walsheim Bold', 'Arial Black', sans-serif;
-}
-#marquee .fifty-right-image .leftContent .price {
-  font-size: 18px;
-  color: #333;
-}
-#marquee .fifty-right-image .leftContent .price span {
-  font-size: 36px;
-  color: #EF6C0F;
-}
-#marquee .fifty-right-image .leftContent .headline {
-  font-size: 24px;
-  color: #333;
-  line-height: .9;
-  font-family: 'Walsheim Bold', 'Arial Black', sans-serif;
-}
-#marquee .fifty-right-image .leftContent .product-name {
-  font-size: 36px;
-  line-height: 35px;
-}
-#marquee .fifty-right-image .leftContent .subtitle {
-  font-size: 16px;
-  line-height: 20px;
-  font-family: 'Arial';
-}
-#marquee .fifty-right-image .leftContent button {
-  margin-top: 3%;
-  margin-bottom: 2%;
-}
-#marquee .fifty-right-image .leftContent .disclaimer {
-  font-size: 10px;
-  font-family: Arial;
-}
-#marquee .fifty-right-image .rightContent div {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-  </style>
-</atlantis:webstash>
-<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="fifty-right-image hero polygon">
-  <div class="heroContentWrapper">
-    <div class="leftContent col-xs-12 col-md-6">
-      <mark>[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
-      <div class="headline">GODADDY PRODUCT</div>
-      <div class="product-name text-primary">LOREM IPSUM DOLOR SIT AMET</div>
-      <div class="subtitle">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
-      <div class="price">Starting at <span>[@T[productprice:<current productid="566281" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></div>
-      <button class="btn btn-md btn-primary">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
-      <div class="disclaimer">Disclaimer text is smaller and will take up this area</div>
+<style>
+  /* template layout styling */
+  .hero-right-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .left-container, .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .left-content { padding: 5% 15% 5% 0; }
+  .right-content { padding: 5% 0 5% 15%; }
+  .left-content > *, .right-content > * { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
+  .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
+  .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
+  mark { line-height: inherit; }
+  
+  /* content styling */
+  
+  /* APPROACH #1 */
+  /* apply classes to specify the font family/size/color */
+  /* allows for atomically creating a look/feel for each hero item */
+  /* color is covered by UXCore classes so we just need family/size classes here */
+  .font-lg { font-size: 2.25em; margin-top: .25em !important; margin-bottom: .25em !important; }
+  .font-md { font-size: 1.5em; margin-top: .25em !important; margin-bottom: .25em !important; }
+  .font-sm { font-size: 1em; margin-top: .25em !important; margin-bottom: .25em !important; }
+  
+  .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  
+  /* APPROACH #2 */
+  /* apply classes the group the whole 'look and feel' */
+  /* provides for easily making things consistent - there are only a few styles in the hero */
+  .product { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  
+  .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .price .text-purchase { font-size: 1.25em; }
+  
+  .btn { margin: 1em 0; }
+  .disclaimer { color: #333; font-size: 10px; position: absolute; bottom: 2em; }
+  
+</style>
+<style>
+</style>
+<div class="hero hero-right-arrow">
+  <div class="left-container">
+    <div class="left-content">
+      <div>logo</div>
+      <mark class="font-sm bold">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+      <p class="font-md black">GODADDY PRODUCT</p>
+      <h2 class="product">LOREM IPSUM DOLOR SIT AMET</h2>
+      <div>Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
+      <p class="price">Starting at <span>[@T[productprice:<current productid="566281" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="btn btn-md btn-primary">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</a>
+      <p class="disclaimer">Disclaimer text is smaller and will take up this area</p>
     </div>
-    <div class="rightContent col-xs-12 col-md-6">
+  </div>
+  <div class="right-container">
+    <div class="right-content">
       <div> </div>
     </div>
   </div>
