@@ -1532,6 +1532,16 @@ input[type=checkbox] + label{
             </div>
           </div>
         </div>
+        <% if (extraRow){ %> 
+          <div class="row">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead bold"><%= extraRowLeftText %></div>
+          </div>
+          <div class="col-xs-4">
+              <%= extraRowRightText %>
+          </div>
+        </div>
+       <% } %>
       </li>
       
     </script>
@@ -1573,6 +1583,7 @@ input[type=checkbox] + label{
           </div>
         </div>
       </li>
+      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>

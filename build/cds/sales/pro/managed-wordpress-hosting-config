@@ -724,7 +724,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
-        var srcIsPro = window.location.href.indexOf("pro") > -1
+        var srcIsPro = window.location.href.indexOf("pro") > -1;
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
@@ -1532,6 +1532,16 @@ input[type=checkbox] + label{
             </div>
           </div>
         </div>
+        <% if (extraRow){ %> 
+          <div class="row">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead bold"><%= extraRowLeftText %></div>
+          </div>
+          <div class="col-xs-4">
+              <%= extraRowRightText %>
+          </div>
+        </div>
+       <% } %>
       </li>
       
     </script>
@@ -1573,6 +1583,7 @@ input[type=checkbox] + label{
           </div>
         </div>
       </li>
+      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>
