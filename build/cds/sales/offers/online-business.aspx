@@ -1769,6 +1769,11 @@ $(window).load(function () {
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                     ##endif
                      
+                     
+                    ##if(countrySiteAny(ca))
+                     <br><br> 
+                    ##endif
+                     
                   </div>
                   <button data-ci="95741" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1788,6 +1793,12 @@ $(window).load(function () {
                     ##if(countrySiteAny(uk))
                      
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(ca))
+                     <br>[@L[cds.sales/_common:english-only]@L]
+                     
                     ##endif
                      
                   </div>
@@ -2834,6 +2845,10 @@ $(window).load(function () {
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                           ##endif
                            
+                          ##if(countrySiteAny(ca))
+                           <br><br> 
+                          ##endif
+                           
                         </p>
                       </div>
                       <div class="row">
@@ -2936,6 +2951,12 @@ $(window).load(function () {
                           ##if(countrySiteAny(uk))
                            
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                          ##endif
+                           
+                           
+                          ##if(countrySiteAny(ca))
+                           <br>[@L[cds.sales/_common:english-only]@L]
+                           
                           ##endif
                            
                         </p>
