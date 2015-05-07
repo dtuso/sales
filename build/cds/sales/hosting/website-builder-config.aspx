@@ -1670,8 +1670,7 @@ input[type=radio]:checked + label {
         var sslSelected = false;
         var gfSelected = false;
         var o365Available = false;
-        
-        
+        var gfAvailable = false;
         
         ##if(productIsOffered(104))
         gfAvailable = true;
