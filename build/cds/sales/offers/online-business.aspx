@@ -3018,8 +3018,16 @@ $(window).load(function () {
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]</h5>
                             </li>
-                            <li> 
-                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5>
+                            <li>
+                               
+                              ##if(countrySiteAny(in))
+                               
+                              <h5>[@L[cds.sales/offers/online-business:39341-godaddy-ols-bullet-8-in]@L]</h5> 
+                              ##else
+                               
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5> 
+                              ##endif
+                               
                             </li>
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]</h5>
