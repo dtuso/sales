@@ -1,0 +1,13 @@
+
+<style>
+  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
+  .banner-medium.basic { background: #fff; font-size: 1em; line-height: 1; }
+  .banner-medium.basic .title { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; margin-bottom: 0; margin-top: 0;text-transform: uppercase;font-size:1.25em; }
+  .banner-medium.basic .body { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; margin: .5em 0 42px 0; }
+  .banner-medium.basic .btn-purchase { position: absolute; bottom: .5em; }
+  
+</style>
+<div data-url="[@T[link:<external linktype="MYAURL" path="/default.aspx"><param name="accid" value="43" /><param name="ci" value="98075" /></external>]@T]" data-ci="98075" class="banner-medium basic office365-2">
+  <div class="title text-primary-o">You still have inactive Office 365 accounts </div>
+  <div class="body">Put them to work<br/>Activate O365 Email</div><a href="[@T[link:<external linktype="MYAURL" path="/default.aspx"><param name="accid" value="43" /><param name="ci" value="98075" /></external>]@T]" class="btn btn-sm btn-purchase">Start now</a>
+</div>
