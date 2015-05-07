@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/domains/discount-domains2/en
-name: mcx-38814
-comments: icannfee token
+name: MCX-36271
+comments: Removal of Cashparking from non en markets
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" />
@@ -30,6 +30,12 @@ FAQ
 Anyone can enjoy VIP savings on domain names and related services.
 <phrase key="PlanPricingMiscBannerText0" />
 Why wait for the next domain sale or email offer when you can save up to 60% every single day? Discount Domain Club gives the lowest domain prices on the Web with no minimum to buy. Plus, make the most of your domains with FREE <a href="[@T[link:<relative path="~/parking/domain-name-parking.aspx" />]@T]" target="_blank" data-ci="88317" class="simple-link">[@T[productline:<CashParking />]@T]<sup>&reg;</sup> Premium</a>, a free membership to <a href="[@T[link:<relative path="~/auctions/domain-auctions.aspx" />]@T]" target="_blank" data-ci="88318" class="simple-link">[@T[productline:<Auctions />]@T]<sup class="regimark"></sup></a> and more.
+<phrase key="PlanPricingMiscBannerText0_36271" comment="{0} will be replaced with Free stuff"/>
+Why wait for the next domain sale or email offer when you can save up to 60% every single day? Discount Domain Club gives the lowest domain prices on the Web with no minimum to buy. Plus, make the most of your domains with {0} 
+<phrase key="PlanPricingMiscBannerText0_free_membership_36271" comment="{0} will be replaced with free membership to Auctions"/>
+a free membership to {0}
+<phrase key="FREE_36271" />
+FREE
 <phrase key="PlanPricingContentRightTitle" />
 Discount Domain Club
 <phrase key="PlanPricingContentStartingAt" />
