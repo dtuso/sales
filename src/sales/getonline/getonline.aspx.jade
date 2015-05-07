@@ -7,7 +7,7 @@ append endOfPageScripts
   script.
     // update the form's submit URL based on the user's selections
     (function(){
-    var formOptions = {
+      var formOptions = {
       'next_page_mapping':{
         '96272':{'interest':'new_business', 'resource': 'build_myself', 'product':'wsb'},
         '96273':{'interest':'new_business', 'resource': 'know_someone', 'product':'host'},
@@ -29,7 +29,7 @@ append endOfPageScripts
         'pwd_store': '[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]',
         'host':      '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]'
       }
-    }
+     }
 
       $('#questions select#interest-select').change(function(e) {
         var thisValue = $(this).val();
@@ -184,7 +184,13 @@ block content
                 select#resources-select.form-control.non-wordpress(name="resource")
                   option(value="build_myself") [@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]
                   option(value="know_someone") [@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]
+                  | 
+                  |##if(activeLanguageAny([en-US])) 
+                  | 
                   option(value="hire_someone") [@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]
+                  | 
+                  |##endif
+                  | 
               button.btn.btn-purchase.btn-lg(type="submit") [@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]
       .resources-group-inactive(style={"display":"none"})
         select#resources-select.form-control.wordpress(name="resource")
