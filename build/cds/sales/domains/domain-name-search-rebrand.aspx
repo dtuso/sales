@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<external linktype='siteurl' path='/domains/domain-name-search.aspx' parammode='explicit'/>]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]</title>
     <meta name="description" content="[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/domains/domain-name-search:MetaKeywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/gd/domains/domain-name-search:MetaTitle]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/domains/domain-name-search:MetaDescription]@L]">
     <meta property="og:type" content="product">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[companyname:name]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -117,7 +121,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -226,7 +232,7 @@
         </div>
       </div>
     </section>
-    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/search/css/styles_rebrand_04012015.css" type="text/css" rel="stylesheet">
+    <link href="[@T[link:<cssroot />]@T]fos/sales/themes/scotty/domains/search/css/styles_rebrand_04242015.css" type="text/css" rel="stylesheet">
     <section id="top-pods">
       <atlantis:webstash type="css">
         <style>
@@ -1565,13 +1571,13 @@ top: -6px;
           <div class="row">
             <div class="col-md-6"><span class="col-tld-title">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle0Rebrand]@L] </span><span class="bg-warning">[@L[cds.sales/gd/domains/domain-name-search:WhyGoDaddyListTitle01]@L]</span>
               <ul>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGreen]@L]</span><a href="[@T[link:<relative path='/tlds/green'><param name='ci' value='97717' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotVideo]@L]</span><a href="[@T[link:<relative path='/tlds/video'><param name='ci' value='98036' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLegal]@L]</span><a href="[@T[link:<relative path='/tlds/legal'><param name='ci' value='97718' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotDesign]@L]</span><a href="[@T[link:<relative path='/tlds/design'><param name='ci' value='98035' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSite]@L]</span><a href="[@T[link:<relative path='/tlds/site'><param name='ci' value='97719' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGlobal]@L]</span><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='92814' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
               </ul>
             </div>
@@ -2353,10 +2359,10 @@ top: -6px;
             <div class="modal-body">
               <ul class="disclaimer-modal-list">
                 <li>[@L[cds.sales/domains/searchresults-new-limitations:icann-fee]@L]</li>
-                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]                        </li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem2]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem4]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem6]@L]</li>
-                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem7]@L]                          </li>
+                <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem7]@L]</li>
                 <li>[@L[cds.sales/gd/domains/domain-name-search:DisclaimerModalListItem9]@L]</li>
               </ul>
             </div>
@@ -2594,7 +2600,7 @@ ul li.no-check {
     </script>
     <script>
       $(window).load(function() {
-      
+        
         $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);

@@ -12,12 +12,13 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <meta name="robots" content="noindex, nofollow">
     <title>[@L[cds.sales/page:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/page:page-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/page:page-keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/page:page-openGraph-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/page:page-openGraph-description]@L]">
     <meta property="og:type" content="website">
@@ -26,6 +27,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -118,7 +122,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -153,7 +159,7 @@
                   <label for="search-input" class="sr-only">[@L[cds.sales/getonline:QuestionsLP-6-WhatSYourBusinessName]@L]</label>
                   <input id="search-input" type="text" autocomplete="off" placeholder="[@L[cds.sales/getonline:QuestionsLP-7-EnterYourBusinessNameOrIdea]@L]" name="domain" maxlength="63" aria-describedby="inputWarning2Status" class="form-control search-bar">
                 </div>
-                <p class="form-error">[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
+                <p class="form-error">[@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]</p>
               </fieldset>
             </div>
             <div class="col-sm-6">
@@ -335,7 +341,7 @@ ul li.no-check {
             var tldSpecified = $('#search-input').val().toLowerCase().split(".")[1] || "";
             
             if (tldSpecified && validTlds.indexOf(tldSpecified) === -1) {
-              $(".form-error").text("[@L[cds.sales/getonline:QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
+              $(".form-error").text("[@L[cds.sales/getonline:38470-QuestionsLP-10-OfferOnlyValidWithCOMCLUBCONET]@L]");
               $("fieldset.step-1 input").removeClass("search-bar");
               $("fieldset.step-1 .form-group").addClass("has-error");
               $(".form-error").show()

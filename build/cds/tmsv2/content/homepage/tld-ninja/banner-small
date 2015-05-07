@@ -1,0 +1,67 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]" data-ci='97559' class="banner-small tld-ninja">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-ninja/banner-small/ninja-logo.png" alt=""/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9Ijc5MyIgaGVpZ2h0PSIxODciIHZpZXdCb3g9Ii0wLjUgMjEyLjUgNzkzIDE4NyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMC41IDIxMi41IDc5MyAxODciIHhtbDpzcGFjZT0icHJlc2VydmUiPjxjaXJjbGUgZmlsbD0iIzQxNDI0MiIgY3g9IjE2IiBjeT0iMzU0IiByPSIxNiIvPjxwYXRoIGZpbGw9IiM0MTQyNDIiIGQ9Ik0xNTQuOCAzMzkuMWMtMC41IDEuNi01Ny42LTExNC4yLTU3LjYtMTE0LjJINzcuOUw0OC42IDM3MGgxOC43bDI0LjYtMTE1LjggNTYuNiAxMTUuOGgxOC4xbDI4LjgtMTQ1LjJoLTE1LjVDMTc5LjkgMjI0LjkgMTU1LjMgMzM3LjUgMTU0LjggMzM5LjF6TTM4OS42IDIyNC45YzAgMC0yNC41IDExMi4xLTI1LjEgMTE0LjIgLTAuNSAxLjYtNTcuNi0xMTQuMi01Ny42LTExNC4ySDI4Ny43bC0yOS40IDE0NS4yaDE4LjdsMjQuNi0xMTUuOCA1Ny4xIDExNS44aDE3LjZsMjguOC0xNDUuMkgzODkuNnoiLz48cG9seWdvbiBmaWxsPSIjNDE0MjQyIiBwb2ludHM9IjIwMy45IDM3MCAyMjAuNCAzNzAgMjUwLjMgMjI0LjkgMjM0LjMgMjI0LjkgIi8+PHBhdGggZmlsbD0iIzQxNDI0MiIgZD0iTTU0Ny42IDIyNC45bC04OS43IDE0NS4yaDIwLjNsMTkuNy0zMi42aDcybDUuMyAzMi42aDE3LjZsLTI1LjEtMTQ1LjJINTQ3LjZ6TTUwNy41IDMyMmw0Ny41LTc5IDEyLjggNzlINTA3LjV6TTQ1MS41IDIyNC45YzAgMC05LjEgNDkuNi0xNC45IDc3LjQgLTUuMyAyOC4zLTguNSA0Ny0xOS4yIDU4LjcgLTEwLjcgMTEuNy0zMy4xIDIzLjUtMzMuMSAyMy41bDYuNCAxNC45YzAgMCAxOS43LTUuOSAzOC40LTI3LjIgMTguNy0yMS4zIDE4LjEtMzYuMyAyNS42LTY4LjMgNi45LTMyIDE0LjktNzkgMTQuOS03OUg0NTEuNXpNNzA4LjIgMjEyLjZjLTQ2LjQgMC04My44IDM3LjQtODMuOCA4My44czM3LjQgODMuOCA4My44IDgzLjhTNzkyIDM0Mi44IDc5MiAyOTYuNCA3NTQuNiAyMTIuNiA3MDguMiAyMTIuNnpNNzU5LjQgMzM5LjZjLTEyLjgtMS42LTE3LjEtMjIuNC0zMS0yMi40IC01LjMgMC04IDAtMjcuMiAxMC43IC0xOS4yIDEwLjctMjcuOCAxMS4yLTM0LjcgMTAuMSAtNi45LTEuMS0yMi45LTkuNi0yMS45LTM5LjUgMS42LTI5LjkgMTguNy00MCAzMy4xLTQwIDIxLjkgMCAzNS44IDI2LjIgNTIuOCAyNy4yIDE5LjcgMS4xIDIwLjMtMTguNyAzNy45LTE4LjcgOS42IDAgMTQuOSAxOS43IDE0LjQgMzMuMUM3ODEuOSAzMTIuOSA3NzIuMyAzNDEuOCA3NTkuNCAzMzkuNnpNNzA0LjUgMjg3LjNjLTQuOC02LjktMTAuMS0xNy42LTIwLjMtMTkuMiAtNi40LTEuMS0xNC45IDIuMS0xOC43IDQuMyAwIDAgMTAuMSAxLjEgMTcuMSA4LjUgLTExLjcgMC41LTE2LjUgNC44LTE2LjUgNC44IDUuMyAwIDExLjcgMi4xIDE2IDQuMyAtMS42IDIuMS0yLjcgNC44LTIuNyA4IDAgNy41IDUuOSAxMi44IDEyLjggMTIuOCA1LjkgMCAxMC4xLTMuNyAxMi4zLTguNSAxLjYgMC41IDMuNyAxLjEgNC4zIDEuMSA1LjMgMC41IDEwLjctMS42IDEzLjktNC4zQzcxNS4xIDI5OS42IDcwOS44IDI5NC4zIDcwNC41IDI4Ny4zek02OTIuMiAzMDIuOGMtMi43IDAtNC44LTIuMS00LjgtNC44czIuMS00LjggNC44LTQuOCA0LjggMi4xIDQuOCA0LjhTNjk0LjkgMzAyLjggNjkyLjIgMzAyLjh6TTczMy4zIDI5OC41YzEuNiAxLjEgMy4yIDMuMiA1LjMgMy43IDMuMiAyLjEgNy41IDIuNyAxMy45IDIuNyAxLjYgMy43IDQuOCA1LjkgOS4xIDUuOSA1LjMgMCAxMC4xLTQuMyAxMC4xLTEwLjEgMC0yLjctMS4xLTQuOC0yLjctNi45IDEuNi0xLjYgNS4zLTMuNyA1LjMtMy43di0xMS4yYy02LjkgMC0xMy45IDUuOS0xOS4yIDExLjJDNzQ3LjcgMjk4IDczMy4zIDI5OC41IDczMy4zIDI5OC41ek03NjIuMSAyOTcuNWMyLjEgMCAzLjcgMS42IDMuNyAzLjcgMCAxLjYtMi4xIDMuNy0zLjcgMy43IC0yLjEgMC0zLjctMS42LTMuNy0zLjdDNzU4LjQgMjk5LjEgNzYwIDI5Ny41IDc2Mi4xIDI5Ny41eiIvPjwvc3ZnPg==" alt="" class="svgfallback"/>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/tld-ninja/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/ninja'><param name='ci' value='97559' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-ninja/banner-small:cta]@L] </a>
+</div>

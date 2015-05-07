@@ -12,10 +12,10 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/getonline:hosting-page-title]@L]</title>
     <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -767,7 +767,9 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -851,7 +853,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
                   <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange domain-eligibility-fail">[@L[cds.sales/getonline:eligibility-error]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                   <div style="display:none" data-tokenize="[@T[link:<external linktype="carturl" path="/basket.aspx" ><param name="ci" value="97048" /></external>]@T]" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange dup-domain-fail">[@L[cds.sales/getonline:domain-already-in-cart-checkout-or-search]@L]</div>
                 </div>
               </div>
@@ -883,7 +885,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>
@@ -960,7 +962,7 @@ function animateObjectInFromTheRight($obj, windowWidth, zIndex) {
               <div class="row domain-search-messaging-row">
                 <div class="col-xs-12 col-sm-12">
                   <div class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-yellow type-your-business-name">[@L[cds.sales/getonline:placeholder-message]@L]</div>
-                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:offer-only-valid]@L]</div>
+                  <div style="display:none" class="search-message headline-primary speech-shape-upsidedown speech-shape-upsidedown-orange invalid-TLD-entered">[@L[cds.sales/getonline:38470-offer-only-valid]@L]</div>
                 </div>
               </div>
             </form>

@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/website-builder.aspx' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/gd/hosting/website-builder:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/gd/hosting/website-builder:meta-description]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/hosting/website-builder:meta-keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/gd/hosting/website-builder:og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/hosting/website-builder:og-description]@L]">
     <meta property="og:type" content="website">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -117,7 +121,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -3112,7 +3118,7 @@ var PlanBox6UI = {
                   </div>
                 </div>
                 <div class="row">
-                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 ">
+                        <div data-begin="0" data-end="0" class="features-tabbed-carousel-icon col-md-2 0 col-md-offset-1">
                           <div data-ci="87767" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-facebook-box"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-facebook-title]@L]</div>
@@ -3140,12 +3146,6 @@ var PlanBox6UI = {
                           <div data-ci="87771" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
                             <div class="feature-carousel-icon"><span class="uxicon uxicon-paypal"></span></div>
                             <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-title]@L]</div>
-                          </div>
-                        </div>
-                        <div data-begin="5" data-end="5" class="features-tabbed-carousel-icon col-md-2 5 ">
-                          <div data-ci="87772" data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;.features-tabbed-carousel-icon&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}">
-                            <div class="feature-carousel-icon"><span class="uxicon uxicon-homefinder"></span></div>
-                            <div class="feature-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]</div>
                           </div>
                         </div>
                 </div>
@@ -3544,7 +3544,6 @@ top: -6px;
                     <li data-target="#carousel-social-media" data-slide-to="2" data-ci=""></li>
                     <li data-target="#carousel-social-media" data-slide-to="3" data-ci=""></li>
                     <li data-target="#carousel-social-media" data-slide-to="4" data-ci=""></li>
-                    <li data-target="#carousel-social-media" data-slide-to="5" data-ci=""></li>
                   </ol>
                   <div class="carousel-inner">
                           <div class="item">
@@ -3622,22 +3621,6 @@ top: -6px;
                                 <div class="row">
                                   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
                                     <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-paypal-desc]@L]</div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="item-wrapper text-center">
-                              <div data-icode="" data-ci="" class="carousel-panel container"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-imagery-homeFinder.png" data-lazyload-watch=".carousel-container " data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center"/>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <h2>[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-title]@L]<sup class="supsymbol">&reg;</sup></h2>
-                                  </div>
-                                </div>
-                                <div class="row">
-                                  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-                                    <div class="carousel-panel-text">[@L[cds.sales/gd/hosting/website-builder:apps-modal-homefinder-desc]@L]</div>
                                   </div>
                                 </div>
                               </div>
@@ -4937,7 +4920,7 @@ top: -6px;
             [@L[cds.sales/gd/hosting/website-builder:rb_disclaimers]@L] <a onClick="disclaimersModal()" data-ci="87766">[@L[cds.sales/gd/hosting/website-builder:rb_disclaimers_view]@L]</a>
           </p>
           <div id="disclaimersModal" data-title="[@L[cds.sales/gd/hosting/website-builder:disclaimer-modal-header]@L]" style="display:none">
-            <p>[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]</p>
+            <p data-icann-fee="">[@L[cds.sales/gd/hosting/website-builder:38337-restristions-apply-tooltip]@L]</p>
             <p>[@L[cds.sales/gd/hosting/website-builder:modal-disclaimer-5]@L]</p> 
             ##if(splitTestingSideIsActive(1349, B))
              
@@ -5662,7 +5645,7 @@ width: 50%;
     </script>
     <script>
       $(window).load(function() {
-      
+        
         $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);

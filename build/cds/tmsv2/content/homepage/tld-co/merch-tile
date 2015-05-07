@@ -1,19 +1,44 @@
 
-<atlantis:webstash type="css">
-  <style>
-    .co-tertiary-tile .tile-content-wrapper{padding:20px 15px;color:#333333}
-    .co-tertiary-tile .promo-logo{width:70%}
-    .co-tertiary-tile .promo-text{padding-top:10px;}
-    .co-tertiary-tile .promo-cta{position:absolute;bottom:5px}
-    .co-tertiary-tile a{text-decoration:underline;color:#f2812e}
-  </style>
-</atlantis:webstash>
-<div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="tile co-tertiary-tile">
-  <div class="tile-content-wrapper">
-    <div class="promo-logo-wrapper"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png" class="promo-logo"/>
-    </div>
-    <div class="promo-text walsheim-black">PERFECT FOR YOUR COMPANY, CORPORATION OR COMMUNITY.</div>
-    <div class="promo-cta"><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" class="walsheim-black">Starting at [@T[productprice:<current productid='56401' period='yearly' checktmspromocode='true' />]@T]/yr </a>
-    </div>
+<style>.banner-small {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .75em 0;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="banner-small banner-small-tld-co">
+  <div class="title text-primary-o"><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/tld-co.png"/>
   </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L] </a>
 </div>

@@ -1,8 +1,8 @@
 ---
 location: sales/tlds/gtld.aspx
-id: 551ad203f778fc1930ca2ead
-name: GCEMO-731
-comments: merchandising updates 4/1/2015
+id: 5539231ff778fc21ec5946d6
+name: MCXMO-864
+comments: merchandising updates 4/29/2015
 ---
 {% extends 'layouts/base.html' %}
 
@@ -29,11 +29,11 @@ comments: merchandising updates 4/1/2015
     }
 
     .bg-images > .bg-slide2 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-site.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-sale.jpg");
     }
 
     .bg-images > .bg-slide3 {
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-guru.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-rocks.jpg");
     }
     
     .bg-images > .bg-slide4 {
@@ -42,7 +42,7 @@ comments: merchandising updates 4/1/2015
       ##elseif(activeLanguageAny([en-US], [es-US]))
       background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-nyc.jpg");
       ##else
-      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-company.jpg");
+      background-image: url("[@T[link:<cssroot />]@T]fos/sales/themes/scotty/tlds/gtld/img/bg-main-banner-tech.jpg");
       ##endif
     }
 
@@ -106,16 +106,16 @@ comments: merchandising updates 4/1/2015
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-2">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.site</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlide2Site]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="97775" href="[@T[link:<relative path="~/tlds/site"/>]@T]">[@L[cds.sales/gd/tlds/gtld:PreRegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.sale</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideSale]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="97998" href="[@T[link:<relative path="~/tlds/sale"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-3">
                       <div class="carousel-inner-text-container carousel-inner-text-cointainer-gtld">
-                        <p class="domain no-margin-bottom"><strong>.guru</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideGuru]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="89138" href="[@T[link:<relative path="~/tlds/world"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.rocks</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextRocks]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="94265" href="[@T[link:<relative path="~/tlds/rocks"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                       </div>
                     </div>
                     <div class="item carousel-inner-item carousel-inner-item-gtld carousel-inner-item-gtld-4">
@@ -129,9 +129,9 @@ comments: merchandising updates 4/1/2015
                         <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTextNyc]@L]</p>
                         <p class="no-margin-bottom"><a class="underlined" data-ci="92204" href="[@T[link:<relative path="~/tlds/nyc"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##else
-                        <p class="domain no-margin-bottom"><strong>.company</strong></p>
-                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MarketingTagLineCompany]@L]</p>
-                        <p class="no-margin-bottom"><a class="underlined" data-ci="90067" href="[@T[link:<relative path="~/tlds/company"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
+                        <p class="domain no-margin-bottom"><strong>.tech</strong></p>
+                        <p class="no-margin-bottom">[@L[cds.sales/gd/tlds/gtld:MainBannerCarouselSlideTech]@L]</p>
+                        <p class="no-margin-bottom"><a class="underlined" data-ci="97999" href="[@T[link:<relative path="~/tlds/tech"/>]@T]">[@L[cds.sales/gd/tlds/gtld:RegisterNow]@L]</a></p>
                         ##endif
                       </div>
                     </div>
@@ -443,9 +443,7 @@ comments: merchandising updates 4/1/2015
         });
     }
     $(document).ready(function(){
-      $('.carousel').carousel({
-        interval: 7000
-      });
+
 
         var checkInterval = setInterval(function(){
         var $noButton = $('.noButton');

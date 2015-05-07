@@ -12,11 +12,12 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting.aspx' />]@T]">
-    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico">
     <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-page-desc]@L]">
-    <meta name="keywords" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-meta-Keywords]@L]">
+    <meta name="keywords" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-meta-Keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
     <meta property="og:title" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-title]@L]">
     <meta property="og:description" content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-og-description]@L]">
     <meta property="og:type" content="website">
@@ -25,6 +26,9 @@
     <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
     <meta property="fb:app_id" content="115696031791232">
     <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
     <script>
       window.ux = window.ux || {};
       window.ux.disable = {
@@ -117,7 +121,9 @@
     <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
     <script type="text/javascript">
       loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
       loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
       
     </script>
     <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
@@ -939,7 +945,7 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">&nbsp; </div>
+                <div class="plan-item">SFTP</div>
                 <div class="plan-item">&nbsp; </div>
                 <div class="plan-item">&nbsp; </div> 
                 ##if(productIsOffered(107))
@@ -980,8 +986,8 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"> </span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L] </div> 
                 ##if(productIsOffered(107))
                  
@@ -1021,8 +1027,8 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-6]@L] </div> 
                 ##if(productIsOffered(107))
                  
@@ -1070,8 +1076,8 @@
                   [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
                 </div>
                 <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='800000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L] </div>
-                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L]</div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]</div>
                 <div class="plan-item">&nbsp;  </div> 
                 ##if(productIsOffered(107))
                  
@@ -1132,13 +1138,6 @@
               ##if(areAdCreditsEnabled(bing))
                
               <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li> 
-              ##endif
-               
-               
-              ##if(areAdCreditsEnabled(facebook))
-               
-              <li><span data-tokenize="[@T[currencyprice:<price usdamount="5000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-facebook]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-facebook-ad]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
               ##endif
                
@@ -2924,7 +2923,7 @@ top: -6px;
         <div class="row">
           <div class="col-sm-4 col-sm-offset-1 col-xs-12">       <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_step-me-through-it_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive training-img"/>
             <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-title]@L]</h3>
-            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-desc]@L]</p>
+            <p>[@L[cds.sales/gd/hosting/wordpress-hosting:38465-training-item-1-desc]@L]</p>
             <p class="powered-by">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-training-item-1-note]@L]</p>
           </div>
           <div class="col-sm-4 col-sm-offset-2 col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_video-chat_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive training-img"/>
@@ -4318,7 +4317,7 @@ ul li.no-check {
             });
         
             while($this.outerHeight() > desiredHeight && numIterations++ < maxIterations) {
-              console.log($this.outerHeight(), desiredHeight);
+        
               // loop thru each selector and reduce each by percentDecrease
               $.each(classesArr, function(idx,classSelector){
                 var $thisItem = $this.find(classSelector),
@@ -4361,7 +4360,7 @@ ul li.no-check {
     </atlantis:webstash>
     <script>
       $(window).load(function() {
-      
+        
         $('[data-icann-fee]').each(function(){
           var tokenized = $(this).html().replace('{icannfee}', '[@T[domains:<icannfee/>]@T]');
           $(this).html(tokenized);

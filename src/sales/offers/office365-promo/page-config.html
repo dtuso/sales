@@ -1,8 +1,8 @@
 ---
 location: sales/offers/office365-promo-config.aspx
 id: 
-name: GCE-33745
-comments: POB for sage
+name: GCE-38839
+comments: JS issue found on POB config page
 url: http://www.dev-godaddy.com/offers/office365-promo-config.aspx
 metaCanonicalPath:  /offers/office365-promo-config.aspx
 assetPath: false
@@ -40,6 +40,7 @@ assetPath: false
   <![endif]-->
 
   <script src="[@T[link:<javascriptroot />]@T]fos/201401/global/vendor/jquery/1.8.3/jquery.min.js"></script>
+  <script src="[@T[link:<javascriptroot />]@T]fos/office365/js/modal-fix.js"></script>
 
 {% include './_shared-setup.html' %}
 
@@ -71,6 +72,18 @@ assetPath: false
     #disclaimerModal .modal-dialog {width:700px;}
     #disclaimerModal .modal-dialog p {margin-bottom:15px;font-size:16px;line-height:1.4em;}
     #disclaimerModal .modal-title {font-size:24px}
+    .universal-modal-wrap a.universal-modal-close {
+      background-color: #fff;
+      border-left: 5px solid #fff;
+      color: #333;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 0 5px 4px;
+      position: absolute;
+      right: 16px;
+      top: 20px;
+      z-index: 999999;
+    }
 
   {% endless %}
   </style>
@@ -703,17 +716,23 @@ assetPath: false
         }
         $(".btn.js-addtocart").addClass("btn-orange-disabled square-pixel-spinner");
 
-      var sageIsc = getParameterByName("isc");
-      var packageId = got2Page.packageId;
-      if(sageIsc != undefined && (sageIsc === "sageonea") || (sageIsc === "sageoneb") || (sageIsc === "sageonec"))
-      {
-          packageId = got2Page.sagePackageId;
-      }
+        got2Page.ciCode = $(thisClick).data('ci');
+        got2Page.iscCode = getParameterByName("isc");
+
+        if(!got2Page.canOfferGetPaid) {
+          got2Page.packageId = got2Page.noGetPaidPackageId;
+        }
+        
+        if(got2Page.iscCode != undefined && (got2Page.iscCode === "sageonea") || (got2Page.iscCode === "sageoneb") || (got2Page.iscCode === "sageonec"))
+        {
+            got2Page.packageId = got2Page.sagePackageId;
+        }
+
         // add Got2 to the cart  
         var urlFragment = '/' + got2Page.itcCode; //itc code
-        urlFragment += '/' + $(thisClick).data('ci'); //ci code
+        urlFragment += '/' + got2Page.ciCode; //ci code
         urlFragment += '/' + office365config.productOrder.productQty;  // quantity
-        urlFragment    += '/' + packageId  //Plan Name (aka Package Id)
+        urlFragment    += '/' + got2Page.packageId;  //Plan Name (aka Package Id)
         var url = got2Page.apiUrl.update.replace('{0}', urlFragment);
 
         url += ((url.indexOf('?') > -1) ? '&' : '?') + 'domain=' + office365config.productOrder.domain + '&sourceCode=domaincheck';

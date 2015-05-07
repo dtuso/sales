@@ -1,24 +1,24 @@
 
 <atlantis:webstash type="css">
   <style>
-    #marquee .hero-wrapper>div, .hero, .heroContent {min-height:inherit}
+    #marquee .hero-wrapper>div, .hero, .heroContentWrapper {min-height:inherit}
     #marquee #marqueeImage {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover; height:175px}
     @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover;}}
-    #marquee .heroContent { padding-top:3%;}
-    #marquee .heroContent>* {margin-left: 17%;}
-    .hero {background-color:#DEDEDE; margin-left:-10%;}
+    #marquee .heroContentWrapper {margin-left: 14%;margin-right:14%; position:relative}
+    #marquee .heroContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%)}
+    .hero {background-color:#DEDEDE; margin-left:-60px}
     .Explorer8 #marquee .hero.polygon{background:url() no-repeat;}
     .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat;}
+    .Explorer8 #marquee .heroContent{position:relative;}
+    .Explorer8 #marquee .heroContentWrapper{padding:3% 0 0 7%; margin:0}
   </style>
   <style>@media only screen and (min-width: 768px) {
-  .hero.polygon {
+  #marquee .hero.polygon {
     background-color: transparent;
     background: url();
-    background-size: contain;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-  }
-  .hero.polygon .heroContent {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -118,11 +118,13 @@ and (min-width : 768px)and (max-width : 992px) .Safari #marquee {
 </atlantis:webstash>
 <div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="gem hero polygon">
   <div id="marqueeImage" class="col-xs-12 visible-xs"></div>
-  <div class="heroContent">
-    <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
-    <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
-    <div class="product-name walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]</div>
-    <div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
-    <button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
+  <div class="heroContentWrapper">
+    <div class="heroContent">
+      <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:headlineText]@L]</div>
+      <mark class="walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+      <div class="product-name walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:productNameText]@L]</div>
+      <div class="price walsheim-black">[@L[cds.tmsv2/content/homepage/gem/hero:priceText]@L]</div>
+      <button class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</button>
+    </div>
   </div>
 </div>

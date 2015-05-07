@@ -1,0 +1,67 @@
+
+<style>.banner-small {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.banner-small img {
+  float: left;
+  height: 2em;
+  max-width: 100%;
+  padding-right: 10px;
+}
+.banner-small .title {
+  height: 2em;
+  font-size: 24px;
+  letter-spacing: -1px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  line-height: .9;
+}
+.banner-small .title span {
+  display: table;
+  height: 100%;
+}
+.banner-small .title span span {
+  display: table-cell;
+  vertical-align: middle;
+}
+.banner-small .body {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  margin: .5em 0 2.5em 0;
+  line-height: 1.2;
+}
+.banner-small a {
+  color: #ef6c0f;
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  position: absolute;
+  bottom: 5px;
+}
+@media only screen and (max-width: 550px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .banner-small .title img {
+    display: none;
+  }
+  .banner-small .title img[alt=""] {
+    display: block;
+  }
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]" data-ci='97979' class="banner-small sitelock">
+  <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/sitelock/banner-small/sitelock-icon.png" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMjggMzUiPjxwYXRoIGQ9Ik0wIDM1TDAgOC41QzAgOC41IDMuNSA4LjUgMy41IDguNSA0LjUgMy43IDguNyAwIDEzLjggMCAxOC45IDAgMjMuMiAzLjcgMjQuMiA4LjUgMjQuMiA4LjUgMjggOC41IDI4IDguNUwyOCAzNSAwIDM1ek00LjUgMTMuMUw0LjUgMzAuNCAyMy41IDMwLjQgMjMuNSAxNi41IDE0IDI4LjcgNi40IDIyLjUgOS40IDE4LjcgMTMuNyAyMi43IDIwLjcgMTMuMSA0LjUgMTMuMXpNMTMuOCA0LjRDMTEuMiA0LjQgOC45IDYuMSA4LjEgOC40IDguMSA4LjQgMTkuNiA4LjQgMTkuNiA4LjQgMTguNyA2LjEgMTYuNSA0LjQgMTMuOCA0LjR6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]" class="svgfallback"/><span><span>[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]</span></span>
+  </div>
+  <div class="body">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:body]@L]</div><a href="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:cta]@L] </a>
+</div>

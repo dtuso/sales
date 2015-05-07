@@ -1,82 +1,107 @@
 
 <atlantis:webstash type="css">
-  <style>
-    .got-tile{background-position:0 -485px;}
-    .got-tile-products>ul,.got-tile-symbols>ul{list-style:none;}
-    .got-tile-products>ul{margin:0 10px 0 175px;font-size:28px;font-family:'Walsheim-Black'}
-    html[lang|="el"] .got-tile-products>ul{font-family:Arial, Sans-serif;font-weight:700;}
-    .got-tile-products>ul>li{padding:55px 10px 20px 10px;}
-    .got-tile-products>ul>li>span{font-size:18px;display:inline;margin-left:20px;font-family:'Walsheim-Regular';}
-    html[lang|="el"] .got-tile-products>ul>li>span{font-family:Arial, Sans-serif;}
-    .got-tile-symbols{float:left;position:relative;font-family:'Walsheim-Black'}
-    html[lang|="el"] .got-tile-symbols{font-family:Arial, Sans-serif;font-weight:700;}
-    .got-tile-symbols>ul{font-size:56px;margin:110px 0 0 10px}
-    .got-tile-symbols>ul>li{padding:30px 10px 10px 10px;}
-    .got-tile>.atn-btn-wrap{margin-left:20px}
-    .got-tile>.atn-btn-wrap>span{font-size:36px;line-height:36px;margin:10px 20px 0 0;text-transform:uppercase;text-align:center;width:225px;}
-    .got-tile>.atn-btn-wrap>span>span.got-tile-price{font-size:52px;margin-bottom:5px;color:#ff8a00;}
-    .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{margin:0 auto;color:#ff8a00;max-width:200px;padding:15px 0 0 0;}
-    .got-tile>.atn-btn-wrap>.btn-top-img{font-size:24px;color:#fff;background-color:#f5811f;border-bottom:4px solid #b25e18;padding:14px 12px;box-sizing:border-box;height:61px;width:160px;margin:-5px 10px 0 20px;}
-    .got-tile>.atn-btn-wrap>.btn-top-img:hover{background-color:#ff9b39}
-    .got-restriction-text{float:right;text-align:center;margin-top:5px;position:relative;left:-40px;font-size:12px;font-family:'Walsheim-Medium'}
-    html[lang|="el"] .got-restriction-text{font-family:Arial, Sans-serif;}
-    .bigtext{visibility:hidden;}
-    span.got-tile-price{font-family:'Walsheim-Bold'}
-    html[lang|="el"] span.got-tile-price{font-family:Arial, Sans-serif;font-weight:700;}
-    html[lang|="de"] .got-tile-products>ul,html[lang|="sv"] .got-tile-products>ul{font-size:22px;}
-    html[lang|="de"] .got-tile-products>ul>li{padding: 55px 10px 25px 10px;}
-    html[lang|="de"] .got-tile>.atn-btn-wrap>span{width:150px;margin-top:20px;}
-    html[lang|="de"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:16px;margin:10px 10px 0 30px;padding:18px 8px;}
-    html[lang|="es"] .got-tile-products>ul,html[lang|="fr"] .got-tile-products>ul,html[lang|="it"] .got-tile-products>ul{font-size:24px;}
-    html[lang|="es"] .got-tile>.atn-btn-wrap>span{width:150px;margin:0 20px 0 25px}
-    html[lang|="es-US"] .got-tile>.atn-btn-wrap>span{margin:0 20px 0 0}
-    html[lang|="es"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:14px;margin:-10px 10px 0 60px;padding:18px 8px;height:59px;}
-    html[lang|="es"] .got-restriction-text{margin-top:0px;}
-    html[lang|="fr"] .got-tile-products>ul>li{padding: 45px 10px 25px 10px;}
-    html[lang|="fr"] .got-tile>.atn-btn-wrap>span{width:150px;margin-left:30px}
-    html[lang|="fr"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:16px;margin:10px 10px 0 45px;padding:18px 8px;}
-    html[lang|="it"] .got-tile-products>ul>li{padding: 50px 10px 20px 10px;}
-    html[lang|="it"] .got-tile>.atn-btn-wrap>span{width:150px;margin-left:30px}
-    html[lang|="it"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:16px;margin:10px 10px 0 45px;padding:18px 8px;width:initial;}
-    html[lang|="nb"] .got-tile>.atn-btn-wrap>span>span.got-tile-price{margin-bottom: 10px;}
-    html[lang|="pt-BR"] .got-tile>.atn-btn-wrap>span{width:165px;}
-    html[lang|="pt-BR"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:16px;margin:10px 10px 0 65px;padding:18px 8px;}
-    html[lang|="uk"] .got-tile-products>ul,html[lang|="ru"] .got-tile-products>ul{font-size:21px;}
-    html[lang|="uk"] .got-tile-products>ul>li:nth-child(2),html[lang|="uk"] .got-tile-products>ul>li:nth-child(3),html[lang|="ru"] .got-tile-products>ul>li:nth-child(2){width:200px;}
-    html[lang|="uk"] .got-tile-products>ul>li:nth-child(3){padding-top:35px;}
-    html[lang|="uk"] .got-tile>.atn-btn-wrap>.btn-top-img,html[lang|="tr"] .got-tile>.atn-btn-wrap>.btn-top-img{padding-top:20px;font-size:16px;}
-    html[lang|="uk"] .got-restriction-text{left:-20px;}
-    html[lang|="uk"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext,html[lang|="el"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext,html[lang|="ru"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{font-size:36px !important;}
-    html[lang|="tr"] .got-tile-products>ul>li:nth-child(2){line-height:30px;padding-top:45px;padding-bottom:5px;}
-    html[lang|="da"] .got-tile-products>ul,html[lang|="el"] .got-tile-products>ul{font-size:25px;}
-    html[lang|="da"] .got-tile-products>ul>li{padding-top:60px;}
-    html[lang|="el"] .got-tile-products>ul>li:nth-child(2){padding-top:45px;padding-bottom:5px;}
-    html[lang|="el"] .got-tile-products>ul>li:nth-child(3){padding-bottom:30px;}
-    html[lang|="fi"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:20px;height:57px;}
-    html[lang|="el"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:19px;}
-    html[lang|="sv"] .got-tile-products>ul>li:nth-child(2){padding-top:60px;}
-    html[lang|="sv"] .got-tile-products>ul>li:nth-child(3){padding-top:65px;padding-bottom:35px;}
-    html[lang|="tr"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{font-size:55px !important;}
-    html[lang|="fi"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{font-size:30px !important;}
-    html[lang|="pt-pt"] .got-tile>.atn-btn-wrap>span>span.got-tile-pricetext{font-size:45px !important;}
-    html[lang|="sv"] .got-tile>.atn-btn-wrap>.btn-top-img,html[lang|="pt-pt"] .got-tile>.atn-btn-wrap>.btn-top-img,html[lang|="ru"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size: 17px;height:55px;}
-    html[lang|="pt-pt"] .got-tile-products>ul>li:nth-child(3){padding-bottom: 35px;}
-    html[lang|="pt-pt"] .got-tile-products>ul>li{font-size: 20px;}
-    html[lang|="ru"] .got-tile-products>ul>li:nth-child(3){width:300px;}
-    html[lang|="pl"] .got-tile>.atn-btn-wrap>.btn-top-img{font-size:22px;}
-    
+  <style>.got-tile {
+  background-position: 0 -485px;
+  position: relative;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  overflow: hidden;
+}
+.got-tile .content-wrapper {
+  padding: 23px;
+}
+.got-tile #addition-wrapper {
+  font-size: 56px;
+  width: 33%;
+  margin-top: 115px;
+  display: inline-block;
+}
+.got-tile #addition-wrapper .addition {
+  height: 96px;
+  margin-bottom: 20px;
+  line-height: 0;
+  padding: 48px 0;
+  height: 0;
+}
+.got-tile #products {
+  width: 66%;
+  float: right;
+  display: inline-block;
+  font-size: 24px;
+}
+.got-tile #products .product {
+  height: 96px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.got-tile #products .product .text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  line-height: 0.9;
+}
+.got-tile .price-text {
+  position: absolute;
+  bottom: 23px;
+  left: 23px;
+  width: 45%;
+  color: #ff8a00;
+  line-height: 1.1;
+  text-align: center;
+}
+.got-tile .price-text .price {
+  font-size: 40px;
+  line-height: 0.9;
+}
+.got-tile .price-text .text {
+  font-size: 30px;
+}
+.got-tile .cta {
+  position: absolute;
+  bottom: 23px;
+  right: 23px;
+  width: 45%;
+}
+.got-tile .cta a {
+  max-width: 80%;
+  white-space: normal;
+}
+.got-tile .cta .disclaimer {
+  color: #333;
+  font-size: 10px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+html[lang|="el"] .got-tile {
+  font-family: Arial, Sans-serif;
+  font-weight: 700;
+}
+
   </style>
 </atlantis:webstash>
-<div id="gdhp-gottile" data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='93295' /></relative>]@T]" data-ci="93295" class="gdhp-tile got-tile tile-sprite js-gdhpclick"><span class="got-tile-symbols">
-    <ul>
-      <li class="b">+</li>
-      <li class="b">+</li>
-    </ul></span><span class="got-tile-products">
-    <ul>
-      <li class="b">[@L[cds.sales/homepage/tile/got:got-tile-domain]@L]</li>
-      <li class="b">[@L[cds.sales/homepage/tile/got:got-tile-wsb]@L]</li>
-      <li class="b">[@L[cds.sales/homepage/tile/got:got-tile-email]@L]<span>[@L[cds.sales/homepage/tile/got:got-marq-o365]@L]</span></li>
-    </ul></span>
-  <div class="atn-btn-wrap"><span class="tungsten bigtext"><span class="b got-tile-price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]</span><span class="got-tile-pricetext">[@L[cds.sales/homepage/tile/got:got-per-month]@L]</span></span><a id="gdhp-gottile-btn" href="javascript:void(0)" data-ci="93295" class="btn btn-top-img">[@L[cds.sales/homepage/tile/got:got-get-it-now]@L]</a></div>
-  <div class="got-restriction-text">[@L[cds.sales/homepage/tile/got:got-rest-text-new]@L]</div>
+<div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='93295' /></relative>]@T]" data-ci="93295" class="gdhp-tile got-tile tile-sprite js-gdhpclick">
+  <div class="content-wrapper">
+    <div id="addition-wrapper">
+      <div class="addition">+</div>
+      <div class="addition">+</div>
+    </div>
+    <div id="products">
+      <div class="product">
+        <div class="text">[@L[cds.sales/homepage/tile/got:got-tile-domain]@L]</div>
+      </div>
+      <div class="product">
+        <div class="text">[@L[cds.sales/homepage/tile/got:got-tile-wsb]@L]</div>
+      </div>
+      <div class="product">
+        <div class="text">[@L[cds.sales/homepage/tile/got:got-tile-email]@L]</div>
+      </div>
+    </div>
+    <div class="price-text">
+      <div class="price">[@T[multipleproductprice:<current productidlist="464069|101|7524" period="monthly" promocode="24681357" />]@T]</div>
+      <div class="text">[@L[cds.sales/homepage/tile/got:got-per-month]@L]</div>
+    </div>
+    <div class="cta"><a id="gdhp-gottile-btn" href="javascript:void(0)" data-ci="93295" class="btn btn-warning">[@L[cds.sales/homepage/tile/got:got-get-it-now]@L]</a>
+      <div class="disclaimer">[@L[cds.sales/homepage/tile/got:got-rest-text-new]@L]</div>
+    </div>
+  </div>
 </div>

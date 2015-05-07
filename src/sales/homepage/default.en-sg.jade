@@ -1,10 +1,14 @@
 extends ../../layouts/homepage/default_base
 
 block marquee
-  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/web-hosting/default_template" /> ]@P]
+  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gtld/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |  ##endif
 
 block bugBar
-  +tldBugs(["com","club","asia","org","rocks"])
+  +tldBugs(["com","club","asia","org"])
 
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting.jade
