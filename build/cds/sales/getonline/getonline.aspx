@@ -179,8 +179,12 @@
                   <label for="resources-select">[@L[cds.sales/getonline:QuestionsLP-7-IHaveTheResourcesAndTimeTo]@L]</label>
                   <select id="resources-select" name="resource" class="form-control non-wordpress">
                     <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
-                    <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option>
-                    <option value="hire_someone">[@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]</option>
+                    <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option> 
+                    ##if(productIsOffered(54) && productIsOffered(75)) 
+                     
+                    <option value="hire_someone">[@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]</option> 
+                    ##endif
+                     
                   </select>
                 </div>
                 <button type="submit" class="btn btn-purchase btn-lg">[@L[cds.sales/getonline:QuestionsLP-6-GetMeUpAndRunning]@L]</button>
@@ -288,7 +292,7 @@ ul li.no-check {
     <script>
       // update the form's submit URL based on the user's selections
       (function(){
-      var formOptions = {
+        var formOptions = {
         'next_page_mapping':{
           '96272':{'interest':'new_business', 'resource': 'build_myself', 'product':'wsb'},
           '96273':{'interest':'new_business', 'resource': 'know_someone', 'product':'host'},
@@ -310,7 +314,7 @@ ul li.no-check {
           'pwd_store': '[@T[link:<relative path="~/getonline/pro-ecomm.aspx"></relative>]@T]',
           'host':      '[@T[link:<relative path="~/getonline/web-hosting.aspx"></relative>]@T]'
         }
-      }
+       }
       
         $('#questions select#interest-select').change(function(e) {
           var thisValue = $(this).val();
