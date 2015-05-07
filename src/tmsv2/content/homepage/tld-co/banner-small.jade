@@ -5,16 +5,7 @@ block append vars
   - containerClass = "tld-co";
   - logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MyIgaGVpZ2h0PSI2MTIiIHZpZXdCb3g9IjU0LjUgMCA2ODMgNjEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDU0LjUgMCA2ODMgNjEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBkaXNwbGF5PSJub25lIi8+PGcgZGlzcGxheT0ibm9uZSI+PGcgZGlzcGxheT0iaW5saW5lIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNNDc0LjcgNDUyLjlMNTUgNTcuN2wxMi4yIDU0Ny4zTDc2My4yIDU2Ni41bDM1LTM3OS40TDQ3NC43IDQ1Mi45ek03ODUuOSAxNDEuNkw3OS41IDBsNDAwLjQgNDIzLjJMNzg1LjkgMTQxLjZ6Ii8+PC9nPjwvZz48cGF0aCBmaWxsPSIjRkY2RTAwIiBkPSJNNTEzLjIgMzk2LjljLTMzLjIgMC01OS41IDI2LjItNTkuNSA1OS41czI2LjIgNTkuNSA1OS41IDU5LjUgNTkuNS0yNi4yIDU5LjUtNTkuNVM1NDYuNCAzOTYuOSA1MTMuMiAzOTYuOXpNNjYzLjUgMTEwLjJjLTIxLTIxLTg5LjItODkuMi05Ny45LTk3LjlDNTUzLjQgMS43IDU0OS45IDAgNTM1LjkgMEg5MS43Yy0yMSAwLTM2LjcgMTUuNy0zNi43IDM2Ljd2NTQwLjNjMCAxOS4yIDE1LjcgMzUgMzYuNyAzNWg1NDAuM2MxOS4yIDAgMzYuNy0xNS43IDM2LjctMzYuN1YxMjQuMUM2NjguOCAxMTUuNCA2NjcgMTEzLjcgNjYzLjUgMTEwLjJ6TTEyMS41IDU1Ny44Yy0xNCAwLTI2LjItMTIuMi0yNi4yLTI2LjIgMC0xNCAxMi4yLTI2LjIgMjYuMi0yNi4yIDE0IDAgMjYuMiAxMi4yIDI2LjIgMjYuMkMxNDcuNyA1NDUuNiAxMzUuNSA1NTcuOCAxMjEuNSA1NTcuOHpNMjc1LjMgNTE1LjhjMjEgMCAzOC41LTEwLjUgNDktMjYuMiAxLjctMS43IDUuMi03IDguNy04LjcgMTQtOC43IDM1LTguNyA1NC4yLTEwLjUgLTcgNTYtNTQuMiA5Ny45LTExMS45IDk3LjkgLTYyLjkgMC0xMTMuNy01MC43LTExMy43LTExMy43UzIxMi40IDM0MSAyNzUuMyAzNDFjNTYgMCAxMDMuMiA0My43IDExMS45IDk3LjkgLTE5LjIgMS43LTQwLjIgMS43LTU0LjItNyAtMS43LTEuNy03LTUuMi04LjctOC43IC0xMC41LTE1LjctMjgtMjYuMi00OS0yNi4yIC0zMy4yIDAtNTkuNSAyNi4yLTU5LjUgNTkuNVMyNDIuMSA1MTUuOCAyNzUuMyA1MTUuOHpNNTEzLjIgNTcwYy02Mi45IDAtMTEzLjctNTAuNy0xMTMuNy0xMTMuN1M0NTAuMiAzNDIuNyA1MTMuMiAzNDIuN3MxMTMuNyA1MC43IDExMy43IDExMy43UzU3Ni4xIDU3MCA1MTMuMiA1NzB6Ii8+PHBhdGggZmlsbD0iI0ZGNkUwMCIgZD0iTTY5Ni44IDYxMnYtMjFoLTd2LTMuNWgyMXYzLjVoLTdWNjEySDY5Ni44ek03MTIuNSA2MTJ2LTI2LjJoN2w1LjIgMTcuNSA1LjItMTcuNWg3VjYxMmgtNS4ydi0xOS4yTDcyNi41IDYxMmgtNS4ybC01LjItMTkuMlY2MTJINzEyLjV6Ii8+PC9zdmc+";
   - logoImageFallback = "[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-co/banner-small/co-logo.png";
-  - titleText = "";
+  - titleText = "[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]";
   - bodyText = "[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]";
   - ctaText = "[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L]";
   - ctaLink = "[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]";
-
-  block scripts
-  script.
-    $(document).ready(function(){
-    var langCulture = $("html").attr("lang");
-    $coBody=$(".tld-co .body");
-    if(langCulture=="en-US")
-      $coBody.html('PERFECT FOR YOUR <span class="text-primary">CO</span>MPANY, <span class="text-primary">CO</span>RPORATION OR <span class="text-primary">CO</span>MMUNITY.');
-      });
