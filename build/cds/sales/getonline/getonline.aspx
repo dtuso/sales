@@ -180,7 +180,7 @@
                   <select id="resources-select" name="resource" class="form-control non-wordpress">
                     <option value="build_myself">[@L[cds.sales/getonline:QuestionsLP-8-BuildItMyselfIfItSEasy]@L]</option>
                     <option value="know_someone">[@L[cds.sales/getonline:QuestionsLP-13-IHaveAGuyWhoKnowsHowTo]@L]</option> 
-                    ##if(activeLanguageAny([en-US])) 
+                    ##if(productIsOffered(54) && productIsOffered(75)) 
                      
                     <option value="hire_someone">[@L[cds.sales/getonline:QuestionsLP-11-HireSomeoneToDoItAllForMe]@L]</option> 
                     ##endif
