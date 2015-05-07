@@ -1,3 +1,23 @@
+extends ../_hero-simple.jade
+
+block leftContent
+  mark.font-sm.bold Introducing
+  h2.font-sm.bold GoDaddy Product
+  p.font-lg.black.text-primary-o Lorem Ipsum Dolor Sit Amet
+  p Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+  p.price Starting at <span class="text-purchase">$1.00/MO</span>
+  a.btn.btn-md.btn-primary Call to Action
+  p.disclaimer Disclaimer text is smaller and will take up this area.
+
+block rightContent
+  mark.font-sm.bold Introducing
+  h2.product GoDaddy Product
+  p.big-green Lorem Ipsum Dolor Sit Amet
+  p Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+  p.price Starting at <span class="text-purchase">$1.00/MO</span>
+  a.btn.btn-md.btn-primary Call to Action
+  p.disclaimer Disclaimer text is smaller and will take up this area.
+
 style
   :less
     #marquee{background-color:#f3f3f3}

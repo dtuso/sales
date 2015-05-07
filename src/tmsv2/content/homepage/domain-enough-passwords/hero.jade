@@ -1,28 +1,19 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "95853";
-  - rightArrow.ctaLink = "[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
-  - rightArrow.classes += " domain-enough-passwords";
-block append rightArrowStyles
-  style
-    :less
-      .hero.right-arrow.domain-enough-passwords{
-        .rightContent {
-          .line3{font-size:65%; padding:2% 0}
-        }
-      }
 block leftContent
-  .bigtext
-    .line1.walsheim-black TRANSFER
-    .line2.tungsten YOUR DOMAIN TO US.
-    .line3.walsheim-black YOU HAVE ENOUGH PASSWORDS
-    .line4.tungsten 
-      span.dash ——————————— 
-      span TO REMEMBER
+  mark.font-sm.bold Introducing
+  h2.font-sm.bold GoDaddy Product
+  p.font-lg.black.text-primary-o Lorem Ipsum Dolor Sit Amet
+  p Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+  p.price Starting at <span class="text-purchase">$1.00/MO</span>
+  a.btn.btn-md.btn-primary Call to Action
+  p.disclaimer Disclaimer text is smaller and will take up this area.
+
 block rightContent
-  .bigtext
-    .line1.price.walsheim-black FREE
-    .line2.tungsten 1-YEAR EXTENSION
-  button.btn.btn-lg.btn-purchase GET STARTED
-  .line3 *Exclusions apply
+  mark.font-sm.bold Introducing
+  h2.product GoDaddy Product
+  p.big-green Lorem Ipsum Dolor Sit Amet
+  p Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+  p.price Starting at <span class="text-purchase">$1.00/MO</span>
+  a.btn.btn-md.btn-primary Call to Action
+  p.disclaimer Disclaimer text is smaller and will take up this area.
