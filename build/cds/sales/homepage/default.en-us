@@ -1658,7 +1658,6 @@ ul li.no-check {
 #domain-name-input {
   text-transform: inherit;
 }
-.price,
 .icann-disclaimer,
 .promo-cta > a {
   color: #ef6c0f;
