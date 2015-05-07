@@ -6,6 +6,7 @@
   padding: 10px;
   font-size: 13px;
   cursor: default;
+  position: relative;
 }
 @media only screen and (min-width: 480px) {
   .testimonial.merch-tile {
@@ -27,15 +28,27 @@
     font-size: 16px;
   }
 }
-.testimonial.merch-tile .testimony {
-  color: #77C043;
-  font-size: 1.25em;
-  margin-bottom: 10px;
+.testimonial.merch-tile .tile-content-wrapper {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-.testimonial.merch-tile .customer {
-  text-transform: uppercase;
+.testimonial.merch-tile .tile-content-wrapper .testimony {
+  margin-bottom: 10px;
+  font-size: 1.25em;
   color: #fff;
+  line-height: 1.2;
+}
+.testimonial.merch-tile .tile-content-wrapper .customer {
+  text-transform: uppercase;
   font-size: 1em;
+  color: #77C043;
+}
+.Explorer8 .testimonial.merch-tile .tile-content-wrapper {
+  position: relative;
+  top: 0;
 }
 
   </style>
@@ -43,6 +56,6 @@
 <div class="tile testimonial merch-tile ">
   <div class="tile-content-wrapper">
     <div class="testimony">"There's a reason why GoDaddy is the number one registrar in the world."</div>
-    <div class="customer">Mr. Atul Chaundhari, Impace Systems</div>
+    <div class="customer">Mr. Atul Chaudhari, Impace Systems</div>
   </div>
 </div>
