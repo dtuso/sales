@@ -5459,7 +5459,6 @@ h2.api-error-header {
 
 .btn, .word-break {
   word-wrap: break-word;
-  word-break: break-all;
 }
 section {
   padding: 0px!important;
