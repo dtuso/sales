@@ -1,12 +1,14 @@
 ---
-id:  5502229bf778fc12bce6e284
-name: GCE-35561
+id: false
+name: MCX-39123
 comments: Managed WordPress Hosting rebrand
 location: localization/sales/gd/hosting/wordpress-hosting/en-us
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="35561-marquee-product-desc" comment="" />
 WordPress hosting for creators, not <br/> <span class="dash">----</span> administrators
+<phrase key="39123-marquee-product-desc" comment="" />
+WordPress hosting made simple<br/> <span class="dash">----</span> and blazing fast
 <phrase key="35561-never-loose-title" comment="" />
 We've got your back(up)
 <phrase key="35561-alt-1-title" comment="" />
