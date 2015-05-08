@@ -62,18 +62,19 @@ block append pageStyles
       [data-tms-name], [data-tms-template] { height: inherit; min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; }
 
 append headScripts
-  var tms = function(data) {
-    $(document).ready(function(){
-      for (var key in data) {
-        if ((data[key]) && (data[key].trim() != '')) {
-          var elem = document.getElementById(key)
-          if (elem != null) {
-            document.getElementById(key).innerHTML = data[key];
+  script.
+    var tms = function(data) {
+      $(document).ready(function(){
+        for (var key in data) {
+          if ((data[key]) && (data[key].trim() != '')) {
+            var elem = document.getElementById(key)
+            if (elem != null) {
+              document.getElementById(key).innerHTML = data[key];
+            }
           }
         }
-      }
-    });
-  }
+      });
+    }
 
 block endOfPageScripts
 

@@ -116,6 +116,21 @@
         });
       }
       
+    </script>
+    <script>
+      var tms = function(data) {
+        $(document).ready(function(){
+          for (var key in data) {
+            if ((data[key]) && (data[key].trim() != '')) {
+              var elem = document.getElementById(key)
+              if (elem != null) {
+                document.getElementById(key).innerHTML = data[key];
+              }
+            }
+          }
+        });
+      }
+      
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -200,15 +215,14 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div id="hero-wrapper" class="col-md-8 col-sm-12">
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div class="col-md-12 col-sm-6">
-                <div class="tile-wrapper">
-                  <atlantis:webstash type="css">
-                    <style>.marquee-tile.got {
+              <div id="marquee-tile-1" data-tms-spoofable="marquee-tile" class="col-md-12 col-sm-6">
+                <atlantis:webstash type="css">
+                  <style>.marquee-tile.got {
   background-color: #333;
   font-size: 14px;
 }
@@ -257,22 +271,19 @@
   }
 }
 
-                    </style>
-                  </atlantis:webstash>
-                  <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
-                    <div class="tile-content-wrapper">
-                      <div class="walsheim-black">
-                        <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
-                        <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
-                      </div>
-                      <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
+                  </style>
+                </atlantis:webstash>
+                <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
+                  <div class="tile-content-wrapper">
+                    <div class="walsheim-black">
+                      <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
+                      <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
                     </div>
+                    <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-12 col-sm-6"> 
-                <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-              </div>
+              <div id="marquee-tile-2" data-tms-spoofable="banner-medium" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
             </div>
           </div>
         </div>
@@ -1609,27 +1620,34 @@ ul li.no-check {
 .tungsten {
   font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
 }
+/* page layout/styling */
+#domain-search {
+  margin-top: 10px;
+}
+#bugbar {
+  margin: 10px 0;
+}
 #marquee {
   position: relative;
 }
-#marquee .tile-wrapper {
-  margin-top: 6.5px;
-}
-#marquee .tile-wrapper:last-child {
-  margin-bottom: 6.5px;
-}
-#marquee .tile {
-  min-height: 140px;
-}
-.hero-wrapper {
+#hero-wrapper {
   min-height: 300px;
-  cursor: pointer;
 }
-.tile {
-  cursor: pointer;
+#marquee-tile-1 {
+  position: relative;
+  margin: 6px 0 3px 0;
 }
-.top-banner-lower-content {
-  min-height: 40px;
+#marquee-tile-2 {
+  position: relative;
+  margin: 3px 0 6px 0;
+}
+@media screen and (min-width: 768px) {
+  #marquee-tile-1,
+  #marquee-tile-2 {
+    min-height: 141px;
+    max-height: 181px;
+    overflow: hidden;
+  }
 }
 #limitations-social {
   padding: 20px 0;
@@ -1648,15 +1666,6 @@ ul li.no-check {
 }
 .fosfbbox {
   height: 25px !important;
-}
-#bugbar {
-  margin: 10px 0;
-}
-#domain-search {
-  margin-top: 10px;
-}
-#domain-name-input {
-  text-transform: inherit;
 }
 .price,
 .icann-disclaimer,
@@ -1686,6 +1695,9 @@ section {
 #why-godaddy {
   padding-bottom: 50px;
 }
+#domain-name-input {
+  text-transform: inherit;
+}
 #domain-name-input::-webkit-input-placeholder {
   color: #008a32;
 }
@@ -1699,6 +1711,18 @@ section {
 }
 #domain-name-input:-ms-input-placeholder {
   color: #008a32;
+}
+/* should be more global? */
+[data-url] {
+  cursor: pointer;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
 }
 
       </style>
@@ -1721,26 +1745,14 @@ section {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
           }).css("min-height", maxTitleHeight);
           if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
-            var maxHeroHeight = 0;
-            $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-            $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+            $("#hero-wrapper").css("min-height", $("#marquee-tile-wrapper").height());
           }
       }
-      function tokenizeTheDataTokenizeAttribute() {
-        $('[data-tokenize]').each(function(){
-          var $this = $(this),
-            html = $this.html(),
-            val = $this.data('tokenize'),
-              tokenizedHtml = html.replace(/\{0\}/gi, val);
-          $this
-            .html(tokenizedHtml)
-            .removeAttr('data-tokenize');
-        });
-      }
+      
       $(window).load(function () {
         reSizeTiles();
         $('.bigtext').bigtext().css('visibility', 'visible');
-          setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
     </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
@@ -1748,7 +1760,6 @@ section {
     <script type="text/javascript">
       var ignoreLivePerson = true;
       $(document).ready(function() {
-        tokenizeTheDataTokenizeAttribute();
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();
