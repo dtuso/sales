@@ -208,64 +208,42 @@
               <div class="col-md-12 col-sm-6">
                 <div class="tile-wrapper">
                   <atlantis:webstash type="css">
-                    <style>.marquee-tile.got {
-  background-color: #333;
-  font-size: 14px;
+                    <style>.marquee-tile.p4p {
+  background-color: #77c043;
+  background-repeat: no-repeat;
+  background-position: 5% 100%;
+  background-size: 120px 110px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==);
 }
-.marquee-tile.got .tile-content-wrapper {
-  padding: 15px 0 0 10px;
+.marquee-tile.p4p .tile-content-wrapper {
+  padding: 3% 11% 0 44%;
+  line-height: 1.3;
 }
-.marquee-tile.got .products {
-  font-size: 1.5em;
-  color: #77c043;
-  margin: 0;
-  text-transform: uppercase;
-}
-.marquee-tile.got .price-text {
-  font-size: 1.5em;
-  color: #fff;
-  margin: -3px 0 0;
-  text-transform: uppercase;
-}
-.marquee-tile.got .price {
-  font-size: 1.5em;
-  margin: -10px 0 0;
-}
-.marquee-tile.got .disclaimer {
-  font-size: 10px;
-  color: #fff;
-  margin: 5px 0 0;
-}
-@media only screen and (min-width: 480px) {
-  .marquee-tile.got {
-    font-size: 18px;
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .marquee-tile.p4p .tile-content-wrapper {
+    padding-right: 1%;
   }
 }
-@media only screen and (min-width: 768px) {
-  .marquee-tile.got {
-    font-size: 15px;
-  }
+.marquee-tile.p4p .headline {
+  background-color: #fdda54;
+  padding-left: 2%;
+  margin-left: -2%;
 }
-@media only screen and (min-width: 992px) {
-  .marquee-tile.got {
-    font-size: 13px;
-  }
+.marquee-tile.p4p button {
+  margin: 5% 0;
 }
-@media only screen and (min-width: 1200px) {
-  .marquee-tile.got {
-    font-size: 16px;
-  }
+.Explorer8 .marquee-tile-p4p,
+.Explorer7 .marquee-tile-p4p {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
 }
 
                     </style>
                   </atlantis:webstash>
-                  <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
+                  <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
                     <div class="tile-content-wrapper">
-                      <div class="walsheim-black">
-                        <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
-                        <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
-                      </div>
-                      <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
+                      <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
+                      <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
+                      <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
                     </div>
                   </div>
                 </div>
@@ -420,19 +398,10 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]" data-ci='95801' class="banner-small web-hosting-price">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/web-hosting-price/banner-small/web-hosting-icon.png" alt="[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjM1IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMzUgMzUiPjxwYXRoIGQ9Ik0yMyAzNUwyMyAwLjQgMzUgMC44IDM1IDM0LjYgMjMgMzV6TTI4LjEgMzIuM0wyOS45IDMyLjIgMjkuOSAzMC41IDI4LjEgMzAuNSAyOC4xIDMyLjN6TTI1LjkgMjQuNUwzMi4xIDI0LjcgMzIuMSAyMyAyNS45IDIzIDI1LjkgMjQuNXpNMjUuOSAyMS41TDMyLjEgMjEuNSAzMi4xIDIxLjUgMzIuMSAxOS44IDI1LjkgMTkuOCAyNS45IDIxLjV6TTI1LjkgNC4xTDI1LjkgNS44IDMyLjEgNS42IDMyLjEgNC4xIDI1LjkgNC4xek0zMi4xIDcuM0wyNS45IDcuMyAyNS45IDguOSAzMi4xIDguNiAzMi4xIDcuM3pNMjUuOSAxMy42TDI1LjkgMTUuMyAzMi4xIDE1IDMyLjEgMTMuNiAyNS45IDEzLjZ6TTMyLjEgMTJMMzIgMTAuNCAyNS45IDEwLjQgMjUuOSAxMi4xIDMyLjEgMTJ6TTMyLjEgMTYuN0wyNS45IDE2LjcgMjUuOSAxOC4zIDMyLjEgMTguMyAzMi4xIDE2Ljd6TTAgMzQuNkwwIDAuNCAyMC44IDAgMjAuMiAzNC42IDAgMzQuNnpNOS43IDMyLjNMMTEuNSAzMi40IDExLjUgMzAuNSA5LjYgMzAuNSA5LjcgMzIuM3pNNCAyNC43TDE3LjMgMjQuNSAxNy4zIDIzIDMuOSAyMyA0IDI0Ljd6TTMuOSAyMS41TDE3LjMgMjEuNSAxNy4zIDE5LjggMy45IDE5LjggMy45IDIxLjV6TTMuOSA0LjFMNCA1LjYgMTcuMyA1LjggMTcuMyA0LjEgMy45IDQuMXpNMTcuMyA3LjNMMy45IDcuMyAzLjkgOC42IDE3LjMgOC45IDE3LjMgNy4zek0zLjkgMTJMMTcuMyAxMi4xIDE3LjMgMTAuNCA0IDEwLjQgMy45IDEyek0zLjkgMTMuNkw0IDE1IDE3LjMgMTUuMyAxNy4zIDEzLjYgMy45IDEzLjZ6TTE3LjMgMTYuN0w0IDE2LjcgMy45IDE4LjMgMTcuNCAxOC4zIDE3LjMgMTYuN3oiIGZpbGw9IiM3N0MwNDMiLz48L3N2Zz4=" alt="[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:title]@L]</span></span>
+            <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="banner-small tld-co">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-co/banner-small/co-logo.png" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MyIgaGVpZ2h0PSI2MTIiIHZpZXdCb3g9IjU0LjUgMCA2ODMgNjEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDU0LjUgMCA2ODMgNjEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBkaXNwbGF5PSJub25lIi8+PGcgZGlzcGxheT0ibm9uZSI+PGcgZGlzcGxheT0iaW5saW5lIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNNDc0LjcgNDUyLjlMNTUgNTcuN2wxMi4yIDU0Ny4zTDc2My4yIDU2Ni41bDM1LTM3OS40TDQ3NC43IDQ1Mi45ek03ODUuOSAxNDEuNkw3OS41IDBsNDAwLjQgNDIzLjJMNzg1LjkgMTQxLjZ6Ii8+PC9nPjwvZz48cGF0aCBmaWxsPSIjRkY2RTAwIiBkPSJNNTEzLjIgMzk2LjljLTMzLjIgMC01OS41IDI2LjItNTkuNSA1OS41czI2LjIgNTkuNSA1OS41IDU5LjUgNTkuNS0yNi4yIDU5LjUtNTkuNVM1NDYuNCAzOTYuOSA1MTMuMiAzOTYuOXpNNjYzLjUgMTEwLjJjLTIxLTIxLTg5LjItODkuMi05Ny45LTk3LjlDNTUzLjQgMS43IDU0OS45IDAgNTM1LjkgMEg5MS43Yy0yMSAwLTM2LjcgMTUuNy0zNi43IDM2Ljd2NTQwLjNjMCAxOS4yIDE1LjcgMzUgMzYuNyAzNWg1NDAuM2MxOS4yIDAgMzYuNy0xNS43IDM2LjctMzYuN1YxMjQuMUM2NjguOCAxMTUuNCA2NjcgMTEzLjcgNjYzLjUgMTEwLjJ6TTEyMS41IDU1Ny44Yy0xNCAwLTI2LjItMTIuMi0yNi4yLTI2LjIgMC0xNCAxMi4yLTI2LjIgMjYuMi0yNi4yIDE0IDAgMjYuMiAxMi4yIDI2LjIgMjYuMkMxNDcuNyA1NDUuNiAxMzUuNSA1NTcuOCAxMjEuNSA1NTcuOHpNMjc1LjMgNTE1LjhjMjEgMCAzOC41LTEwLjUgNDktMjYuMiAxLjctMS43IDUuMi03IDguNy04LjcgMTQtOC43IDM1LTguNyA1NC4yLTEwLjUgLTcgNTYtNTQuMiA5Ny45LTExMS45IDk3LjkgLTYyLjkgMC0xMTMuNy01MC43LTExMy43LTExMy43UzIxMi40IDM0MSAyNzUuMyAzNDFjNTYgMCAxMDMuMiA0My43IDExMS45IDk3LjkgLTE5LjIgMS43LTQwLjIgMS43LTU0LjItNyAtMS43LTEuNy03LTUuMi04LjctOC43IC0xMC41LTE1LjctMjgtMjYuMi00OS0yNi4yIC0zMy4yIDAtNTkuNSAyNi4yLTU5LjUgNTkuNVMyNDIuMSA1MTUuOCAyNzUuMyA1MTUuOHpNNTEzLjIgNTcwYy02Mi45IDAtMTEzLjctNTAuNy0xMTMuNy0xMTMuN1M0NTAuMiAzNDIuNyA1MTMuMiAzNDIuN3MxMTMuNyA1MC43IDExMy43IDExMy43UzU3Ni4xIDU3MCA1MTMuMiA1NzB6Ii8+PHBhdGggZmlsbD0iI0ZGNkUwMCIgZD0iTTY5Ni44IDYxMnYtMjFoLTd2LTMuNWgyMXYzLjVoLTdWNjEySDY5Ni44ek03MTIuNSA2MTJ2LTI2LjJoN2w1LjIgMTcuNSA1LjItMTcuNWg3VjYxMmgtNS4ydi0xOS4yTDcyNi41IDYxMmgtNS4ybC01LjItMTkuMlY2MTJINzEyLjV6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]</span></span>
               </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:body]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta]@L] </a>
-              <script>
-                var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
-                $cta=$('.banner-small.web-hosting-price a');
-                if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
-                else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
-              </script>
+              <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L] </a>
             </div>
           </div>
           <div id="banner-small-3" class="col-md-3 col-sm-6 col-xs-6">
