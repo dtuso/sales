@@ -1,6 +1,6 @@
 extends ../_hero-arrow.jade
 
-prepend vars
+append vars
   - var classes = "fifty-right-image"
   - var dataCI = 97703;
   - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCI+"' /></relative>]@T]";
@@ -12,27 +12,60 @@ prepend vars
   - var xsBannerColor = "#DEDEDE";
   - var logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+";
   - var logoImageFallback = "[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png";
-  - var titleText="Template title icon";
+  - var titleText ="Template title icon";
 
 append styles
   style
     :less
       #marquee{
-        .fifty-right-image{
-          .leftContent{
+        .left-content{
+            @media only screen 
+              and (max-width: 325px) {
+                .product { font-size: 1em !important;}
+                .big-green { font-size: 1.25em !important;}
+                .btn-md{font-size: 14px; padding:5px 15px 2px; border-bottom-width:3px; }
+                .description{font-size: 12px;}
             }
-          .rightContent{
+            @media only screen 
+              and (min-width:326px)
+              and (max-width: 575px) {
+                .product { font-size: 1.25em !important;}
+                .big-green { font-size: 1.5em !important;}
+                .btn-md{font-size: 14px; padding:5px 15px 2px; border-bottom-width:3px; }
             }
-        }
+            @media only screen
+              and (min-width:575px)
+              and (max-width: 768px) {
+                img{display:initial !important;}
+            }
+            @media only screen
+              and (min-width:900px)
+              and (max-width: 1200px) {
+                padding: 10% 0% 5% 0;
+            }
+          }
+        .rightContent{
+          div{
+
+          }
+          }
       }
 
 block leftContent
-  mark.font-sm.bold [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
-  p.font-md.black GODADDY PRODUCT
-  h2.product LOREM IPSUM DOLOR SIT AMET
-  div Ut enim ad minim veniam quis nostrud ecercitation ullamco.
+  <!--[if lt IE 9]>
+  img.hidden-xs(src!=logoImageFallback alt!=titleText)
+  <![endif]-->
+  img.svgfallback.hidden-xs(src!=logoImage alt!=titleText)
+  div.hidden-xs
+    mark.font-sm.bold [@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]
+  p.product GODADDY PRODUCT
+  h2.big-green LOREM IPSUM DOLOR SIT AMET
+  div.description Ut enim ad minim veniam quis nostrud ecercitation ullamco.
   p.price Starting at <span>[@T[productprice:<current productid="566281" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span>
   a.btn.btn-md.btn-primary [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
   p.disclaimer Disclaimer text is smaller and will take up this area
 block rightContent
-  div 
+  div <!--[if lt IE 9]>
+      img(src!=rightImage alt!=titleText)
+      <![endif]-->
+      img.svgfallback(src!=rightImage alt!=titleText)

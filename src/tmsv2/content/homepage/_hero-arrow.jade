@@ -2,9 +2,7 @@ block vars
   - ciCode = ""
   - ctaText = "Get It Now"
   - ctaLink = "[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]"
-  - logoImage           = "";
-  - logoImageFallback   = "";
-
+  - classes = "";
 block styles
   style.
     /* template layout styling */
@@ -12,8 +10,8 @@ block styles
     .left-container, .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
     .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
     .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-    .left-content { padding: 5% 15% 5% 0; }
-    .right-content { padding: 5% 0 5% 15%; }
+    .left-content { padding: 5% 0% 5% 0; }
+    .right-content { padding: 5% 0 5% 0%; }
     .left-content > *, .right-content > * { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
     .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
     .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
@@ -35,7 +33,7 @@ block styles
     /* APPROACH #2 */
     /* apply classes the group the whole 'look and feel' */
     /* provides for easily making things consistent - there are only a few styles in the hero */
-    .product { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+    .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
     .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
     .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
     
@@ -43,16 +41,11 @@ block styles
     .price .text-purchase { font-size: 1.25em; }
 
     .btn { margin: 1em 0; }
-    .disclaimer { color: #333; font-size: 10px; position: absolute; bottom: 2em; }
+    .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
 
 .hero.hero-right-arrow
   .left-container
     .left-content
-      block logo
-        <!--[if lt IE 9]>
-        img(src!=logoImageFallback alt!=titleText)
-        <![endif]-->
-        img.svgfallback(src!=logoImage alt!=titleText)
       block leftContent
 
   .right-container

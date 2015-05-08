@@ -5,8 +5,8 @@
   .left-container, .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
   .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
   .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-  .left-content { padding: 5% 15% 5% 0; }
-  .right-content { padding: 5% 0 5% 15%; }
+  .left-content { padding: 5% 0% 5% 0; }
+  .right-content { padding: 5% 0 5% 0%; }
   .left-content > *, .right-content > * { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
   .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
   .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
@@ -28,7 +28,7 @@
   /* APPROACH #2 */
   /* apply classes the group the whole 'look and feel' */
   /* provides for easily making things consistent - there are only a few styles in the hero */
-  .product { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
   .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
   .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
   
@@ -36,25 +36,66 @@
   .price .text-purchase { font-size: 1.25em; }
   
   .btn { margin: 1em 0; }
-  .disclaimer { color: #333; font-size: 10px; position: absolute; bottom: 2em; }
+  .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
   
 </style>
-<style>
+<style>@media only screen and (max-width: 325px) {
+  #marquee .left-content .product {
+    font-size: 1em !important;
+  }
+  #marquee .left-content .big-green {
+    font-size: 1.25em !important;
+  }
+  #marquee .left-content .btn-md {
+    font-size: 14px;
+    padding: 5px 15px 2px;
+    border-bottom-width: 3px;
+  }
+  #marquee .left-content .description {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 326px) and (max-width: 575px) {
+  #marquee .left-content .product {
+    font-size: 1.25em !important;
+  }
+  #marquee .left-content .big-green {
+    font-size: 1.5em !important;
+  }
+  #marquee .left-content .btn-md {
+    font-size: 14px;
+    padding: 5px 15px 2px;
+    border-bottom-width: 3px;
+  }
+}
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  #marquee .left-content img {
+    display: initial !important;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  #marquee .left-content {
+    padding: 10% 0% 5% 0;
+  }
+}
+
 </style>
 <div class="hero hero-right-arrow">
   <div class="left-container">
-    <div class="left-content"><!--[if lt IE 9]><img src="" alt="Template title icon"/><![endif]--><img src="" alt="Template title icon" class="svgfallback"/>
-      <mark class="font-sm bold">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
-      <p class="font-md black">GODADDY PRODUCT</p>
-      <h2 class="product">LOREM IPSUM DOLOR SIT AMET</h2>
-      <div>Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
+    <div class="left-content"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="Template title icon" class="hidden-xs"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="Template title icon" class="svgfallback hidden-xs"/>
+      <div class="hidden-xs">
+        <mark class="font-sm bold">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
+      </div>
+      <p class="product">GODADDY PRODUCT</p>
+      <h2 class="big-green">LOREM IPSUM DOLOR SIT AMET</h2>
+      <div class="description">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
       <p class="price">Starting at <span>[@T[productprice:<current productid="566281" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="btn btn-md btn-primary">[@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]</a>
       <p class="disclaimer">Disclaimer text is smaller and will take up this area</p>
     </div>
   </div>
   <div class="right-container">
     <div class="right-content">
-      <div> </div>
+      <div><!--[if lt IE 9]><img src="[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg" alt="Template title icon"/><![endif]--><img src="[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg" alt="Template title icon" class="svgfallback"/></div>
     </div>
   </div>
 </div>
