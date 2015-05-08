@@ -6,35 +6,18 @@ include ../shared/_helpers.jade
 
 extends ../shared/_page
 
-
 block append vars
   - page = page || {};
   - page.title = "[@L[cds.sales/homepage:page-title]@L]";
   - page.description = "[@L[cds.sales/homepage:meta-description]@L]";
   - page.keywords = "[@L[cds.sales/homepage:meta-keywords]@L]";
-  - page.canonical =  "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
   - page.openGraph.title = "[@L[cds.sales/homepage:og-title]@L]";
   - page.openGraph.description = "[@L[cds.sales/homepage:og-content]@L]";
-  - page.openGraph.type = "website";
-  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png";
-  - page.openGraph.siteName = "[@T[link:<relative parammode='explicit' />]@T]";
-  - page.config.version = "0.7.0";
-  - page.config.uxcoreVersion = "dev-brand";
 
 block append pageStyles
   // home page styling
   style
     :less
-      @light-gray:#f5f5f5;
-      @med-gray:#f3f3f4;
-      @dark-gray:#dedede;
-      @shadow:rgba(0,0,0,0.1);
-      @dark-green:#008a30;
-      @gd-orange:#ef6c0f;
-      @desktop: ~"only screen and (min-width:991px)";
-      @desktop-lg: ~"only screen and (min-width:1200px)";
-      @desktop-sm: ~"only screen and (min-width:768px)";
       .text-white{color:#fff}
       .bg-green-official{background-color:#77c043;}
       .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
@@ -42,34 +25,55 @@ block append pageStyles
       .walsheim-bold{font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
       .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
       .tungsten{font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;}
-      #marquee{position:relative;
-        .tile-wrapper{margin-top:6.5px;}
-        .tile-wrapper:last-child{margin-bottom:6.5px;}
-        .tile{min-height:140px;}
+
+      /* page layout/styling */
+      #domain-search {margin-top: 10px;}
+      #bugbar {margin:10px 0;}
+      #marquee {position:relative; }
+      #hero-wrapper {min-height:300px;}
+      #marquee-tile-1 {position: relative; margin: 6px 0 3px 0;}
+      #marquee-tile-2 {position: relative; margin: 3px 0 6px 0;}
+      @media screen and (min-width: 768px) {
+        #marquee-tile-1, #marquee-tile-2 {min-height: 141px; max-height: 181px; overflow: hidden;}
       }
-      .hero-wrapper{min-height:300px;cursor:pointer}
-      .tile{cursor:pointer}
-      .top-banner-lower-content{min-height:40px;}
+      
       #limitations-social{padding:20px 0;font-size:1.2rem;
         p{margin:0;}
         a{cursor:pointer}
       }
       .gdhp-share{position:relative;float:right;margin-top:5px;}
       .fosfbbox{height:25px !important;}
-      #bugbar{margin:10px 0;}
-      #domain-search{margin-top: 10px;}
-      #domain-name-input{text-transform:inherit}
-      .price,.icann-disclaimer,.promo-cta>a{color:@gd-orange}
+
+      .price,.icann-disclaimer,.promo-cta>a{color:#ef6c0f}
       #merchandising{background-color:#fff;padding:10px 0;font-size:16px;
         #banner-small-1,#banner-small-2,#banner-small-3,#banner-small-4,#banner-small-5,#banner-small-6,#banner-small-7,#banner-small-8,#banner-small-9{margin:5px 0}
       }
       section { padding-top: 0; padding-bottom: 0;}
       #why-godaddy { padding-bottom: 50px; }
 
+      #domain-name-input{text-transform:inherit}
       #domain-name-input::-webkit-input-placeholder { color: #008a32; }
       #domain-name-input:-moz-placeholder { color: #008a32; opacity: 1;  }
       #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
       #domain-name-input:-ms-input-placeholder { color: #008a32; }
+
+      /* should be more global? */
+      [data-url] { cursor: pointer; }
+      [data-tms-name], [data-tms-template] { height: inherit; min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; }
+
+append headScripts
+  var tms = function(data) {
+    $(document).ready(function(){
+      for (var key in data) {
+        if ((data[key]) && (data[key].trim() != '')) {
+          var elem = document.getElementById(key)
+          if (elem != null) {
+            document.getElementById(key).innerHTML = data[key];
+          }
+        }
+      }
+    });
+  }
 
 block endOfPageScripts
 
@@ -87,26 +91,14 @@ block endOfPageScripts
           maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
         }).css("min-height", maxTitleHeight);
         if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
-          var maxHeroHeight = 0;
-          $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-          $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+          $("#hero-wrapper").css("min-height", $("#marquee-tile-wrapper").height());
         }
     }
-    function tokenizeTheDataTokenizeAttribute() {
-      $('[data-tokenize]').each(function(){
-        var $this = $(this),
-          html = $this.html(),
-          val = $this.data('tokenize'),
-            tokenizedHtml = html.replace(/\{0\}/gi, val);
-        $this
-          .html(tokenizedHtml)
-          .removeAttr('data-tokenize');
-      });
-    }
+
     $(window).load(function () {
       reSizeTiles();
       $('.bigtext').bigtext().css('visibility', 'visible');
-        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+      setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
     });
   script(src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
   script(src!="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript")
@@ -114,7 +106,6 @@ block endOfPageScripts
   script(type="text/javascript").
     var ignoreLivePerson = true;
     $(document).ready(function() {
-      tokenizeTheDataTokenizeAttribute();
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
                    date = new Date();
@@ -140,7 +131,6 @@ block content
             +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
 
   //- Bugbar
-  
   section#bugbar
     .container
       .row
@@ -153,17 +143,16 @@ block content
     section#marquee
       .container
         .row
-          .col-md-8.col-sm-12
+          #hero-wrapper.col-md-8.col-sm-12
             .hero-wrapper
               block hero  
-          .col-md-4.col-sm-12
+          #marquee-tile-wrapper.col-md-4.col-sm-12
             .row
-              .col-md-12.col-sm-6
-                .tile-wrapper
-                  block marquee-tile1
-              .col-md-12.col-sm-6  
-                .tile-wrapper
-                  block marquee-tile2
+              #marquee-tile-1.col-md-12.col-sm-6(data-tms-spoofable="marquee-tile")
+                  block marquee-tile-1
+              #marquee-tile-2.col-md-12.col-sm-6(data-tms-spoofable="banner-medium")
+                  block marquee-tile-2
+
   //- Secondary Tile Section
   block merchandisingTiles
     section#merchandising
@@ -177,6 +166,7 @@ block content
               block banner-small-3
           #banner-small-4.col-md-3.col-sm-6.col-xs-6
               block banner-small-4
+
   block sections
     block domain-promo
       atlantis:webstash(type="css")
