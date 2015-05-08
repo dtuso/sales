@@ -1769,6 +1769,11 @@ $(window).load(function () {
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                     ##endif
                      
+                     
+                    ##if(countrySiteAny(ca))
+                     <br><br> 
+                    ##endif
+                     
                   </div>
                   <button data-ci="95741" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-wsb">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]</div>
@@ -1788,6 +1793,12 @@ $(window).load(function () {
                     ##if(countrySiteAny(uk))
                      
                     <div>[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
+                    ##endif
+                     
+                     
+                    ##if(countrySiteAny(ca))
+                     <br>[@L[cds.sales/_common:english-only]@L]
+                     
                     ##endif
                      
                   </div>
@@ -2834,6 +2845,10 @@ $(window).load(function () {
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                           ##endif
                            
+                          ##if(countrySiteAny(ca))
+                           <br><br> 
+                          ##endif
+                           
                         </p>
                       </div>
                       <div class="row">
@@ -2938,6 +2953,12 @@ $(window).load(function () {
                           <div class="vat-price-disclaimer">[@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]</div> 
                           ##endif
                            
+                           
+                          ##if(countrySiteAny(ca))
+                           <br>[@L[cds.sales/_common:english-only]@L]
+                           
+                          ##endif
+                           
                         </p>
                       </div>
                       <div class="row">
@@ -3018,8 +3039,16 @@ $(window).load(function () {
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]</h5>
                             </li>
-                            <li> 
-                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5>
+                            <li>
+                               
+                              ##if(countrySiteAny(in))
+                               
+                              <h5>[@L[cds.sales/offers/online-business:39341-godaddy-ols-bullet-8-in]@L]</h5> 
+                              ##else
+                               
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5> 
+                              ##endif
+                               
                             </li>
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]</h5>
