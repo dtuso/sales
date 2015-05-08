@@ -2,6 +2,8 @@ block vars
   - ciCode = ""
   - ctaText = "Get It Now"
   - ctaLink = "[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]"
+  - logoImage           = "";
+  - logoImageFallback   = "";
 
 block styles
   style.
@@ -46,6 +48,11 @@ block styles
 .hero.hero-right-arrow
   .left-container
     .left-content
+      block logo
+        <!--[if lt IE 9]>
+        img(src!=logoImageFallback alt!=titleText)
+        <![endif]-->
+        img.svgfallback(src!=logoImage alt!=titleText)
       block leftContent
 
   .right-container

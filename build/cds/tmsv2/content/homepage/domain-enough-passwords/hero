@@ -42,6 +42,8 @@
 <div class="hero hero-right-arrow">
   <div class="left-container">
     <div class="left-content">
+    </div>
+    <div class="title text-primary-o"><!--[if lt IE 9]><img src=""/><![endif]--><img src="" class="svgfallback"/>
       <mark class="font-sm bold">Introducing</mark>
       <h2 class="font-sm bold">GoDaddy Product</h2>
       <p class="font-lg black text-primary-o">Lorem Ipsum Dolor Sit Amet</p>

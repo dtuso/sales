@@ -43,8 +43,7 @@
 </style>
 <div class="hero hero-right-arrow">
   <div class="left-container">
-    <div class="left-content">
-      <div>logo</div>
+    <div class="left-content"><!--[if lt IE 9]><img src="" alt="Template title icon"/><![endif]--><img src="" alt="Template title icon" class="svgfallback"/>
       <mark class="font-sm bold">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>
       <p class="font-md black">GODADDY PRODUCT</p>
       <h2 class="product">LOREM IPSUM DOLOR SIT AMET</h2>
