@@ -322,6 +322,7 @@
   background-color: #fff;
   padding: 5px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .banner-small img {
   float: left;
@@ -399,6 +400,7 @@
   background-color: #fff;
   padding: 5px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .banner-small img {
   float: left;
@@ -476,6 +478,7 @@
   background-color: #fff;
   padding: 5px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .banner-small img {
   float: left;
@@ -544,6 +547,7 @@
   background-color: #fff;
   padding: 5px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .banner-small img {
   float: left;
