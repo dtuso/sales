@@ -11,26 +11,11 @@ font-weight: 100;
 line-height: 1.1;
 color: #333;
 }
-.config-step .step-subtitle {
-margin-left: 15px;
-}
-.config-text-primary {
-  font-size: 30px;
-  font-weight: 200;
-}
-.config-text-secondary {
-  font-size: 24px;
-}
-.config-text-lead {
-  font-size: 16px;
-}
+
 .bold{
   font-weight: 600;
 }
-.config-text-lead-secondary {
-  font-size: 14px;
 
-}
 .product-options li {
   border-bottom: 1px solid #C3C3C3;
   padding-bottom: 25px;
@@ -58,55 +43,13 @@ margin-left: 15px;
 .product-options {
 list-style: none;
 }
-.vertical-align {
-    display: flex;
-    align-items: center;
-}   
-.product-radio {
-  margin-top :10px; 
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 35px;
-  height: 35px;
-}
-@media (max-width: 1024px) { 
-    .vertical-align {
-        display: block;
-        align-items: inherit;
-    }
-    .text-md-right{
-      text-align: right;
-    }
-    .config-text-primary {
-      font-size: 20px;
-    }
-    .config-text-secondary {
-      font-size: 20px;
-    }
-    .config-text-lead {
-      font-size: 16px;
-    }
-    .config-text-save {
-      font-size: 14px;
-    }
-    .config-text-disclaimer {
-      font-size: 14px;
-    }
-    .product-radio {
-      margin-top :0;
-    } 
-    .item-price{
-      border-bottom: 1px solid #EBEBEB;
-    }
-}
+
 @media (max-width: 600px) { 
     .text-xs-right {
       text-align: right;
     }
     .text-md-right{
       text-align: inherit;
-    }
-    .item-price{
-      border-bottom: none;
     }
 }
 .product-added-to-cart-text{

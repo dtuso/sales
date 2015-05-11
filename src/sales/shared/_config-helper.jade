@@ -191,7 +191,7 @@ mixin configSummary(configSummaryParams)
       .order-total-wrapper
         .order-total 
     .row
-      .savings-total-wrapper.text-secondary [@L[cds.sales/_common:total-savings]@L]:
+      .savings-total-wrapper.text-secondary [@L[cds.sales/_common:total-savings]@L]: 
         span.savings-total
     | 
     | ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
@@ -393,14 +393,6 @@ mixin itemTemplate(itemTemplateParams)
           .text-md-right{
             text-align: inherit;
           }
-          .item-price{
-            border-bottom: none;
-          }
-        }
-        @media (max-width: 1024px) { 
-          .item-price{
-            border-bottom: 1px solid #EBEBEB;
-          }
         }
   script.itemTemplate(type='text/template').
     <div class="row toprow">
@@ -409,16 +401,16 @@ mixin itemTemplate(itemTemplateParams)
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
+      <div class="col-xs-4 col-sm-12 ">
         <div class="item-term"><%= #{itemTemplateParams.itemTerm} %></div>
       </div>
-      <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
+      <div class="col-xs-1 col-sm-1">
         <div class="item-x">x</div>
       </div>
-      <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
+      <div class="col-xs-3 col-sm-7">
         <div class="item-price" id="<%= #{itemTemplateParams.itemID} %>"><%= #{itemTemplateParams.itemPricePerTerm} %></div> 
       </div>
-      <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
+      <div class="col-xs-4 col-sm-4">
         <div class="item-total-price text-secondary"><%= #{itemTemplateParams.itemTotal} %></div>
       </div>
     </div>
@@ -470,7 +462,7 @@ mixin planTemplate(planTemplateParams)
         <div class="col-xs-6 col-lg-7">
           <div class="config-text-secondary"><%= #{planTemplateParams.title} %></div>
         </div>
-        <div class="col-xs-4 col-lg-4">
+        <div class="col-xs-4 col-lg-4 text-right">
           <div class="config-text-primary text-secondary-o"><%= #{planTemplateParams.currentPrice} %>/[@L[cds.sales/_common:mo]@L]</div>
         </div>
       </div>
@@ -478,7 +470,7 @@ mixin planTemplate(planTemplateParams)
         <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
           <div class="config-text-lead bold"><%= #{planTemplateParams.subtitle} %></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4 text-right">
           <% if ( #{planTemplateParams.onSale} ){ %>
               <strike><%= #{planTemplateParams.listPrice} %>/[@L[cds.sales/_common:mo]@L]</strike> 
             <% } %>
@@ -490,7 +482,7 @@ mixin planTemplate(planTemplateParams)
           <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= #{planTemplateParams.toolTipContent} %>" ></span>
           <% } %></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4 text-right">
           <div class="config-text-lead text-secondary-o">
             <% if ( #{planTemplateParams.onSale} ){ %>
               [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= #{planTemplateParams.percentSavings} %>)
@@ -503,7 +495,7 @@ mixin planTemplate(planTemplateParams)
         <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
           <div class="config-text-lead bold"><%= #{planTemplateParams.extraRowLeftText} %></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-xs-4 text-right">
             <%= #{planTemplateParams.extraRowRightText} %>
         </div>
       </div>
