@@ -1,22 +1,32 @@
 extends ./_home-page.jade
+
 block append seo
   meta(name="p:domain_verify" content="dab477e14df859062b884b18aa901346")
+
 block bugBar
   +tldBugs(["com","club","us","org"])
+
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
+
 block marquee-tile-1
-  include ../../tmsv2/content/homepage/got/marquee-tile.jade
+  include ../../tmsv2/content/homepage/testimonial-impacesys/banner-medium.jade
+
 block marquee-tile-2
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+
 block banner-small-1
   include ../../tmsv2/content/homepage/o365-biz-email/banner-small.jade
+
 block banner-small-2
   include ../../tmsv2/content/homepage/tld-club/banner-small.jade
+
 block banner-small-3
   include ../../tmsv2/content/homepage/gdpro/banner-small.jade
+
 block banner-small-4
   include ../../tmsv2/content/homepage/gem/banner-small.jade
+
 block prepend sections
   |  
   |  ##if(appSettingEnabled(Danica_Win_Daytona))

@@ -220,70 +220,71 @@
           </div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div id="marquee-tile-1" data-tms-spoofable="marquee-tile" class="col-md-12 col-sm-6">
-                <atlantis:webstash type="css">
-                  <style>.marquee-tile.got {
-  background-color: #333;
-  font-size: 14px;
+              <div id="marquee-tile-1" data-tms-spoofable="banner-medium" class="col-md-12 col-sm-6">
+                <style>.banner-medium {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  height: 100%;
+  width: 100%;
+  padding: .5em;
 }
-.marquee-tile.got .tile-content-wrapper {
-  padding: 15px 0 0 10px;
-}
-.marquee-tile.got .products {
-  font-size: 1.5em;
-  color: #77c043;
-  margin: 0;
-  text-transform: uppercase;
-}
-.marquee-tile.got .price-text {
-  font-size: 1.5em;
-  color: #fff;
-  margin: -3px 0 0;
-  text-transform: uppercase;
-}
-.marquee-tile.got .price {
-  font-size: 1.5em;
-  margin: -10px 0 0;
-}
-.marquee-tile.got .disclaimer {
-  font-size: 10px;
-  color: #fff;
-  margin: 5px 0 0;
+.banner-medium.testimonial {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  font-size: 13px;
+  position: relative;
 }
 @media only screen and (min-width: 480px) {
-  .marquee-tile.got {
+  .banner-medium.testimonial {
     font-size: 18px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .marquee-tile.got {
+  .banner-medium.testimonial {
     font-size: 15px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .marquee-tile.got {
+  .banner-medium.testimonial {
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .marquee-tile.got {
+  .banner-medium.testimonial {
     font-size: 16px;
   }
 }
+.banner-medium.testimonial .banner-content {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.banner-medium.testimonial .banner-content .testimony {
+  margin-bottom: .5em;
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+.banner-medium.testimonial .banner-content .customer {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.Explorer8 .banner-medium.testimonial .banner-content {
+  position: relative;
+  top: 0;
+}
 
-                  </style>
-                </atlantis:webstash>
-                <div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
-                  <div class="tile-content-wrapper">
-                    <div class="walsheim-black">
-                      <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
-                      <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
-                    </div>
-                    <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
+                </style>
+                <div class="banner-medium testimonial bg-dark">
+                  <div class="banner-content">
+                    <div class="testimony">"There's a reason why GoDaddy is the number one registrar in the world."</div>
+                    <div class="customer text-primary-o">Mr. Atul Chaudhari, Impace Systems</div>
                   </div>
                 </div>
               </div>
-              <div id="marquee-tile-2" data-tms-spoofable="banner-medium" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
             </div>
           </div>
         </div>
@@ -1599,7 +1600,8 @@ ul li.no-check {
 
       </style>
       <!-- home page styling-->
-      <style>.text-white {
+      <style>/* delete this? */
+.text-white {
   color: #ffffff;
 }
 .bg-green-official {
@@ -1619,6 +1621,9 @@ ul li.no-check {
 }
 .tungsten {
   font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
+}
+.hero-wrapper {
+  min-height: 300px;
 }
 /* page layout/styling */
 #domain-search {

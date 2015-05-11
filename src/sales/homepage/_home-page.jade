@@ -18,6 +18,7 @@ block append pageStyles
   // home page styling
   style
     :less
+      /* delete this? */
       .text-white{color:#fff}
       .bg-green-official{background-color:#77c043;}
       .walsheim-regular{font-family:'Walsheim-Regular', Arial, sans-serif;}
@@ -25,6 +26,7 @@ block append pageStyles
       .walsheim-bold{font-family:'Walsheim-Bold', 'Arial Black', sans-serif;}
       .walsheim-black{font-family:'Walsheim-Black', 'Arial Black', sans-serif;}
       .tungsten{font-family:Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;}
+      .hero-wrapper{min-height:300px;}
 
       /* page layout/styling */
       #domain-search {margin-top: 10px;}
@@ -149,9 +151,9 @@ block content
               block hero  
           #marquee-tile-wrapper.col-md-4.col-sm-12
             .row
-              #marquee-tile-1.col-md-12.col-sm-6(data-tms-spoofable="marquee-tile")
+              #marquee-tile-1.col-md-12.col-sm-6(data-tms-spoofable="banner-medium")
                   block marquee-tile-1
-              #marquee-tile-2.col-md-12.col-sm-6(data-tms-spoofable="banner-medium")
+              #marquee-tile-2.col-md-12.col-sm-6
                   block marquee-tile-2
 
   //- Secondary Tile Section
