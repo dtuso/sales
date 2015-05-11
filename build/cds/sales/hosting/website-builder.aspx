@@ -671,7 +671,7 @@
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
-                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item"><b>[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L]</b> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
                 </div>
               </div>
             </div> 
@@ -705,7 +705,7 @@
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]</div>
-                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item"><b>[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L]</b> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
                 </div>
               </div>
             </div> 
@@ -740,7 +740,7 @@
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-pages]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-diskspace]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-bandwidth]@L]</div>
-                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item"><b>[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L]</b> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
                 </div>
               </div>
@@ -774,7 +774,7 @@
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-pages]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-diskspace]@L]</div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-bandwidth]@L]</div>
-                  <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
+                  <div class="plan-item"><b>[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L]</b> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_mobile_site_tooltip]@L]'></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_seo]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_seo_tooltip]@L]'></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:rb_oneclick]@L] <span class='sf-tip sf-tipper-target' data-style='qt' data-content='[@L[cds.sales/gd/hosting/website-builder:rb_oneclick_tooltip]@L]'></span></div>
