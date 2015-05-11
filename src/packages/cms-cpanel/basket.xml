@@ -1,0 +1,153 @@
+<Packages>
+  <Package id="cpanel_tier0_001mo" QtyIsDuration="true">
+    <ProductId>294055</ProductId>
+    <Rules>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier0_012mo" QtyIsDuration="false">
+    <ProductId>294057</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier0_024mo" QtyIsDuration="false">
+    <ProductId>294061</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="2"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier0_036mo" QtyIsDuration="false">
+    <ProductId>294065</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="3"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier0_048mo" QtyIsDuration="false">
+    <ProductId>294067</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="4"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier0_060mo" QtyIsDuration="false">
+    <ProductId>294069</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="5"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_001mo" QtyIsDuration="true">
+    <ProductId>32048</ProductId>
+    <Rules>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_003mo" QtyIsDuration="true">
+    <ProductId>32048</ProductId>
+    <Rules>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_012mo" QtyIsDuration="false">
+    <ProductId>32051</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_024mo" QtyIsDuration="false">
+    <ProductId>32060</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="2"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_036mo" QtyIsDuration="false">
+    <ProductId>32063</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="3"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_048mo" QtyIsDuration="false">
+    <ProductId>32066</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="4"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier1_060mo" QtyIsDuration="false">
+    <ProductId>32069</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="5"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_001mo" QtyIsDuration="true">
+    <ProductId>32050</ProductId>
+    <Rules>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_012mo" QtyIsDuration="false">
+    <ProductId>32059</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_024mo" QtyIsDuration="false">
+    <ProductId>32062</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="2"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_036mo" QtyIsDuration="false">
+    <ProductId>32065</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="3"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_048mo" QtyIsDuration="false">
+    <ProductId>32068</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="4"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier2_060mo" QtyIsDuration="false">
+    <ProductId>32071</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="5"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_001mo" QtyIsDuration="true">
+    <ProductId>32076</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_012mo" QtyIsDuration="false">
+    <ProductId>32082</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_024mo" QtyIsDuration="false">
+    <ProductId>32084</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="2"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_036mo" QtyIsDuration="false">
+    <ProductId>32086</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="3"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_048mo" QtyIsDuration="false">
+    <ProductId>32088</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="4"/>
+    </Rules>
+  </Package>
+  <Package id="cpanel_tier3_060mo" QtyIsDuration="false">
+    <ProductId>32090</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="5"/>
+    </Rules>
+  </Package>
+</Packages>
