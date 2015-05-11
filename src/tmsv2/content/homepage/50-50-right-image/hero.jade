@@ -4,10 +4,8 @@ append vars
   - var classes = "fifty-right-image"
   - var dataCI = 97703;
   - var ctaLink = "[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='"+dataCI+"' /></relative>]@T]";
-  - var leftImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var xsLeftImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var rightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
-  - var xsRightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg";
+  - var rightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg";
+  - var xsRightImage = "[@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg";
   - var polygon = "grey-bottom";
   - var xsBannerColor = "#DEDEDE";
   - var logoImage = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+";
@@ -44,11 +42,7 @@ append styles
                 padding: 10% 0% 5% 0;
             }
           }
-        .rightContent{
-          div{
-
-          }
-          }
+        .right-content{background:url(!{rightImage}) top center;}
       }
 
 block leftContent
@@ -65,7 +59,3 @@ block leftContent
   a.btn.btn-md.btn-primary [@L[cds.tmsv2/content/homepage/gem/hero:ctaText]@L]
   p.disclaimer Disclaimer text is smaller and will take up this area
 block rightContent
-  div <!--[if lt IE 9]>
-      img(src!=rightImage alt!=titleText)
-      <![endif]-->
-      img.svgfallback(src!=rightImage alt!=titleText)
