@@ -71,6 +71,11 @@ block append pageStyles
       #domain-name-input::-moz-placeholder { color: #008a32; opacity: 1;  }
       #domain-name-input:-ms-input-placeholder { color: #008a32; }
       [data-tms-name], [data-tms-template] { height: inherit; min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; }
+      
+      @media only screen and (max-width: 767px) {
+          section .btn-md{font-size: 14px; padding:5px 15px 2px; border-bottom-width:3px; }
+          .hero-wrapper { font-size: 12px;}
+      }
 
 block endOfPageScripts
 
