@@ -3,257 +3,280 @@
   <ByLocale>
     <enus>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="us"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enus>
     <esus>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="us"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </esus>
     <enca>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ca"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enca>
     <frca>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ca"></li>
+      <li tld="design"></li>
       <li tld="quebec"></li>
     </frca>
     <esmx>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
-      <li tld="org"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
     </esmx>
     <esar>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
-      <li tld="org"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
     </esar>
     <escl>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
-      <li tld="org"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
     </escl>
     <esco>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
-      <li tld="org"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
     </esco>
     <espe>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="pe"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </espe>
     <esve>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
-      <li tld="org"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
     </esve>
     <ptbr>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="br"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </ptbr>
     <enau>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="com-au"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enau>
     <ennz>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="co-nz"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </ennz>
     <enin>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="biz"></li>
       <li tld="in"></li>
       <li tld="co-in"></li>
-      <li tld="biz"></li>
+      <li tld="org"></li>
     </enin>
     <enmy>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="asia"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enmy>
     <enpk>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="asia"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enpk>
     <enph>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="asia"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </enph>
     <ensg>
       <li tld="com"></li>
       <li tld="club"></li>
       <li tld="asia"></li>
-      <li tld="org"></li>
+      <li tld="design"></li>
     </ensg>
     <nlbe>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="be"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </nlbe>
     <frbe>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="be"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </frbe>
     <dadk>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="dk"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </dadk>
     <dede>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="de"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </dede>
     <eses>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="es"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </eses>
     <frfr>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="fr"></li>
-      <li tld="eu"></li>
+      <li tld="design"></li>
       <li tld="paris"></li>
     </frfr>
     <enie>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </enie>
     <itit>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="it"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </itit>
     <nlnl>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="nl"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </nlnl>
     <nbno>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </nbno>
     <deat>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </deat>
     <plpl>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="pl"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </plpl>
     <ptpt>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </ptpt>
     <dech>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ch"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </dech>
     <frch>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ch"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </frch>
     <fifi>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </fifi>
     <svse>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </svse>
     <itch>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ch"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </itch>
     <trtr>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </trtr>
     <engb>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="uk"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
-      <li tld="london"></li>
     </engb>
     <elgr>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </elgr>
     <ruru>
       <li tld="com"></li>
-      <li tld="club"></li>
+      <li tld="co"></li>
       <li tld="ru"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </ruru>
     <ukua>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </ukua>
     <enza>
       <li tld="com"></li>
-      <li tld="club"></li>
-      <li tld="work"></li>
+      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="design"></li>
       <li tld="eu"></li>
     </enza>
   </ByLocale>
@@ -300,5 +323,6 @@
     <eu         cicode="97868" lpurl="/tlds/eu-domain"  pfid="2851"/>
     <london     cicode="98021" lpurl="/tlds/london"     pfid="342462"/>
     <work       cicode="98022" lpurl="/tlds/work"       pfid="567686"/>
+    <design     cicode="99118" lpurl="/tlds/design"     pfid="611653"/>
   </BugCatalog>
 </Text>
