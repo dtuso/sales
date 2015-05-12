@@ -1,26 +1,15 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "95851";
-  - rightArrow.ctaLink = "[@T[link:<external linktype='carturl' path='/basket.aspx'><param name='ci' value='"+rightArrow.ci+"'/></external>]@T]";
-  - rightArrow.classes += " abndcart";
-block append rightArrowStyles
-  style
-    :less
-      .hero.right-arrow.abndcart{
-        .rightContent {
-          .line2{ padding:0 0 2% 0}
-        }
-      }
+append vars
+  - var classes = "abndcart";
+  - var ciCode = 95851;
+  - var ctaLink = "[@T[link:<external linktype='carturl' path='/basket.aspx'><param name='ci' value='"+ciCode+"'/></external>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext
-    .line1.tungsten YOU DID THE RESEARCH.
-    .line2.walsheim-black YOU SHOPPED
-    .line3.tungsten 
-      span.dash — 
-      span SMART.
+  p.font-lg.black.text-white YOU DID THE RESEARCH. YOU SHOPPED SMART.
+
 block rightContent
-  .bigtext
-    .line1.walsheim-black NOW
-    .line2.walsheim-black YOU JUST NEED TO 
-  button.btn.btn-lg.btn-purchase GO TO CART
+  p.font-lg.black NOW YOU JUST NEED TO
+  a.btn.btn-md.btn-purchase GO TO CART
