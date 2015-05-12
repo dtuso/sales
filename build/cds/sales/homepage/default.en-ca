@@ -1339,6 +1339,16 @@ section {
   min-width: inherit;
   max-width: inherit;
 }
+@media only screen and (max-width: 767px) {
+  section .btn-md {
+    font-size: 14px;
+    padding: 5px 15px 2px;
+    border-bottom-width: 3px;
+  }
+  .hero-wrapper {
+    font-size: 12px;
+  }
+}
 
       </style>
     </atlantis:webstash>

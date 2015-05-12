@@ -12,8 +12,8 @@ block styles
     .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
     .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
     .left-content { padding: 5% 0% 5% 0; }
-    .right-content { padding: 5% 0% 5% 25%;  width: 75%; word-break: break-word; }
-    .left-content > *, .right-content > * { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
+    .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
+    .left-content > *:not(.btn), .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
     .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
     .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
     mark { line-height: inherit; }
@@ -41,7 +41,7 @@ block styles
     .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
     .price .text-purchase { font-size: 1.25em; }
 
-    .btn { margin: 1em 0; }
+
     .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
     .left-container{background:#{polyColor};}
 
@@ -51,8 +51,8 @@ block styles
       block leftContent
 
   .right-container
-    svg(preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;" viewBox="0 0 100 100")
-      polygon(points="0,0 20,30 0,100" style="fill:#{polyColor};")
+    svg(preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100")
+      polygon(points="0,0 100,30 0,100" style="fill:#{polyColor};")
     .right-content
       block rightContent
 
