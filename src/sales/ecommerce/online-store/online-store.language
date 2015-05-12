@@ -118,6 +118,8 @@ Unlimited products
 Up to 10 images per product
 <phrase key="WhatsIncluded-PaymentType"/>
 Accept credit cards & PayPal
+<phrase key="WhatsIncluded-PaymentType-IN" comment="DO NOT TRANSLATE"/>
+Accept credit cards
 <phrase key="WhatsIncluded-CouponCodes"/>
 Create coupon codes
 <phrase key="WhatsIncluded-RatingsAndReviews"/>
