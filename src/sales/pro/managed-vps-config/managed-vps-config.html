@@ -1,8 +1,7 @@
 ---
 location: sales/pro/managed-vps-config
-id: 552d951af778fc1164ef9fcc
-name: GCE-37474
-comment: VPS SALE - Config Page Sale and Term Offering Updates
+name: Tims-Request
+comment: Remove Mapping function
 configPage: true
 sitecore: true 
 cssVersionOverride: 2
@@ -231,10 +230,6 @@ cssVersionOverride: 2
       var Config = {
         loadData: function(plan){      
           
-          // map old plan to new plan
-          if(plan.indexOf('pro') == -1){
-                 getMappedPlan(plan);
-          }
           var defaultPackageId=plan; 
           var planMonths =  plan.split('_').pop(1);
           plan = plan.replace('_'+ planMonths,'');
@@ -530,21 +525,6 @@ cssVersionOverride: 2
 
       }
 
-      function getMappedPlan (plan){
-          var month = plan.split('_').pop(1);
-          var plan;
-          var planaddon;
-
-          if((plan.indexOf("linux") > 0)){
-                plan= "pro_vps_linux_t1_"+ month+"month";
-                planaddon="pro_vps_os_linux";
-          }
-          else{
-               plan= "pro_vps_windows_t1_"+ month+"month";
-                planaddon="pro_vps_os_windows";          
-          }
-          window.location.href=  window.location.href.split('?')[0] + "?plan=" + plan + "&planaddons=pro_vps_managed|"+planaddon;
-      }
 
       function getPercentage(primaryPrice, secondaryPrice){
         var difference = currencyCalc.evaluate([primaryPrice,"-",secondaryPrice]);

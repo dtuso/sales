@@ -1,49 +1,4 @@
 
- ##if(activeLanguageAny([en-us]))
- 
-<style>#marquee {
-  background-color: #f3f3f3;
-}
-.small-business {
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  font-size: .75em;
-  line-height: 1;
-  text-transform: Uppercase;
-}
-.small-business .headline,
-.small-business .btn {
-  margin-bottom: 0.9em;
-}
-.small-business .headline {
-  padding-top: 1.75em;
-  font-size: 1.250em;
-}
-.small-business .offer {
-  font-size: 2.25em;
-  line-height: 1;
-  margin-bottom: 0.6em;
-}
-.small-business .learn-more {
-  display: block;
-  font-size: 1em;
-  line-height: 1;
-  text-transform: none;
-  font-family: Arial;
-}
-@media only screen and (min-width: 768px) {
-  .small-business {
-    font-size: 1em;
-    padding-right: 30%;
-  }
-}
-
-</style>
-<div data-url="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]" class="hero small-business">
-  <div class="headline">Celebrate small business week<br />like a boss... (Because you are the boss).</div>
-  <div class="offer text-primary">Get the right bundle for your business.</div><a href="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='98066' /></relative>]@T]" class="btn btn-md btn-purchase">Get Started</a><a href="[@T[link:<relative path='/business/small-business-week'><param name='ci' value='98067' /></relative>]@T]" class="learn-more text-primary hover-text-primary">Learn more about Small Business Week</a>
-</div> 
-##else
- 
 <!--start got hero-->
 <atlantis:webstash type="css">
   <style>#marquee {
@@ -150,5 +105,4 @@
     </div>
   </div>
 </div>
-<!--end got hero--> 
-##endif
+<!--end got hero-->
