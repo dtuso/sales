@@ -21,6 +21,7 @@
   .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
   .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
   .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .text-white { color:#fff;}
   
   .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
   .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
@@ -37,31 +38,25 @@
   
   
   .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
-  .left-container{background:;}
+  .left-container{background:#77c043;}
+  .dash{letter-spacing:-.2em;}
   
 </style>
-<div data-url="" data-ci="" class="hero hero-right-arrow">
+<div data-url="[@T[link:<relative path='/domains/domain-transfer.aspx'><param name='ci' value='95853'/></relative>]@T]" data-ci='95853' class="hero hero-right-arrow domain-enough-passwords">
   <div class="left-container">
     <div class="left-content">
-      <mark class="font-sm bold">Introducing</mark>
-      <h2 class="font-sm bold">GoDaddy Product</h2>
-      <p class="font-lg black text-primary-o">Lorem Ipsum Dolor Sit Amet</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <p class="price">Starting at <span class="text-purchase">$1.00/MO</span></p><a class="btn btn-md btn-primary">Call to Action</a>
-      <p class="disclaimer">Disclaimer text is smaller and will take up this area.</p>
+      <p class="font-lg black text-white">Transfer your domain to us.</p>
+      <p class="font-md black text-white">You have enough passwords to remember.</p>
     </div>
   </div>
   <div class="right-container">
-    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100">
-      <polygon points="0,0 100,30 0,100" style="fill:;"></polygon>
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
-      <mark class="font-sm bold">Introducing</mark>
-      <h2 class="product">GoDaddy Product</h2>
-      <p class="big-green">Lorem Ipsum Dolor Sit Amet</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <p class="price">Starting at <span class="text-purchase">$1.00/MO</span></p><a class="btn btn-md btn-primary">Call to Action</a>
-      <p class="disclaimer">Disclaimer text is smaller and will take up this area.</p>
+      <p class="font-lg bold text-secondary">Free </p>
+      <p class="font-lg">1-Year extension</p><a class="btn btn-md btn-purchase">GET STARTED</a>
+      <p class="font-sm">*Exclusions apply</p>
     </div>
   </div>
 </div>

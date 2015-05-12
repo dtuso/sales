@@ -53,7 +53,7 @@
       <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
-      <h3 class="font-md black">Add privacy to your domain</h3>
+      <p class="font-md black">Add privacy to your domain</p>
       <p class="price bold"><span class="text-purchase">[@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</span> PER DOMAIN</p><a class="btn btn-md btn-purchase">GET STARTED</a>
     </div>
   </div>

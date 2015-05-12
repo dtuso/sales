@@ -1,7 +1,7 @@
 extends ../_hero-arrow.jade
 
 append vars
-  - var classes = "domain-privacy"
+  - var classes = "domain-privacy";
   - var ciCode = 95849;
   - var ctaLink = "[@T[link:<relative path='/domainaddon/private-registration.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
   - var polyColor = "#77c043";
@@ -11,6 +11,6 @@ block leftContent
   p.font-lg.black.text-white Don't let your<br/> private info<br/>out in public.
 
 block rightContent
-  h3.font-md.black Add privacy to your domain
+  p.font-md.black Add privacy to your domain
   p.price.bold <span class="text-purchase">[@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</span> PER DOMAIN
   a.btn.btn-md.btn-purchase GET STARTED
