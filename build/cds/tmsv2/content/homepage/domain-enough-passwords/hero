@@ -54,9 +54,8 @@
       <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
-      <p class="font-lg bold text-secondary">Free </p>
-      <p class="font-lg">1-Year extension</p><a class="btn btn-md btn-purchase">GET STARTED</a>
-      <p class="font-sm">*Exclusions apply</p>
+      <p class="font-md black">Free 1-Year extension</p><a class="btn btn-md btn-purchase">GET STARTED</a>
+      <p class="font-sm disclaimer">*Exclusions apply</p>
     </div>
   </div>
 </div>
