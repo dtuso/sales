@@ -581,7 +581,13 @@ a, a:hover {
                 <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
                   <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ImagesPerProduct]@L]</td></tr></table></li>
                 <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType]@L]</td></tr></table></li>
+                  <td valign="top">
+                    ##if(countrySiteAny(in))
+                    [@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType-IN]@L]
+                    ##else
+                    [@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType]@L]
+                    ##endif                    
+                  </td></tr></table></li>
                 <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
                   <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-CouponCodes]@L]</td></tr></table></li>
                 <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
