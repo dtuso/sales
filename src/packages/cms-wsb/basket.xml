@@ -1,0 +1,62 @@
+<Packages>
+  <Package id="wsb_tier1_001mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7521</ProductId>
+  </Package>
+  <Package id="wsb_tier1_012mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7524</ProductId>
+  </Package>
+  <Package id="wsb_tier1_024mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7525</ProductId>
+  </Package>
+  <Package id="wsb_tier1_036mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7526</ProductId>
+  </Package>
+  <Package id="wsb_tier1_048mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7527</ProductId>
+  </Package>
+  <Package id="wsb_tier2_001mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7502</ProductId>
+  </Package>
+  <Package id="wsb_tier2_012mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7509</ProductId>
+  </Package>
+  <Package id="wsb_tier2_024mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7510</ProductId>
+  </Package>
+  <Package id="wsb_tier2_036mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7511</ProductId>
+  </Package>
+  <Package id="wsb_tier2_048mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7512</ProductId>
+  </Package>
+  <Package id="wsb_tier3_001mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7503</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_tier3_012mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7514</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_tier3_024mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7515</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_tier3_036mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7516</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wsb_tier3_048mo" QtyIsDuration="true" MaxQty="25">
+    <ProductId>7517</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+</Packages>

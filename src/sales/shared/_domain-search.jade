@@ -752,6 +752,9 @@ mixin configDomainSearchInput(configDomainSearchParams)
                             $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                             var availableDomain = safeShortName.split('.')[0];
                             var availableTld = '.'+safeShortName.split('.')[1];
+                            if (safeShortName.split('.')[2] != undefined){
+                              availableTld += '.'+safeShortName.split('.')[2];
+                            }
                             $('.domain-name-display-domain').html(availableDomain);
                             $('.domain-name-display-tld').html(availableTld);
                             $('.available-result').show();

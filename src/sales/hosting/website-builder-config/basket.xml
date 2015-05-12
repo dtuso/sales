@@ -61,90 +61,60 @@
   </Package>
   <Package id="wsb_personal_o365_1month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632600</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_personal_o365_12month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632603</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_personal_o365_24month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632606</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_personal_o365_36month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632609</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_personal_o365_48month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632612</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_business_o365_1month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632602</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_business_o365_12month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632605</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_business_o365_24month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632608</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_business_o365_36month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632611</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
   </Package>
   <Package id="wsb_business_o365_48month" QtyIsDuration="true" MaxQty="25" IsPackage="true">
       <ProductId>632614</ProductId>
-      <Rules>
-          <Rule Name="applydiscountcode" code="O365ZERO" />
-      </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
       </GroupItems>
@@ -153,7 +123,6 @@
       <ProductId>632619</ProductId>
       <Rules>
           <Rule Name="FreeSSL" SSLId="3604" />
-          <Rule Name="applydiscountcode" code="O365ZERO" />
       </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
@@ -163,7 +132,6 @@
       <ProductId>632621</ProductId>
       <Rules>
           <Rule Name="FreeSSL" SSLId="3604" />
-          <Rule Name="applydiscountcode" code="O365ZERO" />
       </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
@@ -173,7 +141,6 @@
       <ProductId>632623</ProductId>
       <Rules>
           <Rule Name="FreeSSL" SSLId="3604" />
-          <Rule Name="applydiscountcode" code="O365ZERO" />
       </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
@@ -183,7 +150,6 @@
       <ProductId>632625</ProductId>
       <Rules>
           <Rule Name="FreeSSL" SSLId="3604" />
-          <Rule Name="applydiscountcode" code="O365ZERO" />
       </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
@@ -193,7 +159,6 @@
       <ProductId>632627</ProductId>
       <Rules>
           <Rule Name="FreeSSL" SSLId="3604" />
-          <Rule Name="applydiscountcode" code="O365ZERO" />
       </Rules>
       <GroupItems>
           <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
