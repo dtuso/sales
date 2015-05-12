@@ -1245,6 +1245,16 @@
   <PackageGroup Name="cms-vps" ProductGroupId="25">
     <Packages>
       <Package id="cmsvpsconfig" />
+      <Package id="vps_windows_tier1" />
+      <Package id="vps_windows_tier2" />
+      <Package id="vps_windows_tier3" />
+      <Package id="vps_windows_tier4" />
+      <Package id="vps_windows_tier5" />
+      <Package id="vps_linux_tier1" />
+      <Package id="vps_linux_tier2" />
+      <Package id="vps_linux_tier3" />
+      <Package id="vps_linux_tier4" />
+      <Package id="vps_linux_tier5" />
       <Package id="vps_windows_tier1_001mo" />
       <Package id="vps_windows_tier1_003mo" />
       <Package id="vps_windows_tier1_006mo" />
@@ -1329,6 +1339,16 @@
   </PackageGroup>
   <PackageGroup Name="cms-dedicatedserver" ProductGroupId="24">
     <Packages>
+      <Package id="dedicated_windows_tier1" />
+      <Package id="dedicated_windows_tier2" />
+      <Package id="dedicated_windows_tier3" />
+      <Package id="dedicated_windows_tier4" />
+      <Package id="dedicated_windows_tier5" />
+      <Package id="dedicated_linux_tier1" />
+      <Package id="dedicated_linux_tier2" />
+      <Package id="dedicated_linux_tier3" />
+      <Package id="dedicated_linux_tier4" />
+      <Package id="dedicated_linux_tier5" />
       <Package id="dedicated_windows_tier1_001mo" />
       <Package id="dedicated_windows_tier1_003mo" />
       <Package id="dedicated_windows_tier1_006mo" />
