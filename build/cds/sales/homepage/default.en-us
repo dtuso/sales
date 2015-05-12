@@ -221,68 +221,37 @@
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
               <div id="marquee-tile-1" data-tms-spoofable="banner-medium" class="col-md-12 col-sm-6">
-                <style>.banner-medium {
-  min-height: inherit;
-  max-height: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  height: 100%;
-  width: 100%;
-  padding: .5em;
-}
-.banner-medium.testimonial {
-  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-  font-size: 13px;
-  position: relative;
-}
-@media only screen and (min-width: 480px) {
-  .banner-medium.testimonial {
-    font-size: 18px;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .banner-medium.testimonial {
-    font-size: 15px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .banner-medium.testimonial {
-    font-size: 13px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .banner-medium.testimonial {
-    font-size: 16px;
-  }
-}
-.banner-medium.testimonial .banner-content {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-.banner-medium.testimonial .banner-content .testimony {
-  margin-bottom: .5em;
-  font-size: 1.25em;
-  line-height: 1.2;
-}
-.banner-medium.testimonial .banner-content .customer {
-  text-transform: uppercase;
-  font-size: 1em;
-}
-.Explorer8 .banner-medium.testimonial .banner-content {
-  position: relative;
-  top: 0;
-}
-
-                </style>
-                <div class="banner-medium testimonial bg-dark">
-                  <div class="banner-content">
-                    <div class="testimony">"There's a reason why GoDaddy is the number one registrar in the world."</div>
-                    <div class="customer text-primary-o">Mr. Atul Chaudhari, Impace Systems</div>
-                  </div>
-                </div>
+                <style>
+                  .banner-medium:hover, .banner-medium:focus { color: #fff; }
+                  .banner-medium.tld-com { display: block; text-decoration: none; min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+                  .banner-medium.tld-com .content-container { line-height: 1; padding: 1em; min-height: inherit; position: relative; display: table; }
+                  .banner-medium.tld-com .content { display: table-cell; vertical-align: middle;}
+                  .banner-medium.tld-com img { height: .8em;max-width: 100%; vertical-align: initial;}
+                  
+                  .banner-medium.tld-com .font-lg { font-size: 2.5em; }
+                  .banner-medium.tld-com .font-md { font-size: 1.25em; }
+                  .banner-medium.tld-com .font-sm { font-size: 1em; }
+                  .banner-medium.tld-com .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+                  .banner-medium.tld-com .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; }
+                  .banner-medium.tld-com .disclaimer { font-size: 10px; }
+                  
+                  .banner-medium.tld-com .content > * { margin-top: .25em; margin-bottom: .25em;}
+                  .banner-medium.tld-com .content > *:first-child { margin-top: 0;}
+                  .banner-medium.tld-com .content > *:last-child { margin-bottom: 0;}
+                  .banner-medium.tld-com .svgfallback:not(old) { display: inline-block;}
+                  .banner-medium.tld-com .svgfallback { display: none;}
+                  
+                </style><a href="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727'/></relative>]@T]" data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727'/></relative>]@T]" data-ci="95727" class="banner-medium tld-com bg-dark 499-com">
+                  <div class="content-container">
+                    <div class="content">
+                      <h2 class="font-lg text-purchase">
+                        [@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T]*
+                        <!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/com-logo.png" alt=".com" title=".com"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMTc0IDQxLjYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDE3My45NzggNDEuNTUzIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNNjYuOCAyNS41Yy0yLjEgOC44LTkuOSAxNi4xLTIwLjQgMTYuMSAtMTEuOCAwLTIwLjgtOS4zLTIwLjgtMjAuOEMyNS41IDkuMyAzNC40IDAgNDYuMSAwYzEwLjMgMCAxOC43IDYuOCAyMC42IDE2LjRINTQuOWMtMS4zLTIuNy0zLjYtNS41LTguNC01LjUgLTIuNy0wLjEtNS4xIDAuOS02LjcgMi43IC0xLjYgMS44LTIuNSA0LjQtMi41IDcuMiAwIDUuNyAzLjcgOS45IDkuMyA5LjkgNC44IDAgNy4yLTIuOCA4LjQtNS4ySDY2Ljh6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTY5LjEgMjAuN2MwLTkuNSA2LjgtMjAuNiAyMS0yMC42IDE0LjIgMCAyMSAxMS4yIDIxIDIwLjcgMCA5LjUtNi44IDIwLjctMjEgMjAuNyAtMTQuMiAwLTIxLTExLjItMjEtMjAuN1YyMC43ek04MC44IDIwLjhjMCA1LjYgNC4zIDkuOCA5LjMgOS44IDUuMSAwIDkuMy00LjEgOS4zLTkuOCAwLTUuNy00LjMtOS44LTkuMy05LjggLTUuMSAwLTkuMyA0LjEtOS4zIDkuOFYyMC44eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xMTQuMiAxLjNoMTAuOXY0LjFjMCAwIDAuNy0xLjQgMi40LTIuN0MxMjkuMSAxLjMgMTMxLjkgMCAxMzUuOSAwYzIuNyAwIDYgMC43IDguOSAzLjcgMC44IDAuOCAxLjYgMS45IDIuMyAzLjIgMC44LTEuMiAxLjctMi40IDIuOC0zLjRDMTUyLjMgMS41IDE1NS41IDAgMTU5LjUgMGMyLjcgMCA3LjEgMC42IDEwLjIgMy45IDMuNiAzLjkgNC4yIDYuNSA0LjIgMTUuMXYyMS4zaC0xMS43VjE5LjZjMC0xLjYgMC0zLjctMC44LTUuNSAtMC43LTEuOC0yLjItMy4yLTUuMi0zLjIgLTMuMiAwLTQuOCAxLjUtNS42IDMuMiAtMC44IDEuOC0wLjggMy43LTAuOCA0Ljh2MjEuM2gtMTEuNlYxOS4xYzAtMS4xIDAtMy4xLTAuNy00LjggLTAuOC0xLjgtMi4yLTMuMy01LjEtMy4zIC0zLjMgMC00LjkgMS41LTUuOCAzLjQgLTAuOCAxLjktMC44IDQtMC44IDUuMnYyMC43aC0xMS43VjEuM3oiLz48bGluZWFyR3JhZGllbnQgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjguOSIgeTE9IjEyLjEiIHgyPSI4LjkiIHkyPSIzMCI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjODJEMUY1Ii8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA5RERDIi8+PC9saW5lYXJHcmFkaWVudD48Y2lyY2xlIGZpbGw9InVybCgjU1ZHSURfMV8pIiBjeD0iOC45IiBjeT0iMjEiIHI9IjguOSIvPjwvc3ZnPg==" alt=".com" title=".com" class="tld svgfallback">
+                      </h2>
+                      <div class="font-md bold">[@L[cds.sales/homepage/tile/marquee-com-tld-sale-tile:marquee-com-tld-sale-tile-bodytext]@L]</div>
+                      <div class="disclaimer">[@L[cds.sales/homepage/tile/marquee-com-tld-sale-tile:marquee-com-tld-sale-tile-resttext]@L]</div>
+                    </div>
+                  </div></a>
               </div>
               <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
             </div>
@@ -432,10 +401,10 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/tlds/club'><param name='ci' value='99078' /></relative>]@T]" data-ci='99078' class="banner-small tld-club">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-club/banner-small/club-bday.png" alt=""><![endif]--><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-club/banner-small/club-bday.png" alt="" class="svgfallback">
+            <div data-url="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]" data-ci='96974' class="banner-small tld-co">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/tld-co/banner-small/co-logo.png" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MyIgaGVpZ2h0PSI2MTIiIHZpZXdCb3g9IjU0LjUgMCA2ODMgNjEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDU0LjUgMCA2ODMgNjEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj48ZyBkaXNwbGF5PSJub25lIi8+PGcgZGlzcGxheT0ibm9uZSI+PGcgZGlzcGxheT0iaW5saW5lIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNNDc0LjcgNDUyLjlMNTUgNTcuN2wxMi4yIDU0Ny4zTDc2My4yIDU2Ni41bDM1LTM3OS40TDQ3NC43IDQ1Mi45ek03ODUuOSAxNDEuNkw3OS41IDBsNDAwLjQgNDIzLjJMNzg1LjkgMTQxLjZ6Ii8+PC9nPjwvZz48cGF0aCBmaWxsPSIjRkY2RTAwIiBkPSJNNTEzLjIgMzk2LjljLTMzLjIgMC01OS41IDI2LjItNTkuNSA1OS41czI2LjIgNTkuNSA1OS41IDU5LjUgNTkuNS0yNi4yIDU5LjUtNTkuNVM1NDYuNCAzOTYuOSA1MTMuMiAzOTYuOXpNNjYzLjUgMTEwLjJjLTIxLTIxLTg5LjItODkuMi05Ny45LTk3LjlDNTUzLjQgMS43IDU0OS45IDAgNTM1LjkgMEg5MS43Yy0yMSAwLTM2LjcgMTUuNy0zNi43IDM2Ljd2NTQwLjNjMCAxOS4yIDE1LjcgMzUgMzYuNyAzNWg1NDAuM2MxOS4yIDAgMzYuNy0xNS43IDM2LjctMzYuN1YxMjQuMUM2NjguOCAxMTUuNCA2NjcgMTEzLjcgNjYzLjUgMTEwLjJ6TTEyMS41IDU1Ny44Yy0xNCAwLTI2LjItMTIuMi0yNi4yLTI2LjIgMC0xNCAxMi4yLTI2LjIgMjYuMi0yNi4yIDE0IDAgMjYuMiAxMi4yIDI2LjIgMjYuMkMxNDcuNyA1NDUuNiAxMzUuNSA1NTcuOCAxMjEuNSA1NTcuOHpNMjc1LjMgNTE1LjhjMjEgMCAzOC41LTEwLjUgNDktMjYuMiAxLjctMS43IDUuMi03IDguNy04LjcgMTQtOC43IDM1LTguNyA1NC4yLTEwLjUgLTcgNTYtNTQuMiA5Ny45LTExMS45IDk3LjkgLTYyLjkgMC0xMTMuNy01MC43LTExMy43LTExMy43UzIxMi40IDM0MSAyNzUuMyAzNDFjNTYgMCAxMDMuMiA0My43IDExMS45IDk3LjkgLTE5LjIgMS43LTQwLjIgMS43LTU0LjItNyAtMS43LTEuNy03LTUuMi04LjctOC43IC0xMC41LTE1LjctMjgtMjYuMi00OS0yNi4yIC0zMy4yIDAtNTkuNSAyNi4yLTU5LjUgNTkuNVMyNDIuMSA1MTUuOCAyNzUuMyA1MTUuOHpNNTEzLjIgNTcwYy02Mi45IDAtMTEzLjctNTAuNy0xMTMuNy0xMTMuN1M0NTAuMiAzNDIuNyA1MTMuMiAzNDIuN3MxMTMuNyA1MC43IDExMy43IDExMy43UzU3Ni4xIDU3MCA1MTMuMiA1NzB6Ii8+PHBhdGggZmlsbD0iI0ZGNkUwMCIgZD0iTTY5Ni44IDYxMnYtMjFoLTd2LTMuNWgyMXYzLjVoLTdWNjEySDY5Ni44ek03MTIuNSA2MTJ2LTI2LjJoN2w1LjIgMTcuNSA1LjItMTcuNWg3VjYxMmgtNS4ydi0xOS4yTDcyNi41IDYxMmgtNS4ybC01LjItMTkuMlY2MTJINzEyLjV6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/tld-co/banner-small:title]@L]</span></span>
               </div>
-              <div class="body">Today only! Celebrate 1 year of .club. Get your own for just [@T[productprice:<current productid='172137' period='yearly' />]@T].</div><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='99078' /></relative>]@T]">Search now </a>
+              <div class="body">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:body]@L]</div><a href="[@T[link:<relative path='/tlds/co-domain.aspx'><param name='ci' value='96974' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/tld-co/banner-small:cta]@L] </a>
             </div>
           </div>
           <div id="banner-small-3" class="col-md-3 col-sm-6 col-xs-6">
@@ -1576,7 +1545,7 @@ section h3 {
   display: none;
 }
 .svgfallback:not(old) {
-  display: block;
+  display: initial;
 }
 ul.green-check li,
 li.green-check,
@@ -1638,21 +1607,13 @@ ul li.no-check {
 #hero-wrapper {
   min-height: 300px;
 }
-#marquee-tile-1 {
-  position: relative;
-  margin: 6px 0 3px 0;
-}
+#marquee-tile-1,
 #marquee-tile-2 {
   position: relative;
-  margin: 3px 0 6px 0;
-}
-@media screen and (min-width: 768px) {
-  #marquee-tile-1,
-  #marquee-tile-2 {
-    min-height: 141px;
-    max-height: 181px;
-    overflow: hidden;
-  }
+  margin: 6px 0 3px 0;
+  min-height: 141px;
+  max-height: 181px;
+  overflow: hidden;
 }
 #limitations-social {
   padding: 20px 0;

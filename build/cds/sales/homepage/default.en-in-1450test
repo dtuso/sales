@@ -1317,7 +1317,7 @@ section h3 {
   display: none;
 }
 .svgfallback:not(old) {
-  display: block;
+  display: initial;
 }
 ul.green-check li,
 li.green-check,
@@ -1379,21 +1379,13 @@ ul li.no-check {
 #hero-wrapper {
   min-height: 300px;
 }
-#marquee-tile-1 {
-  position: relative;
-  margin: 6px 0 3px 0;
-}
+#marquee-tile-1,
 #marquee-tile-2 {
   position: relative;
-  margin: 3px 0 6px 0;
-}
-@media screen and (min-width: 768px) {
-  #marquee-tile-1,
-  #marquee-tile-2 {
-    min-height: 141px;
-    max-height: 181px;
-    overflow: hidden;
-  }
+  margin: 6px 0 3px 0;
+  min-height: 141px;
+  max-height: 181px;
+  overflow: hidden;
 }
 #limitations-social {
   padding: 20px 0;

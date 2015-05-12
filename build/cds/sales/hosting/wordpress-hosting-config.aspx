@@ -972,7 +972,7 @@ section h3 {
   display: none;
 }
 .svgfallback:not(old) {
-  display: block;
+  display: initial;
 }
 ul.green-check li,
 li.green-check,
