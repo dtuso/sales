@@ -313,7 +313,7 @@
                   </div>
                 </div>
               </div>
-              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+              <div id="marquee-tile-2" data-tms-spoofable="marquee-tile" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
             </div>
           </div>
         </div>
