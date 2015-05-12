@@ -45,7 +45,9 @@
 <div data-url="[@T[link:<relative path='/domainaddon/private-registration.aspx'><param name='ci' value='95849'/></relative>]@T]" data-ci='95849' class="hero hero-right-arrow domain-privacy">
   <div class="left-container">
     <div class="left-content">
-      <p class="font-lg black text-white">Don't let your<br/> private info<br/>out in public.</p>
+      <p class="font-lg black text-white">Don't let your</p>
+      <p class="font-lg black text-white">private info</p>
+      <p class="font-lg black text-white">out in public.</p>
     </div>
   </div>
   <div class="right-container">
@@ -53,7 +55,8 @@
       <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
-      <p class="font-md black">Add privacy to your domain</p>
+      <p class="font-md black">Add privacy </p>
+      <p class="font-md black">to your domain</p>
       <p class="price bold"><span class="text-purchase">[@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</span> PER DOMAIN</p><a class="btn btn-md btn-purchase">GET STARTED</a>
     </div>
   </div>
