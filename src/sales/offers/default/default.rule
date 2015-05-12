@@ -1,9 +1,10 @@
 ---
 location: sales/offers/default.aspx.rule
 id: 
-name: GCE-34369
-comments: Various VAT fixes
----[
+name: GCE-39041
+comments: Adding Domain ADV LP
+---
+[
 { 
     'Type': 'Redirect', 
     'Condition': '(!siteContextAny(gd) || !hasISC()) && !isManager()', 
@@ -18,5 +19,10 @@ comments: Various VAT fixes
     'Type': 'Redirect',
     'Condition': '!queryValueHas(nosplit,1) && splitTestingSideIsActive(1323, B) && (queryValueHas(tmskey,[1domwsb_1]) || queryValueHas(tmskey,[1domwsb_2]) || queryValueHas(tmskey,[1domwsb_3]) || queryValueHas(tmskey,[1domwsb_4]) || queryValueHas(tmskey,[1domwsb_5]) || queryValueHas(tmskey,[1domwsb_6]) || queryValueHas(tmskey,[1domwsb_7]) || queryValueHas(tmskey,[1domwsb_8]) || queryValueHas(tmskey,[1domwsb_9]) || queryValueHas(tmskey,[1domwsb_10]) || queryValueHas(tmskey,[1domwsb_11]) || queryValueHas(tmskey,[1domwsb_12]))',
     'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/hosting/website-builder.aspx\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!queryValueHas(nosplit,1) && splitTestingSideIsActive(1456, A) && (queryValueHas(tmskey,[1dom_01]) || queryValueHas(tmskey,[1dom_02]) || queryValueHas(tmskey,[1dom_03]) || queryValueHas(tmskey,[1dom_04]) || queryValueHas(tmskey,[1dom_05]) || queryValueHas(tmskey,[1dom_06]) || queryValueHas(tmskey,[1dom_07]) || queryValueHas(tmskey,[1dom_08])',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/deal2/default.aspx\" />]@T]' }"
   }
 ]
