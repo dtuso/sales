@@ -1,0 +1,1442 @@
+<Packages>
+  <Package id="vps_windows_tier1_001mo" QtyIsDuration="false">
+    <ProductId>458319</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_003mo" QtyIsDuration="false">
+    <ProductId>458324</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_006mo" QtyIsDuration="false">
+    <ProductId>458327</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_012mo" QtyIsDuration="false">
+    <ProductId>458322</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_024mo" QtyIsDuration="false">
+    <ProductId>458331</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_036mo" QtyIsDuration="false">
+    <ProductId>458334</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_048mo" QtyIsDuration="false">
+    <ProductId>458337</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier1_060mo" QtyIsDuration="false">
+    <ProductId>458340</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_001mo" QtyIsDuration="false">
+    <ProductId>458321</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_003mo" QtyIsDuration="false">
+    <ProductId>458326</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_006mo" QtyIsDuration="false">
+    <ProductId>458329</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_012mo" QtyIsDuration="false">
+    <ProductId>458330</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_024mo" QtyIsDuration="false">
+    <ProductId>458333</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_036mo" QtyIsDuration="false">
+    <ProductId>458336</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_048mo" QtyIsDuration="false">
+    <ProductId>458339</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier2_060mo" QtyIsDuration="false">
+    <ProductId>458342</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_001mo" QtyIsDuration="false">
+    <ProductId>458344</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_003mo" QtyIsDuration="false">
+    <ProductId>458347</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_006mo" QtyIsDuration="false">
+    <ProductId>458349</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_012mo" QtyIsDuration="false">
+    <ProductId>458350</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_024mo" QtyIsDuration="false">
+    <ProductId>458352</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_036mo" QtyIsDuration="false">
+    <ProductId>458354</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_048mo" QtyIsDuration="false">
+    <ProductId>458356</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier3_060mo" QtyIsDuration="false">
+    <ProductId>458358</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_001mo" QtyIsDuration="false">
+    <ProductId>458360</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_003mo" QtyIsDuration="false">
+    <ProductId>458363</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_006mo" QtyIsDuration="false">
+    <ProductId>458365</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_012mo" QtyIsDuration="false">
+    <ProductId>458366</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_024mo" QtyIsDuration="false">
+    <ProductId>458368</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_036mo" QtyIsDuration="false">
+    <ProductId>458370</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_048mo" QtyIsDuration="false">
+    <ProductId>458372</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier4_060mo" QtyIsDuration="false">
+    <ProductId>458374</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_001mo" QtyIsDuration="false">
+    <ProductId>458376</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_003mo" QtyIsDuration="false">
+    <ProductId>458379</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_006mo" QtyIsDuration="false">
+    <ProductId>458381</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_012mo" QtyIsDuration="false">
+    <ProductId>458382</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_024mo" QtyIsDuration="false">
+    <ProductId>458384</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_036mo" QtyIsDuration="false">
+    <ProductId>458386</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_048mo" QtyIsDuration="false">
+    <ProductId>458388</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_windows_tier5_060mo" QtyIsDuration="false">
+    <ProductId>458390</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483556</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_windows" ProductId="483556" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_001mo" QtyIsDuration="false">
+    <ProductId>458319</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_003mo" QtyIsDuration="false">
+    <ProductId>458324</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_006mo" QtyIsDuration="false">
+    <ProductId>458327</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_012mo" QtyIsDuration="false">
+    <ProductId>458322</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_024mo" QtyIsDuration="false">
+    <ProductId>458331</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_036mo" QtyIsDuration="false">
+    <ProductId>458334</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_048mo" QtyIsDuration="false">
+    <ProductId>458337</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier1_060mo" QtyIsDuration="false">
+    <ProductId>458340</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_001mo" QtyIsDuration="false">
+    <ProductId>458321</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_003mo" QtyIsDuration="false">
+    <ProductId>458326</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_006mo" QtyIsDuration="false">
+    <ProductId>458329</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_012mo" QtyIsDuration="false">
+    <ProductId>458330</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_024mo" QtyIsDuration="false">
+    <ProductId>458333</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_036mo" QtyIsDuration="false">
+    <ProductId>458336</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_048mo" QtyIsDuration="false">
+    <ProductId>458339</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier2_060mo" QtyIsDuration="false">
+    <ProductId>458342</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_001mo" QtyIsDuration="false">
+    <ProductId>458344</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_003mo" QtyIsDuration="false">
+    <ProductId>458347</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_006mo" QtyIsDuration="false">
+    <ProductId>458349</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_012mo" QtyIsDuration="false">
+    <ProductId>458350</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_024mo" QtyIsDuration="false">
+    <ProductId>458352</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_036mo" QtyIsDuration="false">
+    <ProductId>458354</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_048mo" QtyIsDuration="false">
+    <ProductId>458356</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier3_060mo" QtyIsDuration="false">
+    <ProductId>458358</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_001mo" QtyIsDuration="false">
+    <ProductId>458360</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_003mo" QtyIsDuration="false">
+    <ProductId>458363</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_006mo" QtyIsDuration="false">
+    <ProductId>458365</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_012mo" QtyIsDuration="false">
+    <ProductId>458366</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_024mo" QtyIsDuration="false">
+    <ProductId>458368</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_036mo" QtyIsDuration="false">
+    <ProductId>458370</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_048mo" QtyIsDuration="false">
+    <ProductId>458372</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier4_060mo" QtyIsDuration="false">
+    <ProductId>458374</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_001mo" QtyIsDuration="false">
+    <ProductId>458376</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_003mo" QtyIsDuration="false">
+    <ProductId>458379</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_006mo" QtyIsDuration="false">
+    <ProductId>458381</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_012mo" QtyIsDuration="false">
+    <ProductId>458382</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_024mo" QtyIsDuration="false">
+    <ProductId>458384</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_036mo" QtyIsDuration="false">
+    <ProductId>458386</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_048mo" QtyIsDuration="false">
+    <ProductId>458388</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+  <Package id="vps_linux_tier5_060mo" QtyIsDuration="false">
+    <ProductId>458390</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3605" />
+    </Rules>
+    <ChildProducts>
+      <ProductId>483558</ProductId>
+    </ChildProducts>
+    <AddOns>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_os_linux" ProductId="483558" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+      <AddOnGroup MaxSelection="1">
+        <AddOn Name="pro_vps_managed" ProductId="483560" MatchParentDuration="true" MaxQty="1" />
+        <AddOn Name="pro_vps_managed_plus" ProductId="483562" MatchParentDuration="true" MaxQty="1" />
+      </AddOnGroup>
+    </AddOns>
+  </Package>
+</Packages>
