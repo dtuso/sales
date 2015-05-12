@@ -3,6 +3,7 @@ block vars
   - ctaLink = ""
   - classes = "";
   - polyColor = "";
+  - polyPoint = "30";
 
 block styles
   style.
@@ -27,6 +28,7 @@ block styles
     .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
     .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
     .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+    .text-white { color:#fff;}
 
     .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
     .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
@@ -44,6 +46,7 @@ block styles
 
     .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
     .left-container{background:#{polyColor};}
+    .dash{letter-spacing:-.2em;}
 
 .hero.hero-right-arrow(class!=classes data-url!=ctaLink data-ci=ciCode)
   .left-container
@@ -51,8 +54,8 @@ block styles
       block leftContent
 
   .right-container
-    svg(preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100")
-      polygon(points="0,0 100,30 0,100" style="fill:#{polyColor};")
+    svg.hidden-xs(preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100")
+      polygon(points="0,0 100,#{polyPoint} 0,100" style="fill:#{polyColor};")
     .right-content
       block rightContent
 
