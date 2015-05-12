@@ -219,8 +219,8 @@
           </div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div id="marquee-tile-1" data-tms-spoofable="banner-medium" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-              <div id="marquee-tile-2" data-tms-spoofable="marquee-tile" class="col-md-12 col-sm-6">
+              <div id="marquee-tile-1" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">
                 <atlantis:webstash type="css">
                   <style>
                     .marquee-tile-tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:5%; line-height:1}

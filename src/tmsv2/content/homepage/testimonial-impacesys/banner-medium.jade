@@ -1,38 +1,12 @@
-block vars
-  - ctaLink = "";
-  - containerClass = "testimonial merch-tile ";
-  - ctaLink = ctaLink || "";
-  - ctaText = ctaText || "";
-  - dataCi = dataCi || "";
-  - containerClass = containerClass || "";
+extends ../_banner-medium-simple.jade
 
-block tileStyles
-  style
-    :less
-      .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
-      .banner-medium.testimonial { 
-        font-family:'Walsheim-Black', 'Arial Black', sans-serif; font-size:13px; position:relative;
-        @media only screen and (min-width:480px){
-         font-size:18px;
-        }
-        @media only screen and (min-width:768px){
-          font-size:15px;
-        }
-        @media only screen and (min-width:992px){
-          font-size:13px;
-        }
-        @media only screen and (min-width:1200px){
-          font-size:16px;
-        }
-        .banner-content { 
-          position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
-          .testimony {font-size:1.25em; margin-bottom: .5em; font-size: 1.25em;line-height:1.2}
-          .customer {text-transform:uppercase;font-size:1em;}
-        }
-      }
-      .Explorer8 .banner-medium.testimonial .banner-content {position: relative;top: 0;}
+append vars
+  - classes ="testimonial";
 
-.banner-medium.testimonial.bg-dark
-  .banner-content
-    .testimony "There's a reason why GoDaddy is the number one registrar in the world."
-    .customer.text-primary-o Mr. Atul Chaudhari, Impace Systems
+append styles
+  style.
+    .banner-medium.testimonial { background-color: #333; color: #fff; }
+
+block content
+  .black.font-sm "There's a reason why GoDaddy is the number one registrar in the world."
+  .black.font-sm.text-primary-o Mr. Atul Chaudhari, Impace Systems
