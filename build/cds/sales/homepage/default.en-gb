@@ -1252,9 +1252,8 @@ ul li.no-check {
 }
 .hero-wrapper {
   min-height: 300px;
-  cursor: pointer;
 }
-.tile {
+[data-url] {
   cursor: pointer;
 }
 .top-banner-lower-content {
@@ -1328,6 +1327,14 @@ section {
 }
 #domain-name-input:-ms-input-placeholder {
   color: #008a32;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
 }
 
       </style>

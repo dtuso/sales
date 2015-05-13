@@ -1,4 +1,66 @@
+##if(activeLanguageAny([en-us]))
+<atlantis:webstash type="css">
+  <style>.marquee-tile.got {
+  background-color: #333;
+  font-size: 14px;
+}
+.marquee-tile.got .tile-content-wrapper {
+  padding: 15px 0 0 10px;
+}
+.marquee-tile.got .products {
+  font-size: 1.5em;
+  color: #77c043;
+  margin: 0;
+  text-transform: uppercase;
+}
+.marquee-tile.got .price-text {
+  font-size: 1.5em;
+  color: #fff;
+  margin: -3px 0 0;
+  text-transform: uppercase;
+}
+.marquee-tile.got .price {
+  font-size: 1.5em;
+  margin: -10px 0 0;
+}
+.marquee-tile.got .disclaimer {
+  font-size: 10px;
+  color: #fff;
+  margin: 5px 0 0;
+}
+@media only screen and (min-width: 480px) {
+  .marquee-tile.got {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .marquee-tile.got {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .marquee-tile.got {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .marquee-tile.got {
+    font-size: 16px;
+  }
+}
 
+  </style>
+</atlantis:webstash>
+<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="tile marquee-tile got">
+  <div class="tile-content-wrapper">
+    <div class="walsheim-black">
+      <div class="products">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
+      <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
+    </div>
+    <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
+  </div>
+</div> 
+##else
 <atlantis:webstash type="css">
   <style>.gtld-marquee-tile {
   background-size: cover;
@@ -63,4 +125,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
+##endif

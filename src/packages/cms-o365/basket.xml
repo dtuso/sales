@@ -1,0 +1,29 @@
+<Packages>
+  <Package id="office365_tier1_001mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31819</ProductId>
+  </Package>
+  <Package id="office365_tier1_012mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31825</ProductId>
+  </Package>
+  <Package id="office365_tier1_024mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31827</ProductId>
+  </Package>
+  <Package id="office365_tier2_001mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>543626</ProductId>
+  </Package>
+  <Package id="office365_tier2_012mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>543628</ProductId>
+  </Package>
+  <Package id="office365_tier2_024mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>543634</ProductId>
+  </Package>
+  <Package id="office365_tier3_001mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31835</ProductId>
+  </Package>
+  <Package id="office365_tier3_012mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31841</ProductId>
+  </Package>
+  <Package id="office365_tier3_024mo" QtyIsDuration="true" MaxQty="300">
+    <ProductId>31843</ProductId>
+  </Package>
+</Packages>
