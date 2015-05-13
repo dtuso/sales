@@ -1340,6 +1340,14 @@ section {
 #domain-name-input:-ms-input-placeholder {
   color: #008a32;
 }
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
 /* should be more global? */
 [data-url] {
   cursor: pointer;
