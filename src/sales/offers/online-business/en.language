@@ -1,7 +1,6 @@
 ---
-id:  54c937b2f778fc2bc0f8d8a1
-name: GCE-38252
-comments: Got flow update
+name: mcx-39341
+comments: Enable India
 location: localization/sales/offers/online-business/en
 ---
 {% include 'modules/doc-block.html' %}
@@ -165,6 +164,8 @@ Unlimited products
 Built-in SEO features
 <phrase key="32573-godaddy-ols-bullet-8" />
 Accept credit cards &amp; PayPal<sup>&reg;</sup>
+<phrase key="39341-godaddy-ols-bullet-8-in" />
+Accept credit cards
 <phrase key="32573-godaddy-ols-bullet-9" />
 Secure checkout
 <phrase key="32573-godaddy-ols-bullet-10" />
