@@ -1,0 +1,578 @@
+<Packages>
+  <Package id="wordpress_tier1_001mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580967</ProductId>
+  </Package>
+  <Package id="wordpress_tier1_003mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580972</ProductId>
+  </Package>
+  <Package id="wordpress_tier1_006mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580975</ProductId>
+  </Package>
+  <Package id="wordpress_tier1_012mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580970</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier1_024mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580979</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier1_036mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580982</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier1_048mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580985</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier1_060mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580988</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier1_120mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580991</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_001mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580969</ProductId>
+  </Package>
+  <Package id="wordpress_tier2_003mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580974</ProductId>
+  </Package>
+  <Package id="wordpress_tier2_006mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580977</ProductId>
+  </Package>
+  <Package id="wordpress_tier2_012mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580978</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_024mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580981</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_036mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580984</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_048mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580987</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_060mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580990</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier2_120mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580993</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_001mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580995</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_003mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>580998</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_006mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581000</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_012mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581001</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_024mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581003</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_036mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581005</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_048mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581007</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_060mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581009</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier3_120mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581011</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_001mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581013</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_003mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581016</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_006mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581018</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_012mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581019</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_024mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581021</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_036mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581023</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_048mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581025</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_060mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581027</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_tier4_120mo" QtyIsDuration="false" MaxQty="25">
+    <ProductId>581029</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+    </Rules>
+  </Package>
+  <Package id="wordpress_o365_tier1_001mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580967</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_003mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580972</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_006mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580975</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_012mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580970</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_024mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580979</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_036mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580982</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_048mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580985</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_060mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580988</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier1_120mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580991</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_001mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580969</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_003mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580974</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_006mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580977</ProductId>
+    <Rules>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_012mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580978</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_024mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580981</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_036mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580984</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_048mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580987</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_060mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580990</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier2_120mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580993</ProductId>
+    <Rules>
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_001mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580995</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_003mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>580998</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_006mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581000</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_012mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581001</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_024mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581003</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_036mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581005</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_048mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581007</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_060mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581009</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier3_120mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581011</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_001mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581013</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_003mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581016</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_006mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581018</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_012mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581019</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_024mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581021</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_036mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581023</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_048mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581025</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_060mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581027</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+  <Package id="wordpress_o365_tier4_120mo" QtyIsDuration="false" MaxQty="25" IsPackage="true">
+    <ProductId>581029</ProductId>
+    <Rules>
+      <Rule Name="FreeSSL" SSLId="3604" />
+      <Rule Name="FreeDomain" duration="1"/>
+      <Rule Name="applydiscountcode" code="O365ZERO" />
+    </Rules>
+    <GroupItems>
+      <GroupItem Name="O365Email" ItemType="product" ProductId="464069" Duration="1" ProductGroupId="99" />
+    </GroupItems>
+  </Package>
+</Packages>
