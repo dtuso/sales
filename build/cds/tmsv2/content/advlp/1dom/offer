@@ -22,7 +22,7 @@
      ##else
        $(".price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')})
      ##endif
-     $(".original-price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" />]@T]')})
+     $(".original-price").each(function(){$(this).text('[@T[productprice:<list productid="101" period="yearly" />]@T]')})
      $(".icann-fee").each(function(){$(this).text('[@T[domains:<icannfee/>]@T]')});
     
   </script>
@@ -203,7 +203,7 @@
 <!-- =========================-->
 <section class="compare-chart-section">
   <div class="l-main-container container main-banner-content">
-    <h4 class="compare-chart-title text-center uppercase">Compare and save big!</h4>
+    <h4 class="compare-chart-title text-center uppercase">[@L[cds.tmsv2/content/advlp/1dom:compare-chart-5-CompareAndSaveBig]@L]</h4>
     <div class="compare-chart-table-wrapper">
       <table class="compare-chart-table">
         <thead>
@@ -211,46 +211,46 @@
             <th class="compare-chart-col-1"> </th>
             <th rel="godaddy" class="company-col-gd text-center highlight-compare-column"> 
               <div class="company-logo"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/gd-logo.png"/></div>
-              <div class="company-text">GoDaddy</div>
+              <div class="company-text">[@T[companyname:name]@T]</div>
             </th>
             <th rel="networksolutions" class="company-col-network text-center"> 
               <div class="company-logo"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/network-logo.png"/></div>
-              <div class="company-text">Network Solutions</div>
+              <div class="company-text">[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-NetworkSolutions]@L]</div>
             </th>
             <th rel="register" class="company-col-register text-center"> 
               <div class="company-logo"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/register-logo.png"/></div>
-              <div class="company-text">Register.<span style="display:none;"> </span>com</div>
+              <div class="company-text">[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-RegisterCom]@L]</div>
             </th>
             <th rel="Yahoodomains" class="company-col-yahoo text-center"> 
               <div class="company-logo"><img src="[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/yahoo-logo.png"/></div>
-              <div class="company-text">Yahoo Domains</div>
+              <div class="company-text">[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-YahooDomains]@L]</div>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1 Yr Domain Registration (.COM)</td>
-            <td class="text-center compare-chart-highlight">$0.99*<br/>SALE!</td>
-            <td class="text-center">$34.99</td>
-            <td class="text-center">$38.00</td>
-            <td class="text-center">$9.95</td>
+            <td>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-6-1YrDomainRegistrationCOM]@L]</td>
+            <td class="text-center compare-chart-highlight"><span class="price"></span>*<br/>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-SALE]@L]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="3499" htmlsymbol="true" />]@T]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="3800" htmlsymbol="true" />]@T]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="995" htmlsymbol="true" />]@T]</td>
           </tr>
           <tr>
             <td>Domain Transfer</td>
-            <td class="text-center compare-chart-highlight">$0.99*<br/>SALE!</td>
-            <td class="text-center">$19.00</td>
-            <td class="text-center">$12.00</td>
-            <td class="text-center">$9.95</td>
+            <td class="text-center compare-chart-highlight"><span class="price"></span>*<br/>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-SALE]@L]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="1900" htmlsymbol="true" />]@T]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="1200" htmlsymbol="true" />]@T]</td>
+            <td class="text-center">[@T[currencyprice:<price usdamount="995" htmlsymbol="true" />]@T]</td>
           </tr>
           <tr>
-            <td>Status Alerts</td>
+            <td>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-StatusAlerts]@L]</td>
             <td class="text-center compare-chart-highlight"><span class="check-style-1"></span></td>
             <td class="text-center">-</td>
             <td class="text-center">-</td>
             <td class="text-center">-</td>
           </tr>
           <tr>
-            <td>Getting Started Guide</td>
+            <td>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-3-GettingStartedGuide]@L]</td>
             <td class="text-center compare-chart-highlight"><span class="check-style-1"></span></td>
             <td class="text-center"><span class="check-style-2"></span></td>
             <td class="text-center">-</td>
@@ -258,9 +258,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="text-right chart-date">
-        <Date>accurate as of (DATE)</Date>
-      </div>
+      <div class="text-right chart-date">[@L[cds.tmsv2/content/advlp/1dom:compare-chart-6-DateAccurateAsOfDATE]@L]</div>
     </div>
   </div>
 </section> 

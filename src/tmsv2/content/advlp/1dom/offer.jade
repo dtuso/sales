@@ -21,7 +21,7 @@ atlantis:webstash(type='js')
       ##else
         $(".price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')})
       ##endif
-      $(".original-price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" />]@T]')})
+      $(".original-price").each(function(){$(this).text('[@T[productprice:<list productid="101" period="yearly" />]@T]')})
       $(".icann-fee").each(function(){$(this).text('[@T[domains:<icannfee/>]@T]')});
 
 atlantis:webstash(type='css')
@@ -194,7 +194,7 @@ section.domain-section
 
 section.compare-chart-section
   div.l-main-container.container.main-banner-content
-    h4.compare-chart-title.text-center.uppercase Compare and save big!
+    h4.compare-chart-title.text-center.uppercase [@L[cds.tmsv2/content/advlp/1dom:compare-chart-5-CompareAndSaveBig]@L]
     div.compare-chart-table-wrapper
       table.compare-chart-table
         thead
@@ -202,42 +202,42 @@ section.compare-chart-section
             th.compare-chart-col-1 
             th.company-col-gd.text-center.highlight-compare-column(rel='godaddy') 
               div.company-logo: img(src!='[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/gd-logo.png')
-              div.company-text GoDaddy
+              div.company-text [@T[companyname:name]@T]
             th.company-col-network.text-center(rel='networksolutions') 
               div.company-logo: img(src!='[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/network-logo.png')
-              div.company-text Network Solutions
+              div.company-text [@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-NetworkSolutions]@L]
             th.company-col-register.text-center(rel='register') 
               div.company-logo: img(src!='[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/register-logo.png')
-              div.company-text Register.<span style="display:none;"> </span>com
+              div.company-text [@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-RegisterCom]@L]
             th.company-col-yahoo.text-center(rel='Yahoodomains') 
               div.company-logo: img(src!='[@T[link:<imageroot />]@T]fos/sales/themes/scotty/offers/default/img/domain/yahoo-logo.png')
-              div.company-text Yahoo Domains
+              div.company-text [@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-YahooDomains]@L]
         tbody
           tr
-            td 1 Yr Domain Registration (.COM)
-            td.text-center.compare-chart-highlight $0.99*<br/>SALE!
-            td.text-center $34.99
-            td.text-center $38.00
-            td.text-center $9.95
+            td [@L[cds.tmsv2/content/advlp/1dom:compare-chart-6-1YrDomainRegistrationCOM]@L]
+            td.text-center.compare-chart-highlight <span class="price"></span>*<br/>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-SALE]@L]
+            td.text-center [@T[currencyprice:<price usdamount="3499" htmlsymbol="true" />]@T]
+            td.text-center [@T[currencyprice:<price usdamount="3800" htmlsymbol="true" />]@T]
+            td.text-center [@T[currencyprice:<price usdamount="995" htmlsymbol="true" />]@T]
           tr
             td Domain Transfer
-            td.text-center.compare-chart-highlight $0.99*<br/>SALE!
-            td.text-center $19.00
-            td.text-center $12.00
-            td.text-center $9.95
+            td.text-center.compare-chart-highlight <span class="price"></span>*<br/>[@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-SALE]@L]
+            td.text-center [@T[currencyprice:<price usdamount="1900" htmlsymbol="true" />]@T]
+            td.text-center [@T[currencyprice:<price usdamount="1200" htmlsymbol="true" />]@T]
+            td.text-center [@T[currencyprice:<price usdamount="995" htmlsymbol="true" />]@T]
           tr
-            td Status Alerts
+            td [@L[cds.tmsv2/content/advlp/1dom:compare-chart-2-StatusAlerts]@L]
             td.text-center.compare-chart-highlight: span.check-style-1
             td.text-center -
             td.text-center -
             td.text-center -
           tr
-            td Getting Started Guide
+            td [@L[cds.tmsv2/content/advlp/1dom:compare-chart-3-GettingStartedGuide]@L]
             td.text-center.compare-chart-highlight: span.check-style-1
             td.text-center: span.check-style-2
             td.text-center -
             td.text-center -
-      div.text-right.chart-date: Date accurate as of (DATE)
+      div.text-right.chart-date: [@L[cds.tmsv2/content/advlp/1dom:compare-chart-6-DateAccurateAsOfDATE]@L]
 |  
 | ##endif
 |  
