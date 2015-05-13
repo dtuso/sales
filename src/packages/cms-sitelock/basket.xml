@@ -1,0 +1,38 @@
+<Packages>
+  <Package id="sitelock_tier1_012mo" QtyIsDuration="false">
+    <ProductId>181769</ProductId>
+  </Package>
+  <Package id="sitelock_tier1_024mo" QtyIsDuration="false">
+    <ProductId>181772</ProductId>
+  </Package>
+  <Package id="sitelock_tier1_036mo" QtyIsDuration="false">
+    <ProductId>181775</ProductId>
+  </Package>
+  <Package id="sitelock_tier1_060mo" QtyIsDuration="false">
+    <ProductId>181781</ProductId>
+  </Package>
+  <Package id="sitelock_tier2_012mo" QtyIsDuration="false">
+    <ProductId>181771</ProductId>
+  </Package>
+  <Package id="sitelock_tier2_024mo" QtyIsDuration="false">
+    <ProductId>181774</ProductId>
+  </Package>
+  <Package id="sitelock_tier2_036mo" QtyIsDuration="false">
+    <ProductId>181777</ProductId>
+  </Package>
+  <Package id="sitelock_tier2_060mo" QtyIsDuration="false">
+    <ProductId>181783</ProductId>
+  </Package>
+  <Package id="sitelock_tier3_012mo" QtyIsDuration="false">
+    <ProductId>181785</ProductId>
+  </Package>
+  <Package id="sitelock_tier3_024mo" QtyIsDuration="false">
+    <ProductId>181787</ProductId>
+  </Package>
+  <Package id="sitelock_tier3_036mo" QtyIsDuration="false">
+    <ProductId>181789</ProductId>
+  </Package>
+  <Package id="sitelock_tier3_060mo" QtyIsDuration="false">
+    <ProductId>181793</ProductId>
+  </Package>
+</Packages>
