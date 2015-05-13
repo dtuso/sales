@@ -1970,7 +1970,9 @@ input[type=checkbox] + label{
                 features: planFeatures,
                 percentSavings: planPercentSavings,
                 isToolTip: isToolTip,
-                toolTipContent: sslToolTipString
+                toolTipContent: sslToolTipString,
+                extraRow: false
+                
               };
               parentID.append(planTemplate(planData));
       
