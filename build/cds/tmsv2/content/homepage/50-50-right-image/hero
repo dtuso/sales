@@ -3,7 +3,7 @@
   /* template layout styling */
   .hero-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
   .hero-arrow .left-container, .hero-arrow .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
-  .hero-arrow left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; background:white;}
+  .hero-arrow .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
   .hero-arrow .left-content, .hero-arrow .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
   .hero-arrow .left-content { padding: 5% 0% 5% 0; }
   .hero-arrow .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
@@ -11,6 +11,7 @@
   .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:first-child { margin-top: 0 !important;}
   .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:last-child { margin-bottom: 0 !important;}
   .hero-arrow mark { line-height: inherit; }
+  .hero-arrow mark:after { height: 1em; }
   
   /* content styling */
   
@@ -22,7 +23,6 @@
   .hero-arrow .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
   .hero-arrow .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
   .hero-arrow .text-white { color:#fff;}
-  
   .hero-arrow .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
   .hero-arrow .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
   
@@ -47,7 +47,7 @@
 
 </style>
 <div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="hero hero-arrow fifty-right-image">
-  <div class="left-container">
+  <div style="background:white;" class="left-container">
     <div class="left-content"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="Template title icon" class="hidden-xs"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="Template title icon" class="svgfallback hidden-xs"/>
       <div class="hidden-xs">
         <mark class="font-sm bold">[@L[cds.tmsv2/content/homepage/gem/hero:markText]@L]</mark>

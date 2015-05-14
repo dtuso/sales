@@ -663,7 +663,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]</div>
@@ -712,7 +712,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:personal-themes]@L]</div>
@@ -762,7 +762,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:business-themes]@L]</div>
@@ -812,7 +812,7 @@
                   </div>
                 </div>
                 <div class="action-button-wrap row"></div>
-                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
                 <div class="features-wrap">
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span></div>
                   <div class="plan-item">[@L[cds.sales/gd/hosting/website-builder:unlimited-themes]@L]</div>
@@ -5429,7 +5429,7 @@ width: 50%;
         /* TODO: can this styling be abstracted into landing-page.jade? */
         body { background-color: #d9d9d9; }
         #marquee { 
-          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg) no-repeat top center; 
+          background: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wsb-marquee-02_v1.jpg) no-repeat top center; 
           padding-bottom: 120px;
           margin-bottom: 0;
           background-size: cover;
@@ -5454,7 +5454,7 @@ width: 50%;
         html[lang="en-nz"] #marquee,
         html[lang="fr-be"] #marquee,
         html[lang="fr-ca"] #marquee {
-          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/BACKUP_image_sb15_wsb_marquee.jpg);
+          background-image: url([@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/website-builder/img-wsb-marquee-02_v1.jpg);
         }
         
         /* asia */

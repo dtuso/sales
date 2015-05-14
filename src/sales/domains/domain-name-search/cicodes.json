@@ -729,6 +729,12 @@
           { "ITC Code" : "ButtomPodWales" },
           { "Description" : "Buttom TLD Pods - .WALES" }
         ]
+      },
+      { "Buttom TLD Pods - .VIDEO" : [
+          { "ITC ID" : "99092" },
+          { "ITC Code" : "ButtomPodVideo" },
+          { "Description" : "Buttom TLD Pods - .VIDEO" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -970,6 +976,18 @@
           { "ITC ID" : "98035" },
           { "ITC Code" : "NewAvailDesign" },
           { "Description" : "New Available TLD's Column - .DESIGN" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .LIFE" : [
+          { "ITC ID" : "99094" },
+          { "ITC Code" : "NewAvailLife" },
+          { "Description" : "New Available TLD's Column - .LIFE" }
+        ]
+      },
+      { "New Domains Available TLD's Column - .SALE" : [
+          { "ITC ID" : "99095" },
+          { "ITC Code" : "NewAvailSale" },
+          { "Description" : "New Available TLD's Column - .SALE" }
         ]
       }
     ],

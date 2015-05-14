@@ -115,6 +115,14 @@ section#step2-choose-product.js-marquee-section
               | 
               |##endif
               | 
+              | 
+              |##if(countrySiteAny(ca))
+              | 
+              br 
+              br
+              | 
+              |##endif
+              | 
             button.btn.btn-md.btn-block.btn-purchase.got-microsoft-clickable-package.product-wsb(data-ci="95741") [@L[cds.sales/offers/online-business:32573-choose-select-button]@L]
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-1]@L]
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-wsb-bullet-2]@L]
@@ -133,6 +141,14 @@ section#step2-choose-product.js-marquee-section
               |##if(countrySiteAny(uk))
               | 
               div [@L[cds.sales/offers/online-business:32573-vat-excludes-price-percentage]@L]
+              | 
+              |##endif
+              | 
+              | 
+              |##if(countrySiteAny(ca))
+              | 
+              br 
+              | [@L[cds.sales/_common:english-only]@L]
               | 
               |##endif
               | 
