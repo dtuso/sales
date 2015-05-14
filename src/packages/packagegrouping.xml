@@ -438,6 +438,7 @@
       <Package id="dc_hosting" />
       <Package id="dc_websitebuilder" />
       <Package id="dc_websitebuilderandhosting" />
+      <Package id="dc_wsbandhostingnoemailcredits" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="domainbackorders" ProductGroupId="1">
