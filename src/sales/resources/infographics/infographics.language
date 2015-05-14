@@ -1,0 +1,31 @@
+---
+location: localization/sales/gd/resources/infographics/en
+id: 555275fff778fc0d1c094f52
+name: SEM-510
+---
+{% include '../../../modules/doc-block.html' %}
+## DO NOT TRANSLATE THE FILE
+<phrase key="page-title" />
+Infographics for Domains, Hosting, Ecommerce and More - [@T[companyname:name]@T]
+<phrase key="meta-description" />
+Check out our infographics about websites, domain names, hosting, ecommerce and more from the experts at [@T[companyname:name]@T].
+<phrase key="og-title" />
+Infographics for Domains, Hosting, Ecommerce and More - [@T[companyname:name]@T]
+<phrase key="og-description" />
+Check out our infographics about websites, domain names, hosting, ecommerce and more from the experts at [@T[companyname:name]@T].
+<phrase key="page-title-h1" />
+Infographics
+<phrase key="intro-paragraph" />
+There's a lot of information out there. Stay in the know about websites and the online world with our visually-rich infographics and noteworthy data tidbits.
+<phrase key="view-featured-button-label" />
+View Featured
+<phrase key="infographics-1-title" />
+Top Five Domain Name Registration Tips
+<phrase key="infographics-1-intro" />
+Managing your online identity and reputation includes being smart about domain names. Learn how to avoid missteps and maintain control of your online identity.
+<phrase key="coming-soon-image-text" />
+Coming Soon
+<phrase key="coming-soon-title" />
+Check Back Later
+<phrase key="coming-soon-paragraph" />
+More new infographics are on the way.
