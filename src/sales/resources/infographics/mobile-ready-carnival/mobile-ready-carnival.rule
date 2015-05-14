@@ -1,0 +1,17 @@
+---
+location: sales/research.rule
+id: 5550c9cef778fc2030decc75
+name: SEM-510
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([pt-br],[en-gb])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]

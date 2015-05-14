@@ -1,0 +1,17 @@
+---
+location: sales/resources/infographics/colour-your-website-with-success.rule
+id: 5550c953f778fc2030decc74
+name: SEM-511
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en-in])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]
