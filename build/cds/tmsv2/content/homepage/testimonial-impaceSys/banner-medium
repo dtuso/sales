@@ -3,7 +3,7 @@
   .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
   .banner-medium .font-lg { font-size: 2.5em; }
   .banner-medium .font-md { font-size: 1.5em; }
-  .banner-medium .font-sm { font-size: 1em; }
+  .banner-medium .font-sm { font-size: 1.25em; }
   .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
   .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
   .banner-medium .disclaimer { font-size: 10px; }
@@ -21,12 +21,12 @@
 </style>
 <style>
   .banner-medium.testimonial { background-color: #333; color: #fff; }
-  .banner-medium.testimonial .font-md { font-size: 1.25em; text-transform: none; }
+  .banner-medium.testimonial .black.font-sm { text-transform: none; }
   
 </style><a href="" data-url="" data-ci="" class="banner-medium simple testimonial">
   <div class="content-container">
     <div class="content">
-      <div class="black font-md">"There's a reason why GoDaddy is the number one registrar in the world."</div>
-      <div class="black font-sm text-primary-o">Mr. Atul Chaudhari, Impace Systems</div>
+      <div class="black font-sm">"There's a reason why GoDaddy is the number one registrar in the world."</div>
+      <div class="black text-primary-o">Mr. Atul Chaudhari, Impace Systems</div>
     </div>
   </div></a>

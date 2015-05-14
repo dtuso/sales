@@ -3,7 +3,7 @@
   .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
   .banner-medium .font-lg { font-size: 2.25em; }
   .banner-medium .font-md { font-size: 1.5em; }
-  .banner-medium .font-sm { font-size: 1em; }
+  .banner-medium .font-sm { font-size: 1.25em; }
   .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
   .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
   .banner-medium .disclaimer { font-size: 10px; }
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div class="right-container">
-    <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;" viewBox="0 0 10 100">
+    <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;left:-1px;" viewBox="0 0 100 100">
       <polygon points="0,0 10,100 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
