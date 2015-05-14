@@ -238,7 +238,7 @@
                       var $price = $('.ca.banner-medium .text-purchase');
                       $price.html($price.html().replace('{0}','[@T[productprice:<current productid="9405" period="yearly" />]@T]'));
                       $price.show();
-                    }());
+                    })();
                   </script>
                 </div>
               </div>

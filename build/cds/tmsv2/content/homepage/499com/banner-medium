@@ -21,6 +21,8 @@
 </style>
 <style>
   .banner-medium.com499 { background-color: #333; color: #fff; }
+  .banner-medium.com499 .font-md { font-size: 1.25em; }
+  .banner-medium.com499 .bold { text-transform: none; }
   
 </style><a href="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727'/></relative>]@T]" data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='95727'/></relative>]@T]" data-ci="95727" class="banner-medium simple com499">
   <div class="content-container">

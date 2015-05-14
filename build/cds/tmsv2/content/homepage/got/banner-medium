@@ -21,14 +21,12 @@
 </style>
 <style>
   .banner-medium.got { background-color: #333; color: #fff; }
-  .banner-medium.got .black { text-transform: uppercase; }
-  .banner-medium.got .price { font-size:1.5em; display: block; line-height: 1.4; }
+  .banner-medium.got .price { font-size:1.5em; display: block; line-height: 1; margin-top: .25em; }
   
 </style><a href="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="banner-medium simple got">
   <div class="content-container">
     <div class="content">
       <div class="font-md black text-primary-o">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
       <div class="font-md black">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
-      <div class="font-md black text-purchase">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
     </div>
   </div></a>

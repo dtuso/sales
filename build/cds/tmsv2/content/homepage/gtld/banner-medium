@@ -10,7 +10,6 @@
   
   
   .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
-  .banner-medium.split .left-container { background-color: #77c043 }
   .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
   .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
   
@@ -29,7 +28,7 @@
   
 </style>
 <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci="95897" class="banner-medium split gtld">
-  <div class="left-container">
+  <div style="background-color: #77c043;" class="left-container">
     <div class="left-content">
       <h2 class="black text-center">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
     </div>

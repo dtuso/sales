@@ -10,7 +10,6 @@
   
   
   .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
-  .banner-medium.split .left-container { background-color: #333 }
   .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
   .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
   
@@ -30,7 +29,7 @@
   
 </style>
 <div data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='97696' /></relative>]@T]" data-ci="97696" class="banner-medium split tld-com-rajesh">
-  <div class="left-container">
+  <div style="background-color: #333;" class="left-container">
     <div class="left-content">
       <div class="black">Big dreams.<br>Small price.</div>
       <h2 class="black text-primary-o">New .com<br/><span class="text-purchase">[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]*</span></h2>

@@ -241,7 +241,7 @@
                       var $price = $('.co-uk.banner-medium .text-purchase');
                       $price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));
                       $price.show();
-                    }());
+                    })();
                   </script>
                   <script>
                     (function() { 
@@ -250,7 +250,7 @@
                       if (!savings) {
                         $element.html('100% BRILLIANT');
                       }
-                    }());
+                    })();
                   </script>
                 </div>
               </div>
