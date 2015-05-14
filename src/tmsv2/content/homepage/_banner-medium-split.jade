@@ -7,17 +7,23 @@ block vars
 
 block styles
   style.
-    .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; color: #333; position: relative; }
-    .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
-    .banner-medium .left-container { background-color: #{polygonFill} }
-    .banner-medium .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
-    .banner-medium .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
-
-    .banner-medium .font-lg { font-size: 2.25em; margin-top: .25em !important; margin-bottom: .25em !important; }
-    .banner-medium .font-md { font-size: 1.5em; margin-top: .25em !important; margin-bottom: .25em !important; }
-    .banner-medium .font-sm { font-size: 1em; margin-top: .25em !important; margin-bottom: .25em !important; }
+    .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+    .banner-medium .font-lg { font-size: 2.25em; }
+    .banner-medium .font-md { font-size: 1.5em; }
+    .banner-medium .font-sm { font-size: 1em; }
     .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
     .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+    .banner-medium .disclaimer { font-size: 10px; }
+
+
+    .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
+    .banner-medium.split .left-container { background-color: #{polygonFill} }
+    .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+    .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
+
+    .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
+    .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
+    .banner-medium.split .left-content > *:last-child, .banner-medium.split .right-content > *:last-child { margin-bottom: 0;}
 
 .banner-medium.split(data-url!=ctaLink data-ci=ciCode class=classes)
   .left-container

@@ -69,7 +69,7 @@ append headScripts
           if ((data[key]) && (data[key].trim() != '')) {
             var elem = document.getElementById(key)
             if (elem != null) {
-              document.getElementById(key).innerHTML = data[key];
+              $('#' + key).html(data[key]);
             }
           }
         }

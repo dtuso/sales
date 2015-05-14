@@ -1,27 +1,17 @@
-block vars
+extends ../_banner-medium-simple.jade
+
+append vars
   - ctaLink = "[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]";
   - ciCode = 95726;
-  
-style.
-  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
-  .banner-medium.got { background: #333; color: #fff; }
-  .banner-medium.got .products, .banner-medium.got .price-text { line-height: 1.7em; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase;font-size:1.4em; }
-  .banner-medium.got .price { font-size: 1.5em; }
-  .banner-medium.got .disclaimer { font-size:.75em; margin-bottom: -.5em;}
-  @media only screen and (min-width:480px) {
-    .banner-medium.got { font-size:18px; }
-  }
-  @media only screen and (min-width:768px) {
-    .banner-medium.got { font-size:15px; }
-  }
-  @media only screen and (min-width:992px) {
-    .banner-medium.got { font-size:13px; }
-  }
-  @media only screen and (min-width:1200px) {
-    .banner-medium.got { font-size:16px; }
-  }
+  - classes ="got";
 
-.banner-medium.got(data-url!=ctaLink data-ci=ciCode)
-  .products.text-primary-o [@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]
-  .price-text [@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]
-  .disclaimer [@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]
+append styles
+  style.
+    .banner-medium.got { background-color: #333; color: #fff; }
+    .banner-medium.got .black { text-transform: uppercase; }
+    .banner-medium.got .price { font-size:1.5em; display: block; line-height: 1.4; }
+
+block content
+  .font-md.black.text-primary-o [@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]
+  .font-md.black [@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]
+  .font-md.black.text-purchase [@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]

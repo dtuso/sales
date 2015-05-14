@@ -16,13 +16,3 @@ block content
   .title.text-primary-o !{titleText} 
   .body !{bodyText} 
   a.btn.btn-sm.btn-purchase(href!=ctaLink) !{ctaText}
-  script.
-    (function() { 
-      var gdproSavings = '[@T[productcompare:<percent primaryproductid="32759" secondaryproductid="32759" showsymbol="true" hidebelow="5"/>]@T]';
-      if (gdproSavings) {
-        var text = $('.banner-medium.gdpro-beginner-price .body').html();
-        $('.banner-medium.gdpro-beginner-price .body').html(text.replace(/\{0\}/gi, gdproSavings));
-      } else {
-        $('.banner-medium.gdpro-beginner-price .body').html("");
-      }
-    })();

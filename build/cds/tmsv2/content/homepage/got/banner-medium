@@ -1,26 +1,34 @@
 
 <style>
-  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
-  .banner-medium.got { background: #333; color: #fff; }
-  .banner-medium.got .products, .banner-medium.got .price-text { line-height: 1.7em; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase;font-size:1.4em; }
-  .banner-medium.got .price { font-size: 1.5em; }
-  .banner-medium.got .disclaimer { font-size:.75em; margin-bottom: -.5em;}
-  @media only screen and (min-width:480px) {
-    .banner-medium.got { font-size:18px; }
-  }
-  @media only screen and (min-width:768px) {
-    .banner-medium.got { font-size:15px; }
-  }
-  @media only screen and (min-width:992px) {
-    .banner-medium.got { font-size:13px; }
-  }
-  @media only screen and (min-width:1200px) {
-    .banner-medium.got { font-size:16px; }
-  }
+  .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+  .banner-medium .font-lg { font-size: 2.5em; }
+  .banner-medium .font-md { font-size: 1.5em; }
+  .banner-medium .font-sm { font-size: 1em; }
+  .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .banner-medium .disclaimer { font-size: 10px; }
+  
+  .banner-medium.simple { padding: 0; display: block; text-decoration: none; }
+  .banner-medium.simple:hover, .banner-medium.simple:focus { color: #fff; }
+  .banner-medium.simple .content-container { line-height: 1; padding: 1em; min-height: inherit; position: relative; display: table; }
+  .banner-medium.simple .content { display: table-cell; vertical-align: middle;}
+  .banner-medium.simple .content > * { margin-top: .25em; margin-bottom: .25em;}
+  .banner-medium.simple .content > *:first-child { margin-top: 0;}
+  .banner-medium.simple .content > *:last-child { margin-bottom: 0;}
+  .banner-medium.simple .svgfallback:not(old) { display: inline-block;}
+  .banner-medium.simple .svgfallback { display: none;}
   
 </style>
-<div data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="banner-medium got">
-  <div class="products text-primary-o">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
-  <div class="price-text">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
-  <div class="disclaimer">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
-</div>
+<style>
+  .banner-medium.got { background-color: #333; color: #fff; }
+  .banner-medium.got .black { text-transform: uppercase; }
+  .banner-medium.got .price { font-size:1.5em; display: block; line-height: 1.4; }
+  
+</style><a href="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-url="[@T[link:<relative path='offers/online-business.aspx'><param name='ci' value='95726' /></relative>]@T]" data-ci='95726' class="banner-medium simple got">
+  <div class="content-container">
+    <div class="content">
+      <div class="font-md black text-primary-o">[@L[cds.tmsv2/content/homepage/got/marquee-tile:products]@L]</div>
+      <div class="font-md black">[@L[cds.tmsv2/content/homepage/got/marquee-tile:cta]@L]</div>
+      <div class="font-md black text-purchase">[@L[cds.tmsv2/content/homepage/got/marquee-tile:disclaimer]@L]</div>
+    </div>
+  </div></a>

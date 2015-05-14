@@ -123,7 +123,7 @@
             if ((data[key]) && (data[key].trim() != '')) {
               var elem = document.getElementById(key)
               if (elem != null) {
-                document.getElementById(key).innerHTML = data[key];
+                $('#' + key).html(data[key]);
               }
             }
           }
@@ -222,7 +222,8 @@
               <div id="marquee-tile-1" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]</div>
               <div id="marquee-tile-2" class="col-md-12 col-sm-6">
                 <style>
-                  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%;padding: .5em; }
+                  .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%; position: relative; }
+                  .banner-medium.tld { padding: .5em; }
                   .banner-medium.tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:1em; line-height:1; color: #fff; }
                   .banner-medium.tld .headline {font-size:1.1em; text-transform: uppercase; margin: 1em 0 .5em 0;}
                   .banner-medium.tld .text-purchase {font-size:1.5em; display: none; }
@@ -237,7 +238,7 @@
                       var $price = $('.ca.banner-medium .text-purchase');
                       $price.html($price.html().replace('{0}','[@T[productprice:<current productid="9405" period="yearly" />]@T]'));
                       $price.show();
-                    })();
+                    }());
                   </script>
                 </div>
               </div>
