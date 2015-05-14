@@ -700,21 +700,21 @@ section {
     border-bottom-width: 3px;
   }
 }
-.hero-wrapper {
+#hero-wrapper {
   font-size: 12px;
 }
 @media only screen and (min-width: 768px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 16px;
   }
 }

@@ -214,9 +214,7 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div id="hero-wrapper" class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
-          </div>
+          <div id="hero-wrapper" class="col-md-8 col-sm-12">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
               <div id="marquee-tile-1" class="col-md-12 col-sm-6">
@@ -1363,21 +1361,21 @@ section {
     border-bottom-width: 3px;
   }
 }
-.hero-wrapper {
+#hero-wrapper {
   font-size: 12px;
 }
 @media only screen and (min-width: 768px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 14px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .hero-wrapper {
+  #hero-wrapper {
     font-size: 16px;
   }
 }
