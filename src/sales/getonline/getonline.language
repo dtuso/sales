@@ -240,6 +240,8 @@ Over the years, our Professional Design Services department has built over 23,00
 Here you go...
 <phrase key="pro-design-get-it-now-bubble-content-text" />
 A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-design-get-it-now-bubble-content-text_37476" comment="{price_monthly} and {price_annual} will be replaced with price" />
+A professional design service for <mark class="business-name-display"></mark> - One-time fee of <mark><span id="product-price">{price_annual}</span></mark> plus <mark><span id="product-price">{price_monthly}</span>/mo</mark> hosting
 <phrase key="pro-design-interview-header" />
 We'll Build a Website That Will Help You Build Your Business
 <phrase key="pro-design-interview-header-text" />
@@ -266,6 +268,8 @@ Whenever you need to update the text or change an image on your site, just conta
 We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
 <phrase key="pro-design-get-it-now-bottom-text" />
 We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-design-get-it-now-bottom-text_37476" comment="{price_annual} and {price_monthly} will be replaced with price" />
+We have a professional design service for <mark><span class="business-name-display"></span></mark> all for a one-time fee of <mark><span id="product-price">{price_annual}</span></mark> plus <mark><span id="product-price">{price_monthly}</span>/mo</mark> hosting
 <phrase key="pro-ecomm-page-title" />
 Get Online eCommerce Design
 <phrase key="pro-ecomm-product-name" />
@@ -284,6 +288,8 @@ Over the years, our Professional Design Services department has built over 23,00
 Here you go...
 <phrase key="pro-ecomm-get-it-now-bubble-content-text" />
 A professional design service for <mark class="business-name-display"></mark> – Starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-ecomm-get-it-now-bubble-content-text_37476" comment="{price_annual} and {price_monthly} will be replaced with price" />
+A professional design service for <mark class="business-name-display"></mark> - One-time fee of <mark><span id="product-price">{price_annual}</span></mark> plus <mark><span id="product-price">{price_monthly}</span>/mo</mark> hosting
 <phrase key="pro-ecomm-interview-header" />
 We'll Build a Website That Will Help You Build Your Business
 <phrase key="pro-ecomm-interview-header-text" />
@@ -310,6 +316,8 @@ Whenever you need to update the text or change an image on your site, just conta
 We have more than 60 people in our Professional Web Services department, all working to make sure you look awesome online.
 <phrase key="pro-ecomm-get-it-now-bottom-text" />
 We have a professional design service for <mark><span class="business-name-display"></span></mark> starting at <mark><span id="product-price">{price_monthly}</span>/mo*</mark>
+<phrase key="pro-ecomm-get-it-now-bottom-text_37476" comment="{price_annual} and {price_monthly} will be replaced with price" />
+We have a professional design service for <mark><span class="business-name-display"></span></mark> all for a one-time fee of <mark><span id="product-price">{price_annual}</span></mark> plus <mark><span id="product-price">{price_monthly}</span>/mo</mark> hosting
 <phrase key="disclaimer-modal-title" />
 Disclaimers
 <phrase key="disclaimer-modal-wsb-content" comment="{0} will get replaced with a currency amount" />
