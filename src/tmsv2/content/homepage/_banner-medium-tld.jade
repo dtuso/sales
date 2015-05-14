@@ -31,6 +31,8 @@ block styles
     script.
       (function() { 
         var $price = $('.!{classes}.banner-medium .text-purchase');
-        $price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{pfid}" period="yearly" />]@T]'));
-        $price.show();
+        if ($price.length) {
+          $price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{pfid}" period="yearly" />]@T]'));
+          $price.show();
+        }
       })();
