@@ -438,6 +438,7 @@
       <Package id="dc_hosting" />
       <Package id="dc_websitebuilder" />
       <Package id="dc_websitebuilderandhosting" />
+      <Package id="dc_wsbandhostingnoemailcredits" />
     </Packages>
   </PackageGroup>
   <PackageGroup Name="domainbackorders" ProductGroupId="1">
@@ -653,6 +654,21 @@
       <Package id="wsb_businessplus_24month" />
       <Package id="wsb_businessplus_36month" />
       <Package id="wsb_businessplus_48month" />
+      <Package id="wsb_personal_o365_1month" />
+      <Package id="wsb_personal_o365_12month" />
+      <Package id="wsb_personal_o365_24month" />
+      <Package id="wsb_personal_o365_36month" />
+      <Package id="wsb_personal_o365_48month" />
+      <Package id="wsb_business_o365_1month" />
+      <Package id="wsb_business_o365_12month" />
+      <Package id="wsb_business_o365_24month" />
+      <Package id="wsb_business_o365_36month" />
+      <Package id="wsb_business_o365_48month" />
+      <Package id="wsb_businessplus_o365_1month" />
+      <Package id="wsb_businessplus_o365_12month" />
+      <Package id="wsb_businessplus_o365_24month" />
+      <Package id="wsb_businessplus_o365_36month" />
+      <Package id="wsb_businessplus_o365_48month" />
       <Package id="wsb_personal_1month_lenovo" />
       <Package id="wsb_personal_12month_lenovo" />
       <Package id="wsb_personal_24month_lenovo" />
