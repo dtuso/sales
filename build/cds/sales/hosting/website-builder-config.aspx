@@ -237,7 +237,7 @@
                 <div class="step-title">[@L[cds.sales/gd/hosting/website-builder-config:select_term_title]@L]</div>
               </div>
               <div class="row">
-                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:select_term_subtitle]@L]</p>
+                <p class="text-secondary step-subtitle"> [@L[cds.sales/gd/hosting/website-builder-config:lock_savings]@L]</p>
               </div>
               <div class="row options-wrapper">
                 <ul id="termList" class="product-options"></ul>
@@ -295,7 +295,15 @@
           <div id="addedPersonalCart" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_personal_cart]@L]</div>
           <div id="addedBusinessPlus" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_plus_cart]@L]</div>
           <div id="addedBusiness" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:added_business_cart]@L]</div>
-          <div id="gfText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</div>
+          <div id="gfText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:add_gf]@L]</div> 
+          ##if(productIsOffered(99) && !countrySiteAny(mx))
+           
+          <div id="extraRowLeftText" class="hidden_div">[@L[cds.sales/gd/hosting/website-builder-config:free_email]@L]</div>
+          <div id="extraRowRightText" class="hidden_div"> 
+            <strike>[@T[productprice:<current productid="464069" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:mo]@L]</strike><span class="config-text-lead text-secondary-o">  [@T[currencyprice:<price usdamount='0' /> ]@T]</span>
+          </div> 
+          ##endif
+           
         </div>
         <div class="col-sm-3">
           <atlantis:webstash type="css">
@@ -395,7 +403,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]:<span class="savings-total"></span></div>
+              <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]: <span class="savings-total"></span></div>
             </div> 
             ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
              
@@ -654,7 +662,7 @@
                   <li data-main=".com" data-view="com" class="availabletld selected">
                     <div data-main="true"><span>.com</span></div>
                   </li> 
-                  ##if(countrySiteAny(br) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".com.br" data-view="com.br" class="availabletld">
                     <div data-main="true"><span>.com.br</span></div>
@@ -670,7 +678,7 @@
                   ##endif
                    
                    
-                  ##if(countrySiteAny(au) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".com.au" data-view="com.au" class="availabletld">
                     <div data-main="true"><span>.com.au</span></div>
@@ -680,7 +688,7 @@
                   <li data-main=".co" data-view="co" class="availabletld">
                     <div data-main="true"><span>.co</span></div>
                   </li> 
-                  ##if(countrySiteAny(ca) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".ca" data-view="ca" class="availabletld">
                     <div data-main="true"><span>.ca</span></div>
@@ -705,7 +713,12 @@
                    
                   <li data-main="co.uk" data-view="co.uk" class="availabletld">
                     <div data-main="true"><span>.co.uk</span></div>
-                  </li>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(isManager())
+                   
                   <li data-main=".uk" data-view="uk" class="availabletld">
                     <div data-main="true"><span>.uk</span></div>
                   </li> 
@@ -756,7 +769,7 @@
       <atlantis:webstash type="js"></atlantis:webstash>
       <script>
         var nextStepUrl;
-        var srcIsPro = window.location.href.indexOf("pro") > -1
+        var srcIsPro = window.location.href.indexOf("pro") > -1;
         var ConfigSearch = {
           showTerm: function (li) {
               if (li) {
@@ -949,6 +962,9 @@
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var availableDomain = safeShortName.split('.')[0];
                                 var availableTld = '.'+safeShortName.split('.')[1];
+                                if (safeShortName.split('.')[2] != undefined){
+                                  availableTld += '.'+safeShortName.split('.')[2];
+                                }
                                 $('.domain-name-display-domain').html(availableDomain);
                                 $('.domain-name-display-tld').html(availableTld);
                                 $('.available-result').show();
@@ -1208,7 +1224,7 @@ ul li.no-check {
         margin-left: 15px;
         }
         .config-text-primary {
-          font-size: 30px;
+          font-size: 25px;
           font-weight: 200;
         }
         .config-text-secondary {
@@ -1300,26 +1316,11 @@ font-weight: 100;
 line-height: 1.1;
 color: #333;
 }
-.config-step .step-subtitle {
-margin-left: 15px;
-}
-.config-text-primary {
-  font-size: 30px;
-  font-weight: 200;
-}
-.config-text-secondary {
-  font-size: 24px;
-}
-.config-text-lead {
-  font-size: 16px;
-}
+
 .bold{
   font-weight: 600;
 }
-.config-text-lead-secondary {
-  font-size: 14px;
 
-}
 .product-options li {
   border-bottom: 1px solid #C3C3C3;
   padding-bottom: 25px;
@@ -1347,55 +1348,13 @@ margin-left: 15px;
 .product-options {
 list-style: none;
 }
-.vertical-align {
-    display: flex;
-    align-items: center;
-}   
-.product-radio {
-  margin-top :10px; 
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -158px -9px;
-  width: 35px;
-  height: 35px;
-}
-@media (max-width: 1024px) { 
-    .vertical-align {
-        display: block;
-        align-items: inherit;
-    }
-    .text-md-right{
-      text-align: right;
-    }
-    .config-text-primary {
-      font-size: 20px;
-    }
-    .config-text-secondary {
-      font-size: 20px;
-    }
-    .config-text-lead {
-      font-size: 16px;
-    }
-    .config-text-save {
-      font-size: 14px;
-    }
-    .config-text-disclaimer {
-      font-size: 14px;
-    }
-    .product-radio {
-      margin-top :0;
-    } 
-    .item-price{
-      border-bottom: 1px solid #EBEBEB;
-    }
-}
+
 @media (max-width: 600px) { 
     .text-xs-right {
       text-align: right;
     }
     .text-md-right{
       text-align: inherit;
-    }
-    .item-price{
-      border-bottom: none;
     }
 }
 .product-added-to-cart-text{
@@ -1411,38 +1370,11 @@ list-style: none;
   position: relative;
   margin-bottom: 15px;
 }
-.order-item-details-wrapper .toprow {
-  margin-top: 15px;
-}
-.item-title-wrapper{
-  border-bottom: 1px solid #333;
-}
-.item-title{
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
-.item-term,.item-x,.item-price,.item-total-price{
-  margin-top: 5px;
-}
-.item-total-price{
-  text-align: right;
-}
-.item-savings-wrapper{
-  text-transform: uppercase;
-}
-.input_hidden {
-    position: absolute;
-    left: -9999px;
-}
-.selected-radio{
-  background: url('[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/lp_sprite-v1.png') no-repeat -121px -7px;
-  width: 36px;
-  height: 36px;
-}
-
 .hidden_div{
   display: none;
+}
+input[type=radio]:checked + label {
+  color: #579006;
 }
       </style>
     </atlantis:webstash>
@@ -1450,151 +1382,245 @@ list-style: none;
       endOfPageScripts();
       
     </script>
-    <atlantis:webstash type="js">
-      <script type="text/template" class="breakTemplate">
-        <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup"><span class="icon-down"></span></div>
+    <atlantis:webstash type="css">
+      <style>
+        .down-arrow{
+          text-align:center;
+          margin-top: 15px;
+          margin-bottom: 15px;
+        }
+      </style>
+    </atlantis:webstash>
+    <script type="text/template" class="breakTemplate">
+      <div data-ci="" data-scroll="" class="config-step-break col-sm-10 move backup uxicon uxicon-chevron-down down-arrow"></div>
+      
+    </script>
+    <atlantis:webstash type="css">
+      <style>
+        .item-title{
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+        .item-term,.item-x,.item-price,.item-total-price{
+          margin-top: 5px;
+        }
+        .item-total-price{
+          text-align: right;
+        }
+        .item-savings-wrapper{
+          text-transform: uppercase;
+        }
+        .order-item-details-wrapper .toprow {
+          margin-top: 15px;
+        }
+        .item-title-wrapper{
+          border-bottom: 1px solid #333;
+        }
+        @media (max-width: 428px) { 
+          .text-xs-right {
+            text-align: right;
+          }
+          .text-md-right{
+            text-align: inherit;
+          }
+        }
+      </style>
+    </atlantis:webstash>
+    <script type="text/template" class="itemTemplate">
+      <div class="row toprow">
+        <div class="col-xs-12 item-title-wrapper">
+          <div class="item-title"><%= itemName %></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-sm-12 ">
+          <div class="item-term"><%= itemTerm %></div>
+        </div>
+        <div class="col-xs-1 col-sm-1">
+          <div class="item-x">x</div>
+        </div>
+        <div class="col-xs-3 col-sm-7">
+          <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div> 
+        </div>
+        <div class="col-xs-4 col-sm-4">
+          <div class="item-total-price text-secondary"><%= itemTotal %></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <% if ( onSale ){ %>
+            <div class="item-savings-wrapper text-secondary">
+              [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
+            </div>
+          <% } %>
+        </div>
+      </div>
+      
+    </script>
+    <atlantis:webstash type="css">
+      <style>
+        .term-circle{
+          font-size:2em;
+          margin-bottom:0;
         
-      </script>
-      <script type="text/template" class="itemTemplate">
-        <div class="row toprow">
-          <div class="col-xs-12 item-title-wrapper">
-            <div class="item-title"><%= itemName %></div>
+        }
+      </style>
+    </atlantis:webstash>
+    <script type="text/template" class="termTemplate">
+      <li>
+        <div class="row vertical-align">
+          <div class="col-xs-2 col-lg-1">
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
+              <label class="uxicon term-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-            <div class="item-term"><%= itemTerm %></div>
+          <div class="col-xs-5 col-lg-3">
+            <div class="config-text-primary"><%= term %> <%= month %></div>
           </div>
-          <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
-            <div class="item-x">x</div>
+          <div class="col-xs-5 col-lg-3">
+            <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
-          <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
-            <div class="item-price"><%= itemPricePerTerm %></div>
-          </div>
-          <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
-            <div class="item-total-price text-secondary"><%= itemTotal %></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <% if ( onSale ){ %>
-              <div class="item-savings-wrapper text-secondary">
-                [@L[cds.sales/_common:save]@L] <span class="item-savings"><%= itemsSavings %></span>
-              </div>
-            <% } %>
-          </div>
-        </div>
-        
-      </script>
-      <script type="text/template" class="planTemplate">
-        <li>
-          <div class="row vertical-align">
-            <div class="col-xs-2 col-sm-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
-            </div>
-            <div class="col-xs-6 col-sm-7">
-              <div class="config-text-secondary"><%= title %></div>
-            </div>
-            <div class="col-xs-4 ">
-              <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
-              <div class="config-text-lead bold"><%= subtitle %></div>
-            </div>
-            <div class="col-xs-4">
+          <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div class="config-text-lead text-xs-right">
               <% if ( onSale ){ %>
-                  <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-                <% } %>
+                <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+              <% } %>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-6 col-sm-7 col-xs-offset-2 col-sm-offset-1">
-              <div class="config-text-lead"><%= features %></div>
-            </div>
-            <div class="col-xs-4">
-              <div class="config-text-lead text-secondary-o">
-                <% if ( onSale ){ %>
-                  [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-                <% } %>
-              </div>
+          <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0 ">
+            <div class="text-xs-right config-text-lead text-secondary-o"> 
+              <% if ( onSale ){ %>
+                [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+              <% } %>
             </div>
           </div>
-        </li>
+        </div>
+      </li>
+      
+    </script>
+    <atlantis:webstash type="css">
+      <style>
+        .plan-circle{
+          font-size:2em;
+          margin-bottom:0;
+        }
         
-      </script>
-      <script type="text/template" class="termTemplate">
-        <li>
-          <div class="row vertical-align">
-            <div class="col-xs-2 col-lg-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-monthly="<%= monthly %>" data-monthlyList="<%= monthlyList %>" data-yearly="<%= yearly %>"  data-term="<%= term %>" data-onSale="<%= onSale %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden"  >
-            </div>
-            <div class="col-xs-5 col-lg-3">
-              <div class="config-text-primary"><%= term %> <%= month %></div>
-            </div>
-            <div class="col-xs-5 col-lg-3">
-              <div class="config-text-primary text-secondary-o text-xs-right"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
-            </div>
-            <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-2 col-lg-offset-0">
-              <div class="config-text-lead text-xs-right">
-                <% if ( onSale ){ %>
-                  <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
-                <% } %>
-              </div>
-            </div>
-            <div class="col-xs-5 col-xs-offset-7 col-md-offset-0 col-lg-3 col-lg-offset-0">
-              <div class="text-xs-right config-text-lead text-secondary-o"> 
-                <% if ( onSale ){ %>
-                  [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
-                <% } %>
-              </div>
+      </style>
+    </atlantis:webstash>
+    <script type="text/template" class="planTemplate">
+      <li>
+        <div class="row vertical-align">
+          <div class="col-xs-2 col-lg-1"> 
+              <input type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%=  package %>" data-plan="<%= plan %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+              <label class="uxicon plan-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
+          </div>
+          <div class="col-xs-6 col-lg-7">
+            <div class="config-text-secondary"><%= title %></div>
+          </div>
+          <div class="col-xs-4 col-lg-4 text-right">
+            <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead bold"><%= subtitle %></div>
+          </div>
+          <div class="col-xs-4 text-right">
+            <% if ( onSale ){ %>
+                <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
+              <% } %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead"><%= features %> <% if ( isToolTip ){ %>
+            <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
+            <% } %></div>
+          </div>
+          <div class="col-xs-4 text-right">
+            <div class="config-text-lead text-secondary-o">
+              <% if ( onSale ){ %>
+                [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
+              <% } %>
             </div>
           </div>
-        </li>
-        
-      </script>
-      <script type="text/template" class="addonTemplate">
-        <li>
+        </div>
+        <% if (extraRow){ %> 
           <div class="row">
-            <div class="col-xs-2 col-md-1">
-              <label class="product-radio radio-<%= radio %> <% if ( !checked ){ %>selected-radio<% } %>" id ="no_thanks_label"></label><input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
-            </div>
-            <div class="col-xs-10 col-md-11">
-              <div class ="config-text-primary">
-                [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
-              </div>
-            </div>
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead bold"><%= extraRowLeftText %></div>
           </div>
-        </li>
-        <li>
-          <div class="row">
-            <div class="col-xs-2 col-md-1">
-              <label class="product-radio radio-<%= radio %> <% if ( checked ){ %>selected-radio<% } %>" id="<%= package %>"></label><input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
-            </div>
-            <div class="col-xs-10 col-md-11">
-              <div class="config-text-primary">
-                <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
-              </div>
-            </div>
+          <div class="col-xs-4 text-right">
+              <%= extraRowRightText %>
           </div>
-        </li>
+        </div>
+       <% } %>
+      </li>
+      
+    </script>
+    <atlantis:webstash type="css">
+      <style>
+        .addon-circle{
+          font-size:2em;
+          margin-bottom:0;
         
-      </script>
+        }
+        
+      </style>
+    </atlantis:webstash>
+    <script type="text/template" class="noThanksAddonTemplate">
+      <li>
+        <div class="row">
+          <div class="col-xs-2 col-md-1">
+          <input id ="no_thanks" type="radio" style="margin-right:4px;" name="<%= radio %>" value="no_thanks"  data-monthly="[@T[currencyprice:<price usdamount='0' /> ]@T]"  data-yearly="[@T[currencyprice:<price usdamount='0' /> ]@T]" <% if ( !checked ){ %>checked="checked"<% } %> class="input_hidden" >
+            <label class="uxicon addon-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( !checked ){ %>uxicon-radio-filled<% } %>" id ="no_thanks_label"></label>
+          </div>
+          <div class="col-xs-10 col-md-11">
+            <div class ="config-text-primary">
+              [@L[cds.sales/gd/hosting/website-builder-config:no_thanks]@L]
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div class="col-xs-2 col-md-1">
+          <input id = "add<%= radio %>"type="radio" style="margin-right:4px;" name="<%= radio %>" value="<%= package %>" data-addon="<%= addon %>" data-monthly="<%= monthly %>"  data-yearly="<%= yearly %>" <% if ( checked ){ %>checked="checked"<% } %> class="input_hidden" >
+            <label class="uxicon addon-circle uxicon-circle-outline vertical-align radio-<%= radio %> <% if ( checked ){ %>uxicon-radio-filled<% } %>" id="<%= package %>"></label>
+          </div>
+          <div class="col-xs-10 col-md-11">
+            <div class="config-text-primary">
+              <%= addonText %> <span class="text-secondary-o"><%= currentPrice %>/<%= termType %></span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </script>
+    <atlantis:webstash type="js">
       <script>
         $.ajaxSetup({cache:false,async:false});
         
+        ##if(productIsOffered(99) && !countrySiteAny(mx))
+        var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_o365_12month";
+        ##else
         var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "wsb_personal_12month";
+        ##endif
+        
         // gs for get started button, ac for add to cart button
         var origin = (getParameterByName('src') != '') ? getParameterByName('src') : "gs";;
         var reload = false;
         var gfSelected = false;
         var sslSelected = false;
+        var gfSelected = false;
+        var o365Available = false;
+        var gfAvailable = false;
         
         ##if(productIsOffered(104))
-        var gfAvailable = true;
-        ##else
-        var gfAvailable = false;
+        gfAvailable = true;
+        ##endif
+        
+        ##if(productIsOffered(99) && !countrySiteAny(mx))
+        o365Available = true;
         ##endif
         
         // spoof url for config and packagegrouping removed when both are published
@@ -1617,7 +1643,11 @@ list-style: none;
             text:{
               title:"[@L[cds.sales/gd/hosting/website-builder-config:business]@L]",
               subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_text]@L]",
-              features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]",
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
+                features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] ",
+              ##else
+                features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:2_email]@L]",
+              ##endif
               product:"[@L[cds.sales/gd/hosting/website-builder-config:order_business_wsb]@L]"
         
             }
@@ -1627,7 +1657,11 @@ list-style: none;
             text:{
               title:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus]@L]",
               subtitle:"[@L[cds.sales/gd/hosting/website-builder-config:business_plus_text]@L]",
-              features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
+              ##if(productIsOffered(99) && !countrySiteAny(mx))
+                features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
+              ##else
+                features:"[@L[cds.sales/gd/hosting/website-builder-config:300_themes]@L] | [@L[cds.sales/gd/hosting/website-builder-config:mobile_site]@L] | [@L[cds.sales/gd/hosting/website-builder-config:5_email]@L] | [@L[cds.sales/gd/hosting/website-builder-config:seo]@L] | [@L[cds.sales/gd/hosting/website-builder-config:social_manager]@L]",
+              ##endif
               product:"[@L[cds.sales/gd/hosting/website-builder-config:order_business_plus_wsb]@L]"
         
             }
@@ -1784,7 +1818,7 @@ list-style: none;
                 var termPercentSavings = termItem[4];
                 var termListPrice = termItem[5];
                 var termCurrentYearlyPrice =  termItem[6];
-                var isSale = ( parseInt(termPercentSavings) > 0 ) ? true : false;
+                var isSale = ( parseInt(termPercentSavings.replace('%','')) > 0 ) ? true : false;
                 var monthString =  (termLength > 1) ? "[@L[cds.sales/_common:months]@L]" : "[@L[cds.sales/_common:month]@L]";
                 var checkedRadiobutton = ( plan ===  termPackage) ? true : false;
                 var isManager = false ; 
@@ -1845,8 +1879,15 @@ list-style: none;
                 var planProduct = planText.product;
                 var planSubtitle = planText.subtitle;
                 var planFeatures = planText.features;
-                var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
+                var isSale = ( parseInt(planPercentSavings.replace('%','')) > 0 ) ? true : false;
                 var isChecked = ( plan ===  planPackage) ? true : false;
+                var extraRowLeftText = '';
+                var extraRowRightText = '';
+                if(o365Available){
+                  var extraRowLeftText = $('#extraRowLeftText').text();
+                  var extraRowRightText = $('#extraRowRightText').html();
+                }
+                
         
                 var planData = {
                   radio: radioName,
@@ -1859,7 +1900,11 @@ list-style: none;
                   onSale: isSale,
                   listPrice: planListPrice,
                   features: planFeatures,
-                  percentSavings: planPercentSavings
+                  percentSavings: planPercentSavings,
+                  isToolTip: false,
+                  extraRow: o365Available,
+                  extraRowLeftText: extraRowLeftText,
+                  extraRowRightText: extraRowRightText
                 };
                 parentID.append(planTemplate(planData));
         
@@ -1878,7 +1923,7 @@ list-style: none;
           generateSSL: function(ssl){
             var radioName = "sslOption";
             var parentID = $("#sslList");
-            var addonTemplate = _.template($( "script.addonTemplate" ).html());
+            var addonTemplate = _.template($( "script.noThanksAddonTemplate" ).html());
         
             parentID.empty();
         
@@ -1906,8 +1951,8 @@ list-style: none;
               parentID.append(addonTemplate(sslData));
         
               $('.radio-'+radioName).click(function(){
-                $(this).parent().parent().parent().parent().find('label').removeClass('selected-radio');
-                $(this).addClass('selected-radio');
+                $(this).parent().parent().parent().parent().find('label').removeClass('uxicon-radio-filled');
+                $(this).addClass('uxicon-radio-filled');
                 $(this).parent().find('input').attr('checked',true).trigger('click');
         
               });
@@ -1929,7 +1974,7 @@ list-style: none;
           generateGetFound: function(gf){
             var radioName = "getFoundOption";
             var parentID = $("#getFoundList");
-            var addonTemplate = _.template($( "script.addonTemplate" ).html());
+            var addonTemplate = _.template($( "script.noThanksAddonTemplate" ).html());
         
             parentID.empty();
         
@@ -1944,7 +1989,7 @@ list-style: none;
                 var gfListPrice = gfItem[4];
                 var gfCurrentYearlyPrice =  gfItem[5];
                 var gfText = $('#gfText').text();
-                var isSale = ( parseInt(gfPercentSavings) > 0 ) ? true : false;
+                var isSale = ( parseInt(gfPercentSavings.replace('%','')) > 0 ) ? true : false;
                 var termLength = $('input:radio[name="termOption"]').filter(':checked').attr('data-term');
                 var termType = "[@L[cds.sales/_common:mo]@L]";
                 var selectedGfTerm = ( termLength ===  gftermLength) ? true : false;
@@ -1967,8 +2012,8 @@ list-style: none;
               });
               
               $('.radio-'+radioName).click(function(){
-                $(this).parent().parent().parent().parent().find('label').removeClass('selected-radio');
-                $(this).addClass('selected-radio');
+                $(this).parent().parent().parent().parent().find('label').removeClass('uxicon-radio-filled');
+                $(this).addClass('uxicon-radio-filled');
                 $(this).parent().find('input').attr('checked',true).trigger('click');
         
               });
@@ -2026,10 +2071,28 @@ list-style: none;
                   itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
                   itemTotal: selectedTotal,
                   onSale: onSale,
-                  itemsSavings: selectedSavings
-                };
+                  itemsSavings: selectedSavings,
+                  itemID: 'selectedPlan'
         
+                };
             parentID.append(itemTemplate(itemData));
+        
+            ##if(productIsOffered(99) && !countrySiteAny(mx))
+              var o365Data = {
+                  itemName: '[@L[cds.sales/gd/hosting/website-builder-config:starter_email]@L]',
+                  itemTerm: '12' + monthString,
+                  itemPricePerTerm: '[@T[currencyprice:<price usdamount='0' /> ]@T]' + "/[@L[cds.sales/_common:mo]@L]",
+                  itemTotal: '[@T[currencyprice:<price usdamount='0' /> ]@T]',
+                  onSale: true,
+                  itemsSavings: '[@T[productprice:<current productid="464069" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]',
+                  itemID: 'o365PlanSelected'
+        
+                };
+              parentID.append(itemTemplate(o365Data));
+        
+            ##endif
+        
+        
           },
           getSelectedSSL: function(){
         
@@ -2051,7 +2114,9 @@ list-style: none;
                     itemTerm: selectedTerm + ' [@L[cds.sales/_common:year]@L]',
                     itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:yr]@L]",
                     itemTotal: selectedPricePerTerm,
-                    onSale: onSale
+                    onSale: onSale,
+                    itemID: 'selectedSSL'
+        
                   };
         
               parentID.append(itemTemplate(itemData));
@@ -2087,7 +2152,9 @@ list-style: none;
                     itemTerm: selectedTerm + monthString,
                     itemPricePerTerm: selectedPricePerTerm + "/[@L[cds.sales/_common:mo]@L]",
                     itemTotal: selectedTotal,
-                    onSale: onSale
+                    onSale: onSale,
+                    itemID: 'selectedGF'
+        
                   };
               parentID.append(itemTemplate(itemData));
             }

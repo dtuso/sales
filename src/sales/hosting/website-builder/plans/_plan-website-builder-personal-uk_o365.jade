@@ -1,0 +1,35 @@
+extend ../../../shared/_plan-tile
+
+block vars
+  - title = "[@L[cds.sales/gd/hosting/website-builder:economy-title]@L]";
+  - description = "[@L[cds.sales/gd/hosting/website-builder:economy-description]@L]"
+  - features = ['[@L[cds.sales/gd/hosting/website-builder:plan-domain]@L] <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:restristions-apply-tooltip]@L]"></span>',"[@L[cds.sales/gd/hosting/website-builder:economy-themes]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-pages]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-diskspace]@L]","[@L[cds.sales/gd/hosting/website-builder:economy-bandwidth]@L]",'<b>[@L[cds.sales/gd/hosting/website-builder:o365-feature]@L]</b> <span class="sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/website-builder:o365-tooltip]@L]"></span>'];
+  //- pfid = "632603";
+  - ci = "87842"
+  - buttonid="product-A";
+  - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
+  //- term ="/[@L[cds.sales/_common:month]@L]"
+  - defaultPlan = "wsb_personal_o365_12month";
+
+block price
+  .plan-price-wrap.row
+    span.plan-price.text-warning [@T[productprice:<current productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
+    span.plan-duration.text-warning /[@L[cds.sales/_common:month]@L]
+    | 
+    |##if(productHasSavingsMoreThan(632603, 632603, 0))
+    | 
+    br
+    strong
+      | [@L[cds.sales/_common:onsale-all-cap]@L] -
+      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="632603" secondaryproductid="632603" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
+    | 
+    |##endif
+    | 
+    p.h6.vat-price [@T[productprice:<list productid="632603" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
+    | 
+    |##if(countrySiteAny(uk))
+    | 
+    p.h6.vat-price [@L[cds.sales/_common:vat-price-uk]@L] 
+    | 
+    |##endif
+    | 
