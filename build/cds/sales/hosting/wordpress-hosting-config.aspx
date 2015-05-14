@@ -1720,6 +1720,18 @@ input[type=checkbox] + label{
           {
             steps = _.without(steps, 'officeStep');
           }
+          if(noSiteLock)
+          {
+            if( (plan.indexOf('mwp_developer') >= 0) || (plan.indexOf('tier4') >= 0))
+            {
+              steps = _.without(steps, 'securityStep');
+            }
+            else
+            {
+              document.getElementById('slElement').style.display = "none";
+              document.getElementById('addsiteLockOption').checked = false;
+            }
+          }
           Config.setTitle();
           Config.showSteps(steps);
           Config.addStepBreaks();
@@ -1958,7 +1970,9 @@ input[type=checkbox] + label{
                 features: planFeatures,
                 percentSavings: planPercentSavings,
                 isToolTip: isToolTip,
-                toolTipContent: sslToolTipString
+                toolTipContent: sslToolTipString,
+                extraRow: false
+                
               };
               parentID.append(planTemplate(planData));
       
