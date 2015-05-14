@@ -1,28 +1,19 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "95856";
-  - rightArrow.ctaLink = "[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
-  - rightArrow.classes += " hosting-awesome";
-block append rightArrowStyles
-  style
-    :less
-      .hero.right-arrow.hosting-awesome{
-        .leftContent {
-        .top{width:60%}
-        }
-      }
+append vars
+  - var classes = "hosting-awesome";
+  - var ciCode = 95856;
+  - var ctaLink = "[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext.top
-    .line1.tungsten YOUR WEBSITE
-  .bigtext
-    .line2.walsheim-black IS ONLY AS AWESOME AS
-    .line3.tungsten 
-      span.dash —— 
-      span YOUR HOSTING.
+  p.font-md.black.text-white Your website
+  p.font-md.black.text-white is only as awesome as 
+  p.font-lg.black.text-white your hosting.
+
 block rightContent
-  .bigtext
-    .line1.walsheim-bold GUARANTEED 99.9% UPTIME
-    .line2.walsheim-black WEB HOSTING
-    .line4.price.walsheim-bold NOW JUST [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
-  button.btn.btn-lg.btn-purchase GET STARTED
+  p.font-sm.black GUARANTEED [@T[localization:<display type="percent" number="99.9" />]@T] UPTIME
+  p.font-md.black Web Hosting
+  p.price.bold Now just [@T[productprice:<current productid="32051" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
+  a.btn.btn-md.btn-purchase GET STARTED

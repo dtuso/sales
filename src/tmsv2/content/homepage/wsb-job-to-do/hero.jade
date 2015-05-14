@@ -1,20 +1,18 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "94090";
-  - rightArrow.ctaLink = "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
-  - rightArrow.classes += " wsb-job-to-do";
+append vars
+  - var classes = "wsb-job-to-do";
+  - var ciCode = 94090;
+  - var ctaLink = "[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext
-    .line1.tungsten WEBSITE BUILDER
-    .line2.walsheim-black YOUR DOMAIN
-    .line3.tungsten HAS A JOB TO DO
-    .line4.walsheim-black
-      span.dash ————————
-      span PUT IT TO WORK
+  p.font-lg.black.text-white Website builder</br>your domain</br>has a job to do
+  p.font-md.black.text-white Put it to work
+
 block rightContent
-  .bigtext.walsheim-bold
-    .line1 BUILD A WEBSITE
-    .line2 FOR AS LOW AS
-    .line3.price [@T[productprice:<current productid="7524" period="monthly" />]@T]/MO
-  a.btn.btn-lg.btn-purchase START NOW
+  p.font-md.black BUILD A WEBSITE
+  p.font-md.black FOR AS LOW AS
+  p.font-md.black.text-purchase [@T[productprice:<current productid="7524" period="monthly" />]@T]/MO
+  a.btn.btn-md.btn-purchase START NOW

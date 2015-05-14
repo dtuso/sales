@@ -40,6 +40,7 @@
   .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
   .left-container{background:white;}
   .dash{letter-spacing:-.2em;}
+  .underline{text-decoration:underline;}
   
 </style>
 <style>#marquee .right-container {

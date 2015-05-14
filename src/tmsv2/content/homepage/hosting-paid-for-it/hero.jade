@@ -1,27 +1,18 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "95857";
-  - rightArrow.ctaLink = "[@T[link:<external linktype='MYAURL'><param name='ci' value='"+rightArrow.ci+"'/><param name='accid' value='3' /></external>]@T]";
-  - rightArrow.classes += " hosting-paid-for-it";
-block append rightArrowStyles
-  style
-    :less
-      .hero.right-arrow.hosting-paid-for-it{
-        .leftContent {
-        .top{width:70%}
-        }
-      }
+append vars
+  - var classes = "hosting-paid-for-it";
+  - var ciCode = 95857;
+  - var ctaLink = "[@T[link:<external linktype='MYAURL'><param name='ci' value='"+ciCode+"'/><param name='accid' value='3' /></external>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext.top
-    .line1.tungsten YOU BOUGHT IT.
-  .bigtext
-    .line2.walsheim-black PAID FOR IT.
-    .line3.tungsten 
-      span.dash ——— 
-      span SO USE IT.
+  p.font-lg.black.text-white You bought it.
+  p.font-lg.black.text-white Paid for it.
+  p.font-lg.black.text-white So use it.
+
 block rightContent
-  .bigtext
-    .line1.tungsten ACTIVATE
-    .line2.walsheim-black YOUR HOSTING PLAN 
-  button.btn.btn-lg.btn-purchase GET STARTED
+  p.font-lg.black Activate
+  p.font-md.black Your hosting plan
+  a.btn.btn-md.btn-purchase GET STARTED

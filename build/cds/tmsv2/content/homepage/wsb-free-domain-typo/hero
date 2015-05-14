@@ -1,119 +1,76 @@
 
-<!-- start right-arrow hero section-->
-<atlantis:webstash type="css">
-  <style>
-    .hero-wrapper>div{min-height:inherit;}
-    .right-arrow.hero {min-height: inherit;line-height:.9;background: transparent}
-    .right-arrow>div{min-height:inherit}
-    .right-arrow .left{background-color:rgb(119,192,67);color:#333}
-    .right-arrow .right{background-color:transparent; color:#000}
-    .right-arrow .dash{letter-spacing:-.2rem}
-    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat; z-index:-1}
-    .right-arrow .leftContent, .right-arrow .rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-    .right-arrow .leftContent{width:80%; margin-left:10%;}
-    .right-arrow .rightContent{width:70%}
-    .right-arrow .rightContent .btn{margin:5% 0}
-    .Explorer .right-arrow .arrow{background-size: 100% 100% !important;}
-    
-  </style>
-  <style>.hero.right-arrow.wsb-free-domain-typo .leftContent {
+<style>
+  /* template layout styling */
+  .hero-right-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .left-container, .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .left-content { padding: 5% 0% 5% 0; }
+  .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
+  .left-content > *:not(.btn), .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
+  .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
+  .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
+  mark { line-height: inherit; }
+  
+  /* content styling */
+  
+  /* APPROACH #1 */
+  /* apply classes to specify the font family/size/color */
+  /* allows for atomically creating a look/feel for each hero item */
+  /* color is covered by UXCore classes so we just need family/size classes here */
+  .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+  .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+  .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .text-white { color:#fff;}
+  
+  .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  
+  /* APPROACH #2 */
+  /* apply classes the group the whole 'look and feel' */
+  /* provides for easily making things consistent - there are only a few styles in the hero */
+  .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  
+  .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .price .text-purchase { font-size: 1.25em; }
+  
+  
+  .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
+  .left-container{background:#77c043;}
+  .dash{letter-spacing:-.2em;}
+  .underline{text-decoration:underline;}
+  
+</style>
+<style>.hero-wrapper .wsb-free-domain-typo .left-content {
   white-space: nowrap;
-}
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product {
-  display: inline-block;
-  width: 43%;
-  margin-right: 20%;
-}
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product > img {
-  width: 100%;
-}
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .product > div {
-  font-size: 170%;
-  margin: 0 auto;
-}
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .addition {
-  width: 10%;
   display: inline-block;
 }
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .domain > div {
-  width: 50%;
+.hero-wrapper .wsb-free-domain-typo .left-content .domain {
+  width: 35%;
 }
-.hero.right-arrow.wsb-free-domain-typo .leftContent .products .domain {
-  margin-right: 20%;
-}
-.hero.right-arrow.wsb-free-domain-typo .rightContent {
-  width: 95%;
-}
-.hero.right-arrow.wsb-free-domain-typo .rightContent .line5 {
-  white-space: normal;
-  font-size: 125%;
-}
-.hero.right-arrow.wsb-free-domain-typo .rightContent .line6 {
-  font-size: 65%;
-  padding-top: 2%;
-  white-space: normal;
-}
-.hero.right-arrow.wsb-free-domain-typo .addition {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.hero-wrapper .wsb-free-domain-typo .left-content .wbld {
+  width: 35%;
 }
 
-  </style>
-</atlantis:webstash>
-<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" class="hero right-arrow wsb-free-domain-typo">
-  <div class="left col-xs-6">
-    <div class="leftContent">
-      <div class="products walsheim-black">
-        <div class="product domain bigtext"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain-black.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www svgfallback"/>
-          <div class="domain tungsten">DOMAIN</div>
-        </div>
-        <div class="addition bigtext"><span>[@L[cds.sales/homepage/heros/got:additionSign]@L]</span></div>
-        <div class="product website bigtext"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website-black.png" class="img-responsi pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil svgfallback"/>
-          <div class="tungsten">WEBSITE BUILDER</div>
-        </div>
-      </div>
+</style>
+<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" data-ci='95862' class="hero hero-right-arrow wsb-free-domain-typo">
+  <div class="left-container">
+    <div class="left-content"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain-black.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www domain svgfallback"/>
+      <p class="font-md black">Domain</p><span class="addition font-lg black">[@L[cds.sales/homepage/heros/got:additionSign]@L]</span><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website-black.png" class="img-responsi pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="wbld pencil svgfallback"/>
+      <p class="font-md black">Website Builder</p>
     </div>
   </div>
-  <div class="col-xs-1 arrow"></div>
-  <script>
-    (function(){
-    function IEVersion(){
-      var ua = window.navigator.userAgent;
-      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
-        return '8-9';
-      }
-      else if(ua.indexOf('10-current')>0 || ua.indexOf('Trident')>0){
-        return '10-current';
-      }
-    }
-    var ieVersion = IEVersion();
-      if(ieVersion != undefined)
-        if(ieVersion == '10-current'){
-          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
-          var base64 = window.btoa(utf8);
-          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
-          }
-        else{
-          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
-        }
-      })();
-  </script>
-  <div class="right col-xs-5">
-    <div class="rightContent">
-      <div class="bigtext">
-        <div class="line1 walsheim-black">FREE DOMAIN</div>
-        <div class="line2 tungsten">WHEN YOU BUY WEBSITE BUILDER</div>
-        <div class="line3 walsheim-black">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</div>
-        <div class="line4 tungsten"><span>THIS</span><span class="dash"> ——— </span><span>IS NOT A TYPO</span></div>
-        <div class="line5 walsheim-bold">AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
-      <div class="line6">Free domain with annual plan only. Other restrictions apply.</div>
+  <div class="right-container">
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
+    </svg>
+    <div class="right-content">
+      <p class="font-md black">FREE DOMAIN</br>WHEN YOU BUY WEBSITE BUILDER</p>
+      <p class="font-md black text-purchase">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</p>
+      <p class="font-md black">THIS IS NOT A TYPO</br>AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</p><a class="btn btn-md btn-purchase">GET STARTED</a>
+      <p class="font-sm disclaimer">Free domain with annual plan only. Other restrictions apply.</p>
     </div>
   </div>
 </div>
-<!-- end right-arrow hero section-->

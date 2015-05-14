@@ -7,7 +7,7 @@
   .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
   .left-content { padding: 5% 0% 5% 0; }
   .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
-  .left-content > *:not(.btn), .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1.1; }
+  .left-content > *:not(.btn), .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
   .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
   .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
   mark { line-height: inherit; }
@@ -40,6 +40,7 @@
   .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
   .left-container{background:#77c043;}
   .dash{letter-spacing:-.2em;}
+  .underline{text-decoration:underline;}
   
 </style>
 <div data-url="[@T[link:<external linktype='MYAURL' path='/default.aspx'><param name='accid' value='43' /><param name='ci' value='93637' /></external>]@T]" data-ci='91193' class="hero hero-right-arrow office365-2">
