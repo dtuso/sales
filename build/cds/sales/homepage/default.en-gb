@@ -1292,7 +1292,6 @@ ul li.no-check {
 .fosfbbox {
   height: 25px !important;
 }
-.price,
 .icann-disclaimer,
 .promo-cta > a {
   color: #ef6c0f;

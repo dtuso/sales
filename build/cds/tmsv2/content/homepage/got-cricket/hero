@@ -56,7 +56,7 @@
 }
 #marquee .hero.polygon.cricket.got div.products > div {
   display: inline;
-  font-size: 1em;
+  font-size: 16px;
 }
 #marquee .hero.polygon.cricket.got .pricetext {
   color: #ff8a00;
@@ -73,13 +73,12 @@
 }
 #marquee .hero.polygon.cricket.got img.products {
   width: 270px;
-  margin-left: 3%;
 }
 #marquee .hero.polygon.cricket.got .website {
-  margin-left: 40px;
+  margin-left: 34px;
 }
 #marquee .hero.polygon.cricket.got .email {
-  margin-left: 55px;
+  margin-left: 52px;
 }
 
   </style>

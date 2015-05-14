@@ -63,8 +63,18 @@ block append pageStyles
 
       @media only screen and (max-width: 767px) {
         section .btn-md{font-size: 14px; padding:5px 15px 2px; border-bottom-width:3px; }
-        .hero-wrapper { font-size: 12px;}
       }
+      .hero-wrapper { font-size: 12px;}
+      @media only screen and (min-width: 768px) {
+        .hero-wrapper { font-size: 14px;}
+      }
+      @media only screen and (min-width: 992px) {
+        .hero-wrapper { font-size: 14px;}
+      }
+      @media only screen and (min-width: 1200px) {
+        .hero-wrapper { font-size: 16px;}
+      }
+
 
 append headScripts
   script.
