@@ -1726,11 +1726,6 @@ input[type=checkbox] + label{
             {
               steps = _.without(steps, 'securityStep');
             }
-            else
-            {
-              document.getElementById('slElement').style.display = "none";
-              document.getElementById('addsiteLockOption').checked = false;
-            }
           }
           Config.setTitle();
           Config.showSteps(steps);
