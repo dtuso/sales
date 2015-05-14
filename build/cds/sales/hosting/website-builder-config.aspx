@@ -662,7 +662,7 @@
                   <li data-main=".com" data-view="com" class="availabletld selected">
                     <div data-main="true"><span>.com</span></div>
                   </li> 
-                  ##if(countrySiteAny(br) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".com.br" data-view="com.br" class="availabletld">
                     <div data-main="true"><span>.com.br</span></div>
@@ -678,7 +678,7 @@
                   ##endif
                    
                    
-                  ##if(countrySiteAny(au) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".com.au" data-view="com.au" class="availabletld">
                     <div data-main="true"><span>.com.au</span></div>
@@ -688,7 +688,7 @@
                   <li data-main=".co" data-view="co" class="availabletld">
                     <div data-main="true"><span>.co</span></div>
                   </li> 
-                  ##if(countrySiteAny(ca) || isManager())
+                  ##if(isManager())
                    
                   <li data-main=".ca" data-view="ca" class="availabletld">
                     <div data-main="true"><span>.ca</span></div>
@@ -713,7 +713,12 @@
                    
                   <li data-main="co.uk" data-view="co.uk" class="availabletld">
                     <div data-main="true"><span>.co.uk</span></div>
-                  </li>
+                  </li> 
+                  ##endif
+                   
+                   
+                  ##if(isManager())
+                   
                   <li data-main=".uk" data-view="uk" class="availabletld">
                     <div data-main="true"><span>.uk</span></div>
                   </li> 
