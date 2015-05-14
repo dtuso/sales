@@ -1885,7 +1885,7 @@ input[type=checkbox] + label{
               var termPercentSavings = termItem[4];
               var termListPrice = termItem[5];
               var termCurrentYearlyPrice =  termItem[6];
-              var isSale = ( parseInt(termPercentSavings) > 0 ) ? true : false;
+              var isSale = ( parseInt(termPercentSavings.replace('%','')) > 0 ) ? true : false;
               var monthString =  (termLength > 1) ? "[@L[cds.sales/_common:months]@L]" : "[@L[cds.sales/_common:month]@L]";
               var checkedRadiobutton = ( plan ===  termPackage) ? true : false;
               
@@ -1941,7 +1941,7 @@ input[type=checkbox] + label{
               var planProduct = planText.product;
               var planSubtitle = planText.subtitle;
               var planFeatures = planText.features;
-              var isSale = ( parseInt(planPercentSavings) > 0 ) ? true : false;
+              var isSale = ( parseInt(planPercentSavings.replace('%','')) > 0 ) ? true : false;
               var isChecked = ( plan ===  planPackage) ? true : false;
       
               var sslToolTipString = "[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]";
