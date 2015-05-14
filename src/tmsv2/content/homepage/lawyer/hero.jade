@@ -8,10 +8,11 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white FINALLY, A DOMAIN FOR PEOPLE WHO READ THE DISCLAIMERS.
+  p.font-lg.black.text-white Finally, a domain for people who read the disclaimers.
 
 block rightContent
-  p.font-md.black GET YOUR .LAWYER
-  p.font-md.black JUST <span class="text-purchase">[@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR*</span>
-  a.btn.btn-md.btn-purchase GET STARTED
+  p.font-md.black Get your .lawyer
+  p.price.bold Just 
+    span.text-purchase [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR*
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Get started
   p.disclaimer *Seriously, it's just [@T[productprice:<current productid="466716" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/yr.

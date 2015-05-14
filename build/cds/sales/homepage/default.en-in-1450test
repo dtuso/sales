@@ -115,6 +115,21 @@
         });
       }
       
+    </script>
+    <script>
+      var tms = function(data) {
+        $(document).ready(function(){
+          for (var key in data) {
+            if ((data[key]) && (data[key].trim() != '')) {
+              var elem = document.getElementById(key)
+              if (elem != null) {
+                $('#' + key).html(data[key]);
+              }
+            }
+          }
+        });
+      }
+      
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -199,15 +214,14 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
+          <div id="hero-wrapper" class="col-md-8 col-sm-12">
             <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div class="col-md-12 col-sm-6">
-                <div class="tile-wrapper">
-                  <atlantis:webstash type="css">
-                    <style>.com.tld.rajesh.tile {
+              <div id="marquee-tile-1" class="col-md-12 col-sm-6">
+                <atlantis:webstash type="css">
+                  <style>.com.tld.rajesh.tile {
   font-size: 14px;
   overflow: hidden;
   color: #fff;
@@ -269,29 +283,28 @@
   }
 }
 
-                    </style>
-                  </atlantis:webstash>
-                  <div data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='97696' /></relative>]@T]" data-ci="97696" class="tile com tld rajesh marquee-tile">
-                    <div class="tile-content-wrapper">
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-xs-6 left">
-                            <div class="left-content-wrapper">
-                              <div class="header-wrapper">
-                                <h2 class="header-text walsheim-black">Big dreams.<br>Small price.</h2>
-                                <h3 class="maintext walsheim-black">NEW .COM</h3>
-                                <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]" class="price walsheim-black">{0}*</div>
-                                <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' promocode='0' />]@T]" class="disclaimer">*2 year minimum registration required. Subsequent years charged at {0}/yr.</div><img src="data:image/png;base64,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">
-                              </div>
+                  </style>
+                </atlantis:webstash>
+                <div data-url="[@T[link:<relative path='domains/domain-name-search.aspx'><param name='ci' value='97696' /></relative>]@T]" data-ci="97696" class="tile com tld rajesh marquee-tile">
+                  <div class="tile-content-wrapper">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-xs-6 left">
+                          <div class="left-content-wrapper">
+                            <div class="header-wrapper">
+                              <h2 class="header-text walsheim-black">Big dreams.<br>Small price.</h2>
+                              <h3 class="maintext walsheim-black">NEW .COM</h3>
+                              <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' checktmspromocode='true' />]@T]" class="price walsheim-black">{0}*</div>
+                              <div data-tokenize="[@T[productprice:<current productid='101' period='yearly' promocode='0' />]@T]" class="disclaimer">*2 year minimum registration required. Subsequent years charged at {0}/yr.</div><img src="data:image/png;base64,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">
                             </div>
                           </div>
-                          <div class="col-xs-6 right">
-                            <div class="right-content-wrapper">
-                              <div class="angle">
-                                <svg width="50" height="500" style="position: absolute;top: 0;left: 0;">
-                                  <polygon points="0,10 60,500 0,500" style="fill:#333;position: absolute;top: 6%;"></polygon>
-                                </svg>
-                              </div>
+                        </div>
+                        <div class="col-xs-6 right">
+                          <div class="right-content-wrapper">
+                            <div class="angle">
+                              <svg width="50" height="500" style="position: absolute;top: 0;left: 0;">
+                                <polygon points="0,10 60,500 0,500" style="fill:#333;position: absolute;top: 6%;"></polygon>
+                              </svg>
                             </div>
                           </div>
                         </div>
@@ -300,9 +313,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-12 col-sm-6"> 
-                <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-              </div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
             </div>
           </div>
         </div>
@@ -1330,7 +1341,8 @@ ul li.no-check {
 
       </style>
       <!-- home page styling-->
-      <style>.text-white {
+      <style>/* delete this? */
+.text-white {
   color: #ffffff;
 }
 .bg-green-official {
@@ -1351,27 +1363,29 @@ ul li.no-check {
 .tungsten {
   font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
 }
+.hero-wrapper {
+  min-height: 300px;
+}
+/* page layout/styling */
+#domain-search {
+  margin-top: 10px;
+}
+#bugbar {
+  margin: 10px 0;
+}
 #marquee {
   position: relative;
 }
-#marquee .tile-wrapper {
-  margin-top: 6.5px;
-}
-#marquee .tile-wrapper:last-child {
-  margin-bottom: 6.5px;
-}
-#marquee .tile {
-  min-height: 140px;
-}
-.hero-wrapper {
+#hero-wrapper {
   min-height: 300px;
-  cursor: pointer;
 }
-.tile {
-  cursor: pointer;
-}
-.top-banner-lower-content {
-  min-height: 40px;
+#marquee-tile-1,
+#marquee-tile-2 {
+  position: relative;
+  margin: 6px 0 3px 0;
+  min-height: 141px;
+  max-height: 181px;
+  overflow: hidden;
 }
 #limitations-social {
   padding: 20px 0;
@@ -1391,15 +1405,7 @@ ul li.no-check {
 .fosfbbox {
   height: 25px !important;
 }
-#bugbar {
-  margin: 10px 0;
-}
-#domain-search {
-  margin-top: 10px;
-}
-#domain-name-input {
-  text-transform: inherit;
-}
+.price,
 .icann-disclaimer,
 .promo-cta > a {
   color: #ef6c0f;
@@ -1427,6 +1433,9 @@ section {
 #why-godaddy {
   padding-bottom: 50px;
 }
+#domain-name-input {
+  text-transform: inherit;
+}
 #domain-name-input::-webkit-input-placeholder {
   color: #008a32;
 }
@@ -1440,6 +1449,18 @@ section {
 }
 #domain-name-input:-ms-input-placeholder {
   color: #008a32;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
+/* should be more global? */
+[data-url] {
+  cursor: pointer;
 }
 [data-tms-name],
 [data-tms-template] {
@@ -1480,26 +1501,14 @@ section {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
           }).css("min-height", maxTitleHeight);
           if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
-            var maxHeroHeight = 0;
-            $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-            $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+            $("#hero-wrapper").css("min-height", $("#marquee-tile-wrapper").height());
           }
       }
-      function tokenizeTheDataTokenizeAttribute() {
-        $('[data-tokenize]').each(function(){
-          var $this = $(this),
-            html = $this.html(),
-            val = $this.data('tokenize'),
-              tokenizedHtml = html.replace(/\{0\}/gi, val);
-          $this
-            .html(tokenizedHtml)
-            .removeAttr('data-tokenize');
-        });
-      }
+      
       $(window).load(function () {
         reSizeTiles();
         $('.bigtext').bigtext().css('visibility', 'visible');
-          setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
     </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
@@ -1507,7 +1516,6 @@ section {
     <script type="text/javascript">
       var ignoreLivePerson = true;
       $(document).ready(function() {
-        tokenizeTheDataTokenizeAttribute();
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();

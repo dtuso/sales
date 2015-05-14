@@ -8,11 +8,8 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white You bought it.
-  p.font-lg.black.text-white Paid for it.
-  p.font-lg.black.text-white So use it.
+  p.font-lg.black.text-white You bought it.<br/>Paid for it.<br/>So use it.
 
 block rightContent
-  p.font-lg.black Activate
-  p.font-md.black Your hosting plan
-  a.btn.btn-md.btn-purchase GET STARTED
+  p.font-md.black Activate your hosting plan
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Get started

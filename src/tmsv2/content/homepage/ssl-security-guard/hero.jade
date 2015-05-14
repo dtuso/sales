@@ -8,10 +8,12 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white SSL CERTIFICATES</br>LIKE AN ONLINE</br>SECURITY GUARD.</br>THAT NEVER TAKES A BREAK.</br>EVER
+  h2.font-lg.black.text-white SSL Certificates
+  p.font-md.black.text-white Like an online security guard that never takes a break. Ever.
 
 block rightContent
-  p.font-md.black ON SALE NOW</br>SSL CERTIFICATES
-  p.font-md.black NOW JUST 
-    span.purchase-text [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
-  a.btn.btn-md.btn-purchase GET STARTED
+  mark.font-md.black On sale now
+  .font-md.black SSL Certificates
+  .price.font-md.black Now just 
+    span.text-purchase [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Get started

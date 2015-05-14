@@ -8,12 +8,9 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white Don't let your
-  p.font-lg.black.text-white private info
-  p.font-lg.black.text-white out in public.
+  p.font-lg.black.text-white Don't let your<br/>private info<br/>out in public.
 
 block rightContent
-  p.font-md.black Add privacy 
-  p.font-md.black to your domain
+  h2.font-md.black Add privacy to your domain
   p.price.bold <span class="text-purchase">[@T[productprice:<current productid="7001" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</span> PER DOMAIN
-  a.btn.btn-md.btn-purchase GET STARTED
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Get started

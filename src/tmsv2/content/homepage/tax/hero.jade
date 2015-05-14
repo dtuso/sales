@@ -8,11 +8,10 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white KEEP A CALCULATOR
-  p.font-md.black.text-white UNDER YOUR PILLOW?
+  p.font-lg.black.text-white Keep a calculator under your pillow?
 
 block rightContent
-  p.font-lg.black .TAX</br>IS FOR YOU
-  p.font-md.black JUST 
-    span.font-md.black.text-purchase [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
-  a.btn.btn-md.btn-purchase GET STARTED
+  p.font-md.black .tax is for you
+  p.price.bold Just 
+    span.text-purchase [@T[productprice:<current productid="426119" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Get started

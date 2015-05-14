@@ -8,10 +8,9 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white [@L[cds.sales/homepage/heros/domain-expire:dontLetDomainBe]@L]
-  p.font-md.black.text-white [@L[cds.sales/homepage/heros/domain-expire:oneGotAway]@L]
+  p.font-lg.black.text-white Don't let your domain be...
+  p.font-md.black.text-white the one that got away.
 
 block rightContent
-  p.font-md.black [@L[cds.sales/homepage/heros/domain-expire:renewItNow]@L]
-  p.font-md.black [@L[cds.sales/homepage/heros/domain-expire:beforeItExpires]@L]
-  a.btn.btn-md.btn-purchase [@L[cds.sales/homepage/heros/domain-expire:goToMyRenewals]@L]
+  p.font-md.black Renew it now before it expires
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Go to my renewals

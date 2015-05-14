@@ -8,11 +8,11 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white Website builder</br>your domain</br>has a job to do
-  p.font-md.black.text-white Put it to work
+  p.font-lg.black.text-white Website Builder
+  p.font-md.black.text-white Your domain has a job to do. Put it to work.
 
 block rightContent
-  p.font-md.black BUILD A WEBSITE
-  p.font-md.black FOR AS LOW AS
-  p.font-md.black.text-purchase [@T[productprice:<current productid="7524" period="monthly" />]@T]/MO
-  a.btn.btn-md.btn-purchase START NOW
+  p.font-md.black Build a website
+  p.price.bold As low as 
+    span.text-purchase [@T[productprice:<current productid="7524" period="monthly" />]@T]/MO
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Start now

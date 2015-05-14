@@ -8,12 +8,9 @@ append vars
   - var polyPoint = 50;
 
 block leftContent
-  p.font-lg.black.text-white [@L[cds.sales/homepage/heros/hosting-upgrade:yourSiteNeeds]@L]
-  p.font-lg.black.text-white [@L[cds.sales/homepage/heros/hosting-upgrade:moreResources]@L]
-  p.font-lg.black.text-white [@L[cds.sales/homepage/heros/hosting-upgrade:priceOfBeing]@L]
-  p.font-lg.black.text-white [@L[cds.sales/homepage/heros/hosting-upgrade:soPopular]@L]
+  p.font-lg.black.text-white Your site needs more resources.
+  p.font-md.black.text-white That's the price of being so popular.
 
 block rightContent
-  p.font-lg.black [@L[cds.sales/homepage/heros/hosting-upgrade:upgrade]@L] 
-  p.font-md.black [@L[cds.sales/homepage/heros/hosting-upgrade:yourHosting]@L] 
-  a.btn.btn-md.btn-purchase [@L[cds.sales/homepage/heros/hosting-upgrade:goToMyAccount]@L] 
+  p.font-md.black Upgrade your hosting
+  a.btn.btn-md.btn-purchase(href!=ctaLink) [@L[cds.sales/homepage/heros/hosting-upgrade:goToMyAccount]@L] 

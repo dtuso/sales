@@ -1,16 +1,17 @@
 
 <style>
   /* template layout styling */
-  .hero-right-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
-  .left-container, .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
-  .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
-  .left-content, .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-  .left-content { padding: 5% 0% 5% 0; }
-  .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
-  .left-content > *:not(.btn), .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
-  .left-content > *:last-child, .right-content > *:first-child { margin-top: 0 !important;}
-  .left-content > *:last-child, .right-content > *:last-child { margin-bottom: 0 !important;}
-  mark { line-height: inherit; }
+  .hero-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .hero-arrow .left-container, .hero-arrow .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .hero-arrow .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .hero-arrow .left-content, .hero-arrow .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .hero-arrow .left-content { padding: 5% 0% 5% 0; }
+  .hero-arrow .right-content { padding: 5% 0% 5% 18%; word-break: break-word; max-width:100%;}
+  .hero-arrow .left-content > *:not(.btn), .hero-arrow .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:first-child { margin-top: 0 !important;}
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:last-child { margin-bottom: 0 !important;}
+  .hero-arrow mark { line-height: inherit; }
+  .hero-arrow mark:after { height: 1em; }
   
   /* content styling */
   
@@ -18,29 +19,26 @@
   /* apply classes to specify the font family/size/color */
   /* allows for atomically creating a look/feel for each hero item */
   /* color is covered by UXCore classes so we just need family/size classes here */
-  .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
-  .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
-  .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
-  .text-white { color:#fff;}
-  
-  .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
-  .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .hero-arrow .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .text-white { color:#fff;}
+  .hero-arrow .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .hero-arrow .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
   
   /* APPROACH #2 */
   /* apply classes the group the whole 'look and feel' */
   /* provides for easily making things consistent - there are only a few styles in the hero */
-  .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
-  .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
-  .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  .hero-arrow .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
   
-  .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
-  .price .text-purchase { font-size: 1.25em; }
+  .hero-arrow .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .hero-arrow .price .text-purchase { font-size: 1.25em; }
   
-  
-  .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
-  .left-container{background:#77c043;}
-  .dash{letter-spacing:-.2em;}
-  .underline{text-decoration:underline;}
+  .hero-arrow .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
+  .hero-arrow .dash { letter-spacing:-.2em; }
+  .hero-arrow .underline { text-decoration:underline; }
   
 </style>
 <style>.hero-wrapper .wsb-free-domain-typo .left-content {
@@ -55,21 +53,21 @@
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" data-ci='95862' class="hero hero-right-arrow wsb-free-domain-typo">
-  <div class="left-container">
+<div data-url="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" data-ci='95862' class="hero hero-arrow wsb-free-domain-typo">
+  <div style="background:#77c043;" class="left-container">
     <div class="left-content"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain-black.png" class="www"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www domain svgfallback"/>
       <p class="font-md black">Domain</p><span class="addition font-lg black">[@L[cds.sales/homepage/heros/got:additionSign]@L]</span><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website-black.png" class="img-responsi pencil"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjMEEwQjA5Ij48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="wbld pencil svgfallback"/>
       <p class="font-md black">Website Builder</p>
     </div>
   </div>
   <div class="right-container">
-    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;left: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
       <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
     </svg>
     <div class="right-content">
       <p class="font-md black">FREE DOMAIN</br>WHEN YOU BUY WEBSITE BUILDER</p>
       <p class="font-md black text-purchase">[@T[productprice:<current productid="7524" period="monthly" />]@T]/MONTH</p>
-      <p class="font-md black">THIS IS NOT A TYPO</br>AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</p><a class="btn btn-md btn-purchase">GET STARTED</a>
+      <p class="font-md black">THIS IS NOT A TYPO</br>AND IF IT IS, HURRY BEFORE WE FIGURE IT OUT.</p><a href="[@T[link:<relative path='/hosting/website-builder.aspx'><param name='ci' value='95862'/></relative>]@T]" class="btn btn-md btn-purchase">GET STARTED</a>
       <p class="font-sm disclaimer">Free domain with annual plan only. Other restrictions apply.</p>
     </div>
   </div>
