@@ -456,75 +456,82 @@ mixin configDomainSearchInput(configDomainSearchParams)
             a.domain-arrow.g-btn-sm.g-btn-sec(href='javascript:void(0)')
               span
             ul
-              li.availabletld.selected(data-main='.com', data-view='com')
-                div(data-main='true')
-                  span .com
-              | 
-              | ##if(countrySiteAny(br) || isManager())
-              | 
-              li.availabletld(data-main='.com.br', data-view='com.br')
-                div(data-main='true')
-                  span .com.br
-              | 
-              | ##endif
-              | 
-              | 
-              | ##if(countrySiteAny(mx) || isManager())
-              | 
-              li.availabletld(data-main='.com.mx', data-view='com.mx')
-                div(data-main='true')
-                  span .com.mx
-              | 
-              | ##endif
-              | 
-              | 
-              | ##if(countrySiteAny(au) || isManager())
-              | 
-              li.availabletld(data-main='.com.au', data-view='com.au')
-                div(data-main='true')
-                  span .com.au
-              | 
-              | ##endif
-              | 
-              li.availabletld(data-main='.co', data-view='co')
-                div(data-main='true')
-                  span .co
-              | 
-              | ##if(countrySiteAny(ca) || isManager())
-              | 
-              li.availabletld(data-main='.ca', data-view='ca')
-                div(data-main='true')
-                  span .ca
-              | 
-              | ##endif
-              | 
-              | 
-              | ##if(countrySiteAny(in) || isManager())
-              | 
-              li.availabletld(data-main='.in', data-view='in')
-                div(data-main='true')
-                  span .in
-              | 
-              | ##endif
-              | 
-              li.availabletld(data-main='.net', data-view='net')
-                div(data-main='true')
-                  span .net
-              li.availabletld(data-main='.org', data-view='org')
-                div(data-main='true')
-                  span .org
-              | 
-              | ##if(countrySiteAny(uk) || isManager())
-              | 
-              li.availabletld(data-main='co.uk', data-view='co.uk')
-                div(data-main='true')
-                  span .co.uk
-              li.availabletld(data-main='.uk', data-view='uk')
-                div(data-main='true')
-                  span .uk
-              | 
-              | ##endif
-              | 
+              block configTLDS
+                li.availabletld.selected(data-main='.com', data-view='com')
+                  div(data-main='true')
+                    span .com
+                | 
+                | ##if(isManager())
+                | 
+                li.availabletld(data-main='.com.br', data-view='com.br')
+                  div(data-main='true')
+                    span .com.br
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(countrySiteAny(mx) || isManager())
+                | 
+                li.availabletld(data-main='.com.mx', data-view='com.mx')
+                  div(data-main='true')
+                    span .com.mx
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(isManager())
+                | 
+                li.availabletld(data-main='.com.au', data-view='com.au')
+                  div(data-main='true')
+                    span .com.au
+                | 
+                | ##endif
+                | 
+                li.availabletld(data-main='.co', data-view='co')
+                  div(data-main='true')
+                    span .co
+                | 
+                | ##if(isManager())
+                | 
+                li.availabletld(data-main='.ca', data-view='ca')
+                  div(data-main='true')
+                    span .ca
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(countrySiteAny(in) || isManager())
+                | 
+                li.availabletld(data-main='.in', data-view='in')
+                  div(data-main='true')
+                    span .in
+                | 
+                | ##endif
+                | 
+                li.availabletld(data-main='.net', data-view='net')
+                  div(data-main='true')
+                    span .net
+                li.availabletld(data-main='.org', data-view='org')
+                  div(data-main='true')
+                    span .org
+                | 
+                | ##if(countrySiteAny(uk) || isManager())
+                | 
+                li.availabletld(data-main='co.uk', data-view='co.uk')
+                  div(data-main='true')
+                    span .co.uk
+                | 
+                | ##endif
+                | 
+                | 
+                | ##if(isManager())
+                | 
+                li.availabletld(data-main='.uk', data-view='uk')
+                  div(data-main='true')
+                    span .uk
+                | 
+                | ##endif
+                | 
           span.input-group-btn
             button.btn.btn-primary.btn-lg.offer-search-btn(class=buttonClass type='submit' data-ci='#{configDomainSearchParams.searchCicode}') 
               span.search-icon.uxicon.uxicon-magnifying-glass

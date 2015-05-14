@@ -154,7 +154,16 @@
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-2]@L]</li> 
               ##if(productIsOffered(99) && !countrySiteAny(mx))
                
+               
+              ##if(activeLanguageAny(en))
+               
               <li>[@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L]</li> 
+              ##else
+               
+              <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li> 
+              ##endif
+               
+               
               ##else
                
               <li>[@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]</li> 

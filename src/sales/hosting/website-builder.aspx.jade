@@ -141,7 +141,17 @@ block marqueeContent
     | 
     |##if(productIsOffered(99) && !countrySiteAny(mx))
     | 
+    | 
+    |##if(activeLanguageAny(en))
+    | 
     li [@L[cds.sales/gd/hosting/website-builder:free-domain-email]@L]
+    | 
+    |##else
+    | 
+    li [@L[cds.sales/gd/hosting/website-builder:wsb-main-listitem-3]@L]
+    | 
+    |##endif
+    | 
     | 
     |##else
     | 
