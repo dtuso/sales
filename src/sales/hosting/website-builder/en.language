@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/hosting/website-builder/en
-name: mcx-38814
-comments: icannfee token
+name: MCX-40043
+comments: New Token
 ---
 <phrase key="page-title" />
 Website Builder | Create Your Own Website in Minutes  - [@T[companyname:name]@T]
@@ -763,3 +763,11 @@ Disclaimers
 <sup>4</sup> Special introductory pricing valid for the initial purchase term only. Product renewal pricing subject to change.
 <phrase key="renewal-text" comment="$x.xx when you renew" />
 when you renew<sup>4</sup>
+<phrase key="free-domain-email" comment="" />
+<span class="condensed">FREE</span> domain, hosting and business email
+<phrase key="o365-feature" comment="" />
+Business email from Office 365, free for 1st year
+<phrase key="o365-tooltip" comment="" />
+Enjoy business email powered by Microsoft Office 365 free for 12 months. After the first year, it will renew automatically at the current price. You can cancel anytime in the 1st year to avoid renewal charges.
+<phrase key="free-domain-email-40043" comment="" />
+<span class="condensed">FREE DOMAIN</span>, <span class="condensed">FREE HOSTING</span> and <span class="condensed">FREE BUSINESS EMAIL</span>
