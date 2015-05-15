@@ -1,0 +1,73 @@
+
+<style>
+  /* template layout styling */
+  .hero-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .hero-arrow .left-container, .hero-arrow .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .hero-arrow .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .hero-arrow .left-content, .hero-arrow .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .Explorer8 .hero-arrow .left-content, .Explorer8 .hero-arrow .right-content { position: relative;top: 0;}
+  .hero-arrow .left-content { padding: 5% 0% 5% 0; }
+  .hero-arrow .right-content { padding: 5% 5% 5% 18%; word-break: break-word; max-width:100%;}
+  .hero-arrow .left-content > *:not(.btn), .hero-arrow .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:first-child { margin-top: 0 !important;}
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:last-child { margin-bottom: 0 !important;}
+  .hero-arrow mark { line-height: inherit; }
+  .hero-arrow mark:after { height: 1em; }
+  
+  /* content styling */
+  
+  /* APPROACH #1 */
+  /* apply classes to specify the font family/size/color */
+  /* allows for atomically creating a look/feel for each hero item */
+  /* color is covered by UXCore classes so we just need family/size classes here */
+  .hero-arrow .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .text-white { color:#fff;}
+  .hero-arrow .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .hero-arrow .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  
+  /* APPROACH #2 */
+  /* apply classes the group the whole 'look and feel' */
+  /* provides for easily making things consistent - there are only a few styles in the hero */
+  .hero-arrow .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  
+  .hero-arrow .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .hero-arrow .price .text-purchase { font-size: 1.25em; }
+  
+  .hero-arrow .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
+  .hero-arrow .dash { letter-spacing:-.2em; }
+  .hero-arrow .underline { text-decoration:underline; }
+  
+</style>
+<style>.hero-wrapper .mwp-flash .left-content .left-image {
+  width: inherit;
+  padding-left: 40%;
+}
+.hero-wrapper .mwp-flash .left-content .left-image img {
+  width: 88%;
+  float: right;
+  padding-right: 4%;
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/hosting/wordpress-hosting.aspx'><param name='ci' value='99173'/></relative>]@T]" data-ci='99173' class="hero hero-arrow mwp-flash">
+  <div style="background:rgb(255,138,0);" class="left-container">
+    <div class="left-content">
+      <div class="left-image"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/homepage/mwp-flash/sale-banner.png" class="img-responsi"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDI1OCAzNzUuMyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjU4IDM3NS4zIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjMzMzMzMzIiBkPSJNMTM1LjkgMzc1LjNsLTM2LjktMTAuOSAtMTQuNS0zNS43IDE4LjktMzMuNiAzOC02LjIgMjguNSAyNS45IC0yLjQgMzguNEwxMzUuOSAzNzUuM3pNMTczLjIgMjM5LjhsLTE5LjMgMzMuMyAtMzguMSA1LjcgLTI4LjItMjYuMiAzLTM4LjQgMzEuOS0yMS42IDM2LjggMTEuNEwxNzMuMiAyMzkuOHpNMTM4LjkgMTgyLjNsLTM2LjktMTAuOSAtMTQuNS0zNS43IDE4LjktMzMuNiAzOC02LjIgMjguNSAyNS45IC0yLjQgMzguNEwxMzguOSAxODIuM3pNMTYwLjMgNzMuM0wxMjMuOSA4NiA5MS4zIDY1LjUgODcgMjcuMiAxMTQuMiAwbDM4LjMgNC4zTDE3MyAzNi45IDE2MC4zIDczLjN6Ii8+PHBhdGggZmlsbD0iIzc3QzA0MyIgZD0iTTEwNi40IDQ5YzAgMTEuOCA4LjEgMTguNCAyMC45IDE4LjQgMTIuNiAwIDIwLjQtNi4zIDIwLjQtMTYuMiAwLTExLjQtMTAuNS0xNC4xLTE4LjMtMTcuMSAtNC43LTEuNy02LjktMy4xLTYuOS01LjggMC0yLjcgMi4yLTMuOSA0LjYtMy45IDMuNCAwIDUgMi4yIDUgNi4zaDE1YzAtNy45LTUtMTYuNC0xOS42LTE2LjQgLTEwLjIgMC0yMCA0LjEtMjAgMTQuOCAwIDEwLjQgOS4zIDEzLjUgMTcuNiAxNi43IDUuMyAyLjEgNy42IDMuMiA3LjYgNiAwIDIuNy0xLjkgNC4zLTUgNC4zIC0zLjggMC02LjMtMi42LTYuMy03LjFIMTA2LjR6TTE1Ny41IDE2M2wtMTktNTAuNGgtMTUuN0wxMDQuMiAxNjNoMTYuMmwxLjctNS44aDE2LjlsMS43IDUuOEgxNTcuNXpNMTM2IDE0Ni4zaC0xMC43bDUuMy0xOC42TDEzNiAxNDYuM3pNMTMxLjMgMjQ5LjJ2LTM3LjZoLTE1VjI2MmgyOC4ydi0xMi44SDEzMS4zek0xNDMuOCAzMTYuOHYtMTEuMmgtMzIuNVYzNTZoMzIuNXYtMTEuMmgtMTcuNXYtOC40aDE3LjV2LTEwLjdoLTE3LjV2LTguOEgxNDMuOHoiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjM1LjUgMTAuNUwyMzMuNCAyNWwxMC45IDEyLjUgLTE2LjYgMyAtMTAuOSAxNCAtNS0xNS4zIC0xNC42LTYuOSAxMS45LTkuMlY5bDE0LjggNS45TDIzNS41IDEwLjV6TTI1MC41IDcxLjdsLTEgMTUuNSA4LjUgMTIuNiAtMTUgMS40IC0xMi41IDExLjMgLTIuOC0xMy4xIC0xMy45LTYuNyAxMC45LTguNCAzLjMtMTcuMSAxMC4yIDkuNkwyNTAuNSA3MS43ek0yNTUgMTUybC0xMi40IDkuNyAtMi42IDE0LjEgLTguNS03LjQgLTguMSA0LjcgMS44LTEzLjIgLTguNS0xMy4xIDEyLjkgMS44IDcuMy05LjIgNC41IDguOUwyNTUgMTUyek0yNDIuOCAyMjQuOWwtNyAxOS4xIDYuOCAxOS44IC0xNS41LTMuMSAtMjAuNSAxNC42IDAuOS0yMS45IC0xNy41LTcuOCAxNS43LTEyLjcgLTEuMS0xNy4xIDE4LjQgMTEuN0wyNDIuOCAyMjQuOXpNMjU0LjEgMzU1LjFsLTI1LjEtMS44TDIxMS44IDM2OWwtMy41LTE4LjggLTEzLjYtMTAuMSAxMS40LTkuNSAtMC4xLTIwLjMgMTYuMiAxMi43IDIyLjQtNS4xIC0yLjQgMTguMkwyNTQuMSAzNTUuMXpNMjIuNSAzNjcuNWwyLjEtMTQuNSAtMTEtMTIuNSAxNi42LTMgMTAuOS0xNCA1IDE1LjMgMTQuNiA2LjkgLTEyIDkuMnYxNEwzNCAzNjMuMSAyMi41IDM2Ny41ek03LjUgMzA2LjNsMS0xNS41TDAgMjc4LjNsMTUtMS40IDEyLjUtMTEuMyAyLjggMTMuMSAxMy45IDYuNyAtMTEgOC40IC0zLjMgMTcuMSAtMTAuMi05LjZMNy41IDMwNi4zek0zIDIyNmwxMi40LTkuNyAyLjYtMTQuMSA4LjUgNy40IDguMS00LjcgLTEuOCAxMy4yIDguNSAxMy4xIC0xMy0xLjggLTcuMyA5LjIgLTQuNS04LjlMMyAyMjZ6TTE1LjIgMTUzLjFsNy0xOS4xIC02LjgtMTkuOCAxNS41IDMuMSAyMC41LTE0LjYgLTAuOSAyMS45IDE3LjUgNy44IC0xNS43IDEyLjcgMS4xIDE3LjFMMzUgMTUwLjUgMTUuMiAxNTMuMXpNMy45IDIyLjhMMjkgMjQuNyA0Ni4yIDlsMy41IDE4LjggMTMuNiAxMC4xIC0xMS40IDkuNUw1MiA2Ny43IDM1LjggNTVsLTIyLjUgNS4xIDIuNC0xOC4yTDMuOSAyMi44eiIvPjwvc3ZnPg==" class="svgfallback"/></div>
+    </div>
+  </div>
+  <div class="right-container">
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;left: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,30 0,100" style="fill:rgb(255,138,0);"></polygon>
+    </svg>
+    <div class="right-content">
+      <mark class="font-sm black">3 Days only... Save </mark>
+      <p class="font-md black">Managed</br>Wordpress <span>+</br></span><span class="text-primary-o">A Free Domain</span></p>
+      <p class="font-md black">Just <span class="text-purchase">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO</span></p><a href="[@T[link:<relative path='/hosting/wordpress-hosting.aspx'><param name='ci' value='99173'/></relative>]@T]" class="btn btn-md btn-purchase">GET It Now</a>
+      <p class="font-sm disclaimer">First year only. Annual purchase required.</p>
+    </div>
+  </div>
+</div>
