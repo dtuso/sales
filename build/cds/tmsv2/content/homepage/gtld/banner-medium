@@ -12,6 +12,7 @@
   .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
   .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
   .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
+  .Explorer8 .banner-medium.split .left-content, .Explorer8 .banner-medium .right-content { position: relative;top: 0;}
   
   .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
   .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
