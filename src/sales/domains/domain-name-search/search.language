@@ -1,7 +1,8 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-name: mcx-38814
-comments: icannfee token
+id: 554a89aaf778fc1eccc62a47
+name: MCXMO-948
+comments: merch updates for 5/13/2015
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -479,6 +480,8 @@ Perfect for the creative space.
 Share your love of technology.
 <phrase key="PodDotWalesText" />
 Show your Welsh pride by registering your own <strong>.wales</strong> domain.
+<phrase key="PodDotVideoText" />
+Be seen online with <strong>.video</strong>.
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotLegal" />
@@ -659,6 +662,10 @@ Show your Welsh pride by registering your own <strong>.wales</strong> domain.
 <strong>.wales</strong>
 <phrase key="TldDotVideo" />
 <strong>.video</strong>
+<phrase key="TldDotLife" />
+<strong>.life</strong>
+<phrase key="TldDotSale" />
+<strong>.sale</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />

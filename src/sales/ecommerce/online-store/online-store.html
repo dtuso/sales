@@ -231,6 +231,9 @@ a, a:hover {
           ##endif
           <div class="row"><div class="col-xs-3"></div><div class="col-xs-5 top-inline-disclaimer">
             [@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div></div>
+         ##if(countrySiteAny(ca))
+          <div class="row"><div class="col-xs-3"></div><div class="col-xs-5 top-inline-disclaimer">[@L[cds.sales/_common:english-only]@L]</div></div>
+         ##endif
         ##else 
           <p class="pricing">
             [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
