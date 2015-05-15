@@ -927,7 +927,13 @@ a, a:hover {
           <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4]@L]</div>
         </div>
         <div class="row faq-content">
-          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text]@L]</div>
+          <div class="col-xs-12 faq-content-text">
+            ##if(countrySiteAny(in))
+                [@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text-IN]@L]
+            ##else
+                [@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text]@L]
+            ##endif
+          </div>
         </div>
       </li>
     </ul>
