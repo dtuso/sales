@@ -42,11 +42,11 @@
   .hero-arrow .underline { text-decoration:underline; }
   
 </style>
-<style>.hero-wrapper .mwp-flash .left-content .left-image {
+<style>#hero-wrapper .mwp-flash .left-content .left-image {
   width: inherit;
   padding-left: 40%;
 }
-.hero-wrapper .mwp-flash .left-content .left-image img {
+#hero-wrapper .mwp-flash .left-content .left-image img {
   width: 88%;
   float: right;
   padding-right: 4%;
@@ -64,7 +64,7 @@
       <polygon points="0,0 100,30 0,100" style="fill:rgb(255,138,0);"></polygon>
     </svg>
     <div class="right-content">
-      <mark class="font-sm black">3 Days only... Save </mark>
+      <mark class="font-sm black">3 Days only... Save [@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580970" hidebelow="5" showsymbol="true" />]@T]</mark>
       <p class="font-md black">Managed</br>Wordpress <span>+</br></span><span class="text-primary-o">A Free Domain</span></p>
       <p class="font-md black">Just <span class="text-purchase">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO</span></p><a href="[@T[link:<relative path='/hosting/wordpress-hosting.aspx'><param name='ci' value='99173'/></relative>]@T]" class="btn btn-md btn-purchase">GET It Now</a>
       <p class="font-sm disclaimer">First year only. Annual purchase required.</p>
