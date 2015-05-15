@@ -491,7 +491,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                   div(data-main='true')
                     span .co
                 | 
-                | ##if(isManager())
+                | ##if(countrySiteAny(ca) || isManager())
                 | 
                 li.availabletld(data-main='.ca', data-view='ca')
                   div(data-main='true')

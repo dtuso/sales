@@ -648,7 +648,7 @@
                   <li data-main=".co" data-view="co" class="availabletld">
                     <div data-main="true"><span>.co</span></div>
                   </li> 
-                  ##if(isManager())
+                  ##if(countrySiteAny(ca) || isManager())
                    
                   <li data-main=".ca" data-view="ca" class="availabletld">
                     <div data-main="true"><span>.ca</span></div>
