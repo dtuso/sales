@@ -42,11 +42,11 @@
   .hero-arrow .underline { text-decoration:underline; }
   
 </style>
-<style>.hero-wrapper .mwp-flash .left-content .left-image {
+<style>#hero-wrapper .mwp-flash .left-content .left-image {
   width: inherit;
   padding-left: 40%;
 }
-.hero-wrapper .mwp-flash .left-content .left-image img {
+#hero-wrapper .mwp-flash .left-content .left-image img {
   width: 88%;
   float: right;
   padding-right: 4%;
