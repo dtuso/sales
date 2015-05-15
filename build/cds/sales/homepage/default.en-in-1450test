@@ -264,7 +264,69 @@
                   </div>
                 </div>
               </div>
-              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]</div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
+                <div style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;" class="tms-default">
+                  <style>
+                    .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+                    .banner-medium .font-lg { font-size: 2.25em; }
+                    .banner-medium .font-md { font-size: 1.5em; }
+                    .banner-medium .font-sm { font-size: 1.25em; }
+                    .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+                    .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+                    .banner-medium .disclaimer { font-size: 10px; }
+                    
+                    
+                    .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
+                    .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+                    .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
+                    .Explorer8 .banner-medium.split .left-content, .Explorer8 .banner-medium .right-content { position: relative;top: 0;}
+                    
+                    .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
+                    .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
+                    .banner-medium.split .left-content > *:last-child, .banner-medium.split .right-content > *:last-child { margin-bottom: 0;}
+                    
+                  </style>
+                  <style>
+                    .banner-medium.gtld h2 {font-size:2.5em;margin:0;}
+                    .banner-medium.gtld ul{list-style-type:none;}
+                    .banner-medium.gtld li {margin: 0;}
+                    .banner-medium.gtld a{text-transform: none;font-size:1.25em;text-decoration:none;} 
+                    .banner-medium.gtld a:hover{color: #77c043;}
+                    .Explorer8 .banner-medium.gtld,.Explorer7 .banner-medium.gtld {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);}
+                    
+                  </style>
+                  <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci="95897" class="banner-medium split gtld">
+                    <div style="background-color: #77c043;" class="left-container">
+                      <div class="left-content">
+                        <h2 class="black text-center">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
+                      </div>
+                    </div>
+                    <div class="right-container">
+                      <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;left:-1px;" viewBox="0 0 100 100">
+                        <polygon points="0,0 10,100 0,100" style="fill:#77c043;"></polygon>
+                      </svg>
+                      <div class="right-content">
+                        <ul>
+                          <li><a href="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" class="black text-purchase tld-guru">.guru</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" class="black text-purchase tld-club">.club</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='98104' /></relative>]@T]" class="black text-purchase tld-global">.global</a></li>
+                          <li><a href="[@T[link:<relative path='/tlds/life'><param name='ci' value='98105' /></relative>]@T]" class="black text-purchase tld-life">.life</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                  $(document).ready(function(){
+                    var isDefault = /^\s?default/.test($('#marquee-tile-2 [data-tms-template]').text());
+                    if (isDefault) {
+                      $('.tms-default').show();
+                    } else {
+                      $('#marquee-tile-2 [data-tms-template]').show();
+                    }
+                  });
+                </script>
+              </div>
             </div>
           </div>
         </div>
@@ -1444,6 +1506,10 @@ section {
   #hero-wrapper {
     font-size: 16px;
   }
+}
+#marquee-tile-1 [data-tms-template],
+#marquee-tile-2 [data-tms-template] {
+  display: none;
 }
 
       </style>
