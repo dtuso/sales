@@ -1,19 +1,17 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "91192";
-  - rightArrow.ctaLink = "[@T[link:<external linktype='MYAURL' path='/default.aspx'><param name='accid' value='43' /><param name='ci' value='93636' /></external>]@T]";
-  - rightArrow.classes += " office365-1";
+append vars
+  - var classes = "office365-1";
+  - var ciCode = 91192;
+  - var ctaLink = "[@T[link:<external linktype='MYAURL' path='/default.aspx'><param name='accid' value='43' /><param name='ci' value='93636' /></external>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext
-    .line1.walsheim-black WORK ANYTIME, ANYWHERE
-    .line2.tungsten SET UP YOUR EMAIL
-    .line3.walsheim-black IN JUST ONE STEP.
-    .line4.tungsten 
-      span.dash ———————————
-      span EASY, PEASY.
+  p.font-md.black.text-white Work anytime, anywhere.
+  p.font-lg.black.text-white Set up your email in just one step.
+  p.font-md.black.text-white Easy, peasy.
+
 block rightContent
-  .bigtext
-    .line1.walsheim-black ACTIVATE
-    .line2.tungsten OFFICE 365 EMAIL
-  button.btn.btn-lg.btn-purchase START NOW
+  h2.font-md.black Activate<br/>Office 365 Email
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Start now

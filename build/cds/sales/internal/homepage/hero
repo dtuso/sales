@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="[@T[localization:<language full='true' />]@T]" id="" ng-app="">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="[@T[localization:<language full='true' />]@T]">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="google-site-verification" content="odAW2IckEFXrJjMrVxmnpjRPGNxEJp_xnCb7iBydgBY">
+    <meta name="msvalidate.01" content="9D246CEFA0D8894D78306DF6FBA618D9">
+    <link href="https://plus.google.com/108306343581548568740" rel="publisher">
+    <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
+    <meta name="y_key" content="1e39c508e0d87750">
+    <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
+    <title>[@L[cds.sales/homepage:page-title]@L]</title>
+    <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
+    <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]"> 
+    ##if(siteContextAny(gd))
+     
+    <meta property="og:title" content="[@L[cds.sales/homepage:og-title]@L]">
+    <meta property="og:description" content="[@L[cds.sales/homepage:og-content]@L]">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="og:image" content="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/gd_rebrand_og.png">
+    <meta property="og:site_name" content="[@T[link:<relative parammode='explicit' />]@T]">
+    <meta property="fb:app_id" content="115696031791232">
+    <meta property="fb:admins" content="633356800">
+    <link rel="shortcut icon" href="[@T[link:<imageroot />]@T]assets/godaddy.ico"> 
+    ##endif
+     
+    <script>
+      window.ux = window.ux || {};
+      window.ux.disable = {
+        'ga': true,
+        'tealium': true
+      };
+      
+    </script> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+    
+    <atlantis:webstash type="css">
+      <style>
+        *[data-tokenize] {visibility: hidden;}
+        
+      </style>
+    </atlantis:webstash>
+    <atlantis:webstash type="js">
+      <script>
+        $(document).ready(function(){
+          $('[data-tokenize]').each(function(){
+            var $this = $(this),
+              val = $this.data('tokenize'),
+              attrName = $this.data('tokenize-attr'),
+              jsVar = $this.data('tokenize-jsvar'),
+              text = attrName ? $this.attr(attrName) : $this.html(),
+              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
+        
+            if(attrName) {
+              $this.attr(attrName, tokenized);
+            } else {
+              $this.html(tokenized);
+            }
+        
+            $this.removeAttr('data-tokenize');
+          });
+        });
+      </script>
+    </atlantis:webstash>
+    <script>       (function(e){if(typeof lazyload=="undefined"){window.lazyload={version:"2.0.0",items:e(),__defaults:{updatePosition:true,checkHorizontal:false,scrollCheckDelay:300,loadBufferDistance:0,fadeInDelay:0,fadeInSpeed:500}};function t(e,t){if(typeof t=="undefined"){t={source:e.data("lazyload-source"),watch:e.data("lazyload-watch"),callback:e.data("lazyload-callback"),callbackAfter:e.data("lazyload-callbackAfter")}}if(typeof t.source!="undefined"){e[0].lazyload=t;lazyload.items=lazyload.items.add(e);i(e)}}function n(){i(e(window));lazyload.items.each(function(){r(e(this))})}function r(t){var n=t[0].lazyload.updatePosition||lazyload.__defaults.updatePosition;var r=r||lazyload.__defaults.updateWindowScroll;var s=t[0].lazyload.checkHorizontal||lazyload.__defaults.checkHorizontal;if(n){i(t)}i(e(window));var o=t[0].lazyload.positionTop;var a=t[0].lazyload.positionBottom;var f=lazyload.windowTop;var l=lazyload.windowBottom;if(o<l+lazyload.__defaults.loadBufferDistance&&a>f-lazyload.__defaults.loadBufferDistance){u(t)}}function i(e){var t=e[0];if(t==window){if(lazyload.updateWindowPosition){lazyload.windowTop=e.scrollTop();lazyload.windowLeft=e.scrollLeft();lazyload.windowRight=lazyload.windowLeft+e.width();lazyload.windowBottom=lazyload.windowTop+e.height();lazyload.updateWindowPosition=false;clearTimeout(lazyload.windowPositionDelayTimer);lazyload.windowPositionDelayTimer=setTimeout(function(){lazyload.updateWindowPosition=true},lazyload.__defaults.scrollCheckDelay)}}else{if(typeof t.lazyload.watch!="undefined"){var n=e.parents(t.lazyload.watch);if(n.length>=1){e=n}}t.lazyload.positionTop=e.offset().top;t.lazyload.positionLeft=e.offset().left;t.lazyload.positionRight=t.lazyload.positionLeft+e.width();t.lazyload.positionBottom=t.lazyload.positionTop+e.height()}}function s(e){function i(e,t,n){try{if(typeof t!="undefined"&&t.length>=1){e.apply(null,t)}else{e.call(null)}}catch(r){}}if(typeof e=="string"){var t=e.split(",");var n=t.shift();n=o(n);i(n,t,e)}else if(typeof e=="object"){for(var r=0;r<e.length;r++){(function(){var t=e[r].split(",");var n=t.shift();var s=n;n=o(n);i(n,t,s)})()}}}function o(e){var t=window;var n=e.split(".");var r=n.pop();var i=true;for(var s=0;s<n.length;s++){if(typeof t[n[s]]!="undefined"){t=t[n[s]]}else{i=false}}if(i){return t[r]}else{return null}}function u(e){var t=e[0].lazyload.src||e[0].lazyload.source;var n=e[0].lazyload.callback;var r=e[0].lazyload.callbackAfter;lazyload.items=lazyload.items.not(e);if(lazyload.loadedSrc.indexOf(t)==-1){lazyload.loadedSrc.push(t)}var i=new Image;i.onload=function(){if(typeof n!="undefined"){e.trigger("lazyloaded").addClass("lazyloaded");s(n)}if(e.is("img")){e.css({opacity:0}).attr("src",t).delay(lazyload.__defaults.fadeInDelay).animate({opacity:1},lazyload.__defaults.fadeInSpeed,function(){if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadedafter");s(r)},lazyload.__defaults.fadeInSpeed)}})}else{var o=200;try{var u="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var a=new Image;a.src=u;a.height=i.height;a.width=i.width;function f(e){var t=document.createElement("canvas");t.width=e.width;t.height=e.height;var n=t.getContext("2d");n.drawImage(e,0,0);var r=t.toDataURL("image/png");return r.replace(/^data:image\/(png|jpg);base64,/,"")}var l=f(a);e.css({"background-image":"url(data:image/gif;base64,"+l+")","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"})}catch(c){o=0}setTimeout(function(){e.css({"background-image":"url("+t+")","-webkit-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-moz-transition":"all "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out","-o-transition":"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out",transition:"background "+lazyload.__defaults.fadeInSpeed+"ms ease-in-out"});if(typeof r!="undefined"){setTimeout(function(){e.trigger("lazyloadafter");s(r)},lazyload.__defaults.fadeInSpeed)}},o)}};i.src=t}e(document).ready(function(){lazyload.updateWindowPosition=true;lazyload.scrollCheck=true;lazyload.loadedSrc=[];$foundItems=e(".lazyload");if($foundItems.length>=1){lazyload.scrollElements=e("div,ul");lazyload.scrollElements.each(function(){var t=e(this);var n=t.css("overflow");var r=t.css("overflow-x");var i=t.css("overflow-y");var s=["hidden","scroll","auto"];if(t.find("[data-lazy-load]").length==0&&s.indexOf(n)==-1&&s.indexOf(i)==-1&&s.indexOf(r)==-1){lazyload.scrollElements=lazyload.scrollElements.not(t)}});lazyload.scrollElements=lazyload.scrollElements.add(window);lazyload.scrollElements.bind("scroll.lazyload",function(e){if(lazyload.scrollCheck){n();lazyload.scrollCheck=false;clearTimeout(lazyload.scrollCheckDelayTimer);lazyload.scrollCheckDelayTimer=setTimeout(function(){lazyload.scrollCheck=true},lazyload.__defaults.scrollCheckDelay)}});$foundItems.each(function(){t(e(this))});n()}});lazyload.check=function(){n()};lazyload.add=function(n,r){t(e(n),r)};lazyload.load=function(){u(e($item))}}})(jQuery);if(!Array.prototype.indexOf){Array.prototype.indexOf=function(e){var t=this.length>>>0;var n=Number(arguments[1])||0;n=n<0?Math.ceil(n):Math.floor(n);if(n<0)n+=t;for(;n<t;n++){if(n in this&&this[n]===e)return n}return-1}}
+    </script>
+    <script>
+      function loadJsAsync(sourceUrl, id) {
+         var js, fjs = document.getElementsByTagName('script')[0];
+         if (document.getElementById(id)) {return;}
+         js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
+         js.id = id;
+         js.src = sourceUrl;
+         fjs.parentNode.insertBefore(js, fjs);
+      }
+      
+      function endOfPageScripts() {
+      
+        $(document).ready(function(){
+          // fix centering elements
+          window.triggerResize = function(){
+            setTimeout(function(){
+              $(window).trigger('resize');
+            },50);
+          }
+          setTimeout(function(){
+            triggerResize();
+          },200);
+      
+          // Wire up tooltips
+          if($(document).sfTipper){
+            $(document).sfTipper({ wireup: true });
+          }
+          
+        });
+      
+        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+          $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+          }, 500);
+          return false;
+        });
+      
+        // Track all the icodes (tcodes handled by gtm.js)
+        window._trfq = window._trfq || [];
+        $('[data-icode]').each(function(index, element) {
+          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+        });
+      }
+      
+    </script>
+    <script>
+      var tms = function(data) {
+        $(document).ready(function(){
+          for (var key in data) {
+            if ((data[key]) && (data[key].trim() != '')) {
+              var elem = document.getElementById(key)
+              if (elem != null) {
+                $('#' + key).html(data[key]);
+              }
+            }
+          }
+        });
+      }
+      
+    </script><!--[if lt IE 9]>
+    <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+    <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+    <script type="text/javascript">
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      ##if(siteContextAny(gd))
+      loadJsAsync("[@T[link:<javascriptroot />]@T]fos/liveperson/js/[@T[appSetting:<setting name="sales_livepersonchat_file_js" />]@T]", 'livepersonLibrary');
+      ##endif
+      
+    </script>
+    <link href="[@T[link:<cssroot />]@T]fos/liveperson/css/chat-window_20140205.css" rel="stylesheet" type="text/css"> 
+    ##if(IsManager())
+    <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
+    ##endif
+  </head>
+  <body ng-controller="">
+    <!-- HEADERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
+    <!-- HEADEREND-->
+    <style>
+      .banner {position: relative; margin: 6px 0 3px 0;min-height: 141px; max-height: 181px; overflow: hidden;}
+      .hero-wrapper-id {min-height:300px;}
+      .marquee-tile-1-id, .marquee-tile-2-id {position: relative; margin: 6px 0 3px 0;min-height: 141px; max-height: 181px; overflow: hidden;}
+      section { margin-top: 20px;margin-bottom: 20px;background:#f3f3f3;}
+      .banner-medium-spacer { background:#ccc;position: absolute;top: 0;left: 0;right: 0;bottom: 0;}
+      
+    </style>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/domain-enough-passwords/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/domain-expire/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer">           </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/domain-privacy/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/fos21197_office365_1/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/fos21197_office365_2/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/fos21247_63offwddc_1/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/fos23002_abndcart/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/gdpro-beginner-price/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/hosting-awesome/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/hosting-paid-for-it/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/hosting-upgrade/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/lawyer/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/o365-boss-impressed/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/ssl-scrawny-price/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/ssl-security-guard/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/tax/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/wsb-free-domain-typo/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="hero-wrapper-id col-md-8 col-sm-12">
+            <div class="hero-wrapper">[@P[cdsDocument:<data app="tmsv2" location="content/homepage/wsb-job-to-do/hero" /> ]@P]</div>
+          </div>
+          <div class="marquee-tile-wrapper-id col-md-4 col-sm-12">
+            <div class="row">
+              <div class="marquee-tile-1-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"></div>
+              </div>
+              <div class="marquee-tile-2-id col-md-12 col-sm-6">
+                <div class="banner-medium-spacer"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTERBEGIN--> 
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="footer" /></Parameters></Data>]@P]
+    <!-- FOOTEREND-     -->
+    <!-- liveperson includes -->
+    <div id="lpButtonDiv"></div><!-- End Main Content -->
+    <atlantis:webstash type="css">
+      <!-- page styling -->
+      <style>section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+section h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Black';
+  font-weight: 100;
+  line-height: 1.1;
+  color: inherit;
+}
+section h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'Walsheim-Bold';
+  font-weight: 300;
+  line-height: 1.1;
+  color: inherit;
+}
+.feature img {
+  height: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .feature img {
+    height: 150px;
+  }
+}
+.svgfallback {
+  display: none;
+}
+.svgfallback:not(old) {
+  display: block;
+}
+ul.green-check li,
+li.green-check,
+ul.no-check li,
+li.no-check {
+  padding: 0.4em 0 0.4em 35px;
+  list-style: none;
+  background-repeat: no-repeat;
+}
+ul.green-check li,
+li.green-check {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAcCAYAAACUJBTQAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wEUERcjd6fRgQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACiElEQVRIx62WP0wTcRTHv+93tBIUaQwxKoOzGifj4mB+LT3AxUHD4uBgXDBR42BaiAFTEtufgw4OTsTg4oCJGuMf4I7r5KAmLkYJGgcFozYiRVBp6T0HrTalv7v+4ba79373yefee7/fEdbpiqWjdwHeB+AVQK8BfgNgWrjGO2r05YPjvcgHFjtcsTqrSXlB62RxG+CjmvBBatTCFfkt+cD3r5qUl0raexs2iTvRUSY+rgmbxMKiRiwAtK5smF+snEHvlbR2AoCoF5LoHkMu+O2KR8rZuGP+wdVr0bTa0ry8cfanxuKTktb24p2o1+JHy5yHBceKFnVB/tYCTNynSVlW0r6ZCk/+96pzLi4DfF4TPkksRkohTWBgYKqHCkb+EIAHAHUK13CSkXGuZJHoHoMHYEVJe2RNhS7d6wtk22a+AAiVPC8Qiz3Exkwy8pjLLIYAvqiBnCIW10stAEBk22YelgEAwGByp12R/xB3utoB4NyT/cWi6gBQ0l4DAAChpG0CWNKs62AqZGLp6POrB54hlo4OeA2/LkAA0D/VtcMVhTmferteHamkrW0iAQDJyMRHYuOwD0ToW56G/RYCAFLhifsAJeppaSWtweL8eEIGx3uhpDUEwKkNQaniLuALSXSPIe6YUNKOAJivwaLfy6LixJ9+uhuhhV2bc8GFbBWMa0raZ3xd9YeR2cPkPvJa3Pxr6yam1WWvT+W7d8XS0WGAL1RcyHQjFbZOVFU1/82w0wEgy58Hc20hYiPrZ+ELiTsmUuFJxNKdGQDtJRa3UmHrWNX9V4UJiI12pkLmX0u6gW2BfOvnaixqOk/ijimZXAegO0paR2qapBp/f4YBGg3mQm+rtQCA38MA8KA+FQdhAAAAAElFTkSuQmCC);
+}
+ul.green-check li:not(old),
+li.green-check:not(old) {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI4cHgiIHZpZXdCb3g9IjAgMCA1MCA1NSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaWQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBvbHlnb24gZmlsbD0iIzc3YzA0MyIgcG9pbnRzPSIzNywwIDQ5LDIgMjMsNTQgMCwyNSA3LDIyIDIyLDMwIi8+PC9zdmc+);
+}
+ul li.no-check {
+  background-image: none !important;
+}
+
+      </style>
+      <!-- home page styling-->
+      <style>/* delete this? */
+.text-white {
+  color: #ffffff;
+}
+.bg-green-official {
+  background-color: #77c043;
+}
+.walsheim-regular {
+  font-family: 'Walsheim-Regular', Arial, sans-serif;
+}
+.walsheim-medium {
+  font-family: 'Walsheim-Medium', Arial, sans-serif;
+}
+.walsheim-bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+}
+.walsheim-black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+}
+.tungsten {
+  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
+}
+.hero-wrapper {
+  min-height: 300px;
+}
+/* page layout/styling */
+#domain-search {
+  margin-top: 10px;
+}
+#bugbar {
+  margin: 10px 0;
+}
+#marquee {
+  position: relative;
+}
+#hero-wrapper {
+  min-height: 300px;
+}
+#marquee-tile-1,
+#marquee-tile-2 {
+  position: relative;
+  margin: 6px 0 3px 0;
+  min-height: 141px;
+  max-height: 181px;
+  overflow: hidden;
+}
+#limitations-social {
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+#limitations-social p {
+  margin: 0;
+}
+#limitations-social a {
+  cursor: pointer;
+}
+.gdhp-share {
+  position: relative;
+  float: right;
+  margin-top: 5px;
+}
+.fosfbbox {
+  height: 25px !important;
+}
+.icann-disclaimer,
+.promo-cta > a {
+  color: #ef6c0f;
+}
+#merchandising {
+  background-color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+#merchandising #banner-small-1,
+#merchandising #banner-small-2,
+#merchandising #banner-small-3,
+#merchandising #banner-small-4,
+#merchandising #banner-small-5,
+#merchandising #banner-small-6,
+#merchandising #banner-small-7,
+#merchandising #banner-small-8,
+#merchandising #banner-small-9 {
+  margin: 5px 0;
+}
+section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#why-godaddy {
+  padding-bottom: 50px;
+}
+#domain-name-input {
+  text-transform: inherit;
+}
+#domain-name-input::-webkit-input-placeholder {
+  color: #008a32;
+}
+#domain-name-input:-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input::-moz-placeholder {
+  color: #008a32;
+  opacity: 1;
+}
+#domain-name-input:-ms-input-placeholder {
+  color: #008a32;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
+/* should be more global? */
+[data-url] {
+  cursor: pointer;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
+@media only screen and (max-width: 767px) {
+  section .btn-md {
+    font-size: 14px;
+    padding: 5px 15px 2px;
+    border-bottom-width: 3px;
+  }
+}
+#hero-wrapper {
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  #hero-wrapper {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #hero-wrapper {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero-wrapper {
+    font-size: 16px;
+  }
+}
+
+      </style>
+    </atlantis:webstash>
+    <script type="text/javascript">
+      endOfPageScripts();
+      
+    </script>
+    <script type="text/javascript">
+      $('body').on('click','[data-url]',function(event){
+        var $clickedElement = $(event.currentTarget);
+        var $clickedUrl = $clickedElement.attr('data-url'); 
+        event.stopPropagation();
+        window.location.href=$clickedUrl;
+      });
+      function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
+      var reSizeTiles = function(){
+        var maxTitleHeight = 0;
+          $("#merchandising .body").each(function(index, title) {
+            maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
+          }).css("min-height", maxTitleHeight);
+          if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
+            $("#hero-wrapper").css("min-height", $("#marquee-tile-wrapper").height());
+          }
+      }
+      
+      $(window).load(function () {
+        reSizeTiles();
+        $('.bigtext').bigtext().css('visibility', 'visible');
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+      });
+    </script>
+    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
+    <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
+    <script type="text/javascript">
+      var ignoreLivePerson = true;
+      $(document).ready(function() {
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
+                     qs = [],
+                     date = new Date();
+        for(var i = 0; i < hashes.length; i++) {
+          var hash = hashes[i].split('=');
+          qs.push(hash[0]);
+          qs[hash[0]] = hash[1];
+        }
+      
+        window.setTimeout(function() {
+          $('#shareme').fosShare({});
+        }, 2000);
+      });
+      
+    </script>
+  </body>
+</html>

@@ -116,6 +116,21 @@
         });
       }
       
+    </script>
+    <script>
+      var tms = function(data) {
+        $(document).ready(function(){
+          for (var key in data) {
+            if ((data[key]) && (data[key].trim() != '')) {
+              var elem = document.getElementById(key)
+              if (elem != null) {
+                $('#' + key).html(data[key]);
+              }
+            }
+          }
+        });
+      }
+      
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
@@ -200,57 +215,54 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 col-sm-12">
-            <div class="hero-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
-          </div>
-          <div class="col-md-4 col-sm-12">
+          <div id="hero-wrapper" class="col-md-8 col-sm-12">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
+          <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div class="col-md-12 col-sm-6">
-                <div class="tile-wrapper">
-                  <atlantis:webstash type="css">
-                    <style>.marquee-tile.p4p {
-  background-color: #77c043;
+              <div id="marquee-tile-1" class="col-md-12 col-sm-6">
+                <style>.banner-medium {
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  height: 100%;
+  width: 100%;
+  padding: .5em;
+}
+.banner-medium.p4p {
+  background-color: #78c043;
   background-repeat: no-repeat;
   background-position: 5% 100%;
   background-size: 120px 110px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDExMy4xIDExOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTEzLjA1OCAxMTgiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiMzMzMzMzMiIHBvaW50cz0iMTUuNCA1OSA3LjcgNjMuNyAxNy40IDEwMi4xIDIyLjUgMTAyLjggNDQuOSA5MS44IDQyLjIgMTE4IDkwIDExOCA5Mi4zIDk0LjggOTkuNyAxMDYuNCA5NC43IDExOCAxMDUuNCAxMTggMTEzLjEgMTA0LjQgOTEuOSA2Ny43IDc1LjEgNjUuOCA3NC45IDY1LjkgNzQuNCA1NS45IDgyLjggNTAuOCA4NC42IDMzLjkgODQuNyAzMy45IDg5LjkgMTcuMSA4NS4yIDEwLjIgNzkuNiAwIDU3LjUgMy43IDQ5LjUgMTAgNDUuMyAyMS45IDUxIDM5LjQgNTIuNiA1MS45IDYxLjkgNTcuMiA2MS4zIDY1LjkgNjEuMiA2NS44IDQ1LjggNjkuOCA0My42IDcxLjcgNDIuOCA3MiA0MyA3Mi4zIDI0LjYgODguMSAiLz48cG9seWdvbiBmaWxsPSIjMzMzMzMzIiBwb2ludHM9IjE2LjcgNTEuOCAxNC40IDQ1IDEzLjQgNDUuOCAxMy4xIDQ5LjYgNyAzNi4xIDUuNyAzNi4zIDYuNSAzOS43IDMuOSAzNS4zIDIuNSAzNS41IDQuMiA0NC4xIDEuNyAzNy45IDAuOCAzOC43IDIuOCA0OC4xIDAuOCA0Mi40IDAgNDMuMSAyLjIgNTYuNSA2LjYgNjAuMyAxNC44IDU3ICIvPjwvc3ZnPg==);
-}
-.marquee-tile.p4p .tile-content-wrapper {
-  padding: 3% 11% 0 44%;
   line-height: 1.3;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  padding-left: 44%;
+  padding-right: 11%;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .marquee-tile.p4p .tile-content-wrapper {
-    padding-right: 1%;
-  }
-}
-.marquee-tile.p4p .headline {
+.banner-medium.p4p .headline {
   background-color: #fdda54;
   padding-left: 2%;
   margin-left: -2%;
 }
-.marquee-tile.p4p button {
-  margin: 5% 0;
+.banner-medium.p4p .sub-headline {
+  margin-bottom: 42px;
 }
-.Explorer8 .marquee-tile-p4p,
-.Explorer7 .marquee-tile-p4p {
+.banner-medium.p4p .btn-purchase {
+  position: absolute;
+  bottom: .5em;
+}
+.Explorer8 .banner-medium.p4p,
+.Explorer7 .banner-medium.p4p {
   background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/p4p-man.png);
 }
 
-                    </style>
-                  </atlantis:webstash>
-                  <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="tile marquee-tile p4p">
-                    <div class="tile-content-wrapper">
-                      <div class="headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
-                      <div class="sub-headline walsheim-black">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div>
-                      <button class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</button>
-                    </div>
-                  </div>
+                </style>
+                <div data-url="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" data-ci='95742' class="banner-medium p4p">
+                  <div class="headline">[@L[cds.tmsv2/content/homepage/p4p:headline]@L]</div>
+                  <div class="sub-headline">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div><a href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</a>
                 </div>
               </div>
-              <div class="col-md-12 col-sm-6"> 
-                <div class="tile-wrapper">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]</div>
-              </div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]</div>
             </div>
           </div>
         </div>
@@ -1566,7 +1578,8 @@ ul li.no-check {
 
       </style>
       <!-- home page styling-->
-      <style>.text-white {
+      <style>/* delete this? */
+.text-white {
   color: #ffffff;
 }
 .bg-green-official {
@@ -1587,26 +1600,29 @@ ul li.no-check {
 .tungsten {
   font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
 }
-#marquee {
-  position: relative;
-}
-#marquee .tile-wrapper {
-  margin-top: 6.5px;
-}
-#marquee .tile-wrapper:last-child {
-  margin-bottom: 6.5px;
-}
-#marquee .tile {
-  min-height: 140px;
-}
 .hero-wrapper {
   min-height: 300px;
 }
-[data-url] {
-  cursor: pointer;
+/* page layout/styling */
+#domain-search {
+  margin-top: 10px;
 }
-.top-banner-lower-content {
-  min-height: 40px;
+#bugbar {
+  margin: 10px 0;
+}
+#marquee {
+  position: relative;
+}
+#hero-wrapper {
+  min-height: 300px;
+}
+#marquee-tile-1,
+#marquee-tile-2 {
+  position: relative;
+  margin: 6px 0 3px 0;
+  min-height: 141px;
+  max-height: 181px;
+  overflow: hidden;
 }
 #limitations-social {
   padding: 20px 0;
@@ -1626,16 +1642,6 @@ ul li.no-check {
 .fosfbbox {
   height: 25px !important;
 }
-#bugbar {
-  margin: 10px 0;
-}
-#domain-search {
-  margin-top: 10px;
-}
-#domain-name-input {
-  text-transform: inherit;
-}
-.price,
 .icann-disclaimer,
 .promo-cta > a {
   color: #ef6c0f;
@@ -1663,6 +1669,9 @@ section {
 #why-godaddy {
   padding-bottom: 50px;
 }
+#domain-name-input {
+  text-transform: inherit;
+}
 #domain-name-input::-webkit-input-placeholder {
   color: #008a32;
 }
@@ -1685,6 +1694,43 @@ section {
   min-width: inherit;
   max-width: inherit;
 }
+/* should be more global? */
+[data-url] {
+  cursor: pointer;
+}
+[data-tms-name],
+[data-tms-template] {
+  height: inherit;
+  min-height: inherit;
+  max-height: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
+@media only screen and (max-width: 767px) {
+  section .btn-md {
+    font-size: 14px;
+    padding: 5px 15px 2px;
+    border-bottom-width: 3px;
+  }
+}
+#hero-wrapper {
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  #hero-wrapper {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #hero-wrapper {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #hero-wrapper {
+    font-size: 16px;
+  }
+}
 
       </style>
     </atlantis:webstash>
@@ -1706,26 +1752,14 @@ section {
             maxTitleHeight = $(title).height() > maxTitleHeight ? $(title).height() : maxTitleHeight;
           }).css("min-height", maxTitleHeight);
           if(Math.max(document.documentElement.clientWidth, window.innerWidth || 0)>992){
-            var maxHeroHeight = 0;
-            $("#marquee .tile").each(function(index, title) {maxHeroHeight += $(title).outerHeight();});
-            $("#marquee .hero-wrapper").css("min-height", maxHeroHeight + 26);
+            $("#hero-wrapper").css("min-height", $("#marquee-tile-wrapper").height());
           }
       }
-      function tokenizeTheDataTokenizeAttribute() {
-        $('[data-tokenize]').each(function(){
-          var $this = $(this),
-            html = $this.html(),
-            val = $this.data('tokenize'),
-              tokenizedHtml = html.replace(/\{0\}/gi, val);
-          $this
-            .html(tokenizedHtml)
-            .removeAttr('data-tokenize');
-        });
-      }
+      
       $(window).load(function () {
         reSizeTiles();
         $('.bigtext').bigtext().css('visibility', 'visible');
-          setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
+        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
     </script>
     <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
@@ -1733,7 +1767,6 @@ section {
     <script type="text/javascript">
       var ignoreLivePerson = true;
       $(document).ready(function() {
-        tokenizeTheDataTokenizeAttribute();
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();
