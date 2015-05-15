@@ -281,3 +281,6 @@ width: 50%;
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .uppercase{
+  text-transform: uppercase;
+  }

@@ -1,0 +1,17 @@
+---
+location: sales/resources/infographics.rule
+id: 5550ca65f778fc2030decc76
+name: SEM-511
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': '!activeLanguageAny([en-us],[en-in],[pt-br],[en-gb])',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+    'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+]

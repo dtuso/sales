@@ -10,7 +10,6 @@ block vars
   - buttonText = "[@L[cds.sales/_common:add-to-cart-cap]@L]";
   //- term ="/[@L[cds.sales/_common:month]@L]"
   - defaultPlan = "wsb_personal_12month";
-  //- vat = true;
 
 block price
   .plan-price-wrap.row
@@ -21,31 +20,12 @@ block price
     | 
     br
     strong
-      | 
-      | ##if(splitTestingSideIsActive(1349, A))
-      | 
-      | [@L[cds.sales/_common:was]@L] 
-      strike [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-      |  
-      span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
-      | 
-      | ##else
-      | 
       | [@L[cds.sales/_common:onsale-all-cap]@L] -
       span.text-primary <mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="7524" secondaryproductid="7524" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark>
-      | 
-      | ##endif
-      | 
     | 
     |##endif
     | 
-    | 
-    | ##if(splitTestingSideIsActive(1349, B))
-    | 
     p.h6.vat-price [@T[productprice:<list productid="7524" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
-    | 
-    | ##endif
-    | 
     | 
     |##if(countrySiteAny(uk))
     | 
