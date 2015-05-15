@@ -1779,7 +1779,13 @@ $(window).load(function () {
                   <button data-ci="95740" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]</div>
-                  <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]</div>
+                  <div class="include-check-green">
+                    ##if(countrySiteAny(in))
+                    [@L[cds.sales/offers/online-business:40011-choose-ols-bullet-3-IN]@L]
+                    ##else 
+                    [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]
+                    ##endif
+                  </div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-4]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-5]@L]</div>
                 </div>
