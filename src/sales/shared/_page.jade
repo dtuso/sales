@@ -41,7 +41,8 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
     link(rel="canonical" href!="#{page.canonical}")
 
     //- fonts - load ASAP as they're on the critical path for page load time 
-    link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
+    block fonts
+      link(rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css")
 
     //- page.jade exposes and uses seo variables for the most frequently used meta tags (listed above)
     //- usually, inherited pages can simply set these variables

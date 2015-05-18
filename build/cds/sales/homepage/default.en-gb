@@ -12,7 +12,6 @@
     <meta name="verify-v1" content="dV1r/ZJJdDEI++fKJ6iDEl6o+TMNtSu0kv18ONeqM0I=">
     <meta name="y_key" content="1e39c508e0d87750">
     <link rel="canonical" href="[@T[link:<relative parammode='explicit' />]@T]">
-    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7914312/697366/css/fonts.css">
     <title>[@L[cds.sales/homepage:page-title]@L]</title>
     <meta name="description" content="[@L[cds.sales/homepage:meta-description]@L]">
     <meta name="keywords" content="[@L[cds.sales/homepage:meta-keywords]@L]"> 
@@ -1101,10 +1100,9 @@
 }
 #o365-promo .promo-flag {
   color: #000;
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Arial, sans-serif;
-  font-size: 28px;
-  font-size: 2.8rem;
-  padding: 10px 20px;
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  font-size: 1.25em;
+  padding: 15px 20px;
   text-transform: uppercase;
   line-height: 1;
   background-size: cover;
@@ -1311,9 +1309,6 @@ ul li.no-check {
 }
 .walsheim-black {
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
-}
-.tungsten {
-  font-family: Tungsten, 'Tungsten A', 'Tungsten B', Impact, sans-serif;
 }
 .hero-wrapper {
   min-height: 300px;
