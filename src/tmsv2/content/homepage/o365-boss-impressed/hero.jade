@@ -1,19 +1,17 @@
-extends ../../../../sales/homepage/_right_arrow.jade
+extends ../_hero-arrow.jade
 
-block append heroVars
-  - rightArrow.ci = "95859";
-  - rightArrow.ctaLink = "[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='"+rightArrow.ci+"'/></relative>]@T]";
-  - rightArrow.classes += " o365-boss-impressed";
+append vars
+  - var classes = "o365-boss-impressed";
+  - var ciCode = 95859;
+  - var ctaLink = "[@T[link:<relative path='/business/office-365.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
+  - var polyColor = "#77c043";
+  - var polyPoint = 50;
+
 block leftContent
-  .bigtext
-    .line1.walsheim-black OFFICE 365 FROM GODADDY
-    .line2.tungsten EMAIL SO PROFESSIONAL,
-    .line3.walsheim-black EVEN YOUR OLD BOSS
-    .line4.tungsten 
-      span.dash ————— 
-      span WILL BE IMPRESSED.
+  p.font-lg.black.text-white Office 365 from GoDaddy
+  p.font-md.black.text-white Email so professional, even your old boss will be impressed.
+
 block rightContent
-  .bigtext
-    .line1.walsheim-bold PLANS FROM ONLY
-    .line2.price.walsheim-black [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
-  button.btn.btn-lg.btn-purchase START NOW
+  p.font-md.black Plans from only
+  p.font-md.black.text-purchase [@T[productprice:<current productid="31805" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/MO
+  a.btn.btn-md.btn-purchase(href!=ctaLink) Start now

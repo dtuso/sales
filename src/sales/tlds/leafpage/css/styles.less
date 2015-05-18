@@ -34,8 +34,8 @@ src: url('//img1.wsimg.com/ux/fonts/1.0/woff/w8.woff') format('woff'), url('//im
 font-weight: 400;
 font-style: normal;
 }
-#main-wrap * {
-  font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif!important;
+#main-wrap {
+  font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;
   font-weight:300;
 }
 #price-bold {
@@ -45,10 +45,13 @@ font-style: normal;
   font-weight: 600;
 }
 #main-wrap {
-  width:1000px;margin: 0 auto 30px;clear:both;
+  width:1000px;
+  margin: 0 auto 30px;
+  clear:both;
 }
 #head-wrap {
-  width:1000px;height:277px;
+  width:1000px;
+  height:277px;
 }
 #head-wrap .header {
   min-height:277px;
@@ -63,7 +66,7 @@ font-style: normal;
 }
 #main-wrap .tungsten {
 	font-family: Tungsten, 'Tungsten A', 'Tungsten B', 'Helvetica Neue', 'Segoe UI', Segoe, Helvetica, Arial, 'Lucida Grande', sans-serif;
-	font-weight:700
+	font-weight:700;
 }
 #tld-headline {
   font-size:36px;
@@ -189,7 +192,9 @@ font-style: normal;
   float:right;
 }
 #sm-wrap {
-  height:21px;margin:14px 0 14px;float:right;
+  height:21px;
+  margin:14px 0 14px;
+  float:right;
 }
 #sm-wrap div.fosfbbox {
   height:21px!important;
@@ -322,7 +327,7 @@ font-style: normal;
   margin: 11px 9px 0 0; 
   min-width: 78px;
   padding:6px 10px;
-  text-transform: uppercase; 
+  font-weight: 600;
 }
 #body-wrap .now-open {
   font-weight: 600; 
@@ -361,20 +366,28 @@ font-style: normal;
   font-size:20px; 
   font-weight: 400;
 }
-#main-wrap h1 em.gtld {
-  font-weight: 400;
+#div-london-Priority{
+  padding-top: 15px;
 }
-#tld-headline > em.gtld{
-  font-weight: 600;
+#div-London-Award{
+  padding-bottom: 10px;
 }
-#div-london-Priority{padding-top: 15px;}
-#div-London-Award{padding-bottom: 10px;}
-#div-Priority-Ranking{font-size: 16px;color: #333333;}
-ul.RankingList {list-style-type: none; margin-left: 1.5em;padding-left: 1em;text-indent: -0.85em;}
-ul.RankingList li:before {content: "- ";}
+#div-Priority-Ranking{
+  font-size: 16px;
+  color: #333333;
+}
+ul.RankingList {
+  list-style-type: none;
+  margin-left: 1.5em;
+  padding-left: 1em;
+  text-indent: -0.85em;
+}
+ul.RankingList li:before {
+  content: "- ";
+}
 em.gtld {
-  text-transform: uppercase;
   text-decoration: none;
+  font-weight: 600;
 }
 /* Specific Styles */
 

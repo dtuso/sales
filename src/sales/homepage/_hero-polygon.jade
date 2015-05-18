@@ -21,7 +21,7 @@ atlantis:webstash(type="css")
       @media only screen and (min-width: 768px) {#marquee{background:url(!{marqueeBackground}) no-repeat top center;background-size:cover;}}
       #marquee .heroContentWrapper {margin-left: 14%;margin-right:14%; position:relative}
       #marquee .heroContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%)}
-      .hero {background-color:!{xsBannerColor}; margin-left:-60px}
+      .hero-polygon.hero {background-color:!{xsBannerColor}; margin-left:-60px}
       .Explorer8 #marquee .hero.polygon{background:url(!{polygon.png}) no-repeat;}
       .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url(!{marqueeFallback}) no-repeat;}
       .Explorer8 #marquee .heroContent{position:relative;}
@@ -35,7 +35,7 @@ atlantis:webstash(type="css")
           }
         }
 
-div(class=classes data-url!=ctaLink, data-ci=dataCI)
+.hero-polygon(class=classes data-url!=ctaLink, data-ci=dataCI)
   #marqueeImage.col-xs-12.visible-xs
   .heroContentWrapper
     .heroContent

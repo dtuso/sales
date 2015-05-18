@@ -1,0 +1,38 @@
+block vars
+  - ciCode = "";
+  - classes = "";
+  - pfid = "";
+  - logoSVG = "";
+  - logoFallback = "";
+  - headline = "";
+  - ctaText = "[@L[cds.tmsv2/content/homepage/marquee-tile-tld:price]@L]";
+  - ctaLink = "";
+
+block styles
+  style.
+    .banner-medium { min-height: inherit;max-height: inherit;min-width: inherit;max-width: inherit;height: 100%;width: 100%; position: relative; }
+    .banner-medium.tld { padding: .5em; }
+    .banner-medium.tld {background-color:#333;font-family:'Walsheim-Black', 'Arial Black', sans-serif;padding:1em; line-height:1; color: #fff; }
+    .banner-medium.tld .headline {font-size:1.1em; text-transform: uppercase; margin: 1em 0 .5em 0;}
+    .banner-medium.tld .text-purchase {font-size:1.5em; display: none; }
+    .banner-medium.tld img {height:2.5em;max-width:100%;align-content:left;}
+
+.banner-medium.tld(data-url!=ctaLink data-ci=ciCode class=classes)
+  block image
+    img.tld.svgfallback(src!=logoSVG)
+    <!--[if lt IE 9]>
+    img(src!=logoFallback)
+    <![endif]-->
+  block headline
+    .headline.text-primary-o !{headline}
+  block cta
+    .cta !{ctaText}
+  block script
+    script.
+      (function() { 
+        var $price = $('.!{classes}.banner-medium .text-purchase');
+        if ($price.length) {
+          $price.html($price.html().replace('{0}','[@T[productprice:<current productid="!{pfid}" period="yearly" />]@T]'));
+          $price.show();
+        }
+      })();

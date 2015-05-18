@@ -363,7 +363,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]:<span class="savings-total"></span></div>
+              <div class="savings-total-wrapper text-secondary">[@L[cds.sales/_common:total-savings]@L]: <span class="savings-total"></span></div>
             </div> 
             ##if((((((((((((((((((((countrysiteany(ie) || countrysiteany(gb)) || countrysiteany(ca)) || countrysiteany(ph)) || countrysiteany(sg)) || countrysiteany(at)) || activeLanguageAny([nl-BE])) || activeLanguageAny([fr-BE])) || countrysiteany(cz)) || countrysiteany(dk)) || countrysiteany(fi)) || countrysiteany(de)) || countrysiteany(gr)) || countrysiteany(it)) || countrysiteany(pl)) || countrysiteany(pt)) || countrysiteany(es)) || countrysiteany(se)) || countrysiteany(hu)) || countrysiteany(nl)) || countrysiteany(bg))
              
@@ -622,7 +622,7 @@
                   <li data-main=".com" data-view="com" class="availabletld selected">
                     <div data-main="true"><span>.com</span></div>
                   </li> 
-                  ##if(countrySiteAny(br) || isManager())
+                  ##if(countrySiteAny(br) ||isManager())
                    
                   <li data-main=".com.br" data-view="com.br" class="availabletld">
                     <div data-main="true"><span>.com.br</span></div>
@@ -917,6 +917,9 @@
                                 $('#no-domain-link').html('[@L[cds.sales/_common:continue-no-free-domain]@L]');
                                 var availableDomain = safeShortName.split('.')[0];
                                 var availableTld = '.'+safeShortName.split('.')[1];
+                                if (safeShortName.split('.')[2] != undefined){
+                                  availableTld += '.'+safeShortName.split('.')[2];
+                                }
                                 $('.domain-name-display-domain').html(availableDomain);
                                 $('.domain-name-display-tld').html(availableTld);
                                 $('.available-result').show();
@@ -1176,7 +1179,7 @@ ul li.no-check {
         margin-left: 15px;
         }
         .config-text-primary {
-          font-size: 30px;
+          font-size: 25px;
           font-weight: 200;
         }
         .config-text-secondary {
@@ -1443,14 +1446,6 @@ input[type=checkbox] + label{
           .text-md-right{
             text-align: inherit;
           }
-          .item-price{
-            border-bottom: none;
-          }
-        }
-        @media (max-width: 1024px) { 
-          .item-price{
-            border-bottom: 1px solid #EBEBEB;
-          }
         }
       </style>
     </atlantis:webstash>
@@ -1461,16 +1456,16 @@ input[type=checkbox] + label{
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
+        <div class="col-xs-4 col-sm-12 ">
           <div class="item-term"><%= itemTerm %></div>
         </div>
-        <div class="col-xs-1 col-sm-12 col-lg-1 text-md-right">
+        <div class="col-xs-1 col-sm-1">
           <div class="item-x">x</div>
         </div>
-        <div class="col-xs-3 col-sm-12 col-lg-3 text-md-right">
+        <div class="col-xs-3 col-sm-7">
           <div class="item-price" id="<%= itemID %>"><%= itemPricePerTerm %></div> 
         </div>
-        <div class="col-xs-4 col-sm-12 col-lg-4 text-md-right">
+        <div class="col-xs-4 col-sm-4">
           <div class="item-total-price text-secondary"><%= itemTotal %></div>
         </div>
       </div>
@@ -1504,7 +1499,7 @@ input[type=checkbox] + label{
           <div class="col-xs-6 col-lg-7">
             <div class="config-text-secondary"><%= title %></div>
           </div>
-          <div class="col-xs-4 col-lg-4">
+          <div class="col-xs-4 col-lg-4 text-right">
             <div class="config-text-primary text-secondary-o"><%= currentPrice %>/[@L[cds.sales/_common:mo]@L]</div>
           </div>
         </div>
@@ -1512,7 +1507,7 @@ input[type=checkbox] + label{
           <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
             <div class="config-text-lead bold"><%= subtitle %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 text-right">
             <% if ( onSale ){ %>
                 <strike><%= listPrice %>/[@L[cds.sales/_common:mo]@L]</strike> 
               <% } %>
@@ -1524,7 +1519,7 @@ input[type=checkbox] + label{
             <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="<%= toolTipContent %>" ></span>
             <% } %></div>
           </div>
-          <div class="col-xs-4">
+          <div class="col-xs-4 text-right">
             <div class="config-text-lead text-secondary-o">
               <% if ( onSale ){ %>
                 [@L[cds.sales/_common:onsale-all-cap]@L] ([@L[cds.sales/_common:save-cap]@L] <%= percentSavings %>)
@@ -1532,6 +1527,16 @@ input[type=checkbox] + label{
             </div>
           </div>
         </div>
+        <% if (extraRow){ %> 
+          <div class="row">
+          <div class="col-xs-6 col-xs-offset-2 col-lg-offset-1 col-lg-7">
+            <div class="config-text-lead bold"><%= extraRowLeftText %></div>
+          </div>
+          <div class="col-xs-4 text-right">
+              <%= extraRowRightText %>
+          </div>
+        </div>
+       <% } %>
       </li>
       
     </script>
@@ -1573,6 +1578,7 @@ input[type=checkbox] + label{
           </div>
         </div>
       </li>
+      
     </script>
     <script type="text/template" class="addonTemplate">
       <li>
