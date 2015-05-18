@@ -1,72 +1,62 @@
 
-<!-- start right-arrow hero section-->
-<atlantis:webstash type="css">
-  <style>
-    .hero-wrapper>div{min-height:inherit;}
-    .right-arrow.hero {min-height: inherit;line-height:.9;background: transparent}
-    .right-arrow>div{min-height:inherit}
-    .right-arrow .left{background-color:rgb(119,192,67);color:#fff}
-    .right-arrow .right{background-color:transparent; color:#000}
-    .right-arrow .dash{letter-spacing:-.2rem}
-    .right-arrow .arrow{background-color:transparent; background:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>') no-repeat; z-index:-1}
-    .right-arrow .leftContent, .right-arrow .rightContent{position:absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
-    .right-arrow .leftContent{width:80%; margin-left:10%;}
-    .right-arrow .rightContent{width:70%}
-    .right-arrow .rightContent .btn{margin:5% 0}
-    .Explorer .right-arrow .arrow{background-size: 100% 100% !important;}
-    
-  </style>
-  <style>.hero.right-arrow.ssl-security-guard .rightContent .line3 {
-  margin-bottom: 3%;
-}
-
-  </style>
-</atlantis:webstash>
-<div data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95860'/></relative>]@T]" class="hero right-arrow ssl-security-guard">
-  <div class="left col-xs-6">
-    <div class="leftContent">
-      <div class="bigtext">
-        <div class="line1 tungsten">SSL CERTIFICATES</div>
-        <div class="line2 walsheim-black">LIKE AN ONLINE</div>
-        <div class="line3 tungsten">SECURITY GUARD.</div>
-        <div class="line4 walsheim-black">THAT NEVER TAKES A BREAK.</div>
-        <div class="line5 tungsten"> <span class="dash">———— </span><span>EVER</span></div>
-      </div>
+<style>
+  /* template layout styling */
+  .hero-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .hero-arrow .left-container, .hero-arrow .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .hero-arrow .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .hero-arrow .left-content, .hero-arrow .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .Explorer8 .hero-arrow .left-content, .Explorer8 .hero-arrow .right-content { position: relative;top: 0;}
+  .hero-arrow .left-content { padding: 5% 0% 5% 0; }
+  .hero-arrow .right-content { padding: 5% 5% 5% 18%; word-break: break-word; max-width:100%;}
+  .hero-arrow .left-content > *:not(.btn), .hero-arrow .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:first-child { margin-top: 0 !important;}
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:last-child { margin-bottom: 0 !important;}
+  .hero-arrow mark { line-height: inherit; }
+  .hero-arrow mark:after { height: 1em; }
+  
+  /* content styling */
+  
+  /* APPROACH #1 */
+  /* apply classes to specify the font family/size/color */
+  /* allows for atomically creating a look/feel for each hero item */
+  /* color is covered by UXCore classes so we just need family/size classes here */
+  .hero-arrow .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .text-white { color:#fff;}
+  .hero-arrow .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .hero-arrow .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  
+  /* APPROACH #2 */
+  /* apply classes the group the whole 'look and feel' */
+  /* provides for easily making things consistent - there are only a few styles in the hero */
+  .hero-arrow .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  
+  .hero-arrow .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .hero-arrow .price .text-purchase { font-size: 1.25em; }
+  
+  .hero-arrow .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
+  .hero-arrow .dash { letter-spacing:-.2em; }
+  .hero-arrow .underline { text-decoration:underline; }
+  
+</style>
+<div data-url="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95860'/></relative>]@T]" data-ci='95860' class="hero hero-arrow ssl-security-guard">
+  <div style="background:#77c043;" class="left-container">
+    <div class="left-content">
+      <h2 class="font-lg black text-white">SSL Certificates</h2>
+      <p class="font-md black text-white">Like an online security guard that never takes a break. Ever.</p>
     </div>
   </div>
-  <div class="col-xs-1 arrow"></div>
-  <script>
-    (function(){
-    function IEVersion(){
-      var ua = window.navigator.userAgent;
-      if (ua.indexOf('MSIE 8')>0 || ua.indexOf('MSIE 9')>0){
-        return '8-9';
-      }
-      else if(ua.indexOf('10-current')>0 || ua.indexOf('Trident')>0){
-        return '10-current';
-      }
-    }
-    var ieVersion = IEVersion();
-      if(ieVersion != undefined)
-        if(ieVersion == '10-current'){
-          var utf8 = '<svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 45 315" enable-background="new 0 0 45 315" xml:space="preserve"><path fill-rule="evenodd" fill="rgb(119,192,67)" clip-rule="evenodd" d="M0 0l45 158L0 315V0z"/></svg>';
-          var base64 = window.btoa(utf8);
-          $('.right-arrow .arrow').css('background','url(data:image/svg+xml;base64,'+base64+') no-repeat');
-          }
-        else{
-          $('.right-arrow .arrow').css('background','url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/arrow-green.png) no-repeat');
-        }
-      })();
-  </script>
-  <div class="right col-xs-5">
-    <div class="rightContent">
-      <div class="bigtext">
-        <div class="line1 walsheim-bold">ON SALE NOW</div>
-        <div class="line2 walsheim-black">SSL CERTIFICATES</div>
-        <div class="line3 price walsheim-bold">NOW JUST [@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</div>
-      </div>
-      <button class="btn btn-lg btn-purchase">GET STARTED</button>
+  <div class="right-container">
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;left: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,50 0,100" style="fill:#77c043;"></polygon>
+    </svg>
+    <div class="right-content">
+      <mark class="font-md black">On sale now</mark>
+      <div class="font-md black">SSL Certificates</div>
+      <div class="price font-md black">Now just <span class="text-purchase">[@T[productprice:<current productid="3604" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]/YR</span></div><a href="[@T[link:<relative path='/ssl/ssl-certificates.aspx'><param name='ci' value='95860'/></relative>]@T]" class="btn btn-md btn-purchase">Get started</a>
     </div>
   </div>
 </div>
-<!-- end right-arrow hero section-->
