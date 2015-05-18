@@ -461,7 +461,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                   div(data-main='true')
                     span .com
                 | 
-                | ##if(isManager())
+                | ##if(countrySiteAny(br) ||isManager())
                 | 
                 li.availabletld(data-main='.com.br', data-view='com.br')
                   div(data-main='true')
@@ -479,7 +479,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                 | ##endif
                 | 
                 | 
-                | ##if(isManager())
+                | ##if(countrySiteAny(au) || isManager())
                 | 
                 li.availabletld(data-main='.com.au', data-view='com.au')
                   div(data-main='true')
@@ -491,7 +491,7 @@ mixin configDomainSearchInput(configDomainSearchParams)
                   div(data-main='true')
                     span .co
                 | 
-                | ##if(isManager())
+                | ##if(countrySiteAny(ca) || isManager())
                 | 
                 li.availabletld(data-main='.ca', data-view='ca')
                   div(data-main='true')
@@ -520,12 +520,6 @@ mixin configDomainSearchInput(configDomainSearchParams)
                 li.availabletld(data-main='co.uk', data-view='co.uk')
                   div(data-main='true')
                     span .co.uk
-                | 
-                | ##endif
-                | 
-                | 
-                | ##if(isManager())
-                | 
                 li.availabletld(data-main='.uk', data-view='uk')
                   div(data-main='true')
                     span .uk
