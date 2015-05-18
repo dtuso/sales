@@ -1,0 +1,67 @@
+
+<style>
+  /* template layout styling */
+  .hero-arrow { min-height: inherit; max-height: inherit; height: 100%; width: 100%; min-width: inherit; max-width: inherit; color: #333; position: relative; }
+  .hero-arrow .left-container, .hero-arrow .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+  .hero-arrow .left-container { box-sizing: content-box; margin-left: -1000px; padding-left: 1000px; }
+  .hero-arrow .left-content, .hero-arrow .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);}
+  .Explorer8 .hero-arrow .left-content, .Explorer8 .hero-arrow .right-content { position: relative;top: 0;}
+  .hero-arrow .left-content { padding: 5% 0% 5% 0; }
+  .hero-arrow .right-content { padding: 5% 5% 5% 18%; word-break: break-word; max-width:100%;}
+  .hero-arrow .left-content > *:not(.btn), .hero-arrow .right-content > *:not(.btn) { margin-top: .25em !important; margin-bottom: .25em !important; line-height: 1; }
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:first-child { margin-top: 0 !important;}
+  .hero-arrow .left-content > *:last-child, .hero-arrow .right-content > *:last-child { margin-bottom: 0 !important;}
+  .hero-arrow mark { line-height: inherit; }
+  .hero-arrow mark:after { height: 1em; }
+  
+  /* content styling */
+  
+  /* APPROACH #1 */
+  /* apply classes to specify the font family/size/color */
+  /* allows for atomically creating a look/feel for each hero item */
+  /* color is covered by UXCore classes so we just need family/size classes here */
+  .hero-arrow .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .font-sm { font-size: 1em; margin-top: .25em; margin-bottom: .25em; }
+  .hero-arrow .text-white { color:#fff;}
+  .hero-arrow .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+  .hero-arrow .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+  
+  /* APPROACH #2 */
+  /* apply classes the group the whole 'look and feel' */
+  /* provides for easily making things consistent - there are only a few styles in the hero */
+  .hero-arrow .product { font-size: 1.5em; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .big-green { font-size: 2em; color: #77c043; text-transform: uppercase; font-family: 'Walsheim-Black', 'Arial Black', sans-serif; }
+  .hero-arrow .sub-title { font-size: 1.5em; color: #333; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase;  }
+  
+  .hero-arrow .price { text-transform: uppercase; font-size: 1em; font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;  }
+  .hero-arrow .price .text-purchase { font-size: 1.25em; }
+  
+  .hero-arrow .disclaimer { color: #333; font-size: 10px; position: relative; bottom: 2em; padding-top:2em; }
+  .hero-arrow .dash { letter-spacing:-.2em; }
+  .hero-arrow .underline { text-decoration:underline; }
+  
+</style>
+<style>#hero-wrapper .hosting-flash .right-container {
+  background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg) top center;
+}
+
+</style>
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="hero hero-arrow hosting-flash">
+  <div style="background:white;" class="left-container">
+    <div class="left-content">
+      <p class="product">Web Hosting</p>
+      <h2 class="big-green">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off web hosting</h2>
+      <div class="description">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
+      <p class="price">Starting at <span class="text-purchase">[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="btn btn-md btn-primary">Get Started</a>
+      <p class="disclaimer">Annual purchase required.</p>
+    </div>
+  </div>
+  <div class="right-container">
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;left: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,30 0,100" style="fill:white;"></polygon>
+    </svg>
+    <div class="right-content">
+    </div>
+  </div>
+</div>
