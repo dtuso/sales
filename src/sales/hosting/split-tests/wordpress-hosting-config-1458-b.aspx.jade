@@ -1,0 +1,119 @@
+extends ../../shared/_config-page
+
+append vars
+  - page.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-title]@L]";
+  - page.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-description]@L]";
+  - page.keywords = " ";
+  - page.canonical = "[@T[link:<relative parammode='explicit' path='~/hosting/wordpress-hosting-config.aspx' />]@T]";
+
+  - page.openGraph = page.openGraph || {};
+  - page.openGraph.title = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-title]@L]";
+  - page.openGraph.description = "[@L[cds.sales/hosting/wordpress-hosting:wordpress-hosting-og-description]@L]";
+  - page.openGraph.image = "[@T[link:<imageroot />]@T]fos/201401/hosting/website-builder/img/og.png";
+
+  - page.links = page.links || {};
+  - page.links.canonical = "[@T[link:<relative parammode='explicit' />]@T]";
+  - page.links.favicon = "[@T[link:<imageroot />]@T]assets/godaddy.ico";
+
+append pageStyles
+  style
+    include ../wordpress-hosting-config/styles.css 
+  style.
+    ##if(countrysiteany(in))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(mx))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(countrysiteany(br))
+    .domain-search-container{
+      margin-bottom: 200px;
+    }
+    ##endif
+    ##if(siteContextAny(pl))
+    input[type=radio]:checked + label {
+      color: #a92728!important;
+    }
+    input[type=checkbox] + label {
+      color: #a92728;
+    }
+    .green-check,.product-added-to-cart,.text-secondary,.text-secondary-o {
+      color: #a92728;
+    }
+    .order-total-wrapper, .scroll-down-wrapper p{
+      color: #0090FC;
+    }
+    .container{
+      width: 1000px;
+      max-width: 1000px;
+      min-width: 1000px;
+    }
+    .config-text-primary{
+      font-size:26px;
+    }
+    .config-text-lead{
+      font-size:14px;
+    }
+    .btn-continue,.btn-continue:hover{
+      background-color: #0090FC !important;
+      border-color: #0090FC !important;
+    }
+    .product-added-to-cart{
+      margin-top:15px;
+    }
+    ##endif
+
+block domainSearch
+  .row
+    .col-sm-12 
+        h4.get-a-domain-text [@L[cds.sales/hosting/fosconfigcommon:domainheader]@L] <span class="tool-tip-black sf-tip sf-tipper-target" data-style="qt" data-width="400" data-content="[@L[cds.sales/hosting/fosconfigcommon:domainhover]@L]" ></span>
+  +configDomainSearchInput({
+    'title': '[@L[cds.sales/hosting/wordpress-hosting:rebrandConfigDFreeDomain]@L]',
+    'placeholderText': '[@L[cds.sales/hosting/fosconfigcommon:domainsearchtext]@L]',
+    'buttonText': '[@L[cds.sales/_common:search]@L]',
+    'promoCode': 'wordpress-promo',
+    'linkText' : '[@L[cds.sales/hosting/fosconfigcommon:nodomainbtn]@L]',
+    'continueText' : '[@L[cds.sales/_common:select-continue]@L]'
+    })
+
+  script.
+    var plan = (getParameterByName('plan') != '') ? getParameterByName('plan') : "mwp_basic_12month";
+    var isPro = plan.indexOf('wordpress') >= 0
+    var itc = isPro ? "pro_wordpress" : "slp_wordpress";
+
+    function getParameterByName(name){
+      name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.search);
+      if(!jQuery.isEmptyObject(results))
+        return  decodeURIComponent(results[1].replace(/\+/g, " "));
+      else
+        return '';
+    }
+
+    $(document).ready(function(){
+      $('.domain-search-container').show();
+    });
+
+    $('#noFreeDomain').click(function(){
+      ##if(isManager())
+        if(isPro){
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##else
+        if(isPro){
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" ><param name="pro" value="1" /></external>]@T]';
+        }
+        else{
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+        }
+      ##endif
+
+    });
