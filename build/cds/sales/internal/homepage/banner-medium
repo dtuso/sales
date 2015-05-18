@@ -455,11 +455,8 @@ section {
       
       $(window).load(function () {
         reSizeTiles();
-        $('.bigtext').bigtext().css('visibility', 'visible');
-        setTimeout( "$('.bigtext').bigtext().css('visibility', 'visible');",500 );
       });
     </script>
-    <script src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
     <script src="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript"></script>
     <script type="text/javascript">
       var ignoreLivePerson = true;
