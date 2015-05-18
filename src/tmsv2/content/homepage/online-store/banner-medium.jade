@@ -1,24 +1,26 @@
 extends ../_banner-medium-simple.jade
 
 append vars
-  - ciCode = "11111";
+  - ciCode = "99184";
   - classes ="online-store";
   - ctaLink = "[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='" + ciCode + "'/></relative>]@T]";
 
 append styles
-  style.
-    .banner-medium.online-store { background-color: #333; color: #fff; }
+  style
+    :less
+      .banner-medium.online-store { background-color: #333; color: #fff; }
+
 
 block content
   h2.font-sm.black.text-primary-o [@L[cds.tmsv2/content/homepage/online-store/banner-medium:headline]@L]
-  .font-md.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]
-  .font-md.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  
+  .font-sm.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]
+  .font-sm.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  
   .btn.btn-sm.btn-purchase(href!=ctaLink) [@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] 
   script.
     (function() { 
-      var $price = $('.banner-medium.online-store .as-low-as');
+      var $price = $('.banner-medium.online-store span.text-secondary-o');
       if ($price.length) {
-        $price.html($price.html().replace('{0}/MO','[@T[productprice:<current productid="40966" period="monthly" />]@T]' + '/MO'));
+        $price.html($price.html().replace('{0}','[@T[productprice:<current productid="40966" period="monthly" />]@T]'));
         $price.show();
       }
     })();

@@ -19,21 +19,23 @@
   .banner-medium.simple .svgfallback { display: none;}
   
 </style>
-<style>
-  .banner-medium.online-store { background-color: #333; color: #fff; }
-  
-</style><a href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" data-url="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" data-ci="11111" class="banner-medium simple online-store">
+<style>.banner-medium.online-store {
+  background-color: #333;
+  color: #fff;
+}
+
+</style><a href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-url="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-ci="99184" class="banner-medium simple online-store">
   <div class="content-container">
     <div class="content">
       <h2 class="font-sm black text-primary-o">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:headline]@L]</h2>
-      <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]</div>
-      <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  </div>
-      <div href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" class="btn btn-sm btn-purchase">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] </div>
+      <div class="font-sm black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]</div>
+      <div class="font-sm black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  </div>
+      <div href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" class="btn btn-sm btn-purchase">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] </div>
       <script>
         (function() { 
-          var $price = $('.banner-medium.online-store .as-low-as');
+          var $price = $('.banner-medium.online-store span.text-secondary-o');
           if ($price.length) {
-            $price.html($price.html().replace('{0}/MO','[@T[productprice:<current productid="40966" period="monthly" />]@T]' + '/MO'));
+            $price.html($price.html().replace('{0}','[@T[productprice:<current productid="40966" period="monthly" />]@T]'));
             $price.show();
           }
         })();
