@@ -217,7 +217,40 @@
           <div id="hero-wrapper" class="col-md-8 col-sm-12">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
-              <div id="marquee-tile-1" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]  </div>
+              <div id="marquee-tile-1" class="col-md-12 col-sm-6">
+                <style>
+                  .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+                  .banner-medium .font-lg { font-size: 2.5em; }
+                  .banner-medium .font-md { font-size: 1.5em; }
+                  .banner-medium .font-sm { font-size: 1.25em; }
+                  .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+                  .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+                  .banner-medium .disclaimer { font-size: 10px; }
+                  
+                  .banner-medium.simple { padding: 0; display: block; text-decoration: none; }
+                  .banner-medium.simple:hover, .banner-medium.simple:focus { color: #fff; }
+                  .banner-medium.simple .content-container { line-height: 1; padding: 1em; min-height: inherit; position: relative; display: table; }
+                  .banner-medium.simple .content { display: table-cell; vertical-align: middle;}
+                  .banner-medium.simple .content > * { margin-top: .25em; margin-bottom: .25em;}
+                  .banner-medium.simple .content > *:first-child { margin-top: 0;}
+                  .banner-medium.simple .content > *:last-child { margin-bottom: 0;}
+                  .banner-medium.simple .svgfallback:not(old) { display: inline-block;}
+                  .banner-medium.simple .svgfallback { display: none;}
+                  
+                </style>
+                <style>
+                  .banner-medium.online-store { background-color: #333; color: #fff; }
+                  
+                </style><a href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" data-url="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" data-ci="11111" class="banner-medium simple online-store">
+                  <div class="content-container">
+                    <div class="content">
+                      <h2 class="font-sm black text-primary-o">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:headline]@L]</h2>
+                      <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]</div>
+                      <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  </div>
+                      <div href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" class="btn btn-sm btn-purchase">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] </div>
+                    </div>
+                  </div></a>
+              </div>
               <div id="marquee-tile-2" class="col-md-12 col-sm-6">
                 <style>
                   .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
