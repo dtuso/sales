@@ -1545,7 +1545,7 @@
                 <div class="row">
                   <div class="col-md-4 col-xs-12"><a data-url="[@T[link:<external linktype='COMMUNITYURL'><param name='ci' value='95789' /></external>]@T]" class="btn btn-default-light">[@L[cds.sales/homepage/sections/_support-promo:cta-text]@L]</a></div>
                   <div class="col-md-8 col-xs-12">
-                    <div class="support-promo-number walsheim-medium">[@T[supportphone:<technical />]@T]</div>
+                    <div class="support-promo-number">[@T[supportphone:<technical />]@T]</div>
                   </div>
                 </div>
               </div>
@@ -1642,12 +1642,6 @@ ul li.no-check {
 }
 .bg-green-official {
   background-color: #77c043;
-}
-.walsheim-regular {
-  font-family: 'Walsheim-Regular', Arial, sans-serif;
-}
-.walsheim-medium {
-  font-family: 'Walsheim-Medium', Arial, sans-serif;
 }
 .walsheim-bold {
   font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
