@@ -1,0 +1,21 @@
+extends ../_banner-medium-simple.jade
+
+append vars
+  - ciCode = "99184";
+  - classes ="online-store bg-dark";
+  - ctaLink = "[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='" + ciCode + "'/></relative>]@T]";
+
+
+block content
+  h2.font-sm.black.text-primary-o [@L[cds.tmsv2/content/homepage/online-store/banner-medium:headline]@L]
+  .font-sm.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]
+  .font-sm.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  
+  .btn.btn-sm.btn-purchase(href!=ctaLink) [@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] 
+  script.
+    (function() { 
+      var $price = $('.banner-medium.online-store span.text-secondary-o');
+      if ($price.length) {
+        $price.html($price.html().replace('{0}','[@T[productprice:<current productid="40966" period="monthly" />]@T]'));
+        $price.show();
+      }
+    })();
