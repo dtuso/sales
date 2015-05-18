@@ -1,0 +1,28 @@
+---
+location: sales/ecommerce/online-store.aspx.rule
+name: MCX-39129
+comments: OLS LP for India - 5/14
+---
+[
+  { 
+    'Type': 'Redirect',
+    'Condition': 'mobileRedirectRequired()',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[mobileRedirectLink:<data redirectKey=\"sales.productlanding.onlinestore\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'siteContextAny(pl)',
+     'Data': "{ 'Type' : '301', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': 'activeLanguageAny([en-MY]) || activeLanguageAny([en-ZA]) || activeLanguageAny([es-us]) ',
+  'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/ecommerce/shopping-cart.aspx\"><param name=\"ci\" value=\"72972\"/></relative>]@T]' }"
+  },
+  { 
+    'Type': 'Redirect',
+    'Condition': '!productIsOffered(105))',
+    'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
+  }
+
+]
