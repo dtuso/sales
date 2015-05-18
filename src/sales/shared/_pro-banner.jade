@@ -1,0 +1,119 @@
+- var proBannerCss = false;
+
+
+mixin proBanner(proBannerParams)
+  - proBannerParams                       = proBannerParams || {};
+  - proBannerParams.ci                = proBannerParams.ci || "";
+  - proBannerParams.link                = proBannerParams.link || "";
+  
+  if(!proBannerCss)
+    - proBannerCss = true;
+    atlantis:webstash(type="css")
+      style.
+        .pro-banner {
+          background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/bg-webpro-promo.png"); 
+          background-repeat: no-repeat; background-size: 100% 100%; 
+        }
+        .pro-banner a {
+          white-space: normal;
+          max-width: 100%;
+        }
+        .pro-banner .top-text {
+          font-size: 20px;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+          margin-top: 11px;
+          margin-bottom: 0;
+        }
+        .pro-banner .bottom-text {
+          font-size: 40px;
+          text-transform: uppercase;
+          font-family: 'Walsheim-Black';
+        }
+
+        .pro-banner .pro-banner-image {
+          padding-top: 20px;
+        }
+        .pro-banner .pro-banner-button {
+          padding-top: 30px;
+        }
+
+        @media (min-width: 1200px) {
+          .pro-banner {
+            width: 1135px;
+            margin-left: 10px;
+          }
+          .pro-banner .pro-banner-text {
+            width:55%;
+          }
+          .pro-banner .pro-banner-button {
+            
+          }
+        }
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+          .pro-banner {
+            width: 925px;
+            margin-left: 10px;
+          }
+          .pro-banner .pro-banner-image {
+            width: 29%;
+          }
+          .pro-banner .pro-banner-text {
+            width:50%;
+          }
+          .pro-banner .pro-banner-button {
+            width: 21%;
+          }
+        }
+
+        @media (min-width: 768px) and (max-width: 991px) {
+          .pro-banner {
+            background-image: none;
+            background-color: #ef6b0d;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+            width: 700px;
+            margin-left: 10px;
+          }
+          .pro-banner .pro-banner-image {
+            width: 38%;
+          }
+          .pro-banner .pro-banner-text {
+            width: 62%;
+          }
+          .pro-banner .pro-banner-button {
+            width: 100%;
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 30px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .pro-banner {
+            background-image: none;
+            background-color: #ef6b0d;
+            box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+          }
+          .pro-banner .pro-banner-image {
+            width: 100%;
+          }
+          .pro-banner .pro-banner-text {
+            width: 100%;
+          }
+          .pro-banner .pro-banner-button {
+            width: 100%;
+            text-align: center;
+            padding-top: 0;
+            padding-bottom: 30px;
+          }
+        }
+  .row.pro-banner.white-text
+    .col-sm-3.pro-banner-image
+      div.text-center
+        +lazyImg("", "", "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/img-webpro-logo.png")
+    .col-sm-6.pro-banner-text
+      p.top-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]
+      p.bottom-text [@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]
+    .col-sm-2.pro-banner-button
+      a(data-ci="#{proBannerParams.ci}", class= "btn btn-default-light" href!="#{proBannerParams.link}") [@L[cds.sales/_common:learn-more]@L]
