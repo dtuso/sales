@@ -1779,7 +1779,13 @@ $(window).load(function () {
                   <button data-ci="95740" class="btn btn-md btn-block btn-purchase got-microsoft-clickable-package product-ols">[@L[cds.sales/offers/online-business:32573-choose-select-button]@L]</button>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]</div>
-                  <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]</div>
+                  <div class="include-check-green">
+                    ##if(countrySiteAny(in))
+                    [@L[cds.sales/offers/online-business:40011-choose-ols-bullet-3-IN]@L]
+                    ##else 
+                    [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]
+                    ##endif
+                  </div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-4]@L]</div>
                   <div class="include-check-green">[@L[cds.sales/offers/online-business:32573-choose-ols-bullet-5]@L]</div>
                 </div>
@@ -3013,8 +3019,17 @@ $(window).load(function () {
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-7]@L]</h5>
                             </li>
-                            <li> 
-                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5>
+                            <li>
+                                            
+                               
+                              ##if(countrySiteAny(in))
+                               
+                              <h5>[@L[cds.sales/offers/online-business:39341-godaddy-ols-bullet-8-in]@L]</h5> 
+                              ##else
+                               
+                              <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-8]@L]</h5> 
+                              ##endif
+                               
                             </li>
                             <li> 
                               <h5>[@L[cds.sales/offers/online-business:32573-godaddy-ols-bullet-9]@L]</h5>
@@ -5425,7 +5440,6 @@ h2.api-error-header {
 
 .btn, .word-break {
   word-wrap: break-word;
-  word-break: break-all;
 }
 section {
   padding: 0px!important;

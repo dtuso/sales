@@ -1,6 +1,6 @@
 ---
-name: mcx-31432
-comments: Update all pages using new ICANN token
+name: mcx-39341
+comments: Enable India
 location: localization/sales/offers/online-business/en
 ---
 {% include 'modules/doc-block.html' %}
@@ -164,6 +164,8 @@ Unlimited products
 Built-in SEO features
 <phrase key="32573-godaddy-ols-bullet-8" />
 Accept credit cards &amp; PayPal<sup>&reg;</sup>
+<phrase key="39341-godaddy-ols-bullet-8-in" />
+Accept credit cards
 <phrase key="32573-godaddy-ols-bullet-9" />
 Secure checkout
 <phrase key="32573-godaddy-ols-bullet-10" />
@@ -242,6 +244,8 @@ Includes online store with website
 Beautiful themes and simple setup
 <phrase key="32573-choose-ols-bullet-3" />
 Accept credit cards and PayPal<sup>&reg;</sup> with secure checkout
+<phrase key="40011-choose-ols-bullet-3-IN" comment="DO NOT TRANSLATE" />
+Accept credit cards with secure checkout
 <phrase key="32573-choose-ols-bullet-4" />
 Unlimited products and flexible shipping options
 <phrase key="32573-choose-ols-bullet-5" />
