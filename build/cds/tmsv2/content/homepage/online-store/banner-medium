@@ -18,13 +18,7 @@
   .banner-medium.simple .svgfallback:not(old) { display: inline-block;}
   .banner-medium.simple .svgfallback { display: none;}
   
-</style>
-<style>.banner-medium.online-store {
-  background-color: #333;
-  color: #fff;
-}
-
-</style><a href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-url="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-ci="99184" class="banner-medium simple online-store">
+</style><a href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-url="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='99184'/></relative>]@T]" data-ci="99184" class="banner-medium simple online-store bg-dark">
   <div class="content-container">
     <div class="content">
       <h2 class="font-sm black text-primary-o">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:headline]@L]</h2>

@@ -2,13 +2,8 @@ extends ../_banner-medium-simple.jade
 
 append vars
   - ciCode = "99184";
-  - classes ="online-store";
+  - classes ="online-store bg-dark";
   - ctaLink = "[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='" + ciCode + "'/></relative>]@T]";
-
-append styles
-  style
-    :less
-      .banner-medium.online-store { background-color: #333; color: #fff; }
 
 
 block content
