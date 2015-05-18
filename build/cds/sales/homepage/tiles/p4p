@@ -1,0 +1,24 @@
+
+<style>#p4p mark {
+  font-size: 40px;
+}
+#p4p .subtitle {
+  font-size: 30px;
+}
+#p4p .black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+#p4p .bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+
+</style>
+<div id="p4p" data-url="[@T[link:<relative path='/getonline/getonline.aspx'><param name='ci' value='94911' /></relative><param name='p4p' value='confusing' /></relative>]@T]" data-ci="94911" class="tile-sprite gdhp-tile gtld-tile js-gdhpclick">
+  <div class="gtld-tile-text">
+    <mark class="black">Got 30 Seconds?</mark>
+    <div class="subtitle bold">We'll recommend the right bundle for your business.</div>
+    <div class="atn-btn-wrap"><a id="gdhp-gtldtile-btn" href="javascript:void(0)" data-ci="94911" class="btn btn-top-img">Get Started</a></div>
+  </div>
+</div>
