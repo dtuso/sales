@@ -1,0 +1,13 @@
+---
+location: localization/tmsv2/content/homepage/online-store/banner-medium/en
+name: MCXMO-1016
+comments: Initial creation of file
+---
+<phrase key="headline" />
+Keep your business open 24/7
+<phrase key="body" />
+New! Online Store
+<phrase key="as-low-as" />
+As Low as <span class="text-secondary-o">{0}/MO<span>
+<phrase key="cta" />
+Learn More

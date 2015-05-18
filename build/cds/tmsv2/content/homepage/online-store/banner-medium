@@ -29,5 +29,14 @@
       <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]</div>
       <div class="font-md black">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  </div>
       <div href="[@T[link:<relative path='ecommerce/online-store.aspx'><param name='ci' value='11111'/></relative>]@T]" class="btn btn-sm btn-purchase">[@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] </div>
+      <script>
+        (function() { 
+          var $price = $('.banner-medium.online-store .as-low-as');
+          if ($price.length) {
+            $price.html($price.html().replace('{0}/MO','[@T[productprice:<current productid="40966" period="monthly" />]@T]' + '/MO'));
+            $price.show();
+          }
+        })();
+      </script>
     </div>
   </div></a>

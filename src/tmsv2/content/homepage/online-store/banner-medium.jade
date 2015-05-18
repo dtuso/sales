@@ -14,3 +14,11 @@ block content
   .font-md.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:body]@L]
   .font-md.black [@L[cds.tmsv2/content/homepage/online-store/banner-medium:as-low-as]@L]  
   .btn.btn-sm.btn-purchase(href!=ctaLink) [@L[cds.tmsv2/content/homepage/online-store/banner-medium:cta]@L] 
+  script.
+    (function() { 
+      var $price = $('.banner-medium.online-store .as-low-as');
+      if ($price.length) {
+        $price.html($price.html().replace('{0}/MO','[@T[productprice:<current productid="40966" period="monthly" />]@T]' + '/MO'));
+        $price.show();
+      }
+    })();
