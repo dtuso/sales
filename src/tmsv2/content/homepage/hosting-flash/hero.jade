@@ -10,14 +10,19 @@ append styles
   style
     :less
      #hero-wrapper .hosting-flash{
-        .right-container{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg) top center;}
+        .right-container{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/bike-shop-man.jpg) top center;}
+        .left-container{
+          .disclaimer{padding-top:4em;}
+          .price{padding:1em 0 1em 0;}
+        }
       }
 
 block leftContent
-  p.product Web Hosting
-  h2.big-green [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off web hosting
-  div.description Ut enim ad minim veniam quis nostrud ecercitation ullamco.
-  p.price Starting at <span class="text-purchase">[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span>
-  a.btn.btn-md.btn-primary Get Started
-  p.disclaimer Annual purchase required.
+  p.black.product Act Fast. Save Half.
+  h2.black.big-green [@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off</br> web hosting
+  mark.black.font-md Sale ends 5/20/2015
+  p.black.price Starting at 
+    span.text-purchase.font-md[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo
+  a.black.btn.btn-md.btn-primary Get Started
+  p.black.disclaimer Annual purchase required.
 block rightContent

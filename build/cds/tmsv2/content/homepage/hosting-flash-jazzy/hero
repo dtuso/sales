@@ -45,11 +45,17 @@
 <style>#hero-wrapper .hosting-flash-jazzy .right-container {
   background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg) top center;
 }
+#hero-wrapper .hosting-flash-jazzy .left-content polygon {
+  float: right;
+}
 
 </style>
 <div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="hero hero-arrow hosting-flash-jazzy">
-  <div style="background:white;" class="left-container">
+  <div style="background:;" class="left-container">
     <div class="left-content">
+      <svg preserveAspectRatio="none" style="position: absolute; height: 100%;right: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+        <polygon points="0,0 100,30 0,100" style="fill:blue;"></polygon>
+      </svg>
       <p class="product">Jazzy Web Hosting</p>
       <h2 class="big-green">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off web hosting</h2>
       <div class="description">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
@@ -58,9 +64,6 @@
     </div>
   </div>
   <div class="right-container">
-    <svg preserveAspectRatio="none" style="position: absolute; height: 100%;left: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
-      <polygon points="0,0 100,30 0,100" style="fill:white;"></polygon>
-    </svg>
     <div class="right-content">
     </div>
   </div>

@@ -1,16 +1,20 @@
-extends ../_hero-arrow.jade
+extends ../_hero-left-arrow.jade
 
 append vars
   - var classes = "hosting-flash-jazzy"
   - var ciCode = 97703;
   - var ctaLink = "[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='"+ciCode+"' /></relative>]@T]";
-  - var polyColor = "white";
+
+  - var polyPoint = "30";
 
 append styles
   style
     :less
      #hero-wrapper .hosting-flash-jazzy{
         .right-container{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg) top center;}
+        .left-content{
+          polygon {float:right;}
+        }
       }
 
 block leftContent
