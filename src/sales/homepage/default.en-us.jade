@@ -5,10 +5,19 @@ block bugBar
   +tldBugs(["com","co","us","design"])
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
-block marquee-tile1
-  include ../../tmsv2/content/homepage/p4p/marquee-tile.jade
-block marquee-tile2
-  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="marquee-tile" rank="1" />]@P]
+block marquee-tile-1
+  include ../../tmsv2/content/homepage/p4p/banner-medium.jade
+block marquee-tile-2
+  |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
+  .default-content(style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;")
+    include ../../tmsv2/content/homepage/gtld/banner-medium.jade
+  script.
+    $(document).ready(function(){
+      if ($('#marquee-tile-2 .tms-default').length) {
+        $('#marquee-tile-2 [data-tms-template]').hide();
+        $('.default-content').show();
+      }
+    });
 block banner-small-1
   include ../../tmsv2/content/homepage/o365-biz-email/banner-small.jade
 block banner-small-2

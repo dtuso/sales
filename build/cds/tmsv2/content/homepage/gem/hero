@@ -6,7 +6,7 @@
     @media only screen and (min-width: 768px) {#marquee{background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat top center;background-size:cover;}}
     #marquee .heroContentWrapper {margin-left: 14%;margin-right:14%; position:relative}
     #marquee .heroContent{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%)}
-    .hero {background-color:#DEDEDE; margin-left:-60px}
+    .hero-polygon.hero {background-color:#DEDEDE; margin-left:-60px}
     .Explorer8 #marquee .hero.polygon{background:url() no-repeat;}
     .Explorer8 #marquee #marqueeImage, .Explorer8 #marquee {background:url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/gem-full-width02.jpg) no-repeat;}
     .Explorer8 #marquee .heroContent{position:relative;}
@@ -116,7 +116,7 @@ and (min-width : 768px)and (max-width : 992px) .Safari #marquee {
 
   </style>
 </atlantis:webstash>
-<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="gem hero polygon">
+<div data-url="[@T[link:<relative path='business/email-marketing-software'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="hero-polygon gem hero polygon">
   <div id="marqueeImage" class="col-xs-12 visible-xs"></div>
   <div class="heroContentWrapper">
     <div class="heroContent">
