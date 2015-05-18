@@ -919,7 +919,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-basic-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_basic_desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -960,7 +960,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-deluxe-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_deluxe_desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -1001,7 +1001,7 @@
               <div class="pro-plan-wrap">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_ultimate_desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -1050,7 +1050,7 @@
               <div class="pro-plan-wrap pro-plan-wrap-alternate">
                 <div class="title-wrap">
                   <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
-                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-desc]@L]</p>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_developer_desc]@L]</p>
                 </div>
                 <div class="price-wrap">
                   <div class="plan-price-wrap">
@@ -1099,48 +1099,153 @@
         </div>
       </div>
       <div class="container all-plans-include">
+        <atlantis:webstash type="css">
+          <style>
+            .pro-banner {
+              background-image: url("[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/bg-webpro-promo.png"); 
+              background-repeat: no-repeat; background-size: 100% 100%; 
+            }
+            .pro-banner a {
+              white-space: normal;
+              max-width: 100%;
+            }
+            .pro-banner .top-text {
+              font-size: 20px;
+              text-transform: uppercase;
+              font-family: 'Walsheim-Black';
+              margin-top: 11px;
+              margin-bottom: 0;
+            }
+            .pro-banner .bottom-text {
+              font-size: 40px;
+              text-transform: uppercase;
+              font-family: 'Walsheim-Black';
+            }
+            
+            .pro-banner .pro-banner-image {
+              padding-top: 20px;
+            }
+            .pro-banner .pro-banner-button {
+              padding-top: 30px;
+            }
+            
+            @media (min-width: 1200px) {
+              .pro-banner {
+                width: 1135px;
+                margin-left: 10px;
+              }
+              .pro-banner .pro-banner-text {
+                width:55%;
+              }
+              .pro-banner .pro-banner-button {
+                
+              }
+            }
+            
+            @media (min-width: 992px) and (max-width: 1199px) {
+              .pro-banner {
+                width: 925px;
+                margin-left: 10px;
+              }
+              .pro-banner .pro-banner-image {
+                width: 29%;
+              }
+              .pro-banner .pro-banner-text {
+                width:50%;
+              }
+              .pro-banner .pro-banner-button {
+                width: 21%;
+              }
+            }
+            
+            @media (min-width: 768px) and (max-width: 991px) {
+              .pro-banner {
+                background-image: none;
+                background-color: #ef6b0d;
+                box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+                width: 700px;
+                margin-left: 10px;
+              }
+              .pro-banner .pro-banner-image {
+                width: 38%;
+              }
+              .pro-banner .pro-banner-text {
+                width: 62%;
+              }
+              .pro-banner .pro-banner-button {
+                width: 100%;
+                text-align: center;
+                padding-top: 0;
+                padding-bottom: 30px;
+              }
+            }
+            
+            @media (max-width: 767px) {
+              .pro-banner {
+                background-image: none;
+                background-color: #ef6b0d;
+                box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.1);
+              }
+              .pro-banner .pro-banner-image {
+                width: 100%;
+              }
+              .pro-banner .pro-banner-text {
+                width: 100%;
+              }
+              .pro-banner .pro-banner-button {
+                width: 100%;
+                text-align: center;
+                padding-top: 0;
+                padding-bottom: 30px;
+              }
+            }
+          </style>
+        </atlantis:webstash>
+        <div class="row pro-banner white-text">
+          <div class="col-sm-3 pro-banner-image">
+            <div class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/shared/img-webpro-logo.png" data-lazyload-watch="" data-lazyload-callback="undefined" data-lazyload-callbackAfter="undefined" alt="" class="lazyload"/>
+            </div>
+          </div>
+          <div class="col-sm-6 pro-banner-text">
+            <p class="top-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerTop]@L]</p>
+            <p class="bottom-text">[@L[cds.sales/hosting/web-hosting-rebrand:proBannerBottom]@L]</p>
+          </div>
+          <div class="col-sm-2 pro-banner-button"><a data-ci="93999" href="[@T[link:<relative path='/pro/managed-wordpress-hosting'><param name='ci' value='93999' /></relative>]@T]" class="btn btn-default-light">[@L[cds.sales/_common:learn-more]@L]</a></div>
+        </div>
         <div class="row">
           <h3 class="text-center">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]</h3>
         </div>
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li> 
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              </li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]</li> 
               ##if(productIsOffered(99) && !countrySiteAny(mx))
                
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_4]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
               ##endif
                
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]</li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]</li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li> <a id="uptime-promise-link">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]</a></li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_5]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_6]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_7]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_8]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_8_tooltip]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]</li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]</li> 
-              ##if(areAdCreditsEnabled(google))
-               
-              <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li> 
-              ##endif
-               
-               
-              ##if(areAdCreditsEnabled(bing))
-               
-              <li> <span data-tokenize="[@T[currencyprice:<price usdamount="10000" dropdecimal="true" />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]</span><span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
-              </li> 
-              ##endif
-               
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_9]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_9_tooltip]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              </li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_10]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_11]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              </li>
             </ul>
           </div>
         </div>
@@ -1158,6 +1263,8 @@
         #reviews-carousel .carousel-container .carousel .carousel-indicators li.active {
           background-color: #77c043
         }
+        
+        #features-why,
         #features-more,    
         #security,
         #faq,
@@ -1509,6 +1616,34 @@
       $("#midPageNav").on("click", "a", scroll_if_anchor);
     </script>
     <section id="mid-page-nav-tile-features" data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Features]@L]" data-cicode="96211" class="mid-page-nav-section">
+      <section id="features-why">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
+            </div>
+            <div class="col-sm-7">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress]@L]</h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_intro]@L]</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <ul class="left-aligned-round-list short-spacing"></ul>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_1]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_2]@L]</li>
+                  <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_3]@L]</li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="features">
         <div class="container">
           <div class="row">
