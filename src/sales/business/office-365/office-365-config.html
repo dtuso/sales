@@ -329,9 +329,15 @@ comments: removing split 1414
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
+                    ##if(splitTestingSideIsActive(1459, A))
                     <option value="1">[@L[cds.sales/business/office-365-config:cp-2-1Month]@L]</option>
                     <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
                     <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
+                    ##endif
+                    ##if(splitTestingSideIsActive(1459, B))
+                    <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
+                    <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
+                    ##endif
                   </select>
                 </div>
                 <a class="btn btn-green js-update-duration">[@L[cds.sales/business/office-365-config:cp-1-Apply]@L]</a>
@@ -350,9 +356,15 @@ comments: removing split 1414
               <div class="term-length-selector-wrapper">
                 <div class="term-length-selector">
                   <select class="selectstyle js-duration" name="terms-selector">
+                    ##if(splitTestingSideIsActive(1459, A))
                     <option value="1">[@L[cds.sales/business/office-365-config:cp-2-1Month]@L]</option>
                     <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
                     <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
+                    ##endif
+                    ##if(splitTestingSideIsActive(1459, B))
+                    <option value="12">[@L[cds.sales/business/office-365-config:cp-2-1Year]@L]</option>
+                    <option value="24">[@L[cds.sales/business/office-365-config:cp-2-2Years]@L]</option>
+                    ##endif
                   </select>
                 </div>
                 <a class="btn btn-green js-update-duration">[@L[cds.sales/business/office-365-config:cp-1-Apply]@L]</a>
