@@ -1,0 +1,24 @@
+extends ../_hero-simple.jade
+block append vars
+  - ciCode = 99091
+  - ctaLink = "[@T[link:<external linktype='DCCURL' path='/manage/{0}/setup'><param name='ci' value='99091' /></external>]@T]"
+  - classes = "domain-activator"
+block append styles
+  style
+    :less
+      .hero.domain-activator {
+        mark#activate-domain{text-transform:lowercase;  word-break: break-word;}
+      }
+block content
+  h2.font-lg.black [@L[cds.tmsv2/content/homepage/domain-activator/hero:headline]@L]
+  .font-md.bold [@L[cds.tmsv2/content/homepage/domain-activator/hero:subheadline]@L]
+  a.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/domain-activator/hero:cta]@L]
+
+block script
+  script.
+    var domainActivator = {dynamicContent:JSON.parse('[@D[tms.message.rule_data]@D]'),
+    hero:$('.domain-activator.hero'), 
+    placeholder:$('#activate-domain')
+    };
+    domainActivator.placeholder.text(domainActivator.dynamicContent.domain_activation[0]);
+    domainActivator.hero.attr('data-url',domainActivator.hero.attr('data-url').replace('{0}',domainActivator.dynamicContent.domain_activation[0]));

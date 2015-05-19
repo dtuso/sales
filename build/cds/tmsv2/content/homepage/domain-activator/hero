@@ -74,17 +74,25 @@
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/offers/office365-promo.aspx'><param name='ci' value='98027'/></relative>]@T]" data-ci='98027' class="hero hero-simple pob">
+<style>.hero.domain-activator mark#activate-domain {
+  text-transform: lowercase;
+  word-break: break-word;
+}
+
+</style>
+<div data-url="[@T[link:<external linktype='DCCURL' path='/manage/{0}/setup'><param name='ci' value='99091' /></external>]@T]" data-ci='99091' class="hero hero-simple domain-activator">
   <div class="content-container">
-    <div class="flag-wrapper">
-      <div class="flag">
-        <div class="flag-content bold">[@L[cds.tmsv2/content/homepage/pob:flag]@L]</div>
-      </div>
-    </div>
     <div class="content">
-      <div class="font-lg text-primary-o black">[@L[cds.tmsv2/content/homepage/pob:headline]@L]</div>
-      <div class="font-md black">[@L[cds.tmsv2/content/homepage/pob:pricetext]@L]</div><a class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/pob:cta]@L]</a>
-      <div class="disclaimer">[@L[cds.tmsv2/content/homepage/pob:disclaimer]@L]</div>
+      <h2 class="font-lg black">[@L[cds.tmsv2/content/homepage/domain-activator/hero:headline]@L]</h2>
+      <div class="font-md bold">[@L[cds.tmsv2/content/homepage/domain-activator/hero:subheadline]@L]</div><a class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/domain-activator/hero:cta]@L]</a>
     </div>
   </div>
 </div>
+<script>
+  var domainActivator = {dynamicContent:JSON.parse('[@D[tms.message.rule_data]@D]'),
+  hero:$('.domain-activator.hero'), 
+  placeholder:$('#activate-domain')
+  };
+  domainActivator.placeholder.text(domainActivator.dynamicContent.domain_activation[0]);
+  domainActivator.hero.attr('data-url',domainActivator.hero.attr('data-url').replace('{0}',domainActivator.dynamicContent.domain_activation[0]));
+</script>
