@@ -4,6 +4,14 @@ include ../shared/_two-up-compare.jade
 include ../shared/_full-width-video.jade
 include ../shared/_helpers.jade
 
+mixin lazyImg2(src,classes,altText)
+  img.lazyload(
+    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+    class="#{classes}"
+    data-src!="#{src}"
+    alt=(altText ? altText : "")
+    )
+
 extends ../shared/_page
 
 block append vars
@@ -15,6 +23,7 @@ block append vars
   - page.openGraph.description = "[@L[cds.sales/homepage:og-content]@L]";
 
 block fonts
+  //- prevent fonts.css from being loaded
 
 block append pageStyles
   // home page styling
@@ -74,8 +83,52 @@ block append pageStyles
         #hero-wrapper { font-size: 16px;}
       }
 
-append headScripts
+//- override headscripts to remove lazyload
+block headScripts
   script.
+    function loadJsAsync(sourceUrl, id) {
+       var js, fjs = document.getElementsByTagName('script')[0];
+       if (document.getElementById(id)) {return;}
+       js = document.createElement('script'); js.type = 'text/javascript'; js.ansyc = true;
+       js.id = id;
+       js.src = sourceUrl;
+       fjs.parentNode.insertBefore(js, fjs);
+    }
+
+    function endOfPageScripts() {
+
+      $(document).ready(function(){
+        // fix centering elements
+        window.triggerResize = function(){
+          setTimeout(function(){
+            $(window).trigger('resize');
+          },50);
+        }
+        setTimeout(function(){
+          triggerResize();
+        },200);
+
+        // Wire up tooltips
+        if($(document).sfTipper){
+          $(document).sfTipper({ wireup: true });
+        }
+        
+      });
+
+      $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
+        $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+        return false;
+      });
+
+      // Track all the icodes (tcodes handled by gtm.js)
+      window._trfq = window._trfq || [];
+      $('[data-icode]').each(function(index, element) {
+        window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
+      });
+    }
+
     var tms = function(data) {
       $(document).ready(function(){
         for (var key in data) {
@@ -90,6 +143,14 @@ append headScripts
     }
 
 block endOfPageScripts
+
+
+  script.
+    $(document).ready(function() {
+      loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
+      loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
+      loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
+    });
 
   script(type="text/javascript").
     $('body').on('click','[data-url]',function(event){
@@ -111,9 +172,12 @@ block endOfPageScripts
 
     $(window).load(function () {
       reSizeTiles();
+
+      ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
+      ux.util.lazy.loadViaSelector('.lazyload', 'scroll'); // only show on scroll
+
     });
-  script(src!="[@T[link:<javascriptroot />]@T]starfield/fos.share/v1.3/fos.share-20140505.min.js" id="fosShareScript")
-  
+
   script(type="text/javascript").
     var ignoreLivePerson = true;
     $(document).ready(function() {
@@ -130,6 +194,13 @@ block endOfPageScripts
         $('#shareme').fosShare({});
       }, 2000);
     });
+
+block delayLoadedScripts
+  //- page.jade's delay loading is actually broken
+  //- fix here for now, and do it there (so all pages get it) eventually...
+
+block head
+  //- exclude chat_window CSS
 
 block content
   
@@ -183,9 +254,13 @@ block content
         style
           :less
             #domain-promo { color: #fff; 
+              .jones-bg-image { background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg); }
               .domain-promo-content{
                 @media only screen and (max-width:767px) {background-image:none !important;}
-                background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg) 50% 100% #333 no-repeat;background-size:cover;
+                background-repeat: no-repeat;
+                background-size: 50% 100%;
+                background-color: #333333;
+                background-size: cover;
               }
               .domain-promo-text{padding:7% 2% 1%;}
               .text-center{color:#333;margin:0;padding:30px 0;text-transform:uppercase;}
@@ -198,7 +273,7 @@ block content
 
       section#domain-promo.bg-green-official
         h2.text-center [@L[cds.sales/homepage/sections/_domain-promo:header-text]@L]
-        div.domain-promo-content
+        div.domain-promo-content(data-src!="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/Jones_Studio.jpg" data-img-class="jones-bg-image")
           .container
             .row
               .col-sm-6.col-sm-offset-6.col-xs-8.col-xs-offset-2.domain-promo-text
@@ -222,9 +297,9 @@ block content
                 block why-godaddy-feature-1
                   .why-gd-registrar
                     <!--[if lt IE 9]>
-                    +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','Pin Point Globe')
+                    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.png','','Pin Point Globe')
                     <![endif]-->
-                    +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','Pin Point Globe')
+                    +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/location.svg','svgfallback','Pin Point Globe')
                     h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading1]@L]
                     p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body1]@L]
             .col-sm-4
@@ -232,9 +307,9 @@ block content
                 block why-godaddy-feature-2
                   .why-gd-prices
                   <!--[if lt IE 9]>
-                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','TLD Boards')
+                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.png','','TLD Boards')
                   <![endif]-->
-                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','TLD Boards')
+                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/tld-browser-01.svg','svgfallback','TLD Boards')
                   h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading2]@L]
                   p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body2]@L]
             .col-sm-4
@@ -242,9 +317,9 @@ block content
                 block why-godaddy-feature-3
                   .why-gd-support
                   <!--[if lt IE 9]>
-                  +lazyImg('','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','Support Icon')
+                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.png','','Support Icon')
                   <![endif]-->
-                  +lazyImg('svgfallback','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','Support Icon')
+                  +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_icon.svg','svgfallback','Support Icon')
                   h3.walsheim-black [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-heading3]@L]
                   p [@L[cds.sales/homepage/sections/_why-godaddy:why-godaddy-body3]@L]
 
@@ -304,9 +379,9 @@ block content
             .col-sm-6
               .promo-flag [@L[cds.sales/homepage/sections/_o365-promo:promo-flag]@L]
               <!--[if lt IE 9]>
-              +lazyImg('o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','Office 365 image')
+              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/office365_laptop_002.png','o365-promo-image','Office 365 image')
               <![endif]-->
-              +lazyImg('svgfallback o365-promo-image','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','Office 365 image')
+              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/office365_laptop_v2.svg','svgfallback o365-promo-image','Office 365 image')
       | 
       | ##endif
 
@@ -331,9 +406,9 @@ block content
           .row
             .col-xs-6.text-center
               <!--[if lt IE 9]>
-              +lazyImg('support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','GoDaddy Support')        
+              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.png','support-promo-img','GoDaddy Support')        
               <![endif]-->
-              +lazyImg('svgfallback support-promo-img','','[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','GoDaddy Support')
+              +lazyImg2('[@T[link:<imageroot />]@T]fos/hp/rebrand/img/support_main_illus.svg','svgfallback support-promo-img','GoDaddy Support')
             .col-xs-6
               .support-promo-text.text-white
                 h3.walsheim-black [@L[cds.sales/homepage/sections/_support-promo:sub-header-text]@L]
