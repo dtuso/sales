@@ -43,28 +43,36 @@
   
 </style>
 <style>#hero-wrapper .hosting-flash-jazzy .right-container {
-  background: url([@T[link:<imageroot/>]@T]/fos/hp/rebrand/img/woman.jpg) top center;
+  background: #77c043;
 }
-#hero-wrapper .hosting-flash-jazzy .left-content polygon {
-  float: right;
+#hero-wrapper .hosting-flash-jazzy .left-container .disclaimer {
+  padding-top: 4em;
+}
+#hero-wrapper .hosting-flash-jazzy .left-container .price {
+  padding: .75em 0 .75em 0;
+}
+#hero-wrapper .hosting-flash-jazzy .left-container .disclaimer {
+  text-transform: initial;
+}
+#hero-wrapper .hosting-flash-jazzy .left-container .text-purchase {
+  font-size: 1.5em;
 }
 
 </style>
-<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='97703' /></relative>]@T]" data-ci='97703' class="hero hero-arrow hosting-flash-jazzy">
-  <div style="background:;" class="left-container">
+<div data-url="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='99188' /></relative>]@T]" data-ci='99188' class="hero hero-arrow hosting-flash-jazzy">
+  <div style="background:white;" class="left-container">
     <div class="left-content">
-      <svg preserveAspectRatio="none" style="position: absolute; height: 100%;right: -1px; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
-        <polygon points="0,0 100,30 0,100" style="fill:blue;"></polygon>
-      </svg>
-      <p class="product">Jazzy Web Hosting</p>
-      <h2 class="big-green">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off web hosting</h2>
-      <div class="description">Ut enim ad minim veniam quis nostrud ecercitation ullamco.</div>
-      <p class="price">Starting at <span class="text-purchase">[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="btn btn-md btn-primary">Get Started</a>
-      <p class="disclaimer">Annual purchase required.</p>
+      <p class="bold font-md">Act Fast. Save Half.</p>
+      <h2 class="black big-green">[@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" hidebelow="5" showsymbol="true" />]@T] off</br> web hosting</h2>
+      <mark class="bold font-md">Sale ends 5/21/2015</mark>
+      <p class="black price">Starting at <span class="black text-purchase">[@T[productprice:<current productid="32051" period="monthly" checktmspromocode="true" htmlsymbol="false" />]@T]/mo</span></p><a class="black btn btn-md btn-primary">Get Started</a>
+      <p class="font-sm disclaimer">Annual purchase required.</p>
     </div>
   </div>
   <div class="right-container">
-    <div class="right-content">
-    </div>
+    <svg preserveAspectRatio="none" style="position: absolute; height: 100%; width: 23%;max-width: 45px;" viewBox="0 0 100 100" class="hidden-xs">
+      <polygon points="0,0 100,0 0,30 100,100 0,100" style="fill:white;"></polygon>
+    </svg>
+    <div class="right-content"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/homepage/hosting-flash-jazzy/sale-banner.png" class="img-responsive"/><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4Ni40IiBoZWlnaHQ9IjI3MS4xIiB2aWV3Qm94PSItMzUgNTIuOSAxODYuNCAyNzEuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMzUgNTIuOSAxODYuNCAyNzEuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzMzMzMzMyIgZD0iTTYzLjIgMzI0bC0yNi43LTcuOUwyNiAyOTAuMyAzOS42IDI2NmwyNy41LTQuNSAyMC42IDE4LjdMODUuOSAzMDggNjMuMiAzMjR6TTkwLjEgMjI2LjJsLTE0IDI0LjEgLTI3LjUgNC4xIC0yMC40LTE5IDIuMS0yNy43IDIzLTE1LjYgMjYuNiA4LjJMOTAuMSAyMjYuMnpNNjUuMyAxODQuNmwtMjYuNy03LjkgLTEwLjQtMjUuOCAxMy42LTI0LjMgMjcuNS00LjUgMjAuNiAxOC44IC0xLjggMjcuOEw2NS4zIDE4NC42ek04MC44IDEwNS44TDU0LjUgMTE1IDMxIDEwMC4ybC0zLjEtMjcuNiAxOS42LTE5LjdMNzUuMiA1NiA5MCA3OS42IDgwLjggMTA1Ljh6Ii8+PHBhdGggZmlsbD0iI0YyODEyRSIgZD0iTTQxLjkgODguM2MwIDguNSA1LjggMTMuMyAxNS4xIDEzLjMgOS4xIDAgMTQuOC00LjUgMTQuOC0xMS43IDAtOC4zLTcuNi0xMC4yLTEzLjItMTIuMyAtMy40LTEuMi01LTIuMi01LTQuMiAwLTEuOSAxLjYtMi44IDMuMy0yLjggMi40IDAgMy42IDEuNiAzLjYgNC41aDEwLjhjMC01LjctMy42LTExLjktMTQuMi0xMS45IC03LjMgMC0xNC41IDMtMTQuNSAxMC43IDAgNy41IDYuNyA5LjcgMTIuNyAxMi4xIDMuOCAxLjUgNS41IDIuMyA1LjUgNC40IDAgMS45LTEuNCAzLjEtMy42IDMuMSAtMi44IDAtNC42LTEuOS00LjYtNS4yQzUyLjYgODguMyA0MS45IDg4LjMgNDEuOSA4OC4zek03OC44IDE3MC43bC0xMy43LTM2LjRINTMuN2wtMTMuNCAzNi40SDUybDEuMi00LjJoMTIuMmwxLjIgNC4ySDc4Ljh6TTYzLjMgMTU4LjZoLTcuN2wzLjgtMTMuNEw2My4zIDE1OC42ek01OS45IDIzMi45di0yNy4ySDQ5LjF2MzYuNGgyMC4zdi05LjJINTkuOXpNNjguOSAyODEuOHYtOC4xSDQ1LjV2MzYuNEg2OVYzMDJINTYuM3YtNi4xaDEyLjZ2LTcuOEg1Ni4zdi02LjNINjguOXoiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTM1LjIgNjAuNUwxMzMuNyA3MWw3LjkgOS4xIC0xMiAyLjEgLTcuOSAxMC4xIC0zLjYtMTEuMSAtMTAuNS01IDguNi02LjdWNTkuNGwxMC43IDQuM0wxMzUuMiA2MC41ek0xNDYgMTA0LjdsLTAuNyAxMS4yIDYuMSA5LjEgLTEwLjggMSAtOS4xIDguMiAtMi05LjUgLTEwLjEtNC44IDcuOS02LjEgMi40LTEyLjMgNy40IDYuOUwxNDYgMTA0Ljd6TTE0OS4yIDE2Mi43bC04LjkgNyAtMS45IDEwLjIgLTYuMS01LjMgLTUuOCAzLjQgMS4zLTkuNiAtNi4xLTkuNSA5LjQgMS4zIDUuMy02LjcgMy4yIDYuNEwxNDkuMiAxNjIuN3pNMTQwLjQgMjE1LjRsLTUgMTMuOCA0LjkgMTQuMyAtMTEuMi0yLjIgLTE0LjggMTAuNiAwLjYtMTUuOCAtMTIuNi01LjcgMTEuMy05LjEgLTAuOC0xMi40IDEzLjMgOC41TDE0MC40IDIxNS40ek0xNDguNiAzMDkuNWwtMTguMS0xLjNMMTE4IDMxOS41bC0yLjUtMTMuNiAtOS44LTcuMyA4LjMtNi45IC0wLjEtMTQuNiAxMS43IDkuMiAxNi4yLTMuNyAtMS43IDEzLjJMMTQ4LjYgMzA5LjV6TS0xOC44IDMxOC40bDEuNS0xMC41IC03LjktOSAxMi0yLjEgNy45LTEwLjEgMy42IDExLjEgMTAuNiA1IC04LjYgNi43djEwLjFsLTEwLjctNC4zTC0xOC44IDMxOC40ek0tMjkuNiAyNzQuMmwwLjctMTEuMiAtNi4xLTkgMTAuOC0xIDkuMS04LjIgMiA5LjUgMTAuMSA0LjggLTcuOSA2LjEgLTIuNCAxMi4zIC03LjQtNi45TC0yOS42IDI3NC4yek0tMzIuOCAyMTYuMmw4LjktN0wtMjIgMTk5bDYuMSA1LjMgNS45LTMuNCAtMS4zIDkuNiA2LjEgOS41IC05LjQtMS4zIC01LjMgNi43IC0zLjItNi40TC0zMi44IDIxNi4yek0tMjQgMTYzLjVsNS0xMy44IC00LjktMTQuMyAxMS4yIDIuMkwyLjEgMTI3bC0wLjYgMTUuOSAxMi42IDUuNyAtMTEuMyA5LjEgMC44IDEyLjQgLTEzLjMtOC41TC0yNCAxNjMuNXpNLTMyLjIgNjkuNGwxOC4xIDEuMyAxMi41LTExLjNMMC45IDczbDkuOCA3LjMgLTguMyA2LjkgMC4xIDE0LjYgLTExLjctOS4yIC0xNi4yIDMuNyAxLjctMTMuMkwtMzIuMiA2OS40eiIvPjwvc3ZnPg==" class="svgfallback"/></div>
   </div>
 </div>
