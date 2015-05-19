@@ -89,7 +89,7 @@
 </div>
 <script>
   var domainRecommendations = {
-    dynamicContent: JSON.parse('[@D[tms.message.rule_data]@D]'),
+    dynamicContent: JSON.parse('{"domain_recommendations":["james.com","mcwnuclear.co","mcwnuclear.org","mcwnuclear.info","mcwnuclearpower.us"]}'),
     domainPlaceholder: $('.domain'),
     url:"[@T[link:<relative path='/domains/searchresults.aspx'><param name='domainToCheck' value='{0}' /><param name='checkAvail' value='1' /><param name='ci' value='99098' /></relative>]@T]",
     hero:$('.hero.domain-recommendations')
