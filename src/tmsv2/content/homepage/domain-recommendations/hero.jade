@@ -3,6 +3,8 @@ block append vars
   - ciCode = 99098
   - classes = "domain-recommendations"
 
+block flag
+
 block append styles
   style
     :less
@@ -16,7 +18,7 @@ block content
 block script
   script.
     var domainRecommendations = {
-      dynamicContent: JSON.parse('{"domain_recommendations":["james.com","mcwnuclear.co","mcwnuclear.org","mcwnuclear.info","mcwnuclearpower.us"]}'),
+      dynamicContent: JSON.parse('[@D[tms.message.rule_data]@D]'),
       domainPlaceholder: $('.domain'),
       url:"[@T[link:<relative path='/domains/searchresults.aspx'><param name='domainToCheck' value='{0}' /><param name='checkAvail' value='1' /><param name='ci' value='#{ciCode}' /></relative>]@T]",
       hero:$('.hero.domain-recommendations')
