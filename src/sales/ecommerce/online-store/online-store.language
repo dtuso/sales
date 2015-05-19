@@ -1,17 +1,17 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-name: MCX-39129
-comments: OLS LP for India - 5/14
+id: 55565eadf778fc14a8d1f432
+name: SEM-507
 ---
 {% include 'modules/doc-block.html' %}
-<phrase key="MetaTitle" />
-Online Store | Start Your eCommerce Business Today - GoDaddy
-<phrase key="MetaDescription" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Build your own eCommerce website and start selling online today!
+<phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
+Online Store | eCommerce Website Building Software - GoDaddy
+<phrase key="MetaDescription" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="MetaKeywords" />
 Online Store, ecommerce store, Online Store builder, online shop, build a store, build a store online
-<phrase key="og-description" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Start your own eCommerce website and start selling online today!
+<phrase key="og-description" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="OnlineStore" />
 Online Store
 <phrase key="labelReadReviews" />
