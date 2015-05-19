@@ -2,8 +2,8 @@
 url: http://www.dev-godaddy.com/business/office-365.aspx
 location: sales/business/office-365.aspx
 id: 
-name: GCE-33982
-comments: removing split 1414
+name: GCE-38369
+comments: Monthly Term Removal Split
 metaTitle: "[@L[cds.sales/business/office-365:lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy]@L]"
 metaDescription: "[@L[cds.sales/business/office-365:lp-36-MSOffice365IsEasyToSetUp]@L]"
 metaKeywords: "[@L[cds.sales/business/office-365:lp-18-Office365MicrosoftOffice365Office365Pricing]@L]"
@@ -1008,9 +1008,15 @@ assetPath: false
             <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-1-description]@L]</p>
             <div class="office-box no-office"></div>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>
+              ##if(splitTestingSideIsActive(1459, A))  
               <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##endif
+              ##if(splitTestingSideIsActive(1459, B))  
+              <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+              <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+              ##endif
               ##if(productHasSavingsMoreThan({{pfids.A}}, {{pfids.A}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
@@ -1038,11 +1044,19 @@ assetPath: false
             <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-2-description]@L]</p>
             <div class="office-box"></div>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>
+              ##if(splitTestingSideIsActive(1459, A)) 
               <p class="plan-box-price">
                 [@T[productprice:<current productid="{{pfids.B}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##endif
+              ##if(splitTestingSideIsActive(1459, B)) 
+              <p class="plan-box-price">
+                [@T[productprice:<current productid="{{pfids.B}}" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+              ##endif
               ##if(productHasSavingsMoreThan({{pfids.B}}, {{pfids.B}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
@@ -1070,11 +1084,19 @@ assetPath: false
             <p class="plan-description">[@L[cds.sales/business/office-365:29621-PlanBlock-3-description]@L]</p>
             <div class="office-box"></div>
             <div class="price-wrapper"> 
-              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p> 
+              <p class="as-low-as">[@L[cds.sales/business/office-365:29621-StartingAt]@L]</p>
+              ##if(splitTestingSideIsActive(1459, A)) 
               <p class="plan-box-price">
               [@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
               </p> 
               <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+              ##endif
+              ##if(splitTestingSideIsActive(1459, B)) 
+              <p class="plan-box-price">
+              [@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]
+              </p> 
+              <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+              ##endif
               ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
                 <div class="strike-through-wrapper">
                   <p class="strike-through-price">
@@ -1284,8 +1306,14 @@ assetPath: false
               <h3>[@L[cds.sales/business/office-365:29621-PlanBlock-3-title]@L]</h3>
               <div class="pricing-wrapper">
                 <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
+                ##if(splitTestingSideIsActive(1459, A))
                 <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
                 <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+                ##endif
+                ##if(splitTestingSideIsActive(1459, B))
+                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</div>
+                <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+                ##endif
                 ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
@@ -1403,8 +1431,14 @@ assetPath: false
             <td class="last">
               <div class="table-td-cell-vertAlign">
                 <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
-                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
+                ##if(splitTestingSideIsActive(1459, A))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+                ##endif
+                ##if(splitTestingSideIsActive(1459, B))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.A}}" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+                ##endif            
                 ##if(productHasSavingsMoreThan({{pfids.A}}, {{pfids.A}}, 0))
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
@@ -1426,8 +1460,14 @@ assetPath: false
             <td class="last">
               <div class="table-td-cell-vertAlign">
                 <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.B}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
-                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
+                ##if(splitTestingSideIsActive(1459, A))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.B}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+                ##endif
+                ##if(splitTestingSideIsActive(1459, B))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.B}}" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+                ##endif               
                 ##if(productHasSavingsMoreThan({{pfids.B}}, {{pfids.B}}, 0))
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
@@ -1449,8 +1489,14 @@ assetPath: false
             <td class="last">
               <div class="table-td-cell-vertAlign">
                 <div class="as-low-as">[@L[cds.sales/business/office-365:29621-PlansStartingAt]@L]</div>
-                <div class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</div>
-                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>               
+                ##if(splitTestingSideIsActive(1459, A))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:29621-PerUserPerMonth]@L]</div>
+                ##endif
+                ##if(splitTestingSideIsActive(1459, B))  
+                <p class="plan-box-price">[@T[productprice:<current productid="{{pfids.C}}" period="yearly" htmlsymbol="false" negative="parentheses" />]@T]</p> 
+                <div class="per-user">[@L[cds.sales/business/office-365:lp-3-PerUserYear]@L]</div>
+                ##endif               
                 ##if(productHasSavingsMoreThan({{pfids.C}}, {{pfids.C}}, 0))
                   <div class="row strike-through-wrapper">
                     <p class="strike-through-price">
