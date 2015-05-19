@@ -21,7 +21,7 @@ comments: OLS LP for India - 5/14
   },
   { 
     'Type': 'Redirect',
-    'Condition': '!productIsOffered(105))',
+    'Condition': '!productIsOffered(105)',
     'Data': "{ 'Type' : '302', 'Loc': '[@T[link:<relative path=\"~/\" />]@T]' }"
   }
 
