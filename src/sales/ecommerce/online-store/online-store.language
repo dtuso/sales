@@ -1,7 +1,6 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id: 55565eadf778fc14a8d1f432
-name: SEM-507
+name: MCX-40206
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
