@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 554a89aaf778fc1eccc62a47
-name: MCXMO-948
-comments: merch updates for 5/13/2015
+id: 555ce97cf778fc1d44e5e8ab
+name: MCXMO-1089
+comments: merch updates for 5/27/2015
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -304,7 +304,7 @@ Show diners what's cookin' with <strong>.menu</strong>
 Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="PodDotMxText" />
 Market to Mexico with <strong>.mx</strong>
-<phrase key="PodDotMxText" />
+<phrase key="PodDotComMxText" />
 Market to Mexico with <strong>.com.mx</strong>
 <phrase key="PodDotRuText" />
 <strong>.ru</strong> tells Russians you’re talking to them.
@@ -484,6 +484,8 @@ Share your love of technology.
 Show your Welsh pride by registering your own <strong>.wales</strong> domain.
 <phrase key="PodDotVideoText" />
 Be seen online with <strong>.video</strong>.
+<phrase key="PodDotNewsText" />
+<strong>.news</strong> you can trust
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotLegal" />
