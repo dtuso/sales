@@ -304,6 +304,8 @@ Show diners what's cookin' with <strong>.menu</strong>
 Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="PodDotMxText" />
 Market to Mexico with <strong>.mx</strong>
+<phrase key="PodDotMxText" />
+Market to Mexico with <strong>.com.mx</strong>
 <phrase key="PodDotRuText" />
 <strong>.ru</strong> tells Russians you’re talking to them.
 <phrase key="PodDotAtText" />
@@ -666,6 +668,8 @@ Be seen online with <strong>.video</strong>.
 <strong>.life</strong>
 <phrase key="TldDotSale" />
 <strong>.sale</strong>
+<phrase key="TldDotGroup" />
+<strong>.group</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
