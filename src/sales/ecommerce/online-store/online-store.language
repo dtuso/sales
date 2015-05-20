@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
 name: SEM-515
-comments: Remove {X} from 2nd FAQ
+comments: Remove {X} from 1st FAQ
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
