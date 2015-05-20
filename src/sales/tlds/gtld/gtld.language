@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/tlds/gtld/en
-id: 554a860cf778fc1eccc62a41
-name: MXCMO-947
-comments: merch updates 2015-05-13
+id: 555cf000f778fc1d44e5e9ee
+name: MXCMO-1087
+comments: merch updates 2015-05-27
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaDescription" />
