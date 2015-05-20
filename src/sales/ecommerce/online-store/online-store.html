@@ -236,13 +236,16 @@ a, a:hover {
          ##endif
         ##else 
           <p class="pricing">
-            [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+            [@L[cds.sales/_common:only]@L] <span class="normal-price">[@T[productprice:<current productid="40944" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
+                ##if(productHasSavingsMoreThan(40944, 40944, 0))
+                <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] - <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="40944" secondaryproductid="40944" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+                ##endif
           </p>
           <form id="addtocart-form" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
                   <input type="hidden" name="itc" value="slp_onlinestore" />
                   <input type="hidden" name="ci" value="90988" />
                   <input type="hidden" name="qty" value="1" />
-                  <input type="hidden" name="package" value="ols_premium1month"/>
+                  <input type="hidden" name="package" value="ols_premium12month"/>
             <p class="no-margin-bottom"><button id="marqueeGetStartedLink" type="submit" class="btn btn-primary call-to-action cta-small" data-ci="90988">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button></p>
             <div class="row">
               <div class="col-xs-3"></div>
