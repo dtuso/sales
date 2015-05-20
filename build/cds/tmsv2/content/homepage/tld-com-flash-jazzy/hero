@@ -64,7 +64,7 @@
     <div class="left-content">
       <mark style="font-size: 1.3em" class="bold">Memorial Day Weekend Only!</mark>
       <h2 style="font-size: 2.25em;" class="text-purchase">[@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T] .com*<sup style="color: black;font-size:.65em">/1st yr</sup></h2>
-      <p>Save on the first year when you register for two.</p><a class="black btn btn-md btn-primary">Find your .com</a>
+      <p>Save on the first year when you register for two.</p><a style="margin: 0.35em 0 0.65em" class="black btn btn-md btn-primary">Find your .com</a>
       <p>.com logo</p>
       <p class="font-sm disclaimer">*2 year minimum registration required. Subsequent years charged at $14.99/yr</p>
     </div>
