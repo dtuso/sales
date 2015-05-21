@@ -52,7 +52,6 @@
   border-color: #007029 !important;
 }
 #p4p .p4p-tile-text #gdhp-p4p-btn:hover {
-  color: #ffffff !important;
   background-color: #009938 !important;
   border-color: #007f2e !important;
 }
@@ -62,6 +61,25 @@
   bottom: 20px;
   width: 450px;
   height: 54px;
+}
+.Explorer8 #p4p,
+.Explorer7 #p4p {
+  position: relative;
+  background: url("[@T[link:<imageroot />]@T]fos/hp/oldbrand-p4p/p4p-old-layout-tile-background.png");
+}
+.Explorer8 #p4p .question,
+.Explorer7 #p4p .question {
+  padding-left: 5px;
+  display: inline-block;
+  font-size: 40px;
+  line-height: 42px;
+  background: #ff0;
+  position: relative;
+  padding-right: 10px;
+}
+.Explorer8 #p4p .subtitle,
+.Explorer7 #p4p .subtitle {
+  padding-top: 15%;
 }
 
 </style>
