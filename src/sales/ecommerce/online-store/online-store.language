@@ -1,17 +1,16 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-name: MCX-39129
-comments: OLS LP for India - 5/14
+name: MCX-40206
 ---
 {% include 'modules/doc-block.html' %}
-<phrase key="MetaTitle" />
-Online Store | Start Your eCommerce Business Today - GoDaddy
-<phrase key="MetaDescription" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Build your own eCommerce website and start selling online today!
+<phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
+Online Store | eCommerce Website Building Software - GoDaddy
+<phrase key="MetaDescription" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="MetaKeywords" />
 Online Store, ecommerce store, Online Store builder, online shop, build a store, build a store online
-<phrase key="og-description" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Start your own eCommerce website and start selling online today!
+<phrase key="og-description" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="OnlineStore" />
 Online Store
 <phrase key="labelReadReviews" />
@@ -252,4 +251,4 @@ Click here for a full list.
 <phrase key="PaymentSectionContent-3-title-IN" comment="DO NOT TRANSLATE" />
 Mobile friendly: 
 <phrase key="PaymentSectionContent-3-text-IN" comment="DO NOT TRANSLATE" />
-With eCommerce going mobile and m-commerce rising, we understand the importance of a great mobile experience. Your store will be built to adjust to any mobile device, so it always looks great and works flawlessly. 
+Make it easy for your customers to shop on the go. Online Store doesn’t just look great on mobile devices, it’s built to accept payments from mobile, too.
