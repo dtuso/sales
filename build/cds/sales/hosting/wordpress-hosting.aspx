@@ -942,10 +942,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <style>
@@ -1152,10 +1148,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
@@ -1244,10 +1236,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
@@ -1344,10 +1332,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
@@ -1569,10 +1553,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1614,10 +1594,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1659,10 +1635,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1712,10 +1684,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>

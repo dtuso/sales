@@ -671,10 +671,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="87842" data-plan="wsb_personal_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -709,10 +705,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="87842" data-plan="wsb_personal_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -748,10 +740,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="87843" data-plan="wsb_business_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -786,10 +774,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_o365_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -832,10 +816,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -870,10 +850,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="87842" data-plan="wsb_personal_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -908,10 +884,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="87843" data-plan="wsb_business_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -946,10 +918,6 @@
                     ##endif
                      
                   </div>
-                  <!--if(showDropDownList)-->
-                  <!--  +planSelectList(listID)-->
-                  <!--   block planOptions-->
-                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="87844" data-plan="wsb_businessplus_12month" title="undefined" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
