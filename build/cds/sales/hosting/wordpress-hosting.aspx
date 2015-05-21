@@ -395,6 +395,9 @@
         }
         @media (min-width: 1000px) {
         }
+        .pro-banner .btn {
+          word-wrap:normal;
+        }
         
         
       </style>
