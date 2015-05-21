@@ -918,7 +918,7 @@
             if ("false" != "false"){
               var productTile = $(this).data("ul");
           
-              var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+              var productPackage = $("ul#"+productTile+" li").filter('.selected').attr('data-plan');
             }
             else{
               var productPackage = $(this).data("plan");
