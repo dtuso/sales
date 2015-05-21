@@ -1,32 +1,44 @@
 extends ../_hero-left-arrow.jade
 
 append vars
-  - var classes = "hosting-flash-jazzy"
-  - var ciCode = 11111;
+  - var classes = "tld-com-flash-jazzy"
+  - var ciCode = 99212;
   - var ctaLink = "[@T[link:<relative path='/tlds/com.aspx'><param name='ci' value='"+ciCode+"' /></relative>]@T]";
   - var polyColor = "white";
 
 append styles
   style
     :less
-      #hero-wrapper .hosting-flash-jazzy {
+      #hero-wrapper .tld-com-flash-jazzy {
         .right-container{background:#77c043;}
         .left-container{
           .left-content {}
           .disclaimer{padding-top:4em;}
           .price{padding:.75em 0 .75em 0;}
           .disclaimer{text-transform: initial;}
-          .text-purchase{font-size:1.5em;}
+          .text-purchase{
+            font-size:2.25em;
+            sup {
+              color: black;
+              font-size: 0.65em;
+            }
+          }
+          .bold{font-size: 1.3em}
+          .black{margin: 0.35em 0 0.65em;}
+          .svgfallback{width:20%;}
         }
       }
 
 block leftContent
-  mark.bold(style="font-size: 1.3em") Memorial Day Weekend Only!
-  h2.text-purchase(style="font-size: 2.25em;") [@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T] .com*
-    sup(style="color: black;font-size:.65em") /1st yr
+  mark.bold() Memorial Day Weekend Only!
+  h2.text-purchase() [@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T] .com*
+    sup() /1st yr
   p Save on the first year when you register for two.
-  a.black.btn.btn-md.btn-primary(style="margin: 0.35em 0 0.65em") Find your .com
-  p .com logo
+  a.black.btn.btn-md.btn-primary() Find your .com
+  <!--[if lt IE 9]>
+  img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/tmsv2/content/homepage/tld-com-flash-jazzy/com-logo_2x.png")
+  <![endif]-->
+  img.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxNzQgNDEuNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDQxLjYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMwMDY0QTQiIGQ9Ik02Ni44IDI1LjVjLTIuMSA4LjgtOS45IDE2LjEtMjAuNCAxNi4xIC0xMS44IDAtMjAuOC05LjMtMjAuOC0yMC44QzI1LjUgOS4zIDM0LjQgMCA0Ni4xIDBjMTAuMyAwIDE4LjcgNi44IDIwLjYgMTYuNEg1NC45Yy0xLjMtMi43LTMuNi01LjUtOC40LTUuNSAtMi43LTAuMS01LjEgMC45LTYuNyAyLjcgLTEuNiAxLjgtMi41IDQuNC0yLjUgNy4yIDAgNS43IDMuNyA5LjkgOS4zIDkuOSA0LjggMCA3LjItMi44IDguNC01LjJINjYuOHpNNjkuMSAyMC43YzAtOS41IDYuOC0yMC42IDIxLTIwLjYgMTQuMiAwIDIxIDExLjIgMjEgMjAuNyAwIDkuNS02LjggMjAuNy0yMSAyMC43Qzc1LjkgNDEuNSA2OS4xIDMwLjMgNjkuMSAyMC43TDY5LjEgMjAuN3pNODAuOCAyMC44YzAgNS42IDQuMyA5LjggOS4zIDkuOCA1LjEgMCA5LjMtNC4xIDkuMy05LjggMC01LjctNC4zLTkuOC05LjMtOS44Qzg1LjEgMTEgODAuOCAxNS4xIDgwLjggMjAuOEw4MC44IDIwLjh6TTExNC4yIDEuM2gxMC45djQuMWMwIDAgMC43LTEuNCAyLjQtMi43IDEuNy0xLjQgNC40LTIuNyA4LjUtMi43IDIuNyAwIDYgMC43IDguOSAzLjcgMC44IDAuOCAxLjYgMS45IDIuMyAzLjIgMC44LTEuMiAxLjctMi40IDIuOC0zLjQgMi4zLTIuMSA1LjUtMy42IDkuNS0zLjYgMi43IDAgNy4xIDAuNiAxMC4yIDMuOSAzLjYgMy45IDQuMiA2LjUgNC4yIDE1LjF2MjEuM2gtMTEuN1YxOS42YzAtMS42IDAtMy43LTAuOC01LjUgLTAuNy0xLjgtMi4yLTMuMi01LjItMy4yIC0zLjIgMC00LjggMS41LTUuNiAzLjIgLTAuOCAxLjgtMC44IDMuNy0wLjggNC44djIxLjNoLTExLjZWMTkuMWMwLTEuMSAwLTMuMS0wLjctNC44IC0wLjgtMS44LTIuMi0zLjMtNS4xLTMuMyAtMy4zIDAtNC45IDEuNS01LjggMy40IC0wLjggMS45LTAuOCA0LTAuOCA1LjJ2MjAuN2gtMTEuN1YxLjN6Ii8+PGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI4LjkiIHkxPSIxMi4xIiB4Mj0iOC45IiB5Mj0iMzAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzgyRDFGNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwOUREQyIvPjwvbGluZWFyR3JhZGllbnQ+PGNpcmNsZSBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIgY3g9IjguOSIgY3k9IjIxIiByPSI4LjkiLz48L3N2Zz4=")
   p.font-sm.disclaimer *2 year minimum registration required. Subsequent years charged at $14.99/yr
 block rightContent
   <!--[if lt IE 9]>
