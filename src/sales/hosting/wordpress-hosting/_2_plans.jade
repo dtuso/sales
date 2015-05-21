@@ -67,7 +67,25 @@ atlantis:webstash(type="css")
 
 
 section#plans
+  -includeBoxStyles = true;
+  | 
+  | ##if(splitTestingSideIsActive(1458, B))
+  | 
+  +renderCartLogic(page.config.url, page.itc, {dropdown: "true"})
+  +renderPlanTiles(4) 
+    +planTile("planTileA")
+      include ./_2_plan-A_dropdown.jade
+    +planTile("planTileB")
+      include ./_2_plan-B_dropdown.jade
+    +planTile("planTileC")
+      include ./_2_plan-C_dropdown.jade
+    +planTile("planTileD")
+      include ./_2_plan-D_dropdown.jade
+  | 
+  | ##else
+  | 
   +renderCartLogic(page.config.url, page.itc)
+  -hasIncludedPlanTilesMixinJs = false;
   +renderPlanTiles(4) 
     +planTile("planTileA")
       include ./_2_plan-A.jade
@@ -77,6 +95,9 @@ section#plans
       include ./_2_plan-C.jade
     +planTile("planTileD")
       include ./_2_plan-D.jade
+  | 
+  | ##endif
+  | 
   .container.all-plans-include
     +proBanner({"ci":"93999","link":"[@T[link:<relative path='/pro/managed-wordpress-hosting'><param name='ci' value='93999' /></relative>]@T]"})
     .row
@@ -90,7 +111,7 @@ section#plans
             +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]")
           li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]
           | 
-          | ##if(productIsOffered(99) && !countrySiteAny(mx))
+          | ##if((productIsOffered(99) && !countrySiteAny(mx)) && splitTestingSideIsActive(1458, A))
           | 
           li
             | [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_4]@L]

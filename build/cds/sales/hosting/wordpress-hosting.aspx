@@ -313,8 +313,12 @@
             <div data-fit-line=".price" class="marquee-content-wrapper clearfix">
               <h1 class="marquee-product-name">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-name]@L]</h1>
               <h2 class="marquee-product-desc">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-marquee-product-desc]@L]</h2>
-              <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p>
-              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan">[@L[cds.sales/_common:get-started]@L]</button>
+              <p class="marquee-product-p">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-marquee-product-p]@L]</p> 
+              ##if(splitTestingSideIsActive(1458, A))
+               
+              <button id="get-started-btn" data-ci="96210" data-plan="mwp_basic_12month" data-btn-src="gs" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan">[@L[cds.sales/_common:get-started]@L]</button> 
+              ##endif
+               
               <div class="as-low-as-pricing">
                 <p class="price-text">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</p>
                 <div data-tokenize="[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="price">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-price-span-per-mo]@L]</div>
@@ -399,7 +403,9 @@
         
       </style>
     </atlantis:webstash>
-    <section id="plans">
+    <section id="plans"> 
+      ##if(splitTestingSideIsActive(1458, B))
+       
       <atlantis:webstash type="js">
         <script type="text/javascript">
           var itemTrackingCode = "slp_wordpress";
@@ -408,10 +414,10 @@
           
           $(".btn-plan").click(function() {
           
-            if ("false" != "false"){
+            if ("true" != "false"){
               var productTile = $(this).data("ul");
           
-              var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+              var productPackage = $("ul#"+productTile+" li").filter('.selected').attr('data-plan');
             }
             else{
               var productPackage = $(this).data("plan");
@@ -936,6 +942,637 @@
                     ##endif
                      
                   </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
+                </div>
+                <div class="action-button-wrap row"></div>
+                <style>
+                  .select-box {
+                      background-color: #FFF;
+                      font-size: .928571em;
+                      padding-bottom: 5px;
+                      position: relative;
+                      z-index: 1;
+                  }
+                  .select-box .price-left {
+                      text-align: left;
+                      width: 80px;
+                      display: inline-block
+                  }
+                  .select-box .price-right {
+                      float: right;
+                  }
+                  .select-box .save {
+                    display: none;
+                  }
+                  .select-box .savingSecondRow {
+                    display: none;
+                  }
+                  .select-box .savingSecondRow .strikePrice{
+                    padding-left: 4px;
+                  }
+                  .select-box-head {
+                      cursor: pointer;
+                      height: 40px;
+                      line-height: 40px;
+                      padding: 0 10px;
+                      border: 1px solid #d4d4d4;
+                      margin: 0;
+                      font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+                      text-transform: uppercase;
+                      font-size: .85em;
+                  }
+                  .select-box-current {
+                      width: 90%;
+                      height: 100%;
+                      float: left;
+                  }
+                  .select-box-current .price {
+                    float: right;
+                  }
+                  .select-box-current span:first-child {
+                      text-align: left;
+                      width: 6em;
+                      display: inline-block;
+                  }
+                  .select-box-current span.lastChild {
+                      float: right
+                  }
+                  .select-box-cta {
+                      height: 100%;
+                      width: 10%;
+                      float: left;
+                      text-align: right;
+                      background-repeat: no-repeat;
+                      background-position: right center;
+                  }
+                  .select-box-body {
+                      background-color: inherit;
+                      display: none;
+                      position: absolute;
+                      width: 100%;
+                  }
+                  .select-box-body>ul>li span:first-child {
+                      text-align: left;
+                      width: 6em;
+                      display: inline-block;
+                  }
+                  .select-box-body>ul>li span:last-child {
+                      float: right;
+                  }
+                  .lt-ie8 .select-box-body {
+                      background-color: #fff;
+                  }
+                  .select-box-options {
+                      list-style-type: none;
+                      margin: 0;
+                      padding: 0;
+                  }
+                  .select-box-options label {
+                      display: block;
+                      cursor: pointer;
+                      padding: 10px;
+                  }
+                  .select-box-options label input {
+                      position: absolute;
+                      left: -9999px;
+                  }
+                  .lt-ie8 .select-box-options {
+                      margin-left: -1.07142857em;
+                  }
+                  .select-box-options>li {
+                      cursor: pointer;
+                      border-right: 1px solid #d4d4d4;
+                      border-bottom: 1px solid #d4d4d4;
+                      border-left: 1px solid #d4d4d4;
+                      margin: 0;
+                  }
+                  .select-box-options>li:hover {
+                      background-color: #f5f5f5;
+                  }
+                  .select-box .selected {
+                      background-color: #e4efc7;
+                  }
+                  .select-box .price,
+                  .select-box .save {
+                      color: #ff8a00;
+                  }
+                  .select-box .save {
+                      text-transform: uppercase;
+                  }
+                  .lt-ie8 .select-box-cta {
+                      padding-top: 1.071428571em;
+                  }
+                </style>
+                <div class="select-box">
+                  <div class="select-box-head">
+                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                      ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                       <span class="save price-right"></span> 
+                      ##endif
+                       
+                    </div>
+                    <div class="select-box-cta"><span class="uxicon uxicon-chevron-down"></span></div>
+                  </div>
+                  <div class="select-box-body">
+                    <ul id="planTileAList" class="select-box-options">
+                      <li data-plan="mwp_basic_3month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_basic_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580972" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580972" secondaryproductid="580973" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_basic_12month" class="selected">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_basic_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580970" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580971" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_basic_24month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_basic_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="580979" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580979" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580979" secondaryproductid="580980" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_basic_36month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_basic_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="580982" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580982" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580982" secondaryproductid="580983" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button id="product-A" data-ci="96216" data-ul="planTileAList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='25000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-basic-feature-4]@L]</div>
+                <div class="plan-item">&nbsp; </div>
+                <div class="plan-item">&nbsp; </div> 
+                ##if(productIsOffered(107))
+                 
+                <div class="plan-item">&nbsp; </div> 
+                ##endif
+                 
+                <div class="plan-item">&nbsp; </div>
+              </div>
+            </div>
+            <div id="planTileB" class="col-md-3 col-sm-6 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_deluxe_desc]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap">
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div data-fit-line=".plan-price,.plan-duration" class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580978' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(580978, 580978, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580978' secondaryproductid='580978' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='580996' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
+                </div>
+                <div class="action-button-wrap row"></div>
+                <div class="select-box">
+                  <div class="select-box-head">
+                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                      ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                       <span class="save price-right"></span> 
+                      ##endif
+                       
+                    </div>
+                    <div class="select-box-cta"><span class="uxicon uxicon-chevron-down"></span></div>
+                  </div>
+                  <div class="select-box-body">
+                    <ul id="planTileBList" class="select-box-options">
+                      <li data-plan="mwp_deluxe_3month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_deluxe_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580974" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580974" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580974" secondaryproductid="580997" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_deluxe_12month" class="selected">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_deluxe_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580978" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580978" secondaryproductid="580996" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_deluxe_24month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_deluxe_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="580981" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580981" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580981" secondaryproductid="581002" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_deluxe_36month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_deluxe_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="580984" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580984" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580984" secondaryproductid="581004" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button id="product-B" data-ci="96217" data-ul="planTileBList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"> </span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='100000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-3]@L]&nbsp; </span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-4]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-6]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-seo]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##if(productIsOffered(107))
+                 
+                <div class="plan-item">&nbsp; </div> 
+                ##endif
+                 
+                <div class="plan-item">&nbsp; </div>
+              </div>
+            </div>
+            <div id="planTileC" class="col-md-3 col-sm-6 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_ultimate_desc]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap">
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div data-fit-line=".plan-price,.plan-duration" class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581001' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(581001, 581001, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581001' secondaryproductid='581001' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='581014' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
+                </div>
+                <div class="action-button-wrap row"></div>
+                <div class="select-box">
+                  <div class="select-box-head">
+                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                      ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                       <span class="save price-right"></span> 
+                      ##endif
+                       
+                    </div>
+                    <div class="select-box-cta"><span class="uxicon uxicon-chevron-down"></span></div>
+                  </div>
+                  <div class="select-box-body">
+                    <ul id="planTileCList" class="select-box-options">
+                      <li data-plan="mwp_ultimate_3month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_ultimate_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580998" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580998" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580998" secondaryproductid="581015" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_ultimate_12month" class="selected">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_ultimate_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581001" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581001" secondaryproductid="581014" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_ultimate_24month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_ultimate_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="581003" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581003" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581003" secondaryproductid="581020" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_ultimate_36month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_ultimate_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="581005" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581005" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581005" secondaryproductid="581022" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button id="product-C" data-ci="96217" data-ul="planTileCList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='400000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-4]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-feature-6]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-seo]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##if(productIsOffered(107))
+                 
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-ultimate-feature-7]@L] <span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:39123-tooltip-malware]@L]" data-tokenize="[@T[productprice:<list productid='181771' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##endif
+                 
+                 
+                ##if(productIsOffered(22))
+                 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##else
+                 
+                <div class="plan-item">&nbsp; </div> 
+                ##endif
+                 
+              </div>
+            </div>
+            <div id="planTileD" class="col-md-3 col-sm-6 plan-tile plan-pro">
+              <div class="pro-plan-wrap pro-plan-wrap-alternate">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_developer_desc]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap">
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div data-fit-line=".plan-price,.plan-duration" class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='581019' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(581019, 581019, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='581019' secondaryproductid='581019' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='581031' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
+                </div>
+                <div class="action-button-wrap row"></div>
+                <div class="select-box">
+                  <div class="select-box-head">
+                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                      ##if(productHasSavingsMoreThan(7524, 7524, 0))
+                       <span class="save price-right"></span> 
+                      ##endif
+                       
+                    </div>
+                    <div class="select-box-cta"><span class="uxicon uxicon-chevron-down"></span></div>
+                  </div>
+                  <div class="select-box-body">
+                    <ul id="planTileDList" class="select-box-options">
+                      <li data-plan="mwp_developer_3month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_developer_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="581016" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581016" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581016" secondaryproductid="581032" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_developer_12month" class="selected">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_developer_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581019" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581019" secondaryproductid="581031" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_developer_24month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_developer_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="581021" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581021" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581021" secondaryproductid="581034" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                      <li data-plan="mwp_developer_36month">
+                        <div>
+                          <label>
+                            <input type="radio" name="plan" value="mwp_developer_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="581023" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581023" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581023" secondaryproductid="581035" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button id="product-D" data-ci="96219" data-ul="planTileDList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
+                <div class="plan-item">
+                   
+                  [@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-2]@L]&nbsp;<span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssd]@L]" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
+                <div class="plan-item"><span data-tokenize="[@T[localization:<display type='numeric' number='800000' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-3]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-visitors]@L]" data-tokenize="[@T[localization:<display type='numeric' number='10000' />]@T]" data-tokenize-attr="data-content" class="tool-tip-black sf-tip sf-tipper-target"></span></div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-5]@L] </div>
+                <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-4]@L]</div>
+                <div class="plan-item">&nbsp;  </div> 
+                ##if(productIsOffered(107))
+                 
+                <div class="plan-item">&nbsp; </div> 
+                ##endif
+                 
+                 
+                ##if(productIsOffered(22))
+                 
+                <div class="plan-item"> <span data-tokenize="[@T[productprice:<list productid='3606' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' />]@T]">[@L[cds.sales/gd/hosting/wordpress-hosting:39123-developer-feature-6]@L]&nbsp;</span><span data-style="qt" data-width="400" data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-ssl]@L]" data-tokenize="undefined" class="tool-tip-black sf-tip sf-tipper-target"></span></div> 
+                ##else
+                 
+                <div class="plan-item">&nbsp; </div> 
+                ##endif
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+      ##else
+       
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var itemTrackingCode = "slp_wordpress";
+          var ci = "0"
+          var btnSrc = "ac"
+          
+          $(".btn-plan").click(function() {
+          
+            if ("false" != "false"){
+              var productTile = $(this).data("ul");
+          
+              var productPackage = $("ul#"+productTile+" li").filter('.selected').attr('data-plan');
+            }
+            else{
+              var productPackage = $(this).data("plan");
+              if($(this).data("ci")!== undefined)
+                ci = $(this).data("ci");
+              if($(this).data("btn-src")!== undefined)
+                btnSrc = $(this).data("btn-src");
+            }
+          
+            var url = "[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]";
+          
+            $.ajax({
+              type: "POST",
+              url: url,
+              contentType: "application/json",
+              data: "requestData=" + JSON.stringify({
+                pkgid: productPackage,
+                qty: 1,
+                itc: itemTrackingCode
+              }),
+              dataType: "jsonp"
+            })
+            .done(function(data) {
+              var redirectUrl = "[@T[link:<relative path="~/hosting/wordpress-hosting-config.aspx" parammode="common" />]@T]";
+              redirectUrl = redirectUrl.replace('%7b0%7d',ci);
+              if (redirectUrl.indexOf("?") === -1) {
+                redirectUrl += "?plan=";
+              } else {
+                redirectUrl += "&plan=";
+              }
+              redirectUrl += productPackage;
+              redirectUrl += "&src=" + btnSrc;
+          
+              window.location.href = redirectUrl;
+            })
+            .fail(function(xhr, status, error) {
+              alert('Failed to add to the cart. Please try again later.')
+            });
+          });
+        </script>
+      </atlantis:webstash>
+      <atlantis:webstash type="js">
+        <script type="text/javascript">
+          var planTileMixin = {
+          
+            findMaxHeight: function($items) {
+              var maxHeight = 0;
+              $items.each(function(index, item) {
+                maxHeight = ($(item).outerHeight() > maxHeight) ? $(item).outerHeight() : maxHeight;
+              });
+              return maxHeight;
+            },
+            autoHeightIt: function($obj, selector) {
+              var $objs = $obj.find(selector);
+              var maxHeight = planTileMixin.findMaxHeight($objs);
+              if( maxHeight > 0 ) $objs.css("height", maxHeight);
+            },
+            autoHeighPlanBoxInsides: function() {
+              $tiles = $('#plans').find('.plan-tile');
+              planTileMixin.autoHeightIt($tiles, '.title-wrap');
+              planTileMixin.autoHeightIt($tiles, '.price-wrap');
+              planTileMixin.autoHeightIt($tiles, '.action-button-wrap');
+          
+              // align each plan-item with eachother in the same line
+              // however, only do this if each plan-tile has the same 
+              // number of plan-item's in it.
+              var numItems = 0, bail= false;
+              $tiles.each(function(){
+                var $tile = $(this);
+                var numPlanItems = $tile.find('.plan-item').length;
+                if(numItems==0) {
+                  numItems = numPlanItems;
+                }
+                if(numItems != numPlanItems) bail = true;
+              });
+              if(bail || numItems == 0) return;
+              // loop thru each plan item and adjust independantly
+              for(var i=0; i<numItems; i++) {            
+                planTileMixin.autoHeightIt($tiles, '.plan-item:eq(' + i + ')');
+              }
+          
+            },
+            autoHeightPlanBoxes: function() {
+              // auto height the plan boxes
+              $(".pro-plans").each(function(index, outerPlan) {
+                if($(outerPlan).hasClass('ignore-same-height')) 
+                  return;
+                planTileMixin.autoHeightIt($(outerPlan), '.pro-plan-wrap');
+              });
+            }
+          };
+          
+          $(document).ready(function(){
+            if ($(window).width() < 768) 
+              return; /* bail out because too narrow to list more than one wide */
+            // allow some time for tokenization to happen 
+            // before auto-heighting the boxes per GCE-37970 
+            window.setTimeout(function(){
+              planTileMixin.autoHeighPlanBoxInsides();
+              planTileMixin.autoHeightPlanBoxes();
+            }, 400);
+          });
+          
+        </script>
+      </atlantis:webstash>
+      <div class="pro-plans-wrap ">
+        <div id="plans" data-icode="" class="container pro-plans">
+          <div class="row"> 
+            <div id="planTileA" class="col-md-3 col-sm-6 plan-tile plan-pro">
+              <div class="pro-plan-wrap">
+                <div class="title-wrap">
+                  <h3 class="plan-title">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic]@L]</h3>
+                  <p class="plan-text">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_basic_desc]@L]</p>
+                </div>
+                <div class="price-wrap">
+                  <div class="plan-price-wrap">
+                    <div class="price-text"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-as-low-as]@L]</strong></div>
+                    <div data-fit-line=".plan-price,.plan-duration" class="plan-price-and-duration"><span class="plan-price">[@T[productprice:<current productid='580970' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]</span><span class="plan-duration">/[@L[cds.sales/_common:mo]@L]</span></div> 
+                    ##if(productHasSavingsMoreThan(580970, 580970, 0))
+                     <strong>[@L[cds.sales/_common:onsale-all-cap]@L] -<span data-tokenize="[@T[productcompare:<percent primaryproductid='580970' secondaryproductid='580970' showsymbol='true' hidebelow='5'><html><![CDATA[{0}]]></html></percent>]@T]" class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] {0}</mark></span></strong> 
+                    ##endif
+                     
+                    <p data-tokenize="[@T[productprice:<list productid='580971' dropdecimal='false' period='monthly' htmlsymbol='false' negative='parentheses' />]@T]" class="h6">[@L[cds.sales/gd/hosting/wordpress-hosting:37952-when-you-renew]@L]</p> 
+                    ##if(countrySiteAny(uk))
+                     
+                    <p class="h6">[@L[cds.sales/_common:vat-price-uk]@L] </p> 
+                    ##endif
+                     
+                  </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -977,6 +1614,10 @@
                     ##endif
                      
                   </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1018,6 +1659,10 @@
                     ##endif
                      
                   </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1067,6 +1712,10 @@
                     ##endif
                      
                   </div>
+                  <!--if(showDropDownList)-->
+                  <!--  +planSelectList(listID)-->
+                  <!--   block planOptions-->
+                  
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
@@ -1097,7 +1746,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+      ##endif
+       
       <div class="container all-plans-include">
         <atlantis:webstash type="css">
           <style>
@@ -1222,7 +1873,7 @@
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li>
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]</li> 
-              ##if(productIsOffered(99) && !countrySiteAny(mx))
+              ##if((productIsOffered(99) && !countrySiteAny(mx)) && splitTestingSideIsActive(1458, A))
                
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_4]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li> 
@@ -4378,7 +5029,8 @@ ul li.no-check {
       
     </script>
     <atlantis:webstash type="js">
-      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>##if(splitTestingSideIsActive(1458, B)) 
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js"></script>##endif
       <script>
         var wpHosting = {
           sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
@@ -4462,6 +5114,159 @@ ul li.no-check {
             $this.removeAttr('data-fit-line').removeClass('word-break');
           });
         }
+        
+        ##if(splitTestingSideIsActive(1458, B))
+        $('.select-box').setSelectBox();
+        
+        //drop down sales logic
+        // ---------------------------------BASIC-------------------------------------------
+        // 3 months
+        ##if(productHasSavingsMoreThan(580972, 580973, 0))
+        $('[data-plan="mwp_basic_3month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_basic_3month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_basic_3month"]').find(".save").remove();
+        $('[data-plan="mwp_basic_3month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 12 months
+        ##if(productHasSavingsMoreThan(580970, 580971, 0))
+        $('[data-plan="mwp_basic_12month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_basic_12month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_basic_12month"]').find(".save").remove();
+        $('[data-plan="mwp_basic_12month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 24 months
+        ##if(productHasSavingsMoreThan(580979, 580980, 0))
+        $('[data-plan="mwp_basic_24month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_basic_24month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_basic_24month"]').find(".save").remove();
+        $('[data-plan="mwp_basic_24month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 36 months
+        ##if(productHasSavingsMoreThan(580982, 580983, 0))
+        $('[data-plan="mwp_basic_36month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_basic_36month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_basic_36month"]').find(".save").remove();
+        $('[data-plan="mwp_basic_36month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // --------------------------------DELUXE--------------------------------------------
+        // 3 months
+        ##if(productHasSavingsMoreThan(580974, 580997, 0))
+        $('[data-plan="mwp_deluxe_3month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_deluxe_3month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_deluxe_3month"]').find(".save").remove();
+        $('[data-plan="mwp_deluxe_3month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 12 months
+        ##if(productHasSavingsMoreThan(580978, 580996, 0))
+        $('[data-plan="mwp_deluxe_12month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_deluxe_12month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_deluxe_12month"]').find(".save").remove();
+        $('[data-plan="mwp_deluxe_12month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 24 months
+        ##if(productHasSavingsMoreThan(580981, 581002, 0))
+        $('[data-plan="mwp_deluxe_24month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_deluxe_24month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_deluxe_24month"]').find(".save").remove();
+        $('[data-plan="mwp_deluxe_24month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 36 months
+        ##if(productHasSavingsMoreThan(580984, 581004, 0))
+        $('[data-plan="mwp_deluxe_36month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_deluxe_36month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_deluxe_36month"]').find(".save").remove();
+        $('[data-plan="mwp_deluxe_36month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // --------------------------------ULTIMATE--------------------------------------------
+        // 3 months
+        ##if(productHasSavingsMoreThan(580998, 581015, 0))
+        $('[data-plan="mwp_ultimate_3month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_ultimate_3month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_ultimate_3month"]').find(".save").remove();
+        $('[data-plan="mwp_ultimate_3month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 12 months
+        ##if(productHasSavingsMoreThan(581001, 581014, 0))
+        $('[data-plan="mwp_ultimate_12month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_ultimate_12month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_ultimate_12month"]').find(".save").remove();
+        $('[data-plan="mwp_ultimate_12month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 24 months
+        ##if(productHasSavingsMoreThan(581003, 581020, 0))
+        $('[data-plan="mwp_ultimate_24month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_ultimate_24month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_ultimate_24month"]').find(".save").remove();
+        $('[data-plan="mwp_ultimate_24month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 36 months
+        ##if(productHasSavingsMoreThan(581005, 581022, 0))
+        $('[data-plan="mwp_ultimate_36month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_ultimate_36month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_ultimate_36month"]').find(".save").remove();
+        $('[data-plan="mwp_ultimate_36month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        
+        // --------------------------------DEVELOPER--------------------------------------------
+        // 3 months
+        $('[data-plan="mwp_developer_3month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_developer_3month"]').find('.savingSecondRow').css('display','block');
+        
+        
+        // 12 months
+        ##if(productHasSavingsMoreThan(581019, 581031, 0))
+        $('[data-plan="mwp_developer_12month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_developer_12month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_developer_12month"]').find(".save").remove();
+        $('[data-plan="mwp_developer_12month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 24 months
+        ##if(productHasSavingsMoreThan(581021, 581034, 0))
+        $('[data-plan="mwp_developer_24month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_developer_24month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_developer_24month"]').find(".save").remove();
+        $('[data-plan="mwp_developer_24month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        // 36 months
+        ##if(productHasSavingsMoreThan(581023, 581035, 0))
+        $('[data-plan="mwp_developer_36month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_developer_36month"]').find('.savingSecondRow').css('display','block');
+        ##else
+        $('[data-plan="mwp_developer_36month"]').find(".save").remove();
+        $('[data-plan="mwp_developer_36month"]').find('.savingSecondRow').remove();
+        ##endif
+        
+        
+        ##endif
+        
         $(document).ready(function(){
         
           //tokenizeDisclaimerModal('#step2-choose-product-ols-modal.tokenizable-disclaimer-modal','TODO!');

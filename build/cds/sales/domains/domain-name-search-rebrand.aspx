@@ -723,6 +723,10 @@
                         <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
                           <strike>{{pod.ListPrice}}</strike></span>
                       </div>
+                      <!--if(showDropDownList)-->
+                      <!--  +planSelectList(listID)-->
+                      <!--   block planOptions-->
+                      
                     </div><a href="{{pod.ButtonURL}}" data-index="1" ng-hide="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:PreRegisterRebrand]@L]</a><a href="{{pod.ButtonURL}}" data-index="1" ng-show="'{{pod.LaunchPhase}}'=='28'" class="btn btn-primary btn-plan btn-lg btn-block">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                   </div>
                 </div>
@@ -1542,6 +1546,10 @@ top: -6px;
                           <nostrike ng-show="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.ListPrice}}{{pod.IcannForList}}</nostrike><span ng-hide=" '{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-price text-warning">{{pod.CurrentPrice}}{{pod.IcannForCurrent}}</span><span ng-hide="'{{pod.CurrentPrice}}'=='{{pod.ListPrice}}'" class="plan-strike-price"><br />[@L[cds.sales/gd/domains/domain-name-search:was]@L]&nbsp;
                             <strike>{{pod.ListPrice}}</strike></span>
                         </div>
+                        <!--if(showDropDownList)-->
+                        <!--  +planSelectList(listID)-->
+                        <!--   block planOptions-->
+                        
                       </div><a href="{{pod.ButtonURL}}" data-index="1" class="btn btn-primary btn-plan btn-lg btn-block">{{pod.ButtonText}}</a>
                     </div>
                   </div>
