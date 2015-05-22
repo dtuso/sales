@@ -1,0 +1,47 @@
+extends ../_hero-left-arrow.jade
+
+append vars
+  - var classes = "tld-com-flash-jazzy"
+  - var ciCode = 99212;
+  - var ctaLink = "[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='"+ciCode+"' /></relative>]@T]";
+  - var polyColor = "white";
+
+append styles
+  style
+    :less
+      #hero-wrapper .tld-com-flash-jazzy {
+        .right-container{background:#77c043;}
+        .left-container{
+          .left-content {}
+          .disclaimer{padding-top:4em;}
+          .price{padding:.75em 0 .75em 0;}
+          .disclaimer{text-transform: initial;}
+          .text-purchase{
+            font-size:2.25em;
+            sup {
+              color: black;
+              font-size: 0.65em;
+            }
+          }
+          .bold{font-size: 1.3em;}
+          .black{margin: 0.35em 0 0.65em;}
+          .svgfallback{width:4.5em;height:1em;}
+        }
+      }
+
+block leftContent
+  mark.bold Memorial Day Weekend Only!
+  h2.text-purchase [@T[productprice:<current productid="101" period="yearly" checktmspromocode="true" htmlsymbol="false" />]@T] .com*
+    sup /1st yr
+  p Save on the first year when you register for two.
+  a.black.btn.btn-md.btn-primary Find your .com
+  <!--[if lt IE 9]>
+  img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/tmsv2/content/homepage/tld-com-flash-jazzy/com-logo_2x.png")
+  <![endif]-->
+  img.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAxNzQgNDEuNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTc0IDQxLjYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiMwMDY0QTQiIGQ9Ik02Ni44IDI1LjVjLTIuMSA4LjgtOS45IDE2LjEtMjAuNCAxNi4xIC0xMS44IDAtMjAuOC05LjMtMjAuOC0yMC44QzI1LjUgOS4zIDM0LjQgMCA0Ni4xIDBjMTAuMyAwIDE4LjcgNi44IDIwLjYgMTYuNEg1NC45Yy0xLjMtMi43LTMuNi01LjUtOC40LTUuNSAtMi43LTAuMS01LjEgMC45LTYuNyAyLjcgLTEuNiAxLjgtMi41IDQuNC0yLjUgNy4yIDAgNS43IDMuNyA5LjkgOS4zIDkuOSA0LjggMCA3LjItMi44IDguNC01LjJINjYuOHpNNjkuMSAyMC43YzAtOS41IDYuOC0yMC42IDIxLTIwLjYgMTQuMiAwIDIxIDExLjIgMjEgMjAuNyAwIDkuNS02LjggMjAuNy0yMSAyMC43Qzc1LjkgNDEuNSA2OS4xIDMwLjMgNjkuMSAyMC43TDY5LjEgMjAuN3pNODAuOCAyMC44YzAgNS42IDQuMyA5LjggOS4zIDkuOCA1LjEgMCA5LjMtNC4xIDkuMy05LjggMC01LjctNC4zLTkuOC05LjMtOS44Qzg1LjEgMTEgODAuOCAxNS4xIDgwLjggMjAuOEw4MC44IDIwLjh6TTExNC4yIDEuM2gxMC45djQuMWMwIDAgMC43LTEuNCAyLjQtMi43IDEuNy0xLjQgNC40LTIuNyA4LjUtMi43IDIuNyAwIDYgMC43IDguOSAzLjcgMC44IDAuOCAxLjYgMS45IDIuMyAzLjIgMC44LTEuMiAxLjctMi40IDIuOC0zLjQgMi4zLTIuMSA1LjUtMy42IDkuNS0zLjYgMi43IDAgNy4xIDAuNiAxMC4yIDMuOSAzLjYgMy45IDQuMiA2LjUgNC4yIDE1LjF2MjEuM2gtMTEuN1YxOS42YzAtMS42IDAtMy43LTAuOC01LjUgLTAuNy0xLjgtMi4yLTMuMi01LjItMy4yIC0zLjIgMC00LjggMS41LTUuNiAzLjIgLTAuOCAxLjgtMC44IDMuNy0wLjggNC44djIxLjNoLTExLjZWMTkuMWMwLTEuMSAwLTMuMS0wLjctNC44IC0wLjgtMS44LTIuMi0zLjMtNS4xLTMuMyAtMy4zIDAtNC45IDEuNS01LjggMy40IC0wLjggMS45LTAuOCA0LTAuOCA1LjJ2MjAuN2gtMTEuN1YxLjN6Ii8+PGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSI4LjkiIHkxPSIxMi4xIiB4Mj0iOC45IiB5Mj0iMzAiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzgyRDFGNSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwOUREQyIvPjwvbGluZWFyR3JhZGllbnQ+PGNpcmNsZSBmaWxsPSJ1cmwoI1NWR0lEXzFfKSIgY3g9IjguOSIgY3k9IjIxIiByPSI4LjkiLz48L3N2Zz4=")
+  p.font-sm.disclaimer *2 year minimum registration required. Subsequent years charged at [@T[productprice:<list productid='101' dropdecimal='false' period='yearly' negative='parentheses' />]@T]/yr
+block rightContent
+  <!--[if lt IE 9]>
+  img.img-responsive(src!="[@T[link:<imageroot />]@T]fos/tmsv2/content/homepage/hosting-flash-jazzy/sale-banner.png")
+  <![endif]-->
+  img.svgfallback(src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjE4Ni40IiBoZWlnaHQ9IjI3MS4xIiB2aWV3Qm94PSItMzUgNTIuOSAxODYuNCAyNzEuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAtMzUgNTIuOSAxODYuNCAyNzEuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzMzMzMzMyIgZD0iTTYzLjIgMzI0bC0yNi43LTcuOUwyNiAyOTAuMyAzOS42IDI2NmwyNy41LTQuNSAyMC42IDE4LjdMODUuOSAzMDggNjMuMiAzMjR6TTkwLjEgMjI2LjJsLTE0IDI0LjEgLTI3LjUgNC4xIC0yMC40LTE5IDIuMS0yNy43IDIzLTE1LjYgMjYuNiA4LjJMOTAuMSAyMjYuMnpNNjUuMyAxODQuNmwtMjYuNy03LjkgLTEwLjQtMjUuOCAxMy42LTI0LjMgMjcuNS00LjUgMjAuNiAxOC44IC0xLjggMjcuOEw2NS4zIDE4NC42ek04MC44IDEwNS44TDU0LjUgMTE1IDMxIDEwMC4ybC0zLjEtMjcuNiAxOS42LTE5LjdMNzUuMiA1NiA5MCA3OS42IDgwLjggMTA1Ljh6Ii8+PHBhdGggZmlsbD0iI0YyODEyRSIgZD0iTTQxLjkgODguM2MwIDguNSA1LjggMTMuMyAxNS4xIDEzLjMgOS4xIDAgMTQuOC00LjUgMTQuOC0xMS43IDAtOC4zLTcuNi0xMC4yLTEzLjItMTIuMyAtMy40LTEuMi01LTIuMi01LTQuMiAwLTEuOSAxLjYtMi44IDMuMy0yLjggMi40IDAgMy42IDEuNiAzLjYgNC41aDEwLjhjMC01LjctMy42LTExLjktMTQuMi0xMS45IC03LjMgMC0xNC41IDMtMTQuNSAxMC43IDAgNy41IDYuNyA5LjcgMTIuNyAxMi4xIDMuOCAxLjUgNS41IDIuMyA1LjUgNC40IDAgMS45LTEuNCAzLjEtMy42IDMuMSAtMi44IDAtNC42LTEuOS00LjYtNS4yQzUyLjYgODguMyA0MS45IDg4LjMgNDEuOSA4OC4zek03OC44IDE3MC43bC0xMy43LTM2LjRINTMuN2wtMTMuNCAzNi40SDUybDEuMi00LjJoMTIuMmwxLjIgNC4ySDc4Ljh6TTYzLjMgMTU4LjZoLTcuN2wzLjgtMTMuNEw2My4zIDE1OC42ek01OS45IDIzMi45di0yNy4ySDQ5LjF2MzYuNGgyMC4zdi05LjJINTkuOXpNNjguOSAyODEuOHYtOC4xSDQ1LjV2MzYuNEg2OVYzMDJINTYuM3YtNi4xaDEyLjZ2LTcuOEg1Ni4zdi02LjNINjguOXoiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTM1LjIgNjAuNUwxMzMuNyA3MWw3LjkgOS4xIC0xMiAyLjEgLTcuOSAxMC4xIC0zLjYtMTEuMSAtMTAuNS01IDguNi02LjdWNTkuNGwxMC43IDQuM0wxMzUuMiA2MC41ek0xNDYgMTA0LjdsLTAuNyAxMS4yIDYuMSA5LjEgLTEwLjggMSAtOS4xIDguMiAtMi05LjUgLTEwLjEtNC44IDcuOS02LjEgMi40LTEyLjMgNy40IDYuOUwxNDYgMTA0Ljd6TTE0OS4yIDE2Mi43bC04LjkgNyAtMS45IDEwLjIgLTYuMS01LjMgLTUuOCAzLjQgMS4zLTkuNiAtNi4xLTkuNSA5LjQgMS4zIDUuMy02LjcgMy4yIDYuNEwxNDkuMiAxNjIuN3pNMTQwLjQgMjE1LjRsLTUgMTMuOCA0LjkgMTQuMyAtMTEuMi0yLjIgLTE0LjggMTAuNiAwLjYtMTUuOCAtMTIuNi01LjcgMTEuMy05LjEgLTAuOC0xMi40IDEzLjMgOC41TDE0MC40IDIxNS40ek0xNDguNiAzMDkuNWwtMTguMS0xLjNMMTE4IDMxOS41bC0yLjUtMTMuNiAtOS44LTcuMyA4LjMtNi45IC0wLjEtMTQuNiAxMS43IDkuMiAxNi4yLTMuNyAtMS43IDEzLjJMMTQ4LjYgMzA5LjV6TS0xOC44IDMxOC40bDEuNS0xMC41IC03LjktOSAxMi0yLjEgNy45LTEwLjEgMy42IDExLjEgMTAuNiA1IC04LjYgNi43djEwLjFsLTEwLjctNC4zTC0xOC44IDMxOC40ek0tMjkuNiAyNzQuMmwwLjctMTEuMiAtNi4xLTkgMTAuOC0xIDkuMS04LjIgMiA5LjUgMTAuMSA0LjggLTcuOSA2LjEgLTIuNCAxMi4zIC03LjQtNi45TC0yOS42IDI3NC4yek0tMzIuOCAyMTYuMmw4LjktN0wtMjIgMTk5bDYuMSA1LjMgNS45LTMuNCAtMS4zIDkuNiA2LjEgOS41IC05LjQtMS4zIC01LjMgNi43IC0zLjItNi40TC0zMi44IDIxNi4yek0tMjQgMTYzLjVsNS0xMy44IC00LjktMTQuMyAxMS4yIDIuMkwyLjEgMTI3bC0wLjYgMTUuOSAxMi42IDUuNyAtMTEuMyA5LjEgMC44IDEyLjQgLTEzLjMtOC41TC0yNCAxNjMuNXpNLTMyLjIgNjkuNGwxOC4xIDEuMyAxMi41LTExLjNMMC45IDczbDkuOCA3LjMgLTguMyA2LjkgMC4xIDE0LjYgLTExLjctOS4yIC0xNi4yIDMuNyAxLjctMTMuMkwtMzIuMiA2OS40eiIvPjwvc3ZnPg==")
