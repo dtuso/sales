@@ -1,17 +1,17 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-id: 54b82ec3f778fc1c443c203b
-name: SEM-271
+name: SEM-515
+comments: Remove {X} from 1st FAQ
 ---
 {% include 'modules/doc-block.html' %}
-<phrase key="MetaTitle" />
-Online Store | Start Your eCommerce Business Today - GoDaddy
-<phrase key="MetaDescription" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Build your own eCommerce website and start selling online today!
+<phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
+Online Store | eCommerce Website Building Software - GoDaddy
+<phrase key="MetaDescription" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="MetaKeywords" />
 Online Store, ecommerce store, Online Store builder, online shop, build a store, build a store online
-<phrase key="og-description" />
-Creating an online business with GoDaddy Online Store is simple, fast and affordable. Start your own eCommerce website and start selling online today!
+<phrase key="og-description" comment="DO NOT TRANSLATE" />
+Creating an eCommerce website with GoDaddy's Online Store is simple, fast and affordable. Our fully hosted shopping cart software lets you sell products online today!
 <phrase key="OnlineStore" />
 Online Store
 <phrase key="labelReadReviews" />
@@ -118,6 +118,8 @@ Unlimited products
 Up to 10 images per product
 <phrase key="WhatsIncluded-PaymentType"/>
 Accept credit cards & PayPal
+<phrase key="WhatsIncluded-PaymentType-IN" comment="DO NOT TRANSLATE"/>
+Accept credit cards
 <phrase key="WhatsIncluded-CouponCodes"/>
 Create coupon codes
 <phrase key="WhatsIncluded-RatingsAndReviews"/>
@@ -163,7 +165,7 @@ Mobile-optimized sites for tablets and smartphones.
 <phrase key="FaqTitleSlide0" />
 How do I get started building my <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide0Text" comment="{X} will be replaced with a text link" />
-Choose the theme and colors that best support your brand and give your customers a consistent experience when interacting with your company. Our <strong>eCommerce website builder</strong> allows you to customize the look and feel of your Online Store. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12054/choosing-and-customizing-online-store-themes">Choose and Customize Online Store Themes</a>.<span class="expansion-page-1-link">{X}</span>
+Choose the theme and colors that best support your brand and give your customers a consistent experience when interacting with your company. Our <strong>eCommerce website builder</strong> allows you to customize the look and feel of your Online Store. Learn how to <a target="blank" href="https://support.godaddy.com/help/article/12054/choosing-and-customizing-online-store-themes">Choose and Customize Online Store Themes</a>.<span class="expansion-page-1-link"></span>
 <phrase key="FaqTitleSlide1" />
 How do I add products to my <strong>Online Store</strong>?
 <phrase key="FaqTitleSlide1Text" />
@@ -180,6 +182,8 @@ What if I know the technical aspects of website design? Is <strong> Online Store
  Which payment methods does Online Store accept?
 <phrase key="FaqTitleSlide4Text" />
 When you create your Online Store using our eCommerce platform, accepting payments is already integrated. You can take payments via PayPal Express or Stripe, putting money into your account quickly and seamlessly. <a href="https://support.godaddy.com/help/article/9049/managing-payment-methods-in-online-store" target="blank"> Managing Payment Methods in Online Store </a>is as easy as pushing a button.
+<phrase key="FaqTitleSlide4Text-IN" comment="DO NOT TRANSLATE"/>
+When you create your Online Store using our eCommerce platform, accepting payments is already integrated. With built-in payment processing through CCAvenue, you’ll have 100+ payment options, including the 6 major credit cards, 2 major wallets (Paytm and Mobikwik), 70+ debit cards, nearly 50 net banking options and much more. You can even use our offline payment method to accept cash on delivery.
 <phrase key="More"/>
 More
 <phrase key="Less"/>
@@ -235,3 +239,17 @@ SSL Certificate
 <sup class=\"supSymbol\">1</sup> Performance may begin to slow at varying numbers of products depending on potential physical and practical constraints, including (but not limited to): system architecture, system capacity, system load, end-user Internet connectivity and end-user computer configurations.
 <phrase key="DisclaimerModal0DisclaimerItems5Text" />
 Products will automatically renew until cancelled. You may turn off the auto-renewal feature by visiting your [@T[companyname:name]@T] account.
+<phrase key="PaymentSectionContent-1-title-IN" comment="DO NOT TRANSLATE" />
+Broadest payment options:
+<phrase key="PaymentSectionContent-1-text-IN" comment="DO NOT TRANSLATE" />
+With built-in payment processing through CCAvenue, you’ll have 100+ payment options, including the 6 major credit cards, 2 major wallets (Paytm and Mobikwik), 70+ debit cards, nearly 50 net banking options and much more. You can even use our offline payment method to accept cash on delivery.
+<phrase key="PaymentSectionContent-2-title-IN" comment="DO NOT TRANSLATE" />
+Industry-leading transaction fees:
+<phrase key="PaymentSectionContent-2-text-IN" comment="DO NOT TRANSLATE" />
+GoDaddy and CCAvenue offer industry-leading transaction fees and zero setup fees to help you get started. Better yet, there are no hidden fees, so you get to keep more of what you earn. <span class="green">Fees start as low as 1.1%</span>. Want more details? With fees this low, we’re happy to show you. 
+<phrase key="PaymentSectionContent-2-link-text-IN" comment="DO NOT TRANSLATE" />
+Click here for a full list.
+<phrase key="PaymentSectionContent-3-title-IN" comment="DO NOT TRANSLATE" />
+Mobile friendly: 
+<phrase key="PaymentSectionContent-3-text-IN" comment="DO NOT TRANSLATE" />
+Make it easy for your customers to shop on the go. Online Store doesn’t just look great on mobile devices, it’s built to accept payments from mobile, too.

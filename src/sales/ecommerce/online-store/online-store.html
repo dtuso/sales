@@ -1,14 +1,21 @@
 ---
 location: sales/ecommerce/online-store.aspx
-name: MCX-39499
-comments: Provide disclaimer for en-CA when products is only available in English
+name: MCX-39129
+comments: OLS LP for India - 5/14
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
-cssVersionOverride: 3
+assetPath: false
 ---
 {% extends 'layouts/base.html' %}
 
 {% block metahead %}
 {% parent %}
+
+<style type="text/css">
+  {% less %}
+    {% include 'css/styles.less' %}
+  {% endless %}
+</style>
+
 ##if(appSettingEnabled(UXCORE_ENABLED))
 <style>
 body {
@@ -23,10 +30,10 @@ a, a:hover {
 {% endblock %}
 
 {% block body %}
+
 <!------------------------------------>
 <!--           MARQUEE              -->
 <!------------------------------------>
-    
 <section class="main-banner background-container main-banner-onlinestore">
   <div class="container l-main-container center-text main-banner-content main-banner-online-store-content">
     ##if(countrySiteAny(uk,ca,au,nz,sg,ph) || activeLanguageAny([en-us]))
@@ -251,7 +258,7 @@ a, a:hover {
 </section>
 
 <!---------------------------------------->
-<!--------4 reasons to belive ------------>
+<!---     4 reasons to belive           -->
 <!---------------------------------------->
   <div class="container marquee-bottom-spacer">
     <!-- floating white feature bullets -->
@@ -330,38 +337,60 @@ a, a:hover {
       <div>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Paypal]@L] </div>
     </div>
     <div class="payments-section-bottom-spacer-paypal"></div>
-##elseif(countrySiteAny(www,uk,ca,au,ie))
+##elseif(countrySiteAny(www,uk,ca,au,ie,in))
+
     <div class="col-xs-6">
-        <div class="payments-section-bottom-spacer"></div>
-        <div class="solazy payment-options-image-div"></div>
+      <div class="payments-section-bottom-spacer"></div>
+      <div class="solazy payment-options-image-div"></div>
     </div>
 
     <div class="col-xs-6 payment-section-content">
-      
       <h2>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionTitle]@L]</h2>
+
+      ##if(countrySiteAny(in))
+      
+        <p>
+          <b>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-1-title-IN]@L]</b>
+          [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-1-text-IN]@L]
+        </p>
+        <p>
+          <b>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-2-title-IN]@L]</b>
+          [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-2-text-IN]@L]
+          <a href="https://login.ccavenue.com/web/registration.do?command=goDaddy" data-ci="99087" target="_blank">
+            [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-2-link-text-IN]@L]
+          </a>
+        </p>
+        <p>
+          <b>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-3-title-IN]@L]</b>
+          [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-3-text-IN]@L]
+        </p>
+
+      ##else
+
         <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-First]@L] </p>
         <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second]@L] 
-        <span  class="green">
-        ##if(countrySiteAny(www))
-         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-US]@L]
-        ##elseif(countrySiteAny(uk))
-         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-UK]@L]
-        ##elseif(countrySiteAny(ca))
-         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-ca]@L]
-        ##elseif(countrySiteAny(au))
-         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-AU]@L]
-        ##elseif(countrySiteAny(ie))
-         [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-IE]@L]
-        ##endif
-        ##if(countrySiteAny(ie))
-            [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L][@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-VAT]@L].
-        ##else
-            [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L].
-        ##endif
-
-        </span>
+          <span  class="green">
+          ##if(countrySiteAny(www))
+           [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-US]@L]
+          ##elseif(countrySiteAny(uk))
+           [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-UK]@L]
+          ##elseif(countrySiteAny(ca))
+           [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-ca]@L]
+          ##elseif(countrySiteAny(au))
+           [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-AU]@L]
+          ##elseif(countrySiteAny(ie))
+           [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-amount-IE]@L]
+          ##endif
+          ##if(countrySiteAny(ie))
+              [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L][@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-VAT]@L].
+          ##else
+              [@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Second-per-transaction]@L].
+          ##endif
+          </span>
+        </p>
         <p>[@L[cds.sales/gd/ecommerce/online-store:PaymentSectionContent-Third]@L]</p>
-        </div>
+
+      ##endif
     </div>
     <div class="payments-section-bottom-spacer"></div>
 
@@ -372,7 +401,7 @@ a, a:hover {
 ##endif
 
 <!------------------------------------>
-<!--       CALL TO ACTION  (CTA) BAR       -->
+<!--   CALL TO ACTION  (CTA) BAR    -->
 <!------------------------------------>
 
 <section class="main-call-to-action-bar">
@@ -386,57 +415,60 @@ a, a:hover {
         </span>
       </p>
     ##else
-       ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
-          <p class="pricing">
-            <span class="so-easy">
-              [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]          
-              <!-- <span class="call-to-action-bar-spacer"></span> -->
-              ##if(shopperStatusAny(authenticated, partiallytrusted)) 
+      ##if(countrySiteAny(uk,ca,au,nz,sg,ph) || activeLanguageAny([en-us]))
+        <p class="pricing">
+          <span class="so-easy">
+            [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L]          
+            <!-- <span class="call-to-action-bar-spacer"></span> -->
+            ##if(shopperStatusAny(authenticated, partiallytrusted)) 
+              <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+              <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+            ##else
+              <span class="call-to-action-bar-spacer"></span>
+              ##if(splitTestingSideIsActive(1383,A))
+                <a id="CTALoginToStartLink" data-ci="90991" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding"><span>[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</span></div>
+              ##else
                 <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
                 <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
-              ##else
-                <span class="call-to-action-bar-spacer"></span>
-                ##if(splitTestingSideIsActive(1383,A))
-                  <a id="CTALoginToStartLink" data-ci="90991" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
-                  <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding"><span>[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</span></div>
-                ##else
-                  <a id="CTAStartFreeTrialLink" data-ci="90990" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">[@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
-                  <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
-                ##endif
               ##endif
-               <!-- <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div> -->
+            ##endif
+             <!-- <div class="col-xs-6 inline-disclaimer non-mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div> -->
+          </span>
+        </p>
+      ##else
+        <form id="addtocart-form-1" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
+          <input type="hidden" name="itc" value="slp_onlinestore" />
+          <input type="hidden" name="ci" value="90989" />
+          <input type="hidden" name="qty" value="1" />
+          <input type="hidden" name="package" value="ols_premium1month"/>
+
+          <p class="pricing">
+              <span class="so-easy">
+                [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L] 
+                <span class="aslowasText">
+                  [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+                </span>
+                <span class="no-margin-bottom">
+                  <button id="CTAGetStartedLink" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93899">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button>
+                </span>
+                <div class="row">
+                  <div class="col-xs-2"></div>
+                  <div class="col-xs-7 inline-disclaimer mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:CurrentRenewalPrice]@L]</div>
+                </div>
             </span>
           </p>
-      ##else
-          <form id="addtocart-form-1" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
-                <input type="hidden" name="itc" value="slp_onlinestore" />
-                <input type="hidden" name="ci" value="90989" />
-                <input type="hidden" name="qty" value="1" />
-                <input type="hidden" name="package" value="ols_premium1month"/>
-
-            <p class="pricing">
-                <span class="so-easy">
-                  [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L] 
-                  <span class="aslowasText">
-                    [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
-                  </span>
-                  <span class="no-margin-bottom"><button id="CTAGetStartedLink" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93899">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button>
-                  </span>
-                  <div class="row">
-                      <div class="col-xs-2"></div>
-                      <div class="col-xs-7 inline-disclaimer mgr-view-left-padding">[@L[cds.sales/gd/ecommerce/online-store:CurrentRenewalPrice]@L]</div>
-                  </div>
-              </span>
-            </p>
-          </form>
+        </form>
       ##endif  
     ##endif
   </div>
 
 </section>
-  <!------------------------------------>
-    <!--     FEATURE CONTENT DESIGNS    -->
-    <!------------------------------------>
+
+
+<!------------------------------------>
+<!--     FEATURE CONTENT DESIGNS    -->
+<!------------------------------------>
 <section class="solazy feature-content-design">  
     <div class="solazy container l-main-container center-text main-content-designs-top">
       <div class="callout-horizontal-wrapper horizontal-wrapper-1">
@@ -479,7 +511,6 @@ a, a:hover {
 <!------------------------------------>
 <!--        TOOLS CAROUSEL          -->
 <!------------------------------------>
-
 <section class="main-tools-carousel">
 
   <div class="container l-main-container center-text">  
@@ -524,10 +555,9 @@ a, a:hover {
           </div>
     </div> <!-- end id tools-slider -->
 
-        
   </div>
       
-    </section>
+</section>
 
   
 
@@ -547,62 +577,50 @@ a, a:hover {
           <h3 class="included-subtitle">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncludedSubTitle]@L]</h3>
           
           <div class="row left-text">
-                <div class="col-xs-6 whatsIncludedColumn1">
-                <ul class="checkmark-bullets">
-                  <li>
-                    <table cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                        <td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                        <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-UnlimitedProducts]@L]</td>
-                        </tr>
-                    </table></li>
-                  <li>
-                      <table cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                          <td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ImagesPerProduct]@L]</td>
-                        </tr>
-                      </table></li>              
-                  <li>
-                      <table cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                          <td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType]@L]</td>
-                        </tr></table>
-                  </li>              
-                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-CouponCodes]@L]</td></tr></table>
-                  </li>
-                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                            <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-RatingsAndReviews]@L]</td></tr></table>
-                  </li>
-                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                              <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FaceBookStore]@L]</td></tr></table>
-                  </li>
-                </ul> 
-          </div>
-           
-           <div class="col-xs-6 whatsIncludedColumn2">
-            <ul class="checkmark-bullets">
-              <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ShippingRates]@L]</td></tr></table></li>
+            <div class="col-xs-6 whatsIncludedColumn1">
+              <ul class="checkmark-bullets">
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-UnlimitedProducts]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ImagesPerProduct]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">
+                    ##if(countrySiteAny(in))
+                    [@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType-IN]@L]
+                    ##else
+                    [@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-PaymentType]@L]
+                    ##endif                    
+                  </td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-CouponCodes]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-RatingsAndReviews]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FaceBookStore]@L]</td></tr></table></li>
+              </ul> 
+            </div>
+
+            <div class="col-xs-6 whatsIncludedColumn2">
+              <ul class="checkmark-bullets">
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-ShippingRates]@L]</td></tr></table></li>
                 <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
                   <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-SEOFeatures]@L]</td></tr></table></li>
-                  <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                    <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-Customizable]@L]</td></tr></table></li>
-                    <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                      <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-MobileFriendly]@L]</td></tr></table></li>
-                      <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                        <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FreeHosting]@L]</td></tr></table></li>
-                        <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
-                          <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-SecureCheckout]@L]</td></tr></table></li>
-                        </ul>
-                      </div>        
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-Customizable]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-MobileFriendly]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-FreeHosting]@L]</td></tr></table></li>
+                <li><table cellspacing="0" cellpadding="0" border="0"><tr><td valign="top" width="50px"><div class="solazy checkmark-icon"></div></td>
+                  <td valign="top">[@L[cds.sales/gd/ecommerce/online-store:WhatsIncluded-SecureCheckout]@L]</td></tr></table></li>
+              </ul>
+            </div>
           </div>
 
       </div>
     ##if(isManager())
-    <div id="mgrViewPricingSection" class="col-xs-4">
+      <div id="mgrViewPricingSection" class="col-xs-4">
               <form id="addtocart-form-MgrView" class="addtocart-form mgr-view" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
                   <input type="hidden" name="itc" value="slp_onlinestore" />
                   <input type="hidden" name="ci" value="94022" />
@@ -753,13 +771,13 @@ a, a:hover {
               </form>
 
               <div class="col-xs-3 cta-mgr-view-loginbtn-spacer"> <!-- Get started / Login to Start button in mgr view -->
-                    <div class="cta-mgr-voew-free-trial-div"> <!-- Start Free Trial Div -->
+                <div class="cta-mgr-voew-free-trial-div"> <!-- Start Free Trial Div -->
 
-                    <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
-                    [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
-                      </div>
-                  <div class="mgr-view-free-trial-text-bottom-spacer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
-                </div>
+                  <a id="WhatsIncludedStartFreeTrial" data-ci="93906" class="btn btn-warning call-to-action cta-small" href="[@T[link:<external linktype="carturl" path="/freetrial/setup.aspx">  <param name="pfid" value="40966" />  <param name="itc" value="slp_onlinestore" /></external>]@T]">
+                  [@L[cds.sales/gd/ecommerce/online-store:StartFreeTrial]@L]</a>
+                    </div>
+                <div class="mgr-view-free-trial-text-bottom-spacer">[@L[cds.sales/gd/ecommerce/online-store:FreeTrialPricingText]@L]</div>
+              </div>
     </div>
     ##else
     <div id="non-mgrViewPricingSection" class="col-xs-4">
@@ -909,7 +927,13 @@ a, a:hover {
           <div class="col-xs-12  faq-title">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4]@L]</div>
         </div>
         <div class="row faq-content">
-          <div class="col-xs-12 faq-content-text">[@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text]@L]</div>
+          <div class="col-xs-12 faq-content-text">
+            ##if(countrySiteAny(in))
+                [@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text-IN]@L]
+            ##else
+                [@L[cds.sales/gd/ecommerce/online-store:FaqTitleSlide4Text]@L]
+            ##endif
+          </div>
         </div>
       </li>
     </ul>
@@ -1019,97 +1043,97 @@ a, a:hover {
     ##endif
 {% endblock %}
 {% block footer %}
-                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
-                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
-                        <script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
-                        <script type="text/javascript" >
-                      $(document).ready(function(){
-                            cartURL = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
-                            managerCartUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
-                            managerView=false;
-                            ##if(isManager())
-                              managerView=true;
-                            ##endif  
-                            ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
-                              $(".expansion-page-1-link").html(" You can also learn <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-solution' secure='true'><param name='ci' value='95066' /></relative>]@T]\">How the Best eCommerce Stores</a> leverage trust signals and social sharing buttons.");
-                              $(".expansion-page-2-link").html("For more information, see <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-sites' secure='true'><param name='ci' value='95241' /></relative>]@T]\">Creating Online Store Product Options</a>.");
-                            ##endif                            
-                            });              
-                        </script>
-                        <script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js?v=1" type="text/javascript" ></script> 
-         
-##if(activeLanguageAny(en))
-        <script type="text/javascript">
-                var loadReviews = function(){
-                  if (typeof $BV != "undefined") {
-                    $BV.configure("global", {
-                      allowSamePageSubmission: true,
-                      userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
-                      doLogin: function(successCallback, successUrl) {
-                        $('#login-modal').modal();
-                      },
-                      doScrollSubmission: function () {
-                        return false;
-                      }
-                    });
-                    $BV.ui("rr", "show_reviews", {
-                      productId: "online-store",
-                      num: 4,
-                      doShowContent: function() {
-                        $('.bv-loading').hide();
-                      }
-                    });
-                  }
-                };
-                 $('a[href="#reviews"]').on('mousedown', function (e) {
-                  e.preventDefault();
-                  (function() {
-                    if (!document.getElementById('bvapi')) {
-                      var bv = document.createElement('script');
-                      bv.type = 'text/javascript';
-                      bv.id = 'bvapi';
-                      bv.async = true;
-                      bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-                      bv.onload = loadReviews;
-                      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-                    }
-                  })();
-                });
-                function LoadBV() {
-          
-                        if (!document.getElementById('bvapi')) {
-                          
-                            var bv = document.createElement('script');
-                            bv.type = 'text/javascript';
-                            bv.id = 'bvapi';
-                            bv.async = true;
-                            bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
-                            bv.onload = loadReviews;
-                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
-                        }
-                    }
-        
-                //<div id="reviews" data-trigger-function='{"cb":"LoadBV"}'>
-                $(document).ready(function() {
-                    $(window).bind('scroll', function() {
-                      
-                      $('[data-trigger-function]').each(function(){
-                        var $this = $(this);
-                        var data = $this.data('trigger-function') + "();";
-                        var objTop = $this.position().top;
-                        var scrollPos = $(window).scrollTop();
-                        var viewPort = $(window).height();
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/gd-swipe-v2.min.js" type="text/javascript"></script>
+<script src="[@T[link:<javascriptroot />]@T]fos/lib/solazy/jquery.solazy.1.2.1.min.js" type="text/javascript" ></script>
+<script type="text/javascript" >
+$(document).ready(function(){
+    cartURL = '[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
+    managerCartUrl = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" />]@T]';
+    managerView=false;
+    ##if(isManager())
+      managerView=true;
+    ##endif  
+    ##if(activeLanguageAny([en-au],[en-ca],[en-gb],[en-in],[en-us]))
+      $(".expansion-page-1-link").html(" You can also learn <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-solution' secure='true'><param name='ci' value='95066' /></relative>]@T]\">How the Best eCommerce Stores</a> leverage trust signals and social sharing buttons.");
+      $(".expansion-page-2-link").html("For more information, see <a href=\"[@T[link:<relative path='~/ecommerce/online-store/best-ecommerce-sites' secure='true'><param name='ci' value='95241' /></relative>]@T]\">Creating Online Store Product Options</a>.");
+    ##endif                            
+    });              
+</script>
+<script src="[@T[link:<javascriptroot />]@T]fos/sales/themes/scotty/ecommerce/online-store/js/online-store.js?v=1" type="text/javascript" ></script> 
 
-                        if ((scrollPos + viewPort) >= objTop) {
-                         var tmpFunc = new Function(data);
-                          tmpFunc();                  
-                        }
-                      
-                      });
-                     
-                    });
-                    $('.rating-stars-init').ratingStars();
-                });   
-    </script>
+##if(activeLanguageAny(en))
+<script type="text/javascript">
+  var loadReviews = function(){
+    if (typeof $BV != "undefined") {
+      $BV.configure("global", {
+        allowSamePageSubmission: true,
+        userToken: "[@P[userControl:<Data location="~/Shared/BazaarVoice/SessionUserToken.ascx"></Data>]@P]",
+        doLogin: function(successCallback, successUrl) {
+          $('#login-modal').modal();
+        },
+        doScrollSubmission: function () {
+          return false;
+        }
+      });
+      $BV.ui("rr", "show_reviews", {
+        productId: "online-store",
+        num: 4,
+        doShowContent: function() {
+          $('.bv-loading').hide();
+        }
+      });
+    }
+  };
+   $('a[href="#reviews"]').on('mousedown', function (e) {
+    e.preventDefault();
+    (function() {
+      if (!document.getElementById('bvapi')) {
+        var bv = document.createElement('script');
+        bv.type = 'text/javascript';
+        bv.id = 'bvapi';
+        bv.async = true;
+        bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+        bv.onload = loadReviews;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+      }
+    })();
+  });
+  function LoadBV() {
+
+          if (!document.getElementById('bvapi')) {
+            
+              var bv = document.createElement('script');
+              bv.type = 'text/javascript';
+              bv.id = 'bvapi';
+              bv.async = true;
+              bv.src = '[@P[userControl:<Data location="~/Scripts/BVScriptUrlOnly.ascx"></Data>]@P]';
+              bv.onload = loadReviews;
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bv);
+          }
+      }
+
+  //<div id="reviews" data-trigger-function='{"cb":"LoadBV"}'>
+  $(document).ready(function() {
+      $(window).bind('scroll', function() {
+        
+        $('[data-trigger-function]').each(function(){
+          var $this = $(this);
+          var data = $this.data('trigger-function') + "();";
+          var objTop = $this.position().top;
+          var scrollPos = $(window).scrollTop();
+          var viewPort = $(window).height();
+
+          if ((scrollPos + viewPort) >= objTop) {
+           var tmpFunc = new Function(data);
+            tmpFunc();                  
+          }
+        
+        });
+       
+      });
+      $('.rating-stars-init').ratingStars();
+  });   
+</script>
 ##endif
 {% endblock %}

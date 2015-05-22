@@ -3,29 +3,18 @@ block append vars
   - ciCode = 99129
   - ctaLink = "[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='99129' /></relative>]@T]"
   - classes = "tld-com-flash"
-  - flagText = "Sale ends midnight est 5/14/15"
+  - flagText = "Memorial Day Weekend Only!"
 block append styles
   style
     :less
       #marquee{background-color:#f3f3f3; 
         .hero.tld-com-flash{
           .font-xl{font-size:4em}
-          .content {padding-top:1.25em;
-            sup {text-transform:lowercase}
-            img{display:block; width:5em}
-            .bold{text-transform:none}
-          }
+          sup {text-transform:lowercase}
+          img{display:block; width:5em}
+          .bold{text-transform:none}
+          .flag-content {text-transform: uppercase;}
         }
-      }
-      .hero-wrapper {font-size:12px}
-      @media only screen and (min-width: 768px) {
-        .hero-wrapper { font-size: 16px;}
-      }
-      @media only screen and (min-width: 992px) {
-        .hero-wrapper { font-size: 13px;}
-      }
-      @media only screen and (min-width: 1200px) {
-        .hero-wrapper { font-size: 16px;}
       }
 block content
   h2.font-xl [@T[productprice:<current productid='101' dropdecimal='false' period='yearly' htmlsymbol='false' negative='parentheses' checktmspromocode='true' />]@T] .com/1<sup>st</sup> YR
