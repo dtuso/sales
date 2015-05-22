@@ -399,6 +399,9 @@
         }
         @media (min-width: 1000px) {
         }
+        .pro-banner .btn {
+          word-wrap:normal;
+        }
         
         
       </style>
@@ -2238,9 +2241,11 @@
       <section id="features-why">
         <div class="container">
           <div class="row">
-            <div class="col-sm-5"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
+            <div class="col-sm-5">
+              <div data-center-element="{&quot;vertical&quot;:{&quot;target&quot;:{&quot;method&quot;:&quot;parents&quot;,&quot;selector&quot;:&quot;#features-why&quot;},&quot;verticalStyle&quot;:&quot;margin-top&quot;,&quot;elementHeightMethod&quot;:&quot;outerHeight&quot;,&quot;targetWidthMethod&quot;:&quot;height&quot;}}" style="margin-top: 108.5px;" class="text-center"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn-content-why.png" data-lazyload-watch="null" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center features-img"/>
+              </div>
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-6 col-sm-offset-1">
               <div class="row">
                 <div class="col-sm-12">
                   <h3>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress]@L]</h3>

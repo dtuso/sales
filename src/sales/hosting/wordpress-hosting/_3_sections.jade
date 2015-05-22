@@ -90,8 +90,9 @@ section#mid-page-nav-tile-features.mid-page-nav-section(data-mid-nav-title="[@L[
     .container
       .row
         .col-sm-5
-          +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_website_builder_02_v01.png", "", "triggerResize")
-        .col-sm-7
+          .text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":"#features-why"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}', style='margin-top: 108.5px;')
+            +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn-content-why.png", "", "triggerResize")
+        .col-sm-6.col-sm-offset-1
           .row
             .col-sm-12
               h3 [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress]@L]
