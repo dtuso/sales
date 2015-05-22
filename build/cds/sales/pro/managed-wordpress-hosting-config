@@ -1648,7 +1648,7 @@ input[type=checkbox] + label{
       
       // spoof url for config and packagegrouping removed when both are published
       var url = '[@T[link:<relative path="~/api/package/config/{0}"/>]@T]';
-      //url=url + "?configdocid=55149c4ff778fc258409b399";
+      //url=url + "?configdocid=555fac84f778fc29f40a536f";
       //url=url + "?configdocid=55076131f778fc17c039f8cb&groupdocid=550b4d89f778fc1570acef28";
       //url = url + "?configdocid=54ef736af778fc203043be19";
       
@@ -2157,7 +2157,7 @@ input[type=checkbox] + label{
           var onSale = (selectedSale == 'true');
           var monthString =  (selectedTerm > 1) ? " [@L[cds.sales/_common:months]@L]" : " [@L[cds.sales/_common:month]@L]";
       
-          if(parseInt(selectedTerm) > 1){
+          if(parseInt(selectedTerm) >= 12){
             var selectedTotal = currencyCalc.evaluate([selectedFactor,"*",selectedPricePerYear]);
           }
           else{
