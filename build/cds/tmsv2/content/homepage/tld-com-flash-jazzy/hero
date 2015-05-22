@@ -68,7 +68,7 @@
   margin: 0.35em 0 0.65em;
 }
 #hero-wrapper .tld-com-flash-jazzy .left-container .svgfallback {
-  width: 20%;
+  width: 4.5em;
 }
 
 </style>

@@ -90,6 +90,9 @@
 #marquee .hero.tld-com-flash .bold {
   text-transform: none;
 }
+#marquee .hero.tld-com-flash .flag-content {
+  text-transform: uppercase;
+}
 
 </style>
 <div data-url="[@T[link:<relative path='/domains/search-new.aspx'><param name='ci' value='99129' /></relative>]@T]" data-ci='99129' class="hero hero-simple tld-com-flash">
