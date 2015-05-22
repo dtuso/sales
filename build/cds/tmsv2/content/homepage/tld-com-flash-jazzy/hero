@@ -69,6 +69,7 @@
 }
 #hero-wrapper .tld-com-flash-jazzy .left-container .svgfallback {
   width: 4.5em;
+  height: 1em;
 }
 
 </style>
