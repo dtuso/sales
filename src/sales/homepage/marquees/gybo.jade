@@ -34,18 +34,27 @@ block append marqueeStyles
     #gybo .domain{background-position: 0px 0px}
     #gybo .wsb{background-position: 0px -162px}
     #gybo .o365{background-position: 0px -324px}
-    html[lang|="de"] #gybo .headline,html[lang|="fr"] #gybo .headline,html[lang|="it"] #gybo .headline{font-size:48px;}
+    html[lang|="de"] #gybo .headline,html[lang|="fr"] #gybo .headline,html[lang|="it"] #gybo .headline{font-size:48px;line-height:1em;}
     html[lang|="de"] #gybo .product-text,html[lang|="fr"] #gybo .product-text,html[lang|="it"] #gybo .product-text{font-size:24px;}
     html[lang|="fr"] #gybo .rest-text,html[lang|="uk"] #gybo .rest-text,html[lang|="it"] #gybo .rest-text,html[lang|="de"] #gybo .rest-text,html[lang|="da"] #gybo .rest-text,html[lang|="pt"] #gybo .rest-text,html[lang|="ru"] #gybo .rest-text{width:168px;}
     html[lang|="uk"] #gybo .product-text,html[lang|="el"] #gybo .product-text,html[lang|="ru"] #gybo .product-text{font-size:22px;}
     html[lang|="uk"] #gybo .cond-text,html[lang|="el"] #gybo .cond-text{font-size:26px;}
     html[lang|="fi"] #gybo .cond-text{font-size:33px;}
     html[lang|="ru"] #gybo .cond-text{font-size:30px;}
-    html[lang|="sv"] #gybo .text>.headline{font-size:33px;}
+    html[lang|="sv"] #gybo .text>.headline{font-size:33px;line-height:1em;}
+    #gybo .support-flag{max-width:30%;padding:.5em 1em;font-size:1.4em;line-height:1em;text-transform:uppercase;font-family:'Walsheim-Bold', 'Arial Black', sans-serif;background-size:cover;background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCAzNjAgNzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDM2MCA3NSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PHBhdGggZmlsbD0iIzc4QzA0NCIgZD0iTTcwIDBIMGwxMCA3NSAzNDAtMTAgMTAtNjVINzB6Ii8+PC9zdmc+');}
+    .Explorer8 #gybo .support-flag{background-color:#77c043;}
 
 block marqueeContent
   .marquee-content
     .text
+      | 
+      | ##if(countrySiteAny(dk,at,ch,de,gr,ie,za,es,fi,be,fr,it,no,nl,pl,pt,ru,se,tr,ua))
+      | 
+      .support-flag.pull-right [@L[cds.sales/homepage/marquee/gybo:gybo-support-flag]@L]
+      | 
+      | ##endif
+      | 
       .headline [@L[cds.sales/homepage/marquee/gybo:gybo-headline]@L]
       .middle-wrapper
         .domain.image
