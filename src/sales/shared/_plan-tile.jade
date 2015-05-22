@@ -8,11 +8,11 @@ mixin planSelectList(listID)
             input(type="radio", name="plan", value=planNameList[planCount], check="checked")
             span.price-left !{val}
             span.price [@T[productprice:<current productid="!{pfidList_Purchase[planCount]}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-            span.save.price-right On Sale
+            span.save.price-right [@L[cds.sales/_common:onsale-all-cap]@L]
             .savingSecondRow
               span.price-left &nbsp;
-              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]
-              span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]
+              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]
+              span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]
     else
       li(data-plan=planNameList[planCount])
         div
@@ -20,11 +20,11 @@ mixin planSelectList(listID)
             input(type="radio", name="plan", value=planNameList[planCount])
             span.price-left !{val}
             span.price [@T[productprice:<current productid="!{pfidList_Purchase[planCount]}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
-            span.save.price-right On Sale
+            span.save.price-right [@L[cds.sales/_common:onsale-all-cap]@L]
             .savingSecondRow
               span.price-left &nbsp;
-              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]
-              span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]
+              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]
+              span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]
     - planCount++;
 
 mixin addPlanOption(duration, pfid, plan)
@@ -152,9 +152,14 @@ block vars
               position: relative;
               z-index: 1;
           }
-          .select-box .price-left {
+          .select-box-current .price-left {
               text-align: left;
-              width: 80px;
+              width: 6em;
+              display: inline-block;
+          }
+          .select-box-options .price-left {
+              text-align: left;
+              padding-right: 4%;
               display: inline-block
           }
           .select-box .price-right {
@@ -210,11 +215,6 @@ block vars
               position: absolute;
               width: 100%;
           }
-          .select-box-body>ul>li span:first-child {
-              text-align: left;
-              width: 6em;
-              display: inline-block;
-          }
           .select-box-body>ul>li span:last-child {
               float: right;
           }
@@ -264,7 +264,7 @@ block vars
       .select-box
         .select-box-head
           .select-box-current
-            span.price-left 12 months
+            span.price-left 12 [@L[cds.sales/_common:months]@L]
             span.price [@T[productprice:<current productid="!{pfidList_Purchase[1]}" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]
             | 
             | ##if(productHasSavingsMoreThan(7524, 7524, 0))

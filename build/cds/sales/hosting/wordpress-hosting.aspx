@@ -952,9 +952,14 @@
                       position: relative;
                       z-index: 1;
                   }
-                  .select-box .price-left {
+                  .select-box-current .price-left {
                       text-align: left;
-                      width: 80px;
+                      width: 6em;
+                      display: inline-block;
+                  }
+                  .select-box-options .price-left {
+                      text-align: left;
+                      padding-right: 4%;
                       display: inline-block
                   }
                   .select-box .price-right {
@@ -1010,11 +1015,6 @@
                       position: absolute;
                       width: 100%;
                   }
-                  .select-box-body>ul>li span:first-child {
-                      text-align: left;
-                      width: 6em;
-                      display: inline-block;
-                  }
                   .select-box-body>ul>li span:last-child {
                       float: right;
                   }
@@ -1064,7 +1064,7 @@
                 </style>
                 <div class="select-box">
                   <div class="select-box-head">
-                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                    <div class="select-box-current"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
                       ##if(productHasSavingsMoreThan(7524, 7524, 0))
                        <span class="save price-right"></span> 
                       ##endif
@@ -1077,32 +1077,32 @@
                       <li data-plan="mwp_basic_3month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_basic_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580972" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580972" secondaryproductid="580973" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_basic_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580972" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580972" secondaryproductid="580973" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_basic_12month" class="selected">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_basic_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580970" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580971" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_basic_12month" check="checked"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580970" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580970" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580970" secondaryproductid="580971" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_basic_24month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_basic_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="580979" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580979" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580979" secondaryproductid="580980" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_basic_24month"><span class="price-left">24 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580979" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580979" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580979" secondaryproductid="580980" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_basic_36month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_basic_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="580982" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580982" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580982" secondaryproductid="580983" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_basic_36month"><span class="price-left">36 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580982" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580982" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580982" secondaryproductid="580983" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -1152,7 +1152,7 @@
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
                   <div class="select-box-head">
-                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                    <div class="select-box-current"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
                       ##if(productHasSavingsMoreThan(7524, 7524, 0))
                        <span class="save price-right"></span> 
                       ##endif
@@ -1165,32 +1165,32 @@
                       <li data-plan="mwp_deluxe_3month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_deluxe_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580974" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580974" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580974" secondaryproductid="580997" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_deluxe_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580974" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580974" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580974" secondaryproductid="580997" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_deluxe_12month" class="selected">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_deluxe_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580978" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580978" secondaryproductid="580996" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_deluxe_12month" check="checked"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580978" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580978" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580978" secondaryproductid="580996" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_deluxe_24month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_deluxe_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="580981" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580981" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580981" secondaryproductid="581002" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_deluxe_24month"><span class="price-left">24 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580981" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580981" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580981" secondaryproductid="581002" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_deluxe_36month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_deluxe_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="580984" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580984" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580984" secondaryproductid="581004" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_deluxe_36month"><span class="price-left">36 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580984" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580984" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580984" secondaryproductid="581004" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -1240,7 +1240,7 @@
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
                   <div class="select-box-head">
-                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                    <div class="select-box-current"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
                       ##if(productHasSavingsMoreThan(7524, 7524, 0))
                        <span class="save price-right"></span> 
                       ##endif
@@ -1253,32 +1253,32 @@
                       <li data-plan="mwp_ultimate_3month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_ultimate_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="580998" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580998" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580998" secondaryproductid="581015" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_ultimate_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580998" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580998" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580998" secondaryproductid="581015" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_ultimate_12month" class="selected">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_ultimate_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581001" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581001" secondaryproductid="581014" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_ultimate_12month" check="checked"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581001" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581001" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581001" secondaryproductid="581014" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_ultimate_24month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_ultimate_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="581003" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581003" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581003" secondaryproductid="581020" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_ultimate_24month"><span class="price-left">24 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581003" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581003" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581003" secondaryproductid="581020" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_ultimate_36month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_ultimate_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="581005" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581005" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581005" secondaryproductid="581022" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_ultimate_36month"><span class="price-left">36 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581005" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581005" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581005" secondaryproductid="581022" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -1336,7 +1336,7 @@
                 <div class="action-button-wrap row"></div>
                 <div class="select-box">
                   <div class="select-box-head">
-                    <div class="select-box-current"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
+                    <div class="select-box-current"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span> 
                       ##if(productHasSavingsMoreThan(7524, 7524, 0))
                        <span class="save price-right"></span> 
                       ##endif
@@ -1349,32 +1349,32 @@
                       <li data-plan="mwp_developer_3month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_developer_3month"><span class="price-left">3 months</span><span class="price">[@T[productprice:<current productid="581016" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581016" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581016" secondaryproductid="581032" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_developer_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581016" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581016" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581016" secondaryproductid="581032" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_developer_12month" class="selected">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_developer_12month" check="checked"><span class="price-left">12 months</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581019" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581019" secondaryproductid="581031" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_developer_12month" check="checked"><span class="price-left">12 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581019" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581019" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581019" secondaryproductid="581031" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_developer_24month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_developer_24month"><span class="price-left">24 months</span><span class="price">[@T[productprice:<current productid="581021" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581021" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581021" secondaryproductid="581034" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_developer_24month"><span class="price-left">24 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581021" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581021" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581021" secondaryproductid="581034" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
                       <li data-plan="mwp_developer_36month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_developer_36month"><span class="price-left">36 months</span><span class="price">[@T[productprice:<current productid="581023" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">On Sale</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581023" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T] [@L[cds.sales/gd/hosting/website-builder:month]@L]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581023" secondaryproductid="581035" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/gd/hosting/website-builder:save]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_developer_36month"><span class="price-left">36 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581023" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581023" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581023" secondaryproductid="581035" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -4997,7 +4997,7 @@ ul li.no-check {
       
     </script>
     <atlantis:webstash type="js">
-      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>##if(splitTestingSideIsActive(1458, B)) 
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>##if(splitTestingSideIsActive(1458, B))
       <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js"></script>##endif
       <script>
         var wpHosting = {
@@ -5201,6 +5201,7 @@ ul li.no-check {
         
         // --------------------------------DEVELOPER--------------------------------------------
         // 3 months
+        
         $('[data-plan="mwp_developer_3month"]').find(".save").css('display','block');
         $('[data-plan="mwp_developer_3month"]').find('.savingSecondRow').css('display','block');
         
@@ -5224,13 +5225,10 @@ ul li.no-check {
         ##endif
         
         // 36 months
-        ##if(productHasSavingsMoreThan(581023, 581035, 0))
+        
         $('[data-plan="mwp_developer_36month"]').find(".save").css('display','block');
         $('[data-plan="mwp_developer_36month"]').find('.savingSecondRow').css('display','block');
-        ##else
-        $('[data-plan="mwp_developer_36month"]').find(".save").remove();
-        $('[data-plan="mwp_developer_36month"]').find('.savingSecondRow').remove();
-        ##endif
+        
         
         
         ##endif
