@@ -1,29 +1,31 @@
 
 <atlantis:webstash type="js">
   <script>
+    // needed to prevent null object on base page
+    var offersCodes = {}
+    
     $(document).ready(function(){
-       $("#txtsld").on("focus",function(){
-         $("#txtsldlabel").css({"opacity":"0"});
-       }).on("blur",function(){
-         if($(this).val()==''){
-           $("#txtsldlabel").css({"opacity":"1"});
-         }
-       });
-       if($("#txtsld").val()==''){
-           $("#txtsldlabel").css({"opacity":"1"});
-         }
+      $("#txtsld").on("focus",function(){
+        $("#txtsldlabel").css({"opacity":"0"});
+      }).on("blur",function(){
+        if($(this).val()==''){
+          $("#txtsldlabel").css({"opacity":"1"});
+        }
+      });
+      if($("#txtsld").val()==''){
+          $("#txtsldlabel").css({"opacity":"1"});
+        }
     
-       $("#domainSearch").find("[name=isc]").val(getParameterByName('isc'));
-     });
+      $("#domainSearch").find("[name=isc]").val(getParameterByName('isc'));
+    });
     
-     
-     ##if(countrySiteAny(at,be,ch,de,dk,es,fi,fr,gr,ie,it,nl,no,pl,pt,ru,se,tr,ua))
-       $(".price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code_vat]@D]" />]@T]')})
-     ##else
-       $(".price").each(function(){$(this).text('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')})
-     ##endif
-     $(".original-price").each(function(){$(this).text('[@T[productprice:<list productid="101" period="yearly" />]@T]')})
-     $(".icann-fee").each(function(){$(this).text('[@T[domains:<icannfee/>]@T]')});
+    ##if(countrySiteAny(at,be,ch,de,dk,es,fi,fr,gr,ie,it,nl,no,pl,pt,ru,se,tr,ua))
+      $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code_vat]@D]" />]@T]')})
+    ##else
+      $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')})
+    ##endif
+    $(".original-price").each(function(){$(this).html('[@T[productprice:<list productid="101" period="yearly" />]@T]')})
+    $(".icann-fee").each(function(){$(this).html('[@T[domains:<icannfee/>]@T]')});
     
   </script>
 </atlantis:webstash>
@@ -180,8 +182,12 @@
         <div class="search-border-highlight">
           <div class="search-border">
             <input type="hidden" name="isc" value=""/>
-            <input type="hidden" name="ci" value="99126"/>
-            <input type="hidden" name="dpp_itc" value="DLP_OFFER_COM"/>
+            <input type="hidden" name="ci" value="99126"/> 
+            ##if(isManager())
+            <input type="hidden" name="dpp_itc" value="MGR_DLP_OFFER_COM"/> 
+            ##else 
+            <input type="hidden" name="dpp_itc" value="DLP_OFFER_COM"/> 
+            ##endif 
             <input type="hidden" name="tmskey" value="[@D[tms.message.tag]@D]"/>
             <input type="hidden" name="checkAvail" value="1"/>
             <label id="txtsldlabel" for="txtsld" style="opacity: 0;" class="search-input-label">[@L[cds.tmsv2/content/advlp/1dom:domain-search-placeholder]@L]</label>
