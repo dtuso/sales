@@ -96,7 +96,16 @@ block domainSearch
     }
 
     $(document).ready(function(){
-      $('.domain-search-container').show();
+      if(plan.indexOf('3month') >= 0){
+        ##if(isManager())
+          window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
+        ##else
+          window.location = '[@T[link:<external linktype="carturl" path="/basket.aspx" secure="true" />]@T]';
+        ##endif
+      }
+      else{
+        $('.domain-search-container').show();
+      }
     });
 
     $('#noFreeDomain').click(function(){
