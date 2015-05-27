@@ -11,7 +11,7 @@ mixin planSelectList(listID)
             span.save.price-right [@L[cds.sales/_common:onsale-all-cap]@L]
             .savingSecondRow
               span.price-left &nbsp;
-              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]
+              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
               span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]
     else
       li(data-plan=planNameList[planCount])
@@ -23,7 +23,7 @@ mixin planSelectList(listID)
             span.save.price-right [@L[cds.sales/_common:onsale-all-cap]@L]
             .savingSecondRow
               span.price-left &nbsp;
-              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike> {0}]]></strike><nostrike><![CDATA[{0}]]></nostrike></template>]@T]
+              span.strikePrice [@T[productprice:<template productid="!{pfidList_Purchase[planCount]}" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]
               span.save.price-right [@T[productcompare:<percent primaryproductid="!{pfidList_Purchase[planCount]}" secondaryproductid="!{pfidList_Renew[planCount]}" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]
     - planCount++;
 
