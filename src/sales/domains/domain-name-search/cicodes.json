@@ -493,6 +493,12 @@
           { "ITC Code" : "TopPodDESIGNLink" },
           { "Description" : "Top Pod - .DESIGN link" }
         ]
+      },
+      { "Top TLD Pods - .COM.MX link" : [
+          { "ITC ID" : "99246" },
+          { "ITC Code" : "TopPodCOMMXLink" },
+          { "Description" : "Top Pod - .COM.MX link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
