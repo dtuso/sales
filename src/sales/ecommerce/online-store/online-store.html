@@ -236,9 +236,11 @@ a, a:hover {
          ##endif
         ##else 
           <p class="pricing">
-            [@L[cds.sales/_common:only]@L] <span class="normal-price">[@T[productprice:<current productid="40944" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
-                ##if(productHasSavingsMoreThan(40944, 40944, 0))
-                <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] - <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="40944" secondaryproductid="40944" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong> 
+            [@L[cds.sales/_common:only]@L] <span class="normal-price">[@T[productprice:<current productid="40972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
+                ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] - <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong>
+                </p>
+                <p> [@T[productprice:<list productid="40972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
                 ##endif
           </p>
           <form id="addtocart-form" class="addtocart-form" action="[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]" method="post" data-addtocart="[@T[link:<external linktype="SALESPRODUCTSURL" path="/v1/pl/1/cart/packages" />]@T]">
@@ -985,7 +987,7 @@ a, a:hover {
     </p>
     <p>
       <small class="small-print">
-      <span>†, ‡, 1</span> 
+      <span>†, ‡, 1, 4</span> 
           <a class="simple-link" href="#" data-toggle="modal" data-target="#product-disclaimer-modal" data-ci="94069">[@L[cds.sales/gd/ecommerce/online-store:DisclaimerContentLinkText]@L]</a></small>
     </p>
   </section>
@@ -1005,6 +1007,7 @@ a, a:hover {
           <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems2Text]@L]</p>
           <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems3Text]@L]</p> -->
           <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems4Text]@L]</p>
+          <p>[@L[cds.sales/gd/hosting/website-builder:renewal-disclaimer]@L]
           <p>[@L[cds.sales/gd/ecommerce/online-store:DisclaimerModal0DisclaimerItems5Text]@L]</p>
         </div>
       </div>
