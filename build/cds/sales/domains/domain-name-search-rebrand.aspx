@@ -1575,7 +1575,7 @@ top: -6px;
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotWorld]@L]</span><a href="[@T[link:<relative path='/tlds/world'><param name='ci' value='95891' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSale]@L]</span><a href="[@T[link:<relative path='/tlds/sale'><param name='ci' value='99095' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotTech]@L]</span><a href="[@T[link:<relative path='/tlds/tech'><param name='ci' value='99236' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotSite]@L]</span><a href="[@T[link:<relative path='/tlds/site'><param name='ci' value='97719' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:RegisterRebrand]@L]</a>
                 </li>
@@ -1587,7 +1587,7 @@ top: -6px;
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotStore]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='97716' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
-                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotNews]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='97715' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
+                <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotGroup]@L]</span><a href="[@T[link:<relative path='/tlds/gltd.aspx'><param name='ci' value='99237' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
                 <li><span>[@L[cds.sales/gd/domains/domain-name-search:TldDotLive]@L]</span><a href="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='97714' /></relative>]@T]" class="btn btn-primary">[@L[cds.sales/gd/domains/domain-name-search:LearnMore]@L]</a>
                 </li>
