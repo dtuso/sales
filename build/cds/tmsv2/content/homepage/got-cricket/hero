@@ -73,6 +73,7 @@
 }
 #marquee .hero.polygon.cricket.got img.products {
   width: 270px;
+  margin-left: 1%;
 }
 #marquee .hero.polygon.cricket.got .website {
   margin-left: 34px;

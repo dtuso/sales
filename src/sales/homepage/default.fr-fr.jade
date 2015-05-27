@@ -5,10 +5,15 @@ append styles
 
 block marquee
   |  
-  |  [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
-
+  | ##if(splitTestingSideIsActive(1461, B))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/tld-com-flash/default_template" /> ]@P]
+  | ##elseif(splitTestingSideIsActive(1461, C))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/tld-com-flash-jazzy/default_template" /> ]@P]
+  | ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  | ##endif
 block bugBar
-  +tldBugs(["com","co","fr","design","paris"])
+  +tldBugs(["net","club","fr","co","paris"])
 
 block primaryTile
   //- include ../../sales/homepage/tiles/hosting-old-brand.jade
