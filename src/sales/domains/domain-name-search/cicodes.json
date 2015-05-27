@@ -191,6 +191,30 @@
           { "ITC Code" : "SliderGuideLink" },
           { "Description" : "Slide .GUIDE Link" }
         ]
+      },
+      { "Slide .GLOBAL Link" : [
+          { "ITC ID" : "99238" },
+          { "ITC Code" : "SliderGlobalLink" },
+          { "Description" : "Slide .GLOBAL Link" }
+        ]
+      },
+      { "Slide .TECH Link" : [
+          { "ITC ID" : "99240" },
+          { "ITC Code" : "SliderTechLink" },
+          { "Description" : "Slide .TECH Link" }
+        ]
+      },
+      { "Slide .SALE Link" : [
+          { "ITC ID" : "99241" },
+          { "ITC Code" : "SliderSaleLink" },
+          { "Description" : "Slide .SALE Link" }
+        ]
+      },
+      { "Slide .VIDEO Link" : [
+          { "ITC ID" : "99242" },
+          { "ITC Code" : "SliderVideoLink" },
+          { "Description" : "Slide .VIDEO Link" }
+        ]
       }
     ],
   "Top Tld Pods" : [
@@ -469,6 +493,12 @@
           { "ITC Code" : "TopPodDESIGNLink" },
           { "Description" : "Top Pod - .DESIGN link" }
         ]
+      },
+      { "Top TLD Pods - .COM.MX link" : [
+          { "ITC ID" : "99246" },
+          { "ITC Code" : "TopPodCOMMXLink" },
+          { "Description" : "Top Pod - .COM.MX link" }
+        ]
       }
     ],
   "Buttom Tld Pods" :  [
@@ -735,6 +765,18 @@
           { "ITC Code" : "ButtomPodVideo" },
           { "Description" : "Buttom TLD Pods - .VIDEO" }
         ]
+      },
+      { "Buttom TLD Pods - .SALE" : [
+          { "ITC ID" : "99235" },
+          { "ITC Code" : "ButtomPodSale" },
+          { "Description" : "Buttom TLD Pods - .SALE" }
+        ]
+      },
+      { "Buttom TLD Pods - .NEWS" : [
+          { "ITC ID" : "99234" },
+          { "ITC Code" : "ButtomPodNews" },
+          { "Description" : "Buttom TLD Pods - .NEWS" }
+        ]
       }
     ],
   "New Available Tlds" : [
@@ -989,6 +1031,12 @@
           { "ITC Code" : "NewAvailSale" },
           { "Description" : "New Available TLD's Column - .SALE" }
         ]
+      },
+      { "New Domains Available TLD's Column - .TECH" : [
+          { "ITC ID" : "99236" },
+          { "ITC Code" : "NewAvailTech" },
+          { "Description" : "New Available TLD's Column - .TECH" }
+        ]
       }
     ],
   "Coming Soon Tlds" : [
@@ -1098,6 +1146,12 @@
           { "ITC ID" : "97714" },
           { "ITC Code" : "ComingSoonLIVE" },
           { "Description" : "Coming Soon TLD's Column - .LIVE" }
+        ]
+      },
+      { "Coming Soon TLD's Column - .GROUP" : [
+          { "ITC ID" : "99237" },
+          { "ITC Code" : "ComingSoonGROUP" },
+          { "Description" : "Coming Soon TLD's Column - .GROUP" }
         ]
       }
     ],

@@ -1,8 +1,8 @@
 ---
 location: localization/sales/gd/domains/domain-name-search/en
-id: 554a89aaf778fc1eccc62a47
-name: MCXMO-948
-comments: merch updates for 5/13/2015
+id: 5564de72f778fc108419c454
+name: MCXMO-1089
+comments: merch updates for 5/27/2015
 ---
 
 {% include 'modules/doc-block.html' %}
@@ -304,6 +304,8 @@ Show diners what's cookin' with <strong>.menu</strong>
 Share, collaborate and learn with <strong>.wiki</strong>
 <phrase key="PodDotMxText" />
 Market to Mexico with <strong>.mx</strong>
+<phrase key="PodDotComMxText" />
+Market to Mexico with <strong>.com.mx</strong>
 <phrase key="PodDotRuText" />
 <strong>.ru</strong> tells Russians you’re talking to them.
 <phrase key="PodDotAtText" />
@@ -482,6 +484,8 @@ Share your love of technology.
 Show your Welsh pride by registering your own <strong>.wales</strong> domain.
 <phrase key="PodDotVideoText" />
 Be seen online with <strong>.video</strong>.
+<phrase key="PodDotNewsText" />
+<strong>.news</strong> you can trust
 <phrase key="TldDotGuide" />
 <strong>.guide</strong>
 <phrase key="TldDotLegal" />
@@ -666,6 +670,8 @@ Be seen online with <strong>.video</strong>.
 <strong>.life</strong>
 <phrase key="TldDotSale" />
 <strong>.sale</strong>
+<phrase key="TldDotGroup" />
+<strong>.group</strong>
 <phrase key="CarouselSlide1Default" />
 Get a web address that tells the world what you do. New domains available now: <strong>.club</strong>, <strong>.work</strong>, <strong>.world</strong>, <strong>.space</strong>, <strong>.guru</strong>, and <strong>.rocks</strong>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1AU" />
@@ -673,7 +679,7 @@ New domains are here! <strong>.TIPS</strong>, <strong>.GURU</strong>, <strong>.T
 <phrase key="CarouselSlide1DE" />
 Get a web address that tells the world what you do or where you are. New domains available now: <a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="88763" /></relative>]@T]"><span class="greenText">.club</span></a>, <a href="[@T[link:<relative path="/tlds/world"><param name="ci" value="96167" /></relative>]@T]"><span class="greenText">.world</span></a>, <a href="[@T[link:<relative path="/tlds/work"><param name="ci" value="96901" /></relative>]@T]"><span class="greenText">.work</span></a>, <a href="[@T[link:<relative path="/tlds/site"><param name="ci" value="97825" /></relative>]@T]"><span class="greenText">.site</span></a>, and <a href="[@T[link:<relative path="/tlds/berlin"><param name="ci" value="97822" /></relative>]@T]"><span class="greenText">.berlin</span></a>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1ES" />
-Get a web address that tells the world what you do. New domains available now: <a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="88763" /></relative>]@T]"><span class="greenText">.club</span></a>, <a href="[@T[link:<relative path="/tlds/work"><param name="ci" value="96901" /></relative>]@T]"><span class="greenText">.work</span></a>, <a href="[@T[link:<relative path="/tlds/rocks"><param name="ci" value="96903" /></relative>]@T]"><span class="greenText">.rocks</span></a>, <a href="[@T[link:<relative path="/tlds/world"><param name="ci" value="96167" /></relative>]@T]"><span class="greenText">.world</span></a>, <a href="[@T[link:<relative path="/tlds/site"><param name="ci" value="97825" /></relative>]@T]"><span class="greenText">.site</span></a>, and <a href="[@T[link:<relative path="/tlds/green"><param name="ci" value="96905" /></relative>]@T]"><span class="greenText">.green</span></a>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
+Get a web address that tells the world what you do. New domains available now: <a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="88763" /></relative>]@T]"><span class="greenText">.club</span></a>, <a href="[@T[link:<relative path="/tlds/work"><param name="ci" value="96901" /></relative>]@T]"><span class="greenText">.work</span></a>, <a href="[@T[link:<relative path="/tlds/rocks"><param name="ci" value="96903" /></relative>]@T]"><span class="greenText">.rocks</span></a>, <a href="[@T[link:<relative path="/tlds/world"><param name="ci" value="96167" /></relative>]@T]"><span class="greenText">.world</span></a>, <a href="[@T[link:<relative path="/tlds/site"><param name="ci" value="97825" /></relative>]@T]"><span class="greenText">.site</span></a>, and <a href="[@T[link:<relative path="/tlds/global"><param name="ci" value="99238" /></relative>]@T]"><span class="greenText">.global</span></a>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1UK" />
 Get a web address that tells the world what you do or where you are. New domains available now: <a href="[@T[link:<relative path="/tlds/london"><param name="ci" value="97824" /></relative>]@T]"><span class="greenText">.london</span></a>, <a href="[@T[link:<relative path="/tlds/wales"><param name="ci" value="97826" /></relative>]@T]"><span class="greenText">.wales</span></a>, <a href="[@T[link:<relative path="/tlds/cymru"><param name="ci" value="97823" /></relative>]@T]"><span class="greenText">.cymru</span></a>, <a href="[@T[link:<relative path="/tlds/club"><param name="ci" value="88763" /></relative>]@T]"><span class="greenText">.club</span></a>, <a href="[@T[link:<relative path="/tlds/work"><param name="ci" value="96901" /></relative>]@T]"><span class="greenText">.work</span></a>, and <a href="[@T[link:<relative path="/tlds/world"><param name="ci" value="96167" /></relative>]@T]"><span class="greenText">.world</span></a>. <span class="br"></span><a href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="88394" /></relative>]@T]">Find yours now!</a>
 <phrase key="CarouselSlide1MY" />
@@ -776,7 +782,7 @@ Publishes an online business card so customers and partners can find you.
 <phrase key="CertifiedRegistrationTitleRebrand" />
 HELP VISITORS GET COMFORTABLE WITH A CERTIFIED DOMAIN SEAL.
 <phrase key="CarouselSlide1DefaultRebrand" />
-Finally! A web address that tells people exactly what you do. <br> <a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="96901" href="[@T[link:<relative path="/tlds/work"></relative>]@T]"><span class="greenText">.work</span></a>, <a data-ci="96167" href="[@T[link:<relative path="/tlds/world"></relative>]@T]"><span class="greenText">.world</span></a>, <a data-ci="96903" href="[@T[link:<relative path="/tlds/rocks"></relative>]@T]"><span class="greenText">.rocks</span></a>, <a data-ci="97825" href="[@T[link:<relative path="/tlds/site"></relative>]@T]"><span class="greenText">.site</span></a>, and <a data-ci="96905" href="[@T[link:<relative path="/tlds/green"></relative>]@T]"><span class="greenText">.green</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
+Finally! A web address that tells people exactly what you do. <br> <a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="96901" href="[@T[link:<relative path="/tlds/work"></relative>]@T]"><span class="greenText">.work</span></a>, <a data-ci="96167" href="[@T[link:<relative path="/tlds/world"></relative>]@T]"><span class="greenText">.world</span></a>, <a data-ci="99240" href="[@T[link:<relative path="/tlds/tech"></relative>]@T]"><span class="greenText">.tech</span></a>, <a data-ci="97825" href="[@T[link:<relative path="/tlds/site"></relative>]@T]"><span class="greenText">.site</span></a>, and <a data-ci="99241" href="[@T[link:<relative path="/tlds/sale"></relative>]@T]"><span class="greenText">.sale</span></a> are now available. <br><a style="color: black;" href="[@T[link:<relative path="/tlds/gtld.aspx"><param name="ci" value="95445" /></relative>]@T]"> Search domains now.</a>
 <phrase key="CarouselSlide1DefaultRebrand2" />
 Finally! A web address that tells people exactly what you do.
 <phrase key="CarouselSlideDefaultAnd" />
@@ -786,7 +792,7 @@ are now available.
 <phrase key="CarouselSlideDefaultSearch" />
 Search domains now.
 <phrase key="CarouselSlide2DefaultRebrand" />
-SAVE 30% or more on new domains: <br /><a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, <a data-ci="96904" href="[@T[link:<relative path="/tlds/company"></relative>]@T]"><span class="greenText">.company</span></a>, <a data-ci="97825" href="[@T[link:<relative path="/tlds/site"></relative>]@T]"><span class="greenText">.site</span></a>, <a data-ci="96905" href="[@T[link:<relative path="/tlds/green"></relative>]@T]"><span class="greenText">.green</span></a>, and more.
+SAVE 30% or more on new domains: <br /><a data-ci="88763" href="[@T[link:<relative path="/tlds/club"></relative>]@T]"><span class="greenText">.club</span></a>, <a data-ci="90584" href="[@T[link:<relative path="/tlds/guru"></relative>]@T]"><span class="greenText">.guru</span></a>, <a data-ci="99242" href="[@T[link:<relative path="/tlds/video"></relative>]@T]"><span class="greenText">.video</span></a>, <a data-ci="99241" href="[@T[link:<relative path="/tlds/sale"></relative>]@T]"><span class="greenText">.sale</span></a>, and more.
 <phrase key="CarouselSlide2DefaultRebrand2" />
 30% OFF 
 <phrase key="CarouselSlide2DefaultNow" />
@@ -843,6 +849,8 @@ Your domain name is arguably the most important part of your online presence and
 WHAT PAYMENT OPTIONS DO YOU OFFER?
 <phrase key="MainBannerAnswer3" /> 
 After seeing how easy it is to use our domain names search, you'll want a payment process that's just as simple. We accept all major credit cards, including VISA, MasterCard, Discover and American Express, as well as debit cards, PayPal&#174; and payment by check. Or you can use GoodAsGold, a payment system that allows you to fund your GoDaddy account via wire transfer or by mailing a check or money order. And if you're more of a phone person, feel free to call our customer care consultants at [@T[supportphone:<mcafee />]@T].
+<phrase key="MainBannerAnswer3_38136" /> 
+After seeing how easy it is to use our domain names search, you'll want a payment process that's just as simple. We accept all major credit cards, including VISA, MasterCard, Discover and American Express, as well as debit cards, PayPal&#174; and payment by check. Or if you're more of a phone person, feel free to call our customer care consultants at [@T[supportphone:<mcafee />]@T].
 <phrase key="MainBannerQuestion4" />
 WHAT IF I NEED HELP?
 <phrase key="MainBannerAnswer4" />
