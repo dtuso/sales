@@ -7,7 +7,7 @@ comments: updating Global CSS
 {% extends 'sales/offers/default/layouts/base.html' %} 
 {% block pageTitle %}<title>[@L[cds.sales/offers/default:page-title]@L]</title>{% endblock %}
 {% block metahead %} 
-{% parent %} 
+{% parent %}
   <style>
     /* Page Global CSS -- changes will effect all campaigns */
     html body#offers{background:#fff;line-height:1;font-size:14px;font-family:HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue","Segoe UI",Segoe,Helvetica,Arial,"Lucida Grande",sans-serif;font-weight:300}
@@ -58,6 +58,8 @@ comments: updating Global CSS
       $(".modal-body").append($("#tms-modal-body"));
       
       $('[data-ci]').click(function (e) {
+          // create blank object if it does not exist
+          offersCodes = offersCodes || {};
           var $this = $(this);
           var ci = $this.attr('data-ci');
           // example, checks to see if data-ci="domain-search-click"
@@ -155,6 +157,5 @@ comments: updating Global CSS
       }
       return [foundStart,foundEnd];      
     }
-    $(document).ready(function(){var url=window.location.hostname.substring(window.location.hostname.indexOf('.')+1);$.cookie("fb_tmsclick",null,{domain:url,path:"/"});$("div[data-tms-trackingid]").on("click",function(e){try{$.cookie("fb_tmsclick",$(this).data("tms-trackingid"),{domain:url,path:"/"})}catch(t){}return true})})
   </script>
 {% endblock %}
