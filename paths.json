@@ -55,6 +55,7 @@
   "serp":                    "./domains/searchresults/",
   "servers":                 "./hosting/servers/",
   "ssl":                     "./ssl/ssl-certificates/",
+  "ssl-pro":                 "./pro/ssl-encryption-config/",
   "static-ip":               "./ssl/static-ip/",
   "tlds":                    "./tlds/",
   "tui":                     "./domains/tui/",

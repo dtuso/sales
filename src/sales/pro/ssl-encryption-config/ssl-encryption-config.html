@@ -1,6 +1,6 @@
 ---
-location: sales/ssl/ssl-certificates-config.aspx
-url: http://www.dev-godaddy.com/ssl/ssl-certificates-config.aspx
+location: sales/pro/ssl-encryption-config
+url: http://www.dev-godaddy.com/pro/ssl-encryption-config
 name: MCX-40006
 comments: SSL Config page updates for MOPS integration 
 assetPath: false
@@ -27,7 +27,10 @@ assetPath: false
   </style>
   </head>
 <body>
-  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Header" />]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="proheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="proheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="proheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+  [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="proheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
 <div id="hostingConfig">
   <h2>[@L[cds.sales/ssl/fosconfigssl:customize-ssl]@L]</h2>
   <div id="hostingConfigOverlay"></div>
@@ -150,7 +153,7 @@ assetPath: false
 </div>
 </div>
 <div class="buttons">
-  <a id="planConfigContinue" class="flt-btn-orng" href="">[@L[cds.sales/ssl/fosconfigssl:continue]@L]</a>
+  <a id="planConfigContinue" class="btn btn-purchase" href="">[@L[cds.sales/ssl/fosconfigssl:continue]@L]</a>
   <div id="planConfigLoading" class="loading" style="display: none"></div>
   <input type="hidden" name="planSelected" id="planSelected" value=""/>
   <input type="hidden" name="mgrNumber" id="mgrNumber" value=""/>
