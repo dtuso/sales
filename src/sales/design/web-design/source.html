@@ -1,8 +1,7 @@
 ---
 location: sales/design/web-design.aspx
-id: 55382155f778fc1458efd5d9
-name: MCX-38784
-comments:  Fast Follow text changes
+name: MCX-39756
+comments:  One time price crossout on sale
 cssVersionOverride : 3
 ---
 {% extends 'layouts/base.html' %}
@@ -46,6 +45,10 @@ cssVersionOverride : 3
   .ico-download
   {
     width:14px;
+  }
+  .sale-box-capital
+  {
+    text-transform: uppercase;
   }
 </style>
 
@@ -219,10 +222,18 @@ $(function () {
                           <input type="hidden" name="qty" value="1" />
                           <div class="grid-column no-padding-bottom relative">
                              <h2>[@L[cds.sales/gd/design/web-design:PlanBoxStandardAbovePlanDetailsCustomContent]@L]</h2>
-                             <p class="starting-at">
-                               <span class="starting-at-above">[@L[cds.sales/gd/design/web-design:PlanBoxOne-TimeFee_34158]@L]</span>
-                               <span>[@T[productprice:<current productid="618050" dropdecimal="false" period="yearly" htmlsymbol="false" negative="parentheses"  />]@T]</current></span>
-                             </p>
+                            <p class="starting-at">
+                             <span class="starting-at-above">[@L[cds.sales/gd/design/web-design:PlanBoxOne-TimeFee_34158]@L]</span>
+                             <span>[@T[productprice:<current productid="618050" period="yearly" dropdecimal="false" htmlsymbol="false" negative="parentheses"  />]@T]</current></span>
+                            </p>
+                            ##if(productHasSavingsMoreThan(618050, 618050, 0))
+                            <p class="margin-bottom-12" style=""> 
+                                <span class="tertiary-color">[@T[productprice:<template productid="618050" period="yearly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                                <span class="secondary-color sale-box-capital">
+                                <strong>[@T[productcompare:<percent primaryproductid="618050" secondaryproductid="618050" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</strong>
+                                </span>
+                            </p>
+                            ##endif
                              <p class="starting-at">
                                <span class="starting-at-bottom">[@L[cds.sales/gd/design/web-design:PlanBoxPlus_34158]@L]</span>
                              </p>
@@ -289,8 +300,16 @@ $(function () {
                             <h2>[@L[cds.sales/gd/design/web-design:PlanBoxPremiumAbovePlanDetailsCustomContent]@L]</h2>
                            <p class="starting-at">
                              <span class="starting-at-above">[@L[cds.sales/gd/design/web-design:PlanBoxOne-TimeFee_34158]@L]</span>
-                             <span class="starting-at-price">[@T[productprice:<current productid="618051" period="yearly" dropdecimal="false" htmlsymbol="false" negative="parentheses"  />]@T]</current></span>
+                             <span>[@T[productprice:<current productid="618051" period="yearly" dropdecimal="false" htmlsymbol="false" negative="parentheses"  />]@T]</current></span>
                            </p>
+                            ##if(productHasSavingsMoreThan(618051, 618051, 0))
+                            <p class="margin-bottom-12" style=""> 
+                                <span class="tertiary-color">[@T[productprice:<template productid="618051" period="yearly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span>
+                                <span class="secondary-color sale-box-capital">
+                                <strong>[@T[productcompare:<percent primaryproductid="618051" secondaryproductid="618051" showsymbol="true" hidebelow="1"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</strong>
+                                </span>
+                            </p>
+                            ##endif
                              <p class="starting-at">
                                <span class="starting-at-bottom">[@L[cds.sales/gd/design/web-design:PlanBoxPlus_34158]@L]</span>
                              </p>
