@@ -3,14 +3,7 @@ extends ./_home-page.jade
 block hero
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]
 block marquee-tile-1
-  |  
-  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   include ../../tmsv2/content/homepage/tld-co-uk/banner-medium.jade
-  |  
-  |  ##else
-  include ../../tmsv2/content/homepage/p4p/banner-medium.jade
-  |  
-  |  ##endif
 
 block marquee-tile-2
   |[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
