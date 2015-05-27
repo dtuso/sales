@@ -1729,7 +1729,7 @@
             }
             .pro-banner a {
               white-space: normal;
-              max-width: 100%;
+              max-width: 205px;
             }
             .pro-banner .top-text {
               font-size: 20px;
@@ -2964,7 +2964,7 @@ top: -6px;
                   <div data-icode="" data-ci="" class="carousel-panel container"> 
                     <div class="container-fluid ols-carousel-item">
                       <div class="row">
-                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn_mwp_wordpress-hosting_02_v02.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center security-carousel-img"/>
+                        <div class="col-xs-12"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-lazyload-source="[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/illus_mwp_scan-with-sitelock_02_v01.png" data-lazyload-watch=".carousel-container" data-lazyload-callback="triggerResize" data-lazyload-callbackAfter="undefined" alt="" class="lazyload img-responsive img-center security-carousel-img"/>
                         </div>
                       </div>
                       <div class="row">
