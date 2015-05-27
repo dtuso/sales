@@ -1,6 +1,6 @@
 ---
 location: sales/ecommerce/online-store.aspx
-name: MCX-39129
+name: Annual Plan for OLS Paid Plan flows
 comments: OLS LP for India - 5/14
 url: http://www.dev-godaddy.com/ecommerce/online-store.aspx
 assetPath: false
@@ -446,13 +446,13 @@ a, a:hover {
           <input type="hidden" name="itc" value="slp_onlinestore" />
           <input type="hidden" name="ci" value="90989" />
           <input type="hidden" name="qty" value="1" />
-          <input type="hidden" name="package" value="ols_premium1month"/>
+          <input type="hidden" name="package" value="ols_premium12month"/>
 
           <p class="pricing">
               <span class="so-easy">
                 [@L[cds.sales/gd/ecommerce/online-store:EasyToSetUpText]@L] 
                 <span class="aslowasText">
-                  [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+                  [@L[cds.sales/_common:only]@L] <span class="normal-price">[@T[productprice:<current productid="40972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
                 </span>
                 <span class="no-margin-bottom">
                   <button id="CTAGetStartedLink" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93899">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button>
@@ -788,7 +788,12 @@ a, a:hover {
     <div id="non-mgrViewPricingSection" class="col-xs-4">
          ##if(!countrySiteAny(uk,ca,au,nz,sg,ph) && !activeLanguageAny([en-us]))
               <p class="pricing pricing-top-spacer"> 
-              [@L[cds.sales/gd/ecommerce/online-store:AsLowAsText]@L]
+              [@L[cds.sales/_common:only]@L] <span class="normal-price">[@T[productprice:<current productid="40972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/mo</span>
+              ##if(productHasSavingsMoreThan(40972, 40972, 0))
+                <br><strong>[@L[cds.sales/_common:onsale-all-cap]@L] - <span class="text-primary"><mark>[@L[cds.sales/_common:save-cap]@L] [@T[productcompare:<percent primaryproductid="40972" secondaryproductid="40972" showsymbol="true" hidebelow="5"><html><![CDATA[{0}]]></html></percent>]@T]</mark></span></strong>
+                </p>
+                <p> [@T[productprice:<list productid="40972" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]/[@L[cds.sales/_common:month]@L] [@L[cds.sales/gd/hosting/website-builder:renewal-text]@L]
+                ##endif
               </p>
          ##endif
          ##if(countrySiteAny(uk,ca,au,nz,sg,ph)|| activeLanguageAny([en-us]))
@@ -813,7 +818,7 @@ a, a:hover {
                                 <input type="hidden" name="itc" value="slp_onlinestore" />
                                 <input type="hidden" name="ci" value="93908" />
                                 <input type="hidden" name="qty" value="1" />
-                                <input type="hidden" name="package" value="ols_premium1month"/>
+                                <input type="hidden" name="package" value="ols_premium12month"/>
                           <p class="no-margin-bottom"><button id="WhatsIncludedGetStarted" type="submit" class="btn btn-warning call-to-action cta-small" data-ci="93908">[@L[cds.sales/gd/ecommerce/online-store:GetStarted]@L]</button></p>
 
                   </form>
