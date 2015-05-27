@@ -1110,7 +1110,7 @@
             }
             .pro-banner a {
               white-space: normal;
-              max-width: 100%;
+              max-width: 205px;
             }
             .pro-banner .top-text {
               font-size: 20px;
