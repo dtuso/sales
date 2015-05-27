@@ -190,9 +190,8 @@ section.domain-section
         div.submit-btn-form
           input#domain-search-click.flt-btn-grn.walsheim-bold.uppercase(type='submit', data-ci='99126', value='[@L[cds.tmsv2/content/advlp/1dom:search-btn]@L]')
 
-// | ## if([@D[tms.message.data.show_compare_chart]@D] == 'true')
 |  
-| ##if('[@D[tms.message.data.show_chart]@D]' == 'true')
+| ##if('[@D[tms.message.data.show_chart]@D]' == 'true' && activeLanguageAny([en-us]))
 |  
 // =========================
 //     Compare Chart - EN Only    

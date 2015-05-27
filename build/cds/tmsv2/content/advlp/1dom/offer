@@ -197,9 +197,8 @@
       </form>
     </div>
   </div>
-</section>
-<!-- | ## if([@D[tms.message.data.show_compare_chart]@D] == 'true')--> 
-##if('[@D[tms.message.data.show_chart]@D]' == 'true')
+</section> 
+##if('[@D[tms.message.data.show_chart]@D]' == 'true' && activeLanguageAny([en-us]))
  
 <!-- =========================-->
 <!--     Compare Chart - EN Only    -->
