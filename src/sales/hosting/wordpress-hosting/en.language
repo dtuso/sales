@@ -1,7 +1,6 @@
 ---
-id: false
-name: MCX-39123
-comments: GoDaddy LP text only changes
+name: MCX-39394
+comments: Sales MWP GD LP Updates Phase 2
 location: localization/sales/gd/hosting/wordpress-hosting/en
 ---
 {% include 'modules/doc-block.html' %}
@@ -715,3 +714,47 @@ From
 BEST VALUE!
 <phrase key="professional-Hosting-Support" />
 Need help? Call our dedicated Hosting Professionals at
+<phrase key="39394_basic_desc" />
+A great way to get started.
+<phrase key="39394_deluxe_desc" />
+Get more visitors with an integrated SEO wizard.
+<phrase key="39394_ultimate_desc" />
+More websites. More storage. More security.
+<phrase key="39394_developer_desc" />
+Up to 5 sites and packed with pro features.
+<phrase key="39394_all_plans_include_1" />
+Access to 1000s of free themes and plugins
+<phrase key="39394_all_plans_include_2" />
+Free domain with annual plan
+<phrase key="39394_all_plans_include_3" />
+Free [@T[TechnicalSupportIs24x7:<tokendata true="24/7" false=""></tokendata>]@T] Support 
+<phrase key="39394_all_plans_include_4" />
+Free (1) Microsoft Office 365 Email – 1st year free (optional)
+<phrase key="39394_all_plans_include_5" />
+Free daily backups & 1-click restore
+<phrase key="39394_all_plans_include_6" />
+One-click migration tool
+<phrase key="39394_all_plans_include_7" />
+Automatic WordPress Core software and security updates
+<phrase key="39394_all_plans_include_8" />
+Temporary domain name
+<phrase key="39394_all_plans_include_8_tooltip" />
+All annual plans include a free domain, but if you’re not ready to choose your name, you can use a temporary domain to set up your account and add your official domain later.
+<phrase key="39394_all_plans_include_9" />
+Premium WordPress Hosting Platform
+<phrase key="39394_all_plans_include_9_tooltip" />
+Built specifically for WordPress to optimize the speed, reliability and security of your site
+<phrase key="39394_all_plans_include_10" />
+150+ interactive WordPress walkthroughs and training videos
+<phrase key="39394_all_plans_include_11" />
+<a id="uptime-promise-link">[@T[localization:<display type="percent" number="99.9" />]@T] uptime</a> and money-back guarantee
+<phrase key="39394_why_wordpress" />
+Why WordPress?
+<phrase key="39394_why_wordpress_intro" />
+WordPress is the world’s most popular website building tool. It gives you access to thousands of free themes and plugins that help simplify the design process and allow you to add powerful features with just a few clicks. Plus, with GoDaddy Managed WordPress, you get:
+<phrase key="39394_why_wordpress_item_1" />
+Automatic setup, backups and WordPress software updates
+<phrase key="39394_why_wordpress_item_2" />
+Industry-leading performance on our premium hosting platform
+<phrase key="39394_why_wordpress_item_3" />
+Award-winning support from hosting experts, 24/7/365
