@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365/en
 id: 54ebc215f778fc0acccea4a9
-name: GCE-35999
-comments: Renewal message disclaimer
+name: GCE-38369
+comments: Monthly term split test
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="lp-8-MicrosoftOffice365BoostProductivityVirtuallyAnywhereGoDaddy" />
@@ -49,6 +49,8 @@ Look professional with every email
 Starting at
 <phrase key="lp-3-PerUserMonth" />
 per user/month
+<phrase key="lp-3-PerUserYear" />
+per user/year
 <phrase key="lp-2-1Month" />
 1 month
 <phrase key="lp-1-Mo" />
@@ -162,7 +164,7 @@ All Plans Include
 <phrase key="lp-4-Expert247Support" />
 Expert 24/7 support
 <phrase key="lp-32-999GuaranteedUptimeAndReliability999Guaranteed" />
-<span class="tooltip-underline">99.9% guaranteed uptime and reliability<span class="tooltip-caption-right" ><span class="tooltip-caption-header">99.9% guaranteed uptime and reliability</span>Some limitations apply to the 99.9% uptime guarantee. For details see the Microsoft Online Service Level Agreement at <a data-ci="86701" href="http://x.co/365TOS" target="_blank">x.co/365TOS</a></span>   
+<span class="tooltip-underline">[@T[localization:<display type="percent" number="99.9" />]@T] guaranteed uptime and reliability<span class="tooltip-caption-right" ><span class="tooltip-caption-header">[@T[localization:<display type="percent" number="99.9" />]@T] guaranteed uptime and reliability</span>Some limitations apply to the [@T[localization:<display type="percent" number="99.9" />]@T] uptime guarantee. For details see the Microsoft Online Service Level Agreement at <a data-ci="86701" href="http://x.co/365TOS" target="_blank">x.co/365TOS</a></span>   
 </span>
 <phrase key="lp-15-OutlookWebApplicationOutlookWebAppAccessYourEmail" />
 <span class="tooltip-underline">Outlook web application <span class="tooltip-caption-right" ><span class="tooltip-caption-header">Outlook web app</span>Access your email, calendar and contacts on any device.</span>
@@ -584,9 +586,9 @@ delivered to the same inbox
 <phrase key="split-test-b-4-Expert247Support" />
 Expert 24/7 support
 <phrase key="split-test-b-6-999GuaranteedUptimeAndReliability" />
-99.9% guaranteed uptime and reliability
+[@T[localization:<display type="percent" number="99.9" />]@T] guaranteed uptime and reliability
 <phrase key="split-test-b-19-SomeLimitationsApplyToThe999Uptime" />
-Some limitations apply to the 99.9% uptime guarantee. For details see the Microsoft Online Service Level Agreement at 
+Some limitations apply to the [@T[localization:<display type="percent" number="99.9" />]@T] uptime guarantee. For details see the Microsoft Online Service Level Agreement at 
 <phrase key="split-test-b-3-OutlookWebApp" />
 Outlook web app
 <phrase key="split-test-b-10-AccessYourEmailCalendarAndContactsOnAny" />
@@ -908,6 +910,8 @@ Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPo
 Get the latest versions of the programs you rely on &ndash; Excel, Word, PowerPoint, Outlook, OneNote, Access and Publisher &ndash; with a subscription to Microsoft Office 2013 or Office for Mac 2011 for up to 5 devices per single user. 
 <phrase key="29621-FeatureContent-2-title" comment="{0} replaced with a percentage" />
 Save {0} when you go with GoDaddy.
+<phrase key="29621-FeatureContent-2-description" />
+We’ve partnered with Microsoft to bring you this exclusive deal on Office 365. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
 <phrase key="32537-FeatureContent-2-description" />
 Only [@T[companyname:name]@T] can bring you an offer this good. Save {0} for the first year on the latest version of Microsoft Office — plus, get free automatic upgrades as they’re released with your subscription. <em>Business and Business Premium plans only.</em>
 <phrase key="32259-FeatureContent-2-description" />
@@ -955,7 +959,7 @@ Meet face to face, wherever you are, with video conferencing, screen sharing and
 <phrase key="32259-FeatureContent-8-bullet-meet" />
 Meet face to face, wherever you are, with video conferencing, screen sharing and more via Microsoft Lync.<em> Business Premium plan only.</em>
 <phrase key="29621-FeatureContent-8-bullet-be" />
-Be confident that your email, contacts and calendar are always available with guaranteed 99.9% uptime.
+Be confident that your email, contacts and calendar are always available with guaranteed [@T[localization:<display type="percent" number="99.9" />]@T] uptime.
 <phrase key="29621-Compare-title" />
 Compare Office plans.
 <phrase key="29621-Compare-subtitle" />
@@ -989,7 +993,7 @@ GoDaddy’s award-winning 24/7 support
 <phrase key="29621-PlansInclude-money" />
 Money-back guarantee
 <phrase key="29621-PlansInclude-uptime" />
-<span class="tooltip-underline">Guaranteed 99.9% uptime<span class="tooltip-caption-right" ><span class="tooltip-caption-header">99.9% guaranteed uptime and reliability</span>Some limitations apply to the 99.9% uptime guarantee. For details see the Microsoft Online Service Level Agreement at <a data-ci="94235" href="http://x.co/365TOS" target="_blank">x.co/365TOS</a></span>
+<span class="tooltip-underline">Guaranteed [@T[localization:<display type="percent" number="99.9" />]@T] uptime<span class="tooltip-caption-right" ><span class="tooltip-caption-header">[@T[localization:<display type="percent" number="99.9" />]@T] guaranteed uptime and reliability</span>Some limitations apply to the [@T[localization:<display type="percent" number="99.9" />]@T] uptime guarantee. For details see the Microsoft Online Service Level Agreement at <a data-ci="94235" href="http://x.co/365TOS" target="_blank">x.co/365TOS</a></span>
 <phrase key="29621-StartingAt" />
 Starting at
 <phrase key="29621-PlansStartingAt" />
@@ -1089,6 +1093,10 @@ If you would like to switch your domain-based email from Workspace to Office 365
 I am part of a larger organization - can I use Microsoft Office 365 from GoDaddy?
 <phrase key="29621-FAQ-a-11" />
 The plans on our website are ideal for businesses that require fewer than 300 accounts. You may purchase up to 300 user accounts on each plan type and up to 900 in total. If you have questions, just give us a call at [@T[supportphone:<technical/>]@T]. Our award-winning team is here to help 24/7.
+<phrase key="29621-FAQ-a-11-US" comment="{0} will be replaced with the support phone" />
+The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help 24/7.
+<phrase key="29621-FAQ-a-11-INT" comment="{0} will be replaced with the support phone"/>
+  The plans on our website are designed for businesses that require fewer than 300 accounts. You may purchase up to 300 Business Premium accounts and up to 300 accounts between Email Essentials and Online Essentials for up to 600 accounts total. If you have questions, just give us a call at {0}. Our award-winning team is here to help.
 <phrase key="29621-FAQ-q-12" />
 What is Lync Online?
 <phrase key="29621-FAQ-a-12" />
@@ -1108,9 +1116,9 @@ And with each plan, you can create free ‘alias’ addresses – like one using
 <phrase key="31272-backed_by_trust" />
 Backed by names you know and trust.
 <phrase key="31272-backed_by_trust_text" />
-With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning 24/7 support. You’ll can feel confident knowing our all-star team is powering your email.
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s [@T[localization:<display type="percent" number="99.9" />]@T] uptime guarantee and our award-winning 24/7 support. You’ll can feel confident knowing our all-star team is powering your email.
 <phrase key="31272-backed_by_trust_text_no_24" />
-With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s 99.9% uptime guarantee and our award-winning support. You’ll can feel confident knowing our all-star team is powering your email.
+With Microsoft Office 365 from [@T[companyname:name]@T], peace of mind is included. Every email hosting plan is backed by Microsoft’s [@T[localization:<display type="percent" number="99.9" />]@T] uptime guarantee and our award-winning support. You’ll can feel confident knowing our all-star team is powering your email.
 <phrase key="31272-exclusive_discount" />
 Exclusive discount for [@T[companyname:name]@T] customers.
 <phrase key="35999-DisclaimersLinkText" />
