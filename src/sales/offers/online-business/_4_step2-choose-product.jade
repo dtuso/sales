@@ -155,7 +155,12 @@ section#step2-choose-product.js-marquee-section
             button.btn.btn-md.btn-block.btn-purchase.got-microsoft-clickable-package.product-ols(data-ci="95740") [@L[cds.sales/offers/online-business:32573-choose-select-button]@L]
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-1]@L]
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-2]@L]
-            .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]
+            .include-check-green
+              |##if(countrySiteAny(in))
+              | [@L[cds.sales/offers/online-business:40011-choose-ols-bullet-3-IN]@L]
+              |##else 
+              | [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-3]@L]
+              |##endif
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-4]@L]
             .include-check-green [@L[cds.sales/offers/online-business:32573-choose-ols-bullet-5]@L]
 

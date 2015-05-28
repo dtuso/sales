@@ -64,6 +64,9 @@ atlantis:webstash(type="css")
     }
     @media (min-width: 1000px) {
     }
+    .pro-banner .btn {
+      word-wrap:normal;
+    }
 
 
 section#plans
@@ -78,57 +81,42 @@ section#plans
     +planTile("planTileD")
       include ./_2_plan-D.jade
   .container.all-plans-include
+    +proBanner({"ci":"93999","link":"[@T[link:<relative path='/pro/managed-wordpress-hosting'><param name='ci' value='93999' /></relative>]@T]"})
     .row
       h3.text-center [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-title]@L]
     .row
       .col-md-4.col-sm-12
         ul.green-check
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L]
           li
-            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-1]@L] 
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] 
             +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]")
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]
           | 
           | ##if(productIsOffered(99) && !countrySiteAny(mx))
           | 
           li
-            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-2]@L]
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_4]@L]
             +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-office-365]@L]")  
           | 
           | ##endif
           | 
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-3]@L]
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-4]@L]
           
       .col-md-4.col-sm-12
         ul.green-check
-          li 
-            a(id="uptime-promise-link") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-5]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_5]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_6]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_7]@L]
           li
-            | [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-6]@L] 
-            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]")
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-7]@L]
+            | [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_8]@L] 
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_8_tooltip]@L]")
 
 
       .col-md-4.col-sm-12
         ul.green-check
-          li [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-8]@L]
-        
-          | 
-          | ##if(areAdCreditsEnabled(google))
-          | 
-          li 
-            span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-google]@L]
-            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-google-adword]@L]")
-        
-          | 
-          | ##endif
-          | 
-
-          | 
-          | ##if(areAdCreditsEnabled(bing))
-          | 
-          li 
-            span(data-tokenize!="#{page.pricing.hundred}") [@L[cds.sales/gd/hosting/wordpress-hosting:35561-all-plans-bing]@L]
-            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-bing-adcredit]@L]")
-          | 
-          | ##endif
-          | 
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_9]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_9_tooltip]@L]")
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_10]@L]
+          li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_11]@L]
+            +toolTip("[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-guarantee]@L]")
+          

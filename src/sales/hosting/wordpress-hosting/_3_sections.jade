@@ -10,6 +10,8 @@ atlantis:webstash(type="css")
     #reviews-carousel .carousel-container .carousel .carousel-indicators li.active {
       background-color: #77c043
     }
+    
+    #features-why,
     #features-more,    
     #security,
     #faq,
@@ -84,6 +86,25 @@ atlantis:webstash(type="css")
   +priceBlock(page.pricing.current.A, "[@L[cds.sales/_common:month]@L]", "#planTileA", {"ci":page.ci.midPageNavSeeThePlans})
 
 section#mid-page-nav-tile-features.mid-page-nav-section(data-mid-nav-title="[@L[cds.sales/gd/hosting/wordpress-hosting:37951-Features]@L]", data-cicode="#{page.ci.midPageNavFeature}")
+  section#features-why
+    .container
+      .row
+        .col-sm-5
+          .text-center(data-center-element='{"vertical":{"target":{"method":"parents","selector":"#features-why"},"verticalStyle":"margin-top","elementHeightMethod":"outerHeight","targetWidthMethod":"height"}}', style='margin-top: 108.5px;')
+            +lazyImg("img-responsive img-center features-img", null, "[@T[link:<imageroot />]@T]fos/sales/themes/montezuma/hosting/wordpress-hosting/icn-content-why.png", "", "triggerResize")
+        .col-sm-6.col-sm-offset-1
+          .row
+            .col-sm-12
+              h3 [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress]@L]
+          .row
+            .col-sm-12
+              p [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_intro]@L]
+          .row
+            .col-sm-12
+              ul.left-aligned-round-list.short-spacing
+              li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_1]@L]
+              li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_2]@L]
+              li [@L[cds.sales/gd/hosting/wordpress-hosting:39394_why_wordpress_item_3]@L]
   section#features
     .container
       .row
