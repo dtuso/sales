@@ -1064,9 +1064,6 @@ function setPricing(selector) {
     renewalPrice = '[@T[productprice:<list productid="37990" period="monthly"></list>]@T]',
     savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37987" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
 
-  currentPrice = "$11.99";
-  savePercentage = "35%";
-
   var $pricing = $(selector + ' p.pricing');
   var $onsale = $(selector + ' p.onsale-save');
   var $renewal = $(selector + ' p.renewal-price');
