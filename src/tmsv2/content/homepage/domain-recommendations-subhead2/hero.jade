@@ -2,7 +2,6 @@ extends ../_hero-simple.jade
 block append vars
   - ciCode = 99098
   - classes = "domain-recommendations"
-  - flagText = "[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:flag]@L]"
 
 block append styles
   style
@@ -12,6 +11,7 @@ block append styles
       }
 block content
   h2.font-lg [@L[cds.tmsv2/content/homepage/domain-recommendations/hero:headline]@L]
+  .font-md.bold [@L[cds.tmsv2/content/homepage/domain-recommendations/hero:subhead2]@L]
   a.btn.btn-md.btn-purchase [@L[cds.tmsv2/content/homepage/domain-recommendations/hero:cta]@L]
 
 block script
