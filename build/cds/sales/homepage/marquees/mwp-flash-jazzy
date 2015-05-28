@@ -90,13 +90,13 @@
   padding-right: 3%;
 }
 .marquee#mwp-flash-jazzy .content .new-button {
-  background-color: #008a32!important;
-  border-color: #007029 !important;
+  background-color: #008a32;
+  border-color: #007029;
   color: #fff;
 }
 .marquee#mwp-flash-jazzy .content .new-button:hover {
-  background-color: #009938 !important;
-  border-color: #007f2e !important;
+  background-color: #009938;
+  border-color: #007f2e;
   color: #fff;
 }
 .marquee#mwp-flash-jazzy .Explorer8 .marquee#mwp-flash-jazzy .content {
