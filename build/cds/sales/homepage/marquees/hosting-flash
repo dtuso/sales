@@ -17,8 +17,8 @@
     .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
     .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
   </style>
-  <style>.marquee#hosting-flash-jazzy {
-  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/stopwatch-background.png) no-repeat top center;
+  <style>.marquee#hosting-flash {
+  background: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/LATAM-flash-sale-photo-background.jpg) no-repeat top center;
   width: 100%;
   min-width: 1000px;
   height: 400px;
@@ -26,11 +26,11 @@
   font-size: 16px;
   color: #333;
 }
-.marquee#hosting-flash-jazzy .container {
+.marquee#hosting-flash .container {
   height: inherit;
   position: relative;
 }
-.marquee#hosting-flash-jazzy .content {
+.marquee#hosting-flash .content {
   width: 50%;
   position: absolute;
   top: 50%;
@@ -38,70 +38,70 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.marquee#hosting-flash-jazzy .content mark {
+.marquee#hosting-flash .content mark {
   background-color: #fedc45;
 }
-.marquee#hosting-flash-jazzy .content .font-lg {
+.marquee#hosting-flash .content .font-lg {
   font-size: 2.25em;
   margin-top: .25em;
   margin-bottom: .25em;
 }
-.marquee#hosting-flash-jazzy .content .font-md {
+.marquee#hosting-flash .content .font-md {
   font-size: 1.5em;
   margin-top: .25em;
   margin-bottom: .25em;
 }
-.marquee#hosting-flash-jazzy .content .font-sm {
+.marquee#hosting-flash .content .font-sm {
   font-size: 1.25em;
   margin-top: .25em;
   margin-bottom: .25em;
 }
-.marquee#hosting-flash-jazzy .content .black {
+.marquee#hosting-flash .content .black {
   font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
   text-transform: uppercase;
 }
-.marquee#hosting-flash-jazzy .content .bold {
+.marquee#hosting-flash .content .bold {
   font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
   text-transform: uppercase;
 }
-.marquee#hosting-flash-jazzy .content .text-primary-o {
+.marquee#hosting-flash .content .text-primary-o {
   color: #77c043;
 }
-.marquee#hosting-flash-jazzy .content .btn-primary {
+.marquee#hosting-flash .content .btn-primary {
   color: #fff!important;
   background-color: #008a32!important;
   border-color: #007029 !important;
 }
-.marquee#hosting-flash-jazzy .content .btn-primary:hover {
+.marquee#hosting-flash .content .btn-primary:hover {
   color: #fff!important;
   background-color: #009938!important;
   border-color: #007f2e !important;
 }
-.marquee#hosting-flash-jazzy .content .btn-primary:focus,
-.marquee#hosting-flash-jazzy .content .btn-primary:active,
-.marquee#hosting-flash-jazzy .content .btn-primary.active,
-.marquee#hosting-flash-jazzy .content .open .dropdown-toggle.btn-primary {
+.marquee#hosting-flash .content .btn-primary:focus,
+.marquee#hosting-flash .content .btn-primary:active,
+.marquee#hosting-flash .content .btn-primary.active,
+.marquee#hosting-flash .content .open .dropdown-toggle.btn-primary {
   color: #fff!important;
   background-color: #007029!important;
   border-color: #007029 !important;
 }
-.marquee#hosting-flash-jazzy .content .text-purchase {
+.marquee#hosting-flash .content .text-purchase {
   font-size: 1.25em;
   color: #ef6c0f;
 }
-.marquee#hosting-flash-jazzy .content .sale-text {
+.marquee#hosting-flash .content .sale-text {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
-.marquee#hosting-flash-jazzy .content a {
+.marquee#hosting-flash .content a {
   text-transform: uppercase;
   margin-top: .8em;
 }
-.marquee#hosting-flash-jazzy .content img {
+.marquee#hosting-flash .content img {
   display: block;
   width: 4.5em;
   padding-top: 1em;
 }
-.marquee#hosting-flash-jazzy .content .disclaimer {
+.marquee#hosting-flash .content .disclaimer {
   color: #333;
   font-size: 10px;
   margin-top: 2em;
@@ -113,7 +113,7 @@
 
   </style>
 </atlantis:webstash>
-<div id="hosting-flash-jazzy" data-url="[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="99273" /></relative>]@T]" class="marquee js-gdhpclick">
+<div id="hosting-flash" data-url="[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="99273" /></relative>]@T]" class="marquee js-gdhpclick">
   <div class="container l-main-container">
     <div class="content">
       <p class="bold font-md">[@L[cds.tmsv2/content/homepage/hosting-flash/hero:subhead]@L]</p>
