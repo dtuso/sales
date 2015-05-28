@@ -33,6 +33,12 @@ comments: updating Global CSS
     .flt-btn-orng:active{background:#f06d00;border-color:#f06d00}
     a.flt-btn-orng{color:#fff;text-decoration:none}
     .goldBanner{display:none;}
+    /* disclaimers css start */
+    .modal-title{font-size:24px}
+    .modal-dialog{width: 600px}
+    .disclaimers{font-size:14px;margin:0 auto;line-height:14px;width:1000px}
+    .disclaimers a,.disclaimers a:link,.disclaimers a:visited{color:#333;text-decoration:underline}
+    .disclaimers a:active,.disclaimers a:hover{color:#7db701}
   </style>
 {% endblock %} 
 
@@ -58,14 +64,12 @@ comments: updating Global CSS
       $(".modal-body").append($("#tms-modal-body"));
       
       $('[data-ci]').click(function (e) {
-          // create blank object if it does not exist
-          offersCodes = offersCodes || {};
           var $this = $(this);
           var ci = $this.attr('data-ci');
           // example, checks to see if data-ci="domain-search-click"
           // has a value in offersCodes.ci
           // offersCodes Data is in campaign document
-          ci = offersCodes.ci[ci] || ci;
+          ci = (typeof offersCodes != "undefined" && typeof offersCodes.ci != "undefined" && typeof offersCodes.ci[ci] != "undefined")? offersCodes.ci[ci]: ci;
           
           FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
           fbiLibCheckQueue();

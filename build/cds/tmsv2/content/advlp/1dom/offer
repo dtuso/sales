@@ -16,11 +16,11 @@
       $("#domainSearch").find("[name=isc]").val(getParameterByName('isc'));
     
       ##if(countrySiteAny(at,be,ch,de,dk,es,fi,fr,gr,ie,it,nl,no,pl,pt,ru,se,tr,ua))
-        $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code_vat]@D]" />]@T]')})
+        $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code_vat]@D]" />]@T]')});
       ##else
-        $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')})
+        $(".price").each(function(){$(this).html('[@T[productprice:<current productid="101" period="yearly" promocode="[@D[tms.message.data.promo_code]@D]" />]@T]')});
       ##endif
-      $(".original-price").each(function(){$(this).html('[@T[productprice:<list productid="101" period="yearly" />]@T]')})
+      $(".original-price").each(function(){$(this).html('[@T[productprice:<list productid="101" period="yearly" />]@T]')});
       $(".icann-fee").each(function(){$(this).html('[@T[domains:<icannfee/>]@T]')});
     });
     
