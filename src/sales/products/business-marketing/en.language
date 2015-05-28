@@ -1,8 +1,7 @@
 ---
 location: localization/sales/gd/products/business-marketing/en
-id: 542427fbf778fc26c89ef527
-name: GCE-27850
-comments: Redesign of landing page (take 2)
+name: GCE-40411
+comments: PFID and on sale fixes
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="meta-title" />
@@ -27,6 +26,8 @@ Get Started
 Get Free Report
 <phrase key="pricing-text" comment="replacement 0 and 1 are prices, 2 is percentage" />
 As low as <span class="normal-price">{0}/mo</span> <span class="renewal-price"><strike>{1}/mo</strike>*</span> <span class="save-percentage">Save {2}</span>
+<phrase key="pricing-text-40411" comment="replacement 0 and 1 are prices, 2 is percentage" />
+As low as <span class="normal-price">{0}/mo</span> 
 <phrase key="as-low-as" />
 As low as
 <phrase key="per-mo" />
@@ -35,6 +36,12 @@ As low as
 Save
 <phrase key="current-renewal-price" />
 Current renewal price.
+<phrase key="on-sale-save-40411" comment="0 is a percentage"/>
+ON SALE - Save {0}
+<phrase key="current-renewal-price-40411" comment="0 is a price" />
+{0}/month when you renew<sup>4</sup>
+<phrase key="disclaimer-modal-text-initial-term-40411" />
+<sup>4</sup> Product renewal pricing subject to change.
 <phrase key="tab-plans-pricing" />
 Plan Details
 <phrase key="tab-faq" />
