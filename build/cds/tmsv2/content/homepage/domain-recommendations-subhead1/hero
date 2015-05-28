@@ -82,13 +82,9 @@
 </style>
 <div data-url="" data-ci='99098' class="hero hero-simple domain-recommendations">
   <div class="content-container">
-    <div class="flag-wrapper">
-      <div class="flag">
-        <div class="flag-content bold">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:flag]@L]</div>
-      </div>
-    </div>
     <div class="content">
-      <h2 class="font-lg">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:headline]@L]</h2><a class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:cta]@L]</a>
+      <h2 class="font-lg">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:headline]@L]</h2>
+      <div class="font-md bold">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:subhead1]@L]</div><a class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:cta]@L]</a>
     </div>
   </div>
 </div>
