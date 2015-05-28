@@ -245,6 +245,12 @@
           { "ITC Code" : "GtldEoiTechLink" },
           { "Description" : ".TECH Slide Link" }
           ]
+      },
+      { ".NEWS Slide Link" : [
+          { "ITC ID" : "99197" },
+          { "ITC Code" : "GtldEoiNewsLink" },
+          { "Description" : ".NEWS Slide Link" }
+          ]
       }
     ],
   "Everything Else" : [

@@ -17,7 +17,10 @@
     .restrictions { margin: 10px 0;text-align: left;font-size: 12px; margin: 10px 0;}
     .inline-dash { display:inline-block;overflow:hidden;letter-spacing:-0.5em;font-size:1.4em;vertical-align:top;line-height:50%;}
   </style>
-  <style>.marquee#tld-com-flash {
+  <style>html[lang|="uk-UA"] .marquee#tld-com-flash {
+  font-size: 19px;
+}
+.marquee#tld-com-flash {
   background-image: none;
   font-size: 26px;
   color: #333;
@@ -60,7 +63,8 @@
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 .Explorer8 .marquee#tld-com-flash .flag {
-  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/yellow-flag.png);
+  background-image: none;
+  background-color: #fedc45;
 }
 
   </style>

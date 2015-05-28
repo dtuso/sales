@@ -2,327 +2,344 @@
 <Text>
   <ByLocale>
     <enus>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="us"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enus>
     <esus>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="us"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </esus>
     <enca>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ca"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enca>
     <frca>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ca"></li>
-      <li tld="design"></li>
+      <li tld="co"></li>
       <li tld="quebec"></li>
     </frca>
     <esmx>
-      <li tld="com"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="com-mx"></li>
       <li tld="co"></li>
-      <li tld="mx"></li>
       <li tld="design"></li>
     </esmx>
     <esar>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </esar>
     <escl>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </escl>
     <esco>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </esco>
     <espe>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="pe"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </espe>
     <esve>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </esve>
     <ptbr>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="br"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </ptbr>
     <enau>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="com-au"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enau>
     <ennz>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="co-nz"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </ennz>
     <enin>
-      <li tld="com"></li>
-      <li tld="biz"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="in"></li>
       <li tld="co-in"></li>
-      <li tld="org"></li>
+      <li tld="biz"></li>
     </enin>
     <enmy>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enmy>
     <enpk>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enpk>
     <enph>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="asia"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </enph>
     <ensg>
-      <li tld="com"></li>
+      <li tld="net"></li>
       <li tld="club"></li>
       <li tld="asia"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
     </ensg>
     <nlbe>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="be"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </nlbe>
     <frbe>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="be"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </frbe>
     <dadk>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="dk"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </dadk>
     <dede>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="de"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </dede>
     <eses>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="es"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </eses>
     <frfr>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="fr"></li>
-      <li tld="design"></li>
+      <li tld="co"></li>
       <li tld="paris"></li>
     </frfr>
     <enie>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </enie>
     <itit>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="it"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </itit>
     <nlnl>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="nl"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </nlnl>
     <nbno>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </nbno>
     <deat>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </deat>
     <plpl>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="pl"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </plpl>
     <ptpt>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </ptpt>
     <dech>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </dech>
     <frch>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </frch>
     <fifi>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </fifi>
     <svse>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </svse>
     <itch>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ch"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </itch>
     <trtr>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </trtr>
     <engb>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="uk"></li>
-      <li tld="design"></li>
+      <li tld="co"></li>
       <li tld="london"></li>
     </engb>
     <elgr>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </elgr>
     <ruru>
-      <li tld="com"></li>
-      <li tld="co"></li>
+      <li tld="net"></li>
+      <li tld="club"></li>
       <li tld="ru"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </ruru>
     <ukua>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </ukua>
     <enza>
-      <li tld="com"></li>
-      <li tld="co"></li>
       <li tld="net"></li>
+      <li tld="club"></li>
+      <li tld="org"></li>
+      <li tld="co"></li>
       <li tld="design"></li>
-      <li tld="eu"></li>
     </enza>
   </ByLocale>
   
   <BugCatalog bugCssSelector=".tld-link" bugPriceCssSelector=".price" id="#bugbar ">
-    <co         cicode="93296" lpurl="/co-domain"       pfid="56401"/>
-    <org        cicode="93297" lpurl="/tlds/org"        pfid="12101"/>
-    <net        cicode="93298" lpurl="/tlds/net"        pfid="12001"/>
-    <biz        cicode="94195" lpurl="/tlds/biz"        pfid="11301"/>
-    <in         cicode="94304" lpurl="/tlds/in"         pfid="9850"/>
-    <co-in      cicode="94302" lpurl="/tlds/in"         pfid="41000"/>
-    <uno        cicode="88299" lpurl="/tlds/uno"        pfid="40995"/>
-    <br         cicode="88377" lpurl="/tlds/br-domain"  pfid="57201"/>
-    <club       cicode="89153" lpurl="/tlds/club"       pfid="172137"/>
-    <ca         cicode="94959" lpurl="/tlds/ca"         pfid="9405"/>
-    <pe         cicode="91790" lpurl="/tlds/pe-domain"  pfid="34452"/>
-    <com        cicode="94303" lpurl="/tlds/com"        pfid="101"/>
-    <quebec     cicode="94960" lpurl="/tlds/quebec"     pfid="546605"/>
-    <xyz        cicode="94936" lpurl="/tlds/xyz"        pfid="334499"/>
-    <de         cicode="96867" lpurl="/tlds/de"         pfid="12601"/>
-    <berlin     cicode="96865" lpurl="/tlds/berlin"     pfid="574534"/>
-    <com-au     cicode="96866" lpurl="/au-domain"       pfid="1790"/>
-    <uk         cicode="95298" lpurl="/tlds/uk"         pfid="410930"/>
-    <wales      cicode="96870" lpurl="/tlds/wales"      pfid="592699"/>
-    <asia       cicode="97575" lpurl="/tlds/asia.aspx"  pfid="2770"/>
-    <it         cicode="97579" lpurl="/tlds/it"         pfid="43001"/>
-    <es         cicode="97577" lpurl="/tlds/es-domain"  pfid="54001"/>
-    <fr         cicode="97578" lpurl="/tlds/fr"         pfid="56101"/>
-    <nl         cicode="97580" lpurl="/tlds/nl"         pfid="56301"/>
-    <ch         cicode="97576" lpurl="/tlds/ch"         pfid="143090"/>
-    <reviews    cicode="97581" lpurl="/tlds/reviews"    pfid="194774"/>
-    <mx         cicode="96868" lpurl="/tlds/mx-domain"  pfid="41901"/>
-    <cymru      cicode="97582" lpurl="/tlds/cymru"      pfid="594711"/>
-    <co-nz      cicode="97763" lpurl="/tlds/nz-domain"  pfid="12901"/>
-    <be         cicode="97762" lpurl="/tlds/be"         pfid="12501"/>
-    <ru         cicode="97767" lpurl="/tlds/ru-domain"  pfid="171428"/>
-    <pl         cicode="97765" lpurl="/tlds/pl-domain"  pfid="168381"/>
-    <dk         cicode="97764" lpurl="/tlds/dk"         pfid="142908"/>
-    <us         cicode="97768" lpurl="/tlds/us.aspx"    pfid="11601"/>
-    <rocks      cicode="97766" lpurl="/tlds/rocks"      pfid="221207"/>
-    <social     cicode="97871" lpurl="/tlds/social"     pfid="217055"/>
-    <paris      cicode="97970" lpurl="/tlds/paris"      pfid="622895"/>
-    <global     cicode="97869" lpurl="/tlds/global"     pfid="483124"/>
-    <eu         cicode="97868" lpurl="/tlds/eu-domain"  pfid="2851"/>
-    <london     cicode="98021" lpurl="/tlds/london"     pfid="342462"/>
-    <work       cicode="98022" lpurl="/tlds/work"       pfid="567686"/>
-    <design     cicode="99118" lpurl="/tlds/design"     pfid="611653"/>
+    <co         cicode="93296" lpurl="/co-domain"             pfid="56401"/>
+    <org        cicode="93297" lpurl="/tlds/org"              pfid="12101"/>
+    <net        cicode="93298" lpurl="/tlds/net"              pfid="12001"/>
+    <biz        cicode="94195" lpurl="/tlds/biz"              pfid="11301"/>
+    <in         cicode="94304" lpurl="/tlds/in"               pfid="9850"/>
+    <co-in      cicode="94302" lpurl="/tlds/in"               pfid="41000"/>
+    <uno        cicode="88299" lpurl="/tlds/uno"              pfid="40995"/>
+    <br         cicode="88377" lpurl="/tlds/br-domain"        pfid="57201"/>
+    <club       cicode="89153" lpurl="/tlds/club"             pfid="172137"/>
+    <ca         cicode="94959" lpurl="/tlds/ca"               pfid="9405"/>
+    <pe         cicode="91790" lpurl="/tlds/pe-domain"        pfid="34452"/>
+    <com        cicode="94303" lpurl="/tlds/com"              pfid="101"/>
+    <quebec     cicode="94960" lpurl="/tlds/quebec"           pfid="546605"/>
+    <xyz        cicode="94936" lpurl="/tlds/xyz"              pfid="334499"/>
+    <de         cicode="96867" lpurl="/tlds/de"               pfid="12601"/>
+    <berlin     cicode="96865" lpurl="/tlds/berlin"           pfid="574534"/>
+    <com-au     cicode="96866" lpurl="/au-domain"             pfid="1790"/>
+    <uk         cicode="95298" lpurl="/tlds/uk"               pfid="410930"/>
+    <wales      cicode="96870" lpurl="/tlds/wales"            pfid="592699"/>
+    <asia       cicode="97575" lpurl="/tlds/asia.aspx"        pfid="2770"/>
+    <it         cicode="97579" lpurl="/tlds/it"               pfid="43001"/>
+    <es         cicode="97577" lpurl="/tlds/es-domain"        pfid="54001"/>
+    <fr         cicode="97578" lpurl="/tlds/fr"               pfid="56101"/>
+    <nl         cicode="97580" lpurl="/tlds/nl"               pfid="56301"/>
+    <ch         cicode="97576" lpurl="/tlds/ch"               pfid="143090"/>
+    <reviews    cicode="97581" lpurl="/tlds/reviews"          pfid="194774"/>
+    <mx         cicode="96868" lpurl="/tlds/mx-domain"        pfid="41901"/>
+    <cymru      cicode="97582" lpurl="/tlds/cymru"            pfid="594711"/>
+    <co-nz      cicode="97763" lpurl="/tlds/nz-domain"        pfid="12901"/>
+    <be         cicode="97762" lpurl="/tlds/be"               pfid="12501"/>
+    <ru         cicode="97767" lpurl="/tlds/ru-domain"        pfid="171428"/>
+    <pl         cicode="97765" lpurl="/tlds/pl-domain"        pfid="168381"/>
+    <dk         cicode="97764" lpurl="/tlds/dk"               pfid="142908"/>
+    <us         cicode="97768" lpurl="/tlds/us.aspx"          pfid="11601"/>
+    <rocks      cicode="97766" lpurl="/tlds/rocks"            pfid="221207"/>
+    <social     cicode="97871" lpurl="/tlds/social"           pfid="217055"/>
+    <paris      cicode="97970" lpurl="/tlds/paris"            pfid="622895"/>
+    <global     cicode="97869" lpurl="/tlds/global"           pfid="483124"/>
+    <eu         cicode="97868" lpurl="/tlds/eu-domain"        pfid="2851"/>
+    <london     cicode="98021" lpurl="/tlds/london"           pfid="342462"/>
+    <work       cicode="98022" lpurl="/tlds/work"             pfid="567686"/>
+    <design     cicode="99118" lpurl="/tlds/design"           pfid="611653"/>
+    <com-mx     cicode="99232" lpurl="/tlds/com-mx-domain"    pfid="12801"/>
   </BugCatalog>
 </Text>
