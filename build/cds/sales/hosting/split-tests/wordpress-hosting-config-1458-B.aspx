@@ -598,7 +598,7 @@
         }
         
         $(document).ready(function(){
-          if(plan.indexOf('3month') >= 0){
+          if((plan.indexOf('3month') >= 0) || (plan.indexOf('1month') >= 0)){
             ##if(isManager())
               window.location = '[@T[link:<external linktype="MANAGERCARTURL" path="/basket.aspx" secure="true" />]@T]';
             ##else

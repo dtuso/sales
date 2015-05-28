@@ -1165,11 +1165,11 @@
                   </div>
                   <div class="select-box-body">
                     <ul id="planTileBList" class="select-box-options">
-                      <li data-plan="mwp_deluxe_3month">
+                      <li data-plan="mwp_deluxe_1month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_deluxe_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580974" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580974" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580974" secondaryproductid="580997" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_deluxe_1month"><span class="price-left">1 [@L[cds.sales/_common:month]@L]</span><span class="price">[@T[productprice:<current productid="580969" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580969" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580969" secondaryproductid="580994" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -1253,11 +1253,11 @@
                   </div>
                   <div class="select-box-body">
                     <ul id="planTileCList" class="select-box-options">
-                      <li data-plan="mwp_ultimate_3month">
+                      <li data-plan="mwp_ultimate_1month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_ultimate_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="580998" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580998" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580998" secondaryproductid="581015" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_ultimate_1month"><span class="price-left">1 [@L[cds.sales/_common:month]@L]</span><span class="price">[@T[productprice:<current productid="580995" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="580995" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="580995" secondaryproductid="581012" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -1349,11 +1349,11 @@
                   </div>
                   <div class="select-box-body">
                     <ul id="planTileDList" class="select-box-options">
-                      <li data-plan="mwp_developer_3month">
+                      <li data-plan="mwp_developer_1month">
                         <div>
                           <label>
-                            <input type="radio" name="plan" value="mwp_developer_3month"><span class="price-left">3 [@L[cds.sales/_common:months]@L]</span><span class="price">[@T[productprice:<current productid="581016" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
-                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581016" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581016" secondaryproductid="581032" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
+                            <input type="radio" name="plan" value="mwp_developer_1month"><span class="price-left">1 [@L[cds.sales/_common:month]@L]</span><span class="price">[@T[productprice:<current productid="581013" dropdecimal="false" period="monthly" htmlsymbol="false" negative="parentheses" />]@T]</span><span class="save price-right">[@L[cds.sales/_common:onsale-all-cap]@L]</span>
+                            <div class="savingSecondRow"><span class="price-left">&nbsp;</span><span class="strikePrice">[@T[productprice:<template productid="581013" period="monthly"><strike><![CDATA[<strike>{1}</strike>]]></strike></template>]@T]</span><span class="save price-right">[@T[productcompare:<percent primaryproductid="581013" secondaryproductid="581030" showsymbol="true" hidebelow="0"><html><![CDATA[[@L[cds.sales/_common:save-cap]@L] {0}]]></html></percent>]@T]</span></div>
                           </label>
                         </div>
                       </li>
@@ -5134,13 +5134,13 @@ ul li.no-check {
         ##endif
         
         // --------------------------------DELUXE--------------------------------------------
-        // 3 months
-        ##if(productHasSavingsMoreThan(580974, 580997, 0))
-        $('[data-plan="mwp_deluxe_3month"]').find(".save").css('display','block');
-        $('[data-plan="mwp_deluxe_3month"]').find('.savingSecondRow').css('display','block');
+        // 1 month
+        ##if(productHasSavingsMoreThan(580969, 580994, 0))
+        $('[data-plan="mwp_deluxe_1month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_deluxe_1month"]').find('.savingSecondRow').css('display','block');
         ##else
-        $('[data-plan="mwp_deluxe_3month"]').find(".save").remove();
-        $('[data-plan="mwp_deluxe_3month"]').find('.savingSecondRow').remove();
+        $('[data-plan="mwp_deluxe_1month"]').find(".save").remove();
+        $('[data-plan="mwp_deluxe_1month"]').find('.savingSecondRow').remove();
         ##endif
         
         // 12 months
@@ -5171,13 +5171,13 @@ ul li.no-check {
         ##endif
         
         // --------------------------------ULTIMATE--------------------------------------------
-        // 3 months
-        ##if(productHasSavingsMoreThan(580998, 581015, 0))
-        $('[data-plan="mwp_ultimate_3month"]').find(".save").css('display','block');
-        $('[data-plan="mwp_ultimate_3month"]').find('.savingSecondRow').css('display','block');
+        // 1 month
+        ##if(productHasSavingsMoreThan(580995, 581012, 0))
+        $('[data-plan="mwp_ultimate_1month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_ultimate_1month"]').find('.savingSecondRow').css('display','block');
         ##else
-        $('[data-plan="mwp_ultimate_3month"]').find(".save").remove();
-        $('[data-plan="mwp_ultimate_3month"]').find('.savingSecondRow').remove();
+        $('[data-plan="mwp_ultimate_1month"]').find(".save").remove();
+        $('[data-plan="mwp_ultimate_1month"]').find('.savingSecondRow').remove();
         ##endif
         
         // 12 months
@@ -5209,13 +5209,13 @@ ul li.no-check {
         
         
         // --------------------------------DEVELOPER--------------------------------------------
-        // 3 months
-        ##if(productHasSavingsMoreThan(581016, 581032, 0))
-        $('[data-plan="mwp_developer_3month"]').find(".save").css('display','block');
-        $('[data-plan="mwp_developer_3month"]').find('.savingSecondRow').css('display','block');
+        // 1 month
+        ##if(productHasSavingsMoreThan(581013, 581030, 0))
+        $('[data-plan="mwp_developer_1month"]').find(".save").css('display','block');
+        $('[data-plan="mwp_developer_1month"]').find('.savingSecondRow').css('display','block');
         ##else
-        $('[data-plan="mwp_developer_3month"]').find(".save").remove();
-        $('[data-plan="mwp_developer_3month"]').find('.savingSecondRow').remove();
+        $('[data-plan="mwp_developer_1month"]').find(".save").remove();
+        $('[data-plan="mwp_developer_1month"]').find('.savingSecondRow').remove();
         ##endif
         
         // 12 months
