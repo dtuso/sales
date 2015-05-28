@@ -1,8 +1,7 @@
 ---
 location: sales/products/business-marketing.aspx
-id: 554a6ff3f778fc1eccc629cc
-name: MCX-38604
-comments: BusMrking GetFound LP Sprite too big at 829KB
+name: MCX-40411
+comments: Fix PFID
 url: http://www.dev-godaddy.com/products/business-marketing.aspx
 assetPath: false
 ---
@@ -81,12 +80,6 @@ assetPath: false
       font-weight: 600px;
     }
 
-    p.inline-disclaimer {
-      font-size: 15px;
-      font-weight: 300;
-      /*visibility: hidden;*/
-    } 
-
     .ghost-button {
       height: 53px;
       color: #679b08;
@@ -119,14 +112,20 @@ assetPath: false
       font-weight: 600;
       font-size: 24px;
     }
-    span.save-percentage,
-    span.renewal-price {
-      display: none;
+    p.onsale-save {      
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    p.renewal-price {
       color: #ff8914;
       font-weight: 300;
       font-size: 16px;
     }
 
+    .tokenized {
+      display: none;
+    }
   {% endless %}
   </style>
 <!-- end-css-elevate -->
@@ -169,17 +168,21 @@ assetPath: false
       margin:9px 0 35px;
     }
 
-    .main-banner-business-marketing p.inline-disclaimer {
-      color: #fff;
-      margin-bottom:62px;
-    }
     .main-banner-business-marketing p.pricing {
       color: #ff8914;
       font-weight: 600;
       font-size: 24px;
       margin-top: 35px;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
     }
+
+    .main-banner-business-marketing p.onsale-save {
+      margin-bottom: 0px;
+    }
+    .main-banner-business-marketing p.renewal-price {
+      margin-bottom:62px;
+    }
+
     .main-banner-business-marketing a.ghost-button {
       height: 61px;
       font-size: 22px;
@@ -207,8 +210,9 @@ assetPath: false
         </div>
       </div>
       <div class="row center-text">
-        <p class="pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text]@L]</p>
-        <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
+        <p class="tokenized pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text-40411]@L]</p>
+        <p class="tokenized onsale-save">[@L[cds.sales/gd/products/business-marketing:on-sale-save-40411]@L]</p>
+        <p class="tokenized renewal-price">[@L[cds.sales/gd/products/business-marketing:current-renewal-price-40411]@L]</p>
       </div>
     </div>
   </section>
@@ -341,16 +345,18 @@ assetPath: false
         }
 
         .main-plans p.pricing {
-          margin-bottom: 10px;
-        }
-        .main-plans p.inline-disclaimer {
-          color: #333;    
-          margin-bottom: 14px;
-        }
-        .main-plans span.save-percentage,
-        .main-plans span.renewal-price {
           color: #ff8914;
+          margin-bottom: 0;
         }
+        .main-plans p.onsale-save{
+          color: #333;    
+          margin-bottom: 0;
+        }
+        .main-plans p.renewal-price {
+          color: #ff8914;
+          margin-bottom: 50px;
+        }
+
         .plan-item-side-B i.uxicon-x {
           float:right;
           margin-top: 20px;
@@ -561,8 +567,9 @@ assetPath: false
           </div>
 
           <div class="row center-text">
-            <p class="pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text]@L]</p>
-            <p class="inline-disclaimer renewal-price">*[@L[cds.sales/gd/products/business-marketing:current-renewal-price]@L]</p>
+            <p class="tokenized pricing">[@L[cds.sales/gd/products/business-marketing:pricing-text-40411]@L]</p>
+            <p class="tokenized onsale-save">[@L[cds.sales/gd/products/business-marketing:on-sale-save-40411]@L]</p>
+            <p class="tokenized renewal-price">[@L[cds.sales/gd/products/business-marketing:current-renewal-price-40411]@L]</p>
           </div>
         </div>
       </section>
@@ -985,6 +992,35 @@ assetPath: false
     </div>
   </section>
 
+
+
+  <!------------------------------------>
+  <!--            FOOOTER             -->
+  <!------------------------------------>  
+
+  <!-- start-css-elevate -->
+  <style>  
+  {% less %}
+    #disclaimers {      
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: left;
+    }
+    #disclaimers p.disclaimer {
+      font-size: 16px;
+      margin: 0px;
+    }
+  {% endless %}
+  </style>
+  <!-- end-css-elevate -->
+  <section id="disclaimers">
+    <div class="container l-main-container">
+      <p class="disclaimer">[@L[cds.sales/gd/products/business-marketing:disclaimer-modal-text-initial-term-40411]@L]</p>
+    </div>
+  </section>
+
+
+
 {% endblock %}
 {% block footer %}
 <script src="[@T[link:<javascriptroot />]@T]fos/lib/gd-swipe/js/swipe-v2.1.js" type="text/javascript"></script>
@@ -1002,8 +1038,125 @@ assetPath: false
     locuPage.isManager = false;
     locuPage.redirectUrl ='[@T[link:<external linktype="carturl" path="/basket.aspx" />]@T]';
   ##endif
+$(document).ready(function(){
 
-  function setPricing(t){var e='[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',i='[@T[productprice:<current productid="37990" period="monthly"></current>]@T]',a='[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37990" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]',n=$(t+" p.pricing");tokenizeThis(n,[e,i,a]),n.show();var r=e!==i;r&&$(t+" p.pricing span.renewal-price").show()}function activateSlides(t){$(t+" .gd-swipe").attr("data-gd-swipe",'{"auto":0}').gdSwipe()}function addLocuToCart(t,e){var i=$(e).attr("data-ci"),a="add",n="slp_get_found_lp",r="1",c="locu_Essential1Yr",o='[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace("{0}",a).replace("{1}",n).replace("{2}",i).replace("{3}",r).replace("{4}",c),l=pcCartCt+1;$.getJSON(o,function(t){return"fail"==t?void alert("Add to cart failure."):t.Success?(pcUpdateCart(l),void(window.location=locuPage.redirectUrl)):void alert("Add to cart failure.")})}$(document).ready(function(){setupCiCodeTracking(),setPricing(".main-banner-business-marketing"),setPricing("#plans"),activateGetStartedBtn("#get-started-btn-1"),activateGetStartedBtn("#get-started-btn-2"),activateCardFlippers(".plan-item","a.ghost-button",".plan-item-side-B i.uxicon-x"),activateSlides("#customer-slider")});var setupCiCodeTracking=function(){$("[data-ci]").on("click",function(t){var e=$(this).attr("data-ci");FastballEvent_MouseClick(t,e,$(this)[0],"a"),fbiLibCheckQueue()})},activateGetStartedBtn=function(t){$(t).on("click",function(e){return e.preventDefault(),addLocuToCart(e,t),!1})},activateCardFlippers=function(t,e,i){var a=!($.browser.msie&&parseFloat($.browser.version)<10);a?$(t).on("click",e+","+i,function(){$(this).closest(".plan-item-container").toggleClass("flipped")}):($(t).on("click",e,function(){$(this).closest(".plan-item").find(".plan-item-side-A").hide(),$(this).closest(".plan-item").find(".plan-item-side-B").show()}),$(t).on("click",i,function(){$(this).closest(".plan-item").find(".plan-item-side-B").hide(),$(this).closest(".plan-item").find(".plan-item-side-A").show()})),console.log("transformsAvailable",a)},tokenizeThis=function(t,e){for(var i=t.html(),a=0;a<e.length;a++)i=i.replace("{"+a+"}",e[a]);t.html(i)};
+  // WIRE UP CI CODE TRACKING
+  setupCiCodeTracking();
+
+  // PRICING
+  setPricing('.main-banner-business-marketing'); // CTA bar
+  setPricing('#plans'); // plan tiers
+
+  // ADD TO CART
+  activateGetStartedBtn('#get-started-btn-1');
+  activateGetStartedBtn('#get-started-btn-2');
+
+  // SETUP FLIPPING CARDS
+  activateCardFlippers('.plan-item','a.ghost-button','.plan-item-side-B i.uxicon-x');
+
+  // SLIDER AREA
+  activateSlides('#customer-slider');
+});
+
+function setPricing(selector) {
+
+  var currentPrice = '[@T[productprice:<current productid="37987" period="monthly"></current>]@T]',
+    renewalPrice = '[@T[productprice:<list productid="37990" period="monthly"></list>]@T]',
+    savePercentage = '[@T[productcompare:<percent primaryproductid="37987" secondaryproductid="37987" hidebelow="1" showsymbol="true"><html><![CDATA[{0}]]></html></percent>]@T]';
+
+  currentPrice = "$11.99";
+  savePercentage = "35%";
+
+  var $pricing = $(selector + ' p.pricing');
+  var $onsale = $(selector + ' p.onsale-save');
+  var $renewal = $(selector + ' p.renewal-price');
+  tokenizeThis($pricing, [currentPrice]);
+  tokenizeThis($onsale, [savePercentage]);
+  tokenizeThis($renewal, [renewalPrice]);
+  $pricing.show();
+  $renewal.show();
+
+  if(savePercentage.length > 0) {
+    // on sale so show it
+    $(selector + ' p.onsale-save').show();
+  }
+
+}
+
+var setupCiCodeTracking = function(){
+  $('[data-ci]').on('click',function(e){
+    var ci = $(this).attr('data-ci');
+    FastballEvent_MouseClick(e, ci, $(this)[0], 'a');
+    fbiLibCheckQueue();
+  });
+}
+
+var activateGetStartedBtn = function(selector){
+  $(selector).on('click', function(e){
+    e.preventDefault();
+    addLocuToCart(e, selector);
+    return false;
+  });
+};
+var activateCardFlippers = function(selector, openSelector, closeSelector) {
+  var transformsAvailable = !($.browser.msie && parseFloat($.browser.version) < 10); /* older IE (less than 10) cannot do transforms */
+  if(transformsAvailable) {
+    $(selector).on('click',openSelector + ',' + closeSelector, function(){
+      $(this).closest('.plan-item-container').toggleClass('flipped');
+    });
+  } else {
+    $(selector).on('click',openSelector, function(){
+      $(this).closest('.plan-item').find('.plan-item-side-A').hide();
+      $(this).closest('.plan-item').find('.plan-item-side-B').show();
+    });
+    $(selector).on('click',closeSelector, function(){
+      $(this).closest('.plan-item').find('.plan-item-side-B').hide();
+      $(this).closest('.plan-item').find('.plan-item-side-A').show();
+    });
+  }
+
+};
+
+var tokenizeThis = function($obj, strArr) {
+  var tokenized = $obj.html();
+  for(var idx = 0; idx< strArr.length; idx++) {
+    tokenized = tokenized.replace('{' + idx + '}', strArr[idx]);
+  }
+  $obj.html(tokenized);
+}
+
+function activateSlides(selector) { 
+  $(selector + ' .gd-swipe')
+    .attr('data-gd-swipe','{"auto":0}')
+    .gdSwipe();
+}
+
+function addLocuToCart(e, b) {
+  var ciCode = $(b).attr('data-ci'); //grab ci code from the button clicked
+  var action   = 'add';
+  var itc      = 'slp_get_found_lp';
+  var quantity = '1';
+  var plan     = 'locu_Essential1Yr';
+  var url      = '[@T[link:<relative path="/api/package/{0}/{1}/{2}/{3}/{4}"/>]@T]'.replace('{0}',action).replace('{1}',itc).replace('{2}',ciCode).replace('{3}',quantity).replace('{4}',plan);
+  
+  $.getJSON(url, function (data) {
+    // 1. check for failures
+    if (data == 'fail') {
+      alert('Add to cart failure.');
+      return;        
+    }
+    if(!data.Success) {
+      alert('Add to cart failure.');
+      return;
+    }
+    // 2. update the new cart count on the page. pcCartCt is a global var from the header
+    pcUpdateCart(pcCartCt + 1);
+
+    // 3. redirect user to the cart where their product should be waiting for them.
+    window.location = locuPage.redirectUrl;
+  });          
+}
+
 </script>
 <!-- end-js-elevate -->
 {% endblock %}
