@@ -1,7 +1,7 @@
 ---
 location: localization/sales/gd/ecommerce/online-store/en
-name: SEM-515
-comments: Remove {X} from 1st FAQ
+name: MCX-40208
+comments: Disclaimer for video in OLS India LP
 ---
 {% include 'modules/doc-block.html' %}
 <phrase key="MetaTitle" comment="DO NOT TRANSLATE" />
@@ -253,3 +253,5 @@ Click here for a full list.
 Mobile friendly: 
 <phrase key="PaymentSectionContent-3-text-IN" comment="DO NOT TRANSLATE" />
 Make it easy for your customers to shop on the go. Online Store doesn’t just look great on mobile devices, it’s built to accept payments from mobile, too.
+<phrase key="VideoSectionDisclaimer-text-IN" comment="DO NOT TRANSLATE" />
+PayPal is currently not supported in India. For payment options in India, see Payment section.
