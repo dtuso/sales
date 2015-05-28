@@ -95,9 +95,13 @@ append vars
 prepend endOfPageScripts
   atlantis:webstash(type="js")
     script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js")
-    ##if(splitTestingSideIsActive(1458, B))
+    | 
+    |##if(splitTestingSideIsActive(1458, B))
+    | 
     script(type="text/javascript", src!="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js")
-    ##endif
+    | 
+    |##endif
+    | 
     script.
       var wpHosting = {
         sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  

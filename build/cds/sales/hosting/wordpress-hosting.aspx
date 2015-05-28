@@ -5002,8 +5002,12 @@ ul li.no-check {
       
     </script>
     <atlantis:webstash type="js">
-      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script>##if(splitTestingSideIsActive(1458, B))
-      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js"></script>##endif
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/hp/rebrand/js/bigtext.min.js"></script> 
+      ##if(splitTestingSideIsActive(1458, B))
+       
+      <script type="text/javascript" src="[@T[link:<javascriptroot />]@T]fos/201401/global/js/3.1.0/global-3.1.0.min.js"></script> 
+      ##endif
+       
       <script>
         var wpHosting = {
           sfDialogOkButton: {text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } },  
