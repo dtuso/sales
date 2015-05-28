@@ -1,12 +1,11 @@
----
-location: sales/homepage/marquee/mwp-flash-jazzy/default_template
-id: false
-name: mcxmo-1111
-ctaLink: "[@T[link:<relative path='/hosting/wordpress-hosting.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
-elementId: mwp-flash-jazzy
----
-
 extends ../../../layouts/homepage/marquee
+
+append vars
+  - var classes = "mwp-flash";
+  - var ciCode = 99173;
+  - var ctaLink = "[@T[link:<relative path='/hosting/wordpress-hosting.aspx'><param name='ci' value='"+ciCode+"'/></relative>]@T]";
+  - var polyColor = "rgb(255,138,0)";
+
 block append marqueeStyles
   style
     :less
@@ -29,7 +28,7 @@ block append marqueeStyles
       }
       .Explorer8 .marquee#mwp-flash-jazzy .content {top: 0;}
 block marqueeContent
-  .content
+  .content.mwp-flash-jazzy.js-gdhpclick(data-url!='[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value='"+ciCode+"'/></relative>]@T]')
     mark.bold.font-sm [@L[cds.tmsv2/content/homepage/mwp-flash/hero:flag-date]@L]
     h2.black [@L[cds.tmsv2/content/homepage/mwp-flash/hero:headline]@L]
     p.bold.font-md [@L[cds.tmsv2/content/homepage/mwp-flash/hero:sub-headline]@L]
