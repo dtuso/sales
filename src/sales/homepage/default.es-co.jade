@@ -1,8 +1,11 @@
 extends ../../layouts/homepage/default_base
 
 block marquee
-  | 
-  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |  ##if(splitTestingSideIsActive(1462, B))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash/default_template" /> ]@P]
+  |  ##elseif(splitTestingSideIsActive(1462, C))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/hosting-flash-jazzy/default_template" /> ]@P]
+  |  ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |    ##if(splitTestingSideIsActive(1416, A))
   |      [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
   |    ##else
@@ -14,11 +17,20 @@ block marquee
 
 block primaryTile
   | 
-  | [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+  | ##if(splitTestingSideIsActive(1462, B))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  | ##elseif(splitTestingSideIsActive(1462, C))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
+  | ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/hosting/default_template" /> ]@P]
+  | ##endif
 
 block secondaryTile
-  | 
-  |  ##if(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+  |  ##if(splitTestingSideIsActive(1462, B))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  |  ##elseif(splitTestingSideIsActive(1462, C))
+  |   [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]
+  |  ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
   |    [@P[cdsDocument:<data app="sales" location="homepage/tile/got/default_template" /> ]@P]
   |  ##else
   |    [@P[cdsDocument:<data app="sales" location="homepage/tile/30-percent-gtld/default_template" /> ]@P]

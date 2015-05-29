@@ -1,0 +1,62 @@
+<phrase key="hero_graphic_1" comment="Do Not Translate" />
+.tms-header-class{background-color:#7ABE4B}
+<phrase key="hero_graphic_2" comment="Do Not Translate" />
+.tms-header-class{background-color:#CCC}
+<phrase key="headline_1" comment="spacing important, do not remove spaces between tags" />
+<span class="price"></span> <span class="product-offer-name tld1">.COM</span> 
+<phrase key="headline_2" comment="spacing important, do not remove spaces between tags" />
+<span class="price"></span> <span class="product-offer-name tld1">.COM</span> <span class="headline-or">or</span> <span class="product-offer-name tld2">.COM.MX</span>
+<phrase key="subtitle" />
+Limited Availability - Get yours Now
+<phrase key="feature-item-1" />
+<strong class="uppercase">More People Trust</strong> GoDaddy with their domains than anyone else.
+<phrase key="feature-item-2" comment="do not include 24/7 for markets that do not offer 24/7 support" />
+<strong class="uppercase">World Class 24/7</strong> help building your online business.
+<phrase key="feature-item-3" />
+<strong class="uppercase">Big Savings</strong> over other registrars.
+<phrase key="domain-heading" />
+Start your domain name search here.
+<phrase key="domain-search-placeholder" />
+Find your perfect domain name
+<phrase key="search-btn" />
+Search
+<phrase key="why-us-title" />
+Why Choose GoDaddy?
+<phrase key="why-us-description" />
+With more than 59 million domains under management, we have more experience than anyone. We&#x27;ll make sure you find the right domain and that it&#x27;s got a secure, comfy home online.
+<phrase key="why-us-item-1-title" />
+World&#x27;s Largest Registrar
+<phrase key="why-us-item-1-details" />
+More people trust us than any other domain provider. Since the right domain name can set you up for future success, you don&#x27;t want to mess around. Go with the world&#x27;s largest registrar.
+<phrase key="why-us-item-2-title" />
+Widest Selection on the Web
+<phrase key="why-us-item-2-details" />
+Every time you enter a name in our domain search box, our powerful engine searches the web&#x27;s largest pool of names. There&#x27;s no better place to ﬁnd the right domain name for your business.
+<phrase key="why-us-item-3-title" comment="do not include 24/7 for markets that do not offer 24/7 support" />
+Award-Winning 24/7 Support
+<phrase key="why-us-item-3-details" comment="do not include {day or night} for markets that do not offer 24/7 support, ex: {Call them day or night at...} = {Call them at...}" />
+Stumped by... anything? Our smart, friendly domain experts are here to help. Call them day or night at <span class="no-break">[@T[supportphone:<technical />]@T]</span>.
+<phrase key="disclaimer" comment="{0} will be replaced with Icannfee, {1} will be replaced with product sale price {2} will be replaced with product renewal price" />
+*Plus ICANN fee of <span class="icann-fee">{0}</span> per domain name per year. <span class="price">{1}</span> price good for the first year of one new or transfer .COM per customer. Additional years or .COMs may be purchased for <span class="original-price">{2}</span> per year. Discounts cannot be used in conjunction with any other offer or promotion. Not all payment methods valid with this offer, acceptable payments will display in cart at checkout. Your discount will be applied in your shopping cart. After the initial purchase term, discounted products will renew at the then-current renewal rate. Go Daddy reserves the right to deny use of this offer and/or cancel domains purchased using this offer if the offer is abused or used fraudulently, as determined by Go Daddy in its sole discretion.
+<phrase key="disclaimer-link" />
+Product Disclaimers
+<phrase key="disclaimer-modal-title" />
+Disclaimers
+<phrase key="compare-chart-5-CompareAndSaveBig" />
+Compare and save big!
+<phrase key="compare-chart-2-NetworkSolutions" />
+Network Solutions
+<phrase key="compare-chart-2-RegisterCom" />
+Register.<span style="display:none;"> </span>com
+<phrase key="compare-chart-2-YahooDomains" />
+Yahoo Domains
+<phrase key="compare-chart-6-1YrDomainRegistrationCOM" />
+1 Yr Domain Registration (.COM)
+<phrase key="compare-chart-2-SALE" />
+SALE!
+<phrase key="compare-chart-2-StatusAlerts" />
+Status Alerts
+<phrase key="compare-chart-3-GettingStartedGuide" />
+Getting Started Guide
+<phrase key="compare-chart-6-DateAccurateAsOfDATE" />
+Date accurate as of <span class="chart-date-text">5/30/2014</span>
