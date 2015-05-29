@@ -107,8 +107,11 @@
   margin-top: 2em;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
-.Explorer8 .marquee#tld-com-flash-jazzy .content {
+.Explorer8 .marquee#hosting-flash-jazzy .content {
   top: 0;
+}
+.Explorer8 .marquee#hosting-flash-jazzy .flag {
+  background-color: #fedc45;
 }
 
   </style>
