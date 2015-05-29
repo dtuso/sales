@@ -1113,6 +1113,8 @@
                   </div>
                 </div>
                 <button id="product-A" data-ci="96216" data-ul="planTileAList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -1201,6 +1203,8 @@
                   </div>
                 </div>
                 <button id="product-B" data-ci="96217" data-ul="planTileBList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -1289,6 +1293,8 @@
                   </div>
                 </div>
                 <button id="product-C" data-ci="96217" data-ul="planTileCList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1385,6 +1391,8 @@
                   </div>
                 </div>
                 <button id="product-D" data-ci="96219" data-ul="planTileDList" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1559,6 +1567,8 @@
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-A" data-ci="96216" data-plan="mwp_basic_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-basic-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -1600,6 +1610,8 @@
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-B" data-ci="96217" data-plan="mwp_deluxe_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:35561-deluxe-feature-1]@L]</div>
                 <div class="plan-item">
                    
@@ -1641,6 +1653,8 @@
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-C" data-ci="96218" data-plan="mwp_ultimate_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-ultimate-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1690,6 +1704,8 @@
                 </div>
                 <div class="action-button-wrap row"></div>
                 <button id="product-D" data-ci="96219" data-plan="mwp_developer_12month" title="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-btn-alt-text]@L]" class="btn btn-purchase btn-plan btn-lg btn-block">[@L[cds.sales/_common:add-to-cart-cap]@L]</button>
+                <div style="font-weight:bold;" class="plan-item">[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+                </div>
                 <div class="plan-item"> <strong>[@L[cds.sales/gd/hosting/wordpress-hosting:35561-developer-feature-1]@L]</strong></div>
                 <div class="plan-item">
                    
@@ -1840,8 +1856,8 @@
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L]</li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] <span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L] i</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] p<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li>
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]</li> 
               ##if((productIsOffered(99) && !countrySiteAny(mx)) && splitTestingSideIsActive(1458, A))
