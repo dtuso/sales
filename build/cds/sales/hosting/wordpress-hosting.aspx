@@ -1856,8 +1856,8 @@
         <div class="row">
           <div class="col-md-4 col-sm-12">
             <ul class="green-check">
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L] i</li>
-              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L] p<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_1]@L]</li>
+              <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_2]@L]<span>&nbsp;</span><span data-content="[@L[cds.sales/gd/hosting/wordpress-hosting:35561-tooltip-free-domain]@L]" data-style="qt" data-width="400" class="tool-tip-black sf-tip sf-tipper-target"></span>
               </li>
               <li>[@L[cds.sales/gd/hosting/wordpress-hosting:39394_all_plans_include_3]@L]</li> 
               ##if((productIsOffered(99) && !countrySiteAny(mx)) && splitTestingSideIsActive(1458, A))
