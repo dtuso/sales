@@ -1,0 +1,42 @@
+---
+location: sales/homepage/marquee/hosting-flash-jazzy/default_template
+id: false
+name: mcxmo-1112
+ctaLink: '[@T[link:<relative path="/hosting/web-hosting.aspx"><param name="ci" value="99273" /></relative>]@T]'
+elementId: hosting-flash-jazzy
+---
+extends ../../../layouts/homepage/marquee
+block append marqueeStyles
+  style
+    :less
+      .marquee#hosting-flash-jazzy{background:url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/stopwatch-background.png) no-repeat top center;width:100%;min-width:1000px;height:400px; cursor:pointer; font-size:16px;color: #333; 
+        .container{height:inherit;position:relative;}
+        .content{width:50%; position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%);
+          mark{background-color: #fedc45;}
+          .font-lg { font-size: 2.25em; margin-top: .25em; margin-bottom: .25em; }
+          .font-md { font-size: 1.5em; margin-top: .25em; margin-bottom: .25em; }
+          .font-sm { font-size: 1.25em; margin-top: .25em; margin-bottom: .25em; }
+          .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+          .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+          .text-primary-o {color: #77c043;}
+          .btn-primary{color:#fff!important;background-color:#008a32!important;border-color:#007029!important}
+          .btn-primary:hover{color:#fff!important;background-color:#009938!important;border-color:#007f2e!important}
+          .btn-primary:focus,.btn-primary:active,.btn-primary.active,.open .dropdown-toggle.btn-primary{color:#fff!important;background-color:#007029!important;border-color:#007029!important}
+          .text-purchase {font-size: 1.25em;color:#ef6c0f;}
+          .sale-text {font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;}
+          a{text-transform:uppercase;margin-top: .8em;}
+          img{display:block; width:4.5em;padding-top:1em}
+          .disclaimer{color: #333; font-size: 10px; margin-top:2em;font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;}
+        }
+      }
+      .Explorer8 .marquee#hosting-flash-jazzy .content {top: 0;}
+      .Explorer8 .marquee#hosting-flash-jazzy .flag {background-color: #fedc45;}
+block marqueeContent
+  .content
+    p.bold.font-md [@L[cds.tmsv2/content/homepage/hosting-flash/hero:subhead]@L]
+    h2.black.text-primary-o [@L[cds.tmsv2/content/homepage/hosting-flash/hero:headline]@L]
+    p.bold.font-md [@L[cds.tmsv2/content/homepage/hosting-flash/hero:free-domain]@L]
+    mark.bold.font-sm [@L[cds.tmsv2/content/homepage/hosting-flash/hero:flag]@L]
+    p.bold.price.font-md [@L[cds.tmsv2/content/homepage/hosting-flash/hero:price]@L]
+    a.bold.btn.btn-lg.btn-primary [@L[cds.tmsv2/content/homepage/hosting-flash/hero:cta]@L]
+    p.font-sm.disclaimer [@L[cds.tmsv2/content/homepage/hosting-flash/hero:disclaimer]@L]
