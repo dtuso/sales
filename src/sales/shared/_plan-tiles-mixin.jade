@@ -44,7 +44,7 @@ mixin renderPlanTiles(columns, options)
   else
     - containerClass = "container"
 
-  if (typeof hasIncludedPlanTilesMixinJs == 'undefined')
+  if (hasIncludedPlanTilesMixinJs != true)
     - hasIncludedPlanTilesMixinJs = true
     atlantis:webstash(type="js")
       script(type="text/javascript").
@@ -138,7 +138,7 @@ mixin renderCartLogic(url, itc, options)
         if ("#{options.dropdown}" != "false"){
           var productTile = $(this).data("ul");
 
-          var productPackage = $("ul#"+productTile+" li").filter('[data-selected="true"]').attr('data-plan');
+          var productPackage = $("ul#"+productTile+" li").filter('.selected').attr('data-plan');
         }
         else{
           var productPackage = $(this).data("plan");
