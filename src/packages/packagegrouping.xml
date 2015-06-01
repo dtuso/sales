@@ -1197,35 +1197,6 @@
       <Package id="ssl_001sites_tier3_024mo" />
     </Packages>
   </PackageGroup>
-  <PackageGroup Name="cms-cpanel" ProductGroupId="1">
-    <Packages>
-      <Package id="cpanel_tier0_001mo" />
-      <Package id="cpanel_tier0_012mo" />
-      <Package id="cpanel_tier0_024mo" />
-      <Package id="cpanel_tier0_036mo" />
-      <Package id="cpanel_tier0_048mo" />
-      <Package id="cpanel_tier0_060mo" />
-      <Package id="cpanel_tier1_001mo" />
-      <Package id="cpanel_tier1_003mo" />
-      <Package id="cpanel_tier1_012mo" />
-      <Package id="cpanel_tier1_024mo" />
-      <Package id="cpanel_tier1_036mo" />
-      <Package id="cpanel_tier1_048mo" />
-      <Package id="cpanel_tier1_060mo" />
-      <Package id="cpanel_tier2_001mo" />
-      <Package id="cpanel_tier2_012mo" />
-      <Package id="cpanel_tier2_024mo" />
-      <Package id="cpanel_tier2_036mo" />
-      <Package id="cpanel_tier2_048mo" />
-      <Package id="cpanel_tier2_060mo" />
-      <Package id="cpanel_tier3_001mo" />
-      <Package id="cpanel_tier3_012mo" />
-      <Package id="cpanel_tier3_024mo" />
-      <Package id="cpanel_tier3_036mo" />
-      <Package id="cpanel_tier3_048mo" />
-      <Package id="cpanel_tier3_060mo" />
-    </Packages>
-  </PackageGroup>
   <PackageGroup Name="cms-sitelock" ProductGroupId="107">
     <Packages>
       <Package id="sitelock_tier1_012mo" />
@@ -1526,6 +1497,54 @@
       <Package id="mwp_developer_48month_withEmail" />
       <Package id="mwp_developer_60month_withEmail" />
       <Package id="mwp_developer_120month_withEmail" />
+    </Packages>
+  </PackageGroup>
+  <PackageGroup Name="cms-webhosting" ProductGroupId="1">
+    <Packages>
+      <Package id="cpanel_tier0_001mo" />
+      <Package id="cpanel_tier0_012mo" />
+      <Package id="cpanel_tier0_024mo" />
+      <Package id="cpanel_tier0_036mo" />
+      <Package id="cpanel_tier0_048mo" />
+      <Package id="cpanel_tier0_060mo" />
+      <Package id="cpanel_tier1_001mo" />
+      <Package id="cpanel_tier1_003mo" />
+      <Package id="cpanel_tier1_012mo" />
+      <Package id="cpanel_tier1_024mo" />
+      <Package id="cpanel_tier1_036mo" />
+      <Package id="cpanel_tier1_048mo" />
+      <Package id="cpanel_tier1_060mo" />
+      <Package id="cpanel_tier2_001mo" />
+      <Package id="cpanel_tier2_012mo" />
+      <Package id="cpanel_tier2_024mo" />
+      <Package id="cpanel_tier2_036mo" />
+      <Package id="cpanel_tier2_048mo" />
+      <Package id="cpanel_tier2_060mo" />
+      <Package id="cpanel_tier3_001mo" />
+      <Package id="cpanel_tier3_012mo" />
+      <Package id="cpanel_tier3_024mo" />
+      <Package id="cpanel_tier3_036mo" />
+      <Package id="cpanel_tier3_048mo" />
+      <Package id="cpanel_tier3_060mo" />
+      <Package id="plesk_tier1_001mo" />
+      <Package id="plesk_tier1_003mo" />
+      <Package id="plesk_tier1_012mo" />
+      <Package id="plesk_tier1_024mo" />
+      <Package id="plesk_tier1_036mo" />
+      <Package id="plesk_tier1_048mo" />
+      <Package id="plesk_tier1_060mo" />
+      <Package id="plesk_tier2_001mo" />
+      <Package id="plesk_tier2_012mo" />
+      <Package id="plesk_tier2_024mo" />
+      <Package id="plesk_tier2_036mo" />
+      <Package id="plesk_tier2_048mo" />
+      <Package id="plesk_tier2_060mo" />
+      <Package id="plesk_tier3_001mo" />
+      <Package id="plesk_tier3_012mo" />
+      <Package id="plesk_tier3_024mo" />
+      <Package id="plesk_tier3_036mo" />
+      <Package id="plesk_tier3_048mo" />
+      <Package id="plesk_tier3_060mo" />
     </Packages>
   </PackageGroup>
 </PackageGroups>
