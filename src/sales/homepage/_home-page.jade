@@ -45,57 +45,6 @@ mixin renderTwoUpCompare2(twoUpOptions)
         .row
           block
 
-
-mixin domainSearchInput2(domainSearchParams)
-  - domainSearchParams                       = domainSearchParams || {};
-  - domainSearchParams.cicode                = domainSearchParams.cicode || "";
-  - domainSearchParams.buttonText            = domainSearchParams.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
-  - domainSearchParams.placeholderText       = domainSearchParams.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
-  - domainSearchParams.formSize              = domainSearchParams.formSize || "lg";
-
-  //- pages can pass any value besides "sm" or "lg" to reset to normal sized inputs
-  case domainSearchParams.formSize
-    when "sm"
-      - buttonClass = "btn-sm"
-      - inputClass = "input-sm"
-    when "lg"
-      - buttonClass = "btn-lg"
-      - inputClass = "input-lg"
-    default
-      - buttonClass = ""
-      - inputClass = ""
-
-  atlantis:webstash(type="css")
-    style
-      :less
-        .search-text { display: none; }
-        .search-icon { font-size: 22px; }
-        @media (min-width: 768px) {
-          .search-text { display: inline; }
-          .search-icon { display: none; }
-        }
- 
-  form.domain-search-form(method="get" action!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single")
-    input(type="hidden",name="ci",value=domainSearchParams.cicode)
-    input(type="hidden",name="checkAvail",value="1")
-    .input-group
-      label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
-      input#domain-name-input.searchInput.form-control(class=inputClass type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
-      span.input-group-btn
-        button.btn.btn-primary(class=buttonClass type='submit' data-ci='#{domainSearchParams.cicode}') 
-          span.search-icon.uxicon.uxicon-magnifying-glass
-          span.search-text !{domainSearchParams.buttonText}
-  script.
-    ux.eldorado.ready(function() {
-      $(".domain-search-form").on('submit', function(e) {
-        var input = $(this).find("input[name='domainToCheck']");
-        if (input && (input.val() == null || input.val() == "")) {
-          e.preventDefault();
-          window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-        }
-      });
-    });
-
 extends ../shared/_page
 
 block append vars
@@ -167,16 +116,6 @@ block append pageStyles
         #hero-wrapper { font-size: 16px;}
       }
 
-      #marquee {
-        opacity: 0;
-        visibility: hidden;
-        -webkit-transition: opacity .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out;
-        -ms-transition: opacity .2s ease-in-out;
-        -o-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-      }
-
 //- override headscripts to remove lazyload
 block headScripts
   script.
@@ -193,44 +132,8 @@ block headScripts
 
     }
 
-    //- local DOM ready so we don't need to wait on UXCore
-    //-!function(t){"use strict";var e=function(t){i(t),f()},n=t.document,o=!1,a=[],i=function(t){"function"==typeof t&&a.push(t)},d=function(){for(;a.length;)a.shift()();i=function(t){t()}},c=function(){n.addEventListener?n.removeEventListener("DOMContentLoaded",c,!1):n.detachEvent("onreadystatechange",c),r()},r=function(){if(!e.isReady){if(!n.body)return setTimeout(r,1);e.isReady=!0,d()}},f=function(){var e=!1;if(!o)if(o=!0,"loading"!==n.readyState&&r(),n.addEventListener)n.addEventListener("DOMContentLoaded",c,!1),t.addEventListener("load",c,!1);else if(n.attachEvent){n.attachEvent("onreadystatechange",c),t.attachEvent("onload",c);try{e=null==t.frameElement}catch(a){}n.documentElement.doScroll&&e&&u()}},u=function(){if(!e.isReady){try{n.documentElement.doScroll("left")}catch(t){return void setTimeout(u,1)}r()}};e.isReady=!1,t.$=e}(window);
-
-
 block endOfPageScripts
   script.
-    // once the document is ready, wait no more than 1 second to show it
-    var tmsTimer;
-    var TMS_TIMEOUT = 10;
-    
-    //-ux.eldorado.ready(function() {
-      tmsTimer = setTimeout(function() {
-        var marquee = document.getElementById("marquee");
-        marquee.style.visibility = "visible";
-        marquee.style.opacity = "1";
-      }, TMS_TIMEOUT);
-    //-});
-
-    var tms = function(data) {
-      //$(document).ready(function(){
-      //-ux.eldorado.ready(function() {
-        var marquee = document.getElementById("marquee");
-        if (marquee.style.visibility != "visible") {
-          clearTimeout(tmsTimer);
-          for (var key in data) {
-            if ((data[key]) && (data[key].trim() != '') && !(/class="tms-default"><\/div>/.test(data[key])) ) {
-              var elem = document.getElementById(key);
-              if (elem != null) {
-                elem.innerHTML = data[key];
-                //-$('#' + key).html(data[key]);
-              }
-            }
-          }
-          marquee.style.visibility = "visible";
-          marquee.style.opacity = "1";
-        }
-      //-});
-    }
 
     ux.eldorado.ready(function(){
       loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
@@ -248,8 +151,8 @@ block endOfPageScripts
 
       reSizeTiles();
 
-      ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
-      ux.util.lazy.loadViaSelector('.lazyload'); // only show on scroll
+      ux.util.lazy.loadViaSelector('.domain-promo-content'); 
+      ux.util.lazy.loadViaSelector('.lazyload'); 
     });
 
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
@@ -301,10 +204,6 @@ block pcHead
   |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
 
 block content
-  | 
-  | [@T[CachePolicy:<tokendata cacheability="Public" maxage="86400"></tokendata>]@T]
-
-  //-a(href="https://www.godaddy.com/?version=sales/homepage/default.en-us|556771928326f11bf02b5451") CLICK HERE
   
   //- domain search section
   block domainSearch
@@ -312,7 +211,7 @@ block content
       .container
         .row
           .col-xs-12
-            +domainSearchInput2({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
+            +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
 
   //- Bugbar
   section#bugbar
