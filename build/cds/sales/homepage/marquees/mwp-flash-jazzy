@@ -99,16 +99,16 @@
   border-color: #007f2e;
   color: #fff;
 }
-.marquee#mwp-flash-jazzy .Explorer8 .marquee#mwp-flash-jazzy .content {
+.Explorer8 .marquee#mwp-flash-jazzy .content {
   top: 0;
 }
-.marquee#mwp-flash-jazzy .Explorer8 .marquee#mwp-flash-jazzy .flag {
+.Explorer8 .marquee#mwp-flash-jazzy .flag {
   background-color: #fedc45;
 }
 
   </style>
 </atlantis:webstash>
-<div id="mwp-flash-jazzy" data-url="[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="99231" /></relative>]@T]" class="marquee js-gdhpclick">
+<div id="mwp-flash-jazzy" data-url="[@T[link:<relative path="/hosting/wordpress-hosting.aspx"><param name="ci" value="99281" /></relative>]@T]" class="marquee js-gdhpclick">
   <div class="container l-main-container">
     <div class="content">
       <div class="flag bold font-sm">

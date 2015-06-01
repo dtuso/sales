@@ -1,7 +1,11 @@
 extends ../../layouts/homepage/default_base
 
 block marquee
+  |  ##if(splitTestingSideIsActive(1463, B))
   |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/mwp-flash-jazzy/default_template" /> ]@P]
+  |  ##else
+  |   [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
+  |  ##endif
 
 block bugBar
   +tldBugs(["net","club","pe","co","design"])
