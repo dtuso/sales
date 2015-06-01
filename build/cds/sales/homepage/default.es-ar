@@ -62,6 +62,8 @@
     </div>
      ##if(splitTestingSideIsActive(1463, B))
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/mwp-flash-jazzy/default_template" /> ]@P]
+     ##elseif(targetMessageTagAny(sales_hp_default,hp_existing_customer))
+      [@P[cdsDocument:<data app="sales" location="homepage/locals/es-ar/topmarquee" /> ]@P]
      ##else
       [@P[cdsDocument:<data app="sales" location="homepage/marquee/gybo/default_template" /> ]@P]
      ##endif
