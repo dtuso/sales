@@ -32,15 +32,15 @@
       <div class="cta btn btn-sm btn-primary">Find yours</div>
       <script>
         (function() { 
-          var $price = $('.co-uk.banner-medium .text-purchase');
+          var price = document.querySelectorAll('.co-uk.banner-medium .text-purchase')[0];
           var savings = '[@T[productcompare:<percent primaryproductid="57465" secondaryproductid="57465" showsymbol="true" hidebelow="5"/>]@T]';
-          var $element = $('.banner-medium.co-uk .text-primary');
-          if ($price.length) {
-            $price.html($price.html().replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));
-            $price.show();
+          var element = document.querySelectorAll('.banner-medium.co-uk .text-primary')[0];
+          if (price) {
+            price.innerHTML = price.innerHTML.replace('{0}','[@T[productprice:<current productid="57465" period="yearly" />]@T]'));
+            price.style.display = "block";
           }
           if (!savings) {
-            $element.html('100% BRILLIANT');
+            element.innerHTML = '100% BRILLIANT';
           }
         })();
       </script>

@@ -333,12 +333,11 @@
               <div class="body">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:body]@L]</div><a href="[@T[link:<relative path='/hosting/web-hosting.aspx'><param name='ci' value='95801' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta]@L] </a>
               <script>
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="32051" secondaryproductid="32051" />]@T],[@T[productcompare:<percent primaryproductid="32059" secondaryproductid="32059" />]@T],[@T[productcompare:<percent primaryproductid="32082" secondaryproductid="32082" />]@T]);
-                $cta=$('.banner-small.web-hosting-price a');
+                var cta = document.querySelectorAll('.banner-small.web-hosting-price a')[0];
                 if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]')
+                  cta.innerHTML = '[@L[cds.tmsv2/content/homepage/web-hosting-price/banner-small:cta-fallback]@L]';
                 else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                  cta.innerHTML = cta.innerHTML.replace("{0}", savings);
               </script>
             </div>
           </div>
@@ -404,10 +403,10 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]" data-ci='97979' class="banner-small sitelock">
-              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/sitelock/banner-small/sitelock-icon.png" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjI4IiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgMjggMzUiPjxwYXRoIGQ9Ik0wIDM1TDAgOC41QzAgOC41IDMuNSA4LjUgMy41IDguNSA0LjUgMy43IDguNyAwIDEzLjggMCAxOC45IDAgMjMuMiAzLjcgMjQuMiA4LjUgMjQuMiA4LjUgMjggOC41IDI4IDguNUwyOCAzNSAwIDM1ek00LjUgMTMuMUw0LjUgMzAuNCAyMy41IDMwLjQgMjMuNSAxNi41IDE0IDI4LjcgNi40IDIyLjUgOS40IDE4LjcgMTMuNyAyMi43IDIwLjcgMTMuMSA0LjUgMTMuMXpNMTMuOCA0LjRDMTEuMiA0LjQgOC45IDYuMSA4LjEgOC40IDguMSA4LjQgMTkuNiA4LjQgMTkuNiA4LjQgMTguNyA2LjEgMTYuNSA0LjQgMTMuOCA0LjR6IiBmaWxsPSIjNzdDMDQzIi8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/sitelock/banner-small:title]@L]</span></span>
+            <div data-url="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]" data-ci='95780' class="banner-small online-store">
+              <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/online-store/banner-small/online-store-icon.png" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjMwIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIxLjUgMCAzMCAzNSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxLjUgMCAzMCAzNSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iIzc3QzA0MyIgZD0iTTI2LjkgMTQuMmwtMS44IDEwLjkgMC40IDIuNyAxLjUgMC4zIDEuNCAyLjIgLTAuNiAyLjUgLTIuMiAxLjQgLTIuNS0wLjYgLTEuNC0yLjIgMC42LTIuNSAxLjItMC44IC0wLjQtMi42TDcgMjkuMSA2LjMgMTcuNGwxOC42LTQuM2gtMC4xbDQuMS0zLjVMMjIgMi41bC0zLjggMyA2LjYgNi4xaC0yLjJsLTUuOS01TDIuOSAxMi45bC0wLjQtMC43YzAgMCAxMy03LjMgMTQuOS04LjJWMy45TDIxLjMgMGw4LjkgOC40IDEuMyAyLjVMMjYuOSAxNC4yek01LjcgMjhsLTMtNi40IC0xLjItOS4xIDMuNiA0LjRMNS43IDI4ek0xMiAyOS43bDIuMiAwLjEgMS41IDEuNiAtMC4xIDIuMUwxNCAzNWwtMi4xLTAuMSAtMS41LTEuNnYtMi4xTDEyIDI5Ljd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/online-store/banner-small:title]@L]</span></span>
               </div>
-              <div class="body">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:body]@L]</div><a href="[@T[link:<relative path='/security/malware-scanner.aspx'><param name='ci' value='97979' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/sitelock/banner-small:cta]@L] </a>
+              <div class="body">[@L[cds.tmsv2/content/homepage/online-store/banner-small:body]@L]</div><a href="[@T[link:<relative path='/ecommerce/online-store.aspx'><param name='ci' value='95780' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/online-store/banner-small:cta]@L] </a>
             </div>
           </div>
           <div id="banner-small-4" class="col-md-3 col-sm-6 col-xs-6">
@@ -1374,8 +1373,7 @@ section {
       
         reSizeTiles();
       
-        ux.util.lazy.loadViaSelector('.domain-promo-content'); 
-        ux.util.lazy.loadViaSelector('.lazyload'); 
+        ux.util.lazy.loadViaSelector('.lazyload, .domain-promo-content');
       });
       
       function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}

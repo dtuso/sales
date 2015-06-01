@@ -12,4 +12,7 @@ block append vars
 
 block scripts
   script.
-    $('html[lang="en-gb"] .banner-small.support a').attr('href',$('.banner-small.support a').attr('href').replace(/020/i,"4420"));
+    var ukLink = document.querySelectorAll('html[lang="en-gb"] .banner-small.support a')[0];
+    if (ukLink) {
+      ukLink.href = ukLink.href.replace(/020/i,"4420");
+    }

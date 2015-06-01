@@ -151,8 +151,7 @@ block endOfPageScripts
 
       reSizeTiles();
 
-      ux.util.lazy.loadViaSelector('.domain-promo-content'); 
-      ux.util.lazy.loadViaSelector('.lazyload'); 
+      ux.util.lazy.loadViaSelector('.lazyload, .domain-promo-content');
     });
 
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
