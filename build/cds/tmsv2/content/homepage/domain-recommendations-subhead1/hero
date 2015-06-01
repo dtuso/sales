@@ -1,0 +1,100 @@
+
+<style>.hero-simple {
+  min-height: inherit;
+  max-height: inherit;
+  height: 100%;
+  width: 100%;
+  min-width: inherit;
+  max-width: inherit;
+  color: #333;
+}
+.hero-simple .font-lg {
+  font-size: 2.25em;
+}
+.hero-simple .font-md {
+  font-size: 1.5em;
+}
+.hero-simple .font-sm {
+  font-size: 1.25em;
+}
+.hero-simple .black {
+  font-family: 'Walsheim-Black', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+.hero-simple .bold {
+  font-family: 'Walsheim-Bold', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+}
+.hero-simple .content-container {
+  display: table;
+  min-height: inherit;
+  max-height: inherit;
+  height: 100%;
+  width: 90%;
+  min-width: inherit;
+  max-width: inherit;
+}
+.hero-simple .flag-wrapper {
+  display: table-header-group;
+}
+.hero-simple .flag {
+  margin-left: -2em;
+  display: inline-block;
+  top: 0;
+  font-size: 1.25em;
+  padding: 6px 40px 10px 40px;
+  background: no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEiIHZpZXdCb3g9IjAgMCAzOTAgNTAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxwYXRoIGQ9Ik0zOTAgMEwzNjAgNDUgMTUgNTAgMCAwIDM5MCAweiIgZmlsbD0iI0ZFREM0NSIvPjwvc3ZnPg==);
+  background-size: 100% 100%;
+}
+.hero-simple .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.hero-simple .content > * {
+  margin-top: .25em;
+  margin-bottom: .25em;
+  line-height: 1;
+}
+.hero-simple .content > *:first-child {
+  margin-top: 0;
+}
+.hero-simple .content > *:last-child {
+  margin-bottom: 0;
+}
+.hero-simple span.text-purchase {
+  font-size: 1.25em;
+}
+.hero-simple .disclaimer {
+  color: #333;
+  font-size: 10px;
+  margin-top: 2em;
+}
+.Explorer8 .hero-simple .flag-wrapper .flag {
+  background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/yellow-flag.png);
+}
+
+</style>
+<style>.hero.domain-recommendations mark.domain {
+  text-transform: lowercase;
+  word-break: break-word;
+}
+
+</style>
+<div data-url="" data-ci='99098' class="hero hero-simple domain-recommendations">
+  <div class="content-container">
+    <div class="content">
+      <h2 class="font-lg">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:headline]@L]</h2>
+      <div class="font-md bold">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:subhead1]@L]</div><a class="btn btn-md btn-purchase">[@L[cds.tmsv2/content/homepage/domain-recommendations/hero:cta]@L]</a>
+    </div>
+  </div>
+</div>
+<script>
+  var domainRecommendations = {
+    dynamicContent: JSON.parse('[@D[tms.message.rule_data]@D]'),
+    domainPlaceholder: $('.domain'),
+    url:"[@T[link:<relative path='/domains/searchresults.aspx'><param name='domainToCheck' value='{0}' /><param name='checkAvail' value='1' /><param name='ci' value='99098' /></relative>]@T]",
+    hero:$('.hero.domain-recommendations')
+  };
+  $(domainRecommendations.hero).attr('data-url',domainRecommendations.url.replace('%7b0%7d',domainRecommendations.dynamicContent.domain_recommendations[0]));
+  $(domainRecommendations.domainPlaceholder).text(domainRecommendations.dynamicContent.domain_recommendations[0])
+</script>

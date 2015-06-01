@@ -1,8 +1,8 @@
 ---
 location: localization/sales/business/office-365-config/en
 id:  54d938e9f778fc1bb4408c01
-name: GCE-32258
-comments: Config page verbage update
+name: MCX-38369
+comments: Removal of Monthly Term split test
 max: "{{max}}"
 ---
 {% include 'modules/doc-block.html' %}
@@ -30,6 +30,8 @@ Keep your business running smoothly. Add plans for key players on your team.
 Email Essentials <span class="powered-by-office-365-text">powered by Office 365</span>
 <phrase key="cp-3-PerUserMonth" />
 per user/month
+<phrase key="cp-3-PerUserYear" />
+per user/year
 <phrase key="cp-4-5GBEmailStorage" />
 5 GB Email Storage
 <phrase key="cp-5-2GBCloudFileStorage" />
