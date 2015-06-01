@@ -83,13 +83,13 @@ html(lang!="[@T[localization:<language full='true' />]@T]" id!=angularId ng-app!
       |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="#{page.manifest}" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
 
 
-    include ./_simpleTokenizer.jade
 
     //- inherited page classes can prepend/override/append headScripts when 
     //- that page needs a script loaded early on in DOM processing
     //- TODO: UPDATE PATH
     //- TODO: remove uxcore/uxcontrols from this block once PC head control renders the right stuff
     block headScripts
+      include ./_simpleTokenizer.jade
       script        
         include ./_page/jquery.lazyload.2.0.0.min.js
       script.

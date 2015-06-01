@@ -36,38 +36,9 @@
       };
       
     </script> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
-    
-    <atlantis:webstash type="css">
-      <style>
-        *[data-tokenize] {visibility: hidden;}
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="js">
-      <script>
-        $(document).ready(function(){
-          $('[data-tokenize]').each(function(){
-            var $this = $(this),
-              val = $this.data('tokenize'),
-              attrName = $this.data('tokenize-attr'),
-              jsVar = $this.data('tokenize-jsvar'),
-              text = attrName ? $this.attr(attrName) : $this.html(),
-              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
-        
-            if(attrName) {
-              $this.attr(attrName, tokenized);
-            } else {
-              $this.html(tokenized);
-            }
-        
-            $this.removeAttr('data-tokenize');
-          });
-        });
-      </script>
-    </atlantis:webstash>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
     <script>
       function loadJsAsync(sourceUrl, id) {
          var js, fjs = document.getElementsByTagName('script')[0];
@@ -80,55 +51,17 @@
       
       function endOfPageScripts() {
       
-        $(document).ready(function(){
-          // fix centering elements
-          window.triggerResize = function(){
-            setTimeout(function(){
-              $(window).trigger('resize');
-            },50);
-          }
-          setTimeout(function(){
-            triggerResize();
-          },200);
-      
-          // Wire up tooltips
-          if($(document).sfTipper){
-            $(document).sfTipper({ wireup: true });
-          }
-          
-        });
-      
-        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
-          $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-          }, 500);
-          return false;
-        });
-      
-        // Track all the icodes (tcodes handled by gtm.js)
-        window._trfq = window._trfq || [];
-        $('[data-icode]').each(function(index, element) {
-          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
-        });
       }
       
-      var tms = function(data) {
-        $(document).ready(function(){
-          for (var key in data) {
-            if ((data[key]) && (data[key].trim() != '')) {
-              var elem = document.getElementById(key)
-              if (elem != null) {
-                $('#' + key).html(data[key]);
-              }
-            }
-          }
-        });
-      }
+      //- local DOM ready so we don't need to wait on UXCore
+      //-!function(t){"use strict";var e=function(t){i(t),f()},n=t.document,o=!1,a=[],i=function(t){"function"==typeof t&&a.push(t)},d=function(){for(;a.length;)a.shift()();i=function(t){t()}},c=function(){n.addEventListener?n.removeEventListener("DOMContentLoaded",c,!1):n.detachEvent("onreadystatechange",c),r()},r=function(){if(!e.isReady){if(!n.body)return setTimeout(r,1);e.isReady=!0,d()}},f=function(){var e=!1;if(!o)if(o=!0,"loading"!==n.readyState&&r(),n.addEventListener)n.addEventListener("DOMContentLoaded",c,!1),t.addEventListener("load",c,!1);else if(n.attachEvent){n.attachEvent("onreadystatechange",c),t.attachEvent("onload",c);try{e=null==t.frameElement}catch(a){}n.documentElement.doScroll&&e&&u()}},u=function(){if(!e.isReady){try{n.documentElement.doScroll("left")}catch(t){return void setTimeout(u,1)}r()}};e.isReady=!1,t.$=e}(window);
+      
       
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]--> 
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+     
     ##if(IsManager())
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
@@ -696,6 +629,15 @@ section {
     font-size: 16px;
   }
 }
+#marquee {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
 
       </style>
     </atlantis:webstash>
@@ -704,20 +646,59 @@ section {
       
     </script>
     <script>
-      $(document).ready(function() {
+      // once the document is ready, wait no more than 1 second to show it
+      var tmsTimer;
+      var TMS_TIMEOUT = 10;
+      
+      //-ux.eldorado.ready(function() {
+        tmsTimer = setTimeout(function() {
+          var marquee = document.getElementById("marquee");
+          marquee.style.visibility = "visible";
+          marquee.style.opacity = "1";
+        }, TMS_TIMEOUT);
+      //-});
+      
+      var tms = function(data) {
+        //$(document).ready(function(){
+        //-ux.eldorado.ready(function() {
+          var marquee = document.getElementById("marquee");
+          if (marquee.style.visibility != "visible") {
+            clearTimeout(tmsTimer);
+            for (var key in data) {
+              if ((data[key]) && (data[key].trim() != '') && !(/class="tms-default"><\/div>/.test(data[key])) ) {
+                var elem = document.getElementById(key);
+                if (elem != null) {
+                  elem.innerHTML = data[key];
+                  //-$('#' + key).html(data[key]);
+                }
+              }
+            }
+            marquee.style.visibility = "visible";
+            marquee.style.opacity = "1";
+          }
+        //-});
+      }
+      
+      ux.eldorado.ready(function(){
         loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
         loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
         loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
       });
       
-    </script>
-    <script type="text/javascript">
-      $('body').on('click','[data-url]',function(event){
-        var $clickedElement = $(event.currentTarget);
-        var $clickedUrl = $clickedElement.attr('data-url'); 
-        event.stopPropagation();
-        window.location.href=$clickedUrl;
+      ux.eldorado.ready(function(){
+        $('body').on('click','[data-url]',function(event){
+          var $clickedElement = $(event.currentTarget);
+          var $clickedUrl = $clickedElement.attr('data-url'); 
+          event.stopPropagation();
+          window.location.href=$clickedUrl;
+        });
+      
+        reSizeTiles();
+      
+        ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
+        ux.util.lazy.loadViaSelector('.lazyload'); // only show on scroll
       });
+      
       function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
       var reSizeTiles = function(){
         var maxTitleHeight = 0;
@@ -729,18 +710,8 @@ section {
           }
       }
       
-      $(window).load(function () {
-        reSizeTiles();
-      
-        ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
-        ux.util.lazy.loadViaSelector('.lazyload', 'scroll'); // only show on scroll
-      
-      });
-      
-    </script>
-    <script type="text/javascript">
       var ignoreLivePerson = true;
-      $(document).ready(function() {
+      ux.eldorado.ready(function(){
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();

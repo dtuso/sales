@@ -12,6 +12,90 @@ mixin lazyImg2(src,classes,altText)
     alt=(altText ? altText : "")
     )
 
+mixin renderTwoUpCompare2(twoUpOptions)
+  - populatedColumns = 0
+  - twoUpOptions = twoUpOptions || {};
+  - twoUpOptions.title = twoUpOptions.title || "";
+  - twoUpOptions.twoUpCompareId = twoUpOptions.twoUpCompareId || "";
+  - twoUpOptions.titleBackgroundColor = twoUpOptions.titleBackgroundColor || "";
+  - twoUpOptions.titleWhiteText = twoUpOptions.titleWhiteText || "";
+  - twoUpOptions.icode = twoUpOptions.icode || "";
+  - twoUpOptions.style = twoUpOptions.style || "";
+  - twoUpOptions.backgroundColor = twoUpOptions.backgroundColor || "";
+  - twoUpOptions.backgroundImage = twoUpOptions.backgroundImage || "";
+  - twoUpOptions.includeStyles = twoUpOptions.includeStyles
+
+  if typeof(twoUpOptions.includeStyles) == 'undefined'
+    style
+      include:css ../shared/_two-up-compare/two-up-compare-styles.css
+    style.
+      .hp-two-up-compare-img {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg); }
+
+  div(id="#{twoUpOptions.twoUpCompareId ? twoUpOptions.twoUpCompareId : ''}" class = "two-up-title-wrap #{twoUpOptions.titleBackgroundColor}")
+    if (twoUpOptions.title)
+      div(class="#{twoUpOptions.whiteText ? 'white-text' : ''}")
+        .container
+          .row
+            .col-sm-12
+              h2.h0.text-center.two-up-title !{twoUpOptions.title}
+    div(class="two-up-wrap-compare #{twoUpOptions.backgroundColor} lazyload", 
+        style!= "#{twoUpOptions.style ? twoUpOptions.style : ''};", 
+        data-src!=("#{twoUpOptions.backgroundImage}") data-img-class!="hp-two-up-compare-img")
+      .container
+        .row
+          block
+
+
+mixin domainSearchInput2(domainSearchParams)
+  - domainSearchParams                       = domainSearchParams || {};
+  - domainSearchParams.cicode                = domainSearchParams.cicode || "";
+  - domainSearchParams.buttonText            = domainSearchParams.buttonText || "[@L[cds.sales/homepage/locales/en:domain-search-btn]@L]";
+  - domainSearchParams.placeholderText       = domainSearchParams.placeholderText || "[@L[cds.sales/homepage/segments/default:domain-banner-search-text]@L]";
+  - domainSearchParams.formSize              = domainSearchParams.formSize || "lg";
+
+  //- pages can pass any value besides "sm" or "lg" to reset to normal sized inputs
+  case domainSearchParams.formSize
+    when "sm"
+      - buttonClass = "btn-sm"
+      - inputClass = "input-sm"
+    when "lg"
+      - buttonClass = "btn-lg"
+      - inputClass = "input-lg"
+    default
+      - buttonClass = ""
+      - inputClass = ""
+
+  atlantis:webstash(type="css")
+    style
+      :less
+        .search-text { display: none; }
+        .search-icon { font-size: 22px; }
+        @media (min-width: 768px) {
+          .search-text { display: inline; }
+          .search-icon { display: none; }
+        }
+ 
+  form.domain-search-form(method="get" action!="[@T[link:<external linktype='siteurl' path='' parammode='explicit'/>]@T]/api/dpp/search/single")
+    input(type="hidden",name="ci",value=domainSearchParams.cicode)
+    input(type="hidden",name="checkAvail",value="1")
+    .input-group
+      label.searchInput.sr-only(for='domain-name-input') !{domainSearchParams.placeholderText}
+      input#domain-name-input.searchInput.form-control(class=inputClass type='text' placeholder!='#{domainSearchParams.placeholderText}' name='domainToCheck' maxlength='63')
+      span.input-group-btn
+        button.btn.btn-primary(class=buttonClass type='submit' data-ci='#{domainSearchParams.cicode}') 
+          span.search-icon.uxicon.uxicon-magnifying-glass
+          span.search-text !{domainSearchParams.buttonText}
+  script.
+    ux.eldorado.ready(function() {
+      $(".domain-search-form").on('submit', function(e) {
+        var input = $(this).find("input[name='domainToCheck']");
+        if (input && (input.val() == null || input.val() == "")) {
+          e.preventDefault();
+          window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+        }
+      });
+    });
+
 extends ../shared/_page
 
 block append vars
@@ -83,6 +167,16 @@ block append pageStyles
         #hero-wrapper { font-size: 16px;}
       }
 
+      #marquee {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity .2s ease-in-out;
+        -moz-transition: opacity .2s ease-in-out;
+        -ms-transition: opacity .2s ease-in-out;
+        -o-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+      }
+
 //- override headscripts to remove lazyload
 block headScripts
   script.
@@ -97,68 +191,67 @@ block headScripts
 
     function endOfPageScripts() {
 
-      $(document).ready(function(){
-        // fix centering elements
-        window.triggerResize = function(){
-          setTimeout(function(){
-            $(window).trigger('resize');
-          },50);
-        }
-        setTimeout(function(){
-          triggerResize();
-        },200);
-
-        // Wire up tooltips
-        if($(document).sfTipper){
-          $(document).sfTipper({ wireup: true });
-        }
-        
-      });
-
-      $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
-        $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-        }, 500);
-        return false;
-      });
-
-      // Track all the icodes (tcodes handled by gtm.js)
-      window._trfq = window._trfq || [];
-      $('[data-icode]').each(function(index, element) {
-        window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
-      });
     }
 
-    var tms = function(data) {
-      $(document).ready(function(){
-        for (var key in data) {
-          if ((data[key]) && (data[key].trim() != '')) {
-            var elem = document.getElementById(key)
-            if (elem != null) {
-              $('#' + key).html(data[key]);
-            }
-          }
-        }
-      });
-    }
+    //- local DOM ready so we don't need to wait on UXCore
+    //-!function(t){"use strict";var e=function(t){i(t),f()},n=t.document,o=!1,a=[],i=function(t){"function"==typeof t&&a.push(t)},d=function(){for(;a.length;)a.shift()();i=function(t){t()}},c=function(){n.addEventListener?n.removeEventListener("DOMContentLoaded",c,!1):n.detachEvent("onreadystatechange",c),r()},r=function(){if(!e.isReady){if(!n.body)return setTimeout(r,1);e.isReady=!0,d()}},f=function(){var e=!1;if(!o)if(o=!0,"loading"!==n.readyState&&r(),n.addEventListener)n.addEventListener("DOMContentLoaded",c,!1),t.addEventListener("load",c,!1);else if(n.attachEvent){n.attachEvent("onreadystatechange",c),t.attachEvent("onload",c);try{e=null==t.frameElement}catch(a){}n.documentElement.doScroll&&e&&u()}},u=function(){if(!e.isReady){try{n.documentElement.doScroll("left")}catch(t){return void setTimeout(u,1)}r()}};e.isReady=!1,t.$=e}(window);
+
 
 block endOfPageScripts
-
-
   script.
-    $(document).ready(function() {
+    // once the document is ready, wait no more than 1 second to show it
+    var tmsTimer;
+    var TMS_TIMEOUT = 10;
+    
+    //-ux.eldorado.ready(function() {
+      tmsTimer = setTimeout(function() {
+        var marquee = document.getElementById("marquee");
+        marquee.style.visibility = "visible";
+        marquee.style.opacity = "1";
+      }, TMS_TIMEOUT);
+    //-});
+
+    var tms = function(data) {
+      //$(document).ready(function(){
+      //-ux.eldorado.ready(function() {
+        var marquee = document.getElementById("marquee");
+        if (marquee.style.visibility != "visible") {
+          clearTimeout(tmsTimer);
+          for (var key in data) {
+            if ((data[key]) && (data[key].trim() != '') && !(/class="tms-default"><\/div>/.test(data[key])) ) {
+              var elem = document.getElementById(key);
+              if (elem != null) {
+                elem.innerHTML = data[key];
+                //-$('#' + key).html(data[key]);
+              }
+            }
+          }
+          marquee.style.visibility = "visible";
+          marquee.style.opacity = "1";
+        }
+      //-});
+    }
+
+    ux.eldorado.ready(function(){
       loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
       loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
       loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
     });
 
-  script(type="text/javascript").
-    $('body').on('click','[data-url]',function(event){
-      var $clickedElement = $(event.currentTarget);
-      var $clickedUrl = $clickedElement.attr('data-url'); 
-      event.stopPropagation();
-      window.location.href=$clickedUrl;
+    ux.eldorado.ready(function(){
+      $('body').on('click','[data-url]',function(event){
+        var $clickedElement = $(event.currentTarget);
+        var $clickedUrl = $clickedElement.attr('data-url'); 
+        event.stopPropagation();
+        window.location.href=$clickedUrl;
+      });
+
+      reSizeTiles();
+
+      ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
+      ux.util.lazy.loadViaSelector('.lazyload'); // only show on scroll
     });
+
     function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
     var reSizeTiles = function(){
       var maxTitleHeight = 0;
@@ -170,17 +263,8 @@ block endOfPageScripts
         }
     }
 
-    $(window).load(function () {
-      reSizeTiles();
-
-      ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
-      ux.util.lazy.loadViaSelector('.lazyload', 'scroll'); // only show on scroll
-
-    });
-
-  script(type="text/javascript").
     var ignoreLivePerson = true;
-    $(document).ready(function() {
+    ux.eldorado.ready(function(){
       var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                    qs = [],
                    date = new Date();
@@ -202,7 +286,25 @@ block delayLoadedScripts
 block head
   //- exclude chat_window CSS
 
+
+block pcHead
+  script.
+    window.ux = window.ux || {};
+    window.ux.disable = {
+      'ga': true,
+      'tealium': true
+    };
+    
+  | 
+  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+  |[@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
+
 block content
+  | 
+  | [@T[CachePolicy:<tokendata cacheability="Public" maxage="86400"></tokendata>]@T]
+
+  //-a(href="https://www.godaddy.com/?version=sales/homepage/default.en-us|556771928326f11bf02b5451") CLICK HERE
   
   //- domain search section
   block domainSearch
@@ -210,7 +312,7 @@ block content
       .container
         .row
           .col-xs-12
-            +domainSearchInput({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
+            +domainSearchInput2({"placeholderText":"Find your perfect domain name","cicode":"54814","formSize":"normal"})
 
   //- Bugbar
   section#bugbar
@@ -335,7 +437,7 @@ block content
             .two-up-speech-shape.two-up-speech-shape-gold,.two-up-speech-shape.two-up-speech-shape-gold:after{background-color:#fedc45;}
             .two-up-speech-shape.two-up-speech-shape-gold:before{border-top-color:#fedc45;}
       section#website-promo
-        +renderTwoUpCompare({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
+        +renderTwoUpCompare2({title: "[@L[cds.sales/homepage/sections/_website-promo:promo-title-text]@L]", twoUpCompareId: "website-promo", titleBackgroundColor: "bg-green-official", backgroundImage: "[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg", style: "min-height: 100%;"})
           +twoUpCompareColumn({title: "[@L[cds.sales/homepage/sections/_website-promo:website-title-text]@L]", backgroundColor: "bg-gray-darkest", shapeText: "[@L[cds.sales/homepage/sections/_website-promo:website-shape-text]@L]", shapeColor: "gold", whiteText:"WhiteText"})
             ul
               li [@L[cds.sales/homepage/sections/_website-promo:website-feature-line1]@L]

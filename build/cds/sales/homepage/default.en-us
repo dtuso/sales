@@ -37,38 +37,9 @@
       };
       
     </script> 
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
-    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
-    
-    <atlantis:webstash type="css">
-      <style>
-        *[data-tokenize] {visibility: hidden;}
-        
-      </style>
-    </atlantis:webstash>
-    <atlantis:webstash type="js">
-      <script>
-        $(document).ready(function(){
-          $('[data-tokenize]').each(function(){
-            var $this = $(this),
-              val = $this.data('tokenize'),
-              attrName = $this.data('tokenize-attr'),
-              jsVar = $this.data('tokenize-jsvar'),
-              text = attrName ? $this.attr(attrName) : $this.html(),
-              tokenized = text.replace(/\{0\}/gi, jsVar ? eval(jsVar) : val);
-        
-            if(attrName) {
-              $this.attr(attrName, tokenized);
-            } else {
-              $this.html(tokenized);
-            }
-        
-            $this.removeAttr('data-tokenize');
-          });
-        });
-      </script>
-    </atlantis:webstash>
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="css" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="script" /></Parameters></Data>]@P]
+    [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Application" value="salescpo" /><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="head-ie-rsiv" /></Parameters></Data>]@P]
     <script>
       function loadJsAsync(sourceUrl, id) {
          var js, fjs = document.getElementsByTagName('script')[0];
@@ -81,55 +52,17 @@
       
       function endOfPageScripts() {
       
-        $(document).ready(function(){
-          // fix centering elements
-          window.triggerResize = function(){
-            setTimeout(function(){
-              $(window).trigger('resize');
-            },50);
-          }
-          setTimeout(function(){
-            triggerResize();
-          },200);
-      
-          // Wire up tooltips
-          if($(document).sfTipper){
-            $(document).sfTipper({ wireup: true });
-          }
-          
-        });
-      
-        $('.jump-arrow-icon, .jump-arrow-btn').click(function(){
-          $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-          }, 500);
-          return false;
-        });
-      
-        // Track all the icodes (tcodes handled by gtm.js)
-        window._trfq = window._trfq || [];
-        $('[data-icode]').each(function(index, element) {
-          window._trfq.push(['cmdLogImpression', $(element).attr('data-icode'), null, element]);
-        });
       }
       
-      var tms = function(data) {
-        $(document).ready(function(){
-          for (var key in data) {
-            if ((data[key]) && (data[key].trim() != '')) {
-              var elem = document.getElementById(key)
-              if (elem != null) {
-                $('#' + key).html(data[key]);
-              }
-            }
-          }
-        });
-      }
+      //- local DOM ready so we don't need to wait on UXCore
+      //-!function(t){"use strict";var e=function(t){i(t),f()},n=t.document,o=!1,a=[],i=function(t){"function"==typeof t&&a.push(t)},d=function(){for(;a.length;)a.shift()();i=function(t){t()}},c=function(){n.addEventListener?n.removeEventListener("DOMContentLoaded",c,!1):n.detachEvent("onreadystatechange",c),r()},r=function(){if(!e.isReady){if(!n.body)return setTimeout(r,1);e.isReady=!0,d()}},f=function(){var e=!1;if(!o)if(o=!0,"loading"!==n.readyState&&r(),n.addEventListener)n.addEventListener("DOMContentLoaded",c,!1),t.addEventListener("load",c,!1);else if(n.attachEvent){n.attachEvent("onreadystatechange",c),t.attachEvent("onload",c);try{e=null==t.frameElement}catch(a){}n.documentElement.doScroll&&e&&u()}},u=function(){if(!e.isReady){try{n.documentElement.doScroll("left")}catch(t){return void setTimeout(u,1)}r()}};e.isReady=!1,t.$=e}(window);
+      
       
     </script><!--[if lt IE 9]>
     <link href="/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
     <link href="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy.min.html" id="respond-proxy" rel="respond-proxy">
-    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]--> 
+    <script src="[@T[link:<javascriptroot />]@T]fos/respond/respond-proxy-combo.min.js"></script><![endif]-->
+     
     ##if(IsManager())
     <link rel="Stylesheet" type="text/css" href="[@T[link:<javascriptroot />]@T]pc_css/gd_20110801_https.min.css" />
     ##endif
@@ -138,6 +71,8 @@
     <!-- HEADERBEGIN--> 
     [@P[webControl:<Data assembly="App_Code" type="WebControls.PresentationCentral.Item"><Parameters><Parameter key="Manifest" value="salesheader" /><Parameter key="Split" value="brand2.0" /><Parameter key="Name" value="header" /></Parameters></Data>]@P]
     <!-- HEADEREND-->
+     
+    [@T[CachePolicy:<tokendata cacheability="Public" maxage="86400"></tokendata>]@T]
     <section id="domain-search">
       <div class="container">
         <div class="row">
@@ -170,12 +105,14 @@
               </div>
             </form>
             <script>
-              $(".domain-search-form").on('submit', function(e) {
-                var input = $(this).find("input[name='domainToCheck']");
-                if (input && (input.val() == null || input.val() == "")) {
-                  e.preventDefault();
-                  window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
-                }
+              ux.eldorado.ready(function() {
+                $(".domain-search-form").on('submit', function(e) {
+                  var input = $(this).find("input[name='domainToCheck']");
+                  if (input && (input.val() == null || input.val() == "")) {
+                    e.preventDefault();
+                    window.location = '[@T[link:<external linktype="siteurl" path="" parammode="explicit"/>]@T]/domains/domain-name-search.aspx';
+                  }
+                });
               });
               
             </script>
@@ -202,7 +139,115 @@
     <section id="marquee">
       <div class="container">
         <div class="row">
-          <div id="hero-wrapper" class="col-md-8 col-sm-12">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="hero" rank="0" />]@P]</div>
+          <div id="hero-wrapper" class="col-md-8 col-sm-12">
+            <!--start got hero-->
+            <atlantis:webstash type="css">
+              <style>#marquee {
+  background-color: #ecedee;
+}
+#marquee .hero.got {
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#marquee .hero.got .products {
+  text-align: center;
+  overflow: hidden;
+}
+#marquee .hero.got .product {
+  max-width: 50%;
+  margin: auto;
+  font-size: 1em;
+}
+#marquee .hero.got img.www {
+  width: 80%;
+}
+#marquee .hero.got img.pencil {
+  padding: 4%;
+  width: 87%;
+}
+#marquee .hero.got img.envelope {
+  padding: 8% 0;
+  width: 95%;
+}
+#marquee .hero.got .addition {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-33%);
+  -ms-transform: translateY(-33%);
+  transform: translateY(-33%);
+}
+#marquee .hero.got .addition-wrapper {
+  padding-top: 8%;
+  width: 12%;
+  font-size: 2em;
+}
+#marquee .hero.got .pricing {
+  font-size: 1.5em;
+}
+#marquee .hero.got .price-wrapper {
+  width: 30%;
+  display: inline-block;
+}
+#marquee .hero.got .disclaimer {
+  font-size: 10px;
+  padding: 1% 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+@media only screen and (min-width: 480px) {
+  #marquee .hero.got {
+    font-size: 14px;
+  }
+  #marquee .hero.got .addition-wrapper {
+    font-size: 4em;
+  }
+  #marquee .hero.got .product {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #marquee .hero.got {
+    font-size: 18px;
+  }
+}
+
+              </style>
+            </atlantis:webstash>
+            <div data-url="[@T[link:<relative path='/offers/online-business.aspx'><param name='ci' value='95658'/></relative>]@T]" data-ci="95658" class="hero got">
+              <div class="products walsheim-black">
+                <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-domain.png" class="www"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOCIgaGVpZ2h0PSI0MyIgdmlld0JveD0iMCAwIDM4IDQzIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMkwyMiAwIDE5IDEgMTkgMTMgMjQgMTMgMjMgMk0yOSA3TDI3IDQgMjUgNSAyNSAxMyAyOSAxMyAyOSA3TTExIDdMOSA4IDggMTAgNyAxMyAxMiAxMyAxMSA3TTE3IDNMMTYgMyAxNCA0IDEzIDEzIDE4IDEzIDE3IDNNMTMgMTVMMTQgMjUgMTggMjUgMTkgMjAgMjAgMjUgMjQgMjUgMjUgMTUgMjYgMjAgMjcgMTYgMjkgMTcgMjkgMTQgMjIgMTQgMjIgMjAgMjEgMTQgMTcgMTQgMTcgMjEgMTYgMTQgOSAxNCA5IDIwIDggMTQgNSAxNCA0IDIxIDMgMTQgMCAxNCAyIDI1IDYgMjUgNiAyMCA3IDI1IDExIDI1IDEzIDE1TTM1IDE0TDM0IDIwIDMzIDE0IDMwIDE0IDMwIDE3IDMyIDE4IDMyIDI1IDMyIDI1IDM2IDI1IDM4IDE0IDM1IDE0TTI4IDE4TDI1IDI1IDIwIDI3IDE4IDMyIDE3IDI2IDcgMjYgNyAzMiAxMCAzOSAxOSA0MiAyNyA0MSAzMiAzMSAzMSAxOSAyOCAxOCIvPjwvZz48L3N2Zz4=" class="www svgfallback">
+                  <div class="domain">[@L[cds.sales/homepage/heros/got:domain]@L]</div>
+                </div>
+                <div class="addition-wrapper col-xs-2">
+                  <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+                </div>
+                <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-website.png" class="pencil"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNyIgdmlld0JveD0iMCAwIDM1IDM3Ij48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjMgMTZMMzIgMTcgMTQgMCA4IDAgMjMgMTZNMTYgMjJMMjMgMjIgMjMgMTcgNyAwIDEgNSAxNiAyMk0xNSAyOUwxNSAyMyAwIDYgMSAxNSAxNSAyOU0zMCAyOUwzMyAyOCAzMyAxOCAyNSAxNyAyNCAyNCAxNiAyNCAxNiAzMCAyNyAzMyAzMCAyOU0zMSAzMUwyOSAzNCAzNCAzNSAzMyAzMCAzMSAzMSIvPjwvZz48L3N2Zz4=" class="pencil svgfallback">
+                  <div class="website">[@L[cds.sales/homepage/heros/got:website]@L]</div>
+                </div>
+                <div class="addition-wrapper col-xs-2">
+                  <div class="addition">[@L[cds.sales/homepage/heros/got:additionSign]@L]</div>
+                </div>
+                <div class="product col-xs-2"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/icn-email.png" class="envelope"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSIzNSIgdmlld0JveD0iMCAwIDQyIDM1IiB2ZXJzaW9uPSIxIj48dGl0bGU+aWNuX2VtYWlsPC90aXRsZT48ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48ZyBmaWxsPSIjNzliZjRhIj48cGF0aCBkPSJNMjQgMjZMMCA0IDEgMzUgNDAgMzIgNDIgMTEgMjQgMjZNNDEgOEwxIDAgMjQgMjQgNDEgOCIvPjwvZz48L2c+PC9zdmc+" class="envelope svgfallback">
+                  <div class="email">[@L[cds.sales/homepage/heros/got:email]@L]</div>
+                </div>
+              </div>
+              <div class="pricing walsheim-black">
+                <div class="col-xs-11">
+                  <div class="priceText">[@L[cds.sales/homepage/heros/got:priceText]@L]</div>
+                </div>
+              </div>
+              <div class="cta">
+                <div class="col-xs-11"><a class="btn btn-md btn-purchase">[@L[cds.sales/homepage/heros/got:cta]@L]</a>
+                  <div class="disclaimer">[@L[cds.sales/homepage/heros/got:disclaimer-new]@L]</div>
+                </div>
+              </div>
+            </div>
+            <!--end got hero-->
+          </div>
           <div id="marquee-tile-wrapper" class="col-md-4 col-sm-12">
             <div class="row">
               <div id="marquee-tile-1" class="col-md-12 col-sm-6">
@@ -249,66 +294,56 @@
                   <div class="sub-headline">[@L[cds.tmsv2/content/homepage/p4p:sub-headline]@L]</div><a href="[@T[link:<relative path='getonline/getonline.aspx'><param name='ci' value='95742' /><param name='p4p' value='confusing' /></relative>]@T]" class="btn btn-purchase btn-sm">[@L[cds.tmsv2/content/homepage/p4p:cta]@L]</a>
                 </div>
               </div>
-              <div id="marquee-tile-2" class="col-md-12 col-sm-6">[@P[tmscontent:<data product="hp" interaction="marquee" channel="homepage" template="banner-medium" rank="1" />]@P]
-                <div style="display:none;min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative;" class="default-content">
-                  <style>
-                    .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
-                    .banner-medium .font-lg { font-size: 2.25em; }
-                    .banner-medium .font-md { font-size: 1.5em; }
-                    .banner-medium .font-sm { font-size: 1.25em; }
-                    .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
-                    .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
-                    .banner-medium .disclaimer { font-size: 10px; }
-                    
-                    
-                    .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
-                    .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
-                    .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
-                    .Explorer8 .banner-medium.split .left-content, .Explorer8 .banner-medium .right-content { position: relative;top: 0;}
-                    
-                    .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
-                    .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
-                    .banner-medium.split .left-content > *:last-child, .banner-medium.split .right-content > *:last-child { margin-bottom: 0;}
-                    
-                  </style>
-                  <style>
-                    .banner-medium.gtld h2 {font-size:2.5em;margin:0;}
-                    .banner-medium.gtld ul{list-style-type:none;}
-                    .banner-medium.gtld li {margin: 0;}
-                    .banner-medium.gtld a{text-transform: none;font-size:1.25em;text-decoration:none;} 
-                    .banner-medium.gtld a:hover{color: #77c043;}
-                    .Explorer8 .banner-medium.gtld,.Explorer7 .banner-medium.gtld {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);}
-                    
-                  </style>
-                  <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci="95897" class="banner-medium split gtld">
-                    <div style="background-color: #77c043;" class="left-container">
-                      <div class="left-content">
-                        <h2 class="black text-center">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
-                      </div>
+              <div id="marquee-tile-2" class="col-md-12 col-sm-6">
+                <style>
+                  .banner-medium { min-height: inherit; max-height: inherit; min-width: inherit; max-width: inherit; height: 100%; width: 100%; position: relative; }
+                  .banner-medium .font-lg { font-size: 2.25em; }
+                  .banner-medium .font-md { font-size: 1.5em; }
+                  .banner-medium .font-sm { font-size: 1.25em; }
+                  .banner-medium .black { font-family: 'Walsheim-Black', 'Arial Black', sans-serif; text-transform: uppercase; }
+                  .banner-medium .bold { font-family: 'Walsheim-Bold', 'Arial Black', sans-serif; text-transform: uppercase; }
+                  .banner-medium .disclaimer { font-size: 10px; }
+                  
+                  
+                  .banner-medium.split {padding: 0;background-color:#333; color: #fff; }
+                  .banner-medium.split .left-container, .banner-medium .right-container { width: 50%; float: left; min-height: inherit; position: relative; }
+                  .banner-medium.split .left-content, .banner-medium .right-content { position: absolute;top: 50%;-webkit-transform: translateY(-50%);-ms-transform: translateY(-50%);transform: translateY(-50%); padding: 0 5%;}
+                  .Explorer8 .banner-medium.split .left-content, .Explorer8 .banner-medium .right-content { position: relative;top: 0;}
+                  
+                  .banner-medium.split .left-content > *, .banner-medium.split .right-content > * { margin-top: .25em; margin-bottom: .25em;}
+                  .banner-medium.split .left-content > *:first-child, .banner-medium.split .right-content > *:first-child { margin-top: 0;}
+                  .banner-medium.split .left-content > *:last-child, .banner-medium.split .right-content > *:last-child { margin-bottom: 0;}
+                  
+                </style>
+                <style>
+                  .banner-medium.gtld h2 {font-size:2.5em;margin:0;}
+                  .banner-medium.gtld ul{list-style-type:none;}
+                  .banner-medium.gtld li {margin: 0;}
+                  .banner-medium.gtld a{text-transform: none;font-size:1.25em;text-decoration:none;} 
+                  .banner-medium.gtld a:hover{color: #77c043;}
+                  .Explorer8 .banner-medium.gtld,.Explorer7 .banner-medium.gtld {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/gtld-tile-background.png);}
+                  
+                </style>
+                <div data-url="[@T[link:<relative path='/tlds/gtld.aspx'><param name='ci' value='95897' /></relative>]@T]" data-ci="95897" class="banner-medium split gtld">
+                  <div style="background-color: #77c043;" class="left-container">
+                    <div class="left-content">
+                      <h2 class="black text-center">[@L[cds.sales/homepage/tile/marquee-tile-gtld:header-text]@L]</h2>
                     </div>
-                    <div class="right-container">
-                      <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;left:-1px;" viewBox="0 0 100 100">
-                        <polygon points="0,0 10,100 0,100" style="fill:#77c043;"></polygon>
-                      </svg>
-                      <div class="right-content">
-                        <ul>
-                          <li><a href="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" class="black text-purchase tld-guru">.guru</a></li>
-                          <li><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" class="black text-purchase tld-club">.club</a></li>
-                          <li><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='98104' /></relative>]@T]" class="black text-purchase tld-global">.global</a></li>
-                          <li><a href="[@T[link:<relative path='/tlds/life'><param name='ci' value='98105' /></relative>]@T]" class="black text-purchase tld-life">.life</a></li>
-                        </ul>
-                      </div>
+                  </div>
+                  <div class="right-container">
+                    <svg preserveAspectRatio="xMinYMid slice" style="position: absolute; height: 100%;left:-1px;" viewBox="0 0 100 100">
+                      <polygon points="0,0 10,100 0,100" style="fill:#77c043;"></polygon>
+                    </svg>
+                    <div class="right-content">
+                      <ul>
+                        <li><a href="[@T[link:<relative path='/tlds/guru'><param name='ci' value='95716' /></relative>]@T]" class="black text-purchase tld-guru">.guru</a></li>
+                        <li><a href="[@T[link:<relative path='/tlds/club'><param name='ci' value='95713' /></relative>]@T]" class="black text-purchase tld-club">.club</a></li>
+                        <li><a href="[@T[link:<relative path='/tlds/global'><param name='ci' value='98104' /></relative>]@T]" class="black text-purchase tld-global">.global</a></li>
+                        <li><a href="[@T[link:<relative path='/tlds/life'><param name='ci' value='98105' /></relative>]@T]" class="black text-purchase tld-life">.life</a></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-                <script>
-                  $(document).ready(function(){
-                    if ($('#marquee-tile-2 .tms-default').length) {
-                      $('#marquee-tile-2 [data-tms-template]').hide();
-                      $('.default-content').show();
-                    }
-                  });
-                </script>
               </div>
             </div>
           </div>
@@ -380,18 +415,17 @@
 }
 
             </style>
-            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small 0365-biz-email">
+            <div data-url="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]" data-ci='97911' class="banner-small o365-biz-email">
               <div class="title text-primary-o"><!--[if lt IE 9]><img src="[@T[link:<imageroot />]@T]fos/tmsv2/content/o365-biz-email/banner-small/pro-email-icon.png" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]"><![endif]--><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMCIgeT0iMCIgd2lkdGg9IjQzIiBoZWlnaHQ9IjM1IiB2aWV3Qm94PSIwIDAgNDMgMzUiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDM1IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBmaWxsPSIjNzdDMDQzIiBkPSJNMS40IDBsNDEgOC4yTDI0LjYgMjQuNSAxLjQgMHpNNDMgMTAuN2wtMiAyMi4xTDAuNyAzNSAwIDMuM2wyNC4zIDIzTDQzIDEwLjd6Ii8+PC9zdmc+" alt="[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]" class="svgfallback"><span><span>[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:title]@L]</span></span>
               </div>
               <div class="body">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:body]@L]</div><a href="[@T[link:<relative path='/email-account.aspx'><param name='ci' value='97911' /></relative>]@T]">[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta]@L] </a>
               <script>
                 var savings = Math.max([@T[productcompare:<percent primaryproductid="31805" secondaryproductid="31805" />]@T],[@T[productcompare:<percent primaryproductid="31825" secondaryproductid="31825" />]@T],[@T[productcompare:<percent primaryproductid="31841" secondaryproductid="31841" />]@T]);
-                $cta=$('.banner-small.0365-biz-email a');
+                var cta = document.querySelectorAll('.banner-small.o365-biz-email a')[0];
                 if(savings<5)
-                  $cta.html('[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]')
+                  cta.innerHTML = '[@L[cds.tmsv2/content/homepage/o365-biz-email/banner-small:cta-fallback]@L]';
                 else
-                  $cta.html($cta.html().replace("{0}", savings));
-                $cta.show();
+                  cta.innerHTML = cta.innerHTML.replace("{0}", savings);
               </script>
             </div>
           </div>
@@ -603,339 +637,6 @@
         </div>
       </div>
     </section>
-     
-     ##if(appSettingEnabled(Danica_Win_Daytona))
-    <atlantis:webstash type="css">
-      <style>
-      </style>
-      <style>#danica-wins-daytona {
-  max-height: 300px;
-  background-size: cover;
-  background-position: center center;
-}
-#danica-wins-daytona .TopText {
-  color: #77C043;
-  font-size: 37px;
-  text-transform: uppercase;
-  margin-top: 82px;
-}
-#danica-wins-daytona .MiddleText {
-  color: #77C043;
-  font-size: 39px;
-  text-transform: uppercase;
-}
-#danica-wins-daytona .BottomText {
-  color: #77C043;
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 82px;
-}
-#danica-wins-daytona .dash {
-  letter-spacing: -0.5rem;
-  margin-right: 15px;
-}
-@media only screen and (min-width: 480px) {
-  #danica-wins-daytona .TopText {
-    font-size: 22px;
-  }
-  #danica-wins-daytona .MiddleText {
-    font-size: 27px;
-    line-height: 20px;
-  }
-  #danica-wins-daytona .BottomText {
-    font-size: 33px;
-    line-height: 40px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #danica-wins-daytona .TopText {
-    font-size: 30px;
-  }
-  #danica-wins-daytona .MiddleText {
-    font-size: 34px;
-    line-height: 25px;
-  }
-  #danica-wins-daytona .BottomText {
-    font-size: 45px;
-    line-height: 56px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #danica-wins-daytona .TopText {
-    font-size: 37px;
-  }
-  #danica-wins-daytona .MiddleText {
-    font-size: 40px;
-    line-height: 30px;
-  }
-  #danica-wins-daytona .BottomText {
-    font-size: 55px;
-  }
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="danica-wins-daytona" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="TopText walsheim-black">Congratulations, Danica!</div>
-            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
-            <div class="BottomText walsheim-black">Daytona 500 Win!</div>
-          </div>
-        </div>
-      </div>
-    </section> 
-     ##elseif(appSettingEnabled(Danica_WIN_FIRST_RACE))
-    <atlantis:webstash type="css">
-      <style>
-      </style>
-      <style>#danica-first-win {
-  max-height: 300px;
-  background-size: cover;
-  background-position: center center;
-}
-#danica-first-win .TopText {
-  color: #77C043;
-  font-size: 37px;
-  text-transform: uppercase;
-  margin-top: 82px;
-}
-#danica-first-win .MiddleText {
-  color: #77C043;
-  font-size: 39px;
-  text-transform: uppercase;
-}
-#danica-first-win .BottomText {
-  color: #77C043;
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 82px;
-}
-#danica-first-win .dash {
-  letter-spacing: -0.5rem;
-  margin-right: 15px;
-}
-@media only screen and (min-width: 480px) {
-  #danica-first-win .TopText {
-    font-size: 22px;
-  }
-  #danica-first-win .MiddleText {
-    font-size: 44px;
-    line-height: 34px;
-  }
-  #danica-first-win .BottomText {
-    font-size: 40px;
-    line-height: 40px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #danica-first-win .TopText {
-    font-size: 30px;
-  }
-  #danica-first-win .MiddleText {
-    font-size: 60px;
-    line-height: 40px;
-  }
-  #danica-first-win .BottomText {
-    font-size: 50px;
-    line-height: 56px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #danica-first-win .TopText {
-    font-size: 37px;
-  }
-  #danica-first-win .MiddleText {
-    font-size: 74px;
-    line-height: 48px;
-  }
-  #danica-first-win .BottomText {
-    font-size: 60px;
-    line-height: 64px;
-  }
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="danica-first-win" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="TopText walsheim-black">Congratulations, Danica!</div>
-            <div class="MiddleText tungsten">On your history-making</div>
-            <div class="BottomText walsheim-black"> <span class="dash">------------------------- </span> win!</div>
-          </div>
-        </div>
-      </div>
-    </section> 
-     ##elseif(appSettingEnabled(Danica_Win_Additional_Race))
-    <atlantis:webstash type="css">
-      <style>
-      </style>
-      <style>#danica-addtional-win {
-  max-height: 300px;
-  background-size: cover;
-  background-position: center center;
-}
-#danica-addtional-win .TopText {
-  color: #77C043;
-  font-size: 37px;
-  text-transform: uppercase;
-  margin-top: 82px;
-}
-#danica-addtional-win .MiddleText {
-  color: #77C043;
-  font-size: 39px;
-  text-transform: uppercase;
-}
-#danica-addtional-win .BottomText {
-  color: #77C043;
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 82px;
-}
-#danica-addtional-win .dash {
-  letter-spacing: -0.5rem;
-  margin-right: 15px;
-}
-@media only screen and (min-width: 480px) {
-  #danica-addtional-win .TopText {
-    font-size: 22px;
-  }
-  #danica-addtional-win .MiddleText {
-    font-size: 27px;
-    line-height: 25px;
-  }
-  #danica-addtional-win .BottomText {
-    font-size: 35px;
-    line-height: 40px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #danica-addtional-win .TopText {
-    font-size: 30px;
-  }
-  #danica-addtional-win .MiddleText {
-    font-size: 34px;
-    line-height: 25px;
-  }
-  #danica-addtional-win .BottomText {
-    font-size: 50px;
-    line-height: 56px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #danica-addtional-win .TopText {
-    font-size: 37px;
-  }
-  #danica-addtional-win .MiddleText {
-    font-size: 39px;
-    line-height: 25px;
-  }
-  #danica-addtional-win .BottomText {
-    font-size: 48px;
-    line-height: 64px;
-  }
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="danica-addtional-win" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="TopText walsheim-black">Congratulations, Danica!</div>
-            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
-            <div class="BottomText walsheim-black">Nascar Win!</div>
-          </div>
-        </div>
-      </div>
-    </section> 
-     ##elseif(appSettingEnabled(Danica_Win_2nd_Pole))
-    <atlantis:webstash type="css">
-      <style>
-      </style>
-      <style>#danica-pole-position {
-  max-height: 300px;
-  background-size: cover;
-  background-position: center center;
-}
-#danica-pole-position .TopText {
-  color: #77C043;
-  font-size: 37px;
-  text-transform: uppercase;
-  margin-top: 82px;
-}
-#danica-pole-position .MiddleText {
-  color: #77C043;
-  font-size: 39px;
-  text-transform: uppercase;
-}
-#danica-pole-position .BottomText {
-  color: #77C043;
-  font-size: 48px;
-  text-transform: uppercase;
-  margin-bottom: 82px;
-}
-#danica-pole-position .dash {
-  letter-spacing: -0.5rem;
-  margin-right: 15px;
-}
-@media only screen and (min-width: 480px) {
-  #danica-pole-position .TopText {
-    font-size: 22px;
-  }
-  #danica-pole-position .MiddleText {
-    font-size: 28px;
-    line-height: 20px;
-  }
-  #danica-pole-position .BottomText {
-    font-size: 27px;
-    line-height: 40px;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #danica-pole-position .TopText {
-    font-size: 30px;
-  }
-  #danica-pole-position .MiddleText {
-    font-size: 34px;
-    line-height: 20px;
-  }
-  #danica-pole-position .BottomText {
-    font-size: 36px;
-    line-height: 50px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  #danica-pole-position .TopText {
-    font-size: 37px;
-  }
-  #danica-pole-position .MiddleText {
-    font-size: 39px;
-    line-height: 25px;
-  }
-  #danica-pole-position .BottomText {
-    font-size: 43px;
-    line-height: 60px;
-  }
-}
-
-      </style>
-    </atlantis:webstash>
-    <section id="danica-pole-position" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/danica-congratulations-module-background-04.jpg" class="lazyload">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="TopText walsheim-black">Congratulations, Danica!</div>
-            <div class="MiddleText tungsten"> <span class="dash">------------------------------------- </span> We're Proud to be a part of your</div>
-            <div class="BottomText walsheim-black">2nd Daytona 500 Pole!</div>
-          </div>
-        </div>
-      </div>
-    </section> 
-     ##endif
     <atlantis:webstash type="css">
       <style>#domain-promo {
   color: #fff;
@@ -1368,6 +1069,10 @@
 }
 
       </style>
+      <style>
+        .hp-two-up-compare-img {background-image: url([@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg); }
+        
+      </style>
       <div id="website-promo" class="two-up-title-wrap bg-green-official">
         <div>
           <div class="container">
@@ -1378,7 +1083,7 @@
             </div>
           </div>
         </div>
-        <div style="min-height: 100%;;" data-lazyload-source="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg" class="two-up-wrap-compare  lazyload">
+        <div style="min-height: 100%;;" data-src="[@T[link:<imageroot />]@T]fos/hp/rebrand/img/sb/website_promo.jpg" data-img-class="hp-two-up-compare-img" class="two-up-wrap-compare  lazyload">
           <div class="container">
             <div class="row">
               <div class="col-md-5 or-container-none col-sm-6  bg-gray-darkest">
@@ -1773,6 +1478,15 @@ section {
     font-size: 16px;
   }
 }
+#marquee {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
 
       </style>
     </atlantis:webstash>
@@ -1781,20 +1495,59 @@ section {
       
     </script>
     <script>
-      $(document).ready(function() {
+      // once the document is ready, wait no more than 1 second to show it
+      var tmsTimer;
+      var TMS_TIMEOUT = 10;
+      
+      //-ux.eldorado.ready(function() {
+        tmsTimer = setTimeout(function() {
+          var marquee = document.getElementById("marquee");
+          marquee.style.visibility = "visible";
+          marquee.style.opacity = "1";
+        }, TMS_TIMEOUT);
+      //-});
+      
+      var tms = function(data) {
+        //$(document).ready(function(){
+        //-ux.eldorado.ready(function() {
+          var marquee = document.getElementById("marquee");
+          if (marquee.style.visibility != "visible") {
+            clearTimeout(tmsTimer);
+            for (var key in data) {
+              if ((data[key]) && (data[key].trim() != '') && !(/class="tms-default"><\/div>/.test(data[key])) ) {
+                var elem = document.getElementById(key);
+                if (elem != null) {
+                  elem.innerHTML = data[key];
+                  //-$('#' + key).html(data[key]);
+                }
+              }
+            }
+            marquee.style.visibility = "visible";
+            marquee.style.opacity = "1";
+          }
+        //-});
+      }
+      
+      ux.eldorado.ready(function(){
         loadJsAsync("https://img1.wsimg.com/fastball/js_lib/FastballLibrary0006.min.js?version=2", 'fastballLibrary');
         loadJsAsync("https://img1.wsimg.com/fos/liveperson/js/liveperson_20150217.min.js", 'livepersonLibrary');
         loadJsAsync("https://img1.wsimg.com/starfield/fos.share/v1.3/fos.share-20140505.min.js", 'fosShareScript');
       });
       
-    </script>
-    <script type="text/javascript">
-      $('body').on('click','[data-url]',function(event){
-        var $clickedElement = $(event.currentTarget);
-        var $clickedUrl = $clickedElement.attr('data-url'); 
-        event.stopPropagation();
-        window.location.href=$clickedUrl;
+      ux.eldorado.ready(function(){
+        $('body').on('click','[data-url]',function(event){
+          var $clickedElement = $(event.currentTarget);
+          var $clickedUrl = $clickedElement.attr('data-url'); 
+          event.stopPropagation();
+          window.location.href=$clickedUrl;
+        });
+      
+        reSizeTiles();
+      
+        ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
+        ux.util.lazy.loadViaSelector('.lazyload'); // only show on scroll
       });
+      
       function limitationsModal() {$('#limitationsModal').sfDialog({buttons: [{text: 'OK', onClick: function($sfDialog) { $sfDialog.sfDialog('close'); } }] });}
       var reSizeTiles = function(){
         var maxTitleHeight = 0;
@@ -1806,18 +1559,8 @@ section {
           }
       }
       
-      $(window).load(function () {
-        reSizeTiles();
-      
-        ux.util.lazy.loadViaSelector('.domain-promo-content'); // load after, uh, load
-        ux.util.lazy.loadViaSelector('.lazyload', 'scroll'); // only show on scroll
-      
-      });
-      
-    </script>
-    <script type="text/javascript">
       var ignoreLivePerson = true;
-      $(document).ready(function() {
+      ux.eldorado.ready(function(){
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&'),
                      qs = [],
                      date = new Date();
@@ -1833,5 +1576,6 @@ section {
       });
       
     </script>
+    <script async src="/api/content?hero-wrapper=hero|0&amp;marquee-tile-2=banner-medium|1&amp;callback=tms"></script>
   </body>
 </html>
